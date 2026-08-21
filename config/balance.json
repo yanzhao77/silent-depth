@@ -1,0 +1,276 @@
+{
+  "version": 1,
+  "authority": "GAME_DESIGN.md v1.0 (§12 balance targets B1-B10 + §4-§10)",
+  "source": "procedural_design",
+  "world": {
+    "mapSizeKm": 30,
+    "gridM": 500,
+    "outOfBoundsFailSeconds": 60,
+    "maxGenRetries": 10,
+    "playerSpawnMinDistKm": 8,
+    "merchantSpawnSpreadKm": 1.5,
+    "escortOffsetM": 800
+  },
+  "speedBands": {
+    "STOPPED":  { "speedMinKt": 0,  "speedMaxKt": 0,  "noiseMin": 0,  "noiseMax": 2,   "batteryDrainPerSec": 0.02, "reverseMaxKt": 4 },
+    "SILENT":   { "speedMinKt": 2,  "speedMaxKt": 4,  "noiseMin": 8,  "noiseMax": 15,  "batteryDrainPerSec": 0.10 },
+    "CRUISE":   { "speedMinKt": 8,  "speedMaxKt": 12, "noiseMin": 30, "noiseMax": 50,  "batteryDrainPerSec": 0.30 },
+    "FULL":     { "speedMinKt": 18, "speedMaxKt": 22, "noiseMin": 70, "noiseMax": 90,  "batteryDrainPerSec": 0.60 }
+  },
+  "noiseInterp": {
+    "STOPPED": 1,
+    "SILENT": { "bandBase": 8,  "slopePerKt": 2 },
+    "CRUISE": { "bandBase": 30, "slopePerKt": 4 },
+    "FULL":   { "bandBase": 70, "slopePerKt": 5 }
+  },
+  "rudder": {
+    "turnRateDegPerSec": 3.0,
+    "turnRateDegPerSecFullSpeed": 1.5,
+    "lowBatteryTurnRateFactor": 0.5
+  },
+  "depthLayers": {
+    "Surface":   { "minM": 0,   "maxM": 3,   "noiseMod": 15,  "detectFactor": 1.5, "chargePerSec": 0.4,  "torpedoAllowed": false, "deckGunTargetable": true,  "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
+    "Periscope": { "minM": 4,   "maxM": 10,  "noiseMod": 8,   "detectFactor": 1.2, "chargePerSec": 0,    "torpedoAllowed": true,  "deckGunTargetable": true,  "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
+    "Shallow":   { "minM": 11,  "maxM": 30,  "noiseMod": 0,   "detectFactor": 0.9, "chargePerSec": 0,    "torpedoAllowed": true,  "deckGunTargetable": false, "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
+    "Medium":    { "minM": 31,  "maxM": 70,  "noiseMod": -5,  "detectFactor": 0.65,"chargePerSec": 0,    "torpedoAllowed": true,  "deckGunTargetable": false, "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
+    "Deep":      { "minM": 71,  "maxM": 120, "noiseMod": -10, "detectFactor": 0.5, "chargePerSec": 0,    "torpedoAllowed": true,  "deckGunTargetable": false, "dcDamageFactor": 1.5, "extraBatteryPerSec": 0.05 }
+  },
+  "depthTransitionSecondsPerLayer": 3,
+  "battery": {
+    "capacity": 100,
+    "pingCostPercent": 2,
+    "silentRunningExtraPerSec": 0.08,
+    "emergencyDiveCostPercent": 3,
+    "decoyCostPercent": 1,
+    "lowBatteryThreshold": 10,
+    "lowBatteryMaxSpeedBand": "SILENT",
+    "forcedSurfaceDetection": 100
+  },
+  "hull": {
+    "playerMax": 100,
+    "damagedThreshold": 30,
+    "damagedNoiseBonus": 5,
+    "collisionDamageMin": 10,
+    "collisionDamageMax": 25
+  },
+  "detection": {
+    "bands": [
+      { "max": 20,  "label": "Unaware" },
+      { "max": 40,  "label": "Suspicious" },
+      { "max": 60,  "label": "Searching" },
+      { "max": 80,  "label": "Hunting" },
+      { "max": 100, "label": "Located" }
+    ],
+    "sources": {
+      "activePing": 12,
+      "torpedoFired": 20,
+      "depthChargeHit": 15,
+      "depthChargeNearMiss": 10,
+      "enemyPingHit": 8,
+      "deckGunHit": 5
+    },
+    "sinks": {
+      "stoppedSilentPerSec": 2,
+      "silentSilentPerSec": 1,
+      "diveSurfaceToMedium": 15,
+      "hardTurnDeg30Per10s": 10,
+      "decoyLaunch": 20,
+      "distancePerSec": 0.5
+    },
+    "located": { "graceSeconds": 60, "requiredBelow": 60 },
+    "noAutoDecay": true
+  },
+  "sonar": {
+    "active": {
+      "rangeKm": 10,
+      "cooldownSeconds": 6,
+      "batteryPercent": 2,
+      "selfExposureDetection": 12,
+      "escortHearPingRangeKm": 8,
+      "bearingErrorDeg": 0.5,
+      "rangeErrorPctStart": 0.1,
+      "rangeErrorPctPerPingFactor": 0.8,
+      "bearingErrorPerPingFactor": 0.7
+    },
+    "passive": {
+      "engineRangeKm": 5,
+      "torpedoRangeKm": 10,
+      "explosionRangeKm": 15,
+      "bearingErrorDegStart": 3,
+      "bearingErrorDegConverged": 1,
+      "bearingConvergeSeconds": 30,
+      "rangeNeverGiven": true
+    },
+    "signalStrength": {
+      "strongMaxKm": 3,
+      "mediumMaxKm": 7
+    },
+    "contact": {
+      "decaySecondsWithoutObs": 90,
+      "decayPer10sPct": 10,
+      "degradeConfidence": 30,
+      "removeUnknownSeconds": 120,
+      "convergeSpeedHeadingPctStart": 0.2,
+      "convergeSpeedHeadingPctTracked": 0.05,
+      "convergePerObsFactor": 0.85,
+      "errorExemptRangeKm": 1.5
+    },
+    "classification": {
+      "passiveObsConfidenceGain": 15,
+      "pingHitConfidenceGain": 25,
+      "lockTypeConfidence": 60,
+      "types": {
+        "Merchant":   { "speedRangeKt": [8, 10],  "noiseRange": [70, 80], "surfaceOnly": true },
+        "Cargo":      { "speedRangeKt": [9, 11],  "noiseRange": [70, 80], "surfaceOnly": true },
+        "Tanker":     { "speedRangeKt": [7, 9],   "noiseRange": [70, 80], "surfaceOnly": true },
+        "Destroyer":  { "speedRangeKt": [20, 26], "noiseRange": [60, 70], "surfaceOnly": true },
+        "Frigate":    { "speedRangeKt": [18, 22], "noiseRange": [60, 70], "surfaceOnly": true },
+        "Submarine":  { "speedRangeKt": [4, 10],  "noiseRange": [0, 30],  "surfaceOnly": false }
+      }
+    }
+  },
+  "enemyAI": {
+    "states": ["NORMAL", "SUSPICIOUS", "ALERT", "SEARCHING", "HUNTING", "LOST_CONTACT"],
+    "transitions": {
+      "normalToSuspicious": "player noise detected or ping heard",
+      "suspiciousToAlert": "detection >= 40 or 2 consecutive pings with range",
+      "alertToSearching": "torpedo within 3km or explosion heard",
+      "searchingToHunting": "detection >= 60 or ping confirm < 1.5km",
+      "searchingToLost": "120s no contact",
+      "huntingToSearching": "detection < 40 for 30s",
+      "lostToNormal": "60s at escort post"
+    },
+    "shipTypes": {
+      "Merchant":  { "speedKt": 9,  "hull": 100, "passiveRangeKm": 4, "attack": null },
+      "Cargo":     { "speedKt": 10, "hull": 110, "passiveRangeKm": 4, "attack": null },
+      "Tanker":    { "speedKt": 8,  "hull": 130, "passiveRangeKm": 4, "attack": null },
+      "Destroyer": { "speedKt": { "patrol": 20, "attack": 26 }, "hull": 190, "passiveRangeKm": 6, "activePingRangeKm": 6, "attack": ["depthCharge", "deckGun"] },
+      "Frigate":   { "speedKt": { "patrol": 18, "attack": 22 }, "hull": 140, "passiveRangeKm": 6, "activePingRangeKm": 6, "attack": ["depthCharge", "deckGun"] }
+    },
+    "escort": {
+      "patrolRadiusKm": 1,
+      "patrolPattern": "figure-8",
+      "patrolPeriodSeconds": 90,
+      "offsetM": 800,
+      "formation": { "columns": 2, "rows": 2, "colSpacingM": 500, "rowSpacingM": 400 }
+    },
+    "activePing": {
+      "suspiciousIntervalSeconds": 4,
+      "huntingIntervalSeconds": 2,
+      "heavyEscortIntervalSeconds": 2,
+      "rangeKm": 6,
+      "detectionGainOnPlayer": 8,
+      "bearingErrorDeg": 2
+    },
+    "depthCharges": {
+      "perRound": 6,
+      "roundIntervalSeconds": 20,
+      "volleyIntervalSeconds": 3,
+      "perMission": 20
+    },
+    "searchPatterns": {
+      "circular":  { "radiusStartKm": 1.0, "radiusMaxKm": 2.5, "radiusStepPerLapM": 300, "speedKt": 20 },
+      "zigzag":    { "laneSpacingM": 300, "laneLengthKm": 2, "turnRadiusM": 200 },
+      "expanding": { "radiusStepPer45DegM": 150, "startRadiusM": 500 }
+    },
+    "lkp": {
+      "refreshSeconds": 5,
+      "driftErrorM": 50,
+      "driftMaxKm": 1.5,
+      "decoyReplaceChance": 0.7,
+      "decoyReplaceSeconds": 20
+    },
+    "merchant": {
+      "evadeChanceOnTorpedo": 0.3,
+      "evadeTurnDeg": 45,
+      "evadeSeconds": 30,
+      "alertSpeedKt": 11,
+      "alertTurnDeg": 30
+    }
+  },
+  "torpedo": {
+    "countPerMissionMin": 4,
+    "countPerMissionMax": 6,
+    "speedKt": 40,
+    "rangeKm": 6,
+    "lifetimeSeconds": 300,
+    "damageBase": 90,
+    "damageSpread": 10,
+    "hitDistanceM": 40,
+    "nearMissDistanceM": 120,
+    "selfNoiseHearRangeKm": 10,
+    "salvoMax": 2,
+    "states": ["LOADED", "READY", "FIRED", "RUNNING", "HIT", "MISSED", "EXPIRED"]
+  },
+  "hitProbability": {
+    "base": 0.85,
+    "clampMin": 0.05,
+    "clampMax": 0.95,
+    "rangePen": { "le2km": 0, "le4km": 0.15, "le6km": 0.35 },
+    "aobPen": { "90deg": 0, "45deg": 0.10, "20deg": 0.25, "0deg": 0.45 },
+    "targetSpeedPen": { "le5kt": 0, "10kt": 0.05, "15kt": 0.15, "20ktPlus": 0.25 },
+    "confidencePen": { "ge90": 0, "70": 0.10, "50": 0.20, "lt30": 0.35 },
+    "maneuverPen": { "Merchant": 0, "Cargo": 0, "Tanker": 0, "Frigate": 0.10, "Destroyer": 0.15, "DestroyerEvading": 0.15 },
+    "resolve": { "uniformSpread": 0.10, "hitThreshold": 0.50 }
+  },
+  "weapons": {
+    "depthCharge": { "directDamage": 35, "nearMissDamage": 20, "farDamage": 10, "directM": 40, "nearM": 120, "farM": 250, "deepLayerFactor": 1.5 },
+    "deckGun": { "rangeKm": 2, "hitChanceAt0_5km": 0.6, "hitChanceAt2km": 0.1, "damageMin": 8, "damageMax": 15, "targets": ["Surface", "Periscope"] }
+  },
+  "decoy": {
+    "perMission": 2,
+    "noiseLevel": 90,
+    "durationSeconds": 20,
+    "escortReplaceChance": 0.7,
+    "replaceRangeKm": 5,
+    "batteryCostPercent": 1
+  },
+  "weather": {
+    "Clear":   { "visibilityKm": 10,  "sonarFactor": 1.0, "noiseFactor": 1.0 },
+    "Cloudy":  { "visibilityKm": 7,   "sonarFactor": 0.9, "noiseFactor": 1.0 },
+    "Storm":   { "visibilityKm": 3,   "sonarFactor": 0.6, "noiseFactor": 1.15, "surfaceNoiseBonus": 10 },
+    "Fog":     { "visibilityKm": 1.5, "sonarFactor": 0.5, "noiseFactor": 1.0 },
+    "Night":   { "visibilityKm": 2,   "sonarFactor": 0.8, "noiseFactor": 1.0 }
+  },
+  "detectionFormula": {
+    "escortBaseRate": 0.05,
+    "merchantBaseRate": 0.015,
+    "perSecond": "P = (noise/100) * baseRate * depthFactor * weatherFactor * distanceFactor",
+    "distanceFactor": "clamp(1 - d/range, 0, 1)"
+  },
+  "missions": [
+    { "id": "M01", "name": "Sonar Training", "objective": "find_classify_track", "enemies": { "Merchant": 1 }, "escorts": 0, "torpedoes": 4, "weather": "Clear", "visibility": "high", "difficulty": "Easy", "parMinutes": 15, "seed": 1001, "unlock": null },
+    { "id": "M02", "name": "First Ambush", "objective": "sink_transport", "enemies": { "Tanker": 1 }, "escorts": 0, "torpedoes": 4, "weather": "Clear->Cloudy", "visibility": "medium-high", "difficulty": "Easy-Med", "parMinutes": 20, "seed": 1002, "unlock": "M01" },
+    { "id": "M03", "name": "Convoy Attack", "objective": "sink_ge2_merchants", "enemies": { "Cargo": 4 }, "escorts": 1, "escortType": "Destroyer", "torpedoes": 5, "weather": "Cloudy->Storm", "visibility": "medium", "difficulty": "Medium", "parMinutes": 30, "seed": 1003, "unlock": "M02" },
+    { "id": "M04", "name": "Heavy Escort", "objective": "sink_ge2_survive", "enemies": { "Cargo": 4 }, "escorts": 2, "escortType": "Destroyer", "torpedoes": 4, "weather": "Storm->Fog", "visibility": "low", "difficulty": "Hard", "parMinutes": 35, "seed": 1004, "unlock": "M03", "escortPingIntervalSeconds": 2 },
+    { "id": "M05", "name": "Silent Hunter", "objective": "sink_ge1_and_escape", "enemies": { "Cargo": 4 }, "escorts": 3, "escortType": ["Destroyer", "Destroyer", "Frigate"], "torpedoes": 4, "weather": "Night+Fog", "visibility": "very-low", "difficulty": "Very Hard", "parMinutes": 40, "seed": 1005, "unlock": "M04", "escapeRequired": true }
+  ],
+  "scoring": {
+    "total": 1000,
+    "weights": { "objective": 0.40, "damage": 0.20, "detection": 0.15, "torpedoEfficiency": 0.10, "time": 0.10, "survival": 0.05 },
+    "components": {
+      "objectiveMax": 400,
+      "damageMax": 200,
+      "detectionMax": 150,
+      "torpedoEfficiencyMax": 100,
+      "timeMax": 100,
+      "survivalMax": 50
+    },
+    "damageScores": { "Merchant": 60, "Cargo": 60, "Tanker": 70, "Frigate": 90, "Destroyer": 110 },
+    "expectedHits": { "M01": 0, "M02": 1, "M03": 2, "M04": 2, "M05": 1 },
+    "grades": [
+      { "min": 1000, "label": "Perfect" },
+      { "min": 800, "label": "Excellent" },
+      { "min": 600, "label": "Good" },
+      { "min": 400, "label": "Poor" },
+      { "min": 0, "label": "Failed" }
+    ],
+    "m05EscapeBonus": 50
+  },
+  "escape": {
+    "detectionBelow": 20,
+    "durationSeconds": 30,
+    "minDistEscortKm": 3,
+    "requiredInM05": true
+  }
+}
