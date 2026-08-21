@@ -324,7 +324,7 @@ describe('balance loader', () => {
     expect(balance.speedBands.FULL.speedMaxKt).toBe(22)
     expect(balance.torpedo.speedKt).toBe(40)
     expect(balance.torpedo.rangeKm).toBe(6)
-    expect(balance.detection.sources.activePing).toBe(12)
+    expect(balance.detection.sources.activePing).toBe(8)
     expect(balance.sonar.active.rangeKm).toBe(10)
     expect(balance.enemyAI.depthCharges.perMission).toBe(20)
     expect(balance.decoy.perMission).toBe(2)
@@ -332,7 +332,7 @@ describe('balance loader', () => {
     expect(balance.missions.length).toBe(5)
     expect(balance.missions[0]!.id).toBe('M01')
     expect(balance.missions[0]!.seed).toBe(1001)
-    expect(balance.escape.detectionBelow).toBe(20)
+    expect(balance.escape.detectionBelow).toBe(25)
   })
 
   it('throws a clear error on a missing required key', () => {

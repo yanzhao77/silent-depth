@@ -273,7 +273,7 @@ describe('M03 Convoy Attack — perception, detection exposure & fire pipeline',
     // Sonar perception: contacts formed and reached CLASSIFIED (or better).
     expect(snap.contacts.length).toBeGreaterThan(0)
     expect(snap.contacts.some((c) => c.state === 'CLASSIFIED' || c.state === 'TRACKED' || c.state === 'CONFIRMED')).toBe(true)
-    // Detection-meter exposure (F3 + ping self-exposure +12, §8.1).
+    // Detection-meter exposure (F3 + ping self-exposure +8, §8.1; t-015: 12 → 8).
     expect(snap.playerSub.detection).toBeGreaterThan(20)
     expect(snap.stats.peakDetection).toBeGreaterThanOrEqual(20)
     // Torpedo fire pipeline started (fired → RUNNING entities were created).
@@ -437,7 +437,7 @@ describe('pause/resume — frozen pause edges keep the run byte-identical', () =
 // F9 escape (M05 Silent Hunter)
 // ---------------------------------------------------------------------------
 
-describe('M05 — F9 escape: detection < 20, escorts > 3 km, sustained 30 s', () => {
+describe('M05 — F9 escape: detection < 25 (t-015), escorts > 3 km, sustained 30 s', () => {
   const def = getMissionDef('M05')
 
   it('silent + dive + move away → escape.escaped within 60 s', () => {
@@ -469,8 +469,9 @@ describe('M05 — F9 escape: detection < 20, escorts > 3 km, sustained 30 s', ()
       }
     }
     expect(escapedAt).not.toBeNull()
-    // F9: the escape requires detection < 20 and fires the event once.
-    expect(escapedAt!.playerSub.detection).toBeLessThan(20)
+    // F9: the escape requires detection < balance.escape.detectionBelow (25,
+    // t-015: 20 → 25) and fires the event once.
+    expect(escapedAt!.playerSub.detection).toBeLessThan(25)
     expect(escapedAt!.simTime).toBeLessThan(60)
     expect(escapedAt!.eventLog.filter((e) => e.type === 'escape.escaped').length).toBe(1)
     expect(escapedAt!.mission.escaped).toBe(true)

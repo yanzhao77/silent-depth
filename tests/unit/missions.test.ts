@@ -635,7 +635,7 @@ describe('objectives — M05 escape required (F9)', () => {
     expect(missionRequiresEscape(ctx)).toBe(true)
   })
 
-  it('escape completes after detection < 20 for 30 s with escorts far away', () => {
+  it('escape completes after detection < threshold (25, t-015) for 30 s with escorts far away', () => {
     const mission = getMissionDef('M05', balance)
     const ctx = makeCtx(mission)
     const outcomes = attachOutcomeSpy(ctx)
@@ -660,7 +660,7 @@ describe('objectives — M05 escape required (F9)', () => {
     expect(escapedEvent!.payload).toEqual({ missionId: 'M05', durationSeconds: balance.escape.durationSeconds })
   })
 
-  it('a nearby escort or detection ≥ 20 resets the escape timer', () => {
+  it('a nearby escort or detection ≥ threshold (25, t-015) resets the escape timer', () => {
     const mission = getMissionDef('M05', balance)
     const ctx = makeCtx(mission)
     const outcomes = attachOutcomeSpy(ctx)

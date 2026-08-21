@@ -14,7 +14,7 @@
   "speedBands": {
     "STOPPED":  { "speedMinKt": 0,  "speedMaxKt": 0,  "noiseMin": 0,  "noiseMax": 2,   "batteryDrainPerSec": 0.02, "reverseMaxKt": 4 },
     "SILENT":   { "speedMinKt": 2,  "speedMaxKt": 4,  "noiseMin": 8,  "noiseMax": 15,  "batteryDrainPerSec": 0.10 },
-    "CRUISE":   { "speedMinKt": 8,  "speedMaxKt": 12, "noiseMin": 30, "noiseMax": 50,  "batteryDrainPerSec": 0.30 },
+    "CRUISE":   { "speedMinKt": 8,  "speedMaxKt": 12, "noiseMin": 30, "noiseMax": 50,  "batteryDrainPerSec": 0.22 },
     "FULL":     { "speedMinKt": 18, "speedMaxKt": 22, "noiseMin": 70, "noiseMax": 90,  "batteryDrainPerSec": 0.60 }
   },
   "noiseInterp": {
@@ -29,7 +29,7 @@
     "lowBatteryTurnRateFactor": 0.5
   },
   "depthLayers": {
-    "Surface":   { "minM": 0,   "maxM": 3,   "noiseMod": 15,  "detectFactor": 1.5, "chargePerSec": 0.4,  "torpedoAllowed": false, "deckGunTargetable": true,  "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
+    "Surface":   { "minM": 0,   "maxM": 3,   "noiseMod": 15,  "detectFactor": 1.5, "chargePerSec": 0.5,  "torpedoAllowed": false, "deckGunTargetable": true,  "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
     "Periscope": { "minM": 4,   "maxM": 10,  "noiseMod": 8,   "detectFactor": 1.2, "chargePerSec": 0,    "torpedoAllowed": true,  "deckGunTargetable": true,  "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
     "Shallow":   { "minM": 11,  "maxM": 30,  "noiseMod": 0,   "detectFactor": 0.9, "chargePerSec": 0,    "torpedoAllowed": true,  "deckGunTargetable": false, "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
     "Medium":    { "minM": 31,  "maxM": 70,  "noiseMod": -5,  "detectFactor": 0.65,"chargePerSec": 0,    "torpedoAllowed": true,  "deckGunTargetable": false, "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
@@ -62,15 +62,15 @@
       { "max": 100, "label": "Located" }
     ],
     "sources": {
-      "activePing": 12,
-      "torpedoFired": 20,
+      "activePing": 8,
+      "torpedoFired": 15,
       "depthChargeHit": 15,
       "depthChargeNearMiss": 10,
       "enemyPingHit": 8,
       "deckGunHit": 5
     },
     "sinks": {
-      "stoppedSilentPerSec": 2,
+      "stoppedSilentPerSec": 2.5,
       "silentSilentPerSec": 1,
       "diveSurfaceToMedium": 15,
       "hardTurnDeg30Per10s": 10,
@@ -85,7 +85,7 @@
       "rangeKm": 10,
       "cooldownSeconds": 6,
       "batteryPercent": 2,
-      "selfExposureDetection": 12,
+      "selfExposureDetection": 8,
       "escortHearPingRangeKm": 8,
       "bearingErrorDeg": 0.5,
       "rangeErrorPctStart": 0.1,
@@ -196,7 +196,7 @@
     "lifetimeSeconds": 300,
     "damageBase": 90,
     "damageSpread": 10,
-    "hitDistanceM": 40,
+    "hitDistanceM": 55,
     "nearMissDistanceM": 120,
     "selfNoiseHearRangeKm": 10,
     "salvoMax": 2,
@@ -233,8 +233,8 @@
     "Night":   { "visibilityKm": 2,   "sonarFactor": 0.8, "noiseFactor": 1.0 }
   },
   "detectionFormula": {
-    "escortBaseRate": 0.05,
-    "merchantBaseRate": 0.015,
+    "escortBaseRate": 0.035,
+    "merchantBaseRate": 0.01,
     "perSecond": "P = (noise/100) * baseRate * depthFactor * weatherFactor * distanceFactor",
     "distanceFactor": "clamp(1 - d/range, 0, 1)"
   },
@@ -268,7 +268,7 @@
     "m05EscapeBonus": 50
   },
   "escape": {
-    "detectionBelow": 20,
+    "detectionBelow": 25,
     "durationSeconds": 30,
     "minDistEscortKm": 3,
     "requiredInM05": true

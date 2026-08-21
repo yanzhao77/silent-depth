@@ -1,13 +1,13 @@
 # Playtest 08 — Generated Tanker Escort (t-014 evidence)
 
-- **Version**: 95d3462
+- **Version**: 394464f
 - **Mission**: GEN-03 — Generated Tanker Escort (seed 2003, difficulty 2/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
 - **Result**: **TIMEOUT** after 3000.1 s (60000 ticks)
 
 ## Actions
 
-- pings: 398 · fire inputs: 0 · moving ticks: 60000 · turning ticks: 1830 · fire rejections (tail): 0
+- pings: 397 · fire inputs: 0 · moving ticks: 60000 · turning ticks: 1876 · fire rejections (tail): 0
 - strategy: Silent approach (SILENT band, Medium), ping to acquire range, fire at the nearest TRACKED-or-better contact ≤ 1.5 km; evade when detection ≥ 45 or an escort escalates inside 5 km.
 
 ## Result
@@ -44,53 +44,53 @@ SINK_OBJECTIVE_NOT_MET — 1 sink(s) required; 0 sunk within the tick budget.
 
 ### Key events (tail)
 
-- 114.5s sonar.ping {"bearingDeg":272.128540920311}
+- 96.2s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 99.5s sonar.ping {"bearingDeg":272.19361843351544}
+- 99.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
+- 103.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 107.0s sonar.ping {"bearingDeg":272.12837123549934}
+- 107.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
+- 111.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 114.5s sonar.ping {"bearingDeg":271.99378684565386}
 - 114.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 120.5s sub.depthChanged {"layer":"Deep"}
-- 120.5s detection.threshold {"detection":31.12499999999957,"band":"Suspicious"}
-- 120.6s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
-- 122.0s sonar.ping {"bearingDeg":271.92205877762353}
-- 122.0s detection.threshold {"detection":42.37499999999961,"band":"Searching"}
-- 126.5s sub.depthChanged {"layer":"Shallow"}
-- 126.8s detection.threshold {"detection":39.999999999999744,"band":"Suspicious"}
-- 129.5s sonar.ping {"bearingDeg":271.92205877762353}
-- 129.5s detection.threshold {"detection":50.62499999999982,"band":"Searching"}
+- 118.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 122.0s sonar.ping {"bearingDeg":271.8851523420051}
+- 122.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
+- 126.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 129.5s sonar.ping {"bearingDeg":271.89820941003677}
 - 129.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 133.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 137.0s sonar.ping {"bearingDeg":272.06439419970786}
+- 133.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 137.0s sonar.ping {"bearingDeg":272.0581552812722}
 - 137.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 143.0s sub.depthChanged {"layer":"Deep"}
-- 143.0s detection.threshold {"detection":31.12499999999938,"band":"Suspicious"}
-- 143.1s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
-- 144.5s sonar.ping {"bearingDeg":272.40129413132536}
-- 144.5s detection.threshold {"detection":42.374999999999424,"band":"Searching"}
-- 149.0s sub.depthChanged {"layer":"Shallow"}
-- 149.3s detection.threshold {"detection":39.99999999999956,"band":"Suspicious"}
-- 152.1s sonar.ping {"bearingDeg":272.40129413132536}
-- 152.1s detection.threshold {"detection":50.62499999999964,"band":"Searching"}
+- 141.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 144.5s sonar.ping {"bearingDeg":272.29588468206407}
+- 144.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
+- 148.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 152.1s sonar.ping {"bearingDeg":272.565300668413}
 - 152.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 155.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 159.6s sonar.ping {"bearingDeg":272.75526647703396}
+- 156.4s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 159.6s sonar.ping {"bearingDeg":272.84579439372317}
 - 159.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 165.6s sub.depthChanged {"layer":"Deep"}
-- 165.6s detection.threshold {"detection":31.124999999999194,"band":"Suspicious"}
-- 165.6s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
-- 167.1s sonar.ping {"bearingDeg":273.2142619295869}
-- 167.1s detection.threshold {"detection":42.37499999999924,"band":"Searching"}
-- 171.6s sub.depthChanged {"layer":"Shallow"}
-- 171.8s detection.threshold {"detection":39.999999999999375,"band":"Suspicious"}
-- 174.6s sonar.ping {"bearingDeg":273.2142619295869}
-- 174.6s detection.threshold {"detection":50.62499999999945,"band":"Searching"}
-- 174.6s battery.low {"battery":9.35799999999753}
+- 163.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 167.1s sonar.ping {"bearingDeg":273.1284308297311}
+- 167.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
+- 171.4s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 174.6s sonar.ping {"bearingDeg":273.40929570118146}
 - 174.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 188.3s detection.threshold {"detection":39.999999999999524,"band":"Suspicious"}
-- 228.4s detection.threshold {"detection":19.975000000000662,"band":"Unaware"}
-- 258.3s escape.escaped {"missionId":"GEN-03","durationSeconds":30}
-- 265.3s sub.forcedSurface
-- 265.3s detection.threshold {"detection":99.975,"band":"Located"}
-- 277.3s sub.depthChanged {"layer":"Deep"}
-- 277.3s detection.threshold {"detection":66.97499999999931,"band":"Hunting"}
-- 281.9s detection.threshold {"detection":59.99999999999905,"band":"Searching"}
-- 297.9s sub.depthChanged {"layer":"Shallow"}
-- 301.9s detection.threshold {"detection":39.999999999998764,"band":"Suspicious"}
-- 341.9s detection.threshold {"detection":19.9999999999999,"band":"Unaware"}
+- 178.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 182.1s sonar.ping {"bearingDeg":273.6865428009402}
+- 182.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
+- 186.4s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
+- 189.6s sonar.ping {"bearingDeg":273.95906622855136}
+- 189.6s battery.low {"battery":9.246000000004244}
+- 189.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
+- 203.7s detection.threshold {"detection":39.99999999999924,"band":"Suspicious"}
+- 243.8s detection.threshold {"detection":19.975000000000378,"band":"Unaware"}
+- 278.8s sub.forcedSurface
+- 278.8s detection.threshold {"detection":99.975,"band":"Located"}
+- 290.8s sub.depthChanged {"layer":"Deep"}
+- 290.8s detection.threshold {"detection":66.97499999999931,"band":"Hunting"}
+- 295.4s detection.threshold {"detection":59.99999999999905,"band":"Searching"}
+- 311.4s sub.depthChanged {"layer":"Shallow"}
+- 315.4s detection.threshold {"detection":39.999999999998764,"band":"Suspicious"}
+- 355.4s detection.threshold {"detection":19.9999999999999,"band":"Unaware"}

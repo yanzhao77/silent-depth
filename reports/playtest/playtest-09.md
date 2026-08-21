@@ -1,18 +1,18 @@
 # Playtest 09 — Generated Convoy + Destroyer (t-014 evidence)
 
-- **Version**: 95d3462
+- **Version**: 394464f
 - **Mission**: GEN-04 — Generated Convoy + Destroyer (seed 2004, difficulty 2/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
-- **Result**: **DEFEAT** after 2735.1 s (54701 ticks)
+- **Result**: **DEFEAT** after 2704.1 s (54081 ticks)
 
 ## Actions
 
-- pings: 292 · fire inputs: 0 · moving ticks: 54701 · turning ticks: 12320 · fire rejections (tail): 0
+- pings: 287 · fire inputs: 0 · moving ticks: 54081 · turning ticks: 12364 · fire rejections (tail): 0
 - strategy: Silent approach (SILENT band, Medium), ping to acquire range, fire at the nearest TRACKED-or-better contact ≤ 1.5 km; evade when detection ≥ 45 or an escort escalates inside 5 km.
 
 ## Result
 
-- outcome: **DEFEAT** · score 143.91158138640196 (Failed) · hull 0 · battery 0.0% · detection 0.0
+- outcome: **DEFEAT** · score 144.41455706148162 (Failed) · hull 0 · battery 0.0% · detection 0.0
 - sunk: none · damage dealt: 0.0 hull points
 
 ## Failure
@@ -39,60 +39,60 @@ DESTROYED_BY_ESCORT — Player hull reached 0 (escort depth charges / deck gun o
 ## Evidence
 
 ### Score parts
-- objective 0 · damage 0 · stealth 0.03750000000001252 · torpedoEfficiency 100 · time 43.87408138640197 · survival 0 · total 143.91158138640196 · grade Failed
+- objective 0 · damage 0 · stealth 0.03750000000001252 · torpedoEfficiency 100 · time 44.377057061481615 · survival 0 · total 144.41455706148162 · grade Failed
 
 ### Stats
 - torpedoes fired 0 · hit 0 · remaining 5 · peak detection 99.975 · damage dealt 0.0
 
 ### Key events (tail)
 
-- 2701.3s sonar.passive {"source":"engine","bearingDeg":140.9693225801021}
-- 2701.3s sonar.passive {"source":"engine","bearingDeg":152.07051856163233}
-- 2702.1s sonar.passive {"source":"engine","bearingDeg":147.0128578036781}
-- 2702.6s sonar.passive {"source":"propeller","bearingDeg":95.73616257601498}
-- 2704.3s sonar.passive {"source":"engine","bearingDeg":141.56068949053332}
-- 2704.3s sonar.passive {"source":"engine","bearingDeg":151.55472026519027}
-- 2705.1s sonar.passive {"source":"engine","bearingDeg":147.795761743611}
-- 2705.6s sonar.passive {"source":"propeller","bearingDeg":107.98387647996749}
-- 2707.3s sonar.passive {"source":"engine","bearingDeg":141.0883559331285}
-- 2707.3s sonar.passive {"source":"engine","bearingDeg":151.09907133144105}
-- 2708.1s sonar.passive {"source":"engine","bearingDeg":147.05927326054626}
-- 2708.6s sonar.passive {"source":"propeller","bearingDeg":118.86401114017363}
-- 2710.3s sonar.passive {"source":"engine","bearingDeg":140.6387460855442}
-- 2710.3s sonar.passive {"source":"engine","bearingDeg":151.5300134714413}
-- 2711.1s sonar.passive {"source":"engine","bearingDeg":146.7975103044558}
-- 2711.6s sonar.passive {"source":"propeller","bearingDeg":130.6320268471658}
-- 2713.3s sonar.passive {"source":"engine","bearingDeg":140.49381010703613}
-- 2713.3s sonar.passive {"source":"engine","bearingDeg":150.95281941205317}
-- 2714.1s sonar.passive {"source":"engine","bearingDeg":146.8711008323133}
-- 2714.6s sonar.passive {"source":"propeller","bearingDeg":141.56842152725466}
-- 2716.3s sonar.passive {"source":"engine","bearingDeg":140.77496544431176}
-- 2716.3s sonar.passive {"source":"engine","bearingDeg":149.8204950488716}
-- 2717.1s sonar.passive {"source":"engine","bearingDeg":146.4414106679704}
-- 2717.6s sonar.passive {"source":"propeller","bearingDeg":152.782910886393}
-- 2719.3s sonar.passive {"source":"engine","bearingDeg":139.04884361996903}
-- 2719.3s sonar.passive {"source":"engine","bearingDeg":150.98133117812353}
-- 2720.1s sonar.passive {"source":"engine","bearingDeg":147.27639567359182}
-- 2720.6s sonar.passive {"source":"propeller","bearingDeg":162.69119703619702}
-- 2722.3s sonar.passive {"source":"engine","bearingDeg":140.64273489342992}
-- 2722.3s sonar.passive {"source":"engine","bearingDeg":149.7838743473597}
-- 2723.1s sonar.passive {"source":"engine","bearingDeg":146.74102941244482}
-- 2723.6s sonar.passive {"source":"propeller","bearingDeg":168.08117199775674}
-- 2725.3s sonar.passive {"source":"engine","bearingDeg":140.01363003782376}
-- 2725.3s sonar.passive {"source":"engine","bearingDeg":150.25090239396297}
-- 2726.1s sonar.passive {"source":"engine","bearingDeg":147.11265796650164}
-- 2726.6s sonar.passive {"source":"propeller","bearingDeg":170.48394452143165}
-- 2728.3s sonar.passive {"source":"engine","bearingDeg":140.10216359740895}
-- 2728.3s sonar.passive {"source":"engine","bearingDeg":151.22653233061465}
-- 2729.1s sonar.passive {"source":"engine","bearingDeg":145.67365794788185}
-- 2729.6s sonar.passive {"source":"propeller","bearingDeg":169.81281129278486}
-- 2730.1s sub.damaged {"source":"collision","amount":18,"hullLeft":15}
-- 2731.3s sonar.passive {"source":"engine","bearingDeg":138.5995628311441}
-- 2731.3s sonar.passive {"source":"engine","bearingDeg":149.8183640792319}
-- 2732.1s sonar.passive {"source":"engine","bearingDeg":145.7611504594632}
-- 2732.6s sonar.passive {"source":"propeller","bearingDeg":168.09484564645672}
-- 2734.3s sonar.passive {"source":"engine","bearingDeg":138.16724695400657}
-- 2734.3s sonar.passive {"source":"engine","bearingDeg":149.87623017339698}
-- 2735.1s sonar.passive {"source":"engine","bearingDeg":145.86646297091437}
-- 2735.1s sub.damaged {"source":"collision","amount":19,"hullLeft":0}
-- 2735.1s mission.defeat {"scoreParts":{"objective":0,"damage":0,"stealth":0.03750000000001252,"torpedoEfficiency":100,"time":43.8740813864019...
+- 2668.7s sonar.passive {"source":"engine","bearingDeg":151.32538309867886}
+- 2668.7s sonar.passive {"source":"propeller","bearingDeg":82.04559909792843}
+- 2669.0s sonar.passive {"source":"engine","bearingDeg":148.21429824752903}
+- 2671.2s sonar.passive {"source":"engine","bearingDeg":140.7931788223129}
+- 2671.7s sonar.passive {"source":"engine","bearingDeg":152.0163807234412}
+- 2671.7s sonar.passive {"source":"propeller","bearingDeg":94.00106305597943}
+- 2672.0s sonar.passive {"source":"engine","bearingDeg":147.49819688240865}
+- 2674.2s sonar.passive {"source":"engine","bearingDeg":140.15554126573343}
+- 2674.7s sonar.passive {"source":"engine","bearingDeg":152.74378018615081}
+- 2674.7s sonar.passive {"source":"propeller","bearingDeg":106.34503224710717}
+- 2675.0s sonar.passive {"source":"engine","bearingDeg":148.1721337498674}
+- 2677.2s sonar.passive {"source":"engine","bearingDeg":139.98432179497112}
+- 2677.7s sonar.passive {"source":"engine","bearingDeg":151.54989718329284}
+- 2677.7s sonar.passive {"source":"propeller","bearingDeg":119.33481096798906}
+- 2678.0s sonar.passive {"source":"engine","bearingDeg":148.38711713810576}
+- 2680.2s sonar.passive {"source":"engine","bearingDeg":139.72462710287303}
+- 2680.7s sonar.passive {"source":"engine","bearingDeg":151.6885633953314}
+- 2680.7s sonar.passive {"source":"propeller","bearingDeg":130.21710353397202}
+- 2681.0s sonar.passive {"source":"engine","bearingDeg":147.14575929342578}
+- 2683.2s sonar.passive {"source":"engine","bearingDeg":140.0011315924201}
+- 2683.7s sonar.passive {"source":"engine","bearingDeg":152.43749180165793}
+- 2683.7s sonar.passive {"source":"propeller","bearingDeg":142.4152682623887}
+- 2684.0s sonar.passive {"source":"engine","bearingDeg":147.06006191251777}
+- 2686.2s sonar.passive {"source":"engine","bearingDeg":139.668671541654}
+- 2686.7s sonar.passive {"source":"engine","bearingDeg":152.30265245053354}
+- 2686.7s sonar.passive {"source":"propeller","bearingDeg":151.48731336193234}
+- 2687.0s sonar.passive {"source":"engine","bearingDeg":148.2454507361823}
+- 2689.2s sonar.passive {"source":"engine","bearingDeg":140.0554143346812}
+- 2689.7s sonar.passive {"source":"engine","bearingDeg":150.4900486504836}
+- 2689.7s sonar.passive {"source":"propeller","bearingDeg":162.3025523419174}
+- 2690.0s sonar.passive {"source":"engine","bearingDeg":147.66073797361165}
+- 2692.2s sonar.passive {"source":"engine","bearingDeg":140.63770762642935}
+- 2692.7s sonar.passive {"source":"engine","bearingDeg":151.092171141566}
+- 2692.7s sonar.passive {"source":"propeller","bearingDeg":168.34068084586661}
+- 2693.0s sonar.passive {"source":"engine","bearingDeg":147.3070399090297}
+- 2695.2s sonar.passive {"source":"engine","bearingDeg":138.84618649688517}
+- 2695.7s sonar.passive {"source":"engine","bearingDeg":151.57902821126135}
+- 2695.7s sonar.passive {"source":"propeller","bearingDeg":171.4766440045944}
+- 2696.0s sonar.passive {"source":"engine","bearingDeg":146.98909687913107}
+- 2698.2s sonar.passive {"source":"engine","bearingDeg":139.175829375445}
+- 2698.7s sonar.passive {"source":"engine","bearingDeg":150.44852539660172}
+- 2698.7s sonar.passive {"source":"propeller","bearingDeg":169.3803215098049}
+- 2699.0s sonar.passive {"source":"engine","bearingDeg":147.27387089852274}
+- 2699.1s sub.damaged {"source":"collision","amount":18,"hullLeft":15}
+- 2701.2s sonar.passive {"source":"engine","bearingDeg":138.75773672320793}
+- 2701.7s sonar.passive {"source":"engine","bearingDeg":149.95703321251082}
+- 2701.7s sonar.passive {"source":"propeller","bearingDeg":169.0471766027465}
+- 2702.0s sonar.passive {"source":"engine","bearingDeg":147.60106656575581}
+- 2704.1s sub.damaged {"source":"collision","amount":19,"hullLeft":0}
+- 2704.1s mission.defeat {"scoreParts":{"objective":0,"damage":0,"stealth":0.03750000000001252,"torpedoEfficiency":100,"time":44.3770570614816...

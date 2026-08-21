@@ -1,6 +1,6 @@
 # Playtest 11 — Sonar Training (t-014 evidence)
 
-- **Version**: 95d3462
+- **Version**: 394464f
 - **Mission**: M01 — Sonar Training (seed 1001, difficulty 1/5) — determinism run A
 - **Agent**: scripted-brain-ping-until-track (Determinism double-run (M01))
 - **Result**: **VICTORY** after 120.8 s (2415 ticks)
@@ -12,7 +12,7 @@
 
 ## Result
 
-- outcome: **VICTORY** · score 864 (Excellent) · hull 100 · battery 22.7% · detection 36.0
+- outcome: **VICTORY** · score 876 (Excellent) · hull 100 · battery 22.7% · detection 24.0
 - sunk: none · damage dealt: 0.0 hull points
 
 ## Failure
@@ -34,10 +34,10 @@ none — Objective met — mission completed.
 ## Evidence
 
 ### Score parts
-- objective 400 · damage 100 · stealth 114 · torpedoEfficiency 100 · time 100 · survival 50 · total 864 · grade Excellent
+- objective 400 · damage 100 · stealth 126 · torpedoEfficiency 100 · time 100 · survival 50 · total 876 · grade Excellent
 
 ### Stats
-- torpedoes fired 0 · hit 0 · remaining 4 · peak detection 36 · damage dealt 0.0
+- torpedoes fired 0 · hit 0 · remaining 4 · peak detection 24 · damage dealt 0.0
 
 ### Key events (tail)
 
@@ -50,8 +50,8 @@ none — Objective met — mission completed.
 - 108.7s sonar.contact {"contactIds":["C-01"],"pingBearingDeg":263.1428584778349}
 - 114.7s sonar.ping {"bearingDeg":263.5683570330018}
 - 114.7s sonar.contact {"contactIds":["C-01"],"pingBearingDeg":263.5683570330018}
-- 114.7s detection.threshold {"detection":24,"band":"Suspicious"}
 - 120.8s sonar.ping {"bearingDeg":263.8402768210467}
 - 120.8s contact.classified {"contactId":"C-01","classification":"LargeSurface","confidence":75}
 - 120.8s sonar.contact {"contactIds":["C-01"],"pingBearingDeg":263.8402768210467}
-- 120.8s mission.victory {"scoreParts":{"objective":400,"damage":100,"stealth":114,"torpedoEfficiency":100,"time":100,"survival":50,"total":86...
+- 120.8s detection.threshold {"detection":24,"band":"Suspicious"}
+- 120.8s mission.victory {"scoreParts":{"objective":400,"damage":100,"stealth":126,"torpedoEfficiency":100,"time":100,"survival":50,"total":87...

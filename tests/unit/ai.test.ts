@@ -477,9 +477,9 @@ describe('ship primitives (F3, kinematics, damage)', () => {
     const d = passiveDetectionRate(destroyer, player, BALANCE, 'Clear')
     expect(m).toBeGreaterThan(0)
     expect(d).toBeGreaterThan(m)
-    // exact formula spot-check (%/s): noise 80 × escort 0.05 × Shallow 0.9 ×
-    // Clear 1.0 × distanceFactor (1 − 1/6) = 3.0 %/s
-    expect(d).toBeCloseTo(80 * 0.05 * 0.9 * 1.0 * (1 - 1 / 6), 6)
+    // exact formula spot-check (%/s): noise 80 × escort 0.035 × Shallow 0.9 ×
+    // Clear 1.0 × distanceFactor (1 − 1/6) = 2.1 %/s (t-015: baseRate 0.05 → 0.035)
+    expect(d).toBeCloseTo(80 * 0.035 * 0.9 * 1.0 * (1 - 1 / 6), 6)
   })
 
   it('applyDamage clamps hull at 0 and reports the fatal blow once', () => {
@@ -1124,8 +1124,8 @@ describe('aiSystem attacks and events', () => {
     const player = makePlayer({ position: { x: 10, y: 10 }, noise: 100, depthLayer: 'Surface', detection: 0 })
     const mission = makeMission(1001, { weather: 'Clear->Storm' as WeatherKind })
     const ctx = makeCtx({ enemies: [escort], player, mission }) // no worldState wired
-    tick(ctx) // must not throw; Clear sonarFactor 1.0 → 7.5%/s × 0.05 s
-    expect(ctx.player.detection).toBeCloseTo(100 * 0.05 * 1.5 * 1.0 * 1.0 * 0.05, 6)
+    tick(ctx) // must not throw; Clear sonarFactor 1.0 → 5.25%/s × 0.05 s (t-015: baseRate 0.05 → 0.035)
+    expect(ctx.player.detection).toBeCloseTo(100 * 0.035 * 1.5 * 1.0 * 1.0 * 0.05, 6)
   })
 
   it('F3 uses the world system active weather when wired (Storm sonarFactor 0.6)', () => {
@@ -1135,8 +1135,8 @@ describe('aiSystem attacks and events', () => {
     // The world system (t-009) publishes its active weather on ctx.worldState.
     ctx.worldState = { currentWeather: 'Storm' } as unknown as WorldState
     tick(ctx)
-    // 100 × 0.05 × 1.5 × 0.6 × 1.0 = 4.5 %/s → 0.225 per 0.05 s tick
-    expect(ctx.player.detection).toBeCloseTo(4.5 * 0.05, 6)
+    // 100 × 0.035 × 1.5 × 0.6 × 1.0 = 3.15 %/s → 0.1575 per 0.05 s tick (t-015)
+    expect(ctx.player.detection).toBeCloseTo(3.15 * 0.05, 6)
   })
 
   it('determinism: identical seed + identical ticks → identical results (no Math.random)', () => {

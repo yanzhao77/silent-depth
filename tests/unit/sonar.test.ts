@@ -305,12 +305,12 @@ describe('active ping (GAME_DESIGN §5.1)', () => {
     expect(ctx.player.battery).toBeLessThan(batteryAfterFirst)
   })
 
-  it('drains 2 % battery and adds +12 self-exposure per ping', () => {
+  it('drains 2 % battery and adds +8 self-exposure per ping (t-015: 12 → 8)', () => {
     const enemy = makeEnemy()
     const ctx = makeCtx({ enemies: [enemy] })
     doPing(ctx)
     expect(ctx.player.battery).toBe(98)
-    expect(ctx.player.detection).toBe(12)
+    expect(ctx.player.detection).toBe(8)
     expect(ctx.player.sonarState).toBe('ping')
   })
 

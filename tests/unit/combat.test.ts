@@ -308,13 +308,13 @@ describe('fire control (F6/F7)', () => {
 // ---------------------------------------------------------------------------
 
 describe('torpedo fire', () => {
-  it('fires a salvo of up to 2 tubes with ready→fired events, +20 detection', () => {
+  it('fires a salvo of up to 2 tubes with ready→fired events, +15 detection (t-015: 20 → 15)', () => {
     const ship = makeEnemy()
     const ctx = makeCtx({ enemies: [ship], contacts: [makeContact()] })
     tick(ctx, { inputs: { fireTorpedo: 'C-01' } })
 
     expect(ctx.stats.torpedoesFired).toBe(2)
-    expect(ctx.player.detection).toBe(BALANCE.detection.sources.torpedoFired) // 20
+    expect(ctx.player.detection).toBe(BALANCE.detection.sources.torpedoFired) // 15 (t-015: 20 → 15)
     expect(ctx.player.torpedoTubes.filter((t) => t.state === 'FIRED')).toHaveLength(2)
     expect(ctx.torpedoes).toHaveLength(2)
     expect(ctx.torpedoes.every((t) => t.state === 'RUNNING')).toBe(true)
@@ -619,19 +619,20 @@ describe('detection system', () => {
   it('applies the STOPPED+silent sink over time and never on the first tick', () => {
     const player = makePlayer({ speedBand: 'STOPPED', silentRunning: true, detection: 50 })
     const ctx = makeCtx({ player })
-    tickDetection(ctx, 20) // 1 s at dt 0.05 → −2
-    expect(ctx.player.detection).toBeCloseTo(48, 9)
+    tickDetection(ctx, 20) // 1 s at dt 0.05 → −2.5 (t-015: stoppedSilentPerSec 2 → 2.5)
+    expect(ctx.player.detection).toBeCloseTo(47.5, 9)
     expect(ctx.bus.getLog().filter((e) => e.type === 'detection.threshold')).toHaveLength(0) // no band crossed
   })
 
   it('emits detection.threshold when crossing a band boundary', () => {
     const player = makePlayer({ speedBand: 'STOPPED', silentRunning: true, detection: 21 })
     const ctx = makeCtx({ player })
-    tickDetection(ctx, 10) // 21 − 1 = 20 → crosses 20
-    expect(ctx.player.detection).toBeCloseTo(20, 9)
+    tickDetection(ctx, 10) // 21 − 1.25 = 19.75 final; boundary 20.0 crossed on tick 8 (t-015: sink 2 → 2.5)
+    expect(ctx.player.detection).toBeCloseTo(19.75, 9)
     const events = ctx.bus.getLog().filter((e) => e.type === 'detection.threshold')
     expect(events).toHaveLength(1)
     expect(events[0]!.payload!.band).toBe('Unaware')
+    // The event carries the detection at the crossing tick — exactly the 20.0 boundary.
     expect(events[0]!.payload!.detection as number).toBeCloseTo(20, 9)
   })
 
