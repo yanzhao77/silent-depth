@@ -1,0 +1,137 @@
+{
+  "schema": "silent-depth-missions-v1",
+  "authority": "GAME_DESIGN §9.1 (五任务表 FR-14) + §9.2 generator params",
+  "missions": [
+    {
+      "id": "M01",
+      "name": "Sonar Training",
+      "nameZh": "声呐训练",
+      "objectiveKind": "find_classify_track",
+      "objective": {
+        "kind": "find_classify_track",
+        "params": {},
+        "subgoals": [
+          { "id": "find", "weight": 100, "desc": "找到商船接触 (find a merchant contact)" },
+          { "id": "classify", "weight": 150, "desc": "分类接触 (classify the contact)" },
+          { "id": "track", "weight": 150, "desc": "跟踪接触至 TRACKED (track the contact)" }
+        ]
+      },
+      "enemies": { "Merchant": 1 },
+      "escorts": [],
+      "torpedoCount": 4,
+      "weather": "Clear",
+      "visibility": "high",
+      "difficulty": "Easy",
+      "difficultyLevel": 1,
+      "parMinutes": 15,
+      "seed": 1001,
+      "unlock": null,
+      "escapeRequired": false,
+      "escortPingIntervalSeconds": null
+    },
+    {
+      "id": "M02",
+      "name": "First Ambush",
+      "nameZh": "首次伏击",
+      "objectiveKind": "sink_transport",
+      "objective": {
+        "kind": "sink_transport",
+        "params": { "targetClass": "Tanker", "count": 1 },
+        "subgoals": [
+          { "id": "sink-1", "weight": 400, "desc": "击沉油轮 (sink the tanker)" }
+        ]
+      },
+      "enemies": { "Tanker": 1 },
+      "escorts": [],
+      "torpedoCount": 4,
+      "weather": "Clear->Cloudy",
+      "visibility": "medium-high",
+      "difficulty": "Easy-Med",
+      "difficultyLevel": 2,
+      "parMinutes": 20,
+      "seed": 1002,
+      "unlock": "M01",
+      "escapeRequired": false,
+      "escortPingIntervalSeconds": null
+    },
+    {
+      "id": "M03",
+      "name": "Convoy Attack",
+      "nameZh": "袭击护航队",
+      "objectiveKind": "sink_ge2_merchants",
+      "objective": {
+        "kind": "sink_ge2_merchants",
+        "params": { "targetClass": "Cargo", "count": 2 },
+        "subgoals": [
+          { "id": "sink-1", "weight": 200, "desc": "击沉第一艘货船 (sink the first cargo ship)" },
+          { "id": "sink-2", "weight": 200, "desc": "击沉第二艘货船 (sink a second cargo ship)" }
+        ]
+      },
+      "enemies": { "Cargo": 4 },
+      "escorts": ["Destroyer"],
+      "torpedoCount": 5,
+      "weather": "Cloudy->Storm",
+      "visibility": "medium",
+      "difficulty": "Medium",
+      "difficultyLevel": 3,
+      "parMinutes": 30,
+      "seed": 1003,
+      "unlock": "M02",
+      "escapeRequired": false,
+      "escortPingIntervalSeconds": null
+    },
+    {
+      "id": "M04",
+      "name": "Heavy Escort",
+      "nameZh": "重装护航",
+      "objectiveKind": "sink_ge2_survive",
+      "objective": {
+        "kind": "sink_ge2_survive",
+        "params": { "targetClass": "Cargo", "count": 2 },
+        "subgoals": [
+          { "id": "sink-1", "weight": 150, "desc": "击沉第一艘货船 (sink the first cargo ship)" },
+          { "id": "sink-2", "weight": 150, "desc": "击沉第二艘货船 (sink a second cargo ship)" },
+          { "id": "survive", "weight": 100, "desc": "存活至任务结束 (survive the escort attack)" }
+        ]
+      },
+      "enemies": { "Cargo": 4 },
+      "escorts": ["Destroyer", "Destroyer"],
+      "torpedoCount": 4,
+      "weather": "Storm->Fog",
+      "visibility": "low",
+      "difficulty": "Hard",
+      "difficultyLevel": 4,
+      "parMinutes": 35,
+      "seed": 1004,
+      "unlock": "M03",
+      "escapeRequired": false,
+      "escortPingIntervalSeconds": 2
+    },
+    {
+      "id": "M05",
+      "name": "Silent Hunter",
+      "nameZh": "静默猎手",
+      "objectiveKind": "sink_ge1_and_escape",
+      "objective": {
+        "kind": "sink_ge1_and_escape",
+        "params": { "count": 1 },
+        "subgoals": [
+          { "id": "sink-1", "weight": 250, "desc": "击沉至少一艘敌船 (sink at least one ship)" },
+          { "id": "escape", "weight": 150, "desc": "成功逃脱 (escape the hunters, F9)" }
+        ]
+      },
+      "enemies": { "Cargo": 4 },
+      "escorts": ["Destroyer", "Destroyer", "Frigate"],
+      "torpedoCount": 4,
+      "weather": "Night+Fog",
+      "visibility": "very-low",
+      "difficulty": "Very Hard",
+      "difficultyLevel": 5,
+      "parMinutes": 40,
+      "seed": 1005,
+      "unlock": "M04",
+      "escapeRequired": true,
+      "escortPingIntervalSeconds": null
+    }
+  ]
+}

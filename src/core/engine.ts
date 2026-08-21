@@ -182,6 +182,8 @@ export interface SystemContext {
   worldSystem?: SystemFn
   /** Per-game WorldState (t-009) — other systems read weather modifiers. */
   worldState?: WorldState
+  /** Outcome hook (t-008 objectives) — call to end the mission from a system. */
+  setOutcome?: (outcome: 'victory' | 'defeat') => void
 }
 
 export type SystemFn = (ctx: SystemContext) => void
@@ -438,6 +440,7 @@ export function step(handle: GameHandle, dtSeconds: number, inputs: PlayerInputs
     skip: false,
     worldSystem: rt.worldSystem,
     worldState: rt.worldState,
+    setOutcome: (outcome) => applyOutcome(rt, outcome),
   }
 
   // 1. state machine system — pause/briefing/end-of-mission handling
@@ -522,7 +525,11 @@ function updateStats(rt: EngineRuntime): void {
  * otherwise GameStateTransitionError is thrown (programming error).
  */
 export function endMission(handle: GameHandle, outcome: 'victory' | 'defeat'): void {
-  const rt = getRuntime(handle)
+  applyOutcome(getRuntime(handle), outcome)
+}
+
+/** Shared outcome application (used by endMission() and ctx.setOutcome). */
+function applyOutcome(rt: EngineRuntime, outcome: 'victory' | 'defeat'): void {
   const target: GameState = outcome === 'victory' ? 'VICTORY' : 'DEFEAT'
   rt.stateMachine.transition(target)
   rt.missionStatus.phase = outcome === 'victory' ? 'complete' : 'failed'
@@ -611,8 +618,7 @@ function systemWorld(ctx: SystemContext): void {
 
 /** 3. Missions (t-008): objective progress snapshot — reads global state. */
 function systemMissions(ctx: SystemContext): void {
-  // TODO(t-008 missions): update missionStatus.objectives progress.
-  void ctx
+  missionsSystem(ctx)
 }
 
 /** 4. Gameplay/submarine (t-004): movement/turn/speed band/depth/battery/noise. */
@@ -622,8 +628,7 @@ function systemSubmarine(ctx: SystemContext): void {
 
 /** 5. Sonar (t-005): passive listening then active ping; contact updates. */
 function systemSonar(ctx: SystemContext): void {
-  // TODO(t-005 sonar): passive listen; on ctx.pingEdge run active ping.
-  void ctx
+  sonarSystem(ctx)
 }
 
 /** 6. Enemy AI (t-006): perception → state machine → behavior per ship. */
@@ -633,20 +638,17 @@ function systemAI(ctx: SystemContext): void {
 
 /** 7. Combat (t-007): torpedoes, depth charges, deck gun, damage. */
 function systemCombat(ctx: SystemContext): void {
-  // TODO(t-007 combat): torpedo lifecycle; consume ctx.forks.combat.
-  void ctx
+  combatSystem(ctx)
 }
 
 /** 8. Detection (t-007): aggregate detection-meter deltas (F8) + thresholds. */
 function systemDetection(ctx: SystemContext): void {
-  // TODO(t-007 combat/detection): detection rise/fall per §8.1; band events.
-  void ctx
+  detectionSystem(ctx)
 }
 
-/** 9. Objectives (t-008): victory/defeat/escape evaluation → endMission(). */
+/** 9. Objectives (t-008): victory/defeat/escape evaluation → setOutcome(). */
 function systemObjectives(ctx: SystemContext): void {
-  // TODO(t-008 objectives): evaluate victory/defeat/escape; call endMission().
-  void ctx
+  objectivesSystem(ctx)
 }
 
 /** Pipeline order is the RNG consumption order — do not reorder. */
@@ -716,3 +718,7 @@ export { GameStateTransitionError }
 import { createWorldSystem, initWorld, type WorldState } from '../world/world'
 import { submarineSystem } from '../gameplay/submarine'
 import { aiSystem } from '../ai/ai'
+import { sonarSystem } from '../sonar/sonar'
+import { missionsSystem, objectivesSystem } from '../missions/objectives'
+import { combatSystem } from '../combat/torpedo'
+import { detectionSystem } from '../combat/detection'
