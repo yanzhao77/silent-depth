@@ -146,6 +146,8 @@ interface EngineRuntime {
   prevPause: boolean
   prevPing: boolean
   prevDecoy: boolean
+  worldSystem?: SystemFn
+  worldState?: WorldState
 }
 
 /**
@@ -176,6 +178,10 @@ export interface SystemContext {
   stats: MatchStats
   /** Set by the state-machine system to stop the rest of the pipeline. */
   skip: boolean
+  /** Bound world system (t-009) — dispatcher runs it at pipeline slot 2. */
+  worldSystem?: SystemFn
+  /** Per-game WorldState (t-009) — other systems read weather modifiers. */
+  worldState?: WorldState
 }
 
 export type SystemFn = (ctx: SystemContext) => void
@@ -251,6 +257,11 @@ export function createGame(missionDef: MissionDef, seed: number): GameHandle {
     prevPing: false,
     prevDecoy: false,
   }
+
+  // t-009 world system: one WorldState per game handle, bound into a SystemFn.
+  const worldState = initWorld(missionDef, seed, balance)
+  runtime.worldState = worldState
+  runtime.worldSystem = createWorldSystem(worldState)
 
   return { mission: missionDef, seed, __internal: runtime }
 }
@@ -425,6 +436,8 @@ export function step(handle: GameHandle, dtSeconds: number, inputs: PlayerInputs
     score: rt.score,
     stats: rt.stats,
     skip: false,
+    worldSystem: rt.worldSystem,
+    worldState: rt.worldState,
   }
 
   // 1. state machine system — pause/briefing/end-of-mission handling
@@ -591,10 +604,9 @@ function systemStateMachine(ctx: SystemContext, rt?: EngineRuntime): void {
   ctx.state = runtime.stateMachine.state
 }
 
-/** 2. World (t-009): ocean/weather state — static per mission, only timers. */
+/** 2. World (t-009): ocean/weather state — dispatcher for the bound system. */
 function systemWorld(ctx: SystemContext): void {
-  // TODO(t-009 world): maintain weather timers; expose weatherModifiers(weather).
-  void ctx
+  ctx.worldSystem?.(ctx)
 }
 
 /** 3. Missions (t-008): objective progress snapshot — reads global state. */
@@ -605,8 +617,7 @@ function systemMissions(ctx: SystemContext): void {
 
 /** 4. Gameplay/submarine (t-004): movement/turn/speed band/depth/battery/noise. */
 function systemSubmarine(ctx: SystemContext): void {
-  // TODO(t-004 submarine): apply inputs.throttle/rudder/depthLayerTarget/silentRunning.
-  void ctx
+  submarineSystem(ctx)
 }
 
 /** 5. Sonar (t-005): passive listening then active ping; contact updates. */
@@ -617,8 +628,7 @@ function systemSonar(ctx: SystemContext): void {
 
 /** 6. Enemy AI (t-006): perception → state machine → behavior per ship. */
 function systemAI(ctx: SystemContext): void {
-  // TODO(t-006 ai): consume ctx.forks.ai; update ctx.enemies.
-  void ctx
+  aiSystem(ctx)
 }
 
 /** 7. Combat (t-007): torpedoes, depth charges, deck gun, damage. */
@@ -699,3 +709,10 @@ function secondsToTicks(seconds: number): number {
 
 // Re-export for system implementers (t-004..t-009) and tests.
 export { GameStateTransitionError }
+
+// ---------------------------------------------------------------------------
+// System wiring (factory manager integration — modules export SystemFn)
+// ---------------------------------------------------------------------------
+import { createWorldSystem, initWorld, type WorldState } from '../world/world'
+import { submarineSystem } from '../gameplay/submarine'
+import { aiSystem } from '../ai/ai'
