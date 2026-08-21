@@ -47,9 +47,10 @@
  */
 
 import type { SystemContext } from '../core/engine'
-import type { Contact, EnemyShip, Torpedo } from '../core/types'
+import type { Contact, EnemyShip, Torpedo, WeatherKind } from '../core/types'
 import { KNOTS_TO_KM_PER_SEC } from '../gameplay/submarine'
 import { distKm } from '../sonar/contacts'
+import { activeWeather } from '../world/world'
 import { solveFireSolution } from './fireControl'
 import { applyTorpedoDamage, checkCollisions, drainPendingPlayerDamage } from './damage'
 
@@ -211,8 +212,11 @@ function updateTorpedoes(ctx: SystemContext): void {
       }
     }
 
-    // Range / lifetime expiry (6 km / 300 s).
-    if (torpedo.distanceKm >= balance.torpedo.rangeKm || torpedo.ageS >= balance.torpedo.lifetimeSeconds) {
+    // Range / lifetime expiry (6 km / 300 s). t-021 (replan-v2 drill): Storm
+    // weather reduces effective torpedo range ×0.85 (balance.weather.<kind>.torpedoRangeFactor).
+    const weatherKind = ctx.worldState !== undefined ? activeWeather(ctx.worldState) : ctx.mission.weather.split('->')[0] as WeatherKind
+    const rangeFactor = (balance.weather[weatherKind] as { torpedoRangeFactor?: number } | undefined)?.torpedoRangeFactor ?? 1
+    if (torpedo.distanceKm >= balance.torpedo.rangeKm * rangeFactor || torpedo.ageS >= balance.torpedo.lifetimeSeconds) {
       torpedo.state = 'EXPIRED'
       ctx.bus.emit('torpedo.expired', { torpedoId: torpedo.id, targetShipId: torpedo.targetShipId })
       ctx.torpedoes.splice(i, 1)

@@ -226,11 +226,11 @@
     "batteryCostPercent": 1
   },
   "weather": {
-    "Clear":   { "visibilityKm": 10,  "sonarFactor": 1.0, "noiseFactor": 1.0 },
-    "Cloudy":  { "visibilityKm": 7,   "sonarFactor": 0.9, "noiseFactor": 1.0 },
-    "Storm":   { "visibilityKm": 3,   "sonarFactor": 0.6, "noiseFactor": 1.15, "surfaceNoiseBonus": 10 },
-    "Fog":     { "visibilityKm": 1.5, "sonarFactor": 0.5, "noiseFactor": 1.0 },
-    "Night":   { "visibilityKm": 2,   "sonarFactor": 0.8, "noiseFactor": 1.0 }
+    "Clear":   { "visibilityKm": 10,  "sonarFactor": 1.0, "noiseFactor": 1.0,  "torpedoRangeFactor": 1.0 },
+    "Cloudy":  { "visibilityKm": 7,   "sonarFactor": 0.9, "noiseFactor": 1.0,  "torpedoRangeFactor": 1.0 },
+    "Storm":   { "visibilityKm": 3,   "sonarFactor": 0.6, "noiseFactor": 1.15, "torpedoRangeFactor": 0.85, "surfaceNoiseBonus": 10 },
+    "Fog":     { "visibilityKm": 1.5, "sonarFactor": 0.5, "noiseFactor": 1.0,  "torpedoRangeFactor": 1.0 },
+    "Night":   { "visibilityKm": 2,   "sonarFactor": 0.8, "noiseFactor": 1.0,  "torpedoRangeFactor": 1.0 }
   },
   "detectionFormula": {
     "escortBaseRate": 0.035,
