@@ -1,0 +1,239 @@
+/**
+ * SILENT DEPTH — keyboard input (src/ui/input.ts)
+ *
+ * GAME_DESIGN §11.2 keyboard mapping (FR-18):
+ *   W/S    speed up/down (target speed, ±2 kt, clamped [0, maxKt])
+ *   A/D    rudder (A = port −1, D = starboard +1, 0 when released)
+ *   Q/E    depth layer up/down (one step per keydown edge)
+ *   Space  active-sonar ping (edge)
+ *   F      fire torpedo at the selected contact (edge, one-shot)
+ *   R      silent running toggle (edge)
+ *   G      decoy launch (edge)
+ *   P      pause/resume (edge → onPause callback)
+ *   Esc    menu / abort (edge → onMenu callback)
+ *
+ * Architecture: the module maps raw key CODES to PlayerInputs; the browser
+ * binding (bind()) is a thin window-keyboard wrapper that preventDefaults
+ * handled keys and feeds handleKey(code, pressed). Pure mapping is exposed
+ * for Node unit tests via handleKey directly — no window required.
+ *
+ * DESIGN DECISIONS:
+ *  - Edge inputs (ping / decoy / fire / depth-step / pause / menu) are
+ *    latched and consumed: ping/decoy stay true until getInputs() is read,
+ *    fireRequest until consumeFireRequest() — the engine's own edge detection
+ *    (prevPing/prevDecoy) sees exactly one true tick.
+ *  - Throttle is a persistent target speed (engine integrates acceleration);
+ *    steps of ±2 kt keep the value balance-driven via maxThrottleKt
+ *    (balance.speedBands.FULL.speedMaxKt, never hardcoded).
+ *  - Repeated keydown (OS key-repeat) is ignored for edges — only the first
+ *    press latches (binding checks e.repeat).
+ *
+ * Task: t-010 ui-engineer (browser presentation layer).
+ * @pure-at-import — no window/document at module scope.
+ */
+
+import type { DepthLayer, PlayerInputs } from '../core/types'
+import { DEPTH_LAYER_ORDER } from '../world/ocean'
+
+/** Throttle step in kt per W/S press. */
+export const THROTTLE_STEP_KT = 2
+
+/** Key codes handled by the shell (for preventDefault + tests). */
+export const HANDLED_KEYS: readonly string[] = [
+  'KeyW',
+  'KeyS',
+  'KeyA',
+  'KeyD',
+  'KeyQ',
+  'KeyE',
+  'Space',
+  'KeyF',
+  'KeyR',
+  'KeyG',
+  'KeyP',
+  'Escape',
+]
+
+/** Minimal event-target surface the binding needs (window in the browser). */
+export interface KeyEventTarget {
+  addEventListener(type: string, cb: (e: unknown) => void): void
+  removeEventListener(type: string, cb: (e: unknown) => void): void
+}
+
+export interface InputOptions {
+  /** Throttle clamp (balance.speedBands.FULL.speedMaxKt). */
+  maxThrottleKt: number
+  /** Called on the P keydown edge (shell toggles its paused flag). */
+  onPause?: () => void
+  /** Called on the Esc keydown edge (shell aborts to menu). */
+  onMenu?: () => void
+}
+
+export interface InputController {
+  /** Current PlayerInputs for this frame (edge latches consumed on read). */
+  getInputs(): PlayerInputs
+  /** One-shot fire request: returns the selected contactId (or null) and
+   *  clears the latch. Call once per frame after getInputs(). */
+  consumeFireRequest(): string | null
+  /** The contact the fire control card / salvo targets. */
+  setSelectedContactId(id: string | null): void
+  /** Raw key mapping — pure and testable. `pressed` true = keydown. */
+  handleKey(code: string, pressed: boolean): void
+  /** Attach browser key listeners to a window-like target. */
+  bind(target: KeyEventTarget): () => void
+  /** Reset all held state (mission start). */
+  reset(): void
+  /** Remove listeners (target bound via bind). */
+  dispose(): void
+}
+
+export function createInput(opts: InputOptions): InputController {
+  const maxThrottleKt = opts.maxThrottleKt > 0 ? opts.maxThrottleKt : 20
+
+  // Persistent state.
+  let throttle = 0
+  let depthTargetIdx = DEPTH_LAYER_ORDER.indexOf('Shallow') // engine starts at Shallow
+  let silentRunning = false
+  const held = new Set<string>()
+  let selectedContactId: string | null = null
+
+  // Edge latches.
+  let pingLatch = false
+  let decoyLatch = false
+  let fireRequest: string | null = null
+
+  let bound: { target: KeyEventTarget; down: (e: unknown) => void; up: (e: unknown) => void } | null = null
+
+  function clamp(v: number, min: number, max: number): number {
+    return v < min ? min : v > max ? max : v
+  }
+
+  function handleKey(code: string, pressed: boolean): void {
+    if (pressed) {
+      held.add(code)
+    } else {
+      held.delete(code)
+    }
+    if (!pressed) return // edges latch on keydown only
+
+    switch (code) {
+      case 'KeyW':
+        throttle = clamp(throttle + THROTTLE_STEP_KT, 0, maxThrottleKt)
+        break
+      case 'KeyS':
+        throttle = clamp(throttle - THROTTLE_STEP_KT, 0, maxThrottleKt)
+        break
+      case 'KeyQ': {
+        const next = depthTargetIdx - 1
+        if (next >= 0) depthTargetIdx = next
+        break
+      }
+      case 'KeyE': {
+        const next = depthTargetIdx + 1
+        if (next < DEPTH_LAYER_ORDER.length) depthTargetIdx = next
+        break
+      }
+      case 'Space':
+        pingLatch = true
+        break
+      case 'KeyF':
+        fireRequest = selectedContactId
+        break
+      case 'KeyR':
+        silentRunning = !silentRunning
+        break
+      case 'KeyG':
+        decoyLatch = true
+        break
+      case 'KeyP':
+        opts.onPause?.()
+        break
+      case 'Escape':
+        opts.onMenu?.()
+        break
+    }
+  }
+
+  function getInputs(): PlayerInputs {
+    let rudder = 0
+    if (held.has('KeyA')) rudder -= 1
+    if (held.has('KeyD')) rudder += 1
+
+    const inputs: PlayerInputs = {
+      throttle,
+      rudder,
+      depthLayerTarget: DEPTH_LAYER_ORDER[depthTargetIdx] as DepthLayer,
+      silentRunning,
+      ping: pingLatch,
+      fireTorpedo: null, // one-shot via consumeFireRequest()
+      decoy: decoyLatch,
+      pause: false, // shell-owned (onPause callback flips the shell flag)
+    }
+    // Consume latches after read (engine edge detection sees one true tick).
+    pingLatch = false
+    decoyLatch = false
+    return inputs
+  }
+
+  function consumeFireRequest(): string | null {
+    const req = fireRequest
+    fireRequest = null
+    return req
+  }
+
+  function bind(target: KeyEventTarget): () => void {
+    const handled = new Set(HANDLED_KEYS)
+    const down = (e: unknown): void => {
+      const code = (e as { code?: string; repeat?: boolean }).code
+      if (typeof code !== 'string' || !handled.has(code)) return
+      if ((e as { repeat?: boolean }).repeat) return // ignore OS key-repeat
+      ;(e as { preventDefault?: () => void }).preventDefault?.()
+      handleKey(code, true)
+    }
+    const up = (e: unknown): void => {
+      const code = (e as { code?: string }).code
+      if (typeof code !== 'string' || !handled.has(code)) return
+      ;(e as { preventDefault?: () => void }).preventDefault?.()
+      handleKey(code, false)
+    }
+    target.addEventListener('keydown', down)
+    target.addEventListener('keyup', up)
+    bound = { target, down, up }
+    return () => {
+      target.removeEventListener('keydown', down)
+      target.removeEventListener('keyup', up)
+      bound = null
+    }
+  }
+
+  function reset(): void {
+    throttle = 0
+    depthTargetIdx = DEPTH_LAYER_ORDER.indexOf('Shallow')
+    silentRunning = false
+    selectedContactId = null
+    pingLatch = false
+    decoyLatch = false
+    fireRequest = null
+    held.clear()
+  }
+
+  function dispose(): void {
+    if (bound) {
+      bound.target.removeEventListener('keydown', bound.down)
+      bound.target.removeEventListener('keyup', bound.up)
+      bound = null
+    }
+  }
+
+  return {
+    getInputs,
+    consumeFireRequest,
+    setSelectedContactId: (id: string | null) => {
+      selectedContactId = id
+    },
+    handleKey,
+    bind,
+    reset,
+    dispose,
+  }
+}

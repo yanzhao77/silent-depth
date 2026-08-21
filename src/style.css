@@ -1,8 +1,767 @@
+/* ===========================================================================
+   SILENT DEPTH 《深海猎手》 — UI stylesheet (src/style.css)
+   VISUAL_STYLE.md: muted · military · cold · underwater palette, mono type,
+   uppercase labels, panel bg rgba(11,21,32,0.88), border #2a4a5e,
+   text #9fb4c7 / dim #5b7385, alert #d9534f, warning #e8a33d, neutral #5bc0de.
+   =========================================================================== */
+
 :root {
   color-scheme: dark;
-  background: #050a12;
-  color: #9fb4c7;
-  font-family: 'SF Mono', 'Cascadia Code', Consolas, monospace;
+  --bg: #050a12;
+  --panel-bg: rgba(11, 21, 32, 0.88);
+  --panel-border: #2a4a5e;
+  --text: #9fb4c7;
+  --text-dim: #5b7385;
+  --alert: #d9534f;
+  --warning: #e8a33d;
+  --neutral: #5bc0de;
+  --sonar: #7fd8d8;
+  --enemy: #c0392b;
+  --ok: #3f9d5a;
+  --font: 'SF Mono', 'Cascadia Code', Consolas, monospace;
 }
-body { margin: 0; }
-#app { width: 100vw; height: 100vh; overflow: hidden; position: relative; }
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  user-select: none;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ---------------------------------------------------------------------------
+   Canvas (L0–L5)
+   --------------------------------------------------------------------------- */
+#game-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  touch-action: none; /* pan/zoom handled by the shell */
+}
+
+/* ---------------------------------------------------------------------------
+   HUD (L6, DOM)
+   --------------------------------------------------------------------------- */
+.hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.hud-chip,
+.hud-tubes,
+.hud-contacts,
+.hud-log-wrap,
+.hud-objectives-list {
+  pointer-events: auto;
+}
+
+/* --- top bar ------------------------------------------------------------- */
+.hud-topbar {
+  display: flex;
+  align-items: stretch;
+  gap: 6px;
+  padding: 8px 10px 0;
+  flex-wrap: nowrap;
+}
+
+.hud-chip {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 4px 10px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+  min-width: 74px;
+}
+
+.hud-label {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+}
+
+.hud-value {
+  font-size: 13px;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.hud-chip.low .hud-value {
+  color: var(--warning);
+  animation: hud-blink 0.7s steps(2, start) infinite;
+}
+
+.hud-chip.danger .hud-value {
+  color: var(--alert);
+}
+
+.hud-meter-bar {
+  height: 4px;
+  background: #1c3a4d;
+  border-radius: 2px;
+  width: 100%;
+  transition: width 120ms linear;
+}
+
+.hud-timer-chip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4px 10px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+}
+
+.hud-timer {
+  font-size: 13px;
+}
+
+.hud-weather-chip {
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+}
+
+.hud-weather {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--sonar);
+}
+
+/* --- objectives (collapsible) -------------------------------------------- */
+.hud-objectives {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 220px;
+  max-width: 320px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+  padding: 4px 10px;
+}
+
+.hud-objectives-toggle {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+  padding: 2px 0;
+}
+
+.hud-objective-row {
+  display: flex;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.hud-objective-row.done {
+  color: var(--ok);
+}
+
+.hud-objective-mark {
+  width: 10px;
+  text-align: center;
+}
+
+/* --- torpedo tubes -------------------------------------------------------- */
+.hud-tubes {
+  position: absolute;
+  left: 10px;
+  top: 52px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 8px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+}
+
+.hud-tubes-title {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.hud-tubes-row {
+  display: flex;
+  gap: 4px;
+}
+
+.hud-tube {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+  background: transparent;
+}
+
+.hud-tube-id {
+  font-size: 9px;
+  color: var(--text-dim);
+}
+
+.hud-tube.loaded {
+  border-color: #9fb4c7;
+}
+
+.hud-tube.loaded .hud-tube-id {
+  color: #e8e8e8;
+}
+
+.hud-tube.ready {
+  border-color: var(--ok);
+  box-shadow: 0 0 4px rgba(63, 157, 90, 0.5);
+}
+
+.hud-tube.ready .hud-tube-id {
+  color: var(--ok);
+}
+
+.hud-tube.fired {
+  border-color: rgba(90, 115, 133, 0.35);
+  opacity: 0.35;
+}
+
+.hud-salvo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hud-salvo-btn {
+  width: 22px;
+  height: 18px;
+  border: 1px solid var(--panel-border);
+  background: transparent;
+  color: var(--text-dim);
+  font-family: var(--font);
+  font-size: 10px;
+  cursor: pointer;
+}
+
+.hud-salvo-btn.active {
+  border-color: var(--neutral);
+  color: var(--neutral);
+}
+
+/* --- contact panel + fire control card ------------------------------------ */
+.hud-contacts {
+  position: absolute;
+  right: 10px;
+  top: 52px;
+  bottom: 204px; /* clears the minimap */
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 6px 8px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.hud-panel-title {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.hud-contact-list {
+  flex: 1 1 auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-height: 40px;
+}
+
+.hud-contact-row {
+  display: grid;
+  grid-template-columns: 34px 52px 40px 46px 40px 42px 40px 40px;
+  gap: 4px;
+  background: rgba(30, 58, 77, 0.25);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 2px 4px;
+  font-family: var(--font);
+  font-size: 10px;
+  color: var(--text);
+  text-align: left;
+  cursor: pointer;
+}
+
+.hud-contact-row:hover {
+  border-color: var(--panel-border);
+}
+
+.hud-contact-row.selected {
+  border-color: var(--neutral);
+  background: rgba(91, 192, 222, 0.12);
+}
+
+.hud-contact-cell {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hud-firecard {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-top: 1px solid var(--panel-border);
+  padding-top: 6px;
+}
+
+.hud-firecard.empty .hud-fc-row .hud-fc-value {
+  color: var(--text-dim);
+}
+
+.hud-firecard-title {
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--neutral);
+}
+
+.hud-fc-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.hud-fc-label {
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.hud-fc-value {
+  font-size: 11px;
+  color: var(--text);
+}
+
+.hud-fc-hp {
+  color: var(--sonar);
+}
+
+.hud-fc-est {
+  font-size: 9px;
+  color: var(--warning);
+  letter-spacing: 1px;
+}
+
+/* --- event log ------------------------------------------------------------ */
+.hud-log-wrap {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px 8px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+}
+
+.hud-log {
+  height: 148px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.hud-log-row {
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.hud-log-time {
+  color: var(--text-dim);
+  flex: 0 0 40px;
+}
+
+.hud-log-text {
+  color: var(--text);
+}
+
+/* ---------------------------------------------------------------------------
+   Menu overlay
+   --------------------------------------------------------------------------- */
+.menu-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 10, 18, 0.82);
+  z-index: 10;
+}
+
+.menu-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  min-width: 440px;
+  max-width: 640px;
+  max-height: 86vh;
+  overflow-y: auto;
+  padding: 28px 32px;
+  background: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  animation: menu-in 120ms ease-out;
+}
+
+.menu-title {
+  margin: 0;
+  font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+}
+
+.menu-title.small {
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+.menu-title.victory,
+.menu-title.grade-perfect,
+.menu-title.grade-excellent {
+  color: var(--sonar);
+}
+
+.menu-title.defeat,
+.menu-title.grade-failed {
+  color: var(--alert);
+}
+
+.menu-title.grade-good {
+  color: var(--ok);
+}
+
+.menu-title.grade-poor {
+  color: var(--warning);
+}
+
+.menu-subtitle {
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: center;
+  color: var(--neutral);
+}
+
+.menu-spacer {
+  height: 12px;
+}
+
+.menu-meta {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text);
+  text-align: center;
+}
+
+.menu-meta.dim {
+  color: var(--text-dim);
+}
+
+.menu-button {
+  padding: 10px 14px;
+  background: transparent;
+  border: 1px solid var(--panel-border);
+  border-radius: 2px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 120ms, color 120ms, background 120ms;
+}
+
+.menu-button:hover {
+  border-color: var(--neutral);
+  color: var(--neutral);
+}
+
+.menu-button.danger:hover {
+  border-color: var(--alert);
+  color: var(--alert);
+}
+
+/* --- mission select -------------------------------------------------------- */
+.mission-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: rgba(30, 58, 77, 0.25);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 12px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.mission-row:hover {
+  border-color: var(--panel-border);
+}
+
+.mission-row[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.mission-lock {
+  width: 18px;
+  text-align: center;
+  color: var(--text-dim);
+}
+
+.mission-name {
+  min-width: 150px;
+}
+
+.mission-name-zh {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+.mission-meta {
+  margin-left: auto;
+  color: var(--text-dim);
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+/* --- briefing -------------------------------------------------------------- */
+.briefing-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 2px solid var(--panel-border);
+  padding-left: 12px;
+  margin: 4px 0;
+}
+
+.briefing-label {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--neutral);
+}
+
+.briefing-line {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.briefing-count {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: var(--warning);
+}
+
+/* --- settings -------------------------------------------------------------- */
+.settings-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.settings-label {
+  width: 160px;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.settings-value {
+  width: 46px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.settings-row input[type='range'] {
+  flex: 1;
+  accent-color: var(--neutral);
+}
+
+.settings-row input[type='checkbox'] {
+  accent-color: var(--neutral);
+}
+
+.settings-row select {
+  flex: 1;
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--panel-border);
+  font-family: var(--font);
+  font-size: 11px;
+}
+
+.settings-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.settings-actions .menu-button {
+  flex: 1;
+  font-size: 11px;
+  padding: 8px 10px;
+}
+
+/* --- credits --------------------------------------------------------------- */
+.credits-line {
+  font-size: 12px;
+  color: var(--text);
+  margin: 2px 0;
+}
+
+.credits-line.dim {
+  color: var(--text-dim);
+  font-size: 11px;
+}
+
+/* --- result ---------------------------------------------------------------- */
+.result-total {
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: var(--text);
+}
+
+.result-bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.result-bar-label {
+  width: 160px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+}
+
+.result-bar {
+  flex: 1;
+  height: 10px;
+  background: #1c3a4d;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.result-bar-fill {
+  height: 100%;
+  background: var(--neutral);
+}
+
+.result-bar-value {
+  width: 44px;
+  text-align: right;
+  font-size: 11px;
+  color: var(--text);
+}
+
+.result-stats {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.result-hint {
+  font-size: 12px;
+  color: var(--warning);
+  text-align: center;
+  border-top: 1px solid var(--panel-border);
+  padding-top: 8px;
+}
+
+/* ---------------------------------------------------------------------------
+   Animations
+   --------------------------------------------------------------------------- */
+@keyframes hud-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0.25;
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Thin scrollbars for log / contact list. */
+.hud-log::-webkit-scrollbar,
+.hud-contact-list::-webkit-scrollbar,
+.menu-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.hud-log::-webkit-scrollbar-thumb,
+.hud-contact-list::-webkit-scrollbar-thumb,
+.menu-panel::-webkit-scrollbar-thumb {
+  background: var(--panel-border);
+  border-radius: 3px;
+}

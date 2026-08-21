@@ -289,7 +289,14 @@ function refreshContactData(
     const spdErr = contact.speedErrorFrac
     contact.speedEstimateKt = ship.speedKt * (1 + ctx.forks.sonar.range(-1, 1) * spdErr)
     const hdgErr = headingErrorDeg(spdErr)
-    contact.headingEstimateDeg = normalizeDeg(ship.headingDeg + ctx.forks.sonar.range(-1, 1) * hdgErr)
+    // REMEDIATION t-020: enemy headingDeg is stored in math convention
+    // (0=east, CCW — ai/ship.ts moveShip: x+=cos, y+=sin), while contact
+    // bearings and the player/torpedo use compass (0=north, CW). Convert to
+    // compass here so fire control (F6 AOB) and HUD display are consistent:
+    // compass = normalizeDeg(90 − math). Verified analytically: F6 lead with
+    // compass heading matches the true intercept; old math-convention lead was
+    // ~24° off at 2 km (QA t-013 finding; M02/M03 accuracy).
+    contact.headingEstimateDeg = normalizeDeg(90 - ship.headingDeg + ctx.forks.sonar.range(-1, 1) * hdgErr)
   }
   // §5.3 exemption: CONFIRMED + close → treated as exact.
   if (errorsExempt(contact.state, contact.rangeKm, balance)) {
