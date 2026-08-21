@@ -1,0 +1,22 @@
+{
+  "name": "silent-depth",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SILENT DEPTH 深海猎手 — 2D tactical submarine ambush game (offline, procedural assets)",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "sim": "node --experimental-strip-types src/sim/runner.ts",
+    "playtest": "node --experimental-strip-types src/sim/playtest.ts",
+    "lint": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.4",
+    "vite": "^5.4.0",
+    "vitest": "^2.0.5"
+  }
+}

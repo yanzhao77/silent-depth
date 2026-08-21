@@ -1,0 +1,15 @@
+{
+  "audio": {
+    "masterVolume": 0.7,
+    "musicVolume": 0.5,
+    "sfxVolume": 0.8
+  },
+  "video": {
+    "showFps": false,
+    "particles": "normal",
+    "mapGrid": true
+  },
+  "input": {
+    "sensitivity": 1.0
+  }
+}
