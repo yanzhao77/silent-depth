@@ -881,8 +881,14 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     let totalWeight = 0
     for (const obj of objectives) totalWeight += obj.weight
     for (const [id, row] of objectiveRows) {
-      if (!objectives.some((o) => o.id === id)) row.remove()
-      objectiveRows.delete(id)
+      // Only drop rows whose objective no longer exists. (Bug fix t-028d:
+      // the previous delete() ran unconditionally, emptying the map every
+      // frame — every task was re-created and re-appended → the objectives
+      // panel accumulated duplicates.)
+      if (!objectives.some((o) => o.id === id)) {
+        row.remove()
+        objectiveRows.delete(id)
+      }
     }
     let activeSeen = false
     for (const obj of objectives) {
