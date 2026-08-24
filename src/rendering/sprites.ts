@@ -203,7 +203,7 @@ export interface SpriteManifestEntry {
 
 export const SPRITE_MANIFEST: readonly SpriteManifestEntry[] = [
   // ---- ship sprites (north-up, centered, transparent bg) ----
-  { id: 'sprite-submarine', kind: 'submarine', name: 'Submarine (player, white outline)', type: 'ship', format: 'canvas-2d', width: 256, height: 256, renderScalePx: 48 },
+  { id: 'sprite-submarine', kind: 'submarine', name: 'Submarine (player, white outline)', type: 'ship', format: 'canvas-2d', width: 256, height: 256, renderScalePx: 56 },
   { id: 'sprite-merchant', kind: 'merchant', name: 'Merchant — tramp steamer', type: 'ship', format: 'canvas-2d', width: 256, height: 256, renderScalePx: 46 },
   { id: 'sprite-cargo', kind: 'cargo', name: 'Cargo — container ship', type: 'ship', format: 'canvas-2d', width: 256, height: 256, renderScalePx: 48 },
   { id: 'sprite-tanker', kind: 'tanker', name: 'Tanker — long-haul tanker', type: 'ship', format: 'canvas-2d', width: 512, height: 512, renderScalePx: 64 },
@@ -465,18 +465,20 @@ export function drawSubmarine(ctx: CanvasRenderingContext2D, size: number, opts?
   ctx.save()
   ctx.clearRect(0, 0, size, size)
 
-  // dedicated submarine palette — deep, layered, desaturated
-  const cHullDeep = '#26313d'
-  const cHullMid = '#3d4b59'
-  const cHullHigh = '#57687a'
-  const cHullEdge = '#151c23'
-  const cSonarDome = '#1c2530'
-  const cSail = '#2e3946'
-  const cSailHigh = '#4e5c6c'
-  const cDeck = '#495865'
-  const cPanel = '#202a34'
-  const cProp = '#12181f'
-  const cMark = '#6b7e8f'
+  // Dedicated submarine palette — brighter than before so details read at 48–64
+  // px game size. The shared dark background + subtle glow provide the deep-sea
+  // feel; the hull itself needs enough contrast to show the sail / planes / dome.
+  const cHullDeep = '#384555'
+  const cHullMid = '#526375'
+  const cHullHigh = '#6e8298'
+  const cHullEdge = '#1c2430'
+  const cSonarDome = '#2a3745'
+  const cSail = '#445566'
+  const cSailHigh = '#6a7f92'
+  const cDeck = '#5c6f80'
+  const cPanel = '#2e3c4a'
+  const cProp = '#1e2832'
+  const cMark = '#8599aa'
 
   // ---- 1. hull body: horizontal cylinder shading + axial bow/stern darkening
   subHullPath(ctx, u)
@@ -500,15 +502,15 @@ export function drawSubmarine(ctx: CanvasRenderingContext2D, size: number, opts?
 
   // ---- 2. bow spherical sonar dome
   ctx.beginPath()
-  ctx.ellipse(cx, 14.5 * u, 5.4 * u, 6.2 * u, 0, 0, Math.PI * 2)
-  const domeGrad = ctx.createRadialGradient(cx - 1.4 * u, 12.5 * u, 0.5 * u, cx, 14.5 * u, 6.6 * u)
+  ctx.ellipse(cx, 14 * u, 6 * u, 7 * u, 0, 0, Math.PI * 2)
+  const domeGrad = ctx.createRadialGradient(cx - 1.5 * u, 12 * u, 0.5 * u, cx, 14 * u, 7.5 * u)
   domeGrad.addColorStop(0, '#33404d')
   domeGrad.addColorStop(1, cSonarDome)
   ctx.fillStyle = domeGrad
   ctx.fill()
   ctx.beginPath()
-  ctx.moveTo(cx - 6.1 * u, 20 * u)
-  ctx.quadraticCurveTo(cx, 22.8 * u, cx + 6.1 * u, 20 * u)
+  ctx.moveTo(cx - 6.6 * u, 20 * u)
+  ctx.quadraticCurveTo(cx, 23 * u, cx + 6.6 * u, 20 * u)
   ctx.strokeStyle = cHullEdge
   ctx.globalAlpha = 0.75
   ctx.lineWidth = Math.max(1, u * 0.55)
@@ -525,9 +527,9 @@ export function drawSubmarine(ctx: CanvasRenderingContext2D, size: number, opts?
   ctx.stroke()
   ctx.globalAlpha = 1
   ctx.beginPath()
-  for (const y of [56, 68]) {
-    ctx.moveTo(cx - 4.8 * u, y * u)
-    ctx.quadraticCurveTo(cx, (y + 1.4) * u, cx + 4.8 * u, y * u)
+  for (const y of [55, 67]) {
+    ctx.moveTo(cx - 5.0 * u, y * u)
+    ctx.quadraticCurveTo(cx, (y + 1.6) * u, cx + 5.0 * u, y * u)
   }
   ctx.strokeStyle = cPanel
   ctx.globalAlpha = 0.7
@@ -553,12 +555,12 @@ export function drawSubmarine(ctx: CanvasRenderingContext2D, size: number, opts?
   sailGrad.addColorStop(0.42, cSailHigh)
   sailGrad.addColorStop(1, cSail)
   ctx.beginPath()
-  ctx.moveTo(cx, 31.5 * u)
-  ctx.bezierCurveTo(cx - 3.9 * u, 33.5 * u, cx - 4.3 * u, 37 * u, cx - 4.1 * u, 40.5 * u)
-  ctx.lineTo(cx - 3.6 * u, 47.5 * u)
-  ctx.quadraticCurveTo(cx, 49.8 * u, cx + 3.6 * u, 47.5 * u)
-  ctx.lineTo(cx + 4.1 * u, 40.5 * u)
-  ctx.bezierCurveTo(cx + 4.3 * u, 37 * u, cx + 3.9 * u, 33.5 * u, cx, 31.5 * u)
+  ctx.moveTo(cx, 30 * u)
+  ctx.bezierCurveTo(cx - 4.6 * u, 32.5 * u, cx - 5.0 * u, 36 * u, cx - 4.8 * u, 40 * u)
+  ctx.lineTo(cx - 4.2 * u, 48 * u)
+  ctx.quadraticCurveTo(cx, 50.5 * u, cx + 4.2 * u, 48 * u)
+  ctx.lineTo(cx + 4.8 * u, 40 * u)
+  ctx.bezierCurveTo(cx + 5.0 * u, 36 * u, cx + 4.6 * u, 32.5 * u, cx, 30 * u)
   ctx.closePath()
   ctx.fillStyle = sailGrad
   ctx.fill()
@@ -590,17 +592,17 @@ export function drawSubmarine(ctx: CanvasRenderingContext2D, size: number, opts?
 
   // ---- 6. sail planes (fairwater planes)
   ctx.beginPath()
-  ctx.moveTo(cx - 4.0 * u, 38.5 * u)
-  ctx.lineTo(cx - 11.8 * u, 36 * u)
-  ctx.lineTo(cx - 11.0 * u, 40.5 * u)
-  ctx.lineTo(cx - 4.2 * u, 41.8 * u)
+  ctx.moveTo(cx - 4.6 * u, 37 * u)
+  ctx.lineTo(cx - 14 * u, 34.5 * u)
+  ctx.lineTo(cx - 13.2 * u, 39.5 * u)
+  ctx.lineTo(cx - 4.8 * u, 41 * u)
   ctx.closePath()
-  ctx.moveTo(cx + 4.0 * u, 38.5 * u)
-  ctx.lineTo(cx + 11.8 * u, 36 * u)
-  ctx.lineTo(cx + 11.0 * u, 40.5 * u)
-  ctx.lineTo(cx + 4.2 * u, 41.8 * u)
+  ctx.moveTo(cx + 4.6 * u, 37 * u)
+  ctx.lineTo(cx + 14 * u, 34.5 * u)
+  ctx.lineTo(cx + 13.2 * u, 39.5 * u)
+  ctx.lineTo(cx + 4.8 * u, 41 * u)
   ctx.closePath()
-  const planeGrad = ctx.createLinearGradient(0, 36 * u, 0, 42 * u)
+  const planeGrad = ctx.createLinearGradient(0, 34 * u, 0, 42 * u)
   planeGrad.addColorStop(0, cHullHigh)
   planeGrad.addColorStop(1, cHullDeep)
   ctx.fillStyle = planeGrad
@@ -611,46 +613,47 @@ export function drawSubmarine(ctx: CanvasRenderingContext2D, size: number, opts?
 
   // ---- 7. stern cruciform control surfaces + upper rudder
   ctx.beginPath()
-  ctx.moveTo(cx - 3.4 * u, 80.5 * u)
-  ctx.lineTo(cx - 12.0 * u, 85 * u)
-  ctx.lineTo(cx - 10.8 * u, 89.5 * u)
-  ctx.lineTo(cx - 2.8 * u, 86.8 * u)
+  ctx.moveTo(cx - 3.8 * u, 79 * u)
+  ctx.lineTo(cx - 13.5 * u, 83.5 * u)
+  ctx.lineTo(cx - 12.2 * u, 88.5 * u)
+  ctx.lineTo(cx - 3.2 * u, 85.5 * u)
   ctx.closePath()
-  ctx.moveTo(cx + 3.4 * u, 80.5 * u)
-  ctx.lineTo(cx + 12.0 * u, 85 * u)
-  ctx.lineTo(cx + 10.8 * u, 89.5 * u)
-  ctx.lineTo(cx + 2.8 * u, 86.8 * u)
+  ctx.moveTo(cx + 3.8 * u, 79 * u)
+  ctx.lineTo(cx + 13.5 * u, 83.5 * u)
+  ctx.lineTo(cx + 12.2 * u, 88.5 * u)
+  ctx.lineTo(cx + 3.2 * u, 85.5 * u)
   ctx.closePath()
-  const sternGrad = ctx.createLinearGradient(0, 82 * u, 0, 90 * u)
-  sternGrad.addColorStop(0, cHullMid)
+  const sternGrad = ctx.createLinearGradient(0, 80 * u, 0, 90 * u)
+  sternGrad.addColorStop(0, cHullHigh)
   sternGrad.addColorStop(1, cHullDeep)
   ctx.fillStyle = sternGrad
   ctx.fill()
   ctx.strokeStyle = cHullEdge
   ctx.lineWidth = Math.max(1, u * 0.55)
   ctx.stroke()
+  // upper rudder
   ctx.beginPath()
-  ctx.moveTo(cx, 81 * u)
-  ctx.lineTo(cx, 89.5 * u)
+  ctx.moveTo(cx, 80 * u)
+  ctx.lineTo(cx, 88 * u)
   ctx.strokeStyle = cHullEdge
   ctx.lineWidth = Math.max(1.2, u * 1.0)
   ctx.stroke()
 
   // ---- 8. pump-jet propulsor disc + blade etchings
   ctx.beginPath()
-  ctx.arc(cx, 92.2 * u, 2.8 * u, 0, Math.PI * 2)
+  ctx.arc(cx, 92 * u, 3.2 * u, 0, Math.PI * 2)
   ctx.fillStyle = cProp
   ctx.fill()
   ctx.strokeStyle = cMark
-  ctx.globalAlpha = 0.6
-  ctx.lineWidth = Math.max(1, u * 0.5)
+  ctx.globalAlpha = 0.65
+  ctx.lineWidth = Math.max(1, u * 0.55)
   ctx.stroke()
   ctx.globalAlpha = 1
   ctx.beginPath()
   for (let i = 0; i < 6; i++) {
     const a = (i / 6) * Math.PI * 2 - Math.PI / 2
-    ctx.moveTo(cx + Math.cos(a) * 0.7 * u, 92.2 * u + Math.sin(a) * 0.7 * u)
-    ctx.lineTo(cx + Math.cos(a) * 2.4 * u, 92.2 * u + Math.sin(a) * 2.4 * u)
+    ctx.moveTo(cx + Math.cos(a) * 0.8 * u, 92 * u + Math.sin(a) * 0.8 * u)
+    ctx.lineTo(cx + Math.cos(a) * 2.8 * u, 92 * u + Math.sin(a) * 2.8 * u)
   }
   ctx.strokeStyle = cMark
   ctx.globalAlpha = 0.75

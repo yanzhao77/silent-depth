@@ -578,12 +578,12 @@ function drawPlayerSubmarine(
     ctx.globalAlpha = 1
   }
 
-  // Glow effect around submarine
+  // Subtle glow — reduced from 0.15 to 0.07 so the hull sprite reads clearly.
   ctx.save()
-  const glowRadius = size * 0.8
+  const glowRadius = size * 0.65
   const gradient = ctx.createRadialGradient(s.x, s.y, size * 0.3, s.x, s.y, glowRadius)
-  gradient.addColorStop(0, 'rgba(100, 180, 255, 0.15)')
-  gradient.addColorStop(0.5, 'rgba(100, 180, 255, 0.08)')
+  gradient.addColorStop(0, 'rgba(100, 180, 255, 0.07)')
+  gradient.addColorStop(0.5, 'rgba(100, 180, 255, 0.04)')
   gradient.addColorStop(1, 'rgba(100, 180, 255, 0)')
   ctx.fillStyle = gradient
   ctx.beginPath()

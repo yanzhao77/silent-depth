@@ -1,6 +1,6 @@
 # SILENT DEPTH 《深海猎手》 — Playtest SUMMARY (t-014)
 
-**Version:** 4b3d0be
+**Version:** ea49653
 **Sessions:** 12 recorded (5 fixed + 5 generated + M01 determinism double-run)
 **Victories:** 4 (M01, M02, M01, M01)
 **Torpedoes:** 2 hits / 8 fired (25%) · **total damage dealt:** 130 hull points
