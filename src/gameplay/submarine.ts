@@ -211,7 +211,6 @@ export const submarineSystem: (ctx: SystemContext) => void = (ctx: SystemContext
 
   // --- 6. battery: band drain + silent-running extra + surface/deep charge ---
   updateBattery(ctx)
-
   // --- 7. decoy launch (edge) + decoy aging ---
   if (ctx.decoyEdge) launchDecoy(ctx)
   updateDecoys(ctx.decoys, dt, balance)
@@ -257,8 +256,24 @@ function updateDepth(ctx: SystemContext): void {
   // DESIGN DECISION: no dive lock-out after forced surface — the sub recharges
   // at Surface (DD-05) within one tick, so a "battery == 0" guard would be
   // dead code; depth control stays with the player (their input is the target).
-  const target = inputs.depthLayerTarget
+  let target = inputs.depthLayerTarget
   if (!(target in DEPTH_INDEX)) return // defensive: unknown layer ignored
+
+  // t-024: emergency dive (edge) overrides the depth target to Deep, costs
+  // battery (balance.battery.emergencyDiveCostPercent) and emits
+  // sub.emergencyDive. The UI keeps depthLayerTarget='Deep' afterwards; a
+  // single-shot edge without a persistent input re-asserts the player's
+  // selection next tick (input contract owns the depth intent).
+  if (ctx.diveEdge === true) {
+    target = 'Deep'
+    player.battery = Math.max(0, player.battery - balance.battery.emergencyDiveCostPercent)
+    bus.emit('sub.emergencyDive', {})
+  } else if (ctx.periscope?.state === 'SURFACING') {
+    // The periscope auto-rise owns the depth while surfacing: hold the
+    // required layer against the player's input (periscope.ts sets
+    // targetDepthLayer; re-asserted here because slot 4 runs before slot 6).
+    target = ctx.balance.periscope.requiredLayer
+  }
 
   if (target === player.depthLayer) {
     // Cancel any in-flight transition back to the current layer.

@@ -17,8 +17,8 @@
  * shell).
  *
  * System pipeline (fixed order = RNG consumption order, §5.2 / §7):
- *   stateMachine → world → missions → submarine → sonar → ai → combat →
- *   detection → objectives → (snapshot assembly).
+ *   stateMachine → world → missions → submarine → sonar → periscope (t-024) →
+ *   ai → combat → detection → objectives → (snapshot assembly).
  * Systems not implemented in t-003 (world/missions/submarine/sonar/ai/combat/
  * detection/objectives) are explicit no-op stubs with TODO markers pointing at
  * the owning task (t-004..t-009); the order and per-system RNG forks are
@@ -71,6 +71,7 @@ import type {
   MatchStats,
   MissionDef,
   MissionStatus,
+  PeriscopePublicState,
   PlayerInputs,
   ScoreParts,
   SubmarineState,
@@ -146,6 +147,12 @@ interface EngineRuntime {
   prevPause: boolean
   prevPing: boolean
   prevDecoy: boolean
+  /** t-024 periscope edge-trackers. */
+  prevPeriscope: boolean
+  prevLockTarget: boolean
+  prevDive: boolean
+  /** t-024 live periscope public state (mutated by periscopeSystem, slot 6). */
+  periscope: PeriscopePublicState
   worldSystem?: SystemFn
   worldState?: WorldState
 }
@@ -184,6 +191,17 @@ export interface SystemContext {
   worldState?: WorldState
   /** Outcome hook (t-008 objectives) — call to end the mission from a system. */
   setOutcome?: (outcome: 'victory' | 'defeat') => void
+  /**
+   * t-024 live periscope public state. The engine always provides it in
+   * step(); optional only so legacy hand-built test contexts compile.
+   */
+  periscope?: PeriscopePublicState
+  /** t-024 periscope raise/lower request (edge, inputs.periscope rising). */
+  periscopeEdge?: boolean
+  /** t-024 lock-target request (edge, inputs.lockTarget rising). */
+  lockEdge?: boolean
+  /** t-024 emergency dive request (edge, inputs.emergencyDive rising). */
+  diveEdge?: boolean
 }
 
 export type SystemFn = (ctx: SystemContext) => void
@@ -207,6 +225,9 @@ const DEFAULT_INPUTS: PlayerInputs = {
   fireTorpedo: null,
   decoy: false,
   pause: false,
+  periscope: false,
+  lockTarget: false,
+  emergencyDive: false,
 }
 
 // ---------------------------------------------------------------------------
@@ -258,6 +279,10 @@ export function createGame(missionDef: MissionDef, seed: number): GameHandle {
     prevPause: false,
     prevPing: false,
     prevDecoy: false,
+    prevPeriscope: false,
+    prevLockTarget: false,
+    prevDive: false,
+    periscope: createInitialPeriscopeState(),
   }
 
   // t-009 world system: one WorldState per game handle, bound into a SystemFn.
@@ -413,9 +438,16 @@ export function step(handle: GameHandle, dtSeconds: number, inputs: PlayerInputs
   const pauseEdge = inputs.pause && !rt.prevPause
   const pingEdge = inputs.ping && !rt.prevPing
   const decoyEdge = inputs.decoy && !rt.prevDecoy
+  // t-024 periscope edges (optional inputs — undefined means false).
+  const periscopeEdge = inputs.periscope === true && !rt.prevPeriscope
+  const lockEdge = inputs.lockTarget === true && !rt.prevLockTarget
+  const diveEdge = inputs.emergencyDive === true && !rt.prevDive
   rt.prevPause = inputs.pause
   rt.prevPing = inputs.ping
   rt.prevDecoy = inputs.decoy
+  rt.prevPeriscope = inputs.periscope === true
+  rt.prevLockTarget = inputs.lockTarget === true
+  rt.prevDive = inputs.emergencyDive === true
 
   const ctx: SystemContext = {
     dt,
@@ -424,6 +456,9 @@ export function step(handle: GameHandle, dtSeconds: number, inputs: PlayerInputs
     pauseEdge,
     pingEdge,
     decoyEdge,
+    periscopeEdge,
+    lockEdge,
+    diveEdge,
     inputs: DEFAULT_INPUTS,
     bus: rt.bus,
     balance: rt.balance,
@@ -437,6 +472,7 @@ export function step(handle: GameHandle, dtSeconds: number, inputs: PlayerInputs
     missionStatus: rt.missionStatus,
     score: rt.score,
     stats: rt.stats,
+    periscope: rt.periscope,
     skip: false,
     worldSystem: rt.worldSystem,
     worldState: rt.worldState,
@@ -631,22 +667,27 @@ function systemSonar(ctx: SystemContext): void {
   sonarSystem(ctx)
 }
 
-/** 6. Enemy AI (t-006): perception → state machine → behavior per ship. */
+/** 6. Periscope (t-024): optical observation — after sonar, before ai. */
+function systemPeriscope(ctx: SystemContext): void {
+  periscopeSystem(ctx)
+}
+
+/** 7. Enemy AI (t-006): perception → state machine → behavior per ship. */
 function systemAI(ctx: SystemContext): void {
   aiSystem(ctx)
 }
 
-/** 7. Combat (t-007): torpedoes, depth charges, deck gun, damage. */
+/** 8. Combat (t-007): torpedoes, depth charges, deck gun, damage. */
 function systemCombat(ctx: SystemContext): void {
   combatSystem(ctx)
 }
 
-/** 8. Detection (t-007): aggregate detection-meter deltas (F8) + thresholds. */
+/** 9. Detection (t-007): aggregate detection-meter deltas (F8) + thresholds. */
 function systemDetection(ctx: SystemContext): void {
   detectionSystem(ctx)
 }
 
-/** 9. Objectives (t-008): victory/defeat/escape evaluation → setOutcome(). */
+/** 10. Objectives (t-008): victory/defeat/escape evaluation → setOutcome(). */
 function systemObjectives(ctx: SystemContext): void {
   objectivesSystem(ctx)
 }
@@ -658,11 +699,12 @@ const PIPELINE: readonly SystemFn[] = [
   systemMissions, // 3
   systemSubmarine, // 4
   systemSonar, // 5
-  systemAI, // 6
-  systemCombat, // 7
-  systemDetection, // 8
-  systemObjectives, // 9
-  // step 10 (snapshot assembly) is buildSnapshot() in step() — GAME_ARCHITECTURE §7.
+  systemPeriscope, // 6 (t-024)
+  systemAI, // 7
+  systemCombat, // 8
+  systemDetection, // 9
+  systemObjectives, // 10
+  // step 11 (snapshot assembly) is buildSnapshot() in step() — GAME_ARCHITECTURE §7.
 ]
 
 // ---------------------------------------------------------------------------
@@ -682,6 +724,7 @@ function buildSnapshot(rt: EngineRuntime): GameSnapshot {
     score: clone(rt.score),
     eventLog: clone(rt.bus.getLog()) as EventEntry[],
     stats: clone(rt.stats),
+    periscope: clone(rt.periscope),
   }
 }
 
@@ -722,3 +765,4 @@ import { sonarSystem } from '../sonar/sonar'
 import { missionsSystem, objectivesSystem } from '../missions/objectives'
 import { combatSystem } from '../combat/torpedo'
 import { detectionSystem } from '../combat/detection'
+import { createInitialPeriscopeState, periscopeSystem } from '../periscope/periscope'

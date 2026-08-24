@@ -249,6 +249,41 @@ export interface WeatherConfig {
   sonarFactor: number
   noiseFactor: number
   surfaceNoiseBonus?: number
+  /** Effective torpedo range multiplier per weather (t-021; default 1). */
+  torpedoRangeFactor?: number
+}
+
+// ---------------------------------------------------------------------------
+// Periscope config (t-024)
+// ---------------------------------------------------------------------------
+
+export interface PeriscopeConfig {
+  raiseTimeS: number
+  lowerTimeS: number
+  /** Lower duration used when the emergency-dive edge triggers the lower. */
+  emergencyLowerTimeS: number
+  /** The depth layer the periscope can raise in ('Periscope'). */
+  requiredLayer: DepthLayer
+  /** Auto-rise to requiredLayer when the raise command comes from deeper water. */
+  autoSurface: boolean
+  /** Half-angle of the visual cone (degrees); target bearing must be within. */
+  fovDeg: number
+  /** Max optical range, capped by the active weather visibility. */
+  maxVisualRangeKm: number
+  /** Raised-duration thresholds for LOW→MEDIUM→HIGH→CRITICAL (seconds). */
+  exposureBandsS: number[]
+  /** Detection raise per second per exposure band (LOW..CRITICAL). */
+  exposureDetectPerSec: number[]
+  /** Confidence set on a visually confirmed contact. */
+  observeConfidence: number
+  /** Residual range tolerance reported by the periscope (km). */
+  observeRangeErrKm: number
+  /** Residual bearing tolerance reported by the periscope (deg). */
+  observeBearingErrDeg: number
+  /** Extra detection added when firing a torpedo while the periscope is up. */
+  torpedoFiredWhileRaisedBonus: number
+  /** Max range (km) at which a target can be locked. */
+  lockMaxRangeKm: number
 }
 
 export interface MissionConfig {
@@ -332,6 +367,7 @@ export interface BalanceConfig {
   hitProbability: HitProbabilityConfig
   weapons: WeaponsConfig
   decoy: DecoyConfig
+  periscope: PeriscopeConfig
   weather: Record<WeatherKind, WeatherConfig>
   detectionFormula: {
     escortBaseRate: number
@@ -374,6 +410,7 @@ const REQUIRED_TOP_LEVEL_KEYS = [
   'hitProbability',
   'weapons',
   'decoy',
+  'periscope',
   'weather',
   'detectionFormula',
   'missions',
@@ -408,6 +445,11 @@ const REQUIRED_DEEP_NUMBERS: string[][] = [
   ['weapons', 'deckGun', 'rangeKm'],
   ['decoy', 'perMission'],
   ['decoy', 'noiseLevel'],
+  ['periscope', 'raiseTimeS'],
+  ['periscope', 'lowerTimeS'],
+  ['periscope', 'emergencyLowerTimeS'],
+  ['periscope', 'maxVisualRangeKm'],
+  ['periscope', 'observeConfidence'],
   ['weather', 'Clear', 'visibilityKm'],
   ['weather', 'Storm', 'sonarFactor'],
   ['detectionFormula', 'escortBaseRate'],

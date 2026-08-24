@@ -225,6 +225,22 @@
     "replaceRangeKm": 5,
     "batteryCostPercent": 1
   },
+  "periscope": {
+    "raiseTimeS": 3.2,
+    "lowerTimeS": 2.0,
+    "emergencyLowerTimeS": 0.5,
+    "requiredLayer": "Periscope",
+    "autoSurface": true,
+    "fovDeg": 16,
+    "maxVisualRangeKm": 5,
+    "exposureBandsS": [3, 8, 15],
+    "exposureDetectPerSec": [0.4, 1.0, 2.0, 4.0],
+    "observeConfidence": 98,
+    "observeRangeErrKm": 0.02,
+    "observeBearingErrDeg": 0.5,
+    "torpedoFiredWhileRaisedBonus": 10,
+    "lockMaxRangeKm": 5
+  },
   "weather": {
     "Clear":   { "visibilityKm": 10,  "sonarFactor": 1.0, "noiseFactor": 1.0,  "torpedoRangeFactor": 1.0 },
     "Cloudy":  { "visibilityKm": 7,   "sonarFactor": 0.9, "noiseFactor": 1.0,  "torpedoRangeFactor": 1.0 },

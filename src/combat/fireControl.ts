@@ -56,16 +56,29 @@ export interface FireSolution {
   salvoHitProbability: number
   /** True when any essential input is missing (bearing-only / no track). */
   estimated: boolean
+  /**
+   * t-024: 'VISUAL CONFIRMED' when the periscope observed/locked the target
+   * (ground-truth data, confidence penalty removed); 'ESTIMATED' otherwise.
+   * Optional only so legacy fixtures (tests/unit/ui.test.ts) compile —
+   * solveFireSolution() always sets it; treat undefined as 'ESTIMATED'.
+   */
+  status?: 'ESTIMATED' | 'VISUAL CONFIRMED'
 }
 
 /**
  * Solve the fire solution for a contact (GAME_DESIGN §7.3). Display-only —
  * the torpedo launch uses `bearingDeg`; no lock or guidance.
+ *
+ * @param visualConfirmed t-024: pass true for a periscope-confirmed (or
+ *   locked) contact — the confidence penalty is dropped (the contact carries
+ *   ground-truth values) and the solution reports 'VISUAL CONFIRMED'.
+ *   Default false keeps all legacy behavior and tests byte-identical.
  */
 export function solveFireSolution(
   contact: Contact,
   _player: SubmarineState,
   balance: BalanceConfig,
+  visualConfirmed = false,
 ): FireSolution {
   const torpedoKt = balance.torpedo.speedKt
   const theta = contact.bearingDeg // absolute, already carries sonar error
@@ -89,13 +102,14 @@ export function solveFireSolution(
   }
   const bearingDeg = normalizeDeg(theta + leadAngleDeg)
 
-  // F7: hit probability from the balance penalty tables.
+  // F7: hit probability from the balance penalty tables. A visually confirmed
+  // target carries ground-truth data, so the confidence penalty is dropped.
   const hp = clamp(
     balance.hitProbability.base -
       rangePenalty(rangeKm, balance) -
       aobPenalty(aobDeg, balance) -
       speedPenalty(speed, balance) -
-      confidencePenalty(contact.confidence, balance) -
+      (visualConfirmed ? 0 : confidencePenalty(contact.confidence, balance)) -
       maneuverPenalty(contact.classification, balance),
     balance.hitProbability.clampMin,
     balance.hitProbability.clampMax,
@@ -111,7 +125,8 @@ export function solveFireSolution(
     aobDeg,
     hitProbability: hp,
     salvoHitProbability,
-    estimated,
+    estimated: visualConfirmed ? false : estimated,
+    status: visualConfirmed ? 'VISUAL CONFIRMED' : 'ESTIMATED',
   }
 }
 

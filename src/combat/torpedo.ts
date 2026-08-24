@@ -145,7 +145,11 @@ function handleFireInput(ctx: SystemContext, rt: CombatRuntime): void {
     return
   }
   const fireCount = Math.min(tubes.length, balance.torpedo.salvoMax)
-  const solution = solveFireSolution(contact, ctx.player, balance)
+  // t-024: a periscope-confirmed contact (visuallyConfirmed) or the locked
+  // target fires with a VISUAL CONFIRMED solution (confidence penalty off).
+  const visual =
+    contact.visuallyConfirmed === true || ctx.periscope?.lockedContactId === contactId
+  const solution = solveFireSolution(contact, ctx.player, balance, visual)
 
   for (let i = 0; i < fireCount; i++) {
     const tube = tubes[i]!
@@ -159,8 +163,14 @@ function handleFireInput(ctx: SystemContext, rt: CombatRuntime): void {
     createTorpedo(ctx, rt, ship, contact, solution.bearingDeg)
   }
 
-  // Self-exposure: +20 detection once per fire action ("出管瞬间", §8.1).
-  ctx.player.detection = clamp(ctx.player.detection + balance.detection.sources.torpedoFired, 0, 100)
+  // Self-exposure: torpedoFired once per fire action ("出管瞬间", §8.1);
+  // t-024: firing while the periscope is up adds the raised bonus (the UI
+  // warns — the engine only adds the detection).
+  let firedDetection = balance.detection.sources.torpedoFired
+  if (ctx.periscope !== undefined && (ctx.periscope.state === 'RAISED' || ctx.periscope.state === 'OBSERVING')) {
+    firedDetection += balance.periscope.torpedoFiredWhileRaisedBonus
+  }
+  ctx.player.detection = clamp(ctx.player.detection + firedDetection, 0, 100)
   ctx.stats.torpedoesFired += fireCount
 }
 

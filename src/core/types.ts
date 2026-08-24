@@ -82,6 +82,46 @@ export type WeatherKind = 'Clear' | 'Cloudy' | 'Storm' | 'Fog' | 'Night'
 export type ScoreGrade = 'Perfect' | 'Excellent' | 'Good' | 'Poor' | 'Failed'
 
 // ---------------------------------------------------------------------------
+// Periscope (t-024) — optical observation mechanic (risk-for-reward)
+// ---------------------------------------------------------------------------
+
+/**
+ * Periscope state machine (tick-driven, deterministic):
+ *   SUBMERGED → SURFACING (auto-rise to Periscope layer) → RAISING → RAISED
+ *   ⇄ OBSERVING (target in view) — LOWERING → SUBMERGED.
+ */
+export type PeriscopeState =
+  | 'SUBMERGED'
+  | 'SURFACING'
+  | 'RAISING'
+  | 'RAISED'
+  | 'OBSERVING'
+  | 'LOWERING'
+
+/** Exposure bands derived from balance.periscope.exposureBandsS thresholds. */
+export type ExposureBand = 'NONE' | 'LOW' | 'MEDIUM' | 'HIGH' | 'CRITICAL'
+
+/** Public periscope view (live in SystemContext, snapshot copy in GameSnapshot). */
+export interface PeriscopePublicState {
+  state: PeriscopeState
+  /** 0..1 — raising/lowering progress. */
+  progress: number
+  /** Seconds the periscope has been up (RAISED/OBSERVING) — drives exposure. */
+  raisedDurationS: number
+  /** 0..100 exposure accrued while raised. */
+  exposure: number
+  exposureBand: ExposureBand
+  canRaise: boolean
+  cannotRaiseReason: 'tooDeep' | 'wrongLayer' | 'alreadyActive' | 'none'
+  /** Contact id currently in the periscope view, or null. */
+  observingContactId: string | null
+  /** Locked contact id (fire solution becomes VISUAL CONFIRMED), or null. */
+  lockedContactId: string | null
+  /** Sub heading while raised — the view direction (north-up). */
+  viewBearingDeg: number
+}
+
+// ---------------------------------------------------------------------------
 // Player submarine (FR-01..03, FR-13; GAME_ARCHITECTURE §6)
 // ---------------------------------------------------------------------------
 
@@ -159,6 +199,12 @@ export interface Contact {
   observations: number
   /** Internal link to the true ship; visible in snapshot but never shown by UI. */
   trueShipId: string | null
+  /**
+   * Set when the periscope visually confirmed this target (t-024): the
+   * contact then carries ground-truth type/speed/heading/range and the fire
+   * solution is VISUAL CONFIRMED. Undefined (absent) for sonar-only contacts.
+   */
+  visuallyConfirmed?: boolean
 }
 
 // ---------------------------------------------------------------------------
@@ -338,6 +384,18 @@ export type EventType =
   | 'mission.defeat'
   | 'mission.complete'
   | 'ui.click'
+  // t-024 periscope (appended — do not reorder existing members)
+  | 'periscope.ready'
+  | 'periscope.raising'
+  | 'periscope.raised'
+  | 'periscope.visualContact'
+  | 'periscope.classified'
+  | 'periscope.locked'
+  | 'periscope.unlocked'
+  | 'periscope.lowered'
+  | 'periscope.cannotRaise'
+  | 'periscope.exposure'
+  | 'sub.emergencyDive'
 
 export interface EventEntry {
   /** Monotonic, never reused within a game session. */
@@ -369,6 +427,16 @@ export interface PlayerInputs {
   decoy: boolean
   /** Pause/resume toggle (edge). */
   pause: boolean
+  /**
+   * t-024 periscope: raise/lower request (edge). Optional so legacy test
+   * fixtures compile; the engine treats undefined as false and always
+   * normalizes it into DEFAULT_INPUTS.
+   */
+  periscope?: boolean
+  /** Lock the observed target (edge). */
+  lockTarget?: boolean
+  /** Emergency dive to Deep (edge): battery cost, instant lower (t-024). */
+  emergencyDive?: boolean
 }
 
 export interface GameSnapshot {
@@ -385,4 +453,6 @@ export interface GameSnapshot {
   /** Event log tail (ring buffer, last 50). */
   eventLog: EventEntry[]
   stats: MatchStats
+  /** Periscope public view (t-024). */
+  periscope: PeriscopePublicState
 }
