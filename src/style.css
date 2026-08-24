@@ -1810,3 +1810,84 @@ button {
   color: var(--color-primary);
   background: rgba(34, 211, 238, 0.12);
 }
+
+/* --- t-028b: real periscope sea scene ------------------------------------- */
+.periscope-view .pv-sky,
+.periscope-view .pv-sea,
+.periscope-view .pv-horizon,
+.periscope-view .pv-marks,
+.periscope-view .pv-ships,
+.periscope-view .pv-weather {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.pv-sky {
+  top: 0;
+  bottom: 46%;
+  background: linear-gradient(180deg, #2b3d4f 0%, #3d566b 55%, #59748a 100%);
+}
+.pv-sea {
+  top: 46%;
+  bottom: 0;
+  background: linear-gradient(180deg, #1b2a36 0%, #101c26 55%, #0a1319 100%);
+  animation: pv-waves 6s ease-in-out infinite;
+}
+@keyframes pv-waves {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+.pv-horizon {
+  top: 46%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+}
+/* bearing tick marks along the horizon */
+.pv-marks {
+  top: 44%;
+  height: 8px;
+  background: repeating-linear-gradient(90deg, rgba(255,255,255,.5) 0 1px, transparent 1px 4%);
+  opacity: .6;
+}
+.pv-ships {
+  top: 30%;
+  bottom: 40%;
+}
+.pv-ship {
+  position: absolute;
+  bottom: 6%;
+  height: 100%;
+  transform: translateX(-50%);
+  opacity: 0.92;
+  filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
+  transition: left 0.25s ease, width 0.25s ease;
+}
+.pv-ship svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.pv-ship svg path,
+.pv-ship svg rect {
+  fill: #0a1420;
+}
+.pv-ship.observed {
+  opacity: 1;
+}
+.pv-ship.observed svg path,
+.pv-ship.observed svg rect {
+  fill: #1c2c3c;
+  stroke: rgba(34, 211, 238, 0.65);
+  stroke-width: 1.2;
+}
+/* weather overlays on the scene */
+.pv-weather { opacity: 0; transition: opacity .4s ease; }
+.pv-w-night { background: linear-gradient(180deg, rgba(4,10,18,.72), rgba(4,10,18,.45)); opacity: 1; }
+.pv-w-fog { background: linear-gradient(180deg, rgba(180,200,215,.42), rgba(180,200,215,.22)); opacity: 1; }
+.pv-w-storm {
+  background: linear-gradient(180deg, rgba(20,30,42,.5), rgba(12,20,28,.35));
+  opacity: 1;
+}
+.pv-w-storm .pv-sea { background: repeating-linear-gradient(180deg, #1a2834 0 2px, #101c26 2px 6px); }
+.pv-w-cloudy { background: linear-gradient(180deg, rgba(90,110,130,.18), rgba(90,110,130,.08)); opacity: 1; }
+.pv-w-clear { opacity: 0; }

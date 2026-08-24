@@ -668,7 +668,22 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   const pvExposureValue = el('span', { className: 'mono' })
   const pvRaisedTime = el('span', { className: 'mono' })
 
+  // t-028b: real periscope scene — sky, sea, horizon, weather, ship silhouettes.
+  const pvSky = el('div', { className: 'pv-sky' })
+  const pvSea = el('div', { className: 'pv-sea' })
+  const pvHorizon = el('div', { className: 'pv-horizon' })
+  const pvWeather = el('div', { className: 'pv-weather' })
+  const pvMarks = el('div', { className: 'pv-marks' })
+  const pvShips = el('div', { className: 'pv-ships' })
+  const shipEls = new Map<string, HTMLElement>()
+
   const periscopeView = el('div', { className: 'periscope-view' }, [
+    pvSky,
+    pvSea,
+    pvHorizon,
+    pvMarks,
+    pvShips,
+    pvWeather,
     el('div', { className: 'pv-vignette' }),
     el('div', { className: 'pv-reticle' }, [
       el('div', { className: 'pv-ring pv-ring-outer' }),
@@ -1020,6 +1035,36 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       pvExposureFill.style.width = `${Math.min(100, pExposure)}%`
       pvExposureFill.style.background = exposureBandColor(pBand)
       setText(pvExposureValue, `${Math.round(pExposure)}%`)
+
+      // --- periscope scene (t-028b): ships on the horizon ---
+      pvWeather.className = `pv-weather pv-w-${String(extras.weather ?? 'Clear').toLowerCase().replace('->', '-').split('-')[0]!.replace('+', '-')}`
+      const viewBearing = ps.viewBearingDeg ?? sub.headingDeg
+      const seenShips = new Set<string>()
+      for (const c of snapshot.contacts) {
+        if (c.trueShipId === null || c.rangeKm === null || c.state === 'UNKNOWN') continue
+        const ship = snapshot.enemies.find((e) => e.id === c.trueShipId)
+        if (ship === undefined || ship.hull <= 0) continue
+        const placement = periscopePlacement(c.bearingDeg, viewBearing, c.rangeKm)
+        if (placement === null) continue
+        seenShips.add(c.id)
+        let shipEl = shipEls.get(c.id)
+        if (shipEl === undefined) {
+          shipEl = el('div', { className: 'pv-ship' })
+          shipEls.set(c.id, shipEl)
+          pvShips.append(shipEl)
+        }
+        shipEl.style.left = `${placement.xPct}%`
+        shipEl.style.width = `${Math.round(72 * placement.scale)}px`
+        shipEl.className = 'pv-ship' + (c.id === ps.observingContactId ? ' observed' : '')
+        shipEl.textContent = ''
+        shipEl.append(shipSilhouetteEl(ship.shipClass))
+      }
+      for (const [id, shipEl] of shipEls) {
+        if (!seenShips.has(id)) {
+          shipEl.remove()
+          shipEls.delete(id)
+        }
+      }
       const obs = ps.observingContactId === null ? undefined : snapshot.contacts.find((c) => c.id === ps.observingContactId)
       if (obs === undefined) {
         setText(pvTargetType, tt('class.Unknown'))
@@ -1151,6 +1196,93 @@ function pcStateClass(state: string): string {
     default:
       return 'pc-down'
   }
+}
+
+/** Compass wrap to [-180, 180). */
+function wrapDeg(d: number): number {
+  return ((d + 540) % 360) - 180
+}
+
+/**
+ * t-028b: periscope scene placement — where a contact appears on the horizon
+ * view given the periscope's view bearing. Pure + testable.
+ * - delta = wrapped bearing offset from the view centre; FOV ±22° (+6° edge);
+ * - xPct: screen X as a percentage (6..94), centre = view bearing;
+ * - scale: ship size multiplier from range (closer = bigger, 3 km = 1.0).
+ * Returns null when the contact is outside the view cone.
+ */
+export function periscopePlacement(
+  bearingDeg: number,
+  viewBearingDeg: number,
+  rangeKm: number,
+): { xPct: number; scale: number } | null {
+  const delta = wrapDeg(bearingDeg - viewBearingDeg)
+  const fovHalf = 22
+  if (Math.abs(delta) > fovHalf + 6) return null
+  const xPct = Math.max(6, Math.min(94, 50 + (delta / fovHalf) * 44))
+  const scale = Math.max(0.5, Math.min(2.5, 3 / Math.max(0.5, rangeKm)))
+  return { xPct, scale }
+}
+
+/** Per-class ship silhouette (side view) as SVG shapes. */
+const SHIP_SILHOUETTES: Record<string, [string, Record<string, number | string>][]> = {
+  Merchant: [
+    ['path', { d: 'M26 68 h188 v-10 q0 -8 -12 -8 h-34 l-10 -14 h-26 l-8 14 h-96 q-12 0 -12 8 z' }],
+    ['rect', { x: '72', y: '30', width: '3', height: '38' }],
+    ['rect', { x: '65', y: '25', width: '17', height: '6' }],
+    ['rect', { x: '152', y: '34', width: '3', height: '34' }],
+    ['rect', { x: '104', y: '44', width: '20', height: '12' }],
+    ['rect', { x: '124', y: '39', width: '9', height: '12' }],
+  ],
+  Cargo: [
+    ['path', { d: 'M24 68 h192 v-10 q0 -8 -12 -8 h-36 l-10 -14 h-26 l-8 14 h-98 q-12 0 -12 8 z' }],
+    ['rect', { x: '58', y: '44', width: '28', height: '14' }],
+    ['rect', { x: '90', y: '44', width: '28', height: '14' }],
+    ['rect', { x: '58', y: '33', width: '28', height: '11' }],
+    ['rect', { x: '90', y: '33', width: '28', height: '11' }],
+    ['rect', { x: '148', y: '44', width: '22', height: '12' }],
+    ['rect', { x: '168', y: '37', width: '9', height: '11' }],
+  ],
+  Tanker: [
+    ['path', { d: 'M14 68 h212 v-12 q0 -8 -12 -8 h-38 l-8 -10 h-104 q-10 0 -10 8 v-2 h-28 q-12 0 -12 8 z' }],
+    ['rect', { x: '158', y: '46', width: '24', height: '12' }],
+    ['rect', { x: '174', y: '41', width: '9', height: '8' }],
+    ['rect', { x: '96', y: '36', width: '3', height: '32' }],
+    ['rect', { x: '122', y: '36', width: '3', height: '32' }],
+  ],
+  Destroyer: [
+    ['path', { d: 'M8 68 h224 l-8 -18 q-10 -6 -22 -4 l-4 -6 h-24 l6 10 q-64 -10 -118 -6 l-46 4 q-12 2 -12 10 z' }],
+    ['rect', { x: '58', y: '40', width: '18', height: '8' }],
+    ['rect', { x: '64', y: '35', width: '5', height: '7' }],
+    ['rect', { x: '118', y: '37', width: '11', height: '17' }],
+    ['rect', { x: '178', y: '44', width: '15', height: '6' }],
+  ],
+  Frigate: [
+    ['path', { d: 'M14 68 h212 l-6 -14 q-8 -4 -18 -2 l-2 -4 h-20 l4 6 q-50 -8 -96 -6 l-60 4 q-12 2 -14 8 z' }],
+    ['rect', { x: '50', y: '44', width: '13', height: '6' }],
+    ['rect', { x: '102', y: '39', width: '10', height: '15' }],
+    ['rect', { x: '140', y: '36', width: '3', height: '30' }],
+  ],
+  Submarine: [
+    ['path', { d: 'M10 68 h220 v-10 q0 -6 -10 -6 h-200 q-10 0 -10 6 z' }],
+    ['rect', { x: '104', y: '48', width: '32', height: '14' }],
+  ],
+}
+
+/** Build a per-class silhouette as an inline SVG element (Node-safe: only
+ *  called from the DOM update path). */
+function shipSilhouetteEl(cls: string): HTMLElement {
+  const ns = 'http://www.w3.org/2000/svg'
+  const svg = document.createElementNS(ns, 'svg')
+  svg.setAttribute('viewBox', '0 0 240 80')
+  svg.setAttribute('preserveAspectRatio', 'xMidYMax meet')
+  const shapes = SHIP_SILHOUETTES[cls] ?? SHIP_SILHOUETTES['Merchant']!
+  for (const [tag, attrs] of shapes) {
+    const node = document.createElementNS(ns, tag)
+    for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, String(v))
+    svg.append(node)
+  }
+  return svg as unknown as HTMLElement
 }
 
 /**

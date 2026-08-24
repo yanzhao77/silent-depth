@@ -7,7 +7,7 @@ import { createGame, step } from '../../src/core/engine'
 import { getMissionDef } from '../../src/missions/missions'
 import { FIXED_DT } from '../../src/core/time'
 import { loadBalance } from '../../src/core/balance'
-import { pingStatus } from '../../src/ui/hud'
+import { pingStatus, periscopePlacement } from '../../src/ui/hud'
 import type { PlayerInputs } from '../../src/core/types'
 
 const IDLE: PlayerInputs = { throttle: 0, rudder: 0, depthLayerTarget: 'Medium', silentRunning: true, ping: false, fireTorpedo: null, decoy: false, pause: false }
@@ -72,5 +72,24 @@ describe('t-028 HUD ping status (pingStatus)', () => {
   it('unavailable when battery is low even with cooldown ready', () => {
     const ps = pingStatus({ pingCooldown: 0, lowBattery: true }, balance)
     expect(ps.state).toBe('unavailable')
+  })
+})
+
+describe('t-028b periscope scene placement (periscopePlacement)', () => {
+  it('centres the target at the view bearing and spreads by bearing delta', () => {
+    const centre = periscopePlacement(142, 142, 2)
+    expect(centre?.xPct).toBe(50)
+    const right = periscopePlacement(153, 142, 2) // +11° → right of centre
+    expect(right!.xPct).toBeGreaterThan(50)
+    const left = periscopePlacement(131, 142, 2) // −11° → left
+    expect(left!.xPct).toBeLessThan(50)
+  })
+  it('scales by range (closer = bigger, clamped)', () => {
+    expect(periscopePlacement(0, 0, 3)?.scale).toBeCloseTo(1, 5)
+    expect(periscopePlacement(0, 0, 1)?.scale).toBe(2.5) // clamped max
+    expect(periscopePlacement(0, 0, 6)?.scale).toBe(0.5) // clamped min
+  })
+  it('returns null outside the view cone', () => {
+    expect(periscopePlacement(90, 0, 2)).toBeNull() // +90° → out of FOV
   })
 })
