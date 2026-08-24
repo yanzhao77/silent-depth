@@ -39,6 +39,7 @@
 
 import settingsJson from '../../config/settings.json'
 import type { ScoreGrade, ShipClass } from '../core/types'
+import { isLang, type Lang } from '../ui/i18n'
 
 // ---------------------------------------------------------------------------
 // Schema types
@@ -61,6 +62,8 @@ export interface SaveSettings {
   audio: { masterVolume: number; musicVolume: number; sfxVolume: number }
   video: { showFps: boolean; particles: 'normal' | 'low' | 'off'; mapGrid: boolean }
   input: { sensitivity: number }
+  /** UI language (t-022 i18n; 'en' default). */
+  app: { language: Lang }
 }
 
 export interface SaveStatistics {
@@ -123,7 +126,9 @@ function clampSettings(raw: unknown): SaveSettings {
   const audio = (r['audio'] ?? {}) as Record<string, unknown>
   const video = (r['video'] ?? {}) as Record<string, unknown>
   const input = (r['input'] ?? {}) as Record<string, unknown>
+  const app = (r['app'] ?? {}) as Record<string, unknown>
   const particles = video['particles']
+  const lang = app['language']
   return {
     audio: {
       masterVolume: clamp(audio['masterVolume'], 0, 1, DEFAULT_SETTINGS_RAW.audio.masterVolume),
@@ -140,6 +145,10 @@ function clampSettings(raw: unknown): SaveSettings {
     },
     input: {
       sensitivity: clamp(input['sensitivity'], 0.1, 5, DEFAULT_SETTINGS_RAW.input.sensitivity),
+    },
+    app: {
+      // t-022: language whitelist — unknown values fall back to the default.
+      language: isLang(lang) ? lang : DEFAULT_SETTINGS_RAW.app.language,
     },
   }
 }

@@ -1,6 +1,6 @@
 # Playtest 11 — Sonar Training (t-014 evidence)
 
-- **Version**: 714c6ab
+- **Version**: 2cbd2c8
 - **Mission**: M01 — Sonar Training (seed 1001, difficulty 1/5) — determinism run A
 - **Agent**: scripted-brain-ping-until-track (Determinism double-run (M01))
 - **Result**: **VICTORY** after 120.8 s (2415 ticks)

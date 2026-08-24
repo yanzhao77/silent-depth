@@ -8,36 +8,46 @@
  *
  * Layout (CSS classes in src/style.css):
  *   .hud-topbar   — depth / speed / heading / battery / hull / noise /
- *                   detection (5-band) / objectives (collapsible) / timer /
- *                   weather
+ *                   detection (5-band + band label) / objectives (collapsible)
+ *                   / timer / weather
  *   .hud-tubes    — torpedo tubes (LOADED white / READY green / FIRED empty)
  *                   + salvo selector 1–2
- *   .hud-contacts — contact rows `id | type | bearing | range | speed |
- *                   heading | confidence | lastSeen`; click selects →
- *                   fire control card (TARGET / BEARING / RANGE / TARGET HDG /
- *                   SPD / RECOMMENDED FIRING BEARING / HIT PROBABILITY, §7.3)
+ *   .hud-contacts — header row (ID/TYPE/BRG/RNG/SPD/HDG/CONF/SEEN) + contact
+ *                   rows; click selects → fire control card (TARGET / BEARING /
+ *                   RANGE / TARGET HDG / SPD / REC. FIRING BRG / HIT
+ *                   PROBABILITY / SALVO, §7.3); empty-state line
  *   .hud-log      — event log, mm:ss timestamps, tail 50 (FR-18 wording)
+ *
+ * i18n (t-022): every user-visible string goes through the translator bound
+ * to the HUD's current language (getT). createHud() takes an initial lang;
+ * setLanguage(lang) re-translates the static label registry in place — the
+ * DOM (log entries, contact rows, tube state) is preserved across switches.
+ * formatEvent / formatFireSolution / formatLastSeen accept an optional lang
+ * (default 'en') — the canonical EN output is pinned by tests.
  *
  * Pure helpers (exported for Node unit tests, tests/unit/ui.test.ts):
  *   formatTime / formatEvent / formatFireSolution / formatLastSeen /
  *   detectionBandIndex / DETECTION_BAND_COLORS
  *
  * DESIGN DECISIONS:
- *  - Event log lines follow FR-18 exactly for the ten named entries
- *    (SONAR CONTACT DETECTED … MISSION COMPLETE); every other catalogue
- *    event gets a stable uppercase line. The noisy UI events
+ *  - Event log lines follow FR-18 exactly for the ten named entries; every
+ *    other catalogue event gets a stable uppercase line. The noisy UI events
  *    (sub.speedChanged / sub.depthChanged / ui.click) are suppressed — they
  *    are shell-driven and would flood the log (formatEvent returns null).
  *  - Detection meter colors: 5-band green → yellow → orange → red → deep red
  *    (GAME_DESIGN §11.2 "绿/黄/橙/红/深红"), indexed by
- *    balance.detection.bands.
- *  - Depth is displayed as the layer name + its balance min–max metres
- *    (the engine tracks layers, not exact metres).
+ *    balance.detection.bands; the band label comes from the same config and
+ *    is localized via 'hud.bands.<label>'.
+ *  - Depth is displayed as the localized layer name + balance min–max
+ *    metres (the engine tracks layers, not exact metres).
  *  - The weather chip uses short military codes (CLR/CLD/STM/FOG/NGT) —
- *    monospace-safe glyphs instead of emoji that render inconsistently
- *    across fonts.
+ *    monospace-safe glyphs, intentionally unlocalized.
+ *  - Classification / contact-state / depth-layer / speed-band names are
+ *    keyed by their engine string ('class.Tanker', 'state.TRACKED',
+ *    'hud.layer.Shallow', 'hud.band.SILENT') so the i18n keys stay stable
+ *    against the engine's enums.
  *
- * Task: t-010 ui-engineer (browser presentation layer).
+ * Task: t-010 ui-engineer (t-022 i18n wave).
  * @pure-at-import — DOM touched only inside functions; importable in Node.
  */
 
@@ -52,6 +62,7 @@ import type {
   MissionDef,
   WeatherKind,
 } from '../core/types'
+import { getT, type Lang, type Translator } from './i18n'
 import { el, setText, toggleClass, type Child } from './dom'
 
 // ---------------------------------------------------------------------------
@@ -67,47 +78,49 @@ export function formatTime(seconds: number): string {
 }
 
 /** FR-18 log wording for an event; null = suppress (noisy shell events). */
-export function formatEvent(entry: EventEntry): string | null {
-  const label = EVENT_LABELS[entry.type]
-  if (label === undefined) return null
+export function formatEvent(entry: EventEntry, lang: Lang = 'en'): string | null {
+  const key = EVENT_LOG_KEYS[entry.type]
+  if (key === undefined) return null
+  const tt = getT(lang)
+  const label = tt(key)
   const payload = entry.payload
   const contactId =
     typeof payload?.contactId === 'string' ? (payload.contactId as string) : null
   const targetId = typeof payload?.targetId === 'string' ? (payload.targetId as string) : null
   const shipId = typeof payload?.shipId === 'string' ? (payload.shipId as string) : null
   const suffix = contactId ?? targetId ?? shipId
-  return suffix !== null && suffix.length > 0 ? `${label} — ${suffix}` : label
+  return suffix !== null && suffix.length > 0 ? tt('log.entry', { text: label, id: suffix }) : label
 }
 
-/** EventType → FR-18 log text (all catalogue members; null = suppressed). */
-const EVENT_LABELS: Partial<Record<EventType, string>> = {
-  'sonar.ping': 'ACTIVE PING',
-  'sonar.contact': 'SONAR RETURN',
-  'sonar.passive': 'PASSIVE CONTACT',
-  'contact.detected': 'SONAR CONTACT DETECTED',
-  'contact.classified': 'CONTACT CLASSIFIED',
-  'contact.degraded': 'CONTACT DEGRADED',
-  'contact.lost': 'CONTACT LOST',
-  'torpedo.ready': 'TORPEDO READY',
-  'torpedo.fired': 'TORPEDO FIRED',
-  'torpedo.hit': 'TARGET HIT',
-  'torpedo.missed': 'TORPEDO MISSED',
-  'torpedo.expired': 'TORPEDO EXPIRED',
-  'torpedo.fireRejected': 'FIRE REJECTED',
-  'ship.sunk': 'SHIP SUNK',
-  'depthCharge.dropped': 'DEPTH CHARGES DROPPED',
-  'depthCharge.detonated': 'DEPTH CHARGE DETONATED',
-  'deckGun.fired': 'DECK GUN FIRED',
-  'sub.damaged': 'HULL DAMAGED',
-  'sub.forcedSurface': 'FORCED TO SURFACE',
-  'battery.low': 'LOW BATTERY',
-  'detection.threshold': 'DETECTION WARNING',
-  'player.located': 'PLAYER LOCATED',
-  'decoy.launched': 'DECOY LAUNCHED',
-  'escape.escaped': 'ESCAPED',
-  'mission.victory': 'MISSION ACCOMPLISHED',
-  'mission.defeat': 'MISSION FAILED',
-  'mission.complete': 'MISSION COMPLETE',
+/** EventType → i18n log key (all catalogue members; null = suppressed). */
+const EVENT_LOG_KEYS: Partial<Record<EventType, string>> = {
+  'sonar.ping': 'log.sonar.ping',
+  'sonar.contact': 'log.sonar.contact',
+  'sonar.passive': 'log.sonar.passive',
+  'contact.detected': 'log.contact.detected',
+  'contact.classified': 'log.contact.classified',
+  'contact.degraded': 'log.contact.degraded',
+  'contact.lost': 'log.contact.lost',
+  'torpedo.ready': 'log.torpedo.ready',
+  'torpedo.fired': 'log.torpedo.fired',
+  'torpedo.hit': 'log.torpedo.hit',
+  'torpedo.missed': 'log.torpedo.missed',
+  'torpedo.expired': 'log.torpedo.expired',
+  'torpedo.fireRejected': 'log.torpedo.fireRejected',
+  'ship.sunk': 'log.ship.sunk',
+  'depthCharge.dropped': 'log.depthCharge.dropped',
+  'depthCharge.detonated': 'log.depthCharge.detonated',
+  'deckGun.fired': 'log.deckGun.fired',
+  'sub.damaged': 'log.sub.damaged',
+  'sub.forcedSurface': 'log.sub.forcedSurface',
+  'battery.low': 'log.battery.low',
+  'detection.threshold': 'log.detection.threshold',
+  'player.located': 'log.player.located',
+  'decoy.launched': 'log.decoy.launched',
+  'escape.escaped': 'log.escape.escaped',
+  'mission.victory': 'log.mission.victory',
+  'mission.defeat': 'log.mission.defeat',
+  'mission.complete': 'log.mission.complete',
   // Suppressed (shell-driven noise): sub.speedChanged, sub.depthChanged,
   // ui.click — deliberately absent from the map (formatEvent → null).
 }
@@ -126,13 +139,14 @@ export interface FireControlParts {
 }
 
 /** Format a FireSolution into card strings ("--" for unknown inputs). */
-export function formatFireSolution(solution: FireSolution, contact: Contact): FireControlParts {
+export function formatFireSolution(solution: FireSolution, contact: Contact, lang: Lang = 'en'): FireControlParts {
+  const tt = getT(lang)
   const three = (v: number | null): string => (v === null ? '--' : String(Math.round(v)).padStart(3, '0') + '°')
   const rangeStr = (km: number | null): string =>
     km === null ? '--' : km >= 10 ? `${Math.round(km)}KM` : `${km.toFixed(1)}KM`
   const speedStr = (kt: number | null): string => (kt === null ? '--' : `${Math.round(kt)}KT`)
   return {
-    target: `${contact.id} ${contact.classification}`,
+    target: `${contact.id} ${tt(`class.${contact.classification}`)}`,
     bearing: three(contact.bearingDeg),
     range: rangeStr(contact.rangeKm),
     targetHeading: three(contact.headingEstimateDeg),
@@ -145,10 +159,11 @@ export function formatFireSolution(solution: FireSolution, contact: Contact): Fi
 }
 
 /** "NOW" / "12S" / "1:05" — seconds since last detection. */
-export function formatLastSeen(lastDetectedAt: number, now: number): string {
+export function formatLastSeen(lastDetectedAt: number, now: number, lang: Lang = 'en'): string {
+  const tt = getT(lang)
   const dt = Math.max(0, Math.round(now - lastDetectedAt))
-  if (dt < 1) return 'NOW'
-  if (dt < 60) return `${dt}S`
+  if (dt < 1) return tt('hud.lastSeen.now')
+  if (dt < 60) return tt('hud.lastSeen.seconds', { s: dt })
   return formatTime(dt)
 }
 
@@ -164,7 +179,7 @@ export function detectionBandIndex(detection: number, bands: readonly { max: num
 /** 5-band meter colors (GAME_DESIGN §11.2: 绿/黄/橙/红/深红). */
 export const DETECTION_BAND_COLORS = ['#3f9d5a', '#e8a33d', '#e07b39', '#d9534f', '#a8322e'] as const
 
-/** Weather chip codes (monospace-safe). */
+/** Weather chip codes (monospace-safe, intentionally unlocalized). */
 export const WEATHER_CODES: Record<WeatherKind, string> = {
   Clear: 'CLR',
   Cloudy: 'CLD',
@@ -193,6 +208,8 @@ export interface HudOptions {
   onSalvoChange: (salvo: 1 | 2) => void
   /** Mission objectives panel collapsed/expanded. */
   onToggleObjectives?: (collapsed: boolean) => void
+  /** Initial UI language (t-022; default 'en'). */
+  lang?: Lang
 }
 
 export interface Hud {
@@ -202,6 +219,8 @@ export interface Hud {
   appendLog(entry: EventEntry): void
   /** Reset per-mission state (tubes, log, selection). */
   reset(): void
+  /** Switch UI language: re-translates the static labels in place. */
+  setLanguage(lang: Lang): void
   /** The HUD root element (CSS class 'hud'). */
   root: HTMLElement
 }
@@ -216,6 +235,18 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   root.className = 'hud'
   root.style.display = 'none'
 
+  let lang: Lang = opts.lang ?? 'en'
+  let tt: Translator = getT(lang)
+
+  /** Label registry — re-translated by setLanguage() without rebuilding. */
+  const labelRegistry: [HTMLElement, string][] = []
+  function label(key: string, className: string): HTMLElement {
+    const node = el('span', { className })
+    labelRegistry.push([node, key])
+    setText(node, tt(key))
+    return node
+  }
+
   // --- top bar ------------------------------------------------------------
   const depthValue = el('span', { className: 'hud-value' })
   const speedValue = el('span', { className: 'hud-value' })
@@ -229,34 +260,36 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   const timerValue = el('span', { className: 'hud-value hud-timer' })
   const weatherValue = el('span', { className: 'hud-weather' })
 
-  const batteryChip = chip('BATTERY', batteryValue, 'hud-chip-battery')
-  const hullChip = chip('HULL', hullValue, 'hud-chip-hull')
-  const detectionChip = chip('DETECTION', [detectionValue, detectionBar], 'hud-chip-detection')
+  const batteryChip = chip(tt, 'hud.battery', batteryValue, 'hud-chip-battery')
+  const hullChip = chip(tt, 'hud.hull', hullValue, 'hud-chip-hull')
+  const detectionChip = chip(tt, 'hud.detection', [detectionValue, detectionBar], 'hud-chip-detection')
 
-  const objectivesHeader = el(
-    'button',
-    {
-      className: 'hud-objectives-toggle',
-      text: 'OBJECTIVES ▾',
-      onclick: () => {
-        const collapsed = objectivesList.style.display === 'none'
-        objectivesList.style.display = collapsed ? '' : 'none'
-        objectivesHeader.textContent = collapsed ? 'OBJECTIVES ▾' : 'OBJECTIVES ▸'
-        opts.onToggleObjectives?.(!collapsed)
-      },
+  let objectivesCollapsed = false
+  function renderObjectivesToggle(): void {
+    objectivesHeader.textContent = tt('hud.objectives') + (objectivesCollapsed ? ' ▸' : ' ▾')
+  }
+  const objectivesHeader = el('button', {
+    className: 'hud-objectives-toggle',
+    onclick: () => {
+      objectivesCollapsed = objectivesList.style.display === 'none'
+      objectivesList.style.display = objectivesCollapsed ? '' : 'none'
+      objectivesCollapsed = !objectivesCollapsed
+      renderObjectivesToggle()
+      opts.onToggleObjectives?.(objectivesCollapsed)
     },
-  )
+  })
+  renderObjectivesToggle()
 
   const topbar = el('div', { className: 'hud-topbar' }, [
-    chip('DEPTH', depthValue),
-    chip('SPEED', speedValue),
-    chip('HEADING', headingValue),
+    chip(tt, 'hud.depth', depthValue),
+    chip(tt, 'hud.speed', speedValue),
+    chip(tt, 'hud.heading', headingValue),
     batteryChip,
     hullChip,
-    chip('NOISE', noiseValue),
+    chip(tt, 'hud.noise', noiseValue),
     detectionChip,
     el('div', { className: 'hud-objectives' }, [objectivesHeader, objectivesList]),
-    el('div', { className: 'hud-timer-chip' }, [el('span', { className: 'hud-label', text: 'TIME' }), timerValue]),
+    el('div', { className: 'hud-timer-chip' }, [label('hud.time', 'hud-label'), timerValue]),
     el('div', { className: 'hud-weather-chip' }, [weatherValue]),
   ])
 
@@ -264,11 +297,14 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   const tubesRow = el('div', { className: 'hud-tubes-row' })
   const salvo1 = salvoButton('1', true)
   const salvo2 = salvoButton('2', false)
+  const tubesTitle = el('div', { className: 'hud-tubes-title' })
+  labelRegistry.push([tubesTitle, 'hud.torpedoes'])
+  setText(tubesTitle, tt('hud.torpedoes'))
   const tubes = el('div', { className: 'hud-tubes' }, [
-    el('div', { className: 'hud-tubes-title' }, ['TORPEDOES']),
+    tubesTitle,
     tubesRow,
     el('div', { className: 'hud-salvo' }, [
-      el('span', { className: 'hud-label', text: 'SALVO' }),
+      label('hud.salvo', 'hud-label'),
       salvo1,
       salvo2,
     ]),
@@ -276,6 +312,31 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
 
   // --- contact panel + fire control card -----------------------------------
   const contactList = el('div', { className: 'hud-contact-list' })
+  // Empty-state hint — reuses the panel-title dim styling (style.css is out
+  // of scope for t-022; t-023 redesigns visuals).
+  const contactEmpty = el('div', { className: 'hud-panel-title' })
+  labelRegistry.push([contactEmpty, 'hud.contacts.empty'])
+  setText(contactEmpty, tt('hud.contacts.empty'))
+  contactEmpty.style.display = 'none'
+
+  // Header row — reuses the row grid (same 8-column template).
+  const headerCells = [
+    'hud.contact.id',
+    'hud.contact.type',
+    'hud.contact.bearing',
+    'hud.contact.range',
+    'hud.contact.speed',
+    'hud.contact.heading',
+    'hud.contact.confidence',
+    'hud.contact.lastSeen',
+  ].map((key) => {
+    const cell = el('span', { className: 'hud-contact-cell' })
+    labelRegistry.push([cell, key])
+    setText(cell, tt(key))
+    return cell
+  })
+  const contactHead = el('div', { className: 'hud-contact-row hud-contact-head' }, headerCells)
+
   const fcTarget = el('span', { className: 'hud-fc-value' })
   const fcBearing = el('span', { className: 'hud-fc-value' })
   const fcRange = el('span', { className: 'hud-fc-value' })
@@ -284,32 +345,42 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   const fcFiring = el('span', { className: 'hud-fc-value' })
   const fcHp = el('span', { className: 'hud-fc-value hud-fc-hp' })
   const fcSalvo = el('span', { className: 'hud-fc-value' })
-  const fcEstimated = el('div', { className: 'hud-fc-est', text: 'ESTIMATED SOLUTION' })
+  const fcEstimated = el('div', { className: 'hud-fc-est' })
+  labelRegistry.push([fcEstimated, 'hud.fc.estimated'])
+  setText(fcEstimated, tt('hud.fc.estimated'))
 
+  const fireCardTitle = el('div', { className: 'hud-firecard-title' })
+  labelRegistry.push([fireCardTitle, 'hud.fireControl'])
+  setText(fireCardTitle, tt('hud.fireControl'))
   const fireCard = el('div', { className: 'hud-firecard' }, [
-    el('div', { className: 'hud-firecard-title', text: 'FIRE CONTROL' }),
-    fcRow('TARGET', fcTarget),
-    fcRow('BEARING', fcBearing),
-    fcRow('RANGE', fcRange),
-    fcRow('TARGET HDG', fcHdg),
-    fcRow('TARGET SPD', fcSpd),
-    fcRow('REC. FIRING BRG', fcFiring),
-    fcRow('HIT PROBABILITY', fcHp),
-    fcRow('SALVO (2)', fcSalvo),
+    fireCardTitle,
+    fcRow(tt, 'hud.fc.target', fcTarget),
+    fcRow(tt, 'hud.fc.bearing', fcBearing),
+    fcRow(tt, 'hud.fc.range', fcRange),
+    fcRow(tt, 'hud.fc.targetHdg', fcHdg),
+    fcRow(tt, 'hud.fc.targetSpd', fcSpd),
+    fcRow(tt, 'hud.fc.firingBearing', fcFiring),
+    fcRow(tt, 'hud.fc.hitProbability', fcHp),
+    fcRow(tt, 'hud.fc.salvo', fcSalvo),
     fcEstimated,
   ])
+  const contactsTitle = el('div', { className: 'hud-panel-title' })
+  labelRegistry.push([contactsTitle, 'hud.contacts'])
+  setText(contactsTitle, tt('hud.contacts'))
   const contactsPanel = el('div', { className: 'hud-contacts' }, [
-    el('div', { className: 'hud-panel-title', text: 'CONTACTS' }),
+    contactsTitle,
+    contactHead,
     contactList,
+    contactEmpty,
     fireCard,
   ])
 
   // --- event log ------------------------------------------------------------
   const logBody = el('div', { className: 'hud-log' })
-  const logPanel = el('div', { className: 'hud-log-wrap' }, [
-    el('div', { className: 'hud-panel-title', text: 'EVENT LOG' }),
-    logBody,
-  ])
+  const logTitle = el('div', { className: 'hud-panel-title' })
+  labelRegistry.push([logTitle, 'hud.log'])
+  setText(logTitle, tt('hud.log'))
+  const logPanel = el('div', { className: 'hud-log-wrap' }, [logTitle, logBody])
 
   root.append(topbar, tubes, contactsPanel, logPanel)
 
@@ -345,18 +416,25 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     const bal = extras.balance
     const now = snapshot.simTime
 
-    // Depth (layer name + balance min–max metres).
+    // Depth (localized layer name + balance min–max metres).
     const layerCfg = bal.depthLayers[sub.depthLayer]
-    setText(depthValue, `${sub.depthLayer.toUpperCase()} ${Math.round(layerCfg.minM)}–${Math.round(layerCfg.maxM)}M`)
+    setText(
+      depthValue,
+      tt('hud.depthValue', {
+        layer: tt(`hud.layer.${sub.depthLayer}`),
+        min: Math.round(layerCfg.minM),
+        max: Math.round(layerCfg.maxM),
+      }),
+    )
 
-    // Speed (kt + band).
-    setText(speedValue, `${sub.speedKt.toFixed(1).replace(/\.0$/, '')} KT ${sub.speedBand}`)
+    // Speed (kt + localized band).
+    setText(speedValue, tt('hud.speedValue', { v: sub.speedKt.toFixed(1).replace(/\.0$/, ''), band: tt(`hud.band.${sub.speedBand}`) }))
 
     // Heading.
     setText(headingValue, `${String(Math.round(sub.headingDeg) % 360).padStart(3, '0')}°`)
 
     // Battery (LOW BATTERY <10 blinks via CSS class).
-    setText(batteryValue, `${Math.round(sub.battery)}%${sub.lowBattery ? ' LOW BATTERY' : ''}`)
+    setText(batteryValue, `${Math.round(sub.battery)}%${sub.lowBattery ? ' ' + tt('hud.lowBattery') : ''}`)
     toggleClass(batteryChip, 'low', sub.lowBattery)
 
     // Hull (<30 red).
@@ -366,14 +444,18 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     // Noise.
     setText(noiseValue, `${Math.round(sub.noise)}`)
 
-    // Detection (0–100, 5-band color).
-    setText(detectionValue, `${Math.round(sub.detection)}`)
+    // Detection (0–100, 5-band color; band label folded into the value text
+    // — no extra DOM element, style.css untouched for t-022).
     const bandIdx = detectionBandIndex(sub.detection, bal.detection.bands)
     detectionBar.style.width = `${Math.min(100, sub.detection)}%`
     detectionBar.style.background = DETECTION_BAND_COLORS[bandIdx] ?? DETECTION_BAND_COLORS[0]!
+    setText(detectionValue, `${Math.round(sub.detection)} ${tt(`hud.bands.${bal.detection.bands[bandIdx]?.label ?? 'Unaware'}`)}`)
 
-    // Objectives (collapsible; diff via id → row map).
+    // Objectives (collapsible; diff via id → row map). Localized via the
+    // same per-mission keys as the briefing ('mission.<id>.obj.<subgoalId>');
+    // falls back to the engine desc for subgoal ids without a key.
     const objectives = snapshot.mission.objectives
+    const missionId = extras.mission.id
     for (const [id, row] of objectiveRows) {
       if (!objectives.some((o) => o.id === id)) row.remove()
       objectiveRows.delete(id)
@@ -392,7 +474,9 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       const desc = row.lastChild as HTMLElement
       mark.textContent = obj.done ? '✓' : '○'
       toggleClass(row, 'done', obj.done)
-      setText(desc, obj.desc)
+      const key = `mission.${missionId}.obj.${obj.id}`
+      const localized = tt(key)
+      setText(desc, localized !== key ? localized : obj.desc)
     }
 
     // Timer + weather.
@@ -424,7 +508,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       toggleClass(t, 'fired', tube.state === 'FIRED' || tube.state === 'RUNNING' || tube.state === 'HIT' || tube.state === 'MISSED' || tube.state === 'EXPIRED')
     }
 
-    // Contact panel (id → row map, diff minimal).
+    // Contact panel (id → row map, diff minimal; header + empty state).
     const seen = new Set<string>()
     for (const c of snapshot.contacts) {
       seen.add(c.id)
@@ -432,12 +516,13 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       if (row === undefined) {
         row = el('button', {
           className: 'hud-contact-row',
+          title: `${c.id} · ${tt(`state.${c.state}`)}`,
           onclick: () => selectContact(c.id === selectedContactId ? null : c.id),
         })
         contactRows.set(c.id, row)
         contactList.append(row)
       }
-      renderContactRow(row, c, now)
+      renderContactRow(row, c, now, lang, tt)
       toggleClass(row, 'selected', c.id === selectedContactId)
     }
     for (const [id, row] of contactRows) {
@@ -447,6 +532,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
         if (id === selectedContactId) selectContact(null)
       }
     }
+    contactEmpty.style.display = snapshot.contacts.length === 0 ? '' : 'none'
 
     // Fire control card for the selected contact.
     const sel = snapshot.contacts.find((c) => c.id === selectedContactId)
@@ -459,7 +545,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     } else {
       fireCard.classList.remove('empty')
       const sol = solveFireSolution(sel, sub, bal)
-      const parts = formatFireSolution(sol, sel)
+      const parts = formatFireSolution(sol, sel, lang)
       setText(fcTarget, parts.target)
       setText(fcBearing, parts.bearing)
       setText(fcRange, parts.range)
@@ -475,7 +561,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   function appendLog(entry: EventEntry): void {
     if (entry.id <= lastLogEntryId) return
     lastLogEntryId = entry.id
-    const line = formatEvent(entry)
+    const line = formatEvent(entry, lang)
     if (line === null) return
     logEntries.push(entry)
     if (logEntries.length > LOG_CAPACITY) logEntries.shift()
@@ -506,24 +592,35 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     setSalvo(1)
   }
 
-  return { update, appendLog, reset, root }
+  function setLanguage(next: Lang): void {
+    lang = next
+    tt = getT(lang)
+    // Re-translate every registered static label in place (DOM preserved);
+    // the next update() re-syncs values (lastSeen / band labels etc.).
+    for (const [node, key] of labelRegistry) {
+      setText(node, tt(key))
+    }
+    renderObjectivesToggle()
+  }
+
+  return { update, appendLog, reset, setLanguage, root }
 }
 
 // ---------------------------------------------------------------------------
 // Small construction helpers
 // ---------------------------------------------------------------------------
 
-function chip(label: string, content: Child | Child[], className = ''): HTMLElement {
+function chip(tt: Translator, key: string, content: Child | Child[], className = ''): HTMLElement {
   const children = Array.isArray(content) ? content : [content]
   return el('div', { className: `hud-chip ${className}` }, [
-    el('span', { className: 'hud-label', text: label }),
+    el('span', { className: 'hud-label', text: tt(key) }),
     ...children,
   ])
 }
 
-function fcRow(label: string, value: HTMLElement): HTMLElement {
+function fcRow(tt: Translator, key: string, value: HTMLElement): HTMLElement {
   return el('div', { className: 'hud-fc-row' }, [
-    el('span', { className: 'hud-fc-label', text: label }),
+    el('span', { className: 'hud-fc-label', text: tt(key) }),
     value,
   ])
 }
@@ -533,16 +630,16 @@ function salvoButton(n: '1' | '2', active: boolean): HTMLElement {
 }
 
 /** Render one contact row's cells (all textContent; diff via setText). */
-function renderContactRow(row: HTMLElement, c: Contact, now: number): void {
+function renderContactRow(row: HTMLElement, c: Contact, now: number, lang: Lang, tt: Translator): void {
   const cells = [
     c.id,
-    c.classification,
+    tt(`class.${c.classification}`),
     `${String(Math.round(c.bearingDeg) % 360).padStart(3, '0')}°`,
     c.rangeKm === null ? '--' : c.rangeKm >= 10 ? `${Math.round(c.rangeKm)}KM` : `${c.rangeKm.toFixed(1)}KM`,
     c.speedEstimateKt === null ? '--' : `${Math.round(c.speedEstimateKt)}KT`,
     c.headingEstimateDeg === null ? '--' : `${String(Math.round(c.headingEstimateDeg) % 360).padStart(3, '0')}°`,
     `${Math.round(c.confidence)}%`,
-    formatLastSeen(c.lastDetectedAt, now),
+    formatLastSeen(c.lastDetectedAt, now, lang),
   ]
   // Build cells once, then diff-update text in place.
   if (row.childElementCount === 0) {

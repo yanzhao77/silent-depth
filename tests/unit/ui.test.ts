@@ -14,6 +14,10 @@
  *   firecard — formatFireSolution display strings
  *   minimap  — minimapProject coordinate math, lerpAngle wrap,
  *              activeWeatherAt segment semantics
+ *   i18n     — t-022: dictionary completeness (equal key sets across
+ *              zh/en/fr/ru), {var} interpolation + fallback, language
+ *              detection (navigator tag map, save settings), settings
+ *              round-trip with app.language, localized formatters
  *
  * Environment: vitest node. All fixtures are plain data.
  */
@@ -32,6 +36,16 @@ import {
   type StorageLike,
 } from '../../src/save/save'
 import { createInput } from '../../src/ui/input'
+import {
+  detectLanguage,
+  getT,
+  isLang,
+  langFromNavigator,
+  langFromSettings,
+  LANGS,
+  translations,
+  type Lang,
+} from '../../src/ui/i18n'
 import {
   DETECTION_BAND_COLORS,
   detectionBandIndex,
@@ -595,5 +609,168 @@ describe('renderer pure math', () => {
     expect(activeWeatherAt('Clear->Cloudy', 50, 100)).toBe('Cloudy')
     expect(activeWeatherAt('Clear->Cloudy', 100, 100)).toBe('Cloudy')
     expect(activeWeatherAt('Storm', 999, 100)).toBe('Storm')
+  })
+})
+
+// ---------------------------------------------------------------------------
+// i18n (src/ui/i18n.ts) — t-022
+// ---------------------------------------------------------------------------
+
+describe('i18n dictionary', () => {
+  const LANG_CODES = ['en', 'zh', 'fr', 'ru'] as const
+
+  it('all four languages cover the exact same key set', () => {
+    const keySets = LANG_CODES.map((l) => new Set(Object.keys(translations[l])))
+    const base = keySets[0]!
+    for (const set of keySets) {
+      expect(set.size).toBe(base.size)
+      for (const key of base) {
+        expect(set.has(key), `missing key "${key}" in one language`).toBe(true)
+      }
+    }
+  })
+
+  it('every translation value is a non-empty string (no missing translations)', () => {
+    for (const l of LANG_CODES) {
+      for (const [key, value] of Object.entries(translations[l])) {
+        expect(typeof value, `${l}.${key}`).toBe('string')
+        expect(value.length, `${l}.${key}`).toBeGreaterThan(0)
+      }
+    }
+  })
+
+  it('LANGS lists the four languages with their own-language labels', () => {
+    expect(LANGS.map((l) => l.code)).toEqual(['zh', 'en', 'fr', 'ru'])
+    expect(LANGS.map((l) => l.label)).toEqual(['中文', 'English', 'Français', 'Русский'])
+  })
+
+  it('isLang validates language codes', () => {
+    expect(isLang('en')).toBe(true)
+    expect(isLang('zh')).toBe(true)
+    expect(isLang('fr')).toBe(true)
+    expect(isLang('ru')).toBe(true)
+    expect(isLang('de')).toBe(false)
+    expect(isLang(undefined)).toBe(false)
+  })
+})
+
+describe('i18n translator', () => {
+  it('t() interpolates {var} placeholders', () => {
+    const tt = getT('en')
+    expect(tt('menu.nextMission', { id: 'M01', best: 850 })).toBe('NEXT MISSION M01 · BEST 850')
+    expect(tt('hud.lastSeen.seconds', { s: 12 })).toBe('12S')
+    expect(tt('log.entry', { text: 'SHIP SUNK', id: 'E-01' })).toBe('SHIP SUNK — E-01')
+  })
+
+  it('t() falls back to English then to the raw key (never crashes)', () => {
+    const tt = getT('ru')
+    expect(tt('menu.play')).toBe('ИГРАТЬ')
+    // A key missing from ru falls back to en.
+    expect(tt('missing.key.xyz')).toBe('missing.key.xyz')
+    expect(getT('de' as Lang)('menu.play')).toBe('PLAY')
+  })
+
+  it('translations differ per language for a sample of categories', () => {
+    expect(getT('zh')('menu.play')).toBe('开始游戏')
+    expect(getT('fr')('pause.title')).toBe('PAUSE')
+    expect(getT('ru')('log.torpedo.hit')).toBe('ПОПАДАНИЕ В ЦЕЛЬ')
+    expect(getT('en')('log.contact.detected')).toBe('SONAR CONTACT DETECTED')
+    // Ship classes + mission names are localized.
+    expect(getT('fr')('class.Tanker')).toBe('PÉTROLIER')
+    expect(getT('zh')('mission.M03.name')).toBe('袭击护航队')
+    expect(getT('ru')('mission.M01.name')).toBe('Сонар-тренировка')
+  })
+})
+
+describe('i18n detection', () => {
+  it('langFromNavigator maps browser tags', () => {
+    expect(langFromNavigator('zh-CN')).toBe('zh')
+    expect(langFromNavigator('zh')).toBe('zh')
+    expect(langFromNavigator('fr-FR')).toBe('fr')
+    expect(langFromNavigator('ru-RU')).toBe('ru')
+    expect(langFromNavigator('en-US')).toBe('en')
+    expect(langFromNavigator('de-DE')).toBe('en')
+    expect(langFromNavigator(undefined)).toBe('en')
+    expect(langFromNavigator('')).toBe('en')
+  })
+
+  it('langFromSettings reads settings.app.language from raw save JSON', () => {
+    expect(langFromSettings({ settings: { app: { language: 'fr' } } })).toBe('fr')
+    expect(langFromSettings({ settings: { app: { language: 'xx' } } })).toBeNull()
+    expect(langFromSettings({ settings: {} })).toBeNull()
+    expect(langFromSettings(null)).toBeNull()
+    expect(langFromSettings([1, 2])).toBeNull()
+  })
+
+  it('detectLanguage always returns a supported language (Node: ambient navigator)', () => {
+    // Node ≥21 exposes a global navigator (language is machine-dependent) —
+    // assert validity; the exact tag mapping is covered by langFromNavigator.
+    expect(isLang(detectLanguage())).toBe(true)
+  })
+
+  it('detectLanguage prefers the saved settings over the navigator', () => {
+    const storage = {
+      getItem: () => JSON.stringify({ settings: { app: { language: 'fr' } } }),
+      setItem: () => undefined,
+      removeItem: () => undefined,
+    }
+    const g = globalThis as Record<string, unknown>
+    const prev = g['localStorage']
+    g['localStorage'] = storage
+    try {
+      expect(detectLanguage()).toBe('fr')
+    } finally {
+      if (prev === undefined) delete g['localStorage']
+      else g['localStorage'] = prev
+    }
+  })
+})
+
+describe('i18n in save settings', () => {
+  it('settings round-trip preserves app.language through the store', () => {
+    const store = createSaveStore(makeFakeStorage())
+    const save = defaultSave()
+    save.settings.app.language = 'fr'
+    store.write(save)
+    const loaded = store.load()
+    expect(loaded.settings.app.language).toBe('fr')
+  })
+
+  it('validateAndClamp rejects unknown languages → default en', () => {
+    const d = validateAndClamp(
+      { version: 1, settings: { app: { language: 'de' } } },
+      MISSION_IDS,
+    )
+    expect(d.settings.app.language).toBe('en')
+    const ok = validateAndClamp(
+      { version: 1, settings: { app: { language: 'ru' } } },
+      MISSION_IDS,
+    )
+    expect(ok.settings.app.language).toBe('ru')
+  })
+})
+
+describe('i18n in HUD formatters', () => {
+  it('formatEvent localizes per language (EN canonical unchanged)', () => {
+    const entry = makeEvent('contact.detected', { contactId: 'C-01' })
+    expect(formatEvent(entry)).toBe('SONAR CONTACT DETECTED — C-01')
+    expect(formatEvent(entry, 'zh')).toBe('发现声呐接触 — C-01')
+    expect(formatEvent(entry, 'fr')).toBe('CONTACT SONAR DÉTECTÉ — C-01')
+    expect(formatEvent(entry, 'ru')).toBe('ОБНАРУЖЕН КОНТАКТ — C-01')
+  })
+
+  it('formatFireSolution localizes the classification (EN canonical unchanged)', () => {
+    const contact = makeContact()
+    const sol = makeSolution()
+    expect(formatFireSolution(sol, contact).target).toBe('C-01 Tanker')
+    expect(formatFireSolution(sol, contact, 'zh').target).toBe('C-01 油轮')
+    expect(formatFireSolution(sol, contact, 'fr').target).toBe('C-01 PÉTROLIER')
+  })
+
+  it('formatLastSeen localizes NOW (EN canonical unchanged)', () => {
+    expect(formatLastSeen(100, 100.4)).toBe('NOW')
+    expect(formatLastSeen(100, 100.4, 'zh')).toBe('现在')
+    expect(formatLastSeen(100, 100.4, 'fr')).toBe('MAINTENANT')
+    expect(formatLastSeen(100, 112.6, 'en')).toBe('13S')
   })
 })

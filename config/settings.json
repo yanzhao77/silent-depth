@@ -11,5 +11,8 @@
   },
   "input": {
     "sensitivity": 1.0
+  },
+  "app": {
+    "language": "en"
   }
 }

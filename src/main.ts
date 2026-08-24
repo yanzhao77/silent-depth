@@ -48,10 +48,12 @@ import { activeWeatherAt, createRenderer, type Renderer } from './rendering/rend
 import { createHud } from './ui/hud'
 import { createMenus, type MenuSection } from './ui/menus'
 import { createInput } from './ui/input'
+import { detectLanguage, getT, type Lang } from './ui/i18n'
 import {
   createSaveStore,
   setKnownMissionIds,
   updateOnMissionResult,
+  SAVE_KEY,
   type MissionResult,
   type SaveData,
   type SaveSettings,
@@ -90,6 +92,17 @@ setKnownMissionIds(MISSION_IDS)
 
 const saveStore = createSaveStore(typeof localStorage !== 'undefined' ? localStorage : null)
 let save: SaveData = saveStore.load()
+
+// t-022 i18n: initial language from save settings → navigator → 'en'.
+// A first run (no stored save) persists the detected language so returning
+// players keep their choice; otherwise detectLanguage() read the saved one.
+const hadStoredSave = typeof localStorage !== 'undefined' && localStorage.getItem(SAVE_KEY) !== null
+let lang: Lang = detectLanguage()
+if (!hadStoredSave) {
+  save = { ...save, settings: { ...save.settings, app: { ...save.settings.app, language: lang } } }
+  saveStore.write(save)
+}
+
 let audio: AudioEngine = createAudio({ audio: save.settings.audio })
 
 let handle: ReturnType<typeof createGame> | null = null
@@ -139,6 +152,15 @@ function persistSave(): void {
   saveStore.write(save)
 }
 
+/** t-022: switch UI language — persist, then re-render HUD + menus. */
+function setLanguage(next: Lang): void {
+  lang = next
+  save = { ...save, settings: { ...save.settings, app: { ...save.settings.app, language: next } } }
+  persistSave()
+  hud.setLanguage(next)
+  menus.setLanguage(next)
+}
+
 // ---------------------------------------------------------------------------
 // HUD / menus / input
 // ---------------------------------------------------------------------------
@@ -152,6 +174,7 @@ const hud = createHud(hudRoot, {
     salvo = n
     salvoPending = false
   },
+  lang,
 })
 
 const input = createInput({
@@ -177,45 +200,53 @@ const input = createInput({
 })
 input.bind(window)
 
-const menus = createMenus(menuRoot, {
-  save: () => save,
-  listMissions: () => listMissionSpecs(),
-  onPlay: (id: string) => startMission(id),
-  onSettingsChanged: (settings: SaveSettings) => {
-    save = { ...save, settings }
-    persistSave()
-    applySettings()
-  },
-  onClearSave: () => {
-    saveStore.reset()
-    save = saveStore.load()
-    applySettings()
-    menus.refresh()
-  },
-  onExportSave: () => saveStore.export(save),
-  onImportSave: (file: File) => {
-    saveStore.import(file, (imported) => {
-      save = imported
+const menus = createMenus(
+  menuRoot,
+  {
+    save: () => save,
+    listMissions: () => listMissionSpecs(),
+    onPlay: (id: string) => startMission(id),
+    onSettingsChanged: (settings: SaveSettings) => {
+      save = { ...save, settings }
       persistSave()
       applySettings()
+    },
+    onLanguageChange: (next: Lang) => setLanguage(next),
+    onClearSave: () => {
+      saveStore.reset()
+      save = saveStore.load()
+      applySettings()
       menus.refresh()
-    })
+    },
+    onExportSave: () => saveStore.export(save),
+    onImportSave: (file: File) => {
+      saveStore.import(file, (imported) => {
+        save = imported
+        persistSave()
+        applySettings()
+        // Imported save may carry a different language — re-sync the shell.
+        const importedLang = imported.settings.app.language
+        if (importedLang !== lang) setLanguage(importedLang)
+        else menus.refresh()
+      })
+    },
+    onResume: () => {
+      if (handle !== null) pausePulse = true
+    },
+    onRestart: () => {
+      if (missionId !== null) startMission(missionId)
+    },
+    onAbort: () => abortToMenu(),
+    onGoMainMenu: () => {
+      setMenuSection('main')
+    },
   },
-  onResume: () => {
-    if (handle !== null) pausePulse = true
-  },
-  onRestart: () => {
-    if (missionId !== null) startMission(missionId)
-  },
-  onAbort: () => abortToMenu(),
-  onGoMainMenu: () => {
-    setMenuSection('main')
-  },
-})
+  lang,
+)
 
 function setMenuSection(section: MenuSection): void {
   if (handle !== null && snapshot !== null && snapshot.state !== 'MENU') {
-    abortToMenu()
+    if (!abortToMenu()) return // user cancelled the abort confirmation
   }
   menus.setSection(section)
 }
@@ -264,8 +295,16 @@ function startMission(id: string): void {
   processNewEvents(snapshot)
 }
 
-function abortToMenu(): void {
-  if (handle === null) return
+/**
+ * Abort the current mission back to the menu. Prompts the localized
+ * confirmation while a mission is in progress (Esc / ABORT button). Returns
+ * true when the navigation proceeded (false when the user cancelled).
+ */
+function abortToMenu(): boolean {
+  if (handle === null) return true
+  if (snapshot !== null && snapshot.state !== 'MENU') {
+    if (typeof confirm === 'function' && !confirm(getT(lang)('confirm.abort'))) return false
+  }
   try {
     goToMenu(handle)
   } catch {
@@ -274,6 +313,7 @@ function abortToMenu(): void {
   hudRoot.style.display = 'none'
   lastShownState = 'MENU'
   menus.showEngineState('MENU')
+  return true
 }
 
 // ---------------------------------------------------------------------------
