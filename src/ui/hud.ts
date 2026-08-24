@@ -609,6 +609,22 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     ]),
   ])
 
+  // t-028c: operations & key reference panel (below the fire control card).
+  const controlsCard = el('div', { className: 'card controls-card' }, [
+    el('div', { className: 'card-head' }, [label('hud.controls.title', 'card-title')]),
+    el(
+      'div',
+      { className: 'controls-list' },
+      CONTROL_BINDINGS.map((b) => {
+        const keyChip = el('span', { className: 'key-chip mono', text: b.key })
+        const lbl = el('span', { className: 'controls-label' })
+        labelRegistry.push([lbl, b.labelKey])
+        setText(lbl, tt(b.labelKey))
+        return el('div', { className: 'controls-row' }, [keyChip, lbl])
+      }),
+    ),
+  ])
+
   const rightCol = el('div', { className: 'hud-right' }, [
     el('div', { className: 'card' }, [
       el('div', { className: 'card-head' }, [label('hud.contacts', 'card-title')]),
@@ -616,6 +632,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       contactList,
     ]),
     fireCard,
+    controlsCard,
   ])
 
   // --- bottom: activity timeline (K) ------------------------------------------------
@@ -1268,6 +1285,22 @@ const SHIP_SILHOUETTES: Record<string, [string, Record<string, number | string>]
     ['rect', { x: '104', y: '48', width: '32', height: '14' }],
   ],
 }
+
+/** t-028c: in-HUD controls & key reference (below the fire control card). */
+export const CONTROL_BINDINGS: readonly { key: string; labelKey: string }[] = [
+  { key: 'W / S', labelKey: 'hud.controls.throttle' },
+  { key: 'A / D', labelKey: 'hud.controls.rudder' },
+  { key: 'Q / E', labelKey: 'hud.controls.depth' },
+  { key: 'SPACE', labelKey: 'hud.controls.ping' },
+  { key: 'F', labelKey: 'hud.controls.fire' },
+  { key: 'R', labelKey: 'hud.controls.silent' },
+  { key: 'G', labelKey: 'hud.controls.decoy' },
+  { key: 'P', labelKey: 'hud.controls.periscope' },
+  { key: 'L', labelKey: 'hud.controls.lock' },
+  { key: 'X', labelKey: 'hud.controls.dive' },
+  { key: 'ESC', labelKey: 'hud.controls.pause' },
+  { key: 'F12', labelKey: 'hud.controls.screenshot' },
+]
 
 /** Build a per-class silhouette as an inline SVG element (Node-safe: only
  *  called from the DOM update path). */

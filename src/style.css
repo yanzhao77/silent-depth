@@ -1891,3 +1891,36 @@ button {
 .pv-w-storm .pv-sea { background: repeating-linear-gradient(180deg, #1a2834 0 2px, #101c26 2px 6px); }
 .pv-w-cloudy { background: linear-gradient(180deg, rgba(90,110,130,.18), rgba(90,110,130,.08)); opacity: 1; }
 .pv-w-clear { opacity: 0; }
+
+/* --- t-028c: in-HUD controls & keys panel --------------------------------- */
+.controls-card {
+  margin-top: 10px;
+}
+.controls-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.controls-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 0;
+}
+.key-chip {
+  flex: 0 0 auto;
+  min-width: 46px;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.4px;
+  padding: 2px 6px;
+  border-radius: 6px;
+  color: var(--text-secondary);
+  background: rgba(148, 163, 184, 0.12);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+}
+.controls-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  line-height: 1.25;
+}
