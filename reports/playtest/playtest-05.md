@@ -1,6 +1,6 @@
 # Playtest 05 — Silent Hunter (t-014 evidence)
 
-- **Version**: 00ce33e
+- **Version**: 5409c51
 - **Mission**: M05 — Silent Hunter (seed 1005, difficulty 5/5)
 - **Agent**: scripted-brain-sink-and-escape (Sink then escape (M05 best effort))
 - **Result**: **DEFEAT** after 1405.5 s (28110 ticks)

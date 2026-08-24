@@ -144,6 +144,12 @@ export interface SubmarineState {
   targetDepthLayer: DepthLayer
   /** Remaining seconds of a depth-layer transition, or null when stable (3 s/layer, F2). */
   depthTransitionT: number | null
+  /** Live depth in metres (t-028): layer midpoint, interpolated during a
+   *  transition between source and target layer midpoints. HUD/display only —
+   *  all gameplay rules still use depthLayer. Optional for hand-built test
+   *  fixtures; the engine always sets it and the HUD falls back to the layer
+   *  midpoint. */
+  depthM?: number
   /** 0..100. */
   battery: number
   /** 0..100 (speed/depth/hull modified, F1). */

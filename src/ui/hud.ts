@@ -471,6 +471,21 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     pExposureValue,
   ])
 
+  // t-028: active-sonar availability row (chip + cooldown bar + seconds).
+  const pingChip = el('span', { className: 'pc-mini-chip' })
+  const pingFill = el('div', { className: 'bar-fill' })
+  const pingValue = el('span', { className: 'bar-value' })
+  const pingRow = el('div', { className: 'bar-row ping-row' }, [
+    pingChip,
+    el('div', { className: 'bar-track' }, [pingFill]),
+    pingValue,
+  ])
+
+  // t-028: system chips — silent running + decoys remaining.
+  const silentChip = el('span', { className: 'sys-chip' })
+  const decoyChip = el('span', { className: 'sys-chip' })
+  const chipsRow = el('div', { className: 'sys-chips' }, [silentChip, decoyChip])
+
   const statusCard = el('div', { className: 'card' }, [
     el('div', { className: 'status-readouts' }, readouts),
     el('div', { className: 'status-bars' }, [
@@ -478,8 +493,10 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       hullBar.row,
       noiseBar.row,
       detectionBar.row,
+      pingRow,
       pScopeRow,
     ]),
+    chipsRow,
   ])
 
   // --- tasks (objectives) card (H) ------------------------------------------------
@@ -762,14 +779,14 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     setText(fpsValue, String(Math.round(extras.fps)))
     fpsChip.style.display = extras.showFps ? '' : 'none'
 
-    // --- status readouts (G) ---
+    // --- status readouts (G, t-028: live metres) ---
     const layerCfg = bal.depthLayers[sub.depthLayer]
+    const depthM = sub.depthM ?? (layerCfg.minM + layerCfg.maxM) / 2
     setText(
       depthValue,
       tt('hud.depthValue', {
+        m: Math.round(depthM),
         layer: tt(`hud.layer.${sub.depthLayer}`),
-        min: Math.round(layerCfg.minM),
-        max: Math.round(layerCfg.maxM),
       }),
     )
     setText(speedValue, tt('hud.speedValue', { v: sub.speedKt.toFixed(1).replace(/\.0$/, ''), band: tt(`hud.band.${sub.speedBand}`) }))
@@ -798,6 +815,32 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       detectionBar.value,
       `${Math.round(sub.detection)} ${tt(`hud.bands.${bal.detection.bands[bandIdx]?.label ?? 'Unaware'}`)}`,
     )
+
+    // t-028: active sonar availability + cooldown.
+    const pingState = pingStatus(sub, bal)
+    if (pingState.state === 'ready') {
+      setText(pingChip, tt('hud.ping.ready'))
+      pingChip.className = 'pc-mini-chip ping-ready'
+      setText(pingValue, '')
+    } else if (pingState.state === 'cooldown') {
+      setText(pingChip, tt('hud.ping.cooldown', { s: pingState.seconds.toFixed(1) }))
+      pingChip.className = 'pc-mini-chip ping-cooldown'
+      setText(pingValue, '')
+    } else {
+      setText(pingChip, tt('hud.ping.unavailable'))
+      pingChip.className = 'pc-mini-chip ping-unavailable'
+      setText(pingValue, '')
+    }
+    setBar(
+      { fill: pingFill, row: pingRow },
+      pingState.fraction * 100,
+      pingState.state === 'ready' ? 'success' : pingState.state === 'cooldown' ? 'warning' : 'error',
+    )
+
+    // t-028: system chips — silent running + decoys.
+    setText(silentChip, sub.silentRunning ? tt('hud.silent.on') : tt('hud.silent.off'))
+    silentChip.className = sub.silentRunning ? 'sys-chip chip-on' : 'sys-chip chip-off'
+    setText(decoyChip, tt('hud.decoys', { n: sub.decoyCount }))
 
     // --- tasks (H) ---
     const objectives = snapshot.mission.objectives
@@ -1108,6 +1151,27 @@ function pcStateClass(state: string): string {
     default:
       return 'pc-down'
   }
+}
+
+/**
+ * t-028: active-sonar availability for the HUD. Pure + testable.
+ * - low battery (sub.lowBattery) → 'unavailable' (the submarine system blocks
+ *   pings below balance.battery.lowBatteryThreshold);
+ * - pingCooldown > 0 → 'cooldown' with remaining seconds + bar fraction
+ *   (full when ready; fraction = 1 − remaining/cooldownSeconds);
+ * - else 'ready'.
+ */
+export function pingStatus(
+  sub: { pingCooldown: number; lowBattery: boolean },
+  balance: BalanceConfig,
+): { state: 'ready' | 'cooldown' | 'unavailable'; seconds: number; fraction: number } {
+  if (sub.lowBattery) return { state: 'unavailable', seconds: 0, fraction: 1 }
+  const cd = Math.max(0, sub.pingCooldown)
+  if (cd > 0) {
+    const total = balance.sonar.active.cooldownSeconds
+    return { state: 'cooldown', seconds: cd, fraction: Math.max(0, Math.min(1, 1 - cd / total)) }
+  }
+  return { state: 'ready', seconds: 0, fraction: 1 }
 }
 
 function setBar(bar: { fill: HTMLElement; row: HTMLElement }, value: number, semantic: 'success' | 'info' | 'warning' | 'error'): void {

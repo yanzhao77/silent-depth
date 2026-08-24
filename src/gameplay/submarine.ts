@@ -63,6 +63,12 @@ export const KNOTS_TO_KM_PER_SEC = 1.852 / 3600
 export const SUB_ACCEL_KT_PER_S = 2.0
 
 /** Layer distance (number of layer steps) between two depth layers (F2). */
+/** Layer midpoint depth in metres (t-028, HUD display). */
+export function layerMidM(layer: DepthLayer, balance: BalanceConfig): number {
+  const c = balance.depthLayers[layer]
+  return (c.minM + c.maxM) / 2
+}
+
 export function layerDistance(a: DepthLayer, b: DepthLayer): number {
   return Math.abs(DEPTH_INDEX[a] - DEPTH_INDEX[b])
 }
@@ -309,6 +315,21 @@ function updateDepth(ctx: SystemContext): void {
       player.depthLayer = player.targetDepthLayer
       player.depthTransitionT = null
       bus.emit('sub.depthChanged', { layer: player.depthLayer })
+    }
+  }
+
+  // t-028: live depth in metres — interpolate between the source layer
+  // midpoint (depthLayer is still the origin while transitioning) and the
+  // target midpoint by transition progress; stable when no transition runs.
+  {
+    const from = layerMidM(player.depthLayer, balance)
+    const to = layerMidM(player.targetDepthLayer, balance)
+    if (player.depthTransitionT !== null) {
+      const total = Math.max(layerDistance(player.depthLayer, player.targetDepthLayer) * balance.depthTransitionSecondsPerLayer, 1e-9)
+      const progress = 1 - player.depthTransitionT / total
+      player.depthM = from + (to - from) * Math.max(0, Math.min(1, progress))
+    } else {
+      player.depthM = from
     }
   }
 }

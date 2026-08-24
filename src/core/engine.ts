@@ -324,6 +324,12 @@ function validateMissionDef(def: MissionDef): void {
   }
 }
 
+/** Layer midpoint depth in metres (t-028, HUD display). */
+function layerMidM(layer: DepthLayer, balance: BalanceConfig): number {
+  const c = balance.depthLayers[layer]
+  return (c.minM + c.maxM) / 2
+}
+
 function initialSubmarineState(mission: MissionDef, balance: BalanceConfig): SubmarineState {
   const tubes: SubmarineState['torpedoTubes'] = Array.from({ length: mission.torpedoCount }, (_, i) => ({
     id: `T-${String(i + 1).padStart(2, '0')}`,
@@ -339,6 +345,7 @@ function initialSubmarineState(mission: MissionDef, balance: BalanceConfig): Sub
     depthLayer: INITIAL_DEPTH_LAYER,
     targetDepthLayer: INITIAL_DEPTH_LAYER,
     depthTransitionT: null,
+    depthM: layerMidM(INITIAL_DEPTH_LAYER, balance),
     battery: mission.batteryStart,
     noise: 0,
     hull: balance.hull.playerMax,

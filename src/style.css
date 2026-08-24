@@ -1765,3 +1765,48 @@ button {
     bottom: 150px;
   }
 }
+
+/* --- t-028: active-sonar availability row + system chips ------------------ */
+.ping-row .pc-mini-chip {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+  justify-self: start;
+}
+.pc-mini-chip.ping-ready {
+  color: var(--color-success);
+  background: rgba(52, 211, 153, 0.12);
+}
+.pc-mini-chip.ping-cooldown {
+  color: var(--color-warning);
+  background: rgba(251, 191, 36, 0.12);
+}
+.pc-mini-chip.ping-unavailable {
+  color: var(--color-error);
+  background: rgba(248, 113, 113, 0.14);
+}
+
+.sys-chips {
+  display: flex;
+  gap: 6px;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid rgba(148, 163, 184, 0.08);
+}
+.sys-chip {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
+  color: var(--text-muted);
+  background: rgba(148, 163, 184, 0.08);
+}
+.sys-chip.chip-on {
+  color: var(--color-primary);
+  background: rgba(34, 211, 238, 0.12);
+}
