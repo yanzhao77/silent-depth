@@ -1,6 +1,6 @@
 # Playtest 04 — Heavy Escort (t-014 evidence)
 
-- **Version**: 1c87353
+- **Version**: 750cc0b
 - **Mission**: M04 — Heavy Escort (seed 1004, difficulty 4/5)
 - **Agent**: scripted-brain-convoy-attack (Convoy attack (M03/M04 best effort))
 - **Result**: **DEFEAT** after 2785.9 s (55717 ticks)

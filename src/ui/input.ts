@@ -51,6 +51,10 @@ export const HANDLED_KEYS: readonly string[] = [
   'KeyS',
   'KeyA',
   'KeyD',
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
   'KeyQ',
   'KeyE',
   'Space',
@@ -136,9 +140,11 @@ export function createInput(opts: InputOptions): InputController {
 
     switch (code) {
       case 'KeyW':
+      case 'ArrowUp':
         throttle = clamp(throttle + THROTTLE_STEP_KT, 0, maxThrottleKt)
         break
       case 'KeyS':
+      case 'ArrowDown':
         throttle = clamp(throttle - THROTTLE_STEP_KT, 0, maxThrottleKt)
         break
       case 'KeyQ': {
@@ -183,8 +189,8 @@ export function createInput(opts: InputOptions): InputController {
 
   function getInputs(): PlayerInputs {
     let rudder = 0
-    if (held.has('KeyA')) rudder -= 1
-    if (held.has('KeyD')) rudder += 1
+    if (held.has('KeyA') || held.has('ArrowLeft')) rudder -= 1
+    if (held.has('KeyD') || held.has('ArrowRight')) rudder += 1
 
     const inputs: PlayerInputs = {
       throttle,

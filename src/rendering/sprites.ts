@@ -415,67 +415,109 @@ function fillRectRounded(ctx: CanvasRenderingContext2D, x: number, y: number, w:
 }
 
 /** Submarine — player, whale-shaped hull + sail, WHITE 60% outline. */
+/** Submarine hull planform: slender teardrop, pointed bow, tapered stern. */
+function subHullPath(
+  ctx: CanvasRenderingContext2D,
+  u: number,
+  opts: { bowY: number; sternY: number; halfWidth: number },
+): void {
+  const cx = 50 * u
+  const { bowY, sternY, halfWidth } = opts
+  const hw = halfWidth * u
+  ctx.beginPath()
+  // bow tip (top)
+  ctx.moveTo(cx, bowY * u)
+  ctx.bezierCurveTo(cx - hw * 0.4, bowY * u + hw * 0.5, cx - hw, bowY * u + hw * 2.0, cx - hw, bowY * u + hw * 3.4)
+  // port side — parallel mid body, then taper to the stern
+  ctx.bezierCurveTo(cx - hw, sternY * u - hw * 2.6, cx - hw * 0.55, sternY * u - hw * 0.6, cx - hw * 0.18, sternY * u)
+  ctx.quadraticCurveTo(cx, sternY * u + hw * 0.35, cx + hw * 0.18, sternY * u)
+  // starboard side back up to the bow
+  ctx.bezierCurveTo(cx + hw * 0.55, sternY * u - hw * 0.6, cx + hw, sternY * u - hw * 2.6, cx + hw, bowY * u + hw * 3.4)
+  ctx.bezierCurveTo(cx + hw, bowY * u + hw * 2.0, cx + hw * 0.4, bowY * u + hw * 0.5, cx, bowY * u)
+  ctx.closePath()
+}
+
+/** Player submarine (t-028e): proper top-down submarine silhouette. */
 export function drawSubmarine(ctx: CanvasRenderingContext2D, size: number, opts?: DrawOpts): void {
   const p = resolvePalette(opts?.palette)
   const u = size / 100
   ctx.save()
   ctx.clearRect(0, 0, size, size)
   const cx = 50 * u
-  const hull = { bowY: 14, sternY: 84, halfWidth: 13 }
-  // hull body
-  ctx.beginPath()
-  ctx.moveTo(cx, hull.bowY * u)
-  ctx.bezierCurveTo(cx - 16 * u, 20 * u, cx - 13 * u, 46 * u, cx - 10 * u, 70 * u)
-  ctx.quadraticCurveTo(cx - 9 * u, 78 * u, cx - 6 * u, 82 * u)
-  ctx.quadraticCurveTo(cx, 86 * u, cx + 6 * u, 82 * u)
-  ctx.quadraticCurveTo(cx + 9 * u, 78 * u, cx + 10 * u, 70 * u)
-  ctx.bezierCurveTo(cx + 13 * u, 46 * u, cx + 16 * u, 20 * u, cx, hull.bowY * u)
-  ctx.closePath()
+  const hull = { bowY: 12, sternY: 90, halfWidth: 9 }
+
+  // hull body (teardrop planform)
+  subHullPath(ctx, u, hull)
   ctx.fillStyle = p.hullFill
   ctx.fill()
-  // deck line
+
+  // subtle center deck spine
   ctx.beginPath()
-  ctx.moveTo(cx - 8 * u, 30 * u)
-  ctx.quadraticCurveTo(cx, 34 * u, cx + 8 * u, 30 * u)
-  ctx.strokeStyle = p.hullDark
-  ctx.lineWidth = Math.max(1, u * 0.5)
+  ctx.moveTo(cx, 20 * u)
+  ctx.lineTo(cx, 84 * u)
+  ctx.strokeStyle = p.hullLight
+  ctx.globalAlpha = 0.55
+  ctx.lineWidth = Math.max(1, u * 0.8)
   ctx.stroke()
-  // sail (conning tower)
-  fillRectRounded(ctx, cx - 8 * u, 34 * u, 16 * u, 18 * u, 3 * u, p.stackFill)
-  // periscope mast
+  ctx.globalAlpha = 1
+
+  // conning tower (sail), slightly aft of midship
+  fillRectRounded(ctx, cx - 6.5 * u, 40 * u, 13 * u, 18 * u, 4 * u, p.stackFill)
+  // sail front edge shade
   ctx.beginPath()
-  ctx.moveTo(cx, 30 * u)
-  ctx.lineTo(cx, 34 * u)
+  ctx.moveTo(cx - 4.5 * u, 42 * u)
+  ctx.lineTo(cx + 4.5 * u, 42 * u)
+  ctx.strokeStyle = p.hullDark
+  ctx.lineWidth = Math.max(1, u * 0.6)
+  ctx.stroke()
+
+  // periscope mast: thin stalk + small head forward of the sail
+  ctx.beginPath()
+  ctx.moveTo(cx, 26 * u)
+  ctx.lineTo(cx, 40 * u)
   ctx.strokeStyle = p.hullLight
   ctx.lineWidth = Math.max(1, u * 0.7)
   ctx.stroke()
-  // bow planes
   ctx.beginPath()
-  ctx.moveTo(cx - 13 * u, 24 * u)
-  ctx.lineTo(cx - 17 * u, 22 * u)
-  ctx.moveTo(cx + 13 * u, 24 * u)
-  ctx.lineTo(cx + 17 * u, 22 * u)
-  ctx.strokeStyle = p.hullDark
-  ctx.lineWidth = Math.max(1, u * 0.7)
-  ctx.stroke()
-  // stern planes + rudder
+  ctx.arc(cx, 25 * u, Math.max(1, u * 1.1), 0, Math.PI * 2)
+  ctx.fillStyle = p.hullLight
+  ctx.fill()
+
+  // bow planes (short diving fins)
   ctx.beginPath()
-  ctx.moveTo(cx - 8 * u, 82 * u)
-  ctx.lineTo(cx - 12 * u, 85 * u)
-  ctx.moveTo(cx + 8 * u, 82 * u)
-  ctx.lineTo(cx + 12 * u, 85 * u)
-  ctx.moveTo(cx, 84 * u)
-  ctx.lineTo(cx, 89 * u)
+  ctx.moveTo(cx - 7 * u, 30 * u)
+  ctx.lineTo(cx - 11 * u, 25 * u)
+  ctx.moveTo(cx + 7 * u, 30 * u)
+  ctx.lineTo(cx + 11 * u, 25 * u)
   ctx.strokeStyle = p.hullDark
-  ctx.lineWidth = Math.max(1, u * 0.7)
+  ctx.lineWidth = Math.max(1, u * 0.8)
   ctx.stroke()
-  // WHITE bright outline — player highlight (VISUAL_STYLE §3)
-  hullPath(ctx, u, { bowY: 12, sternY: 84, halfWidth: 13 })
+
+  // stern planes + rudder (cross control surfaces)
+  ctx.beginPath()
+  ctx.moveTo(cx - 8 * u, 86 * u)
+  ctx.lineTo(cx - 13 * u, 90 * u)
+  ctx.moveTo(cx + 8 * u, 86 * u)
+  ctx.lineTo(cx + 13 * u, 90 * u)
+  ctx.moveTo(cx, 87 * u)
+  ctx.lineTo(cx, 93 * u)
+  ctx.strokeStyle = p.hullDark
+  ctx.lineWidth = Math.max(1, u * 0.8)
+  ctx.stroke()
+
+  // propeller hint at the stern tip
+  ctx.beginPath()
+  ctx.arc(cx - 2 * u, 92 * u, Math.max(0.8, u * 0.9), 0, Math.PI * 2)
+  ctx.arc(cx + 2 * u, 92 * u, Math.max(0.8, u * 0.9), 0, Math.PI * 2)
+  ctx.fillStyle = p.hullDark
+  ctx.fill()
+
+  // WHITE bright outline — player highlight (VISUAL_STYLE §3), matches hull
+  subHullPath(ctx, u, hull)
   strokeOutline(ctx, p.outlineBright, u)
   ctx.restore()
 }
 
-/** Merchant — tramp steamer: midship bridge + funnel, two masts. */
 export function drawMerchant(ctx: CanvasRenderingContext2D, size: number, opts?: DrawOpts): void {
   const p = resolvePalette(opts?.palette)
   const u = size / 100

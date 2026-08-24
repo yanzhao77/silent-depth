@@ -420,11 +420,12 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   // --- central Mission Workspace (F) -------------------------------------------
   const wsId = el('span', { className: 'ws-id' })
   const wsTimer = el('span', { className: 'mono-strong' })
+  const wsSpeed = el('span', { className: 'mono-strong ws-speed' })
   const wsZoom = el('span', { className: 'mono-strong' })
   const workspace = el('div', { className: 'hud-workspace' }, [
     el('div', { className: 'ws-header' }, [
       wsId,
-      el('div', { className: 'ws-meta' }, [wsTimer, wsZoom]),
+      el('div', { className: 'ws-meta' }, [wsTimer, wsSpeed, wsZoom]),
     ]),
   ])
 
@@ -803,6 +804,9 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     }
     setText(wsId, extras.mission.id)
     setText(wsTimer, formatTime(now))
+    // t-028e: live speed in the workspace header (user: real-time speed visible
+    // next to zoom, not only in the status card).
+    setText(wsSpeed, `${sub.speedKt.toFixed(1).replace(/\.0$/, '')} KT · ${tt(`hud.band.${sub.speedBand}`)}`)
     setText(wsZoom, `ZOOM ${Math.round(extras.zoom)} PX/KM`)
 
     // Top-bar meta.
@@ -1294,8 +1298,8 @@ const SHIP_SILHOUETTES: Record<string, [string, Record<string, number | string>]
 
 /** t-028c: in-HUD controls & key reference (below the fire control card). */
 export const CONTROL_BINDINGS: readonly { key: string; labelKey: string }[] = [
-  { key: 'W / S', labelKey: 'hud.controls.throttle' },
-  { key: 'A / D', labelKey: 'hud.controls.rudder' },
+  { key: 'W / S / ↑↓', labelKey: 'hud.controls.throttle' },
+  { key: 'A / D / ←→', labelKey: 'hud.controls.rudder' },
   { key: 'Q / E', labelKey: 'hud.controls.depth' },
   { key: 'SPACE', labelKey: 'hud.controls.ping' },
   { key: 'F', labelKey: 'hud.controls.fire' },
