@@ -152,7 +152,7 @@ forward / reverse / turn L / turn R / change speed (四档切换，连续加减�
 
 - 初始 100%，耗尽 0% → 强制上浮 (规则 §3.1)。< 10% → **LOW BATTERY** 警报：禁用主动声呐、速度上限降至 SILENT、转向率减半。
 - 消耗来源：速度档位 (§4.3)、主动 ping 2%/次、silent running 额外 +0.08%/s、emergency dive 3%/次、decoy 1%/枚。
-- 补充来源：Surface 层充电 +0.4%/s (游戏化设计，见 DD-05)。
+- 补充来源：Surface 层充电 +0.4%/s (游戏化设计，见 DD-05)；**t-028f：浮至水面且航速 ≤ CRUISE 时快速充电 +2.0%/s** (balance.battery.surfaceFastChargePerSec；FULL 航速仅基础充电率——高速航行入不敷出)。
 
 ### 4.6 船体 (FR-13)
 

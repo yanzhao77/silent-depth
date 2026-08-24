@@ -44,7 +44,9 @@
     "decoyCostPercent": 1,
     "lowBatteryThreshold": 10,
     "lowBatteryMaxSpeedBand": "SILENT",
-    "forcedSurfaceDetection": 100
+    "forcedSurfaceDetection": 100,
+    "surfaceFastChargePerSec": 2.0,
+    "surfaceFastChargeMaxBand": "CRUISE"
   },
   "hull": {
     "playerMax": 100,

@@ -832,9 +832,12 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     // Battery: success → warning when low.
     setBar(batteryBar, sub.battery, 'success')
     toggleClass(batteryBar.row, 'low', sub.lowBattery)
+    // t-028f: surfaced at low/medium speed → fast recharge indicator.
+    const fastCharging = sub.depthLayer === 'Surface' && sub.speedBand !== 'FULL' && sub.battery < 100
+    toggleClass(batteryBar.row, 'charging', fastCharging)
     setText(
       batteryBar.value,
-      `${Math.round(sub.battery)}%${sub.lowBattery ? ' ' + tt('hud.lowBattery') : ''}`,
+      `${Math.round(sub.battery)}%${sub.lowBattery ? ' ' + tt('hud.lowBattery') : ''}${fastCharging ? ' ⚡' : ''}`,
     )
     // Hull: success → error when damaged (<30).
     setBar(hullBar, sub.hull, 'success')

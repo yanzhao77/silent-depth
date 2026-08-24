@@ -1,9 +1,9 @@
 # SILENT DEPTH 《深海猎手》 — Playtest SUMMARY (t-014)
 
-**Version:** 750cc0b
+**Version:** b739063
 **Sessions:** 12 recorded (5 fixed + 5 generated + M01 determinism double-run)
-**Victories:** 5 (M01, M02, GEN-02, M01, M01)
-**Torpedoes:** 4 hits / 8 fired (50%) · **total damage dealt:** 240 hull points
+**Victories:** 4 (M01, M02, M01, M01)
+**Torpedoes:** 2 hits / 8 fired (25%) · **total damage dealt:** 130 hull points
 **Determinism double-run (M01, seed 1001):** PASS — final snapshots byte-identical
 
 ## Aggregate results
@@ -12,14 +12,14 @@
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | 01 | M01 | 1001 | 1 | Ping until track (M01) | **VICTORY** | 121 | 0 | 24 | — | 876 | Excellent |
 | 02 | M02 | 1002 | 2 | Stationary ambush (M02, PROVEN t-013/t-020) | **VICTORY** | 2754 | 130 | 100 | 2/4 | 663.5761493209185 | Good |
-| 03 | M03 | 1003 | 3 | Convoy attack (M03/M04 best effort) | **DEFEAT** | 829 | 0 | 99.975 | — | 100.03750000000001 | Failed |
-| 04 | M04 | 1004 | 4 | Convoy attack (M03/M04 best effort) | **DEFEAT** | 2786 | 0 | 99.975 | — | 75.4170900785731 | Failed |
-| 05 | M05 | 1005 | 5 | Sink then escape (M05 best effort) | **DEFEAT** | 1406 | 0 | 99.975 | — | 300.0375 | Failed |
+| 03 | M03 | 1003 | 3 | Convoy attack (M03/M04 best effort) | **DEFEAT** | 832 | 0 | 99.975 | — | 100.03750000000001 | Failed |
+| 04 | M04 | 1004 | 4 | Convoy attack (M03/M04 best effort) | **DEFEAT** | 2786 | 0 | 99.975 | — | 75.40356373811967 | Failed |
+| 05 | M05 | 1005 | 5 | Sink then escape (M05 best effort) | **DEFEAT** | 1411 | 0 | 99.975 | — | 300.0375 | Failed |
 | 06 | GEN-01 | 2001 | 1 | Generic hunter (generated missions) | **TIMEOUT** | 3000 | 0 | 100 | — | 189.99933334441562 | Failed |
-| 07 | GEN-02 | 2002 | 1 | Generic hunter (generated missions) | **VICTORY** | 1375 | 110 | 100 | 2/4 | 697.2949478049404 | Good |
+| 07 | GEN-02 | 2002 | 1 | Generic hunter (generated missions) | **TIMEOUT** | 3000 | 0 | 100 | 0/4 | 189.99933334441562 | Failed |
 | 08 | GEN-03 | 2003 | 2 | Generic hunter (generated missions) | **TIMEOUT** | 3000 | 0 | 99.975 | — | 190.03683334441564 | Failed |
-| 09 | GEN-04 | 2004 | 2 | Generic hunter (generated missions) | **DEFEAT** | 2704 | 0 | 99.975 | — | 144.41455706148162 | Failed |
-| 10 | GEN-05 | 2005 | 3 | Generic hunter (generated missions) | **DEFEAT** | 954 | 0 | 99.975 | — | 250.03750000000002 | Failed |
+| 09 | GEN-04 | 2004 | 2 | Generic hunter (generated missions) | **DEFEAT** | 2704 | 0 | 99.975 | — | 144.41948091573065 | Failed |
+| 10 | GEN-05 | 2005 | 3 | Generic hunter (generated missions) | **DEFEAT** | 951 | 0 | 99.975 | — | 250.03750000000002 | Failed |
 | 11 | M01 | 1001 | 1 | Determinism double-run (M01) | **VICTORY** | 121 | 0 | 24 | — | 876 | Excellent |
 | 12 | M01 | 1001 | 1 | Determinism double-run (M01) | **VICTORY** | 121 | 0 | 24 | — | 876 | Excellent |
 
@@ -27,7 +27,7 @@
 
 - **Torpedo efficiency < 100 % (misses at effective fire range)**
   - session 02 (M02): 2/4 hits at ≤ fire range
-  - session 07 (GEN-02): 2/4 hits at ≤ fire range
+  - session 07 (GEN-02): 0/4 hits at ≤ fire range
 - **Detection reaches the ≥ 40 band (merchant ALERT / escort escalation threshold)**
   - session 02 (M02): peak detection 100
   - session 03 (M03): peak detection 99.975
@@ -55,6 +55,7 @@
   - session 09 (GEN-04): final hull 0
 - **Sink objective not met within the tick budget**
   - session 06 (GEN-01): 0 sunk
+  - session 07 (GEN-02): 0 sunk
   - session 08 (GEN-03): 0 sunk
 
 ## Notes

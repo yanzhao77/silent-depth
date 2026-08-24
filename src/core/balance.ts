@@ -62,6 +62,9 @@ export interface BatteryConfig {
   lowBatteryThreshold: number
   lowBatteryMaxSpeedBand: SpeedBand
   forcedSurfaceDetection: number
+  /** t-028f: fast recharge rate at Surface when speed ≤ surfaceFastChargeMaxBand. */
+  surfaceFastChargePerSec: number
+  surfaceFastChargeMaxBand: SpeedBand
 }
 
 export interface HullConfig {
@@ -428,6 +431,7 @@ const REQUIRED_DEEP_NUMBERS: string[][] = [
   ['depthTransitionSecondsPerLayer'],
   ['battery', 'lowBatteryThreshold'],
   ['battery', 'forcedSurfaceDetection'],
+  ['battery', 'surfaceFastChargePerSec'],
   ['hull', 'playerMax'],
   ['detection', 'sources', 'activePing'],
   ['detection', 'located', 'graceSeconds'],

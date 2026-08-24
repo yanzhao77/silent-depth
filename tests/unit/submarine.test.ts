@@ -322,8 +322,8 @@ describe('battery', () => {
     const b = loadBalance()
     const surface = makeCtx({ player: makePlayer({ battery: 50, depthLayer: 'Surface' }) })
     for (let i = 0; i < 20; i++) tick(surface, { inputs: { throttle: 0 } })
-    // STOPPED drain 0.02 + Surface charge 0.4 → net +0.38/s
-    expect(surface.player.battery).toBeCloseTo(50 + (b.depthLayers.Surface.chargePerSec - b.speedBands.STOPPED.batteryDrainPerSec), 6)
+    // t-028f: STOPPED ≤ CRUISE → surfaced fast charge 2.0 − STOPPED drain 0.02 → +1.98/s
+    expect(surface.player.battery).toBeCloseTo(50 + (b.battery.surfaceFastChargePerSec - b.speedBands.STOPPED.batteryDrainPerSec), 6)
 
     const deep = makeCtx({ player: makePlayer({ battery: 50, depthLayer: 'Deep' }) })
     for (let i = 0; i < 20; i++) tick(deep, { inputs: { throttle: 0 } })

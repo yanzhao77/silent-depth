@@ -342,7 +342,16 @@ function updateBattery(ctx: SystemContext): void {
   let delta = -bandCfg.batteryDrainPerSec * dt
   if (player.silentRunning) delta -= balance.battery.silentRunningExtraPerSec * dt
   const layerCfg = balance.depthLayers[player.depthLayer]
-  delta += layerCfg.chargePerSec * dt // Surface recharge (DD-05)
+  // t-028f: surfaced at LOW/MEDIUM speed (≤ CRUISE) → FAST battery recharge
+  // (diesel/dynamo on the surface); FULL speed keeps only the base surface
+  // rate (high-speed running burns more than it recharges).
+  const bandIdx = ['STOPPED', 'SILENT', 'CRUISE', 'FULL'].indexOf(player.speedBand)
+  const fastBandIdx = ['STOPPED', 'SILENT', 'CRUISE', 'FULL'].indexOf(balance.battery.surfaceFastChargeMaxBand)
+  let charge = layerCfg.chargePerSec
+  if (player.depthLayer === 'Surface' && bandIdx >= 0 && bandIdx <= fastBandIdx) {
+    charge = balance.battery.surfaceFastChargePerSec
+  }
+  delta += charge * dt // Surface recharge (DD-05 / t-028f fast recharge)
   delta += layerCfg.extraBatteryPerSec * dt // Deep ballast recharge
 
   player.battery = clamp(player.battery + delta, 0, balance.battery.capacity)

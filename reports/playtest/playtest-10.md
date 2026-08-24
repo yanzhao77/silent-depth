@@ -1,13 +1,13 @@
 # Playtest 10 — Generated Heavy Convoy (t-014 evidence)
 
-- **Version**: 750cc0b
+- **Version**: b739063
 - **Mission**: GEN-05 — Generated Heavy Convoy (seed 2005, difficulty 3/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
-- **Result**: **DEFEAT** after 954.1 s (19082 ticks)
+- **Result**: **DEFEAT** after 950.6 s (19011 ticks)
 
 ## Actions
 
-- pings: 124 · fire inputs: 0 · moving ticks: 19082 · turning ticks: 1876 · fire rejections (tail): 0
+- pings: 124 · fire inputs: 0 · moving ticks: 19011 · turning ticks: 2248 · fire rejections (tail): 0
 - strategy: Silent approach (SILENT band, Medium), ping to acquire range, fire at the nearest TRACKED-or-better contact ≤ 1.5 km; evade when detection ≥ 45 or an escort escalates inside 5 km.
 
 ## Result
@@ -44,19 +44,6 @@ OUT_OF_BOUNDS — Player spent 60 s outside the map square.
 
 ### Key events (tail)
 
-- 99.5s sonar.ping {"bearingDeg":54.150000000005434}
-- 99.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 103.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 107.0s sonar.ping {"bearingDeg":41.550000000007344}
-- 107.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 111.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 114.5s sonar.ping {"bearingDeg":28.800000000009277}
-- 114.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 118.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 122.0s sonar.ping {"bearingDeg":16.05000000001121}
-- 122.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 126.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 129.5s sonar.ping {"bearingDeg":3.300000000013142}
 - 129.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
 - 133.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
 - 137.0s sonar.ping {"bearingDeg":350.5500000000151}
@@ -90,7 +77,20 @@ OUT_OF_BOUNDS — Player spent 60 s outside the map square.
 - 290.8s sub.depthChanged {"layer":"Deep"}
 - 290.8s detection.threshold {"detection":66.97499999999931,"band":"Hunting"}
 - 295.4s detection.threshold {"detection":59.99999999999905,"band":"Searching"}
-- 311.4s sub.depthChanged {"layer":"Shallow"}
-- 315.4s detection.threshold {"detection":39.999999999998764,"band":"Suspicious"}
-- 355.4s detection.threshold {"detection":19.9999999999999,"band":"Unaware"}
-- 954.1s mission.defeat {"scoreParts":{"objective":0,"damage":0,"stealth":0.03750000000001252,"torpedoEfficiency":100,"time":100,"survival":5...
+- 305.5s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 305.5s sonar.ping {"bearingDeg":274.72766918549564}
+- 305.5s sub.speedChanged {"band":"SILENT","speedKt":3,"noise":0}
+- 310.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 313.0s sonar.ping {"bearingDeg":274.63566370407614}
+- 313.0s sub.speedChanged {"band":"SILENT","speedKt":7.1999999999999895,"noise":8.399999999999977}
+- 317.6s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 320.5s sonar.ping {"bearingDeg":274.535547412941}
+- 320.5s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 324.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 328.0s sonar.ping {"bearingDeg":274.42309195050143}
+- 328.0s battery.low {"battery":8.570000000000212}
+- 328.0s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 338.3s sub.depthChanged {"layer":"Shallow"}
+- 342.2s detection.threshold {"detection":39.99999999999794,"band":"Suspicious"}
+- 382.2s detection.threshold {"detection":19.999999999999076,"band":"Unaware"}
+- 950.6s mission.defeat {"scoreParts":{"objective":0,"damage":0,"stealth":0.03750000000001252,"torpedoEfficiency":100,"time":100,"survival":5...

@@ -1942,3 +1942,16 @@ button {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
+
+/* --- t-028f: surfaced fast-charge indicator --- */
+.bar-row.charging .bar-fill {
+  background: var(--color-success);
+  animation: charge-pulse 1.2s ease-in-out infinite;
+}
+.bar-row.charging .bar-value {
+  color: var(--color-success);
+}
+@keyframes charge-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.55; }
+}
