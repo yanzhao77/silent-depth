@@ -134,7 +134,7 @@ export function createMenus(root: HTMLElement, deps: MenuDeps, initialLang: Lang
         el('h1', { className: 'menu-title', text: tt('app.title') }),
         el('div', { className: 'menu-subtitle', text: tt('app.subtitle') }),
         el('div', { className: 'menu-spacer' }),
-        menuButton(tt('menu.play'), () => deps.onPlay(lastUnlocked), '', tt('menu.quickStart', { id: lastUnlocked })),
+        menuButton(tt('menu.play'), () => deps.onPlay(lastUnlocked), 'primary', tt('menu.quickStart', { id: lastUnlocked })),
         menuButton(tt('menu.missions'), () => setSectionImpl('missions')),
         menuButton(tt('menu.settings'), () => setSectionImpl('settings')),
         menuButton(tt('menu.credits'), () => setSectionImpl('credits')),
@@ -255,27 +255,18 @@ export function createMenus(root: HTMLElement, deps: MenuDeps, initialLang: Lang
         commit()
       }),
       sectionHeader(tt('settings.app')),
-      // Language picker (t-022) — labels in their own language. Inline
-      // styles keep the picker readable without touching style.css (which
-      // is out of scope for t-022; t-023 redesigns visuals).
+      // Language picker (t-022/t-023) — labels in their own language;
+      // segmented control styled in style.css (.lang-btn).
       el('div', { className: 'settings-row' }, [
         el('span', { className: 'settings-label', text: tt('settings.language') }),
-        el('div', { style: { display: 'flex', gap: '6px', 'flex-wrap': 'wrap' } }, LANGS.map((info) => {
-          const active = info.code === lang
-          // Note: dom.ts el() applies styles via setProperty → kebab-case keys.
-          const style: Record<string, string> = { padding: '6px 10px', 'font-size': '11px' }
-          if (active) {
-            style['border-color'] = '#5bc0de'
-            style['color'] = '#5bc0de'
-          }
-          return el('button', {
-            className: 'menu-button',
+        el('div', { className: 'lang-btns' }, LANGS.map((info) =>
+          el('button', {
+            className: `lang-btn${info.code === lang ? ' active' : ''}`,
             text: info.label,
             title: info.label,
-            style,
             onclick: () => deps.onLanguageChange(info.code),
-          })
-        })),
+          }),
+        )),
       ]),
       el('div', { className: 'settings-actions' }, [
         menuButton(tt('settings.export'), () => deps.onExportSave()),
@@ -419,7 +410,7 @@ export function createMenus(root: HTMLElement, deps: MenuDeps, initialLang: Lang
         el('div', { className: 'result-stats', text: tt('result.stats', { hit: stats.torpedoesHit, fired: stats.torpedoesFired, left: stats.torpedoesRemaining, d: Math.round(stats.peakDetection), t: formatPar(stats.elapsedS) }) }),
         el('div', { className: 'result-hint', text: tt(`result.hint.${score.grade}`) }),
         el('div', { className: 'menu-spacer' }),
-        menuButton(tt('result.retry'), () => deps.onRestart()),
+        menuButton(tt('result.retry'), () => deps.onRestart(), 'primary'),
         menuButton(tt('result.missions'), () => setSectionImpl('missions')),
         menuButton(tt('result.mainMenu'), () => deps.onGoMainMenu()),
       ]),

@@ -5,8 +5,8 @@
  *
  *   L0 ocean gradient (VISUAL_STYLE §2: #050a12 base → #0a1626 → #0d2233 →
  *      #14303f shallow tint)
- *   L1 5 km grid (balance.world.gridM, 18 % alpha) + sonar range rings +
- *      LKP markers
+ *   L1 5 km grid (balance.world.gridM, ~9 % alpha — softened in t-023) +
+ *      sonar range rings + LKP markers
  *   L2 entities: enemy ships (per shipClass + aiState coding) → player
  *      submarine (white outline) + wake → torpedoes / decoys → contact
  *      uncertainty ellipses (CONTACT_STATE_COLORS rings)
@@ -38,6 +38,9 @@
  *    ship/unit sprites (drawImage fast path, GAME_ARCHITECTURE §11).
  *  - Weather overlays follow the ACTIVE weather segment (world.ts semantics:
  *    M05 'Night->Fog' hands over at the midpoint).
+ *  - UI v2 (t-023): the grid alpha is softened (major 0.18 → 0.09, minor
+ *    0.05 → 0.035) so the map reads as ambient background under the DOM
+ *    Mission Workspace frame; nothing else in the tactical palette changed.
  *  - The renderer works in CSS pixels; the shell scales the backing store by
  *    devicePixelRatio and applies ctx.setTransform(dpr,…) once.
  *
@@ -345,6 +348,13 @@ function drawGrid(ctx: CanvasRenderingContext2D, camera: Camera, balance: Balanc
   ctx.lineWidth = 1
   ctx.strokeStyle = OCEAN_GRID_COLOR
 
+  // UI v2 (t-023): the grid is ambient background, not UI — major lines at
+  // ~9% alpha (was 18% per VISUAL_STYLE v1), minor at ~3.5% (was 5%). The
+  // tactical palette is otherwise untouched; the Mission Workspace (DOM
+  // frame) now carries the "UI" role.
+  const ALPHA_MAJOR = 0.09
+  const ALPHA_MINOR = 0.035
+
   // Inline north-up projection (no per-line worldToScreen allocation):
   //   screenX = wx * zoom + originX, screenY = -wy * zoom + originY.
   const originX = camera.viewport.width / 2 - camera.center.x * zoom
@@ -357,7 +367,7 @@ function drawGrid(ctx: CanvasRenderingContext2D, camera: Camera, balance: Balanc
     const idx = Math.round(x / cellKm)
     const major = idx % majorEvery === 0
     if (!major && !showMinor) continue
-    ctx.globalAlpha = major ? 0.18 : 0.05
+    ctx.globalAlpha = major ? ALPHA_MAJOR : ALPHA_MINOR
     const sx = x * zoom + originX
     ctx.beginPath()
     ctx.moveTo(sx, view.bottom * -zoom + originY)
@@ -371,7 +381,7 @@ function drawGrid(ctx: CanvasRenderingContext2D, camera: Camera, balance: Balanc
     const idx = Math.round(y / cellKm)
     const major = idx % majorEvery === 0
     if (!major && !showMinor) continue
-    ctx.globalAlpha = major ? 0.18 : 0.05
+    ctx.globalAlpha = major ? ALPHA_MAJOR : ALPHA_MINOR
     const sy = -y * zoom + originY
     ctx.beginPath()
     ctx.moveTo(view.left * zoom + originX, sy)

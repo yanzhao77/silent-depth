@@ -124,6 +124,9 @@ let salvoPending = false
 let pausePulse = false
 let lastShownState: string | null = null
 let lastWeather: WeatherKind | null = null
+/** t-023: Settings opened from the in-mission HUD — BACK returns to the
+ *  mission instead of aborting to the main menu. */
+let overlayReturnToMission = false
 
 let followPlayer = true
 let dragging = false
@@ -173,6 +176,13 @@ const hud = createHud(hudRoot, {
   onSalvoChange: (n: 1 | 2) => {
     salvo = n
     salvoPending = false
+  },
+  onOpenSettings: () => {
+    // Settings opened from the in-mission HUD: BACK returns to the mission
+    // (no abort confirmation), not to the main menu.
+    overlayReturnToMission =
+      handle !== null && snapshot !== null && snapshot.state !== 'MENU' && snapshot.state !== 'BOOT'
+    menus.setSection('settings')
   },
   lang,
 })
@@ -238,11 +248,24 @@ const menus = createMenus(
     },
     onAbort: () => abortToMenu(),
     onGoMainMenu: () => {
+      // Settings opened over a running mission: BACK just closes the overlay.
+      if (overlayReturnToMission) {
+        overlayReturnToMission = false
+        closeOverlayToMission()
+        return
+      }
       setMenuSection('main')
     },
   },
   lang,
 )
+
+/** Re-show the correct screen after closing the in-mission settings overlay. */
+function closeOverlayToMission(): void {
+  if (handle !== null && snapshot !== null && snapshot.state !== 'MENU' && snapshot.state !== 'BOOT') {
+    menus.showEngineState(snapshot.state, { mission: missionDef ?? undefined, snapshot })
+  }
+}
 
 function setMenuSection(section: MenuSection): void {
   if (handle !== null && snapshot !== null && snapshot.state !== 'MENU') {
@@ -579,6 +602,9 @@ function frame(nowMs: number): void {
       weather: lastWeather ?? 'Clear',
       mission: missionDef!,
       balance,
+      zoom: camera.zoom,
+      fps,
+      showFps: save.settings.video.showFps,
     })
   }
 

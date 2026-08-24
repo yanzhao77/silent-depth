@@ -49,6 +49,8 @@ import {
 import {
   DETECTION_BAND_COLORS,
   detectionBandIndex,
+  eventPhase,
+  eventSeverity,
   formatEvent,
   formatFireSolution,
   formatLastSeen,
@@ -772,5 +774,40 @@ describe('i18n in HUD formatters', () => {
     expect(formatLastSeen(100, 100.4, 'zh')).toBe('现在')
     expect(formatLastSeen(100, 100.4, 'fr')).toBe('MAINTENANT')
     expect(formatLastSeen(100, 112.6, 'en')).toBe('13S')
+  })
+})
+
+// ---------------------------------------------------------------------------
+// Timeline helpers (t-023 UI v2 — eventSeverity / eventPhase)
+// ---------------------------------------------------------------------------
+
+describe('timeline severity + phase', () => {
+  it('eventSeverity maps outcomes to semantic dots (default info)', () => {
+    expect(eventSeverity('torpedo.hit')).toBe('success')
+    expect(eventSeverity('ship.sunk')).toBe('success')
+    expect(eventSeverity('mission.victory')).toBe('success')
+    expect(eventSeverity('escape.escaped')).toBe('success')
+    expect(eventSeverity('torpedo.missed')).toBe('warning')
+    expect(eventSeverity('battery.low')).toBe('warning')
+    expect(eventSeverity('detection.threshold')).toBe('warning')
+    expect(eventSeverity('player.located')).toBe('error')
+    expect(eventSeverity('mission.defeat')).toBe('error')
+    expect(eventSeverity('sonar.ping')).toBe('info')
+    expect(eventSeverity('torpedo.fired')).toBe('info')
+    expect(eventSeverity('depthCharge.detonated')).toBe('info')
+  })
+
+  it('eventPhase groups events into mission phases', () => {
+    expect(eventPhase('sonar.ping')).toBe('SONAR')
+    expect(eventPhase('contact.classified')).toBe('SONAR')
+    expect(eventPhase('torpedo.fired')).toBe('TORPEDO')
+    expect(eventPhase('torpedo.hit')).toBe('TORPEDO')
+    expect(eventPhase('ship.sunk')).toBe('COMBAT')
+    expect(eventPhase('depthCharge.dropped')).toBe('COMBAT')
+    expect(eventPhase('sub.damaged')).toBe('SUB')
+    expect(eventPhase('battery.low')).toBe('SUB')
+    expect(eventPhase('decoy.launched')).toBe('SUB')
+    expect(eventPhase('mission.victory')).toBe('MISSION')
+    expect(eventPhase('escape.escaped')).toBe('MISSION')
   })
 })

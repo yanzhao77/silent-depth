@@ -89,3 +89,72 @@ Version: v1 · Owner: Factory Manager (escalated from designer delegation) · St
 - [ ] Every asset has registry.json entry with sha256 + source=procedural
 - [ ] Weather overlays in code (not baked into sprites)
 - [ ] No asset exceeds 512×512 in v1
+
+---
+
+## 12. v2 — Modern AI Mission Control (UI v2 · t-023)
+
+The interface (DOM layer L6 + menu screens) was redesigned from the v1
+Retro Military Console (deep navy, thin blue borders, ALL-CAPS mono, boxes)
+to a **Modern AI Mission Control** surface. **This section supersedes
+§2/§7/§8/§9 for the UI layer only** — the v1 canvas palette (§2), sprite
+rules (§6), and particle style (§10) remain authoritative for the tactical
+map and assets. CSS implementation: `src/style.css` (design tokens).
+
+### 12.1 Design tokens (CSS custom properties)
+
+| Token | Value | Role |
+|---|---|---|
+| `--color-primary` | `#22d3ee` | brand accent (cyan) — interactive, selection, focus |
+| `--color-success` | `#34d399` | running/completed, battery, hits |
+| `--color-warning` | `#fbbf24` | low battery, degraded, torpedo misses |
+| `--color-error` | `#f87171` | damage, danger, defeat |
+| `--color-info` | `#60a5fa` | neutral system info |
+| `--color-muted` | `#64748b` | disabled / tertiary |
+| `--surface-0` | `#0a0e14` | page background |
+| `--surface-1` | `#0e141d` | workspace |
+| `--surface-2` | `rgba(19,27,40,.76)` | panel / card (blurred) |
+| `--surface-3` | `#1b2534` | raised / interactive |
+| `--text-primary` | `#e6edf3` | primary text |
+| `--text-secondary` | `#a3b3c6` | secondary text |
+| `--text-muted` | `#64748b` | metadata / hints |
+
+### 12.2 Typography (dual-font system)
+
+- **UI text**: sans-serif stack `-apple-system, 'SF Pro Text', Inter, 'Segoe
+  UI', Roboto, 'Helvetica Neue', Arial, sans-serif` — sentence case, never
+  ALL-CAPS except tiny micro-labels (card titles, technical tags).
+- **Technical data only** (logs, IDs, timestamps, numbers, codes, status
+  chips): monospace `'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas`.
+
+### 12.3 Surface model & hierarchy
+
+Layer stack: Background (`surface-0`) → Workspace (canvas map, `surface-1`)
+→ Panel/Card (`surface-2` + `backdrop-filter: blur(14px)`) → Content →
+Interactive (`surface-3`). Rounded corners 8–14 px, very faint borders
+(`rgba(148,163,184,.1)`), soft shadows, subtle elevation on hover. Borders
+are auxiliary; hierarchy comes from size/weight/color/spacing.
+
+Primary (mission name, status chip, workspace, submarine status) → secondary
+(progress bars, contacts, fire control) → tertiary (timeline) → metadata
+(time, IDs, zoom) — established with type size/weight, not boxes.
+
+### 12.4 Layout (1280×720 target, responsive-ish)
+
+Top bar (brand · mission + status chip · spacer · weather/language/settings)
+→ central framed **Mission Workspace** (canvas L0–L5 with a header row:
+mission id, timer, zoom hint) → left column (Submarine Status card, Tasks,
+Torpedoes) → right column (Contacts, Fire Control) → bottom **Activity
+timeline** (severity-dotted event log grouped by phase). The canvas minimap
+keeps its v1 bottom-right placement; panels clear it.
+
+### 12.5 Motion
+
+120–200 ms transitions on hover/state; status-chip pulse while RUNNING;
+active-objective pulse; progress-bar width transitions. No gratuitous motion.
+
+### 12.6 Interaction states
+
+Visible hover on everything clickable, `:focus-visible` outlines, selected
+contact highlight (primary border + tint), primary/secondary/danger button
+tokens, disabled states at ~42 % opacity.
