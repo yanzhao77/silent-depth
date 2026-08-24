@@ -162,6 +162,18 @@ const input = createInput({
   onMenu: () => {
     abortToMenu()
   },
+  onScreenshot: () => {
+    // F12: capture a real in-game screenshot (canvas only) and download it.
+    try {
+      const url = canvas.toDataURL('image/png')
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `silent-depth-${Date.now()}.png`
+      a.click()
+    } catch (err) {
+      console.warn('[silent-depth] screenshot failed:', err)
+    }
+  },
 })
 input.bind(window)
 

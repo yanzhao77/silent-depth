@@ -1,6 +1,6 @@
 # Playtest 08 — Generated Tanker Escort (t-014 evidence)
 
-- **Version**: ed9227c
+- **Version**: 92e19b8
 - **Mission**: GEN-03 — Generated Tanker Escort (seed 2003, difficulty 2/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
 - **Result**: **TIMEOUT** after 3000.1 s (60000 ticks)

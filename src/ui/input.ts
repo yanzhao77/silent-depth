@@ -67,6 +67,8 @@ export interface InputOptions {
   onPause?: () => void
   /** Called on the Esc keydown edge (shell aborts to menu). */
   onMenu?: () => void
+  /** Called on the F12 keydown edge (shell saves a screenshot PNG). */
+  onScreenshot?: () => void
 }
 
 export interface InputController {
@@ -150,6 +152,9 @@ export function createInput(opts: InputOptions): InputController {
         break
       case 'Escape':
         opts.onMenu?.()
+        break
+      case 'F12':
+        opts.onScreenshot?.()
         break
     }
   }

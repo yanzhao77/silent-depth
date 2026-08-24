@@ -1,50 +1,105 @@
 # SILENT DEPTH 《深海猎手》
 
-**2D 战术潜艇伏击游戏** — 在不完整信息下做决策:听 → 判 → 追 → 算 → 伏 → 攻 → 藏 → 逃。
+**2D 战术潜艇伏击游戏** — 核心体验是**在信息不完整的情况下做决策**:听 → 判 → 追 → 算 → 伏 → 攻 → 藏 → 逃。你不是"看到敌人再开火",而是通过声呐听见、判断、跟踪、预测,在敌方搜索与反击中完成伏击。
 
-纯 TypeScript 确定性引擎(headless-first)+ Canvas 2D + WebAudio 程序化音效 + 全程序化素材。完全离线运行,零运行时依赖,零第三方素材。
+纯 TypeScript 确定性引擎(headless-first)+ Canvas 2D + WebAudio 程序化音效 + 全程序化素材。**完全离线运行,零运行时依赖,零第三方素材,零外部网络请求**。
 
-## 快速开始
+---
+
+## 📸 游戏画面
+
+> 以下为**程序化预览渲染**(真实引擎 + 真实渲染器在无头环境下绘制,非浏览器实拍)。
+> 游戏内按 **F12** 可随时截取真实画面(PNG 自动下载)。
+
+| | |
+|---|---|
+| ![首次伏击](assets/screenshots/m02-ambush.png) | ![袭击护航队](assets/screenshots/m03-convoy.png) |
+| **M02 首次伏击** — 玩家潜艇 + 油轮接触(不确定性椭圆)+ 声呐 ping 扩散环 | **M03 袭击护航队** — 货船编队 + 驱逐舰护航,接触以椭圆而非红点呈现 |
+| ![静默猎手(夜间)](assets/screenshots/m05-night-fog.png) | ![鱼雷出管](assets/screenshots/m02-torpedo.png) |
+| **M05 静默猎手** — 夜间 + 浓雾叠层,低能见度下的伏击 | **鱼雷航行** — 无自动锁定,直航 + 尾迹气泡,命中靠提前量 |
+
+---
+
+## ✨ 特性
+
+- **声呐是信息层(P0)**:主动 ping(信息↑ 暴露↑)vs 被动监听(信息↓ 暴露↓);接触从不精确——首次仅方位角,随跟踪收敛(射程 ±10%→±2%,航向 ±20%→±5%)
+- **渐进分类**:Unknown → Large Surface → Merchant 72% → Confirmed,基于速度/噪声/深度特征投票
+- **敌方 AI 状态机**:NORMAL → SUSPICIOUS → ALERT → SEARCHING → HUNTING → LOST_CONTACT;以"最后已知位置(LKP)"为中心执行圆形/之字/扩张搜索
+- **护航编队**:2×2 商船队形 + figure-8 巡逻护航舰,鱼雷/爆炸/噪声触发不同响应优先级
+- **无自动锁定鱼雷**:火控解算(提前角 + 命中概率)只做辅助,出管后直航,命中率 = 你的跟踪质量
+- **探测计与逃脱**:噪声↑ → 探测↑;静默、下潜、变向、诱饵(decoy)主动压低探测;F9 逃脱判定
+- **5 个任务 + 种子任务生成器**:同一种子可复现同一任务(可重放、可调试)
+- **程序化世界**:5 种天气(晴/多云/风暴/浓雾/夜间)影响能见度、声呐与探测
+- **存档**:任务解锁链、最高分、统计(localStorage,无账号)
+
+## 🚀 快速开始
 
 ```bash
 npm install
 npm run dev        # 开发 (http://localhost:5173)
-npm run preview    # 预览生产构建
-npm run test       # 358 项测试 (vitest)
 npm run build      # 生成离线静态构建 → dist/
+npm run preview    # 预览生产构建
+npm test           # 358 项测试 (vitest)
 ```
 
-> 直接玩:构建后打开 `dist/index.html` 即可(无需服务器)。
+> 直接玩:构建后打开 `dist/index.html` 即可,无需服务器。
 
-## 操作
+## 🎮 操作
 
-| 键 | 动作 |
+| 键 | 动作 | 键 | 动作 |
+|---|---|---|---|
+| **W / S** | 加速 / 减速 | **G** | 释放假目标 Decoy |
+| **A / D** | 左转 / 右转 | **P** | 暂停 |
+| **Q / E** | 深度层切换 | **Esc** | 菜单 / 中止 |
+| **Space** | 主动声呐 Ping | **F12** | 截图(PNG 下载) |
+| **F** | 发射鱼雷(选中接触) | 滚轮 / 拖拽 | 地图缩放 / 平移 |
+| **R** | 静默运行 | — | — |
+
+## 🗺️ 任务
+
+| ID | 任务 | 目标 | 敌情 | 天气 | 难度 |
+|---|---|---|---|---|---|
+| M01 | 声呐训练 | 找到→分类→跟踪商船 | 1 × Merchant | 晴 | 简单 |
+| M02 | 首次伏击 | 击沉运输船 | 1 × Tanker | 晴→多云 | 简单-中等 |
+| M03 | 袭击护航队 | 击沉 ≥2 货船 | 4 × Cargo + 1 × Destroyer | 多云→风暴 | 中等 |
+| M04 | 重装护航 | 击沉 ≥2 且存活 | 4 × Cargo + 2 × Destroyer | 风暴→浓雾 | 困难 |
+| M05 | 静默猎手 | 击沉 ≥1 且成功逃脱 | 4 × Cargo + 2 × Destroyer + 1 × Frigate | 夜间 + 浓雾 | 极难 |
+
+## 🏆 评分
+
+| 等级 | 分数 |
 |---|---|
-| W / S | 加速 / 减速 |
-| A / D | 左转 / 右转 |
-| Q / E | 深度层切换 |
-| Space | 主动声呐 Ping |
-| F | 发射鱼雷(选中接触) |
-| R | 静默运行 |
-| G | 释放假目标 Decoy |
-| P | 暂停 |
-| Esc | 菜单 |
+| Perfect | 1000 |
+| Excellent | 800–999 |
+| Good | 600–799 |
+| Poor | 400–599 |
+| Failed | <400 |
 
-## 内容
+权重:目标 40% · 伤害 20% · 隐匿 15% · 鱼雷效率 10% · 时间 10% · 存活/逃脱 5%(基于真实数据计算)。
 
-- **5 个任务**:声呐训练 → 首次伏击 → 袭击护航队 → 重装护航 → 静默猎手(夜间+浓雾+强护航)
-- **核心系统**:主动/被动声呐、接触不确定性收敛、渐进分类、敌方 AI 状态机(NORMAL→…→HUNTING)、护航编队与搜索模式、无自动锁定鱼雷火控、探测计与逃脱判定、种子化任务生成器、5 种天气
-- **评分**:1000 Perfect / 800 Excellent / 600 Good / 400 Poor / <400 Failed
+## 📚 文档
 
-## 文档
+| 文档 | 内容 |
+|---|---|
+| [docs/README.md](docs/README.md) | 完整说明(控制/任务/评分) |
+| [docs/GAME_DESIGN.md](docs/GAME_DESIGN.md) | 游戏设计 + 平衡目标(B1–B10)+ 平衡公式(F1–F10) |
+| [docs/GAME_ARCHITECTURE.md](docs/GAME_ARCHITECTURE.md) | 引擎架构、模块图、事件目录、确定性策略 |
+| [docs/VISUAL_STYLE.md](docs/VISUAL_STYLE.md) | 视觉风格圣经(调色板/分辨率/图标/动效) |
+| [docs/AUDIO_DESIGN.md](docs/AUDIO_DESIGN.md) | 14 个 WebAudio 程序化音效合成规格 |
+| [docs/ASSET_PIPELINE.md](docs/ASSET_PIPELINE.md) | 素材管线 + 许可证闸门 |
+| [RELEASE_NOTES.md](RELEASE_NOTES.md) | v1.0.0 发布说明 |
+| `reports/` | 生产证据:TEST / PLAYTEST / BALANCE / SECURITY / BUILD 报告 |
 
-- [docs/README.md](docs/README.md) — 完整说明(控制/任务/评分)
-- [docs/GAME_DESIGN.md](docs/GAME_DESIGN.md) — 游戏设计 + 平衡目标
-- [docs/GAME_ARCHITECTURE.md](docs/GAME_ARCHITECTURE.md) — 引擎架构与事件目录
-- [docs/VISUAL_STYLE.md](docs/VISUAL_STYLE.md) / [docs/AUDIO_DESIGN.md](docs/AUDIO_DESIGN.md) / [docs/ASSET_PIPELINE.md](docs/ASSET_PIPELINE.md)
-- [RELEASE_NOTES.md](RELEASE_NOTES.md) — v1.0.0 发布说明
-- `reports/` — 生产证据(TEST / PLAYTEST / BALANCE / SECURITY / BUILD 报告)
+## 🏭 生产背景
 
-## 生产背景
+本项目由 **DeepSeek Software Factory** 全自主生产(需求 → 设计 → 架构 → 实现 → 测试 → AI Playtest → 平衡 → 构建 → 交付),作为 **GAME PRODUCTION BENCHMARK**。要点:
 
-本项目由 **DeepSeek Software Factory** 自主生产(要求 → 设计 → 架构 → 实现 → 测试 → AI Playtest → 平衡 → 构建 → 交付),作为 GAME PRODUCTION BENCHMARK。全部素材程序化生成(CC0),零第三方版权素材,零运行时网络请求。
+- **确定性**:全系统种子化 RNG,同种子同操作 → 完全可复现(测试证明 3000-tick 快照 byte-identical)
+- **AI Playtest**:12 次无头试玩、5 次胜利(M01/M02/生成任务),失败均带证据
+- **诚实记录**:所有素材程序化生成(CC0)、零第三方版权素材、零运行时网络;平衡调整全部证据驱动
+- **质量门槛**:16 道 Gate 全部通过,358/358 测试,离线构建验证通过
+
+## 已知限制
+
+- M03+ 的**脚本化** AI 胜利尚未达成(护航压迫 + 商船散开 + 电池上限),人工玩家采用"静默伏击"战术可通关;详见 `reports/balance/BALANCE_REPORT.md`
+- 视觉浏览器冒烟测试未在无头环境执行,建议 `npm run preview` 手动验收
