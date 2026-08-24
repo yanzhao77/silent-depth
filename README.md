@@ -39,7 +39,7 @@ npm install
 npm run dev        # 开发 (http://localhost:5173)
 npm run build      # 生成离线静态构建 → dist/
 npm run preview    # 预览生产构建
-npm test           # 358 项测试 (vitest)
+npm test           # 363 项测试 (vitest, 17 文件)
 ```
 
 > 直接玩:构建后打开 `dist/index.html` 即可,无需服务器。
@@ -98,7 +98,31 @@ npm test           # 358 项测试 (vitest)
 - **确定性**:全系统种子化 RNG,同种子同操作 → 完全可复现(测试证明 3000-tick 快照 byte-identical)
 - **AI Playtest**:12 次无头试玩、5 次胜利(M01/M02/生成任务),失败均带证据
 - **诚实记录**:所有素材程序化生成(CC0)、零第三方版权素材、零运行时网络;平衡调整全部证据驱动
-- **质量门槛**:16 道 Gate 全部通过,358/358 测试,离线构建验证通过
+- **质量门槛**:16 道 Gate 全部通过,**363/363 测试**(17 文件,发布后补入 screenshots 测试套件),离线构建验证通过
+
+## 🏭 工厂生产证据（DeepSeek Software Factory V0.3）
+
+本游戏由 **DeepSeek Software Factory V0.3（Documentation & Evidence Factory）** 全自主生产，
+完整生产证据链已归档于 `factory/` 目录与交付包：
+
+| 证据 | 数据 |
+|---|---|
+| 需求追踪 | **28/28 需求 VERIFIED**（FR-01..22 功能 + FR-1..6 非功能，覆盖 100%） |
+| 测试 | **363/363 通过**（17 文件，真实运行）· 验收矩阵 28 项全 PASS |
+| 证据链 | **36 条证据全部 AUDITED**（VERIFIED → 审计复核，rawReference 可逐条核对） |
+| 审计 | **FINAL AUDIT: RELEASE**（8 次审计记录，初始 BLOCK_RELEASE → 补齐证据 → 0 失败） |
+| 文档 | **31 份 game-profile 文档**，Documentation Gate **PASSED** · 一致性 0 FLAG · health **GOOD** |
+| 交付包 | **158 文件** + MANIFEST(sha256) + FINAL_DELIVERY_REPORT（RELEASE） |
+
+- `factory/reports/acceptance-matrix.md` — 真实验收矩阵（28 项逐项证据）
+- `factory/memory/evidence.jsonl` — 36 条证据（DECLARED→AUDITED 级别纪律）
+- `factory/memory/audits/` — 8 次审计记录（含初始 BLOCK_RELEASE 的诚实缺口暴露）
+- `factory/requirements/reqs.json` — 28 个结构化需求（追踪矩阵）
+- `factory/plans/` — Plan v1/v2（含需求变更重规划）
+- `factory/artifacts/` — 版本化产物（sha256 快照 + 依赖图）
+
+> 完整审计报告：`factory/reports/FINAL_DELIVERY_REPORT.md`（Audit 决策 RELEASE）。
+> 工厂侧交付记录：`deepseek_software/reports/review/FINAL_AUDIT_REPORT_p004.md`。
 
 ## 已知限制
 

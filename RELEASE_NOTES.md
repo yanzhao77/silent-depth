@@ -25,7 +25,7 @@ Nine wired systems — world, missions, submarine, sonar, AI, combat, detection,
 - **Headless sim / AI playtest** — the game is playable by scripted AI brains (`src/sim`); 12 recorded sessions across fixed + generated missions (PLAYTEST SUMMARY).
 
 ### Quality gates at release
-- **Tests: 358 / 358 passed (16 files)** — re-run and verified on release day (`npm test`, 5.4 s). Includes unit, integration (gameplay/determinism/weather), regression and the playtest harness.
+- **Tests: 363 / 363 passed (17 files)** — re-run and verified on release day (`npm test`). Includes unit, integration (gameplay/determinism/weather), regression, the playtest harness, and the headless screenshot tooling suite (added post-release, +5).
 - **`tsc --noEmit`: 0 errors.**
 - **Build: SUCCESS** — offline-verified static bundle, zero reachable runtime network references, no sourcemaps (build-report t-016).
 - **Security: PASS** (post-UI re-verification) — zero runtime dependencies, zero runtime network calls, no injection surface, no secrets; only open item is a LOW deployment hardening note (CSP header).
@@ -65,7 +65,7 @@ npm install            # dev toolchain only (vite, vitest, typescript) — zero 
 
 npm run dev            # dev server → http://localhost:5173
 npm run preview        # serve the production build → http://localhost:4173 (recommended visual pass)
-npm test               # 358 tests / 16 files
+npm test               # 363 tests / 17 files
 npm run build          # regenerate dist/ (tsc --noEmit && vite build)
 npm run sim            # headless AI simulation runner
 ```
