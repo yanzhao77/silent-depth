@@ -17,6 +17,7 @@
 | **M02 首次伏击** — 玩家潜艇 + 油轮接触(不确定性椭圆)+ 声呐 ping 扩散环 | **M03 袭击护航队** — 货船编队 + 驱逐舰护航,接触以椭圆而非红点呈现 |
 | ![静默猎手(夜间)](assets/screenshots/m05-night-fog.png) | ![鱼雷出管](assets/screenshots/m02-torpedo.png) |
 | **M05 静默猎手** — 夜间 + 浓雾叠层,低能见度下的伏击 | **鱼雷航行** — 无自动锁定,直航 + 尾迹气泡,命中靠提前量 |
+<img width="2556" height="1188" alt="64cc9820-2147-45d3-85ef-ca7e3c11ad24" src="https://github.com/user-attachments/assets/f35a4b92-c7ba-4524-b463-6a3a74d845bc" />
 
 ---
 
