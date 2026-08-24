@@ -1,6 +1,6 @@
 # Playtest 03 — Convoy Attack (t-014 evidence)
 
-- **Version**: b739063
+- **Version**: 4b3d0be
 - **Mission**: M03 — Convoy Attack (seed 1003, difficulty 3/5)
 - **Agent**: scripted-brain-convoy-attack (Convoy attack (M03/M04 best effort))
 - **Result**: **DEFEAT** after 832.1 s (16642 ticks)

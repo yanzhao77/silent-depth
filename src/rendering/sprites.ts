@@ -97,11 +97,11 @@ export const PALETTE: PaletteColors = {
   explosionEmber: '#7a2f22',
   outlineBright: 'rgba(255,255,255,0.60)',
   outlineDim: 'rgba(255,255,255,0.25)',
-  hullFill: '#46586b',
-  hullDark: '#2e3d4d',
-  hullLight: '#6b8094',
-  deckFill: '#3a4c5e',
-  stackFill: '#24333f',
+  hullFill: '#5a6a7a', // 现代军用灰 - 主船体颜色
+  hullDark: '#3d4d5d', // 深灰色 - 阴影部分
+  hullLight: '#7a8a9a', // 浅灰色 - 高光部分
+  deckFill: '#4a5a6a', // 甲板灰色
+  stackFill: '#3a4a5a', // 指挥塔灰色
 }
 
 /** Merge an optional palette override onto the canonical palette (pure). */
@@ -203,7 +203,7 @@ export interface SpriteManifestEntry {
 
 export const SPRITE_MANIFEST: readonly SpriteManifestEntry[] = [
   // ---- ship sprites (north-up, centered, transparent bg) ----
-  { id: 'sprite-submarine', kind: 'submarine', name: 'Submarine (player, white outline)', type: 'ship', format: 'canvas-2d', width: 256, height: 256, renderScalePx: 40 },
+  { id: 'sprite-submarine', kind: 'submarine', name: 'Submarine (player, white outline)', type: 'ship', format: 'canvas-2d', width: 256, height: 256, renderScalePx: 48 },
   { id: 'sprite-merchant', kind: 'merchant', name: 'Merchant — tramp steamer', type: 'ship', format: 'canvas-2d', width: 256, height: 256, renderScalePx: 46 },
   { id: 'sprite-cargo', kind: 'cargo', name: 'Cargo — container ship', type: 'ship', format: 'canvas-2d', width: 256, height: 256, renderScalePx: 48 },
   { id: 'sprite-tanker', kind: 'tanker', name: 'Tanker — long-haul tanker', type: 'ship', format: 'canvas-2d', width: 512, height: 512, renderScalePx: 64 },
@@ -414,107 +414,280 @@ function fillRectRounded(ctx: CanvasRenderingContext2D, x: number, y: number, w:
   ctx.fill()
 }
 
-/** Submarine — player, whale-shaped hull + sail, WHITE 60% outline. */
-/** Submarine hull planform: slender teardrop, pointed bow, tapered stern. */
-function subHullPath(
-  ctx: CanvasRenderingContext2D,
-  u: number,
-  opts: { bowY: number; sternY: number; halfWidth: number },
-): void {
+/**
+ * Submarine hull planform (t-028f redesign): slender teardrop silhouette of a
+ * modern attack submarine — rounded bow, parallel mid body, tapered stern
+ * cone. Bow 8 → stern 93.5, max half-width 7.4 (≈ 5.8:1 length-to-beam).
+ */
+function subHullPath(ctx: CanvasRenderingContext2D, u: number): void {
   const cx = 50 * u
-  const { bowY, sternY, halfWidth } = opts
-  const hw = halfWidth * u
   ctx.beginPath()
-  // bow tip (top)
-  ctx.moveTo(cx, bowY * u)
-  ctx.bezierCurveTo(cx - hw * 0.4, bowY * u + hw * 0.5, cx - hw, bowY * u + hw * 2.0, cx - hw, bowY * u + hw * 3.4)
-  // port side — parallel mid body, then taper to the stern
-  ctx.bezierCurveTo(cx - hw, sternY * u - hw * 2.6, cx - hw * 0.55, sternY * u - hw * 0.6, cx - hw * 0.18, sternY * u)
-  ctx.quadraticCurveTo(cx, sternY * u + hw * 0.35, cx + hw * 0.18, sternY * u)
-  // starboard side back up to the bow
-  ctx.bezierCurveTo(cx + hw * 0.55, sternY * u - hw * 0.6, cx + hw, sternY * u - hw * 2.6, cx + hw, bowY * u + hw * 3.4)
-  ctx.bezierCurveTo(cx + hw, bowY * u + hw * 2.0, cx + hw * 0.4, bowY * u + hw * 0.5, cx, bowY * u)
+  ctx.moveTo(cx, 8 * u)
+  // port side: rounded bow → parallel mid body → tapered stern cone
+  ctx.bezierCurveTo(cx - 3.9 * u, 9.5 * u, cx - 6.8 * u, 14 * u, cx - 7.2 * u, 20 * u)
+  ctx.bezierCurveTo(cx - 7.4 * u, 27 * u, cx - 7.4 * u, 36 * u, cx - 7.3 * u, 46 * u)
+  ctx.bezierCurveTo(cx - 7.2 * u, 58 * u, cx - 6.7 * u, 69 * u, cx - 5.2 * u, 78 * u)
+  ctx.bezierCurveTo(cx - 3.8 * u, 86 * u, cx - 2.0 * u, 91 * u, cx, 93.5 * u)
+  // starboard side (mirror)
+  ctx.bezierCurveTo(cx + 2.0 * u, 91 * u, cx + 3.8 * u, 86 * u, cx + 5.2 * u, 78 * u)
+  ctx.bezierCurveTo(cx + 6.7 * u, 69 * u, cx + 7.2 * u, 58 * u, cx + 7.3 * u, 46 * u)
+  ctx.bezierCurveTo(cx + 7.4 * u, 36 * u, cx + 7.4 * u, 27 * u, cx + 7.2 * u, 20 * u)
+  ctx.bezierCurveTo(cx + 6.8 * u, 14 * u, cx + 3.9 * u, 9.5 * u, cx, 8 * u)
   ctx.closePath()
 }
 
-/** Player submarine (t-028e): proper top-down submarine silhouette. */
+/**
+ * Player submarine (t-028f redesign): modern attack-submarine top-down view.
+ *
+ * Layered construction (all north-up, u = size/100):
+ *   1. hull — horizontal gradient simulates the cylindrical pressure-hull
+ *      shading (light from above-left); axial gradient darkens bow/stern.
+ *   2. bow spherical sonar dome (radial gradient + section line).
+ *   3. deck spine highlight + hull section lines.
+ *   4. torpedo-tube hatch marks (bow, flanking the spine).
+ *   5. streamlined sail with gradient, leading-edge highlight and mast
+ *      details (periscope / snorkel / ESM stubs).
+ *   6. sail planes (fairwater planes) — swept horizontal fins.
+ *   7. stern cruciform control surfaces + upper rudder line.
+ *   8. pump-jet propulsor disc with blade etchings.
+ *   9. flank sonar array lines along both sides of the hull.
+ *  10. dark keyline + cyan outer glow + bright inner outline (player
+ *      readability per VISUAL_STYLE §3 white-outline rule).
+ *
+ * The palette is self-contained (deep, desaturated submarine tones) and does
+ * not depend on the shared ship PALETTE — the player boat is deliberately
+ * darker than surface traffic for the "hunter in the deep" read.
+ */
 export function drawSubmarine(ctx: CanvasRenderingContext2D, size: number, opts?: DrawOpts): void {
-  const p = resolvePalette(opts?.palette)
+  void opts // palette overrides are ignored — the player sub has a dedicated scheme
   const u = size / 100
+  const cx = 50 * u
   ctx.save()
   ctx.clearRect(0, 0, size, size)
-  const cx = 50 * u
-  const hull = { bowY: 12, sternY: 90, halfWidth: 9 }
 
-  // hull body (teardrop planform)
-  subHullPath(ctx, u, hull)
-  ctx.fillStyle = p.hullFill
+  // dedicated submarine palette — deep, layered, desaturated
+  const cHullDeep = '#26313d'
+  const cHullMid = '#3d4b59'
+  const cHullHigh = '#57687a'
+  const cHullEdge = '#151c23'
+  const cSonarDome = '#1c2530'
+  const cSail = '#2e3946'
+  const cSailHigh = '#4e5c6c'
+  const cDeck = '#495865'
+  const cPanel = '#202a34'
+  const cProp = '#12181f'
+  const cMark = '#6b7e8f'
+
+  // ---- 1. hull body: horizontal cylinder shading + axial bow/stern darkening
+  subHullPath(ctx, u)
+  const hullGrad = ctx.createLinearGradient(cx - 7.5 * u, 0, cx + 7.5 * u, 0)
+  hullGrad.addColorStop(0.0, cHullDeep)
+  hullGrad.addColorStop(0.26, cHullMid)
+  hullGrad.addColorStop(0.48, cHullHigh)
+  hullGrad.addColorStop(0.74, cHullMid)
+  hullGrad.addColorStop(1.0, cHullDeep)
+  ctx.fillStyle = hullGrad
   ctx.fill()
 
-  // subtle center deck spine
+  subHullPath(ctx, u)
+  const axGrad = ctx.createLinearGradient(0, 8 * u, 0, 94 * u)
+  axGrad.addColorStop(0.0, 'rgba(0,0,0,0.20)')
+  axGrad.addColorStop(0.2, 'rgba(0,0,0,0)')
+  axGrad.addColorStop(0.78, 'rgba(0,0,0,0)')
+  axGrad.addColorStop(1.0, 'rgba(0,0,0,0.32)')
+  ctx.fillStyle = axGrad
+  ctx.fill()
+
+  // ---- 2. bow spherical sonar dome
   ctx.beginPath()
-  ctx.moveTo(cx, 20 * u)
-  ctx.lineTo(cx, 84 * u)
-  ctx.strokeStyle = p.hullLight
-  ctx.globalAlpha = 0.55
-  ctx.lineWidth = Math.max(1, u * 0.8)
+  ctx.ellipse(cx, 14.5 * u, 5.4 * u, 6.2 * u, 0, 0, Math.PI * 2)
+  const domeGrad = ctx.createRadialGradient(cx - 1.4 * u, 12.5 * u, 0.5 * u, cx, 14.5 * u, 6.6 * u)
+  domeGrad.addColorStop(0, '#33404d')
+  domeGrad.addColorStop(1, cSonarDome)
+  ctx.fillStyle = domeGrad
+  ctx.fill()
+  ctx.beginPath()
+  ctx.moveTo(cx - 6.1 * u, 20 * u)
+  ctx.quadraticCurveTo(cx, 22.8 * u, cx + 6.1 * u, 20 * u)
+  ctx.strokeStyle = cHullEdge
+  ctx.globalAlpha = 0.75
+  ctx.lineWidth = Math.max(1, u * 0.55)
   ctx.stroke()
   ctx.globalAlpha = 1
 
-  // conning tower (sail), slightly aft of midship
-  fillRectRounded(ctx, cx - 6.5 * u, 40 * u, 13 * u, 18 * u, 4 * u, p.stackFill)
-  // sail front edge shade
+  // ---- 3. deck spine + hull section lines
   ctx.beginPath()
-  ctx.moveTo(cx - 4.5 * u, 42 * u)
-  ctx.lineTo(cx + 4.5 * u, 42 * u)
-  ctx.strokeStyle = p.hullDark
+  ctx.moveTo(cx, 24 * u)
+  ctx.lineTo(cx, 80 * u)
+  ctx.strokeStyle = cDeck
+  ctx.globalAlpha = 0.85
+  ctx.lineWidth = Math.max(1, u * 1.0)
+  ctx.stroke()
+  ctx.globalAlpha = 1
+  ctx.beginPath()
+  for (const y of [56, 68]) {
+    ctx.moveTo(cx - 4.8 * u, y * u)
+    ctx.quadraticCurveTo(cx, (y + 1.4) * u, cx + 4.8 * u, y * u)
+  }
+  ctx.strokeStyle = cPanel
+  ctx.globalAlpha = 0.7
+  ctx.lineWidth = Math.max(1, u * 0.5)
+  ctx.stroke()
+  ctx.globalAlpha = 1
+
+  // ---- 4. torpedo-tube hatch marks
+  ctx.beginPath()
+  ctx.moveTo(cx - 3.2 * u, 25.5 * u)
+  ctx.lineTo(cx - 3.2 * u, 30 * u)
+  ctx.moveTo(cx + 3.2 * u, 25.5 * u)
+  ctx.lineTo(cx + 3.2 * u, 30 * u)
+  ctx.strokeStyle = cPanel
+  ctx.globalAlpha = 0.85
+  ctx.lineWidth = Math.max(1, u * 0.55)
+  ctx.stroke()
+  ctx.globalAlpha = 1
+
+  // ---- 5. streamlined sail with gradient + leading-edge highlight + masts
+  const sailGrad = ctx.createLinearGradient(cx - 4.4 * u, 0, cx + 4.4 * u, 0)
+  sailGrad.addColorStop(0, cHullEdge)
+  sailGrad.addColorStop(0.42, cSailHigh)
+  sailGrad.addColorStop(1, cSail)
+  ctx.beginPath()
+  ctx.moveTo(cx, 31.5 * u)
+  ctx.bezierCurveTo(cx - 3.9 * u, 33.5 * u, cx - 4.3 * u, 37 * u, cx - 4.1 * u, 40.5 * u)
+  ctx.lineTo(cx - 3.6 * u, 47.5 * u)
+  ctx.quadraticCurveTo(cx, 49.8 * u, cx + 3.6 * u, 47.5 * u)
+  ctx.lineTo(cx + 4.1 * u, 40.5 * u)
+  ctx.bezierCurveTo(cx + 4.3 * u, 37 * u, cx + 3.9 * u, 33.5 * u, cx, 31.5 * u)
+  ctx.closePath()
+  ctx.fillStyle = sailGrad
+  ctx.fill()
+  ctx.strokeStyle = cHullEdge
+  ctx.lineWidth = Math.max(1, u * 0.65)
+  ctx.stroke()
+
+  ctx.beginPath()
+  ctx.moveTo(cx - 1.0 * u, 33 * u)
+  ctx.quadraticCurveTo(cx - 3.0 * u, 35.5 * u, cx - 3.1 * u, 39.5 * u)
+  ctx.strokeStyle = cSailHigh
+  ctx.globalAlpha = 0.95
   ctx.lineWidth = Math.max(1, u * 0.6)
   ctx.stroke()
+  ctx.globalAlpha = 1
 
-  // periscope mast: thin stalk + small head forward of the sail
   ctx.beginPath()
-  ctx.moveTo(cx, 26 * u)
-  ctx.lineTo(cx, 40 * u)
-  ctx.strokeStyle = p.hullLight
+  ctx.moveTo(cx - 1.2 * u, 37 * u)
+  ctx.lineTo(cx - 1.2 * u, 44 * u)
+  ctx.moveTo(cx + 1.0 * u, 38 * u)
+  ctx.lineTo(cx + 1.0 * u, 43.5 * u)
+  ctx.strokeStyle = cPanel
+  ctx.lineWidth = Math.max(1, u * 0.6)
+  ctx.stroke()
+  ctx.beginPath()
+  ctx.arc(cx - 1.2 * u, 36.2 * u, Math.max(0.8, u * 0.7), 0, Math.PI * 2)
+  ctx.fillStyle = cMark
+  ctx.fill()
+
+  // ---- 6. sail planes (fairwater planes)
+  ctx.beginPath()
+  ctx.moveTo(cx - 4.0 * u, 38.5 * u)
+  ctx.lineTo(cx - 11.8 * u, 36 * u)
+  ctx.lineTo(cx - 11.0 * u, 40.5 * u)
+  ctx.lineTo(cx - 4.2 * u, 41.8 * u)
+  ctx.closePath()
+  ctx.moveTo(cx + 4.0 * u, 38.5 * u)
+  ctx.lineTo(cx + 11.8 * u, 36 * u)
+  ctx.lineTo(cx + 11.0 * u, 40.5 * u)
+  ctx.lineTo(cx + 4.2 * u, 41.8 * u)
+  ctx.closePath()
+  const planeGrad = ctx.createLinearGradient(0, 36 * u, 0, 42 * u)
+  planeGrad.addColorStop(0, cHullHigh)
+  planeGrad.addColorStop(1, cHullDeep)
+  ctx.fillStyle = planeGrad
+  ctx.fill()
+  ctx.strokeStyle = cHullEdge
+  ctx.lineWidth = Math.max(1, u * 0.55)
+  ctx.stroke()
+
+  // ---- 7. stern cruciform control surfaces + upper rudder
+  ctx.beginPath()
+  ctx.moveTo(cx - 3.4 * u, 80.5 * u)
+  ctx.lineTo(cx - 12.0 * u, 85 * u)
+  ctx.lineTo(cx - 10.8 * u, 89.5 * u)
+  ctx.lineTo(cx - 2.8 * u, 86.8 * u)
+  ctx.closePath()
+  ctx.moveTo(cx + 3.4 * u, 80.5 * u)
+  ctx.lineTo(cx + 12.0 * u, 85 * u)
+  ctx.lineTo(cx + 10.8 * u, 89.5 * u)
+  ctx.lineTo(cx + 2.8 * u, 86.8 * u)
+  ctx.closePath()
+  const sternGrad = ctx.createLinearGradient(0, 82 * u, 0, 90 * u)
+  sternGrad.addColorStop(0, cHullMid)
+  sternGrad.addColorStop(1, cHullDeep)
+  ctx.fillStyle = sternGrad
+  ctx.fill()
+  ctx.strokeStyle = cHullEdge
+  ctx.lineWidth = Math.max(1, u * 0.55)
+  ctx.stroke()
+  ctx.beginPath()
+  ctx.moveTo(cx, 81 * u)
+  ctx.lineTo(cx, 89.5 * u)
+  ctx.strokeStyle = cHullEdge
+  ctx.lineWidth = Math.max(1.2, u * 1.0)
+  ctx.stroke()
+
+  // ---- 8. pump-jet propulsor disc + blade etchings
+  ctx.beginPath()
+  ctx.arc(cx, 92.2 * u, 2.8 * u, 0, Math.PI * 2)
+  ctx.fillStyle = cProp
+  ctx.fill()
+  ctx.strokeStyle = cMark
+  ctx.globalAlpha = 0.6
+  ctx.lineWidth = Math.max(1, u * 0.5)
+  ctx.stroke()
+  ctx.globalAlpha = 1
+  ctx.beginPath()
+  for (let i = 0; i < 6; i++) {
+    const a = (i / 6) * Math.PI * 2 - Math.PI / 2
+    ctx.moveTo(cx + Math.cos(a) * 0.7 * u, 92.2 * u + Math.sin(a) * 0.7 * u)
+    ctx.lineTo(cx + Math.cos(a) * 2.4 * u, 92.2 * u + Math.sin(a) * 2.4 * u)
+  }
+  ctx.strokeStyle = cMark
+  ctx.globalAlpha = 0.75
+  ctx.lineWidth = Math.max(1, u * 0.4)
+  ctx.stroke()
+  ctx.globalAlpha = 1
+
+  // ---- 9. flank sonar array lines
+  ctx.beginPath()
+  ctx.moveTo(cx - 6.3 * u, 46 * u)
+  ctx.lineTo(cx - 6.0 * u, 70 * u)
+  ctx.moveTo(cx + 6.3 * u, 46 * u)
+  ctx.lineTo(cx + 6.0 * u, 70 * u)
+  ctx.strokeStyle = cPanel
+  ctx.globalAlpha = 0.6
+  ctx.lineWidth = Math.max(1, u * 0.5)
+  ctx.stroke()
+  ctx.globalAlpha = 1
+
+  // ---- 10. dark keyline + cyan outer glow + bright inner outline (player id)
+  subHullPath(ctx, u)
+  ctx.strokeStyle = 'rgba(10, 14, 18, 0.85)'
+  ctx.lineWidth = Math.max(1, u * 0.9)
+  ctx.stroke()
+  ctx.save()
+  ctx.shadowColor = 'rgba(100, 200, 255, 0.55)'
+  ctx.shadowBlur = 7 * u
+  subHullPath(ctx, u)
+  ctx.strokeStyle = 'rgba(190, 220, 240, 0.75)'
   ctx.lineWidth = Math.max(1, u * 0.7)
   ctx.stroke()
-  ctx.beginPath()
-  ctx.arc(cx, 25 * u, Math.max(1, u * 1.1), 0, Math.PI * 2)
-  ctx.fillStyle = p.hullLight
-  ctx.fill()
-
-  // bow planes (short diving fins)
-  ctx.beginPath()
-  ctx.moveTo(cx - 7 * u, 30 * u)
-  ctx.lineTo(cx - 11 * u, 25 * u)
-  ctx.moveTo(cx + 7 * u, 30 * u)
-  ctx.lineTo(cx + 11 * u, 25 * u)
-  ctx.strokeStyle = p.hullDark
-  ctx.lineWidth = Math.max(1, u * 0.8)
+  ctx.restore()
+  subHullPath(ctx, u)
+  ctx.strokeStyle = 'rgba(230, 242, 252, 0.85)'
+  ctx.lineWidth = Math.max(1, u * 0.45)
   ctx.stroke()
 
-  // stern planes + rudder (cross control surfaces)
-  ctx.beginPath()
-  ctx.moveTo(cx - 8 * u, 86 * u)
-  ctx.lineTo(cx - 13 * u, 90 * u)
-  ctx.moveTo(cx + 8 * u, 86 * u)
-  ctx.lineTo(cx + 13 * u, 90 * u)
-  ctx.moveTo(cx, 87 * u)
-  ctx.lineTo(cx, 93 * u)
-  ctx.strokeStyle = p.hullDark
-  ctx.lineWidth = Math.max(1, u * 0.8)
-  ctx.stroke()
-
-  // propeller hint at the stern tip
-  ctx.beginPath()
-  ctx.arc(cx - 2 * u, 92 * u, Math.max(0.8, u * 0.9), 0, Math.PI * 2)
-  ctx.arc(cx + 2 * u, 92 * u, Math.max(0.8, u * 0.9), 0, Math.PI * 2)
-  ctx.fillStyle = p.hullDark
-  ctx.fill()
-
-  // WHITE bright outline — player highlight (VISUAL_STYLE §3), matches hull
-  subHullPath(ctx, u, hull)
-  strokeOutline(ctx, p.outlineBright, u)
   ctx.restore()
 }
 

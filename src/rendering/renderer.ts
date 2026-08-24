@@ -148,6 +148,13 @@ const BEARING_ONLY_RANGE_KM = 3
 const MINIMAP_SIZE_PX = 180
 const MINIMAP_PADDING = 8
 
+/** Minimap trail sampling (t-028g): one crumb every 0.5 sim-s, 75 s window. */
+const TRAIL_SAMPLE_S = 0.5
+const TRAIL_WINDOW_S = 75
+const PLAYER_TRAIL_ID = '__player__'
+/** Speed-vector line scale on the minimap: px per knot (capped per entity). */
+const VECTOR_PX_PER_KT = 1.3
+
 const RAD = Math.PI / 180
 
 // ---------------------------------------------------------------------------
@@ -209,6 +216,32 @@ export function createRenderer(opts: RendererOptions): Renderer {
 
   // Per-torpedo wake emitters (~10 Hz per torpedo).
   const wakeTimers = new Map<string, number>()
+
+  // Minimap motion trails (t-028g): at 30 km → 180 px the map scale is
+  // ~157 m/px, so a 5 kt submarine (~2.6 m/s) needs ~60 s to cross a single
+  // pixel — icons look frozen without motion cues. We sample positions every
+  // TRAIL_SAMPLE_S sim-seconds and keep a TRAIL_WINDOW_S history so movement
+  // reads as a fading breadcrumb trail, plus a heading/speed vector line.
+  // Keyed by entity id; PLAYER_TRAIL_ID for the own boat. State lives in the
+  // renderer closure → a fresh renderer per mission ⇒ no cross-mission leaks.
+  const minimapTrail = new Map<string, { x: number; y: number; t: number }[]>()
+  const minimapLastSample = new Map<string, number>()
+
+  function sampleMinimapTrail(id: string, pos: { x: number; y: number }, simTime: number): void {
+    const last = minimapLastSample.get(id) ?? -Infinity
+    if (simTime - last < TRAIL_SAMPLE_S) return
+    minimapLastSample.set(id, simTime)
+    let trail = minimapTrail.get(id)
+    if (trail === undefined) {
+      trail = []
+      minimapTrail.set(id, trail)
+    }
+    // Mission restart guard: sim time went backwards → drop stale history.
+    if (trail.length > 0 && simTime < trail[trail.length - 1]!.t) trail.length = 0
+    trail.push({ x: pos.x, y: pos.y, t: simTime })
+    const cutoff = simTime - TRAIL_WINDOW_S
+    while (trail.length > 0 && trail[0]!.t < cutoff) trail.shift()
+  }
 
   /** Player sonar-perceived enemy ids this frame (trueShipId links). */
   function detectedEnemyIds(snapshot: GameSnapshot): Set<string> {
@@ -318,7 +351,12 @@ export function createRenderer(opts: RendererOptions): Renderer {
     drawWeatherOverlay(ctx, weather, w, h)
 
     // ---------------- L5 minimap --------------------------------------------
-    drawMinimap(ctx, snapshot, mapSizeKm, w, h)
+    // Sample trail crumbs (throttled to TRAIL_SAMPLE_S per entity).
+    sampleMinimapTrail(PLAYER_TRAIL_ID, playerPos, snapshot.simTime)
+    for (const enemy of snapshot.enemies) {
+      sampleMinimapTrail(enemy.id, enemy.position, snapshot.simTime)
+    }
+    drawMinimap(ctx, snapshot, mapSizeKm, w, h, minimapTrail)
 
     // ---------------- debug FPS overlay -------------------------------------
     if (settings.showFps && frame.fps !== undefined) {
@@ -508,30 +546,57 @@ function drawPlayerSubmarine(
   const size = entry.renderScalePx * (camera.zoom / 8)
   const s = camera.worldToScreen(pos.x, pos.y)
 
-  // Wake: two stern lines, length/alpha by speed (VISUAL_STYLE §9 subtle).
+  // Enhanced wake effect - longer and more visible
   if (speedKt > 0.5) {
-    const wakeLen = Math.min(30, 4 + speedKt * 0.8) // px
+    const wakeLen = Math.min(45, 6 + speedKt * 1.2) // 增加尾迹长度
     const back = headingDeg + 180
     const sin = Math.sin(back * RAD)
     const cos = Math.cos(back * RAD)
     const half = size * 0.28
-    ctx.globalAlpha = Math.min(0.5, 0.08 + speedKt * 0.02)
-    ctx.strokeStyle = PALETTE.torpedoTrail
-    ctx.lineWidth = 2
+    
+    // 主尾迹 - 更明显的白色
+    ctx.globalAlpha = Math.min(0.7, 0.15 + speedKt * 0.03)
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)'
+    ctx.lineWidth = 3
     ctx.beginPath()
     ctx.moveTo(s.x - cos * half - sin * half * 0.3, s.y + sin * half - cos * half * 0.3)
     ctx.lineTo(s.x - cos * (half + wakeLen), s.y + sin * (half + wakeLen))
     ctx.moveTo(s.x + cos * half - sin * half * 0.3, s.y - sin * half - cos * half * 0.3)
     ctx.lineTo(s.x - cos * (half + wakeLen), s.y + sin * (half + wakeLen))
     ctx.stroke()
+    
+    // 次尾迹 - 扩散效果
+    ctx.globalAlpha = Math.min(0.4, 0.08 + speedKt * 0.015)
+    ctx.strokeStyle = 'rgba(200, 220, 240, 0.3)'
+    ctx.lineWidth = 5
+    ctx.beginPath()
+    ctx.moveTo(s.x - cos * half - sin * half * 0.5, s.y + sin * half - cos * half * 0.5)
+    ctx.lineTo(s.x - cos * (half + wakeLen * 0.7), s.y + sin * (half + wakeLen * 0.7))
+    ctx.moveTo(s.x + cos * half - sin * half * 0.5, s.y - sin * half - cos * half * 0.5)
+    ctx.lineTo(s.x - cos * (half + wakeLen * 0.7), s.y + sin * (half + wakeLen * 0.7))
+    ctx.stroke()
     ctx.globalAlpha = 1
   }
 
-  // Gentle roll/bob (VISUAL_STYLE §9: 2-frame roll, no rotation).
-  const bob = Math.sin(wallT * 2) * 0.8
+  // Glow effect around submarine
+  ctx.save()
+  const glowRadius = size * 0.8
+  const gradient = ctx.createRadialGradient(s.x, s.y, size * 0.3, s.x, s.y, glowRadius)
+  gradient.addColorStop(0, 'rgba(100, 180, 255, 0.15)')
+  gradient.addColorStop(0.5, 'rgba(100, 180, 255, 0.08)')
+  gradient.addColorStop(1, 'rgba(100, 180, 255, 0)')
+  ctx.fillStyle = gradient
+  ctx.beginPath()
+  ctx.arc(s.x, s.y, glowRadius, 0, Math.PI * 2)
+  ctx.fill()
+  ctx.restore()
+
+  // Enhanced bob effect - more pronounced
+  const bob = Math.sin(wallT * 2.5) * 1.5 // 增强浮动效果
+  const roll = Math.sin(wallT * 1.8) * 0.02 // 轻微滚动
   ctx.save()
   ctx.translate(s.x, s.y + bob)
-  ctx.rotate(headingDeg * RAD)
+  ctx.rotate(headingDeg * RAD + roll)
   ctx.globalAlpha = 1
   ctx.drawImage(sprite, -size / 2, -size / 2, size, size)
   ctx.restore()
@@ -665,6 +730,7 @@ function drawMinimap(
   mapSizeKm: number,
   w: number,
   h: number,
+  trail?: ReadonlyMap<string, readonly { x: number; y: number; t: number }[]>,
 ): void {
   const size = MINIMAP_SIZE_PX
   const pad = MINIMAP_PADDING
@@ -688,14 +754,47 @@ function drawMinimap(
   ctx.strokeRect(x0 + tl.x, y0 + tl.y, br.x - tl.x, br.y - tl.y)
   ctx.globalAlpha = 1
 
-  // Convoy (enemies) — squares, escorts red.
+  // Motion trails (t-028g) — fading breadcrumbs under the icons. Without them
+  // a 5 kt boat crosses ~1 px per minute and the map reads as frozen.
+  if (trail !== undefined) {
+    for (const [id, points] of trail) {
+      const isPlayer = id === PLAYER_TRAIL_ID
+      const enemy = isPlayer ? undefined : snapshot.enemies.find((e) => e.id === id)
+      const isEscort = enemy !== undefined && (enemy.shipClass === 'Destroyer' || enemy.shipClass === 'Frigate')
+      ctx.fillStyle = isPlayer ? '#e8f2fa' : isEscort ? PALETTE.enemySurface : PALETTE.hullLight
+      for (const crumb of points) {
+        const age = snapshot.simTime - crumb.t
+        const alpha = 0.55 * (1 - age / TRAIL_WINDOW_S)
+        if (alpha <= 0.03) continue
+        const p = project(crumb.x, crumb.y)
+        ctx.globalAlpha = alpha
+        ctx.fillRect(x0 + p.x - 0.5, y0 + p.y - 0.5, 1.5, 1.5)
+      }
+    }
+    ctx.globalAlpha = 1
+  }
+
+  // Convoy (enemies) — squares, escorts red, with heading/speed vector ticks.
   for (const enemy of snapshot.enemies) {
     const p = project(enemy.position.x, enemy.position.y)
     const isEscort = enemy.shipClass === 'Destroyer' || enemy.shipClass === 'Frigate'
-    ctx.fillStyle = isEscort ? PALETTE.enemySurface : PALETTE.hullLight
+    const color = isEscort ? PALETTE.enemySurface : PALETTE.hullLight
+    // speed vector tick: direction = heading, length ∝ speed (2–9 px).
+    const vLen = Math.min(9, Math.max(2, enemy.speedKt * VECTOR_PX_PER_KT))
+    const hx = Math.sin(enemy.headingDeg * RAD)
+    const hy = Math.cos(enemy.headingDeg * RAD)
+    ctx.strokeStyle = color
+    ctx.globalAlpha = 0.75
+    ctx.lineWidth = 1
+    ctx.beginPath()
+    ctx.moveTo(x0 + p.x, y0 + p.y)
+    ctx.lineTo(x0 + p.x + hx * vLen, y0 + p.y - hy * vLen)
+    ctx.stroke()
+    ctx.fillStyle = color
     ctx.globalAlpha = 0.9
     ctx.fillRect(x0 + p.x - 1.5, y0 + p.y - 1.5, 3, 3)
   }
+  ctx.globalAlpha = 1
 
   // Contacts — state-colored dots (honest view).
   const player = snapshot.playerSub
@@ -724,10 +823,25 @@ function drawMinimap(
     ctx.stroke()
   }
 
-  // Own submarine — white triangle, heading tick.
+  // Own submarine — white triangle, heading tick + speed vector line.
   const pp = project(player.position.x, player.position.y)
   const px = x0 + pp.x
   const py = y0 + pp.y
+  // Speed vector: length ∝ speedKt (cap 14 px ≈ 10+ kt) — motion reads at a
+  // glance even though the icon itself barely crawls across the 30 km map.
+  const vLen = Math.min(14, Math.max(0, player.speedKt * VECTOR_PX_PER_KT))
+  if (vLen >= 1) {
+    const hx = Math.sin(player.headingDeg * RAD)
+    const hy = Math.cos(player.headingDeg * RAD)
+    ctx.strokeStyle = PALETTE.outlineBright
+    ctx.globalAlpha = 0.65
+    ctx.lineWidth = 1
+    ctx.beginPath()
+    ctx.moveTo(px, py)
+    ctx.lineTo(px + hx * vLen, py - hy * vLen)
+    ctx.stroke()
+    ctx.globalAlpha = 1
+  }
   ctx.save()
   ctx.translate(px, py)
   ctx.rotate(player.headingDeg * RAD)

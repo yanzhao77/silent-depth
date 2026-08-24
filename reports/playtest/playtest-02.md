@@ -1,6 +1,6 @@
 # Playtest 02 — First Ambush (t-014 evidence)
 
-- **Version**: b739063
+- **Version**: 4b3d0be
 - **Mission**: M02 — First Ambush (seed 1002, difficulty 2/5)
 - **Agent**: scripted-brain-stationary-ambush (Stationary ambush (M02, PROVEN t-013/t-020))
 - **Result**: **VICTORY** after 2753.8 s (55075 ticks)
