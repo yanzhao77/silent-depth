@@ -147,3 +147,67 @@ QA §6.1 finding (M03 victory gap) was root-caused and fixed:
 - **Remaining M03 gap** (for t-015 balance): merchants ALERT-scatter at
   detection ≥ 40 and the destroyer's passive detection escalate quickly; the
   torpedo path itself is now accurate.
+
+---
+
+## Periscope tactical loop (t-024..t-027)
+
+### Coverage
+
+| Suite | Tests | Role |
+|---|---|---|
+| `tests/unit/periscope.test.ts` | 24 | t-024 spec: state machine, visual upgrade, lock/fire, exposure bands, emergency dive, determinism, engine auto-surface, pause-freeze |
+| `tests/unit/audio.test.ts` (periscope wave) | 3 (14 → 17) | t-025: 6 periscope SFX shipped + all 11 periscope/emergency events mapped; `periscope.exposure` band-gated (HIGH/CRITICAL) + throttled |
+| `tests/unit/ui.test.ts` (periscope wave) | 6 (56 → 62) | t-026: P/L/X edge mapping, event severity/phase grouping, EN + localization of the 11 periscope log entries |
+| **`tests/integration/periscope-loop.test.ts`** (new, t-027) | **4** | full headless periscope loop through the real engine (this task) |
+| **Full suite (this run)** | **418** | 414 baseline + 4 new — all green, tsc clean |
+
+### Loop evidence (`tests/integration/periscope-loop.test.ts` — screenshot-free numbers)
+
+Scenario: M02 (single Tanker, seed 1002); the player is parked 0.35 km south
+of the tanker via the documented `__internal` harness, facing it (dead-centre
+in the 16° FOV, inside the 5 km visual range). Scripted inputs only.
+
+- **Phase 1 (SUBMERGED @ Medium):** `canRaise=false`, `cannotRaiseReason='tooDeep'`;
+  raise edge → **SURFACING** (autoSurface=true), never immediately RAISED;
+  depth rises Medium→Periscope (2 layers × 3 s) → **RAISING** after 119 ticks.
+- **Phase 2 (RAISING → RAISED):** progress 0→1 over `raiseTimeS` 3.2 s; while
+  raising `exposure = 0` and `raisedDurationS = 0` (exposure accrues only from
+  RAISED — measured 0.0 at 63/64 ticks, detection unchanged).
+- **Phase 3 (OBSERVING):** `observingContactId='C-01'`; the contact becomes
+  **CONFIRMED / Tanker / confidence 98 / exact range 0.314 km / exact speed /
+  exact compass heading / `visuallyConfirmed=true`** (deterministic ground
+  truth — no RNG).
+- **Phase 4 (fire solution):** pre-observation `ESTIMATED` HP **0.346** →
+  post-observation `VISUAL CONFIRMED` HP **0.696** (**Δ +0.349**); the
+  confidence-penalty removal isolated on identical data (flag toggle) is
+  exactly **+0.275** (= confPen at the pre-observation confidence, balance
+  table).
+- **Phase 5 (LOCK + FIRE):** `lockTarget` edge → `lockedContactId='C-01'`
+  (`periscope.locked`); firing the locked contact while raised →
+  `torpedo.fired` ×2 (salvo), detection **+25.0** (torpedoFired 20 + raised
+  bonus 10 − F8 sinks) → both torpedoes **hit** (stationary-ambush bow-on
+  ground truth) → `ship.sunk` → **VICTORY**, `torpedoesHit = 2`.
+- **Phase 6 (risk & lower):** while still raised, exposure rises **0.7 → 27.7**
+  (band **LOW → MEDIUM**; HIGH/CRITICAL unit-covered) and detection rises to
+  36.2; **edge lower** → LOWERING 40 ticks (2.0 s = `lowerTimeS`) → SUBMERGED +
+  `periscope.unlocked` + `periscope.lowered`; **emergency-dive variant** →
+  battery **−3.00 %** (`emergencyDiveCostPercent`), `sub.emergencyDive` event,
+  boosted lowering **10 ticks (0.5 s = `emergencyLowerTimeS`)**, still wins.
+- **Phase 7 (determinism):** the identical scripted loop re-run with the same
+  seed → **byte-identical final snapshots** (periscope is RNG-neutral at
+  pipeline slot 6; proven end-to-end).
+- **Event order (asserted):** `periscope.raising → periscope.ready →
+  periscope.raised → periscope.exposure → periscope.visualContact →
+  periscope.classified → periscope.locked → torpedo.fired → … →
+  periscope.unlocked → periscope.lowered`.
+
+### Regression status
+
+`npm test` = **418 passed / 418** (19 files); `npx tsc --noEmit` clean. The
+pre-existing suites (including the t-013 M02 scripted victory in
+`gameplay.test.ts` / `regression.test.ts` and the t-020 fire-control
+remediation tests) stay green — the periscope system is inert while submerged
+(detection 0, no events, no RNG), so it does not perturb any prior scripted
+outcome. New t-027 files: `tests/integration/periscope-loop.test.ts` (4 tests).
+

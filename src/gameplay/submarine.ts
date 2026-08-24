@@ -268,10 +268,14 @@ function updateDepth(ctx: SystemContext): void {
     target = 'Deep'
     player.battery = Math.max(0, player.battery - balance.battery.emergencyDiveCostPercent)
     bus.emit('sub.emergencyDive', {})
-  } else if (ctx.periscope?.state === 'SURFACING') {
-    // The periscope auto-rise owns the depth while surfacing: hold the
-    // required layer against the player's input (periscope.ts sets
-    // targetDepthLayer; re-asserted here because slot 4 runs before slot 6).
+  } else if (ctx.periscope !== undefined && ctx.periscope.state !== 'SUBMERGED') {
+    // The periscope owns the depth while ANY of its states is active
+    // (SURFACING auto-rise, RAISING, RAISED, OBSERVING, LOWERING): hold the
+    // required layer against the player's input. Without this the stale
+    // depth input yanks the sub back down the moment RAISING starts (t-027
+    // integration finding — the hold must not be limited to SURFACING).
+    // The player changes depth by lowering the periscope first, or via
+    // emergency dive (diveEdge above wins).
     target = ctx.balance.periscope.requiredLayer
   }
 
@@ -286,6 +290,15 @@ function updateDepth(ctx: SystemContext): void {
   if (target !== player.targetDepthLayer) {
     // Start (or restart from the current layer) a transition.
     player.targetDepthLayer = target
+    player.depthTransitionT = layerDistance(player.depthLayer, target) * balance.depthTransitionSecondsPerLayer
+  } else if (player.depthTransitionT === null && target !== player.depthLayer) {
+    // t-027 integration finding: the periscope SURFACING hold pre-sets
+    // targetDepthLayer (slot 4 runs before slot 6), so `target !==
+    // targetDepthLayer` is false and the transition timer would never start.
+    // If the target is already set but no transition is running and we are
+    // not there yet, start it now. (Normal play can't reach here: same-input
+    // with a completed transition means depthLayer === target, caught by the
+    // return above; an in-flight transition has depthTransitionT !== null.)
     player.depthTransitionT = layerDistance(player.depthLayer, target) * balance.depthTransitionSecondsPerLayer
   }
   if (player.depthTransitionT !== null) {
