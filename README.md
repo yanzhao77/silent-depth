@@ -11,13 +11,14 @@
 > 以下为**程序化预览渲染**(真实引擎 + 真实渲染器在无头环境下绘制,非浏览器实拍)。
 > 游戏内按 **F12** 可随时截取真实画面(PNG 自动下载)。
 
-| | |
+ | | |
 |---|---|
-| ![首次伏击](assets/screenshots/m02-ambush.png) | ![袭击护航队](assets/screenshots/m03-convoy.png) |
-| **M02 首次伏击** — 玩家潜艇 + 油轮接触(不确定性椭圆)+ 声呐 ping 扩散环 | **M03 袭击护航队** — 货船编队 + 驱逐舰护航,接触以椭圆而非红点呈现 |
-| ![静默猎手(夜间)](assets/screenshots/m05-night-fog.png) | ![鱼雷出管](assets/screenshots/m02-torpedo.png) |
-| **M05 静默猎手** — 夜间 + 浓雾叠层,低能见度下的伏击 | **鱼雷航行** — 无自动锁定,直航 + 尾迹气泡,命中靠提前量 |
-<img width="2556" height="1188" alt="64cc9820-2147-45d3-85ef-ca7e3c11ad24" src="https://github.com/user-attachments/assets/f35a4b92-c7ba-4524-b463-6a3a74d845bc" />
+| ![游戏实拍](assets/screenshots/gameplay.png) | ![首次伏击](assets/screenshots/m02-ambush.png) |
+| **游戏实拍** — 完整 UI 布局:深度/速度/航向 HUD + 声呐接触列表 + 火控解算面板 + 小地图运动轨迹 + 潜艇俯视图 | **M02 首次伏击** — 环境渲染预览:油轮接触(不确定性椭圆)+ 声呐 ping 扩散环 |
+| ![袭击护航队](assets/screenshots/m03-convoy.png) | ![鱼雷出管](assets/screenshots/m02-torpedo.png) |
+| **M03 袭击护航队** — 货船编队 + 驱逐舰护航,接触以椭圆而非红点呈现 | **鱼雷航行** — 无自动锁定,直航 + 尾迹气泡,命中靠提前量 |
+| ![静默猎手(夜间)](assets/screenshots/m05-night-fog.png) | |
+| **M05 静默猎手** — 夜间 + 浓雾叠层,低能见度下的伏击 | |
 
 ---
 
