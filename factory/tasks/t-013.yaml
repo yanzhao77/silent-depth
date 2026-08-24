@@ -1,0 +1,11 @@
+id: t-013
+title: 全面测试: unit/integration/gameplay/AI/回归
+epic: 
+dependsOn: [t-003, t-004, t-005, t-006, t-007, t-008, t-009, t-011, t-012]
+role: qa
+status: done
+outputs: []
+acceptance: []
+attempts: 1
+evidence: 350/350 tests; determinism PROVEN; TEST_REPORT with honest gaps
+tags: [testing]

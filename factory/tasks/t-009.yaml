@@ -1,0 +1,11 @@
+id: t-009
+title: 世界生成: 海洋/天气/洋流(种子)
+epic: 
+dependsOn: [t-003]
+role: level-designer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: world module 4 files, 22 tests; createWorldSystem wired slot 2
+tags: [backend, world]

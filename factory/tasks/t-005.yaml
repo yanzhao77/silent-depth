@@ -1,0 +1,11 @@
+id: t-005
+title: 声呐P0: ping/被动/接触/不确定性/分类
+epic: 
+dependsOn: [t-004]
+role: ai-engineer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: sonar module 6 files, 33 tests; sonarSystem wired slot 5; suite 256/256
+tags: [backend, sonar]

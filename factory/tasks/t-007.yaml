@@ -1,0 +1,11 @@
+id: t-007
+title: 战斗: 鱼雷/命中概率/伤害/深水炸弹
+epic: 
+dependsOn: [t-004, t-005, t-006]
+role: gameplay-engineer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: combat+detection, 36 tests; combatSystem slot7 + detectionSystem slot8 wired; full 9-system engine live 292/292
+tags: [backend, combat]

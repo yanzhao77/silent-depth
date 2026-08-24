@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "runId": "run-001",
+  "createdAt": "2026-08-21T09:26:47.534Z",
+  "status": "active",
+  "changeReason": "plan-v1 baseline from execution-plan",
+  "requirementRevision": null,
+  "impactRef": null,
+  "tasks": [
+    {
+      "id": "t-001",
+      "title": "游戏设计文档 GAME_DESIGN + VISUAL_STYLE + AUDIO_DESIGN",
+      "epic": "",
+      "dependsOn": [],
+      "role": "game-designer"
+    }
+  ],
+  "affectedTasks": [],
+  "preservedTasks": [
+    "t-001"
+  ],
+  "newTasks": [],
+  "removedTasks": []
+}

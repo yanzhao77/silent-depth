@@ -1,0 +1,11 @@
+id: t-021
+title: 风暴天气鱼雷射程x0.85 (replan-v2 drill)
+epic: 
+dependsOn: [t-013]
+role: gameplay-engineer
+status: ready
+outputs: []
+acceptance: []
+attempts: 1
+evidence: storm torpedo range x0.85 implemented (balance.json + combat) + weather.test.ts; 358/358
+tags: [change, combat]

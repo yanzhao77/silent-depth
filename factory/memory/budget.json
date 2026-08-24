@@ -1,0 +1,10 @@
+# p-004 Memory — Budget Ledger
+
+## Cost policy
+- Only ESTIMATED or measured entries. No fabrication.
+- rates.json (factory): input $0.27 / 1M tokens, output $1.10 / 1M tokens (ESTIMATED, used when provider exposes no data).
+
+## Ledger
+| Agent | Role | inputTok | outputTok | calls | confidence | costUsd | note |
+|---|---|---|---|---|---|---|---|
+| 5faa891e | game-designer | UNKNOWN | UNKNOWN | 1 | unknown | UNKNOWN | no provider token data yet |

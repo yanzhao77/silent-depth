@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SOFTWARE FACTORY — SILENT DEPTH 深海猎手 — 2D 潜艇战术伏击游戏</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; margin: 24px; background: #0f1419; color: #e6edf3; }
+  h1 { font-size: 20px; letter-spacing: 2px; border-bottom: 2px solid #58a6ff; padding-bottom: 8px; }
+  h2 { font-size: 14px; color: #58a6ff; margin-top: 28px; text-transform: uppercase; letter-spacing: 1px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 12px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 12px 16px; }
+  .card .num { font-size: 26px; font-weight: 700; color: #58a6ff; }
+  .card .lbl { font-size: 11px; color: #8b949e; text-transform: uppercase; }
+  .bar { background: #21262d; border-radius: 6px; height: 14px; overflow: hidden; margin: 6px 0 12px; }
+  .fill { background: linear-gradient(90deg, #1f6feb, #58a6ff); height: 100%; }
+  table { border-collapse: collapse; width: 100%; margin-top: 8px; font-size: 13px; }
+  th, td { border: 1px solid #30363d; padding: 5px 10px; text-align: left; }
+  th { background: #21262d; color: #8b949e; font-weight: 600; }
+  tr.ok td { color: #3fb950; } tr.run td { color: #d29922; } tr.fail td { color: #f85149; } tr.warn td { color: #db6d28; }
+  td.passed, td.PASS { color: #3fb950; } td.failed, td.FAIL { color: #f85149; } td.running { color: #d29922; }
+  .unknown { color: #f85149; padding: 8px 0; }
+  .meta { color: #8b949e; font-size: 12px; }
+  .evt { color: #79c0ff; }
+  tr.tot { background: #21262d; font-weight: 700; }
+  .legend { font-size: 11px; color: #8b949e; margin-top: 6px; }
+</style>
+</head>
+<body>
+<h1>SOFTWARE FACTORY — CONTROL CENTER</h1>
+<div class="meta">generated 2026-08-21T11:53:12.950Z · data read live from the factory store · /Users/sjw/Documents/GitHub/deepseek_software/projects</div>
+
+<h2>Factory</h2>
+<div class="grid">
+  <div class="card"><div class="num">0</div><div class="lbl">Active Runs</div></div>
+  <div class="card"><div class="num">2</div><div class="lbl">Completed Runs</div></div>
+  <div class="card"><div class="num">100%</div><div class="lbl">Success Rate</div></div>
+  <div class="card"><div class="num">4</div><div class="lbl">Projects</div></div>
+</div>
+
+<h2>Current Production — SILENT DEPTH 深海猎手 — 2D 潜艇战术伏击游戏</h2>
+<div class="meta">RUN run-001 · state COMPLETED · phase build · active: run-001 (COMPLETED)</div>
+<div class="bar"><div class="fill" style="width:64%"></div></div>
+<div class="meta">64% — 18/28 tasks done · 2 running · 0 failed · 0 blocked</div>
+
+<h2>Workflow</h2>
+<table><tr><th></th><th>Phase</th></tr><tr class="ok"><td>✓</td><td>Requirements</td></tr><tr class=""><td>○</td><td>Product</td></tr><tr class="ok"><td>✓</td><td>Architecture</td></tr><tr class="ok"><td>✓</td><td>Planning</td></tr><tr class="ok"><td>✓</td><td>Backend</td></tr><tr class="ok"><td>✓</td><td>Frontend</td></tr><tr class="ok"><td>✓</td><td>Testing</td></tr><tr class="ok"><td>✓</td><td>Security</td></tr><tr class="ok"><td>✓</td><td>Build</td></tr><tr class=""><td>○</td><td>Deployment</td></tr></table>
+<div class="legend">✓ completed · ◉ running · ○ pending · ✗ failed · ⚠ blocked</div>
+
+<h2>Tasks</h2>
+<table><tr><th>ID</th><th>Title</th><th>Epic</th><th>Status</th><th>Attempts</th><th>Depends</th></tr><tr><td>t-001</td><td>游戏设计文档 GAME_DESIGN + VISUAL_STYLE + AUDIO_DESIGN</td><td></td><td class="done">done</td><td>2</td><td></td></tr><tr><td>t-002</td><td>游戏架构 GAME_ARCHITECTURE + 实现计划</td><td></td><td class="done">done</td><td>0</td><td>t-001</td></tr><tr><td>t-003</td><td>核心运行时: 种子RNG/状态机/事件总线/任务生命周期</td><td></td><td class="done">done</td><td>0</td><td>t-002</td></tr><tr><td>t-004</td><td>潜艇操控: 移动/速度/深度/电池/噪声</td><td></td><td class="done">done</td><td>0</td><td>t-003</td></tr><tr><td>t-005</td><td>声呐P0: ping/被动/接触/不确定性/分类</td><td></td><td class="done">done</td><td>0</td><td>t-004</td></tr><tr><td>t-006</td><td>敌方AI: 状态机/护航/搜索模式</td><td></td><td class="done">done</td><td>0</td><td>t-003</td></tr><tr><td>t-007</td><td>战斗: 鱼雷/命中概率/伤害/深水炸弹</td><td></td><td class="done">done</td><td>0</td><td>t-004, t-005, t-006</td></tr><tr><td>t-008</td><td>任务系统: 5任务+种子生成器</td><td></td><td class="done">done</td><td>0</td><td>t-003</td></tr><tr><td>t-009</td><td>世界生成: 海洋/天气/洋流(种子)</td><td></td><td class="done">done</td><td>0</td><td>t-003</td></tr><tr><td>t-010</td><td>HUD/UI: 战术HUD/接触面板/事件日志/菜单</td><td></td><td class="done">done</td><td>0</td><td>t-003, t-004, t-005, t-006, t-007, t-008, t-009</td></tr><tr><td>t-011</td><td>程序化素材+注册表+许可证闸门</td><td></td><td class="running">running</td><td>0</td><td>t-002</td></tr><tr><td>t-012</td><td>程序化音频(WebAudio≥10)</td><td></td><td class="running">running</td><td>0</td><td>t-002</td></tr><tr><td>t-013</td><td>全面测试: unit/integration/gameplay/AI/回归</td><td></td><td class="done">done</td><td>1</td><td>t-003, t-004, t-005, t-006, t-007, t-008, t-009, t-011, t-012</td></tr><tr><td>t-014</td><td>无头playtest驱动+≥10次试玩</td><td></td><td class="done">done</td><td>0</td><td>t-008, t-013</td></tr><tr><td>t-015</td><td>平衡调整(证据驱动)</td><td></td><td class="done">done</td><td>0</td><td>t-014</td></tr><tr><td>t-016</td><td>离线生产构建</td><td></td><td class="done">done</td><td>0</td><td>t-010, t-013</td></tr><tr><td>t-017</td><td>安全审计</td><td></td><td class="done">done</td><td>0</td><td>t-011, t-013</td></tr><tr><td>t-018</td><td>需求变更演练+失败恢复演练+验收矩阵</td><td></td><td class="done">done</td><td>0</td><td>t-015, t-016, t-017</td></tr><tr><td>t-019</td><td>最终交付文档+RELEASE_NOTES</td><td></td><td class="done">done</td><td>0</td><td>t-018</td></tr><tr><td>t-020</td><td>修复火控航向约定: headingEstimateDeg/敌人精灵旋转转罗盘</td><td></td><td class="done">done</td><td>0</td><td>t-013</td></tr><tr><td>t-021</td><td>风暴天气鱼雷射程x0.85 (replan-v2 drill)</td><td></td><td class="ready">ready</td><td>1</td><td>t-013</td></tr><tr><td>t-050</td><td>修复 t-013: TEST_FAILURE</td><td>recovery</td><td class="cancelled">cancelled</td><td>0</td><td>t-013</td></tr><tr><td>t-051</td><td>修复 t-021: TEST_FAILURE</td><td>recovery</td><td class="cancelled">cancelled</td><td>0</td><td>t-021</td></tr><tr><td>t-300</td><td>风暴-spec</td><td>change</td><td class="cancelled">cancelled</td><td>0</td><td></td></tr><tr><td>t-301</td><td>暴天-spec</td><td>change</td><td class="cancelled">cancelled</td><td>0</td><td></td></tr><tr><td>t-302</td><td>天气-spec</td><td>change</td><td class="cancelled">cancelled</td><td>0</td><td></td></tr><tr><td>t-303</td><td>气下-spec</td><td>change</td><td class="cancelled">cancelled</td><td>0</td><td></td></tr><tr><td>t-304</td><td>下鱼-spec</td><td>change</td><td class="cancelled">cancelled</td><td>0</td><td></td></tr></table>
+
+<h2>Agent Activity</h2>
+<table><tr><th>Agent</th><th>Status</th><th>Task</th></tr><tr><td>game-designer-001</td><td class="failed">failed</td><td>t-001</td></tr><tr><td>game-architect-001</td><td class="running">running</td><td>t-002</td></tr><tr><td>game-designer-002</td><td class="done">done</td><td>t-001</td></tr><tr><td>asset-engineer-001</td><td class="running">running</td><td>t-011</td></tr><tr><td>audio-engineer-001</td><td class="running">running</td><td>t-012</td></tr><tr><td>ai-engineer-001</td><td class="running">running</td><td>t-005</td></tr><tr><td>level-designer-001</td><td class="running">running</td><td>t-008</td></tr><tr><td>gameplay-engineer-001</td><td class="running">running</td><td>t-007</td></tr><tr><td>ui-engineer-001</td><td class="running">running</td><td>t-010</td></tr><tr><td>qa-001</td><td class="running">running</td><td>t-013</td></tr><tr><td>security-001</td><td class="running">running</td><td>t-017</td></tr><tr><td>playtest-001</td><td class="running">running</td><td>t-014</td></tr><tr><td>balance-001</td><td class="running">running</td><td>t-015</td></tr><tr><td>build-001</td><td class="running">running</td><td>t-019</td></tr></table>
+
+<h2>Event Timeline</h2>
+<table><tr><th>Time</th><th>Event</th><th>Task</th><th>Note</th></tr><tr><td>11:50:08</td><td class="evt">QUALITY_GATE_PASSED</td><td></td><td>build-gate PASS on core-runtime</td></tr><tr><td>11:50:08</td><td class="evt">ARTIFACT_VALIDATED</td><td></td><td></td></tr><tr><td>11:50:23</td><td class="evt">TASK_FAILED</td><td>t-021</td><td></td></tr><tr><td>11:50:23</td><td class="evt">FAILURE_RECORDED</td><td>t-021</td><td>TEST_FAILURE on t-021 (attempt 1)</td></tr><tr><td>11:50:23</td><td class="evt">TASK_CREATED</td><td>t-051</td><td></td></tr><tr><td>11:50:23</td><td class="evt">TASK_RETRYING</td><td>t-021</td><td></td></tr><tr><td>11:50:29</td><td class="evt">TASK_CANCELLED</td><td>t-051</td><td></td></tr><tr><td>11:50:52</td><td class="evt">TASK_COMPLETED</td><td>t-018</td><td></td></tr><tr><td>11:50:52</td><td class="evt">ARTIFACT_CREATED</td><td></td><td></td></tr><tr><td>11:50:52</td><td class="evt">QUALITY_GATE_PASSED</td><td></td><td>playtest-gate PASS on acceptance-matrix</td></tr><tr><td>11:50:52</td><td class="evt">ARTIFACT_VALIDATED</td><td></td><td></td></tr><tr><td>11:50:59</td><td class="evt">AGENT_STARTED</td><td>t-019</td><td></td></tr><tr><td>11:51:11</td><td class="evt">PHASE_COMPLETED</td><td></td><td>PHASE 3-8 engine complete: core/submarine/sonar/AI/combat/missions/world</td></tr><tr><td>11:51:11</td><td class="evt">PHASE_STARTED</td><td></td><td>PHASE 9-11 UI/assets/audio</td></tr><tr><td>11:51:11</td><td class="evt">PHASE_COMPLETED</td><td></td><td>HUD+renderer+save; 34 assets; 14 SFX</td></tr><tr><td>11:51:11</td><td class="evt">PHASE_STARTED</td><td></td><td>PHASE 12-14 QA/playtest/balance</td></tr><tr><td>11:51:11</td><td class="evt">PHASE_COMPLETED</td><td></td><td>358 tests; 12 playtests; balance pass</td></tr><tr><td>11:51:11</td><td class="evt">PHASE_STARTED</td><td></td><td>PHASE security audit</td></tr><tr><td>11:51:11</td><td class="evt">PHASE_COMPLETED</td><td></td><td>audit PASS + post-UI re-verify</td></tr><tr><td>11:51:11</td><td class="evt">PHASE_STARTED</td><td></td><td>PHASE 15-16 build+trial</td></tr><tr><td>11:51:11</td><td class="evt">PHASE_COMPLETED</td><td></td><td>dist offline-verified; drills PASS</td></tr><tr><td>11:52:49</td><td class="evt">TASK_COMPLETED</td><td>t-019</td><td></td></tr><tr><td>11:52:49</td><td class="evt">ARTIFACT_CREATED</td><td></td><td></td></tr><tr><td>11:52:52</td><td class="evt">RUN_COMPLETED</td><td></td><td>SILENT DEPTH v1.0.0 delivered: all gates PASS, 358 tests, offline build verified</td></tr></table>
+
+<h2>Quality Gates</h2>
+<table><tr><th>Gate</th><th>Result</th></tr><tr><td>audit-gate</td><td class="pass">PASS</td></tr><tr><td>game-design-gate</td><td class="pass">PASS</td></tr><tr><td>architecture-gate</td><td class="pass">PASS</td></tr><tr><td>core-runtime-gate</td><td class="pass">PASS</td></tr><tr><td>submarine-gate</td><td class="pass">PASS</td></tr><tr><td>ai-gate</td><td class="pass">PASS</td></tr><tr><td>mission-gate</td><td class="pass">PASS</td></tr><tr><td>sonar-gate</td><td class="pass">PASS</td></tr><tr><td>combat-gate</td><td class="pass">PASS</td></tr><tr><td>ui-gate</td><td class="pass">PASS</td></tr><tr><td>test-gate</td><td class="pass">PASS</td></tr><tr><td>security-gate</td><td class="pass">PASS</td></tr><tr><td>playtest-gate</td><td class="pass">PASS</td></tr><tr><td>balance-gate</td><td class="pass">PASS</td></tr><tr><td>build-gate</td><td class="pass">PASS</td></tr></table>
+
+<h2>Artifacts (versions &amp; deps)</h2>
+<table><tr><th>Artifact</th><th>Current</th><th>Versions</th><th>Depends on</th><th>Validated</th></tr><tr><td>audit-report</td><td>v1</td><td>1</td><td></td><td>audit-gate:PASS</td></tr><tr><td>execution-plan</td><td>v1</td><td>1</td><td>audit-report</td><td></td></tr><tr><td>requirements</td><td>v1</td><td>1</td><td></td><td></td></tr><tr><td>game-design</td><td>v1</td><td>1</td><td></td><td>game-design-gate:PASS</td></tr><tr><td>visual-style</td><td>v1</td><td>1</td><td></td><td></td></tr><tr><td>audio-design</td><td>v1</td><td>1</td><td></td><td></td></tr><tr><td>game-architecture</td><td>v1</td><td>1</td><td>game-design</td><td>architecture-gate:PASS</td></tr><tr><td>implementation-plan</td><td>v1</td><td>1</td><td>game-architecture</td><td></td></tr><tr><td>core-runtime</td><td>v1</td><td>1</td><td></td><td>core-runtime-gate:PASS; build-gate:PASS</td></tr><tr><td>gameplay-submarine</td><td>v1</td><td>1</td><td></td><td>submarine-gate:PASS</td></tr><tr><td>enemy-ai</td><td>v1</td><td>1</td><td></td><td>ai-gate:PASS</td></tr><tr><td>world-system</td><td>v1</td><td>1</td><td></td><td>mission-gate:PASS</td></tr><tr><td>sonar-system</td><td>v1</td><td>1</td><td></td><td>sonar-gate:PASS</td></tr><tr><td>mission-system</td><td>v1</td><td>1</td><td></td><td>mission-gate:PASS</td></tr><tr><td>combat-system</td><td>v1</td><td>1</td><td></td><td>combat-gate:PASS</td></tr><tr><td>ui-layer</td><td>v1</td><td>1</td><td></td><td>ui-gate:PASS</td></tr><tr><td>test-suite</td><td>v1</td><td>1</td><td></td><td>test-gate:PASS; security-gate:PASS</td></tr><tr><td>playtest-suite</td><td>v1</td><td>1</td><td></td><td>playtest-gate:PASS</td></tr><tr><td>balance-report</td><td>v1</td><td>1</td><td></td><td>balance-gate:PASS</td></tr><tr><td>acceptance-matrix</td><td>v1</td><td>1</td><td></td><td>playtest-gate:PASS</td></tr><tr><td>release-notes</td><td>v1</td><td>1</td><td></td><td></td></tr></table>
+
+<h2>Metrics</h2>
+<div class="grid">
+  <div class="card"><div class="num">100%</div><div class="lbl">Success Rate</div></div>
+  <div class="card"><div class="num">1</div><div class="lbl">Replans</div></div>
+  <div class="card"><div class="num">2</div><div class="lbl">Interventions</div></div>
+  <div class="card"><div class="num">0%</div><div class="lbl">Gate Failure Rate</div></div>
+  <div class="card"><div class="num">0%</div><div class="lbl">Security Failure Rate</div></div>
+  <div class="card"><div class="num">66.7%</div><div class="lbl">Recovery Rate</div></div>
+</div>
+
+<h2>Cost / Token Accounting</h2>
+<table><tr><th>Agent</th><th>Calls</th><th>In</th><th>Out</th><th>USD</th><th>Confidence</th></tr>
+       <tr><td>game-designer-001</td><td>1</td><td>0</td><td>0</td><td>$0</td><td>unknown</td></tr>
+       <tr class="tot"><td>TOTAL</td><td>1</td><td>0</td><td>0</td><td>$0</td><td>unknown</td></tr></table>
+
+<h2>Plans</h2>
+<table><tr><th>Version</th><th>Status</th><th>Change</th></tr><tr><td>v1</td><td>active</td><td>plan-v1 baseline from execution-plan</td></tr><tr><td>v2</td><td>approved</td><td>requirement change</td></tr></table>
+
+</body></html>

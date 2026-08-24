@@ -1,0 +1,11 @@
+id: t-016
+title: 离线生产构建
+epic: 
+dependsOn: [t-010, t-013]
+role: build-release
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: final offline build SUCCESS; zero network refs; preview smoke PASS; build-report with sha256
+tags: [build]

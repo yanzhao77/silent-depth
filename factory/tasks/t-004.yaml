@@ -1,0 +1,11 @@
+id: t-004
+title: 潜艇操控: 移动/速度/深度/电池/噪声
+epic: 
+dependsOn: [t-003]
+role: gameplay-engineer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: submarine.ts+decoy.ts, 27 tests; 119/119 green at delivery; wired into engine slot 4
+tags: [backend, gameplay]

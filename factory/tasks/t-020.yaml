@@ -1,0 +1,11 @@
+id: t-020
+title: 修复火控航向约定: headingEstimateDeg/敌人精灵旋转转罗盘
+epic: 
+dependsOn: [t-013]
+role: gameplay-engineer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: heading convention fix: sonar contacts + renderer; M02/M03 accuracy verified; suite 350/350
+tags: [remediation, combat]

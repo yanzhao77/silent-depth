@@ -1,0 +1,54 @@
+# SILENT DEPTH — Quality Gates (contracts/gates.yaml)
+# Each gate: PASS requires independently verifiable evidence (tests, build logs,
+# artifact diff, hash). FAIL → fix loop → RETRYING → PASS. No core gate may be
+# skipped before DELIVERED.
+
+gates:
+  game-design-gate:
+    check: GAME_DESIGN.md + VISUAL_STYLE.md + AUDIO_DESIGN.md exist; every FR-01..FR-22 addressed with concrete numbers; no TBD
+    evidence: doc review + section coverage checklist
+  architecture-gate:
+    check: GAME_ARCHITECTURE.md defines runtime/state/entity/systems/events/rendering/input/AI/save/asset/audio + task DAG + headless sim design
+    evidence: doc review + task DAG in tasks/
+  core-runtime-gate:
+    check: game boots → mission loads → mission can end (victory/defeat); state machine transitions tested
+    evidence: vitest core-runtime tests green
+  submarine-gate:
+    check: movement/rotation/speed/depth/battery/noise implemented + tested
+    evidence: vitest gameplay tests green
+  sonar-gate:
+    check: P0 — ping, passive, contacts, uncertainty, classification implemented + tested
+    evidence: vitest sonar tests green
+  ai-gate:
+    check: enemy state machine NORMAL→…→HUNTING→LOST_CONTACT; convoy; search patterns; tested
+    evidence: vitest ai tests green
+  combat-gate:
+    check: torpedo fire/travel/collision/hit/miss/damage; hit probability; depth charge; tested
+    evidence: vitest combat tests green
+  mission-gate:
+    check: 5 missions + seeded generator + world gen/weather; objectives solvable
+    evidence: vitest missions tests + headless mission completion
+  ui-gate:
+    check: menus + tactical HUD + contact panel + event log; information clear
+    evidence: build OK + UI smoke (canvas renders, no console errors)
+  asset-gate:
+    check: assets/registry.json with full provenance; license gate enforced; style per VISUAL_STYLE.md
+    evidence: registry validation script + review
+  audio-gate:
+    check: ≥10 procedural SFX synthesized (WebAudio), no external samples
+    evidence: audio module tests + code review
+  test-gate:
+    check: unit/integration/gameplay/AI/regression all green; failures fixed (not skipped)
+    evidence: `npm test` full pass log
+  playtest-gate:
+    check: ≥10 headless playtests recorded; ≥1 mission completed by AI; failures logged & reacted
+    evidence: reports/playtest/*.md
+  balance-gate:
+    check: balance.json updated from playtest evidence (not gut feeling); changes documented
+    evidence: reports/balance/BALANCE_REPORT.md + diff
+  security-gate:
+    check: no XSS/injection/unsafe file access/external runtime network; dependency audit; asset provenance clean
+    evidence: reports/qa/security-report.md
+  build-gate:
+    check: `npm run build` succeeds; dist/ runs offline; smoke launch passes
+    evidence: build log + dist smoke test

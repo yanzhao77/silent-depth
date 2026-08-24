@@ -1,0 +1,423 @@
+{
+  "version": 2,
+  "runId": "run-001",
+  "createdAt": "2026-08-21T11:46:56.620Z",
+  "status": "approved",
+  "changeReason": "requirement change",
+  "requirementRevision": 3,
+  "impactRef": {
+    "impact": "HIGH",
+    "keywords": [
+      "风暴",
+      "暴天",
+      "天气",
+      "气下",
+      "下鱼",
+      "鱼雷",
+      "雷射",
+      "射程",
+      "程降",
+      "降低",
+      "倍"
+    ],
+    "affected": {
+      "artifacts": [],
+      "tasks": [
+        "t-007",
+        "t-009",
+        "t-010",
+        "t-013",
+        "t-014",
+        "t-015",
+        "t-016",
+        "t-017",
+        "t-018",
+        "t-019",
+        "t-020",
+        "t-050"
+      ],
+      "agents": [
+        "balance",
+        "build-release",
+        "factory-manager",
+        "gameplay-engineer",
+        "level-designer",
+        "playtest",
+        "qa",
+        "security",
+        "ui-engineer"
+      ]
+    },
+    "preserved": {
+      "artifacts": [
+        "audio-design",
+        "audit-report",
+        "balance-report",
+        "combat-system",
+        "core-runtime",
+        "enemy-ai",
+        "execution-plan",
+        "game-architecture",
+        "game-design",
+        "gameplay-submarine",
+        "implementation-plan",
+        "mission-system",
+        "playtest-suite",
+        "requirements",
+        "sonar-system",
+        "test-suite",
+        "ui-layer",
+        "visual-style",
+        "world-system"
+      ],
+      "tasks": [
+        "t-001",
+        "t-002",
+        "t-003",
+        "t-004",
+        "t-005",
+        "t-006",
+        "t-008",
+        "t-011",
+        "t-012"
+      ]
+    },
+    "added": [
+      {
+        "suggested": true,
+        "name": "风暴-spec",
+        "reason": "keyword \"风暴\" has no existing artifact"
+      },
+      {
+        "suggested": true,
+        "name": "暴天-spec",
+        "reason": "keyword \"暴天\" has no existing artifact"
+      },
+      {
+        "suggested": true,
+        "name": "天气-spec",
+        "reason": "keyword \"天气\" has no existing artifact"
+      },
+      {
+        "suggested": true,
+        "name": "气下-spec",
+        "reason": "keyword \"气下\" has no existing artifact"
+      },
+      {
+        "suggested": true,
+        "name": "下鱼-spec",
+        "reason": "keyword \"下鱼\" has no existing artifact"
+      }
+    ]
+  },
+  "tasks": [
+    {
+      "id": "t-001",
+      "title": "游戏设计文档 GAME_DESIGN + VISUAL_STYLE + AUDIO_DESIGN",
+      "epic": "",
+      "dependsOn": [],
+      "role": "game-designer",
+      "status": "done"
+    },
+    {
+      "id": "t-002",
+      "title": "游戏架构 GAME_ARCHITECTURE + 实现计划",
+      "epic": "",
+      "dependsOn": [
+        "t-001"
+      ],
+      "role": "game-architect",
+      "status": "done"
+    },
+    {
+      "id": "t-003",
+      "title": "核心运行时: 种子RNG/状态机/事件总线/任务生命周期",
+      "epic": "",
+      "dependsOn": [
+        "t-002"
+      ],
+      "role": "gameplay-engineer",
+      "status": "done"
+    },
+    {
+      "id": "t-004",
+      "title": "潜艇操控: 移动/速度/深度/电池/噪声",
+      "epic": "",
+      "dependsOn": [
+        "t-003"
+      ],
+      "role": "gameplay-engineer",
+      "status": "done"
+    },
+    {
+      "id": "t-005",
+      "title": "声呐P0: ping/被动/接触/不确定性/分类",
+      "epic": "",
+      "dependsOn": [
+        "t-004"
+      ],
+      "role": "ai-engineer",
+      "status": "done"
+    },
+    {
+      "id": "t-006",
+      "title": "敌方AI: 状态机/护航/搜索模式",
+      "epic": "",
+      "dependsOn": [
+        "t-003"
+      ],
+      "role": "ai-engineer",
+      "status": "done"
+    },
+    {
+      "id": "t-007",
+      "title": "战斗: 鱼雷/命中概率/伤害/深水炸弹",
+      "epic": "",
+      "dependsOn": [
+        "t-004",
+        "t-005",
+        "t-006"
+      ],
+      "role": "gameplay-engineer",
+      "status": "done"
+    },
+    {
+      "id": "t-008",
+      "title": "任务系统: 5任务+种子生成器",
+      "epic": "",
+      "dependsOn": [
+        "t-003"
+      ],
+      "role": "level-designer",
+      "status": "done"
+    },
+    {
+      "id": "t-009",
+      "title": "世界生成: 海洋/天气/洋流(种子)",
+      "epic": "",
+      "dependsOn": [
+        "t-003"
+      ],
+      "role": "level-designer",
+      "status": "done"
+    },
+    {
+      "id": "t-010",
+      "title": "HUD/UI: 战术HUD/接触面板/事件日志/菜单",
+      "epic": "",
+      "dependsOn": [
+        "t-003",
+        "t-004",
+        "t-005",
+        "t-006",
+        "t-007",
+        "t-008",
+        "t-009"
+      ],
+      "role": "ui-engineer",
+      "status": "done"
+    },
+    {
+      "id": "t-011",
+      "title": "程序化素材+注册表+许可证闸门",
+      "epic": "",
+      "dependsOn": [
+        "t-002"
+      ],
+      "role": "asset-engineer",
+      "status": "running"
+    },
+    {
+      "id": "t-012",
+      "title": "程序化音频(WebAudio≥10)",
+      "epic": "",
+      "dependsOn": [
+        "t-002"
+      ],
+      "role": "audio-engineer",
+      "status": "running"
+    },
+    {
+      "id": "t-013",
+      "title": "全面测试: unit/integration/gameplay/AI/回归",
+      "epic": "",
+      "dependsOn": [
+        "t-003",
+        "t-004",
+        "t-005",
+        "t-006",
+        "t-007",
+        "t-008",
+        "t-009",
+        "t-011",
+        "t-012"
+      ],
+      "role": "qa",
+      "status": "ready"
+    },
+    {
+      "id": "t-014",
+      "title": "无头playtest驱动+≥10次试玩",
+      "epic": "",
+      "dependsOn": [
+        "t-008",
+        "t-013"
+      ],
+      "role": "playtest",
+      "status": "done"
+    },
+    {
+      "id": "t-015",
+      "title": "平衡调整(证据驱动)",
+      "epic": "",
+      "dependsOn": [
+        "t-014"
+      ],
+      "role": "balance",
+      "status": "done"
+    },
+    {
+      "id": "t-016",
+      "title": "离线生产构建",
+      "epic": "",
+      "dependsOn": [
+        "t-010",
+        "t-013"
+      ],
+      "role": "build-release",
+      "status": "running"
+    },
+    {
+      "id": "t-017",
+      "title": "安全审计",
+      "epic": "",
+      "dependsOn": [
+        "t-011",
+        "t-013"
+      ],
+      "role": "security",
+      "status": "done"
+    },
+    {
+      "id": "t-018",
+      "title": "需求变更演练+失败恢复演练+验收矩阵",
+      "epic": "",
+      "dependsOn": [
+        "t-015",
+        "t-016",
+        "t-017"
+      ],
+      "role": "factory-manager",
+      "status": "pending"
+    },
+    {
+      "id": "t-019",
+      "title": "最终交付文档+RELEASE_NOTES",
+      "epic": "",
+      "dependsOn": [
+        "t-018"
+      ],
+      "role": "build-release",
+      "status": "pending"
+    },
+    {
+      "id": "t-020",
+      "title": "修复火控航向约定: headingEstimateDeg/敌人精灵旋转转罗盘",
+      "epic": "",
+      "dependsOn": [
+        "t-013"
+      ],
+      "role": "gameplay-engineer",
+      "status": "done"
+    },
+    {
+      "id": "t-050",
+      "title": "修复 t-013: TEST_FAILURE",
+      "epic": "recovery",
+      "dependsOn": [
+        "t-013"
+      ],
+      "role": "qa",
+      "status": "cancelled"
+    }
+  ],
+  "affectedTasks": [
+    "t-007",
+    "t-009",
+    "t-010",
+    "t-013",
+    "t-014",
+    "t-015",
+    "t-016",
+    "t-017",
+    "t-018",
+    "t-019",
+    "t-020",
+    "t-050"
+  ],
+  "preservedTasks": [
+    "t-001",
+    "t-002",
+    "t-003",
+    "t-004",
+    "t-005",
+    "t-006",
+    "t-008",
+    "t-011",
+    "t-012"
+  ],
+  "newTasks": [
+    {
+      "id": "t-200",
+      "title": "新增: 风暴-spec",
+      "epic": "change",
+      "dependsOn": [],
+      "role": "backend",
+      "status": "proposed",
+      "reason": "keyword \"风暴\" has no existing artifact",
+      "suggested": true
+    },
+    {
+      "id": "t-201",
+      "title": "新增: 暴天-spec",
+      "epic": "change",
+      "dependsOn": [],
+      "role": "backend",
+      "status": "proposed",
+      "reason": "keyword \"暴天\" has no existing artifact",
+      "suggested": true
+    },
+    {
+      "id": "t-202",
+      "title": "新增: 天气-spec",
+      "epic": "change",
+      "dependsOn": [],
+      "role": "backend",
+      "status": "proposed",
+      "reason": "keyword \"天气\" has no existing artifact",
+      "suggested": true
+    },
+    {
+      "id": "t-203",
+      "title": "新增: 气下-spec",
+      "epic": "change",
+      "dependsOn": [],
+      "role": "backend",
+      "status": "proposed",
+      "reason": "keyword \"气下\" has no existing artifact",
+      "suggested": true
+    },
+    {
+      "id": "t-204",
+      "title": "新增: 下鱼-spec",
+      "epic": "change",
+      "dependsOn": [],
+      "role": "backend",
+      "status": "proposed",
+      "reason": "keyword \"下鱼\" has no existing artifact",
+      "suggested": true
+    }
+  ],
+  "removedTasks": [],
+  "proposedBy": "user"
+}

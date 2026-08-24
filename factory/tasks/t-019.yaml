@@ -1,0 +1,11 @@
+id: t-019
+title: 最终交付文档+RELEASE_NOTES
+epic: 
+dependsOn: [t-018]
+role: build-release
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: RELEASE_NOTES.md + docs/README.md; 358/358 verified; sha256 match
+tags: [release]

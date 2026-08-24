@@ -1,0 +1,95 @@
+# SILENT DEPTH — Game Role Contracts (contracts/game-roles.yaml)
+# Delegation rule: each subagent receives its role contract INLINE in the prompt.
+# This file is the canonical reference. Subagent approval policy = NEVER
+# (no sandbox escalation requests; dangerous ops only at Manager level).
+
+game-designer:
+  mission: 把需求转化为可直接实现的设计文档
+  input: [artifacts/requirements.md]
+  output: [workspace/docs/GAME_DESIGN.md, workspace/docs/VISUAL_STYLE.md, workspace/docs/AUDIO_DESIGN.md]
+  constraints: [不改代码/不动 factory 核心/不下载外部素材, 数字必须具体且自洽, 猜测标注 ESTIMATED]
+  qualityCriteria: [FR-01..22 全覆盖, 无 TBD, 平衡数值可执行]
+
+game-architect:
+  mission: 定义引擎架构、模块边界与任务 DAG
+  input: [artifacts/requirements.md, workspace/docs/GAME_DESIGN.md]
+  output: [workspace/docs/GAME_ARCHITECTURE.md, artifacts/implementation-plan.md]
+  constraints: [不改实现代码, 单一引擎代码路径(headless 与浏览器共用), 明确确定性种子策略]
+  qualityCriteria: [所有子系统有归属模块, 依赖单向, 任务 DAG 覆盖 17 阶段]
+
+gameplay-engineer:
+  mission: 实现核心运行时/潜艇/战斗/任务逻辑
+  input: [workspace/docs/GAME_ARCHITECTURE.md, workspace/docs/GAME_DESIGN.md, config/balance.json]
+  output: [src/core/*, src/gameplay/*, src/combat/*, src/missions/*, src/world/*]
+  constraints: [不修改设计/架构文档, 不安装未批准依赖, 纯 TS 无 DOM 依赖(引擎部分)]
+  qualityCriteria: [vitest 对应模块测试绿, 种子可复现, 无硬编码数值(全部走 balance.json)]
+
+ai-engineer:
+  mission: 实现声呐仿真与敌方 AI
+  input: [workspace/docs/GAME_ARCHITECTURE.md, workspace/docs/GAME_DESIGN.md, config/balance.json]
+  output: [src/sonar/*, src/ai/*]
+  constraints: [不改设计/架构文档, 状态机必须显式, 不确定性模型必须随追踪收敛]
+  qualityCriteria: [sonar 与 ai 测试绿, 状态迁移可观测, 主动/被动风险收益不对称]
+
+ui-engineer:
+  mission: 实现 Canvas 渲染与战术 HUD
+  input: [workspace/docs/VISUAL_STYLE.md, workspace/docs/GAME_DESIGN.md, 引擎 API]
+  output: [src/rendering/*, src/ui/*, src/main.ts, index.html]
+  constraints: [渲染层只做适配不复制逻辑, 信息清晰不过度装饰, 60FPS 友好]
+  qualityCriteria: [构建通过, HUD 显示深度/速度/航向/电池/船体/噪声/探测/鱼雷/接触列表/事件日志]
+
+asset-engineer:
+  mission: 程序化素材 + 注册表 + 许可证闸门
+  input: [workspace/docs/VISUAL_STYLE.md, 需求 FR-21]
+  output: [assets/*, assets/registry.json, docs/ASSET_PIPELINE.md, THIRD_PARTY_ASSETS.md, src/rendering/sprites.ts]
+  constraints: [优先程序化生成, 未知版权 BLOCK, 分辨率 128/256/512]
+  qualityCriteria: [registry 全字段, sha256 真实, 无未知版权素材]
+
+audio-engineer:
+  mission: WebAudio 程序化音效
+  input: [workspace/docs/AUDIO_DESIGN.md]
+  output: [src/audio/*]
+  constraints: [纯程序合成, 无外部采样, 离线]
+  qualityCriteria: [≥10 音效, 模块测试绿]
+
+level-designer:
+  mission: 5 个任务 + 任务生成器 + 世界生成
+  input: [workspace/docs/GAME_DESIGN.md, config/balance.json]
+  output: [config/missions.json, src/missions/generator.ts, src/world/*]
+  constraints: [种子可复现, 任务目标可达成]
+  qualityCriteria: [5 任务可生成可完成, 同一种子结果一致]
+
+qa:
+  mission: 全面测试
+  input: [全部模块 + gates.yaml]
+  output: [tests/*, reports/qa/TEST_REPORT.md]
+  constraints: [失败必须修复或如实记录, 不跳过]
+  qualityCriteria: [npm test 全绿, 覆盖率记录]
+
+playtest:
+  mission: 无头 AI 试玩 ≥10 次, 完成任务并记录证据
+  input: [src/sim/*, config/missions.json]
+  output: [src/sim/playtest.ts, reports/playtest/*.md]
+  constraints: [结果来自真实运行, 不伪造]
+  qualityCriteria: [≥10 次记录, ≥1 任务完成, 失败被识别并上报]
+
+balance:
+  mission: 基于 playtest 数据调平衡
+  input: [reports/playtest/*, config/balance.json]
+  output: [config/balance.json vN, reports/balance/BALANCE_REPORT.md]
+  constraints: [证据驱动, 记录每次修改]
+  qualityCriteria: [检测难度/鱼雷效率/电池/目标达到目标区间]
+
+security:
+  mission: 安全审计
+  input: [全部]
+  output: [reports/qa/security-report.md]
+  constraints: [OWASP 清单, 依赖审计, 素材来源检查]
+  qualityCriteria: [无高危项, 无运行时外网请求]
+
+build-release:
+  mission: 离线构建与发布
+  input: [workspace, gates.yaml]
+  output: [dist/, reports/release/build-report.md, RELEASE_NOTES.md]
+  constraints: [离线运行, 不引入服务端]
+  qualityCriteria: [vite build 成功, dist 冒烟通过]

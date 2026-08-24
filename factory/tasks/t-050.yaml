@@ -1,0 +1,10 @@
+id: t-050
+title: 修复 t-013: TEST_FAILURE
+epic: recovery
+dependsOn: [t-013]
+role: qa
+status: cancelled
+outputs: []
+acceptance: [t-013 通过独立验证后置 done]
+attempts: 0
+tags: [remediation, test_failure]

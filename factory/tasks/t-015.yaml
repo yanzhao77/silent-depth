@@ -1,0 +1,11 @@
+id: t-015
+title: 平衡调整(证据驱动)
+epic: 
+dependsOn: [t-014]
+role: balance
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: 10 evidence-driven balance changes; old→new SUMMARY measured; 356/356 + harness 6/6; BALANCE_REPORT
+tags: [testing, balance]

@@ -1,0 +1,11 @@
+id: t-003
+title: 核心运行时: 种子RNG/状态机/事件总线/任务生命周期
+epic: 
+dependsOn: [t-002]
+role: gameplay-engineer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: 70/70 tests; tsc clean; deterministic engine; system pipeline + forks ready for t-004..t-009
+tags: [backend, core]

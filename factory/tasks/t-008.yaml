@@ -1,0 +1,11 @@
+id: t-008
+title: 任务系统: 5任务+种子生成器
+epic: 
+dependsOn: [t-003]
+role: level-designer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: missions 3 files + missions.json, 39 tests; missionsSystem slot 3 + objectivesSystem slot 9 wired
+tags: [backend, missions]

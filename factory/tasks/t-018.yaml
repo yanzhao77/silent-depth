@@ -1,0 +1,11 @@
+id: t-018
+title: 需求变更演练+失败恢复演练+验收矩阵
+epic: 
+dependsOn: [t-015, t-016, t-017]
+role: factory-manager
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: PHASE 16 drills PASS: requirement-change (rev-0002→plan-v2→t-021 implemented+verified), failure-recovery (drill 2: inject→detect→record→fix→retest PASS), acceptance matrix filled
+tags: [release, trial]

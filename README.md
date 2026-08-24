@@ -89,6 +89,7 @@ npm test           # 358 项测试 (vitest)
 | [docs/ASSET_PIPELINE.md](docs/ASSET_PIPELINE.md) | 素材管线 + 许可证闸门 |
 | [RELEASE_NOTES.md](RELEASE_NOTES.md) | v1.0.0 发布说明 |
 | `reports/` | 生产证据:TEST / PLAYTEST / BALANCE / SECURITY / BUILD 报告 |
+| `factory/` | **工厂生产记录**:审计/需求修订/角色契约/ADR/失败账本/任务DAG/验收矩阵 |
 
 ## 🏭 生产背景
 

@@ -1,0 +1,10 @@
+id: t-302
+title: 天气-spec
+epic: change
+dependsOn: []
+role: backend
+status: cancelled
+outputs: []
+acceptance: []
+attempts: 0
+tags: [change, suggested]

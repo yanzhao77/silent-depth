@@ -1,0 +1,11 @@
+id: t-001
+title: 游戏设计文档 GAME_DESIGN + VISUAL_STYLE + AUDIO_DESIGN
+epic: 
+dependsOn: []
+role: game-designer
+status: done
+outputs: []
+acceptance: []
+attempts: 2
+evidence: GAME_DESIGN.md 702 lines, 15 sections, FR-01..22 matrix, balance targets B1-B10, formulas F1-F10; VISUAL_STYLE.md 91 lines; AUDIO_DESIGN.md 60 lines
+tags: [design, requirements]

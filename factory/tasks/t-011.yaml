@@ -1,0 +1,10 @@
+id: t-011
+title: 程序化素材+注册表+许可证闸门
+epic: 
+dependsOn: [t-002]
+role: asset-engineer
+status: running
+outputs: []
+acceptance: []
+attempts: 0
+tags: [frontend, assets]

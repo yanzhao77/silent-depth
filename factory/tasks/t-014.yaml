@@ -1,0 +1,11 @@
+id: t-014
+title: 无头playtest驱动+≥10次试玩
+epic: 
+dependsOn: [t-008, t-013]
+role: playtest
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: 12 playtest sessions, 5 victories (M01/M02/GEN-02 + determinism x2); SUMMARY with 5 evidence-backed balance findings; 356/356 tests
+tags: [testing, playtest]

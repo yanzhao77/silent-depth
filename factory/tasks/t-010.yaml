@@ -1,0 +1,11 @@
+id: t-010
+title: HUD/UI: 战术HUD/接触面板/事件日志/菜单
+epic: 
+dependsOn: [t-003, t-004, t-005, t-006, t-007, t-008, t-009]
+role: ui-engineer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: UI layer 11 files + 38 tests; build PASS; HUD/menus/renderer/save/main
+tags: [frontend, ui]

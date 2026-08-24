@@ -1,0 +1,11 @@
+id: t-006
+title: 敌方AI: 状态机/护航/搜索模式
+epic: 
+dependsOn: [t-003]
+role: ai-engineer
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: ai module 6 files, 62 tests; aiSystem wired slot 6; 184/184 suite green
+tags: [backend, ai]

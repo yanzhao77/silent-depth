@@ -1,0 +1,11 @@
+id: t-002
+title: 游戏架构 GAME_ARCHITECTURE + 实现计划
+epic: 
+dependsOn: [t-001]
+role: game-architect
+status: done
+outputs: []
+acceptance: []
+attempts: 0
+evidence: GAME_ARCHITECTURE.md 570 lines (14 sections, TS interfaces, tick order, event catalogue); implementation-plan.md 279 lines (6-wave build order, per-task steps t-001..t-019)
+tags: [architecture, planning]

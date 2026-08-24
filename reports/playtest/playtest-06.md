@@ -1,6 +1,6 @@
 # Playtest 06 — Generated Merchant Pair (t-014 evidence)
 
-- **Version**: 92e19b8
+- **Version**: 714c6ab
 - **Mission**: GEN-01 — Generated Merchant Pair (seed 2001, difficulty 1/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
 - **Result**: **TIMEOUT** after 3000.1 s (60000 ticks)
