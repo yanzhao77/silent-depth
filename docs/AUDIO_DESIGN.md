@@ -1,6 +1,6 @@
 # SILENT DEPTH 《深海猎手》 — Audio Design
 
-Version: v1 · Owner: Factory Manager (escalated) · Status: ACCEPTED
+Version: v1.1 (t-025 periscope SFX appended; v1 = 14 core SFX) · Owner: Factory Manager (escalated) · Status: ACCEPTED
 
 ## 1. Style
 Dark · Minimal · Underwater · Military · Tense. Nothing cheerful, cartoonish,
@@ -14,7 +14,7 @@ licensing risk, fully offline.
   ratio 3) → destination.
 - All SFX routed through a shared `sfxBus` gain (settings.audio.sfxVolume).
 
-## 3. SFX spec (≥10 required; v1 ships all 13)
+## 3. SFX spec (≥10 required; v1 ships 20 — 14 core + 6 periscope)
 
 | # | Name | Purpose | Character | Synthesis approach |
 |---|---|---|---|---|
@@ -32,6 +32,12 @@ licensing risk, fully offline.
 | 12 | uiClick | menu/button | short tick | Sine 1200Hz 25ms exp decay, tiny click |
 | 13 | missionSuccess | victory sting | low warm major-ish | Two notes sine 220→330Hz 0.9s, soft, + pad (detuned sines 110/165Hz 2s, lowpass 800Hz) |
 | 14 | missionFailed | defeat sting | cold minor descending | Sine 330→220→165Hz 1.6s, minor, + low noise, dark |
+| 15 | periscopeRaise | hydraulic/motor ascent (t-025) | naval mechanical | low sine sweep 70→120Hz 1.6s + bandpass noise 200–400Hz (Q1.2), soft clunk at end (90Hz 80ms) |
+| 16 | periscopeReady | mechanical latch/prompt (t-025) | analog latch | two sine 90Hz thumps 60ms (120ms apart) + clean soft sine 880Hz confirm blip 80ms |
+| 17 | targetAcquired | analog sonar-ish confirm (t-025) | subdued sonar | two-tone blip 660→880Hz 120ms, soft echo (0.35s delay, 20% wet), subdued |
+| 18 | targetLocked | definitive lock (t-025) | confident lock | double sine 700Hz pulse 90ms (140ms gap) + low 55Hz thump underneath; confident, not loud |
+| 19 | exposureWarning | exposure warning (t-025) | urgent analog | three-beat 440Hz pulse (sawtooth → lowpass 1.2kHz, square-ish), 100ms on / 150ms off ×3, moderate gain |
+| 20 | periscopeLower | hydraulic descent (t-025) | naval mechanical | mirror of raise: sweep 120→70Hz 1.4s + bandpass noise, soft clunk at end (80Hz 80ms) |
 
 ## 4. Ambience
 - Ocean bed loop: filtered pink noise (lowpass 200Hz) at very low gain (-30dB),
@@ -53,6 +59,17 @@ licensing risk, fully offline.
 | detection.threshold | alarm |
 | ui.click | uiClick |
 | mission.victory / mission.defeat | missionSuccess / missionFailed |
+| periscope.raising | periscopeRaise |
+| periscope.raised | periscopeReady |
+| periscope.ready | periscopeReady (reuse) |
+| periscope.visualContact | targetAcquired |
+| periscope.classified | targetAcquired (reuse) |
+| periscope.locked | targetLocked |
+| periscope.unlocked | uiClick (reuse — neutral release tick) |
+| periscope.lowered | periscopeLower |
+| periscope.cannotRaise | uiClick (reuse — short rejection blip) |
+| periscope.exposure (band HIGH/CRITICAL, throttled ≥2.5s) | exposureWarning |
+| sub.emergencyDive | alarm + periscopeLower (rapid drop) |
 
 ## 6. Acceptance (audio-gate)
 - ≥10 distinct SFX synthesized, testable headlessly (pure functions returning

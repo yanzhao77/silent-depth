@@ -51,6 +51,8 @@ import {
   detectionBandIndex,
   eventPhase,
   eventSeverity,
+  eventSeverityFor,
+  exposureBandColor,
   formatEvent,
   formatFireSolution,
   formatLastSeen,
@@ -413,20 +415,27 @@ describe('input mapping', () => {
     expect(input.getInputs().silentRunning).toBe(false)
   })
 
-  it('P and Escape invoke their callbacks (not inputs)', () => {
-    let pauses = 0
+  it('P/L/X latch periscope edges; Escape invokes the onMenu callback (t-026)', () => {
     let menus = 0
     const input = createInput({
       maxThrottleKt: 22,
-      onPause: () => pauses++,
       onMenu: () => menus++,
     })
-    input.handleKey('KeyP', true)
     input.handleKey('Escape', true)
-    expect(pauses).toBe(1)
     expect(menus).toBe(1)
-    // pause stays shell-owned (input value false).
+
+    // P = periscope raise/lower (one-shot latch, consumed on read).
+    input.handleKey('KeyP', true)
+    expect(input.consumePeriscopeRequest()).toBe(true)
+    expect(input.consumePeriscopeRequest()).toBe(false)
+    // L = lock target; X = emergency dive.
+    input.handleKey('KeyL', true)
+    expect(input.consumeLockRequest()).toBe(true)
+    input.handleKey('KeyX', true)
+    expect(input.consumeDiveRequest()).toBe(true)
+    // Shell-owned inputs stay false (pulses come from buildInputs in main).
     expect(input.getInputs().pause).toBe(false)
+    expect(input.getInputs().periscope).toBeUndefined()
   })
 
   it('bind() maps window events and ignores OS key-repeat', () => {
@@ -809,5 +818,68 @@ describe('timeline severity + phase', () => {
     expect(eventPhase('decoy.launched')).toBe('SUB')
     expect(eventPhase('mission.victory')).toBe('MISSION')
     expect(eventPhase('escape.escaped')).toBe('MISSION')
+  })
+})
+
+// ---------------------------------------------------------------------------
+// Periscope (t-026) — helpers + event log entries
+// ---------------------------------------------------------------------------
+
+describe('periscope helpers', () => {
+  it('exposureBandColor maps bands green → red', () => {
+    expect(exposureBandColor('NONE')).toBe('#64748b')
+    expect(exposureBandColor('LOW')).toBe('#34d399')
+    expect(exposureBandColor('MEDIUM')).toBe('#fbbf24')
+    expect(exposureBandColor('HIGH')).toBe('#fb923c')
+    expect(exposureBandColor('CRITICAL')).toBe('#f87171')
+    expect(exposureBandColor('bogus')).toBe('#64748b')
+  })
+
+  it('eventSeverityFor refines periscope.exposure by band payload', () => {
+    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'CRITICAL' }))).toBe('error')
+    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'HIGH' }))).toBe('error')
+    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'MEDIUM' }))).toBe('warning')
+    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'LOW' }))).toBe('info')
+    expect(eventSeverityFor(makeEvent('periscope.raised'))).toBe('info')
+    expect(eventSeverityFor(makeEvent('periscope.locked'))).toBe('success')
+    expect(eventSeverityFor(makeEvent('sub.emergencyDive'))).toBe('warning')
+  })
+
+  it('eventPhase groups periscope events into PERISCOPE', () => {
+    expect(eventPhase('periscope.raised')).toBe('PERISCOPE')
+    expect(eventPhase('periscope.visualContact')).toBe('PERISCOPE')
+    expect(eventPhase('sub.emergencyDive')).toBe('SUB')
+  })
+
+  it('formatEvent renders the 11 new periscope log entries (EN canonical)', () => {
+    expect(formatEvent(makeEvent('periscope.ready'))).toBe('PERISCOPE READY')
+    expect(formatEvent(makeEvent('periscope.raising'))).toBe('RAISING PERISCOPE')
+    expect(formatEvent(makeEvent('periscope.raised'))).toBe('PERISCOPE RAISED')
+    expect(formatEvent(makeEvent('periscope.visualContact', { contactId: 'C-01' }))).toBe('VISUAL CONTACT — C-01')
+    expect(formatEvent(makeEvent('periscope.classified', { contactId: 'C-01', classification: 'Tanker' }))).toBe('TARGET CLASSIFIED — C-01')
+    expect(formatEvent(makeEvent('periscope.locked', { contactId: 'C-01' }))).toBe('TARGET LOCKED — C-01')
+    expect(formatEvent(makeEvent('periscope.unlocked', { contactId: 'C-01' }))).toBe('TARGET UNLOCKED — C-01')
+    expect(formatEvent(makeEvent('periscope.lowered'))).toBe('PERISCOPE LOWERED')
+    expect(formatEvent(makeEvent('periscope.cannotRaise', { reason: 'tooDeep' }))).toBe('CANNOT RAISE PERISCOPE')
+    expect(formatEvent(makeEvent('periscope.exposure', { band: 'HIGH' }))).toBe('EXPOSURE RISING — HIGH')
+    expect(formatEvent(makeEvent('sub.emergencyDive'))).toBe('EMERGENCY DIVE')
+  })
+
+  it('formatEvent localizes periscope entries per language', () => {
+    expect(formatEvent(makeEvent('periscope.raised'), 'zh')).toBe('潜望镜已升起')
+    expect(formatEvent(makeEvent('periscope.locked', { contactId: 'C-01' }), 'fr')).toBe('CIBLE VERROUILLÉE — C-01')
+    expect(formatEvent(makeEvent('periscope.exposure', { band: 'CRITICAL' }), 'ru')).toBe('ЭКСПОЗИЦИЯ РАСТЁТ — КРИТИЧЕСКИЙ')
+  })
+
+  it('formatFireSolution reports the fire-solution status', () => {
+    const contact = makeContact()
+    expect(formatFireSolution(makeSolution(), contact).status).toBe('ESTIMATED')
+    expect(formatFireSolution(makeSolution(), contact).statusText).toBe('ESTIMATED')
+    const confirmed = formatFireSolution(makeSolution({ status: 'VISUAL CONFIRMED' }), contact)
+    expect(confirmed.status).toBe('VISUAL CONFIRMED')
+    expect(confirmed.statusText).toBe('VISUAL CONFIRMED')
+    // EN canonical fields unchanged.
+    expect(confirmed.target).toBe('C-01 Tanker')
+    expect(confirmed.hitProbability).toBe('72%')
   })
 })

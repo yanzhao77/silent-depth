@@ -21,8 +21,15 @@ export type SfxName =
   | 'uiClick'
   | 'missionSuccess'
   | 'missionFailed'
+  // t-025 periscope system (run-002)
+  | 'periscopeRaise'
+  | 'periscopeReady'
+  | 'targetAcquired'
+  | 'targetLocked'
+  | 'exposureWarning'
+  | 'periscopeLower'
 
-/** All 14 SFX shipped in v1 (requirement: ≥10 distinct). */
+/** All 20 SFX shipped (14 core + 6 periscope; requirement: ≥10 distinct). */
 export const SFX_NAMES: readonly SfxName[] = [
   'sonarPing',
   'sonarReturn',
@@ -38,6 +45,13 @@ export const SFX_NAMES: readonly SfxName[] = [
   'uiClick',
   'missionSuccess',
   'missionFailed',
+  // t-025 periscope system (run-002)
+  'periscopeRaise',
+  'periscopeReady',
+  'targetAcquired',
+  'targetLocked',
+  'exposureWarning',
+  'periscopeLower',
 ]
 
 export type WaveformType = 'sine' | 'square' | 'sawtooth' | 'triangle'
@@ -272,6 +286,71 @@ export const SFX_PARAMS: Record<SfxName, SfxParams> = {
     gains: [0.3, 0.12],
     filter: { type: 'lowpass', frequency: 300 },
   },
+  // ---- t-025 periscope system (run-002) — naval/mechanical/analog ----
+  periscopeRaise: {
+    name: 'periscopeRaise',
+    description: 'hydraulic/motor ascent — low 70→120Hz sweep up + bandpass mechanical noise, soft clunk at end',
+    loop: false,
+    waveform: 'sine',
+    noise: 'white',
+    frequencies: [70, 120, 300],
+    durations: [1.6, 0.08],
+    gains: [0.3, 0.22, 0.35],
+    filter: { type: 'bandpass', frequency: 300, q: 1.2 },
+  },
+  periscopeReady: {
+    name: 'periscopeReady',
+    description: 'mechanical latch/prompt — two low 90Hz thumps + clean soft 880Hz confirm blip',
+    loop: false,
+    waveform: 'sine',
+    frequencies: [90, 880],
+    durations: [0.06, 0.08],
+    gains: [0.3, 0.18],
+    filter: null,
+  },
+  targetAcquired: {
+    name: 'targetAcquired',
+    description: 'analog sonar-ish confirm — 660→880Hz two-tone blip with soft echo, subdued',
+    loop: false,
+    waveform: 'sine',
+    frequencies: [660, 880],
+    durations: [0.12, 0.35],
+    gains: [0.25, 0.15],
+    filter: null,
+    echoDelay: 0.35,
+    echoWet: 0.2,
+  },
+  targetLocked: {
+    name: 'targetLocked',
+    description: 'definitive lock — double 700Hz pulse (140ms gap) + low 55Hz thump, confident not loud',
+    loop: false,
+    waveform: 'sine',
+    frequencies: [700, 55],
+    durations: [0.09, 0.14],
+    gains: [0.28, 0.25],
+    filter: null,
+  },
+  exposureWarning: {
+    name: 'exposureWarning',
+    description: 'warning — slow three-beat 440Hz pulse (sawtooth lowpassed, square-ish), urgent but analog',
+    loop: false,
+    waveform: 'sawtooth',
+    frequencies: [440, 1200],
+    durations: [0.1, 0.15],
+    gains: [0.4],
+    filter: { type: 'lowpass', frequency: 1200 },
+  },
+  periscopeLower: {
+    name: 'periscopeLower',
+    description: 'hydraulic descent — 120→70Hz sweep down + bandpass mechanical noise, soft clunk at end',
+    loop: false,
+    waveform: 'sine',
+    noise: 'white',
+    frequencies: [120, 70, 300],
+    durations: [1.4, 0.08],
+    gains: [0.3, 0.22, 0.35],
+    filter: { type: 'bandpass', frequency: 300, q: 1.2 },
+  },
 }
 
 // ---------------------------------------------------------------------------
@@ -306,7 +385,7 @@ export const AMBIENCE_PARAMS: AmbienceParams = {
 // ---------------------------------------------------------------------------
 
 export type EventSfxAction =
-  | { kind: 'play'; sfx: SfxName; alsoStartLoop?: SfxName; stopLoop?: SfxName }
+  | { kind: 'play'; sfx: SfxName; alsoPlay?: SfxName; alsoStartLoop?: SfxName; stopLoop?: SfxName }
   | { kind: 'stopLoop'; sfx: SfxName }
   | { kind: 'retargetEngine' }
   | { kind: 'none' }
@@ -339,6 +418,29 @@ const EVENT_SFX_MAP_RAW = {
   'ui.click': { kind: 'play', sfx: 'uiClick' },
   'mission.victory': { kind: 'play', sfx: 'missionSuccess' },
   'mission.defeat': { kind: 'play', sfx: 'missionFailed' },
+  // ---- t-025 periscope system (run-002) — engine events from src/core/types.ts ----
+  'periscope.raising': { kind: 'play', sfx: 'periscopeRaise' },
+  'periscope.raised': { kind: 'play', sfx: 'periscopeReady' },
+  // DESIGN DECISION: periscope.ready reuses periscopeReady — the engine may emit
+  // ready with or without raised; replaying the latch prompt is harmless and
+  // guarantees audible feedback whenever the scope finishes raising.
+  'periscope.ready': { kind: 'play', sfx: 'periscopeReady' },
+  'periscope.visualContact': { kind: 'play', sfx: 'targetAcquired' },
+  // DESIGN DECISION: periscope.classified reuses targetAcquired (classification
+  // drift — keep simple: play on every classification event).
+  'periscope.classified': { kind: 'play', sfx: 'targetAcquired' },
+  'periscope.locked': { kind: 'play', sfx: 'targetLocked' },
+  // DESIGN DECISION: periscope.unlocked reuses uiClick — a short neutral tick
+  // reads as "release", no dedicated SFX needed.
+  'periscope.unlocked': { kind: 'play', sfx: 'uiClick' },
+  'periscope.lowered': { kind: 'play', sfx: 'periscopeLower' },
+  // DESIGN DECISION: periscope.cannotRaise reuses uiClick — the short tick reads
+  // as a low "nope"/rejection blip (dedicated thud out of the 6-SFX scope).
+  'periscope.cannotRaise': { kind: 'play', sfx: 'uiClick' },
+  // Band HIGH|CRITICAL only + throttled ≥2.5s in audio.ts (t-025 spec).
+  'periscope.exposure': { kind: 'play', sfx: 'exposureWarning' },
+  // Emergency dive: klaxon + rapid periscope drop (both one-shots at once).
+  'sub.emergencyDive': { kind: 'play', sfx: 'alarm', alsoPlay: 'periscopeLower' },
 } as const satisfies Readonly<Record<string, EventSfxAction>>
 
 /** Runtime event→action map (widened for index access by audio.ts). */

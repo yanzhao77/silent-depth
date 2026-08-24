@@ -83,7 +83,14 @@ export function formatEvent(entry: EventEntry, lang: Lang = 'en'): string | null
     typeof payload?.contactId === 'string' ? (payload.contactId as string) : null
   const targetId = typeof payload?.targetId === 'string' ? (payload.targetId as string) : null
   const shipId = typeof payload?.shipId === 'string' ? (payload.shipId as string) : null
-  const suffix = contactId ?? targetId ?? shipId
+  let suffix = contactId ?? targetId ?? shipId
+  // t-026: periscope exposure events carry the exposure band — append its
+  // localized name ('EXPOSURE RISING — HIGH').
+  if (suffix === null && entry.type === 'periscope.exposure' && typeof payload?.band === 'string') {
+    const bandKey = payload.band as string
+    suffix = tt(`periscope.band.${bandKey}`)
+    if (suffix === `periscope.band.${bandKey}`) suffix = bandKey
+  }
   return suffix !== null && suffix.length > 0 ? tt('log.entry', { text: label, id: suffix }) : label
 }
 
@@ -116,6 +123,18 @@ const EVENT_LOG_KEYS: Partial<Record<EventType, string>> = {
   'mission.victory': 'log.mission.victory',
   'mission.defeat': 'log.mission.defeat',
   'mission.complete': 'log.mission.complete',
+  // t-026 periscope catalogue.
+  'periscope.ready': 'log.periscope.ready',
+  'periscope.raising': 'log.periscope.raising',
+  'periscope.raised': 'log.periscope.raised',
+  'periscope.visualContact': 'log.periscope.visualContact',
+  'periscope.classified': 'log.periscope.classified',
+  'periscope.locked': 'log.periscope.locked',
+  'periscope.unlocked': 'log.periscope.unlocked',
+  'periscope.lowered': 'log.periscope.lowered',
+  'periscope.cannotRaise': 'log.periscope.cannotRaise',
+  'periscope.exposure': 'log.periscope.exposure',
+  'sub.emergencyDive': 'log.emergencyDive',
   // Suppressed (shell-driven noise): sub.speedChanged, sub.depthChanged,
   // ui.click — deliberately absent from the map (formatEvent → null).
 }
@@ -131,6 +150,10 @@ export interface FireControlParts {
   hitProbability: string
   salvoProbability: string
   estimated: boolean
+  /** t-024/026: fire-solution quality ('ESTIMATED' | 'VISUAL CONFIRMED'). */
+  status: 'ESTIMATED' | 'VISUAL CONFIRMED'
+  /** Localized status label (fc.status.*). */
+  statusText: string
 }
 
 /** Format a FireSolution into card strings ("--" for unknown inputs). */
@@ -140,6 +163,7 @@ export function formatFireSolution(solution: FireSolution, contact: Contact, lan
   const rangeStr = (km: number | null): string =>
     km === null ? '--' : km >= 10 ? `${Math.round(km)}KM` : `${km.toFixed(1)}KM`
   const speedStr = (kt: number | null): string => (kt === null ? '--' : `${Math.round(kt)}KT`)
+  const status: 'ESTIMATED' | 'VISUAL CONFIRMED' = solution.status ?? 'ESTIMATED'
   return {
     target: `${contact.id} ${tt(`class.${contact.classification}`)}`,
     bearing: three(contact.bearingDeg),
@@ -150,6 +174,8 @@ export function formatFireSolution(solution: FireSolution, contact: Contact, lan
     hitProbability: `${Math.round(solution.hitProbability * 100)}%`,
     salvoProbability: `${Math.round(solution.salvoHitProbability * 100)}%`,
     estimated: solution.estimated,
+    status,
+    statusText: tt(`fc.status.${status === 'VISUAL CONFIRMED' ? 'visualConfirmed' : 'estimated'}`),
   }
 }
 
@@ -186,7 +212,7 @@ export const WEATHER_CODES: Record<WeatherKind, string> = {
 /** Semantic severity of an event for the timeline dot. */
 export type EventSeverity = 'success' | 'info' | 'warning' | 'error'
 
-/** EventType → timeline severity (t-023; pure, unit-tested). */
+/** EventType → timeline severity (t-023/t-026; pure, unit-tested). */
 const EVENT_SEVERITIES: Partial<Record<EventType, EventSeverity>> = {
   // success
   'torpedo.ready': 'success',
@@ -197,6 +223,9 @@ const EVENT_SEVERITIES: Partial<Record<EventType, EventSeverity>> = {
   'escape.escaped': 'success',
   'mission.victory': 'success',
   'mission.complete': 'success',
+  'periscope.visualContact': 'success',
+  'periscope.classified': 'success',
+  'periscope.locked': 'success',
   // warning
   'torpedo.missed': 'warning',
   'torpedo.expired': 'warning',
@@ -206,6 +235,9 @@ const EVENT_SEVERITIES: Partial<Record<EventType, EventSeverity>> = {
   'battery.low': 'warning',
   'detection.threshold': 'warning',
   'sub.forcedSurface': 'warning',
+  'periscope.cannotRaise': 'warning',
+  'periscope.exposure': 'warning',
+  'sub.emergencyDive': 'warning',
   // error
   'contact.lost': 'error',
   'player.located': 'error',
@@ -218,14 +250,47 @@ export function eventSeverity(type: EventType): EventSeverity {
   return EVENT_SEVERITIES[type] ?? 'info'
 }
 
+/**
+ * Timeline dot severity for an entry — refines periscope.exposure by the
+ * band payload (CRITICAL/HIGH → error, MEDIUM → warning, LOW/NONE → info).
+ */
+export function eventSeverityFor(entry: EventEntry): EventSeverity {
+  if (entry.type === 'periscope.exposure') {
+    const band = entry.payload?.band
+    if (band === 'CRITICAL' || band === 'HIGH') return 'error'
+    if (band === 'MEDIUM') return 'warning'
+    return 'info'
+  }
+  return eventSeverity(entry.type)
+}
+
 /** Mission-phase group of an event (technical micro-label for the timeline). */
 export function eventPhase(type: EventType): string {
+  if (type.startsWith('periscope.')) return 'PERISCOPE'
   if (type.startsWith('sonar.') || type.startsWith('contact.')) return 'SONAR'
   if (type.startsWith('torpedo.')) return 'TORPEDO'
   if (type.startsWith('depthCharge.') || type.startsWith('deckGun.') || type === 'ship.sunk') return 'COMBAT'
   if (type.startsWith('sub.') || type === 'battery.low' || type === 'detection.threshold' || type === 'player.located' || type === 'decoy.launched') return 'SUB'
   if (type.startsWith('mission.') || type === 'escape.escaped') return 'MISSION'
   return 'SYS'
+}
+
+/** Exposure band → color (t-026; LOW green → CRITICAL red). */
+export function exposureBandColor(band: string): string {
+  switch (band) {
+    case 'NONE':
+      return '#64748b'
+    case 'LOW':
+      return '#34d399'
+    case 'MEDIUM':
+      return '#fbbf24'
+    case 'HIGH':
+      return '#fb923c'
+    case 'CRITICAL':
+      return '#f87171'
+    default:
+      return '#64748b'
+  }
 }
 
 /** Short technical status code per GameState (mono chip — i18n-neutral). */
@@ -254,6 +319,8 @@ export interface HudExtras {
   /** Measured FPS (dev chip when settings.video.showFps). */
   fps: number
   showFps: boolean
+  /** Wall-clock seconds (post-fire warning banner timing). */
+  wallT: number
 }
 
 export interface HudOptions {
@@ -263,6 +330,12 @@ export interface HudOptions {
   onSalvoChange: (salvo: 1 | 2) => void
   /** Top-bar settings / language entry clicked (shell opens Settings). */
   onOpenSettings: () => void
+  /** t-026: periscope raise/lower edge (P or button). */
+  onPeriscopeToggle: () => void
+  /** t-026: lock the observed target (L or button). */
+  onLockTarget: () => void
+  /** t-026: emergency dive (X or button). */
+  onDive: () => void
   /** Initial UI language (t-022; default 'en'). */
   lang?: Lang
 }
@@ -276,6 +349,8 @@ export interface Hud {
   reset(): void
   /** Switch UI language: re-translates the static labels in place. */
   setLanguage(lang: Lang): void
+  /** t-026: show the post-fire exposure warning banner (~6 s). */
+  showFireWarning(): void
   /** The HUD root element (CSS class 'hud'). */
   root: HTMLElement
 }
@@ -386,6 +461,16 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   const noiseBar = barRow('hud.noise')
   const detectionBar = barRow('hud.detection')
 
+  // t-026 periscope row in the status card: state chip + exposure bar.
+  const pScopeChip = el('span', { className: 'pc-mini-chip' })
+  const pExposureFill = el('div', { className: 'bar-fill' })
+  const pExposureValue = el('span', { className: 'bar-value' })
+  const pScopeRow = el('div', { className: 'bar-row periscope-row' }, [
+    pScopeChip,
+    el('div', { className: 'bar-track' }, [pExposureFill]),
+    pExposureValue,
+  ])
+
   const statusCard = el('div', { className: 'card' }, [
     el('div', { className: 'status-readouts' }, readouts),
     el('div', { className: 'status-bars' }, [
@@ -393,6 +478,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       hullBar.row,
       noiseBar.row,
       detectionBar.row,
+      pScopeRow,
     ]),
   ])
 
@@ -419,7 +505,54 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     tubesRow,
   ])
 
-  const leftCol = el('div', { className: 'hud-left' }, [statusCard, tasksCard, tubesCard])
+  // --- periscope control card (t-026) -----------------------------------------------
+  const pcStatus = el('span', { className: 'pc-status' })
+  const pcProgressFill = el('div', { className: 'pc-progress-fill' })
+  const pcProgressPct = el('span', { className: 'mono pc-pct' })
+  const pcProgress = el('div', { className: 'pc-progress-row' }, [
+    el('div', { className: 'pc-progress' }, [pcProgressFill]),
+    pcProgressPct,
+  ])
+  pcProgress.style.display = 'none'
+  const pcReason = el('div', { className: 'pc-reason' })
+  pcReason.style.display = 'none'
+
+  const raiseBtn = el('button', {
+    className: 'btn btn-primary pc-btn',
+    text: tt('periscope.btn.raise'),
+    onclick: () => opts.onPeriscopeToggle(),
+  })
+  const lockBtn = el('button', {
+    className: 'btn pc-btn',
+    text: tt('periscope.btn.lock'),
+    onclick: () => opts.onLockTarget(),
+  })
+  const lowerBtn = el('button', {
+    className: 'btn pc-btn',
+    text: tt('periscope.btn.lower'),
+    onclick: () => opts.onPeriscopeToggle(),
+  })
+  const diveBtn = el('button', {
+    className: 'btn pc-btn pc-danger',
+    text: tt('periscope.btn.dive'),
+    onclick: () => opts.onDive(),
+  })
+  labelRegistry.push([raiseBtn, 'periscope.btn.raise'])
+  labelRegistry.push([lockBtn, 'periscope.btn.lock'])
+  labelRegistry.push([lowerBtn, 'periscope.btn.lower'])
+  labelRegistry.push([diveBtn, 'periscope.btn.dive'])
+
+  const periscopeCard = el('div', { className: 'card periscope-control' }, [
+    el('div', { className: 'card-head' }, [
+      label('periscope.title', 'card-title'),
+      pcStatus,
+    ]),
+    pcProgress,
+    pcReason,
+    el('div', { className: 'pc-actions' }, [raiseBtn, lockBtn, lowerBtn, diveBtn]),
+  ])
+
+  const leftCol = el('div', { className: 'hud-left' }, [statusCard, tasksCard, tubesCard, periscopeCard])
 
   // --- right column: contacts + fire control (I) -------------------------------------
   const contactList = el('div', { className: 'contact-list' })
@@ -475,7 +608,106 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     timelineBody,
   ])
 
-  root.append(topbar, workspace, leftCol, rightCol, timeline)
+  // --- PERISCOPE VIEW overlay (t-026) ----------------------------------------------
+  // Optical observation mode over the central workspace (RAISED/OBSERVING).
+  // Restrained: vignette + scanlines + an optical reticle; no cyberpunk glow.
+  const pvBearing = el('span', { className: 'pv-bearing mono' })
+  const pvTargetType = el('span', { className: 'pv-value pv-type' })
+  const pvBearingVal = el('span', { className: 'pv-value mono' })
+  const pvRangeVal = el('span', { className: 'pv-value mono' })
+  const pvSpeedVal = el('span', { className: 'pv-value mono' })
+  const pvCourseVal = el('span', { className: 'pv-value mono' })
+  const pvClassVal = el('span', { className: 'pv-value mono' })
+  const pvConfVal = el('span', { className: 'pv-value mono' })
+  const pvStatusChip = el('span', { className: 'status-chip' })
+
+  function pvRow(labelKey: string, value: HTMLElement): HTMLElement {
+    const lb = el('span', { className: 'pv-label' })
+    labelRegistry.push([lb, labelKey])
+    setText(lb, tt(labelKey))
+    return el('div', { className: 'pv-row' }, [lb, value])
+  }
+
+  const pvLockBtn = el('button', {
+    className: 'btn btn-primary pv-btn',
+    text: tt('periscope.btn.lock'),
+    onclick: () => opts.onLockTarget(),
+  })
+  const pvLowerBtn = el('button', {
+    className: 'btn pv-btn',
+    text: tt('periscope.btn.lower'),
+    onclick: () => opts.onPeriscopeToggle(),
+  })
+  const pvDiveBtn = el('button', {
+    className: 'btn pv-btn pv-danger',
+    text: tt('periscope.btn.dive'),
+    onclick: () => opts.onDive(),
+  })
+  labelRegistry.push([pvLockBtn, 'periscope.btn.lock'])
+  labelRegistry.push([pvLowerBtn, 'periscope.btn.lower'])
+  labelRegistry.push([pvDiveBtn, 'periscope.btn.dive'])
+
+  const pvExposureFill = el('div', { className: 'pv-exposure-fill' })
+  const pvExposureValue = el('span', { className: 'mono' })
+  const pvRaisedTime = el('span', { className: 'mono' })
+
+  const periscopeView = el('div', { className: 'periscope-view' }, [
+    el('div', { className: 'pv-vignette' }),
+    el('div', { className: 'pv-reticle' }, [
+      el('div', { className: 'pv-ring pv-ring-outer' }),
+      el('div', { className: 'pv-ring pv-ring-inner' }),
+      el('div', { className: 'pv-cross pv-cross-h' }),
+      el('div', { className: 'pv-cross pv-cross-v' }),
+      pvBearing,
+    ]),
+    el('div', { className: 'pv-target card' }, [
+      el('div', { className: 'pv-target-head' }, [
+        label('periscope.title', 'card-title'),
+        pvStatusChip,
+      ]),
+      pvRow('hud.contact.type', pvTargetType),
+      pvRow('periscope.view.bearing', pvBearingVal),
+      pvRow('hud.fc.range', pvRangeVal),
+      pvRow('periscope.view.speed', pvSpeedVal),
+      pvRow('periscope.view.course', pvCourseVal),
+      pvRow('periscope.view.classification', pvClassVal),
+      pvRow('periscope.view.confidence', pvConfVal),
+    ]),
+    el('div', { className: 'pv-status' }, [
+      el('div', { className: 'pv-exposure' }, [
+        label('periscope.exposure', 'pv-label'),
+        el('div', { className: 'pv-exposure-track' }, [pvExposureFill]),
+        pvExposureValue,
+      ]),
+      pvRaisedTime,
+    ]),
+    el('div', { className: 'pv-actions' }, [pvLockBtn, pvLowerBtn, pvDiveBtn]),
+  ])
+  periscopeView.style.display = 'none'
+
+  // --- post-fire exposure warning banner (t-026) --------------------------------------
+  const fireWarnText = el('div', { className: 'fw-text' })
+  const fwLowerBtn = el('button', {
+    className: 'btn fw-btn',
+    text: tt('periscope.btn.lower'),
+    onclick: () => opts.onPeriscopeToggle(),
+  })
+  const fwDiveBtn = el('button', {
+    className: 'btn fw-btn fw-danger',
+    text: tt('periscope.btn.dive'),
+    onclick: () => opts.onDive(),
+  })
+  labelRegistry.push([fwLowerBtn, 'periscope.btn.lower'])
+  labelRegistry.push([fwDiveBtn, 'periscope.btn.dive'])
+  const fireWarn = el('div', { className: 'fire-warning' }, [
+    el('span', { className: 'fw-icon', text: '⚠' }),
+    fireWarnText,
+    fwLowerBtn,
+    fwDiveBtn,
+  ])
+  fireWarn.style.display = 'none'
+
+  root.append(topbar, workspace, leftCol, rightCol, timeline, periscopeView, fireWarn)
 
   // --- state ------------------------------------------------------------------------
   const contactRows = new Map<string, HTMLElement>()
@@ -486,6 +718,9 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   let lastLogEntryId = 0
   let lastPhase = ''
   const logEntries: EventEntry[] = []
+  /** t-026: post-fire warning banner until wallT (null = hidden). */
+  let fireWarningUntil: number | null = null
+  let lastWallT = 0
 
   function setSalvo(n: 1 | 2): void {
     currentSalvo = n
@@ -687,6 +922,97 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       setText(fcSalvo, parts.salvoProbability)
       fcEstimated.style.display = parts.estimated ? '' : 'none'
     }
+
+    // --- periscope (t-026) -----------------------------------------------------------
+    lastWallT = extras.wallT
+    const ps = snapshot.periscope
+    const pst = ps?.state ?? 'SUBMERGED'
+    const pExposure = ps?.exposure ?? 0
+    const pBand = ps?.exposureBand ?? 'NONE'
+
+    // Status-card row: state chip (colored) + exposure bar (band color).
+    setText(pScopeChip, tt(`periscope.state.${pst}`))
+    pScopeChip.className = `pc-mini-chip ${pcStateClass(pst)}`
+    pExposureFill.style.width = `${Math.min(100, pExposure)}%`
+    pExposureFill.style.background = exposureBandColor(pBand)
+    setText(pExposureValue, `${Math.round(pExposure)}%`)
+
+    // Control card: status text, progress, reason, buttons.
+    const transitioning = pst === 'SURFACING' || pst === 'RAISING' || pst === 'LOWERING'
+    pcProgress.style.display = transitioning ? '' : 'none'
+    if (transitioning) {
+      pcProgressFill.style.width = `${Math.round((ps?.progress ?? 0) * 100)}%`
+      setText(pcProgressPct, `${Math.round((ps?.progress ?? 0) * 100)}%`)
+    }
+    const cannotRaise = ps !== undefined && !ps.canRaise && ps.cannotRaiseReason !== 'none'
+    if (cannotRaise) {
+      setText(pcStatus, tt('periscope.status.cannotRaise'))
+      setText(pcReason, tt(`periscope.reason.${ps!.cannotRaiseReason}`))
+      pcReason.style.display = ''
+    } else {
+      pcReason.style.display = 'none'
+      if (pst === 'SUBMERGED') setText(pcStatus, tt('periscope.status.ready'))
+      else if (pst === 'SURFACING' || pst === 'RAISING') setText(pcStatus, tt('periscope.status.raising'))
+      else if (pst === 'LOWERING') setText(pcStatus, tt(`periscope.state.${pst}`))
+      else setText(pcStatus, tt('periscope.status.raised'))
+    }
+    const raised = pst === 'RAISED' || pst === 'OBSERVING'
+    raiseBtn.style.display = pst === 'SUBMERGED' || pst === 'SURFACING' ? '' : 'none'
+    raiseBtn.disabled = !(ps?.canRaise ?? true)
+    raiseBtn.title = cannotRaise ? tt(`periscope.reason.${ps!.cannotRaiseReason}`) : ''
+    lockBtn.style.display = raised ? '' : 'none'
+    lowerBtn.style.display = raised ? '' : 'none'
+    diveBtn.style.display = raised ? '' : 'none'
+    const locked = ps?.lockedContactId !== null && ps?.lockedContactId !== undefined
+    lockBtn.disabled = ps?.observingContactId === null || ps?.observingContactId === undefined || locked
+    const lockLabel = locked ? tt('periscope.btn.locked') : tt('periscope.btn.lock')
+    setText(lockBtn, lockLabel)
+    setText(pvLockBtn, lockLabel)
+
+    // Periscope VIEW overlay.
+    periscopeView.style.display = raised ? '' : 'none'
+    if (raised && ps !== undefined) {
+      setText(pvBearing, `VIEW ${String(Math.round(ps.viewBearingDeg) % 360).padStart(3, '0')}°`)
+      setText(pvRaisedTime, tt('periscope.raisedTime', { t: formatTime(ps.raisedDurationS) }))
+      pvExposureFill.style.width = `${Math.min(100, pExposure)}%`
+      pvExposureFill.style.background = exposureBandColor(pBand)
+      setText(pvExposureValue, `${Math.round(pExposure)}%`)
+      const obs = ps.observingContactId === null ? undefined : snapshot.contacts.find((c) => c.id === ps.observingContactId)
+      if (obs === undefined) {
+        setText(pvTargetType, tt('class.Unknown'))
+        setText(pvBearingVal, '--')
+        setText(pvRangeVal, '--')
+        setText(pvSpeedVal, '--')
+        setText(pvCourseVal, '--')
+        setText(pvClassVal, '--')
+        setText(pvConfVal, '--')
+        pvStatusChip.style.display = 'none'
+      } else {
+        const cls = tt(`class.${obs.classification}`)
+        setText(pvTargetType, cls)
+        setText(pvBearingVal, `${String(Math.round(obs.bearingDeg) % 360).padStart(3, '0')}°`)
+        setText(pvRangeVal, obs.rangeKm === null ? '--' : `${obs.rangeKm.toFixed(2)}KM`)
+        setText(pvSpeedVal, obs.speedEstimateKt === null ? '--' : `${Math.round(obs.speedEstimateKt)}KT`)
+        setText(pvCourseVal, obs.headingEstimateDeg === null ? '--' : `${String(Math.round(obs.headingEstimateDeg) % 360).padStart(3, '0')}°`)
+        setText(pvClassVal, `${cls} · ${Math.round(obs.confidence)}%`)
+        setText(pvConfVal, `${Math.round(obs.confidence)}%`)
+        pvStatusChip.style.display = ''
+        if (obs.visuallyConfirmed) {
+          setText(pvStatusChip, tt('fc.status.visualConfirmed'))
+          pvStatusChip.className = 'status-chip is-success'
+        } else {
+          setText(pvStatusChip, tt('fc.status.estimated'))
+          pvStatusChip.className = 'status-chip is-info'
+        }
+      }
+      pvLockBtn.disabled = ps.observingContactId === null || locked
+    }
+
+    // Fire-warning banner timing (6 s from showFireWarning()).
+    if (fireWarningUntil !== null && extras.wallT >= fireWarningUntil) {
+      fireWarningUntil = null
+      fireWarn.style.display = 'none'
+    }
   }
 
   function appendLog(entry: EventEntry): void {
@@ -703,7 +1029,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       timelineBody.append(el('div', { className: 'tl-phase', text: phase }))
     }
     const row = el('div', { className: 'tl-row' }, [
-      el('span', { className: `tl-dot ${eventSeverity(entry.type)}` }),
+      el('span', { className: `tl-dot ${eventSeverityFor(entry)}` }),
       el('span', { className: 'tl-time', text: formatTime(entry.simTime) }),
       el('span', { className: 'tl-text', text: line }),
     ])
@@ -727,7 +1053,17 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     tubeEls.length = 0
     tubesRow.textContent = ''
     fireCard.classList.add('placeholder')
+    periscopeView.style.display = 'none'
+    fireWarningUntil = null
+    fireWarn.style.display = 'none'
     setSalvo(1)
+  }
+
+  /** t-026: show the post-fire exposure warning banner (~6 s wall time). */
+  function showFireWarning(): void {
+    fireWarningUntil = lastWallT + 6
+    setText(fireWarnText, `${tt('periscope.warn.torpedoFired')} — ${tt('periscope.warn.detected')}`)
+    fireWarn.style.display = ''
   }
 
   function setLanguage(next: Lang): void {
@@ -739,18 +1075,40 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     // Language chip label (own-language) + settings button.
     const info = LANGS.find((l) => l.code === lang)
     if (info !== undefined) setText(langChip, info.label)
+    // Re-compose dynamic text that mixes two keys.
+    if (fireWarn.style.display !== 'none') {
+      setText(fireWarnText, `${tt('periscope.warn.torpedoFired')} — ${tt('periscope.warn.detected')}`)
+    }
+    setText(lockBtn, tt('periscope.btn.lock'))
+    setText(pvLockBtn, tt('periscope.btn.lock'))
   }
 
   // Initial language chip label.
   const info = LANGS.find((l) => l.code === lang)
   if (info !== undefined) setText(langChip, info.label)
 
-  return { update, appendLog, reset, setLanguage, root }
+  return { update, appendLog, reset, setLanguage, showFireWarning, root }
 }
 
 // ---------------------------------------------------------------------------
 // Small construction helpers
 // ---------------------------------------------------------------------------
+
+/** Periscope state → chip CSS class (t-026). */
+function pcStateClass(state: string): string {
+  switch (state) {
+    case 'RAISED':
+    case 'OBSERVING':
+      return 'pc-up'
+    case 'RAISING':
+    case 'SURFACING':
+      return 'pc-raising'
+    case 'LOWERING':
+      return 'pc-lowering'
+    default:
+      return 'pc-down'
+  }
+}
 
 function setBar(bar: { fill: HTMLElement; row: HTMLElement }, value: number, semantic: 'success' | 'info' | 'warning' | 'error'): void {
   bar.fill.style.width = `${Math.min(100, Math.max(0, value))}%`

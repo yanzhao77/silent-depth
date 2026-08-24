@@ -1,6 +1,6 @@
 # Playtest 01 — Sonar Training (t-014 evidence)
 
-- **Version**: b548366
+- **Version**: d9e798c
 - **Mission**: M01 — Sonar Training (seed 1001, difficulty 1/5)
 - **Agent**: scripted-brain-ping-until-track (Ping until track (M01))
 - **Result**: **VICTORY** after 120.8 s (2415 ticks)

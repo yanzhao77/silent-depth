@@ -352,7 +352,9 @@ export function createMenus(root: HTMLElement, deps: MenuDeps, initialLang: Lang
     root.append(
       el('div', { className: 'menu-panel' }, [
         el('h1', { className: 'menu-title', text: tt('pause.title') }),
-        menuButton(tt('pause.resume'), () => deps.onResume()),
+        el('div', { className: 'menu-meta dim', text: tt('pause.controls') }),
+        el('div', { className: 'menu-spacer' }),
+        menuButton(tt('pause.resume'), () => deps.onResume(), 'primary'),
         menuButton(tt('pause.restart'), () => {
           if (confirm(tt('confirm.restart'))) deps.onRestart()
         }),

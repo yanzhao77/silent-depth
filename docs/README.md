@@ -17,7 +17,7 @@ npm run preview        # serves the production build → http://localhost:4173
 # or open dist/index.html directly (the build uses relative paths, offline-capable)
 ```
 
-Verify: `npm test` → **358 / 358 passed (16 files)** · `npm run build` → offline-verified static bundle.
+Verify: `npm test` → **414 / 414 passed (18 files)** · `npm run build` → offline-verified static bundle.
 
 ## Controls
 
@@ -30,10 +30,39 @@ Verify: `npm test` → **358 / 358 passed (16 files)** · `npm run build` → of
 | **F** | Fire torpedo at the selected contact |
 | **R** | Toggle silent running |
 | **G** | Launch decoy |
-| **P** | Pause / resume |
-| **Esc** | Back to menu |
+| **P** | Raise / lower periscope |
+| **L** | Lock periscope target |
+| **X** | Emergency dive |
+| **Esc** | Pause menu (Pause/Resume · Restart · Abort) |
+| **F12** | Screenshot (dev) |
 
-> Mapping is implemented in `src/ui/input.ts` (GAME_DESIGN §11.2). The engine is deterministic: the same seed + same inputs always produce the same outcome.
+> Mapping is implemented in `src/ui/input.ts` (GAME_DESIGN §11.2 + periscope t-026). The engine is deterministic: the same seed + same inputs always produce the same outcome.
+
+## Periscope (t-026)
+
+The periscope is a risk-for-reward optical observation mechanic — your only
+source of **ground-truth** target data (type / speed / course / range) and the
+gate to a **VISUAL CONFIRMED** fire solution.
+
+- **Raise** (P or `RAISE PERISCOPE`): the boat auto-surfaces to the periscope
+  depth layer, then the periscope raises (~3 s). Raising while too deep or at
+  the wrong layer is blocked with a localized reason hint.
+- **Observe**: while RAISED/OBSERVING the central workspace becomes the
+  **PERISCOPE VIEW** — an optical reticle with the observed target card
+  (TYPE / BEARING / RANGE / SPEED / COURSE / CLASSIFICATION / CONFIDENCE).
+  Any contact in view is visually confirmed.
+- **Exposure**: every second raised accrues exposure (0–100). Bands:
+  LOW (green) → MEDIUM (yellow) → HIGH (orange) → CRITICAL (red). At high
+  exposure the enemy may locate you — lower the periscope or dive.
+- **Lock target** (L): pins the observed contact — the fire solution becomes
+  **VISUAL CONFIRMED** (ground-truth inputs, no confidence penalty).
+- **Warning**: firing a torpedo while the periscope is raised briefly
+  broadcasts your position — a warning banner offers `LOWER PERISCOPE` /
+  `EMERGENCY DIVE` (X).
+- **Emergency dive** (X): drops the periscope in 0.5 s and escapes the
+  exposure window.
+
+Pause lives in the **Esc menu** (P is now the periscope key).
 
 ## Missions
 

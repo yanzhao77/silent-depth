@@ -1,6 +1,6 @@
-// SILENT DEPTH 《深海猎手》 — procedural audio engine (t-012 · audio engineer)
+// SILENT DEPTH 《深海猎手》 — procedural audio engine (t-012 · t-025 audio engineer)
 // ---------------------------------------------------------------------------
-// FR-22 · docs/AUDIO_DESIGN.md v1 (§2 master chain, §3 SFX, §4 ambience, §5
+// FR-22 · docs/AUDIO_DESIGN.md v1.1 (§2 master chain, §3 SFX, §4 ambience, §5
 // event wiring) · GAME_ARCHITECTURE.md §3/§12/§14.
 //
 // - Zero external samples: every SFX is synthesized from oscillators + noise +
@@ -11,7 +11,8 @@
 //   no-op there (console.warn once, see `warnedNoAudioCtx`).
 // - Master chain: masterGain → compressor(threshold -18dB, ratio 3) → dest;
 //   SFX routed via shared sfxBus; ambience/atmosphere via musicBus.
-// - All 14 builders are pure functions (ctx, params) → playable node graph.
+// - All 20 builders (14 core + 6 periscope) are pure functions (ctx, params)
+//   → playable node graph.
 // ---------------------------------------------------------------------------
 import {
   AMBIENCE_PARAMS,
@@ -554,6 +555,174 @@ export function buildMissionFailed(ctx: AudioContext, params: SfxParams): AudioG
 }
 
 // ---------------------------------------------------------------------------
+// §3b t-025 periscope SFX — naval / mechanical / analog military.
+// Motors, hydraulics, low thumps, sonar-ish confirm blips. NO sci-fi lasers.
+// ---------------------------------------------------------------------------
+
+/**
+ * Hydraulic/motor ascent: low sine sweep 70→120Hz over ~1.6s + bandpassed
+ * mechanical noise (white → bandpass ~300Hz), soft clunk at end of travel.
+ */
+export function buildPeriscopeRaise(ctx: AudioContext, params: SfxParams): AudioGraph {
+  const t0 = ctx.currentTime
+  const dur = p(params.durations, 0, 1.6)
+  const fLo = p(params.frequencies, 0, 70)
+  const fHi = p(params.frequencies, 1, 120)
+  const osc = ctx.createOscillator()
+  osc.type = 'sine'
+  osc.frequency.setValueAtTime(fLo, t0)
+  osc.frequency.linearRampToValueAtTime(fHi, t0 + dur)
+  const oscEnv = makeEnv(ctx, t0, p(params.gains, 0, 0.3), 0.15, 0.3, dur)
+  osc.connect(oscEnv)
+  const noise = noiseSource(ctx, params.noise ?? 'white', dur + 0.3)
+  const bp = filterOrBypass(ctx, params.filter) // bandpass ~200–400Hz
+  noise.connect(bp)
+  const noiseEnv = makeEnv(ctx, t0, p(params.gains, 1, 0.22), 0.1, 0.35, dur)
+  bp.connect(noiseEnv)
+  // soft clunk when the scope seats at full raise
+  const clunkAt = dur - 0.05
+  const clunk = ctx.createOscillator()
+  clunk.type = 'sine'
+  clunk.frequency.setValueAtTime(90, t0 + clunkAt)
+  const clunkEnv = makeEnv(ctx, t0 + clunkAt, p(params.gains, 2, 0.35), 0.004, 0.05, p(params.durations, 1, 0.08))
+  clunk.connect(clunkEnv)
+  const out = ctx.createGain()
+  oscEnv.connect(out)
+  noiseEnv.connect(out)
+  clunkEnv.connect(out)
+  return makeGraph(ctx, [osc, noise, clunk], out, { delays: [0, 0, clunkAt] })
+}
+
+/** Mechanical latch/prompt: two low 90Hz thumps + a clean soft 880Hz blip. */
+export function buildPeriscopeReady(ctx: AudioContext, params: SfxParams): AudioGraph {
+  const t0 = ctx.currentTime
+  const thumpDur = p(params.durations, 0, 0.06)
+  const thumpF = p(params.frequencies, 0, 90)
+  const mkThump = (at: number): { osc: OscillatorNode; env: GainNode } => {
+    const osc = ctx.createOscillator()
+    osc.type = 'sine'
+    osc.frequency.setValueAtTime(thumpF, at)
+    const env = makeEnv(ctx, at, p(params.gains, 0, 0.3), 0.004, 0.03, thumpDur)
+    osc.connect(env)
+    return { osc, env }
+  }
+  const a = mkThump(t0)
+  const b = mkThump(t0 + 0.12)
+  const blip = ctx.createOscillator()
+  blip.type = 'sine'
+  blip.frequency.setValueAtTime(p(params.frequencies, 1, 880), t0 + 0.24)
+  const blipEnv = makeEnv(ctx, t0 + 0.24, p(params.gains, 1, 0.18), 0.005, 0.04, p(params.durations, 1, 0.08))
+  blip.connect(blipEnv)
+  const out = ctx.createGain()
+  a.env.connect(out)
+  b.env.connect(out)
+  blipEnv.connect(out)
+  return makeGraph(ctx, [a.osc, b.osc, blip], out, { delays: [0, 0.12, 0.24] })
+}
+
+/** Analog sonar-ish confirm: 660→880Hz two-tone blip with a soft echo. */
+export function buildTargetAcquired(ctx: AudioContext, params: SfxParams): AudioGraph {
+  const t0 = ctx.currentTime
+  const dur = p(params.durations, 0, 0.12)
+  const osc = ctx.createOscillator()
+  osc.type = 'sine'
+  osc.frequency.setValueAtTime(p(params.frequencies, 0, 660), t0)
+  osc.frequency.linearRampToValueAtTime(p(params.frequencies, 1, 880), t0 + dur)
+  const env = makeEnv(ctx, t0, p(params.gains, 0, 0.25), 0.005, 0.08, dur)
+  osc.connect(env)
+  // subdued analog echo tail
+  const out = echoChain(ctx, env, params.echoDelay ?? 0.35, params.echoWet ?? 0.2)
+  return makeGraph(ctx, [osc], out)
+}
+
+/** Definitive lock: double 700Hz pulse (140ms gap) + low 55Hz thump underneath. */
+export function buildTargetLocked(ctx: AudioContext, params: SfxParams): AudioGraph {
+  const t0 = ctx.currentTime
+  const pulseDur = p(params.durations, 0, 0.09)
+  const gap = p(params.durations, 1, 0.14)
+  const pulseF = p(params.frequencies, 0, 700)
+  const mkPulse = (at: number): { osc: OscillatorNode; env: GainNode } => {
+    const osc = ctx.createOscillator()
+    osc.type = 'sine'
+    osc.frequency.setValueAtTime(pulseF, at)
+    const env = makeEnv(ctx, at, p(params.gains, 0, 0.28), 0.004, 0.04, pulseDur)
+    osc.connect(env)
+    return { osc, env }
+  }
+  const p1 = mkPulse(t0)
+  const p2 = mkPulse(t0 + gap)
+  const thump = ctx.createOscillator()
+  thump.type = 'sine'
+  thump.frequency.setValueAtTime(p(params.frequencies, 1, 55), t0)
+  const thumpEnv = makeEnv(ctx, t0, p(params.gains, 1, 0.25), 0.01, 0.12, 0.25)
+  thump.connect(thumpEnv)
+  const out = ctx.createGain()
+  p1.env.connect(out)
+  p2.env.connect(out)
+  thumpEnv.connect(out)
+  return makeGraph(ctx, [p1.osc, p2.osc, thump], out, { delays: [0, gap, 0] })
+}
+
+/**
+ * Warning: slow three-beat 440Hz pulse — sawtooth through a lowpass rounds the
+ * edges into a square-ish analog tone (100ms on / 150ms off ×3).
+ */
+export function buildExposureWarning(ctx: AudioContext, params: SfxParams): AudioGraph {
+  const t0 = ctx.currentTime
+  const onS = p(params.durations, 0, 0.1)
+  const offS = p(params.durations, 1, 0.15)
+  const peak = p(params.gains, 0, 0.4)
+  const osc = ctx.createOscillator()
+  osc.type = 'sawtooth'
+  osc.frequency.setValueAtTime(p(params.frequencies, 0, 440), t0)
+  const lp = filterOrBypass(ctx, params.filter) // lowpass 1200Hz — rounds the edge
+  osc.connect(lp)
+  const env = ctx.createGain()
+  env.gain.setValueAtTime(0.0001, t0)
+  const cycle = onS + offS
+  const beats = 3
+  for (let i = 0; i < beats; i++) {
+    const on = t0 + i * cycle
+    env.gain.setValueAtTime(0.0001, on)
+    env.gain.exponentialRampToValueAtTime(peak, on + 0.008)
+    env.gain.setValueAtTime(peak, on + onS)
+    env.gain.exponentialRampToValueAtTime(0.0001, on + onS + 0.008)
+  }
+  lp.connect(env)
+  return makeGraph(ctx, [osc], env)
+}
+
+/** Hydraulic descent — mirror of raise: sweep 120→70Hz + noise, soft clunk. */
+export function buildPeriscopeLower(ctx: AudioContext, params: SfxParams): AudioGraph {
+  const t0 = ctx.currentTime
+  const dur = p(params.durations, 0, 1.4)
+  const fHi = p(params.frequencies, 0, 120)
+  const fLo = p(params.frequencies, 1, 70)
+  const osc = ctx.createOscillator()
+  osc.type = 'sine'
+  osc.frequency.setValueAtTime(fHi, t0)
+  osc.frequency.linearRampToValueAtTime(fLo, t0 + dur)
+  const oscEnv = makeEnv(ctx, t0, p(params.gains, 0, 0.3), 0.15, 0.3, dur)
+  osc.connect(oscEnv)
+  const noise = noiseSource(ctx, params.noise ?? 'white', dur + 0.3)
+  const bp = filterOrBypass(ctx, params.filter) // bandpass ~200–400Hz
+  noise.connect(bp)
+  const noiseEnv = makeEnv(ctx, t0, p(params.gains, 1, 0.22), 0.1, 0.35, dur)
+  bp.connect(noiseEnv)
+  const clunkAt = dur - 0.05
+  const clunk = ctx.createOscillator()
+  clunk.type = 'sine'
+  clunk.frequency.setValueAtTime(80, t0 + clunkAt)
+  const clunkEnv = makeEnv(ctx, t0 + clunkAt, p(params.gains, 2, 0.35), 0.004, 0.05, p(params.durations, 1, 0.08))
+  clunk.connect(clunkEnv)
+  const out = ctx.createGain()
+  oscEnv.connect(out)
+  noiseEnv.connect(out)
+  clunkEnv.connect(out)
+  return makeGraph(ctx, [osc, noise, clunk], out, { delays: [0, 0, clunkAt] })
+}
+
+// ---------------------------------------------------------------------------
 // §4 Ambience — ocean bed loop (filtered pink noise, level by weather).
 // ---------------------------------------------------------------------------
 
@@ -569,7 +738,7 @@ function buildAmbience(ctx: AudioContext, params: AmbienceParams): AudioGraph {
 }
 
 // ---------------------------------------------------------------------------
-// Builder registry — one entry per shipped SFX (all 14).
+// Builder registry — one entry per shipped SFX (all 20).
 // ---------------------------------------------------------------------------
 
 export const SFX_BUILDERS: Readonly<Record<SfxName, SfxBuilder>> = {
@@ -587,6 +756,12 @@ export const SFX_BUILDERS: Readonly<Record<SfxName, SfxBuilder>> = {
   uiClick: buildUiClick,
   missionSuccess: buildMissionSuccess,
   missionFailed: buildMissionFailed,
+  periscopeRaise: buildPeriscopeRaise,
+  periscopeReady: buildPeriscopeReady,
+  targetAcquired: buildTargetAcquired,
+  targetLocked: buildTargetLocked,
+  exposureWarning: buildExposureWarning,
+  periscopeLower: buildPeriscopeLower,
 }
 
 // ---------------------------------------------------------------------------
@@ -606,6 +781,8 @@ export function createAudio(settings: AudioSettings): AudioEngine {
   let ambience: AudioGraph | null = null
   let weather: string = 'Clear'
   let disposed = false
+  /** t-025: wall-clock throttle for periscope exposure warnings (ms epoch). */
+  let lastExposureWarningAt = -Infinity
   const loops = new Map<SfxName, AudioGraph>()
   const oneShots = new Set<AudioGraph>()
 
@@ -749,11 +926,26 @@ export function createAudio(settings: AudioSettings): AudioEngine {
     return Number.isFinite(n) && n >= 60
   }
 
+  /** t-025: periscope.exposure warns only on HIGH/CRITICAL bands. */
+  function exposureGate(payload: Record<string, unknown> | undefined): boolean {
+    const band = payload?.band
+    return band === 'HIGH' || band === 'CRITICAL'
+  }
+
   function onEngineEvent(ev: EngineEvent): void {
     if (disposed || !ev || typeof ev.type !== 'string') return
     const action: EventSfxAction | undefined = EVENT_SFX_MAP[ev.type]
     if (!action || action.kind === 'none') return
     if (ev.type === 'detection.threshold' && !alarmGate(ev.payload)) return
+    // t-025: periscope exposure — HIGH/CRITICAL band only, throttled ≥2.5s apart.
+    // DESIGN DECISION: wall-clock throttle lives in the AUDIO shell (presentation
+    // layer) — it never feeds back into the deterministic simulation (ADR-004).
+    if (ev.type === 'periscope.exposure') {
+      if (!exposureGate(ev.payload)) return
+      const now = Date.now()
+      if (now - lastExposureWarningAt < 2500) return
+      lastExposureWarningAt = now
+    }
     if (action.kind === 'retargetEngine') {
       retargetEngine(ev.payload)
       return
@@ -763,6 +955,7 @@ export function createAudio(settings: AudioSettings): AudioEngine {
       return
     }
     play(action.sfx)
+    if (action.alsoPlay) play(action.alsoPlay)
     if (action.alsoStartLoop) play(action.alsoStartLoop)
     if (action.stopLoop) stop(action.stopLoop)
   }

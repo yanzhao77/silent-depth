@@ -1395,3 +1395,373 @@ button {
     bottom: 150px;
   }
 }
+
+/* ===========================================================================
+   Periscope (t-026) — optical observation mechanic
+   =========================================================================== */
+
+/* --- status-card periscope row -------------------------------------------- */
+.periscope-row .pc-mini-chip {
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  white-space: nowrap;
+  justify-self: start;
+}
+
+.pc-mini-chip.pc-down {
+  color: var(--text-muted);
+  background: rgba(148, 163, 184, 0.1);
+}
+
+.pc-mini-chip.pc-raising {
+  color: var(--color-info);
+  background: rgba(96, 165, 250, 0.12);
+}
+
+.pc-mini-chip.pc-up {
+  color: var(--color-primary);
+  background: rgba(34, 211, 238, 0.14);
+  animation: status-pulse 1.6s ease-in-out infinite;
+}
+
+.pc-mini-chip.pc-lowering {
+  color: var(--color-warning);
+  background: rgba(251, 191, 36, 0.12);
+}
+
+/* --- periscope control card (left column) ---------------------------------- */
+.periscope-control {
+  gap: 8px;
+}
+
+.pc-status {
+  font-size: 10.5px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.pc-progress-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pc-progress {
+  flex: 1 1 auto;
+  height: 5px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.12);
+  overflow: hidden;
+}
+
+.pc-progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--color-info);
+  transition: width 150ms linear;
+}
+
+.pc-pct {
+  font-size: 10.5px;
+  color: var(--text-secondary);
+}
+
+.pc-reason {
+  font-size: 10.5px;
+  color: var(--color-warning);
+}
+
+.pc-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pc-btn {
+  flex: 1 1 auto;
+  padding: 6px 10px;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+}
+
+.pc-danger {
+  color: var(--color-error);
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+.pc-danger:hover {
+  background: rgba(248, 113, 113, 0.1);
+  color: var(--color-error);
+}
+
+.pc-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --- PERISCOPE VIEW overlay (over the Mission Workspace) -------------------- */
+.periscope-view {
+  position: absolute;
+  left: 312px;
+  right: 352px;
+  top: 64px;
+  bottom: 172px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  pointer-events: auto;
+  z-index: 5;
+}
+
+/* Vignette + scanlines + faint grain — cheap, restrained, optical. */
+.pv-vignette {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at center, rgba(6, 9, 14, 0.05) 0%, rgba(6, 9, 14, 0.55) 78%, rgba(4, 6, 10, 0.85) 100%),
+    repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.025) 0 1px, transparent 1px 3px);
+  pointer-events: none;
+}
+
+/* Optical reticle: concentric rings + crosshair + tick marks. */
+.pv-reticle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 340px;
+  height: 340px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.pv-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.pv-ring-outer {
+  inset: 0;
+}
+
+.pv-ring-inner {
+  inset: 70px;
+  border-color: rgba(148, 163, 184, 0.14);
+}
+
+.pv-cross {
+  position: absolute;
+  background: rgba(148, 163, 184, 0.16);
+}
+
+.pv-cross-h {
+  left: -14px;
+  right: -14px;
+  top: 50%;
+  height: 1px;
+}
+
+.pv-cross-v {
+  top: -14px;
+  bottom: -14px;
+  left: 50%;
+  width: 1px;
+}
+
+.pv-bearing {
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+}
+
+/* Observed-target card. */
+.pv-target {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 232px;
+  gap: 2px;
+  background: rgba(10, 14, 20, 0.82);
+}
+
+.pv-target-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.pv-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 2px 0;
+}
+
+.pv-label {
+  font-size: 10.5px;
+  color: var(--text-muted);
+}
+
+.pv-value {
+  font-size: 12px;
+  color: var(--text-primary);
+}
+
+.pv-value.pv-type {
+  font-size: 13.5px;
+  font-weight: 600;
+  font-family: var(--font-ui);
+}
+
+.pv-status {
+  position: absolute;
+  bottom: 74px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(10, 14, 20, 0.72);
+  border: 1px solid var(--border-subtle);
+}
+
+.pv-exposure {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pv-label {
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+
+.pv-exposure-track {
+  width: 120px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.14);
+  overflow: hidden;
+}
+
+.pv-exposure-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 200ms linear, background 200ms linear;
+}
+
+.pv-status .mono {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.pv-actions {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+}
+
+.pv-btn {
+  padding: 8px 14px;
+  font-size: 12px;
+  border-radius: var(--radius-md);
+}
+
+.pv-danger {
+  color: var(--color-error);
+  border-color: rgba(248, 113, 113, 0.4);
+}
+
+.pv-danger:hover {
+  background: rgba(248, 113, 113, 0.1);
+  color: var(--color-error);
+}
+
+.pv-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* --- post-fire exposure warning banner -------------------------------------- */
+.fire-warning {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: var(--radius-md);
+  background: rgba(248, 113, 113, 0.12);
+  border: 1px solid rgba(248, 113, 113, 0.45);
+  color: var(--color-error);
+  box-shadow: var(--shadow-2);
+  z-index: 6;
+  animation: warn-in 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fw-icon {
+  font-size: 15px;
+}
+
+.fw-text {
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.fw-btn {
+  padding: 5px 10px;
+  font-size: 11px;
+  border-radius: var(--radius-sm);
+  color: var(--color-error);
+  border-color: rgba(248, 113, 113, 0.45);
+}
+
+.fw-btn:hover {
+  background: rgba(248, 113, 113, 0.14);
+  color: var(--color-error);
+}
+
+.fw-danger {
+  background: rgba(248, 113, 113, 0.18);
+}
+
+@keyframes warn-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -8px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media (max-width: 1360px) {
+  .periscope-view {
+    left: 300px;
+    right: 340px;
+  }
+}
+
+@media (max-height: 800px) {
+  .periscope-view {
+    bottom: 150px;
+  }
+}

@@ -9,8 +9,11 @@
  *   F      fire torpedo at the selected contact (edge, one-shot)
  *   R      silent running toggle (edge)
  *   G      decoy launch (edge)
- *   P      pause/resume (edge → onPause callback)
- *   Esc    menu / abort (edge → onMenu callback)
+ *   P      raise/lower periscope (edge, t-026 — pause moved to the Esc menu)
+ *   L      lock periscope target (edge, t-026)
+ *   X      emergency dive (edge, t-026)
+ *   Esc    pause menu (edge → onMenu callback)
+ *   F12    screenshot (dev)
  *
  * Architecture: the module maps raw key CODES to PlayerInputs; the browser
  * binding (bind()) is a thin window-keyboard wrapper that preventDefaults
@@ -18,10 +21,14 @@
  * for Node unit tests via handleKey directly — no window required.
  *
  * DESIGN DECISIONS:
- *  - Edge inputs (ping / decoy / fire / depth-step / pause / menu) are
- *    latched and consumed: ping/decoy stay true until getInputs() is read,
- *    fireRequest until consumeFireRequest() — the engine's own edge detection
- *    (prevPing/prevDecoy) sees exactly one true tick.
+ *  - Edge inputs (ping / decoy / fire / periscope / lock / dive / depth-step /
+ *    menu) are latched and consumed: ping/decoy stay true until getInputs()
+ *    is read, fireRequest until consumeFireRequest(), periscope/lock/dive
+ *    until their consume*Request() — the engine's own edge detection sees
+ *    exactly one true tick.
+ *  - t-026 hotkeys: P = periscope raise/lower (per user spec — pause moved to
+ *    the Esc menu, reachable via menus.ts), L = lock target, X = emergency
+ *    dive (X was unused — no conflict).
  *  - Throttle is a persistent target speed (engine integrates acceleration);
  *    steps of ±2 kt keep the value balance-driven via maxThrottleKt
  *    (balance.speedBands.FULL.speedMaxKt, never hardcoded).
@@ -51,6 +58,8 @@ export const HANDLED_KEYS: readonly string[] = [
   'KeyR',
   'KeyG',
   'KeyP',
+  'KeyL',
+  'KeyX',
   'Escape',
 ]
 
@@ -63,9 +72,7 @@ export interface KeyEventTarget {
 export interface InputOptions {
   /** Throttle clamp (balance.speedBands.FULL.speedMaxKt). */
   maxThrottleKt: number
-  /** Called on the P keydown edge (shell toggles its paused flag). */
-  onPause?: () => void
-  /** Called on the Esc keydown edge (shell aborts to menu). */
+  /** Called on the Esc keydown edge (shell opens the pause menu). */
   onMenu?: () => void
   /** Called on the F12 keydown edge (shell saves a screenshot PNG). */
   onScreenshot?: () => void
@@ -77,6 +84,12 @@ export interface InputController {
   /** One-shot fire request: returns the selected contactId (or null) and
    *  clears the latch. Call once per frame after getInputs(). */
   consumeFireRequest(): string | null
+  /** One-shot periscope raise/lower edge (t-026, key P). */
+  consumePeriscopeRequest(): boolean
+  /** One-shot periscope lock-target edge (t-026, key L). */
+  consumeLockRequest(): boolean
+  /** One-shot emergency-dive edge (t-026, key X). */
+  consumeDiveRequest(): boolean
   /** The contact the fire control card / salvo targets. */
   setSelectedContactId(id: string | null): void
   /** Raw key mapping — pure and testable. `pressed` true = keydown. */
@@ -103,6 +116,9 @@ export function createInput(opts: InputOptions): InputController {
   let pingLatch = false
   let decoyLatch = false
   let fireRequest: string | null = null
+  let periscopeLatch = false
+  let lockLatch = false
+  let diveLatch = false
 
   let bound: { target: KeyEventTarget; down: (e: unknown) => void; up: (e: unknown) => void } | null = null
 
@@ -148,7 +164,13 @@ export function createInput(opts: InputOptions): InputController {
         decoyLatch = true
         break
       case 'KeyP':
-        opts.onPause?.()
+        periscopeLatch = true
+        break
+      case 'KeyL':
+        lockLatch = true
+        break
+      case 'KeyX':
+        diveLatch = true
         break
       case 'Escape':
         opts.onMenu?.()
@@ -186,6 +208,24 @@ export function createInput(opts: InputOptions): InputController {
     return req
   }
 
+  function consumePeriscopeRequest(): boolean {
+    const v = periscopeLatch
+    periscopeLatch = false
+    return v
+  }
+
+  function consumeLockRequest(): boolean {
+    const v = lockLatch
+    lockLatch = false
+    return v
+  }
+
+  function consumeDiveRequest(): boolean {
+    const v = diveLatch
+    diveLatch = false
+    return v
+  }
+
   function bind(target: KeyEventTarget): () => void {
     const handled = new Set(HANDLED_KEYS)
     const down = (e: unknown): void => {
@@ -219,6 +259,9 @@ export function createInput(opts: InputOptions): InputController {
     pingLatch = false
     decoyLatch = false
     fireRequest = null
+    periscopeLatch = false
+    lockLatch = false
+    diveLatch = false
     held.clear()
   }
 
@@ -233,6 +276,9 @@ export function createInput(opts: InputOptions): InputController {
   return {
     getInputs,
     consumeFireRequest,
+    consumePeriscopeRequest,
+    consumeLockRequest,
+    consumeDiveRequest,
     setSelectedContactId: (id: string | null) => {
       selectedContactId = id
     },

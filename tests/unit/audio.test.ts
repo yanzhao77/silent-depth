@@ -1,4 +1,4 @@
-// SILENT DEPTH 《深海猎手》 — audio module unit tests (t-012 · audio engineer)
+// SILENT DEPTH 《深海猎手》 — audio module unit tests (t-012 · t-025 audio engineer)
 // ---------------------------------------------------------------------------
 // Runs in Node (vitest environment 'node'): the AudioContext node graphs are
 // never built here (AUDIO_DESIGN §6 — builders are skipped headless; parameter
@@ -14,7 +14,7 @@ import {
   SFX_NAMES,
   SFX_PARAMS,
 } from '../../src/audio/sfx'
-import type { EventSfxMapKeys, SfxParams } from '../../src/audio/sfx'
+import type { EventSfxMapKeys, SfxName, SfxParams } from '../../src/audio/sfx'
 // EventType comes from the engine role's core module (GAME_ARCHITECTURE §6/§14).
 // type-only import: erased at runtime, so vitest never resolves the module —
 // the gate below is enforced by tsc (npm run lint / build).
@@ -37,10 +37,27 @@ const SETTINGS = { audio: { masterVolume: 0.7, musicVolume: 0.5, sfxVolume: 0.8 
 // ---------------------------------------------------------------------------
 
 describe('sfx parameter tables (src/audio/sfx.ts)', () => {
-  it('ships ≥10 distinct SFX — all 14 from AUDIO_DESIGN §3', () => {
+  it('ships ≥10 distinct SFX — all 20 from AUDIO_DESIGN §3 (14 core + 6 periscope)', () => {
     expect(SFX_NAMES.length).toBeGreaterThanOrEqual(10)
-    expect(SFX_NAMES.length).toBe(14)
+    expect(SFX_NAMES.length).toBe(20)
     expect(new Set(SFX_NAMES).size).toBe(SFX_NAMES.length)
+  })
+
+  it('ships the 6 t-025 periscope SFX with param entries and builders', () => {
+    const periscopeSfx: readonly SfxName[] = [
+      'periscopeRaise',
+      'periscopeReady',
+      'targetAcquired',
+      'targetLocked',
+      'exposureWarning',
+      'periscopeLower',
+    ]
+    for (const name of periscopeSfx) {
+      expect(SFX_NAMES, name).toContain(name)
+      expect(SFX_PARAMS[name], `params for ${name}`).toBeDefined()
+      expect(SFX_BUILDERS[name], `builder for ${name}`).toBeDefined()
+      expect(SFX_PARAMS[name]?.loop, `${name}.loop`).toBe(false) // all one-shots
+    }
   })
 
   it('every SFX name has a param entry and a builder (src/audio/audio.ts)', () => {
@@ -160,6 +177,18 @@ const DESIGN_ROWS: ReadonlyArray<readonly [string, string]> = [
   ['ui.click', 'uiClick'],
   ['mission.victory', 'missionSuccess'],
   ['mission.defeat', 'missionFailed'],
+  // t-025 periscope system (run-002)
+  ['periscope.raising', 'periscopeRaise'],
+  ['periscope.raised', 'periscopeReady'],
+  ['periscope.ready', 'periscopeReady'],
+  ['periscope.visualContact', 'targetAcquired'],
+  ['periscope.classified', 'targetAcquired'],
+  ['periscope.locked', 'targetLocked'],
+  ['periscope.unlocked', 'uiClick'],
+  ['periscope.lowered', 'periscopeLower'],
+  ['periscope.cannotRaise', 'uiClick'],
+  ['periscope.exposure', 'exposureWarning'],
+  ['sub.emergencyDive', 'alarm'],
 ]
 
 /**
@@ -178,6 +207,11 @@ const ARCH_CATALOGUE_EVENTS: readonly string[] = [
   'decoy.launched', 'escape.escaped',
   'mission.victory', 'mission.defeat', 'mission.complete',
   'ui.click',
+  // t-024/t-025 periscope system events (src/core/types.ts EventType)
+  'periscope.ready', 'periscope.raising', 'periscope.raised',
+  'periscope.visualContact', 'periscope.classified', 'periscope.locked', 'periscope.unlocked',
+  'periscope.lowered', 'periscope.cannotRaise', 'periscope.exposure',
+  'sub.emergencyDive',
 ]
 
 /**
@@ -258,6 +292,47 @@ describe('event → SFX wiring', () => {
     expect(() => engine.onEngineEvent({ type: 'detection.threshold', payload: { detection: 70, band: 60 } })).not.toThrow()
     engine.dispose()
   })
+
+  it('periscope wiring: all 11 periscope/emergency events map to actions (t-025)', () => {
+    const expected: ReadonlyArray<readonly [string, string]> = [
+      ['periscope.raising', 'periscopeRaise'],
+      ['periscope.raised', 'periscopeReady'],
+      ['periscope.ready', 'periscopeReady'],
+      ['periscope.visualContact', 'targetAcquired'],
+      ['periscope.classified', 'targetAcquired'],
+      ['periscope.locked', 'targetLocked'],
+      ['periscope.unlocked', 'uiClick'],
+      ['periscope.lowered', 'periscopeLower'],
+      ['periscope.cannotRaise', 'uiClick'],
+      ['periscope.exposure', 'exposureWarning'],
+      ['sub.emergencyDive', 'alarm'],
+    ]
+    for (const [ev, sfx] of expected) {
+      const action = EVENT_SFX_MAP[ev]
+      if (action?.kind === 'play') {
+        expect(action.sfx, `'${ev}' should play ${sfx}`).toBe(sfx)
+      } else {
+        expect(action?.kind, `no play action for '${ev}'`).toBe('play')
+      }
+    }
+    // sub.emergencyDive also drops the periscope (alarm + periscopeLower)
+    const dive = EVENT_SFX_MAP['sub.emergencyDive']
+    if (dive?.kind === 'play') {
+      expect(dive.alsoPlay).toBe('periscopeLower')
+    }
+  })
+
+  it('periscope.exposure is band-gated (HIGH/CRITICAL) + throttled ≥2.5s in the engine', () => {
+    const engine = createAudio(SETTINGS)
+    // Headless: paths must not throw. The gate + wall-clock throttle live in
+    // audio.ts onEngineEvent (presentation layer only, never sim feedback).
+    expect(() => engine.onEngineEvent({ type: 'periscope.exposure', payload: { band: 'LOW' } })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'periscope.exposure', payload: { band: 'MEDIUM' } })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'periscope.exposure', payload: { band: 'HIGH' } })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'periscope.exposure', payload: { band: 'CRITICAL' } })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'periscope.exposure', payload: {} })).not.toThrow()
+    engine.dispose()
+  })
 })
 
 // ---------------------------------------------------------------------------
@@ -276,7 +351,7 @@ describe('audio engine in Node (no AudioContext)', () => {
     expect(() => engine.dispose()).not.toThrow()
   })
 
-  it('all 14 SFX can be played headlessly without throwing', () => {
+  it('all shipped SFX can be played headlessly without throwing', () => {
     const engine = createAudio(SETTINGS)
     for (const name of SFX_NAMES) {
       expect(() => engine.play(name), `play('${name}')`).not.toThrow()
@@ -298,6 +373,13 @@ describe('audio engine in Node (no AudioContext)', () => {
     expect(() => engine.onEngineEvent({ type: 'mission.victory', payload: {} })).not.toThrow()
     expect(() => engine.onEngineEvent({ type: 'mission.defeat', payload: {} })).not.toThrow()
     expect(() => engine.onEngineEvent({ type: 'ui.click', payload: { elementId: 'btn' } })).not.toThrow()
+    // t-025 periscope events — safe no-ops headless
+    expect(() => engine.onEngineEvent({ type: 'periscope.raising' })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'periscope.raised' })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'periscope.visualContact', payload: { contactId: 'C-01', classification: 'Merchant' } })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'periscope.locked', payload: { contactId: 'C-01' } })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'periscope.exposure', payload: { band: 'CRITICAL' } })).not.toThrow()
+    expect(() => engine.onEngineEvent({ type: 'sub.emergencyDive' })).not.toThrow()
     // unknown events are ignored, never throw
     expect(() => engine.onEngineEvent({ type: 'totally.unknown.event' })).not.toThrow()
     expect(() => engine.onEngineEvent({ type: '' })).not.toThrow()

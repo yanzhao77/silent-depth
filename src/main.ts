@@ -122,6 +122,10 @@ let selectedContactId: string | null = null
 let salvo: 1 | 2 = 1
 let salvoPending = false
 let pausePulse = false
+/** t-026 periscope one-tick input edges (raised/lowered, lock, dive). */
+let periscopePulse = false
+let lockPulse = false
+let divePulse = false
 let lastShownState: string | null = null
 let lastWeather: WeatherKind | null = null
 /** t-023: Settings opened from the in-mission HUD — BACK returns to the
@@ -184,16 +188,34 @@ const hud = createHud(hudRoot, {
       handle !== null && snapshot !== null && snapshot.state !== 'MENU' && snapshot.state !== 'BOOT'
     menus.setSection('settings')
   },
+  // t-026 periscope actions — one-tick input edges (pulses consumed by
+  // buildInputs()).
+  onPeriscopeToggle: () => {
+    periscopePulse = true
+  },
+  onLockTarget: () => {
+    lockPulse = true
+  },
+  onDive: () => {
+    divePulse = true
+  },
   lang,
 })
 
 const input = createInput({
   maxThrottleKt: balance.speedBands.FULL.speedMaxKt,
-  onPause: () => {
-    if (handle !== null && snapshot !== null && snapshot.state !== 'MENU') pausePulse = true
-  },
   onMenu: () => {
-    abortToMenu()
+    // Esc: pause menu. In-mission toggles the engine pause (the PAUSED
+    // screen is the pause menu — Pause/Resume/Restart/Abort + controls hint).
+    if (overlayReturnToMission) {
+      overlayReturnToMission = false
+      closeOverlayToMission()
+      return
+    }
+    if (handle !== null && snapshot !== null) {
+      const st = snapshot.state
+      if (st !== 'MENU' && st !== 'BOOT' && st !== 'MISSION_LOADING') pausePulse = true
+    }
   },
   onScreenshot: () => {
     // F12: capture a real in-game screenshot (canvas only) and download it.
@@ -306,6 +328,9 @@ function startMission(id: string): void {
   salvo = 1
   salvoPending = false
   pausePulse = false
+  periscopePulse = false
+  lockPulse = false
+  divePulse = false
   lastShownState = 'BOOT'
   lastWeather = null
 
@@ -356,8 +381,15 @@ function buildInputs(): PlayerInputs {
     ...base,
     fireTorpedo: fire,
     pause: pausePulse,
+    // t-026 periscope edges (keyboard latches OR shell buttons).
+    periscope: periscopePulse || input.consumePeriscopeRequest(),
+    lockTarget: lockPulse || input.consumeLockRequest(),
+    emergencyDive: divePulse || input.consumeDiveRequest(),
   }
   pausePulse = false
+  periscopePulse = false
+  lockPulse = false
+  divePulse = false
   return inputs
 }
 
@@ -383,6 +415,13 @@ function applyEventEffect(ev: EventEntry, snap: GameSnapshot): void {
     case 'sonar.ping': {
       const player = snap.playerSub.position
       particles.spawnPing(player.x, player.y)
+      break
+    }
+    case 'torpedo.fired': {
+      // t-026: firing from the periscope raises the exposure risk — surface
+      // the post-fire warning banner (6 s) while the periscope is up.
+      const ps = snap.periscope?.state
+      if (ps === 'RAISED' || ps === 'OBSERVING') hud.showFireWarning()
       break
     }
     case 'torpedo.hit': {
@@ -605,6 +644,7 @@ function frame(nowMs: number): void {
       zoom: camera.zoom,
       fps,
       showFps: save.settings.video.showFps,
+      wallT,
     })
   }
 
