@@ -3,8 +3,10 @@ title: 程序化素材+注册表+许可证闸门
 epic: 
 dependsOn: [t-002]
 role: asset-engineer
-status: running
-outputs: []
-acceptance: []
+status: done
+outputs: [assets/registry.json, src/rendering/sprites.ts]
+acceptance: [34 procedural CC0 entries, verified on-disk sha256, zero third-party assets]
 attempts: 0
 tags: [frontend, assets]
+evidence: 34 asset-registry entries all source=procedural, license=CC0, sha256 verified via tests/unit/assets.test.ts; THIRD_PARTY_ASSETS.md declares zero third-party assets; security-report §9 PASS.
+notes: status updated from running → done (work complete since release; the tag was stale).

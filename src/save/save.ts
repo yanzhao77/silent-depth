@@ -373,7 +373,7 @@ export function updateOnMissionResult(
       ...save.statistics,
       shipsSunk: { ...save.statistics.shipsSunk },
     },
-    settings: save.settings,
+    settings: { ...save.settings },
   };
 
   const prevBest = next.bestScores[result.missionId] ?? 0;

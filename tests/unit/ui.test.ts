@@ -319,6 +319,9 @@ describe('save schema', () => {
     expect(next.statistics.shipsSunk['Merchant']).toBe(1);
     // Original save is untouched (functional update).
     expect(save.unlockedMissions).toEqual(['M01']);
+    // settings is shallow-copied, not shared (t-028 hygiene).
+    expect(next.settings).not.toBe(save.settings);
+    expect(next.settings).toEqual(save.settings);
   });
 
   it('updateOnMissionResult: bestScore keeps the max; defeat does not unlock', () => {

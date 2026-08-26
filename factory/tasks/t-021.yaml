@@ -3,9 +3,10 @@ title: 风暴天气鱼雷射程x0.85 (replan-v2 drill)
 epic: 
 dependsOn: [t-013]
 role: gameplay-engineer
-status: ready
-outputs: []
-acceptance: []
+status: done
+outputs: [config/balance.json, src/combat/torpedo.ts, tests/unit/weather.test.ts]
+acceptance: [Storm reduces effective torpedo range ×0.85]
 attempts: 1
-evidence: storm torpedo range x0.85 implemented (balance.json + combat) + weather.test.ts; 358/358
 tags: [change, combat]
+evidence: storm torpedo range x0.85 implemented (balance.json + combat) + weather.test.ts; 358/358
+notes: status updated from ready → done (change already landed; the label was stale).

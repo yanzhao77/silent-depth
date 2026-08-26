@@ -3,8 +3,10 @@ title: 程序化音频(WebAudio≥10)
 epic: 
 dependsOn: [t-002]
 role: audio-engineer
-status: running
-outputs: []
-acceptance: []
+status: done
+outputs: [src/audio/audio.ts, src/audio/sfx.ts]
+acceptance: [20 SFX (14 core + 6 periscope), AUDIO_DESIGN §3, all synthesized]
 attempts: 0
 tags: [frontend, audio]
+evidence: 20 shipped SFX with param tables + builders (SFX_NAMES/SFX_PARAMS/SFX_BUILDERS), covered by tests/unit/audio.test.ts and tests/unit/audio-builders.test.ts; accept-matrix AUDIO PASS.
+notes: status updated from running → done (audio engine + 20 SFX complete since release; the tag was stale).
