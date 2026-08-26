@@ -576,7 +576,7 @@ function menuButton(label: string, onclick: () => void, className = '', title = 
   return el('button', { className: `menu-button ${className}`, text: label, title, onclick });
 }
 
-function gradeClass(grade: ScoreGrade): string {
+export function gradeClass(grade: ScoreGrade): string {
   switch (grade) {
     case 'Perfect':
       return 'grade-perfect';
@@ -591,7 +591,7 @@ function gradeClass(grade: ScoreGrade): string {
   }
 }
 
-function formatPar(seconds: number): string {
+export function formatPar(seconds: number): string {
   const s = Math.max(0, Math.floor(seconds));
   const m = Math.floor(s / 60);
   const ss = s % 60;
@@ -599,7 +599,7 @@ function formatPar(seconds: number): string {
 }
 
 /** Localized weather chain for the briefing line ('Clear->Cloudy'). */
-function weatherChain(spec: string, tt: Translator): string {
+export function weatherChain(spec: string, tt: Translator): string {
   return spec
     .split('->')
     .map((w) => tt(`weather.${w.trim()}`))
@@ -607,7 +607,7 @@ function weatherChain(spec: string, tt: Translator): string {
 }
 
 /** Convoy-report-level intel (GAME_DESIGN §11.3) derived from def.spawns. */
-function convoyReport(def: MissionDef, tt: Translator): string {
+export function convoyReport(def: MissionDef, tt: Translator): string {
   const counts = new Map<string, number>();
   for (const spawn of def.spawns) {
     counts.set(spawn.type, (counts.get(spawn.type) ?? 0) + 1);
