@@ -17,12 +17,12 @@
  * @pure — zero DOM / browser-API references.
  */
 
-import type { GameState } from './types'
+import type { GameState } from './types';
 
 export class GameStateTransitionError extends Error {
   constructor(from: GameState, to: GameState) {
-    super(`illegal game state transition: ${from} → ${to}`)
-    this.name = 'GameStateTransitionError'
+    super(`illegal game state transition: ${from} → ${to}`);
+    this.name = 'GameStateTransitionError';
   }
 }
 
@@ -43,36 +43,36 @@ const TRANSITION_TABLE: Record<GameState, readonly GameState[]> = {
   VICTORY: ['MISSION_RESULT'],
   DEFEAT: ['MISSION_RESULT'],
   MISSION_RESULT: ['MENU'],
-}
+};
 
 /** Read-only view of the transition table (documentation / tests). */
-export const GAME_TRANSITIONS: Readonly<Record<GameState, readonly GameState[]>> = TRANSITION_TABLE
+export const GAME_TRANSITIONS: Readonly<Record<GameState, readonly GameState[]>> = TRANSITION_TABLE;
 
 export class GameStateMachine {
-  private current: GameState
+  private current: GameState;
 
   constructor(initial: GameState = 'BOOT') {
-    this.current = initial
+    this.current = initial;
   }
 
   get state(): GameState {
-    return this.current
+    return this.current;
   }
 
   canTransition(target: GameState): boolean {
-    return TRANSITION_TABLE[this.current].includes(target)
+    return TRANSITION_TABLE[this.current].includes(target);
   }
 
   /** Throws GameStateTransitionError on illegal transitions. */
   transition(target: GameState): void {
     if (!this.canTransition(target)) {
-      throw new GameStateTransitionError(this.current, target)
+      throw new GameStateTransitionError(this.current, target);
     }
-    this.current = target
+    this.current = target;
   }
 
   /** Full reset to BOOT (used by tests / engine re-init). */
   reset(): void {
-    this.current = 'BOOT'
+    this.current = 'BOOT';
   }
 }

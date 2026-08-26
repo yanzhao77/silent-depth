@@ -46,8 +46,8 @@
  * @pure-at-import — DOM touched only inside functions; importable in Node.
  */
 
-import type { BalanceConfig } from '../core/balance'
-import { solveFireSolution, type FireSolution } from '../combat/fireControl'
+import type { BalanceConfig } from '../core/balance';
+import { solveFireSolution, type FireSolution } from '../combat/fireControl';
 import type {
   Contact,
   EventEntry,
@@ -56,9 +56,9 @@ import type {
   GameState,
   MissionDef,
   WeatherKind,
-} from '../core/types'
-import { getT, LANGS, type Lang, type Translator } from './i18n'
-import { el, setText, toggleClass, type Child } from './dom'
+} from '../core/types';
+import { getT, LANGS, type Lang, type Translator } from './i18n';
+import { el, setText, toggleClass } from './dom';
 
 // ---------------------------------------------------------------------------
 // Pure formatting helpers (unit-testable)
@@ -66,32 +66,33 @@ import { el, setText, toggleClass, type Child } from './dom'
 
 /** Seconds → "mm:ss" (missions ≤ 99 min; hours not needed). */
 export function formatTime(seconds: number): string {
-  const s = Math.max(0, Math.floor(seconds))
-  const mm = Math.floor(s / 60)
-  const ss = s % 60
-  return `${String(mm).padStart(2, '0')}:${String(ss).padStart(2, '0')}`
+  const s = Math.max(0, Math.floor(seconds));
+  const mm = Math.floor(s / 60);
+  const ss = s % 60;
+  return `${String(mm).padStart(2, '0')}:${String(ss).padStart(2, '0')}`;
 }
 
 /** FR-18 log wording for an event; null = suppress (noisy shell events). */
 export function formatEvent(entry: EventEntry, lang: Lang = 'en'): string | null {
-  const key = EVENT_LOG_KEYS[entry.type]
-  if (key === undefined) return null
-  const tt = getT(lang)
-  const label = tt(key)
-  const payload = entry.payload
-  const contactId =
-    typeof payload?.contactId === 'string' ? (payload.contactId as string) : null
-  const targetId = typeof payload?.targetId === 'string' ? (payload.targetId as string) : null
-  const shipId = typeof payload?.shipId === 'string' ? (payload.shipId as string) : null
-  let suffix = contactId ?? targetId ?? shipId
+  const key = EVENT_LOG_KEYS[entry.type];
+  if (key === undefined) return null;
+  const tt = getT(lang);
+  const label = tt(key);
+  const payload = entry.payload;
+  const contactId = typeof payload?.contactId === 'string' ? (payload.contactId as string) : null;
+  const targetId = typeof payload?.targetId === 'string' ? (payload.targetId as string) : null;
+  const shipId = typeof payload?.shipId === 'string' ? (payload.shipId as string) : null;
+  let suffix = contactId ?? targetId ?? shipId;
   // t-026: periscope exposure events carry the exposure band — append its
   // localized name ('EXPOSURE RISING — HIGH').
   if (suffix === null && entry.type === 'periscope.exposure' && typeof payload?.band === 'string') {
-    const bandKey = payload.band as string
-    suffix = tt(`periscope.band.${bandKey}`)
-    if (suffix === `periscope.band.${bandKey}`) suffix = bandKey
+    const bandKey = payload.band as string;
+    suffix = tt(`periscope.band.${bandKey}`);
+    if (suffix === `periscope.band.${bandKey}`) suffix = bandKey;
   }
-  return suffix !== null && suffix.length > 0 ? tt('log.entry', { text: label, id: suffix }) : label
+  return suffix !== null && suffix.length > 0
+    ? tt('log.entry', { text: label, id: suffix })
+    : label;
 }
 
 /** EventType → i18n log key (all catalogue members; null = suppressed). */
@@ -137,33 +138,38 @@ const EVENT_LOG_KEYS: Partial<Record<EventType, string>> = {
   'sub.emergencyDive': 'log.emergencyDive',
   // Suppressed (shell-driven noise): sub.speedChanged, sub.depthChanged,
   // ui.click — deliberately absent from the map (formatEvent → null).
-}
+};
 
 /** Fire-control card display parts (§7.3 / §7.4 — pure formatting). */
 export interface FireControlParts {
-  target: string
-  bearing: string
-  range: string
-  targetHeading: string
-  targetSpeed: string
-  firingBearing: string
-  hitProbability: string
-  salvoProbability: string
-  estimated: boolean
+  target: string;
+  bearing: string;
+  range: string;
+  targetHeading: string;
+  targetSpeed: string;
+  firingBearing: string;
+  hitProbability: string;
+  salvoProbability: string;
+  estimated: boolean;
   /** t-024/026: fire-solution quality ('ESTIMATED' | 'VISUAL CONFIRMED'). */
-  status: 'ESTIMATED' | 'VISUAL CONFIRMED'
+  status: 'ESTIMATED' | 'VISUAL CONFIRMED';
   /** Localized status label (fc.status.*). */
-  statusText: string
+  statusText: string;
 }
 
 /** Format a FireSolution into card strings ("--" for unknown inputs). */
-export function formatFireSolution(solution: FireSolution, contact: Contact, lang: Lang = 'en'): FireControlParts {
-  const tt = getT(lang)
-  const three = (v: number | null): string => (v === null ? '--' : String(Math.round(v)).padStart(3, '0') + '°')
+export function formatFireSolution(
+  solution: FireSolution,
+  contact: Contact,
+  lang: Lang = 'en',
+): FireControlParts {
+  const tt = getT(lang);
+  const three = (v: number | null): string =>
+    v === null ? '--' : String(Math.round(v)).padStart(3, '0') + '°';
   const rangeStr = (km: number | null): string =>
-    km === null ? '--' : km >= 10 ? `${Math.round(km)}KM` : `${km.toFixed(1)}KM`
-  const speedStr = (kt: number | null): string => (kt === null ? '--' : `${Math.round(kt)}KT`)
-  const status: 'ESTIMATED' | 'VISUAL CONFIRMED' = solution.status ?? 'ESTIMATED'
+    km === null ? '--' : km >= 10 ? `${Math.round(km)}KM` : `${km.toFixed(1)}KM`;
+  const speedStr = (kt: number | null): string => (kt === null ? '--' : `${Math.round(kt)}KT`);
+  const status: 'ESTIMATED' | 'VISUAL CONFIRMED' = solution.status ?? 'ESTIMATED';
   return {
     target: `${contact.id} ${tt(`class.${contact.classification}`)}`,
     bearing: three(contact.bearingDeg),
@@ -176,29 +182,38 @@ export function formatFireSolution(solution: FireSolution, contact: Contact, lan
     estimated: solution.estimated,
     status,
     statusText: tt(`fc.status.${status === 'VISUAL CONFIRMED' ? 'visualConfirmed' : 'estimated'}`),
-  }
+  };
 }
 
 /** "NOW" / "12S" / "1:05" — seconds since last detection. */
 export function formatLastSeen(lastDetectedAt: number, now: number, lang: Lang = 'en'): string {
-  const tt = getT(lang)
-  const dt = Math.max(0, Math.round(now - lastDetectedAt))
-  if (dt < 1) return tt('hud.lastSeen.now')
-  if (dt < 60) return tt('hud.lastSeen.seconds', { s: dt })
-  return formatTime(dt)
+  const tt = getT(lang);
+  const dt = Math.max(0, Math.round(now - lastDetectedAt));
+  if (dt < 1) return tt('hud.lastSeen.now');
+  if (dt < 60) return tt('hud.lastSeen.seconds', { s: dt });
+  return formatTime(dt);
 }
 
 /** Index into balance.detection.bands for a 0..100 detection value. */
-export function detectionBandIndex(detection: number, bands: readonly { max: number; label: string }[]): number {
-  const v = Math.max(0, Math.min(100, detection))
+export function detectionBandIndex(
+  detection: number,
+  bands: readonly { max: number; label: string }[],
+): number {
+  const v = Math.max(0, Math.min(100, detection));
   for (let i = 0; i < bands.length; i++) {
-    if (v <= (bands[i]?.max ?? 0)) return i
+    if (v <= (bands[i]?.max ?? 0)) return i;
   }
-  return Math.max(0, bands.length - 1)
+  return Math.max(0, bands.length - 1);
 }
 
 /** 5-band meter colors (GAME_DESIGN §11.2: 绿/黄/橙/红/深红). */
-export const DETECTION_BAND_COLORS = ['#3f9d5a', '#e8a33d', '#e07b39', '#d9534f', '#a8322e'] as const
+export const DETECTION_BAND_COLORS = [
+  '#3f9d5a',
+  '#e8a33d',
+  '#e07b39',
+  '#d9534f',
+  '#a8322e',
+] as const;
 
 /** Weather chip codes (monospace-safe, intentionally unlocalized). */
 export const WEATHER_CODES: Record<WeatherKind, string> = {
@@ -207,10 +222,10 @@ export const WEATHER_CODES: Record<WeatherKind, string> = {
   Storm: 'STM',
   Fog: 'FOG',
   Night: 'NGT',
-}
+};
 
 /** Semantic severity of an event for the timeline dot. */
-export type EventSeverity = 'success' | 'info' | 'warning' | 'error'
+export type EventSeverity = 'success' | 'info' | 'warning' | 'error';
 
 /** EventType → timeline severity (t-023/t-026; pure, unit-tested). */
 const EVENT_SEVERITIES: Partial<Record<EventType, EventSeverity>> = {
@@ -243,11 +258,11 @@ const EVENT_SEVERITIES: Partial<Record<EventType, EventSeverity>> = {
   'player.located': 'error',
   'mission.defeat': 'error',
   // everything else → info
-}
+};
 
 /** Severity of an event type (default 'info'). */
 export function eventSeverity(type: EventType): EventSeverity {
-  return EVENT_SEVERITIES[type] ?? 'info'
+  return EVENT_SEVERITIES[type] ?? 'info';
 }
 
 /**
@@ -256,40 +271,48 @@ export function eventSeverity(type: EventType): EventSeverity {
  */
 export function eventSeverityFor(entry: EventEntry): EventSeverity {
   if (entry.type === 'periscope.exposure') {
-    const band = entry.payload?.band
-    if (band === 'CRITICAL' || band === 'HIGH') return 'error'
-    if (band === 'MEDIUM') return 'warning'
-    return 'info'
+    const band = entry.payload?.band;
+    if (band === 'CRITICAL' || band === 'HIGH') return 'error';
+    if (band === 'MEDIUM') return 'warning';
+    return 'info';
   }
-  return eventSeverity(entry.type)
+  return eventSeverity(entry.type);
 }
 
 /** Mission-phase group of an event (technical micro-label for the timeline). */
 export function eventPhase(type: EventType): string {
-  if (type.startsWith('periscope.')) return 'PERISCOPE'
-  if (type.startsWith('sonar.') || type.startsWith('contact.')) return 'SONAR'
-  if (type.startsWith('torpedo.')) return 'TORPEDO'
-  if (type.startsWith('depthCharge.') || type.startsWith('deckGun.') || type === 'ship.sunk') return 'COMBAT'
-  if (type.startsWith('sub.') || type === 'battery.low' || type === 'detection.threshold' || type === 'player.located' || type === 'decoy.launched') return 'SUB'
-  if (type.startsWith('mission.') || type === 'escape.escaped') return 'MISSION'
-  return 'SYS'
+  if (type.startsWith('periscope.')) return 'PERISCOPE';
+  if (type.startsWith('sonar.') || type.startsWith('contact.')) return 'SONAR';
+  if (type.startsWith('torpedo.')) return 'TORPEDO';
+  if (type.startsWith('depthCharge.') || type.startsWith('deckGun.') || type === 'ship.sunk')
+    return 'COMBAT';
+  if (
+    type.startsWith('sub.') ||
+    type === 'battery.low' ||
+    type === 'detection.threshold' ||
+    type === 'player.located' ||
+    type === 'decoy.launched'
+  )
+    return 'SUB';
+  if (type.startsWith('mission.') || type === 'escape.escaped') return 'MISSION';
+  return 'SYS';
 }
 
 /** Exposure band → color (t-026; LOW green → CRITICAL red). */
 export function exposureBandColor(band: string): string {
   switch (band) {
     case 'NONE':
-      return '#64748b'
+      return '#64748b';
     case 'LOW':
-      return '#34d399'
+      return '#34d399';
     case 'MEDIUM':
-      return '#fbbf24'
+      return '#fbbf24';
     case 'HIGH':
-      return '#fb923c'
+      return '#fb923c';
     case 'CRITICAL':
-      return '#f87171'
+      return '#f87171';
     default:
-      return '#64748b'
+      return '#64748b';
   }
 }
 
@@ -301,7 +324,7 @@ const STATUS_CODE: Partial<Record<GameState, { code: string; cls: string }>> = {
   VICTORY: { code: 'VICTORY', cls: 'is-success' },
   DEFEAT: { code: 'DEFEAT', cls: 'is-error' },
   MISSION_RESULT: { code: 'RESULT', cls: 'is-info' },
-}
+};
 
 // ---------------------------------------------------------------------------
 // HUD element wiring
@@ -309,92 +332,92 @@ const STATUS_CODE: Partial<Record<GameState, { code: string; cls: string }>> = {
 
 /** Per-frame extra data the snapshot does not carry (shell-owned). */
 export interface HudExtras {
-  selectedContactId: string | null
-  salvo: 1 | 2
-  weather: WeatherKind
-  mission: MissionDef
-  balance: BalanceConfig
+  selectedContactId: string | null;
+  salvo: 1 | 2;
+  weather: WeatherKind;
+  mission: MissionDef;
+  balance: BalanceConfig;
   /** Current camera zoom px/km (workspace hint). */
-  zoom: number
+  zoom: number;
   /** Measured FPS (dev chip when settings.video.showFps). */
-  fps: number
-  showFps: boolean
+  fps: number;
+  showFps: boolean;
   /** Wall-clock seconds (post-fire warning banner timing). */
-  wallT: number
+  wallT: number;
 }
 
 export interface HudOptions {
   /** Contact row clicked → select (shell forwards to input + renderer). */
-  onSelectContact: (contactId: string | null) => void
+  onSelectContact: (contactId: string | null) => void;
   /** Salvo selector changed. */
-  onSalvoChange: (salvo: 1 | 2) => void
+  onSalvoChange: (salvo: 1 | 2) => void;
   /** Top-bar settings / language entry clicked (shell opens Settings). */
-  onOpenSettings: () => void
+  onOpenSettings: () => void;
   /** t-026: periscope raise/lower edge (P or button). */
-  onPeriscopeToggle: () => void
+  onPeriscopeToggle: () => void;
   /** t-026: lock the observed target (L or button). */
-  onLockTarget: () => void
+  onLockTarget: () => void;
   /** t-026: emergency dive (X or button). */
-  onDive: () => void
+  onDive: () => void;
   /** Initial UI language (t-022; default 'en'). */
-  lang?: Lang
+  lang?: Lang;
 }
 
 export interface Hud {
   /** Diff-minimal update from the latest snapshot. */
-  update(snapshot: GameSnapshot, extras: HudExtras): void
+  update(snapshot: GameSnapshot, extras: HudExtras): void;
   /** Append one log line (main forwards new snapshot events). */
-  appendLog(entry: EventEntry): void
+  appendLog(entry: EventEntry): void;
   /** Reset per-mission state (tubes, log, selection). */
-  reset(): void
+  reset(): void;
   /** Switch UI language: re-translates the static labels in place. */
-  setLanguage(lang: Lang): void
+  setLanguage(lang: Lang): void;
   /** t-026: show the post-fire exposure warning banner (~6 s). */
-  showFireWarning(): void
+  showFireWarning(): void;
   /** The HUD root element (CSS class 'hud'). */
-  root: HTMLElement
+  root: HTMLElement;
 }
 
-const LOG_CAPACITY = 50
+const LOG_CAPACITY = 50;
 
 /**
  * Build the HUD overlay. `root` is the persistent DOM container (created by
  * main.ts). Construction touches the DOM — browser only.
  */
 export function createHud(root: HTMLElement, opts: HudOptions): Hud {
-  root.className = 'hud'
-  root.style.display = 'none'
+  root.className = 'hud';
+  root.style.display = 'none';
 
-  let lang: Lang = opts.lang ?? 'en'
-  let tt: Translator = getT(lang)
+  let lang: Lang = opts.lang ?? 'en';
+  let tt: Translator = getT(lang);
 
   /** Label registry — re-translated by setLanguage() without rebuilding. */
-  const labelRegistry: [HTMLElement, string][] = []
+  const labelRegistry: [HTMLElement, string][] = [];
   function label(key: string, className: string): HTMLElement {
-    const node = el('span', { className })
-    labelRegistry.push([node, key])
-    setText(node, tt(key))
-    return node
+    const node = el('span', { className });
+    labelRegistry.push([node, key]);
+    setText(node, tt(key));
+    return node;
   }
 
   // --- top bar (J) -----------------------------------------------------------
-  const missionNameEl = el('span', { className: 'hud-mission-name' })
-  const statusChip = el('span', { className: 'status-chip' })
-  const weatherValue = el('span', { className: 'mono' })
-  const timerValue = el('span', { className: 'mono' })
-  const fpsValue = el('span', { className: 'mono' })
+  const missionNameEl = el('span', { className: 'hud-mission-name' });
+  const statusChip = el('span', { className: 'status-chip' });
+  const weatherValue = el('span', { className: 'mono' });
+  const timerValue = el('span', { className: 'mono' });
+  const fpsValue = el('span', { className: 'mono' });
   const langChip = el('button', {
     className: 'meta-chip hud-lang-chip',
     title: tt('settings.language'),
     onclick: () => opts.onOpenSettings(),
-  })
+  });
   const settingsBtn = el('button', {
     className: 'icon-btn',
     text: tt('settings.title'),
     onclick: () => opts.onOpenSettings(),
-  })
-  const fpsChip = el('span', { className: 'meta-chip' }, [el('span', { text: 'FPS' }), fpsValue])
-  fpsChip.style.display = 'none'
+  });
+  const fpsChip = el('span', { className: 'meta-chip' }, [el('span', { text: 'FPS' }), fpsValue]);
+  fpsChip.style.display = 'none';
 
   const topbar = el('div', { className: 'hud-topbar' }, [
     el('div', { className: 'hud-brand' }, [
@@ -413,79 +436,74 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       settingsBtn,
       fpsChip,
     ]),
-  ])
+  ]);
   // Brand strings are not re-translated (canonical) — register only the rest.
-  labelRegistry.push([settingsBtn, 'settings.title'])
+  labelRegistry.push([settingsBtn, 'settings.title']);
 
   // --- central Mission Workspace (F) -------------------------------------------
-  const wsId = el('span', { className: 'ws-id' })
-  const wsTimer = el('span', { className: 'mono-strong' })
-  const wsSpeed = el('span', { className: 'mono-strong ws-speed' })
-  const wsZoom = el('span', { className: 'mono-strong' })
+  const wsId = el('span', { className: 'ws-id' });
+  const wsTimer = el('span', { className: 'mono-strong' });
+  const wsSpeed = el('span', { className: 'mono-strong ws-speed' });
+  const wsZoom = el('span', { className: 'mono-strong' });
   const workspace = el('div', { className: 'hud-workspace' }, [
     el('div', { className: 'ws-header' }, [
       wsId,
       el('div', { className: 'ws-meta' }, [wsTimer, wsSpeed, wsZoom]),
     ]),
-  ])
+  ]);
 
   // --- left column ---------------------------------------------------------------
-  const depthValue = el('span', { className: 'status-value' })
-  const speedValue = el('span', { className: 'status-value' })
-  const headingValue = el('span', { className: 'status-value' })
+  const depthValue = el('span', { className: 'status-value' });
+  const speedValue = el('span', { className: 'status-value' });
+  const headingValue = el('span', { className: 'status-value' });
 
   const readouts = [
     { key: 'hud.depth', value: depthValue },
     { key: 'hud.speed', value: speedValue },
     { key: 'hud.heading', value: headingValue },
-  ].map((r) =>
-    el('div', { className: 'status-readout' }, [
-      label(r.key, 'status-label'),
-      r.value,
-    ]),
-  )
+  ].map((r) => el('div', { className: 'status-readout' }, [label(r.key, 'status-label'), r.value]));
 
-  const bars: { labelKey: string; fill: HTMLElement; value: HTMLElement; row: HTMLElement }[] = []
+  const bars: { labelKey: string; fill: HTMLElement; value: HTMLElement; row: HTMLElement }[] = [];
   function barRow(labelKey: string): { fill: HTMLElement; value: HTMLElement; row: HTMLElement } {
-    const fill = el('div', { className: 'bar-fill' })
-    const value = el('span', { className: 'bar-value' })
+    const fill = el('div', { className: 'bar-fill' });
+    const value = el('span', { className: 'bar-value' });
     const row = el('div', { className: 'bar-row' }, [
       label(labelKey, 'bar-label'),
       el('div', { className: 'bar-track' }, [fill]),
       value,
-    ])
-    bars.push({ labelKey, fill, value, row })
-    return bars[bars.length - 1]!
+    ]);
+    bars.push({ labelKey, fill, value, row });
+    return bars[bars.length - 1]!;
   }
-  const batteryBar = barRow('hud.battery')
-  const hullBar = barRow('hud.hull')
-  const noiseBar = barRow('hud.noise')
-  const detectionBar = barRow('hud.detection')
+  const batteryBar = barRow('hud.battery');
+  const hullBar = barRow('hud.hull');
+  const noiseBar = barRow('hud.noise');
+  const detectionBar = barRow('hud.detection');
 
   // t-026 periscope row in the status card: state chip + exposure bar.
-  const pScopeChip = el('span', { className: 'pc-mini-chip' })
-  const pExposureFill = el('div', { className: 'bar-fill' })
-  const pExposureValue = el('span', { className: 'bar-value' })
+  const pScopeChip = el('span', { className: 'pc-mini-chip' });
+  const pExposureFill = el('div', { className: 'bar-fill' });
+  const pExposureValue = el('span', { className: 'bar-value' });
   const pScopeRow = el('div', { className: 'bar-row periscope-row' }, [
     pScopeChip,
     el('div', { className: 'bar-track' }, [pExposureFill]),
     pExposureValue,
-  ])
+  ]);
 
   // t-028: active-sonar availability row (chip + cooldown bar + seconds).
-  const pingChip = el('span', { className: 'pc-mini-chip' })
-  const pingFill = el('div', { className: 'bar-fill' })
-  const pingValue = el('span', { className: 'bar-value' })
+  const pingChip = el('span', { className: 'pc-mini-chip' });
+  const pingFill = el('div', { className: 'bar-fill' });
+  const pingValue = el('span', { className: 'bar-value' });
   const pingRow = el('div', { className: 'bar-row ping-row' }, [
     pingChip,
     el('div', { className: 'bar-track' }, [pingFill]),
     pingValue,
-  ])
+  ]);
 
   // t-028: system chips — silent running + decoys remaining.
-  const silentChip = el('span', { className: 'sys-chip' })
-  const decoyChip = el('span', { className: 'sys-chip' })
-  const chipsRow = el('div', { className: 'sys-chips' }, [silentChip, decoyChip])
+  const silentChip = el('span', { className: 'sys-chip' });
+  const decoyChip = el('span', { className: 'sys-chip' });
+  const chipsRow = el('div', { className: 'sys-chips' }, [silentChip, decoyChip]);
 
   const statusCard = el('div', { className: 'card' }, [
     el('div', { className: 'status-readouts' }, readouts),
@@ -498,102 +516,104 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       pScopeRow,
     ]),
     chipsRow,
-  ])
+  ]);
 
   // --- tasks (objectives) card (H) ------------------------------------------------
-  const taskProgressFill = el('div', { className: 'task-progress-fill' })
-  const taskList = el('div', { className: 'task-list' })
+  const taskProgressFill = el('div', { className: 'task-progress-fill' });
+  const taskList = el('div', { className: 'task-list' });
   const tasksCard = el('div', { className: 'card' }, [
     el('div', { className: 'card-head' }, [
       label('hud.objectives', 'card-title'),
       el('div', { className: 'task-progress' }, [taskProgressFill]),
     ]),
     taskList,
-  ])
+  ]);
 
   // --- torpedo tubes card (G) ------------------------------------------------------
-  const tubesRow = el('div', { className: 'tubes-row' })
-  const salvo1 = salvoButton('1', true)
-  const salvo2 = salvoButton('2', false)
+  const tubesRow = el('div', { className: 'tubes-row' });
+  const salvo1 = salvoButton('1', true);
+  const salvo2 = salvoButton('2', false);
   const tubesCard = el('div', { className: 'card' }, [
     el('div', { className: 'card-head' }, [
       label('hud.torpedoes', 'card-title'),
       el('div', { className: 'salvo-select' }, [salvo1, salvo2]),
     ]),
     tubesRow,
-  ])
+  ]);
 
   // --- periscope control card (t-026) -----------------------------------------------
-  const pcStatus = el('span', { className: 'pc-status' })
-  const pcProgressFill = el('div', { className: 'pc-progress-fill' })
-  const pcProgressPct = el('span', { className: 'mono pc-pct' })
+  const pcStatus = el('span', { className: 'pc-status' });
+  const pcProgressFill = el('div', { className: 'pc-progress-fill' });
+  const pcProgressPct = el('span', { className: 'mono pc-pct' });
   const pcProgress = el('div', { className: 'pc-progress-row' }, [
     el('div', { className: 'pc-progress' }, [pcProgressFill]),
     pcProgressPct,
-  ])
-  pcProgress.style.display = 'none'
-  const pcReason = el('div', { className: 'pc-reason' })
-  pcReason.style.display = 'none'
+  ]);
+  pcProgress.style.display = 'none';
+  const pcReason = el('div', { className: 'pc-reason' });
+  pcReason.style.display = 'none';
 
   const raiseBtn = el('button', {
     className: 'btn btn-primary pc-btn',
     text: tt('periscope.btn.raise'),
     onclick: () => opts.onPeriscopeToggle(),
-  })
+  });
   const lockBtn = el('button', {
     className: 'btn pc-btn',
     text: tt('periscope.btn.lock'),
     onclick: () => opts.onLockTarget(),
-  })
+  });
   const lowerBtn = el('button', {
     className: 'btn pc-btn',
     text: tt('periscope.btn.lower'),
     onclick: () => opts.onPeriscopeToggle(),
-  })
+  });
   const diveBtn = el('button', {
     className: 'btn pc-btn pc-danger',
     text: tt('periscope.btn.dive'),
     onclick: () => opts.onDive(),
-  })
-  labelRegistry.push([raiseBtn, 'periscope.btn.raise'])
-  labelRegistry.push([lockBtn, 'periscope.btn.lock'])
-  labelRegistry.push([lowerBtn, 'periscope.btn.lower'])
-  labelRegistry.push([diveBtn, 'periscope.btn.dive'])
+  });
+  labelRegistry.push([raiseBtn, 'periscope.btn.raise']);
+  labelRegistry.push([lockBtn, 'periscope.btn.lock']);
+  labelRegistry.push([lowerBtn, 'periscope.btn.lower']);
+  labelRegistry.push([diveBtn, 'periscope.btn.dive']);
 
   const periscopeCard = el('div', { className: 'card periscope-control' }, [
-    el('div', { className: 'card-head' }, [
-      label('periscope.title', 'card-title'),
-      pcStatus,
-    ]),
+    el('div', { className: 'card-head' }, [label('periscope.title', 'card-title'), pcStatus]),
     pcProgress,
     pcReason,
     el('div', { className: 'pc-actions' }, [raiseBtn, lockBtn, lowerBtn, diveBtn]),
-  ])
+  ]);
 
-  const leftCol = el('div', { className: 'hud-left' }, [statusCard, tasksCard, tubesCard, periscopeCard])
+  const leftCol = el('div', { className: 'hud-left' }, [
+    statusCard,
+    tasksCard,
+    tubesCard,
+    periscopeCard,
+  ]);
 
   // --- right column: contacts + fire control (I) -------------------------------------
-  const contactList = el('div', { className: 'contact-list' })
-  const emptyTitle = el('div', { className: 'empty-title' })
-  const emptyHint = el('div', { className: 'empty-hint' })
+  const contactList = el('div', { className: 'contact-list' });
+  const emptyTitle = el('div', { className: 'empty-title' });
+  const emptyHint = el('div', { className: 'empty-hint' });
   const contactsEmpty = el('div', { className: 'contacts-empty' }, [
     el('div', { className: 'empty-icon', text: '◎' }),
     emptyTitle,
     emptyHint,
-  ])
-  contactsEmpty.style.display = 'none'
+  ]);
+  contactsEmpty.style.display = 'none';
 
-  const fcTarget = el('span', { className: 'fc-value' })
-  const fcBearing = el('span', { className: 'fc-value' })
-  const fcRange = el('span', { className: 'fc-value' })
-  const fcHdg = el('span', { className: 'fc-value' })
-  const fcSpd = el('span', { className: 'fc-value' })
-  const fcFiring = el('span', { className: 'fc-value' })
-  const fcHp = el('span', { className: 'fc-value hp' })
-  const fcSalvo = el('span', { className: 'fc-value' })
-  const fcEstimated = el('div', { className: 'fc-est' })
-  labelRegistry.push([fcEstimated, 'hud.fc.estimated'])
-  setText(fcEstimated, tt('hud.fc.estimated'))
+  const fcTarget = el('span', { className: 'fc-value' });
+  const fcBearing = el('span', { className: 'fc-value' });
+  const fcRange = el('span', { className: 'fc-value' });
+  const fcHdg = el('span', { className: 'fc-value' });
+  const fcSpd = el('span', { className: 'fc-value' });
+  const fcFiring = el('span', { className: 'fc-value' });
+  const fcHp = el('span', { className: 'fc-value hp' });
+  const fcSalvo = el('span', { className: 'fc-value' });
+  const fcEstimated = el('div', { className: 'fc-est' });
+  labelRegistry.push([fcEstimated, 'hud.fc.estimated']);
+  setText(fcEstimated, tt('hud.fc.estimated'));
 
   const fireCard = el('div', { className: 'card firecard placeholder' }, [
     el('div', { className: 'card-head' }, [label('hud.fireControl', 'card-title')]),
@@ -608,7 +628,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       fcRow(tt, 'hud.fc.salvo', fcSalvo, 'wide'),
       fcEstimated,
     ]),
-  ])
+  ]);
 
   // t-028c: operations & key reference panel (below the fire control card).
   const controlsCard = el('div', { className: 'card controls-card' }, [
@@ -617,14 +637,14 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       'div',
       { className: 'controls-list' },
       CONTROL_BINDINGS.map((b) => {
-        const keyChip = el('span', { className: 'key-chip mono', text: b.key })
-        const lbl = el('span', { className: 'controls-label' })
-        labelRegistry.push([lbl, b.labelKey])
-        setText(lbl, tt(b.labelKey))
-        return el('div', { className: 'controls-row' }, [keyChip, lbl])
+        const keyChip = el('span', { className: 'key-chip mono', text: b.key });
+        const lbl = el('span', { className: 'controls-label' });
+        labelRegistry.push([lbl, b.labelKey]);
+        setText(lbl, tt(b.labelKey));
+        return el('div', { className: 'controls-row' }, [keyChip, lbl]);
       }),
     ),
-  ])
+  ]);
 
   const rightCol = el('div', { className: 'hud-right' }, [
     el('div', { className: 'card' }, [
@@ -634,66 +654,66 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     ]),
     fireCard,
     controlsCard,
-  ])
+  ]);
 
   // --- bottom: activity timeline (K) ------------------------------------------------
-  const timelineBody = el('div', { className: 'timeline-body' })
+  const timelineBody = el('div', { className: 'timeline-body' });
   const timeline = el('div', { className: 'card hud-timeline' }, [
     el('div', { className: 'card-head' }, [label('hud.log', 'card-title')]),
     timelineBody,
-  ])
+  ]);
 
   // --- PERISCOPE VIEW overlay (t-026) ----------------------------------------------
   // Optical observation mode over the central workspace (RAISED/OBSERVING).
   // Restrained: vignette + scanlines + an optical reticle; no cyberpunk glow.
-  const pvBearing = el('span', { className: 'pv-bearing mono' })
-  const pvTargetType = el('span', { className: 'pv-value pv-type' })
-  const pvBearingVal = el('span', { className: 'pv-value mono' })
-  const pvRangeVal = el('span', { className: 'pv-value mono' })
-  const pvSpeedVal = el('span', { className: 'pv-value mono' })
-  const pvCourseVal = el('span', { className: 'pv-value mono' })
-  const pvClassVal = el('span', { className: 'pv-value mono' })
-  const pvConfVal = el('span', { className: 'pv-value mono' })
-  const pvStatusChip = el('span', { className: 'status-chip' })
+  const pvBearing = el('span', { className: 'pv-bearing mono' });
+  const pvTargetType = el('span', { className: 'pv-value pv-type' });
+  const pvBearingVal = el('span', { className: 'pv-value mono' });
+  const pvRangeVal = el('span', { className: 'pv-value mono' });
+  const pvSpeedVal = el('span', { className: 'pv-value mono' });
+  const pvCourseVal = el('span', { className: 'pv-value mono' });
+  const pvClassVal = el('span', { className: 'pv-value mono' });
+  const pvConfVal = el('span', { className: 'pv-value mono' });
+  const pvStatusChip = el('span', { className: 'status-chip' });
 
   function pvRow(labelKey: string, value: HTMLElement): HTMLElement {
-    const lb = el('span', { className: 'pv-label' })
-    labelRegistry.push([lb, labelKey])
-    setText(lb, tt(labelKey))
-    return el('div', { className: 'pv-row' }, [lb, value])
+    const lb = el('span', { className: 'pv-label' });
+    labelRegistry.push([lb, labelKey]);
+    setText(lb, tt(labelKey));
+    return el('div', { className: 'pv-row' }, [lb, value]);
   }
 
   const pvLockBtn = el('button', {
     className: 'btn btn-primary pv-btn',
     text: tt('periscope.btn.lock'),
     onclick: () => opts.onLockTarget(),
-  })
+  });
   const pvLowerBtn = el('button', {
     className: 'btn pv-btn',
     text: tt('periscope.btn.lower'),
     onclick: () => opts.onPeriscopeToggle(),
-  })
+  });
   const pvDiveBtn = el('button', {
     className: 'btn pv-btn pv-danger',
     text: tt('periscope.btn.dive'),
     onclick: () => opts.onDive(),
-  })
-  labelRegistry.push([pvLockBtn, 'periscope.btn.lock'])
-  labelRegistry.push([pvLowerBtn, 'periscope.btn.lower'])
-  labelRegistry.push([pvDiveBtn, 'periscope.btn.dive'])
+  });
+  labelRegistry.push([pvLockBtn, 'periscope.btn.lock']);
+  labelRegistry.push([pvLowerBtn, 'periscope.btn.lower']);
+  labelRegistry.push([pvDiveBtn, 'periscope.btn.dive']);
 
-  const pvExposureFill = el('div', { className: 'pv-exposure-fill' })
-  const pvExposureValue = el('span', { className: 'mono' })
-  const pvRaisedTime = el('span', { className: 'mono' })
+  const pvExposureFill = el('div', { className: 'pv-exposure-fill' });
+  const pvExposureValue = el('span', { className: 'mono' });
+  const pvRaisedTime = el('span', { className: 'mono' });
 
   // t-028b: real periscope scene — sky, sea, horizon, weather, ship silhouettes.
-  const pvSky = el('div', { className: 'pv-sky' })
-  const pvSea = el('div', { className: 'pv-sea' })
-  const pvHorizon = el('div', { className: 'pv-horizon' })
-  const pvWeather = el('div', { className: 'pv-weather' })
-  const pvMarks = el('div', { className: 'pv-marks' })
-  const pvShips = el('div', { className: 'pv-ships' })
-  const shipEls = new Map<string, HTMLElement>()
+  const pvSky = el('div', { className: 'pv-sky' });
+  const pvSea = el('div', { className: 'pv-sea' });
+  const pvHorizon = el('div', { className: 'pv-horizon' });
+  const pvWeather = el('div', { className: 'pv-weather' });
+  const pvMarks = el('div', { className: 'pv-marks' });
+  const pvShips = el('div', { className: 'pv-ships' });
+  const shipEls = new Map<string, HTMLElement>();
 
   const periscopeView = el('div', { className: 'periscope-view' }, [
     pvSky,
@@ -732,480 +752,529 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       pvRaisedTime,
     ]),
     el('div', { className: 'pv-actions' }, [pvLockBtn, pvLowerBtn, pvDiveBtn]),
-  ])
-  periscopeView.style.display = 'none'
+  ]);
+  periscopeView.style.display = 'none';
 
   // --- post-fire exposure warning banner (t-026) --------------------------------------
-  const fireWarnText = el('div', { className: 'fw-text' })
+  const fireWarnText = el('div', { className: 'fw-text' });
   const fwLowerBtn = el('button', {
     className: 'btn fw-btn',
     text: tt('periscope.btn.lower'),
     onclick: () => opts.onPeriscopeToggle(),
-  })
+  });
   const fwDiveBtn = el('button', {
     className: 'btn fw-btn fw-danger',
     text: tt('periscope.btn.dive'),
     onclick: () => opts.onDive(),
-  })
-  labelRegistry.push([fwLowerBtn, 'periscope.btn.lower'])
-  labelRegistry.push([fwDiveBtn, 'periscope.btn.dive'])
+  });
+  labelRegistry.push([fwLowerBtn, 'periscope.btn.lower']);
+  labelRegistry.push([fwDiveBtn, 'periscope.btn.dive']);
   const fireWarn = el('div', { className: 'fire-warning' }, [
     el('span', { className: 'fw-icon', text: '⚠' }),
     fireWarnText,
     fwLowerBtn,
     fwDiveBtn,
-  ])
-  fireWarn.style.display = 'none'
+  ]);
+  fireWarn.style.display = 'none';
 
-  root.append(topbar, workspace, leftCol, rightCol, timeline, periscopeView, fireWarn)
+  root.append(topbar, workspace, leftCol, rightCol, timeline, periscopeView, fireWarn);
 
   // --- state ------------------------------------------------------------------------
-  const contactRows = new Map<string, HTMLElement>()
-  const objectiveRows = new Map<string, HTMLElement>()
-  const tubeEls: HTMLElement[] = []
-  let selectedContactId: string | null = null
-  let currentSalvo: 1 | 2 = 1
-  let lastLogEntryId = 0
-  let lastPhase = ''
-  const logEntries: EventEntry[] = []
+  const contactRows = new Map<string, HTMLElement>();
+  const objectiveRows = new Map<string, HTMLElement>();
+  const tubeEls: HTMLElement[] = [];
+  let selectedContactId: string | null = null;
+  let lastLogEntryId = 0;
+  let lastPhase = '';
+  const logEntries: EventEntry[] = [];
   /** t-026: post-fire warning banner until wallT (null = hidden). */
-  let fireWarningUntil: number | null = null
-  let lastWallT = 0
+  let fireWarningUntil: number | null = null;
+  let lastWallT = 0;
 
   function setSalvo(n: 1 | 2): void {
-    currentSalvo = n
-    salvo1.classList.toggle('active', n === 1)
-    salvo2.classList.toggle('active', n === 2)
-    opts.onSalvoChange(n)
+    salvo1.classList.toggle('active', n === 1);
+    salvo2.classList.toggle('active', n === 2);
+    opts.onSalvoChange(n);
   }
-  salvo1.addEventListener('click', () => setSalvo(1))
-  salvo2.addEventListener('click', () => setSalvo(2))
+  salvo1.addEventListener('click', () => setSalvo(1));
+  salvo2.addEventListener('click', () => setSalvo(2));
 
   function selectContact(id: string | null): void {
-    selectedContactId = id
+    selectedContactId = id;
     for (const [cid, row] of contactRows) {
-      toggleClass(row, 'selected', cid === id)
+      toggleClass(row, 'selected', cid === id);
     }
-    opts.onSelectContact(id)
+    opts.onSelectContact(id);
   }
 
   // --- update ----------------------------------------------------------------------
   function update(snapshot: GameSnapshot, extras: HudExtras): void {
-    const sub = snapshot.playerSub
-    const bal = extras.balance
-    const now = snapshot.simTime
+    const sub = snapshot.playerSub;
+    const bal = extras.balance;
+    const now = snapshot.simTime;
 
     // Mission identity + status chip (top bar) + workspace meta.
-    setText(missionNameEl, tt(`mission.${extras.mission.id}.name`))
-    const status = STATUS_CODE[snapshot.state]
+    setText(missionNameEl, tt(`mission.${extras.mission.id}.name`));
+    const status = STATUS_CODE[snapshot.state];
     if (status !== undefined) {
-      setText(statusChip, status.code)
-      statusChip.className = `status-chip ${status.cls}`
+      setText(statusChip, status.code);
+      statusChip.className = `status-chip ${status.cls}`;
     }
-    setText(wsId, extras.mission.id)
-    setText(wsTimer, formatTime(now))
+    setText(wsId, extras.mission.id);
+    setText(wsTimer, formatTime(now));
     // t-028e: live speed in the workspace header (user: real-time speed visible
     // next to zoom, not only in the status card).
-    setText(wsSpeed, `${sub.speedKt.toFixed(1).replace(/\.0$/, '')} KT · ${tt(`hud.band.${sub.speedBand}`)}`)
-    setText(wsZoom, `ZOOM ${Math.round(extras.zoom)} PX/KM`)
+    setText(
+      wsSpeed,
+      `${sub.speedKt.toFixed(1).replace(/\.0$/, '')} KT · ${tt(`hud.band.${sub.speedBand}`)}`,
+    );
+    setText(wsZoom, `ZOOM ${Math.round(extras.zoom)} PX/KM`);
 
     // Top-bar meta.
-    setText(timerValue, formatTime(now))
-    setText(weatherValue, WEATHER_CODES[extras.weather] ?? 'CLR')
-    setText(fpsValue, String(Math.round(extras.fps)))
-    fpsChip.style.display = extras.showFps ? '' : 'none'
+    setText(timerValue, formatTime(now));
+    setText(weatherValue, WEATHER_CODES[extras.weather] ?? 'CLR');
+    setText(fpsValue, String(Math.round(extras.fps)));
+    fpsChip.style.display = extras.showFps ? '' : 'none';
 
     // --- status readouts (G, t-028: live metres) ---
-    const layerCfg = bal.depthLayers[sub.depthLayer]
-    const depthM = sub.depthM ?? (layerCfg.minM + layerCfg.maxM) / 2
+    const layerCfg = bal.depthLayers[sub.depthLayer];
+    const depthM = sub.depthM ?? (layerCfg.minM + layerCfg.maxM) / 2;
     setText(
       depthValue,
       tt('hud.depthValue', {
         m: Math.round(depthM),
         layer: tt(`hud.layer.${sub.depthLayer}`),
       }),
-    )
-    setText(speedValue, tt('hud.speedValue', { v: sub.speedKt.toFixed(1).replace(/\.0$/, ''), band: tt(`hud.band.${sub.speedBand}`) }))
-    setText(headingValue, `${String(Math.round(sub.headingDeg) % 360).padStart(3, '0')}°`)
+    );
+    setText(
+      speedValue,
+      tt('hud.speedValue', {
+        v: sub.speedKt.toFixed(1).replace(/\.0$/, ''),
+        band: tt(`hud.band.${sub.speedBand}`),
+      }),
+    );
+    setText(headingValue, `${String(Math.round(sub.headingDeg) % 360).padStart(3, '0')}°`);
 
     // --- bars ---
     // Battery: success → warning when low.
-    setBar(batteryBar, sub.battery, 'success')
-    toggleClass(batteryBar.row, 'low', sub.lowBattery)
+    setBar(batteryBar, sub.battery, 'success');
+    toggleClass(batteryBar.row, 'low', sub.lowBattery);
     // t-028f: surfaced at low/medium speed → fast recharge indicator.
-    const fastCharging = sub.depthLayer === 'Surface' && sub.speedBand !== 'FULL' && sub.battery < 100
-    toggleClass(batteryBar.row, 'charging', fastCharging)
+    const fastCharging =
+      sub.depthLayer === 'Surface' && sub.speedBand !== 'FULL' && sub.battery < 100;
+    toggleClass(batteryBar.row, 'charging', fastCharging);
     setText(
       batteryBar.value,
       `${Math.round(sub.battery)}%${sub.lowBattery ? ' ' + tt('hud.lowBattery') : ''}${fastCharging ? ' ⚡' : ''}`,
-    )
+    );
     // Hull: success → error when damaged (<30).
-    setBar(hullBar, sub.hull, 'success')
-    toggleClass(hullBar.row, 'danger', sub.hull < 30)
-    setText(hullBar.value, `${Math.round(sub.hull)}%`)
+    setBar(hullBar, sub.hull, 'success');
+    toggleClass(hullBar.row, 'danger', sub.hull < 30);
+    setText(hullBar.value, `${Math.round(sub.hull)}%`);
     // Noise: info.
-    setBar(noiseBar, sub.noise, 'info')
-    setText(noiseBar.value, `${Math.round(sub.noise)}`)
+    setBar(noiseBar, sub.noise, 'info');
+    setText(noiseBar.value, `${Math.round(sub.noise)}`);
     // Detection: 5-band color + localized band label.
-    const bandIdx = detectionBandIndex(sub.detection, bal.detection.bands)
-    setBar(detectionBar, sub.detection, 'info')
-    detectionBar.fill.style.background = DETECTION_BAND_COLORS[bandIdx] ?? DETECTION_BAND_COLORS[0]!
+    const bandIdx = detectionBandIndex(sub.detection, bal.detection.bands);
+    setBar(detectionBar, sub.detection, 'info');
+    detectionBar.fill.style.background =
+      DETECTION_BAND_COLORS[bandIdx] ?? DETECTION_BAND_COLORS[0]!;
     setText(
       detectionBar.value,
       `${Math.round(sub.detection)} ${tt(`hud.bands.${bal.detection.bands[bandIdx]?.label ?? 'Unaware'}`)}`,
-    )
+    );
 
     // t-028: active sonar availability + cooldown.
-    const pingState = pingStatus(sub, bal)
+    const pingState = pingStatus(sub, bal);
     if (pingState.state === 'ready') {
-      setText(pingChip, tt('hud.ping.ready'))
-      pingChip.className = 'pc-mini-chip ping-ready'
-      setText(pingValue, '')
+      setText(pingChip, tt('hud.ping.ready'));
+      pingChip.className = 'pc-mini-chip ping-ready';
+      setText(pingValue, '');
     } else if (pingState.state === 'cooldown') {
-      setText(pingChip, tt('hud.ping.cooldown', { s: pingState.seconds.toFixed(1) }))
-      pingChip.className = 'pc-mini-chip ping-cooldown'
-      setText(pingValue, '')
+      setText(pingChip, tt('hud.ping.cooldown', { s: pingState.seconds.toFixed(1) }));
+      pingChip.className = 'pc-mini-chip ping-cooldown';
+      setText(pingValue, '');
     } else {
-      setText(pingChip, tt('hud.ping.unavailable'))
-      pingChip.className = 'pc-mini-chip ping-unavailable'
-      setText(pingValue, '')
+      setText(pingChip, tt('hud.ping.unavailable'));
+      pingChip.className = 'pc-mini-chip ping-unavailable';
+      setText(pingValue, '');
     }
     setBar(
       { fill: pingFill, row: pingRow },
       pingState.fraction * 100,
-      pingState.state === 'ready' ? 'success' : pingState.state === 'cooldown' ? 'warning' : 'error',
-    )
+      pingState.state === 'ready'
+        ? 'success'
+        : pingState.state === 'cooldown'
+          ? 'warning'
+          : 'error',
+    );
 
     // t-028: system chips — silent running + decoys.
-    setText(silentChip, sub.silentRunning ? tt('hud.silent.on') : tt('hud.silent.off'))
-    silentChip.className = sub.silentRunning ? 'sys-chip chip-on' : 'sys-chip chip-off'
-    setText(decoyChip, tt('hud.decoys', { n: sub.decoyCount }))
+    setText(silentChip, sub.silentRunning ? tt('hud.silent.on') : tt('hud.silent.off'));
+    silentChip.className = sub.silentRunning ? 'sys-chip chip-on' : 'sys-chip chip-off';
+    setText(decoyChip, tt('hud.decoys', { n: sub.decoyCount }));
 
     // --- tasks (H) ---
-    const objectives = snapshot.mission.objectives
-    const missionId = extras.mission.id
-    let doneWeight = 0
-    let totalWeight = 0
-    for (const obj of objectives) totalWeight += obj.weight
+    const objectives = snapshot.mission.objectives;
+    const missionId = extras.mission.id;
+    let doneWeight = 0;
+    let totalWeight = 0;
+    for (const obj of objectives) totalWeight += obj.weight;
     for (const [id, row] of objectiveRows) {
       // Only drop rows whose objective no longer exists. (Bug fix t-028d:
       // the previous delete() ran unconditionally, emptying the map every
       // frame — every task was re-created and re-appended → the objectives
       // panel accumulated duplicates.)
       if (!objectives.some((o) => o.id === id)) {
-        row.remove()
-        objectiveRows.delete(id)
+        row.remove();
+        objectiveRows.delete(id);
       }
     }
-    let activeSeen = false
+    let activeSeen = false;
     for (const obj of objectives) {
-      if (obj.done) doneWeight += obj.weight
-      let row = objectiveRows.get(obj.id)
+      if (obj.done) doneWeight += obj.weight;
+      let row = objectiveRows.get(obj.id);
       if (row === undefined) {
         row = el('div', { className: 'task-row' }, [
           el('span', { className: 'task-mark' }),
           el('span', { className: 'task-text' }),
-        ])
-        objectiveRows.set(obj.id, row)
-        taskList.append(row)
+        ]);
+        objectiveRows.set(obj.id, row);
+        taskList.append(row);
       }
-      const mark = row.firstChild as HTMLElement
-      const text = row.lastChild as HTMLElement
-      const key = `mission.${missionId}.obj.${obj.id}`
-      const localized = tt(key)
-      setText(text, localized !== key ? localized : obj.desc)
+      const mark = row.firstChild as HTMLElement;
+      const text = row.lastChild as HTMLElement;
+      const key = `mission.${missionId}.obj.${obj.id}`;
+      const localized = tt(key);
+      setText(text, localized !== key ? localized : obj.desc);
       if (obj.done) {
-        row.className = 'task-row done'
-        mark.textContent = '✓'
+        row.className = 'task-row done';
+        mark.textContent = '✓';
       } else if (!activeSeen) {
-        activeSeen = true
-        row.className = 'task-row active'
-        mark.textContent = '●'
+        activeSeen = true;
+        row.className = 'task-row active';
+        mark.textContent = '●';
       } else {
-        row.className = 'task-row pending'
-        mark.textContent = ''
+        row.className = 'task-row pending';
+        mark.textContent = '';
       }
     }
-    taskProgressFill.style.width = `${totalWeight > 0 ? (doneWeight / totalWeight) * 100 : 0}%`
+    taskProgressFill.style.width = `${totalWeight > 0 ? (doneWeight / totalWeight) * 100 : 0}%`;
 
     // --- torpedo tubes (G) ---
-    const tubesDef = sub.torpedoTubes
+    const tubesDef = sub.torpedoTubes;
     if (tubeEls.length !== tubesDef.length) {
-      tubesRow.textContent = ''
-      tubeEls.length = 0
+      tubesRow.textContent = '';
+      tubeEls.length = 0;
       for (const tube of tubesDef) {
-        const t = el('span', {
-          className: 'tube-chip',
-          title: `${tube.id} — ${tube.state}`,
-          attrs: { 'aria-label': tube.id },
-        }, [el('span', { className: 'tube-dot' }), el('span', { className: 'mono', text: tube.id })])
-        tubeEls.push(t)
-        tubesRow.append(t)
+        const t = el(
+          'span',
+          {
+            className: 'tube-chip',
+            title: `${tube.id} — ${tube.state}`,
+            attrs: { 'aria-label': tube.id },
+          },
+          [el('span', { className: 'tube-dot' }), el('span', { className: 'mono', text: tube.id })],
+        );
+        tubeEls.push(t);
+        tubesRow.append(t);
       }
     }
     for (let i = 0; i < tubesDef.length; i++) {
-      const tube = tubesDef[i]!
-      const t = tubeEls[i]
-      if (t === undefined) continue
-      t.className = 'tube-chip'
-      toggleClass(t, 'loaded', tube.state === 'LOADED')
-      toggleClass(t, 'ready', tube.state === 'READY')
-      toggleClass(t, 'fired', tube.state === 'FIRED' || tube.state === 'RUNNING' || tube.state === 'HIT' || tube.state === 'MISSED' || tube.state === 'EXPIRED')
+      const tube = tubesDef[i]!;
+      const t = tubeEls[i];
+      if (t === undefined) continue;
+      t.className = 'tube-chip';
+      toggleClass(t, 'loaded', tube.state === 'LOADED');
+      toggleClass(t, 'ready', tube.state === 'READY');
+      toggleClass(
+        t,
+        'fired',
+        tube.state === 'FIRED' ||
+          tube.state === 'RUNNING' ||
+          tube.state === 'HIT' ||
+          tube.state === 'MISSED' ||
+          tube.state === 'EXPIRED',
+      );
     }
 
     // --- contacts (I) ---
-    const seen = new Set<string>()
+    const seen = new Set<string>();
     for (const c of snapshot.contacts) {
-      seen.add(c.id)
-      let row = contactRows.get(c.id)
+      seen.add(c.id);
+      let row = contactRows.get(c.id);
       if (row === undefined) {
         row = el('button', {
           className: 'contact-row',
           onclick: () => selectContact(c.id === selectedContactId ? null : c.id),
-        })
-        contactRows.set(c.id, row)
-        contactList.append(row)
+        });
+        contactRows.set(c.id, row);
+        contactList.append(row);
       }
-      renderContactRow(row, c, now, lang, tt)
-      toggleClass(row, 'selected', c.id === selectedContactId)
+      renderContactRow(row, c, now, lang, tt);
+      toggleClass(row, 'selected', c.id === selectedContactId);
     }
     for (const [id, row] of contactRows) {
       if (!seen.has(id)) {
-        row.remove()
-        contactRows.delete(id)
-        if (id === selectedContactId) selectContact(null)
+        row.remove();
+        contactRows.delete(id);
+        if (id === selectedContactId) selectContact(null);
       }
     }
     // Empty state: split the localized key on ' — ' into title + hint line.
-    const emptyText = tt('hud.contacts.empty')
-    const sep = emptyText.indexOf(' — ')
-    contactsEmpty.style.display = snapshot.contacts.length === 0 ? '' : 'none'
+    const emptyText = tt('hud.contacts.empty');
+    const sep = emptyText.indexOf(' — ');
+    contactsEmpty.style.display = snapshot.contacts.length === 0 ? '' : 'none';
     if (sep >= 0) {
-      setText(emptyTitle, emptyText.slice(0, sep))
-      setText(emptyHint, emptyText.slice(sep + 3))
+      setText(emptyTitle, emptyText.slice(0, sep));
+      setText(emptyHint, emptyText.slice(sep + 3));
     } else {
-      setText(emptyTitle, emptyText)
-      setText(emptyHint, '')
+      setText(emptyTitle, emptyText);
+      setText(emptyHint, '');
     }
 
     // --- fire control card (I) ---
-    const sel = snapshot.contacts.find((c) => c.id === selectedContactId)
+    const sel = snapshot.contacts.find((c) => c.id === selectedContactId);
     if (sel === undefined) {
-      if (selectedContactId !== null) selectContact(null)
-      fireCard.classList.add('placeholder')
-      setText(fcTarget, '—')
-      for (const cell of [fcBearing, fcRange, fcHdg, fcSpd, fcFiring, fcHp, fcSalvo]) setText(cell, '--')
-      fcEstimated.style.display = 'none'
+      if (selectedContactId !== null) selectContact(null);
+      fireCard.classList.add('placeholder');
+      setText(fcTarget, '—');
+      for (const cell of [fcBearing, fcRange, fcHdg, fcSpd, fcFiring, fcHp, fcSalvo])
+        setText(cell, '--');
+      fcEstimated.style.display = 'none';
     } else {
-      fireCard.classList.remove('placeholder')
-      const sol = solveFireSolution(sel, sub, bal)
-      const parts = formatFireSolution(sol, sel, lang)
-      setText(fcTarget, parts.target)
-      setText(fcBearing, parts.bearing)
-      setText(fcRange, parts.range)
-      setText(fcHdg, parts.targetHeading)
-      setText(fcSpd, parts.targetSpeed)
-      setText(fcFiring, parts.firingBearing)
-      setText(fcHp, parts.hitProbability)
-      setText(fcSalvo, parts.salvoProbability)
-      fcEstimated.style.display = parts.estimated ? '' : 'none'
+      fireCard.classList.remove('placeholder');
+      const sol = solveFireSolution(sel, sub, bal);
+      const parts = formatFireSolution(sol, sel, lang);
+      setText(fcTarget, parts.target);
+      setText(fcBearing, parts.bearing);
+      setText(fcRange, parts.range);
+      setText(fcHdg, parts.targetHeading);
+      setText(fcSpd, parts.targetSpeed);
+      setText(fcFiring, parts.firingBearing);
+      setText(fcHp, parts.hitProbability);
+      setText(fcSalvo, parts.salvoProbability);
+      fcEstimated.style.display = parts.estimated ? '' : 'none';
     }
 
     // --- periscope (t-026) -----------------------------------------------------------
-    lastWallT = extras.wallT
-    const ps = snapshot.periscope
-    const pst = ps?.state ?? 'SUBMERGED'
-    const pExposure = ps?.exposure ?? 0
-    const pBand = ps?.exposureBand ?? 'NONE'
+    lastWallT = extras.wallT;
+    const ps = snapshot.periscope;
+    const pst = ps?.state ?? 'SUBMERGED';
+    const pExposure = ps?.exposure ?? 0;
+    const pBand = ps?.exposureBand ?? 'NONE';
 
     // Status-card row: state chip (colored) + exposure bar (band color).
-    setText(pScopeChip, tt(`periscope.state.${pst}`))
-    pScopeChip.className = `pc-mini-chip ${pcStateClass(pst)}`
-    pExposureFill.style.width = `${Math.min(100, pExposure)}%`
-    pExposureFill.style.background = exposureBandColor(pBand)
-    setText(pExposureValue, `${Math.round(pExposure)}%`)
+    setText(pScopeChip, tt(`periscope.state.${pst}`));
+    pScopeChip.className = `pc-mini-chip ${pcStateClass(pst)}`;
+    pExposureFill.style.width = `${Math.min(100, pExposure)}%`;
+    pExposureFill.style.background = exposureBandColor(pBand);
+    setText(pExposureValue, `${Math.round(pExposure)}%`);
 
     // Control card: status text, progress, reason, buttons.
-    const transitioning = pst === 'SURFACING' || pst === 'RAISING' || pst === 'LOWERING'
-    pcProgress.style.display = transitioning ? '' : 'none'
+    const transitioning = pst === 'SURFACING' || pst === 'RAISING' || pst === 'LOWERING';
+    pcProgress.style.display = transitioning ? '' : 'none';
     if (transitioning) {
-      pcProgressFill.style.width = `${Math.round((ps?.progress ?? 0) * 100)}%`
-      setText(pcProgressPct, `${Math.round((ps?.progress ?? 0) * 100)}%`)
+      pcProgressFill.style.width = `${Math.round((ps?.progress ?? 0) * 100)}%`;
+      setText(pcProgressPct, `${Math.round((ps?.progress ?? 0) * 100)}%`);
     }
-    const cannotRaise = ps !== undefined && !ps.canRaise && ps.cannotRaiseReason !== 'none'
+    const cannotRaise = ps !== undefined && !ps.canRaise && ps.cannotRaiseReason !== 'none';
     if (cannotRaise) {
-      setText(pcStatus, tt('periscope.status.cannotRaise'))
-      setText(pcReason, tt(`periscope.reason.${ps!.cannotRaiseReason}`))
-      pcReason.style.display = ''
+      setText(pcStatus, tt('periscope.status.cannotRaise'));
+      setText(pcReason, tt(`periscope.reason.${ps!.cannotRaiseReason}`));
+      pcReason.style.display = '';
     } else {
-      pcReason.style.display = 'none'
-      if (pst === 'SUBMERGED') setText(pcStatus, tt('periscope.status.ready'))
-      else if (pst === 'SURFACING' || pst === 'RAISING') setText(pcStatus, tt('periscope.status.raising'))
-      else if (pst === 'LOWERING') setText(pcStatus, tt(`periscope.state.${pst}`))
-      else setText(pcStatus, tt('periscope.status.raised'))
+      pcReason.style.display = 'none';
+      if (pst === 'SUBMERGED') setText(pcStatus, tt('periscope.status.ready'));
+      else if (pst === 'SURFACING' || pst === 'RAISING')
+        setText(pcStatus, tt('periscope.status.raising'));
+      else if (pst === 'LOWERING') setText(pcStatus, tt(`periscope.state.${pst}`));
+      else setText(pcStatus, tt('periscope.status.raised'));
     }
-    const raised = pst === 'RAISED' || pst === 'OBSERVING'
-    raiseBtn.style.display = pst === 'SUBMERGED' || pst === 'SURFACING' ? '' : 'none'
-    raiseBtn.disabled = !(ps?.canRaise ?? true)
-    raiseBtn.title = cannotRaise ? tt(`periscope.reason.${ps!.cannotRaiseReason}`) : ''
-    lockBtn.style.display = raised ? '' : 'none'
-    lowerBtn.style.display = raised ? '' : 'none'
-    diveBtn.style.display = raised ? '' : 'none'
-    const locked = ps?.lockedContactId !== null && ps?.lockedContactId !== undefined
-    lockBtn.disabled = ps?.observingContactId === null || ps?.observingContactId === undefined || locked
-    const lockLabel = locked ? tt('periscope.btn.locked') : tt('periscope.btn.lock')
-    setText(lockBtn, lockLabel)
-    setText(pvLockBtn, lockLabel)
+    const raised = pst === 'RAISED' || pst === 'OBSERVING';
+    raiseBtn.style.display = pst === 'SUBMERGED' || pst === 'SURFACING' ? '' : 'none';
+    raiseBtn.disabled = !(ps?.canRaise ?? true);
+    raiseBtn.title = cannotRaise ? tt(`periscope.reason.${ps!.cannotRaiseReason}`) : '';
+    lockBtn.style.display = raised ? '' : 'none';
+    lowerBtn.style.display = raised ? '' : 'none';
+    diveBtn.style.display = raised ? '' : 'none';
+    const locked = ps?.lockedContactId !== null && ps?.lockedContactId !== undefined;
+    lockBtn.disabled =
+      ps?.observingContactId === null || ps?.observingContactId === undefined || locked;
+    const lockLabel = locked ? tt('periscope.btn.locked') : tt('periscope.btn.lock');
+    setText(lockBtn, lockLabel);
+    setText(pvLockBtn, lockLabel);
 
     // Periscope VIEW overlay.
-    periscopeView.style.display = raised ? '' : 'none'
+    periscopeView.style.display = raised ? '' : 'none';
     if (raised && ps !== undefined) {
-      setText(pvBearing, `VIEW ${String(Math.round(ps.viewBearingDeg) % 360).padStart(3, '0')}°`)
-      setText(pvRaisedTime, tt('periscope.raisedTime', { t: formatTime(ps.raisedDurationS) }))
-      pvExposureFill.style.width = `${Math.min(100, pExposure)}%`
-      pvExposureFill.style.background = exposureBandColor(pBand)
-      setText(pvExposureValue, `${Math.round(pExposure)}%`)
+      setText(pvBearing, `VIEW ${String(Math.round(ps.viewBearingDeg) % 360).padStart(3, '0')}°`);
+      setText(pvRaisedTime, tt('periscope.raisedTime', { t: formatTime(ps.raisedDurationS) }));
+      pvExposureFill.style.width = `${Math.min(100, pExposure)}%`;
+      pvExposureFill.style.background = exposureBandColor(pBand);
+      setText(pvExposureValue, `${Math.round(pExposure)}%`);
 
       // --- periscope scene (t-028b): ships on the horizon ---
-      pvWeather.className = `pv-weather pv-w-${String(extras.weather ?? 'Clear').toLowerCase().replace('->', '-').split('-')[0]!.replace('+', '-')}`
-      const viewBearing = ps.viewBearingDeg ?? sub.headingDeg
-      const seenShips = new Set<string>()
+      pvWeather.className = `pv-weather pv-w-${String(extras.weather ?? 'Clear')
+        .toLowerCase()
+        .replace('->', '-')
+        .split('-')[0]!
+        .replace('+', '-')}`;
+      const viewBearing = ps.viewBearingDeg ?? sub.headingDeg;
+      const seenShips = new Set<string>();
       for (const c of snapshot.contacts) {
-        if (c.trueShipId === null || c.rangeKm === null || c.state === 'UNKNOWN') continue
-        const ship = snapshot.enemies.find((e) => e.id === c.trueShipId)
-        if (ship === undefined || ship.hull <= 0) continue
-        const placement = periscopePlacement(c.bearingDeg, viewBearing, c.rangeKm)
-        if (placement === null) continue
-        seenShips.add(c.id)
-        let shipEl = shipEls.get(c.id)
+        if (c.trueShipId === null || c.rangeKm === null || c.state === 'UNKNOWN') continue;
+        const ship = snapshot.enemies.find((e) => e.id === c.trueShipId);
+        if (ship === undefined || ship.hull <= 0) continue;
+        const placement = periscopePlacement(c.bearingDeg, viewBearing, c.rangeKm);
+        if (placement === null) continue;
+        seenShips.add(c.id);
+        let shipEl = shipEls.get(c.id);
         if (shipEl === undefined) {
-          shipEl = el('div', { className: 'pv-ship' })
-          shipEls.set(c.id, shipEl)
-          pvShips.append(shipEl)
+          shipEl = el('div', { className: 'pv-ship' });
+          shipEls.set(c.id, shipEl);
+          pvShips.append(shipEl);
         }
-        shipEl.style.left = `${placement.xPct}%`
-        shipEl.style.width = `${Math.round(72 * placement.scale)}px`
-        shipEl.className = 'pv-ship' + (c.id === ps.observingContactId ? ' observed' : '')
-        shipEl.textContent = ''
-        shipEl.append(shipSilhouetteEl(ship.shipClass))
+        shipEl.style.left = `${placement.xPct}%`;
+        shipEl.style.width = `${Math.round(72 * placement.scale)}px`;
+        shipEl.className = 'pv-ship' + (c.id === ps.observingContactId ? ' observed' : '');
+        shipEl.textContent = '';
+        shipEl.append(shipSilhouetteEl(ship.shipClass));
       }
       for (const [id, shipEl] of shipEls) {
         if (!seenShips.has(id)) {
-          shipEl.remove()
-          shipEls.delete(id)
+          shipEl.remove();
+          shipEls.delete(id);
         }
       }
-      const obs = ps.observingContactId === null ? undefined : snapshot.contacts.find((c) => c.id === ps.observingContactId)
+      const obs =
+        ps.observingContactId === null
+          ? undefined
+          : snapshot.contacts.find((c) => c.id === ps.observingContactId);
       if (obs === undefined) {
-        setText(pvTargetType, tt('class.Unknown'))
-        setText(pvBearingVal, '--')
-        setText(pvRangeVal, '--')
-        setText(pvSpeedVal, '--')
-        setText(pvCourseVal, '--')
-        setText(pvClassVal, '--')
-        setText(pvConfVal, '--')
-        pvStatusChip.style.display = 'none'
+        setText(pvTargetType, tt('class.Unknown'));
+        setText(pvBearingVal, '--');
+        setText(pvRangeVal, '--');
+        setText(pvSpeedVal, '--');
+        setText(pvCourseVal, '--');
+        setText(pvClassVal, '--');
+        setText(pvConfVal, '--');
+        pvStatusChip.style.display = 'none';
       } else {
-        const cls = tt(`class.${obs.classification}`)
-        setText(pvTargetType, cls)
-        setText(pvBearingVal, `${String(Math.round(obs.bearingDeg) % 360).padStart(3, '0')}°`)
-        setText(pvRangeVal, obs.rangeKm === null ? '--' : `${obs.rangeKm.toFixed(2)}KM`)
-        setText(pvSpeedVal, obs.speedEstimateKt === null ? '--' : `${Math.round(obs.speedEstimateKt)}KT`)
-        setText(pvCourseVal, obs.headingEstimateDeg === null ? '--' : `${String(Math.round(obs.headingEstimateDeg) % 360).padStart(3, '0')}°`)
-        setText(pvClassVal, `${cls} · ${Math.round(obs.confidence)}%`)
-        setText(pvConfVal, `${Math.round(obs.confidence)}%`)
-        pvStatusChip.style.display = ''
+        const cls = tt(`class.${obs.classification}`);
+        setText(pvTargetType, cls);
+        setText(pvBearingVal, `${String(Math.round(obs.bearingDeg) % 360).padStart(3, '0')}°`);
+        setText(pvRangeVal, obs.rangeKm === null ? '--' : `${obs.rangeKm.toFixed(2)}KM`);
+        setText(
+          pvSpeedVal,
+          obs.speedEstimateKt === null ? '--' : `${Math.round(obs.speedEstimateKt)}KT`,
+        );
+        setText(
+          pvCourseVal,
+          obs.headingEstimateDeg === null
+            ? '--'
+            : `${String(Math.round(obs.headingEstimateDeg) % 360).padStart(3, '0')}°`,
+        );
+        setText(pvClassVal, `${cls} · ${Math.round(obs.confidence)}%`);
+        setText(pvConfVal, `${Math.round(obs.confidence)}%`);
+        pvStatusChip.style.display = '';
         if (obs.visuallyConfirmed) {
-          setText(pvStatusChip, tt('fc.status.visualConfirmed'))
-          pvStatusChip.className = 'status-chip is-success'
+          setText(pvStatusChip, tt('fc.status.visualConfirmed'));
+          pvStatusChip.className = 'status-chip is-success';
         } else {
-          setText(pvStatusChip, tt('fc.status.estimated'))
-          pvStatusChip.className = 'status-chip is-info'
+          setText(pvStatusChip, tt('fc.status.estimated'));
+          pvStatusChip.className = 'status-chip is-info';
         }
       }
-      pvLockBtn.disabled = ps.observingContactId === null || locked
+      pvLockBtn.disabled = ps.observingContactId === null || locked;
     }
 
     // Fire-warning banner timing (6 s from showFireWarning()).
     if (fireWarningUntil !== null && extras.wallT >= fireWarningUntil) {
-      fireWarningUntil = null
-      fireWarn.style.display = 'none'
+      fireWarningUntil = null;
+      fireWarn.style.display = 'none';
     }
   }
 
   function appendLog(entry: EventEntry): void {
-    if (entry.id <= lastLogEntryId) return
-    lastLogEntryId = entry.id
-    const line = formatEvent(entry, lang)
-    if (line === null) return
-    logEntries.push(entry)
-    if (logEntries.length > LOG_CAPACITY) logEntries.shift()
+    if (entry.id <= lastLogEntryId) return;
+    lastLogEntryId = entry.id;
+    const line = formatEvent(entry, lang);
+    if (line === null) return;
+    logEntries.push(entry);
+    if (logEntries.length > LOG_CAPACITY) logEntries.shift();
     // Phase divider groups the timeline by mission phase.
-    const phase = eventPhase(entry.type)
+    const phase = eventPhase(entry.type);
     if (phase !== lastPhase) {
-      lastPhase = phase
-      timelineBody.append(el('div', { className: 'tl-phase', text: phase }))
+      lastPhase = phase;
+      timelineBody.append(el('div', { className: 'tl-phase', text: phase }));
     }
     const row = el('div', { className: 'tl-row' }, [
       el('span', { className: `tl-dot ${eventSeverityFor(entry)}` }),
       el('span', { className: 'tl-time', text: formatTime(entry.simTime) }),
       el('span', { className: 'tl-text', text: line }),
-    ])
-    timelineBody.append(row)
+    ]);
+    timelineBody.append(row);
     while (timelineBody.childElementCount > LOG_CAPACITY + 8) {
-      timelineBody.removeChild(timelineBody.firstChild as Node)
+      timelineBody.removeChild(timelineBody.firstChild as Node);
     }
-    timelineBody.scrollTop = timelineBody.scrollHeight
+    timelineBody.scrollTop = timelineBody.scrollHeight;
   }
 
   function reset(): void {
-    selectedContactId = null
-    lastLogEntryId = 0
-    lastPhase = ''
-    logEntries.length = 0
-    timelineBody.textContent = ''
-    contactRows.clear()
-    contactList.textContent = ''
-    objectiveRows.clear()
-    taskList.textContent = ''
-    tubeEls.length = 0
-    tubesRow.textContent = ''
-    fireCard.classList.add('placeholder')
-    periscopeView.style.display = 'none'
-    fireWarningUntil = null
-    fireWarn.style.display = 'none'
-    setSalvo(1)
+    selectedContactId = null;
+    lastLogEntryId = 0;
+    lastPhase = '';
+    logEntries.length = 0;
+    timelineBody.textContent = '';
+    contactRows.clear();
+    contactList.textContent = '';
+    objectiveRows.clear();
+    taskList.textContent = '';
+    tubeEls.length = 0;
+    tubesRow.textContent = '';
+    fireCard.classList.add('placeholder');
+    periscopeView.style.display = 'none';
+    fireWarningUntil = null;
+    fireWarn.style.display = 'none';
+    setSalvo(1);
   }
 
   /** t-026: show the post-fire exposure warning banner (~6 s wall time). */
   function showFireWarning(): void {
-    fireWarningUntil = lastWallT + 6
-    setText(fireWarnText, `${tt('periscope.warn.torpedoFired')} — ${tt('periscope.warn.detected')}`)
-    fireWarn.style.display = ''
+    fireWarningUntil = lastWallT + 6;
+    setText(
+      fireWarnText,
+      `${tt('periscope.warn.torpedoFired')} — ${tt('periscope.warn.detected')}`,
+    );
+    fireWarn.style.display = '';
   }
 
   function setLanguage(next: Lang): void {
-    lang = next
-    tt = getT(lang)
+    lang = next;
+    tt = getT(lang);
     for (const [node, key] of labelRegistry) {
-      setText(node, tt(key))
+      setText(node, tt(key));
     }
     // Language chip label (own-language) + settings button.
-    const info = LANGS.find((l) => l.code === lang)
-    if (info !== undefined) setText(langChip, info.label)
+    const info = LANGS.find((l) => l.code === lang);
+    if (info !== undefined) setText(langChip, info.label);
     // Re-compose dynamic text that mixes two keys.
     if (fireWarn.style.display !== 'none') {
-      setText(fireWarnText, `${tt('periscope.warn.torpedoFired')} — ${tt('periscope.warn.detected')}`)
+      setText(
+        fireWarnText,
+        `${tt('periscope.warn.torpedoFired')} — ${tt('periscope.warn.detected')}`,
+      );
     }
-    setText(lockBtn, tt('periscope.btn.lock'))
-    setText(pvLockBtn, tt('periscope.btn.lock'))
+    setText(lockBtn, tt('periscope.btn.lock'));
+    setText(pvLockBtn, tt('periscope.btn.lock'));
   }
 
   // Initial language chip label.
-  const info = LANGS.find((l) => l.code === lang)
-  if (info !== undefined) setText(langChip, info.label)
+  const info = LANGS.find((l) => l.code === lang);
+  if (info !== undefined) setText(langChip, info.label);
 
-  return { update, appendLog, reset, setLanguage, showFireWarning, root }
+  return { update, appendLog, reset, setLanguage, showFireWarning, root };
 }
 
 // ---------------------------------------------------------------------------
@@ -1217,20 +1286,20 @@ function pcStateClass(state: string): string {
   switch (state) {
     case 'RAISED':
     case 'OBSERVING':
-      return 'pc-up'
+      return 'pc-up';
     case 'RAISING':
     case 'SURFACING':
-      return 'pc-raising'
+      return 'pc-raising';
     case 'LOWERING':
-      return 'pc-lowering'
+      return 'pc-lowering';
     default:
-      return 'pc-down'
+      return 'pc-down';
   }
 }
 
 /** Compass wrap to [-180, 180). */
 function wrapDeg(d: number): number {
-  return ((d + 540) % 360) - 180
+  return ((d + 540) % 360) - 180;
 }
 
 /**
@@ -1246,12 +1315,12 @@ export function periscopePlacement(
   viewBearingDeg: number,
   rangeKm: number,
 ): { xPct: number; scale: number } | null {
-  const delta = wrapDeg(bearingDeg - viewBearingDeg)
-  const fovHalf = 22
-  if (Math.abs(delta) > fovHalf + 6) return null
-  const xPct = Math.max(6, Math.min(94, 50 + (delta / fovHalf) * 44))
-  const scale = Math.max(0.5, Math.min(2.5, 3 / Math.max(0.5, rangeKm)))
-  return { xPct, scale }
+  const delta = wrapDeg(bearingDeg - viewBearingDeg);
+  const fovHalf = 22;
+  if (Math.abs(delta) > fovHalf + 6) return null;
+  const xPct = Math.max(6, Math.min(94, 50 + (delta / fovHalf) * 44));
+  const scale = Math.max(0.5, Math.min(2.5, 3 / Math.max(0.5, rangeKm)));
+  return { xPct, scale };
 }
 
 /** Per-class ship silhouette (side view) as SVG shapes. */
@@ -1274,21 +1343,36 @@ const SHIP_SILHOUETTES: Record<string, [string, Record<string, number | string>]
     ['rect', { x: '168', y: '37', width: '9', height: '11' }],
   ],
   Tanker: [
-    ['path', { d: 'M14 68 h212 v-12 q0 -8 -12 -8 h-38 l-8 -10 h-104 q-10 0 -10 8 v-2 h-28 q-12 0 -12 8 z' }],
+    [
+      'path',
+      {
+        d: 'M14 68 h212 v-12 q0 -8 -12 -8 h-38 l-8 -10 h-104 q-10 0 -10 8 v-2 h-28 q-12 0 -12 8 z',
+      },
+    ],
     ['rect', { x: '158', y: '46', width: '24', height: '12' }],
     ['rect', { x: '174', y: '41', width: '9', height: '8' }],
     ['rect', { x: '96', y: '36', width: '3', height: '32' }],
     ['rect', { x: '122', y: '36', width: '3', height: '32' }],
   ],
   Destroyer: [
-    ['path', { d: 'M8 68 h224 l-8 -18 q-10 -6 -22 -4 l-4 -6 h-24 l6 10 q-64 -10 -118 -6 l-46 4 q-12 2 -12 10 z' }],
+    [
+      'path',
+      {
+        d: 'M8 68 h224 l-8 -18 q-10 -6 -22 -4 l-4 -6 h-24 l6 10 q-64 -10 -118 -6 l-46 4 q-12 2 -12 10 z',
+      },
+    ],
     ['rect', { x: '58', y: '40', width: '18', height: '8' }],
     ['rect', { x: '64', y: '35', width: '5', height: '7' }],
     ['rect', { x: '118', y: '37', width: '11', height: '17' }],
     ['rect', { x: '178', y: '44', width: '15', height: '6' }],
   ],
   Frigate: [
-    ['path', { d: 'M14 68 h212 l-6 -14 q-8 -4 -18 -2 l-2 -4 h-20 l4 6 q-50 -8 -96 -6 l-60 4 q-12 2 -14 8 z' }],
+    [
+      'path',
+      {
+        d: 'M14 68 h212 l-6 -14 q-8 -4 -18 -2 l-2 -4 h-20 l4 6 q-50 -8 -96 -6 l-60 4 q-12 2 -14 8 z',
+      },
+    ],
     ['rect', { x: '50', y: '44', width: '13', height: '6' }],
     ['rect', { x: '102', y: '39', width: '10', height: '15' }],
     ['rect', { x: '140', y: '36', width: '3', height: '30' }],
@@ -1297,7 +1381,7 @@ const SHIP_SILHOUETTES: Record<string, [string, Record<string, number | string>]
     ['path', { d: 'M10 68 h220 v-10 q0 -6 -10 -6 h-200 q-10 0 -10 6 z' }],
     ['rect', { x: '104', y: '48', width: '32', height: '14' }],
   ],
-}
+};
 
 /** t-028c: in-HUD controls & key reference (below the fire control card). */
 export const CONTROL_BINDINGS: readonly { key: string; labelKey: string }[] = [
@@ -1313,22 +1397,22 @@ export const CONTROL_BINDINGS: readonly { key: string; labelKey: string }[] = [
   { key: 'X', labelKey: 'hud.controls.dive' },
   { key: 'ESC', labelKey: 'hud.controls.pause' },
   { key: 'F12', labelKey: 'hud.controls.screenshot' },
-]
+];
 
 /** Build a per-class silhouette as an inline SVG element (Node-safe: only
  *  called from the DOM update path). */
 function shipSilhouetteEl(cls: string): HTMLElement {
-  const ns = 'http://www.w3.org/2000/svg'
-  const svg = document.createElementNS(ns, 'svg')
-  svg.setAttribute('viewBox', '0 0 240 80')
-  svg.setAttribute('preserveAspectRatio', 'xMidYMax meet')
-  const shapes = SHIP_SILHOUETTES[cls] ?? SHIP_SILHOUETTES['Merchant']!
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', '0 0 240 80');
+  svg.setAttribute('preserveAspectRatio', 'xMidYMax meet');
+  const shapes = SHIP_SILHOUETTES[cls] ?? SHIP_SILHOUETTES['Merchant']!;
   for (const [tag, attrs] of shapes) {
-    const node = document.createElementNS(ns, tag)
-    for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, String(v))
-    svg.append(node)
+    const node = document.createElementNS(ns, tag);
+    for (const [k, v] of Object.entries(attrs)) node.setAttribute(k, String(v));
+    svg.append(node);
   }
-  return svg as unknown as HTMLElement
+  return svg as unknown as HTMLElement;
 }
 
 /**
@@ -1343,34 +1427,41 @@ export function pingStatus(
   sub: { pingCooldown: number; lowBattery: boolean },
   balance: BalanceConfig,
 ): { state: 'ready' | 'cooldown' | 'unavailable'; seconds: number; fraction: number } {
-  if (sub.lowBattery) return { state: 'unavailable', seconds: 0, fraction: 1 }
-  const cd = Math.max(0, sub.pingCooldown)
+  if (sub.lowBattery) return { state: 'unavailable', seconds: 0, fraction: 1 };
+  const cd = Math.max(0, sub.pingCooldown);
   if (cd > 0) {
-    const total = balance.sonar.active.cooldownSeconds
-    return { state: 'cooldown', seconds: cd, fraction: Math.max(0, Math.min(1, 1 - cd / total)) }
+    const total = balance.sonar.active.cooldownSeconds;
+    return { state: 'cooldown', seconds: cd, fraction: Math.max(0, Math.min(1, 1 - cd / total)) };
   }
-  return { state: 'ready', seconds: 0, fraction: 1 }
+  return { state: 'ready', seconds: 0, fraction: 1 };
 }
 
-function setBar(bar: { fill: HTMLElement; row: HTMLElement }, value: number, semantic: 'success' | 'info' | 'warning' | 'error'): void {
-  bar.fill.style.width = `${Math.min(100, Math.max(0, value))}%`
-  bar.fill.className = `bar-fill ${semantic}`
+function setBar(
+  bar: { fill: HTMLElement; row: HTMLElement },
+  value: number,
+  semantic: 'success' | 'info' | 'warning' | 'error',
+): void {
+  bar.fill.style.width = `${Math.min(100, Math.max(0, value))}%`;
+  bar.fill.className = `bar-fill ${semantic}`;
 }
 
 function fcRow(tt: Translator, key: string, value: HTMLElement, wide = ''): HTMLElement {
-  const className = wide !== '' ? `fc-row ${wide}` : 'fc-row'
-  return el('div', { className }, [
-    el('span', { className: 'fc-label', text: tt(key) }),
-    value,
-  ])
+  const className = wide !== '' ? `fc-row ${wide}` : 'fc-row';
+  return el('div', { className }, [el('span', { className: 'fc-label', text: tt(key) }), value]);
 }
 
 function salvoButton(n: '1' | '2', active: boolean): HTMLElement {
-  return el('button', { className: `salvo-btn${active ? ' active' : ''}`, text: n })
+  return el('button', { className: `salvo-btn${active ? ' active' : ''}`, text: n });
 }
 
 /** Render one contact row (primary: type+range; secondary: bearing/conf/seen). */
-function renderContactRow(row: HTMLElement, c: Contact, now: number, lang: Lang, tt: Translator): void {
+function renderContactRow(
+  row: HTMLElement,
+  c: Contact,
+  now: number,
+  lang: Lang,
+  tt: Translator,
+): void {
   if (row.childElementCount === 0) {
     row.append(
       el('div', { className: 'contact-primary' }, [
@@ -1383,21 +1474,31 @@ function renderContactRow(row: HTMLElement, c: Contact, now: number, lang: Lang,
         el('span', { className: 'mono' }),
         el('span', { className: 'mono' }),
       ]),
-    )
+    );
   }
-  const primary = row.children[0] as HTMLElement
-  const meta = row.children[1] as HTMLElement
-  const typeEl = primary.children[0] as HTMLElement
-  const idEl = primary.children[1] as HTMLElement
-  const rangeEl = primary.children[2] as HTMLElement
-  const bearingEl = meta.children[0] as HTMLElement
-  const confEl = meta.children[1] as HTMLElement
-  const seenEl = meta.children[2] as HTMLElement
+  const primary = row.children[0] as HTMLElement;
+  const meta = row.children[1] as HTMLElement;
+  const typeEl = primary.children[0] as HTMLElement;
+  const idEl = primary.children[1] as HTMLElement;
+  const rangeEl = primary.children[2] as HTMLElement;
+  const bearingEl = meta.children[0] as HTMLElement;
+  const confEl = meta.children[1] as HTMLElement;
+  const seenEl = meta.children[2] as HTMLElement;
 
-  setText(typeEl, tt(`class.${c.classification}`))
-  setText(idEl, c.id)
-  setText(rangeEl, c.rangeKm === null ? '--' : c.rangeKm >= 10 ? `${Math.round(c.rangeKm)}KM` : `${c.rangeKm.toFixed(1)}KM`)
-  setText(bearingEl, `${tt('hud.contact.bearing')} ${String(Math.round(c.bearingDeg) % 360).padStart(3, '0')}°`)
-  setText(confEl, `${tt('hud.contact.confidence')} ${Math.round(c.confidence)}%`)
-  setText(seenEl, `${tt('hud.contact.lastSeen')} ${formatLastSeen(c.lastDetectedAt, now, lang)}`)
+  setText(typeEl, tt(`class.${c.classification}`));
+  setText(idEl, c.id);
+  setText(
+    rangeEl,
+    c.rangeKm === null
+      ? '--'
+      : c.rangeKm >= 10
+        ? `${Math.round(c.rangeKm)}KM`
+        : `${c.rangeKm.toFixed(1)}KM`,
+  );
+  setText(
+    bearingEl,
+    `${tt('hud.contact.bearing')} ${String(Math.round(c.bearingDeg) % 360).padStart(3, '0')}°`,
+  );
+  setText(confEl, `${tt('hud.contact.confidence')} ${Math.round(c.confidence)}%`);
+  setText(seenEl, `${tt('hud.contact.lastSeen')} ${formatLastSeen(c.lastDetectedAt, now, lang)}`);
 }

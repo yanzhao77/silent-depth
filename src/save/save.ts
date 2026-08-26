@@ -37,16 +37,16 @@
  * call sites. Importable in Node for unit tests.
  */
 
-import settingsJson from '../../config/settings.json'
-import type { ScoreGrade, ShipClass } from '../core/types'
-import { isLang, type Lang } from '../ui/i18n'
+import settingsJson from '../../config/settings.json';
+import type { ScoreGrade, ShipClass } from '../core/types';
+import { isLang, type Lang } from '../ui/i18n';
 
 // ---------------------------------------------------------------------------
 // Schema types
 // ---------------------------------------------------------------------------
 
-export const SAVE_VERSION = 1
-export const SAVE_KEY = 'silent-depth:save:v1'
+export const SAVE_VERSION = 1;
+export const SAVE_KEY = 'silent-depth:save:v1';
 
 /** Known ship classes (statistics.shipsSunk whitelist — types.ts union). */
 export const SHIP_CLASSES: readonly ShipClass[] = [
@@ -56,79 +56,79 @@ export const SHIP_CLASSES: readonly ShipClass[] = [
   'Destroyer',
   'Frigate',
   'Submarine',
-]
+];
 
 export interface SaveSettings {
-  audio: { masterVolume: number; musicVolume: number; sfxVolume: number }
-  video: { showFps: boolean; particles: 'normal' | 'low' | 'off'; mapGrid: boolean }
-  input: { sensitivity: number }
+  audio: { masterVolume: number; musicVolume: number; sfxVolume: number };
+  video: { showFps: boolean; particles: 'normal' | 'low' | 'off'; mapGrid: boolean };
+  input: { sensitivity: number };
   /** UI language (t-022 i18n; 'en' default). */
-  app: { language: Lang }
+  app: { language: Lang };
 }
 
 export interface SaveStatistics {
-  missionsCompleted: number
-  torpedoesFired: number
-  torpedoesHit: number
-  peakDetectionSum: number
-  totalPlayTimeS: number
+  missionsCompleted: number;
+  torpedoesFired: number;
+  torpedoesHit: number;
+  peakDetectionSum: number;
+  totalPlayTimeS: number;
   /** Ships sunk by class (statistics aggregation across missions). */
-  shipsSunk: Record<string, number>
+  shipsSunk: Record<string, number>;
 }
 
 export interface SaveData {
-  version: number
-  unlockedMissions: string[]
-  bestScores: Record<string, number>
-  statistics: SaveStatistics
-  settings: SaveSettings
+  version: number;
+  unlockedMissions: string[];
+  bestScores: Record<string, number>;
+  statistics: SaveStatistics;
+  settings: SaveSettings;
 }
 
 /** Storage abstraction — localStorage in the browser, fake in tests. */
 export interface StorageLike {
-  getItem(key: string): string | null
-  setItem(key: string, value: string): void
-  removeItem(key: string): void
+  getItem(key: string): string | null;
+  setItem(key: string, value: string): void;
+  removeItem(key: string): void;
 }
 
 /** Mission result payload for the MISSION_RESULT settlement hook. */
 export interface MissionResult {
-  missionId: string
+  missionId: string;
   /** true = victory (unlocks the next mission). */
-  completed: boolean
-  score: number
-  grade: ScoreGrade
-  torpedoesFired: number
-  torpedoesHit: number
-  peakDetection: number
-  elapsedS: number
-  shipsSunk: Record<string, number>
+  completed: boolean;
+  score: number;
+  grade: ScoreGrade;
+  torpedoesFired: number;
+  torpedoesHit: number;
+  peakDetection: number;
+  elapsedS: number;
+  shipsSunk: Record<string, number>;
 }
 
 // ---------------------------------------------------------------------------
 // Defaults
 // ---------------------------------------------------------------------------
 
-const DEFAULT_SETTINGS_RAW = settingsJson as unknown as SaveSettings
+const DEFAULT_SETTINGS_RAW = settingsJson as unknown as SaveSettings;
 
 /** Clamp helper (NaN → fallback). */
 function clamp(v: unknown, min: number, max: number, fallback: number): number {
-  if (typeof v !== 'number' || !Number.isFinite(v)) return fallback
-  return v < min ? min : v > max ? max : v
+  if (typeof v !== 'number' || !Number.isFinite(v)) return fallback;
+  return v < min ? min : v > max ? max : v;
 }
 
 function bool(v: unknown, fallback: boolean): boolean {
-  return typeof v === 'boolean' ? v : fallback
+  return typeof v === 'boolean' ? v : fallback;
 }
 
 function clampSettings(raw: unknown): SaveSettings {
-  const r = (raw ?? {}) as Record<string, unknown>
-  const audio = (r['audio'] ?? {}) as Record<string, unknown>
-  const video = (r['video'] ?? {}) as Record<string, unknown>
-  const input = (r['input'] ?? {}) as Record<string, unknown>
-  const app = (r['app'] ?? {}) as Record<string, unknown>
-  const particles = video['particles']
-  const lang = app['language']
+  const r = (raw ?? {}) as Record<string, unknown>;
+  const audio = (r['audio'] ?? {}) as Record<string, unknown>;
+  const video = (r['video'] ?? {}) as Record<string, unknown>;
+  const input = (r['input'] ?? {}) as Record<string, unknown>;
+  const app = (r['app'] ?? {}) as Record<string, unknown>;
+  const particles = video['particles'];
+  const lang = app['language'];
   return {
     audio: {
       masterVolume: clamp(audio['masterVolume'], 0, 1, DEFAULT_SETTINGS_RAW.audio.masterVolume),
@@ -150,7 +150,7 @@ function clampSettings(raw: unknown): SaveSettings {
       // t-022: language whitelist — unknown values fall back to the default.
       language: isLang(lang) ? lang : DEFAULT_SETTINGS_RAW.app.language,
     },
-  }
+  };
 }
 
 /**
@@ -170,7 +170,7 @@ export function defaultSave(): SaveData {
       shipsSunk: {},
     },
     settings: clampSettings(undefined),
-  }
+  };
 }
 
 /**
@@ -182,40 +182,39 @@ export function defaultSave(): SaveData {
  * @param knownMissionIds whitelist for unlockedMissions / bestScores keys
  */
 export function validateAndClamp(raw: unknown, knownMissionIds: readonly string[]): SaveData {
-  if (raw === null || typeof raw !== 'object' || Array.isArray(raw)) return defaultSave()
-  const r = raw as Record<string, unknown>
+  if (raw === null || typeof raw !== 'object' || Array.isArray(raw)) return defaultSave();
+  const r = raw as Record<string, unknown>;
 
   // Version gate: only v1 is understood (future versions migrate → for now
   // they reset, per GAME_ARCHITECTURE §9 "version 迁移钩子" placeholder).
-  if (r['version'] !== SAVE_VERSION) return defaultSave()
+  if (r['version'] !== SAVE_VERSION) return defaultSave();
 
-  const idSet = new Set(knownMissionIds)
-  const base = defaultSave()
+  const idSet = new Set(knownMissionIds);
 
   // unlockedMissions — whitelisted, unique, M01 always present.
-  const unlockedRaw = Array.isArray(r['unlockedMissions']) ? r['unlockedMissions'] : []
-  const unlocked: string[] = []
+  const unlockedRaw = Array.isArray(r['unlockedMissions']) ? r['unlockedMissions'] : [];
+  const unlocked: string[] = [];
   for (const id of unlockedRaw) {
-    if (typeof id === 'string' && idSet.has(id) && !unlocked.includes(id)) unlocked.push(id)
+    if (typeof id === 'string' && idSet.has(id) && !unlocked.includes(id)) unlocked.push(id);
   }
-  if (!unlocked.includes('M01')) unlocked.unshift('M01')
+  if (!unlocked.includes('M01')) unlocked.unshift('M01');
 
   // bestScores — string keys (whitelisted), numeric values clamped >= 0.
-  const bestScores: Record<string, number> = {}
-  const bs = r['bestScores']
+  const bestScores: Record<string, number> = {};
+  const bs = r['bestScores'];
   if (bs !== null && typeof bs === 'object' && !Array.isArray(bs)) {
     for (const [id, score] of Object.entries(bs as Record<string, unknown>)) {
-      if (idSet.has(id)) bestScores[id] = clamp(score, 0, 1_000_000, 0)
+      if (idSet.has(id)) bestScores[id] = clamp(score, 0, 1_000_000, 0);
     }
   }
 
   // statistics — clamp all numbers; shipsSunk keyed by known class.
-  const statsRaw = (r['statistics'] ?? {}) as Record<string, unknown>
-  const shipsRaw = (statsRaw['shipsSunk'] ?? {}) as Record<string, unknown>
-  const shipsSunk: Record<string, number> = {}
+  const statsRaw = (r['statistics'] ?? {}) as Record<string, unknown>;
+  const shipsRaw = (statsRaw['shipsSunk'] ?? {}) as Record<string, unknown>;
+  const shipsSunk: Record<string, number> = {};
   for (const cls of SHIP_CLASSES) {
-    const n = shipsRaw[cls]
-    if (typeof n === 'number' && Number.isFinite(n) && n > 0) shipsSunk[cls] = Math.floor(n)
+    const n = shipsRaw[cls];
+    if (typeof n === 'number' && Number.isFinite(n) && n > 0) shipsSunk[cls] = Math.floor(n);
   }
   const statistics: SaveStatistics = {
     missionsCompleted: Math.floor(clamp(statsRaw['missionsCompleted'], 0, 1_000_000, 0)),
@@ -224,7 +223,7 @@ export function validateAndClamp(raw: unknown, knownMissionIds: readonly string[
     peakDetectionSum: Math.floor(clamp(statsRaw['peakDetectionSum'], 0, 1_000_000_000, 0)),
     totalPlayTimeS: Math.floor(clamp(statsRaw['totalPlayTimeS'], 0, 1_000_000_000, 0)),
     shipsSunk,
-  }
+  };
 
   return {
     version: SAVE_VERSION,
@@ -232,7 +231,7 @@ export function validateAndClamp(raw: unknown, knownMissionIds: readonly string[
     bestScores,
     statistics,
     settings: clampSettings(r['settings']),
-  }
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -241,23 +240,23 @@ export function validateAndClamp(raw: unknown, knownMissionIds: readonly string[
 
 export interface SaveStore {
   /** Load + validate the save (corrupt → default). Never throws. */
-  load(): SaveData
+  load(): SaveData;
   /** JSON.stringify + version check, then write. */
-  write(save: SaveData): void
+  write(save: SaveData): void;
   /** Remove the storage key ("清除存档"). */
-  reset(): void
+  reset(): void;
   /** Export as a JSON Blob download (guarded no-op headless). */
-  export(save: SaveData): void
+  export(save: SaveData): void;
   /** Import from a JSON File (FileReader + validation). */
-  import(file: File, onDone: (save: SaveData) => void): void
+  import(file: File, onDone: (save: SaveData) => void): void;
 }
 
-let warnedNoStorage = false
+let warnedNoStorage = false;
 
 function warnNoStorage(): void {
   if (!warnedNoStorage) {
-    warnedNoStorage = true
-    console.warn('[save] No storage backend available (headless / Node) — save is a no-op.')
+    warnedNoStorage = true;
+    console.warn('[save] No storage backend available (headless / Node) — save is a no-op.');
   }
 }
 
@@ -268,44 +267,44 @@ function warnNoStorage(): void {
  * @param key storage key (default SAVE_KEY).
  */
 export function createSaveStore(storage: StorageLike | null, key: string = SAVE_KEY): SaveStore {
-  const hasStorage = storage !== null
+  const hasStorage = storage !== null;
 
   function load(): SaveData {
     if (!hasStorage) {
-      warnNoStorage()
-      return defaultSave()
+      warnNoStorage();
+      return defaultSave();
     }
     try {
-      const rawText = storage.getItem(key)
-      if (rawText === null) return defaultSave()
-      const parsed: unknown = JSON.parse(rawText)
-      return validateAndClamp(parsed, SAVE_KNOWN_MISSION_IDS)
+      const rawText = storage.getItem(key);
+      if (rawText === null) return defaultSave();
+      const parsed: unknown = JSON.parse(rawText);
+      return validateAndClamp(parsed, SAVE_KNOWN_MISSION_IDS);
     } catch {
       // Corrupt JSON / quota errors → default (never crash).
-      return defaultSave()
+      return defaultSave();
     }
   }
 
   function write(save: SaveData): void {
     if (!hasStorage) {
-      warnNoStorage()
-      return
+      warnNoStorage();
+      return;
     }
-    const normalized = validateAndClamp(save, SAVE_KNOWN_MISSION_IDS)
+    const normalized = validateAndClamp(save, SAVE_KNOWN_MISSION_IDS);
     try {
-      storage.setItem(key, JSON.stringify(normalized))
+      storage.setItem(key, JSON.stringify(normalized));
     } catch {
-      console.warn('[save] write failed (quota / private mode) — ignored.')
+      console.warn('[save] write failed (quota / private mode) — ignored.');
     }
   }
 
   function reset(): void {
     if (!hasStorage) {
-      warnNoStorage()
-      return
+      warnNoStorage();
+      return;
     }
     try {
-      storage.removeItem(key)
+      storage.removeItem(key);
     } catch {
       /* ignore */
     }
@@ -318,39 +317,42 @@ export function createSaveStore(storage: StorageLike | null, key: string = SAVE_
       typeof document === 'undefined' ||
       typeof document.createElement !== 'function'
     ) {
-      warnNoStorage()
-      return
+      warnNoStorage();
+      return;
     }
-    const blob = new Blob([JSON.stringify(validateAndClamp(save, SAVE_KNOWN_MISSION_IDS), null, 2)], {
-      type: 'application/json',
-    })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = `${key}.json`
-    a.click()
-    URL.revokeObjectURL(url)
+    const blob = new Blob(
+      [JSON.stringify(validateAndClamp(save, SAVE_KNOWN_MISSION_IDS), null, 2)],
+      {
+        type: 'application/json',
+      },
+    );
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `${key}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
   }
 
   function importSave(file: File, onDone: (save: SaveData) => void): void {
     if (typeof FileReader === 'undefined') {
-      warnNoStorage()
-      return
+      warnNoStorage();
+      return;
     }
-    const reader = new FileReader()
+    const reader = new FileReader();
     reader.onload = () => {
       try {
-        const parsed: unknown = JSON.parse(String(reader.result))
-        onDone(validateAndClamp(parsed, SAVE_KNOWN_MISSION_IDS))
+        const parsed: unknown = JSON.parse(String(reader.result));
+        onDone(validateAndClamp(parsed, SAVE_KNOWN_MISSION_IDS));
       } catch {
-        onDone(defaultSave())
+        onDone(defaultSave());
       }
-    }
-    reader.onerror = () => onDone(defaultSave())
-    reader.readAsText(file)
+    };
+    reader.onerror = () => onDone(defaultSave());
+    reader.readAsText(file);
   }
 
-  return { load, write, reset, export: exportSave, import: importSave }
+  return { load, write, reset, export: exportSave, import: importSave };
 }
 
 /**
@@ -372,31 +374,31 @@ export function updateOnMissionResult(
       shipsSunk: { ...save.statistics.shipsSunk },
     },
     settings: save.settings,
-  }
+  };
 
-  const prevBest = next.bestScores[result.missionId] ?? 0
-  if (result.score > prevBest) next.bestScores[result.missionId] = Math.floor(result.score)
+  const prevBest = next.bestScores[result.missionId] ?? 0;
+  if (result.score > prevBest) next.bestScores[result.missionId] = Math.floor(result.score);
 
   if (result.completed) {
-    const idx = missionIds.indexOf(result.missionId)
+    const idx = missionIds.indexOf(result.missionId);
     if (idx >= 0 && idx < missionIds.length - 1) {
-      const nextId = missionIds[idx + 1]!
-      if (!next.unlockedMissions.includes(nextId)) next.unlockedMissions.push(nextId)
+      const nextId = missionIds[idx + 1]!;
+      if (!next.unlockedMissions.includes(nextId)) next.unlockedMissions.push(nextId);
     }
-    next.statistics.missionsCompleted += 1
+    next.statistics.missionsCompleted += 1;
   }
 
-  next.statistics.torpedoesFired += Math.max(0, Math.floor(result.torpedoesFired))
-  next.statistics.torpedoesHit += Math.max(0, Math.floor(result.torpedoesHit))
-  next.statistics.peakDetectionSum += Math.max(0, Math.floor(result.peakDetection))
-  next.statistics.totalPlayTimeS += Math.max(0, Math.floor(result.elapsedS))
+  next.statistics.torpedoesFired += Math.max(0, Math.floor(result.torpedoesFired));
+  next.statistics.torpedoesHit += Math.max(0, Math.floor(result.torpedoesHit));
+  next.statistics.peakDetectionSum += Math.max(0, Math.floor(result.peakDetection));
+  next.statistics.totalPlayTimeS += Math.max(0, Math.floor(result.elapsedS));
   for (const [cls, n] of Object.entries(result.shipsSunk)) {
     if (typeof n === 'number' && n > 0) {
-      next.statistics.shipsSunk[cls] = (next.statistics.shipsSunk[cls] ?? 0) + Math.floor(n)
+      next.statistics.shipsSunk[cls] = (next.statistics.shipsSunk[cls] ?? 0) + Math.floor(n);
     }
   }
 
-  return next
+  return next;
 }
 
 /**
@@ -405,9 +407,9 @@ export function updateOnMissionResult(
  * lets createSaveStore work before the mission table loads (validation then
  * accepts only ids present in this set — an empty set means only M01 stays).
  */
-let SAVE_KNOWN_MISSION_IDS: readonly string[] = ['M01']
+let SAVE_KNOWN_MISSION_IDS: readonly string[] = ['M01'];
 
 /** Set the mission-id whitelist (called once at boot by the shell). */
 export function setKnownMissionIds(ids: readonly string[]): void {
-  SAVE_KNOWN_MISSION_IDS = ids.length > 0 ? [...ids] : ['M01']
+  SAVE_KNOWN_MISSION_IDS = ids.length > 0 ? [...ids] : ['M01'];
 }

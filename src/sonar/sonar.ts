@@ -30,53 +30,53 @@
  * ctx.forks.sonar (ADR-004); module state = the per-game WeakMap.
  */
 
-import type { SystemContext, SystemFn } from '../core/engine'
-import type { Contact } from '../core/types'
-import { runPassiveListen } from './passive'
-import { runActivePing } from './ping'
-import { applyDecay } from './contacts'
+import type { SystemContext, SystemFn } from '../core/engine';
+import type { Contact } from '../core/types';
+import { runPassiveListen } from './passive';
+import { runActivePing } from './ping';
+import { applyDecay } from './contacts';
 
 /** Per-ship sonar bookkeeping (one entry per enemy ship). */
 export interface SonarShipTrack {
   /** Linked contact id (also in rt.contactsByShip). */
-  contactId: string | null
+  contactId: string | null;
   /** Number of ping hits on this ship. */
-  pingCount: number
+  pingCount: number;
   /** Number of gated passive observations. */
-  passiveObsCount: number
+  passiveObsCount: number;
   /** simTime of the last observation (passive obs or ping hit). */
-  lastObservedAt: number
+  lastObservedAt: number;
   /** simTime of the last gated passive observation (3 s cadence). */
-  lastPassiveObsAt: number
+  lastPassiveObsAt: number;
   /** simTime when continuous passive tracking began (bearing convergence). */
-  passiveTrackStartAt: number
+  passiveTrackStartAt: number;
   /** simTime the decay was last applied (10 s steps past the grace period). */
-  lastDecayAt: number
+  lastDecayAt: number;
   /** Ratcheting classification confidence (0..100). */
-  classifyConfidence: number
+  classifyConfidence: number;
   /** True once classifyConfidence ≥ lockTypeConfidence (type frozen). */
-  typeLocked: boolean
+  typeLocked: boolean;
   /** Latest measured noise signature (0..100). */
-  lastNoise: number
+  lastNoise: number;
 }
 
 /** Per-game sonar state (WeakMap keyed on the live player reference). */
 export interface SonarRuntime {
-  tracks: Map<string, SonarShipTrack>
+  tracks: Map<string, SonarShipTrack>;
   /** shipId → live Contact object (also present in ctx.contacts). */
-  contactsByShip: Map<string, Contact>
+  contactsByShip: Map<string, Contact>;
   /** torpedo id → simTime of the last sonar.passive (torpedo) emission. */
-  torpedoPassiveAt: Map<string, number>
+  torpedoPassiveAt: Map<string, number>;
   /** Explosion event ids already announced via sonar.passive. */
-  handledExplosions: Set<number>
-  nextContactId: number
+  handledExplosions: Set<number>;
+  nextContactId: number;
 }
 
-const sonarRuntimes = new WeakMap<object, SonarRuntime>()
+const sonarRuntimes = new WeakMap<object, SonarRuntime>();
 
 /** Get (or lazily create) the per-game sonar runtime. */
 export function getSonarRuntime(ctx: SystemContext): SonarRuntime {
-  let rt = sonarRuntimes.get(ctx.player)
+  let rt = sonarRuntimes.get(ctx.player);
   if (rt === undefined) {
     rt = {
       tracks: new Map<string, SonarShipTrack>(),
@@ -84,10 +84,10 @@ export function getSonarRuntime(ctx: SystemContext): SonarRuntime {
       torpedoPassiveAt: new Map<string, number>(),
       handledExplosions: new Set<number>(),
       nextContactId: 1,
-    }
-    sonarRuntimes.set(ctx.player, rt)
+    };
+    sonarRuntimes.set(ctx.player, rt);
   }
-  return rt
+  return rt;
 }
 
 /**
@@ -97,19 +97,19 @@ export function getSonarRuntime(ctx: SystemContext): SonarRuntime {
  * stub.
  */
 export const sonarSystem: SystemFn = (ctx): void => {
-  if (ctx.state !== 'MISSION_RUNNING') return
-  const rt = getSonarRuntime(ctx)
+  if (ctx.state !== 'MISSION_RUNNING') return;
+  const rt = getSonarRuntime(ctx);
 
   // Passive first — the zero-risk information source (§5.2).
-  runPassiveListen(ctx, rt)
+  runPassiveListen(ctx, rt);
 
   // Then the active ping (leverage: precise but exposing).
-  if (ctx.pingEdge) runActivePing(ctx, rt)
+  if (ctx.pingEdge) runActivePing(ctx, rt);
 
   // Time-based contact decay / degradation / removal (§5.3).
-  applyDecay(ctx, rt)
+  applyDecay(ctx, rt);
 
   // Cooldown countdown + sonar state publishing.
-  ctx.player.pingCooldown = Math.max(0, ctx.player.pingCooldown - ctx.dt)
-  if (!ctx.pingEdge) ctx.player.sonarState = 'passive'
-}
+  ctx.player.pingCooldown = Math.max(0, ctx.player.pingCooldown - ctx.dt);
+  if (!ctx.pingEdge) ctx.player.sonarState = 'passive';
+};

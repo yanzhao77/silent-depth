@@ -36,19 +36,19 @@
  * Task: t-010 ui-engineer (browser presentation layer).
  */
 
-import './style.css'
-import { createGame, goToMenu, step } from './core/engine'
-import { FIXED_DT, MAX_FRAME_TIME_S, computeFixedSteps } from './core/time'
-import type { EventEntry, GameSnapshot, MissionDef, PlayerInputs, WeatherKind } from './core/types'
-import { loadBalance, type BalanceConfig } from './core/balance'
-import { getMissionDef, listMissionSpecs, MISSION_IDS } from './missions/missions'
-import { createCamera, DEFAULT_ZOOM, MAX_ZOOM, MIN_ZOOM } from './rendering/camera'
-import { createParticleSystem } from './rendering/particles'
-import { activeWeatherAt, createRenderer, type Renderer } from './rendering/renderer'
-import { createHud } from './ui/hud'
-import { createMenus, type MenuSection } from './ui/menus'
-import { createInput } from './ui/input'
-import { detectLanguage, getT, type Lang } from './ui/i18n'
+import './style.css';
+import { createGame, goToMenu, step } from './core/engine';
+import { FIXED_DT, MAX_FRAME_TIME_S, computeFixedSteps } from './core/time';
+import type { EventEntry, GameSnapshot, MissionDef, PlayerInputs, WeatherKind } from './core/types';
+import { loadBalance, type BalanceConfig } from './core/balance';
+import { getMissionDef, listMissionSpecs, MISSION_IDS } from './missions/missions';
+import { createCamera, DEFAULT_ZOOM, MAX_ZOOM, MIN_ZOOM } from './rendering/camera';
+import { createParticleSystem } from './rendering/particles';
+import { activeWeatherAt, createRenderer, type Renderer } from './rendering/renderer';
+import { createHud } from './ui/hud';
+import { createMenus, type MenuSection } from './ui/menus';
+import { createInput } from './ui/input';
+import { detectLanguage, getT, type Lang } from './ui/i18n';
 import {
   createSaveStore,
   setKnownMissionIds,
@@ -57,115 +57,116 @@ import {
   type MissionResult,
   type SaveData,
   type SaveSettings,
-} from './save/save'
-import { createAudio, type AudioEngine } from './audio/audio'
+} from './save/save';
+import { createAudio, type AudioEngine } from './audio/audio';
 
 // ---------------------------------------------------------------------------
 // DOM shell
 // ---------------------------------------------------------------------------
 
-const root = document.getElementById('app')!
-root.textContent = '' // clear the boot stub
+const root = document.getElementById('app')!;
+root.textContent = ''; // clear the boot stub
 
-const canvas = document.createElement('canvas')
-canvas.id = 'game-canvas'
-root.append(canvas)
+const canvas = document.createElement('canvas');
+canvas.id = 'game-canvas';
+root.append(canvas);
 
-const hudRoot = document.createElement('div')
-hudRoot.id = 'hud-root'
-root.append(hudRoot)
+const hudRoot = document.createElement('div');
+hudRoot.id = 'hud-root';
+root.append(hudRoot);
 
-const menuRoot = document.createElement('div')
-menuRoot.id = 'menu-root'
-root.append(menuRoot)
+const menuRoot = document.createElement('div');
+menuRoot.id = 'menu-root';
+root.append(menuRoot);
 
-const gfx = canvas.getContext('2d')
-if (gfx === null) throw new Error('[silent-depth] Canvas 2D context unavailable')
-const ctx2d = gfx
+const gfx = canvas.getContext('2d');
+if (gfx === null) throw new Error('[silent-depth] Canvas 2D context unavailable');
+const ctx2d = gfx;
 
 // ---------------------------------------------------------------------------
 // Persistent shell state
 // ---------------------------------------------------------------------------
 
-const balance: BalanceConfig = loadBalance()
-setKnownMissionIds(MISSION_IDS)
+const balance: BalanceConfig = loadBalance();
+setKnownMissionIds(MISSION_IDS);
 
-const saveStore = createSaveStore(typeof localStorage !== 'undefined' ? localStorage : null)
-let save: SaveData = saveStore.load()
+const saveStore = createSaveStore(typeof localStorage !== 'undefined' ? localStorage : null);
+let save: SaveData = saveStore.load();
 
 // t-022 i18n: initial language from save settings → navigator → 'en'.
 // A first run (no stored save) persists the detected language so returning
 // players keep their choice; otherwise detectLanguage() read the saved one.
-const hadStoredSave = typeof localStorage !== 'undefined' && localStorage.getItem(SAVE_KEY) !== null
-let lang: Lang = detectLanguage()
+const hadStoredSave =
+  typeof localStorage !== 'undefined' && localStorage.getItem(SAVE_KEY) !== null;
+let lang: Lang = detectLanguage();
 if (!hadStoredSave) {
-  save = { ...save, settings: { ...save.settings, app: { ...save.settings.app, language: lang } } }
-  saveStore.write(save)
+  save = { ...save, settings: { ...save.settings, app: { ...save.settings.app, language: lang } } };
+  saveStore.write(save);
 }
 
-let audio: AudioEngine = createAudio({ audio: save.settings.audio })
+const audio: AudioEngine = createAudio({ audio: save.settings.audio });
 
-let handle: ReturnType<typeof createGame> | null = null
-let missionDef: MissionDef | null = null
-let snapshot: GameSnapshot | null = null
-let prevSnapshot: GameSnapshot | null = null
-let renderer: Renderer | null = null
+let handle: ReturnType<typeof createGame> | null = null;
+let missionDef: MissionDef | null = null;
+let snapshot: GameSnapshot | null = null;
+let prevSnapshot: GameSnapshot | null = null;
+let renderer: Renderer | null = null;
 
-let accumulator = 0
-let lastEventId = 0
-let resultSettled = false
-let outcome: 'victory' | 'defeat' | null = null
-let shipsSunkThisRun: Record<string, number> = {}
-let missionId: string | null = null
+let accumulator = 0;
+let lastEventId = 0;
+let resultSettled = false;
+let outcome: 'victory' | 'defeat' | null = null;
+let shipsSunkThisRun: Record<string, number> = {};
+let missionId: string | null = null;
 
-let selectedContactId: string | null = null
-let salvo: 1 | 2 = 1
-let salvoPending = false
-let pausePulse = false
+let selectedContactId: string | null = null;
+let salvo: 1 | 2 = 1;
+let salvoPending = false;
+let pausePulse = false;
 /** t-026 periscope one-tick input edges (raised/lowered, lock, dive). */
-let periscopePulse = false
-let lockPulse = false
-let divePulse = false
-let lastShownState: string | null = null
-let lastWeather: WeatherKind | null = null
+let periscopePulse = false;
+let lockPulse = false;
+let divePulse = false;
+let lastShownState: string | null = null;
+let lastWeather: WeatherKind | null = null;
 /** t-023: Settings opened from the in-mission HUD — BACK returns to the
  *  mission instead of aborting to the main menu. */
-let overlayReturnToMission = false
+let overlayReturnToMission = false;
 
-let followPlayer = true
-let dragging = false
-let dragLast = { x: 0, y: 0 }
+let followPlayer = true;
+let dragging = false;
+let dragLast = { x: 0, y: 0 };
 
-let lastTime = performance.now()
-let wallT = 0
-let fps = 0
-let fpsFrames = 0
-let fpsWindowStart = lastTime
+let lastTime = performance.now();
+let wallT = 0;
+let fps = 0;
+let fpsFrames = 0;
+let fpsWindowStart = lastTime;
 
-const camera = createCamera({ mapSizeKm: balance.world.mapSizeKm })
-const particles = createParticleSystem(512)
+const camera = createCamera({ mapSizeKm: balance.world.mapSizeKm });
+const particles = createParticleSystem(512);
 
 // ---------------------------------------------------------------------------
 // Save / settings helpers
 // ---------------------------------------------------------------------------
 
 function applySettings(): void {
-  audio.setVolume('master', save.settings.audio.masterVolume)
-  audio.setVolume('sfx', save.settings.audio.sfxVolume)
-  audio.setVolume('music', save.settings.audio.musicVolume)
+  audio.setVolume('master', save.settings.audio.masterVolume);
+  audio.setVolume('sfx', save.settings.audio.sfxVolume);
+  audio.setVolume('music', save.settings.audio.musicVolume);
 }
 
 function persistSave(): void {
-  saveStore.write(save)
+  saveStore.write(save);
 }
 
 /** t-022: switch UI language — persist, then re-render HUD + menus. */
 function setLanguage(next: Lang): void {
-  lang = next
-  save = { ...save, settings: { ...save.settings, app: { ...save.settings.app, language: next } } }
-  persistSave()
-  hud.setLanguage(next)
-  menus.setLanguage(next)
+  lang = next;
+  save = { ...save, settings: { ...save.settings, app: { ...save.settings.app, language: next } } };
+  persistSave();
+  hud.setLanguage(next);
+  menus.setLanguage(next);
 }
 
 // ---------------------------------------------------------------------------
@@ -174,33 +175,36 @@ function setLanguage(next: Lang): void {
 
 const hud = createHud(hudRoot, {
   onSelectContact: (id: string | null) => {
-    selectedContactId = id
-    input.setSelectedContactId(id)
+    selectedContactId = id;
+    input.setSelectedContactId(id);
   },
   onSalvoChange: (n: 1 | 2) => {
-    salvo = n
-    salvoPending = false
+    salvo = n;
+    salvoPending = false;
   },
   onOpenSettings: () => {
     // Settings opened from the in-mission HUD: BACK returns to the mission
     // (no abort confirmation), not to the main menu.
     overlayReturnToMission =
-      handle !== null && snapshot !== null && snapshot.state !== 'MENU' && snapshot.state !== 'BOOT'
-    menus.setSection('settings')
+      handle !== null &&
+      snapshot !== null &&
+      snapshot.state !== 'MENU' &&
+      snapshot.state !== 'BOOT';
+    menus.setSection('settings');
   },
   // t-026 periscope actions — one-tick input edges (pulses consumed by
   // buildInputs()).
   onPeriscopeToggle: () => {
-    periscopePulse = true
+    periscopePulse = true;
   },
   onLockTarget: () => {
-    lockPulse = true
+    lockPulse = true;
   },
   onDive: () => {
-    divePulse = true
+    divePulse = true;
   },
   lang,
-})
+});
 
 const input = createInput({
   maxThrottleKt: balance.speedBands.FULL.speedMaxKt,
@@ -208,29 +212,29 @@ const input = createInput({
     // Esc: pause menu. In-mission toggles the engine pause (the PAUSED
     // screen is the pause menu — Pause/Resume/Restart/Abort + controls hint).
     if (overlayReturnToMission) {
-      overlayReturnToMission = false
-      closeOverlayToMission()
-      return
+      overlayReturnToMission = false;
+      closeOverlayToMission();
+      return;
     }
     if (handle !== null && snapshot !== null) {
-      const st = snapshot.state
-      if (st !== 'MENU' && st !== 'BOOT' && st !== 'MISSION_LOADING') pausePulse = true
+      const st = snapshot.state;
+      if (st !== 'MENU' && st !== 'BOOT' && st !== 'MISSION_LOADING') pausePulse = true;
     }
   },
   onScreenshot: () => {
     // F12: capture a real in-game screenshot (canvas only) and download it.
     try {
-      const url = canvas.toDataURL('image/png')
-      const a = document.createElement('a')
-      a.href = url
-      a.download = `silent-depth-${Date.now()}.png`
-      a.click()
+      const url = canvas.toDataURL('image/png');
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `silent-depth-${Date.now()}.png`;
+      a.click();
     } catch (err) {
-      console.warn('[silent-depth] screenshot failed:', err)
+      console.warn('[silent-depth] screenshot failed:', err);
     }
   },
-})
-input.bind(window)
+});
+input.bind(window);
 
 const menus = createMenus(
   menuRoot,
@@ -239,108 +243,113 @@ const menus = createMenus(
     listMissions: () => listMissionSpecs(),
     onPlay: (id: string) => startMission(id),
     onSettingsChanged: (settings: SaveSettings) => {
-      save = { ...save, settings }
-      persistSave()
-      applySettings()
+      save = { ...save, settings };
+      persistSave();
+      applySettings();
     },
     onLanguageChange: (next: Lang) => setLanguage(next),
     onClearSave: () => {
-      saveStore.reset()
-      save = saveStore.load()
-      applySettings()
-      menus.refresh()
+      saveStore.reset();
+      save = saveStore.load();
+      applySettings();
+      menus.refresh();
     },
     onExportSave: () => saveStore.export(save),
     onImportSave: (file: File) => {
       saveStore.import(file, (imported) => {
-        save = imported
-        persistSave()
-        applySettings()
+        save = imported;
+        persistSave();
+        applySettings();
         // Imported save may carry a different language — re-sync the shell.
-        const importedLang = imported.settings.app.language
-        if (importedLang !== lang) setLanguage(importedLang)
-        else menus.refresh()
-      })
+        const importedLang = imported.settings.app.language;
+        if (importedLang !== lang) setLanguage(importedLang);
+        else menus.refresh();
+      });
     },
     onResume: () => {
-      if (handle !== null) pausePulse = true
+      if (handle !== null) pausePulse = true;
     },
     onRestart: () => {
-      if (missionId !== null) startMission(missionId)
+      if (missionId !== null) startMission(missionId);
     },
     onAbort: () => abortToMenu(),
     onGoMainMenu: () => {
       // Settings opened over a running mission: BACK just closes the overlay.
       if (overlayReturnToMission) {
-        overlayReturnToMission = false
-        closeOverlayToMission()
-        return
+        overlayReturnToMission = false;
+        closeOverlayToMission();
+        return;
       }
-      setMenuSection('main')
+      setMenuSection('main');
     },
   },
   lang,
-)
+);
 
 /** Re-show the correct screen after closing the in-mission settings overlay. */
 function closeOverlayToMission(): void {
-  if (handle !== null && snapshot !== null && snapshot.state !== 'MENU' && snapshot.state !== 'BOOT') {
-    menus.showEngineState(snapshot.state, { mission: missionDef ?? undefined, snapshot })
+  if (
+    handle !== null &&
+    snapshot !== null &&
+    snapshot.state !== 'MENU' &&
+    snapshot.state !== 'BOOT'
+  ) {
+    menus.showEngineState(snapshot.state, { mission: missionDef ?? undefined, snapshot });
   }
 }
 
 function setMenuSection(section: MenuSection): void {
   if (handle !== null && snapshot !== null && snapshot.state !== 'MENU') {
-    if (!abortToMenu()) return // user cancelled the abort confirmation
+    if (!abortToMenu()) return; // user cancelled the abort confirmation
   }
-  menus.setSection(section)
+  menus.setSection(section);
 }
 
 // Audio unlock on the first user gesture (autoplay policy).
 function unlockAudio(): void {
-  audio.play('uiClick')
-  window.removeEventListener('pointerdown', unlockAudio)
+  audio.play('uiClick');
+  window.removeEventListener('pointerdown', unlockAudio);
 }
-window.addEventListener('pointerdown', unlockAudio)
+window.addEventListener('pointerdown', unlockAudio);
 
 // ---------------------------------------------------------------------------
 // Mission lifecycle
 // ---------------------------------------------------------------------------
 
 function startMission(id: string): void {
-  missionId = id
-  missionDef = getMissionDef(id)
-  handle = createGame(missionDef, missionDef.seed)
-  renderer = createRenderer({ seed: missionDef.seed, mission: missionDef })
+  missionId = id;
+  missionDef = getMissionDef(id);
+  handle = createGame(missionDef, missionDef.seed);
+  renderer = createRenderer({ seed: missionDef.seed, mission: missionDef });
 
-  camera.setZoom(DEFAULT_ZOOM)
-  camera.follow(missionDef.playerStart.x, missionDef.playerStart.y)
-  followPlayer = true
-  particles.clear()
-  accumulator = 0
-  prevSnapshot = null
-  snapshot = null
-  lastEventId = 0
-  resultSettled = false
-  outcome = null
-  shipsSunkThisRun = {}
-  selectedContactId = null
-  salvo = 1
-  salvoPending = false
-  pausePulse = false
-  periscopePulse = false
-  lockPulse = false
-  divePulse = false
-  lastShownState = 'BOOT'
-  lastWeather = null
+  camera.setZoom(DEFAULT_ZOOM);
+  camera.follow(missionDef.playerStart.x, missionDef.playerStart.y);
+  followPlayer = true;
+  particles.clear();
+  accumulator = 0;
+  prevSnapshot = null;
+  snapshot = null;
+  lastEventId = 0;
+  resultSettled = false;
+  outcome = null;
+  shipsSunkThisRun = {};
+  selectedContactId = null;
+  salvo = 1;
+  salvoPending = false;
+  pausePulse = false;
+  periscopePulse = false;
+  lockPulse = false;
+  divePulse = false;
+  lastShownState = 'BOOT';
+  lastWeather = null;
 
-  input.reset()
-  input.setSelectedContactId(null)
-  hud.reset()
+  input.reset();
+  input.setSelectedContactId(null);
+  hud.reset();
 
   // First tick: initialize the briefing snapshot (MISSION_LOADING).
-  snapshot = step(handle, 0, buildInputs())
-  processNewEvents(snapshot)
+  snapshot = step(handle, 0, buildInputs());
+  processNewEvents(snapshot);
 }
 
 /**
@@ -349,19 +358,19 @@ function startMission(id: string): void {
  * true when the navigation proceeded (false when the user cancelled).
  */
 function abortToMenu(): boolean {
-  if (handle === null) return true
+  if (handle === null) return true;
   if (snapshot !== null && snapshot.state !== 'MENU') {
-    if (typeof confirm === 'function' && !confirm(getT(lang)('confirm.abort'))) return false
+    if (typeof confirm === 'function' && !confirm(getT(lang)('confirm.abort'))) return false;
   }
   try {
-    goToMenu(handle)
+    goToMenu(handle);
   } catch {
     // Illegal transition (already MENU) — ignore.
   }
-  hudRoot.style.display = 'none'
-  lastShownState = 'MENU'
-  menus.showEngineState('MENU')
-  return true
+  hudRoot.style.display = 'none';
+  lastShownState = 'MENU';
+  menus.showEngineState('MENU');
+  return true;
 }
 
 // ---------------------------------------------------------------------------
@@ -369,13 +378,13 @@ function abortToMenu(): boolean {
 // ---------------------------------------------------------------------------
 
 function buildInputs(): PlayerInputs {
-  const base = input.getInputs()
-  let fire = input.consumeFireRequest()
+  const base = input.getInputs();
+  let fire = input.consumeFireRequest();
   if (fire !== null) {
-    if (salvo === 2) salvoPending = true
+    if (salvo === 2) salvoPending = true;
   } else if (salvoPending) {
-    fire = selectedContactId
-    salvoPending = false
+    fire = selectedContactId;
+    salvoPending = false;
   }
   const inputs: PlayerInputs = {
     ...base,
@@ -385,12 +394,12 @@ function buildInputs(): PlayerInputs {
     periscope: periscopePulse || input.consumePeriscopeRequest(),
     lockTarget: lockPulse || input.consumeLockRequest(),
     emergencyDive: divePulse || input.consumeDiveRequest(),
-  }
-  pausePulse = false
-  periscopePulse = false
-  lockPulse = false
-  divePulse = false
-  return inputs
+  };
+  pausePulse = false;
+  periscopePulse = false;
+  lockPulse = false;
+  divePulse = false;
+  return inputs;
 }
 
 // ---------------------------------------------------------------------------
@@ -398,75 +407,81 @@ function buildInputs(): PlayerInputs {
 // ---------------------------------------------------------------------------
 
 function processNewEvents(snap: GameSnapshot): void {
-  const log = snap.eventLog
+  const log = snap.eventLog;
   for (let i = 0; i < log.length; i++) {
-    const ev = log[i]!
-    if (ev.id <= lastEventId) continue
-    lastEventId = ev.id
-    audio.onEngineEvent(ev)
-    hud.appendLog(ev)
-    applyEventEffect(ev, snap)
+    const ev = log[i]!;
+    if (ev.id <= lastEventId) continue;
+    lastEventId = ev.id;
+    audio.onEngineEvent(ev);
+    hud.appendLog(ev);
+    applyEventEffect(ev, snap);
   }
 }
 
 function applyEventEffect(ev: EventEntry, snap: GameSnapshot): void {
-  const p = ev.payload
+  const p = ev.payload;
   switch (ev.type) {
     case 'sonar.ping': {
-      const player = snap.playerSub.position
-      particles.spawnPing(player.x, player.y)
-      break
+      const player = snap.playerSub.position;
+      particles.spawnPing(player.x, player.y);
+      break;
     }
     case 'torpedo.fired': {
       // t-026: firing from the periscope raises the exposure risk — surface
       // the post-fire warning banner (6 s) while the periscope is up.
-      const ps = snap.periscope?.state
-      if (ps === 'RAISED' || ps === 'OBSERVING') hud.showFireWarning()
-      break
+      const ps = snap.periscope?.state;
+      if (ps === 'RAISED' || ps === 'OBSERVING') hud.showFireWarning();
+      break;
     }
     case 'torpedo.hit': {
-      const torp = findTorpedo(snap, p?.torpedoId)
-      if (torp !== null) particles.spawnExplosion(torp.position.x, torp.position.y)
-      break
+      const torp = findTorpedo(snap, p?.torpedoId);
+      if (torp !== null) particles.spawnExplosion(torp.position.x, torp.position.y);
+      break;
     }
     case 'ship.sunk': {
-      const ship = findEnemy(snap, p?.shipId)
+      const ship = findEnemy(snap, p?.shipId);
       if (ship !== null) {
-        particles.spawnExplosion(ship.position.x, ship.position.y)
-        const cls = ship.shipClass
-        shipsSunkThisRun[cls] = (shipsSunkThisRun[cls] ?? 0) + 1
+        particles.spawnExplosion(ship.position.x, ship.position.y);
+        const cls = ship.shipClass;
+        shipsSunkThisRun[cls] = (shipsSunkThisRun[cls] ?? 0) + 1;
       }
-      break
+      break;
     }
     case 'depthCharge.detonated': {
       if (typeof p?.x === 'number' && typeof p?.y === 'number') {
-        particles.spawnSplash(p.x as number, p.y as number)
+        particles.spawnSplash(p.x as number, p.y as number);
       }
-      break
+      break;
     }
     case 'mission.victory':
-      outcome = 'victory'
-      break
+      outcome = 'victory';
+      break;
     case 'mission.defeat':
-      outcome = 'defeat'
-      break
+      outcome = 'defeat';
+      break;
   }
 }
 
-function findTorpedo(snap: GameSnapshot, id: unknown): { position: { x: number; y: number } } | null {
-  if (typeof id !== 'string') return null
+function findTorpedo(
+  snap: GameSnapshot,
+  id: unknown,
+): { position: { x: number; y: number } } | null {
+  if (typeof id !== 'string') return null;
   for (const t of snap.torpedoes) {
-    if (t.id === id) return t
+    if (t.id === id) return t;
   }
-  return null
+  return null;
 }
 
-function findEnemy(snap: GameSnapshot, id: unknown): { position: { x: number; y: number }; shipClass: string } | null {
-  if (typeof id !== 'string') return null
+function findEnemy(
+  snap: GameSnapshot,
+  id: unknown,
+): { position: { x: number; y: number }; shipClass: string } | null {
+  if (typeof id !== 'string') return null;
   for (const e of snap.enemies) {
-    if (e.id === id) return e
+    if (e.id === id) return e;
   }
-  return null
+  return null;
 }
 
 // ---------------------------------------------------------------------------
@@ -474,7 +489,7 @@ function findEnemy(snap: GameSnapshot, id: unknown): { position: { x: number; y:
 // ---------------------------------------------------------------------------
 
 function settleResult(snap: GameSnapshot): void {
-  if (missionId === null) return
+  if (missionId === null) return;
   const result: MissionResult = {
     missionId,
     completed: outcome === 'victory',
@@ -485,9 +500,9 @@ function settleResult(snap: GameSnapshot): void {
     peakDetection: snap.stats.peakDetection,
     elapsedS: snap.stats.elapsedS,
     shipsSunk: shipsSunkThisRun,
-  }
-  save = updateOnMissionResult(save, result, MISSION_IDS)
-  persistSave()
+  };
+  save = updateOnMissionResult(save, result, MISSION_IDS);
+  persistSave();
 }
 
 // ---------------------------------------------------------------------------
@@ -497,74 +512,77 @@ function settleResult(snap: GameSnapshot): void {
 canvas.addEventListener(
   'wheel',
   (e: WheelEvent) => {
-    e.preventDefault()
-    const step = e.deltaY < 0 ? 1.5 : -1.5
-    camera.setZoom(Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, camera.zoom + step)))
+    e.preventDefault();
+    const step = e.deltaY < 0 ? 1.5 : -1.5;
+    camera.setZoom(Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, camera.zoom + step)));
   },
   { passive: false },
-)
+);
 
 canvas.addEventListener('pointerdown', (e: PointerEvent) => {
-  dragging = true
-  dragLast = { x: e.clientX, y: e.clientY }
-  canvas.setPointerCapture(e.pointerId)
-})
+  dragging = true;
+  dragLast = { x: e.clientX, y: e.clientY };
+  canvas.setPointerCapture(e.pointerId);
+});
 canvas.addEventListener('pointermove', (e: PointerEvent) => {
-  if (!dragging) return
-  const dx = e.clientX - dragLast.x
-  const dy = e.clientY - dragLast.y
-  dragLast = { x: e.clientX, y: e.clientY }
-  camera.panBy(dx, dy)
-  followPlayer = false
-})
+  if (!dragging) return;
+  const dx = e.clientX - dragLast.x;
+  const dy = e.clientY - dragLast.y;
+  dragLast = { x: e.clientX, y: e.clientY };
+  camera.panBy(dx, dy);
+  followPlayer = false;
+});
 canvas.addEventListener('pointerup', () => {
-  dragging = false
-})
+  dragging = false;
+});
 
 // ---------------------------------------------------------------------------
 // Resize / DPR
 // ---------------------------------------------------------------------------
 
 function resize(): void {
-  const dpr = Math.min(2, typeof window.devicePixelRatio === 'number' ? window.devicePixelRatio : 1)
-  const w = window.innerWidth
-  const h = window.innerHeight
-  canvas.width = Math.round(w * dpr)
-  canvas.height = Math.round(h * dpr)
-  canvas.style.width = `${w}px`
-  canvas.style.height = `${h}px`
-  ctx2d.setTransform(dpr, 0, 0, dpr, 0, 0)
-  camera.setViewport(w, h)
+  const dpr = Math.min(
+    2,
+    typeof window.devicePixelRatio === 'number' ? window.devicePixelRatio : 1,
+  );
+  const w = window.innerWidth;
+  const h = window.innerHeight;
+  canvas.width = Math.round(w * dpr);
+  canvas.height = Math.round(h * dpr);
+  canvas.style.width = `${w}px`;
+  canvas.style.height = `${h}px`;
+  ctx2d.setTransform(dpr, 0, 0, dpr, 0, 0);
+  camera.setViewport(w, h);
 }
-window.addEventListener('resize', resize)
-resize()
+window.addEventListener('resize', resize);
+resize();
 
 // ---------------------------------------------------------------------------
 // Main render loop (rAF, dual-rate)
 // ---------------------------------------------------------------------------
 
 function frame(nowMs: number): void {
-  requestAnimationFrame(frame)
+  requestAnimationFrame(frame);
 
-  const frameDt = Math.min(Math.max(0, (nowMs - lastTime) / 1000), 0.25)
-  lastTime = nowMs
-  wallT += frameDt
+  const frameDt = Math.min(Math.max(0, (nowMs - lastTime) / 1000), 0.25);
+  lastTime = nowMs;
+  wallT += frameDt;
 
   // FPS measurement.
-  fpsFrames++
+  fpsFrames++;
   if (nowMs - fpsWindowStart >= 500) {
-    fps = Math.round((fpsFrames * 1000) / Math.max(1, nowMs - fpsWindowStart))
-    fpsFrames = 0
-    fpsWindowStart = nowMs
+    fps = Math.round((fpsFrames * 1000) / Math.max(1, nowMs - fpsWindowStart));
+    fpsFrames = 0;
+    fpsWindowStart = nowMs;
   }
 
-  particles.update(frameDt)
+  particles.update(frameDt);
 
   if (handle === null || snapshot === null) {
     // Menu idle backdrop (deep ocean base).
-    ctx2d.fillStyle = '#050a12'
-    ctx2d.fillRect(0, 0, camera.viewport.width, camera.viewport.height)
-    return
+    ctx2d.fillStyle = '#050a12';
+    ctx2d.fillRect(0, 0, camera.viewport.width, camera.viewport.height);
+    return;
   }
 
   // --- fixed-step simulation (20 Hz) --------------------------------------
@@ -574,12 +592,12 @@ function frame(nowMs: number): void {
     FIXED_DT,
     MAX_FRAME_TIME_S,
     snapshot.simTime,
-  )
-  accumulator = fixed.nextAccumulator
-  prevSnapshot = snapshot
+  );
+  accumulator = fixed.nextAccumulator;
+  prevSnapshot = snapshot;
   for (let i = 0; i < fixed.steps; i++) {
-    snapshot = step(handle, FIXED_DT, buildInputs())
-    processNewEvents(snapshot)
+    snapshot = step(handle, FIXED_DT, buildInputs());
+    processNewEvents(snapshot);
   }
   // Note: when steps === 0 the sim simply does not tick this frame (standard
   // accumulator pattern). Engine edge latches (pause pulse / ping / decoy)
@@ -589,28 +607,33 @@ function frame(nowMs: number): void {
   // gameplay systems with dt=0 and could consume engine RNG, diverging from
   // the headless runner's (FIXED_DT-only) sequences.
 
-  const snap = snapshot
-  const state = snap.state
+  const snap = snapshot;
+  const state = snap.state;
 
   // --- mission-result settlement -------------------------------------------
   if (state === 'MISSION_RESULT' && !resultSettled) {
-    resultSettled = true
-    settleResult(snap)
+    resultSettled = true;
+    settleResult(snap);
   }
 
   // --- camera ---------------------------------------------------------------
   if (followPlayer) {
-    camera.follow(snap.playerSub.position.x, snap.playerSub.position.y)
+    camera.follow(snap.playerSub.position.x, snap.playerSub.position.y);
   } else if (playerOffScreen(snap)) {
-    followPlayer = true
+    followPlayer = true;
   }
 
   // --- weather (audio ambience + HUD chip) ----------------------------------
   if (renderer !== null) {
-    const weather = activeWeatherAt(missionDef!.weather, snap.simTime, missionDef!.parTimeS, balance)
+    const weather = activeWeatherAt(
+      missionDef!.weather,
+      snap.simTime,
+      missionDef!.parTimeS,
+      balance,
+    );
     if (weather !== lastWeather) {
-      lastWeather = weather
-      audio.setWeather(weather)
+      lastWeather = weather;
+      audio.setWeather(weather);
     }
   }
 
@@ -628,12 +651,12 @@ function frame(nowMs: number): void {
       selectedContactId,
       timeSeconds: wallT,
       fps,
-    })
+    });
   }
 
   // --- HUD (L6) / menus ------------------------------------------------------
-  const inMission = state !== 'MENU' && state !== 'BOOT'
-  hudRoot.style.display = inMission ? '' : 'none'
+  const inMission = state !== 'MENU' && state !== 'BOOT';
+  hudRoot.style.display = inMission ? '' : 'none';
   if (inMission && renderer !== null) {
     hud.update(snap, {
       selectedContactId,
@@ -645,31 +668,31 @@ function frame(nowMs: number): void {
       fps,
       showFps: save.settings.video.showFps,
       wallT,
-    })
+    });
   }
 
   if (state !== lastShownState) {
-    lastShownState = state
-    menus.showEngineState(state, { mission: missionDef ?? undefined, snapshot: snap })
+    lastShownState = state;
+    menus.showEngineState(state, { mission: missionDef ?? undefined, snapshot: snap });
   } else if (state === 'MISSION_LOADING' && missionDef !== null) {
     // Live briefing countdown without a full re-render.
-    menus.updateBriefingCountdown((missionDef.briefingSeconds ?? 2) - snap.simTime)
+    menus.updateBriefingCountdown((missionDef.briefingSeconds ?? 2) - snap.simTime);
   }
 }
 
 function playerOffScreen(snap: GameSnapshot): boolean {
-  const p = camera.worldToScreen(snap.playerSub.position.x, snap.playerSub.position.y)
-  const m = 48
+  const p = camera.worldToScreen(snap.playerSub.position.x, snap.playerSub.position.y);
+  const m = 48;
   return (
     p.x < -m || p.x > camera.viewport.width + m || p.y < -m || p.y > camera.viewport.height + m
-  )
+  );
 }
 
 // ---------------------------------------------------------------------------
 // Boot
 // ---------------------------------------------------------------------------
 
-applySettings()
-menus.setSection('main')
-requestAnimationFrame(frame)
-console.log('[silent-depth] shell boot ok')
+applySettings();
+menus.setSection('main');
+requestAnimationFrame(frame);
+console.log('[silent-depth] shell boot ok');

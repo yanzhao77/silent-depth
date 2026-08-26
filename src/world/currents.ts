@@ -24,7 +24,7 @@
  * @pure — zero DOM / browser-API references.
  */
 
-import { lerp, smoothstep01, type CurrentVector, type OceanModel } from './ocean'
+import { lerp, smoothstep01, type CurrentVector, type OceanModel } from './ocean';
 
 /**
  * Current vector (east/north components, kt) at map coordinates (xKm, yKm).
@@ -32,23 +32,23 @@ import { lerp, smoothstep01, type CurrentVector, type OceanModel } from './ocean
  * toroidal wrap (mapSizeKm = currentField.extentKm). Deterministic and pure.
  */
 export function currentAt(model: OceanModel, xKm: number, yKm: number): CurrentVector {
-  const field = model.currentField
-  const u = (((xKm / field.extentKm) % 1) + 1) % 1
-  const v = (((yKm / field.extentKm) % 1) + 1) % 1
-  const xf = u * field.size
-  const yf = v * field.size
-  const i0 = Math.floor(xf) % field.size
-  const i1 = (i0 + 1) % field.size
-  const j0 = Math.floor(yf) % field.size
-  const j1 = (j0 + 1) % field.size
-  const fx = smoothstep01(xf - Math.floor(xf))
-  const fy = smoothstep01(yf - Math.floor(yf))
-  const a = field.vectors[j0 * field.size + i0]!
-  const b = field.vectors[j0 * field.size + i1]!
-  const c = field.vectors[j1 * field.size + i0]!
-  const d = field.vectors[j1 * field.size + i1]!
+  const field = model.currentField;
+  const u = (((xKm / field.extentKm) % 1) + 1) % 1;
+  const v = (((yKm / field.extentKm) % 1) + 1) % 1;
+  const xf = u * field.size;
+  const yf = v * field.size;
+  const i0 = Math.floor(xf) % field.size;
+  const i1 = (i0 + 1) % field.size;
+  const j0 = Math.floor(yf) % field.size;
+  const j1 = (j0 + 1) % field.size;
+  const fx = smoothstep01(xf - Math.floor(xf));
+  const fy = smoothstep01(yf - Math.floor(yf));
+  const a = field.vectors[j0 * field.size + i0]!;
+  const b = field.vectors[j0 * field.size + i1]!;
+  const c = field.vectors[j1 * field.size + i0]!;
+  const d = field.vectors[j1 * field.size + i1]!;
   return {
     x: lerp(lerp(a.x, b.x, fx), lerp(c.x, d.x, fx), fy),
     y: lerp(lerp(a.y, b.y, fx), lerp(c.y, d.y, fx), fy),
-  }
+  };
 }

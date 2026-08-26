@@ -14,21 +14,21 @@
  */
 
 /** Fixed simulation timestep in seconds (20 Hz). */
-export const FIXED_DT = 0.05
+export const FIXED_DT = 0.05;
 
 /** Simulation tick rate in Hz. */
-export const TICK_RATE_HZ = 20
+export const TICK_RATE_HZ = 20;
 
 /** Cap on accumulated frame time (spiral-of-death guard). */
-export const MAX_FRAME_TIME_S = 0.25
+export const MAX_FRAME_TIME_S = 0.25;
 
 export interface FixedStepResult {
   /** Number of fixed steps the caller should run this frame. */
-  steps: number
+  steps: number;
   /** Unconsumed time to carry into the next frame (in [0, dt)). */
-  nextAccumulator: number
+  nextAccumulator: number;
   /** SimTime after consuming `steps` fixed steps. */
-  nextSimTime: number
+  nextSimTime: number;
 }
 
 /**
@@ -47,13 +47,13 @@ export function computeFixedSteps(
   maxFrameSeconds: number = MAX_FRAME_TIME_S,
   simTime: number = 0,
 ): FixedStepResult {
-  const dtSafe = dt > 0 ? dt : FIXED_DT
-  const acc = Math.min(Math.max(0, accumulator) + Math.max(0, frameDtSeconds), maxFrameSeconds)
+  const dtSafe = dt > 0 ? dt : FIXED_DT;
+  const acc = Math.min(Math.max(0, accumulator) + Math.max(0, frameDtSeconds), maxFrameSeconds);
   // Tiny epsilon guards against binary float drift (e.g. 0.1/0.05 = 2.0000000000000004).
-  const steps = Math.floor(acc / dtSafe + 1e-9)
+  const steps = Math.floor(acc / dtSafe + 1e-9);
   return {
     steps,
     nextAccumulator: Math.max(0, acc - steps * dtSafe),
     nextSimTime: simTime + steps * dtSafe,
-  }
+  };
 }

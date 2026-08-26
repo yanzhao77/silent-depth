@@ -27,8 +27,8 @@
  * @pure — zero DOM / browser-API references.
  */
 
-import type { WeatherKind } from '../core/types'
-import { loadBalance, type BalanceConfig } from '../core/balance'
+import type { WeatherKind } from '../core/types';
+import { loadBalance, type BalanceConfig } from '../core/balance';
 
 // ---------------------------------------------------------------------------
 // WeatherModifiers — normalized view of balance.weather[weather]
@@ -36,23 +36,28 @@ import { loadBalance, type BalanceConfig } from '../core/balance'
 
 export interface WeatherModifiers {
   /** Surface visual range in km (waterline/visual/deck gun, GAME_DESIGN §9.1). */
-  visibilityKm: number
+  visibilityKm: number;
   /** Sonar correction factor — enemy detection of player AND player ping hit chance. */
-  sonarFactor: number
+  sonarFactor: number;
   /** Ambient noise multiplier on the player submarine. */
-  noiseFactor: number
+  noiseFactor: number;
   /** Extra player noise at the Surface layer (Storm), normalized to 0 elsewhere. */
-  surfaceNoiseBonus: number
+  surfaceNoiseBonus: number;
 }
 
 /**
  * Balance-driven weather modifiers for one weather kind (FR-17). Pure.
  * Throws TypeError for a kind the config does not define (programming error).
  */
-export function weatherModifiers(weather: WeatherKind, balance: BalanceConfig = loadBalance()): WeatherModifiers {
-  const cfg = balance.weather[weather]
+export function weatherModifiers(
+  weather: WeatherKind,
+  balance: BalanceConfig = loadBalance(),
+): WeatherModifiers {
+  const cfg = balance.weather[weather];
   if (cfg === undefined) {
-    throw new TypeError(`weatherModifiers: unknown weather kind "${String(weather)}" (not in balance.weather)`)
+    throw new TypeError(
+      `weatherModifiers: unknown weather kind "${String(weather)}" (not in balance.weather)`,
+    );
   }
   return {
     visibilityKm: cfg.visibilityKm,
@@ -60,7 +65,7 @@ export function weatherModifiers(weather: WeatherKind, balance: BalanceConfig = 
     noiseFactor: cfg.noiseFactor,
     // Normalize the optional bonus: kinds without one get 0 (see header).
     surfaceNoiseBonus: cfg.surfaceNoiseBonus ?? 0,
-  }
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -68,7 +73,7 @@ export function weatherModifiers(weather: WeatherKind, balance: BalanceConfig = 
 // ---------------------------------------------------------------------------
 
 /** One weather segment: [kind, transitionAtFraction] (see header semantics). */
-export type WeatherSequenceEntry = readonly [WeatherKind, number]
+export type WeatherSequenceEntry = readonly [WeatherKind, number];
 
 /**
  * Parse a weather spec into an ordered sequence of segments with their
@@ -80,18 +85,20 @@ export function parseWeatherSequence(
   spec: string | WeatherKind,
   balance: BalanceConfig = loadBalance(),
 ): WeatherSequenceEntry[] {
-  const tokens = spec.split('->').map((t) => t.trim())
+  const tokens = spec.split('->').map((t) => t.trim());
   if (tokens.length === 0 || tokens.some((t) => t.length === 0)) {
-    throw new TypeError(`parseWeatherSequence: empty weather spec "${String(spec)}"`)
+    throw new TypeError(`parseWeatherSequence: empty weather spec "${String(spec)}"`);
   }
-  const kinds: WeatherKind[] = []
+  const kinds: WeatherKind[] = [];
   for (const token of tokens) {
     if (!(token in balance.weather)) {
-      throw new TypeError(`parseWeatherSequence: unknown weather kind "${token}" (not in balance.weather)`)
+      throw new TypeError(
+        `parseWeatherSequence: unknown weather kind "${token}" (not in balance.weather)`,
+      );
     }
-    kinds.push(token as WeatherKind)
+    kinds.push(token as WeatherKind);
   }
-  const n = kinds.length
+  const n = kinds.length;
   // DESIGN DECISION: n equal segments; segment i starts at fraction i/n.
-  return kinds.map((kind, i) => [kind, i / n] as const)
+  return kinds.map((kind, i) => [kind, i / n] as const);
 }

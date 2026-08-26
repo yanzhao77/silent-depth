@@ -59,23 +59,19 @@
  * the per-game pending-damage buffer described above.
  */
 
-import type { SystemContext, SystemFn } from '../core/engine'
-import type { AiState, EnemyShip, WeatherKind } from '../core/types'
-import {
-  HUNTING_DEGRADE_BELOW,
-  defaultAiThresholds,
-  evaluateAiState,
-} from './aiState'
-import type { AiStateTimers, AiThresholds, AiTriggers } from './aiState'
+import type { SystemContext, SystemFn } from '../core/engine';
+import type { AiState, EnemyShip, WeatherKind } from '../core/types';
+import { HUNTING_DEGRADE_BELOW, defaultAiThresholds, evaluateAiState } from './aiState';
+import type { AiStateTimers, AiThresholds, AiTriggers } from './aiState';
 import {
   advanceAnchor,
   formationGeometry,
   runMerchantBehavior,
   slotForMerchantIndex,
-} from './convoy'
-import type { FormationGeometry } from './convoy'
-import { runEscortTick } from './escort'
-import type { EscortTickCtx } from './escort'
+} from './convoy';
+import type { FormationGeometry } from './convoy';
+import { runEscortTick } from './escort';
+import type { EscortTickCtx } from './escort';
 import {
   chooseSearchPattern,
   initialCircularState,
@@ -84,7 +80,7 @@ import {
   lkpRefreshDue,
   searchPatternsConfig,
   updateLkp,
-} from './search'
+} from './search';
 import {
   angleDiffDeg,
   applyDamage,
@@ -95,36 +91,36 @@ import {
   isMerchantShip,
   normalizeDeg,
   passiveDetectionRate,
-} from './ship'
-import type { AiShipRuntime, FormationSlot, PendingDamage } from './ship'
+} from './ship';
+import type { AiShipRuntime, FormationSlot, PendingDamage } from './ship';
 
 // Re-export the damage helper so combat (t-007) applies player-facing damage
 // with the same semantics the AI uses for ship.sunk detection.
-export { applyDamage }
+export { applyDamage };
 
 // ---------------------------------------------------------------------------
 // Design constants
 // ---------------------------------------------------------------------------
 
 /** Explosion lookback window (s) over the event-log perception queue. */
-export const EXPLOSION_LOOKBACK_S = 2
+export const EXPLOSION_LOOKBACK_S = 2;
 /** Player turn above this (°) counts as one F5 maneuver. */
-export const MANEUVER_TURN_DEG = 30
+export const MANEUVER_TURN_DEG = 30;
 /** Player speed change above this (kt) counts as one F5 maneuver. */
-export const MANEUVER_SPEED_KT = 3
+export const MANEUVER_SPEED_KT = 3;
 
 // ---------------------------------------------------------------------------
 // Pending-output bridge (AI → combat, t-007)
 // ---------------------------------------------------------------------------
 
 interface PendingOutput {
-  simTime: number
+  simTime: number;
   /** Owning game (the live player reference) — key for cross-game isolation. */
-  owner: object | null
-  damages: PendingDamage[]
+  owner: object | null;
+  damages: PendingDamage[];
 }
 
-let pending: PendingOutput = { simTime: -1, owner: null, damages: [] }
+let pending: PendingOutput = { simTime: -1, owner: null, damages: [] };
 
 /**
  * Snapshot-and-clear the damage the AI resolved since the last drain. The
@@ -137,20 +133,20 @@ let pending: PendingOutput = { simTime: -1, owner: null, damages: [] }
  * accumulation keeps the data available instead of silently dropping it.
  */
 export function drainAiPendingDamage(): PendingDamage[] {
-  const out = pending.damages
-  pending.damages = []
-  return out
+  const out = pending.damages;
+  pending.damages = [];
+  return out;
 }
 
 /** Test/manager hook: fully reset the pending bridge. */
 export function resetAiPendingOutput(): void {
-  pending = { simTime: -1, owner: null, damages: [] }
+  pending = { simTime: -1, owner: null, damages: [] };
 }
 
 /** Re-key the buffer when a different game instance ticks (no cross-game leak). */
 function ensurePendingOwner(ctx: SystemContext): void {
   if (pending.owner !== ctx.player) {
-    pending = { simTime: ctx.simTime, owner: ctx.player, damages: [] }
+    pending = { simTime: ctx.simTime, owner: ctx.player, damages: [] };
   }
 }
 
@@ -159,19 +155,19 @@ function ensurePendingOwner(ctx: SystemContext): void {
 // ---------------------------------------------------------------------------
 
 interface AiGameRuntime {
-  anchor: { x: number; y: number } | null
-  fleetHeadingDeg: number
-  fleetSpeedKt: number
-  geo: FormationGeometry
-  heavyEscort: boolean
-  ships: Map<string, AiShipRuntime>
+  anchor: { x: number; y: number } | null;
+  fleetHeadingDeg: number;
+  fleetSpeedKt: number;
+  geo: FormationGeometry;
+  heavyEscort: boolean;
+  ships: Map<string, AiShipRuntime>;
   /** Formation slot per merchant id (assigned in spawn order). */
-  slots: Map<string, FormationSlot>
+  slots: Map<string, FormationSlot>;
   /** Convoy merchant ids that are sunk this tick (neighbor-evade trigger). */
-  convoySunkIds: Set<string>
+  convoySunkIds: Set<string>;
 }
 
-const gameRuntimes = new WeakMap<object, AiGameRuntime>()
+const gameRuntimes = new WeakMap<object, AiGameRuntime>();
 
 /**
  * Active weather for F3: prefer the world system's per-tick weather
@@ -180,14 +176,14 @@ const gameRuntimes = new WeakMap<object, AiGameRuntime>()
  * the mission string is a chain and the world system is not wired yet).
  */
 function activeWeatherFor(ctx: SystemContext): WeatherKind {
-  const ws = ctx.worldState as { currentWeather?: WeatherKind } | undefined
-  if (ws?.currentWeather !== undefined) return ws.currentWeather
-  const kind = ctx.mission.weather
-  return kind in ctx.balance.weather ? (kind as WeatherKind) : 'Clear'
+  const ws = ctx.worldState as { currentWeather?: WeatherKind } | undefined;
+  if (ws?.currentWeather !== undefined) return ws.currentWeather;
+  const kind = ctx.mission.weather;
+  return kind in ctx.balance.weather ? (kind as WeatherKind) : 'Clear';
 }
 
 function getGameRuntime(ctx: SystemContext): AiGameRuntime {
-  let rt = gameRuntimes.get(ctx.player)
+  let rt = gameRuntimes.get(ctx.player);
   if (rt === undefined) {
     rt = {
       anchor: null,
@@ -198,56 +194,56 @@ function getGameRuntime(ctx: SystemContext): AiGameRuntime {
       ships: new Map<string, AiShipRuntime>(),
       slots: new Map<string, FormationSlot>(),
       convoySunkIds: new Set<string>(),
-    }
-    gameRuntimes.set(ctx.player, rt)
+    };
+    gameRuntimes.set(ctx.player, rt);
   }
-  return rt
+  return rt;
 }
 
 function initRuntime(rt: AiGameRuntime, ctx: SystemContext): void {
-  const balance = ctx.balance
-  const merchants = ctx.enemies.filter((e) => isMerchantShip(e, balance))
-  let cx = 0
-  let cy = 0
+  const balance = ctx.balance;
+  const merchants = ctx.enemies.filter((e) => isMerchantShip(e, balance));
+  let cx = 0;
+  let cy = 0;
   if (merchants.length > 0) {
     for (const m of merchants) {
-      cx += m.position.x
-      cy += m.position.y
+      cx += m.position.x;
+      cy += m.position.y;
     }
-    cx /= merchants.length
-    cy /= merchants.length
+    cx /= merchants.length;
+    cy /= merchants.length;
   } else if (ctx.enemies.length > 0) {
-    const first = ctx.enemies[0]
+    const first = ctx.enemies[0];
     if (first !== undefined) {
-      cx = first.position.x
-      cy = first.position.y
+      cx = first.position.x;
+      cy = first.position.y;
     }
   } else {
-    cx = ctx.player.position.x
-    cy = ctx.player.position.y
+    cx = ctx.player.position.x;
+    cy = ctx.player.position.y;
   }
-  rt.anchor = { x: cx, y: cy }
-  rt.fleetHeadingDeg = ctx.mission.fleet.headingDeg
-  rt.fleetSpeedKt = ctx.mission.fleet.speedKt
-  rt.geo = formationGeometry(ctx.mission.fleet, ctx.balance)
-  const escortCount = ctx.enemies.filter((e) => isEscortShip(e, balance)).length
+  rt.anchor = { x: cx, y: cy };
+  rt.fleetHeadingDeg = ctx.mission.fleet.headingDeg;
+  rt.fleetSpeedKt = ctx.mission.fleet.speedKt;
+  rt.geo = formationGeometry(ctx.mission.fleet, ctx.balance);
+  const escortCount = ctx.enemies.filter((e) => isEscortShip(e, balance)).length;
   // Heavy escort (≥2) → the aggressive 2 s ping cadence (M04/M05).
-  rt.heavyEscort = escortCount >= 2
+  rt.heavyEscort = escortCount >= 2;
   merchants.forEach((m, i) => {
-    rt.slots.set(m.id, slotForMerchantIndex(i, rt.geo))
-  })
+    rt.slots.set(m.id, slotForMerchantIndex(i, rt.geo));
+  });
 }
 
 function getShipRuntime(rt: AiGameRuntime, ship: EnemyShip, ctx: SystemContext): AiShipRuntime {
-  let srt = rt.ships.get(ship.id)
+  let srt = rt.ships.get(ship.id);
   if (srt === undefined) {
-    srt = createShipRuntime(rt.slots.get(ship.id) ?? null)
+    srt = createShipRuntime(rt.slots.get(ship.id) ?? null);
     // Prime the F5 maneuver tracker so the first tick is not a "maneuver".
-    srt.lastPlayerHeadingDeg = ctx.player.headingDeg
-    srt.lastPlayerSpeedKt = ctx.player.speedKt
-    rt.ships.set(ship.id, srt)
+    srt.lastPlayerHeadingDeg = ctx.player.headingDeg;
+    srt.lastPlayerSpeedKt = ctx.player.speedKt;
+    rt.ships.set(ship.id, srt);
   }
-  return srt
+  return srt;
 }
 
 // ---------------------------------------------------------------------------
@@ -255,104 +251,117 @@ function getShipRuntime(rt: AiGameRuntime, ship: EnemyShip, ctx: SystemContext):
 // ---------------------------------------------------------------------------
 
 interface SenseResult {
-  noiseSensed: boolean
-  pingHeard: boolean
-  torpedoNearKm: number | null
-  explosionHeard: boolean
-  pingHit: boolean
-  pingHitRangeKm: number | null
+  noiseSensed: boolean;
+  pingHeard: boolean;
+  torpedoNearKm: number | null;
+  explosionHeard: boolean;
+  pingHit: boolean;
+  pingHitRangeKm: number | null;
 }
 
-const EXPLOSION_TYPES: ReadonlySet<string> = new Set(['torpedo.hit', 'depthCharge.detonated', 'ship.sunk'])
+const EXPLOSION_TYPES: ReadonlySet<string> = new Set([
+  'torpedo.hit',
+  'depthCharge.detonated',
+  'ship.sunk',
+]);
 
 function applyDetection(ctx: SystemContext, delta: number): void {
-  if (delta === 0) return
-  ctx.player.detection = clamp(ctx.player.detection + delta, 0, 100)
+  if (delta === 0) return;
+  ctx.player.detection = clamp(ctx.player.detection + delta, 0, 100);
 }
 
-function senseShip(ship: EnemyShip, srt: AiShipRuntime, rt: AiGameRuntime, ctx: SystemContext): SenseResult {
-  const balance = ctx.balance
-  const player = ctx.player
-  const weather = activeWeatherFor(ctx)
+function senseShip(
+  ship: EnemyShip,
+  srt: AiShipRuntime,
+  rt: AiGameRuntime,
+  ctx: SystemContext,
+): SenseResult {
+  const balance = ctx.balance;
+  const player = ctx.player;
+  const weather = activeWeatherFor(ctx);
 
   // F3 passive detection of the player's noise → detection delta.
-  const rate = passiveDetectionRate(ship, player, balance, weather)
-  const noiseSensed = rate > 0
-  const f3Delta = rate * ctx.dt
-  if (f3Delta > 0) applyDetection(ctx, f3Delta)
+  const rate = passiveDetectionRate(ship, player, balance, weather);
+  const noiseSensed = rate > 0;
+  const f3Delta = rate * ctx.dt;
+  if (f3Delta > 0) applyDetection(ctx, f3Delta);
 
   // Player active ping heard (escorts within escortHearPingRangeKm).
-  let pingHeard = false
+  let pingHeard = false;
   if (isEscortShip(ship, balance) && ctx.pingEdge) {
-    const hearRange = balance.sonar.active.escortHearPingRangeKm
-    if (distKm(ship.position, player.position) <= hearRange) pingHeard = true
+    const hearRange = balance.sonar.active.escortHearPingRangeKm;
+    if (distKm(ship.position, player.position) <= hearRange) pingHeard = true;
   }
 
   // Nearest RUNNING torpedo (km) — proximity perception.
-  let torpedoNearKm: number | null = null
+  let torpedoNearKm: number | null = null;
   for (const t of ctx.torpedoes) {
-    if (t.state !== 'RUNNING') continue
-    const d = distKm(ship.position, t.position)
-    if (torpedoNearKm === null || d < torpedoNearKm) torpedoNearKm = d
+    if (t.state !== 'RUNNING') continue;
+    const d = distKm(ship.position, t.position);
+    if (torpedoNearKm === null || d < torpedoNearKm) torpedoNearKm = d;
   }
 
   // Explosion lookback over the event log (§7: the event bus is the
   // sonar→ai perception queue the engine exposes today).
-  let explosionHeard = false
-  const log = ctx.bus.getLog()
+  let explosionHeard = false;
+  const log = ctx.bus.getLog();
   for (const ev of log) {
-    if (!EXPLOSION_TYPES.has(ev.type)) continue
-    if (ev.simTime < ctx.simTime - EXPLOSION_LOOKBACK_S) continue
-    const p = ev.payload
+    if (!EXPLOSION_TYPES.has(ev.type)) continue;
+    if (ev.simTime < ctx.simTime - EXPLOSION_LOOKBACK_S) continue;
+    const p = ev.payload;
     if (p !== undefined && typeof p.x === 'number' && typeof p.y === 'number') {
       if (distKm(ship.position, { x: p.x, y: p.y }) <= balance.sonar.passive.explosionRangeKm) {
-        explosionHeard = true
-        break
+        explosionHeard = true;
+        break;
       }
     } else {
       // Payload without position (e.g. ship.sunk) → assumed audible
       // (DESIGN DECISION — documented in the file header).
-      explosionHeard = true
-      break
+      explosionHeard = true;
+      break;
     }
   }
 
   // Own active ping (escorts only; SUSPICIOUS 4 s, SEARCHING 4 s, HUNTING 2 s,
   // heavy escort 2 s). On a player hit: detection +8, consecutive-hit count,
   // LKP fix with F4 bearing error (handled by updateShipLkp).
-  let pingHit = false
-  let pingHitRangeKm: number | null = null
+  let pingHit = false;
+  let pingHitRangeKm: number | null = null;
   if (isEscortShip(ship, balance) && canPingState(ship.aiState)) {
     if (ctx.simTime >= srt.nextPingAt) {
-      srt.nextPingAt = ctx.simTime + pingInterval(ship.aiState, rt, balance)
-      const pingRange = balance.enemyAI.shipTypes[ship.shipClass]?.activePingRangeKm
+      srt.nextPingAt = ctx.simTime + pingInterval(ship.aiState, rt, balance);
+      const pingRange = balance.enemyAI.shipTypes[ship.shipClass]?.activePingRangeKm;
       if (pingRange !== undefined) {
-        const d = distKm(ship.position, player.position)
+        const d = distKm(ship.position, player.position);
         if (d <= pingRange) {
-          pingHit = true
-          pingHitRangeKm = d
-          srt.consecutivePingHits += 1
-          srt.lastPingHitRangeKm = d
-          applyDetection(ctx, balance.enemyAI.activePing.detectionGainOnPlayer)
+          pingHit = true;
+          pingHitRangeKm = d;
+          srt.consecutivePingHits += 1;
+          srt.lastPingHitRangeKm = d;
+          applyDetection(ctx, balance.enemyAI.activePing.detectionGainOnPlayer);
         } else {
-          srt.consecutivePingHits = 0
+          srt.consecutivePingHits = 0;
         }
       }
     }
   }
 
-  return { noiseSensed, pingHeard, torpedoNearKm, explosionHeard, pingHit, pingHitRangeKm }
+  return { noiseSensed, pingHeard, torpedoNearKm, explosionHeard, pingHit, pingHitRangeKm };
 }
 
 function canPingState(state: AiState): boolean {
-  return state === 'SUSPICIOUS' || state === 'SEARCHING' || state === 'HUNTING'
+  return state === 'SUSPICIOUS' || state === 'SEARCHING' || state === 'HUNTING';
 }
 
-function pingInterval(state: AiState, rt: AiGameRuntime, balance: SystemContext['balance']): number {
-  const ap = balance.enemyAI.activePing
-  if (state === 'HUNTING') return ap.huntingIntervalSeconds
-  if (rt.heavyEscort) return ap.heavyEscortIntervalSeconds
-  return ap.suspiciousIntervalSeconds
+function pingInterval(
+  state: AiState,
+  rt: AiGameRuntime,
+  balance: SystemContext['balance'],
+): number {
+  const ap = balance.enemyAI.activePing;
+  if (state === 'HUNTING') return ap.huntingIntervalSeconds;
+  if (rt.heavyEscort) return ap.heavyEscortIntervalSeconds;
+  return ap.suspiciousIntervalSeconds;
 }
 
 // ---------------------------------------------------------------------------
@@ -360,48 +369,55 @@ function pingInterval(state: AiState, rt: AiGameRuntime, balance: SystemContext[
 // ---------------------------------------------------------------------------
 
 function countPlayerManeuvers(srt: AiShipRuntime, player: SystemContext['player']): number {
-  let n = 0
-  if (Math.abs(angleDiffDeg(srt.lastPlayerHeadingDeg, player.headingDeg)) > MANEUVER_TURN_DEG) n += 1
-  if (Math.abs(player.speedKt - srt.lastPlayerSpeedKt) > MANEUVER_SPEED_KT) n += 1
-  return n
+  let n = 0;
+  if (Math.abs(angleDiffDeg(srt.lastPlayerHeadingDeg, player.headingDeg)) > MANEUVER_TURN_DEG)
+    n += 1;
+  if (Math.abs(player.speedKt - srt.lastPlayerSpeedKt) > MANEUVER_SPEED_KT) n += 1;
+  return n;
 }
 
-function updateShipLkp(ship: EnemyShip, srt: AiShipRuntime, rt: AiGameRuntime, ctx: SystemContext, sense: SenseResult): void {
-  const balance = ctx.balance
-  const lkpCfg = balance.enemyAI.lkp
-  const player = ctx.player
+function updateShipLkp(
+  ship: EnemyShip,
+  srt: AiShipRuntime,
+  rt: AiGameRuntime,
+  ctx: SystemContext,
+  sense: SenseResult,
+): void {
+  const balance = ctx.balance;
+  const lkpCfg = balance.enemyAI.lkp;
+  const player = ctx.player;
 
   if (ship.aiState === 'NORMAL' && ship.lkp === null) {
     // Not aware yet — nothing to maintain.
-    srt.nextLkpRefreshAt = ctx.simTime + lkpCfg.refreshSeconds
-    srt.lastPlayerHeadingDeg = player.headingDeg
-    srt.lastPlayerSpeedKt = player.speedKt
-    return
+    srt.nextLkpRefreshAt = ctx.simTime + lkpCfg.refreshSeconds;
+    srt.lastPlayerHeadingDeg = player.headingDeg;
+    srt.lastPlayerSpeedKt = player.speedKt;
+    return;
   }
 
-  const activeRange = balance.enemyAI.shipTypes[ship.shipClass]?.activePingRangeKm
+  const activeRange = balance.enemyAI.shipTypes[ship.shipClass]?.activePingRangeKm;
   const inSensorRange =
     sense.noiseSensed ||
-    (activeRange !== undefined && distKm(ship.position, player.position) <= activeRange)
+    (activeRange !== undefined && distKm(ship.position, player.position) <= activeRange);
 
   // New live decoy → one replacement roll (F5: 70 % / 20 s).
-  let newDecoy: { x: number; y: number } | null = null
+  let newDecoy: { x: number; y: number } | null = null;
   for (const d of ctx.decoys) {
     if (d.ageS < balance.decoy.durationSeconds && !srt.decoyHandled.has(d.id)) {
-      srt.decoyHandled.add(d.id)
-      newDecoy = { x: d.position.x, y: d.position.y }
-      break
+      srt.decoyHandled.add(d.id);
+      newDecoy = { x: d.position.x, y: d.position.y };
+      break;
     }
   }
 
-  const maneuvers = countPlayerManeuvers(srt, player)
-  srt.lastPlayerHeadingDeg = player.headingDeg
-  srt.lastPlayerSpeedKt = player.speedKt
+  const maneuvers = countPlayerManeuvers(srt, player);
+  srt.lastPlayerHeadingDeg = player.headingDeg;
+  srt.lastPlayerSpeedKt = player.speedKt;
 
-  const due = lkpRefreshDue(ctx.simTime, srt.nextLkpRefreshAt)
-  if (due) srt.nextLkpRefreshAt = ctx.simTime + lkpCfg.refreshSeconds
+  const due = lkpRefreshDue(ctx.simTime, srt.nextLkpRefreshAt);
+  if (due) srt.nextLkpRefreshAt = ctx.simTime + lkpCfg.refreshSeconds;
 
-  const decoyActive = ctx.simTime < srt.lkpDecoyUntil
+  const decoyActive = ctx.simTime < srt.lkpDecoyUntil;
   const out = updateLkp({
     lkp: ship.lkp,
     playerPos: player.position,
@@ -417,9 +433,9 @@ function updateShipLkp(ship: EnemyShip, srt: AiShipRuntime, rt: AiGameRuntime, c
     decoyReplaceChance: balance.decoy.escortReplaceChance,
     decoyActive,
     rng: ctx.forks.ai,
-  })
-  ship.lkp = out.lkp
-  if (out.decoyActive) srt.lkpDecoyUntil = ctx.simTime + balance.decoy.durationSeconds
+  });
+  ship.lkp = out.lkp;
+  if (out.decoyActive) srt.lkpDecoyUntil = ctx.simTime + balance.decoy.durationSeconds;
 }
 
 // ---------------------------------------------------------------------------
@@ -430,9 +446,9 @@ function merchantClamp(current: AiState, next: AiState): AiState {
   // Merchants have no search/hunt behaviour (no weapons, §6.1 merchant rows):
   // SEARCHING/HUNTING fall back to staying, LOST_CONTACT maps to NORMAL
   // (they have no escort post to return to — DESIGN DECISION).
-  if (next === 'SEARCHING' || next === 'HUNTING') return current
-  if (next === 'LOST_CONTACT') return 'NORMAL'
-  return next
+  if (next === 'SEARCHING' || next === 'HUNTING') return current;
+  if (next === 'LOST_CONTACT') return 'NORMAL';
+  return next;
 }
 
 function onEnterState(
@@ -443,93 +459,99 @@ function onEnterState(
   rt: AiGameRuntime,
   ctx: SystemContext,
 ): void {
-  const balance = ctx.balance
-  const merchant = isMerchantShip(ship, balance)
+  const balance = ctx.balance;
+  const merchant = isMerchantShip(ship, balance);
   switch (next) {
     case 'SUSPICIOUS': {
-      srt.suspiciousNoContactS = 0
-      srt.consecutivePingHits = 0
-      srt.lastPingHitRangeKm = null
+      srt.suspiciousNoContactS = 0;
+      srt.consecutivePingHits = 0;
+      srt.lastPingHitRangeKm = null;
       if (!merchant) {
         // Start the escort's own active ping cadence immediately.
-        srt.nextPingAt = ctx.simTime
+        srt.nextPingAt = ctx.simTime;
         if (ship.lkp === null) {
-          ship.lkp = { x: ctx.player.position.x, y: ctx.player.position.y, errorKm: 0 }
+          ship.lkp = { x: ctx.player.position.x, y: ctx.player.position.y, errorKm: 0 };
         }
       }
-      break
+      break;
     }
     case 'ALERT': {
       if (!merchant && ship.lkp === null) {
-        ship.lkp = { x: ctx.player.position.x, y: ctx.player.position.y, errorKm: 0 }
+        ship.lkp = { x: ctx.player.position.x, y: ctx.player.position.y, errorKm: 0 };
       }
       if (merchant) {
         // §6.1 ALERT merchant: turn 30° (direction via RNG) and speed up to
         // alertSpeedKt for MERCHANT_ALERT_SECONDS, then restore.
-        srt.evadeSign = ctx.forks.ai.sign()
+        srt.evadeSign = ctx.forks.ai.sign();
         srt.merchantAlertHeadingDeg = normalizeDeg(
           ship.headingDeg + srt.evadeSign * balance.enemyAI.merchant.alertTurnDeg,
-        )
-        srt.merchantAlertS = balance.enemyAI.merchantAlertSeconds
+        );
+        srt.merchantAlertS = balance.enemyAI.merchantAlertSeconds;
       }
-      break
+      break;
     }
     case 'SEARCHING': {
-      srt.searchingNoContactS = 0
-      srt.nextPingAt = ctx.simTime
-      const kind = chooseSearchPattern(prev)
-      srt.searchPattern = kind
-      const cfg = searchPatternsConfig(balance)
+      srt.searchingNoContactS = 0;
+      srt.nextPingAt = ctx.simTime;
+      const kind = chooseSearchPattern(prev);
+      srt.searchPattern = kind;
+      const cfg = searchPatternsConfig(balance);
       if (kind === 'circular') {
-        srt.circular = initialCircularState(cfg)
+        srt.circular = initialCircularState(cfg);
       } else if (kind === 'zigzag') {
-        srt.zigzag = initialZigzagState(rt.fleetHeadingDeg)
+        srt.zigzag = initialZigzagState(rt.fleetHeadingDeg);
       } else {
-        srt.expanding = initialExpandingState(cfg)
+        srt.expanding = initialExpandingState(cfg);
       }
-      break
+      break;
     }
     case 'HUNTING': {
-      srt.huntingBelow40S = 0
-      srt.dcNextDropAt = 0
-      srt.dcRoundCount = 0
-      srt.nextPingAt = ctx.simTime
-      break
+      srt.huntingBelow40S = 0;
+      srt.dcNextDropAt = 0;
+      srt.dcRoundCount = 0;
+      srt.nextPingAt = ctx.simTime;
+      break;
     }
     case 'LOST_CONTACT': {
-      srt.lostContactAtPostS = 0
-      break
+      srt.lostContactAtPostS = 0;
+      break;
     }
     case 'NORMAL': {
-      srt.patrolPhaseRad = 0
-      break
+      srt.patrolPhaseRad = 0;
+      break;
     }
   }
 }
 
-function updateStateTimers(ship: EnemyShip, srt: AiShipRuntime, rt: AiGameRuntime, ctx: SystemContext, sense: SenseResult): void {
-  const dt = ctx.dt
-  const contact = sense.noiseSensed || sense.pingHeard || sense.pingHit
+function updateStateTimers(
+  ship: EnemyShip,
+  srt: AiShipRuntime,
+  rt: AiGameRuntime,
+  ctx: SystemContext,
+  sense: SenseResult,
+): void {
+  const dt = ctx.dt;
+  const contact = sense.noiseSensed || sense.pingHeard || sense.pingHit;
   switch (ship.aiState) {
     case 'SUSPICIOUS':
-      srt.suspiciousNoContactS = contact ? 0 : srt.suspiciousNoContactS + dt
-      break
+      srt.suspiciousNoContactS = contact ? 0 : srt.suspiciousNoContactS + dt;
+      break;
     case 'SEARCHING':
-      srt.searchingNoContactS = contact ? 0 : srt.searchingNoContactS + dt
-      break
+      srt.searchingNoContactS = contact ? 0 : srt.searchingNoContactS + dt;
+      break;
     case 'HUNTING':
       srt.huntingBelow40S =
-        ctx.player.detection < HUNTING_DEGRADE_BELOW ? srt.huntingBelow40S + dt : 0
-      break
+        ctx.player.detection < HUNTING_DEGRADE_BELOW ? srt.huntingBelow40S + dt : 0;
+      break;
     case 'LOST_CONTACT': {
-      const post = srt.post ?? rt.anchor
+      const post = srt.post ?? rt.anchor;
       const atPost =
-        post !== null && distKm(ship.position, post) <= ctx.balance.enemyAI.escort.patrolRadiusKm
-      srt.lostContactAtPostS = atPost ? srt.lostContactAtPostS + dt : 0
-      break
+        post !== null && distKm(ship.position, post) <= ctx.balance.enemyAI.escort.patrolRadiusKm;
+      srt.lostContactAtPostS = atPost ? srt.lostContactAtPostS + dt : 0;
+      break;
     }
     default:
-      break
+      break;
   }
 }
 
@@ -538,29 +560,29 @@ function updateStateTimers(ship: EnemyShip, srt: AiShipRuntime, rt: AiGameRuntim
 // ---------------------------------------------------------------------------
 
 function maybeEmitSunk(ship: EnemyShip, rt: AiGameRuntime, ctx: SystemContext): void {
-  let srt = rt.ships.get(ship.id)
+  let srt = rt.ships.get(ship.id);
   if (srt === undefined) {
     // A ship can enter the tick already sunk (no runtime was ever created) —
     // create one so the event fires exactly once.
-    srt = createShipRuntime(rt.slots.get(ship.id) ?? null)
-    rt.ships.set(ship.id, srt)
+    srt = createShipRuntime(rt.slots.get(ship.id) ?? null);
+    rt.ships.set(ship.id, srt);
   }
   if (ship.hull <= 0 && !srt.sunkEmitted) {
-    srt.sunkEmitted = true
-    ctx.bus.emit('ship.sunk', { shipId: ship.id, shipClass: ship.shipClass })
+    srt.sunkEmitted = true;
+    ctx.bus.emit('ship.sunk', { shipId: ship.id, shipClass: ship.shipClass });
   }
 }
 
 function isTorpedoTargeting(ship: EnemyShip, torpedoes: SystemContext['torpedoes']): boolean {
   for (const t of torpedoes) {
-    if (t.state === 'RUNNING' && t.targetShipId === ship.id) return true
+    if (t.state === 'RUNNING' && t.targetShipId === ship.id) return true;
   }
-  return false
+  return false;
 }
 
 function convoyMateSunk(ownId: string, sunkIds: ReadonlySet<string>): boolean {
-  for (const id of sunkIds) if (id !== ownId) return true
-  return false
+  for (const id of sunkIds) if (id !== ownId) return true;
+  return false;
 }
 
 // ---------------------------------------------------------------------------
@@ -573,7 +595,7 @@ function stateTimers(srt: AiShipRuntime): AiStateTimers {
     searchingNoContactS: srt.searchingNoContactS,
     huntingBelow40S: srt.huntingBelow40S,
     lostContactAtPostS: srt.lostContactAtPostS,
-  }
+  };
 }
 
 function escortCtx(ctx: SystemContext, rt: AiGameRuntime): EscortTickCtx {
@@ -587,12 +609,12 @@ function escortCtx(ctx: SystemContext, rt: AiGameRuntime): EscortTickCtx {
     rng: ctx.forks.ai,
     addDetection: (d) => applyDetection(ctx, d),
     emitDamage: (d) => {
-      pending.damages.push(d)
+      pending.damages.push(d);
     },
     heavyEscort: rt.heavyEscort,
     fleetHeadingDeg: rt.fleetHeadingDeg,
     anchor: rt.anchor,
-  }
+  };
 }
 
 /**
@@ -604,42 +626,42 @@ export const aiSystem: SystemFn = (ctx) => {
   // Re-key the pending bridge for this game instance (combat t-007 drains it
   // right after this system returns; the buffer is never reset mid-game so an
   // unwired combat system cannot lose resolved damage between ticks).
-  ensurePendingOwner(ctx)
+  ensurePendingOwner(ctx);
 
-  const rt = getGameRuntime(ctx)
-  if (rt.anchor === null) initRuntime(rt, ctx)
+  const rt = getGameRuntime(ctx);
+  if (rt.anchor === null) initRuntime(rt, ctx);
   // initRuntime() guarantees a non-null anchor from here on.
-  const anchor = rt.anchor as { x: number; y: number }
+  const anchor = rt.anchor as { x: number; y: number };
 
   // Advance the formation anchor along the fleet course.
-  rt.anchor = advanceAnchor(anchor, rt.fleetHeadingDeg, rt.fleetSpeedKt, ctx.dt)
+  rt.anchor = advanceAnchor(anchor, rt.fleetHeadingDeg, rt.fleetSpeedKt, ctx.dt);
 
   // Pre-pass: which convoy merchants are already sunk this tick (drives the
   // neighbor-evade rule regardless of array order).
-  rt.convoySunkIds.clear()
+  rt.convoySunkIds.clear();
   for (const e of ctx.enemies) {
     if (e.hull <= 0 && e.inConvoy && isMerchantShip(e, ctx.balance)) {
-      rt.convoySunkIds.add(e.id)
+      rt.convoySunkIds.add(e.id);
     }
   }
 
-  const thresholds: AiThresholds = defaultAiThresholds(ctx.balance)
+  const thresholds: AiThresholds = defaultAiThresholds(ctx.balance);
 
   for (const ship of ctx.enemies) {
     if (ship.hull <= 0) {
-      maybeEmitSunk(ship, rt, ctx)
-      continue
+      maybeEmitSunk(ship, rt, ctx);
+      continue;
     }
-    const srt = getShipRuntime(rt, ship, ctx)
+    const srt = getShipRuntime(rt, ship, ctx);
 
     // 1. sense
-    const sense = senseShip(ship, srt, rt, ctx)
+    const sense = senseShip(ship, srt, rt, ctx);
 
     // 2. LKP (escorts only)
-    if (isEscortShip(ship, ctx.balance)) updateShipLkp(ship, srt, rt, ctx, sense)
+    if (isEscortShip(ship, ctx.balance)) updateShipLkp(ship, srt, rt, ctx, sense);
 
     // 3. state machine
-    const prev = ship.aiState
+    const prev = ship.aiState;
     const triggers: AiTriggers = {
       noiseSensed: sense.noiseSensed,
       pingHeard: sense.pingHeard,
@@ -652,21 +674,21 @@ export const aiSystem: SystemFn = (ctx) => {
       atPost:
         srt.post !== null &&
         distKm(ship.position, srt.post) <= ctx.balance.enemyAI.escort.patrolRadiusKm,
-    }
-    const result = evaluateAiState(prev, triggers, stateTimers(srt), thresholds)
-    const next = isMerchantShip(ship, ctx.balance) ? merchantClamp(prev, result.next) : result.next
+    };
+    const result = evaluateAiState(prev, triggers, stateTimers(srt), thresholds);
+    const next = isMerchantShip(ship, ctx.balance) ? merchantClamp(prev, result.next) : result.next;
     if (next !== prev) {
-      onEnterState(ship, srt, next, prev, rt, ctx)
-      ship.aiState = next
+      onEnterState(ship, srt, next, prev, rt, ctx);
+      ship.aiState = next;
     }
 
     // 4. timers + behavior
-    updateStateTimers(ship, srt, rt, ctx, sense)
+    updateStateTimers(ship, srt, rt, ctx, sense);
 
     if (isEscortShip(ship, ctx.balance)) {
-      runEscortTick(ship, srt, escortCtx(ctx, rt))
+      runEscortTick(ship, srt, escortCtx(ctx, rt));
       // Depth-charge exhaustion disables HUNTING forever (§6.1).
-      if (ship.depthChargesLeft <= 0) srt.huntingDisabled = true
+      if (ship.depthChargesLeft <= 0) srt.huntingDisabled = true;
     } else {
       runMerchantBehavior({
         ship,
@@ -680,16 +702,16 @@ export const aiSystem: SystemFn = (ctx) => {
         torpedoTargeted: isTorpedoTargeting(ship, ctx.torpedoes),
         convoyMateSunk: convoyMateSunk(ship.id, rt.convoySunkIds),
         rng: ctx.forks.ai,
-      })
+      });
       // §6.1: merchant ALERT behaviour lasts 60 s, then restores to NORMAL.
       if (ship.aiState === 'ALERT' && srt.merchantAlertS <= 0) {
-        ship.aiState = 'NORMAL'
-        srt.merchantAlertHeadingDeg = null
+        ship.aiState = 'NORMAL';
+        srt.merchantAlertHeadingDeg = null;
       }
     }
 
     // 5. publish + sunk
-    maybeEmitSunk(ship, rt, ctx)
-    ship.activePingCooldown = Math.max(0, srt.nextPingAt - ctx.simTime)
+    maybeEmitSunk(ship, rt, ctx);
+    ship.activePingCooldown = Math.max(0, srt.nextPingAt - ctx.simTime);
   }
-}
+};

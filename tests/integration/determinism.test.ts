@@ -20,12 +20,11 @@
  * Environment: vitest node. No Math.random anywhere.
  */
 
-import { describe, expect, it } from 'vitest'
-import { createGame, step } from '../../src/core/engine'
-import { getMissionDef } from '../../src/missions/missions'
-import { FIXED_DT } from '../../src/core/time'
-import { compassBearing, distKm } from '../../src/sonar/contacts'
-import type { GameSnapshot, MissionDef, PlayerInputs } from '../../src/core/types'
+import { describe, expect, it } from 'vitest';
+import { createGame, step } from '../../src/core/engine';
+import { getMissionDef } from '../../src/missions/missions';
+import { FIXED_DT } from '../../src/core/time';
+import type { GameSnapshot, MissionDef, PlayerInputs } from '../../src/core/types';
 
 const IDLE: PlayerInputs = {
   throttle: 0,
@@ -36,14 +35,14 @@ const IDLE: PlayerInputs = {
   fireTorpedo: null,
   decoy: false,
   pause: false,
-}
+};
 
 function clamp(v: number, lo: number, hi: number): number {
-  return v < lo ? lo : v > hi ? hi : v
+  return v < lo ? lo : v > hi ? hi : v;
 }
 
 function angleDelta(a: number, b: number): number {
-  return ((b - a + 540) % 360) - 180
+  return ((b - a + 540) % 360) - 180;
 }
 
 /**
@@ -55,18 +54,23 @@ function angleDelta(a: number, b: number): number {
 function scriptedBrain(snap: GameSnapshot, last: PlayerInputs): PlayerInputs {
   const aliveCargoIds = new Set(
     snap.enemies.filter((e) => e.hull > 0 && e.shipClass === 'Cargo').map((e) => e.id),
-  )
+  );
   const contacts = snap.contacts
     .filter((c) => c.trueShipId !== null && aliveCargoIds.has(c.trueShipId) && c.rangeKm !== null)
-    .sort((a, b) => a.rangeKm! - b.rangeKm!)
-  const target = contacts[0]
-  const bearing = target !== undefined ? target.bearingDeg : 270 // briefing: convoy west
-  const rudder = clamp(angleDelta(snap.playerSub.headingDeg, bearing) / 20, -1, 1)
+    .sort((a, b) => a.rangeKm! - b.rangeKm!);
+  const target = contacts[0];
+  const bearing = target !== undefined ? target.bearingDeg : 270; // briefing: convoy west
+  const rudder = clamp(angleDelta(snap.playerSub.headingDeg, bearing) / 20, -1, 1);
 
-  const pingReady = snap.playerSub.pingCooldown <= 0 && !last.ping
-  let fire: string | null = null
-  if (target !== undefined && target.rangeKm! <= 1.7 && snap.playerSub.pingCooldown <= 0 && snap.state === 'MISSION_RUNNING') {
-    fire = target.id
+  const pingReady = snap.playerSub.pingCooldown <= 0 && !last.ping;
+  let fire: string | null = null;
+  if (
+    target !== undefined &&
+    target.rangeKm! <= 1.7 &&
+    snap.playerSub.pingCooldown <= 0 &&
+    snap.state === 'MISSION_RUNNING'
+  ) {
+    fire = target.id;
   }
   return {
     throttle: 12,
@@ -77,11 +81,11 @@ function scriptedBrain(snap: GameSnapshot, last: PlayerInputs): PlayerInputs {
     fireTorpedo: fire,
     decoy: false,
     pause: false,
-  }
+  };
 }
 
-const MISSION_TICKS = 3000
-const SAMPLE_EVERY = 50
+const MISSION_TICKS = 3000;
+const SAMPLE_EVERY = 50;
 
 /** Run the scripted mission and return { snapshots at sample ticks, final }.
  *  Pause window (when opts.pauseAtTick ≥ 0), in loop-tick order:
@@ -94,94 +98,96 @@ function runScripted(
   seed: number,
   opts: { pauseAtTick?: number; frozenTicks?: number } = {},
 ): { samples: string[]; final: GameSnapshot } {
-  const handle = createGame(def, seed)
-  let last = IDLE
-  let snap = step(handle, FIXED_DT, IDLE)
-  const samples: string[] = []
-  let runningTicks = 0
-  const pauseAt = opts.pauseAtTick ?? -1
-  const frozen = opts.frozenTicks ?? 0
-  const pauseEnd = pauseAt >= 0 ? pauseAt + frozen + 3 : -1
-  const total = MISSION_TICKS + (pauseAt >= 0 ? frozen + 3 : 0)
+  const handle = createGame(def, seed);
+  let last = IDLE;
+  let snap = step(handle, FIXED_DT, IDLE);
+  const samples: string[] = [];
+  let runningTicks = 0;
+  const pauseAt = opts.pauseAtTick ?? -1;
+  const frozen = opts.frozenTicks ?? 0;
+  const pauseEnd = pauseAt >= 0 ? pauseAt + frozen + 3 : -1;
+  const total = MISSION_TICKS + (pauseAt >= 0 ? frozen + 3 : 0);
   for (let t = 0; t < total; t++) {
-    const inPause = pauseAt >= 0 && t >= pauseAt && t < pauseEnd
-    let inputs: PlayerInputs
+    const inPause = pauseAt >= 0 && t >= pauseAt && t < pauseEnd;
+    let inputs: PlayerInputs;
     if (inPause) {
-      const i = t - pauseAt
-      if (i === frozen + 2) inputs = { ...IDLE, pause: true } // resume edge (frozen)
-      else if (i === frozen + 1) inputs = { ...IDLE, pause: false } // prevPause reset (frozen)
-      else inputs = { ...IDLE, pause: true } // pause edge + frozen middle
+      const i = t - pauseAt;
+      if (i === frozen + 2)
+        inputs = { ...IDLE, pause: true }; // resume edge (frozen)
+      else if (i === frozen + 1)
+        inputs = { ...IDLE, pause: false }; // prevPause reset (frozen)
+      else inputs = { ...IDLE, pause: true }; // pause edge + frozen middle
     } else {
-      inputs = scriptedBrain(snap, last)
-      last = inputs
+      inputs = scriptedBrain(snap, last);
+      last = inputs;
     }
-    snap = step(handle, FIXED_DT, inputs)
+    snap = step(handle, FIXED_DT, inputs);
     if (!inPause) {
-      runningTicks += 1
+      runningTicks += 1;
       if (runningTicks % SAMPLE_EVERY === 0 || runningTicks === MISSION_TICKS) {
-        samples.push(JSON.stringify(snap))
+        samples.push(JSON.stringify(snap));
       }
-      if (runningTicks >= MISSION_TICKS) break
+      if (runningTicks >= MISSION_TICKS) break;
     }
   }
-  return { samples, final: snap }
+  return { samples, final: snap };
 }
 
 describe('full-mission determinism (scripted M03 play, 3000 ticks)', () => {
-  const def = getMissionDef('M03')
+  const def = getMissionDef('M03');
 
   it('same seed + same script → byte-identical snapshots at every sampled tick', () => {
-    const a = runScripted(def, def.seed)
-    const b = runScripted(def, def.seed)
-    expect(a.samples.length).toBe(b.samples.length)
+    const a = runScripted(def, def.seed);
+    const b = runScripted(def, def.seed);
+    expect(a.samples.length).toBe(b.samples.length);
     for (let i = 0; i < a.samples.length; i++) {
-      expect(a.samples[i], `sample index ${i}`).toBe(b.samples[i])
+      expect(a.samples[i], `sample index ${i}`).toBe(b.samples[i]);
     }
-    expect(a.samples.length).toBe(MISSION_TICKS / SAMPLE_EVERY) // 60 samples
-  })
+    expect(a.samples.length).toBe(MISSION_TICKS / SAMPLE_EVERY); // 60 samples
+  });
 
   it('a different engine seed → snapshots differ', () => {
-    const a = runScripted(def, def.seed)
-    const b = runScripted(def, def.seed + 1)
+    const a = runScripted(def, def.seed);
+    const b = runScripted(def, def.seed + 1);
     // The very first sample may coincide (no RNG consumed before the first
     // ping) — divergence is guaranteed once pings/estimates draw RNG.
-    let diverged = false
+    let diverged = false;
     for (let i = 0; i < a.samples.length; i++) {
       if (a.samples[i] !== b.samples[i]) {
-        diverged = true
-        break
+        diverged = true;
+        break;
       }
     }
-    expect(diverged).toBe(true)
-    expect(JSON.stringify(a.final)).not.toBe(JSON.stringify(b.final))
-  })
+    expect(diverged).toBe(true);
+    expect(JSON.stringify(a.final)).not.toBe(JSON.stringify(b.final));
+  });
 
   it('pause-then-resume vs no-pause → byte-identical final snapshot and samples', () => {
-    const plain = runScripted(def, def.seed)
-    const paused = runScripted(def, def.seed, { pauseAtTick: 1500, frozenTicks: 9 })
-    expect(paused.final.simTime).toBe(plain.final.simTime)
-    expect(paused.samples).toEqual(plain.samples)
-    expect(JSON.stringify(paused.final)).toBe(JSON.stringify(plain.final))
-  })
+    const plain = runScripted(def, def.seed);
+    const paused = runScripted(def, def.seed, { pauseAtTick: 1500, frozenTicks: 9 });
+    expect(paused.final.simTime).toBe(plain.final.simTime);
+    expect(paused.samples).toEqual(plain.samples);
+    expect(JSON.stringify(paused.final)).toBe(JSON.stringify(plain.final));
+  });
 
   it('same def+seed → identical first tick (fresh game bootstrap)', () => {
-    const a = runScripted(def, def.seed)
-    const b = runScripted(def, def.seed)
-    expect(a.samples[0]).toBe(b.samples[0])
-  })
-})
+    const a = runScripted(def, def.seed);
+    const b = runScripted(def, def.seed);
+    expect(a.samples[0]).toBe(b.samples[0]);
+  });
+});
 
 describe('determinism across the five fixed missions (bootstrap + 100 ticks)', () => {
   for (const id of ['M01', 'M02', 'M03', 'M04', 'M05']) {
     it(`${id}: two fresh games with the same def+seed are byte-identical after 100 ticks`, () => {
-      const def = getMissionDef(id)
+      const def = getMissionDef(id);
       const run = (): string => {
-        const handle = createGame(def, def.seed)
-        let snap = step(handle, FIXED_DT, IDLE)
-        for (let i = 0; i < 99; i++) snap = step(handle, FIXED_DT, IDLE)
-        return JSON.stringify(snap)
-      }
-      expect(run()).toBe(run())
-    })
+        const handle = createGame(def, def.seed);
+        let snap = step(handle, FIXED_DT, IDLE);
+        for (let i = 0; i < 99; i++) snap = step(handle, FIXED_DT, IDLE);
+        return JSON.stringify(snap);
+      };
+      expect(run()).toBe(run());
+    });
   }
-})
+});

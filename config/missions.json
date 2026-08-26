@@ -37,9 +37,7 @@
       "objective": {
         "kind": "sink_transport",
         "params": { "targetClass": "Tanker", "count": 1 },
-        "subgoals": [
-          { "id": "sink-1", "weight": 400, "desc": "击沉油轮 (sink the tanker)" }
-        ]
+        "subgoals": [{ "id": "sink-1", "weight": 400, "desc": "击沉油轮 (sink the tanker)" }]
       },
       "enemies": { "Tanker": 1 },
       "escorts": [],

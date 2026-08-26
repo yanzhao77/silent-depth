@@ -31,60 +31,54 @@
  * ctx.forks.sonar (ADR-004).
  */
 
-import type { SystemContext } from '../core/engine'
-import type { SonarRuntime } from './sonar'
+import type { SystemContext } from '../core/engine';
+import type { SonarRuntime } from './sonar';
 import {
   compassBearing,
   distKm,
   getOrCreateTrack,
   normalizeDeg,
   recordObservation,
-} from './contacts'
-import {
-  observedNoiseForClass,
-  pingSignalFor,
-} from './classification'
-import {
-  pingBearingErrorDeg,
-  pingRangeErrorFrac,
-} from './uncertainty'
+} from './contacts';
+import { observedNoiseForClass, pingSignalFor } from './classification';
+import { pingBearingErrorDeg, pingRangeErrorFrac } from './uncertainty';
 
 /** Run the active ping (guarded: cooldown + battery). */
 export function runActivePing(ctx: SystemContext, rt: SonarRuntime): void {
-  const balance = ctx.balance
-  const ap = balance.sonar.active
-  const player = ctx.player
+  const balance = ctx.balance;
+  const ap = balance.sonar.active;
+  const player = ctx.player;
 
-  if (player.pingCooldown > 0) return
-  if (player.battery < ap.batteryPercent) return // defensive second gate
+  if (player.pingCooldown > 0) return;
+  if (player.battery < ap.batteryPercent) return; // defensive second gate
 
   // --- costs ---
-  player.battery = Math.max(0, player.battery - ap.batteryPercent)
-  player.pingCooldown = ap.cooldownSeconds
-  player.detection = Math.min(100, player.detection + ap.selfExposureDetection)
-  player.sonarState = 'ping'
-  ctx.bus.emit('sonar.ping', { bearingDeg: player.headingDeg })
+  player.battery = Math.max(0, player.battery - ap.batteryPercent);
+  player.pingCooldown = ap.cooldownSeconds;
+  player.detection = Math.min(100, player.detection + ap.selfExposureDetection);
+  player.sonarState = 'ping';
+  ctx.bus.emit('sonar.ping', { bearingDeg: player.headingDeg });
 
   // One sound wave → one shared bearing-jitter draw for every contact (§5.1).
-  const waveJitter = ctx.forks.sonar.range(-1, 1)
+  const waveJitter = ctx.forks.sonar.range(-1, 1);
 
-  const hitContactIds: string[] = []
+  const hitContactIds: string[] = [];
   for (const ship of ctx.enemies) {
-    if (ship.hull <= 0) continue
-    const distanceKm = distKm(player.position, ship.position)
-    if (distanceKm > ap.rangeKm) continue
+    if (ship.hull <= 0) continue;
+    const distanceKm = distKm(player.position, ship.position);
+    if (distanceKm > ap.rangeKm) continue;
 
-    const track = getOrCreateTrack(rt, ship.id)
+    const track = getOrCreateTrack(rt, ship.id);
     // Errors for THIS ping (n-th hit: 10 %→8 %→…, 0.5°→0.35°→…).
-    const pingCount = track.pingCount + 1
-    const rangeErr = pingRangeErrorFrac(pingCount, balance)
-    const bearingErr = pingBearingErrorDeg(pingCount, balance)
+    const pingCount = track.pingCount + 1;
+    const rangeErr = pingRangeErrorFrac(pingCount, balance);
+    const bearingErr = pingBearingErrorDeg(pingCount, balance);
 
-    const trueBearing = compassBearing(player.position, ship.position)
-    const returnedBearing = normalizeDeg(trueBearing + waveJitter * bearingErr)
-    const returnedRange = distanceKm * (1 + ctx.forks.sonar.range(-1, 1) * rangeErr)
-    const noise = observedNoiseForClass(ship.shipClass, balance, ctx.forks.sonar)
-    const signal = pingSignalFor(distanceKm, ship.shipClass, balance)
+    const trueBearing = compassBearing(player.position, ship.position);
+    const returnedBearing = normalizeDeg(trueBearing + waveJitter * bearingErr);
+    const returnedRange = distanceKm * (1 + ctx.forks.sonar.range(-1, 1) * rangeErr);
+    const noise = observedNoiseForClass(ship.shipClass, balance, ctx.forks.sonar);
+    const signal = pingSignalFor(distanceKm, ship.shipClass, balance);
 
     const contact = recordObservation(ctx, rt, track, {
       ship,
@@ -94,11 +88,11 @@ export function runActivePing(ctx: SystemContext, rt: SonarRuntime): void {
       noise,
       isPing: true,
       rng: ctx.forks.sonar,
-    })
-    hitContactIds.push(contact.id)
+    });
+    hitContactIds.push(contact.id);
   }
 
   if (hitContactIds.length > 0) {
-    ctx.bus.emit('sonar.contact', { contactIds: hitContactIds, pingBearingDeg: player.headingDeg })
+    ctx.bus.emit('sonar.contact', { contactIds: hitContactIds, pingBearingDeg: player.headingDeg });
   }
 }

@@ -46,28 +46,28 @@
  * @pure — zero DOM; RNG only via ctx.forks.combat (damage/collision rolls).
  */
 
-import type { SystemContext } from '../core/engine'
-import type { Contact, EnemyShip, Torpedo, WeatherKind } from '../core/types'
-import { KNOTS_TO_KM_PER_SEC } from '../gameplay/submarine'
-import { distKm } from '../sonar/contacts'
-import { activeWeather } from '../world/world'
-import { solveFireSolution } from './fireControl'
-import { applyTorpedoDamage, checkCollisions, drainPendingPlayerDamage } from './damage'
+import type { SystemContext } from '../core/engine';
+import type { Contact, EnemyShip, Torpedo, WeatherKind } from '../core/types';
+import { KNOTS_TO_KM_PER_SEC } from '../gameplay/submarine';
+import { distKm } from '../sonar/contacts';
+import { activeWeather } from '../world/world';
+import { solveFireSolution } from './fireControl';
+import { applyTorpedoDamage, checkCollisions, drainPendingPlayerDamage } from './damage';
 
 export interface CombatRuntime {
-  nextTorpedoId: number
+  nextTorpedoId: number;
 }
 
-const combatRuntimes = new WeakMap<object, CombatRuntime>()
+const combatRuntimes = new WeakMap<object, CombatRuntime>();
 
 /** Test/manager hook into the per-game combat runtime. */
 export function getCombatRuntime(ctx: SystemContext): CombatRuntime {
-  let rt = combatRuntimes.get(ctx.player)
+  let rt = combatRuntimes.get(ctx.player);
   if (rt === undefined) {
-    rt = { nextTorpedoId: 1 }
-    combatRuntimes.set(ctx.player, rt)
+    rt = { nextTorpedoId: 1 };
+    combatRuntimes.set(ctx.player, rt);
   }
-  return rt
+  return rt;
 }
 
 /** Create the torpedo entity for a fired tube (launch data from the solution). */
@@ -78,7 +78,7 @@ export function createTorpedo(
   contact: Contact,
   bearingDeg: number,
 ): Torpedo {
-  const balance = ctx.balance
+  const balance = ctx.balance;
   const torpedo: Torpedo = {
     id: `TP-${String(rt.nextTorpedoId++).padStart(2, '0')}`,
     state: 'RUNNING',
@@ -91,9 +91,9 @@ export function createTorpedo(
     targetContactId: contact.id,
     firedAt: ctx.simTime,
     nearestPass: null,
-  }
-  ctx.torpedoes.push(torpedo)
-  return torpedo
+  };
+  ctx.torpedoes.push(torpedo);
+  return torpedo;
 }
 
 // ---------------------------------------------------------------------------
@@ -101,122 +101,138 @@ export function createTorpedo(
 // ---------------------------------------------------------------------------
 
 export const combatSystem: (ctx: SystemContext) => void = (ctx: SystemContext): void => {
-  if (ctx.state !== 'MISSION_RUNNING') return
-  const rt = getCombatRuntime(ctx)
+  if (ctx.state !== 'MISSION_RUNNING') return;
+  const rt = getCombatRuntime(ctx);
 
   // 1. AI-resolved player damage (depth charges / deck gun) — drain & apply.
-  drainPendingPlayerDamage(ctx)
+  drainPendingPlayerDamage(ctx);
 
   // 2. Fire control + launch (inputs.fireTorpedo).
-  handleFireInput(ctx, rt)
+  handleFireInput(ctx, rt);
 
   // 3. Torpedo movement / hit / near-miss / expiry.
-  updateTorpedoes(ctx)
+  updateTorpedoes(ctx);
 
   // 4. Player-ship collisions.
-  checkCollisions(ctx)
-}
+  checkCollisions(ctx);
+};
 
 function handleFireInput(ctx: SystemContext, rt: CombatRuntime): void {
-  const contactId = ctx.inputs.fireTorpedo
-  if (contactId === null) return
+  const contactId = ctx.inputs.fireTorpedo;
+  if (contactId === null) return;
 
-  const balance = ctx.balance
+  const balance = ctx.balance;
   const reject = (reason: 'noTarget' | 'notReady'): void => {
-    ctx.bus.emit('torpedo.fireRejected', { reason, contactId })
-  }
+    ctx.bus.emit('torpedo.fireRejected', { reason, contactId });
+  };
 
   // Resolve contact → ship (the engine already rejected unknown contact ids).
-  const contact = ctx.contacts.find((c) => c.id === contactId)
+  const contact = ctx.contacts.find((c) => c.id === contactId);
   if (contact === undefined) {
-    reject('noTarget') // defensive — engine normalize should have caught it
-    return
+    reject('noTarget'); // defensive — engine normalize should have caught it
+    return;
   }
-  const ship = contact.trueShipId !== null ? ctx.enemies.find((e) => e.id === contact.trueShipId) : undefined
+  const ship =
+    contact.trueShipId !== null ? ctx.enemies.find((e) => e.id === contact.trueShipId) : undefined;
   if (ship === undefined || ship.hull <= 0) {
-    reject('noTarget') // no live ship behind the contact (sunk / no link)
-    return
+    reject('noTarget'); // no live ship behind the contact (sunk / no link)
+    return;
   }
 
   // Tubes: fire up to salvoMax LOADED/READY tubes on the solved bearing.
-  const tubes = ctx.player.torpedoTubes.filter((t) => t.state === 'LOADED' || t.state === 'READY')
+  const tubes = ctx.player.torpedoTubes.filter((t) => t.state === 'LOADED' || t.state === 'READY');
   if (tubes.length === 0) {
-    reject('notReady')
-    return
+    reject('notReady');
+    return;
   }
-  const fireCount = Math.min(tubes.length, balance.torpedo.salvoMax)
+  const fireCount = Math.min(tubes.length, balance.torpedo.salvoMax);
   // t-024: a periscope-confirmed contact (visuallyConfirmed) or the locked
   // target fires with a VISUAL CONFIRMED solution (confidence penalty off).
-  const visual =
-    contact.visuallyConfirmed === true || ctx.periscope?.lockedContactId === contactId
-  const solution = solveFireSolution(contact, ctx.player, balance, visual)
+  const visual = contact.visuallyConfirmed === true || ctx.periscope?.lockedContactId === contactId;
+  const solution = solveFireSolution(contact, ctx.player, balance, visual);
 
   for (let i = 0; i < fireCount; i++) {
-    const tube = tubes[i]!
+    const tube = tubes[i]!;
     if (tube.state === 'LOADED') {
-      tube.state = 'READY' // fire solution computed
-      ctx.bus.emit('torpedo.ready', { tubeId: tube.id, targetContactId: contactId })
+      tube.state = 'READY'; // fire solution computed
+      ctx.bus.emit('torpedo.ready', { tubeId: tube.id, targetContactId: contactId });
     }
-    tube.state = 'FIRED'
-    tube.targetContactId = contactId
-    ctx.bus.emit('torpedo.fired', { tubeId: tube.id, targetContactId: contactId })
-    createTorpedo(ctx, rt, ship, contact, solution.bearingDeg)
+    tube.state = 'FIRED';
+    tube.targetContactId = contactId;
+    ctx.bus.emit('torpedo.fired', { tubeId: tube.id, targetContactId: contactId });
+    createTorpedo(ctx, rt, ship, contact, solution.bearingDeg);
   }
 
   // Self-exposure: torpedoFired once per fire action ("出管瞬间", §8.1);
   // t-024: firing while the periscope is up adds the raised bonus (the UI
   // warns — the engine only adds the detection).
-  let firedDetection = balance.detection.sources.torpedoFired
-  if (ctx.periscope !== undefined && (ctx.periscope.state === 'RAISED' || ctx.periscope.state === 'OBSERVING')) {
-    firedDetection += balance.periscope.torpedoFiredWhileRaisedBonus
+  let firedDetection = balance.detection.sources.torpedoFired;
+  if (
+    ctx.periscope !== undefined &&
+    (ctx.periscope.state === 'RAISED' || ctx.periscope.state === 'OBSERVING')
+  ) {
+    firedDetection += balance.periscope.torpedoFiredWhileRaisedBonus;
   }
-  ctx.player.detection = clamp(ctx.player.detection + firedDetection, 0, 100)
-  ctx.stats.torpedoesFired += fireCount
+  ctx.player.detection = clamp(ctx.player.detection + firedDetection, 0, 100);
+  ctx.stats.torpedoesFired += fireCount;
 }
 
 function updateTorpedoes(ctx: SystemContext): void {
-  const balance = ctx.balance
+  const balance = ctx.balance;
   for (let i = ctx.torpedoes.length - 1; i >= 0; i--) {
-    const torpedo = ctx.torpedoes[i]
-    if (torpedo === undefined || torpedo.state !== 'RUNNING') continue
+    const torpedo = ctx.torpedoes[i];
+    if (torpedo === undefined || torpedo.state !== 'RUNNING') continue;
 
     // Straight-line movement (no homing, DD-04).
-    const rad = (torpedo.headingDeg * Math.PI) / 180
-    const v = torpedo.speedKt * KNOTS_TO_KM_PER_SEC
-    torpedo.position.x += Math.sin(rad) * v * ctx.dt
-    torpedo.position.y += Math.cos(rad) * v * ctx.dt
-    torpedo.ageS += ctx.dt
-    torpedo.distanceKm += v * ctx.dt
+    const rad = (torpedo.headingDeg * Math.PI) / 180;
+    const v = torpedo.speedKt * KNOTS_TO_KM_PER_SEC;
+    torpedo.position.x += Math.sin(rad) * v * ctx.dt;
+    torpedo.position.y += Math.cos(rad) * v * ctx.dt;
+    torpedo.ageS += ctx.dt;
+    torpedo.distanceKm += v * ctx.dt;
 
-    const ship = torpedo.targetShipId !== null ? ctx.enemies.find((e) => e.id === torpedo.targetShipId) : undefined
+    const ship =
+      torpedo.targetShipId !== null
+        ? ctx.enemies.find((e) => e.id === torpedo.targetShipId)
+        : undefined;
     if (ship !== undefined && ship.hull > 0) {
-      const distM = distKm(torpedo.position, ship.position) * 1000
+      const distM = distKm(torpedo.position, ship.position) * 1000;
 
       // Closest-approach bookkeeping.
       if (torpedo.nearestPass === null || distM < torpedo.nearestPass.distM) {
-        torpedo.nearestPass = { distM, at: ctx.simTime }
+        torpedo.nearestPass = { distM, at: ctx.simTime };
       }
 
       // HIT: within the 40 m kill radius.
       if (distM <= balance.torpedo.hitDistanceM) {
-        torpedo.state = 'HIT'
-        const roll = balance.torpedo.damageBase + ctx.forks.combat.range(-balance.torpedo.damageSpread, balance.torpedo.damageSpread)
-        const damage = Math.max(0, Math.round(roll))
-        applyTorpedoDamage(ctx, ship, damage)
-        ctx.bus.emit('torpedo.hit', { torpedoId: torpedo.id, targetShipId: ship.id, distM: Math.round(distM) })
-        ctx.stats.torpedoesHit += 1
-        ctx.torpedoes.splice(i, 1)
-        continue
+        torpedo.state = 'HIT';
+        const roll =
+          balance.torpedo.damageBase +
+          ctx.forks.combat.range(-balance.torpedo.damageSpread, balance.torpedo.damageSpread);
+        const damage = Math.max(0, Math.round(roll));
+        applyTorpedoDamage(ctx, ship, damage);
+        ctx.bus.emit('torpedo.hit', {
+          torpedoId: torpedo.id,
+          targetShipId: ship.id,
+          distM: Math.round(distM),
+        });
+        ctx.stats.torpedoesHit += 1;
+        ctx.torpedoes.splice(i, 1);
+        continue;
       }
 
       // Passed the closest point and never got closer than 40 m: near miss
       // (40–120 m) or a wide pass that keeps flying to expiry (> 120 m).
       if (torpedo.nearestPass !== null && distM > torpedo.nearestPass.distM + 1e-9) {
         if (torpedo.nearestPass.distM <= balance.torpedo.nearMissDistanceM) {
-          torpedo.state = 'MISSED'
-          ctx.bus.emit('torpedo.missed', { torpedoId: torpedo.id, targetShipId: ship.id, distM: Math.round(torpedo.nearestPass.distM) })
-          ctx.torpedoes.splice(i, 1)
-          continue
+          torpedo.state = 'MISSED';
+          ctx.bus.emit('torpedo.missed', {
+            torpedoId: torpedo.id,
+            targetShipId: ship.id,
+            distM: Math.round(torpedo.nearestPass.distM),
+          });
+          ctx.torpedoes.splice(i, 1);
+          continue;
         }
         // nearest pass > 120 m: can no longer hit — run to expiry.
       }
@@ -224,17 +240,28 @@ function updateTorpedoes(ctx: SystemContext): void {
 
     // Range / lifetime expiry (6 km / 300 s). t-021 (replan-v2 drill): Storm
     // weather reduces effective torpedo range ×0.85 (balance.weather.<kind>.torpedoRangeFactor).
-    const weatherKind = ctx.worldState !== undefined ? activeWeather(ctx.worldState) : ctx.mission.weather.split('->')[0] as WeatherKind
-    const rangeFactor = (balance.weather[weatherKind] as { torpedoRangeFactor?: number } | undefined)?.torpedoRangeFactor ?? 1
-    if (torpedo.distanceKm >= balance.torpedo.rangeKm * rangeFactor || torpedo.ageS >= balance.torpedo.lifetimeSeconds) {
-      torpedo.state = 'EXPIRED'
-      ctx.bus.emit('torpedo.expired', { torpedoId: torpedo.id, targetShipId: torpedo.targetShipId })
-      ctx.torpedoes.splice(i, 1)
-      continue
+    const weatherKind =
+      ctx.worldState !== undefined
+        ? activeWeather(ctx.worldState)
+        : (ctx.mission.weather.split('->')[0] as WeatherKind);
+    const rangeFactor =
+      (balance.weather[weatherKind] as { torpedoRangeFactor?: number } | undefined)
+        ?.torpedoRangeFactor ?? 1;
+    if (
+      torpedo.distanceKm >= balance.torpedo.rangeKm * rangeFactor ||
+      torpedo.ageS >= balance.torpedo.lifetimeSeconds
+    ) {
+      torpedo.state = 'EXPIRED';
+      ctx.bus.emit('torpedo.expired', {
+        torpedoId: torpedo.id,
+        targetShipId: torpedo.targetShipId,
+      });
+      ctx.torpedoes.splice(i, 1);
+      continue;
     }
   }
 }
 
 function clamp(value: number, min: number, max: number): number {
-  return value < min ? min : value > max ? max : value
+  return value < min ? min : value > max ? max : value;
 }

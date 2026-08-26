@@ -39,11 +39,11 @@
  * @pure-at-import — no window/document at module scope.
  */
 
-import type { DepthLayer, PlayerInputs } from '../core/types'
-import { DEPTH_LAYER_ORDER } from '../world/ocean'
+import type { DepthLayer, PlayerInputs } from '../core/types';
+import { DEPTH_LAYER_ORDER } from '../world/ocean';
 
 /** Throttle step in kt per W/S press. */
-export const THROTTLE_STEP_KT = 2
+export const THROTTLE_STEP_KT = 2;
 
 /** Key codes handled by the shell (for preventDefault + tests). */
 export const HANDLED_KEYS: readonly string[] = [
@@ -65,132 +65,136 @@ export const HANDLED_KEYS: readonly string[] = [
   'KeyL',
   'KeyX',
   'Escape',
-]
+];
 
 /** Minimal event-target surface the binding needs (window in the browser). */
 export interface KeyEventTarget {
-  addEventListener(type: string, cb: (e: unknown) => void): void
-  removeEventListener(type: string, cb: (e: unknown) => void): void
+  addEventListener(type: string, cb: (e: unknown) => void): void;
+  removeEventListener(type: string, cb: (e: unknown) => void): void;
 }
 
 export interface InputOptions {
   /** Throttle clamp (balance.speedBands.FULL.speedMaxKt). */
-  maxThrottleKt: number
+  maxThrottleKt: number;
   /** Called on the Esc keydown edge (shell opens the pause menu). */
-  onMenu?: () => void
+  onMenu?: () => void;
   /** Called on the F12 keydown edge (shell saves a screenshot PNG). */
-  onScreenshot?: () => void
+  onScreenshot?: () => void;
 }
 
 export interface InputController {
   /** Current PlayerInputs for this frame (edge latches consumed on read). */
-  getInputs(): PlayerInputs
+  getInputs(): PlayerInputs;
   /** One-shot fire request: returns the selected contactId (or null) and
    *  clears the latch. Call once per frame after getInputs(). */
-  consumeFireRequest(): string | null
+  consumeFireRequest(): string | null;
   /** One-shot periscope raise/lower edge (t-026, key P). */
-  consumePeriscopeRequest(): boolean
+  consumePeriscopeRequest(): boolean;
   /** One-shot periscope lock-target edge (t-026, key L). */
-  consumeLockRequest(): boolean
+  consumeLockRequest(): boolean;
   /** One-shot emergency-dive edge (t-026, key X). */
-  consumeDiveRequest(): boolean
+  consumeDiveRequest(): boolean;
   /** The contact the fire control card / salvo targets. */
-  setSelectedContactId(id: string | null): void
+  setSelectedContactId(id: string | null): void;
   /** Raw key mapping — pure and testable. `pressed` true = keydown. */
-  handleKey(code: string, pressed: boolean): void
+  handleKey(code: string, pressed: boolean): void;
   /** Attach browser key listeners to a window-like target. */
-  bind(target: KeyEventTarget): () => void
+  bind(target: KeyEventTarget): () => void;
   /** Reset all held state (mission start). */
-  reset(): void
+  reset(): void;
   /** Remove listeners (target bound via bind). */
-  dispose(): void
+  dispose(): void;
 }
 
 export function createInput(opts: InputOptions): InputController {
-  const maxThrottleKt = opts.maxThrottleKt > 0 ? opts.maxThrottleKt : 20
+  const maxThrottleKt = opts.maxThrottleKt > 0 ? opts.maxThrottleKt : 20;
 
   // Persistent state.
-  let throttle = 0
-  let depthTargetIdx = DEPTH_LAYER_ORDER.indexOf('Shallow') // engine starts at Shallow
-  let silentRunning = false
-  const held = new Set<string>()
-  let selectedContactId: string | null = null
+  let throttle = 0;
+  let depthTargetIdx = DEPTH_LAYER_ORDER.indexOf('Shallow'); // engine starts at Shallow
+  let silentRunning = false;
+  const held = new Set<string>();
+  let selectedContactId: string | null = null;
 
   // Edge latches.
-  let pingLatch = false
-  let decoyLatch = false
-  let fireRequest: string | null = null
-  let periscopeLatch = false
-  let lockLatch = false
-  let diveLatch = false
+  let pingLatch = false;
+  let decoyLatch = false;
+  let fireRequest: string | null = null;
+  let periscopeLatch = false;
+  let lockLatch = false;
+  let diveLatch = false;
 
-  let bound: { target: KeyEventTarget; down: (e: unknown) => void; up: (e: unknown) => void } | null = null
+  let bound: {
+    target: KeyEventTarget;
+    down: (e: unknown) => void;
+    up: (e: unknown) => void;
+  } | null = null;
 
   function clamp(v: number, min: number, max: number): number {
-    return v < min ? min : v > max ? max : v
+    return v < min ? min : v > max ? max : v;
   }
 
   function handleKey(code: string, pressed: boolean): void {
     if (pressed) {
-      held.add(code)
+      held.add(code);
     } else {
-      held.delete(code)
+      held.delete(code);
     }
-    if (!pressed) return // edges latch on keydown only
+    if (!pressed) return; // edges latch on keydown only
 
     switch (code) {
       case 'KeyW':
       case 'ArrowUp':
-        throttle = clamp(throttle + THROTTLE_STEP_KT, 0, maxThrottleKt)
-        break
+        throttle = clamp(throttle + THROTTLE_STEP_KT, 0, maxThrottleKt);
+        break;
       case 'KeyS':
       case 'ArrowDown':
-        throttle = clamp(throttle - THROTTLE_STEP_KT, 0, maxThrottleKt)
-        break
+        throttle = clamp(throttle - THROTTLE_STEP_KT, 0, maxThrottleKt);
+        break;
       case 'KeyQ': {
-        const next = depthTargetIdx - 1
-        if (next >= 0) depthTargetIdx = next
-        break
+        const next = depthTargetIdx - 1;
+        if (next >= 0) depthTargetIdx = next;
+        break;
       }
       case 'KeyE': {
-        const next = depthTargetIdx + 1
-        if (next < DEPTH_LAYER_ORDER.length) depthTargetIdx = next
-        break
+        const next = depthTargetIdx + 1;
+        if (next < DEPTH_LAYER_ORDER.length) depthTargetIdx = next;
+        break;
       }
       case 'Space':
-        pingLatch = true
-        break
+        pingLatch = true;
+        break;
       case 'KeyF':
-        fireRequest = selectedContactId
-        break
+        fireRequest = selectedContactId;
+        break;
       case 'KeyR':
-        silentRunning = !silentRunning
-        break
+        silentRunning = !silentRunning;
+        break;
       case 'KeyG':
-        decoyLatch = true
-        break
+        decoyLatch = true;
+        break;
       case 'KeyP':
-        periscopeLatch = true
-        break
+        periscopeLatch = true;
+        break;
       case 'KeyL':
-        lockLatch = true
-        break
+        lockLatch = true;
+        break;
       case 'KeyX':
-        diveLatch = true
-        break
+        diveLatch = true;
+        break;
       case 'Escape':
-        opts.onMenu?.()
-        break
+        opts.onMenu?.();
+        break;
       case 'F12':
-        opts.onScreenshot?.()
-        break
+        opts.onScreenshot?.();
+        break;
     }
   }
 
   function getInputs(): PlayerInputs {
-    let rudder = 0
-    if (held.has('KeyA') || held.has('ArrowLeft')) rudder -= 1
-    if (held.has('KeyD') || held.has('ArrowRight')) rudder += 1
+    let rudder = 0;
+    if (held.has('KeyA') || held.has('ArrowLeft')) rudder -= 1;
+    if (held.has('KeyD') || held.has('ArrowRight')) rudder += 1;
 
     const inputs: PlayerInputs = {
       throttle,
@@ -201,81 +205,81 @@ export function createInput(opts: InputOptions): InputController {
       fireTorpedo: null, // one-shot via consumeFireRequest()
       decoy: decoyLatch,
       pause: false, // shell-owned (onPause callback flips the shell flag)
-    }
+    };
     // Consume latches after read (engine edge detection sees one true tick).
-    pingLatch = false
-    decoyLatch = false
-    return inputs
+    pingLatch = false;
+    decoyLatch = false;
+    return inputs;
   }
 
   function consumeFireRequest(): string | null {
-    const req = fireRequest
-    fireRequest = null
-    return req
+    const req = fireRequest;
+    fireRequest = null;
+    return req;
   }
 
   function consumePeriscopeRequest(): boolean {
-    const v = periscopeLatch
-    periscopeLatch = false
-    return v
+    const v = periscopeLatch;
+    periscopeLatch = false;
+    return v;
   }
 
   function consumeLockRequest(): boolean {
-    const v = lockLatch
-    lockLatch = false
-    return v
+    const v = lockLatch;
+    lockLatch = false;
+    return v;
   }
 
   function consumeDiveRequest(): boolean {
-    const v = diveLatch
-    diveLatch = false
-    return v
+    const v = diveLatch;
+    diveLatch = false;
+    return v;
   }
 
   function bind(target: KeyEventTarget): () => void {
-    const handled = new Set(HANDLED_KEYS)
+    const handled = new Set(HANDLED_KEYS);
     const down = (e: unknown): void => {
-      const code = (e as { code?: string; repeat?: boolean }).code
-      if (typeof code !== 'string' || !handled.has(code)) return
-      if ((e as { repeat?: boolean }).repeat) return // ignore OS key-repeat
-      ;(e as { preventDefault?: () => void }).preventDefault?.()
-      handleKey(code, true)
-    }
+      const code = (e as { code?: string; repeat?: boolean }).code;
+      if (typeof code !== 'string' || !handled.has(code)) return;
+      if ((e as { repeat?: boolean }).repeat) return; // ignore OS key-repeat
+      (e as { preventDefault?: () => void }).preventDefault?.();
+      handleKey(code, true);
+    };
     const up = (e: unknown): void => {
-      const code = (e as { code?: string }).code
-      if (typeof code !== 'string' || !handled.has(code)) return
-      ;(e as { preventDefault?: () => void }).preventDefault?.()
-      handleKey(code, false)
-    }
-    target.addEventListener('keydown', down)
-    target.addEventListener('keyup', up)
-    bound = { target, down, up }
+      const code = (e as { code?: string }).code;
+      if (typeof code !== 'string' || !handled.has(code)) return;
+      (e as { preventDefault?: () => void }).preventDefault?.();
+      handleKey(code, false);
+    };
+    target.addEventListener('keydown', down);
+    target.addEventListener('keyup', up);
+    bound = { target, down, up };
     return () => {
-      target.removeEventListener('keydown', down)
-      target.removeEventListener('keyup', up)
-      bound = null
-    }
+      target.removeEventListener('keydown', down);
+      target.removeEventListener('keyup', up);
+      bound = null;
+    };
   }
 
   function reset(): void {
-    throttle = 0
-    depthTargetIdx = DEPTH_LAYER_ORDER.indexOf('Shallow')
-    silentRunning = false
-    selectedContactId = null
-    pingLatch = false
-    decoyLatch = false
-    fireRequest = null
-    periscopeLatch = false
-    lockLatch = false
-    diveLatch = false
-    held.clear()
+    throttle = 0;
+    depthTargetIdx = DEPTH_LAYER_ORDER.indexOf('Shallow');
+    silentRunning = false;
+    selectedContactId = null;
+    pingLatch = false;
+    decoyLatch = false;
+    fireRequest = null;
+    periscopeLatch = false;
+    lockLatch = false;
+    diveLatch = false;
+    held.clear();
   }
 
   function dispose(): void {
     if (bound) {
-      bound.target.removeEventListener('keydown', bound.down)
-      bound.target.removeEventListener('keyup', bound.up)
-      bound = null
+      bound.target.removeEventListener('keydown', bound.down);
+      bound.target.removeEventListener('keyup', bound.up);
+      bound = null;
     }
   }
 
@@ -286,11 +290,11 @@ export function createInput(opts: InputOptions): InputController {
     consumeLockRequest,
     consumeDiveRequest,
     setSelectedContactId: (id: string | null) => {
-      selectedContactId = id
+      selectedContactId = id;
     },
     handleKey,
     bind,
     reset,
     dispose,
-  }
+  };
 }

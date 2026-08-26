@@ -33,36 +33,26 @@
  * @pure — zero DOM / browser-API references; RNG injected; no module state.
  */
 
-import type { BalanceConfig } from '../core/balance'
-import type { EnemyShip, SubmarineState, Torpedo } from '../core/types'
-import type { EventBus } from '../core/eventBus'
-import type { Rng } from '../core/rng'
-import {
-  KT_TO_KM_S,
-  clamp,
-  distKm,
-  moveShip,
-  shipSpeeds,
-  steerTo,
-} from './ship'
-import type { AiShipRuntime, PendingDamage } from './ship'
+import type { BalanceConfig } from '../core/balance';
+import type { EnemyShip, SubmarineState, Torpedo } from '../core/types';
+import type { EventBus } from '../core/eventBus';
+import type { Rng } from '../core/rng';
+import { KT_TO_KM_S, clamp, distKm, moveShip, shipSpeeds, steerTo } from './ship';
+import type { AiShipRuntime, PendingDamage } from './ship';
 import {
   chooseSearchPattern,
-  initialCircularState,
-  initialExpandingState,
-  initialZigzagState,
   searchPatternsConfig,
   stepCircular,
   stepExpanding,
   stepZigzag,
-} from './search'
+} from './search';
 
 /** Drop range: the escort must be within this distance of the LKP to drop. */
-export const DC_DROP_RANGE_KM = 0.5
+export const DC_DROP_RANGE_KM = 0.5;
 /** Deck-gun cooldown between shots (seconds) — DESIGN DECISION. */
-export const DECK_GUN_COOLDOWN_S = 5
+export const DECK_GUN_COOLDOWN_S = 5;
 /** States in which an escort will fire the deck gun (aware states). */
-export const DECK_GUN_STATES = ['SUSPICIOUS', 'ALERT', 'SEARCHING', 'HUNTING'] as const
+export const DECK_GUN_STATES = ['SUSPICIOUS', 'ALERT', 'SEARCHING', 'HUNTING'] as const;
 
 // ---------------------------------------------------------------------------
 // Geometry helpers
@@ -74,29 +64,33 @@ export function escortPost(
   offsetM: number,
   fleetHeadingDeg: number,
 ): { x: number; y: number } {
-  const h = (fleetHeadingDeg * Math.PI) / 180
+  const h = (fleetHeadingDeg * Math.PI) / 180;
   return {
     x: anchor.x - Math.cos(h) * (offsetM / 1000),
     y: anchor.y - Math.sin(h) * (offsetM / 1000),
-  }
+  };
 }
 
 /**
  * Point on a Gerono lemniscate (figure-8) centred on `post`: extent ±r along
  * x, ±r/2 along y. Phase 0 → 2π is one full figure-8 loop.
  */
-export function figure8Point(post: { x: number; y: number }, radiusKm: number, phaseRad: number): { x: number; y: number } {
+export function figure8Point(
+  post: { x: number; y: number },
+  radiusKm: number,
+  phaseRad: number,
+): { x: number; y: number } {
   return {
     x: post.x + radiusKm * Math.sin(phaseRad),
     y: post.y + (radiusKm * Math.sin(2 * phaseRad)) / 2,
-  }
+  };
 }
 
 /** |d(point)/d(phase)| for the Gerono lemniscate (km/rad). */
 export function figure8ArcDerivative(radiusKm: number, phaseRad: number): number {
-  const c1 = Math.cos(phaseRad)
-  const c2 = Math.cos(2 * phaseRad)
-  return radiusKm * Math.sqrt(c1 * c1 + c2 * c2)
+  const c1 = Math.cos(phaseRad);
+  const c2 = Math.cos(2 * phaseRad);
+  return radiusKm * Math.sqrt(c1 * c1 + c2 * c2);
 }
 
 // ---------------------------------------------------------------------------
@@ -104,21 +98,21 @@ export function figure8ArcDerivative(radiusKm: number, phaseRad: number): number
 // ---------------------------------------------------------------------------
 
 export interface EscortTickCtx {
-  dt: number
-  simTime: number
-  balance: BalanceConfig
-  player: SubmarineState
-  torpedoes: Torpedo[]
-  bus: EventBus
-  rng: Rng
+  dt: number;
+  simTime: number;
+  balance: BalanceConfig;
+  player: SubmarineState;
+  torpedoes: Torpedo[];
+  bus: EventBus;
+  rng: Rng;
   /** Apply a detection-meter delta to the player (clamped by the caller). */
-  addDetection: (delta: number) => void
+  addDetection: (delta: number) => void;
   /** Hand a resolved damage to combat (t-007) via the pending bridge. */
-  emitDamage: (damage: PendingDamage) => void
+  emitDamage: (damage: PendingDamage) => void;
   /** ≥2 escorts in the fleet → heavy escort ping cadence (2 s). */
-  heavyEscort: boolean
-  fleetHeadingDeg: number
-  anchor: { x: number; y: number } | null
+  heavyEscort: boolean;
+  fleetHeadingDeg: number;
+  anchor: { x: number; y: number } | null;
 }
 
 /**
@@ -126,63 +120,74 @@ export interface EscortTickCtx {
  * gun). Mutates the ship's public view and the per-ship runtime.
  */
 export function runEscortTick(ship: EnemyShip, rt: AiShipRuntime, ctx: EscortTickCtx): void {
-  const { balance } = ctx
-  const speeds = shipSpeeds(ship, balance)
-  const opts = { turnRateDegPerS: balance.enemyAI.turnRates.escort, accelKtPerS: balance.enemyAI.accelKtPerS }
-  const escortCfg = balance.enemyAI.escort
-  const lkp = ship.lkp
+  const { balance } = ctx;
+  const speeds = shipSpeeds(ship, balance);
+  const opts = {
+    turnRateDegPerS: balance.enemyAI.turnRates.escort,
+    accelKtPerS: balance.enemyAI.accelKtPerS,
+  };
+  const escortCfg = balance.enemyAI.escort;
+  const lkp = ship.lkp;
 
   // The patrol post tracks the (moving) formation anchor.
   if (ctx.anchor !== null) {
-    rt.post = escortPost(ctx.anchor, escortCfg.offsetM, ctx.fleetHeadingDeg)
+    rt.post = escortPost(ctx.anchor, escortCfg.offsetM, ctx.fleetHeadingDeg);
   }
 
   switch (ship.aiState) {
     case 'NORMAL': {
       // Figure-8 patrol around the post; physical phase advance keeps the
       // ground speed ≈ patrol speed (see header DESIGN DECISION).
-      const radius = escortCfg.patrolRadiusKm
-      const arc = figure8ArcDerivative(radius, rt.patrolPhaseRad)
-      const speedKmPerS = speeds.patrolKt * KT_TO_KM_S
-      rt.patrolPhaseRad = (rt.patrolPhaseRad + (speedKmPerS * ctx.dt) / Math.max(0.001, arc)) % (2 * Math.PI)
-      const post = rt.post ?? ctx.anchor ?? ship.position
-      const target = figure8Point(post, radius, rt.patrolPhaseRad)
-      steerTo(ship, target.x, target.y, speeds.patrolKt, ctx.dt, opts)
-      break
+      const radius = escortCfg.patrolRadiusKm;
+      const arc = figure8ArcDerivative(radius, rt.patrolPhaseRad);
+      const speedKmPerS = speeds.patrolKt * KT_TO_KM_S;
+      rt.patrolPhaseRad =
+        (rt.patrolPhaseRad + (speedKmPerS * ctx.dt) / Math.max(0.001, arc)) % (2 * Math.PI);
+      const post = rt.post ?? ctx.anchor ?? ship.position;
+      const target = figure8Point(post, radius, rt.patrolPhaseRad);
+      steerTo(ship, target.x, target.y, speeds.patrolKt, ctx.dt, opts);
+      break;
     }
     case 'SUSPICIOUS': {
       // Turn toward the contact (LKP) at the §6.1 suspicious speed.
-      const target = lkp ?? rt.post ?? ctx.anchor ?? ship.position
-      steerTo(ship, target.x, target.y, Math.min(speeds.attackKt, balance.enemyAI.suspiciousSpeedCapKt), ctx.dt, opts)
-      break
+      const target = lkp ?? rt.post ?? ctx.anchor ?? ship.position;
+      steerTo(
+        ship,
+        target.x,
+        target.y,
+        Math.min(speeds.attackKt, balance.enemyAI.suspiciousSpeedCapKt),
+        ctx.dt,
+        opts,
+      );
+      break;
     }
     case 'ALERT': {
       // Full attack speed toward the LKP.
-      const target = lkp ?? rt.post ?? ctx.anchor ?? ship.position
-      steerTo(ship, target.x, target.y, speeds.attackKt, ctx.dt, opts)
-      break
+      const target = lkp ?? rt.post ?? ctx.anchor ?? ship.position;
+      steerTo(ship, target.x, target.y, speeds.attackKt, ctx.dt, opts);
+      break;
     }
     case 'SEARCHING': {
-      runSearching(ship, rt, ctx, opts)
-      break
+      runSearching(ship, rt, ctx, opts);
+      break;
     }
     case 'HUNTING': {
       // Converge on the LKP; once close, hold station (slow) and drop.
       if (lkp !== null && distKm(ship.position, lkp) > DC_DROP_RANGE_KM) {
-        steerTo(ship, lkp.x, lkp.y, speeds.attackKt, ctx.dt, opts)
+        steerTo(ship, lkp.x, lkp.y, speeds.attackKt, ctx.dt, opts);
       } else {
-        moveShip(ship, ship.headingDeg, speeds.patrolKt, ctx.dt, opts)
+        moveShip(ship, ship.headingDeg, speeds.patrolKt, ctx.dt, opts);
       }
-      break
+      break;
     }
     case 'LOST_CONTACT': {
-      const post = rt.post ?? ctx.anchor ?? ship.position
-      steerTo(ship, post.x, post.y, balance.enemyAI.lostContactSpeedKt, ctx.dt, opts)
-      break
+      const post = rt.post ?? ctx.anchor ?? ship.position;
+      steerTo(ship, post.x, post.y, balance.enemyAI.lostContactSpeedKt, ctx.dt, opts);
+      break;
     }
   }
 
-  runEscortAttacks(ship, rt, ctx)
+  runEscortAttacks(ship, rt, ctx);
 }
 
 /** SEARCHING movement: advance the active search pattern around the LKP. */
@@ -192,28 +197,28 @@ function runSearching(
   ctx: EscortTickCtx,
   opts: { turnRateDegPerS: number; accelKtPerS: number },
 ): void {
-  const { balance } = ctx
-  const cfg = searchPatternsConfig(balance)
-  const center = ship.lkp ?? rt.post ?? ctx.anchor ?? ship.position
-  const kind = rt.searchPattern ?? chooseSearchPattern(null)
+  const { balance } = ctx;
+  const cfg = searchPatternsConfig(balance);
+  const center = ship.lkp ?? rt.post ?? ctx.anchor ?? ship.position;
+  const kind = rt.searchPattern ?? chooseSearchPattern(null);
   // All three patterns run at the circular pattern speed (§6.4: 20 kt).
-  const speedKt = cfg.circular.speedKt
+  const speedKt = cfg.circular.speedKt;
 
   if (kind === 'circular') {
-    const step = stepCircular(center, rt.circular, speedKt, ctx.dt, cfg.circular)
-    rt.circular = step.next
-    steerTo(ship, step.point.x, step.point.y, speedKt, ctx.dt, opts)
-    return
+    const step = stepCircular(center, rt.circular, speedKt, ctx.dt, cfg.circular);
+    rt.circular = step.next;
+    steerTo(ship, step.point.x, step.point.y, speedKt, ctx.dt, opts);
+    return;
   }
   if (kind === 'zigzag') {
-    const step = stepZigzag(center, rt.zigzag, speedKt, ctx.dt, cfg.zigzag)
-    rt.zigzag = step.next
-    steerTo(ship, step.point.x, step.point.y, speedKt, ctx.dt, opts)
-    return
+    const step = stepZigzag(center, rt.zigzag, speedKt, ctx.dt, cfg.zigzag);
+    rt.zigzag = step.next;
+    steerTo(ship, step.point.x, step.point.y, speedKt, ctx.dt, opts);
+    return;
   }
-  const step = stepExpanding(center, rt.expanding, speedKt, ctx.dt, cfg.expanding)
-  rt.expanding = step.next
-  steerTo(ship, step.point.x, step.point.y, speedKt, ctx.dt, opts)
+  const step = stepExpanding(center, rt.expanding, speedKt, ctx.dt, cfg.expanding);
+  rt.expanding = step.next;
+  steerTo(ship, step.point.x, step.point.y, speedKt, ctx.dt, opts);
 }
 
 // ---------------------------------------------------------------------------
@@ -222,8 +227,8 @@ function runSearching(
 
 /** One escort attack tick: depth-charge volleys (HUNTING) + deck gun. */
 export function runEscortAttacks(ship: EnemyShip, rt: AiShipRuntime, ctx: EscortTickCtx): void {
-  runDepthCharges(ship, rt, ctx)
-  runDeckGun(ship, rt, ctx)
+  runDepthCharges(ship, rt, ctx);
+  runDeckGun(ship, rt, ctx);
 }
 
 /**
@@ -233,83 +238,95 @@ export function runEscortAttacks(ship: EnemyShip, rt: AiShipRuntime, ctx: Escort
  * (the state machine degrades to SEARCHING — aiState.ts).
  */
 function runDepthCharges(ship: EnemyShip, rt: AiShipRuntime, ctx: EscortTickCtx): void {
-  const dc = ctx.balance.enemyAI.depthCharges
-  if (ship.aiState !== 'HUNTING') return
-  const lkp = ship.lkp
-  if (lkp === null || distKm(ship.position, lkp) > DC_DROP_RANGE_KM) return
-  if (ship.depthChargesLeft <= 0) return
+  const dc = ctx.balance.enemyAI.depthCharges;
+  if (ship.aiState !== 'HUNTING') return;
+  const lkp = ship.lkp;
+  if (lkp === null || distKm(ship.position, lkp) > DC_DROP_RANGE_KM) return;
+  if (ship.depthChargesLeft <= 0) return;
 
-  if (ctx.simTime < rt.dcNextDropAt) return
-  if (rt.dcRoundCount >= dc.perRound && ctx.simTime < rt.dcNextRoundAt) return
+  if (ctx.simTime < rt.dcNextDropAt) return;
+  if (rt.dcRoundCount >= dc.perRound && ctx.simTime < rt.dcNextRoundAt) return;
   if (rt.dcRoundCount >= dc.perRound) {
     // New round may begin.
-    rt.dcRoundCount = 0
-    rt.dcNextDropAt = ctx.simTime
+    rt.dcRoundCount = 0;
+    rt.dcNextDropAt = ctx.simTime;
   }
 
-  dropDepthCharge(ship, ctx)
+  dropDepthCharge(ship, ctx);
 
-  ship.depthChargesLeft = Math.max(0, ship.depthChargesLeft - 1)
-  rt.dcRoundCount += 1
-  rt.dcNextDropAt = ctx.simTime + dc.volleyIntervalSeconds
+  ship.depthChargesLeft = Math.max(0, ship.depthChargesLeft - 1);
+  rt.dcRoundCount += 1;
+  rt.dcNextDropAt = ctx.simTime + dc.volleyIntervalSeconds;
   if (rt.dcRoundCount >= dc.perRound) {
-    rt.dcNextRoundAt = ctx.simTime + dc.roundIntervalSeconds
+    rt.dcNextRoundAt = ctx.simTime + dc.roundIntervalSeconds;
   }
 }
 
 /** Drop one charge at the ship's position and resolve the detonation. */
 function dropDepthCharge(ship: EnemyShip, ctx: EscortTickCtx): void {
-  const { balance } = ctx
-  const wc = balance.weapons.depthCharge
-  const x = ship.position.x
-  const y = ship.position.y
-  ctx.bus.emit('depthCharge.dropped', { shipId: ship.id, x, y })
+  const { balance } = ctx;
+  const wc = balance.weapons.depthCharge;
+  const x = ship.position.x;
+  const y = ship.position.y;
+  ctx.bus.emit('depthCharge.dropped', { shipId: ship.id, x, y });
 
-  const distM = distKm({ x, y }, ctx.player.position) * 1000
-  let dmg = 0
-  let detectionDelta = 0
+  const distM = distKm({ x, y }, ctx.player.position) * 1000;
+  let dmg = 0;
+  let detectionDelta = 0;
   if (distM <= wc.directM) {
-    dmg = wc.directDamage
-    detectionDelta = balance.detection.sources.depthChargeHit
+    dmg = wc.directDamage;
+    detectionDelta = balance.detection.sources.depthChargeHit;
   } else if (distM <= wc.nearM) {
-    dmg = wc.nearMissDamage
-    detectionDelta = balance.detection.sources.depthChargeNearMiss
+    dmg = wc.nearMissDamage;
+    detectionDelta = balance.detection.sources.depthChargeNearMiss;
   } else if (distM <= wc.farM) {
-    dmg = wc.farDamage
+    dmg = wc.farDamage;
   }
-  dmg *= balance.depthLayers[ctx.player.depthLayer].dcDamageFactor
-  dmg = Math.round(dmg)
+  dmg *= balance.depthLayers[ctx.player.depthLayer].dcDamageFactor;
+  dmg = Math.round(dmg);
 
-  ctx.bus.emit('depthCharge.detonated', { shipId: ship.id, x, y, distM: Math.round(distM), dmg })
+  ctx.bus.emit('depthCharge.detonated', { shipId: ship.id, x, y, distM: Math.round(distM), dmg });
   if (dmg > 0) {
-    ctx.emitDamage({ shipId: ship.id, source: 'depthCharge', amount: dmg, distM: Math.round(distM), hit: distM <= wc.nearM })
+    ctx.emitDamage({
+      shipId: ship.id,
+      source: 'depthCharge',
+      amount: dmg,
+      distM: Math.round(distM),
+      hit: distM <= wc.nearM,
+    });
   }
-  if (detectionDelta > 0) ctx.addDetection(detectionDelta)
+  if (detectionDelta > 0) ctx.addDetection(detectionDelta);
 }
 
 /** Deck gun: Surface/Periscope player within range, aware states only. */
 function runDeckGun(ship: EnemyShip, rt: AiShipRuntime, ctx: EscortTickCtx): void {
-  const { balance } = ctx
-  const cfg = balance.weapons.deckGun
-  const attacks = balance.enemyAI.shipTypes[ship.shipClass]?.attack ?? []
-  if (!attacks.includes('deckGun')) return
-  if (!(DECK_GUN_STATES as readonly string[]).includes(ship.aiState)) return
-  if (!cfg.targets.includes(ctx.player.depthLayer)) return
-  if (ctx.simTime < rt.nextDeckGunAt) return
+  const { balance } = ctx;
+  const cfg = balance.weapons.deckGun;
+  const attacks = balance.enemyAI.shipTypes[ship.shipClass]?.attack ?? [];
+  if (!attacks.includes('deckGun')) return;
+  if (!(DECK_GUN_STATES as readonly string[]).includes(ship.aiState)) return;
+  if (!cfg.targets.includes(ctx.player.depthLayer)) return;
+  if (ctx.simTime < rt.nextDeckGunAt) return;
 
-  const distM = distKm(ship.position, ctx.player.position) * 1000
-  const rangeM = cfg.rangeKm * 1000
-  if (distM > rangeM) return
+  const distM = distKm(ship.position, ctx.player.position) * 1000;
+  const rangeM = cfg.rangeKm * 1000;
+  if (distM > rangeM) return;
 
-  rt.nextDeckGunAt = ctx.simTime + DECK_GUN_COOLDOWN_S
-  const t = clamp((distM - 500) / (rangeM - 500), 0, 1)
-  const hitChance = cfg.hitChanceAt0_5km + t * (cfg.hitChanceAt2km - cfg.hitChanceAt0_5km)
-  const hit = ctx.rng.chance(hitChance)
-  const amount = hit ? ctx.rng.int(cfg.damageMin, cfg.damageMax) : 0
+  rt.nextDeckGunAt = ctx.simTime + DECK_GUN_COOLDOWN_S;
+  const t = clamp((distM - 500) / (rangeM - 500), 0, 1);
+  const hitChance = cfg.hitChanceAt0_5km + t * (cfg.hitChanceAt2km - cfg.hitChanceAt0_5km);
+  const hit = ctx.rng.chance(hitChance);
+  const amount = hit ? ctx.rng.int(cfg.damageMin, cfg.damageMax) : 0;
 
-  ctx.bus.emit('deckGun.fired', { shipId: ship.id, distM: Math.round(distM), hit })
+  ctx.bus.emit('deckGun.fired', { shipId: ship.id, distM: Math.round(distM), hit });
   if (hit) {
-    ctx.emitDamage({ shipId: ship.id, source: 'deckGun', amount, distM: Math.round(distM), hit: true })
-    ctx.addDetection(balance.detection.sources.deckGunHit)
+    ctx.emitDamage({
+      shipId: ship.id,
+      source: 'deckGun',
+      amount,
+      distM: Math.round(distM),
+      hit: true,
+    });
+    ctx.addDetection(balance.detection.sources.deckGunHit);
   }
 }

@@ -27,7 +27,7 @@ export type SfxName =
   | 'targetAcquired'
   | 'targetLocked'
   | 'exposureWarning'
-  | 'periscopeLower'
+  | 'periscopeLower';
 
 /** All 20 SFX shipped (14 core + 6 periscope; requirement: ≥10 distinct). */
 export const SFX_NAMES: readonly SfxName[] = [
@@ -52,19 +52,12 @@ export const SFX_NAMES: readonly SfxName[] = [
   'targetLocked',
   'exposureWarning',
   'periscopeLower',
-]
+];
 
-export type WaveformType = 'sine' | 'square' | 'sawtooth' | 'triangle'
-export type NoiseColor = 'white' | 'pink' | 'brown'
+export type WaveformType = 'sine' | 'square' | 'sawtooth' | 'triangle';
+export type NoiseColor = 'white' | 'pink' | 'brown';
 export type FilterType =
-  | 'lowpass'
-  | 'highpass'
-  | 'bandpass'
-  | 'notch'
-  | 'allpass'
-  | 'peaking'
-  | 'lowshelf'
-  | 'highshelf'
+  'lowpass' | 'highpass' | 'bandpass' | 'notch' | 'allpass' | 'peaking' | 'lowshelf' | 'highshelf';
 
 export const FILTER_TYPES: readonly FilterType[] = [
   'lowpass',
@@ -75,20 +68,20 @@ export const FILTER_TYPES: readonly FilterType[] = [
   'peaking',
   'lowshelf',
   'highshelf',
-]
+];
 
 /** Speed bands of the player submarine (GAME_ARCHITECTURE §6). */
-export type SpeedBandName = 'STOPPED' | 'SILENT' | 'CRUISE' | 'FULL'
+export type SpeedBandName = 'STOPPED' | 'SILENT' | 'CRUISE' | 'FULL';
 
 /** Weather kinds (GAME_ARCHITECTURE §6) — ambience level varies by weather. */
-export type WeatherKind = 'Clear' | 'Cloudy' | 'Storm' | 'Fog' | 'Night'
+export type WeatherKind = 'Clear' | 'Cloudy' | 'Storm' | 'Fog' | 'Night';
 
 export interface FilterSpec {
-  type: FilterType
+  type: FilterType;
   /** center/cutoff frequency in Hz (audio range). */
-  frequency: number
+  frequency: number;
   /** quality factor (bandwidth) for bandpass/notch/peaking. */
-  q?: number
+  q?: number;
 }
 
 /**
@@ -98,35 +91,35 @@ export interface FilterSpec {
  * explicitly stopped; `bandGains` maps the engine loop gain per speed band.
  */
 export interface SfxParams {
-  name: SfxName
+  name: SfxName;
   /** short purpose string (AUDIO_DESIGN §3 "Purpose"). */
-  description: string
+  description: string;
   /** true = sustained loop (engine / torpedoTravel), false = one-shot. */
-  loop: boolean
+  loop: boolean;
   /** primary oscillator waveform. */
-  waveform?: WaveformType
+  waveform?: WaveformType;
   /** primary noise color. */
-  noise?: NoiseColor
+  noise?: NoiseColor;
   /** secondary noise color (e.g. explosion crackle over brown body). */
-  noise2?: NoiseColor
+  noise2?: NoiseColor;
   /** oscillator / carrier frequencies in Hz (audio range, 20–4000). */
-  frequencies: number[]
+  frequencies: number[];
   /** segment durations in seconds (0.02–3); empty for loops. */
-  durations: number[]
+  durations: number[];
   /** linear gain values (0–1). */
-  gains: number[]
+  gains: number[];
   /** primary filter; null = no filter (bypass gain). */
-  filter: FilterSpec | null
+  filter: FilterSpec | null;
   /** optional secondary filter (e.g. crackle bandpass on explosion). */
-  filter2?: FilterSpec | null
+  filter2?: FilterSpec | null;
   /** non-audio modulation rate in Hz (e.g. torpedo churn LFO). */
-  modRateHz?: number
+  modRateHz?: number;
   /** echo/delay time in seconds (sonarPing). */
-  echoDelay?: number
+  echoDelay?: number;
   /** echo wet mix 0–1 (sonarPing subtle echo). */
-  echoWet?: number
+  echoWet?: number;
   /** engine loop gain per speed band (sub.speedChanged retarget). */
-  bandGains?: Record<SpeedBandName, number>
+  bandGains?: Record<SpeedBandName, number>;
 }
 
 // ---------------------------------------------------------------------------
@@ -289,7 +282,8 @@ export const SFX_PARAMS: Record<SfxName, SfxParams> = {
   // ---- t-025 periscope system (run-002) — naval/mechanical/analog ----
   periscopeRaise: {
     name: 'periscopeRaise',
-    description: 'hydraulic/motor ascent — low 70→120Hz sweep up + bandpass mechanical noise, soft clunk at end',
+    description:
+      'hydraulic/motor ascent — low 70→120Hz sweep up + bandpass mechanical noise, soft clunk at end',
     loop: false,
     waveform: 'sine',
     noise: 'white',
@@ -322,7 +316,8 @@ export const SFX_PARAMS: Record<SfxName, SfxParams> = {
   },
   targetLocked: {
     name: 'targetLocked',
-    description: 'definitive lock — double 700Hz pulse (140ms gap) + low 55Hz thump, confident not loud',
+    description:
+      'definitive lock — double 700Hz pulse (140ms gap) + low 55Hz thump, confident not loud',
     loop: false,
     waveform: 'sine',
     frequencies: [700, 55],
@@ -332,7 +327,8 @@ export const SFX_PARAMS: Record<SfxName, SfxParams> = {
   },
   exposureWarning: {
     name: 'exposureWarning',
-    description: 'warning — slow three-beat 440Hz pulse (sawtooth lowpassed, square-ish), urgent but analog',
+    description:
+      'warning — slow three-beat 440Hz pulse (sawtooth lowpassed, square-ish), urgent but analog',
     loop: false,
     waveform: 'sawtooth',
     frequencies: [440, 1200],
@@ -342,7 +338,8 @@ export const SFX_PARAMS: Record<SfxName, SfxParams> = {
   },
   periscopeLower: {
     name: 'periscopeLower',
-    description: 'hydraulic descent — 120→70Hz sweep down + bandpass mechanical noise, soft clunk at end',
+    description:
+      'hydraulic descent — 120→70Hz sweep down + bandpass mechanical noise, soft clunk at end',
     loop: false,
     waveform: 'sine',
     noise: 'white',
@@ -351,7 +348,7 @@ export const SFX_PARAMS: Record<SfxName, SfxParams> = {
     gains: [0.3, 0.22, 0.35],
     filter: { type: 'bandpass', frequency: 300, q: 1.2 },
   },
-}
+};
 
 // ---------------------------------------------------------------------------
 // §4 Ambience — ocean bed loop (filtered pink noise, very low gain).
@@ -359,14 +356,14 @@ export const SFX_PARAMS: Record<SfxName, SfxParams> = {
 
 export interface AmbienceParams {
   /** base linear gain ≈ -30 dB. */
-  baseGain: number
+  baseGain: number;
   /** storm multiplier ≈ +1 dB. */
-  stormBoost: number
+  stormBoost: number;
   /** weathers in which the ocean bed is muted (fog/night atmosphere). */
-  mutedWeather: readonly WeatherKind[]
+  mutedWeather: readonly WeatherKind[];
   /** loop buffer length in seconds. */
-  loopSeconds: number
-  filter: FilterSpec
+  loopSeconds: number;
+  filter: FilterSpec;
 }
 
 export const AMBIENCE_PARAMS: AmbienceParams = {
@@ -375,7 +372,7 @@ export const AMBIENCE_PARAMS: AmbienceParams = {
   mutedWeather: ['Fog', 'Night'],
   loopSeconds: 4,
   filter: { type: 'lowpass', frequency: 200 },
-}
+};
 
 // ---------------------------------------------------------------------------
 // §5 Audio-event wiring (engine events → SFX). Pure data consumed by
@@ -388,7 +385,7 @@ export type EventSfxAction =
   | { kind: 'play'; sfx: SfxName; alsoPlay?: SfxName; alsoStartLoop?: SfxName; stopLoop?: SfxName }
   | { kind: 'stopLoop'; sfx: SfxName }
   | { kind: 'retargetEngine' }
-  | { kind: 'none' }
+  | { kind: 'none' };
 
 const EVENT_SFX_MAP_RAW = {
   'sonar.ping': { kind: 'play', sfx: 'sonarPing' },
@@ -441,10 +438,10 @@ const EVENT_SFX_MAP_RAW = {
   'periscope.exposure': { kind: 'play', sfx: 'exposureWarning' },
   // Emergency dive: klaxon + rapid periscope drop (both one-shots at once).
   'sub.emergencyDive': { kind: 'play', sfx: 'alarm', alsoPlay: 'periscopeLower' },
-} as const satisfies Readonly<Record<string, EventSfxAction>>
+} as const satisfies Readonly<Record<string, EventSfxAction>>;
 
 /** Runtime event→action map (widened for index access by audio.ts). */
-export const EVENT_SFX_MAP: Readonly<Record<string, EventSfxAction>> = EVENT_SFX_MAP_RAW
+export const EVENT_SFX_MAP: Readonly<Record<string, EventSfxAction>> = EVENT_SFX_MAP_RAW;
 
 /** Literal union of every mapped engine event name (compile-time checks). */
-export type EventSfxMapKeys = keyof typeof EVENT_SFX_MAP_RAW
+export type EventSfxMapKeys = keyof typeof EVENT_SFX_MAP_RAW;

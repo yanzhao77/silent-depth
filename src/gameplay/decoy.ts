@@ -15,8 +15,8 @@
  * @pure — zero DOM / browser-API references; deterministic (no RNG).
  */
 
-import type { BalanceConfig } from '../core/balance'
-import type { Decoy } from '../core/types'
+import type { BalanceConfig } from '../core/balance';
+import type { Decoy } from '../core/types';
 
 /**
  * Create a decoy at a fixed position. All values come from the balance config
@@ -28,7 +28,7 @@ export function createDecoy(id: string, x: number, y: number, balance: BalanceCo
     position: { x, y },
     ageS: 0,
     noise: balance.decoy.noiseLevel,
-  }
+  };
 }
 
 /**
@@ -39,11 +39,11 @@ export function createDecoy(id: string, x: number, y: number, balance: BalanceCo
  * has no decoy.expired entry; the UI observes removal via the snapshot.
  */
 export function updateDecoys(decoys: Decoy[], dt: number, balance: BalanceConfig): void {
-  const maxAge = balance.decoy.durationSeconds
+  const maxAge = balance.decoy.durationSeconds;
   for (let i = decoys.length - 1; i >= 0; i--) {
-    const decoy = decoys[i]
-    if (decoy === undefined) continue
-    decoy.ageS += dt
-    if (decoy.ageS >= maxAge) decoys.splice(i, 1)
+    const decoy = decoys[i];
+    if (decoy === undefined) continue;
+    decoy.ageS += dt;
+    if (decoy.ageS >= maxAge) decoys.splice(i, 1);
   }
 }

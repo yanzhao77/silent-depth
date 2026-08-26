@@ -33,16 +33,16 @@
  * @pure — zero DOM / browser-API references.
  */
 
-import type { MissionDef, WeatherKind } from '../core/types'
-import { loadBalance, type BalanceConfig } from '../core/balance'
-import type { SystemContext, SystemFn } from '../core/engine'
-import { generateOcean, type OceanModel } from './ocean'
+import type { MissionDef, WeatherKind } from '../core/types';
+import { loadBalance, type BalanceConfig } from '../core/balance';
+import type { SystemContext, SystemFn } from '../core/engine';
+import { generateOcean, type OceanModel } from './ocean';
 import {
   parseWeatherSequence,
   weatherModifiers,
   type WeatherModifiers,
   type WeatherSequenceEntry,
-} from './weather'
+} from './weather';
 
 // ---------------------------------------------------------------------------
 // WorldState — per-game mutable world runtime
@@ -50,13 +50,13 @@ import {
 
 export interface WorldState {
   /** Seeded ocean model (static per mission — never regenerated mid-game). */
-  ocean: OceanModel
+  ocean: OceanModel;
   /** Weather segments parsed from mission.weather ('A->B' chains allowed). */
-  sequence: WeatherSequenceEntry[]
+  sequence: WeatherSequenceEntry[];
   /** Index of the currently active weather segment. */
-  segmentIndex: number
+  segmentIndex: number;
   /** Active weather kind (drives weatherModifiers). */
-  currentWeather: WeatherKind
+  currentWeather: WeatherKind;
 }
 
 /**
@@ -71,29 +71,34 @@ export function initWorld(
   balance: BalanceConfig = loadBalance(),
 ): WorldState {
   if (!(mission.parTimeS > 0)) {
-    throw new TypeError(`initWorld: mission "${mission.id}" parTimeS must be > 0 (got ${mission.parTimeS})`)
+    throw new TypeError(
+      `initWorld: mission "${mission.id}" parTimeS must be > 0 (got ${mission.parTimeS})`,
+    );
   }
-  const ocean = generateOcean(seed, balance)
-  const sequence = parseWeatherSequence(mission.weather, balance)
+  const ocean = generateOcean(seed, balance);
+  const sequence = parseWeatherSequence(mission.weather, balance);
   return {
     ocean,
     sequence,
     segmentIndex: 0,
     currentWeather: sequence[0]![0],
-  }
+  };
 }
 
 /** Active weather kind of a world state (rendering/UI getter). */
 export function activeWeather(state: WorldState): WeatherKind {
-  return state.currentWeather
+  return state.currentWeather;
 }
 
 /**
  * Balance-driven modifiers for the ACTIVE weather of a world state.
  * Convenience for systems that hold the WorldState but not the weather kind.
  */
-export function weatherModifiersFor(state: WorldState, balance: BalanceConfig = loadBalance()): WeatherModifiers {
-  return weatherModifiers(state.currentWeather, balance)
+export function weatherModifiersFor(
+  state: WorldState,
+  balance: BalanceConfig = loadBalance(),
+): WeatherModifiers {
+  return weatherModifiers(state.currentWeather, balance);
 }
 
 /**
@@ -106,27 +111,27 @@ export function createWorldSystem(initial: WorldState): SystemFn {
   return (ctx: SystemContext): void => {
     // The engine only runs the pipeline when !ctx.skip (briefing/end ticks
     // skip); guard defensively anyway.
-    if (ctx.skip) return
+    if (ctx.skip) return;
 
-    const seq = initial.sequence
-    if (seq.length <= 1) return // single-kind mission: nothing to advance
+    const seq = initial.sequence;
+    if (seq.length <= 1) return; // single-kind mission: nothing to advance
 
-    const parTimeS = ctx.mission.parTimeS
-    if (!(parTimeS > 0)) return // invalid parTime (initWorld already rejects): stay on segment 0
+    const parTimeS = ctx.mission.parTimeS;
+    if (!(parTimeS > 0)) return; // invalid parTime (initWorld already rejects): stay on segment 0
 
-    const frac = ctx.simTime / parTimeS
+    const frac = ctx.simTime / parTimeS;
     // Segments are ordered by start fraction; find the last one we have
     // reached. O(n), n ≤ 5 — trivial per tick.
-    let idx = 0
+    let idx = 0;
     for (let i = seq.length - 1; i >= 0; i--) {
       if (frac >= seq[i]![1]) {
-        idx = i
-        break
+        idx = i;
+        break;
       }
     }
     if (idx !== initial.segmentIndex) {
-      initial.segmentIndex = idx
-      initial.currentWeather = seq[idx]![0]
+      initial.segmentIndex = idx;
+      initial.currentWeather = seq[idx]![0];
     }
-  }
+  };
 }

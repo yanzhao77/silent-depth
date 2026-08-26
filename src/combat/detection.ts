@@ -42,35 +42,35 @@
  * @pure — zero DOM; deterministic (no RNG).
  */
 
-import type { BalanceConfig } from '../core/balance'
-import type { SystemContext } from '../core/engine'
-import type { DepthLayer, SubmarineState } from '../core/types'
-import { DEPTH_LAYER_ORDER } from '../gameplay/submarine'
-import { distKm } from '../sonar/contacts'
+import type { BalanceConfig } from '../core/balance';
+import type { SystemContext } from '../core/engine';
+import type { DepthLayer, SubmarineState } from '../core/types';
+import { DEPTH_LAYER_ORDER } from '../gameplay/submarine';
+import { distKm } from '../sonar/contacts';
 
 /** Hard-turn trigger: cumulative heading change over the window (degrees). */
-export const HARD_TURN_DEG_THRESHOLD = 30
+export const HARD_TURN_DEG_THRESHOLD = 30;
 /** Hard-turn window (seconds). */
-export const HARD_TURN_WINDOW_S = 10
+export const HARD_TURN_WINDOW_S = 10;
 
 export interface DetectionRuntime {
-  initialized: boolean
-  lastBandIndex: number
-  prevDepthLayer: DepthLayer
-  prevDecoyCount: number
-  prevHeadingDeg: number
-  turnHistory: { at: number; deltaDeg: number }[]
-  locatedActive: boolean
-  locatedAt: number
-  graceRemainingS: number
-  graceExpired: boolean
+  initialized: boolean;
+  lastBandIndex: number;
+  prevDepthLayer: DepthLayer;
+  prevDecoyCount: number;
+  prevHeadingDeg: number;
+  turnHistory: { at: number; deltaDeg: number }[];
+  locatedActive: boolean;
+  locatedAt: number;
+  graceRemainingS: number;
+  graceExpired: boolean;
 }
 
-const detectionRuntimes = new WeakMap<object, DetectionRuntime>()
+const detectionRuntimes = new WeakMap<object, DetectionRuntime>();
 
 /** Test/manager hook into the per-game detection runtime. */
 export function getDetectionRuntime(ctx: SystemContext): DetectionRuntime {
-  let rt = detectionRuntimes.get(ctx.player)
+  let rt = detectionRuntimes.get(ctx.player);
   if (rt === undefined) {
     rt = {
       initialized: false,
@@ -83,10 +83,10 @@ export function getDetectionRuntime(ctx: SystemContext): DetectionRuntime {
       locatedAt: 0,
       graceRemainingS: 0,
       graceExpired: false,
-    }
-    detectionRuntimes.set(ctx.player, rt)
+    };
+    detectionRuntimes.set(ctx.player, rt);
   }
-  return rt
+  return rt;
 }
 
 // ---------------------------------------------------------------------------
@@ -95,60 +95,74 @@ export function getDetectionRuntime(ctx: SystemContext): DetectionRuntime {
 
 /** STOPPED + silent running: −2 %/s. */
 export function stoppedSilentPerSec(player: SubmarineState, balance: BalanceConfig): number {
-  return player.speedBand === 'STOPPED' && player.silentRunning ? balance.detection.sinks.stoppedSilentPerSec : 0
+  return player.speedBand === 'STOPPED' && player.silentRunning
+    ? balance.detection.sinks.stoppedSilentPerSec
+    : 0;
 }
 
 /** SILENT + silent running: −1 %/s. */
 export function silentSilentPerSec(player: SubmarineState, balance: BalanceConfig): number {
-  return player.speedBand === 'SILENT' && player.silentRunning ? balance.detection.sinks.silentSilentPerSec : 0
+  return player.speedBand === 'SILENT' && player.silentRunning
+    ? balance.detection.sinks.silentSilentPerSec
+    : 0;
 }
 
 /** Dive into Medium or deeper (from a shallower layer): −15, edge. */
-export function diveSink(oldLayer: DepthLayer, newLayer: DepthLayer, balance: BalanceConfig): number {
-  const oldIdx = DEPTH_LAYER_ORDER.indexOf(oldLayer)
-  const newIdx = DEPTH_LAYER_ORDER.indexOf(newLayer)
-  if (oldIdx < 0 || newIdx < 0) return 0
-  return newIdx >= 3 && oldIdx < 3 ? balance.detection.sinks.diveSurfaceToMedium : 0
+export function diveSink(
+  oldLayer: DepthLayer,
+  newLayer: DepthLayer,
+  balance: BalanceConfig,
+): number {
+  const oldIdx = DEPTH_LAYER_ORDER.indexOf(oldLayer);
+  const newIdx = DEPTH_LAYER_ORDER.indexOf(newLayer);
+  if (oldIdx < 0 || newIdx < 0) return 0;
+  return newIdx >= 3 && oldIdx < 3 ? balance.detection.sinks.diveSurfaceToMedium : 0;
 }
 
 /** Decoy launch: −20, edge (detected via the decoy-count decrease). */
-export function decoyLaunchSink(prevCount: number, newCount: number, balance: BalanceConfig): number {
-  return newCount < prevCount ? balance.detection.sinks.decoyLaunch : 0
+export function decoyLaunchSink(
+  prevCount: number,
+  newCount: number,
+  balance: BalanceConfig,
+): number {
+  return newCount < prevCount ? balance.detection.sinks.decoyLaunch : 0;
 }
 
 /** Distance sink: −0.5 %/s while the nearest escort is beyond the escape
  *  distance. Returns 0 when there is no escort at all (M01/M02). */
 export function distanceSinkPerSec(nearestEscortKm: number | null, balance: BalanceConfig): number {
-  if (nearestEscortKm === null) return 0
-  return nearestEscortKm > balance.escape.minDistEscortKm ? balance.detection.sinks.distancePerSec : 0
+  if (nearestEscortKm === null) return 0;
+  return nearestEscortKm > balance.escape.minDistEscortKm
+    ? balance.detection.sinks.distancePerSec
+    : 0;
 }
 
 /** Nearest living attack-capable escort distance, or null when none exists. */
 export function nearestEscortKm(ctx: SystemContext): number | null {
-  let nearest: number | null = null
+  let nearest: number | null = null;
   for (const ship of ctx.enemies) {
-    if (ship.hull <= 0) continue
-    const attack = ctx.balance.enemyAI.shipTypes[ship.shipClass]?.attack
-    if (attack === undefined || attack === null || attack.length === 0) continue
-    const d = distKm(ctx.player.position, ship.position)
-    if (nearest === null || d < nearest) nearest = d
+    if (ship.hull <= 0) continue;
+    const attack = ctx.balance.enemyAI.shipTypes[ship.shipClass]?.attack;
+    if (attack === undefined || attack === null || attack.length === 0) continue;
+    const d = distKm(ctx.player.position, ship.position);
+    if (nearest === null || d < nearest) nearest = d;
   }
-  return nearest
+  return nearest;
 }
 
 /** Smallest angle between two headings (0..180). */
 export function minAngleDelta(a: number, b: number): number {
-  const d = Math.abs(a - b) % 360
-  return d > 180 ? 360 - d : d
+  const d = Math.abs(a - b) % 360;
+  return d > 180 ? 360 - d : d;
 }
 
 /** Detection band index for a value (first band with max >= detection). */
 export function bandIndexFor(detection: number, balance: BalanceConfig): number {
-  const bands = balance.detection.bands
+  const bands = balance.detection.bands;
   for (let i = 0; i < bands.length; i++) {
-    if (detection <= bands[i]!.max) return i
+    if (detection <= bands[i]!.max) return i;
   }
-  return bands.length - 1
+  return bands.length - 1;
 }
 
 // ---------------------------------------------------------------------------
@@ -156,79 +170,79 @@ export function bandIndexFor(detection: number, balance: BalanceConfig): number 
 // ---------------------------------------------------------------------------
 
 export const detectionSystem: (ctx: SystemContext) => void = (ctx: SystemContext): void => {
-  if (ctx.state !== 'MISSION_RUNNING') return
-  const rt = getDetectionRuntime(ctx)
-  const balance = ctx.balance
-  const player = ctx.player
+  if (ctx.state !== 'MISSION_RUNNING') return;
+  const rt = getDetectionRuntime(ctx);
+  const balance = ctx.balance;
+  const player = ctx.player;
 
   if (!rt.initialized) {
-    rt.prevDepthLayer = player.depthLayer
-    rt.prevDecoyCount = player.decoyCount
-    rt.prevHeadingDeg = player.headingDeg
-    rt.lastBandIndex = bandIndexFor(player.detection, balance)
-    rt.initialized = true
+    rt.prevDepthLayer = player.depthLayer;
+    rt.prevDecoyCount = player.decoyCount;
+    rt.prevHeadingDeg = player.headingDeg;
+    rt.lastBandIndex = bandIndexFor(player.detection, balance);
+    rt.initialized = true;
   }
 
-  let delta = 0
+  let delta = 0;
 
   // Per-second sinks (STOPPED/SILENT + silent running, distance).
-  delta -= stoppedSilentPerSec(player, balance) * ctx.dt
-  delta -= silentSilentPerSec(player, balance) * ctx.dt
-  const nearest = nearestEscortKm(ctx)
-  delta -= distanceSinkPerSec(nearest, balance) * ctx.dt
+  delta -= stoppedSilentPerSec(player, balance) * ctx.dt;
+  delta -= silentSilentPerSec(player, balance) * ctx.dt;
+  const nearest = nearestEscortKm(ctx);
+  delta -= distanceSinkPerSec(nearest, balance) * ctx.dt;
 
   // Dive sink (edge on layer change into Medium/Deep).
-  delta -= diveSink(rt.prevDepthLayer, player.depthLayer, balance)
-  rt.prevDepthLayer = player.depthLayer
+  delta -= diveSink(rt.prevDepthLayer, player.depthLayer, balance);
+  rt.prevDepthLayer = player.depthLayer;
 
   // Hard-turn sink (edge: > 30° cumulative in a 10 s window).
-  const headingDelta = minAngleDelta(player.headingDeg, rt.prevHeadingDeg)
-  rt.prevHeadingDeg = player.headingDeg
-  rt.turnHistory.push({ at: ctx.simTime, deltaDeg: headingDelta })
+  const headingDelta = minAngleDelta(player.headingDeg, rt.prevHeadingDeg);
+  rt.prevHeadingDeg = player.headingDeg;
+  rt.turnHistory.push({ at: ctx.simTime, deltaDeg: headingDelta });
   while (rt.turnHistory.length > 0 && rt.turnHistory[0]!.at < ctx.simTime - HARD_TURN_WINDOW_S) {
-    rt.turnHistory.shift()
+    rt.turnHistory.shift();
   }
-  const turnSum = rt.turnHistory.reduce((sum, entry) => sum + entry.deltaDeg, 0)
+  const turnSum = rt.turnHistory.reduce((sum, entry) => sum + entry.deltaDeg, 0);
   if (turnSum > HARD_TURN_DEG_THRESHOLD) {
-    delta -= balance.detection.sinks.hardTurnDeg30Per10s
-    rt.turnHistory.length = 0 // edge once, window reset
+    delta -= balance.detection.sinks.hardTurnDeg30Per10s;
+    rt.turnHistory.length = 0; // edge once, window reset
   }
 
   // Decoy-launch sink (edge on decoyCount decrease — submarine launched one).
-  delta -= decoyLaunchSink(rt.prevDecoyCount, player.decoyCount, balance)
-  rt.prevDecoyCount = player.decoyCount
+  delta -= decoyLaunchSink(rt.prevDecoyCount, player.decoyCount, balance);
+  rt.prevDecoyCount = player.decoyCount;
 
   // Apply + clamp (§8.1: no auto decay beyond the explicit sinks).
-  player.detection = clamp(player.detection + delta, 0, 100)
+  player.detection = clamp(player.detection + delta, 0, 100);
 
   // Band-crossing events.
-  const bandIndex = bandIndexFor(player.detection, balance)
+  const bandIndex = bandIndexFor(player.detection, balance);
   if (bandIndex !== rt.lastBandIndex) {
     ctx.bus.emit('detection.threshold', {
       detection: player.detection,
       band: balance.detection.bands[bandIndex]!.label,
-    })
-    rt.lastBandIndex = bandIndex
+    });
+    rt.lastBandIndex = bandIndex;
   }
 
   // LOCATED episode (§8.1: 100 = located; 60 s grace to drop below 60).
   if (player.detection >= 100) {
     if (!rt.locatedActive) {
-      rt.locatedActive = true
-      rt.locatedAt = ctx.simTime
-      rt.graceRemainingS = balance.detection.located.graceSeconds
-      ctx.bus.emit('player.located', {})
+      rt.locatedActive = true;
+      rt.locatedAt = ctx.simTime;
+      rt.graceRemainingS = balance.detection.located.graceSeconds;
+      ctx.bus.emit('player.located', {});
     }
     if (rt.graceRemainingS > 0) {
-      rt.graceRemainingS -= ctx.dt
-      if (rt.graceRemainingS <= 0) rt.graceExpired = true
+      rt.graceRemainingS -= ctx.dt;
+      if (rt.graceRemainingS <= 0) rt.graceExpired = true;
     }
   } else if (player.detection < balance.detection.located.requiredBelow) {
-    rt.locatedActive = false
-    rt.graceRemainingS = 0
+    rt.locatedActive = false;
+    rt.graceRemainingS = 0;
   }
-}
+};
 
 function clamp(value: number, min: number, max: number): number {
-  return value < min ? min : value > max ? max : value
+  return value < min ? min : value > max ? max : value;
 }

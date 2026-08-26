@@ -53,10 +53,16 @@
  * @pure — zero DOM / browser-API references; no Math.random.
  */
 
-import type { BalanceConfig } from '../core/balance'
-import { loadBalance } from '../core/balance'
-import type { SystemContext, SystemFn } from '../core/engine'
-import type { Contact, EnemyShip, MissionStatus, ScoreGrade, ScoreParts, ShipClass } from '../core/types'
+import type { BalanceConfig } from '../core/balance';
+import type { SystemContext, SystemFn } from '../core/engine';
+import type {
+  Contact,
+  EnemyShip,
+  MissionStatus,
+  ScoreGrade,
+  ScoreParts,
+  ShipClass,
+} from '../core/types';
 
 // ---------------------------------------------------------------------------
 // Contact-state ranking (FR-05 five-state machine)
@@ -68,54 +74,57 @@ const CONTACT_RANK: Record<Contact['state'], number> = {
   CLASSIFIED: 2,
   TRACKED: 3,
   CONFIRMED: 4,
-}
+};
 
-const MERCHANT_CLASSES: ReadonlySet<ShipClass> = new Set(['Merchant', 'Cargo', 'Tanker'])
+const MERCHANT_CLASSES: ReadonlySet<ShipClass> = new Set(['Merchant', 'Cargo', 'Tanker']);
 
 /** Escort = a ship class with an attack kit (Destroyer / Frigate). */
 function isEscortClass(cls: ShipClass, balance: BalanceConfig): boolean {
-  return balance.enemyAI.shipTypes[cls]?.attack !== null && balance.enemyAI.shipTypes[cls]?.attack !== undefined
+  return (
+    balance.enemyAI.shipTypes[cls]?.attack !== null &&
+    balance.enemyAI.shipTypes[cls]?.attack !== undefined
+  );
 }
 
 /** True when a contact points at a merchant (classification or true ship). */
-function isMerchantContact(c: Contact, enemies: EnemyShip[], balance: BalanceConfig): boolean {
-  if (MERCHANT_CLASSES.has(c.classification as ShipClass)) return true
+function isMerchantContact(c: Contact, enemies: EnemyShip[]): boolean {
+  if (MERCHANT_CLASSES.has(c.classification as ShipClass)) return true;
   if (c.trueShipId !== null) {
     for (const e of enemies) {
-      if (e.id === c.trueShipId && MERCHANT_CLASSES.has(e.shipClass)) return true
+      if (e.id === c.trueShipId && MERCHANT_CLASSES.has(e.shipClass)) return true;
     }
   }
-  return false
+  return false;
 }
 
 /** Highest contact-state rank among merchant contacts (0 = none). */
 function bestMerchantContactRank(ctx: SystemContext): number {
-  let best = 0
+  let best = 0;
   for (const c of ctx.contacts) {
-    if (isMerchantContact(c, ctx.enemies, ctx.balance)) {
-      const rank = CONTACT_RANK[c.state] ?? 0
-      if (rank > best) best = rank
+    if (isMerchantContact(c, ctx.enemies)) {
+      const rank = CONTACT_RANK[c.state] ?? 0;
+      if (rank > best) best = rank;
     }
   }
-  return best
+  return best;
 }
 
 /** Any merchant contact exists (any state). */
 function anyMerchantContact(ctx: SystemContext): boolean {
   for (const c of ctx.contacts) {
-    if (isMerchantContact(c, ctx.enemies, ctx.balance)) return true
+    if (isMerchantContact(c, ctx.enemies)) return true;
   }
-  return false
+  return false;
 }
 
 /** Count of sunk ships, optionally restricted to one class. */
 function sunkCount(ctx: SystemContext, cls: ShipClass | undefined): number {
-  let n = 0
+  let n = 0;
   for (const e of ctx.enemies) {
-    if (e.hull > 0) continue
-    if (cls === undefined || e.shipClass === cls) n++
+    if (e.hull > 0) continue;
+    if (cls === undefined || e.shipClass === cls) n++;
   }
-  return n
+  return n;
 }
 
 // ---------------------------------------------------------------------------
@@ -123,29 +132,32 @@ function sunkCount(ctx: SystemContext, cls: ShipClass | undefined): number {
 // ---------------------------------------------------------------------------
 
 interface EscapeRuntime {
-  consecutiveS: number
-  emitted: boolean
+  consecutiveS: number;
+  emitted: boolean;
 }
 
-const escapeStates = new WeakMap<MissionStatus, EscapeRuntime>()
+const escapeStates = new WeakMap<MissionStatus, EscapeRuntime>();
 
 function escapeState(ms: MissionStatus): EscapeRuntime {
-  let st = escapeStates.get(ms)
+  let st = escapeStates.get(ms);
   if (st === undefined) {
-    st = { consecutiveS: 0, emitted: false }
-    escapeStates.set(ms, st)
+    st = { consecutiveS: 0, emitted: false };
+    escapeStates.set(ms, st);
   }
-  return st
+  return st;
 }
 
 function nearestEscortKm(ctx: SystemContext): number {
-  let best = Infinity
+  let best = Infinity;
   for (const e of ctx.enemies) {
-    if (!isEscortClass(e.shipClass, ctx.balance)) continue
-    const d = Math.hypot(e.position.x - ctx.player.position.x, e.position.y - ctx.player.position.y)
-    if (d < best) best = d
+    if (!isEscortClass(e.shipClass, ctx.balance)) continue;
+    const d = Math.hypot(
+      e.position.x - ctx.player.position.x,
+      e.position.y - ctx.player.position.y,
+    );
+    if (d < best) best = d;
   }
-  return best
+  return best;
 }
 
 /**
@@ -154,15 +166,19 @@ function nearestEscortKm(ctx: SystemContext): number {
  * Sets missionStatus.escaped (once) and emits escape.escaped.
  */
 function updateEscape(ctx: SystemContext): void {
-  const esc = ctx.balance.escape
-  if (ctx.missionStatus.escaped) return
-  const ok = ctx.player.detection < esc.detectionBelow && nearestEscortKm(ctx) > esc.minDistEscortKm
-  const st = escapeState(ctx.missionStatus)
-  st.consecutiveS = ok ? st.consecutiveS + ctx.dt : 0
+  const esc = ctx.balance.escape;
+  if (ctx.missionStatus.escaped) return;
+  const ok =
+    ctx.player.detection < esc.detectionBelow && nearestEscortKm(ctx) > esc.minDistEscortKm;
+  const st = escapeState(ctx.missionStatus);
+  st.consecutiveS = ok ? st.consecutiveS + ctx.dt : 0;
   if (st.consecutiveS >= esc.durationSeconds) {
-    ctx.missionStatus.escaped = true
-    st.emitted = true
-    ctx.bus.emit('escape.escaped', { missionId: ctx.mission.id, durationSeconds: esc.durationSeconds })
+    ctx.missionStatus.escaped = true;
+    st.emitted = true;
+    ctx.bus.emit('escape.escaped', {
+      missionId: ctx.mission.id,
+      durationSeconds: esc.durationSeconds,
+    });
   }
 }
 
@@ -171,7 +187,7 @@ export function missionRequiresEscape(ctx: SystemContext): boolean {
   return (
     ctx.mission.objective.kind === 'sink_ge1_and_escape' ||
     (ctx.mission.id === 'M05' && ctx.balance.escape.requiredInM05)
-  )
+  );
 }
 
 // ---------------------------------------------------------------------------
@@ -181,30 +197,30 @@ export function missionRequiresEscape(ctx: SystemContext): boolean {
 /** Recompute every subgoal's done flag from the current game state. */
 export function evaluateObjectiveProgress(ctx: SystemContext): void {
   for (const sg of ctx.missionStatus.objectives) {
-    sg.done = subgoalDone(sg.id, ctx)
+    sg.done = subgoalDone(sg.id, ctx);
   }
 }
 
 function subgoalDone(id: string, ctx: SystemContext): boolean {
   switch (id) {
     case 'find':
-      return anyMerchantContact(ctx)
+      return anyMerchantContact(ctx);
     case 'classify':
-      return bestMerchantContactRank(ctx) >= CONTACT_RANK.CLASSIFIED
+      return bestMerchantContactRank(ctx) >= CONTACT_RANK.CLASSIFIED;
     case 'track':
-      return bestMerchantContactRank(ctx) >= CONTACT_RANK.TRACKED
+      return bestMerchantContactRank(ctx) >= CONTACT_RANK.TRACKED;
     case 'survive':
-      return ctx.player.hull > 0
+      return ctx.player.hull > 0;
     case 'escape':
-      return ctx.missionStatus.escaped
+      return ctx.missionStatus.escaped;
   }
   if (id.startsWith('sink-')) {
-    const n = Number.parseInt(id.slice('sink-'.length), 10)
-    if (!Number.isFinite(n) || n <= 0) return false
-    const target = ctx.mission.objective.params?.targetClass as ShipClass | undefined
-    return sunkCount(ctx, target) >= n
+    const n = Number.parseInt(id.slice('sink-'.length), 10);
+    if (!Number.isFinite(n) || n <= 0) return false;
+    const target = ctx.mission.objective.params?.targetClass as ShipClass | undefined;
+    return sunkCount(ctx, target) >= n;
   }
-  return false
+  return false;
 }
 
 // ---------------------------------------------------------------------------
@@ -214,62 +230,62 @@ function subgoalDone(id: string, ctx: SystemContext): boolean {
 /** Grade for a total score (balance.scoring.grades, descending min). */
 export function computeGrade(total: number, balance: BalanceConfig): ScoreGrade {
   for (const g of balance.scoring.grades) {
-    if (total >= g.min) return g.label
+    if (total >= g.min) return g.label;
   }
-  return 'Failed'
+  return 'Failed';
 }
 
 function objectiveComponent(ctx: SystemContext): number {
-  let sum = 0
+  let sum = 0;
   for (const o of ctx.missionStatus.objectives) {
-    if (o.done) sum += o.weight
+    if (o.done) sum += o.weight;
   }
-  return Math.min(sum, ctx.balance.scoring.components.objectiveMax)
+  return Math.min(sum, ctx.balance.scoring.components.objectiveMax);
 }
 
 function damageComponent(ctx: SystemContext): number {
-  const sc = ctx.balance.scoring
-  const max = sc.components.damageMax
+  const sc = ctx.balance.scoring;
+  const max = sc.components.damageMax;
   if (ctx.mission.objective.kind === 'find_classify_track') {
     // M01 has no sink requirement — the component is the tracking 折算
     // (§10.1.2): CONFIRMED +200, TRACKED +100.
-    const rank = bestMerchantContactRank(ctx)
-    if (rank >= CONTACT_RANK.CONFIRMED) return max
-    if (rank >= CONTACT_RANK.TRACKED) return max / 2
-    return 0
+    const rank = bestMerchantContactRank(ctx);
+    if (rank >= CONTACT_RANK.CONFIRMED) return max;
+    if (rank >= CONTACT_RANK.TRACKED) return max / 2;
+    return 0;
   }
-  let sum = 0
+  let sum = 0;
   for (const e of ctx.enemies) {
-    if (e.hull > 0) continue
-    sum += sc.damageScores[e.shipClass] ?? 0
+    if (e.hull > 0) continue;
+    sum += sc.damageScores[e.shipClass] ?? 0;
   }
-  return Math.min(sum, max)
+  return Math.min(sum, max);
 }
 
 function torpedoEfficiencyComponent(ctx: SystemContext): number {
-  const sc = ctx.balance.scoring
-  const max = sc.components.torpedoEfficiencyMax
-  const expected = sc.expectedHits[ctx.mission.id]
-  if (expected === undefined || expected <= 0) return max // M01: component is always 100 (§10.1.4)
-  const ratio = Math.min(1, Math.max(0, ctx.stats.torpedoesHit / expected))
-  return max * ratio
+  const sc = ctx.balance.scoring;
+  const max = sc.components.torpedoEfficiencyMax;
+  const expected = sc.expectedHits[ctx.mission.id];
+  if (expected === undefined || expected <= 0) return max; // M01: component is always 100 (§10.1.4)
+  const ratio = Math.min(1, Math.max(0, ctx.stats.torpedoesHit / expected));
+  return max * ratio;
 }
 
 function timeComponent(ctx: SystemContext): number {
-  const max = ctx.balance.scoring.components.timeMax
-  const actual = ctx.simTime
-  if (actual <= 0) return max // just started: on pace
-  const ratio = Math.min(1, Math.max(0, ctx.mission.parTimeS / actual))
-  return max * ratio
+  const max = ctx.balance.scoring.components.timeMax;
+  const actual = ctx.simTime;
+  if (actual <= 0) return max; // just started: on pace
+  const ratio = Math.min(1, Math.max(0, ctx.mission.parTimeS / actual));
+  return max * ratio;
 }
 
 function survivalComponent(ctx: SystemContext): number {
-  const sc = ctx.balance.scoring
-  const max = sc.components.survivalMax
-  const hullFrac = Math.min(1, Math.max(0, ctx.player.hull / ctx.balance.hull.playerMax))
-  let v = max * hullFrac
-  if (missionRequiresEscape(ctx) && ctx.missionStatus.escaped) v += sc.m05EscapeBonus
-  return v
+  const sc = ctx.balance.scoring;
+  const max = sc.components.survivalMax;
+  const hullFrac = Math.min(1, Math.max(0, ctx.player.hull / ctx.balance.hull.playerMax));
+  let v = max * hullFrac;
+  if (missionRequiresEscape(ctx) && ctx.missionStatus.escaped) v += sc.m05EscapeBonus;
+  return v;
 }
 
 /**
@@ -279,13 +295,15 @@ function survivalComponent(ctx: SystemContext): number {
  * survival (50 × hull/100, +50 M05 escape bonus), total, grade. Pure.
  */
 export function computeScoreParts(ctx: SystemContext): ScoreParts {
-  const objective = objectiveComponent(ctx)
-  const damage = damageComponent(ctx)
-  const stealth = ctx.balance.scoring.components.detectionMax * (1 - Math.min(ctx.stats.peakDetection, 100) / 100)
-  const torpedoEfficiency = torpedoEfficiencyComponent(ctx)
-  const time = timeComponent(ctx)
-  const survival = survivalComponent(ctx)
-  const total = objective + damage + stealth + torpedoEfficiency + time + survival
+  const objective = objectiveComponent(ctx);
+  const damage = damageComponent(ctx);
+  const stealth =
+    ctx.balance.scoring.components.detectionMax *
+    (1 - Math.min(ctx.stats.peakDetection, 100) / 100);
+  const torpedoEfficiency = torpedoEfficiencyComponent(ctx);
+  const time = timeComponent(ctx);
+  const survival = survivalComponent(ctx);
+  const total = objective + damage + stealth + torpedoEfficiency + time + survival;
   return {
     objective,
     damage,
@@ -295,18 +313,18 @@ export function computeScoreParts(ctx: SystemContext): ScoreParts {
     survival,
     total,
     grade: computeGrade(total, ctx.balance),
-  }
+  };
 }
 
 function applyScore(ctx: SystemContext, parts: ScoreParts): void {
-  ctx.score.objective = parts.objective
-  ctx.score.damage = parts.damage
-  ctx.score.stealth = parts.stealth
-  ctx.score.torpedoEfficiency = parts.torpedoEfficiency
-  ctx.score.time = parts.time
-  ctx.score.survival = parts.survival
-  ctx.score.total = parts.total
-  ctx.score.grade = parts.grade
+  ctx.score.objective = parts.objective;
+  ctx.score.damage = parts.damage;
+  ctx.score.stealth = parts.stealth;
+  ctx.score.torpedoEfficiency = parts.torpedoEfficiency;
+  ctx.score.time = parts.time;
+  ctx.score.survival = parts.survival;
+  ctx.score.total = parts.total;
+  ctx.score.grade = parts.grade;
 }
 
 // ---------------------------------------------------------------------------
@@ -320,8 +338,8 @@ function applyScore(ctx: SystemContext, parts: ScoreParts): void {
  * it; objectivesSystem re-evaluates at slot 9 with fresh state.)
  */
 export const missionsSystem: SystemFn = (ctx) => {
-  evaluateObjectiveProgress(ctx)
-}
+  evaluateObjectiveProgress(ctx);
+};
 
 /**
  * Slot 9: escape check (F9) → running score → victory/defeat via
@@ -330,29 +348,29 @@ export const missionsSystem: SystemFn = (ctx) => {
  * phase leaves 'running' (the engine sets it on the outcome tick).
  */
 export const objectivesSystem: SystemFn = (ctx) => {
-  if (ctx.missionStatus.phase !== 'running') return
+  if (ctx.missionStatus.phase !== 'running') return;
 
   // F9 escape first so the 'escape' subgoal and M05 victory can complete on
   // the same tick.
-  updateEscape(ctx)
-  evaluateObjectiveProgress(ctx)
+  updateEscape(ctx);
+  evaluateObjectiveProgress(ctx);
 
   // Running totals (final on the outcome tick — written before the decision).
-  applyScore(ctx, computeScoreParts(ctx))
+  applyScore(ctx, computeScoreParts(ctx));
 
   // Defeat (takes precedence over victory on the same tick).
   if (ctx.player.hull <= 0) {
-    ctx.setOutcome?.('defeat')
-    return
+    ctx.setOutcome?.('defeat');
+    return;
   }
   if (ctx.player.outOfBoundsTimer >= ctx.balance.world.outOfBoundsFailSeconds) {
-    ctx.setOutcome?.('defeat')
-    return
+    ctx.setOutcome?.('defeat');
+    return;
   }
 
   // Victory: every objective subgoal done.
-  const objectives = ctx.missionStatus.objectives
+  const objectives = ctx.missionStatus.objectives;
   if (objectives.length > 0 && objectives.every((o) => o.done)) {
-    ctx.setOutcome?.('victory')
+    ctx.setOutcome?.('victory');
   }
-}
+};

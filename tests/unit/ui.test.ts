@@ -22,9 +22,9 @@
  * Environment: vitest node. All fixtures are plain data.
  */
 
-import { describe, expect, it } from 'vitest'
-import { createCamera, DEFAULT_ZOOM, MAX_ZOOM, MIN_ZOOM } from '../../src/rendering/camera'
-import { MISSION_IDS } from '../../src/missions/missions'
+import { describe, expect, it } from 'vitest';
+import { createCamera, DEFAULT_ZOOM, MAX_ZOOM, MIN_ZOOM } from '../../src/rendering/camera';
+import { MISSION_IDS } from '../../src/missions/missions';
 import {
   createSaveStore,
   defaultSave,
@@ -32,10 +32,9 @@ import {
   updateOnMissionResult,
   validateAndClamp,
   type MissionResult,
-  type SaveData,
   type StorageLike,
-} from '../../src/save/save'
-import { createInput } from '../../src/ui/input'
+} from '../../src/save/save';
+import { createInput } from '../../src/ui/input';
 import {
   detectLanguage,
   getT,
@@ -45,7 +44,7 @@ import {
   LANGS,
   translations,
   type Lang,
-} from '../../src/ui/i18n'
+} from '../../src/ui/i18n';
 import {
   DETECTION_BAND_COLORS,
   detectionBandIndex,
@@ -58,17 +57,12 @@ import {
   formatLastSeen,
   formatTime,
   type FireControlParts,
-} from '../../src/ui/hud'
-import type { Contact, EventEntry } from '../../src/core/types'
-import {
-  activeWeatherAt,
-  lerpAngle,
-  lerpPos,
-  minimapProject,
-} from '../../src/rendering/renderer'
-import type { FireSolution } from '../../src/combat/fireControl'
+} from '../../src/ui/hud';
+import type { Contact, EventEntry } from '../../src/core/types';
+import { activeWeatherAt, lerpAngle, lerpPos, minimapProject } from '../../src/rendering/renderer';
+import type { FireSolution } from '../../src/combat/fireControl';
 
-setKnownMissionIds(MISSION_IDS)
+setKnownMissionIds(MISSION_IDS);
 
 // ---------------------------------------------------------------------------
 // Fixtures
@@ -95,11 +89,11 @@ function makeContact(overrides: Partial<Contact> = {}): Contact {
     observations: 4,
     trueShipId: 'E-01',
     ...overrides,
-  }
+  };
 }
 
 function makeEvent(type: EventEntry['type'], payload?: Record<string, unknown>): EventEntry {
-  return { id: 1, simTime: 10, type, payload }
+  return { id: 1, simTime: 10, type, payload };
 }
 
 function makeSolution(overrides: Partial<FireSolution> = {}): FireSolution {
@@ -114,21 +108,23 @@ function makeSolution(overrides: Partial<FireSolution> = {}): FireSolution {
     salvoHitProbability: 0.92,
     estimated: false,
     ...overrides,
-  }
+  };
 }
 
-function makeFakeStorage(initial: Record<string, string> = {}): StorageLike & { data: Map<string, string> } {
-  const data = new Map<string, string>(Object.entries(initial))
+function makeFakeStorage(
+  initial: Record<string, string> = {},
+): StorageLike & { data: Map<string, string> } {
+  const data = new Map<string, string>(Object.entries(initial));
   return {
     data,
     getItem: (k: string) => data.get(k) ?? null,
     setItem: (k: string, v: string) => {
-      data.set(k, v)
+      data.set(k, v);
     },
     removeItem: (k: string) => {
-      data.delete(k)
+      data.delete(k);
     },
-  }
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -137,74 +133,90 @@ function makeFakeStorage(initial: Record<string, string> = {}): StorageLike & { 
 
 describe('camera', () => {
   it('worldToScreen/screenToWorld roundtrip (north-up)', () => {
-    const cam = createCamera({ zoom: 8, center: { x: 15, y: 15 }, viewport: { width: 800, height: 600 } })
-    const s = cam.worldToScreen(15, 15)
-    expect(s.x).toBe(400)
-    expect(s.y).toBe(300)
-    const w = cam.screenToWorld(400, 300)
-    expect(w.x).toBeCloseTo(15, 6)
-    expect(w.y).toBeCloseTo(15, 6)
-  })
+    const cam = createCamera({
+      zoom: 8,
+      center: { x: 15, y: 15 },
+      viewport: { width: 800, height: 600 },
+    });
+    const s = cam.worldToScreen(15, 15);
+    expect(s.x).toBe(400);
+    expect(s.y).toBe(300);
+    const w = cam.screenToWorld(400, 300);
+    expect(w.x).toBeCloseTo(15, 6);
+    expect(w.y).toBeCloseTo(15, 6);
+  });
 
   it('north (world +y) maps to smaller screen y', () => {
-    const cam = createCamera({ zoom: 8, center: { x: 15, y: 15 }, viewport: { width: 800, height: 600 } })
-    const north = cam.worldToScreen(15, 17)
-    const south = cam.worldToScreen(15, 13)
-    expect(north.y).toBeLessThan(south.y)
-    expect(north.x).toBe(400)
-  })
+    const cam = createCamera({
+      zoom: 8,
+      center: { x: 15, y: 15 },
+      viewport: { width: 800, height: 600 },
+    });
+    const north = cam.worldToScreen(15, 17);
+    const south = cam.worldToScreen(15, 13);
+    expect(north.y).toBeLessThan(south.y);
+    expect(north.x).toBe(400);
+  });
 
   it('zoom is clamped to [4, 16] px/km', () => {
-    const cam = createCamera({ zoom: 8 })
-    cam.setZoom(2)
-    expect(cam.zoom).toBe(MIN_ZOOM)
-    cam.setZoom(20)
-    expect(cam.zoom).toBe(MAX_ZOOM)
-    cam.zoomBy(-100)
-    expect(cam.zoom).toBe(MIN_ZOOM)
-    cam.zoomBy(100)
-    expect(cam.zoom).toBe(MAX_ZOOM)
-    expect(DEFAULT_ZOOM).toBe(8)
-  })
+    const cam = createCamera({ zoom: 8 });
+    cam.setZoom(2);
+    expect(cam.zoom).toBe(MIN_ZOOM);
+    cam.setZoom(20);
+    expect(cam.zoom).toBe(MAX_ZOOM);
+    cam.zoomBy(-100);
+    expect(cam.zoom).toBe(MIN_ZOOM);
+    cam.zoomBy(100);
+    expect(cam.zoom).toBe(MAX_ZOOM);
+    expect(DEFAULT_ZOOM).toBe(8);
+  });
 
   it('zoom scales world→screen linearly', () => {
-    const cam = createCamera({ zoom: 8, center: { x: 15, y: 15 }, viewport: { width: 800, height: 600 } })
-    const far = cam.worldToScreen(16, 15) // 1 km east
-    cam.setZoom(16)
-    const near = cam.worldToScreen(16, 15)
-    expect(far.x - 400).toBeCloseTo(8, 6)
-    expect(near.x - 400).toBeCloseTo(16, 6)
-  })
+    const cam = createCamera({
+      zoom: 8,
+      center: { x: 15, y: 15 },
+      viewport: { width: 800, height: 600 },
+    });
+    const far = cam.worldToScreen(16, 15); // 1 km east
+    cam.setZoom(16);
+    const near = cam.worldToScreen(16, 15);
+    expect(far.x - 400).toBeCloseTo(8, 6);
+    expect(near.x - 400).toBeCloseTo(16, 6);
+  });
 
   it('panBy moves the center opposite to the drag (roundtrip)', () => {
-    const cam = createCamera({ zoom: 8, center: { x: 15, y: 15 } })
-    cam.panBy(80, 60)
+    const cam = createCamera({ zoom: 8, center: { x: 15, y: 15 } });
+    cam.panBy(80, 60);
     // dx/zoom = 10 km west; dy/zoom = 7.5 km north.
-    expect(cam.center.x).toBeCloseTo(5, 6)
-    expect(cam.center.y).toBeCloseTo(22.5, 6)
-    cam.panBy(-80, -60)
-    expect(cam.center.x).toBeCloseTo(15, 6)
-    expect(cam.center.y).toBeCloseTo(15, 6)
-  })
+    expect(cam.center.x).toBeCloseTo(5, 6);
+    expect(cam.center.y).toBeCloseTo(22.5, 6);
+    cam.panBy(-80, -60);
+    expect(cam.center.x).toBeCloseTo(15, 6);
+    expect(cam.center.y).toBeCloseTo(15, 6);
+  });
 
   it('center is clamped to the world bounds', () => {
-    const cam = createCamera({ mapSizeKm: 30, center: { x: 15, y: 15 } })
-    cam.setCenter(-5, 40)
-    expect(cam.center.x).toBe(0)
-    expect(cam.center.y).toBe(30)
-    cam.follow(2, 28)
-    expect(cam.center.x).toBe(2)
-    expect(cam.center.y).toBe(28)
-  })
+    const cam = createCamera({ mapSizeKm: 30, center: { x: 15, y: 15 } });
+    cam.setCenter(-5, 40);
+    expect(cam.center.x).toBe(0);
+    expect(cam.center.y).toBe(30);
+    cam.follow(2, 28);
+    expect(cam.center.x).toBe(2);
+    expect(cam.center.y).toBe(28);
+  });
 
   it('setViewport changes the projection center point', () => {
-    const cam = createCamera({ zoom: 8, center: { x: 15, y: 15 }, viewport: { width: 800, height: 600 } })
-    cam.setViewport(1000, 800)
-    const s = cam.worldToScreen(15, 15)
-    expect(s.x).toBe(500)
-    expect(s.y).toBe(400)
-  })
-})
+    const cam = createCamera({
+      zoom: 8,
+      center: { x: 15, y: 15 },
+      viewport: { width: 800, height: 600 },
+    });
+    cam.setViewport(1000, 800);
+    const s = cam.worldToScreen(15, 15);
+    expect(s.x).toBe(500);
+    expect(s.y).toBe(400);
+  });
+});
 
 // ---------------------------------------------------------------------------
 // Save (src/save/save.ts)
@@ -212,16 +224,16 @@ describe('camera', () => {
 
 describe('save schema', () => {
   it('validateAndClamp: null/corrupt → default save', () => {
-    const d = validateAndClamp(null, MISSION_IDS)
-    expect(d.version).toBe(1)
-    expect(d.unlockedMissions).toEqual(['M01'])
-    expect(d.statistics.torpedoesFired).toBe(0)
-  })
+    const d = validateAndClamp(null, MISSION_IDS);
+    expect(d.version).toBe(1);
+    expect(d.unlockedMissions).toEqual(['M01']);
+    expect(d.statistics.torpedoesFired).toBe(0);
+  });
 
   it('validateAndClamp: unknown version → default', () => {
-    const d = validateAndClamp({ version: 2, unlockedMissions: ['M01', 'M05'] }, MISSION_IDS)
-    expect(d.unlockedMissions).toEqual(['M01'])
-  })
+    const d = validateAndClamp({ version: 2, unlockedMissions: ['M01', 'M05'] }, MISSION_IDS);
+    expect(d.unlockedMissions).toEqual(['M01']);
+  });
 
   it('validateAndClamp: whitelists ids, dedupes, clamps numbers', () => {
     const d = validateAndClamp(
@@ -235,55 +247,58 @@ describe('save schema', () => {
           peakDetectionSum: 12.7,
           shipsSunk: { Merchant: 2, Alien: 9, Destroyer: 1 },
         },
-        settings: { audio: { masterVolume: 5, sfxVolume: -1, musicVolume: 0.5 }, video: { showFps: 'yes', mapGrid: true } },
+        settings: {
+          audio: { masterVolume: 5, sfxVolume: -1, musicVolume: 0.5 },
+          video: { showFps: 'yes', mapGrid: true },
+        },
       },
       MISSION_IDS,
-    )
-    expect(d.unlockedMissions).toEqual(['M01', 'M02'])
-    expect(d.bestScores).toEqual({ M01: 9999, M02: 0 })
-    expect(d.statistics.torpedoesFired).toBe(1_000_000)
-    expect(d.statistics.torpedoesHit).toBe(0)
-    expect(d.statistics.shipsSunk).toEqual({ Merchant: 2, Destroyer: 1 })
-    expect(d.settings.audio.masterVolume).toBe(1)
-    expect(d.settings.audio.sfxVolume).toBe(0)
-    expect(d.settings.video.showFps).toBe(false)
-    expect(d.settings.video.mapGrid).toBe(true)
-  })
+    );
+    expect(d.unlockedMissions).toEqual(['M01', 'M02']);
+    expect(d.bestScores).toEqual({ M01: 9999, M02: 0 });
+    expect(d.statistics.torpedoesFired).toBe(1_000_000);
+    expect(d.statistics.torpedoesHit).toBe(0);
+    expect(d.statistics.shipsSunk).toEqual({ Merchant: 2, Destroyer: 1 });
+    expect(d.settings.audio.masterVolume).toBe(1);
+    expect(d.settings.audio.sfxVolume).toBe(0);
+    expect(d.settings.video.showFps).toBe(false);
+    expect(d.settings.video.mapGrid).toBe(true);
+  });
 
   it('store: write → load roundtrip through injected storage', () => {
-    const store = createSaveStore(makeFakeStorage())
-    const save = defaultSave()
-    save.bestScores['M01'] = 850
-    store.write(save)
-    const loaded = store.load()
-    expect(loaded.bestScores['M01']).toBe(850)
-    expect(loaded.version).toBe(1)
-  })
+    const store = createSaveStore(makeFakeStorage());
+    const save = defaultSave();
+    save.bestScores['M01'] = 850;
+    store.write(save);
+    const loaded = store.load();
+    expect(loaded.bestScores['M01']).toBe(850);
+    expect(loaded.version).toBe(1);
+  });
 
   it('store: corrupt JSON → default, never throws', () => {
-    const store = createSaveStore(makeFakeStorage({ 'silent-depth:save:v1': 'not json {{{' }))
-    const loaded = store.load()
-    expect(loaded.unlockedMissions).toEqual(['M01'])
-  })
+    const store = createSaveStore(makeFakeStorage({ 'silent-depth:save:v1': 'not json {{{' }));
+    const loaded = store.load();
+    expect(loaded.unlockedMissions).toEqual(['M01']);
+  });
 
   it('store: reset removes the key', () => {
-    const storage = makeFakeStorage()
-    const store = createSaveStore(storage)
-    store.write(defaultSave())
-    expect(storage.data.has('silent-depth:save:v1')).toBe(true)
-    store.reset()
-    expect(storage.data.has('silent-depth:save:v1')).toBe(false)
-  })
+    const storage = makeFakeStorage();
+    const store = createSaveStore(storage);
+    store.write(defaultSave());
+    expect(storage.data.has('silent-depth:save:v1')).toBe(true);
+    store.reset();
+    expect(storage.data.has('silent-depth:save:v1')).toBe(false);
+  });
 
   it('store: null storage is a safe no-op', () => {
-    const store = createSaveStore(null)
-    expect(store.load().unlockedMissions).toEqual(['M01'])
-    expect(() => store.write(defaultSave())).not.toThrow()
-    expect(() => store.reset()).not.toThrow()
-  })
+    const store = createSaveStore(null);
+    expect(store.load().unlockedMissions).toEqual(['M01']);
+    expect(() => store.write(defaultSave())).not.toThrow();
+    expect(() => store.reset()).not.toThrow();
+  });
 
   it('updateOnMissionResult: victory unlocks the next mission + best score', () => {
-    const save = defaultSave() // M01 unlocked
+    const save = defaultSave(); // M01 unlocked
     const result: MissionResult = {
       missionId: 'M01',
       completed: true,
@@ -294,20 +309,20 @@ describe('save schema', () => {
       peakDetection: 45,
       elapsedS: 900,
       shipsSunk: { Merchant: 1 },
-    }
-    const next = updateOnMissionResult(save, result, MISSION_IDS)
-    expect(next.unlockedMissions).toEqual(['M01', 'M02'])
-    expect(next.bestScores['M01']).toBe(850)
-    expect(next.statistics.missionsCompleted).toBe(1)
-    expect(next.statistics.torpedoesFired).toBe(4)
-    expect(next.statistics.torpedoesHit).toBe(3)
-    expect(next.statistics.shipsSunk['Merchant']).toBe(1)
+    };
+    const next = updateOnMissionResult(save, result, MISSION_IDS);
+    expect(next.unlockedMissions).toEqual(['M01', 'M02']);
+    expect(next.bestScores['M01']).toBe(850);
+    expect(next.statistics.missionsCompleted).toBe(1);
+    expect(next.statistics.torpedoesFired).toBe(4);
+    expect(next.statistics.torpedoesHit).toBe(3);
+    expect(next.statistics.shipsSunk['Merchant']).toBe(1);
     // Original save is untouched (functional update).
-    expect(save.unlockedMissions).toEqual(['M01'])
-  })
+    expect(save.unlockedMissions).toEqual(['M01']);
+  });
 
   it('updateOnMissionResult: bestScore keeps the max; defeat does not unlock', () => {
-    let save = defaultSave()
+    let save = defaultSave();
     const win: MissionResult = {
       missionId: 'M01',
       completed: true,
@@ -318,9 +333,9 @@ describe('save schema', () => {
       peakDetection: 30,
       elapsedS: 600,
       shipsSunk: {},
-    }
-    save = updateOnMissionResult(save, win, MISSION_IDS)
-    expect(save.bestScores['M01']).toBe(500)
+    };
+    save = updateOnMissionResult(save, win, MISSION_IDS);
+    expect(save.bestScores['M01']).toBe(500);
 
     const loss: MissionResult = {
       missionId: 'M02',
@@ -332,14 +347,14 @@ describe('save schema', () => {
       peakDetection: 80,
       elapsedS: 400,
       shipsSunk: {},
-    }
-    save = updateOnMissionResult(save, loss, MISSION_IDS)
-    expect(save.bestScores['M02']).toBe(120)
-    expect(save.unlockedMissions).toEqual(['M01', 'M02']) // M03 NOT unlocked
-    expect(save.statistics.missionsCompleted).toBe(1)
-    expect(save.statistics.peakDetectionSum).toBe(110)
-  })
-})
+    };
+    save = updateOnMissionResult(save, loss, MISSION_IDS);
+    expect(save.bestScores['M02']).toBe(120);
+    expect(save.unlockedMissions).toEqual(['M01', 'M02']); // M03 NOT unlocked
+    expect(save.statistics.missionsCompleted).toBe(1);
+    expect(save.statistics.peakDetectionSum).toBe(110);
+  });
+});
 
 // ---------------------------------------------------------------------------
 // Input (src/ui/input.ts)
@@ -347,140 +362,140 @@ describe('save schema', () => {
 
 describe('input mapping', () => {
   it('W/S adjust the target throttle with clamping', () => {
-    const input = createInput({ maxThrottleKt: 22 })
-    input.handleKey('KeyW', true)
-    input.handleKey('KeyW', true)
-    expect(input.getInputs().throttle).toBe(4)
-    input.handleKey('KeyS', true)
-    expect(input.getInputs().throttle).toBe(2)
-    for (let i = 0; i < 30; i++) input.handleKey('KeyW', true)
-    expect(input.getInputs().throttle).toBe(22)
-    for (let i = 0; i < 30; i++) input.handleKey('KeyS', true)
-    expect(input.getInputs().throttle).toBe(0)
-  })
+    const input = createInput({ maxThrottleKt: 22 });
+    input.handleKey('KeyW', true);
+    input.handleKey('KeyW', true);
+    expect(input.getInputs().throttle).toBe(4);
+    input.handleKey('KeyS', true);
+    expect(input.getInputs().throttle).toBe(2);
+    for (let i = 0; i < 30; i++) input.handleKey('KeyW', true);
+    expect(input.getInputs().throttle).toBe(22);
+    for (let i = 0; i < 30; i++) input.handleKey('KeyS', true);
+    expect(input.getInputs().throttle).toBe(0);
+  });
 
   it('A/D hold produce rudder -1/+1/0', () => {
-    const input = createInput({ maxThrottleKt: 22 })
-    input.handleKey('KeyA', true)
-    expect(input.getInputs().rudder).toBe(-1)
-    input.handleKey('KeyD', true)
-    expect(input.getInputs().rudder).toBe(0)
-    input.handleKey('KeyA', false)
-    expect(input.getInputs().rudder).toBe(1)
-    input.handleKey('KeyD', false)
-    expect(input.getInputs().rudder).toBe(0)
-  })
+    const input = createInput({ maxThrottleKt: 22 });
+    input.handleKey('KeyA', true);
+    expect(input.getInputs().rudder).toBe(-1);
+    input.handleKey('KeyD', true);
+    expect(input.getInputs().rudder).toBe(0);
+    input.handleKey('KeyA', false);
+    expect(input.getInputs().rudder).toBe(1);
+    input.handleKey('KeyD', false);
+    expect(input.getInputs().rudder).toBe(0);
+  });
 
   it('Q/E step through the five depth layers with clamping', () => {
-    const input = createInput({ maxThrottleKt: 22 })
-    expect(input.getInputs().depthLayerTarget).toBe('Shallow')
-    input.handleKey('KeyQ', true)
-    expect(input.getInputs().depthLayerTarget).toBe('Periscope')
-    input.handleKey('KeyQ', true)
-    expect(input.getInputs().depthLayerTarget).toBe('Surface')
-    input.handleKey('KeyQ', true)
-    expect(input.getInputs().depthLayerTarget).toBe('Surface') // clamp
-    for (let i = 0; i < 6; i++) input.handleKey('KeyE', true)
-    expect(input.getInputs().depthLayerTarget).toBe('Deep') // clamp
-  })
+    const input = createInput({ maxThrottleKt: 22 });
+    expect(input.getInputs().depthLayerTarget).toBe('Shallow');
+    input.handleKey('KeyQ', true);
+    expect(input.getInputs().depthLayerTarget).toBe('Periscope');
+    input.handleKey('KeyQ', true);
+    expect(input.getInputs().depthLayerTarget).toBe('Surface');
+    input.handleKey('KeyQ', true);
+    expect(input.getInputs().depthLayerTarget).toBe('Surface'); // clamp
+    for (let i = 0; i < 6; i++) input.handleKey('KeyE', true);
+    expect(input.getInputs().depthLayerTarget).toBe('Deep'); // clamp
+  });
 
   it('Space ping and G decoy are edge latches consumed on read', () => {
-    const input = createInput({ maxThrottleKt: 22 })
-    input.handleKey('Space', true)
-    const a = input.getInputs()
-    expect(a.ping).toBe(true)
-    expect(input.getInputs().ping).toBe(false)
-    input.handleKey('KeyG', true)
-    expect(input.getInputs().decoy).toBe(true)
-    expect(input.getInputs().decoy).toBe(false)
-  })
+    const input = createInput({ maxThrottleKt: 22 });
+    input.handleKey('Space', true);
+    const a = input.getInputs();
+    expect(a.ping).toBe(true);
+    expect(input.getInputs().ping).toBe(false);
+    input.handleKey('KeyG', true);
+    expect(input.getInputs().decoy).toBe(true);
+    expect(input.getInputs().decoy).toBe(false);
+  });
 
   it('F queues a one-shot fire request for the selected contact', () => {
-    const input = createInput({ maxThrottleKt: 22 })
-    input.setSelectedContactId('C-01')
-    input.handleKey('KeyF', true)
-    expect(input.consumeFireRequest()).toBe('C-01')
-    expect(input.consumeFireRequest()).toBeNull()
-    input.setSelectedContactId(null)
-    input.handleKey('KeyF', true)
-    expect(input.consumeFireRequest()).toBeNull()
-  })
+    const input = createInput({ maxThrottleKt: 22 });
+    input.setSelectedContactId('C-01');
+    input.handleKey('KeyF', true);
+    expect(input.consumeFireRequest()).toBe('C-01');
+    expect(input.consumeFireRequest()).toBeNull();
+    input.setSelectedContactId(null);
+    input.handleKey('KeyF', true);
+    expect(input.consumeFireRequest()).toBeNull();
+  });
 
   it('R toggles silent running', () => {
-    const input = createInput({ maxThrottleKt: 22 })
-    expect(input.getInputs().silentRunning).toBe(false)
-    input.handleKey('KeyR', true)
-    expect(input.getInputs().silentRunning).toBe(true)
-    input.handleKey('KeyR', true)
-    expect(input.getInputs().silentRunning).toBe(false)
-  })
+    const input = createInput({ maxThrottleKt: 22 });
+    expect(input.getInputs().silentRunning).toBe(false);
+    input.handleKey('KeyR', true);
+    expect(input.getInputs().silentRunning).toBe(true);
+    input.handleKey('KeyR', true);
+    expect(input.getInputs().silentRunning).toBe(false);
+  });
 
   it('P/L/X latch periscope edges; Escape invokes the onMenu callback (t-026)', () => {
-    let menus = 0
+    let menus = 0;
     const input = createInput({
       maxThrottleKt: 22,
       onMenu: () => menus++,
-    })
-    input.handleKey('Escape', true)
-    expect(menus).toBe(1)
+    });
+    input.handleKey('Escape', true);
+    expect(menus).toBe(1);
 
     // P = periscope raise/lower (one-shot latch, consumed on read).
-    input.handleKey('KeyP', true)
-    expect(input.consumePeriscopeRequest()).toBe(true)
-    expect(input.consumePeriscopeRequest()).toBe(false)
+    input.handleKey('KeyP', true);
+    expect(input.consumePeriscopeRequest()).toBe(true);
+    expect(input.consumePeriscopeRequest()).toBe(false);
     // L = lock target; X = emergency dive.
-    input.handleKey('KeyL', true)
-    expect(input.consumeLockRequest()).toBe(true)
-    input.handleKey('KeyX', true)
-    expect(input.consumeDiveRequest()).toBe(true)
+    input.handleKey('KeyL', true);
+    expect(input.consumeLockRequest()).toBe(true);
+    input.handleKey('KeyX', true);
+    expect(input.consumeDiveRequest()).toBe(true);
     // Shell-owned inputs stay false (pulses come from buildInputs in main).
-    expect(input.getInputs().pause).toBe(false)
-    expect(input.getInputs().periscope).toBeUndefined()
-  })
+    expect(input.getInputs().pause).toBe(false);
+    expect(input.getInputs().periscope).toBeUndefined();
+  });
 
   it('bind() maps window events and ignores OS key-repeat', () => {
-    const input = createInput({ maxThrottleKt: 22 })
-    const handlers = new Map<string, (e: unknown) => void>()
+    const input = createInput({ maxThrottleKt: 22 });
+    const handlers = new Map<string, (e: unknown) => void>();
     const fakeTarget: Parameters<typeof input.bind>[0] = {
       addEventListener: (t, cb) => handlers.set(t, cb),
       removeEventListener: (t) => handlers.delete(t),
-    }
-    const unbind = input.bind(fakeTarget)
-    const down = handlers.get('keydown')!
-    const up = handlers.get('keyup')!
-    expect(down).toBeDefined()
-    expect(up).toBeDefined()
+    };
+    const unbind = input.bind(fakeTarget);
+    const down = handlers.get('keydown')!;
+    const up = handlers.get('keyup')!;
+    expect(down).toBeDefined();
+    expect(up).toBeDefined();
 
-    const prevent = (): void => undefined
-    down({ code: 'KeyW', repeat: false, preventDefault: prevent })
-    down({ code: 'KeyW', repeat: true, preventDefault: prevent }) // ignored
-    expect(input.getInputs().throttle).toBe(2)
+    const prevent = (): void => undefined;
+    down({ code: 'KeyW', repeat: false, preventDefault: prevent });
+    down({ code: 'KeyW', repeat: true, preventDefault: prevent }); // ignored
+    expect(input.getInputs().throttle).toBe(2);
 
-    down({ code: 'KeyA', repeat: false, preventDefault: prevent })
-    expect(input.getInputs().rudder).toBe(-1)
-    up({ code: 'KeyA', repeat: false, preventDefault: prevent })
-    expect(input.getInputs().rudder).toBe(0)
+    down({ code: 'KeyA', repeat: false, preventDefault: prevent });
+    expect(input.getInputs().rudder).toBe(-1);
+    up({ code: 'KeyA', repeat: false, preventDefault: prevent });
+    expect(input.getInputs().rudder).toBe(0);
 
-    unbind()
-    expect(handlers.size).toBe(0)
-  })
+    unbind();
+    expect(handlers.size).toBe(0);
+  });
 
   it('reset() returns every input to mission-start defaults', () => {
-    const input = createInput({ maxThrottleKt: 22 })
-    input.handleKey('KeyW', true)
-    input.handleKey('KeyR', true)
-    input.handleKey('KeyQ', true)
-    input.handleKey('KeyA', true)
-    input.setSelectedContactId('C-02')
-    input.reset()
-    const i = input.getInputs()
-    expect(i.throttle).toBe(0)
-    expect(i.depthLayerTarget).toBe('Shallow')
-    expect(i.silentRunning).toBe(false)
-    expect(i.rudder).toBe(0)
-    expect(input.consumeFireRequest()).toBeNull()
-  })
-})
+    const input = createInput({ maxThrottleKt: 22 });
+    input.handleKey('KeyW', true);
+    input.handleKey('KeyR', true);
+    input.handleKey('KeyQ', true);
+    input.handleKey('KeyA', true);
+    input.setSelectedContactId('C-02');
+    input.reset();
+    const i = input.getInputs();
+    expect(i.throttle).toBe(0);
+    expect(i.depthLayerTarget).toBe('Shallow');
+    expect(i.silentRunning).toBe(false);
+    expect(i.rudder).toBe(0);
+    expect(input.consumeFireRequest()).toBeNull();
+  });
+});
 
 // ---------------------------------------------------------------------------
 // HUD formatters (src/ui/hud.ts)
@@ -488,46 +503,48 @@ describe('input mapping', () => {
 
 describe('HUD formatters', () => {
   it('formatTime renders mm:ss', () => {
-    expect(formatTime(0)).toBe('00:00')
-    expect(formatTime(65)).toBe('01:05')
-    expect(formatTime(599)).toBe('09:59')
-    expect(formatTime(-5)).toBe('00:00')
-  })
+    expect(formatTime(0)).toBe('00:00');
+    expect(formatTime(65)).toBe('01:05');
+    expect(formatTime(599)).toBe('09:59');
+    expect(formatTime(-5)).toBe('00:00');
+  });
 
   it('formatLastSeen renders NOW / seconds / mm:ss', () => {
-    expect(formatLastSeen(100, 100.4)).toBe('NOW')
-    expect(formatLastSeen(100, 112.6)).toBe('13S')
-    expect(formatLastSeen(100, 200)).toBe('01:40')
-  })
+    expect(formatLastSeen(100, 100.4)).toBe('NOW');
+    expect(formatLastSeen(100, 112.6)).toBe('13S');
+    expect(formatLastSeen(100, 200)).toBe('01:40');
+  });
 
   it('formatEvent maps the ten FR-18 entries to exact wording', () => {
-    expect(formatEvent(makeEvent('contact.detected', { contactId: 'C-01' }))).toBe('SONAR CONTACT DETECTED — C-01')
-    expect(formatEvent(makeEvent('contact.classified'))).toBe('CONTACT CLASSIFIED')
-    expect(formatEvent(makeEvent('torpedo.ready'))).toBe('TORPEDO READY')
-    expect(formatEvent(makeEvent('torpedo.fired'))).toBe('TORPEDO FIRED')
-    expect(formatEvent(makeEvent('torpedo.hit'))).toBe('TARGET HIT')
-    expect(formatEvent(makeEvent('torpedo.missed'))).toBe('TORPEDO MISSED')
-    expect(formatEvent(makeEvent('depthCharge.dropped'))).toBe('DEPTH CHARGES DROPPED')
-    expect(formatEvent(makeEvent('battery.low'))).toBe('LOW BATTERY')
-    expect(formatEvent(makeEvent('escape.escaped'))).toBe('ESCAPED')
-    expect(formatEvent(makeEvent('mission.complete'))).toBe('MISSION COMPLETE')
-  })
+    expect(formatEvent(makeEvent('contact.detected', { contactId: 'C-01' }))).toBe(
+      'SONAR CONTACT DETECTED — C-01',
+    );
+    expect(formatEvent(makeEvent('contact.classified'))).toBe('CONTACT CLASSIFIED');
+    expect(formatEvent(makeEvent('torpedo.ready'))).toBe('TORPEDO READY');
+    expect(formatEvent(makeEvent('torpedo.fired'))).toBe('TORPEDO FIRED');
+    expect(formatEvent(makeEvent('torpedo.hit'))).toBe('TARGET HIT');
+    expect(formatEvent(makeEvent('torpedo.missed'))).toBe('TORPEDO MISSED');
+    expect(formatEvent(makeEvent('depthCharge.dropped'))).toBe('DEPTH CHARGES DROPPED');
+    expect(formatEvent(makeEvent('battery.low'))).toBe('LOW BATTERY');
+    expect(formatEvent(makeEvent('escape.escaped'))).toBe('ESCAPED');
+    expect(formatEvent(makeEvent('mission.complete'))).toBe('MISSION COMPLETE');
+  });
 
   it('formatEvent covers the rest of the catalogue with stable wording', () => {
-    expect(formatEvent(makeEvent('ship.sunk', { shipId: 'E-01' }))).toBe('SHIP SUNK — E-01')
-    expect(formatEvent(makeEvent('sonar.ping'))).toBe('ACTIVE PING')
-    expect(formatEvent(makeEvent('player.located'))).toBe('PLAYER LOCATED')
-    expect(formatEvent(makeEvent('sub.forcedSurface'))).toBe('FORCED TO SURFACE')
-    expect(formatEvent(makeEvent('torpedo.fireRejected'))).toBe('FIRE REJECTED')
-    expect(formatEvent(makeEvent('mission.victory'))).toBe('MISSION ACCOMPLISHED')
-    expect(formatEvent(makeEvent('mission.defeat'))).toBe('MISSION FAILED')
-  })
+    expect(formatEvent(makeEvent('ship.sunk', { shipId: 'E-01' }))).toBe('SHIP SUNK — E-01');
+    expect(formatEvent(makeEvent('sonar.ping'))).toBe('ACTIVE PING');
+    expect(formatEvent(makeEvent('player.located'))).toBe('PLAYER LOCATED');
+    expect(formatEvent(makeEvent('sub.forcedSurface'))).toBe('FORCED TO SURFACE');
+    expect(formatEvent(makeEvent('torpedo.fireRejected'))).toBe('FIRE REJECTED');
+    expect(formatEvent(makeEvent('mission.victory'))).toBe('MISSION ACCOMPLISHED');
+    expect(formatEvent(makeEvent('mission.defeat'))).toBe('MISSION FAILED');
+  });
 
   it('formatEvent suppresses shell-noise events', () => {
-    expect(formatEvent(makeEvent('sub.speedChanged'))).toBeNull()
-    expect(formatEvent(makeEvent('sub.depthChanged'))).toBeNull()
-    expect(formatEvent(makeEvent('ui.click'))).toBeNull()
-  })
+    expect(formatEvent(makeEvent('sub.speedChanged'))).toBeNull();
+    expect(formatEvent(makeEvent('sub.depthChanged'))).toBeNull();
+    expect(formatEvent(makeEvent('ui.click'))).toBeNull();
+  });
 
   it('detectionBandIndex picks the 5-band color by value', () => {
     const bands = [
@@ -536,40 +553,40 @@ describe('HUD formatters', () => {
       { max: 60, label: 'Searching' },
       { max: 80, label: 'Hunting' },
       { max: 100, label: 'Located' },
-    ]
-    expect(detectionBandIndex(0, bands)).toBe(0)
-    expect(detectionBandIndex(20, bands)).toBe(0)
-    expect(detectionBandIndex(21, bands)).toBe(1)
-    expect(detectionBandIndex(99, bands)).toBe(4)
-    expect(DETECTION_BAND_COLORS.length).toBe(5)
-  })
+    ];
+    expect(detectionBandIndex(0, bands)).toBe(0);
+    expect(detectionBandIndex(20, bands)).toBe(0);
+    expect(detectionBandIndex(21, bands)).toBe(1);
+    expect(detectionBandIndex(99, bands)).toBe(4);
+    expect(DETECTION_BAND_COLORS.length).toBe(5);
+  });
 
   it('formatFireSolution produces the §7.3 card strings', () => {
-    const contact = makeContact()
-    const parts: FireControlParts = formatFireSolution(makeSolution(), contact)
-    expect(parts.target).toBe('C-01 Tanker')
-    expect(parts.bearing).toBe('047°')
-    expect(parts.range).toBe('3.2KM')
-    expect(parts.targetHeading).toBe('142°')
-    expect(parts.targetSpeed).toBe('12KT')
-    expect(parts.firingBearing).toBe('053°')
-    expect(parts.hitProbability).toBe('72%')
-    expect(parts.salvoProbability).toBe('92%')
-    expect(parts.estimated).toBe(false)
-  })
+    const contact = makeContact();
+    const parts: FireControlParts = formatFireSolution(makeSolution(), contact);
+    expect(parts.target).toBe('C-01 Tanker');
+    expect(parts.bearing).toBe('047°');
+    expect(parts.range).toBe('3.2KM');
+    expect(parts.targetHeading).toBe('142°');
+    expect(parts.targetSpeed).toBe('12KT');
+    expect(parts.firingBearing).toBe('053°');
+    expect(parts.hitProbability).toBe('72%');
+    expect(parts.salvoProbability).toBe('92%');
+    expect(parts.estimated).toBe(false);
+  });
 
   it('formatFireSolution shows -- for unknown inputs (bearing-only)', () => {
-    const contact = makeContact({ rangeKm: null, headingEstimateDeg: null, speedEstimateKt: null })
+    const contact = makeContact({ rangeKm: null, headingEstimateDeg: null, speedEstimateKt: null });
     const parts = formatFireSolution(
       makeSolution({ rangeKm: null, targetHeadingDeg: null, targetSpeedKt: null, estimated: true }),
       contact,
-    )
-    expect(parts.range).toBe('--')
-    expect(parts.targetHeading).toBe('--')
-    expect(parts.targetSpeed).toBe('--')
-    expect(parts.estimated).toBe(true)
-  })
-})
+    );
+    expect(parts.range).toBe('--');
+    expect(parts.targetHeading).toBe('--');
+    expect(parts.targetSpeed).toBe('--');
+    expect(parts.estimated).toBe(true);
+  });
+});
 
 // ---------------------------------------------------------------------------
 // Renderer pure math (src/rendering/renderer.ts)
@@ -577,214 +594,208 @@ describe('HUD formatters', () => {
 
 describe('renderer pure math', () => {
   it('minimapProject maps world → minimap (north-up, padded)', () => {
-    const size = 180
-    const pad = 8
-    const p = minimapProject(0, 0, 30, size, pad)
-    expect(p.x).toBeCloseTo(pad, 6)
-    expect(p.y).toBeCloseTo(size - pad, 6)
-    const north = minimapProject(15, 30, 30, size, pad)
-    const south = minimapProject(15, 0, 30, size, pad)
-    expect(north.y).toBeLessThan(south.y)
+    const size = 180;
+    const pad = 8;
+    const p = minimapProject(0, 0, 30, size, pad);
+    expect(p.x).toBeCloseTo(pad, 6);
+    expect(p.y).toBeCloseTo(size - pad, 6);
+    const north = minimapProject(15, 30, 30, size, pad);
+    const south = minimapProject(15, 0, 30, size, pad);
+    expect(north.y).toBeLessThan(south.y);
     // Center of the map → center of the minimap.
-    const c = minimapProject(15, 15, 30, size, pad)
-    expect(c.x).toBeCloseTo(size / 2, 6)
-    expect(c.y).toBeCloseTo(size / 2, 6)
-  })
+    const c = minimapProject(15, 15, 30, size, pad);
+    expect(c.x).toBeCloseTo(size / 2, 6);
+    expect(c.y).toBeCloseTo(size / 2, 6);
+  });
 
   it('minimapProject roundtrips through the inverse transform', () => {
-    const size = 180
-    const pad = 8
-    const inner = size - pad * 2
-    const p = minimapProject(21.5, 4.25, 30, size, pad)
-    const wx = ((p.x - pad) / inner) * 30
-    const wy = (1 - (p.y - pad) / inner) * 30
-    expect(wx).toBeCloseTo(21.5, 6)
-    expect(wy).toBeCloseTo(4.25, 6)
-  })
+    const size = 180;
+    const pad = 8;
+    const inner = size - pad * 2;
+    const p = minimapProject(21.5, 4.25, 30, size, pad);
+    const wx = ((p.x - pad) / inner) * 30;
+    const wy = (1 - (p.y - pad) / inner) * 30;
+    expect(wx).toBeCloseTo(21.5, 6);
+    expect(wy).toBeCloseTo(4.25, 6);
+  });
 
   it('lerpPos interpolates linearly', () => {
-    const p = lerpPos({ x: 0, y: 0 }, { x: 10, y: 20 }, 0.25)
-    expect(p.x).toBeCloseTo(2.5, 6)
-    expect(p.y).toBeCloseTo(5, 6)
-  })
+    const p = lerpPos({ x: 0, y: 0 }, { x: 10, y: 20 }, 0.25);
+    expect(p.x).toBeCloseTo(2.5, 6);
+    expect(p.y).toBeCloseTo(5, 6);
+  });
 
   it('lerpAngle takes the shortest path across 0/360', () => {
-    expect(lerpAngle(350, 10, 0.5)).toBeCloseTo(0, 6)
-    expect(lerpAngle(10, 350, 0.5)).toBeCloseTo(0, 6)
-    expect(lerpAngle(0, 90, 0.5)).toBeCloseTo(45, 6)
-  })
+    expect(lerpAngle(350, 10, 0.5)).toBeCloseTo(0, 6);
+    expect(lerpAngle(10, 350, 0.5)).toBeCloseTo(0, 6);
+    expect(lerpAngle(0, 90, 0.5)).toBeCloseTo(45, 6);
+  });
 
   it('activeWeatherAt follows segment fractions (Clear->Cloudy)', () => {
-    expect(activeWeatherAt('Clear->Cloudy', 0, 100)).toBe('Clear')
-    expect(activeWeatherAt('Clear->Cloudy', 49, 100)).toBe('Clear')
-    expect(activeWeatherAt('Clear->Cloudy', 50, 100)).toBe('Cloudy')
-    expect(activeWeatherAt('Clear->Cloudy', 100, 100)).toBe('Cloudy')
-    expect(activeWeatherAt('Storm', 999, 100)).toBe('Storm')
-  })
-})
+    expect(activeWeatherAt('Clear->Cloudy', 0, 100)).toBe('Clear');
+    expect(activeWeatherAt('Clear->Cloudy', 49, 100)).toBe('Clear');
+    expect(activeWeatherAt('Clear->Cloudy', 50, 100)).toBe('Cloudy');
+    expect(activeWeatherAt('Clear->Cloudy', 100, 100)).toBe('Cloudy');
+    expect(activeWeatherAt('Storm', 999, 100)).toBe('Storm');
+  });
+});
 
 // ---------------------------------------------------------------------------
 // i18n (src/ui/i18n.ts) — t-022
 // ---------------------------------------------------------------------------
 
 describe('i18n dictionary', () => {
-  const LANG_CODES = ['en', 'zh', 'fr', 'ru'] as const
+  const LANG_CODES = ['en', 'zh', 'fr', 'ru'] as const;
 
   it('all four languages cover the exact same key set', () => {
-    const keySets = LANG_CODES.map((l) => new Set(Object.keys(translations[l])))
-    const base = keySets[0]!
+    const keySets = LANG_CODES.map((l) => new Set(Object.keys(translations[l])));
+    const base = keySets[0]!;
     for (const set of keySets) {
-      expect(set.size).toBe(base.size)
+      expect(set.size).toBe(base.size);
       for (const key of base) {
-        expect(set.has(key), `missing key "${key}" in one language`).toBe(true)
+        expect(set.has(key), `missing key "${key}" in one language`).toBe(true);
       }
     }
-  })
+  });
 
   it('every translation value is a non-empty string (no missing translations)', () => {
     for (const l of LANG_CODES) {
       for (const [key, value] of Object.entries(translations[l])) {
-        expect(typeof value, `${l}.${key}`).toBe('string')
-        expect(value.length, `${l}.${key}`).toBeGreaterThan(0)
+        expect(typeof value, `${l}.${key}`).toBe('string');
+        expect(value.length, `${l}.${key}`).toBeGreaterThan(0);
       }
     }
-  })
+  });
 
   it('LANGS lists the four languages with their own-language labels', () => {
-    expect(LANGS.map((l) => l.code)).toEqual(['zh', 'en', 'fr', 'ru'])
-    expect(LANGS.map((l) => l.label)).toEqual(['中文', 'English', 'Français', 'Русский'])
-  })
+    expect(LANGS.map((l) => l.code)).toEqual(['zh', 'en', 'fr', 'ru']);
+    expect(LANGS.map((l) => l.label)).toEqual(['中文', 'English', 'Français', 'Русский']);
+  });
 
   it('isLang validates language codes', () => {
-    expect(isLang('en')).toBe(true)
-    expect(isLang('zh')).toBe(true)
-    expect(isLang('fr')).toBe(true)
-    expect(isLang('ru')).toBe(true)
-    expect(isLang('de')).toBe(false)
-    expect(isLang(undefined)).toBe(false)
-  })
-})
+    expect(isLang('en')).toBe(true);
+    expect(isLang('zh')).toBe(true);
+    expect(isLang('fr')).toBe(true);
+    expect(isLang('ru')).toBe(true);
+    expect(isLang('de')).toBe(false);
+    expect(isLang(undefined)).toBe(false);
+  });
+});
 
 describe('i18n translator', () => {
   it('t() interpolates {var} placeholders', () => {
-    const tt = getT('en')
-    expect(tt('menu.nextMission', { id: 'M01', best: 850 })).toBe('NEXT MISSION M01 · BEST 850')
-    expect(tt('hud.lastSeen.seconds', { s: 12 })).toBe('12S')
-    expect(tt('log.entry', { text: 'SHIP SUNK', id: 'E-01' })).toBe('SHIP SUNK — E-01')
-  })
+    const tt = getT('en');
+    expect(tt('menu.nextMission', { id: 'M01', best: 850 })).toBe('NEXT MISSION M01 · BEST 850');
+    expect(tt('hud.lastSeen.seconds', { s: 12 })).toBe('12S');
+    expect(tt('log.entry', { text: 'SHIP SUNK', id: 'E-01' })).toBe('SHIP SUNK — E-01');
+  });
 
   it('t() falls back to English then to the raw key (never crashes)', () => {
-    const tt = getT('ru')
-    expect(tt('menu.play')).toBe('ИГРАТЬ')
+    const tt = getT('ru');
+    expect(tt('menu.play')).toBe('ИГРАТЬ');
     // A key missing from ru falls back to en.
-    expect(tt('missing.key.xyz')).toBe('missing.key.xyz')
-    expect(getT('de' as Lang)('menu.play')).toBe('PLAY')
-  })
+    expect(tt('missing.key.xyz')).toBe('missing.key.xyz');
+    expect(getT('de' as Lang)('menu.play')).toBe('PLAY');
+  });
 
   it('translations differ per language for a sample of categories', () => {
-    expect(getT('zh')('menu.play')).toBe('开始游戏')
-    expect(getT('fr')('pause.title')).toBe('PAUSE')
-    expect(getT('ru')('log.torpedo.hit')).toBe('ПОПАДАНИЕ В ЦЕЛЬ')
-    expect(getT('en')('log.contact.detected')).toBe('SONAR CONTACT DETECTED')
+    expect(getT('zh')('menu.play')).toBe('开始游戏');
+    expect(getT('fr')('pause.title')).toBe('PAUSE');
+    expect(getT('ru')('log.torpedo.hit')).toBe('ПОПАДАНИЕ В ЦЕЛЬ');
+    expect(getT('en')('log.contact.detected')).toBe('SONAR CONTACT DETECTED');
     // Ship classes + mission names are localized.
-    expect(getT('fr')('class.Tanker')).toBe('PÉTROLIER')
-    expect(getT('zh')('mission.M03.name')).toBe('袭击护航队')
-    expect(getT('ru')('mission.M01.name')).toBe('Сонар-тренировка')
-  })
-})
+    expect(getT('fr')('class.Tanker')).toBe('PÉTROLIER');
+    expect(getT('zh')('mission.M03.name')).toBe('袭击护航队');
+    expect(getT('ru')('mission.M01.name')).toBe('Сонар-тренировка');
+  });
+});
 
 describe('i18n detection', () => {
   it('langFromNavigator maps browser tags', () => {
-    expect(langFromNavigator('zh-CN')).toBe('zh')
-    expect(langFromNavigator('zh')).toBe('zh')
-    expect(langFromNavigator('fr-FR')).toBe('fr')
-    expect(langFromNavigator('ru-RU')).toBe('ru')
-    expect(langFromNavigator('en-US')).toBe('en')
-    expect(langFromNavigator('de-DE')).toBe('en')
-    expect(langFromNavigator(undefined)).toBe('en')
-    expect(langFromNavigator('')).toBe('en')
-  })
+    expect(langFromNavigator('zh-CN')).toBe('zh');
+    expect(langFromNavigator('zh')).toBe('zh');
+    expect(langFromNavigator('fr-FR')).toBe('fr');
+    expect(langFromNavigator('ru-RU')).toBe('ru');
+    expect(langFromNavigator('en-US')).toBe('en');
+    expect(langFromNavigator('de-DE')).toBe('en');
+    expect(langFromNavigator(undefined)).toBe('en');
+    expect(langFromNavigator('')).toBe('en');
+  });
 
   it('langFromSettings reads settings.app.language from raw save JSON', () => {
-    expect(langFromSettings({ settings: { app: { language: 'fr' } } })).toBe('fr')
-    expect(langFromSettings({ settings: { app: { language: 'xx' } } })).toBeNull()
-    expect(langFromSettings({ settings: {} })).toBeNull()
-    expect(langFromSettings(null)).toBeNull()
-    expect(langFromSettings([1, 2])).toBeNull()
-  })
+    expect(langFromSettings({ settings: { app: { language: 'fr' } } })).toBe('fr');
+    expect(langFromSettings({ settings: { app: { language: 'xx' } } })).toBeNull();
+    expect(langFromSettings({ settings: {} })).toBeNull();
+    expect(langFromSettings(null)).toBeNull();
+    expect(langFromSettings([1, 2])).toBeNull();
+  });
 
   it('detectLanguage always returns a supported language (Node: ambient navigator)', () => {
     // Node ≥21 exposes a global navigator (language is machine-dependent) —
     // assert validity; the exact tag mapping is covered by langFromNavigator.
-    expect(isLang(detectLanguage())).toBe(true)
-  })
+    expect(isLang(detectLanguage())).toBe(true);
+  });
 
   it('detectLanguage prefers the saved settings over the navigator', () => {
     const storage = {
       getItem: () => JSON.stringify({ settings: { app: { language: 'fr' } } }),
       setItem: () => undefined,
       removeItem: () => undefined,
-    }
-    const g = globalThis as Record<string, unknown>
-    const prev = g['localStorage']
-    g['localStorage'] = storage
+    };
+    const g = globalThis as Record<string, unknown>;
+    const prev = g['localStorage'];
+    g['localStorage'] = storage;
     try {
-      expect(detectLanguage()).toBe('fr')
+      expect(detectLanguage()).toBe('fr');
     } finally {
-      if (prev === undefined) delete g['localStorage']
-      else g['localStorage'] = prev
+      if (prev === undefined) delete g['localStorage'];
+      else g['localStorage'] = prev;
     }
-  })
-})
+  });
+});
 
 describe('i18n in save settings', () => {
   it('settings round-trip preserves app.language through the store', () => {
-    const store = createSaveStore(makeFakeStorage())
-    const save = defaultSave()
-    save.settings.app.language = 'fr'
-    store.write(save)
-    const loaded = store.load()
-    expect(loaded.settings.app.language).toBe('fr')
-  })
+    const store = createSaveStore(makeFakeStorage());
+    const save = defaultSave();
+    save.settings.app.language = 'fr';
+    store.write(save);
+    const loaded = store.load();
+    expect(loaded.settings.app.language).toBe('fr');
+  });
 
   it('validateAndClamp rejects unknown languages → default en', () => {
-    const d = validateAndClamp(
-      { version: 1, settings: { app: { language: 'de' } } },
-      MISSION_IDS,
-    )
-    expect(d.settings.app.language).toBe('en')
-    const ok = validateAndClamp(
-      { version: 1, settings: { app: { language: 'ru' } } },
-      MISSION_IDS,
-    )
-    expect(ok.settings.app.language).toBe('ru')
-  })
-})
+    const d = validateAndClamp({ version: 1, settings: { app: { language: 'de' } } }, MISSION_IDS);
+    expect(d.settings.app.language).toBe('en');
+    const ok = validateAndClamp({ version: 1, settings: { app: { language: 'ru' } } }, MISSION_IDS);
+    expect(ok.settings.app.language).toBe('ru');
+  });
+});
 
 describe('i18n in HUD formatters', () => {
   it('formatEvent localizes per language (EN canonical unchanged)', () => {
-    const entry = makeEvent('contact.detected', { contactId: 'C-01' })
-    expect(formatEvent(entry)).toBe('SONAR CONTACT DETECTED — C-01')
-    expect(formatEvent(entry, 'zh')).toBe('发现声呐接触 — C-01')
-    expect(formatEvent(entry, 'fr')).toBe('CONTACT SONAR DÉTECTÉ — C-01')
-    expect(formatEvent(entry, 'ru')).toBe('ОБНАРУЖЕН КОНТАКТ — C-01')
-  })
+    const entry = makeEvent('contact.detected', { contactId: 'C-01' });
+    expect(formatEvent(entry)).toBe('SONAR CONTACT DETECTED — C-01');
+    expect(formatEvent(entry, 'zh')).toBe('发现声呐接触 — C-01');
+    expect(formatEvent(entry, 'fr')).toBe('CONTACT SONAR DÉTECTÉ — C-01');
+    expect(formatEvent(entry, 'ru')).toBe('ОБНАРУЖЕН КОНТАКТ — C-01');
+  });
 
   it('formatFireSolution localizes the classification (EN canonical unchanged)', () => {
-    const contact = makeContact()
-    const sol = makeSolution()
-    expect(formatFireSolution(sol, contact).target).toBe('C-01 Tanker')
-    expect(formatFireSolution(sol, contact, 'zh').target).toBe('C-01 油轮')
-    expect(formatFireSolution(sol, contact, 'fr').target).toBe('C-01 PÉTROLIER')
-  })
+    const contact = makeContact();
+    const sol = makeSolution();
+    expect(formatFireSolution(sol, contact).target).toBe('C-01 Tanker');
+    expect(formatFireSolution(sol, contact, 'zh').target).toBe('C-01 油轮');
+    expect(formatFireSolution(sol, contact, 'fr').target).toBe('C-01 PÉTROLIER');
+  });
 
   it('formatLastSeen localizes NOW (EN canonical unchanged)', () => {
-    expect(formatLastSeen(100, 100.4)).toBe('NOW')
-    expect(formatLastSeen(100, 100.4, 'zh')).toBe('现在')
-    expect(formatLastSeen(100, 100.4, 'fr')).toBe('MAINTENANT')
-    expect(formatLastSeen(100, 112.6, 'en')).toBe('13S')
-  })
-})
+    expect(formatLastSeen(100, 100.4)).toBe('NOW');
+    expect(formatLastSeen(100, 100.4, 'zh')).toBe('现在');
+    expect(formatLastSeen(100, 100.4, 'fr')).toBe('MAINTENANT');
+    expect(formatLastSeen(100, 112.6, 'en')).toBe('13S');
+  });
+});
 
 // ---------------------------------------------------------------------------
 // Timeline helpers (t-023 UI v2 — eventSeverity / eventPhase)
@@ -792,34 +803,34 @@ describe('i18n in HUD formatters', () => {
 
 describe('timeline severity + phase', () => {
   it('eventSeverity maps outcomes to semantic dots (default info)', () => {
-    expect(eventSeverity('torpedo.hit')).toBe('success')
-    expect(eventSeverity('ship.sunk')).toBe('success')
-    expect(eventSeverity('mission.victory')).toBe('success')
-    expect(eventSeverity('escape.escaped')).toBe('success')
-    expect(eventSeverity('torpedo.missed')).toBe('warning')
-    expect(eventSeverity('battery.low')).toBe('warning')
-    expect(eventSeverity('detection.threshold')).toBe('warning')
-    expect(eventSeverity('player.located')).toBe('error')
-    expect(eventSeverity('mission.defeat')).toBe('error')
-    expect(eventSeverity('sonar.ping')).toBe('info')
-    expect(eventSeverity('torpedo.fired')).toBe('info')
-    expect(eventSeverity('depthCharge.detonated')).toBe('info')
-  })
+    expect(eventSeverity('torpedo.hit')).toBe('success');
+    expect(eventSeverity('ship.sunk')).toBe('success');
+    expect(eventSeverity('mission.victory')).toBe('success');
+    expect(eventSeverity('escape.escaped')).toBe('success');
+    expect(eventSeverity('torpedo.missed')).toBe('warning');
+    expect(eventSeverity('battery.low')).toBe('warning');
+    expect(eventSeverity('detection.threshold')).toBe('warning');
+    expect(eventSeverity('player.located')).toBe('error');
+    expect(eventSeverity('mission.defeat')).toBe('error');
+    expect(eventSeverity('sonar.ping')).toBe('info');
+    expect(eventSeverity('torpedo.fired')).toBe('info');
+    expect(eventSeverity('depthCharge.detonated')).toBe('info');
+  });
 
   it('eventPhase groups events into mission phases', () => {
-    expect(eventPhase('sonar.ping')).toBe('SONAR')
-    expect(eventPhase('contact.classified')).toBe('SONAR')
-    expect(eventPhase('torpedo.fired')).toBe('TORPEDO')
-    expect(eventPhase('torpedo.hit')).toBe('TORPEDO')
-    expect(eventPhase('ship.sunk')).toBe('COMBAT')
-    expect(eventPhase('depthCharge.dropped')).toBe('COMBAT')
-    expect(eventPhase('sub.damaged')).toBe('SUB')
-    expect(eventPhase('battery.low')).toBe('SUB')
-    expect(eventPhase('decoy.launched')).toBe('SUB')
-    expect(eventPhase('mission.victory')).toBe('MISSION')
-    expect(eventPhase('escape.escaped')).toBe('MISSION')
-  })
-})
+    expect(eventPhase('sonar.ping')).toBe('SONAR');
+    expect(eventPhase('contact.classified')).toBe('SONAR');
+    expect(eventPhase('torpedo.fired')).toBe('TORPEDO');
+    expect(eventPhase('torpedo.hit')).toBe('TORPEDO');
+    expect(eventPhase('ship.sunk')).toBe('COMBAT');
+    expect(eventPhase('depthCharge.dropped')).toBe('COMBAT');
+    expect(eventPhase('sub.damaged')).toBe('SUB');
+    expect(eventPhase('battery.low')).toBe('SUB');
+    expect(eventPhase('decoy.launched')).toBe('SUB');
+    expect(eventPhase('mission.victory')).toBe('MISSION');
+    expect(eventPhase('escape.escaped')).toBe('MISSION');
+  });
+});
 
 // ---------------------------------------------------------------------------
 // Periscope (t-026) — helpers + event log entries
@@ -827,59 +838,77 @@ describe('timeline severity + phase', () => {
 
 describe('periscope helpers', () => {
   it('exposureBandColor maps bands green → red', () => {
-    expect(exposureBandColor('NONE')).toBe('#64748b')
-    expect(exposureBandColor('LOW')).toBe('#34d399')
-    expect(exposureBandColor('MEDIUM')).toBe('#fbbf24')
-    expect(exposureBandColor('HIGH')).toBe('#fb923c')
-    expect(exposureBandColor('CRITICAL')).toBe('#f87171')
-    expect(exposureBandColor('bogus')).toBe('#64748b')
-  })
+    expect(exposureBandColor('NONE')).toBe('#64748b');
+    expect(exposureBandColor('LOW')).toBe('#34d399');
+    expect(exposureBandColor('MEDIUM')).toBe('#fbbf24');
+    expect(exposureBandColor('HIGH')).toBe('#fb923c');
+    expect(exposureBandColor('CRITICAL')).toBe('#f87171');
+    expect(exposureBandColor('bogus')).toBe('#64748b');
+  });
 
   it('eventSeverityFor refines periscope.exposure by band payload', () => {
-    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'CRITICAL' }))).toBe('error')
-    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'HIGH' }))).toBe('error')
-    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'MEDIUM' }))).toBe('warning')
-    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'LOW' }))).toBe('info')
-    expect(eventSeverityFor(makeEvent('periscope.raised'))).toBe('info')
-    expect(eventSeverityFor(makeEvent('periscope.locked'))).toBe('success')
-    expect(eventSeverityFor(makeEvent('sub.emergencyDive'))).toBe('warning')
-  })
+    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'CRITICAL' }))).toBe('error');
+    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'HIGH' }))).toBe('error');
+    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'MEDIUM' }))).toBe('warning');
+    expect(eventSeverityFor(makeEvent('periscope.exposure', { band: 'LOW' }))).toBe('info');
+    expect(eventSeverityFor(makeEvent('periscope.raised'))).toBe('info');
+    expect(eventSeverityFor(makeEvent('periscope.locked'))).toBe('success');
+    expect(eventSeverityFor(makeEvent('sub.emergencyDive'))).toBe('warning');
+  });
 
   it('eventPhase groups periscope events into PERISCOPE', () => {
-    expect(eventPhase('periscope.raised')).toBe('PERISCOPE')
-    expect(eventPhase('periscope.visualContact')).toBe('PERISCOPE')
-    expect(eventPhase('sub.emergencyDive')).toBe('SUB')
-  })
+    expect(eventPhase('periscope.raised')).toBe('PERISCOPE');
+    expect(eventPhase('periscope.visualContact')).toBe('PERISCOPE');
+    expect(eventPhase('sub.emergencyDive')).toBe('SUB');
+  });
 
   it('formatEvent renders the 11 new periscope log entries (EN canonical)', () => {
-    expect(formatEvent(makeEvent('periscope.ready'))).toBe('PERISCOPE READY')
-    expect(formatEvent(makeEvent('periscope.raising'))).toBe('RAISING PERISCOPE')
-    expect(formatEvent(makeEvent('periscope.raised'))).toBe('PERISCOPE RAISED')
-    expect(formatEvent(makeEvent('periscope.visualContact', { contactId: 'C-01' }))).toBe('VISUAL CONTACT — C-01')
-    expect(formatEvent(makeEvent('periscope.classified', { contactId: 'C-01', classification: 'Tanker' }))).toBe('TARGET CLASSIFIED — C-01')
-    expect(formatEvent(makeEvent('periscope.locked', { contactId: 'C-01' }))).toBe('TARGET LOCKED — C-01')
-    expect(formatEvent(makeEvent('periscope.unlocked', { contactId: 'C-01' }))).toBe('TARGET UNLOCKED — C-01')
-    expect(formatEvent(makeEvent('periscope.lowered'))).toBe('PERISCOPE LOWERED')
-    expect(formatEvent(makeEvent('periscope.cannotRaise', { reason: 'tooDeep' }))).toBe('CANNOT RAISE PERISCOPE')
-    expect(formatEvent(makeEvent('periscope.exposure', { band: 'HIGH' }))).toBe('EXPOSURE RISING — HIGH')
-    expect(formatEvent(makeEvent('sub.emergencyDive'))).toBe('EMERGENCY DIVE')
-  })
+    expect(formatEvent(makeEvent('periscope.ready'))).toBe('PERISCOPE READY');
+    expect(formatEvent(makeEvent('periscope.raising'))).toBe('RAISING PERISCOPE');
+    expect(formatEvent(makeEvent('periscope.raised'))).toBe('PERISCOPE RAISED');
+    expect(formatEvent(makeEvent('periscope.visualContact', { contactId: 'C-01' }))).toBe(
+      'VISUAL CONTACT — C-01',
+    );
+    expect(
+      formatEvent(
+        makeEvent('periscope.classified', { contactId: 'C-01', classification: 'Tanker' }),
+      ),
+    ).toBe('TARGET CLASSIFIED — C-01');
+    expect(formatEvent(makeEvent('periscope.locked', { contactId: 'C-01' }))).toBe(
+      'TARGET LOCKED — C-01',
+    );
+    expect(formatEvent(makeEvent('periscope.unlocked', { contactId: 'C-01' }))).toBe(
+      'TARGET UNLOCKED — C-01',
+    );
+    expect(formatEvent(makeEvent('periscope.lowered'))).toBe('PERISCOPE LOWERED');
+    expect(formatEvent(makeEvent('periscope.cannotRaise', { reason: 'tooDeep' }))).toBe(
+      'CANNOT RAISE PERISCOPE',
+    );
+    expect(formatEvent(makeEvent('periscope.exposure', { band: 'HIGH' }))).toBe(
+      'EXPOSURE RISING — HIGH',
+    );
+    expect(formatEvent(makeEvent('sub.emergencyDive'))).toBe('EMERGENCY DIVE');
+  });
 
   it('formatEvent localizes periscope entries per language', () => {
-    expect(formatEvent(makeEvent('periscope.raised'), 'zh')).toBe('潜望镜已升起')
-    expect(formatEvent(makeEvent('periscope.locked', { contactId: 'C-01' }), 'fr')).toBe('CIBLE VERROUILLÉE — C-01')
-    expect(formatEvent(makeEvent('periscope.exposure', { band: 'CRITICAL' }), 'ru')).toBe('ЭКСПОЗИЦИЯ РАСТЁТ — КРИТИЧЕСКИЙ')
-  })
+    expect(formatEvent(makeEvent('periscope.raised'), 'zh')).toBe('潜望镜已升起');
+    expect(formatEvent(makeEvent('periscope.locked', { contactId: 'C-01' }), 'fr')).toBe(
+      'CIBLE VERROUILLÉE — C-01',
+    );
+    expect(formatEvent(makeEvent('periscope.exposure', { band: 'CRITICAL' }), 'ru')).toBe(
+      'ЭКСПОЗИЦИЯ РАСТЁТ — КРИТИЧЕСКИЙ',
+    );
+  });
 
   it('formatFireSolution reports the fire-solution status', () => {
-    const contact = makeContact()
-    expect(formatFireSolution(makeSolution(), contact).status).toBe('ESTIMATED')
-    expect(formatFireSolution(makeSolution(), contact).statusText).toBe('ESTIMATED')
-    const confirmed = formatFireSolution(makeSolution({ status: 'VISUAL CONFIRMED' }), contact)
-    expect(confirmed.status).toBe('VISUAL CONFIRMED')
-    expect(confirmed.statusText).toBe('VISUAL CONFIRMED')
+    const contact = makeContact();
+    expect(formatFireSolution(makeSolution(), contact).status).toBe('ESTIMATED');
+    expect(formatFireSolution(makeSolution(), contact).statusText).toBe('ESTIMATED');
+    const confirmed = formatFireSolution(makeSolution({ status: 'VISUAL CONFIRMED' }), contact);
+    expect(confirmed.status).toBe('VISUAL CONFIRMED');
+    expect(confirmed.statusText).toBe('VISUAL CONFIRMED');
     // EN canonical fields unchanged.
-    expect(confirmed.target).toBe('C-01 Tanker')
-    expect(confirmed.hitProbability).toBe('72%')
-  })
-})
+    expect(confirmed.target).toBe('C-01 Tanker');
+    expect(confirmed.hitProbability).toBe('72%');
+  });
+});

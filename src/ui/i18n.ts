@@ -34,18 +34,18 @@
  * Task: t-022 i18n (ui-engineer). @pure-at-import — no DOM at module scope.
  */
 
-import { SAVE_KEY } from '../save/save'
+import { SAVE_KEY } from '../save/save';
 
 // ---------------------------------------------------------------------------
 // Language registry
 // ---------------------------------------------------------------------------
 
-export type Lang = 'zh' | 'en' | 'fr' | 'ru'
+export type Lang = 'zh' | 'en' | 'fr' | 'ru';
 
 export interface LangInfo {
-  code: Lang
+  code: Lang;
   /** Label in its own language (settings picker). */
-  label: string
+  label: string;
 }
 
 export const LANGS: readonly LangInfo[] = [
@@ -53,10 +53,10 @@ export const LANGS: readonly LangInfo[] = [
   { code: 'en', label: 'English' },
   { code: 'fr', label: 'Français' },
   { code: 'ru', label: 'Русский' },
-]
+];
 
 export function isLang(value: unknown): value is Lang {
-  return value === 'zh' || value === 'en' || value === 'fr' || value === 'ru'
+  return value === 'zh' || value === 'en' || value === 'fr' || value === 'ru';
 }
 
 // ---------------------------------------------------------------------------
@@ -118,10 +118,13 @@ const en = {
   'result.grade.Poor': 'POOR',
   'result.grade.Failed': 'FAILED',
   'result.hint.Perfect': 'Perfect ambush: low noise, correct solution, every torpedo on target.',
-  'result.hint.Excellent': 'Excellent. Keep the stealth and depth advantage; torpedo efficiency is high.',
+  'result.hint.Excellent':
+    'Excellent. Keep the stealth and depth advantage; torpedo efficiency is high.',
   'result.hint.Good': 'Good. Classify and solve the fire solution before firing.',
-  'result.hint.Poor': 'Improve: reduce noise (SILENT), use depth layers, avoid needless active pings.',
-  'result.hint.Failed': 'Debrief: classify before firing; speed and pings expose you; deep water reduces depth-charge damage.',
+  'result.hint.Poor':
+    'Improve: reduce noise (SILENT), use depth layers, avoid needless active pings.',
+  'result.hint.Failed':
+    'Debrief: classify before firing; speed and pings expose you; deep water reduces depth-charge damage.',
   'result.part.objective': 'OBJECTIVES',
   'result.part.damage': 'DAMAGE',
   'result.part.stealth': 'STEALTH',
@@ -152,9 +155,11 @@ const en = {
 
   // --- credits ---------------------------------------------------------------
   'credits.line1': 'SILENT DEPTH — a tactical submarine ambush game',
-  'credits.line2': 'All art and audio are procedurally generated (src/rendering/sprites.ts · src/audio)',
+  'credits.line2':
+    'All art and audio are procedurally generated (src/rendering/sprites.ts · src/audio)',
   'credits.line3': 'THIRD-PARTY ASSETS: NONE — fully offline',
-  'credits.line4': 'Zero runtime network requests; dependencies are dev-tooling only (TypeScript / Vite / Vitest)',
+  'credits.line4':
+    'Zero runtime network requests; dependencies are dev-tooling only (TypeScript / Vite / Vitest)',
 
   // --- HUD top bar -----------------------------------------------------------
   'hud.depth': 'DEPTH',
@@ -357,12 +362,12 @@ const en = {
   'log.periscope.exposure': 'EXPOSURE RISING',
   'log.emergencyDive': 'EMERGENCY DIVE',
   'pause.controls': 'Controls: P periscope · L lock target · X emergency dive · Esc pause',
-} as const
+} as const;
 
-export type TKey = keyof typeof en
+export type TKey = keyof typeof en;
 
 /** Exact-key dictionary type — zh/fr/ru must cover TKey completely. */
-type Dict = Record<TKey, string>
+type Dict = Record<TKey, string>;
 
 const zh: Dict = {
   'app.title': 'SILENT DEPTH',
@@ -640,7 +645,7 @@ const zh: Dict = {
   'log.periscope.exposure': '暴露上升',
   'log.emergencyDive': '紧急下潜',
   'pause.controls': '按键：P 潜望镜 · L 锁定 · X 紧急下潜 · Esc 暂停',
-}
+};
 
 const fr: Dict = {
   'app.title': 'SILENT DEPTH',
@@ -681,7 +686,8 @@ const fr: Dict = {
 
   'result.title': 'RÉSULTAT DE MISSION',
   'result.total': 'SCORE TOTAL {score}',
-  'result.stats': 'TORPILLES {hit}/{fired} TOUCHÉES · RESTANT {left} · DÉTECTION MAX {d}% · TEMPS {t}',
+  'result.stats':
+    'TORPILLES {hit}/{fired} TOUCHÉES · RESTANT {left} · DÉTECTION MAX {d}% · TEMPS {t}',
   'result.retry': 'RÉESSAYER',
   'result.missions': 'MISSIONS',
   'result.mainMenu': 'MENU PRINCIPAL',
@@ -690,11 +696,15 @@ const fr: Dict = {
   'result.grade.Good': 'BON',
   'result.grade.Poor': 'MÉDIOCRE',
   'result.grade.Failed': 'ÉCHEC',
-  'result.hint.Perfect': 'Embuscade parfaite : faible bruit, solution correcte, toutes les torpilles au but.',
-  'result.hint.Excellent': 'Excellent. Conservez l\u2019avantage de la furtivité et de la profondeur.',
+  'result.hint.Perfect':
+    'Embuscade parfaite : faible bruit, solution correcte, toutes les torpilles au but.',
+  'result.hint.Excellent':
+    'Excellent. Conservez l\u2019avantage de la furtivité et de la profondeur.',
   'result.hint.Good': 'Bien. Classez et résolvez la solution de tir avant de tirer.',
-  'result.hint.Poor': 'À améliorer : réduisez le bruit (SILENCIEUX), utilisez les couches de profondeur, évitez les pings inutiles.',
-  'result.hint.Failed': 'Débrief : classez avant de tirer ; vitesse et pings vous exposent ; la profondeur réduit les dégâts des charges.',
+  'result.hint.Poor':
+    'À améliorer : réduisez le bruit (SILENCIEUX), utilisez les couches de profondeur, évitez les pings inutiles.',
+  'result.hint.Failed':
+    'Débrief : classez avant de tirer ; vitesse et pings vous exposent ; la profondeur réduit les dégâts des charges.',
   'result.part.objective': 'OBJECTIFS',
   'result.part.damage': 'DÉGÂTS',
   'result.part.stealth': 'DISCRÉTION',
@@ -723,9 +733,11 @@ const fr: Dict = {
   'settings.clearConfirm': 'Effacer la sauvegarde ? Action irréversible.',
 
   'credits.line1': 'SILENT DEPTH — jeu tactique d\u2019embuscade sous-marine',
-  'credits.line2': 'Tout l\u2019art et l\u2019audio sont générés procéduralement (src/rendering/sprites.ts · src/audio)',
+  'credits.line2':
+    'Tout l\u2019art et l\u2019audio sont générés procéduralement (src/rendering/sprites.ts · src/audio)',
   'credits.line3': 'ASSETS TIERS : AUCUN — entièrement hors ligne',
-  'credits.line4': 'Zéro requête réseau à l\u2019exécution ; dépendances de dev uniquement (TypeScript / Vite / Vitest)',
+  'credits.line4':
+    'Zéro requête réseau à l\u2019exécution ; dépendances de dev uniquement (TypeScript / Vite / Vitest)',
 
   'hud.depth': 'PROFONDEUR',
   'hud.speed': 'VITESSE',
@@ -770,9 +782,9 @@ const fr: Dict = {
   'hud.controls.decoy': 'Lancer leurre',
   'hud.controls.periscope': 'Monter / baisser le périscope',
   'hud.controls.lock': 'Verrouiller la cible',
-  'hud.controls.dive': 'Plongée d\'urgence',
+  'hud.controls.dive': "Plongée d'urgence",
   'hud.controls.pause': 'Menu pause',
-  'hud.controls.screenshot': 'Capture d\'écran',
+  'hud.controls.screenshot': "Capture d'écran",
   'hud.speedValue': '{v} KT {band}',
 
   'hud.contacts': 'CONTACTS',
@@ -917,8 +929,9 @@ const fr: Dict = {
   'log.periscope.cannotRaise': 'LEVÉ IMPOSSIBLE',
   'log.periscope.exposure': 'EXPOSITION EN HAUSSE',
   'log.emergencyDive': 'PLONGÉE D\u2019URGENCE',
-  'pause.controls': 'Commandes : P périscope · L verrouiller · X plongée d\u2019urgence · Esc pause',
-}
+  'pause.controls':
+    'Commandes : P périscope · L verrouiller · X plongée d\u2019urgence · Esc pause',
+};
 
 const ru: Dict = {
   'app.title': 'SILENT DEPTH',
@@ -969,10 +982,12 @@ const ru: Dict = {
   'result.grade.Poor': 'СЛАБО',
   'result.grade.Failed': 'ПРОВАЛ',
   'result.hint.Perfect': 'Идеальная засада: тихий ход, точное решение, все торпеды в цель.',
-  'result.hint.Excellent': 'Отлично. Сохраняйте скрытность и глубину; эффективность торпед высокая.',
+  'result.hint.Excellent':
+    'Отлично. Сохраняйте скрытность и глубину; эффективность торпед высокая.',
   'result.hint.Good': 'Хорошо. Классифицируйте и решайте решение до выстрела.',
   'result.hint.Poor': 'Улучшите: тише ход (ТИХО), глубже погружение, реже активный сонар.',
-  'result.hint.Failed': 'Разбор: сначала классификация; скорость и пинг выдают вас; глубина снижает урон от бомб.',
+  'result.hint.Failed':
+    'Разбор: сначала классификация; скорость и пинг выдают вас; глубина снижает урон от бомб.',
   'result.part.objective': 'ЗАДАЧИ',
   'result.part.damage': 'УРОН',
   'result.part.stealth': 'СКРЫТНОСТЬ',
@@ -1001,9 +1016,11 @@ const ru: Dict = {
   'settings.clearConfirm': 'Очистить сохранение? Это действие необратимо.',
 
   'credits.line1': 'SILENT DEPTH — тактическая подводная игра-засада',
-  'credits.line2': 'Вся графика и звук генерируются процедурно (src/rendering/sprites.ts · src/audio)',
+  'credits.line2':
+    'Вся графика и звук генерируются процедурно (src/rendering/sprites.ts · src/audio)',
   'credits.line3': 'СТОРОННИЕ АКТИВЫ: НЕТ — полностью офлайн',
-  'credits.line4': 'Ноль сетевых запросов в рантайме; зависимости только для разработки (TypeScript / Vite / Vitest)',
+  'credits.line4':
+    'Ноль сетевых запросов в рантайме; зависимости только для разработки (TypeScript / Vite / Vitest)',
 
   'hud.depth': 'ГЛУБИНА',
   'hud.speed': 'СКОРОСТЬ',
@@ -1196,15 +1213,15 @@ const ru: Dict = {
   'log.periscope.exposure': 'ЭКСПОЗИЦИЯ РАСТЁТ',
   'log.emergencyDive': 'АВАРИЙНОЕ ПОГРУЖЕНИЕ',
   'pause.controls': 'Управление: P перископ · L захват · X погружение · Esc пауза',
-}
+};
 
-export const translations: Record<Lang, Dict> = { en, zh, fr, ru }
+export const translations: Record<Lang, Dict> = { en, zh, fr, ru };
 
 // ---------------------------------------------------------------------------
 // Translator
 // ---------------------------------------------------------------------------
 
-export type Translator = (key: string, vars?: Record<string, string | number>) => string
+export type Translator = (key: string, vars?: Record<string, string | number>) => string;
 
 /**
  * Create a translator bound to a language. Missing keys fall back to English
@@ -1212,22 +1229,22 @@ export type Translator = (key: string, vars?: Record<string, string | number>) =
  * from `vars`.
  */
 export function getT(lang: Lang): Translator {
-  const dict: Record<string, string> = translations[lang] ?? translations.en
-  const enDict: Record<string, string> = translations.en
+  const dict: Record<string, string> = translations[lang] ?? translations.en;
+  const enDict: Record<string, string> = translations.en;
   return (key: string, vars?: Record<string, string | number>): string => {
-    let template = dict[key]
-    if (template === undefined) template = enDict[key] ?? key
+    let template = dict[key];
+    if (template === undefined) template = enDict[key] ?? key;
     if (vars !== undefined && template.includes('{')) {
       for (const [name, value] of Object.entries(vars)) {
-        template = template.split(`{${name}}`).join(String(value))
+        template = template.split(`{${name}}`).join(String(value));
       }
     }
-    return template
-  }
+    return template;
+  };
 }
 
 /** Default-EN translator — canonical for tests and pure helpers. */
-export const t: Translator = getT('en')
+export const t: Translator = getT('en');
 
 // ---------------------------------------------------------------------------
 // Language detection
@@ -1238,12 +1255,12 @@ export const t: Translator = getT('en')
  * zh* → zh, fr* → fr, ru* → ru, everything else → en.
  */
 export function langFromNavigator(tag: string | null | undefined): Lang {
-  if (typeof tag !== 'string' || tag.length === 0) return 'en'
-  const t0 = tag.toLowerCase()
-  if (t0.startsWith('zh')) return 'zh'
-  if (t0.startsWith('fr')) return 'fr'
-  if (t0.startsWith('ru')) return 'ru'
-  return 'en'
+  if (typeof tag !== 'string' || tag.length === 0) return 'en';
+  const t0 = tag.toLowerCase();
+  if (t0.startsWith('zh')) return 'zh';
+  if (t0.startsWith('fr')) return 'fr';
+  if (t0.startsWith('ru')) return 'ru';
+  return 'en';
 }
 
 /**
@@ -1251,14 +1268,14 @@ export function langFromNavigator(tag: string | null | undefined): Lang {
  * Returns null when the shape is invalid or the value is not a known Lang.
  */
 export function langFromSettings(raw: unknown): Lang | null {
-  if (raw === null || typeof raw !== 'object' || Array.isArray(raw)) return null
-  const r = raw as Record<string, unknown>
-  const settings = r['settings']
-  if (settings === null || typeof settings !== 'object' || Array.isArray(settings)) return null
-  const app = (settings as Record<string, unknown>)['app']
-  if (app === null || typeof app !== 'object' || Array.isArray(app)) return null
-  const value = (app as Record<string, unknown>)['language']
-  return isLang(value) ? value : null
+  if (raw === null || typeof raw !== 'object' || Array.isArray(raw)) return null;
+  const r = raw as Record<string, unknown>;
+  const settings = r['settings'];
+  if (settings === null || typeof settings !== 'object' || Array.isArray(settings)) return null;
+  const app = (settings as Record<string, unknown>)['app'];
+  if (app === null || typeof app !== 'object' || Array.isArray(app)) return null;
+  const value = (app as Record<string, unknown>)['language'];
+  return isLang(value) ? value : null;
 }
 
 /**
@@ -1268,18 +1285,18 @@ export function langFromSettings(raw: unknown): Lang | null {
 export function detectLanguage(): Lang {
   if (typeof localStorage !== 'undefined') {
     try {
-      const rawText = localStorage.getItem(SAVE_KEY)
+      const rawText = localStorage.getItem(SAVE_KEY);
       if (rawText !== null) {
-        const parsed: unknown = JSON.parse(rawText)
-        const fromSave = langFromSettings(parsed)
-        if (fromSave !== null) return fromSave
+        const parsed: unknown = JSON.parse(rawText);
+        const fromSave = langFromSettings(parsed);
+        if (fromSave !== null) return fromSave;
       }
     } catch {
       // Corrupt storage / private mode — fall through to navigator.
     }
   }
   if (typeof navigator !== 'undefined' && typeof navigator.language === 'string') {
-    return langFromNavigator(navigator.language)
+    return langFromNavigator(navigator.language);
   }
-  return 'en'
+  return 'en';
 }

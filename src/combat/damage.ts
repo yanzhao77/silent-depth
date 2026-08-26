@@ -30,31 +30,31 @@
  * @pure — zero DOM; deterministic (RNG only via ctx.forks.combat).
  */
 
-import type { SystemContext } from '../core/engine'
-import type { EnemyShip } from '../core/types'
-import { applyHullDamage } from '../gameplay/submarine'
-import { distKm } from '../sonar/contacts'
-import { applyDamage } from '../ai/ship'
-import { drainAiPendingDamage } from '../ai/ai'
+import type { SystemContext } from '../core/engine';
+import type { EnemyShip } from '../core/types';
+import { applyHullDamage } from '../gameplay/submarine';
+import { distKm } from '../sonar/contacts';
+import { applyDamage } from '../ai/ship';
+import { drainAiPendingDamage } from '../ai/ai';
 
 /** Player-ship collision radius (km) — now in balance.hull.collisionDistKm (t-015). */
-export const COLLISION_DIST_KM = 0.05
+export const COLLISION_DIST_KM = 0.05;
 /** Minimum seconds between two collision damage events — now in balance.hull.collisionCooldownS (t-015). */
-export const COLLISION_COOLDOWN_S = 5
+export const COLLISION_COOLDOWN_S = 5;
 
 interface CollisionRuntime {
-  nextCollisionAt: number
+  nextCollisionAt: number;
 }
 
-const collisionRuntimes = new WeakMap<object, CollisionRuntime>()
+const collisionRuntimes = new WeakMap<object, CollisionRuntime>();
 
 function getCollisionRuntime(ctx: SystemContext): CollisionRuntime {
-  let rt = collisionRuntimes.get(ctx.player)
+  let rt = collisionRuntimes.get(ctx.player);
   if (rt === undefined) {
-    rt = { nextCollisionAt: 0 }
-    collisionRuntimes.set(ctx.player, rt)
+    rt = { nextCollisionAt: 0 };
+    collisionRuntimes.set(ctx.player, rt);
   }
-  return rt
+  return rt;
 }
 
 /**
@@ -64,9 +64,9 @@ function getCollisionRuntime(ctx: SystemContext): CollisionRuntime {
  * into the next tick.
  */
 export function drainPendingPlayerDamage(ctx: SystemContext): void {
-  const damages = drainAiPendingDamage()
+  const damages = drainAiPendingDamage();
   for (const damage of damages) {
-    applyHullDamage(ctx, damage.source, damage.amount)
+    applyHullDamage(ctx, damage.source, damage.amount);
   }
 }
 
@@ -75,11 +75,11 @@ export function drainPendingPlayerDamage(ctx: SystemContext): void {
  * the hull to 0 — the caller then knows the ship sank this tick.
  */
 export function applyTorpedoDamage(ctx: SystemContext, ship: EnemyShip, amount: number): boolean {
-  const sank = applyDamage(ship, amount)
+  const sank = applyDamage(ship, amount);
   if (sank) {
-    ctx.bus.emit('ship.sunk', { shipId: ship.id, shipClass: ship.shipClass })
+    ctx.bus.emit('ship.sunk', { shipId: ship.id, shipClass: ship.shipClass });
   }
-  return sank
+  return sank;
 }
 
 /**
@@ -87,18 +87,21 @@ export function applyTorpedoDamage(ctx: SystemContext, ship: EnemyShip, amount: 
  * ctx.forks.combat (deterministic, seeded).
  */
 export function checkCollisions(ctx: SystemContext): void {
-  const rt = getCollisionRuntime(ctx)
-  if (ctx.simTime < rt.nextCollisionAt) return
-  if (ctx.player.speedKt <= 0) return // not moving → no impact
+  const rt = getCollisionRuntime(ctx);
+  if (ctx.simTime < rt.nextCollisionAt) return;
+  if (ctx.player.speedKt <= 0) return; // not moving → no impact
 
-  const balance = ctx.balance
+  const balance = ctx.balance;
   for (const ship of ctx.enemies) {
-    if (ship.hull <= 0) continue
+    if (ship.hull <= 0) continue;
     if (distKm(ctx.player.position, ship.position) <= balance.hull.collisionDistKm) {
-      const roll = ctx.forks.combat.int(balance.hull.collisionDamageMin, balance.hull.collisionDamageMax)
-      applyHullDamage(ctx, 'collision', roll)
-      rt.nextCollisionAt = ctx.simTime + balance.hull.collisionCooldownS
-      return // one collision event per tick
+      const roll = ctx.forks.combat.int(
+        balance.hull.collisionDamageMin,
+        balance.hull.collisionDamageMax,
+      );
+      applyHullDamage(ctx, 'collision', roll);
+      rt.nextCollisionAt = ctx.simTime + balance.hull.collisionCooldownS;
+      return; // one collision event per tick
     }
   }
 }

@@ -35,54 +35,54 @@
  * @pure — zero DOM / browser-API references.
  */
 
-import missionsJson from '../../config/missions.json'
-import type { BalanceConfig } from '../core/balance'
-import { loadBalance } from '../core/balance'
-import type { MissionDef, ObjectiveDef, ShipClass } from '../core/types'
-import { generateMission, type GeneratorInput } from './generator'
+import missionsJson from '../../config/missions.json';
+import type { BalanceConfig } from '../core/balance';
+import { loadBalance } from '../core/balance';
+import type { MissionDef, ObjectiveDef, ShipClass } from '../core/types';
+import { generateMission, type GeneratorInput } from './generator';
 
 // ---------------------------------------------------------------------------
 // Mission table (config/missions.json — single source of the 5 missions)
 // ---------------------------------------------------------------------------
 
 export interface MissionSpec {
-  id: string
-  name: string
-  nameZh: string
-  objectiveKind: string
-  objective: ObjectiveDef
+  id: string;
+  name: string;
+  nameZh: string;
+  objectiveKind: string;
+  objective: ObjectiveDef;
   /** Merchant composition {class: count}. */
-  enemies: Record<string, number>
+  enemies: Record<string, number>;
   /** Escort classes in order. */
-  escorts: ShipClass[]
-  torpedoCount: number
+  escorts: ShipClass[];
+  torpedoCount: number;
   /** Weather label: 'Clear', 'Clear->Cloudy', 'Night+Fog', … */
-  weather: string
+  weather: string;
   /** Design visibility label ('high' | 'medium-high' | …). */
-  visibility: string
-  difficulty: string
+  visibility: string;
+  difficulty: string;
   /** 1..5 (GAME_DESIGN difficulty ordering). */
-  difficultyLevel: number
-  parMinutes: number
-  seed: number
+  difficultyLevel: number;
+  parMinutes: number;
+  seed: number;
   /** Unlock chain: previous mission id, or null for M01. */
-  unlock: string | null
-  escapeRequired: boolean
+  unlock: string | null;
+  escapeRequired: boolean;
   /** M04: escort active-ping interval override (2 s). */
-  escortPingIntervalSeconds: number | null
+  escortPingIntervalSeconds: number | null;
 }
 
-const SPECS: readonly MissionSpec[] = missionsJson.missions as unknown as MissionSpec[]
+const SPECS: readonly MissionSpec[] = missionsJson.missions as unknown as MissionSpec[];
 
 export function listMissionSpecs(): readonly MissionSpec[] {
-  return SPECS
+  return SPECS;
 }
 
 export function getMissionSpec(id: string): MissionSpec | undefined {
-  return SPECS.find((s) => s.id === id)
+  return SPECS.find((s) => s.id === id);
 }
 
-export const MISSION_IDS: readonly string[] = SPECS.map((s) => s.id)
+export const MISSION_IDS: readonly string[] = SPECS.map((s) => s.id);
 
 // ---------------------------------------------------------------------------
 // getMissionDef
@@ -94,9 +94,11 @@ export const MISSION_IDS: readonly string[] = SPECS.map((s) => s.id)
  * seeded by the table seed). Throws TypeError for an unknown id.
  */
 export function getMissionDef(id: string, balance: BalanceConfig = loadBalance()): MissionDef {
-  const spec = getMissionSpec(id)
+  const spec = getMissionSpec(id);
   if (spec === undefined) {
-    throw new TypeError(`getMissionDef: unknown mission id "${id}" (expected one of ${MISSION_IDS.join(', ')})`)
+    throw new TypeError(
+      `getMissionDef: unknown mission id "${id}" (expected one of ${MISSION_IDS.join(', ')})`,
+    );
   }
   const input: GeneratorInput = {
     id: spec.id,
@@ -113,11 +115,11 @@ export function getMissionDef(id: string, balance: BalanceConfig = loadBalance()
     escapeRequired: spec.escapeRequired,
     escortPingIntervalSeconds: spec.escortPingIntervalSeconds ?? undefined,
     unlock: spec.unlock,
-  }
-  return generateMission(input, spec.seed, balance)
+  };
+  return generateMission(input, spec.seed, balance);
 }
 
 // Re-export the weather normalization for the shell/renderer (M05 'Night+Fog').
 export function normalizeWeatherSpec(spec: string): string {
-  return spec.replace(/\+/g, '->')
+  return spec.replace(/\+/g, '->');
 }

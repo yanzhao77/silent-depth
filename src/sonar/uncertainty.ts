@@ -28,35 +28,35 @@
  * @pure — zero DOM / browser-API references; no RNG; no module state.
  */
 
-import type { BalanceConfig } from '../core/balance'
-import type { ContactState } from '../core/types'
+import type { BalanceConfig } from '../core/balance';
+import type { ContactState } from '../core/types';
 
 /** ±2 % range error at TRACKED (GAME_DESIGN §5.4; no balance entry). */
-export const TRACKED_RANGE_ERROR_FRAC = 0.02
+export const TRACKED_RANGE_ERROR_FRAC = 0.02;
 
 /**
  * Heading-estimate error scale: a ±20 % speed/heading error becomes
  * ±(0.20 × 180) = ±36° of heading. DESIGN DECISION — the design gives only
  * the fraction; degrees need a scale (0.2 × 360 would be nonsensical).
  */
-export const HEADING_ERROR_DEG_SCALE = 180
+export const HEADING_ERROR_DEG_SCALE = 180;
 
 function clamp(v: number, lo: number, hi: number): number {
-  return v < lo ? lo : v > hi ? hi : v
+  return v < lo ? lo : v > hi ? hi : v;
 }
 
 /** Range error fraction for the n-th ping hit (1-based; ±10 %, ×0.8 each). */
 export function pingRangeErrorFrac(pingCount: number, balance: BalanceConfig): number {
-  const c = balance.sonar.active
-  const n = Math.max(1, pingCount)
-  return c.rangeErrorPctStart * Math.pow(c.rangeErrorPctPerPingFactor, n - 1)
+  const c = balance.sonar.active;
+  const n = Math.max(1, pingCount);
+  return c.rangeErrorPctStart * Math.pow(c.rangeErrorPctPerPingFactor, n - 1);
 }
 
 /** Bearing error (°) for the n-th ping hit (1-based; ±0.5°, ×0.7 each). */
 export function pingBearingErrorDeg(pingCount: number, balance: BalanceConfig): number {
-  const c = balance.sonar.active
-  const n = Math.max(1, pingCount)
-  return c.bearingErrorDeg * Math.pow(c.bearingErrorPerPingFactor, n - 1)
+  const c = balance.sonar.active;
+  const n = Math.max(1, pingCount);
+  return c.bearingErrorDeg * Math.pow(c.bearingErrorPerPingFactor, n - 1);
 }
 
 /**
@@ -65,10 +65,10 @@ export function pingBearingErrorDeg(pingCount: number, balance: BalanceConfig): 
  * converged value.
  */
 export function passiveBearingErrorDeg(elapsedS: number, balance: BalanceConfig): number {
-  const c = balance.sonar.passive
-  if (elapsedS <= 0) return c.bearingErrorDegStart
-  const t = clamp(elapsedS / c.bearingConvergeSeconds, 0, 1)
-  return c.bearingErrorDegStart + (c.bearingErrorDegConverged - c.bearingErrorDegStart) * t
+  const c = balance.sonar.passive;
+  if (elapsedS <= 0) return c.bearingErrorDegStart;
+  const t = clamp(elapsedS / c.bearingConvergeSeconds, 0, 1);
+  return c.bearingErrorDegStart + (c.bearingErrorDegConverged - c.bearingErrorDegStart) * t;
 }
 
 /**
@@ -81,20 +81,20 @@ export function speedHeadingErrorFrac(
   observations: number,
   balance: BalanceConfig,
 ): number {
-  const c = balance.sonar.contact
+  const c = balance.sonar.contact;
   const base =
     state === 'TRACKED' || state === 'CONFIRMED'
       ? c.convergeSpeedHeadingPctTracked
-      : c.convergeSpeedHeadingPctStart
-  const n = Math.max(1, observations)
-  return Math.max(c.convergeSpeedHeadingPctTracked, base * Math.pow(c.convergePerObsFactor, n - 1))
+      : c.convergeSpeedHeadingPctStart;
+  const n = Math.max(1, observations);
+  return Math.max(c.convergeSpeedHeadingPctTracked, base * Math.pow(c.convergePerObsFactor, n - 1));
 }
 
 /** Range error fraction for a contact in the given state. */
 export function rangeErrorFracFor(state: ContactState, pingErrorFrac: number): number {
-  if (state === 'TRACKED') return TRACKED_RANGE_ERROR_FRAC
-  if (state === 'CONFIRMED') return 0
-  return pingErrorFrac
+  if (state === 'TRACKED') return TRACKED_RANGE_ERROR_FRAC;
+  if (state === 'CONFIRMED') return 0;
+  return pingErrorFrac;
 }
 
 /**
@@ -106,10 +106,12 @@ export function errorsExempt(
   rangeKm: number | null,
   balance: BalanceConfig,
 ): boolean {
-  return state === 'CONFIRMED' && rangeKm !== null && rangeKm < balance.sonar.contact.errorExemptRangeKm
+  return (
+    state === 'CONFIRMED' && rangeKm !== null && rangeKm < balance.sonar.contact.errorExemptRangeKm
+  );
 }
 
 /** Heading-estimate error (°) implied by a speed/heading error fraction. */
 export function headingErrorDeg(errorFrac: number): number {
-  return errorFrac * HEADING_ERROR_DEG_SCALE
+  return errorFrac * HEADING_ERROR_DEG_SCALE;
 }

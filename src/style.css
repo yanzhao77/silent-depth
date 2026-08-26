@@ -21,8 +21,8 @@
   color-scheme: dark;
 
   /* --- typography -------------------------------------------------------- */
-  --font-ui: -apple-system, 'SF Pro Text', Inter, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, sans-serif;
+  --font-ui:
+    -apple-system, 'SF Pro Text', Inter, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --font-mono: 'SF Mono', 'JetBrains Mono', 'Cascadia Code', Consolas, monospace;
 
   /* --- semantic colors ---------------------------------------------------- */
@@ -211,7 +211,10 @@ body {
 
 .hud-lang-chip {
   cursor: pointer;
-  transition: background var(--ease), color var(--ease), border-color var(--ease);
+  transition:
+    background var(--ease),
+    color var(--ease),
+    border-color var(--ease);
 }
 
 .hud-lang-chip:hover {
@@ -464,7 +467,9 @@ body {
   height: 100%;
   border-radius: 999px;
   background: var(--color-primary);
-  transition: width 200ms var(--ease), background 200ms var(--ease);
+  transition:
+    width 200ms var(--ease),
+    background 200ms var(--ease);
 }
 
 .bar-fill.success {
@@ -592,7 +597,10 @@ body {
   font-family: var(--font-mono);
   font-size: 10.5px;
   color: var(--text-secondary);
-  transition: border-color var(--ease), color var(--ease), opacity var(--ease);
+  transition:
+    border-color var(--ease),
+    color var(--ease),
+    opacity var(--ease);
 }
 
 .tube-chip .tube-dot {
@@ -642,7 +650,9 @@ body {
   padding: 3px 9px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background var(--ease), color var(--ease);
+  transition:
+    background var(--ease),
+    color var(--ease);
 }
 
 .salvo-btn:hover {
@@ -712,7 +722,10 @@ body {
   color: var(--text-primary);
   text-align: left;
   cursor: pointer;
-  transition: background var(--ease), border-color var(--ease), transform var(--ease);
+  transition:
+    background var(--ease),
+    border-color var(--ease),
+    transform var(--ease);
 }
 
 .contact-row:hover {
@@ -917,8 +930,12 @@ button {
   font-size: 12.5px;
   font-weight: 500;
   cursor: pointer;
-  transition: background var(--ease), color var(--ease), border-color var(--ease),
-    box-shadow var(--ease), transform var(--ease);
+  transition:
+    background var(--ease),
+    color var(--ease),
+    border-color var(--ease),
+    box-shadow var(--ease),
+    transform var(--ease);
 }
 
 .btn:hover,
@@ -960,7 +977,9 @@ button {
   padding: 7px 10px;
   border-radius: var(--radius-md);
   cursor: pointer;
-  transition: background var(--ease), color var(--ease);
+  transition:
+    background var(--ease),
+    color var(--ease);
 }
 
 .icon-btn:hover {
@@ -1095,7 +1114,10 @@ button {
   font-size: 13px;
   text-align: left;
   cursor: pointer;
-  transition: background var(--ease), border-color var(--ease), transform var(--ease);
+  transition:
+    background var(--ease),
+    border-color var(--ease),
+    transform var(--ease);
 }
 
 .mission-row:hover {
@@ -1228,7 +1250,10 @@ button {
   color: var(--text-secondary);
   font-size: 12px;
   cursor: pointer;
-  transition: background var(--ease), color var(--ease), border-color var(--ease);
+  transition:
+    background var(--ease),
+    color var(--ease),
+    border-color var(--ease);
 }
 
 .lang-btn:hover {
@@ -1533,7 +1558,12 @@ button {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at center, rgba(6, 9, 14, 0.05) 0%, rgba(6, 9, 14, 0.55) 78%, rgba(4, 6, 10, 0.85) 100%),
+    radial-gradient(
+      ellipse at center,
+      rgba(6, 9, 14, 0.05) 0%,
+      rgba(6, 9, 14, 0.55) 78%,
+      rgba(4, 6, 10, 0.85) 100%
+    ),
     repeating-linear-gradient(0deg, rgba(148, 163, 184, 0.025) 0 1px, transparent 1px 3px);
   pointer-events: none;
 }
@@ -1671,7 +1701,9 @@ button {
 .pv-exposure-fill {
   height: 100%;
   border-radius: 999px;
-  transition: width 200ms linear, background 200ms linear;
+  transition:
+    width 200ms linear,
+    background 200ms linear;
 }
 
 .pv-status .mono {
@@ -1847,8 +1879,13 @@ button {
   animation: pv-waves 6s ease-in-out infinite;
 }
 @keyframes pv-waves {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-3px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
 }
 .pv-horizon {
   top: 46%;
@@ -1859,8 +1896,8 @@ button {
 .pv-marks {
   top: 44%;
   height: 8px;
-  background: repeating-linear-gradient(90deg, rgba(255,255,255,.5) 0 1px, transparent 1px 4%);
-  opacity: .6;
+  background: repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.5) 0 1px, transparent 1px 4%);
+  opacity: 0.6;
 }
 .pv-ships {
   top: 30%;
@@ -1873,7 +1910,9 @@ button {
   transform: translateX(-50%);
   opacity: 0.92;
   filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.5));
-  transition: left 0.25s ease, width 0.25s ease;
+  transition:
+    left 0.25s ease,
+    width 0.25s ease;
 }
 .pv-ship svg {
   width: 100%;
@@ -1894,16 +1933,32 @@ button {
   stroke-width: 1.2;
 }
 /* weather overlays on the scene */
-.pv-weather { opacity: 0; transition: opacity .4s ease; }
-.pv-w-night { background: linear-gradient(180deg, rgba(4,10,18,.72), rgba(4,10,18,.45)); opacity: 1; }
-.pv-w-fog { background: linear-gradient(180deg, rgba(180,200,215,.42), rgba(180,200,215,.22)); opacity: 1; }
-.pv-w-storm {
-  background: linear-gradient(180deg, rgba(20,30,42,.5), rgba(12,20,28,.35));
+.pv-weather {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.pv-w-night {
+  background: linear-gradient(180deg, rgba(4, 10, 18, 0.72), rgba(4, 10, 18, 0.45));
   opacity: 1;
 }
-.pv-w-storm .pv-sea { background: repeating-linear-gradient(180deg, #1a2834 0 2px, #101c26 2px 6px); }
-.pv-w-cloudy { background: linear-gradient(180deg, rgba(90,110,130,.18), rgba(90,110,130,.08)); opacity: 1; }
-.pv-w-clear { opacity: 0; }
+.pv-w-fog {
+  background: linear-gradient(180deg, rgba(180, 200, 215, 0.42), rgba(180, 200, 215, 0.22));
+  opacity: 1;
+}
+.pv-w-storm {
+  background: linear-gradient(180deg, rgba(20, 30, 42, 0.5), rgba(12, 20, 28, 0.35));
+  opacity: 1;
+}
+.pv-w-storm .pv-sea {
+  background: repeating-linear-gradient(180deg, #1a2834 0 2px, #101c26 2px 6px);
+}
+.pv-w-cloudy {
+  background: linear-gradient(180deg, rgba(90, 110, 130, 0.18), rgba(90, 110, 130, 0.08));
+  opacity: 1;
+}
+.pv-w-clear {
+  opacity: 0;
+}
 
 /* --- t-028c: in-HUD controls & keys panel --------------------------------- */
 .controls-card {
@@ -1952,6 +2007,11 @@ button {
   color: var(--color-success);
 }
 @keyframes charge-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.55; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.55;
+  }
 }

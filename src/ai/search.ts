@@ -28,36 +28,36 @@
  * @pure — zero DOM / browser-API references; no module state; RNG injected.
  */
 
-import type { Rng } from '../core/rng'
-import type { BalanceConfig } from '../core/balance'
-import type { AiState } from '../core/types'
+import type { Rng } from '../core/rng';
+import type { BalanceConfig } from '../core/balance';
+import type { AiState } from '../core/types';
 
 // ---------------------------------------------------------------------------
 // Search patterns
 // ---------------------------------------------------------------------------
 
-export type SearchPatternKind = 'circular' | 'zigzag' | 'expanding'
+export type SearchPatternKind = 'circular' | 'zigzag' | 'expanding';
 
 export interface SearchPatternsConfig {
   circular: {
-    radiusStartKm: number
-    radiusMaxKm: number
-    radiusStepPerLapKm: number
-    speedKt: number
-  }
+    radiusStartKm: number;
+    radiusMaxKm: number;
+    radiusStepPerLapKm: number;
+    speedKt: number;
+  };
   zigzag: {
-    laneSpacingKm: number
-    laneLengthKm: number
-  }
+    laneSpacingKm: number;
+    laneLengthKm: number;
+  };
   expanding: {
-    radiusStepPer45DegKm: number
-    startRadiusKm: number
-  }
+    radiusStepPer45DegKm: number;
+    startRadiusKm: number;
+  };
 }
 
 /** Derive the pattern config from balance.enemyAI.searchPatterns (§6.4). */
 export function searchPatternsConfig(balance: BalanceConfig): SearchPatternsConfig {
-  const c = balance.enemyAI.searchPatterns
+  const c = balance.enemyAI.searchPatterns;
   return {
     circular: {
       radiusStartKm: c.circular.radiusStartKm,
@@ -73,41 +73,41 @@ export function searchPatternsConfig(balance: BalanceConfig): SearchPatternsConf
       radiusStepPer45DegKm: c.expanding.radiusStepPer45DegM / 1000,
       startRadiusKm: c.expanding.startRadiusM / 1000,
     },
-  }
+  };
 }
 
 /** kt → km/s (1 kt = 1.852 km/h). */
-export const KT_TO_KM_S = 1.852 / 3600
+export const KT_TO_KM_S = 1.852 / 3600;
 
 export interface Point {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 
 export function distKm(a: Point, b: Point): number {
-  return Math.hypot(a.x - b.x, a.y - b.y)
+  return Math.hypot(a.x - b.x, a.y - b.y);
 }
 
 // --- circular --------------------------------------------------------------
 
 export interface CircularState {
   /** Current angle on the circle (radians, unbounded — grows with time). */
-  angleRad: number
+  angleRad: number;
   /** Angle at the start of the current lap (radius step per full lap). */
-  lapStartRad: number
+  lapStartRad: number;
   /** Current search radius (km). */
-  radiusKm: number
+  radiusKm: number;
 }
 
 export function initialCircularState(cfg: SearchPatternsConfig): CircularState {
-  return { angleRad: 0, lapStartRad: 0, radiusKm: cfg.circular.radiusStartKm }
+  return { angleRad: 0, lapStartRad: 0, radiusKm: cfg.circular.radiusStartKm };
 }
 
 export interface CircularStep {
-  point: Point
-  next: CircularState
+  point: Point;
+  next: CircularState;
   /** Radius increased this step (a full lap was completed). */
-  lapCompleted: boolean
+  lapCompleted: boolean;
 }
 
 /**
@@ -122,44 +122,48 @@ export function stepCircular(
   dt: number,
   cfg: SearchPatternsConfig['circular'],
 ): CircularStep {
-  const radius = Math.max(0.001, st.radiusKm)
-  const omega = (speedKt * KT_TO_KM_S) / radius // rad/s
-  let angle = st.angleRad + omega * dt
-  let lapStart = st.lapStartRad
-  let radiusNext = st.radiusKm
-  let lapCompleted = false
+  const radius = Math.max(0.001, st.radiusKm);
+  const omega = (speedKt * KT_TO_KM_S) / radius; // rad/s
+  const angle = st.angleRad + omega * dt;
+  let lapStart = st.lapStartRad;
+  let radiusNext = st.radiusKm;
+  let lapCompleted = false;
   while (angle - lapStart >= 2 * Math.PI) {
-    lapStart += 2 * Math.PI
-    radiusNext = Math.min(radiusNext + cfg.radiusStepPerLapKm, cfg.radiusMaxKm)
-    lapCompleted = true
+    lapStart += 2 * Math.PI;
+    radiusNext = Math.min(radiusNext + cfg.radiusStepPerLapKm, cfg.radiusMaxKm);
+    lapCompleted = true;
   }
   const point: Point = {
     x: center.x + radiusNext * Math.cos(angle),
     y: center.y + radiusNext * Math.sin(angle),
-  }
-  return { point, next: { angleRad: angle, lapStartRad: lapStart, radiusKm: radiusNext }, lapCompleted }
+  };
+  return {
+    point,
+    next: { angleRad: angle, lapStartRad: lapStart, radiusKm: radiusNext },
+    lapCompleted,
+  };
 }
 
 // --- zigzag ----------------------------------------------------------------
 
 export interface ZigzagState {
   /** Zero-based lane index (grows outward perpendicular to the sweep). */
-  laneIndex: number
+  laneIndex: number;
   /** Sweep direction along the axis (+1 forward, -1 backward). */
-  dir: 1 | -1
+  dir: 1 | -1;
   /** Distance travelled along the current lane (km). */
-  progressKm: number
+  progressKm: number;
   /** Sweep axis heading (deg, north-up) — the estimated course. */
-  sweepHeadingDeg: number
+  sweepHeadingDeg: number;
 }
 
 export function initialZigzagState(sweepHeadingDeg: number): ZigzagState {
-  return { laneIndex: 0, dir: 1, progressKm: 0, sweepHeadingDeg }
+  return { laneIndex: 0, dir: 1, progressKm: 0, sweepHeadingDeg };
 }
 
 export interface ZigzagStep {
-  point: Point
-  next: ZigzagState
+  point: Point;
+  next: ZigzagState;
 }
 
 /**
@@ -174,42 +178,45 @@ export function stepZigzag(
   dt: number,
   cfg: SearchPatternsConfig['zigzag'],
 ): ZigzagStep {
-  let progress = st.progressKm + speedKt * KT_TO_KM_S * dt
-  let lane = st.laneIndex
-  let dir = st.dir
+  let progress = st.progressKm + speedKt * KT_TO_KM_S * dt;
+  let lane = st.laneIndex;
+  let dir = st.dir;
   if (progress >= cfg.laneLengthKm) {
-    progress = 0
-    lane += 1
-    dir = (dir * -1) as 1 | -1
+    progress = 0;
+    lane += 1;
+    dir = (dir * -1) as 1 | -1;
   }
-  const h = (st.sweepHeadingDeg * Math.PI) / 180
-  const axis: Point = { x: Math.cos(h), y: Math.sin(h) }
-  const perp: Point = { x: -Math.sin(h), y: Math.cos(h) }
-  const along = dir * progress
-  const across = lane * cfg.laneSpacingKm
+  const h = (st.sweepHeadingDeg * Math.PI) / 180;
+  const axis: Point = { x: Math.cos(h), y: Math.sin(h) };
+  const perp: Point = { x: -Math.sin(h), y: Math.cos(h) };
+  const along = dir * progress;
+  const across = lane * cfg.laneSpacingKm;
   const point: Point = {
     x: center.x + axis.x * along + perp.x * across,
     y: center.y + axis.y * along + perp.y * across,
-  }
-  return { point, next: { laneIndex: lane, dir, progressKm: progress, sweepHeadingDeg: st.sweepHeadingDeg } }
+  };
+  return {
+    point,
+    next: { laneIndex: lane, dir, progressKm: progress, sweepHeadingDeg: st.sweepHeadingDeg },
+  };
 }
 
 // --- expanding spiral ------------------------------------------------------
 
 export interface ExpandingState {
   /** Current radius (km). */
-  radiusKm: number
+  radiusKm: number;
   /** Current angle (radians, unbounded). */
-  angleRad: number
+  angleRad: number;
 }
 
 export function initialExpandingState(cfg: SearchPatternsConfig): ExpandingState {
-  return { radiusKm: cfg.expanding.startRadiusKm, angleRad: 0 }
+  return { radiusKm: cfg.expanding.startRadiusKm, angleRad: 0 };
 }
 
 export interface ExpandingStep {
-  point: Point
-  next: ExpandingState
+  point: Point;
+  next: ExpandingState;
 }
 
 /**
@@ -223,15 +230,15 @@ export function stepExpanding(
   dt: number,
   cfg: SearchPatternsConfig['expanding'],
 ): ExpandingStep {
-  const radius = Math.max(0.001, st.radiusKm)
-  const omega = (speedKt * KT_TO_KM_S) / radius
-  const angle = st.angleRad + omega * dt
-  const radiusNext = cfg.startRadiusKm + (angle / (Math.PI / 4)) * cfg.radiusStepPer45DegKm
+  const radius = Math.max(0.001, st.radiusKm);
+  const omega = (speedKt * KT_TO_KM_S) / radius;
+  const angle = st.angleRad + omega * dt;
+  const radiusNext = cfg.startRadiusKm + (angle / (Math.PI / 4)) * cfg.radiusStepPer45DegKm;
   const point: Point = {
     x: center.x + radiusNext * Math.cos(angle),
     y: center.y + radiusNext * Math.sin(angle),
-  }
-  return { point, next: { radiusKm: radiusNext, angleRad: angle } }
+  };
+  return { point, next: { radiusKm: radiusNext, angleRad: angle } };
 }
 
 // --- pattern selection -----------------------------------------------------
@@ -246,12 +253,12 @@ export function stepExpanding(
 export function chooseSearchPattern(previousState: AiState | null): SearchPatternKind {
   switch (previousState) {
     case 'ALERT':
-      return 'circular'
+      return 'circular';
     case 'HUNTING':
     case 'LOST_CONTACT':
-      return 'expanding'
+      return 'expanding';
     default:
-      return 'zigzag'
+      return 'zigzag';
   }
 }
 
@@ -260,41 +267,41 @@ export function chooseSearchPattern(previousState: AiState | null): SearchPatter
 // ---------------------------------------------------------------------------
 
 export interface Lkp {
-  x: number
-  y: number
+  x: number;
+  y: number;
   /** Accumulated uncertainty radius in km (drift / bearing error). */
-  errorKm: number
+  errorKm: number;
 }
 
 export interface LkpModelInput {
   /** Current LKP (null when the escort has never had a fix). */
-  lkp: Lkp | null
-  playerPos: Point
+  lkp: Lkp | null;
+  playerPos: Point;
   /** Player is inside the escort's sensor envelope this tick. */
-  inSensorRange: boolean
+  inSensorRange: boolean;
   /** LKP refresh timer due this tick (every balance.enemyAI.lkp.refreshSeconds). */
-  refreshDue: boolean
+  refreshDue: boolean;
   /** Number of player maneuvers this tick (turn/speed changes). */
-  maneuvers: number
+  maneuvers: number;
   /** Own active ping hit the player this tick (F4: bearing ±2°). */
-  pingHit: boolean
+  pingHit: boolean;
   /** Range of that ping hit (km) — determines the F4 bearing error. */
-  pingRangeKm: number
-  bearingErrorDeg: number
-  driftErrorM: number
-  driftMaxKm: number
+  pingRangeKm: number;
+  bearingErrorDeg: number;
+  driftErrorM: number;
+  driftMaxKm: number;
   /** A live decoy the escort has not reacted to yet (F5 decoy replace). */
-  newDecoy: Point | null
-  decoyReplaceChance: number
+  newDecoy: Point | null;
+  decoyReplaceChance: number;
   /** LKP is currently pinned to a decoy (replaced for decoy.durationSeconds). */
-  decoyActive: boolean
-  rng: Rng
+  decoyActive: boolean;
+  rng: Rng;
 }
 
 export interface LkpModelOutput {
-  lkp: Lkp | null
+  lkp: Lkp | null;
   /** True while the LKP is pinned to a decoy. */
-  decoyActive: boolean
+  decoyActive: boolean;
 }
 
 /**
@@ -312,7 +319,7 @@ export interface LkpModelOutput {
 export function updateLkp(input: LkpModelInput): LkpModelOutput {
   // 1. decoy pin: freeze everything.
   if (input.decoyActive) {
-    return { lkp: input.lkp, decoyActive: true }
+    return { lkp: input.lkp, decoyActive: true };
   }
 
   // 2. decoy replacement roll (once per new decoy — caller tracks ids).
@@ -320,22 +327,22 @@ export function updateLkp(input: LkpModelInput): LkpModelOutput {
     return {
       lkp: { x: input.newDecoy.x, y: input.newDecoy.y, errorKm: 0 },
       decoyActive: true,
-    }
+    };
   }
 
   // 3. maneuver drift (position unchanged, uncertainty grows).
   const driftTotalKm = Math.min(
     (input.lkp?.errorKm ?? 0) + input.maneuvers * (input.driftErrorM / 1000),
     input.driftMaxKm,
-  )
+  );
 
   // 4. ping-hit fresh fix with F4 bearing error.
   if (input.pingHit) {
-    const bearingErrorKm = input.pingRangeKm * Math.tan((input.bearingErrorDeg * Math.PI) / 180)
+    const bearingErrorKm = input.pingRangeKm * Math.tan((input.bearingErrorDeg * Math.PI) / 180);
     return {
       lkp: { x: input.playerPos.x, y: input.playerPos.y, errorKm: bearingErrorKm },
       decoyActive: false,
-    }
+    };
   }
 
   // 5. passive refresh (fresh fix, zero error).
@@ -343,12 +350,12 @@ export function updateLkp(input: LkpModelInput): LkpModelOutput {
     return {
       lkp: { x: input.playerPos.x, y: input.playerPos.y, errorKm: 0 },
       decoyActive: false,
-    }
+    };
   }
 
   // 6. frozen position, drifting error only.
-  if (input.lkp === null) return { lkp: null, decoyActive: false }
-  return { lkp: { x: input.lkp.x, y: input.lkp.y, errorKm: driftTotalKm }, decoyActive: false }
+  if (input.lkp === null) return { lkp: null, decoyActive: false };
+  return { lkp: { x: input.lkp.x, y: input.lkp.y, errorKm: driftTotalKm }, decoyActive: false };
 }
 
 /**
@@ -356,10 +363,10 @@ export function updateLkp(input: LkpModelInput): LkpModelOutput {
  * schedules the following refresh (`+refreshSeconds`).
  */
 export function lkpRefreshDue(simTime: number, nextRefreshAt: number): boolean {
-  return simTime >= nextRefreshAt
+  return simTime >= nextRefreshAt;
 }
 
 /** Seconds of the LKP refresh cadence (balance.enemyAI.lkp.refreshSeconds). */
 export function lkpRefreshInterval(balance: BalanceConfig): number {
-  return balance.enemyAI.lkp.refreshSeconds
+  return balance.enemyAI.lkp.refreshSeconds;
 }

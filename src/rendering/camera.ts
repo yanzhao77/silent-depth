@@ -27,61 +27,61 @@
  */
 
 /** Minimum zoom in px/km (VISUAL_STYLE §5: zoomable 4–16 px/km). */
-export const MIN_ZOOM = 4
+export const MIN_ZOOM = 4;
 /** Maximum zoom in px/km. */
-export const MAX_ZOOM = 16
+export const MAX_ZOOM = 16;
 /** Default zoom in px/km. */
-export const DEFAULT_ZOOM = 8
+export const DEFAULT_ZOOM = 8;
 
 /** A point on screen (px) or in world (km) coordinates. */
 export interface Point {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 
 export interface Camera {
   /** Current zoom, px/km, clamped to [MIN_ZOOM, MAX_ZOOM]. */
-  zoom: number
+  zoom: number;
   /** World-space center of the viewport (km). */
-  center: { x: number; y: number }
+  center: { x: number; y: number };
   /** Viewport size in px (set by setViewport). */
-  viewport: { width: number; height: number }
+  viewport: { width: number; height: number };
   /** World bounds the center is clamped to (km). */
-  mapSizeKm: number
+  mapSizeKm: number;
   /** World → screen transform (north-up: world +y maps to smaller screen y). */
-  worldToScreen(wx: number, wy: number): Point
+  worldToScreen(wx: number, wy: number): Point;
   /** Screen → world transform (inverse of worldToScreen). */
-  screenToWorld(sx: number, sy: number): Point
+  screenToWorld(sx: number, sy: number): Point;
   /** Set the viewport size in px. */
-  setViewport(width: number, height: number): void
+  setViewport(width: number, height: number): void;
   /** Set zoom (clamped to [MIN_ZOOM, MAX_ZOOM]). */
-  setZoom(zoom: number): void
+  setZoom(zoom: number): void;
   /** Zoom by a wheel delta (positive = zoom in). */
-  zoomBy(delta: number): void
+  zoomBy(delta: number): void;
   /** Move the viewport center (km), clamped to the world bounds. */
-  setCenter(x: number, y: number): void
+  setCenter(x: number, y: number): void;
   /** Pan by a screen-space delta (px): dragging right shows more of the
    *  west (center moves −x/zoom), dragging down shows more of the north
    *  (center moves +y/zoom). */
-  panBy(dxPx: number, dyPx: number): void
+  panBy(dxPx: number, dyPx: number): void;
   /** Center the view on a world point (used by follow-player). */
-  follow(worldX: number, worldY: number): void
+  follow(worldX: number, worldY: number): void;
 }
 
 export interface CameraOptions {
   /** Initial zoom, px/km (default DEFAULT_ZOOM). */
-  zoom?: number
+  zoom?: number;
   /** Initial center in world km (default map center). */
-  center?: { x: number; y: number }
+  center?: { x: number; y: number };
   /** Viewport size in px (default 1280×720). */
-  viewport?: { width: number; height: number }
+  viewport?: { width: number; height: number };
   /** World bounds, km (default 30 — balance.world.mapSizeKm). */
-  mapSizeKm?: number
+  mapSizeKm?: number;
 }
 
 /** Clamp a number to [min, max]. */
 function clamp(v: number, min: number, max: number): number {
-  return v < min ? min : v > max ? max : v
+  return v < min ? min : v > max ? max : v;
 }
 
 /**
@@ -89,11 +89,11 @@ function clamp(v: number, min: number, max: number): number {
  * (zoom, center, viewport) — the object is plain data + functions.
  */
 export function createCamera(opts: CameraOptions = {}): Camera {
-  const mapSizeKm = opts.mapSizeKm ?? 30
+  const mapSizeKm = opts.mapSizeKm ?? 30;
   const viewport = {
     width: Math.max(1, opts.viewport?.width ?? 1280),
     height: Math.max(1, opts.viewport?.height ?? 720),
-  }
+  };
   const camera: Camera = {
     zoom: clamp(opts.zoom ?? DEFAULT_ZOOM, MIN_ZOOM, MAX_ZOOM),
     center: {
@@ -107,43 +107,43 @@ export function createCamera(opts: CameraOptions = {}): Camera {
       return {
         x: (wx - camera.center.x) * camera.zoom + viewport.width / 2,
         y: (camera.center.y - wy) * camera.zoom + viewport.height / 2,
-      }
+      };
     },
 
     screenToWorld(sx: number, sy: number): Point {
       return {
         x: camera.center.x + (sx - viewport.width / 2) / camera.zoom,
         y: camera.center.y - (sy - viewport.height / 2) / camera.zoom,
-      }
+      };
     },
 
     setViewport(width: number, height: number): void {
-      viewport.width = Math.max(1, width)
-      viewport.height = Math.max(1, height)
+      viewport.width = Math.max(1, width);
+      viewport.height = Math.max(1, height);
     },
 
     setZoom(zoom: number): void {
-      camera.zoom = clamp(zoom, MIN_ZOOM, MAX_ZOOM)
+      camera.zoom = clamp(zoom, MIN_ZOOM, MAX_ZOOM);
     },
 
     zoomBy(delta: number): void {
-      camera.setZoom(camera.zoom + delta)
+      camera.setZoom(camera.zoom + delta);
     },
 
     setCenter(x: number, y: number): void {
-      camera.center.x = clamp(x, 0, mapSizeKm)
-      camera.center.y = clamp(y, 0, mapSizeKm)
+      camera.center.x = clamp(x, 0, mapSizeKm);
+      camera.center.y = clamp(y, 0, mapSizeKm);
     },
 
     panBy(dxPx: number, dyPx: number): void {
       // Drag semantics: content follows the pointer, so the center moves the
       // opposite way in world space (and y is inverted by the north-up map).
-      camera.setCenter(camera.center.x - dxPx / camera.zoom, camera.center.y + dyPx / camera.zoom)
+      camera.setCenter(camera.center.x - dxPx / camera.zoom, camera.center.y + dyPx / camera.zoom);
     },
 
     follow(worldX: number, worldY: number): void {
-      camera.setCenter(worldX, worldY)
+      camera.setCenter(worldX, worldY);
     },
-  }
-  return camera
+  };
+  return camera;
 }

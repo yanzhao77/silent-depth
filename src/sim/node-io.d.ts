@@ -12,23 +12,26 @@
  */
 
 declare module 'node:fs' {
-  export function mkdirSync(path: string, opts?: { recursive?: boolean }): void
-  export function writeFileSync(path: string, data: string, encoding?: string): void
-  export function existsSync(path: string): boolean
-  export function readFileSync(path: string, encoding?: string): string
-  export function readdirSync(path: string): string[]
+  export function mkdirSync(path: string, opts?: { recursive?: boolean }): void;
+  export function writeFileSync(path: string, data: string, encoding?: string): void;
+  export function existsSync(path: string): boolean;
+  export function readFileSync(path: string, encoding?: string): string;
+  export function readdirSync(path: string): string[];
 }
 
 declare module 'node:path' {
-  export function resolve(...parts: string[]): string
-  export function join(...parts: string[]): string
+  export function resolve(...parts: string[]): string;
+  export function join(...parts: string[]): string;
 }
 
 declare module 'node:child_process' {
-  export function execSync(command: string, opts?: { encoding?: string; stdio?: unknown[] }): string | Buffer
+  export function execSync(
+    command: string,
+    opts?: { encoding?: string; stdio?: unknown[] },
+  ): string | Buffer;
 }
 
 /** Node's process global — only the surface the playtest tooling touches. */
 declare const process: {
-  cwd(): string
-}
+  cwd(): string;
+};

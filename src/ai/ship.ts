@@ -19,9 +19,9 @@
  * @pure — zero DOM / browser-API references; no module state.
  */
 
-import type { BalanceConfig } from '../core/balance'
-import type { EnemyShip, SubmarineState, WeatherKind } from '../core/types'
-import type { SearchPatternKind } from './search'
+import type { BalanceConfig } from '../core/balance';
+import type { EnemyShip, SubmarineState, WeatherKind } from '../core/types';
+import type { SearchPatternKind } from './search';
 
 /**
  * Convoy formation slot (0-based col/row of the fleet grid, GAME_DESIGN §6.3).
@@ -29,12 +29,12 @@ import type { SearchPatternKind } from './search'
  * import-cycle-free: ship.ts ← convoy.ts ← ai.ts.
  */
 export interface FormationSlot {
-  col: number
-  row: number
+  col: number;
+  row: number;
 }
 
 /** kt → km/s (1 kt = 1.852 km/h). */
-export const KT_TO_KM_S = 1.852 / 3600
+export const KT_TO_KM_S = 1.852 / 3600;
 
 // ---------------------------------------------------------------------------
 // Design constants — now migrated to balance.json (t-015).
@@ -43,46 +43,46 @@ export const KT_TO_KM_S = 1.852 / 3600
 // ---------------------------------------------------------------------------
 
 /** Enemy turn rates (°/s) — now in balance.enemyAI.turnRates. */
-export const ENEMY_TURN_RATE_DEG_S = { escort: 8, merchant: 4 } as const
+export const ENEMY_TURN_RATE_DEG_S = { escort: 8, merchant: 4 } as const;
 /** Enemy acceleration toward target speed (kt/s) — now in balance.enemyAI.accelKtPerS. */
-export const ENEMY_ACCEL_KT_PER_S = 2
+export const ENEMY_ACCEL_KT_PER_S = 2;
 /** SUSPICIOUS cruise speed cap (§6.1 table) — now in balance.enemyAI.suspiciousSpeedCapKt. */
-export const SUSPICIOUS_SPEED_CAP_KT = 22
+export const SUSPICIOUS_SPEED_CAP_KT = 22;
 /** LOST_CONTACT cruise speed (§6.1 table) — now in balance.enemyAI.lostContactSpeedKt. */
-export const LOST_CONTACT_SPEED_KT = 20
+export const LOST_CONTACT_SPEED_KT = 20;
 /** Merchant ALERT behaviour duration (§6.1) — now in balance.enemyAI.merchantAlertSeconds. */
-export const MERCHANT_ALERT_SECONDS = 60
+export const MERCHANT_ALERT_SECONDS = 60;
 
 export interface Point {
-  x: number
-  y: number
+  x: number;
+  y: number;
 }
 
 export function distKm(a: Point, b: Point): number {
-  return Math.hypot(a.x - b.x, a.y - b.y)
+  return Math.hypot(a.x - b.x, a.y - b.y);
 }
 
 export function clamp(v: number, lo: number, hi: number): number {
-  return v < lo ? lo : v > hi ? hi : v
+  return v < lo ? lo : v > hi ? hi : v;
 }
 
 /** Wrap a heading to [0, 360). */
 export function normalizeDeg(h: number): number {
-  const m = h % 360
-  return m < 0 ? m + 360 : m
+  const m = h % 360;
+  return m < 0 ? m + 360 : m;
 }
 
 /** Signed shortest angular difference from→to in (-180, 180]. */
 export function angleDiffDeg(from: number, to: number): number {
-  let d = (normalizeDeg(to) - normalizeDeg(from)) % 360
-  if (d > 180) d -= 360
-  if (d <= -180) d += 360
-  return d
+  let d = (normalizeDeg(to) - normalizeDeg(from)) % 360;
+  if (d > 180) d -= 360;
+  if (d <= -180) d += 360;
+  return d;
 }
 
 /** North-up bearing (deg) from `a` to `b`. */
 export function bearingDeg(a: Point, b: Point): number {
-  return normalizeDeg((Math.atan2(b.y - a.y, b.x - a.x) * 180) / Math.PI)
+  return normalizeDeg((Math.atan2(b.y - a.y, b.x - a.x) * 180) / Math.PI);
 }
 
 // ---------------------------------------------------------------------------
@@ -91,37 +91,37 @@ export function bearingDeg(a: Point, b: Point): number {
 
 /** Escort = a ship with an attack kit (Destroyer / Frigate). */
 export function isEscortShip(ship: EnemyShip, balance: BalanceConfig): boolean {
-  return balance.enemyAI.shipTypes[ship.shipClass]?.attack !== null
+  return balance.enemyAI.shipTypes[ship.shipClass]?.attack !== null;
 }
 
 export function isMerchantShip(ship: EnemyShip, balance: BalanceConfig): boolean {
-  return !isEscortShip(ship, balance)
+  return !isEscortShip(ship, balance);
 }
 
 export interface ShipSpeeds {
-  patrolKt: number
-  attackKt: number
+  patrolKt: number;
+  attackKt: number;
 }
 
 /** Patrol/attack speeds from balance (number = both, or {patrol, attack}). */
 export function shipSpeeds(ship: EnemyShip, balance: BalanceConfig): ShipSpeeds {
-  const cfg = balance.enemyAI.shipTypes[ship.shipClass]
-  const s = cfg?.speedKt
-  if (typeof s === 'number') return { patrolKt: s, attackKt: s }
-  const patrolKt = s?.patrol ?? 9
-  return { patrolKt, attackKt: s?.attack ?? patrolKt }
+  const cfg = balance.enemyAI.shipTypes[ship.shipClass];
+  const s = cfg?.speedKt;
+  if (typeof s === 'number') return { patrolKt: s, attackKt: s };
+  const patrolKt = s?.patrol ?? 9;
+  return { patrolKt, attackKt: s?.attack ?? patrolKt };
 }
 
 /** Passive sensor range (km) from balance.enemyAI.shipTypes. */
 export function passiveRangeKm(ship: EnemyShip, balance: BalanceConfig): number {
-  return balance.enemyAI.shipTypes[ship.shipClass]?.passiveRangeKm ?? 4
+  return balance.enemyAI.shipTypes[ship.shipClass]?.passiveRangeKm ?? 4;
 }
 
 /** F3 base rate: escorts 0.05/s (6 km), merchants 0.015/s (4 km). */
 export function baseDetectionRate(ship: EnemyShip, balance: BalanceConfig): number {
   return isEscortShip(ship, balance)
     ? balance.detectionFormula.escortBaseRate
-    : balance.detectionFormula.merchantBaseRate
+    : balance.detectionFormula.merchantBaseRate;
 }
 
 // ---------------------------------------------------------------------------
@@ -144,17 +144,17 @@ export function passiveDetectionRate(
   balance: BalanceConfig,
   weather: WeatherKind,
 ): number {
-  const range = passiveRangeKm(ship, balance)
-  if (range <= 0) return 0
-  const d = distKm(ship.position, player.position)
-  const distanceFactor = clamp(1 - d / range, 0, 1)
-  if (distanceFactor <= 0) return 0
-  const noise = Math.max(0, player.noise)
-  if (noise <= 0) return 0
-  const depthFactor = balance.depthLayers[player.depthLayer].detectFactor
-  const weatherFactor = balance.weather[weather].sonarFactor
+  const range = passiveRangeKm(ship, balance);
+  if (range <= 0) return 0;
+  const d = distKm(ship.position, player.position);
+  const distanceFactor = clamp(1 - d / range, 0, 1);
+  if (distanceFactor <= 0) return 0;
+  const noise = Math.max(0, player.noise);
+  if (noise <= 0) return 0;
+  const depthFactor = balance.depthLayers[player.depthLayer].detectFactor;
+  const weatherFactor = balance.weather[weather].sonarFactor;
   // (noise/100) × 100 collapses to `noise` — the %/s rate.
-  return noise * baseDetectionRate(ship, balance) * depthFactor * weatherFactor * distanceFactor
+  return noise * baseDetectionRate(ship, balance) * depthFactor * weatherFactor * distanceFactor;
 }
 
 // ---------------------------------------------------------------------------
@@ -162,8 +162,8 @@ export function passiveDetectionRate(
 // ---------------------------------------------------------------------------
 
 export interface MoveOpts {
-  turnRateDegPerS: number
-  accelKtPerS?: number
+  turnRateDegPerS: number;
+  accelKtPerS?: number;
 }
 
 /**
@@ -179,19 +179,21 @@ export function moveShip(
   dt: number,
   opts: MoveOpts,
 ): void {
-  const accel = opts.accelKtPerS ?? ENEMY_ACCEL_KT_PER_S
-  const diff = angleDiffDeg(ship.headingDeg, targetHeadingDeg)
-  const maxTurn = opts.turnRateDegPerS * dt
-  ship.headingDeg = normalizeDeg(ship.headingDeg + Math.sign(diff) * Math.min(Math.abs(diff), maxTurn))
+  const accel = opts.accelKtPerS ?? ENEMY_ACCEL_KT_PER_S;
+  const diff = angleDiffDeg(ship.headingDeg, targetHeadingDeg);
+  const maxTurn = opts.turnRateDegPerS * dt;
+  ship.headingDeg = normalizeDeg(
+    ship.headingDeg + Math.sign(diff) * Math.min(Math.abs(diff), maxTurn),
+  );
 
-  const dv = targetSpeedKt - ship.speedKt
-  const maxDv = accel * dt
-  ship.speedKt = ship.speedKt + Math.sign(dv) * Math.min(Math.abs(dv), maxDv)
-  if (Math.abs(ship.speedKt) < 1e-9) ship.speedKt = 0
+  const dv = targetSpeedKt - ship.speedKt;
+  const maxDv = accel * dt;
+  ship.speedKt = ship.speedKt + Math.sign(dv) * Math.min(Math.abs(dv), maxDv);
+  if (Math.abs(ship.speedKt) < 1e-9) ship.speedKt = 0;
 
-  const rad = (ship.headingDeg * Math.PI) / 180
-  ship.position.x += Math.cos(rad) * ship.speedKt * KT_TO_KM_S * dt
-  ship.position.y += Math.sin(rad) * ship.speedKt * KT_TO_KM_S * dt
+  const rad = (ship.headingDeg * Math.PI) / 180;
+  ship.position.x += Math.cos(rad) * ship.speedKt * KT_TO_KM_S * dt;
+  ship.position.y += Math.sin(rad) * ship.speedKt * KT_TO_KM_S * dt;
 }
 
 /** Steer toward a world point at a target speed (see moveShip). */
@@ -203,7 +205,7 @@ export function steerTo(
   dt: number,
   opts: MoveOpts,
 ): void {
-  moveShip(ship, bearingDeg(ship.position, { x: tx, y: ty }), targetSpeedKt, dt, opts)
+  moveShip(ship, bearingDeg(ship.position, { x: tx, y: ty }), targetSpeedKt, dt, opts);
 }
 
 // ---------------------------------------------------------------------------
@@ -215,9 +217,9 @@ export function steerTo(
  * THIS call drove the hull to 0 — the caller emits the ship.sunk event once.
  */
 export function applyDamage(ship: EnemyShip, amount: number): boolean {
-  const before = ship.hull
-  ship.hull = Math.max(0, ship.hull - Math.max(0, amount))
-  return before > 0 && ship.hull <= 0
+  const before = ship.hull;
+  ship.hull = Math.max(0, ship.hull - Math.max(0, amount));
+  return before > 0 && ship.hull <= 0;
 }
 
 // ---------------------------------------------------------------------------
@@ -233,11 +235,11 @@ export function applyDamage(ship: EnemyShip, amount: number): boolean {
  * see src/ai/ai.ts header).
  */
 export interface PendingDamage {
-  shipId: string
-  source: 'depthCharge' | 'deckGun'
-  amount: number
-  distM: number
-  hit: boolean
+  shipId: string;
+  source: 'depthCharge' | 'deckGun';
+  amount: number;
+  distM: number;
+  hit: boolean;
 }
 
 // ---------------------------------------------------------------------------
@@ -252,66 +254,66 @@ export interface PendingDamage {
  */
 export interface AiShipRuntime {
   // state-residence accumulators (seconds)
-  suspiciousNoContactS: number
-  searchingNoContactS: number
-  huntingBelow40S: number
-  lostContactAtPostS: number
+  suspiciousNoContactS: number;
+  searchingNoContactS: number;
+  huntingBelow40S: number;
+  lostContactAtPostS: number;
   // merchant behaviours
   /** Remaining seconds of the §6.1 ALERT merchant behaviour (turn 30°, 11 kt). */
-  merchantAlertS: number
+  merchantAlertS: number;
   /** Remaining seconds of a torpedo-targeted evade (45°, 30 s). */
-  evadeS: number
+  evadeS: number;
   /** Remaining seconds of a convoy-mate-sunk evade (45°, 30 s, then reform). */
-  neighborEvadeS: number
+  neighborEvadeS: number;
   /** Direction chosen for the current merchant evade turn. */
-  evadeSign: 1 | -1
+  evadeSign: 1 | -1;
   /** Absolute heading held during merchant ALERT (or null). */
-  merchantAlertHeadingDeg: number | null
+  merchantAlertHeadingDeg: number | null;
   /** Absolute heading held during a merchant evade (or null). */
-  evadeHeadingDeg: number | null
+  evadeHeadingDeg: number | null;
   // escort sensors
   /** simTime of the next own active ping. */
-  nextPingAt: number
+  nextPingAt: number;
   /** Consecutive own-ping hits with range (SUSPICIOUS → ALERT trigger). */
-  consecutivePingHits: number
+  consecutivePingHits: number;
   /** Range (km) of the last own-ping hit, or null. */
-  lastPingHitRangeKm: number | null
+  lastPingHitRangeKm: number | null;
   /** simTime of the next LKP refresh (F5, 5 s cadence). */
-  nextLkpRefreshAt: number
+  nextLkpRefreshAt: number;
   /** Current LKP uncertainty from drift (km). */
-  lkpErrorKm: number
+  lkpErrorKm: number;
   /** simTime until which the LKP is pinned to a decoy. */
-  lkpDecoyUntil: number
+  lkpDecoyUntil: number;
   /** Decoy ids already processed (one replacement roll per decoy). */
-  decoyHandled: Set<string>
+  decoyHandled: Set<string>;
   /** Player motion reference for F5 maneuver drift detection. */
-  lastPlayerHeadingDeg: number
-  lastPlayerSpeedKt: number
+  lastPlayerHeadingDeg: number;
+  lastPlayerSpeedKt: number;
   // search-pattern state
-  searchPattern: SearchPatternKind | null
-  circular: { angleRad: number; lapStartRad: number; radiusKm: number }
-  zigzag: { laneIndex: number; dir: 1 | -1; progressKm: number; sweepHeadingDeg: number }
-  expanding: { radiusKm: number; angleRad: number }
+  searchPattern: SearchPatternKind | null;
+  circular: { angleRad: number; lapStartRad: number; radiusKm: number };
+  zigzag: { laneIndex: number; dir: 1 | -1; progressKm: number; sweepHeadingDeg: number };
+  expanding: { radiusKm: number; angleRad: number };
   // escort patrol
   /** Figure-8 phase (radians). */
-  patrolPhaseRad: number
+  patrolPhaseRad: number;
   /** Escort patrol post (formation anchor minus offset). */
-  post: { x: number; y: number } | null
+  post: { x: number; y: number } | null;
   // escort attacks
   /** simTime of the next depth-charge drop in the current round. */
-  dcNextDropAt: number
+  dcNextDropAt: number;
   /** Charges dropped in the current round (perRound per round). */
-  dcRoundCount: number
+  dcRoundCount: number;
   /** simTime when the next round may begin. */
-  dcNextRoundAt: number
+  dcNextRoundAt: number;
   /** simTime of the next allowed deck-gun shot. */
-  nextDeckGunAt: number
+  nextDeckGunAt: number;
   // flags
-  sunkEmitted: boolean
+  sunkEmitted: boolean;
   /** Depth-charge ammo exhausted — HUNTING disabled forever (§6.1). */
-  huntingDisabled: boolean
+  huntingDisabled: boolean;
   /** Formation slot (col,row) for convoy merchants (null for escorts). */
-  formationSlot: FormationSlot | null
+  formationSlot: FormationSlot | null;
 }
 
 /** Fresh per-ship runtime defaults (no shared references). */
@@ -349,5 +351,5 @@ export function createShipRuntime(slot: FormationSlot | null): AiShipRuntime {
     sunkEmitted: false,
     huntingDisabled: false,
     formationSlot: slot,
-  }
+  };
 }
