@@ -14,8 +14,8 @@
  * DESIGN DECISIONS (all deterministic; balance values read from balance.json):
  *  - Band is derived from the target speed (throttle kt). Targets in the
  *    inter-band gaps (4–8, 12–18 kt) snap UP to the faster band's minimum.
- *  - Acceleration rate is a feel constant (SUB_ACCEL_KT_PER_S = 2.0 kt/s);
- *    GAME_DESIGN specifies no rate — t-015 balance may migrate it.
+ *  - Acceleration rate is now in balance.json (t-015 migration); read via
+ *    `balance.submarine.accelKtPerS`.
  *  - Reverse (< 0 kt) is out of scope: ADR-005 PlayerInputs.throttle is
  *    clamped to [0, 22] by the engine; reverseMaxKt stays unused until the
  *    input contract grows.
@@ -57,8 +57,7 @@ export const KNOTS_TO_KM_PER_SEC = 1.852 / 3600
 
 /**
  * Acceleration/deceleration toward the target speed (kt/s).
- * DESIGN DECISION: not specified in GAME_DESIGN §12 — feel constant
- * (ESTIMATED); t-015 balance may migrate it into balance.json.
+ * Migrated from hardcoded constant to balance.json (t-015).
  */
 export const SUB_ACCEL_KT_PER_S = 2.0
 
@@ -195,7 +194,7 @@ export const submarineSystem: (ctx: SystemContext) => void = (ctx: SystemContext
   player.targetSpeedKt = target
 
   // --- 2. integrate speed toward target (continuous in-band acceleration) ---
-  const maxStep = SUB_ACCEL_KT_PER_S * dt
+  const maxStep = balance.submarine.accelKtPerS * dt
   const delta = target - player.speedKt
   const step = delta > 0 ? Math.min(delta, maxStep) : Math.max(delta, -maxStep)
   player.speedKt = clamp(player.speedKt + step, 0, balance.speedBands.FULL.speedMaxKt)

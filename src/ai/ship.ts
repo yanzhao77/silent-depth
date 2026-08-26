@@ -37,18 +37,20 @@ export interface FormationSlot {
 export const KT_TO_KM_S = 1.852 / 3600
 
 // ---------------------------------------------------------------------------
-// Design constants
+// Design constants — now migrated to balance.json (t-015).
+// Retained as named exports for backward compatibility; callers should
+// prefer reading from balance.enemyAI for new code.
 // ---------------------------------------------------------------------------
 
-/** Enemy turn rates (°/s) — DESIGN DECISION, no balance entry. */
+/** Enemy turn rates (°/s) — now in balance.enemyAI.turnRates. */
 export const ENEMY_TURN_RATE_DEG_S = { escort: 8, merchant: 4 } as const
-/** Enemy acceleration toward target speed (kt/s) — DESIGN DECISION. */
+/** Enemy acceleration toward target speed (kt/s) — now in balance.enemyAI.accelKtPerS. */
 export const ENEMY_ACCEL_KT_PER_S = 2
-/** SUSPICIOUS cruise speed cap (§6.1 table: "航速 22 kt"). */
+/** SUSPICIOUS cruise speed cap (§6.1 table) — now in balance.enemyAI.suspiciousSpeedCapKt. */
 export const SUSPICIOUS_SPEED_CAP_KT = 22
-/** LOST_CONTACT cruise speed (§6.1 table: "途中 20 kt"). */
+/** LOST_CONTACT cruise speed (§6.1 table) — now in balance.enemyAI.lostContactSpeedKt. */
 export const LOST_CONTACT_SPEED_KT = 20
-/** Merchant ALERT behaviour duration (§6.1: "持续 60 s 后恢复"). */
+/** Merchant ALERT behaviour duration (§6.1) — now in balance.enemyAI.merchantAlertSeconds. */
 export const MERCHANT_ALERT_SECONDS = 60
 
 export interface Point {

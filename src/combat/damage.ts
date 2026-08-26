@@ -17,9 +17,8 @@
  *    following tick for the same ship — the event is consumed idempotently
  *    (AI explosion lookback is boolean; objectives derive sunk from hull;
  *    audio replays the explosion). Known cosmetic interaction, documented.
- *  - Collision distance (0.05 km) and cooldown (5 s) are not in
- *    balance.json (GAME_DESIGN has no values) — design constants here,
- *    flagged for t-015 balance migration.
+ *  - Collision distance and cooldown are now in balance.json (t-015 migration);
+ *    read via `balance.hull.collisionDistKm` and `balance.hull.collisionCooldownS`.
  *  - A collision only damages the player (ship collision damage is out of
  *    scope — GAME_DESIGN only specifies the player-side 10–25).
  *  - Per-game collision state lives in a WeakMap keyed on the live
@@ -38,9 +37,9 @@ import { distKm } from '../sonar/contacts'
 import { applyDamage } from '../ai/ship'
 import { drainAiPendingDamage } from '../ai/ai'
 
-/** Player-ship collision radius (km) — design constant (see header). */
+/** Player-ship collision radius (km) — now in balance.hull.collisionDistKm (t-015). */
 export const COLLISION_DIST_KM = 0.05
-/** Minimum seconds between two collision damage events — design constant. */
+/** Minimum seconds between two collision damage events — now in balance.hull.collisionCooldownS (t-015). */
 export const COLLISION_COOLDOWN_S = 5
 
 interface CollisionRuntime {
@@ -95,10 +94,10 @@ export function checkCollisions(ctx: SystemContext): void {
   const balance = ctx.balance
   for (const ship of ctx.enemies) {
     if (ship.hull <= 0) continue
-    if (distKm(ctx.player.position, ship.position) <= COLLISION_DIST_KM) {
+    if (distKm(ctx.player.position, ship.position) <= balance.hull.collisionDistKm) {
       const roll = ctx.forks.combat.int(balance.hull.collisionDamageMin, balance.hull.collisionDamageMax)
       applyHullDamage(ctx, 'collision', roll)
-      rt.nextCollisionAt = ctx.simTime + COLLISION_COOLDOWN_S
+      rt.nextCollisionAt = ctx.simTime + balance.hull.collisionCooldownS
       return // one collision event per tick
     }
   }

@@ -38,11 +38,7 @@ import type { EnemyShip, SubmarineState, Torpedo } from '../core/types'
 import type { EventBus } from '../core/eventBus'
 import type { Rng } from '../core/rng'
 import {
-  ENEMY_ACCEL_KT_PER_S,
-  ENEMY_TURN_RATE_DEG_S,
   KT_TO_KM_S,
-  LOST_CONTACT_SPEED_KT,
-  SUSPICIOUS_SPEED_CAP_KT,
   clamp,
   distKm,
   moveShip,
@@ -132,7 +128,7 @@ export interface EscortTickCtx {
 export function runEscortTick(ship: EnemyShip, rt: AiShipRuntime, ctx: EscortTickCtx): void {
   const { balance } = ctx
   const speeds = shipSpeeds(ship, balance)
-  const opts = { turnRateDegPerS: ENEMY_TURN_RATE_DEG_S.escort, accelKtPerS: ENEMY_ACCEL_KT_PER_S }
+  const opts = { turnRateDegPerS: balance.enemyAI.turnRates.escort, accelKtPerS: balance.enemyAI.accelKtPerS }
   const escortCfg = balance.enemyAI.escort
   const lkp = ship.lkp
 
@@ -157,7 +153,7 @@ export function runEscortTick(ship: EnemyShip, rt: AiShipRuntime, ctx: EscortTic
     case 'SUSPICIOUS': {
       // Turn toward the contact (LKP) at the §6.1 suspicious speed.
       const target = lkp ?? rt.post ?? ctx.anchor ?? ship.position
-      steerTo(ship, target.x, target.y, Math.min(speeds.attackKt, SUSPICIOUS_SPEED_CAP_KT), ctx.dt, opts)
+      steerTo(ship, target.x, target.y, Math.min(speeds.attackKt, balance.enemyAI.suspiciousSpeedCapKt), ctx.dt, opts)
       break
     }
     case 'ALERT': {
@@ -181,7 +177,7 @@ export function runEscortTick(ship: EnemyShip, rt: AiShipRuntime, ctx: EscortTic
     }
     case 'LOST_CONTACT': {
       const post = rt.post ?? ctx.anchor ?? ship.position
-      steerTo(ship, post.x, post.y, LOST_CONTACT_SPEED_KT, ctx.dt, opts)
+      steerTo(ship, post.x, post.y, balance.enemyAI.lostContactSpeedKt, ctx.dt, opts)
       break
     }
   }

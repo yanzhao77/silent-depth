@@ -27,7 +27,6 @@ import type { Contact, EnemyShip, MissionDef, PlayerInputs, SubmarineState, Torp
 import { combatSystem, getCombatRuntime, createTorpedo } from '../../src/combat/torpedo'
 import { solveFireSolution, type FireSolution } from '../../src/combat/fireControl'
 import { depthChargeDamage } from '../../src/combat/depthCharge'
-import { COLLISION_DIST_KM, COLLISION_COOLDOWN_S } from '../../src/combat/damage'
 import {
   detectionSystem,
   getDetectionRuntime,
@@ -519,18 +518,18 @@ describe('pending damage drain', () => {
 describe('collisions', () => {
   it('applies 10–25 hull damage when moving within the collision distance, gated by cooldown', () => {
     const player = makePlayer({ speedKt: 10, position: { x: 0, y: 0 } })
-    const ship = makeEnemy({ position: { x: COLLISION_DIST_KM / 2, y: 0 } }) // 25 m
+    const ship = makeEnemy({ position: { x: BALANCE.hull.collisionDistKm / 2, y: 0 } }) // 25 m
     const ctx = makeCtx({ player, enemies: [ship] })
     tick(ctx)
     expect(ctx.player.hull).toBeLessThan(100)
     expect(ctx.player.hull).toBeGreaterThanOrEqual(100 - BALANCE.hull.collisionDamageMax)
     expect(ctx.bus.getLog().filter((e) => e.type === 'sub.damaged' && e.payload!.source === 'collision')).toHaveLength(1)
     const hullAfterFirst = ctx.player.hull
-    // cooldown: no second collision within COLLISION_COOLDOWN_S
+    // cooldown: no second collision within collisionCooldownS
     for (let i = 0; i < 20; i++) tick(ctx) // 1 s at dt 0.05
     expect(ctx.player.hull).toBe(hullAfterFirst)
     // after the cooldown elapses, a second collision can occur
-    ctx.simTime += COLLISION_COOLDOWN_S
+    ctx.simTime += BALANCE.hull.collisionCooldownS
     tick(ctx)
     expect(ctx.player.hull).toBeLessThan(hullAfterFirst)
   })

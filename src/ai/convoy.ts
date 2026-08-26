@@ -28,8 +28,6 @@ import type { BalanceConfig } from '../core/balance'
 import type { EnemyShip } from '../core/types'
 import type { Rng } from '../core/rng'
 import {
-  ENEMY_ACCEL_KT_PER_S,
-  ENEMY_TURN_RATE_DEG_S,
   KT_TO_KM_S,
   moveShip,
   normalizeDeg,
@@ -135,7 +133,7 @@ export interface MerchantBehaviorInput {
 export function runMerchantBehavior(input: MerchantBehaviorInput): void {
   const { ship, rt, balance, dt, rng } = input
   const m = balance.enemyAI.merchant
-  const opts = { turnRateDegPerS: ENEMY_TURN_RATE_DEG_S.merchant, accelKtPerS: ENEMY_ACCEL_KT_PER_S }
+  const opts = { turnRateDegPerS: balance.enemyAI.turnRates.merchant, accelKtPerS: balance.enemyAI.accelKtPerS }
 
   // --- evade rolls (one roll per trigger event, not per tick) ---
   if (input.torpedoTargeted && rt.evadeS <= 0 && rt.neighborEvadeS <= 0 && rng.chance(m.evadeChanceOnTorpedo)) {

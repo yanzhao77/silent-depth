@@ -33,7 +33,6 @@ import {
   layerDistance,
   submarineSystem,
   KNOTS_TO_KM_PER_SEC,
-  SUB_ACCEL_KT_PER_S,
 } from '../../src/gameplay/submarine'
 import { createDecoy, updateDecoys } from '../../src/gameplay/decoy'
 import type { DepthLayer, MissionDef, PlayerInputs, SubmarineState } from '../../src/core/types'
@@ -190,8 +189,9 @@ describe('speed bands', () => {
 
   it('integrates speed toward the target with continuous acceleration', () => {
     const ctx = makeCtx()
-    // throttle 10 kt → CRUISE; accelerates 2 kt/s
-    const accelTicks = Math.ceil(10 / (SUB_ACCEL_KT_PER_S * FIXED_DT)) // 100 ticks = 5 s
+    // throttle 10 kt → CRUISE; accelerates at balance.submarine.accelKtPerS
+    const accel = ctx.balance.submarine.accelKtPerS
+    const accelTicks = Math.ceil(10 / (accel * FIXED_DT)) // 100 ticks = 5 s
     for (let i = 0; i < accelTicks; i++) tick(ctx, { inputs: { throttle: 10 } })
     expect(ctx.player.speedBand).toBe('CRUISE')
     expect(ctx.player.targetSpeedKt).toBe(10)

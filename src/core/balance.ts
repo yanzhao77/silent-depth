@@ -73,6 +73,10 @@ export interface HullConfig {
   damagedNoiseBonus: number
   collisionDamageMin: number
   collisionDamageMax: number
+  /** t-015: collision detection radius (km). */
+  collisionDistKm: number
+  /** t-015: minimum seconds between collision damage events. */
+  collisionCooldownS: number
 }
 
 export interface DetectionConfig {
@@ -149,6 +153,16 @@ export interface EnemyAIConfig {
   states: AiState[]
   transitions: Record<string, string>
   shipTypes: Record<string, ShipTypeConfig>
+  /** t-015: turn rates by role (°/s). */
+  turnRates: { escort: number; merchant: number }
+  /** t-015: acceleration toward target speed (kt/s). */
+  accelKtPerS: number
+  /** t-015: SUSPICIOUS cruise speed cap (kt). */
+  suspiciousSpeedCapKt: number
+  /** t-015: LOST_CONTACT cruise speed (kt). */
+  lostContactSpeedKt: number
+  /** t-015: merchant ALERT behaviour duration (seconds). */
+  merchantAlertSeconds: number
   escort: {
     patrolRadiusKm: number
     patrolPattern: string
@@ -359,6 +373,11 @@ export interface BalanceConfig {
     FULL: NoiseInterpConfig
   }
   rudder: RudderConfig
+  /** t-015: player submarine movement parameters. */
+  submarine: {
+    /** Acceleration/deceleration toward target speed (kt/s). */
+    accelKtPerS: number
+  }
   depthLayers: Record<DepthLayer, DepthLayerConfig>
   depthTransitionSecondsPerLayer: number
   battery: BatteryConfig

@@ -28,6 +28,9 @@
     "turnRateDegPerSecFullSpeed": 1.5,
     "lowBatteryTurnRateFactor": 0.5
   },
+  "submarine": {
+    "accelKtPerS": 2.0
+  },
   "depthLayers": {
     "Surface":   { "minM": 0,   "maxM": 3,   "noiseMod": 15,  "detectFactor": 1.5, "chargePerSec": 0.5,  "torpedoAllowed": false, "deckGunTargetable": true,  "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
     "Periscope": { "minM": 4,   "maxM": 10,  "noiseMod": 8,   "detectFactor": 1.2, "chargePerSec": 0,    "torpedoAllowed": true,  "deckGunTargetable": true,  "dcDamageFactor": 1.0, "extraBatteryPerSec": 0 },
@@ -53,7 +56,9 @@
     "damagedThreshold": 30,
     "damagedNoiseBonus": 5,
     "collisionDamageMin": 10,
-    "collisionDamageMax": 25
+    "collisionDamageMax": 25,
+    "collisionDistKm": 0.05,
+    "collisionCooldownS": 5
   },
   "detection": {
     "bands": [
@@ -142,6 +147,11 @@
       "huntingToSearching": "detection < 40 for 30s",
       "lostToNormal": "60s at escort post"
     },
+    "turnRates": { "escort": 8, "merchant": 4 },
+    "accelKtPerS": 2,
+    "suspiciousSpeedCapKt": 22,
+    "lostContactSpeedKt": 20,
+    "merchantAlertSeconds": 60,
     "shipTypes": {
       "Merchant":  { "speedKt": 9,  "hull": 100, "passiveRangeKm": 4, "attack": null },
       "Cargo":     { "speedKt": 10, "hull": 110, "passiveRangeKm": 4, "attack": null },

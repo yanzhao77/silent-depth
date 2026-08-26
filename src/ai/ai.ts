@@ -86,7 +86,6 @@ import {
   updateLkp,
 } from './search'
 import {
-  MERCHANT_ALERT_SECONDS,
   angleDiffDeg,
   applyDamage,
   clamp,
@@ -471,7 +470,7 @@ function onEnterState(
         srt.merchantAlertHeadingDeg = normalizeDeg(
           ship.headingDeg + srt.evadeSign * balance.enemyAI.merchant.alertTurnDeg,
         )
-        srt.merchantAlertS = MERCHANT_ALERT_SECONDS
+        srt.merchantAlertS = balance.enemyAI.merchantAlertSeconds
       }
       break
     }
