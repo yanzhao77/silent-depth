@@ -1,6 +1,6 @@
 # Playtest 09 — Generated Convoy + Destroyer (t-014 evidence)
 
-- **Version**: be271a0
+- **Version**: 4402fe1
 - **Mission**: GEN-04 — Generated Convoy + Destroyer (seed 2004, difficulty 2/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
 - **Result**: **DEFEAT** after 2703.8 s (54075 ticks)
