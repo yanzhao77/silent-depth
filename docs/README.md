@@ -17,7 +17,7 @@ npm run preview        # serves the production build → http://localhost:4173
 # or open dist/index.html directly (the build uses relative paths, offline-capable)
 ```
 
-Verify: `npm test` → **414 / 414 passed (18 files)** · `npm run build` → offline-verified static bundle.
+Verify: `npm test` → **432 / 432 passed (23 files)** · `npm run build` → offline-verified static bundle.
 
 ## Controls
 
