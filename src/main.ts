@@ -695,4 +695,3 @@ function playerOffScreen(snap: GameSnapshot): boolean {
 applySettings();
 menus.setSection('main');
 requestAnimationFrame(frame);
-console.log('[silent-depth] shell boot ok');
