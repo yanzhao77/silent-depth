@@ -255,6 +255,36 @@ function makeGraph(
 // use Math.random — it never feeds back into the engine.
 // ---------------------------------------------------------------------------
 
+/**
+ * Engine-loop gain target (pure, exported for tests): a speed-band gain from
+ * SFX_PARAMS.engine.bandGains, else a linear fallback speedKt/22 × 0.9.
+ */
+export function engineGainTarget(payload: Record<string, unknown> | undefined): number {
+  const bg = SFX_PARAMS.engine.bandGains;
+  if (bg) {
+    const band = payload?.band;
+    if (typeof band === 'string' && Object.prototype.hasOwnProperty.call(bg, band)) {
+      return clamp01((bg as Record<string, number>)[band] ?? 0);
+    }
+  }
+  const kt = typeof payload?.speedKt === 'number' ? payload.speedKt : NaN;
+  if (Number.isFinite(kt)) return clamp01((kt / 22) * 0.9); // 22kt max throttle
+  return 0;
+}
+
+/** GAME_ARCHITECTURE §14: detection.threshold alarms only at ≥60. */
+export function alarmGate(payload: Record<string, unknown> | undefined): boolean {
+  const raw = payload?.detection ?? payload?.band;
+  const n = typeof raw === 'number' ? raw : typeof raw === 'string' ? Number(raw) : NaN;
+  return Number.isFinite(n) && n >= 60;
+}
+
+/** t-025: periscope.exposure warns only on HIGH/CRITICAL bands. */
+export function exposureGate(payload: Record<string, unknown> | undefined): boolean {
+  const band = payload?.band;
+  return band === 'HIGH' || band === 'CRITICAL';
+}
+
 export function buildSonarPing(ctx: AudioContext, params: SfxParams): AudioGraph {
   const t0 = ctx.currentTime;
   const f0 = p(params.frequencies, 0, 900);
@@ -956,32 +986,6 @@ export function createAudio(settings: AudioSettings): AudioEngine {
     const g = loops.get('engine');
     if (!g?.gainParam) return;
     g.gainParam.setTargetAtTime(engineGainTarget(payload), c.currentTime, 0.2);
-  }
-
-  function engineGainTarget(payload: Record<string, unknown> | undefined): number {
-    const bg = SFX_PARAMS.engine.bandGains;
-    if (bg) {
-      const band = payload?.band;
-      if (typeof band === 'string' && Object.prototype.hasOwnProperty.call(bg, band)) {
-        return clamp01((bg as Record<string, number>)[band] ?? 0);
-      }
-    }
-    const kt = typeof payload?.speedKt === 'number' ? payload.speedKt : NaN;
-    if (Number.isFinite(kt)) return clamp01((kt / 22) * 0.9); // 22kt max throttle
-    return 0;
-  }
-
-  /** GAME_ARCHITECTURE §14: detection.threshold alarms only at ≥60. */
-  function alarmGate(payload: Record<string, unknown> | undefined): boolean {
-    const raw = payload?.detection ?? payload?.band;
-    const n = typeof raw === 'number' ? raw : typeof raw === 'string' ? Number(raw) : NaN;
-    return Number.isFinite(n) && n >= 60;
-  }
-
-  /** t-025: periscope.exposure warns only on HIGH/CRITICAL bands. */
-  function exposureGate(payload: Record<string, unknown> | undefined): boolean {
-    const band = payload?.band;
-    return band === 'HIGH' || band === 'CRITICAL';
   }
 
   function onEngineEvent(ev: EngineEvent): void {
