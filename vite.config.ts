@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vite';
 
 // Offline-first static build. No external CDN, no runtime network.
 export default defineConfig({
@@ -11,4 +11,4 @@ export default defineConfig({
     chunkSizeWarningLimit: 1500,
   },
   server: { port: 5173, strictPort: false },
-})
+});

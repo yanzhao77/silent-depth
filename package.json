@@ -10,6 +10,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
     "sim": "node --experimental-strip-types src/sim/runner.ts",
     "playtest": "node --experimental-strip-types src/sim/playtest.ts",
     "typecheck": "tsc --noEmit",
@@ -22,6 +23,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@vitest/coverage-v8": "^2.1.9",
     "eslint": "^10.9.1",
     "globals": "^17.11.0",
     "prettier": "^3.9.6",
