@@ -115,39 +115,67 @@ export const MANEUVER_SPEED_KT = 3;
 
 interface PendingOutput {
   simTime: number;
-  /** Owning game (the live player reference) — key for cross-game isolation. */
-  owner: object | null;
   damages: PendingDamage[];
 }
 
-let pending: PendingOutput = { simTime: -1, owner: null, damages: [] };
+/**
+ * Per-game pending damage buffers, keyed on the live player reference (the
+ * canonical per-game identity in this engine — same pattern as `gameRuntimes`
+ * and the combat `collisionRuntimes` WeakMap). A WeakMap gives strict
+ * cross-game isolation: interleaved handles (e.g. parallel playtest/unit runs)
+ * never clobber each other's undrained damage the way a module-level singleton
+ * `owner` re-key would. Entries are garbage-collected with their game.
+ *
+ * `activeOwners` shadows the keys so a parameterless `resetAiPendingOutput()`
+ * can clear every live buffer (WeakMap is not enumerable) — the test/manager
+ * hook relies on this. Owners are never strongly retained beyond the reset
+ * window for the lifetime of a session; the set is tiny (≤ handshakes in
+ * flight) and cleared on reset.
+ */
+const pendingBuffers = new WeakMap<object, PendingOutput>();
+const activeOwners = new Set<object>();
+
+function getPending(owner: object): PendingOutput {
+  let buf = pendingBuffers.get(owner);
+  if (buf === undefined) {
+    buf = { simTime: -1, damages: [] };
+    pendingBuffers.set(owner, buf);
+    activeOwners.add(owner);
+  }
+  return buf;
+}
 
 /**
- * Snapshot-and-clear the damage the AI resolved since the last drain. The
- * factory manager wires this into the t-007 combat stub (position 7), which
- * applies each entry to the player hull (sub.damaged / ship destruction).
+ * Snapshot-and-clear the damage the AI resolved for `ctx`'s game since the
+ * last drain. The factory manager wires this into the t-007 combat system
+ * (position 7), which applies each entry to the player hull (sub.damaged).
  *
- * The buffer accumulates across ticks of the same game until drained — in the
- * real engine combat drains it every tick right after the AI system, so it
- * never holds more than one tick's worth; when combat is not yet wired the
- * accumulation keeps the data available instead of silently dropping it.
+ * @param ctx the current game context; its player reference keys the buffer.
  */
-export function drainAiPendingDamage(): PendingDamage[] {
-  const out = pending.damages;
-  pending.damages = [];
+export function drainAiPendingDamage(ctx: SystemContext): PendingDamage[] {
+  const buf = pendingBuffers.get(ctx.player);
+  if (buf === undefined) return [];
+  const out = buf.damages;
+  buf.damages = [];
   return out;
 }
 
-/** Test/manager hook: fully reset the pending bridge. */
-export function resetAiPendingOutput(): void {
-  pending = { simTime: -1, owner: null, damages: [] };
+/** Test/manager hook: reset a game's pending buffer. With no arg, clears
+ *  every live buffer (WeakMap is not enumerable, so `activeOwners` shadows
+ *  the keys for the parameterless form). */
+export function resetAiPendingOutput(ctx: SystemContext | null = null): void {
+  if (ctx === null) {
+    for (const owner of activeOwners) pendingBuffers.delete(owner);
+    activeOwners.clear();
+    return;
+  }
+  pendingBuffers.delete(ctx.player);
+  activeOwners.delete(ctx.player);
 }
 
-/** Re-key the buffer when a different game instance ticks (no cross-game leak). */
+/** Get-or-create the buffer for `ctx` (called at the top of the AI system). */
 function ensurePendingOwner(ctx: SystemContext): void {
-  if (pending.owner !== ctx.player) {
-    pending = { simTime: ctx.simTime, owner: ctx.player, damages: [] };
-  }
+  getPending(ctx.player);
 }
 
 // ---------------------------------------------------------------------------
@@ -609,7 +637,7 @@ function escortCtx(ctx: SystemContext, rt: AiGameRuntime): EscortTickCtx {
     rng: ctx.forks.ai,
     addDetection: (d) => applyDetection(ctx, d),
     emitDamage: (d) => {
-      pending.damages.push(d);
+      getPending(ctx.player).damages.push(d);
     },
     heavyEscort: rt.heavyEscort,
     fleetHeadingDeg: rt.fleetHeadingDeg,

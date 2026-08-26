@@ -1087,7 +1087,7 @@ describe('aiSystem attacks and events', () => {
     expect(escort.depthChargesLeft).toBeLessThan(20);
     expect(escort.depthChargesLeft).toBeGreaterThanOrEqual(0);
     // detonations resolved → pending damage handed to combat
-    const pending = drainAiPendingDamage();
+    const pending = drainAiPendingDamage(ctx);
     expect(pending.length).toBeGreaterThan(0);
     expect(pending.every((d) => d.source === 'depthCharge')).toBe(true);
   });
@@ -1137,7 +1137,7 @@ describe('aiSystem attacks and events', () => {
     runTicks(ctx, 120); // 6 s → at least one shot (cooldown 5 s)
     expect(fired.length).toBeGreaterThanOrEqual(1);
     expect(fired.every((id) => id === 'E-01')).toBe(true);
-    const pending = drainAiPendingDamage();
+    const pending = drainAiPendingDamage(ctx);
     const hitCount = hits.filter(Boolean).length;
     expect(pending.filter((d) => d.source === 'deckGun').length).toBe(hitCount);
     // cooldown: shots are ≥ 5 s apart
@@ -1295,11 +1295,11 @@ describe('aiSystem attacks and events', () => {
     });
     const ctx = makeCtx({ enemies: [escort], player });
     runTicks(ctx, 5); // drops at t≈0.05 → 1 damage buffered
-    const first = drainAiPendingDamage();
+    const first = drainAiPendingDamage(ctx);
     expect(first.length).toBeGreaterThanOrEqual(1);
-    expect(drainAiPendingDamage()).toHaveLength(0); // drained → cleared
+    expect(drainAiPendingDamage(ctx)).toHaveLength(0); // drained → cleared
     runTicks(ctx, 70); // next drop at t≈3.05 → fresh accumulation
-    expect(drainAiPendingDamage().length).toBeGreaterThanOrEqual(1);
+    expect(drainAiPendingDamage(ctx).length).toBeGreaterThanOrEqual(1);
   });
 
   it('pending buffer never leaks into a different game instance', () => {
@@ -1319,10 +1319,12 @@ describe('aiSystem attacks and events', () => {
     const ctxA = makeCtx({ enemies: [escort], player: playerA });
     runTicks(ctxA, 3); // game A buffers drops
     const ctxB = makeCtx({ enemies: [makeEnemy()], player: makePlayer() }); // fresh game B
-    aiSystem(ctxB); // B ticks → buffer re-keys to B (A's undrained data is dropped, never applied to B)
-    expect(drainAiPendingDamage()).toHaveLength(0); // buffer belongs to B now; B dropped nothing
+    aiSystem(ctxB); // B ticks → its own buffer (A's undrained data stays under A)
+    expect(drainAiPendingDamage(ctxB)).toHaveLength(0); // B dropped nothing
+    // A's buffer is independent — still holds its undrained drops.
+    expect(drainAiPendingDamage(ctxA).length).toBeGreaterThanOrEqual(1);
     runTicks(ctxB, 3);
-    expect(drainAiPendingDamage()).toHaveLength(0); // B has no HUNTING escort → nothing accumulates
+    expect(drainAiPendingDamage(ctxB)).toHaveLength(0); // B has no HUNTING escort → nothing accumulates
   });
 });
 

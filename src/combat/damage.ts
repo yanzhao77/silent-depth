@@ -64,7 +64,7 @@ function getCollisionRuntime(ctx: SystemContext): CollisionRuntime {
  * into the next tick.
  */
 export function drainPendingPlayerDamage(ctx: SystemContext): void {
-  const damages = drainAiPendingDamage();
+  const damages = drainAiPendingDamage(ctx);
   for (const damage of damages) {
     applyHullDamage(ctx, damage.source, damage.amount);
   }

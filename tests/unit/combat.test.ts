@@ -616,10 +616,10 @@ describe('pending damage drain', () => {
     expect(ctx.player.detection).toBeGreaterThanOrEqual(BALANCE.detection.sources.depthChargeHit);
     expect(ctx.player.detection).toBeLessThan(2 * BALANCE.detection.sources.depthChargeHit);
     // buffer is drained: nothing leaks into the next tick
-    expect(drainAiPendingDamage()).toEqual([]);
+    expect(drainAiPendingDamage(ctx)).toEqual([]);
     // another ai tick without a detonation → still empty after combat
     tickAiAndCombat(ctx, 1);
-    expect(drainAiPendingDamage()).toEqual([]);
+    expect(drainAiPendingDamage(ctx)).toEqual([]);
   });
 });
 
