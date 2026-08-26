@@ -54,11 +54,17 @@ import {
   setKnownMissionIds,
   updateOnMissionResult,
   SAVE_KEY,
-  type MissionResult,
   type SaveData,
   type SaveSettings,
 } from './save/save';
 import { createAudio, type AudioEngine } from './audio/audio';
+import {
+  assembleInputs,
+  buildMissionResult,
+  findEnemy,
+  findTorpedo,
+  isPlayerOffScreen,
+} from './ui/shellLogic';
 
 // ---------------------------------------------------------------------------
 // DOM shell
@@ -96,8 +102,14 @@ let save: SaveData = saveStore.load();
 // t-022 i18n: initial language from save settings → navigator → 'en'.
 // A first run (no stored save) persists the detected language so returning
 // players keep their choice; otherwise detectLanguage() read the saved one.
-const hadStoredSave =
-  typeof localStorage !== 'undefined' && localStorage.getItem(SAVE_KEY) !== null;
+// localStorage may throw (SecurityError) in hardened privacy modes — guard
+// the bare getItem so the shell still boots (falls through to a detect).
+let hadStoredSave: boolean;
+try {
+  hadStoredSave = typeof localStorage !== 'undefined' && localStorage.getItem(SAVE_KEY) !== null;
+} catch {
+  hadStoredSave = false;
+}
 let lang: Lang = detectLanguage();
 if (!hadStoredSave) {
   save = { ...save, settings: { ...save.settings, app: { ...save.settings.app, language: lang } } };
@@ -319,6 +331,9 @@ window.addEventListener('pointerdown', unlockAudio);
 function startMission(id: string): void {
   missionId = id;
   missionDef = getMissionDef(id);
+  // Restart safety: kill any leftover engine/ambience loop from a previous
+  // run before the new mission's events retarget it (t-028 lifecycle).
+  audio.stop('engine');
   handle = createGame(missionDef, missionDef.seed);
   renderer = createRenderer({ seed: missionDef.seed, mission: missionDef });
 
@@ -367,6 +382,14 @@ function abortToMenu(): boolean {
   } catch {
     // Illegal transition (already MENU) — ignore.
   }
+  // Stop the engine/ambience loops so the sub's thrum doesn't bleed into the
+  // menu across missions (t-028 lifecycle). Release the per-mission objects
+  // so the rAF loop no longer steps/renders the abandoned handle.
+  audio.stop('engine');
+  handle = null;
+  renderer = null;
+  snapshot = null;
+  prevSnapshot = null;
   hudRoot.style.display = 'none';
   lastShownState = 'MENU';
   menus.showEngineState('MENU');
@@ -379,27 +402,24 @@ function abortToMenu(): boolean {
 
 function buildInputs(): PlayerInputs {
   const base = input.getInputs();
-  let fire = input.consumeFireRequest();
-  if (fire !== null) {
-    if (salvo === 2) salvoPending = true;
-  } else if (salvoPending) {
-    fire = selectedContactId;
-    salvoPending = false;
-  }
-  const inputs: PlayerInputs = {
-    ...base,
-    fireTorpedo: fire,
+  const fireRequest = input.consumeFireRequest();
+  // t-026 periscope edges (keyboard latches OR shell buttons).
+  const pulses = {
     pause: pausePulse,
-    // t-026 periscope edges (keyboard latches OR shell buttons).
     periscope: periscopePulse || input.consumePeriscopeRequest(),
-    lockTarget: lockPulse || input.consumeLockRequest(),
-    emergencyDive: divePulse || input.consumeDiveRequest(),
+    lock: lockPulse || input.consumeLockRequest(),
+    dive: divePulse || input.consumeDiveRequest(),
   };
+  const queuedFire = salvoPending ? selectedContactId : null;
+  const assembled = assembleInputs(base, fireRequest, queuedFire, pulses);
+  // Salvo-2 queued fire: latch a follow-up shot when a request fires in salvo 2.
+  if (assembled.latchQueue && salvo === 2) salvoPending = true;
+  else if (assembled.fireTorpedo !== null && queuedFire !== null) salvoPending = false;
   pausePulse = false;
   periscopePulse = false;
   lockPulse = false;
   divePulse = false;
-  return inputs;
+  return assembled.inputs;
 }
 
 // ---------------------------------------------------------------------------
@@ -462,45 +482,15 @@ function applyEventEffect(ev: EventEntry, snap: GameSnapshot): void {
   }
 }
 
-function findTorpedo(
-  snap: GameSnapshot,
-  id: unknown,
-): { position: { x: number; y: number } } | null {
-  if (typeof id !== 'string') return null;
-  for (const t of snap.torpedoes) {
-    if (t.id === id) return t;
-  }
-  return null;
-}
-
-function findEnemy(
-  snap: GameSnapshot,
-  id: unknown,
-): { position: { x: number; y: number }; shipClass: string } | null {
-  if (typeof id !== 'string') return null;
-  for (const e of snap.enemies) {
-    if (e.id === id) return e;
-  }
-  return null;
-}
+// (findTorpedo / findEnemy moved to src/ui/shellLogic.ts — pure, testable.)
 
 // ---------------------------------------------------------------------------
 // Mission-result settlement (save update — once per mission)
 // ---------------------------------------------------------------------------
 
 function settleResult(snap: GameSnapshot): void {
-  if (missionId === null) return;
-  const result: MissionResult = {
-    missionId,
-    completed: outcome === 'victory',
-    score: snap.score.total,
-    grade: snap.score.grade,
-    torpedoesFired: snap.stats.torpedoesFired,
-    torpedoesHit: snap.stats.torpedoesHit,
-    peakDetection: snap.stats.peakDetection,
-    elapsedS: snap.stats.elapsedS,
-    shipsSunk: shipsSunkThisRun,
-  };
+  if (missionId === null || outcome === null) return;
+  const result = buildMissionResult(missionId, outcome, snap, shipsSunkThisRun);
   save = updateOnMissionResult(save, result, MISSION_IDS);
   persistSave();
 }
@@ -681,11 +671,7 @@ function frame(nowMs: number): void {
 }
 
 function playerOffScreen(snap: GameSnapshot): boolean {
-  const p = camera.worldToScreen(snap.playerSub.position.x, snap.playerSub.position.y);
-  const m = 48;
-  return (
-    p.x < -m || p.x > camera.viewport.width + m || p.y < -m || p.y > camera.viewport.height + m
-  );
+  return isPlayerOffScreen(snap, camera);
 }
 
 // ---------------------------------------------------------------------------
