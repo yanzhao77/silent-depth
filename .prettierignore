@@ -1,0 +1,8 @@
+dist
+coverage
+node_modules
+assets
+reports
+factory
+package-lock.json
+*.md
