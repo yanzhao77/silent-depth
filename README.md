@@ -17,6 +17,8 @@
 | **游戏实拍** — 完整 UI 布局:深度/速度/航向 HUD + 声呐接触列表 + 火控解算面板 + 小地图运动轨迹 + 潜艇俯视图 | **M02 首次伏击** — 环境渲染预览:油轮接触(不确定性椭圆)+ 声呐 ping 扩散环 |
 | ![袭击护航队](assets/screenshots/m03-convoy.png) | ![鱼雷出管](assets/screenshots/m02-torpedo.png) |
 | **M03 袭击护航队** — 货船编队 + 驱逐舰护航,接触以椭圆而非红点呈现 | **鱼雷航行** — 无自动锁定,直航 + 尾迹气泡,命中靠提前量 |
+| ![声呐训练](assets/screenshots/m01-sonar.png) | ![重装护航](assets/screenshots/m04-heavy-escort.png) |
+| **M01 声呐训练** — 目标跟踪与分类:ping 环 + 接触椭圆收敛 | **M04 重装护航** — 风暴 + 双驱逐舰护航,低能见度下的接触管理 |
 | ![静默猎手(夜间)](assets/screenshots/m05-night-fog.png) | |
 | **M05 静默猎手** — 夜间 + 浓雾叠层,低能见度下的伏击 | |
 
@@ -41,7 +43,7 @@ npm install
 npm run dev        # 开发 (http://localhost:5173)
 npm run build      # 生成离线静态构建 → dist/
 npm run preview    # 预览生产构建
-npm test           # 432 项测试 (vitest, 23 文件)
+npm test           # 489 项测试 (vitest, 28 文件)
 ```
 
 > 直接玩:构建后打开 `dist/index.html` 即可,无需服务器。
@@ -102,7 +104,7 @@ npm test           # 432 项测试 (vitest, 23 文件)
 - **确定性**:全系统种子化 RNG,同种子同操作 → 完全可复现(测试证明 3000-tick 快照 byte-identical)
 - **AI Playtest**:12 次无头试玩、5 次胜利(M01/M02/生成任务),失败均带证据
 - **诚实记录**:所有素材程序化生成(CC0)、零第三方版权素材、零运行时网络;平衡调整全部证据驱动
-- **质量门槛**:16 道 Gate 全部通过,**432/432 测试**(23 文件,发布后补入 screenshots 测试套件),离线构建验证通过
+- **质量门槛**:16 道 Gate 全部通过,**489/489 测试**(28 文件,发布后补入 screenshots 测试套件),离线构建验证通过
 
 ## 🏭 工厂生产证据（DeepSeek Software Factory V0.3）
 
@@ -112,7 +114,7 @@ npm test           # 432 项测试 (vitest, 23 文件)
 | 证据 | 数据 |
 |---|---|
 | 需求追踪 | **28/28 需求 VERIFIED**（FR-01..22 功能 + FR-1..6 非功能，覆盖 100%） |
-| 测试 | **432/432 通过**（23 文件，真实运行）· 验收矩阵 28 项全 PASS |
+| 测试 | **489/489 通过**（28 文件，真实运行）· 验收矩阵 28 项全 PASS |
 | 证据链 | **36 条证据全部 AUDITED**（VERIFIED → 审计复核，rawReference 可逐条核对） |
 | 审计 | **FINAL AUDIT: RELEASE**（8 次审计记录，初始 BLOCK_RELEASE → 补齐证据 → 0 失败） |
 | 文档 | **31 份 game-profile 文档**，Documentation Gate **PASSED** · 一致性 0 FLAG · health **GOOD** |
@@ -131,4 +133,4 @@ npm test           # 432 项测试 (vitest, 23 文件)
 ## 已知限制
 
 - M03+ 的**脚本化** AI 胜利尚未达成(护航压迫 + 商船散开 + 电池上限),人工玩家采用"静默伏击"战术可通关;详见 `reports/balance/BALANCE_REPORT.md`
-- 视觉浏览器冒烟测试未在无头环境执行,建议 `npm run preview` 手动验收
+- 视觉表现已有**无头软件画布**渲染测试覆盖(`renderer.test.ts` 分支 + `screenshots.test.ts` 预览图),但未在**真实浏览器**执行;建议 `npm run preview` 手动验收

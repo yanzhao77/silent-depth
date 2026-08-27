@@ -202,6 +202,52 @@ describe('headless screenshot generator (README previews)', () => {
     console.log('wrote', file, buf.length, 'bytes');
   });
 
+  it('m01-sonar: single merchant tracked through classification', () => {
+    const def = getMissionDef('M01');
+    const h = createGame(def, def.seed);
+    const rt = h as unknown as { __internal: Rt };
+    rt.__internal.player.position = { x: 5, y: 15 };
+    rt.__internal.player.headingDeg = 45;
+    const snap = runTo(h, 600, (s) =>
+      s.playerSub.pingCooldown <= 0 && s.simTime % 20 < FIXED_DT ? { ...IDLE, ping: true } : IDLE,
+    );
+    const camera = createCamera({
+      zoom: 8,
+      center: { x: snap.playerSub.position.x, y: snap.playerSub.position.y },
+      viewport: { width: W, height: H },
+    });
+    const file = renderAndSave('m01-sonar', snap, def, def.seed, camera, { ping: true });
+    const buf = readFileSync(file);
+    expect(buf[0]).toBe(0x89);
+    expect(buf.length).toBeGreaterThan(4_000);
+    console.log('wrote', file, buf.length, 'bytes');
+  });
+
+  it('m04-heavy-escort: storm + double destroyer escort with contact ellipses', () => {
+    const def = getMissionDef('M04');
+    const h = createGame(def, def.seed);
+    const rt = h as unknown as { __internal: Rt };
+    const alive0 = step(h, FIXED_DT, IDLE).enemies.filter((e) => e.hull > 0);
+    const cx0 = alive0.reduce((n, e) => n + e.position.x, 0) / alive0.length;
+    const cy0 = alive0.reduce((n, e) => n + e.position.y, 0) / alive0.length;
+    rt.__internal.player.position = { x: cx0 - 4, y: cy0 };
+    rt.__internal.player.headingDeg = 90;
+    // ping every ~30 s so the escorted convoy is sonar-perceived in the storm
+    const snap = runTo(h, 9_000, (s) =>
+      s.playerSub.pingCooldown <= 0 && s.simTime % 30 < FIXED_DT ? { ...IDLE, ping: true } : IDLE,
+    );
+    const camera = createCamera({
+      zoom: 6,
+      center: { x: snap.playerSub.position.x, y: snap.playerSub.position.y },
+      viewport: { width: W, height: H },
+    });
+    const file = renderAndSave('m04-heavy-escort', snap, def, def.seed, camera);
+    const buf = readFileSync(file);
+    expect(buf[0]).toBe(0x89);
+    expect(buf.length).toBeGreaterThan(4_000);
+    console.log('wrote', file, buf.length, 'bytes');
+  });
+
   it('writes the screenshots README with honest labels', () => {
     const lines = [
       '# SILENT DEPTH — 游戏截图 / Screenshots',
@@ -212,8 +258,10 @@ describe('headless screenshot generator (README previews)', () => {
       '',
       '| 文件 | 场景 |',
       '|---|---|',
+      '| m01-sonar.png | 声呐训练:玩家潜艇跟踪商船(分类接触 + ping 扩散环) |',
       '| m02-ambush.png | 首次伏击:玩家潜艇 + 油轮接触(不确定性椭圆)+ 声呐 ping 扩散环 |',
       '| m03-convoy.png | 袭击护航队:4 货船 + 驱逐舰护航(接触椭圆,宽视野) |',
+      '| m04-heavy-escort.png | 重装护航:风暴 + 双驱逐舰护航(低能见度) |',
       '| m05-night-fog.png | 静默猎手:夜间 + 浓雾天气叠层 |',
       '| m02-torpedo.png | 鱼雷出管航行(尾迹气泡) |',
       '',
