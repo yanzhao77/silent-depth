@@ -1,20 +1,55 @@
 /**
- * SILENT DEPTH V2.0 — Ship Renderer (src/renderer/three/ShipRenderer.ts)
+ * SILENT DEPTH V2.2 — Naval Ship Renderer
  *
- * Manages 3D ship meshes in the scene. Creates procedural geometry per
- * ship class, caches geometries/materials, and updates positions each frame.
+ * Resolves local procedural naval families into distance-driven LOD roots. This
+ * renderer consumes RenderShip only; visibility and AI state remain simulation
+ * facts, while bobbing and warning tint are presentation-only.
  */
 
 import * as THREE from 'three';
-import { createShipGeometry } from '../procedural/shipGeometry';
+import { createShipLodGeometry } from '../procedural/shipGeometry';
 import type { RenderShip } from '../types';
 
 const RAD = Math.PI / 180;
 
+function cloneVisualPrototype(prototype: THREE.Group): THREE.Group {
+  const clone = prototype.clone(true);
+  // Geometry stays shared between same-class ships; materials are local so the
+  // HUNTING feedback below never recolours a separate entity of the same class.
+  clone.traverse((child) => {
+    if (!(child instanceof THREE.Mesh)) return;
+    child.material = Array.isArray(child.material)
+      ? child.material.map((material) => material.clone())
+      : child.material.clone();
+  });
+  return clone;
+}
+
+function disposeGroupResources(
+  group: THREE.Group,
+  geometries: Set<THREE.BufferGeometry>,
+  materials: Set<THREE.Material>,
+): void {
+  group.traverse((child) => {
+    if (!(child instanceof THREE.Mesh)) return;
+    if (!geometries.has(child.geometry)) {
+      child.geometry.dispose();
+      geometries.add(child.geometry);
+    }
+    const childMaterials = Array.isArray(child.material) ? child.material : [child.material];
+    for (const material of childMaterials) {
+      if (!materials.has(material)) {
+        material.dispose();
+        materials.add(material);
+      }
+    }
+  });
+}
+
 export class ShipRenderer {
-  private _scene: THREE.Scene;
-  private _meshes = new Map<string, THREE.Group>();
-  private _geometryCache = new Map<string, THREE.Group>();
+  private readonly _scene: THREE.Scene;
+  private readonly _meshes = new Map<string, THREE.Group>();
+  private readonly _prototypeCache = new Map<string, THREE.Group>();
 
   constructor(scene: THREE.Scene) {
     this._scene = scene;
@@ -25,9 +60,7 @@ export class ShipRenderer {
 
     for (const ship of ships) {
       activeIds.add(ship.id);
-
       if (!ship.visible) {
-        // Hide undetected ships
         const existing = this._meshes.get(ship.id);
         if (existing) existing.visible = false;
         continue;
@@ -35,69 +68,55 @@ export class ShipRenderer {
 
       let group = this._meshes.get(ship.id);
       if (!group) {
-        // Create or clone from cache
-        const cached = this._geometryCache.get(ship.shipClass);
-        if (cached) {
-          group = cached.clone();
-        } else {
-          group = createShipGeometry(ship.shipClass);
-          this._geometryCache.set(ship.shipClass, group);
-          group = group.clone();
+        let prototype = this._prototypeCache.get(ship.shipClass);
+        if (!prototype) {
+          prototype = createShipLodGeometry(ship.shipClass);
+          this._prototypeCache.set(ship.shipClass, prototype);
         }
+        group = cloneVisualPrototype(prototype);
+        group.name = `ship-${ship.id}`;
+        group.userData.renderOnly = true;
         this._scene.add(group);
         this._meshes.set(ship.id, group);
       }
 
       group.visible = true;
       group.position.set(ship.position.x, ship.position.y, ship.position.z);
-
-      // Rotate to match heading (engine: 0=north CW → Three.js Y rotation)
-      // In Three.js with our coord mapping, heading rotation is around Y axis
       group.rotation.y = -ship.headingDeg * RAD + Math.PI / 2;
+      group.position.y += Math.sin(wallTime * 1.5 + ship.position.x * 10) * 0.0005;
 
-      // Subtle bob on waves
-      const bob = Math.sin(wallTime * 1.5 + ship.position.x * 10) * 0.0005;
-      group.position.y += bob;
-
-      // AI state visual coding: hunting ships get a subtle red tint
-      if (ship.aiState === 'HUNTING') {
-        group.traverse((child) => {
-          if (child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial) {
-            child.material.emissive.setHex(0x330000);
-            child.material.emissiveIntensity = 0.3;
-          }
-        });
-      } else {
-        group.traverse((child) => {
-          if (child instanceof THREE.Mesh && child.material instanceof THREE.MeshStandardMaterial) {
-            child.material.emissive.setHex(0x000000);
-            child.material.emissiveIntensity = 0;
-          }
-        });
-      }
+      const hunting = ship.aiState === 'HUNTING';
+      group.traverse((child) => {
+        if (!(child instanceof THREE.Mesh)) return;
+        const materials = Array.isArray(child.material) ? child.material : [child.material];
+        for (const material of materials) {
+          if (!(material instanceof THREE.MeshStandardMaterial)) continue;
+          material.emissive.setHex(hunting ? 0x26110a : 0x000000);
+          material.emissiveIntensity = hunting ? 0.16 : 0;
+        }
+      });
     }
 
-    // Remove ships no longer in the list
-    for (const [id, mesh] of this._meshes) {
+    for (const [id, group] of this._meshes) {
       if (!activeIds.has(id)) {
-        this._scene.remove(mesh);
+        this._scene.remove(group);
         this._meshes.delete(id);
       }
     }
   }
 
   dispose(): void {
-    for (const [, group] of this._meshes) {
+    const geometries = new Set<THREE.BufferGeometry>();
+    const materials = new Set<THREE.Material>();
+    for (const group of this._meshes.values()) {
       this._scene.remove(group);
-      group.traverse((child) => {
-        if (child instanceof THREE.Mesh) {
-          child.geometry?.dispose();
-          if (Array.isArray(child.material)) child.material.forEach((m) => m.dispose());
-          else child.material?.dispose();
-        }
-      });
+      disposeGroupResources(group, geometries, materials);
+    }
+    // Prototypes are never added to the scene but own the original materials.
+    for (const prototype of this._prototypeCache.values()) {
+      disposeGroupResources(prototype, geometries, materials);
     }
     this._meshes.clear();
-    this._geometryCache.clear();
+    this._prototypeCache.clear();
   }
 }

@@ -1,8 +1,10 @@
+import * as THREE from 'three';
 import { describe, expect, it } from 'vitest';
 import combatEffectsSource from '../../src/renderer/three/EffectsManager.ts?raw';
 import oceanSource from '../../src/renderer/three/OceanRenderer.ts?raw';
 import skySource from '../../src/renderer/three/SkyRenderer.ts?raw';
 import shipSource from '../../src/renderer/procedural/shipGeometry.ts?raw';
+import { createShipGeometry, createShipLodGeometry } from '../../src/renderer/procedural/shipGeometry';
 import submarineSource from '../../src/renderer/procedural/submarineGeometry.ts?raw';
 import { createSubmarineGeometry } from '../../src/renderer/procedural/submarineGeometry';
 import registryRaw from '../../assets/v2/registry.json?raw';
@@ -84,6 +86,30 @@ describe('V2.2 renderer asset pipeline', () => {
     expect(lod2.group.children.length).toBeGreaterThan(lod3.group.children.length);
     expect(lod0.group.getObjectByName('forward-torpedo-tube')).toBeDefined();
     expect(lod3.group.getObjectByName('forward-torpedo-tube')).toBeUndefined();
+  });
+
+  it('builds five visually distinct local ship classes and preserves each class at every LOD', () => {
+    const requiredPartByClass: Readonly<Record<string, string>> = {
+      Merchant: 'merchant-crane-arm',
+      Cargo: 'cargo-container',
+      Tanker: 'tanker-deck-tank',
+      Destroyer: 'destroyer-forward-gun-turret',
+      Frigate: 'frigate-flight-deck',
+    };
+    const partCounts = new Set<number>();
+    for (const [shipClass, requiredPart] of Object.entries(requiredPartByClass)) {
+      const lod0 = createShipGeometry(shipClass, 0);
+      const lod3 = createShipGeometry(shipClass, 3);
+      expect(lod0.getObjectByName('ship-hull'), `${shipClass} hull`).toBeDefined();
+      expect(lod0.getObjectByName(requiredPart), `${shipClass} identifying silhouette part`).toBeDefined();
+      expect(lod0.children.length, `${shipClass} near detail`).toBeGreaterThan(lod3.children.length);
+      partCounts.add(lod0.children.length);
+
+      const lodRoot = createShipLodGeometry(shipClass);
+      expect(lodRoot.children).toHaveLength(1);
+      expect((lodRoot.children[0] as THREE.LOD).levels).toHaveLength(4);
+    }
+    expect(partCounts.size).toBeGreaterThanOrEqual(3);
   });
 
   it('rejects remote, absolute, traversal and platform-specific asset paths', () => {

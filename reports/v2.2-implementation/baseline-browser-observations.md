@@ -91,3 +91,38 @@ M05 Silent Hunter 在升级后进入 RUNNING（Night）。夜间画面仍保持�
 ## Hero Submarine Phase — M05 Periscope Check
 
 M05 从 21 m Shallow 上浮至 7 m Periscope 后可正常 Raising → Raised；按 `P` 进入圆形光学视图，显示方位、准星、曝光与 Raised 计时。潜艇渲染器的新 LOD 组会在所有细节层同步潜望镜、螺旋桨与局部舵面可视动画。光学视图仍把无接触数据呈现为 Unknown / `--`，因此未改变声呐或目标位置不确定性。
+
+
+## Enemy Ship Phase — Browser Reload and Entry Check
+
+载入新的舰船 LOD 源码后，隔离 Chromium 审计副本可正常渲染主菜单与全任务列表，M01–M05 均保持可访问。随后启动 M03 检查程序化货轮、护航舰、可见性门禁和多舰缓存路径；敌舰资产仍只会在 `RenderShip.visible` 为真时创建。
+
+
+## Enemy Ship Phase — M03 Contact-Gated Runtime Check
+
+M03 可正常进入 RUNNING。主动声呐后，现有接触链按原有规则显示为 `Large Surface`、距离、方位与 25% 置信度；这证明敌舰 `visible` 门禁和低置信度不确定性没有因 LOD 或材质更新而丢失。船体资产仅在既有 RenderState 指示可见时被创建，未向 UI 或渲染注入真实、未确认的敌舰坐标。
+
+
+## Enemy Ship Phase — M01 Entry Check
+
+刷新后 M01–M05 入口仍完整存在；M01 将用于确认单艘 Merchant 资产在声呐接触变为可见时仍沿用原有未知接触 → 分类链。此步骤只操作既有主动声呐输入，不修改舰船、任务或传感器数据。
+
+
+## Enemy Ship Phase — M01 Runtime Check
+
+M01 在真实 Chromium 中进入 RUNNING，随后按该任务现有时序显示 `ESCAPED`；主动声呐 UI 事件可触发但本次短任务窗口未留下活动接触。该情况与本阶段未改动的任务/传感器流程一致，不将其归因于敌舰资产。已由单元测试覆盖 Merchant 资产、四级 LOD 与本地可见性渲染路径；M03 的五接触运行记录提供多舰门禁验证。
+
+
+## Enemy Ship Phase — M04 Runtime Check
+
+M04 Heavy Escort 成功显示任务简报并转入既有 Storm → Fog 环境，保留 4 Merchant + 2 Escort 的任务级公开情报、3 km 能见度和所有原有目标。多类舰船 LOD 原型的创建未影响风暴场景初始化或 UI；天气、海面和可见性美术将由下一阶段单独处理。
+
+
+## Enemy Ship Phase — M05 Entry Check
+
+敌舰 LOD 与材质隔离源码载入后，M05 仍可从任务列表正常访问；下一步会在该既有夜间任务中复核潜望镜进入前置和光学视图，确认新增舰船呈现树未干扰相机/潜望镜状态链。
+
+
+## Enemy Ship Phase — M05 Periscope Check
+
+M05 在敌舰 LOD 源码载入后可从 21 m Shallow 上浮至 7 m Periscope，并按原有 `P` 输入进入潜望镜光学视图。曝光、方位、Unknown 接触、HUD、暂停/控制按钮均正常；新增敌舰 LOD 根节点不改动潜望镜状态机、接触置信度或任何射击/锁定逻辑。
