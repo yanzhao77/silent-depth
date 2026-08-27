@@ -96,8 +96,9 @@ function p(nums: readonly number[], i: number, dflt: number): number {
   return nums[i] ?? dflt;
 }
 
-/** Fill a Float32Array with white/pink/brown noise (Paul Kellet pink). */
-function fillNoise(data: Float32Array, color: NoiseColor): void {
+/** Fill a Float32Array with white/pink/brown noise (Paul Kellet pink).
+ *  @pure-noise — exported for tests; rendering-layer RNG (ADR-004-exempt). */
+export function fillNoise(data: Float32Array, color: NoiseColor): void {
   if (color === 'white') {
     for (let i = 0; i < data.length; i++) data[i] = Math.random() * 2 - 1;
     return;
@@ -161,8 +162,9 @@ function filterOrBypass(ctx: AudioContext, spec: FilterSpec | null | undefined):
 /**
  * Envelope: fast attack to `peak`, hold, exponential release to silence.
  * `peak` is linear 0..1; exponential ramps never hit exactly 0 (WebAudio).
+ * @pure-graph — exported for tests; drives a MockAudioContext gain param.
  */
-function makeEnv(
+export function makeEnv(
   ctx: AudioContext,
   t0: number,
   peak: number,

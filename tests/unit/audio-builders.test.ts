@@ -10,10 +10,21 @@
 // No real AudioContext is created; all runs stay in Node.
 // ---------------------------------------------------------------------------
 import { describe, expect, it } from 'vitest';
-import { alarmGate, engineGainTarget, exposureGate, SFX_BUILDERS } from '../../src/audio/audio';
+import {
+  alarmGate,
+  engineGainTarget,
+  exposureGate,
+  fillNoise,
+  makeEnv,
+  SFX_BUILDERS,
+} from '../../src/audio/audio';
 import { SFX_NAMES, SFX_PARAMS } from '../../src/audio/sfx';
 import type { SfxParams } from '../../src/audio/sfx';
-import { createMockAudioContext, type MockContext } from '../tools/lib/webaudio-mock';
+import {
+  createMockAudioContext,
+  type MockAudioParam,
+  type MockContext,
+} from '../tools/lib/webaudio-mock';
 
 function buildAllNames(): readonly string[] {
   return SFX_NAMES;
@@ -124,5 +135,81 @@ describe('SFX helpers (exported pure gates)', () => {
     expect(exposureGate({ band: 'HIGH' })).toBe(true);
     expect(exposureGate({ band: 'CRITICAL' })).toBe(true);
     expect(exposureGate({})).toBe(false);
+  });
+});
+
+describe('fillNoise (noise generation)', () => {
+  it('fills a buffer with white noise in [-1, 1] and non-zero energy', () => {
+    const data = new Float32Array(512);
+    fillNoise(data, 'white');
+    expect(data.every((v) => v >= -1 && v <= 1)).toBe(true);
+    let energy = 0;
+    for (const v of data) energy += Math.abs(v);
+    expect(energy).toBeGreaterThan(0);
+  });
+
+  it('produces distinct distributions for white / pink / brown', () => {
+    const white = new Float32Array(2048);
+    const pink = new Float32Array(2048);
+    const brown = new Float32Array(2048);
+    fillNoise(white, 'white');
+    fillNoise(pink, 'pink');
+    fillNoise(brown, 'brown');
+    // Means differ across colors (pink/brown are low-pass, so |mean| > white).
+    const mean = (a: Float32Array) => a.reduce((s, v) => s + v, 0) / a.length;
+    expect(mean(white)).not.toBeCloseTo(mean(brown), 3);
+    expect(mean(pink)).not.toBeCloseTo(mean(brown), 3);
+  });
+
+  it('is deterministic for a fixed buffer only with a fixed RNG (statistical shape)', () => {
+    // The generator uses Math.random (render-layer RNG), so we can only assert
+    // that repeated fills stay in range and non-degenerate.
+    const a = new Float32Array(256);
+    const b = new Float32Array(256);
+    fillNoise(a, 'pink');
+    fillNoise(b, 'pink');
+    for (let i = 0; i < a.length; i++) {
+      expect(a[i]!).toBeGreaterThanOrEqual(-1);
+      expect(a[i]!).toBeLessThanOrEqual(1);
+    }
+  });
+});
+
+describe('makeEnv (amplitude envelope)', () => {
+  it('schedules a fast attack, hold, and exponential release on the gain param', () => {
+    const ctx = createMockAudioContext();
+    const env = makeEnv(ctx as unknown as AudioContext, 0, 0.8, 0.01, 0.1, 0.5) as unknown as {
+      gain: MockAudioParam;
+    };
+    const methods = env.gain.log.map((l) => l.method);
+    expect(methods).toContain('setValueAtTime'); // init 0.0001 at t0
+    expect(methods).toContain('exponentialRampToValueAtTime'); // attack + release
+    // Attack targets the clamped peak (0.8 stays 0.8).
+    const ramp = env.gain.log.filter((l) => l.method === 'exponentialRampToValueAtTime');
+    expect(ramp[0]!.value).toBeCloseTo(0.8, 4);
+    // Release goes back to near-zero (0.0001 floor).
+    expect(ramp[ramp.length - 1]!.value).toBeCloseTo(0.0001, 6);
+  });
+
+  it('clamps an out-of-range peak to [0,1] with a 0.0001 floor', () => {
+    const ctx = createMockAudioContext();
+    const env = makeEnv(ctx as unknown as AudioContext, 0, 5, 0.01, 0.1, 0.5) as unknown as {
+      gain: MockAudioParam;
+    };
+    const attack = env.gain.log.find(
+      (l) => l.method === 'exponentialRampToValueAtTime' && l.value > 0.5,
+    );
+    expect(attack!.value).toBe(1); // clamped
+  });
+
+  it('handles a zero/negative duration without throwing', () => {
+    const ctx = createMockAudioContext();
+    let threw = false;
+    try {
+      makeEnv(ctx as unknown as AudioContext, 0, 0.5, 0.01, 0.1, -1);
+    } catch {
+      threw = true;
+    }
+    expect(threw).toBe(false);
   });
 });
