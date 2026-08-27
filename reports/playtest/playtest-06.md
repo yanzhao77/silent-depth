@@ -1,13 +1,13 @@
 # Playtest 06 — Generated Merchant Pair (t-014 evidence)
 
-- **Version**: 19a428b
+- **Version**: dbb2afa
 - **Mission**: GEN-01 — Generated Merchant Pair (seed 2001, difficulty 1/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
 - **Result**: **TIMEOUT** after 3000.1 s (60000 ticks)
 
 ## Actions
 
-- pings: 396 · fire inputs: 0 · moving ticks: 60000 · turning ticks: 0 · fire rejections (tail): 0
+- pings: 395 · fire inputs: 0 · moving ticks: 60000 · turning ticks: 0 · fire rejections (tail): 0
 - strategy: Silent approach (SILENT band, Medium), ping to acquire range, fire at the nearest TRACKED-or-better contact ≤ 1.5 km; evade when detection ≥ 45 or an escort escalates inside 5 km.
 
 ## Result
@@ -43,53 +43,53 @@ SINK_OBJECTIVE_NOT_MET — 1 sink(s) required; 0 sunk within the tick budget.
 
 ### Key events (tail)
 
-- 2926.7s sonar.passive {"source":"engine","bearingDeg":199.80924254422743}
-- 2927.2s sonar.passive {"source":"engine","bearingDeg":206.38001095091045}
-- 2929.7s sonar.passive {"source":"engine","bearingDeg":200.03382883693206}
-- 2930.2s sonar.passive {"source":"engine","bearingDeg":204.77714345472612}
-- 2932.7s sonar.passive {"source":"engine","bearingDeg":198.90968132395594}
-- 2933.2s sonar.passive {"source":"engine","bearingDeg":205.57562811793824}
-- 2935.7s sonar.passive {"source":"engine","bearingDeg":200.54343798053768}
-- 2936.2s sonar.passive {"source":"engine","bearingDeg":206.70839821985552}
-- 2938.7s sonar.passive {"source":"engine","bearingDeg":199.39306678738492}
-- 2939.2s sonar.passive {"source":"engine","bearingDeg":204.8897554842296}
-- 2941.7s sonar.passive {"source":"engine","bearingDeg":200.31377416688}
-- 2942.2s sonar.passive {"source":"engine","bearingDeg":205.19020837997343}
-- 2944.7s sonar.passive {"source":"engine","bearingDeg":200.45076572463128}
-- 2945.2s sonar.passive {"source":"engine","bearingDeg":206.1293019297709}
-- 2947.7s sonar.passive {"source":"engine","bearingDeg":199.9829267583077}
-- 2948.2s sonar.passive {"source":"engine","bearingDeg":205.87003653576875}
-- 2950.7s sonar.passive {"source":"engine","bearingDeg":198.95724022991402}
-- 2951.2s sonar.passive {"source":"engine","bearingDeg":205.49634546146186}
-- 2953.7s sonar.passive {"source":"engine","bearingDeg":199.0634891904676}
-- 2954.2s sonar.passive {"source":"engine","bearingDeg":205.62979767423647}
-- 2956.7s sonar.passive {"source":"engine","bearingDeg":199.1807455572949}
-- 2957.2s sonar.passive {"source":"engine","bearingDeg":206.29475552737065}
-- 2959.7s sonar.passive {"source":"engine","bearingDeg":199.26487593780578}
-- 2960.2s sonar.passive {"source":"engine","bearingDeg":206.93969689726202}
-- 2962.7s sonar.passive {"source":"engine","bearingDeg":200.43830141101273}
-- 2963.2s sonar.passive {"source":"engine","bearingDeg":206.06757284053884}
-- 2965.7s sonar.passive {"source":"engine","bearingDeg":200.6782880774673}
-- 2966.2s sonar.passive {"source":"engine","bearingDeg":205.54604241547906}
-- 2968.7s sonar.passive {"source":"engine","bearingDeg":199.54268764476478}
-- 2969.2s sonar.passive {"source":"engine","bearingDeg":205.35124546813876}
-- 2971.7s sonar.passive {"source":"engine","bearingDeg":199.37029019738407}
-- 2972.2s sonar.passive {"source":"engine","bearingDeg":206.76963900276687}
-- 2974.7s sonar.passive {"source":"engine","bearingDeg":200.06240778808098}
-- 2975.2s sonar.passive {"source":"engine","bearingDeg":205.57723814477936}
-- 2977.7s sonar.passive {"source":"engine","bearingDeg":199.32342434267775}
-- 2978.2s sonar.passive {"source":"engine","bearingDeg":207.07031274517792}
-- 2980.7s sonar.passive {"source":"engine","bearingDeg":199.54176673792222}
-- 2981.2s sonar.passive {"source":"engine","bearingDeg":207.24870368724442}
-- 2983.7s sonar.passive {"source":"engine","bearingDeg":199.43099060782063}
-- 2984.2s sonar.passive {"source":"engine","bearingDeg":206.61413172238974}
-- 2986.7s sonar.passive {"source":"engine","bearingDeg":201.14715033958555}
-- 2987.2s sonar.passive {"source":"engine","bearingDeg":206.16359078843377}
-- 2989.7s sonar.passive {"source":"engine","bearingDeg":199.65920562402184}
-- 2990.2s sonar.passive {"source":"engine","bearingDeg":207.23863949628904}
-- 2992.7s sonar.passive {"source":"engine","bearingDeg":200.67922834204984}
-- 2993.2s sonar.passive {"source":"engine","bearingDeg":206.4915221660728}
-- 2995.7s sonar.passive {"source":"engine","bearingDeg":201.02990768857495}
-- 2996.2s sonar.passive {"source":"engine","bearingDeg":206.17787997143859}
-- 2998.7s sonar.passive {"source":"engine","bearingDeg":201.31441651508217}
-- 2999.2s sonar.passive {"source":"engine","bearingDeg":206.8241824370754}
+- 2925.9s sonar.passive {"source":"engine","bearingDeg":199.39619513312294}
+- 2926.3s sonar.passive {"source":"engine","bearingDeg":205.7828697599521}
+- 2928.9s sonar.passive {"source":"engine","bearingDeg":200.23764374347078}
+- 2929.3s sonar.passive {"source":"engine","bearingDeg":206.0208079987651}
+- 2931.9s sonar.passive {"source":"engine","bearingDeg":198.82218669354722}
+- 2932.3s sonar.passive {"source":"engine","bearingDeg":205.30570165899414}
+- 2934.9s sonar.passive {"source":"engine","bearingDeg":199.65385438315442}
+- 2935.3s sonar.passive {"source":"engine","bearingDeg":205.4944429199485}
+- 2937.9s sonar.passive {"source":"engine","bearingDeg":199.01701160234228}
+- 2938.3s sonar.passive {"source":"engine","bearingDeg":205.4276095860261}
+- 2940.9s sonar.passive {"source":"engine","bearingDeg":199.74786667542526}
+- 2941.3s sonar.passive {"source":"engine","bearingDeg":206.74202287948737}
+- 2943.9s sonar.passive {"source":"engine","bearingDeg":200.8317277815391}
+- 2944.3s sonar.passive {"source":"engine","bearingDeg":205.23240336261352}
+- 2946.9s sonar.passive {"source":"engine","bearingDeg":198.98469391290396}
+- 2947.3s sonar.passive {"source":"engine","bearingDeg":206.400929274105}
+- 2949.9s sonar.passive {"source":"engine","bearingDeg":200.63063008672665}
+- 2950.3s sonar.passive {"source":"engine","bearingDeg":206.04683134495627}
+- 2952.9s sonar.passive {"source":"engine","bearingDeg":200.4485143613959}
+- 2953.3s sonar.passive {"source":"engine","bearingDeg":205.6480733317636}
+- 2955.9s sonar.passive {"source":"engine","bearingDeg":200.84619685718945}
+- 2956.3s sonar.passive {"source":"engine","bearingDeg":206.49194814363798}
+- 2958.9s sonar.passive {"source":"engine","bearingDeg":200.5077097505355}
+- 2959.3s sonar.passive {"source":"engine","bearingDeg":206.87984957885942}
+- 2961.9s sonar.passive {"source":"engine","bearingDeg":199.5075460385053}
+- 2962.3s sonar.passive {"source":"engine","bearingDeg":205.53512912688547}
+- 2964.9s sonar.passive {"source":"engine","bearingDeg":200.66466102505115}
+- 2965.3s sonar.passive {"source":"engine","bearingDeg":205.5013626819694}
+- 2967.9s sonar.passive {"source":"engine","bearingDeg":199.25288259001326}
+- 2968.3s sonar.passive {"source":"engine","bearingDeg":207.27234031667908}
+- 2970.9s sonar.passive {"source":"engine","bearingDeg":200.22131871096752}
+- 2971.3s sonar.passive {"source":"engine","bearingDeg":206.95267254884544}
+- 2973.9s sonar.passive {"source":"engine","bearingDeg":199.92175647300118}
+- 2974.3s sonar.passive {"source":"engine","bearingDeg":206.47398695496724}
+- 2976.9s sonar.passive {"source":"engine","bearingDeg":200.3329556052498}
+- 2977.3s sonar.passive {"source":"engine","bearingDeg":207.25242445585363}
+- 2979.9s sonar.passive {"source":"engine","bearingDeg":201.32556412698182}
+- 2980.3s sonar.passive {"source":"engine","bearingDeg":206.9500110488665}
+- 2982.9s sonar.passive {"source":"engine","bearingDeg":199.75835470276644}
+- 2983.3s sonar.passive {"source":"engine","bearingDeg":205.77982170178728}
+- 2985.9s sonar.passive {"source":"engine","bearingDeg":199.73194012038857}
+- 2986.3s sonar.passive {"source":"engine","bearingDeg":206.19004749829125}
+- 2988.9s sonar.passive {"source":"engine","bearingDeg":199.87078723103963}
+- 2989.3s sonar.passive {"source":"engine","bearingDeg":206.98022529411816}
+- 2991.9s sonar.passive {"source":"engine","bearingDeg":199.68434080271203}
+- 2992.3s sonar.passive {"source":"engine","bearingDeg":207.1243732695532}
+- 2994.9s sonar.passive {"source":"engine","bearingDeg":200.7752899526283}
+- 2995.3s sonar.passive {"source":"engine","bearingDeg":206.49705687944814}
+- 2997.9s sonar.passive {"source":"engine","bearingDeg":200.52142884659162}
+- 2998.3s sonar.passive {"source":"engine","bearingDeg":206.241310710869}

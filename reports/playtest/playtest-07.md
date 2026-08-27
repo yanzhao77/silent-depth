@@ -1,23 +1,23 @@
 # Playtest 07 — Generated Cargo Pair (t-014 evidence)
 
-- **Version**: 19a428b
+- **Version**: dbb2afa
 - **Mission**: GEN-02 — Generated Cargo Pair (seed 2002, difficulty 1/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
-- **Result**: **TIMEOUT** after 3000.1 s (60000 ticks)
+- **Result**: **VICTORY** after 1375.1 s (27502 ticks)
 
 ## Actions
 
-- pings: 83 · fire inputs: 2 · moving ticks: 60000 · turning ticks: 57608 · fire rejections (tail): 0
+- pings: 83 · fire inputs: 2 · moving ticks: 27502 · turning ticks: 23990 · fire rejections (tail): 0
 - strategy: Silent approach (SILENT band, Medium), ping to acquire range, fire at the nearest TRACKED-or-better contact ≤ 1.5 km; evade when detection ≥ 45 or an escort escalates inside 5 km.
 
 ## Result
 
-- outcome: **TIMEOUT** · score 189.99933334441562 (Failed) · hull 100 · battery 0.0% · detection 0.0
-- sunk: none · damage dealt: 0.0 hull points
+- outcome: **VICTORY** · score 697.2632076501192 (Good) · hull 100 · battery 0.0% · detection 0.0
+- sunk: E-02 (Cargo) · damage dealt: 110.0 hull points
 
 ## Failure
 
-SINK_OBJECTIVE_NOT_MET — 1 sink(s) required; 0 sunk within the tick budget.
+none — Objective met — mission completed.
 
 ## Difficulty
 
@@ -25,73 +25,74 @@ SINK_OBJECTIVE_NOT_MET — 1 sink(s) required; 0 sunk within the tick budget.
 
 ## Bugs (observed anomalies)
 
-- Torpedo efficiency 0/4 (0%) — 4 torpedo(es) missed or expired without a hit at the effective fire range.
+- Torpedo efficiency 2/4 (50%) — 2 torpedo(es) missed or expired without a hit at the effective fire range.
 - Shared detection peaked at 100 (≥ 40) — merchants ALERT-scatter (turn 30°, speed to 11 kt for 60 s), which invalidates the lead estimate of in-flight fire solutions.
 - Battery pressure: 0% remaining — ping cost (2 %/ping) and CRUISE drain (0.3 %/s) close off long approach-and-fire sequences.
+- Detection pegged at 100 despite victory — with no escorts the meter had no combat consequence, but the stealth score component is zeroed: ping self-exposure (+12/ping) accumulates with no silent-running sink over a long session.
 
 ## Recommendations
 
-- Balance (t-015): verify the lead fire solution at the scripted fire range — hit band is 40 m / near-miss 120 m; consider widening the hit band or tightening the heading-estimate floor (±5 % / ±9°).
 - Balance (t-015): merchant ALERT threshold at detection 40 makes every long shot unreliable after any ping exposure; consider 50+, or a shorter/faster scatter so fire solutions stay predictive.
 - Balance (t-015): battery budget — repeated range pings plus CRUISE approach drain make long missions battery-starved; consider a cheaper ping or lower CRUISE drain.
+- Balance (t-015): add an ambient detection sink when silent running is off (STOPPED/Medium), so long no-escort sessions do not silently zero the stealth component.
 
 ## Evidence
 
 ### Score parts
-- objective 0 · damage 0 · stealth 0 · torpedoEfficiency 100 · time 39.99933334441562 · survival 50 · total 189.99933334441562 · grade Failed
+- objective 400 · damage 60 · stealth 0 · torpedoEfficiency 100 · time 87.26320765011914 · survival 50 · total 697.2632076501192 · grade Good
 
 ### Stats
-- torpedoes fired 4 · hit 0 · remaining 0 · peak detection 100 · damage dealt 0.0
+- torpedoes fired 4 · hit 2 · remaining 0 · peak detection 100 · damage dealt 110.0
 
 ### Key events (tail)
 
-- 2212.2s sonar.passive {"source":"engine","bearingDeg":273.0646169929531}
-- 2213.2s sonar.passive {"source":"engine","bearingDeg":268.07820737968325}
-- 2215.2s sonar.passive {"source":"engine","bearingDeg":272.9837404667838}
-- 2216.2s sonar.passive {"source":"engine","bearingDeg":268.4832121693156}
-- 2219.2s sonar.passive {"source":"engine","bearingDeg":268.47218317699065}
-- 2222.2s sonar.passive {"source":"engine","bearingDeg":268.5135676447586}
-- 2225.2s sonar.passive {"source":"engine","bearingDeg":268.70252751708074}
-- 2228.2s sonar.passive {"source":"engine","bearingDeg":268.32298699028246}
-- 2231.2s sonar.passive {"source":"engine","bearingDeg":267.9828545962745}
-- 2234.2s sonar.passive {"source":"engine","bearingDeg":267.66812521194265}
-- 2237.2s sonar.passive {"source":"engine","bearingDeg":269.25989973521996}
-- 2240.2s sonar.passive {"source":"engine","bearingDeg":268.04541299143466}
-- 2243.2s sonar.passive {"source":"engine","bearingDeg":268.5077304047689}
-- 2246.2s sonar.passive {"source":"engine","bearingDeg":268.29009300304926}
-- 2249.2s sonar.passive {"source":"engine","bearingDeg":267.7800127661199}
-- 2252.2s sonar.passive {"source":"engine","bearingDeg":268.2119103070553}
-- 2255.2s sonar.passive {"source":"engine","bearingDeg":268.63312658635067}
-- 2258.2s sonar.passive {"source":"engine","bearingDeg":268.7189896432712}
-- 2261.2s sonar.passive {"source":"engine","bearingDeg":269.1470748399812}
-- 2264.2s sonar.passive {"source":"engine","bearingDeg":268.8997319468094}
-- 2267.2s sonar.passive {"source":"engine","bearingDeg":268.4203625414219}
-- 2270.2s sonar.passive {"source":"engine","bearingDeg":268.9098151549893}
-- 2273.2s sonar.passive {"source":"engine","bearingDeg":267.9847385303642}
-- 2276.2s sonar.passive {"source":"engine","bearingDeg":268.50497580873633}
-- 2279.2s sonar.passive {"source":"engine","bearingDeg":269.0283452907161}
-- 2282.2s sonar.passive {"source":"engine","bearingDeg":267.2655686330634}
-- 2285.2s sonar.passive {"source":"engine","bearingDeg":268.0109561370853}
-- 2288.2s sonar.passive {"source":"engine","bearingDeg":267.6131061592781}
-- 2291.2s sonar.passive {"source":"engine","bearingDeg":268.53494446322884}
-- 2294.2s sonar.passive {"source":"engine","bearingDeg":269.1262507485719}
-- 2297.2s sonar.passive {"source":"engine","bearingDeg":269.0038821024912}
-- 2300.2s sonar.passive {"source":"engine","bearingDeg":267.900681067265}
-- 2303.2s sonar.passive {"source":"engine","bearingDeg":268.7915784763754}
-- 2306.2s sonar.passive {"source":"engine","bearingDeg":268.9461768123304}
-- 2309.2s sonar.passive {"source":"engine","bearingDeg":268.0376467957484}
-- 2312.2s sonar.passive {"source":"engine","bearingDeg":267.6101242666633}
-- 2315.2s sonar.passive {"source":"engine","bearingDeg":267.20107275453455}
-- 2318.2s sonar.passive {"source":"engine","bearingDeg":269.0296712650106}
-- 2321.2s sonar.passive {"source":"engine","bearingDeg":268.67064548486906}
-- 2324.2s sonar.passive {"source":"engine","bearingDeg":268.47324158252536}
-- 2327.2s sonar.passive {"source":"engine","bearingDeg":268.860811727399}
-- 2330.2s sonar.passive {"source":"engine","bearingDeg":268.76322088839356}
-- 2333.2s sonar.passive {"source":"engine","bearingDeg":268.4143072091961}
-- 2336.2s sonar.passive {"source":"engine","bearingDeg":268.0432533021143}
-- 2339.2s sonar.passive {"source":"engine","bearingDeg":268.83004956714564}
-- 2342.2s sonar.passive {"source":"engine","bearingDeg":267.6727755107654}
-- 2345.2s sonar.passive {"source":"engine","bearingDeg":268.1900396969162}
-- 2348.2s sonar.passive {"source":"engine","bearingDeg":267.9862218535013}
-- 2351.2s sonar.passive {"source":"engine","bearingDeg":268.3754261538694}
-- 2354.2s sonar.passive {"source":"engine","bearingDeg":267.9630316014586}
+- 1339.7s sonar.passive {"source":"torpedo","bearingDeg":99.99445338020548}
+- 1340.6s sonar.passive {"source":"engine","bearingDeg":0.18842081035739966}
+- 1341.6s sonar.passive {"source":"engine","bearingDeg":70.61518784823221}
+- 1343.7s sonar.passive {"source":"engine","bearingDeg":359.8600995487518}
+- 1344.6s sonar.passive {"source":"engine","bearingDeg":70.23923175147634}
+- 1344.7s sonar.passive {"source":"torpedo","bearingDeg":100.06921317846052}
+- 1344.7s sonar.passive {"source":"torpedo","bearingDeg":100.06921317846052}
+- 1346.7s sonar.passive {"source":"engine","bearingDeg":0.20434946042769297}
+- 1347.7s sonar.passive {"source":"engine","bearingDeg":68.38116765768379}
+- 1349.8s sonar.passive {"source":"engine","bearingDeg":359.13613357905325}
+- 1349.8s sonar.passive {"source":"torpedo","bearingDeg":100.14094032052849}
+- 1349.8s sonar.passive {"source":"torpedo","bearingDeg":100.14094032052849}
+- 1350.7s sonar.passive {"source":"engine","bearingDeg":69.24372058563083}
+- 1352.8s sonar.passive {"source":"engine","bearingDeg":358.9988686921139}
+- 1353.4s torpedo.expired {"torpedoId":"TP-02","targetShipId":"E-02"}
+- 1353.4s torpedo.expired {"torpedoId":"TP-01","targetShipId":"E-02"}
+- 1353.5s torpedo.ready {"tubeId":"T-03","targetContactId":"C-02"}
+- 1353.5s torpedo.fired {"tubeId":"T-03","targetContactId":"C-02"}
+- 1353.5s torpedo.ready {"tubeId":"T-04","targetContactId":"C-02"}
+- 1353.5s torpedo.fired {"tubeId":"T-04","targetContactId":"C-02"}
+- 1353.5s sonar.passive {"source":"torpedo","bearingDeg":358.2327749836528}
+- 1353.5s sonar.passive {"source":"torpedo","bearingDeg":358.2327749836528}
+- 1353.8s sonar.passive {"source":"engine","bearingDeg":67.15476840452092}
+- 1355.9s sonar.passive {"source":"engine","bearingDeg":358.8349070888825}
+- 1356.5s sub.depthChanged {"layer":"Deep"}
+- 1356.8s sonar.passive {"source":"engine","bearingDeg":65.87375496314797}
+- 1358.6s sonar.passive {"source":"torpedo","bearingDeg":357.92698597141043}
+- 1358.6s sonar.passive {"source":"torpedo","bearingDeg":357.92698597141043}
+- 1358.9s sonar.passive {"source":"engine","bearingDeg":359.91837824402285}
+- 1359.9s sonar.passive {"source":"engine","bearingDeg":65.91767165861764}
+- 1362.0s sonar.passive {"source":"engine","bearingDeg":0.0925119839774311}
+- 1362.9s sonar.passive {"source":"engine","bearingDeg":64.67984599830781}
+- 1363.6s sonar.passive {"source":"torpedo","bearingDeg":357.62542707623913}
+- 1363.6s sonar.passive {"source":"torpedo","bearingDeg":357.62542707623913}
+- 1365.0s sonar.passive {"source":"engine","bearingDeg":358.087724693376}
+- 1366.0s sonar.passive {"source":"engine","bearingDeg":64.71962599890699}
+- 1368.1s sonar.passive {"source":"engine","bearingDeg":358.9625205406538}
+- 1368.7s sonar.passive {"source":"torpedo","bearingDeg":357.3311356754628}
+- 1368.7s sonar.passive {"source":"torpedo","bearingDeg":357.3311356754628}
+- 1369.0s sonar.passive {"source":"engine","bearingDeg":64.04563429581296}
+- 1371.1s sonar.passive {"source":"engine","bearingDeg":357.5125324582977}
+- 1372.1s sonar.passive {"source":"engine","bearingDeg":61.38648431009912}
+- 1373.7s sonar.passive {"source":"torpedo","bearingDeg":357.0470240894913}
+- 1373.7s sonar.passive {"source":"torpedo","bearingDeg":357.0470240894913}
+- 1374.2s sonar.passive {"source":"engine","bearingDeg":356.3323246842227}
+- 1375.1s sonar.passive {"source":"engine","bearingDeg":61.55999037317266}
+- 1375.1s torpedo.hit {"torpedoId":"TP-04","targetShipId":"E-02","distM":55}
+- 1375.1s ship.sunk {"shipId":"E-02","shipClass":"Cargo"}
+- 1375.1s torpedo.hit {"torpedoId":"TP-03","targetShipId":"E-02","distM":55}
+- 1375.1s mission.victory {"scoreParts":{"objective":400,"damage":60,"stealth":0,"torpedoEfficiency":100,"time":87.26320765011914,"survival":50...

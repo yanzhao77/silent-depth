@@ -1,13 +1,13 @@
 # Playtest 08 — Generated Tanker Escort (t-014 evidence)
 
-- **Version**: 19a428b
+- **Version**: dbb2afa
 - **Mission**: GEN-03 — Generated Tanker Escort (seed 2003, difficulty 2/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
 - **Result**: **TIMEOUT** after 3000.1 s (60000 ticks)
 
 ## Actions
 
-- pings: 397 · fire inputs: 0 · moving ticks: 60000 · turning ticks: 2248 · fire rejections (tail): 0
+- pings: 397 · fire inputs: 0 · moving ticks: 60000 · turning ticks: 2843 · fire rejections (tail): 0
 - strategy: Silent approach (SILENT band, Medium), ping to acquire range, fire at the nearest TRACKED-or-better contact ≤ 1.5 km; evade when detection ≥ 45 or an escort escalates inside 5 km.
 
 ## Result
@@ -44,29 +44,6 @@ SINK_OBJECTIVE_NOT_MET — 1 sink(s) required; 0 sunk within the tick budget.
 
 ### Key events (tail)
 
-- 129.5s sonar.ping {"bearingDeg":271.89820941003677}
-- 129.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 133.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 137.0s sonar.ping {"bearingDeg":272.0581552812722}
-- 137.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 141.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 144.5s sonar.ping {"bearingDeg":272.29588468206407}
-- 144.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 148.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 152.1s sonar.ping {"bearingDeg":272.565300668413}
-- 152.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 156.4s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 159.6s sonar.ping {"bearingDeg":272.84579439372317}
-- 159.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 163.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 167.1s sonar.ping {"bearingDeg":273.1284308297311}
-- 167.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 171.4s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 174.6s sonar.ping {"bearingDeg":273.40929570118146}
-- 174.6s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
-- 178.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
-- 182.1s sonar.ping {"bearingDeg":273.6865428009402}
-- 182.1s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":14.8}
 - 186.4s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":12}
 - 189.6s sonar.ping {"bearingDeg":273.95906622855136}
 - 189.6s battery.low {"battery":9.246000000004244}
@@ -79,18 +56,41 @@ SINK_OBJECTIVE_NOT_MET — 1 sink(s) required; 0 sunk within the tick budget.
 - 290.8s detection.threshold {"detection":66.97499999999931,"band":"Hunting"}
 - 295.4s detection.threshold {"detection":59.99999999999905,"band":"Searching"}
 - 305.5s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
-- 305.5s sonar.ping {"bearingDeg":275.50499456802015}
+- 305.5s sonar.ping {"bearingDeg":275.50840417003064}
 - 305.5s sub.speedChanged {"band":"SILENT","speedKt":3,"noise":0}
 - 310.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
-- 313.0s sonar.ping {"bearingDeg":275.44457836979393}
+- 313.0s sonar.ping {"bearingDeg":275.4458617135872}
 - 313.0s sub.speedChanged {"band":"SILENT","speedKt":7.1999999999999895,"noise":8.399999999999977}
 - 317.6s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
-- 320.5s sonar.ping {"bearingDeg":275.3657198049809}
+- 320.5s sonar.ping {"bearingDeg":275.3663402020486}
 - 320.5s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
 - 324.9s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
-- 328.0s sonar.ping {"bearingDeg":275.27109338800415}
-- 328.0s battery.low {"battery":8.570000000000212}
+- 328.0s sonar.ping {"bearingDeg":275.27146063452733}
 - 328.0s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
-- 338.3s sub.depthChanged {"layer":"Shallow"}
-- 342.2s detection.threshold {"detection":39.99999999999794,"band":"Suspicious"}
-- 382.2s detection.threshold {"detection":19.999999999999076,"band":"Unaware"}
+- 332.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 335.5s sonar.ping {"bearingDeg":275.1638581769587}
+- 335.5s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 339.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 343.0s sonar.ping {"bearingDeg":275.0483088957676}
+- 343.0s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 347.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 350.5s sonar.ping {"bearingDeg":274.9259877245222}
+- 350.5s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 354.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 358.0s sonar.ping {"bearingDeg":274.7988994857965}
+- 358.0s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 362.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 365.5s sonar.ping {"bearingDeg":274.6682886100042}
+- 365.5s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 369.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 373.0s sonar.ping {"bearingDeg":274.53506711408454}
+- 373.0s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 377.3s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 380.5s sonar.ping {"bearingDeg":274.4000137184513}
+- 380.5s sub.speedChanged {"band":"SILENT","speedKt":7.9,"noise":9.8}
+- 384.8s sub.speedChanged {"band":"CRUISE","speedKt":3.1,"noise":7}
+- 385.9s battery.low {"battery":9.995499999998483}
+- 385.9s sub.speedChanged {"band":"SILENT","speedKt":5.199999999999997,"noise":9.399999999999993}
+- 390.7s sub.depthChanged {"layer":"Shallow"}
+- 394.7s detection.threshold {"detection":39.999999999996895,"band":"Suspicious"}
+- 434.7s detection.threshold {"detection":19.999999999998032,"band":"Unaware"}
