@@ -126,3 +126,48 @@ M04 Heavy Escort 成功显示任务简报并转入既有 Storm → Fog 环境，
 ## Enemy Ship Phase — M05 Periscope Check
 
 M05 在敌舰 LOD 源码载入后可从 21 m Shallow 上浮至 7 m Periscope，并按原有 `P` 输入进入潜望镜光学视图。曝光、方位、Unknown 接触、HUD、暂停/控制按钮均正常；新增敌舰 LOD 根节点不改动潜望镜状态机、接触置信度或任何射击/锁定逻辑。
+
+
+## Environment Phase — Browser Reload and M01 Entry
+
+环境渲染源码载入后，隔离 Chromium 审计副本成功显示主菜单和 M01–M05 任务列表。M01 将验证 Clear 环境中的水面、天空、阴影和水下后处理；所有天气输入继续由原有 `RenderWeather` 契约提供，未更改任务天气或平衡参数。
+
+
+## Environment Phase — M01 Clear Runtime Check
+
+M01 在 V2.2 环境源码载入后正常进入 RUNNING。真实 Chromium 画面显示更清晰的冷蓝地平线梯度、低饱和海面与水下近距潜艇剪影，且界面、控制、目标和 Unknown 接触语义均维持原有行为。该任务路径未出现着色器编译或 WebGL 初始化错误；后续继续覆盖 M03 阴天、M04 风暴以及 M05 夜间/潜望镜。
+
+
+## Environment Phase — M03 Cloudy Entry
+
+M03 Convoy Attack 在环境升级后仍保持可访问。任务原有的 Cloudy → Storm 天气序列、7 km 能见度和车队目标均未变更；运行态将用于检查中等云量下的冷色天空、海面反射和距离雾是否保持稳定。
+
+
+## Environment Phase — M04 Storm Entry
+
+M04 Heavy Escort 保持可访问，任务简报仍声明既有 Storm → Fog 与 3 km 能见度。该步骤将确认 V2.2 GPU 雨幕、确定性闪电、克制风暴泡沫与三点低照度光仅影响视觉呈现，不改变护航、检测或任务状态。
+
+
+## Environment Phase — M04 Storm Runtime Check and Fix
+
+M04 成功进入 RUNNING，GPU 雨幕、雾化和风暴海面均已初始化。首次 Chromium 观察显示近距点精灵因公里制世界单位与相机距离的缩放组合而显得过大；已将雨点像素尺寸改为以 `0.00050` km 为基础、按深度缩放并钳制在 `0.8–3.8 px`，随后将重新加载 M04 复核。该修复只改动 WeatherRenderer 的呈现着色器，不触及 Storm 的战斗或传感器语义。
+
+
+## Environment Phase — M04 Rain Sizing Retest Entry
+
+雨点像素尺寸修复载入后，主菜单与任务选择均正常。M04 复测将确认风暴仍使用既有任务状态，同时雨点不再以大面积方形精灵遮挡主体视野。
+
+
+## Environment Phase — M04 Rain Sizing Retest Result
+
+M04 复测正常进入 RUNNING。雨点现在以细小、受深度限制的垂直点精灵呈现，不再产生首次观察到的巨型方块遮挡；潜艇近距剪影、海面起伏、风暴云层和 HUD 仍可辨认。任务目标、风暴标签、能见度、潜望镜限制和接触门禁均保持基线行为。
+
+
+## Environment Phase — M05 Night Entry
+
+M05 Silent Hunter 在环境升级后保持可访问。其既有 Night、雾密度、波高、目标和潜望镜规则没有变化；后续运行态将核验提升后的月盘、云层轮廓、夜海反射及低照度轮廓光，同时保留 Unknown/置信度边界。
+
+
+## Environment Phase — M05 Night and Periscope Check
+
+M05 在环境升级后正常进入 Night 运行态，并可从 21 m Shallow 上浮到 7 m Periscope、进入圆形潜望镜视图。浏览器画面显示克制的星点、低饱和冷色夜海、暗部轮廓和稳定的光学遮罩；升级后的月盘方向在当前 090° 视野外，未将其误判为渲染故障。Unknown / `--`、曝光和 Raised 计时依旧使用原有不确定性和潜望镜规则。
