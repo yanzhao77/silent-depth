@@ -9,6 +9,7 @@
 import * as THREE from 'three';
 import { createShipLodGeometry } from '../procedural/shipGeometry';
 import type { RenderShip } from '../types';
+import type { QualitySettings } from './QualityPresets';
 
 const RAD = Math.PI / 180;
 
@@ -23,6 +24,13 @@ function cloneVisualPrototype(prototype: THREE.Group): THREE.Group {
       : child.material.clone();
   });
   return clone;
+}
+
+function applyLodDistanceMultiplier(group: THREE.Object3D, multiplier: number): void {
+  group.traverse((child) => {
+    if (!(child instanceof THREE.LOD)) return;
+    for (const level of child.levels) level.distance *= multiplier;
+  });
 }
 
 function disposeGroupResources(
@@ -50,9 +58,14 @@ export class ShipRenderer {
   private readonly _scene: THREE.Scene;
   private readonly _meshes = new Map<string, THREE.Group>();
   private readonly _prototypeCache = new Map<string, THREE.Group>();
+  private readonly _lodDistanceMultiplier: number;
 
-  constructor(scene: THREE.Scene) {
+  constructor(
+    scene: THREE.Scene,
+    quality?: Pick<QualitySettings, 'lodDistanceMultiplier'>,
+  ) {
     this._scene = scene;
+    this._lodDistanceMultiplier = quality?.lodDistanceMultiplier ?? 1;
   }
 
   update(ships: RenderShip[], wallTime: number): void {
@@ -71,6 +84,7 @@ export class ShipRenderer {
         let prototype = this._prototypeCache.get(ship.shipClass);
         if (!prototype) {
           prototype = createShipLodGeometry(ship.shipClass);
+          applyLodDistanceMultiplier(prototype, this._lodDistanceMultiplier);
           this._prototypeCache.set(ship.shipClass, prototype);
         }
         group = cloneVisualPrototype(prototype);

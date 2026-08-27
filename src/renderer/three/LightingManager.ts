@@ -11,19 +11,24 @@
 
 import * as THREE from 'three';
 import type { RenderWeather } from '../types';
+import type { QualitySettings } from './QualityPresets';
 
 export class LightingManager {
   readonly sunLight: THREE.DirectionalLight;
   readonly ambientLight: THREE.HemisphereLight;
   readonly rimLight: THREE.DirectionalLight;
 
-  constructor(scene: THREE.Scene) {
-    // --- Key Light (sun/moon) with shadows ---
+  constructor(
+    scene: THREE.Scene,
+    quality?: Pick<QualitySettings, 'shadowEnabled' | 'shadowMapSize'>,
+  ) {
+    // --- Key Light (sun/moon) with quality-governed shadows ---
     this.sunLight = new THREE.DirectionalLight(0xffeedd, 1.2);
     this.sunLight.position.set(50, 80, 30);
-    this.sunLight.castShadow = true;
-    this.sunLight.shadow.mapSize.width = 2048;
-    this.sunLight.shadow.mapSize.height = 2048;
+    this.sunLight.castShadow = quality?.shadowEnabled ?? true;
+    const shadowMapSize = quality?.shadowMapSize ?? 2048;
+    this.sunLight.shadow.mapSize.width = shadowMapSize;
+    this.sunLight.shadow.mapSize.height = shadowMapSize;
     this.sunLight.shadow.camera.near = 0.1;
     this.sunLight.shadow.camera.far = 300;
     this.sunLight.shadow.camera.left = -40;

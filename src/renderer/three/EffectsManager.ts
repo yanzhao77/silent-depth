@@ -43,7 +43,7 @@ export class EffectsManager {
   private _particleGeo: THREE.BufferGeometry;
   private _particleMat: THREE.PointsMaterial;
 
-  constructor(scene: THREE.Scene) {
+  constructor(scene: THREE.Scene, particleCount: number = 40) {
     this._scene = scene;
 
     // --- Sonar ping ---
@@ -58,7 +58,7 @@ export class EffectsManager {
     });
 
     // --- Explosion particles ---
-    const pCount = 40;
+    const pCount = Math.max(12, Math.floor(particleCount));
     const positions = new Float32Array(pCount * 3);
     const velocities = new Float32Array(pCount * 3);
     const sizes = new Float32Array(pCount);

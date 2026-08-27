@@ -221,3 +221,48 @@ M05 Silent Hunter 在阶段五视觉层改动后保持可访问。夜间任务�
 ## Phase 5 — M05 Night and Periscope Result
 
 M05 正常进入 RUNNING，并能在 7 m Periscope 深度抬升和进入潜望镜。更新后的圆形镜片呈现克制的玻璃冷色、地平线微光、凝结水滴和更密的 5° 方位刻度；`TYPE Unknown`、`--`、曝光带与 Raised 计时仍忠实显示尚未得到的情报并未泄露位置或分类。左/右栏缩窄后，圆形光学画面仍占据核心视野，所有既有控制按钮保持可用。
+
+
+## Phase 6 — Quality Preset Runtime Entry
+
+最终 Chromium 复测实例正常重新加载并可访问 M04。渲染器启动时自动选择设备可承受的质量档位，并将该设置传入海洋网格、雨幕点数、爆炸粒子预算、后处理、阴影贴图、抗锯齿、像素比以及潜艇/敌舰 LOD 距离；接下来在风暴任务内采集浏览器帧时间，仅将自动化运行环境的数据作为诊断而非玩家硬件帧率。
+
+
+## Phase 6 — M04 Browser Performance Diagnostic
+
+M04 在质量预设接入后正常运行。隔离 Chromium 的 30 帧 `requestAnimationFrame` 诊断平均间隔为 168.54 ms（约 5.9 FPS），P95 184.90 ms；其中一个 -18 ms 最小值表明该自动化/远程浏览器环境的回调时间戳并非可靠玩家硬件性能计量。因此该数值仅记录为受限环境诊断，**不作为发布帧率声明**。已通过代码使 LOW/MEDIUM/HIGH/ULTRA 实际控制海面网格、像素比、阴影、雨幕、粒子、后处理与 LOD 距离；最终仍需在目标硬件上执行发布前性能签核。
+
+
+## Phase 6 — Final Mission Regression: M01 Entry
+
+性能阶段代码载入后，M01–M05 均保持可访问。M04 已完成风暴压力场景运行与受限环境帧时间诊断；以下继续核验 M01、M02、M03 与 M05 在预设接入后的任务初始化和既有潜望镜链路。
+
+
+## Phase 6 — Final Mission Regression: M01 Result
+
+M01 在最终质量预设接入后正常进入 RUNNING，清朗环境、英雄潜艇、HUD、火控占位和任务状态均正常。无新增控制台错误或行为回归；随后继续覆盖 M02、M03 和 M05。
+
+
+## Phase 6 — Final Mission Regression: M02 Result
+
+M02 在最终质量预设接入后正常进入 RUNNING，清朗海面、潜艇、HUD、火控占位及鱼雷管显示稳定。自动质量选择未改变任务目标、潜望镜前置条件、接触可见性或任何射击逻辑。
+
+
+## Phase 6 — Final Mission Regression: M03 Entry
+
+M03 Convoy Attack 在最终质量预设接入后仍可访问；已有的 M04 风暴运行检查、M01/M02 清朗运行检查和后续 M05 潜望镜复核共同覆盖所有五项任务环境。
+
+
+## Phase 6 — Final Mission Regression: M03 Result
+
+M03 正常进入 RUNNING，阴天海面、车队任务 HUD、潜艇 LOD 和敌舰渲染器均完成初始化。自动质量档位的粒子/雨幕/LOD 参数没有影响任务目标、船只可见性或接触不确定性规则。
+
+
+## Phase 6 — Final Mission Regression: M05 Runtime Entry
+
+M05 在最终质量预设接入后正常进入 RUNNING，夜间环境、英雄潜艇、HUD 和火控占位均正常。下一步进入原有潜望镜状态链，确认其不受质量预设参数传递影响。
+
+
+## Phase 6 — Final Mission Regression: M05 Periscope Result
+
+M05 在最终质量预设接入后正常进入 7 m Periscope 并抬升至潜望镜视图。圆形光学遮罩、刻度、镜片微光、水滴、曝光、Unknown/`--` 和紧急下潜/锁定/放下控制均可用。至此，性能阶段在真实 Chromium 中覆盖 M01、M02、M03、M04、M05 及潜望镜；未见任务入口或原有不确定性语义回归。

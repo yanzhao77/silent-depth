@@ -14,6 +14,7 @@ import {
   type SubmarineParts,
 } from '../procedural/submarineGeometry';
 import type { RenderPlayer } from '../types';
+import type { QualitySettings } from './QualityPresets';
 
 const RAD = Math.PI / 180;
 const LOD_LEVELS: readonly SubmarineLodLevel[] = [0, 1, 2, 3];
@@ -25,13 +26,17 @@ export class SubmarineRenderer {
   private _propAngle = 0;
   private _lastHeadingDeg: number | null = null;
 
-  constructor(scene: THREE.Scene) {
+  constructor(
+    scene: THREE.Scene,
+    quality?: Pick<QualitySettings, 'lodDistanceMultiplier'>,
+  ) {
+    const lodDistanceMultiplier = quality?.lodDistanceMultiplier ?? 1;
     const partsByLod = {} as Record<SubmarineLodLevel, SubmarineParts>;
     for (const lod of LOD_LEVELS) {
       const parts = createSubmarineGeometry(lod);
       partsByLod[lod] = parts;
-      const distance = lod === 0 ? 0 : SUBMARINE_LOD_DISTANCES_KM[lod - 1]!;
-      this._lod.addLevel(parts.group, distance);
+      const baseDistance = lod === 0 ? 0 : SUBMARINE_LOD_DISTANCES_KM[lod - 1]!;
+      this._lod.addLevel(parts.group, baseDistance * lodDistanceMultiplier);
     }
     this._partsByLod = partsByLod;
     this._lod.name = 'player-submarine-lod-controller';

@@ -124,6 +124,12 @@ export class PostProcessing {
   get enabled(): boolean { return this._enabled; }
   set enabled(v: boolean) { this._enabled = v; }
 
+  setQuality(enabled: boolean, bloomStrength: number, vignetteStrength: number): void {
+    this._enabled = enabled;
+    this._material.uniforms['uBloomStrength']!.value = bloomStrength;
+    this._material.uniforms['uVignetteStrength']!.value = vignetteStrength;
+  }
+
   resize(width: number, height: number): void {
     this._renderTarget.setSize(width, height);
     this._material.uniforms['uResolution']!.value.set(width, height);
