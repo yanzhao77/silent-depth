@@ -102,7 +102,7 @@
       "attributionRequired": false,
       "attribution": "",
       "licenseCheckedAt": "2026-08-27T08:10:00.000Z",
-      "sha256": "203625a568ffdc8c48d16ad43c521796753b4c56c04b43c644f7efcea85590f6",
+      "sha256": "0b734c2cc64c070bd85b9235708becc03c7cce7ebecd6618bb54d37f7a2a838d",
       "triangles": 2400,
       "materials": ["metal", "paint", "wet-metal", "glass", "rubber"],
       "textures": [],

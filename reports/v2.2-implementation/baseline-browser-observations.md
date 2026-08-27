@@ -61,3 +61,33 @@ M05 Silent Hunter 已直接进入 RUNNING，显示 `NGT` 夜间环境、90° 航
 ## Phase 1 Browser Conclusion
 
 M01、M02、M03、M04、M05 和 M05 潜望镜状态均已在 Chromium 中重新核对，且与 V2.1 的已存审计截图相符。资产管线实施仅可向渲染层添加本地资源元数据、校验和加载准备能力；不改变任务、天气逻辑、实体行为、输入或声呐信息语义。
+
+
+## Hero Submarine Phase — M01 Startup Check
+
+升级后的隔离 Chromium 审计副本已成功加载，M01 任务可从菜单进入 Briefing，`game-canvas` 创建正常。此轮同步仅包含 `submarineGeometry.ts` 与 `SubmarineRenderer.ts` 的呈现层改动；待任务进入 RUNNING 后继续检查潜艇剪影、细节和 LOD，且不改动 M01 目标、天气或任何仿真数据。
+
+
+## Hero Submarine Phase — Browser Relaunch Check
+
+隔离审计副本重新启动后，主菜单和 M01–M05 任务选择均正常渲染，说明新的 `THREE.LOD` 潜艇渲染树不会妨碍菜单、fallback canvas 或任务入口。随后继续覆盖 M03、M04、M05 与潜望镜的运行路径。
+
+
+## Hero Submarine Phase — M03 Runtime Check
+
+在同步后的审计副本中，M03 Convoy Attack 正常进入 RUNNING（Cloudy），多舰任务的画布初始化、控制输入、HUD 与任务目标均维持基线。潜艇呈现使用新建的本地四级 `THREE.LOD` 结构；在当前水下第三人称构图中，主体轮廓稳定且没有 WebGL/控制台级故障。M03 仍未向玩家暴露未确认敌舰的精确位置。
+
+
+## Hero Submarine Phase — M04 Runtime Check
+
+M04 Heavy Escort 在同步后的审计副本中进入 RUNNING，维持 Storm → Fog、3 km 能见度、4 商船 + 2 护航舰和原有目标。新的潜艇 LOD 节点未导致任务启动或世界画布异常；风暴美术本体仍留待环境阶段优化，本阶段只确认英雄资产在低照度任务中稳定工作。
+
+
+## Hero Submarine Phase — M05 Night Check
+
+M05 Silent Hunter 在升级后进入 RUNNING（Night）。夜间画面仍保持低照度、星点、深色海面与潜艇位置/朝向信息；任务目标、鱼雷计数与接触语义未发生变化。英雄资产 LOD 的结构变更不会为未确认目标添加实体或标签，且没有阻断夜间任务加载。
+
+
+## Hero Submarine Phase — M05 Periscope Check
+
+M05 从 21 m Shallow 上浮至 7 m Periscope 后可正常 Raising → Raised；按 `P` 进入圆形光学视图，显示方位、准星、曝光与 Raised 计时。潜艇渲染器的新 LOD 组会在所有细节层同步潜望镜、螺旋桨与局部舵面可视动画。光学视图仍把无接触数据呈现为 Unknown / `--`，因此未改变声呐或目标位置不确定性。

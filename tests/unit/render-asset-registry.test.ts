@@ -1,16 +1,17 @@
 import { describe, expect, it } from 'vitest';
-import combatEffectsSource from '../../../renderer/three/EffectsManager.ts?raw';
-import oceanSource from '../../../renderer/three/OceanRenderer.ts?raw';
-import skySource from '../../../renderer/three/SkyRenderer.ts?raw';
-import shipSource from '../../../renderer/procedural/shipGeometry.ts?raw';
-import submarineSource from '../../../renderer/procedural/submarineGeometry.ts?raw';
-import registryRaw from '../../../assets/v2/registry.json?raw';
+import combatEffectsSource from '../../src/renderer/three/EffectsManager.ts?raw';
+import oceanSource from '../../src/renderer/three/OceanRenderer.ts?raw';
+import skySource from '../../src/renderer/three/SkyRenderer.ts?raw';
+import shipSource from '../../src/renderer/procedural/shipGeometry.ts?raw';
+import submarineSource from '../../src/renderer/procedural/submarineGeometry.ts?raw';
+import { createSubmarineGeometry } from '../../src/renderer/procedural/submarineGeometry';
+import registryRaw from '../../assets/v2/registry.json?raw';
 import {
   isLocalAssetPath,
   resolveApprovedRenderAsset,
   validateRenderAssetRegistry,
   type RenderAssetRegistry,
-} from '../assets/assetRegistry';
+} from '../../src/renderer/assets/assetRegistry';
 
 const registry = JSON.parse(registryRaw) as RenderAssetRegistry;
 
@@ -62,6 +63,27 @@ describe('V2.2 renderer asset pipeline', () => {
       expect(source, `${asset.id} source file`).toBeDefined();
       await expect(sha256Hex(source!)).resolves.toBe(asset.sha256);
     }
+  });
+
+  it('builds all four local submarine detail levels with the hero silhouette parts and lower far-detail density', () => {
+    const lod0 = createSubmarineGeometry(0);
+    const lod1 = createSubmarineGeometry(1);
+    const lod2 = createSubmarineGeometry(2);
+    const lod3 = createSubmarineGeometry(3);
+
+    for (const parts of [lod0, lod1, lod2, lod3]) {
+      expect(parts.group.name).toMatch(/^player-submarine-lod[0-3]$/);
+      expect(parts.group.getObjectByName('pressure-hull')).toBeDefined();
+      expect(parts.group.getObjectByName('conning-tower')).toBeDefined();
+      expect(parts.group.getObjectByName('periscope-shaft')).toBeDefined();
+      expect(parts.group.getObjectByName('rudder')).toBeDefined();
+      expect(parts.group.getObjectByName('five-blade-propeller')).toBeDefined();
+    }
+    expect(lod0.group.children.length).toBeGreaterThan(lod1.group.children.length);
+    expect(lod1.group.children.length).toBeGreaterThan(lod2.group.children.length);
+    expect(lod2.group.children.length).toBeGreaterThan(lod3.group.children.length);
+    expect(lod0.group.getObjectByName('forward-torpedo-tube')).toBeDefined();
+    expect(lod3.group.getObjectByName('forward-torpedo-tube')).toBeUndefined();
   });
 
   it('rejects remote, absolute, traversal and platform-specific asset paths', () => {
