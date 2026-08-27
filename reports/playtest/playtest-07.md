@@ -1,6 +1,6 @@
 # Playtest 07 — Generated Cargo Pair (t-014 evidence)
 
-- **Version**: 4402fe1
+- **Version**: 19a428b
 - **Mission**: GEN-02 — Generated Cargo Pair (seed 2002, difficulty 1/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
 - **Result**: **TIMEOUT** after 3000.1 s (60000 ticks)
