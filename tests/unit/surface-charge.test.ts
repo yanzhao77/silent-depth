@@ -82,9 +82,11 @@ describe('t-028f surfaced fast recharge', () => {
         decoy: false,
         pause: false,
       }).playerSub.battery;
-    // net ≈ fast 2.0 − SILENT drain 0.10 = +1.90 %/s → +3.8 % over 2 s
-    expect(s - before).toBeGreaterThan(3.0);
-    expect(s - before).toBeLessThan(4.5);
+    // net ≈ fast surfaceFastChargePerSec − SILENT drain = +3.90 %/s over 2 s
+    const netPerSec =
+      balance.battery.surfaceFastChargePerSec - balance.speedBands.SILENT.batteryDrainPerSec;
+    expect(s - before).toBeGreaterThan(netPerSec * 1.5);
+    expect(s - before).toBeLessThan(netPerSec * 2.5);
   });
 
   it('Surface + FULL → only base rate (no fast charge)', () => {
@@ -111,8 +113,16 @@ describe('t-028f surfaced fast recharge', () => {
         decoy: false,
         pause: false,
       }).playerSub.battery;
-    // net ≈ base 0.5 − FULL drain 0.60 = −0.10 %/s → −0.2 % over 2 s (no fast charge)
-    expect(s - before).toBeLessThan(0.5);
+    // net ≈ base 1.0 − FULL drain 0.60 = +0.40 %/s over 2 s (no fast charge)
+    const baseRate = balance.depthLayers.Surface.chargePerSec;
+    const fullDrain = balance.speedBands.FULL.batteryDrainPerSec;
+    // FULL band must NOT get the fast recharge: net stays near the base rate,
+    // far below the (much larger) surfaceFastChargePerSec.
+    const netPerSec = baseRate - fullDrain;
+    expect(s - before).toBeGreaterThan(netPerSec * 1.0);
+    expect(s - before).toBeLessThan(netPerSec * 2.5);
+    // Guard: fast charge (surfaceFastChargePerSec) is strictly excluded here.
+    expect(s - before).toBeLessThan(balance.battery.surfaceFastChargePerSec);
   });
 
   it('Periscope depth → no surface charge at all', () => {

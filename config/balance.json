@@ -62,7 +62,7 @@
       "maxM": 3,
       "noiseMod": 15,
       "detectFactor": 1.5,
-      "chargePerSec": 0.5,
+      "chargePerSec": 1.0,
       "torpedoAllowed": false,
       "deckGunTargetable": true,
       "dcDamageFactor": 1.0,
@@ -123,7 +123,7 @@
     "lowBatteryThreshold": 10,
     "lowBatteryMaxSpeedBand": "SILENT",
     "forcedSurfaceDetection": 100,
-    "surfaceFastChargePerSec": 2.0,
+    "surfaceFastChargePerSec": 4.0,
     "surfaceFastChargeMaxBand": "CRUISE"
   },
   "hull": {
