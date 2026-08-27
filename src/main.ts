@@ -45,6 +45,9 @@ import { getMissionDef, listMissionSpecs, MISSION_IDS } from './missions/mission
 import { createCamera, DEFAULT_ZOOM, MAX_ZOOM, MIN_ZOOM } from './rendering/camera';
 import { createParticleSystem } from './rendering/particles';
 import { activeWeatherAt, createRenderer, type Renderer } from './rendering/renderer';
+import { ThreeRenderer } from './renderer/three/index';
+import { snapshotToRenderState } from './renderer/adapter';
+import type { RenderEffect, CameraMode } from './renderer/types';
 import { createHud } from './ui/hud';
 import { createMenus, type MenuSection } from './ui/menus';
 import { createInput } from './ui/input';
@@ -88,6 +91,11 @@ root.append(menuRoot);
 const gfx = canvas.getContext('2d');
 if (gfx === null) throw new Error('[silent-depth] Canvas 2D context unavailable');
 const ctx2d = gfx;
+
+// V2 Three.js renderer (created lazily on first mission start)
+let threeRenderer: ThreeRenderer | null = null;
+let activeEffects: RenderEffect[] = [];
+let cameraMode: CameraMode = 'world';
 
 // ---------------------------------------------------------------------------
 // Persistent shell state
@@ -362,6 +370,17 @@ function startMission(id: string): void {
   input.setSelectedContactId(null);
   hud.reset();
 
+  // V2: Initialize Three.js renderer for 3D world
+  if (threeRenderer === null) {
+    threeRenderer = new ThreeRenderer({
+      canvas,
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  }
+  activeEffects = [];
+  cameraMode = 'world';
+
   // First tick: initialize the briefing snapshot (MISSION_LOADING). Use
   // FIXED_DT (never 0) so the shell's briefing/simTime sequence stays
   // byte-identical to the headless runner (src/sim/runner.ts), which always
@@ -546,6 +565,9 @@ function resize(): void {
   canvas.style.height = `${h}px`;
   ctx2d.setTransform(dpr, 0, 0, dpr, 0, 0);
   camera.setViewport(w, h);
+  if (threeRenderer !== null) {
+    threeRenderer.resize(w, h);
+  }
 }
 window.addEventListener('resize', resize);
 resize();
@@ -572,9 +594,16 @@ function frame(nowMs: number): void {
   particles.update(frameDt);
 
   if (handle === null || snapshot === null) {
-    // Menu idle backdrop (deep ocean base).
-    ctx2d.fillStyle = '#050a12';
-    ctx2d.fillRect(0, 0, camera.viewport.width, camera.viewport.height);
+    // Menu idle backdrop
+    if (threeRenderer !== null) {
+      // Render a dark ocean background with Three.js even in menu
+      // For now, just clear with the deep ocean color
+      ctx2d.fillStyle = '#050a12';
+      ctx2d.fillRect(0, 0, camera.viewport.width, camera.viewport.height);
+    } else {
+      ctx2d.fillStyle = '#050a12';
+      ctx2d.fillRect(0, 0, camera.viewport.width, camera.viewport.height);
+    }
     return;
   }
 
@@ -630,16 +659,44 @@ function frame(nowMs: number): void {
     }
   }
 
-  // --- render L0..L5 ---------------------------------------------------------
-  if (renderer !== null) {
+  // --- render: V2 Three.js or fallback Canvas 2D -----------------------------
+  const inMission = state !== 'MENU' && state !== 'BOOT';
+
+  if (inMission && threeRenderer !== null && missionDef !== null) {
+    // V2: Convert snapshot to RenderState and render with Three.js
+    const weatherKind = activeWeatherAt(
+      missionDef.weather,
+      snap.simTime,
+      missionDef.parTimeS,
+      balance,
+    );
+
+    // Collect new events for effect spawning
+    const newEvents: EventEntry[] = [];
+    for (const ev of snap.eventLog) {
+      if (ev.id > lastEventId) newEvents.push(ev);
+    }
+
+    const renderState = snapshotToRenderState(snap, {
+      balance,
+      prevSnapshot: prevSnapshot ?? undefined,
+      alpha: fixed.steps > 1 ? 1 : accumulator / FIXED_DT,
+      wallTime: wallT,
+      newEvents,
+      activeEffects,
+      dt: frameDt,
+      selectedContactId,
+      cameraMode,
+    });
+
+    // Override weather from mission def (adapter can't access it directly)
+    renderState.weather.kind = weatherKind;
+
+    threeRenderer.render(renderState, frameDt);
+  } else if (renderer !== null) {
+    // Fallback: Canvas 2D for menus or when Three.js not available
     renderer.render(ctx2d, snap, camera, frameDt, {
       prev: prevSnapshot ?? undefined,
-      // When a frame catches up multiple sim steps (steps > 1, e.g. after a
-      // tab switch), the interpolation base (prevSnapshot) is N steps behind
-      // the current snapshot — lerping would render a "jump back then slide"
-      // artifact. Render the exact current state (alpha = 1) instead. For the
-      // common single-step frame, interpolate normally between the last two
-      // snapshots. (Rendering-only; the sim/RNG is unchanged — ADR-004.)
       alpha: fixed.steps > 1 ? 1 : accumulator / FIXED_DT,
       particles,
       settings: {
@@ -654,9 +711,8 @@ function frame(nowMs: number): void {
   }
 
   // --- HUD (L6) / menus ------------------------------------------------------
-  const inMission = state !== 'MENU' && state !== 'BOOT';
   hudRoot.style.display = inMission ? '' : 'none';
-  if (inMission && renderer !== null) {
+  if (inMission && (renderer !== null || threeRenderer !== null)) {
     hud.update(snap, {
       selectedContactId,
       salvo,
