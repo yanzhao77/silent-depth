@@ -26,7 +26,14 @@ export type Unsubscribe = () => void;
 export interface EventBus {
   /** Emit an event; returns the stored entry. Payload must be pure JSON data. */
   emit(type: EventType, payload?: Record<string, unknown>): EventEntry;
-  /** Subscribe; returns an unsubscribe function. */
+  /**
+   * Subscribe; returns an unsubscribe function.
+   * @internal-reserved — the pub-sub listener layer is currently exercised only
+   * by tests. The runtime engine→shell handoff polls `getLog()` / snapshot
+   * `.eventLog` (main.ts processNewEvents) rather than subscribing. Kept as a
+   * contract API (GAME_ARCHITECTURE §14); do not remove without updating
+   * tests/unit/core.test.ts.
+   */
   subscribe(cb: EventCallback): Unsubscribe;
   /** Read-only snapshot of the tail (oldest first). */
   getLog(): EventEntry[];

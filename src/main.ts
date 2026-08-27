@@ -362,8 +362,11 @@ function startMission(id: string): void {
   input.setSelectedContactId(null);
   hud.reset();
 
-  // First tick: initialize the briefing snapshot (MISSION_LOADING).
-  snapshot = step(handle, 0, buildInputs());
+  // First tick: initialize the briefing snapshot (MISSION_LOADING). Use
+  // FIXED_DT (never 0) so the shell's briefing/simTime sequence stays
+  // byte-identical to the headless runner (src/sim/runner.ts), which always
+  // steps with FIXED_DT — preserving the "same seed → same snapshot" contract.
+  snapshot = step(handle, FIXED_DT, buildInputs());
   processNewEvents(snapshot);
 }
 
@@ -631,7 +634,13 @@ function frame(nowMs: number): void {
   if (renderer !== null) {
     renderer.render(ctx2d, snap, camera, frameDt, {
       prev: prevSnapshot ?? undefined,
-      alpha: accumulator / FIXED_DT,
+      // When a frame catches up multiple sim steps (steps > 1, e.g. after a
+      // tab switch), the interpolation base (prevSnapshot) is N steps behind
+      // the current snapshot — lerping would render a "jump back then slide"
+      // artifact. Render the exact current state (alpha = 1) instead. For the
+      // common single-step frame, interpolate normally between the last two
+      // snapshots. (Rendering-only; the sim/RNG is unchanged — ADR-004.)
+      alpha: fixed.steps > 1 ? 1 : accumulator / FIXED_DT,
       particles,
       settings: {
         mapGrid: save.settings.video.mapGrid,

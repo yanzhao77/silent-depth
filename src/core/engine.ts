@@ -236,6 +236,15 @@ export function createGame(missionDef: MissionDef, seed: number): GameHandle {
   const balance = loadBalance();
 
   const rng = createRng(seed);
+  // Per-system RNG forks (GAME_ARCHITECTURE §5.4) — derived from the parent
+  // WITHOUT consuming it, so the sequence is deterministic and stable across
+  // call points. LIVE forks (actually consumed): sonar, ai, combat.
+  // RESERVED forks (declared but not consumed yet; zero runtime cost):
+  //   world     — world randomness lives on a separate 'world-ocean' fork
+  //               (src/world/ocean.ts); steady-state ZERO RNG.
+  //   missions  — generator uses a separate 'missions-gen' fork.
+  //   submarine / detection / objectives — emit no RNG today; reserved for
+  //               future jitter. Do NOT repurpose these labels (contract).
   const forks: Record<SystemName, Rng> = {
     world: rng.fork('world'),
     missions: rng.fork('missions'),
