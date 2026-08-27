@@ -1,6 +1,6 @@
 # Playtest 10 — Generated Heavy Convoy (t-014 evidence)
 
-- **Version**: dbb2afa
+- **Version**: 0be1659
 - **Mission**: GEN-05 — Generated Heavy Convoy (seed 2005, difficulty 3/5)
 - **Agent**: scripted-brain-generic-hunter (Generic hunter (generated missions))
 - **Result**: **DEFEAT** after 934.5 s (18690 ticks)
