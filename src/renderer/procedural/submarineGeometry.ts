@@ -66,6 +66,36 @@ const DETAIL_BY_LOD: Readonly<Record<SubmarineLodLevel, LodDetail>> = {
   },
 };
 
+/**
+ * V2.4 silhouette readability: a subtle fresnel rim keeps the hull legible
+ * against the night sea ("black but readable") WITHOUT raising base brightness.
+ * It behaves like a cold moon/sky rim light and stays presentation-only.
+ */
+function addFresnelRim(material: THREE.MeshStandardMaterial, colorHex: number, strength: number): void {
+  material.onBeforeCompile = (shader) => {
+    shader.uniforms.uRimColor = { value: new THREE.Color(colorHex) };
+    shader.uniforms.uRimStrength = { value: strength };
+    shader.vertexShader = shader.vertexShader
+      .replace(
+        '#include <common>',
+        '#include <common>\nvarying vec3 vRimNormal;\nvarying vec3 vRimView;',
+      )
+      .replace(
+        '#include <begin_vertex>',
+        '#include <begin_vertex>\nvRimNormal = normalize(normalMatrix * normal);\nvec4 vRimMv = modelViewMatrix * vec4(transformed, 1.0);\nvRimView = normalize(-vRimMv.xyz);',
+      );
+    shader.fragmentShader = shader.fragmentShader
+      .replace(
+        '#include <common>',
+        '#include <common>\nvarying vec3 vRimNormal;\nvarying vec3 vRimView;\nuniform vec3 uRimColor;\nuniform float uRimStrength;',
+      )
+      .replace(
+        '#include <dithering_fragment>',
+        'float vRim = pow(1.0 - max(dot(normalize(vRimNormal), normalize(vRimView)), 0.0), 3.0);\ngl_FragColor.rgb += uRimColor * vRim * uRimStrength;\n#include <dithering_fragment>',
+      );
+  };
+}
+
 function makeMaterials(): Readonly<{
   hull: THREE.MeshStandardMaterial;
   tower: THREE.MeshStandardMaterial;
@@ -79,33 +109,42 @@ function makeMaterials(): Readonly<{
   detail: THREE.MeshStandardMaterial;
   seam: THREE.MeshStandardMaterial;
 }> {
-  // Small emissive values preserve silhouette under M05 moonlight without turning
-  // the unit into a self-lit sci-fi object. Roughness variation carries wetness.
-  return {
-    hull: new THREE.MeshStandardMaterial({
-      color: 0x293740, roughness: 0.43, metalness: 0.66,
-      emissive: 0x07141b, emissiveIntensity: 0.16,
-    }),
-    tower: new THREE.MeshStandardMaterial({
-      color: 0x3b4a53, roughness: 0.38, metalness: 0.64,
-      emissive: 0x0b1a21, emissiveIntensity: 0.12,
-    }),
-    deck: new THREE.MeshStandardMaterial({
-      color: 0x1f282d, roughness: 0.76, metalness: 0.33,
-      emissive: 0x060b0d, emissiveIntensity: 0.05,
-    }),
-    waterline: new THREE.MeshStandardMaterial({ color: 0x542d2b, roughness: 0.80, metalness: 0.12 }),
-    periscope: new THREE.MeshStandardMaterial({ color: 0x566872, roughness: 0.24, metalness: 0.72 }),
-    propeller: new THREE.MeshStandardMaterial({ color: 0x8b6932, roughness: 0.31, metalness: 0.79 }),
-    fin: new THREE.MeshStandardMaterial({ color: 0x273137, roughness: 0.57, metalness: 0.47 }),
-    tube: new THREE.MeshStandardMaterial({ color: 0x131a1e, roughness: 0.61, metalness: 0.43 }),
-    glass: new THREE.MeshStandardMaterial({
-      color: 0x07151b, roughness: 0.10, metalness: 0.52,
-      emissive: 0x01090c, emissiveIntensity: 0.18,
-    }),
-    detail: new THREE.MeshStandardMaterial({ color: 0x61707a, roughness: 0.50, metalness: 0.55 }),
-    seam: new THREE.MeshStandardMaterial({ color: 0x182228, roughness: 0.68, metalness: 0.34 }),
-  };
+  // V2.4: "black but readable". Base colours stay dark; wet specular (low
+  // roughness + high metalness on the pressure hull) and a fresnel rim do the
+  // silhouette work instead of emissive self-lighting. A faint emissive floor
+  // only prevents total crush in the deepest shadow.
+  const hull = new THREE.MeshStandardMaterial({
+    color: 0x22323b, roughness: 0.34, metalness: 0.72,
+    emissive: 0x050d12, emissiveIntensity: 0.05,
+  });
+  const tower = new THREE.MeshStandardMaterial({
+    color: 0x314049, roughness: 0.32, metalness: 0.7,
+    emissive: 0x070f14, emissiveIntensity: 0.04,
+  });
+  const deck = new THREE.MeshStandardMaterial({
+    color: 0x1b2429, roughness: 0.86, metalness: 0.28,
+    emissive: 0x04080a, emissiveIntensity: 0.03,
+  });
+  const waterline = new THREE.MeshStandardMaterial({ color: 0x2c201d, roughness: 0.82, metalness: 0.14 });
+  const periscope = new THREE.MeshStandardMaterial({ color: 0x4d5a63, roughness: 0.22, metalness: 0.74 });
+  const propeller = new THREE.MeshStandardMaterial({ color: 0x8b6932, roughness: 0.31, metalness: 0.79 });
+  const fin = new THREE.MeshStandardMaterial({ color: 0x232c32, roughness: 0.5, metalness: 0.5 });
+  const tube = new THREE.MeshStandardMaterial({ color: 0x11181c, roughness: 0.6, metalness: 0.44 });
+  const glass = new THREE.MeshStandardMaterial({
+    color: 0x08161d, roughness: 0.08, metalness: 0.5,
+    emissive: 0x02080b, emissiveIntensity: 0.12,
+  });
+  const detail = new THREE.MeshStandardMaterial({ color: 0x55636d, roughness: 0.46, metalness: 0.56 });
+  const seam = new THREE.MeshStandardMaterial({ color: 0x141b20, roughness: 0.7, metalness: 0.34 });
+
+  // Cold moon/sky rim so the silhouette separates from the sea at night.
+  addFresnelRim(hull, 0x6f8aa6, 0.20);
+  addFresnelRim(tower, 0x7e98b0, 0.22);
+  addFresnelRim(fin, 0x66798c, 0.16);
+  addFresnelRim(periscope, 0x8aa0b4, 0.18);
+  addFresnelRim(waterline, 0x4a3a34, 0.10);
+
+  return { hull, tower, deck, waterline, periscope, propeller, fin, tube, glass, detail, seam };
 }
 
 function hullRadius(t: number): number {

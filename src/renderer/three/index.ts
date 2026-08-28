@@ -11,6 +11,7 @@ import { V3_RENDER_ASSET_REGISTRY } from '../assets/v3Registry';
 import { SceneManager } from './SceneManager';
 import { CameraManager } from './CameraManager';
 import { OceanRenderer } from './OceanRenderer';
+import { collectWakeSources } from './wake/WakeSystem';
 import { ShipRenderer } from './ShipRenderer';
 import { SubmarineRenderer } from './SubmarineRenderer';
 import { SkyRenderer } from './SkyRenderer';
@@ -87,7 +88,8 @@ export class ThreeRenderer {
     document.body.appendChild(this._tacticalCanvas);
     this._tacticalOverlay = new TacticalOverlay(this._tacticalCanvas);
 
-    // Add ocean to scene
+    // Add ocean to scene (distant horizon first so the near field draws over it)
+    scene.add(this._ocean.farMesh);
     scene.add(this._ocean.mesh);
   }
 
@@ -112,6 +114,7 @@ export class ThreeRenderer {
       state.player.position.z,
       state.player.speedKt,
       state.player.headingDeg,
+      collectWakeSources(state),
     );
     this._sky.update(state.weather, state.wallTime);
     this._lighting.update(state.weather);
