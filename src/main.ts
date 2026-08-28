@@ -46,7 +46,8 @@ import { createCamera, DEFAULT_ZOOM, MAX_ZOOM, MIN_ZOOM } from './rendering/came
 import { createParticleSystem } from './rendering/particles';
 import { activeWeatherAt, createRenderer, type Renderer } from './rendering/renderer';
 import { ThreeRenderer } from './renderer/three/index';
-import { snapshotToRenderState } from './renderer/adapter';
+import { snapshotToRenderState, collectFrameEvents } from './renderer/adapter';
+import { selectCameraPreset } from './renderer/three/CameraDirector';
 import type { RenderEffect, CameraMode } from './renderer/types';
 import { createHud } from './ui/hud';
 import { createMenus, type MenuSection } from './ui/menus';
@@ -103,7 +104,7 @@ const ctx2d = gfx;
 // V2 Three.js renderer (created lazily on first mission start)
 let threeRenderer: ThreeRenderer | null = null;
 let activeEffects: RenderEffect[] = [];
-let cameraMode: CameraMode = 'world';
+let cameraMode: CameraMode = 'cinematic';
 
 // ---------------------------------------------------------------------------
 // Persistent shell state
@@ -417,7 +418,7 @@ function startMission(id: string): void {
     }
   }
   activeEffects = [];
-  cameraMode = 'world';
+  cameraMode = 'cinematic';
 
   // First tick: initialize the briefing snapshot (MISSION_LOADING). Use
   // FIXED_DT (never 0) so the shell's briefing/simTime sequence stays
@@ -652,6 +653,10 @@ function frame(nowMs: number): void {
   );
   accumulator = fixed.nextAccumulator;
   prevSnapshot = snapshot;
+  // Capture the event id before this frame's steps so the renderer receives every
+  // event emitted during the frame (processNewEvents advances lastEventId for
+  // audio/HUD). See collectFrameEvents — fixes the V2.4→V2.5 effect starvation.
+  const frameStartEventId = lastEventId;
   for (let i = 0; i < fixed.steps; i++) {
     snapshot = step(handle, FIXED_DT, buildInputs());
     processNewEvents(snapshot);
@@ -673,12 +678,25 @@ function frame(nowMs: number): void {
     settleResult(snap);
   }
 
-  // --- camera ---------------------------------------------------------------
-  if (followPlayer) {
-    camera.follow(snap.playerSub.position.x, snap.playerSub.position.y);
-  } else if (playerOffScreen(snap)) {
-    followPlayer = true;
-  }
+    // --- camera ---------------------------------------------------------------
+    if (followPlayer) {
+      camera.follow(snap.playerSub.position.x, snap.playerSub.position.y);
+    } else if (playerOffScreen(snap)) {
+      followPlayer = true;
+    }
+
+    // Cinematic preset selection (presentation-only). A manual tactical override
+    // wins; otherwise the simulation-owned periscope state, player depth and speed
+    // drive the choice. This never writes back into gameplay or deterministic sim.
+    const periState = snap.periscope?.state;
+    const periscopeRaised = periState === 'RAISED' || periState === 'OBSERVING';
+    const preset = selectCameraPreset({
+      periscopeRaised,
+      depthM: snap.playerSub.depthM ?? 0,
+      speedKt: snap.playerSub.speedKt,
+      override: cameraMode === 'tactical' ? 'tactical' : null,
+    });
+    cameraMode = preset;
 
   // --- weather (audio ambience + HUD chip) ----------------------------------
   if (renderer !== null) {
@@ -694,34 +712,20 @@ function frame(nowMs: number): void {
     }
   }
 
-  // --- render: V2 Three.js or fallback Canvas 2D -----------------------------
-  const inMission = state !== 'MENU' && state !== 'BOOT';
+    // --- render: V2 Three.js or fallback Canvas 2D -----------------------------
+    const inMission = state !== 'MENU' && state !== 'BOOT';
 
-  if (inMission && threeRenderer !== null && missionDef !== null) {
-    // The simulation owns the periscope state. Mirror it one-way into the
-    // renderer camera only, so the visual transition never feeds back into
-    // gameplay or deterministic state.
-    if (cameraMode !== 'tactical') {
-      const periscopeState = snap.periscope?.state;
-      cameraMode =
-        periscopeState === 'RAISED' || periscopeState === 'OBSERVING'
-          ? 'periscope'
-          : 'world';
-    }
+    if (inMission && threeRenderer !== null && missionDef !== null) {
+      // V2: Convert snapshot to RenderState and render with Three.js
+      const weatherKind = activeWeatherAt(
+        missionDef.weather,
+        snap.simTime,
+        missionDef.parTimeS,
+        balance,
+      );
 
-    // V2: Convert snapshot to RenderState and render with Three.js
-    const weatherKind = activeWeatherAt(
-      missionDef.weather,
-      snap.simTime,
-      missionDef.parTimeS,
-      balance,
-    );
-
-    // Collect new events for effect spawning
-    const newEvents: EventEntry[] = [];
-    for (const ev of snap.eventLog) {
-      if (ev.id > lastEventId) newEvents.push(ev);
-    }
+      // Collect every event emitted during this frame (see frameStartEventId).
+      const newEvents = collectFrameEvents(snap.eventLog, frameStartEventId);
 
     const renderState = snapshotToRenderState(snap, {
       balance,

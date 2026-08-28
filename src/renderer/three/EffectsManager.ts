@@ -44,6 +44,16 @@ export class EffectsManager {
   private _particleGeo: THREE.BufferGeometry;
   private _particleMat: THREE.PointsMaterial;
 
+  // Water splash pools (torpedo launch / depth-charge entry)
+  private _splashes: Array<{ fxId: string; mesh: THREE.Mesh }> = [];
+  private _splashGeo: THREE.RingGeometry;
+  private _splashMat: THREE.MeshBasicMaterial;
+
+  // Bubble-trail pools (rising bubble puffs for torpedo runs)
+  private _bubbles: Array<{ fxId: string; points: THREE.Points; velocities: Float32Array }> = [];
+  private _bubbleGeo: THREE.BufferGeometry;
+  private _bubbleMat: THREE.PointsMaterial;
+
   constructor(scene: THREE.Scene, particleCount: number = 40) {
     this._scene = scene;
 
@@ -86,6 +96,34 @@ export class EffectsManager {
       opacity: 1,
       depthWrite: false,
     });
+
+    // --- Water splash (expanding ring at the surface) ---
+    this._splashGeo = new THREE.RingGeometry(0.7, 1.0, 40);
+    this._splashGeo.rotateX(-Math.PI / 2);
+    this._splashMat = new THREE.MeshBasicMaterial({
+      color: 0xcfe8f2, transparent: true, opacity: 0.8,
+      side: THREE.DoubleSide, depthWrite: false,
+    });
+
+    // --- Bubble trail puff (rising bubbles) ---
+    const bCount = 10;
+    const bPos = new Float32Array(bCount * 3);
+    const bVel = new Float32Array(bCount * 3);
+    for (let i = 0; i < bCount; i++) {
+      bPos[i * 3] = 0; bPos[i * 3 + 1] = 0; bPos[i * 3 + 2] = 0;
+      const theta = Math.random() * Math.PI * 2;
+      const speed = 0.05 + Math.random() * 0.12;
+      bVel[i * 3] = Math.cos(theta) * speed;
+      bVel[i * 3 + 1] = 0.3 + Math.random() * 0.5;
+      bVel[i * 3 + 2] = Math.sin(theta) * speed;
+    }
+    this._bubbleGeo = new THREE.BufferGeometry();
+    this._bubbleGeo.setAttribute('position', new THREE.BufferAttribute(bPos, 3));
+    this._bubbleGeo.userData = { velocities: bVel };
+    this._bubbleMat = new THREE.PointsMaterial({
+      color: 0xbfe6ef, size: 0.01, transparent: true, opacity: 0.8,
+      depthWrite: false,
+    });
   }
 
   update(effects: RenderEffect[], dt: number): void {
@@ -100,10 +138,55 @@ export class EffectsManager {
         case 'depthCharge':
           this._renderExplosion(fx, dt);
           break;
+        case 'waterSplash':
+          this._renderSplash(fx);
+          break;
+        case 'bubbleTrail':
+          this._renderBubbleTrail(fx, dt);
+          break;
         default:
           break;
       }
     }
+  }
+
+  private _renderSplash(fx: RenderEffect): void {
+    let s = this._splashes.find((x) => x.fxId === fx.id);
+    if (!s) {
+      const mesh = new THREE.Mesh(this._splashGeo, this._splashMat.clone());
+      mesh.position.set(fx.position.x, 0.003, fx.position.z);
+      this._scene.add(mesh);
+      s = { fxId: fx.id, mesh };
+      this._splashes.push(s);
+    }
+    const progress = fx.age / fx.maxAge;
+    const scale = Math.max(0.005, (0.02 + progress * 0.10) * (fx.params.scale ?? 1));
+    s.mesh.scale.set(scale, scale, scale);
+    (s.mesh.material as THREE.MeshBasicMaterial).opacity = Math.max(0, 0.8 * (1 - progress));
+  }
+
+  private _renderBubbleTrail(fx: RenderEffect, _dt: number): void {
+    let b = this._bubbles.find((x) => x.fxId === fx.id);
+    if (!b) {
+      const points = new THREE.Points(this._bubbleGeo.clone(), this._bubbleMat.clone());
+      points.position.set(fx.position.x, fx.position.y, fx.position.z);
+      this._scene.add(points);
+      b = { fxId: fx.id, points, velocities: this._bubbleGeo.userData.velocities as Float32Array };
+      this._bubbles.push(b);
+    }
+    const progress = fx.age / fx.maxAge;
+    const positions = b.points.geometry.attributes.position;
+    if (positions) {
+      const arr = positions.array as Float32Array;
+      const vels = b.velocities;
+      for (let i = 0; i < arr.length / 3; i++) {
+        arr[i * 3] = vels[i * 3]! * fx.age;
+        arr[i * 3 + 1] = vels[i * 3 + 1]! * fx.age - 0.2 * fx.age * fx.age;
+        arr[i * 3 + 2] = vels[i * 3 + 2]! * fx.age;
+      }
+      positions.needsUpdate = true;
+    }
+    (b.points.material as THREE.PointsMaterial).opacity = Math.max(0, 0.8 * (1 - progress));
   }
 
   private _renderPing(fx: RenderEffect): void {
@@ -277,6 +360,24 @@ export class EffectsManager {
   private _cleanupExpired(activeEffects: RenderEffect[]): void {
     const activeIds = new Set(activeEffects.map((e) => e.id));
 
+    for (let i = this._splashes.length - 1; i >= 0; i--) {
+      const s = this._splashes[i]!;
+      if (!activeIds.has(s.fxId)) {
+        this._scene.remove(s.mesh);
+        (s.mesh.material as THREE.Material).dispose();
+        this._splashes.splice(i, 1);
+      }
+    }
+    for (let i = this._bubbles.length - 1; i >= 0; i--) {
+      const b = this._bubbles[i]!;
+      if (!activeIds.has(b.fxId)) {
+        this._scene.remove(b.points);
+        b.points.geometry.dispose();
+        (b.points.material as THREE.Material).dispose();
+        this._bubbles.splice(i, 1);
+      }
+    }
+
     for (let i = this._pings.length - 1; i >= 0; i--) {
       const ping = this._pings[i]!;
       if (!activeIds.has(ping.fxId)) {
@@ -311,14 +412,29 @@ export class EffectsManager {
     this._pingMat.dispose();
     this._particleGeo.dispose();
     this._particleMat.dispose();
+    this._splashGeo.dispose();
+    this._splashMat.dispose();
+    this._bubbleGeo.dispose();
+    this._bubbleMat.dispose();
     for (const ping of this._pings) {
       this._scene.remove(ping.ring1);
       this._scene.remove(ping.ring2);
+    }
+    for (const s of this._splashes) {
+      this._scene.remove(s.mesh);
+      (s.mesh.material as THREE.Material).dispose();
+    }
+    for (const b of this._bubbles) {
+      this._scene.remove(b.points);
+      b.points.geometry.dispose();
+      (b.points.material as THREE.Material).dispose();
     }
     for (const exp of this._explosions) {
       this._scene.remove(exp.group);
     }
     this._pings.length = 0;
+    this._splashes.length = 0;
+    this._bubbles.length = 0;
     this._explosions.length = 0;
   }
 }

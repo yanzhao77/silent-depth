@@ -12,6 +12,8 @@ import { SceneManager } from './SceneManager';
 import { CameraManager } from './CameraManager';
 import { OceanRenderer } from './OceanRenderer';
 import { collectWakeSources } from './wake/WakeSystem';
+import { EnemyRevealTracker, CombatCueTracker } from './CinematicTrackers';
+import { TorpedoRenderer } from './TorpedoRenderer';
 import { ShipRenderer } from './ShipRenderer';
 import { SubmarineRenderer } from './SubmarineRenderer';
 import { SkyRenderer } from './SkyRenderer';
@@ -42,6 +44,9 @@ export class ThreeRenderer {
   private _effects: EffectsManager;
   private _periscopeView: PeriscopeView;
   private _postProcessing: PostProcessing;
+  private _torpedoRenderer: TorpedoRenderer;
+  private _revealTracker: EnemyRevealTracker;
+  private _cueTracker: CombatCueTracker;
   private _tacticalOverlay: TacticalOverlay | null = null;
   private _tacticalCanvas: HTMLCanvasElement | null = null;
   private _disposed = false;
@@ -69,6 +74,9 @@ export class ThreeRenderer {
     this._lighting = new LightingManager(scene, quality);
     this._weather = new WeatherRenderer(scene, quality.rainCount);
     this._effects = new EffectsManager(scene, quality.particleCount);
+    this._torpedoRenderer = new TorpedoRenderer(scene);
+    this._revealTracker = new EnemyRevealTracker();
+    this._cueTracker = new CombatCueTracker();
     this._periscopeView = new PeriscopeView();
     this._postProcessing = new PostProcessing(
       this._sceneMgr.renderer,
@@ -123,6 +131,22 @@ export class ThreeRenderer {
     this._ships.update(state.ships, state.wallTime);
     this._effects.update(state.effects, dt);
 
+    // Cinematic presentation state (presentation-only, driven by RenderState).
+    const revealId = this._revealTracker.update(state.ships, state.wallTime);
+    if (revealId) {
+      const ship = state.ships.find((s) => s.id === revealId);
+      this._cameraMgr.setFocus(ship && ship.visible ? { x: ship.position.x, z: ship.position.z } : null);
+    } else {
+      this._cameraMgr.setFocus(null);
+    }
+    const cue = this._cueTracker.update(state.effects, state.wallTime);
+    if (cue === 'impact') this._cameraMgr.triggerShake(0.005);
+    else if (cue === 'depthCharge') this._cameraMgr.triggerShake(0.006);
+    else if (cue === 'launch') this._cameraMgr.triggerShake(0.002);
+
+    // Torpedo entities + bubble trails (RenderState.torpedoes only).
+    this._torpedoRenderer.update(state.torpedoes, dt, state.wallTime);
+
     // Camera
     this._cameraMgr.update(state.player, dt, state.wallTime);
 
@@ -145,7 +169,7 @@ export class ThreeRenderer {
     // 2D overlays
     this._periscopeView.update(state, dt);
     if (this._tacticalOverlay && this._tacticalCanvas) {
-      if (state.camera.mode === 'world') {
+      if (state.camera.mode !== 'periscope' && state.camera.mode !== 'tactical') {
         this._tacticalCanvas.style.display = '';
         this._tacticalOverlay.update(state, this._cameraMgr.activeCamera, this._sceneMgr.width, this._sceneMgr.height);
       } else {
@@ -169,6 +193,7 @@ export class ThreeRenderer {
     this._lighting.dispose();
     this._weather.dispose();
     this._effects.dispose();
+    this._torpedoRenderer.dispose();
     this._periscopeView.dispose();
     this._postProcessing.dispose();
     this._assetManager.dispose();

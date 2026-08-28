@@ -176,7 +176,35 @@ export type { CameraMode } from './types';
 
 let effectIdCounter = 0;
 
-function createEffectFromEvent(
+/**
+ * Pure collector for the renderer's per-frame event window. Returns every event
+ * whose id exceeds `sinceId`. This is the fix for the V2.4→V2.5 event-starvation
+ * bug: the shell advances `lastEventId` inside `processNewEvents` (for audio/HUD),
+ * so a naive `ev.id > lastEventId` check at render time was always empty. By
+ * snapshotting the pre-step id and filtering the final event log, the renderer
+ * receives every event emitted during the frame without loss.
+ */
+export function collectFrameEvents(log: readonly EventEntry[], sinceId: number): EventEntry[] {
+  const out: EventEntry[] = [];
+  for (const ev of log) {
+    if (ev.id > sinceId) out.push(ev);
+  }
+  return out;
+}
+
+/**
+ * Locate an enemy ship in the snapshot by id. Returns null when the ship is no
+ * longer present (e.g. it sank and was removed) — callers MUST fail closed and
+ * produce no effect rather than guess a position.
+ */
+function findEnemyPosition(snapshot: GameSnapshot, shipId: unknown): { x: number; y: number } | null {
+  if (typeof shipId !== 'string') return null;
+  const ship = snapshot.enemies.find((e) => e.id === shipId);
+  if (!ship) return null;
+  return { x: ship.position.x, y: ship.position.y };
+}
+
+export function createEffectFromEvent(
   ev: EventEntry,
   snapshot: GameSnapshot,
 ): RenderEffect | null {
@@ -193,12 +221,26 @@ function createEffectFromEvent(
         id: `fx-ping-${effectIdCounter++}`,
       };
     }
+    case 'torpedo.fired': {
+      // The tube is on the player submarine; we know the player's position, so a
+      // short out-of-tube splash/flash is placed there. No position guessing.
+      const pos = engineToThree(snapshot.playerSub.position.x, snapshot.playerSub.position.y, 0);
+      return {
+        type: 'waterSplash',
+        position: pos,
+        age: 0,
+        maxAge: 0.5,
+        params: { scale: 0.5 },
+        id: `fx-tube-${effectIdCounter++}`,
+      };
+    }
     case 'torpedo.hit': {
-      // Find torpedo position from snapshot
-      const torpId = p?.torpedoId as string | undefined;
-      const torp = snapshot.torpedoes.find((t) => t.id === torpId);
-      if (!torp) return null;
-      const pos = engineToThree(torp.position.x, torp.position.y, 0);
+      // The torpedo is spliced from the snapshot the instant it hits, so we locate
+      // the impact via the real targetShipId in the enemy list. Fail closed if the
+      // ship is gone — never invent a coordinate.
+      const target = findEnemyPosition(snapshot, p?.targetShipId);
+      if (!target) return null;
+      const pos = engineToThree(target.x, target.y, 0);
       return {
         type: 'explosion',
         position: pos,
@@ -209,10 +251,9 @@ function createEffectFromEvent(
       };
     }
     case 'ship.sunk': {
-      const shipId = p?.shipId as string | undefined;
-      const ship = snapshot.enemies.find((e) => e.id === shipId);
-      if (!ship) return null;
-      const pos = engineToThree(ship.position.x, ship.position.y, 0);
+      const target = findEnemyPosition(snapshot, p?.shipId);
+      if (!target) return null;
+      const pos = engineToThree(target.x, target.y, 0);
       return {
         type: 'explosion',
         position: pos,
@@ -220,6 +261,19 @@ function createEffectFromEvent(
         maxAge: 3.0,
         params: { scale: 2.0 },
         id: `fx-sunk-${effectIdCounter++}`,
+      };
+    }
+    case 'depthCharge.dropped': {
+      // Surface entry splash: payload carries the real drop coordinates.
+      if (typeof p?.x !== 'number' || typeof p?.y !== 'number') return null;
+      const pos = engineToThree(p.x as number, p.y as number, 0);
+      return {
+        type: 'waterSplash',
+        position: pos,
+        age: 0,
+        maxAge: 0.8,
+        params: { scale: 0.9 },
+        id: `fx-dcdrop-${effectIdCounter++}`,
       };
     }
     case 'depthCharge.detonated': {
@@ -259,6 +313,10 @@ export interface AdapterOptions {
   dt?: number;
   /** Currently selected contact id. */
   selectedContactId?: string | null;
+  /** Mission weather sequence used only to derive visual conditions. */
+  weatherSpec?: string;
+  /** Mission reference duration used to advance a weather sequence. */
+  parTimeS?: number;
   /** Current camera mode. */
   cameraMode?: CameraMode;
 }
@@ -280,7 +338,9 @@ export function snapshotToRenderState(
     activeEffects = [],
     dt = 0.016,
     selectedContactId = null,
-    cameraMode = 'world',
+    weatherSpec = 'Clear',
+    parTimeS = 1800,
+    cameraMode = 'cinematic',
   } = opts;
 
   const t = Math.max(0, Math.min(1, alpha));
@@ -412,17 +472,10 @@ export function snapshotToRenderState(
   }));
 
   // --- Weather ---
-  const missionDef = { weather: '', parTimeS: 1 }; // Will be overridden
-  // We need to extract weather from the snapshot context. Since GameSnapshot
-  // doesn't carry the mission def directly, we use a simple approach:
-  // The caller should provide the weather kind via opts or we derive from events.
-  // For now, use a sensible default — the main loop will override this.
-  const activeWeather = resolveActiveWeather(
-    opts.balance ? '' : 'Clear', // placeholder — see note below
-    snapshot.simTime,
-    1800,
-    balance,
-  );
+  // GameSnapshot intentionally remains simulation-only, so the presentation
+  // caller supplies the mission's visual weather sequence.  A valid Clear
+  // default keeps standalone renderer previews safe without mutating gameplay.
+  const activeWeather = resolveActiveWeather(weatherSpec, snapshot.simTime, parTimeS, balance);
   const weather = deriveWeather(activeWeather, balance);
 
   // --- Effects ---

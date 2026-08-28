@@ -138,7 +138,18 @@ export interface RenderMission {
 // Camera state (for smooth transitions)
 // ---------------------------------------------------------------------------
 
-export type CameraMode = 'world' | 'periscope' | 'tactical';
+/**
+ * Cinematic camera presets (V2.5). Three physical cameras back these:
+ * periscope → periscopeCamera, tactical → orthographic map, all others → the
+ * world perspective camera configured with per-preset parameters.
+ */
+export type CameraMode =
+  | 'tactical'
+  | 'cinematic'
+  | 'chase'
+  | 'surface'
+  | 'underwater'
+  | 'periscope';
 
 export interface RenderCamera {
   mode: CameraMode;
