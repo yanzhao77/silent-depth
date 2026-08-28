@@ -68,7 +68,7 @@ export interface RenderAssetFamily {
 }
 
 export interface RenderAssetRegistry {
-  readonly schema: 'silent-depth-render-asset-registry-v2';
+  readonly schema: 'silent-depth-render-asset-registry-v2' | 'silent-depth-render-asset-registry-v3';
   readonly generatedAt: string;
   readonly policy: {
     readonly localOnly: true;
@@ -112,7 +112,7 @@ export function validateRenderAssetRegistry(registry: RenderAssetRegistry): read
   const assetIds = new Set<string>();
   const familyIds = new Set<string>();
 
-  if (registry.schema !== 'silent-depth-render-asset-registry-v2') {
+  if (registry.schema !== 'silent-depth-render-asset-registry-v2' && registry.schema !== 'silent-depth-render-asset-registry-v3') {
     issues.push({ assetId: '<registry>', message: 'unsupported registry schema' });
   }
   if (!registry.policy.localOnly || registry.policy.runtimeNetwork || !registry.policy.requireSha256 || !registry.policy.blockUnknownLicenses) {
@@ -211,4 +211,32 @@ export function resolveApprovedRenderAsset(
   const requested = registry.assets.find((asset) => asset.id === requestedId);
   if (!requested?.fallbackId) return undefined;
   return registry.assets.find((asset) => asset.id === requested.fallbackId && asset.status === 'approved');
+}
+
+/**
+ * Returns the approved GLB/GLTF asset for a visual family and detail level, or
+ * its declared local procedural fallback. This is a renderer-only selection;
+ * it deliberately receives no gameplay or simulation state.
+ */
+export function resolveFamilyLodAsset(
+  registry: RenderAssetRegistry,
+  familyId: string,
+  lod: 0 | 1 | 2 | 3,
+): RenderAssetRecord | undefined {
+  const glbCandidate = registry.assets.find((asset) => (
+    asset.family === familyId
+    && asset.lod === lod
+    && asset.status === 'approved'
+    && (asset.format === 'glb' || asset.format === 'gltf')
+  ));
+  if (glbCandidate) return glbCandidate;
+
+  const family = registry.families.find((item) => item.id === familyId);
+  return family ? resolveApprovedRenderAsset(registry, family.activeFallbackId) : undefined;
+}
+
+/** Converts a checked-in `public/` asset record to its offline Vite runtime URL. */
+export function toLocalRuntimeAssetUrl(path: string): string | undefined {
+  if (!isLocalAssetPath(path) || !path.startsWith('public/')) return undefined;
+  return `/${path.slice('public/'.length)}`;
 }
