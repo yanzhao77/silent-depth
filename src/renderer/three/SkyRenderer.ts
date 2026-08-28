@@ -36,13 +36,18 @@ uniform float uIsNight;
 uniform float uTime;
 uniform float uStarIntensity;
 uniform float uStorm;
+uniform float uLightning;
+uniform vec3 uFogColor;
+uniform float uFogBlend;
+uniform vec3 uMoonColor;
+uniform vec3 uMoonDirection;
 
 varying vec3 vWorldPosition;
 varying vec3 vDirection;
 
 // --- Noise functions ---
 float hash(vec2 p) {
-  return fract(sin(dot(p, vec2(127.1, 311.7))) * 43758.5453);
+  return fract(sin(dot(p, vec2(127.1, 311.7)) * 43758.5453));
 }
 
 float noise(vec2 p) {
@@ -71,81 +76,65 @@ float fbm(vec2 p) {
 void main() {
   vec3 dir = normalize(vDirection);
   float y = dir.y;
-  float yNorm = y * 0.5 + 0.5; // 0 at bottom, 1 at top
 
   // --- Sky gradient (physically inspired) ---
   vec3 color;
   if (y > 0.0) {
-    // Rayleigh-like: darker at zenith, brighter at horizon
     float t = pow(y, 0.4);
     color = mix(uHorizonColor, uTopColor, t);
-
-    // Horizon haze band
     float haze = exp(-y * 8.0) * 0.3;
     color += uHorizonColor * haze;
   } else {
-    // Below horizon: dark ocean reflection
     color = mix(uHorizonColor * 0.3, uBottomColor, smoothstep(0.0, -0.3, y));
+  }
+
+  // Fog weather: the horizon dissolves into the fog colour so sky and sea read
+  // as one continuous grey wall rather than a tinted band.
+  if (uFogBlend > 0.001) {
+    color = mix(color, uFogColor, uFogBlend * exp(-y * 3.0) * 0.65);
   }
 
   // --- Sun ---
   if (uIsNight < 0.5) {
     vec3 sunDir = normalize(uSunDirection);
     float sunDot = max(dot(dir, sunDir), 0.0);
-    // Sun disc
     float sunDisc = smoothstep(0.998, 0.9995, sunDot);
     color = mix(color, uSunColor * 1.5, sunDisc);
-    // Sun glow
     float sunGlow = pow(sunDot, 8.0) * 0.15;
     color += uSunColor * sunGlow;
-    // Atmospheric scatter around sun
     float scatter = pow(sunDot, 3.0) * 0.08;
     color += uSunColor * scatter;
   }
 
   // --- Moon (night only) ---
   if (uIsNight > 0.5) {
-    vec3 moonDir = normalize(vec3(0.3, 0.6, 0.5));
+    vec3 moonDir = normalize(uMoonDirection);
     float moonDot = max(dot(dir, moonDir), 0.0);
-    // A readable disc and soft halo establish a moon direction without a large
-    // emissive orb or a sci-fi bloom treatment.
     float moonDisc = smoothstep(0.994, 0.999, moonDot);
-    vec3 moonColor = vec3(0.62, 0.73, 0.88);
-    color = mix(color, moonColor * 0.72, moonDisc);
+    color = mix(color, uMoonColor * 0.72, moonDisc);
     float moonGlow = pow(moonDot, 9.0) * 0.085;
-    color += moonColor * moonGlow;
+    color += uMoonColor * moonGlow;
   }
 
   // --- Clouds ---
   if (y > 0.02 && uCloudCover > 0.05) {
     vec2 uv = dir.xz / (y + 0.05) * 3.0;
-
-    // High clouds (wispy, slow)
     float highCloud = fbm(uv * 1.5 + uTime * 0.008);
     highCloud = smoothstep(1.0 - uCloudCover * 0.7, 1.0, highCloud);
-
-    // Low clouds (stratus, medium speed)
     float lowCloud = fbm(uv * 3.0 - uTime * 0.015 + 50.0);
     lowCloud = smoothstep(1.0 - uCloudCover * 0.9, 1.0, lowCloud);
-
     float cloud = max(highCloud * 0.5, lowCloud * 0.8);
-    cloud *= smoothstep(0.0, 0.15, y); // Fade near horizon
-
+    cloud *= smoothstep(0.0, 0.15, y);
     vec3 cloudColor = mix(vec3(0.55, 0.6, 0.68), vec3(0.85, 0.88, 0.92), y);
     if (uIsNight > 0.5) {
       cloudColor *= 0.14;
-      // Moonlit cloud edges remain local to the light vector and retain the
-      // low-value silhouette language needed for night navigation.
-      vec3 moonDir = normalize(vec3(0.3, 0.6, 0.5));
+      vec3 moonDir = normalize(uMoonDirection);
       float moonLit = pow(max(dot(dir, moonDir), 0.0), 4.0) * 0.085;
       cloudColor += vec3(moonLit);
     }
     color = mix(color, cloudColor, cloud * 0.7);
   }
 
-  // A second, broad low cloud mass makes storm horizons read as volume rather
-  // than a single flat sky tint. It is intentionally scene-local and never
-  // changes the authoritative weather state.
   if (uStorm > 0.5 && y > 0.015) {
     vec2 stormUv = dir.xz / (y + 0.10) * 1.55 - vec2(uTime * 0.010, uTime * 0.004);
     float stormMass = smoothstep(0.42, 0.78, fbm(stormUv + 19.0));
@@ -161,7 +150,6 @@ void main() {
     vec2 starUv = dir.xz * 400.0 / y;
     float starHash = hash(floor(starUv));
     float star = step(0.998, starHash);
-    // Twinkle
     float twinkle = sin(uTime * 2.0 + starHash * 100.0) * 0.3 + 0.7;
     color += vec3(star * uStarIntensity * twinkle);
   }
@@ -171,6 +159,11 @@ void main() {
     float horizonFade = exp(-abs(y) * 20.0);
     float sunHorizon = pow(max(dot(normalize(dir.xz), normalize(uSunDirection.xz)), 0.0), 4.0);
     color += uSunColor * horizonFade * sunHorizon * 0.1;
+  }
+
+  // --- Storm lightning flash (dark → flash → afterglow → dark) ---
+  if (uLightning > 0.001) {
+    color += vec3(0.45, 0.55, 0.72) * uLightning * 0.6;
   }
 
   gl_FragColor = vec4(color, 1.0);
@@ -197,6 +190,11 @@ export class SkyRenderer {
         uTime: { value: 0 },
         uStarIntensity: { value: 0.8 },
         uStorm: { value: 0 },
+        uLightning: { value: 0 },
+        uFogColor: { value: new THREE.Color(0x788d9b) },
+        uFogBlend: { value: 0 },
+        uMoonColor: { value: new THREE.Color(0xbcd0e6) },
+        uMoonDirection: { value: new THREE.Vector3(0.22, 0.62, 0.48).normalize() },
       },
       side: THREE.BackSide,
       depthWrite: false,
@@ -205,49 +203,24 @@ export class SkyRenderer {
     scene.add(this.mesh);
   }
 
-  update(weather: RenderWeather, wallTime: number): void {
+  update(weather: RenderWeather, wallTime: number, lightning = 0): void {
     const u = this._material.uniforms;
+    const v = weather.visual;
     u['uTime']!.value = wallTime;
-    u['uCloudCover']!.value = weather.cloudCover;
-    u['uIsNight']!.value = weather.isNight ? 1 : 0;
-    u['uStorm']!.value = weather.kind === 'Storm' ? 1 : 0;
-
-    if (weather.isNight) {
-      u['uTopColor']!.value.setHex(0x030c17);
-      u['uHorizonColor']!.value.setHex(0x102438);
-      u['uBottomColor']!.value.setHex(0x02070d);
-      u['uSunColor']!.value.setHex(0xa8bfd6);
-      u['uSunDirection']!.value.set(0.22, 0.62, 0.48).normalize();
-      u['uStarIntensity']!.value = 0.52;
-    } else if (weather.kind === 'Storm') {
-      u['uTopColor']!.value.setHex(0x111d2a);
-      u['uHorizonColor']!.value.setHex(0x34485a);
-      u['uBottomColor']!.value.setHex(0x0b1929);
-      u['uSunColor']!.value.setHex(0x9aaec0);
-      u['uSunDirection']!.value.set(0.2, 0.3, 0.4).normalize();
-      u['uStarIntensity']!.value = 0;
-    } else if (weather.kind === 'Fog') {
-      u['uTopColor']!.value.setHex(0x5a6a7a);
-      u['uHorizonColor']!.value.setHex(0x8898a8);
-      u['uBottomColor']!.value.setHex(0x5a6a7a);
-      u['uSunColor']!.value.setHex(0xccccbb);
-      u['uSunDirection']!.value.set(0.5, 0.5, 0.3).normalize();
-      u['uStarIntensity']!.value = 0;
-    } else if (weather.kind === 'Cloudy') {
-      u['uTopColor']!.value.setHex(0x22384a);
-      u['uHorizonColor']!.value.setHex(0x5a7a90);
-      u['uBottomColor']!.value.setHex(0x0a1828);
-      u['uSunColor']!.value.setHex(0xddddcc);
-      u['uSunDirection']!.value.set(0.4, 0.6, 0.3).normalize();
-      u['uStarIntensity']!.value = 0;
-    } else {
-      u['uTopColor']!.value.setHex(0x1a3a5c);
-      u['uHorizonColor']!.value.setHex(0x4a6a8a);
-      u['uBottomColor']!.value.setHex(0x030a14);
-      u['uSunColor']!.value.setHex(0xffddaa);
-      u['uSunDirection']!.value.set(0.5, 0.8, 0.3).normalize();
-      u['uStarIntensity']!.value = 0;
-    }
+    u['uCloudCover']!.value = v.cloudCover;
+    u['uIsNight']!.value = v.isNight ? 1 : 0;
+    u['uStorm']!.value = v.storm ? 1 : 0;
+    u['uLightning']!.value = lightning;
+    u['uFogBlend']!.value = weather.kind === 'Fog' ? 1 : 0;
+    u['uFogColor']!.value.setHex(v.fogColor);
+    u['uTopColor']!.value.setHex(v.skyTop);
+    u['uHorizonColor']!.value.setHex(v.skyHorizon);
+    u['uBottomColor']!.value.setHex(v.skyBottom);
+    u['uSunColor']!.value.setHex(v.sunColor);
+    u['uSunDirection']!.value.set(v.sunDirection.x, v.sunDirection.y, v.sunDirection.z);
+    u['uStarIntensity']!.value = v.starIntensity;
+    u['uMoonColor']!.value.setHex(v.moonColor);
+    u['uMoonDirection']!.value.set(v.moonDirection.x, v.moonDirection.y, v.moonDirection.z);
   }
 
   dispose(): void {

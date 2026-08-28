@@ -16,6 +16,7 @@
 
 import * as THREE from 'three';
 import type { RenderWeather } from '../types';
+import type { UnderwaterVisual } from '../weather';
 import { MAX_WAKES, type WakeSource } from './wake/WakeSystem';
 
 const OCEAN_VERTEX = /* glsl */ `
@@ -107,6 +108,9 @@ uniform vec3 uSunDirection;
 uniform float uIsNight;
 uniform float uStorm;
 uniform float uTime;
+uniform float uUnderwater;
+uniform vec3 uWaterTint;
+uniform float uCaustics;
 
 uniform int uWakeCount;
 uniform vec2 uWakePos[MAX_WAKES];
@@ -179,6 +183,15 @@ void main() {
   float forwardScatter = pow(max(dot(viewDir, -lightDir), 0.0), 9.0) * (1.0 - uStorm) * 0.10;
   color += uSubsurfaceColor * forwardScatter * viewUp;
 
+  // Underwater: the surface is viewed from below. Shift toward the depth tint,
+  // kill the sky reflection and add only the shallow-water caustic dapples.
+  if (uUnderwater > 0.5) {
+    color = mix(color, uWaterTint, 0.82);
+    float caus = sin(vWorldPosition.x * 60.0 + uTime * 0.8) * sin(vWorldPosition.z * 60.0 - uTime * 0.6);
+    caus = pow(max(caus, 0.0), 3.0);
+    color += uSubsurfaceColor * caus * uCaustics * 0.12;
+  }
+
   // Storm foam bands: wind-aligned streaks driven by the broad wave direction.
   float bandCoord = dot(vWorldPosition.xz, normalize(vec2(1.0, 0.21)));
   float bands = smoothstep(0.55, 0.95, sin(bandCoord * 36.0 + uTime * 0.7) * 0.5 + 0.5)
@@ -206,6 +219,8 @@ uniform vec3 uSunDirection;
 uniform float uIsNight;
 uniform float uStorm;
 uniform float uTime;
+uniform float uUnderwater;
+uniform vec3 uWaterTint;
 
 varying vec3 vWorldPosition;
 varying vec3 vNormal;
@@ -224,6 +239,9 @@ void main() {
   vec3 waterColor = mix(uDeepColor, uShallowColor, NdotL * 0.4);
   float ambient = mix(0.14, 0.06, uIsNight);
   vec3 color = waterColor * (ambient + NdotL * mix(0.42, 0.24, uStorm));
+  if (uUnderwater > 0.5) {
+    color = mix(color, uWaterTint, 0.85);
+  }
   // Distant water dissolves into the fog colour near the horizon.
   float distanceToCamera = length(vWorldPosition - cameraPosition);
   float fogFactor = 1.0 - exp(-0.010 * distanceToCamera * 8.0);
@@ -302,6 +320,9 @@ export class OceanRenderer {
         uFogColor: { value: new THREE.Color(0x061522) },
         uSunDirection: { value: new THREE.Vector3(0.5, 0.8, 0.3).normalize() },
         uIsNight: { value: 0 },
+        uUnderwater: { value: 0 },
+        uWaterTint: { value: new THREE.Color(0x0a2236) },
+        uCaustics: { value: 0 },
       },
       transparent: false,
       side: THREE.FrontSide,
@@ -326,6 +347,8 @@ export class OceanRenderer {
         uFogColor: { value: new THREE.Color(0x061522) },
         uSunDirection: { value: new THREE.Vector3(0.5, 0.8, 0.3).normalize() },
         uIsNight: { value: 0 },
+        uUnderwater: { value: 0 },
+        uWaterTint: { value: new THREE.Color(0x0a2236) },
       },
       transparent: false,
       side: THREE.FrontSide,
@@ -344,6 +367,7 @@ export class OceanRenderer {
     playerSpeedKt: number,
     playerHeadingDeg: number,
     wakes?: WakeSource[],
+    underwater?: UnderwaterVisual | null,
   ): void {
     this.mesh.position.set(playerX, 0, playerZ);
     this.farMesh.position.set(playerX, 0, playerZ);
@@ -354,6 +378,9 @@ export class OceanRenderer {
     uniforms['uFogDensity']!.value = weather.fogDensity;
     uniforms['uIsNight']!.value = weather.isNight ? 1 : 0;
     uniforms['uStorm']!.value = weather.kind === 'Storm' ? 1 : 0;
+    uniforms['uUnderwater']!.value = underwater ? 1 : 0;
+    uniforms['uWaterTint']!.value.setHex(underwater ? underwater.waterTint : 0x0a2236);
+    uniforms['uCaustics']!.value = underwater ? underwater.causticsIntensity : 0;
 
     if (wakes && wakes.length > 0) {
       const count = Math.min(wakes.length, MAX_WAKES);
@@ -376,6 +403,10 @@ export class OceanRenderer {
     }
 
     this.applyWeatherPalette(uniforms, weather);
+    if (underwater) {
+      uniforms['uFogColor']!.value.setHex(underwater.fogColor);
+      uniforms['uFogDensity']!.value = underwater.fogDensity;
+    }
 
     const far = this._farMaterial.uniforms;
     far['uTime']!.value = wallTime;
@@ -383,53 +414,30 @@ export class OceanRenderer {
     far['uWindSpeed']!.value = weather.windSpeed;
     far['uStorm']!.value = weather.kind === 'Storm' ? 1 : 0;
     far['uIsNight']!.value = weather.isNight ? 1 : 0;
+    far['uUnderwater']!.value = underwater ? 1 : 0;
+    far['uWaterTint']!.value.setHex(underwater ? underwater.waterTint : 0x0a2236);
     this.applyWeatherPalette(far, weather);
+    if (underwater) {
+      far['uFogColor']!.value.setHex(underwater.fogColor);
+    }
   }
 
   private applyWeatherPalette(
     uniforms: Record<string, THREE.IUniform>,
     weather: RenderWeather,
   ): void {
+    const v = weather.visual;
     const set = (name: string, hex: number): void => {
       const u = uniforms[name];
       if (u) (u.value as THREE.Color).setHex(hex);
     };
-    if (weather.isNight) {
-      set('uDeepColor', 0x01070e);
-      set('uShallowColor', 0x0b2130);
-      set('uFoamColor', 0x627b8a);
-      set('uSubsurfaceColor', 0x0b2834);
-      set('uFogColor', 0x02080e);
-      if (uniforms['uSunDirection']) (uniforms['uSunDirection']!.value as THREE.Vector3).set(0.22, 0.62, 0.48).normalize();
-    } else if (weather.kind === 'Storm') {
-      set('uDeepColor', 0x020914);
-      set('uShallowColor', 0x112c3d);
-      set('uFoamColor', 0xaebdc5);
-      set('uSubsurfaceColor', 0x173b4a);
-      set('uFogColor', 0x112235);
-      if (uniforms['uSunDirection']) (uniforms['uSunDirection']!.value as THREE.Vector3).set(0.16, 0.34, 0.42).normalize();
-    } else if (weather.kind === 'Fog') {
-      set('uDeepColor', 0x071420);
-      set('uShallowColor', 0x2b4859);
-      set('uFoamColor', 0xa7b4bd);
-      set('uSubsurfaceColor', 0x2b505c);
-      set('uFogColor', 0x718493);
-      if (uniforms['uSunDirection']) (uniforms['uSunDirection']!.value as THREE.Vector3).set(0.42, 0.56, 0.30).normalize();
-    } else if (weather.kind === 'Cloudy') {
-      set('uDeepColor', 0x04111c);
-      set('uShallowColor', 0x1a3a4d);
-      set('uFoamColor', 0xaab9c4);
-      set('uSubsurfaceColor', 0x1d4655);
-      set('uFogColor', 0x102435);
-      if (uniforms['uSunDirection']) (uniforms['uSunDirection']!.value as THREE.Vector3).set(0.38, 0.55, 0.28).normalize();
-    } else {
-      set('uDeepColor', 0x03111e);
-      set('uShallowColor', 0x1a4e68);
-      set('uFoamColor', 0xd4e2e7);
-      set('uSubsurfaceColor', 0x2e7887);
-      set('uFogColor', 0x0c2638);
-      if (uniforms['uSunDirection']) (uniforms['uSunDirection']!.value as THREE.Vector3).set(0.46, 0.76, 0.34).normalize();
-    }
+    set('uDeepColor', v.oceanDeep);
+    set('uShallowColor', v.oceanShallow);
+    set('uFoamColor', v.oceanFoam);
+    set('uSubsurfaceColor', v.oceanSubsurface);
+    set('uFogColor', v.fogColor);
+    const sun = uniforms['uSunDirection'];
+    if (sun) (sun.value as THREE.Vector3).set(v.sunDirection.x, v.sunDirection.y, v.sunDirection.z);
   }
 
   dispose(): void {

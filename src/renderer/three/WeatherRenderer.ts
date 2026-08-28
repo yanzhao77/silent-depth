@@ -1,13 +1,17 @@
 /**
- * SILENT DEPTH V2.2 — Weather Renderer
+ * SILENT DEPTH V2.6 — Weather Renderer
  *
- * Presentation-only storm, fog and lightning layer. Rain moves in a shader so
+ * Presentation-only storm rain and lightning layer. Rain moves in a shader so
  * CPU cost remains bounded at the configured point count; weather semantics are
- * read exclusively from RenderWeather.
+ * read exclusively from RenderWeather. Scene fog is owned by SceneManager, so
+ * this module no longer sets it. Lightning intensity is supplied by the
+ * deterministic `stormLightningIntensity` clock computed in ThreeRenderer, so
+ * the flash cadence is reproducible and never consumes engine RNG.
  */
 
 import * as THREE from 'three';
 import type { RenderWeather } from '../types';
+import { createVisualRng } from '../visualRng';
 
 const RAIN_VERTEX = /* glsl */ `
 attribute float aSeed;
@@ -41,9 +45,11 @@ void main() {
 }
 `;
 
-function pseudoRandom(index: number, salt: number): number {
-  const value = Math.sin(index * 12.9898 + salt * 78.233) * 43758.5453;
-  return value - Math.floor(value);
+export interface WeatherUpdateOptions {
+  /** Deterministic storm lightning flash intensity [0,1]. */
+  lightning: number;
+  /** Whether the player is currently below the surface (disable rain/flash). */
+  underwater: boolean;
 }
 
 export class WeatherRenderer {
@@ -53,9 +59,6 @@ export class WeatherRenderer {
   private _rainMaterial: THREE.ShaderMaterial | null = null;
   private readonly _rainCount: number;
   private _lightningLight: THREE.PointLight | null = null;
-  private _lightningTimer = 2.8;
-  private _lightningActive = false;
-  private _lightningSeed = 0;
   private _weatherTime = 0;
 
   constructor(scene: THREE.Scene, rainCount: number = 4000) {
@@ -63,11 +66,16 @@ export class WeatherRenderer {
     this._rainCount = rainCount;
   }
 
-  update(weather: RenderWeather, playerX: number, playerZ: number, dt: number): void {
+  update(
+    weather: RenderWeather,
+    playerX: number,
+    playerZ: number,
+    dt: number,
+    options: WeatherUpdateOptions = { lightning: 0, underwater: false },
+  ): void {
     this._weatherTime += Math.max(0, dt);
-    this._updateSceneFog(weather);
 
-    if (weather.kind === 'Storm') {
+    if (weather.kind === 'Storm' && !options.underwater) {
       if (!this._rainParticles) this._createRain();
       if (this._rainParticles && this._rainMaterial) {
         this._rainParticles.visible = true;
@@ -75,69 +83,32 @@ export class WeatherRenderer {
         this._rainMaterial.uniforms['uTime']!.value = this._weatherTime;
         this._rainMaterial.uniforms['uWindSpeed']!.value = weather.windSpeed;
       }
-      this._updateLightning(dt, playerX, playerZ);
+      this._applyLightning(options.lightning, playerX, playerZ);
     } else {
       if (this._rainParticles) this._rainParticles.visible = false;
-      this._removeLightning();
-    }
-  }
-
-  private _updateSceneFog(weather: RenderWeather): void {
-    if (!(this._scene.fog instanceof THREE.FogExp2)) return;
-    this._scene.fog.density = weather.fogDensity;
-    if (weather.isNight) {
-      this._scene.fog.color.setHex(0x020a10);
-    } else if (weather.kind === 'Fog') {
-      this._scene.fog.color.setHex(0x788d9b);
-    } else if (weather.kind === 'Storm') {
-      this._scene.fog.color.setHex(0x101f31);
-    } else if (weather.kind === 'Cloudy') {
-      this._scene.fog.color.setHex(0x10283a);
-    } else {
-      this._scene.fog.color.setHex(0x071b2a);
-    }
-  }
-
-  private _updateLightning(dt: number, playerX: number, playerZ: number): void {
-    this._lightningTimer -= Math.max(0, dt);
-    if (this._lightningTimer <= 0 && !this._lightningActive) {
-      this._lightningActive = true;
-      const flashLength = 0.055 + pseudoRandom(this._lightningSeed, 1) * 0.095;
-      this._lightningTimer = flashLength;
-      if (!this._lightningLight) {
-        this._lightningLight = new THREE.PointLight(0xc9dbff, 8.5, 170);
-        this._scene.add(this._lightningLight);
-      }
-      this._lightningLight.intensity = 5.5 + pseudoRandom(this._lightningSeed, 2) * 3.0;
-      this._lightningLight.position.set(
-        playerX + (pseudoRandom(this._lightningSeed, 3) - 0.5) * 46,
-        38 + pseudoRandom(this._lightningSeed, 4) * 19,
-        playerZ + (pseudoRandom(this._lightningSeed, 5) - 0.5) * 46,
-      );
-      this._lightningSeed++;
-      return;
-    }
-    if (this._lightningActive && this._lightningTimer <= 0) {
-      this._lightningActive = false;
-      this._lightningTimer = 3.5 + pseudoRandom(this._lightningSeed, 6) * 6.5;
       if (this._lightningLight) this._lightningLight.intensity = 0;
     }
   }
 
-  private _removeLightning(): void {
-    this._lightningActive = false;
-    this._lightningTimer = 2.8;
-    if (this._lightningLight) this._lightningLight.intensity = 0;
+  private _applyLightning(intensity: number, playerX: number, playerZ: number): void {
+    if (!this._lightningLight) {
+      this._lightningLight = new THREE.PointLight(0xc9dbff, 0, 170);
+      this._scene.add(this._lightningLight);
+    }
+    this._lightningLight.position.set(playerX, 42, playerZ);
+    // Deterministic flash: 0 intensity between strikes, bright during the peak.
+    this._lightningLight.intensity = intensity * 9;
   }
 
   private _createRain(): void {
+    const rng = createVisualRng(0x9e3779b1);
     const positions = new Float32Array(this._rainCount * 3);
     const seeds = new Float32Array(this._rainCount);
     for (let i = 0; i < this._rainCount; i++) {
-      positions[i * 3] = (pseudoRandom(i, 11) - 0.5) * 17;
-      positions[i * 3 + 1] = pseudoRandom(i, 12) * 8;
-      positions[i * 3 + 2] = (pseudoRandom(i, 13) - 0.5) * 17;
-      seeds[i] = pseudoRandom(i, 14);
+      positions[i * 3] = (rng.next() - 0.5) * 17;
+      positions[i * 3 + 1] = rng.next() * 8;
+      positions[i * 3 + 2] = (rng.next() - 0.5) * 17;
+      seeds[i] = rng.next();
     }
     this._rainGeometry = new THREE.BufferGeometry();
     this._rainGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
@@ -160,8 +131,8 @@ export class WeatherRenderer {
     if (this._rainParticles) this._scene.remove(this._rainParticles);
     this._rainGeometry?.dispose();
     this._rainMaterial?.dispose();
-    this._removeLightning();
     if (this._lightningLight) {
+      this._lightningLight.intensity = 0;
       this._scene.remove(this._lightningLight);
       this._lightningLight.dispose();
     }

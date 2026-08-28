@@ -25,6 +25,7 @@
 import type { BalanceConfig } from '../core/balance';
 import type { EventEntry, GameSnapshot, ShipClass, WeatherKind } from '../core/types';
 import { weatherModifiers } from '../world/weather';
+import { deriveWeatherVisuals } from './weather';
 import type {
   CameraMode,
   RenderCamera,
@@ -117,6 +118,7 @@ function deriveWeather(
     fogDensity: vis.fogDensity,
     isNight: kind === 'Night',
     cloudCover: vis.cloudCover,
+    visual: deriveWeatherVisuals(kind),
   };
 }
 
@@ -128,7 +130,7 @@ function resolveActiveWeather(
   weatherSpec: string,
   simTime: number,
   parTimeS: number,
-  balance: BalanceConfig,
+  _balance: BalanceConfig,
 ): WeatherKind {
   // Simple parsing: handle 'A->B' sequences
   const parts = weatherSpec.split('->').map((s) => s.trim()) as WeatherKind[];

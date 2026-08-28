@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { AssetManager } from '../assets/AssetManager';
+import type { AssetManager } from '../assets/AssetManager';
 import { createShipLodGeometry } from '../procedural/shipGeometry';
 import type { RenderShip } from '../types';
 import type { QualitySettings } from './QualityPresets';
@@ -29,6 +29,42 @@ function applyLodDistanceMultiplier(group: THREE.Object3D, multiplier: number): 
     if (!(child instanceof THREE.LOD)) return;
     for (const level of child.levels) level.distance *= multiplier;
   });
+}
+
+/**
+ * Pure, fail-closed nav-light descriptor for a ship. Returns `null` for any
+ * ship that is not visible — a hidden contact must never yield a marker, per
+ * the architecture's visibility-truth rule. Visible ships expose the standard
+ * COLREG side lights (port red, starboard green) plus a stern white light so
+ * the player can read a target's orientation at night.
+ */
+export interface NavLight {
+  color: number;
+  /** Local ship-space offset in km. */
+  position: { x: number; y: number; z: number };
+}
+
+export function shipNavLights(ship: RenderShip): NavLight[] | null {
+  if (!ship.visible) return null;
+  return [
+    { color: 0xff2b2b, position: { x: -0.03, y: 0.012, z: 0 } }, // port (left) red
+    { color: 0x2bff5a, position: { x: 0.03, y: 0.012, z: 0 } }, // starboard (right) green
+    { color: 0xffffff, position: { x: 0, y: 0.014, z: -0.055 } }, // stern white
+  ];
+}
+
+function addNavLights(group: THREE.Group, ship: RenderShip): void {
+  const lights = shipNavLights(ship);
+  if (!lights) return;
+  for (const light of lights) {
+    const geometry = new THREE.SphereGeometry(0.004, 6, 4);
+    const material = new THREE.MeshBasicMaterial({ color: light.color, fog: false });
+    const mesh = new THREE.Mesh(geometry, material);
+    mesh.position.set(light.position.x, light.position.y, light.position.z);
+    mesh.name = `nav-light-${light.color.toString(16)}`;
+    mesh.userData.renderOnly = true;
+    group.add(mesh);
+  }
 }
 
 function disposeGroupResources(
@@ -95,6 +131,7 @@ export class ShipRenderer {
         group.name = `ship-${ship.id}`;
         group.userData.renderOnly = true;
         group.userData.prototypeSource = source;
+        addNavLights(group, ship);
         this.scene.add(group);
         this.meshes.set(ship.id, group);
       }

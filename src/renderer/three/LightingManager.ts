@@ -11,7 +11,15 @@
 
 import * as THREE from 'three';
 import type { RenderWeather } from '../types';
+import type { WeatherVisual } from '../weather';
 import type { QualitySettings } from './QualityPresets';
+
+export interface LightingOptions {
+  /** Storm lightning flash intensity [0,1] from the deterministic clock. */
+  lightning?: number;
+  /** Underwater light attenuation [0,1]; 1 = surface, lower = darker depths. */
+  underwaterAttenuation?: number;
+}
 
 export class LightingManager {
   readonly sunLight: THREE.DirectionalLight;
@@ -49,62 +57,37 @@ export class LightingManager {
     scene.add(this.rimLight);
   }
 
-  update(weather: RenderWeather): void {
-    if (weather.isNight) {
-      // Moonlight retains a narrow cool rim and enough ambient lift to read a
-      // wet hull, while keeping the surrounding ocean genuinely dark.
-      this.sunLight.color.setHex(0xaec4dc);
-      this.sunLight.intensity = 0.56;
-      this.sunLight.position.set(30, 45, 50);
-      this.ambientLight.color.setHex(0x21495d);
-      this.ambientLight.groundColor.setHex(0x02070d);
-      this.ambientLight.intensity = 0.36;
-      this.rimLight.color.setHex(0x5c8bab);
-      this.rimLight.intensity = 0.36;
-      this.rimLight.position.set(-24, 22, -34);
-    } else if (weather.kind === 'Storm') {
-      // Storms compress contrast rather than removing all form definition.
-      this.sunLight.color.setHex(0x8398aa);
-      this.sunLight.intensity = 0.57;
-      this.sunLight.position.set(20, 25, 40);
-      this.ambientLight.color.setHex(0x3d5969);
-      this.ambientLight.groundColor.setHex(0x07111f);
-      this.ambientLight.intensity = 0.41;
-      this.rimLight.color.setHex(0x63859b);
-      this.rimLight.intensity = 0.27;
-    } else if (weather.kind === 'Fog') {
-      // Fog diffuses source light; a soft rim keeps close tactical geometry
-      // separable without making silhouettes visible through the fog volume.
-      this.sunLight.color.setHex(0xb5c5d0);
-      this.sunLight.intensity = 0.62;
-      this.sunLight.position.set(40, 55, 30);
-      this.ambientLight.color.setHex(0x647786);
-      this.ambientLight.groundColor.setHex(0x0d2233);
-      this.ambientLight.intensity = 0.39;
-      this.rimLight.color.setHex(0x7c91a0);
-      this.rimLight.intensity = 0.20;
-    } else if (weather.kind === 'Cloudy') {
-      // Soft overcast uses cool naval tones and a controlled rear rim.
-      this.sunLight.color.setHex(0xd0dfeb);
-      this.sunLight.intensity = 0.82;
-      this.sunLight.position.set(45, 65, 30);
-      this.ambientLight.color.setHex(0x566b79);
-      this.ambientLight.groundColor.setHex(0x0d2233);
-      this.ambientLight.intensity = 0.36;
-      this.rimLight.color.setHex(0x99afbd);
-      this.rimLight.intensity = 0.24;
-    } else {
-      // Clear daylight — warm, cinematic
-      this.sunLight.color.setHex(0xffeedd);
-      this.sunLight.intensity = 1.3;
-      this.sunLight.position.set(50, 80, 30);
-      this.ambientLight.color.setHex(0x3a6a88);
-      this.ambientLight.groundColor.setHex(0x030a14);
-      this.ambientLight.intensity = 0.35;
-      this.rimLight.color.setHex(0x88aacc);
-      this.rimLight.intensity = 0.25;
-      this.rimLight.position.set(-35, 15, -45);
+  update(weather: RenderWeather, options: LightingOptions = {}): void {
+    const v: WeatherVisual = weather.visual;
+    const lightning = options.lightning ?? 0;
+    const underwater = options.underwaterAttenuation ?? 1;
+
+    // Key light tracks the weather's sun/moon direction.
+    this.sunLight.position.set(v.sunDirection.x * 100, v.sunDirection.y * 100, v.sunDirection.z * 100);
+
+    let sunIntensity = v.sunIntensity;
+    let ambientIntensity = v.ambientIntensity;
+    let rimIntensity = v.rimIntensity;
+
+    // Storm lightning briefly lifts the key + ambient without affecting the
+    // authoritative simulation. It is a pure visual additive flash.
+    if (lightning > 0) {
+      sunIntensity += lightning * 0.9;
+      ambientIntensity += lightning * 0.4;
     }
+
+    // Underwater attenuation dims every light by the surviving top-side light.
+    sunIntensity *= underwater;
+    ambientIntensity *= underwater;
+    rimIntensity *= Math.max(underwater, 0.12);
+
+    this.sunLight.color.setHex(v.sunColor);
+    this.sunLight.intensity = sunIntensity;
+    this.ambientLight.color.setHex(v.ambientTop);
+    this.ambientLight.groundColor.setHex(v.ambientBottom);
+    this.ambientLight.intensity = ambientIntensity;
+    this.rimLight.color.setHex(v.rimColor);
+    this.rimLight.intensity = rimIntensity;
   }
 
   dispose(): void {

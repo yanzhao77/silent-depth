@@ -23,7 +23,9 @@ import { EffectsManager } from './EffectsManager';
 import { PeriscopeView } from './PeriscopeView';
 import { TacticalOverlay } from './TacticalOverlay';
 import { PostProcessing } from './PostProcessing';
+import { UnderwaterRenderer } from './UnderwaterRenderer';
 import { autoDetectQuality, getQualitySettings, type QualityLevel } from './QualityPresets';
+import { deriveUnderwaterVisuals, stormLightningIntensity } from '../weather';
 
 export interface ThreeRendererOptions {
   canvas: HTMLCanvasElement;
@@ -41,6 +43,7 @@ export class ThreeRenderer {
   private _sky: SkyRenderer;
   private _lighting: LightingManager;
   private _weather: WeatherRenderer;
+  private _underwater: UnderwaterRenderer;
   private _effects: EffectsManager;
   private _periscopeView: PeriscopeView;
   private _postProcessing: PostProcessing;
@@ -73,6 +76,7 @@ export class ThreeRenderer {
     this._sky = new SkyRenderer(scene);
     this._lighting = new LightingManager(scene, quality);
     this._weather = new WeatherRenderer(scene, quality.rainCount);
+    this._underwater = new UnderwaterRenderer(scene);
     this._effects = new EffectsManager(scene, quality.particleCount);
     this._torpedoRenderer = new TorpedoRenderer(scene);
     this._revealTracker = new EnemyRevealTracker();
@@ -114,6 +118,21 @@ export class ThreeRenderer {
       this._cameraMgr.setMode(state.camera.mode);
     }
 
+    // Resolve the V2.6 atmosphere: storm lightning cadence (deterministic) and
+    // continuous underwater depth visuals. Both are pure derivations; they only
+    // change what the player sees, never simulation or sonar truth.
+    const quality = getQualitySettings();
+    const playerDepthM = state.player.depthM ?? 0;
+    const underwater = playerDepthM > 0.001
+      ? deriveUnderwaterVisuals(playerDepthM, {
+          underwaterParticles: quality.underwaterParticles,
+          underwaterCaustics: quality.underwaterCaustics,
+        })
+      : null;
+    const lightning = state.weather.kind === 'Storm'
+      ? stormLightningIntensity(state.wallTime)
+      : 0;
+
     // Update all sub-renderers
     this._ocean.update(
       state.weather,
@@ -123,10 +142,28 @@ export class ThreeRenderer {
       state.player.speedKt,
       state.player.headingDeg,
       collectWakeSources(state),
+      underwater,
     );
-    this._sky.update(state.weather, state.wallTime);
-    this._lighting.update(state.weather);
-    this._weather.update(state.weather, state.player.position.x, state.player.position.z, dt);
+    this._sky.update(state.weather, state.wallTime, lightning);
+    // The sky dome is meaningless once the camera is below the surface.
+    this._sky.mesh.visible = !underwater;
+    this._lighting.update(state.weather, {
+      lightning,
+      underwaterAttenuation: underwater ? underwater.lightAttenuation : 1,
+    });
+    this._weather.update(
+      state.weather,
+      state.player.position.x,
+      state.player.position.z,
+      dt,
+      { lightning, underwater: !!underwater },
+    );
+    this._underwater.update(underwater, this._cameraMgr.activeCamera.position, state.wallTime);
+    // Single owned place for scene fog; resolved from weather or underwater.
+    this._sceneMgr.setAtmosphere(
+      underwater ? underwater.fogColor : state.weather.visual.fogColor,
+      underwater ? underwater.fogDensity : state.weather.fogDensity,
+    );
     this._submarine.update(state.player, state.wallTime, dt);
     this._ships.update(state.ships, state.wallTime);
     this._effects.update(state.effects, dt);
@@ -192,6 +229,7 @@ export class ThreeRenderer {
     this._sky.dispose();
     this._lighting.dispose();
     this._weather.dispose();
+    this._underwater.dispose();
     this._effects.dispose();
     this._torpedoRenderer.dispose();
     this._periscopeView.dispose();

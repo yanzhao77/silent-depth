@@ -20,6 +20,10 @@ export interface QualitySettings {
   oceanSegments: number;
   particleCount: number;
   rainCount: number;
+  /** Suspended underwater particle budget (follows the camera, no world alloc). */
+  underwaterParticles: number;
+  /** Strength of the shallow-water caustic light plane [0,1]. */
+  underwaterCaustics: number;
   postProcessing: boolean;
   bloomStrength: number;
   vignetteStrength: number;
@@ -35,6 +39,8 @@ const PRESETS: Record<QualityLevel, QualitySettings> = {
     oceanSegments: 128,
     particleCount: 15,
     rainCount: 1500,
+    underwaterParticles: 8,
+    underwaterCaustics: 0,
     postProcessing: false,
     bloomStrength: 0,
     vignetteStrength: 0,
@@ -48,6 +54,8 @@ const PRESETS: Record<QualityLevel, QualitySettings> = {
     oceanSegments: 200,
     particleCount: 30,
     rainCount: 2500,
+    underwaterParticles: 20,
+    underwaterCaustics: 0.4,
     postProcessing: true,
     bloomStrength: 0.08,
     vignetteStrength: 0.8,
@@ -61,6 +69,8 @@ const PRESETS: Record<QualityLevel, QualitySettings> = {
     oceanSegments: 300,
     particleCount: 40,
     rainCount: 4000,
+    underwaterParticles: 35,
+    underwaterCaustics: 0.7,
     postProcessing: true,
     bloomStrength: 0.15,
     vignetteStrength: 1.2,
@@ -74,6 +84,8 @@ const PRESETS: Record<QualityLevel, QualitySettings> = {
     oceanSegments: 400,
     particleCount: 60,
     rainCount: 6000,
+    underwaterParticles: 60,
+    underwaterCaustics: 1.0,
     postProcessing: true,
     bloomStrength: 0.2,
     vignetteStrength: 1.5,

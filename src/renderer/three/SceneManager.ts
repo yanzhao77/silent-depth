@@ -59,6 +59,23 @@ export class SceneManager {
     this.renderer.setSize(width, height, false);
   }
 
+  /**
+   * Push the active atmosphere (fog colour + density) into the scene. This is
+   * the single owned place where scene fog is set; weather and underwater
+   * visuals feed their resolved colours through here rather than mutating the
+   * scene directly. The background colour follows the fog so the far horizon
+   * stays consistent with the sky dome behind it.
+   */
+  setAtmosphere(fogColor: number, fogDensity: number): void {
+    if (this.scene.fog instanceof THREE.FogExp2) {
+      this.scene.fog.color.setHex(fogColor);
+      this.scene.fog.density = fogDensity;
+    }
+    if (this.scene.background instanceof THREE.Color) {
+      this.scene.background.setHex(fogColor);
+    }
+  }
+
   render(camera: THREE.Camera): void {
     this.renderer.render(this.scene, camera);
   }

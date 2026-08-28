@@ -24,6 +24,7 @@ import type {
   TorpedoState,
   WeatherKind,
 } from '../core/types';
+import type { WeatherVisual } from './weather';
 
 // ---------------------------------------------------------------------------
 // Vector types (plain objects — no Three.js dependency)
@@ -124,6 +125,8 @@ export interface RenderWeather {
   fogDensity: number;
   isNight: boolean;
   cloudCover: number;
+  /** Full derived visual parameter set (V2.6). Pure, deterministic. */
+  visual: WeatherVisual;
 }
 
 export interface RenderMission {
