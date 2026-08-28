@@ -26,6 +26,7 @@ interface ActiveExplosion {
   flash: THREE.PointLight;
   particles: THREE.Points;
   shockwave: THREE.Mesh;
+  waterColumn: THREE.Mesh;
   debrisGeo: THREE.BufferGeometry;
   debris: THREE.Points;
 }
@@ -166,6 +167,22 @@ export class EffectsManager {
       const shockwave = new THREE.Mesh(shockGeo, shockMat);
       group.add(shockwave);
 
+      // A depth charge is legible as a cold, vertical water column rather than
+      // a recoloured torpedo hit. It is spawned only after the adapter has
+      // emitted the same pre-existing depthCharge effect.
+      const columnGeo = new THREE.ConeGeometry(0.06, 0.52, 18, 1, true);
+      const columnMat = new THREE.MeshBasicMaterial({
+        color: isDepthCharge ? 0xc8e7f4 : 0xffc36e,
+        transparent: true,
+        opacity: isDepthCharge ? 0.42 : 0.12,
+        depthWrite: false,
+        side: THREE.DoubleSide,
+      });
+      const waterColumn = new THREE.Mesh(columnGeo, columnMat);
+      waterColumn.position.y = isDepthCharge ? 0.18 : 0.04;
+      waterColumn.visible = isDepthCharge;
+      group.add(waterColumn);
+
       // Debris (larger chunks)
       const debrisCount = 8;
       const dPos = new Float32Array(debrisCount * 3);
@@ -194,7 +211,7 @@ export class EffectsManager {
       group.add(debris);
 
       this._scene.add(group);
-      exp = { fxId: fx.id, group, flash, particles, shockwave, debrisGeo, debris };
+      exp = { fxId: fx.id, group, flash, particles, shockwave, waterColumn, debrisGeo, debris };
       this._explosions.push(exp);
     }
 
@@ -234,6 +251,14 @@ export class EffectsManager {
     exp.shockwave.scale.set(shockScale, shockScale, shockScale);
     (exp.shockwave.material as THREE.MeshBasicMaterial).opacity = Math.max(0, (isDepthCharge ? 0.42 : 0.55) * (1 - progress * 1.9));
 
+    const columnMaterial = exp.waterColumn.material as THREE.MeshBasicMaterial;
+    if (isDepthCharge) {
+      const plume = Math.sin(Math.min(1, progress / 0.42) * Math.PI * 0.5);
+      exp.waterColumn.visible = plume > 0.01;
+      exp.waterColumn.scale.set(1 + plume * 1.7, 0.35 + plume * 2.2, 1 + plume * 1.7);
+      columnMaterial.opacity = Math.max(0, 0.46 * plume * (1 - progress * 0.72));
+    }
+
     // Debris
     const dPos = exp.debrisGeo.attributes.position;
     if (dPos) {
@@ -272,6 +297,8 @@ export class EffectsManager {
         (exp.particles.material as THREE.Material).dispose();
         exp.shockwave.geometry.dispose();
         (exp.shockwave.material as THREE.Material).dispose();
+        exp.waterColumn.geometry.dispose();
+        (exp.waterColumn.material as THREE.Material).dispose();
         exp.debrisGeo.dispose();
         (exp.debris.material as THREE.Material).dispose();
         this._explosions.splice(i, 1);

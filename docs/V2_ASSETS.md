@@ -57,3 +57,16 @@ All materials use `THREE.MeshStandardMaterial` (PBR):
 3. **Cache**: Geometry cached per ship class (clone for instances)
 4. **Dispose**: All geometry/materials disposed on mission abort/end
 5. **Recreate**: Fresh geometry on next mission start
+
+
+## V2.3 Addendum — Local GLB Asset Pipeline
+
+V2.3 extends the offline-first policy: approved GLB files may now be loaded from **local** `public/assets/v3/models/` paths only. They are never requested from a CDN or a runtime HTTP source. The V3 registry must record the local path, project-owned origin, CC0 license record, SHA-256 digest, LOD number, measured triangle count, material intent and the pre-existing procedural fallback. `AssetManager` rejects remote, absolute and traversal paths before the loader sees them.
+
+| V2.3 asset family | LODs | Source | Runtime behaviour | Failure behaviour |
+|---|---|---|---|---|
+| Hero submarine | 0–3 | Project-owned Blender generator in `tools/assets/` | Local GLB scene cached then cloned by `SubmarineRenderer` | Existing procedural submarine family |
+| Destroyer | 1–3 | Project-owned Blender generator in `tools/assets/` | Local GLB scene cached then cloned by `ShipRenderer` | Existing procedural destroyer family |
+| Tanker | 1–3 | Project-owned Blender generator in `tools/assets/` | Local GLB scene cached then cloned by `ShipRenderer` | Existing procedural tanker family |
+
+Project-owned Blender scripts and exported GLBs are source-controlled together so a model digest can be reproduced and audited. The GLB files use material groups for paint, wet hull, deck, glass and metal; they do not authorize undocumented external texture reuse. Future artist-authored texture packs must be recorded as separate local assets under the same registry and licensing gate.

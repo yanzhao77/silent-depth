@@ -6,6 +6,8 @@
  */
 
 import type { RenderState } from '../types';
+import { AssetManager } from '../assets/AssetManager';
+import { V3_RENDER_ASSET_REGISTRY } from '../assets/v3Registry';
 import { SceneManager } from './SceneManager';
 import { CameraManager } from './CameraManager';
 import { OceanRenderer } from './OceanRenderer';
@@ -28,6 +30,7 @@ export interface ThreeRendererOptions {
 
 export class ThreeRenderer {
   private _sceneMgr: SceneManager;
+  private _assetManager: AssetManager;
   private _cameraMgr: CameraManager;
   private _ocean: OceanRenderer;
   private _ships: ShipRenderer;
@@ -55,11 +58,12 @@ export class ThreeRenderer {
     });
 
     const scene = this._sceneMgr.scene;
+    this._assetManager = new AssetManager(V3_RENDER_ASSET_REGISTRY);
 
     this._cameraMgr = new CameraManager(opts.width, opts.height);
     this._ocean = new OceanRenderer(quality.oceanSegments);
-    this._ships = new ShipRenderer(scene, quality);
-    this._submarine = new SubmarineRenderer(scene, quality);
+    this._ships = new ShipRenderer(scene, this._assetManager, quality);
+    this._submarine = new SubmarineRenderer(scene, this._assetManager, quality);
     this._sky = new SkyRenderer(scene);
     this._lighting = new LightingManager(scene, quality);
     this._weather = new WeatherRenderer(scene, quality.rainCount);
@@ -101,7 +105,14 @@ export class ThreeRenderer {
     }
 
     // Update all sub-renderers
-    this._ocean.update(state.weather, state.wallTime, state.player.position.x, state.player.position.z);
+    this._ocean.update(
+      state.weather,
+      state.wallTime,
+      state.player.position.x,
+      state.player.position.z,
+      state.player.speedKt,
+      state.player.headingDeg,
+    );
     this._sky.update(state.weather, state.wallTime);
     this._lighting.update(state.weather);
     this._weather.update(state.weather, state.player.position.x, state.player.position.z, dt);
@@ -157,6 +168,7 @@ export class ThreeRenderer {
     this._effects.dispose();
     this._periscopeView.dispose();
     this._postProcessing.dispose();
+    this._assetManager.dispose();
     if (this._tacticalCanvas) {
       this._tacticalCanvas.remove();
     }

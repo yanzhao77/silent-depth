@@ -812,6 +812,13 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     const sub = snapshot.playerSub;
     const bal = extras.balance;
     const now = snapshot.simTime;
+    // V2.3 world-first presentation: only reduce visual prominence while the
+    // existing snapshot says the boat is safe and there is no contact. This is
+    // a DOM class; no command, contact state, targeting or gameplay data changes.
+    const hasContact = snapshot.contacts.length > 0;
+    const hasLock = snapshot.periscope?.lockedContactId !== null && snapshot.periscope?.lockedContactId !== undefined;
+    const hudQuiet = snapshot.state === 'MISSION_RUNNING' && !hasContact && !hasLock && sub.detection < 20;
+    root.classList.toggle('hud--quiet', hudQuiet);
 
     // Mission identity + status chip (top bar) + workspace meta.
     setText(missionNameEl, tt(`mission.${extras.mission.id}.name`));

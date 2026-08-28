@@ -8,7 +8,7 @@
  */
 
 export type RenderAssetFormat = 'runtime-generated' | 'glb' | 'gltf' | 'ktx2' | 'png' | 'jpg' | 'svg';
-export type RenderAssetSourceKind = 'procedural' | 'external-cc0' | 'external-cc-by' | 'commercial';
+export type RenderAssetSourceKind = 'procedural' | 'project-owned' | 'external-cc0' | 'external-cc-by' | 'commercial';
 export type RenderAssetLicense = 'CC0' | 'CC-BY-4.0' | 'commercial';
 export type RenderAssetStatus = 'approved' | 'candidate' | 'blocked';
 export type RenderMaterialSemantic =
@@ -165,6 +165,13 @@ export function validateRenderAssetRegistry(registry: RenderAssetRegistry): read
       }
       if (!asset.sourceUrl.startsWith('repo://') || !asset.assetPageUrl.startsWith('repo://')) {
         issues.push({ assetId: asset.id, message: 'procedural provenance must point to repository sources' });
+      }
+    } else if (asset.sourceKind === 'project-owned') {
+      if ((asset.format !== 'glb' && asset.format !== 'gltf') || !asset.path.startsWith('public/')) {
+        issues.push({ assetId: asset.id, message: 'project-owned model assets must be local public GLB/GLTF resources' });
+      }
+      if (!asset.sourceUrl.startsWith('repo://') || !asset.assetPageUrl.startsWith('repo://')) {
+        issues.push({ assetId: asset.id, message: 'project-owned provenance must point to repository sources' });
       }
     } else {
       if (!asset.sourceUrl.startsWith('https://') || !asset.assetPageUrl.startsWith('https://')) {

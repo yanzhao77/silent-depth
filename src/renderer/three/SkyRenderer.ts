@@ -35,6 +35,7 @@ uniform float uCloudCover;
 uniform float uIsNight;
 uniform float uTime;
 uniform float uStarIntensity;
+uniform float uStorm;
 
 varying vec3 vWorldPosition;
 varying vec3 vDirection;
@@ -142,6 +143,19 @@ void main() {
     color = mix(color, cloudColor, cloud * 0.7);
   }
 
+  // A second, broad low cloud mass makes storm horizons read as volume rather
+  // than a single flat sky tint. It is intentionally scene-local and never
+  // changes the authoritative weather state.
+  if (uStorm > 0.5 && y > 0.015) {
+    vec2 stormUv = dir.xz / (y + 0.10) * 1.55 - vec2(uTime * 0.010, uTime * 0.004);
+    float stormMass = smoothstep(0.42, 0.78, fbm(stormUv + 19.0));
+    float lowBand = 1.0 - smoothstep(0.12, 0.58, y);
+    vec3 stormColor = vec3(0.035, 0.065, 0.100);
+    color = mix(color, stormColor, stormMass * lowBand * 0.72);
+    float coldRim = pow(max(dot(dir, normalize(uSunDirection)), 0.0), 7.0) * 0.045;
+    color += vec3(0.10, 0.16, 0.21) * coldRim * (1.0 - stormMass);
+  }
+
   // --- Stars (night) ---
   if (uIsNight > 0.5 && y > 0.15) {
     vec2 starUv = dir.xz * 400.0 / y;
@@ -182,6 +196,7 @@ export class SkyRenderer {
         uIsNight: { value: 0 },
         uTime: { value: 0 },
         uStarIntensity: { value: 0.8 },
+        uStorm: { value: 0 },
       },
       side: THREE.BackSide,
       depthWrite: false,
@@ -195,6 +210,7 @@ export class SkyRenderer {
     u['uTime']!.value = wallTime;
     u['uCloudCover']!.value = weather.cloudCover;
     u['uIsNight']!.value = weather.isNight ? 1 : 0;
+    u['uStorm']!.value = weather.kind === 'Storm' ? 1 : 0;
 
     if (weather.isNight) {
       u['uTopColor']!.value.setHex(0x030c17);

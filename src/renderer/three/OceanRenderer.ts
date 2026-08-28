@@ -81,11 +81,27 @@ uniform vec3 uFogColor;
 uniform vec3 uSunDirection;
 uniform float uIsNight;
 uniform float uStorm;
+uniform vec2 uWakePosition;
+uniform float uWakeSpeed;
+uniform float uWakeHeading;
 
 varying vec3 vWorldPosition;
 varying vec3 vNormal;
 varying float vFoam;
 varying float vCrest;
+
+float playerWake(vec2 worldXZ) {
+  vec2 delta = worldXZ - uWakePosition;
+  vec2 direction = vec2(sin(uWakeHeading), cos(uWakeHeading));
+  float aftDistance = -dot(delta, direction);
+  float lateralDistance = abs(dot(delta, vec2(-direction.y, direction.x)));
+  float speedFactor = smoothstep(1.2, 8.5, uWakeSpeed);
+  float stern = smoothstep(0.0015, 0.0001, abs(aftDistance + 0.002));
+  float aftMask = smoothstep(-0.0008, 0.003, aftDistance) * (1.0 - smoothstep(0.012, 0.040, aftDistance));
+  float widening = 0.0018 + aftDistance * 0.18;
+  float chevron = 1.0 - smoothstep(widening * 0.52, widening, lateralDistance);
+  return max(stern, aftMask * chevron) * speedFactor;
+}
 
 void main() {
   vec3 viewDir = normalize(cameraPosition - vWorldPosition);
@@ -108,7 +124,8 @@ void main() {
 
   float forwardScatter = pow(max(dot(viewDir, -lightDir), 0.0), 9.0) * (1.0 - uStorm) * 0.10;
   color += uSubsurfaceColor * forwardScatter * viewUp;
-  float foam = clamp(vFoam * 0.72 + vCrest * (0.20 + uStorm * 0.30), 0.0, 1.0);
+  float wake = playerWake(vWorldPosition.xz);
+  float foam = clamp(vFoam * 0.72 + vCrest * (0.20 + uStorm * 0.30) + wake * 0.92, 0.0, 1.0);
   color = mix(color, uFoamColor, foam * mix(0.34, 0.78, uStorm));
 
   float distanceToCamera = length(vWorldPosition - cameraPosition);
@@ -134,6 +151,9 @@ export class OceanRenderer {
         uWaveHeight: { value: 0.3 },
         uWindSpeed: { value: 2 },
         uStorm: { value: 0 },
+        uWakePosition: { value: new THREE.Vector2() },
+        uWakeSpeed: { value: 0 },
+        uWakeHeading: { value: 0 },
         uDeepColor: { value: new THREE.Color(0x020914) },
         uShallowColor: { value: new THREE.Color(0x143b50) },
         uFoamColor: { value: new THREE.Color(0xc9d7df) },
@@ -151,7 +171,14 @@ export class OceanRenderer {
     this.mesh.receiveShadow = true;
   }
 
-  update(weather: RenderWeather, wallTime: number, playerX: number, playerZ: number): void {
+  update(
+    weather: RenderWeather,
+    wallTime: number,
+    playerX: number,
+    playerZ: number,
+    playerSpeedKt: number,
+    playerHeadingDeg: number,
+  ): void {
     this.mesh.position.set(playerX, 0, playerZ);
     const uniforms = this._material.uniforms;
     uniforms['uTime']!.value = wallTime;
@@ -160,6 +187,9 @@ export class OceanRenderer {
     uniforms['uFogDensity']!.value = weather.fogDensity;
     uniforms['uIsNight']!.value = weather.isNight ? 1 : 0;
     uniforms['uStorm']!.value = weather.kind === 'Storm' ? 1 : 0;
+    uniforms['uWakePosition']!.value.set(playerX, playerZ);
+    uniforms['uWakeSpeed']!.value = playerSpeedKt;
+    uniforms['uWakeHeading']!.value = THREE.MathUtils.degToRad(playerHeadingDeg);
 
     if (weather.isNight) {
       uniforms['uDeepColor']!.value.setHex(0x01070e);

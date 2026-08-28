@@ -76,9 +76,17 @@ import {
 const root = document.getElementById('app')!;
 root.textContent = ''; // clear the boot stub
 
+// The WebGL canvas must never be acquired as a 2D context.  A separate canvas
+// preserves the legacy renderer as a safe fallback while keeping the primary
+// surface available to Three.js.
 const canvas = document.createElement('canvas');
 canvas.id = 'game-canvas';
+canvas.style.display = 'none';
 root.append(canvas);
+
+const fallbackCanvas = document.createElement('canvas');
+fallbackCanvas.id = 'fallback-canvas';
+root.append(fallbackCanvas);
 
 const hudRoot = document.createElement('div');
 hudRoot.id = 'hud-root';
@@ -88,7 +96,7 @@ const menuRoot = document.createElement('div');
 menuRoot.id = 'menu-root';
 root.append(menuRoot);
 
-const gfx = canvas.getContext('2d');
+const gfx = fallbackCanvas.getContext('2d');
 if (gfx === null) throw new Error('[silent-depth] Canvas 2D context unavailable');
 const ctx2d = gfx;
 
@@ -149,6 +157,8 @@ let lockPulse = false;
 let divePulse = false;
 let lastShownState: string | null = null;
 let lastWeather: WeatherKind | null = null;
+let cinematicCaptureActive = false;
+let cinematicCaptureReset: number | null = null;
 /** t-023: Settings opened from the in-mission HUD — BACK returns to the
  *  mission instead of aborting to the main menu. */
 let overlayReturnToMission = false;
@@ -226,6 +236,32 @@ const hud = createHud(hudRoot, {
   lang,
 });
 
+function captureCinematicFrame(): void {
+  if (cinematicCaptureReset !== null) window.clearTimeout(cinematicCaptureReset);
+  cinematicCaptureActive = true;
+  document.body.classList.add('cinematic-capture');
+
+  // Wait one paint so the player can also use the mode for an external platform
+  // capture. The actual export remains canvas-only and cannot expose HUD DOM.
+  window.requestAnimationFrame(() => {
+    try {
+      const url = canvas.toDataURL('image/png');
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `silent-depth-cinematic-${Date.now()}.png`;
+      a.click();
+    } catch (err) {
+      console.warn('[silent-depth] cinematic screenshot failed:', err);
+    }
+  });
+
+  cinematicCaptureReset = window.setTimeout(() => {
+    cinematicCaptureActive = false;
+    cinematicCaptureReset = null;
+    document.body.classList.remove('cinematic-capture');
+  }, 1600);
+}
+
 const input = createInput({
   maxThrottleKt: balance.speedBands.FULL.speedMaxKt,
   onMenu: () => {
@@ -242,16 +278,8 @@ const input = createInput({
     }
   },
   onScreenshot: () => {
-    // F12: capture a real in-game screenshot (canvas only) and download it.
-    try {
-      const url = canvas.toDataURL('image/png');
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `silent-depth-${Date.now()}.png`;
-      a.click();
-    } catch (err) {
-      console.warn('[silent-depth] screenshot failed:', err);
-    }
+    // F12: a presentation-only capture window; it never touches the engine.
+    if (!cinematicCaptureActive) captureCinematicFrame();
   },
 });
 input.bind(window);
@@ -370,13 +398,23 @@ function startMission(id: string): void {
   input.setSelectedContactId(null);
   hud.reset();
 
-  // V2: Initialize Three.js renderer for 3D world
+  // V2: initialize the WebGL layer lazily. Keep the established Canvas 2D
+  // renderer available only as a fallback for browsers without WebGL support.
   if (threeRenderer === null) {
-    threeRenderer = new ThreeRenderer({
-      canvas,
-      width: window.innerWidth,
-      height: window.innerHeight,
-    });
+    try {
+      threeRenderer = new ThreeRenderer({
+        canvas,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+      canvas.style.display = 'block';
+      fallbackCanvas.style.display = 'none';
+    } catch (error) {
+      console.error('[silent-depth] Three.js renderer unavailable; using Canvas 2D fallback.', error);
+      threeRenderer = null;
+      canvas.style.display = 'none';
+      fallbackCanvas.style.display = 'block';
+    }
   }
   activeEffects = [];
   cameraMode = 'world';
@@ -563,6 +601,10 @@ function resize(): void {
   canvas.height = Math.round(h * dpr);
   canvas.style.width = `${w}px`;
   canvas.style.height = `${h}px`;
+  fallbackCanvas.width = Math.round(w * dpr);
+  fallbackCanvas.height = Math.round(h * dpr);
+  fallbackCanvas.style.width = `${w}px`;
+  fallbackCanvas.style.height = `${h}px`;
   ctx2d.setTransform(dpr, 0, 0, dpr, 0, 0);
   camera.setViewport(w, h);
   if (threeRenderer !== null) {
@@ -594,16 +636,9 @@ function frame(nowMs: number): void {
   particles.update(frameDt);
 
   if (handle === null || snapshot === null) {
-    // Menu idle backdrop
-    if (threeRenderer !== null) {
-      // Render a dark ocean background with Three.js even in menu
-      // For now, just clear with the deep ocean color
-      ctx2d.fillStyle = '#050a12';
-      ctx2d.fillRect(0, 0, camera.viewport.width, camera.viewport.height);
-    } else {
-      ctx2d.fillStyle = '#050a12';
-      ctx2d.fillRect(0, 0, camera.viewport.width, camera.viewport.height);
-    }
+    // Menu idle backdrop remains on the independent Canvas 2D fallback layer.
+    ctx2d.fillStyle = '#050a12';
+    ctx2d.fillRect(0, 0, camera.viewport.width, camera.viewport.height);
     return;
   }
 
@@ -663,6 +698,17 @@ function frame(nowMs: number): void {
   const inMission = state !== 'MENU' && state !== 'BOOT';
 
   if (inMission && threeRenderer !== null && missionDef !== null) {
+    // The simulation owns the periscope state. Mirror it one-way into the
+    // renderer camera only, so the visual transition never feeds back into
+    // gameplay or deterministic state.
+    if (cameraMode !== 'tactical') {
+      const periscopeState = snap.periscope?.state;
+      cameraMode =
+        periscopeState === 'RAISED' || periscopeState === 'OBSERVING'
+          ? 'periscope'
+          : 'world';
+    }
+
     // V2: Convert snapshot to RenderState and render with Three.js
     const weatherKind = activeWeatherAt(
       missionDef.weather,
@@ -686,11 +732,10 @@ function frame(nowMs: number): void {
       activeEffects,
       dt: frameDt,
       selectedContactId,
+      weatherSpec: missionDef.weather,
+      parTimeS: missionDef.parTimeS,
       cameraMode,
     });
-
-    // Override weather from mission def (adapter can't access it directly)
-    renderState.weather.kind = weatherKind;
 
     threeRenderer.render(renderState, frameDt);
   } else if (renderer !== null) {

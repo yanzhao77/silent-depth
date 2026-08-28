@@ -433,3 +433,10 @@ All 489 existing tests must continue to pass unchanged. The engine is untouched.
 | `assets/` | EXTEND | Registry entries for procedural 3D |
 | `config/` | NO CHANGE | Balance config preserved |
 | `docs/` | UPDATE | V2 documentation |
+
+
+## V2.3 Addendum — Local GLB Presentation Boundary
+
+V2.3 adds `renderer/assets/AssetManager.ts` and a V3 registry boundary below the existing `RenderState` adapter. `AssetManager` loads only approved `public/assets/v3/...` GLB paths, caches source scenes, creates cloned render instances, and releases shared resources at renderer disposal. It does not read or mutate `core`, `ai`, `sonar`, `combat`, or mission state. `SubmarineRenderer` and `ShipRenderer` select a GLB family asynchronously only after the pre-existing visibility gate permits an entity to render; a complete procedural family remains the result for every missing, rejected, or failed asset load.
+
+The V2.3 wake, storm-volume sky, low-threat HUD class, depth-charge water column, and F12 capture window are presentation derivations. They use existing immutable render/snapshot fields or DOM state and cannot write back to the engine. The direction of authority remains simulation → snapshot/adapter → renderer/UI.

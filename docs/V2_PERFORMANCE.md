@@ -74,3 +74,17 @@ Settings would be exposed via `save.settings.video.quality`: `'high' | 'medium' 
 | **Total** | **~229 KB** |
 
 No external assets loaded at runtime. Total download is the HTML + JS + CSS bundle.
+
+
+## V2.3 Addendum — Local GLB and Quality Budget
+
+V2.3 changes the asset cost model from runtime-only primitives to small, local GLB families. `AssetManager` caches each source GLB once and gives renderers clones; source scenes and materials are released during disposal. The Hero Submarine uses four distance levels, while Destroyer and Tanker use three. Existing quality presets now control the render-path cost envelope: pixel ratio, shadow enable/map size, ocean segmentation, rain count, combat particle budget, post-processing and LOD-distance multiplier.
+
+| Quality | Pixel ratio ceiling | Shadows | Ocean segments | Rain cap | Particle budget | LOD multiplier |
+|---|---:|---|---:|---:|---:|---:|
+| LOW | 1.0 | Off | 128 | 1,500 | 15 | 0.5 |
+| MEDIUM | 1.5 | 1,024 | 200 | 2,500 | 30 | 0.8 |
+| HIGH | 2.0 | 2,048 | 300 | 4,000 | 40 | 1.0 |
+| ULTRA | 2.0 | 4,096 | 400 | 6,000 | 60 | 1.5 |
+
+The V2.3 build is compilation- and regression-tested, but the automated Chromium clock is not a reliable player-hardware FPS measurement. Release performance sign-off still requires Chrome Performance recordings for M03 convoy and M04 storm on a target desktop and an integrated GPU, showing actual frame time, draw calls, GPU memory and asset-load timing.

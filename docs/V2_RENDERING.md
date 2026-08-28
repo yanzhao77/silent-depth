@@ -91,3 +91,18 @@ All 3D models are generated at runtime from primitives — zero external assets:
 | Storm | 2.5m | 0.015 | 0.3 | Dark grey |
 | Fog | 0.2m | 0.04 | 0.5 | White-grey |
 | Night | 0.4m | 0.008 | 0.15 | Near black |
+
+
+## V2.3 Addendum — Asset and Cinematic Pass
+
+### Local GLB selection
+
+`SubmarineRenderer` and `ShipRenderer` now consult the V3 local registry through `AssetManager`. The manager validates a local approved path, loads each source GLB once, and clones it into the visual scene. GLB selection does not change the entity transform, heading, visibility, LOD semantic, or gameplay lifecycle. A failed request leaves the previous procedural family active.
+
+### Surface interaction and weather
+
+The ocean fragment pass receives only the existing player position, heading and speed as visual uniforms. It adds a short local stern-foam field aligned to the existing heading, while the underlying Gerstner/wave/weather data remains unchanged. The sky shader adds a broad storm mass and reserved cold rim treatment for weather categories already supplied by the adapter. Neither effect owns weather timing or has access to simulation state.
+
+### Combat, HUD and capture
+
+`EffectsManager` keeps its existing event-owned effect lifetime and uses type-specific palettes: torpedo impacts are warm and brief; depth charges render a colder, wider shockwave and a short vertical water column. In the DOM, `hud--quiet` reduces visual obstruction only when the existing snapshot reports a safe, contact-free, unlocked running state. F12 applies the temporary `cinematic-capture` class, exports the WebGL canvas after a paint, and restores the DOM overlay after 1.6 seconds.

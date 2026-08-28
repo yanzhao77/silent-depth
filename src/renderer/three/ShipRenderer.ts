@@ -1,22 +1,20 @@
-/**
- * SILENT DEPTH V2.2 — Naval Ship Renderer
- *
- * Resolves local procedural naval families into distance-driven LOD roots. This
- * renderer consumes RenderShip only; visibility and AI state remain simulation
- * facts, while bobbing and warning tint are presentation-only.
- */
-
 import * as THREE from 'three';
+import { AssetManager } from '../assets/AssetManager';
 import { createShipLodGeometry } from '../procedural/shipGeometry';
 import type { RenderShip } from '../types';
 import type { QualitySettings } from './QualityPresets';
 
 const RAD = Math.PI / 180;
+const GLB_WORLD_SCALE = 0.00335;
+const GLB_SHIP_CLASSES = new Set(['Destroyer', 'Tanker']);
+const GLB_LOD_DISTANCES_KM: readonly [number, number, number] = [0, 0.58, 1.45];
+
+type PrototypeSource = 'procedural' | 'glb';
 
 function cloneVisualPrototype(prototype: THREE.Group): THREE.Group {
   const clone = prototype.clone(true);
-  // Geometry stays shared between same-class ships; materials are local so the
-  // HUNTING feedback below never recolours a separate entity of the same class.
+  // Geometry remains shared. Materials are unique per entity so the HUNTING
+  // visual cue cannot recolour another ship instance.
   clone.traverse((child) => {
     if (!(child instanceof THREE.Mesh)) return;
     child.material = Array.isArray(child.material)
@@ -37,10 +35,11 @@ function disposeGroupResources(
   group: THREE.Group,
   geometries: Set<THREE.BufferGeometry>,
   materials: Set<THREE.Material>,
+  disposeGeometry: boolean,
 ): void {
   group.traverse((child) => {
     if (!(child instanceof THREE.Mesh)) return;
-    if (!geometries.has(child.geometry)) {
+    if (disposeGeometry && !geometries.has(child.geometry)) {
       child.geometry.dispose();
       geometries.add(child.geometry);
     }
@@ -54,18 +53,24 @@ function disposeGroupResources(
   });
 }
 
+/**
+ * Presentation-only visual mirror for RenderShip. Approved GLB models are
+ * selected only for families that have a complete local LOD set; all other
+ * classes and every failed asset request continue to use procedural geometry.
+ */
 export class ShipRenderer {
-  private readonly _scene: THREE.Scene;
-  private readonly _meshes = new Map<string, THREE.Group>();
-  private readonly _prototypeCache = new Map<string, THREE.Group>();
-  private readonly _lodDistanceMultiplier: number;
+  private readonly meshes = new Map<string, THREE.Group>();
+  private readonly proceduralPrototypeCache = new Map<string, THREE.Group>();
+  private readonly glbPrototypeCache = new Map<string, THREE.Group>();
+  private readonly glbLoadStarted = new Set<string>();
+  private readonly lodDistanceMultiplier: number;
 
   constructor(
-    scene: THREE.Scene,
+    private readonly scene: THREE.Scene,
+    private readonly assetManager: AssetManager,
     quality?: Pick<QualitySettings, 'lodDistanceMultiplier'>,
   ) {
-    this._scene = scene;
-    this._lodDistanceMultiplier = quality?.lodDistanceMultiplier ?? 1;
+    this.lodDistanceMultiplier = quality?.lodDistanceMultiplier ?? 1;
   }
 
   update(ships: RenderShip[], wallTime: number): void {
@@ -74,24 +79,24 @@ export class ShipRenderer {
     for (const ship of ships) {
       activeIds.add(ship.id);
       if (!ship.visible) {
-        const existing = this._meshes.get(ship.id);
+        const existing = this.meshes.get(ship.id);
         if (existing) existing.visible = false;
         continue;
       }
 
-      let group = this._meshes.get(ship.id);
+      const source = this.resolveSource(ship.shipClass);
+      let group = this.meshes.get(ship.id);
+      if (group && group.userData.prototypeSource !== source) {
+        this.removeInstance(ship.id, group);
+        group = undefined;
+      }
       if (!group) {
-        let prototype = this._prototypeCache.get(ship.shipClass);
-        if (!prototype) {
-          prototype = createShipLodGeometry(ship.shipClass);
-          applyLodDistanceMultiplier(prototype, this._lodDistanceMultiplier);
-          this._prototypeCache.set(ship.shipClass, prototype);
-        }
-        group = cloneVisualPrototype(prototype);
+        group = cloneVisualPrototype(this.resolvePrototype(ship.shipClass, source));
         group.name = `ship-${ship.id}`;
         group.userData.renderOnly = true;
-        this._scene.add(group);
-        this._meshes.set(ship.id, group);
+        group.userData.prototypeSource = source;
+        this.scene.add(group);
+        this.meshes.set(ship.id, group);
       }
 
       group.visible = true;
@@ -111,26 +116,72 @@ export class ShipRenderer {
       });
     }
 
-    for (const [id, group] of this._meshes) {
-      if (!activeIds.has(id)) {
-        this._scene.remove(group);
-        this._meshes.delete(id);
-      }
+    for (const [id, group] of this.meshes) {
+      if (!activeIds.has(id)) this.removeInstance(id, group);
     }
   }
 
   dispose(): void {
     const geometries = new Set<THREE.BufferGeometry>();
     const materials = new Set<THREE.Material>();
-    for (const group of this._meshes.values()) {
-      this._scene.remove(group);
-      disposeGroupResources(group, geometries, materials);
+    for (const [id, group] of this.meshes) this.removeInstance(id, group, geometries, materials);
+    for (const prototype of this.proceduralPrototypeCache.values()) {
+      disposeGroupResources(prototype, geometries, materials, true);
     }
-    // Prototypes are never added to the scene but own the original materials.
-    for (const prototype of this._prototypeCache.values()) {
-      disposeGroupResources(prototype, geometries, materials);
+    // GLB geometry is owned by AssetManager. Only local clone materials above
+    // are released here; the cached source scenes are released centrally.
+    this.meshes.clear();
+    this.proceduralPrototypeCache.clear();
+    this.glbPrototypeCache.clear();
+  }
+
+  private resolveSource(shipClass: string): PrototypeSource {
+    if (!GLB_SHIP_CLASSES.has(shipClass)) return 'procedural';
+    if (!this.glbLoadStarted.has(shipClass)) {
+      this.glbLoadStarted.add(shipClass);
+      void this.loadGlbPrototype(shipClass);
     }
-    this._meshes.clear();
-    this._prototypeCache.clear();
+    return this.glbPrototypeCache.has(shipClass) ? 'glb' : 'procedural';
+  }
+
+  private resolvePrototype(shipClass: string, source: PrototypeSource): THREE.Group {
+    if (source === 'glb') return this.glbPrototypeCache.get(shipClass)!;
+    let prototype = this.proceduralPrototypeCache.get(shipClass);
+    if (!prototype) {
+      prototype = createShipLodGeometry(shipClass);
+      applyLodDistanceMultiplier(prototype, this.lodDistanceMultiplier);
+      this.proceduralPrototypeCache.set(shipClass, prototype);
+    }
+    return prototype;
+  }
+
+  private async loadGlbPrototype(shipClass: string): Promise<void> {
+    const family = shipClass.toLowerCase();
+    const loaded = await Promise.all(([1, 2, 3] as const).map((lod) => this.assetManager.loadFamilyLod(family, lod)));
+    if (loaded.some((result) => result.usingFallback || !result.scene)) return;
+
+    const root = new THREE.Group();
+    root.name = `${family}-glb-prototype`;
+    const controller = new THREE.LOD();
+    for (let index = 0; index < loaded.length; index++) {
+      const scene = loaded[index]!.scene!;
+      scene.name = `${family}-glb-lod${index + 1}`;
+      scene.scale.setScalar(GLB_WORLD_SCALE);
+      scene.rotation.y = Math.PI;
+      controller.addLevel(scene, GLB_LOD_DISTANCES_KM[index]! * this.lodDistanceMultiplier);
+    }
+    root.add(controller);
+    this.glbPrototypeCache.set(shipClass, root);
+  }
+
+  private removeInstance(
+    id: string,
+    group: THREE.Group,
+    geometries = new Set<THREE.BufferGeometry>(),
+    materials = new Set<THREE.Material>(),
+  ): void {
+    this.scene.remove(group);
+    disposeGroupResources(group, geometries, materials, group.userData.prototypeSource !== 'glb');
+    this.meshes.delete(id);
   }
 }

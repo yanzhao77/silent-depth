@@ -89,6 +89,22 @@ body {
   overflow: hidden;
 }
 
+/* V2.3 F12 cinematic capture is a transient display-only state. The WebGL
+   canvas remains untouched; UI fades out for a platform-ready frame and is
+   restored automatically by main.ts without pausing or issuing game commands. */
+#hud-root,
+#menu-root,
+#tactical-overlay {
+  transition: opacity 140ms ease, visibility 140ms ease;
+}
+
+body.cinematic-capture #hud-root,
+body.cinematic-capture #menu-root,
+body.cinematic-capture #tactical-overlay {
+  opacity: 0;
+  visibility: hidden;
+}
+
 /* ---------------------------------------------------------------------------
    Canvas (L0–L5) — the Mission Workspace surface
    --------------------------------------------------------------------------- */
@@ -362,6 +378,46 @@ body {
   bottom: 12px;
   height: 94px;
   min-width: 300px;
+}
+
+/* V2.3 world-first HUD: the existing DOM derives this class from the
+   authoritative snapshot. It fades/compresses presentation only; cards remain
+   focusable and every command is still available. Any contact or lock removes
+   the class on the next frame. */
+.hud-workspace,
+.hud-left,
+.hud-right,
+.hud-timeline,
+.hud-left .card,
+.hud-right .card {
+  transition: width 220ms ease, left 220ms ease, right 220ms ease, bottom 220ms ease,
+    opacity 180ms ease, transform 220ms ease, background 180ms ease;
+}
+
+.hud.hud--quiet .hud-workspace {
+  left: 186px;
+  right: 206px;
+  bottom: 74px;
+  background: linear-gradient(180deg, rgba(14, 20, 29, 0.13), rgba(10, 14, 20, 0.025));
+}
+
+.hud.hud--quiet .hud-left {
+  width: 164px;
+}
+
+.hud.hud--quiet .hud-right {
+  width: 182px;
+}
+
+.hud.hud--quiet .hud-left .card:not(:first-child),
+.hud.hud--quiet .hud-right .firecard,
+.hud.hud--quiet .hud-right .controls-card,
+.hud.hud--quiet .hud-timeline {
+  opacity: 0.42;
+}
+
+.hud.hud--quiet .hud-timeline {
+  height: 52px;
 }
 
 /* ---------------------------------------------------------------------------
