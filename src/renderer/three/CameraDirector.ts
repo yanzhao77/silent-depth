@@ -102,7 +102,9 @@ export function selectCameraPreset(input: CameraSelectionInput): CameraMode {
   return 'cinematic';
 }
 
-/** Resolve the framing parameters for a preset (world-family only). */
+/**
+ * Resolve the framing parameters for a preset (world-family only).
+ */
 export function resolvePresetParams(mode: CameraMode): PresetParams {
   switch (mode) {
     case 'chase': return PRESET_PARAMS.chase;
@@ -112,4 +114,89 @@ export function resolvePresetParams(mode: CameraMode): PresetParams {
     default:
       return PRESET_PARAMS.cinematic;
   }
+}
+
+// ---------------------------------------------------------------------------
+// V2.7 — M03 Convoy Composition (pure function)
+// ---------------------------------------------------------------------------
+
+/** A minimal ship view the convoy framing function needs. */
+export interface ConvoyShipView {
+  id: string;
+  visible: boolean;
+  position: { x: number; z: number };
+  headingDeg: number;
+}
+
+/** Framing hint returned by resolveConvoyFraming. */
+export interface ConvoyFramingHint {
+  /** Position to frame toward (km, engine coords). */
+  targetX: number;
+  targetZ: number;
+  /** Additional distance scale (1 = default preset distance, >1 = further). */
+  distanceScale: number;
+  /** FOV adjustment in degrees (added to preset FOV). */
+  fovAdjust: number;
+}
+
+/**
+ * M03 convoy composition: given visible ships, suggest a framing target that
+ * creates a cinematic layered composition (player → escort → merchants).
+ *
+ * Pure function — no DOM, no Three.js, no gameplay mutation.
+ * Only consumes visible ships; hidden ships are ignored.
+ * Returns null when no visible ships exist (safe fallback).
+ */
+export function resolveConvoyFraming(
+  playerX: number,
+  playerZ: number,
+  playerHeadingDeg: number,
+  visibleShips: readonly ConvoyShipView[],
+): ConvoyFramingHint | null {
+  const visible = visibleShips.filter((s) => s.visible);
+  if (visible.length === 0) return null;
+
+  // Find the nearest visible ship to the player
+  let bestDist = Infinity;
+  let bestShip: ConvoyShipView | null = null;
+  for (const ship of visible) {
+    const dx = ship.position.x - playerX;
+    const dz = ship.position.z - playerZ;
+    const dist = Math.sqrt(dx * dx + dz * dz);
+    if (dist < bestDist) {
+      bestDist = dist;
+      bestShip = ship;
+    }
+  }
+
+  if (bestShip === null) return null;
+
+  // Frame toward the nearest visible ship, slightly offset to show
+  // the convoy line when multiple ships are present
+
+  // If multiple ships, offset the framing point to show the line
+  let targetX = bestShip.position.x;
+  let targetZ = bestShip.position.z;
+  if (visible.length >= 2) {
+    // Average position of all visible ships, biased toward the nearest
+    let sumX = bestShip.position.x * 2;
+    let sumZ = bestShip.position.z * 2;
+    let weight = 2;
+    for (const ship of visible) {
+      if (ship.id === bestShip.id) continue;
+      sumX += ship.position.x;
+      sumZ += ship.position.z;
+      weight += 1;
+    }
+    targetX = sumX / weight;
+    targetZ = sumZ / weight;
+  }
+
+  // Distance scale: closer ships → pull back slightly to show context
+  const distanceScale = bestDist < 1.5 ? 1.2 : bestDist < 3 ? 1.0 : 0.9;
+
+  // FOV: widen slightly when ships are spread, narrow when close
+  const fovAdjust = visible.length >= 3 ? 4 : visible.length >= 2 ? 2 : 0;
+
+  return { targetX, targetZ, distanceScale, fovAdjust };
 }

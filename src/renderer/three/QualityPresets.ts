@@ -24,6 +24,8 @@ export interface QualitySettings {
   underwaterParticles: number;
   /** Strength of the shallow-water caustic light plane [0,1]. */
   underwaterCaustics: number;
+  /** Maximum background world objects (silhouettes, smoke, debris, etc). 0 = disabled. */
+  backgroundBudget: number;
   postProcessing: boolean;
   bloomStrength: number;
   vignetteStrength: number;
@@ -41,6 +43,7 @@ const PRESETS: Record<QualityLevel, QualitySettings> = {
     rainCount: 1500,
     underwaterParticles: 8,
     underwaterCaustics: 0,
+    backgroundBudget: 0,
     postProcessing: false,
     bloomStrength: 0,
     vignetteStrength: 0,
@@ -56,6 +59,7 @@ const PRESETS: Record<QualityLevel, QualitySettings> = {
     rainCount: 2500,
     underwaterParticles: 20,
     underwaterCaustics: 0.4,
+    backgroundBudget: 4,
     postProcessing: true,
     bloomStrength: 0.08,
     vignetteStrength: 0.8,
@@ -71,6 +75,7 @@ const PRESETS: Record<QualityLevel, QualitySettings> = {
     rainCount: 4000,
     underwaterParticles: 35,
     underwaterCaustics: 0.7,
+    backgroundBudget: 7,
     postProcessing: true,
     bloomStrength: 0.15,
     vignetteStrength: 1.2,
@@ -86,6 +91,7 @@ const PRESETS: Record<QualityLevel, QualitySettings> = {
     rainCount: 6000,
     underwaterParticles: 60,
     underwaterCaustics: 1.0,
+    backgroundBudget: 10,
     postProcessing: true,
     bloomStrength: 0.2,
     vignetteStrength: 1.5,

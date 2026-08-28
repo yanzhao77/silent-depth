@@ -24,6 +24,7 @@ import { PeriscopeView } from './PeriscopeView';
 import { TacticalOverlay } from './TacticalOverlay';
 import { PostProcessing } from './PostProcessing';
 import { UnderwaterRenderer } from './UnderwaterRenderer';
+import { BackgroundWorldRenderer, resolveBackgroundWorldState } from './BackgroundWorldRenderer';
 import { autoDetectQuality, getQualitySettings, type QualityLevel } from './QualityPresets';
 import { deriveUnderwaterVisuals, stormLightningIntensity } from '../weather';
 
@@ -31,6 +32,21 @@ export interface ThreeRendererOptions {
   canvas: HTMLCanvasElement;
   width: number;
   height: number;
+}
+
+/**
+ * Deterministic hash of mission id + wall time for visual-only randomness.
+ * Independent of engine RNG — presentation layout is not simulation-coupled.
+ */
+function hashMissionTime(missionId: string, wallTime: number): number {
+  let h = 0x5a17;
+  for (let i = 0; i < missionId.length; i++) {
+    h = ((h << 5) + h + missionId.charCodeAt(i)) | 0;
+  }
+  // Quantise wall time to 0.5 s steps — same visual within a half-second window
+  const qt = Math.floor(wallTime * 2);
+  h = ((h << 13) ^ (h + qt)) | 0;
+  return h >>> 0;
 }
 
 export class ThreeRenderer {
@@ -44,6 +60,7 @@ export class ThreeRenderer {
   private _lighting: LightingManager;
   private _weather: WeatherRenderer;
   private _underwater: UnderwaterRenderer;
+  private _background: BackgroundWorldRenderer;
   private _effects: EffectsManager;
   private _periscopeView: PeriscopeView;
   private _postProcessing: PostProcessing;
@@ -77,6 +94,7 @@ export class ThreeRenderer {
     this._lighting = new LightingManager(scene, quality);
     this._weather = new WeatherRenderer(scene, quality.rainCount);
     this._underwater = new UnderwaterRenderer(scene);
+    this._background = new BackgroundWorldRenderer(scene);
     this._effects = new EffectsManager(scene, quality.particleCount);
     this._torpedoRenderer = new TorpedoRenderer(scene);
     this._revealTracker = new EnemyRevealTracker();
@@ -159,6 +177,23 @@ export class ThreeRenderer {
       { lightning, underwater: !!underwater },
     );
     this._underwater.update(underwater, this._cameraMgr.activeCamera.position, state.wallTime);
+
+    // Background world: distant silhouettes, smoke, debris, rain curtains.
+    // All visual-only — never enters RenderShip[] or gameplay systems.
+    // Visual seed: deterministic hash of missionId + wallTime for reproducible layouts.
+    const bgState = resolveBackgroundWorldState({
+      missionId: state.mission.id,
+      visualSeed: hashMissionTime(state.mission.id, state.wallTime),
+      cameraX: state.player.position.x,
+      cameraZ: state.player.position.z,
+      wallTime: state.wallTime,
+      weatherKind: state.weather.kind,
+      weatherVisual: state.weather.visual,
+      quality,
+      underwater: !!underwater,
+    });
+    this._background.update(bgState, state.wallTime);
+
     // Single owned place for scene fog; resolved from weather or underwater.
     this._sceneMgr.setAtmosphere(
       underwater ? underwater.fogColor : state.weather.visual.fogColor,
@@ -230,6 +265,7 @@ export class ThreeRenderer {
     this._lighting.dispose();
     this._weather.dispose();
     this._underwater.dispose();
+    this._background.dispose();
     this._effects.dispose();
     this._torpedoRenderer.dispose();
     this._periscopeView.dispose();
