@@ -38,7 +38,7 @@
   /* --- surfaces ------------------------------------------------------------ */
   --surface-0: #0a0e14; /* page background */
   --surface-1: #0e141d; /* workspace */
-  --surface-2: rgba(19, 27, 40, 0.50); /* panel / card (blurred) */
+  --surface-2: rgba(19, 27, 40, 0.5); /* panel / card (blurred) */
   --surface-3: #1b2534; /* raised / interactive */
   --surface-hover: rgba(148, 163, 184, 0.08);
   --surface-active: rgba(34, 211, 238, 0.12);
@@ -95,7 +95,9 @@ body {
 #hud-root,
 #menu-root,
 #tactical-overlay {
-  transition: opacity 140ms ease, visibility 140ms ease;
+  transition:
+    opacity 140ms ease,
+    visibility 140ms ease;
 }
 
 body.cinematic-capture #hud-root,
@@ -191,12 +193,14 @@ body.cinematic-capture #tactical-overlay {
 }
 
 .hud-mission-name {
+  flex: 1 1 0;
   font-size: 13.5px;
   font-weight: 600;
   color: var(--text-primary);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .hud-spacer {
@@ -390,8 +394,14 @@ body.cinematic-capture #tactical-overlay {
 .hud-timeline,
 .hud-left .card,
 .hud-right .card {
-  transition: width 220ms ease, left 220ms ease, right 220ms ease, bottom 220ms ease,
-    opacity 180ms ease, transform 220ms ease, background 180ms ease;
+  transition:
+    width 220ms ease,
+    left 220ms ease,
+    right 220ms ease,
+    bottom 220ms ease,
+    opacity 180ms ease,
+    transform 220ms ease,
+    background 180ms ease;
 }
 
 .hud.hud--quiet .hud-workspace {
@@ -418,6 +428,393 @@ body.cinematic-capture #tactical-overlay {
 
 .hud.hud--quiet .hud-timeline {
   height: 52px;
+}
+
+/* ---------------------------------------------------------------------------
+   V2.8 HUD Mode Classes — adaptive presentation based on game state
+   --------------------------------------------------------------------------- */
+
+/* Panel hidden utility — used by mode classes */
+.hud-panel-hidden {
+  display: none !important;
+}
+
+/* Shared transition for all mode-driven changes */
+.hud-workspace,
+.hud-left,
+.hud-right,
+.hud-timeline,
+.hud-topbar,
+.hud-left .card,
+.hud-right .card {
+  transition:
+    width 220ms var(--ease),
+    left 220ms var(--ease),
+    right 220ms var(--ease),
+    bottom 220ms var(--ease),
+    opacity 180ms var(--ease),
+    transform 180ms var(--ease),
+    background 180ms var(--ease),
+    display 0ms var(--ease);
+}
+
+/* Reduced motion: disable transitions */
+@media (prefers-reduced-motion: reduce) {
+  .hud-workspace,
+  .hud-left,
+  .hud-right,
+  .hud-timeline,
+  .hud-topbar,
+  .hud-left .card,
+  .hud-right .card,
+  .hud .card,
+  .btn,
+  .pc-mini-chip.pc-up,
+  .bar-fill,
+  .pv-exposure-fill,
+  .fire-warning {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* --- NORMAL (default running state) ---------------------------------------- */
+.hud.hud--normal .hud-workspace {
+  left: 218px;
+  right: 250px;
+  bottom: 118px;
+}
+.hud.hud--normal .hud-left {
+  width: 196px;
+}
+.hud.hud--normal .hud-right {
+  width: 226px;
+}
+.hud.hud--normal .hud-left .card,
+.hud.hud--normal .hud-right .card {
+  opacity: 1;
+}
+.hud.hud--normal .hud-timeline {
+  height: 94px;
+}
+
+/* --- QUIET (no contacts, low detection) ------------------------------------ */
+.hud.hud--quiet .hud-workspace {
+  left: 186px;
+  right: 206px;
+  bottom: 74px;
+  background: linear-gradient(180deg, rgba(14, 20, 29, 0.13), rgba(10, 14, 20, 0.025));
+}
+.hud.hud--quiet .hud-left {
+  width: 164px;
+}
+.hud.hud--quiet .hud-right {
+  width: 182px;
+}
+.hud.hud--quiet .hud-left .card:not(:first-child),
+.hud.hud--quiet .hud-right .firecard,
+.hud.hud--quiet .hud-right .controls-card,
+.hud.hud--quiet .hud-timeline {
+  opacity: 0.42;
+}
+.hud.hud--quiet .hud-timeline {
+  height: 52px;
+}
+
+/* --- CONTACT (contacts present) -------------------------------------------- */
+.hud.hud--contact .hud-workspace {
+  left: 218px;
+  right: 250px;
+  bottom: 118px;
+}
+.hud.hud--contact .hud-left {
+  width: 196px;
+}
+.hud.hud--contact .hud-right {
+  width: 226px;
+}
+.hud.hud--contact .hud-left .card,
+.hud.hud--contact .hud-right .card {
+  opacity: 1;
+}
+.hud.hud--contact .hud-timeline {
+  height: 94px;
+}
+
+/* --- FIRECONTROL (target locked, solution available) ----------------------- */
+.hud.hud--firecontrol .hud-workspace {
+  left: 218px;
+  right: 250px;
+  bottom: 118px;
+}
+.hud.hud--firecontrol .hud-left {
+  width: 196px;
+}
+.hud.hud--firecontrol .hud-right {
+  width: 260px; /* wider for fire control card */
+}
+.hud.hud--firecontrol .hud-left .card,
+.hud.hud--firecontrol .hud-right .card {
+  opacity: 1;
+}
+.hud.hud--firecontrol .hud-timeline {
+  height: 94px;
+}
+.hud.hud--firecontrol .firecard {
+  opacity: 1;
+}
+.hud.hud--firecontrol .firecard.placeholder {
+  display: none; /* hide placeholder when solution exists */
+}
+
+/* --- WARNING (battery low or high detection) ------------------------------- */
+.hud.hud--warning .hud-workspace {
+  left: 218px;
+  right: 250px;
+  bottom: 118px;
+}
+.hud.hud--warning .hud-left {
+  width: 196px;
+}
+.hud.hud--warning .hud-right {
+  width: 226px;
+}
+.hud.hud--warning .hud-left .card,
+.hud.hud--warning .hud-right .card {
+  opacity: 1;
+}
+.hud.hud--warning .hud-timeline {
+  height: 94px;
+}
+.hud.hud--warning .status-card .bar-row:first-child .bar-fill {
+  background: var(--color-warning) !important;
+}
+.hud.hud--warning .detection-bar .bar-fill {
+  background: var(--color-error) !important;
+}
+
+/* --- PERISCOPE (raised/observing) ------------------------------------------ */
+.hud.hud--periscope .hud-workspace {
+  left: 218px;
+  right: 250px;
+  bottom: 118px;
+}
+.hud.hud--periscope .hud-left {
+  width: 196px;
+}
+.hud.hud--periscope .hud-right {
+  width: 226px;
+}
+.hud.hud--periscope .hud-left .card:not(:first-child):not(.periscope-control) {
+  opacity: 0.3;
+}
+.hud.hud--periscope .hud-right .card {
+  opacity: 0.3;
+}
+.hud.hud--periscope .hud-timeline {
+  opacity: 0.3;
+  height: 52px;
+}
+
+/* --- CINEMATIC (F12 capture) ----------------------------------------------- */
+.hud.hud--cinematic .hud-topbar,
+.hud.hud--cinematic .hud-workspace,
+.hud.hud--cinematic .hud-left,
+.hud.hud--cinematic .hud-right,
+.hud.hud--cinematic .hud-timeline {
+  display: none !important;
+}
+
+/* --- PAUSED ----------------------------------------------------------------- */
+.hud.hud--paused .hud-workspace {
+  left: 218px;
+  right: 250px;
+  bottom: 118px;
+  background: linear-gradient(180deg, rgba(14, 20, 29, 0.18), rgba(10, 14, 20, 0.04));
+}
+.hud.hud--paused .hud-left {
+  width: 196px;
+}
+.hud.hud--paused .hud-right {
+  width: 226px;
+}
+.hud.hud--paused .hud-left .card,
+.hud.hud--paused .hud-right .card {
+  opacity: 1;
+}
+.hud.hud--paused .hud-timeline {
+  height: 94px;
+}
+.hud.hud--paused .controls-card {
+  opacity: 1;
+}
+
+/* ---------------------------------------------------------------------------
+   Responsive breakpoints (V2.8: 1440, 1280, 1024, 390)
+   --------------------------------------------------------------------------- */
+@media (max-width: 1440px) {
+  .hud-workspace {
+    left: 186px;
+    right: 218px;
+  }
+  .hud-timeline {
+    left: 186px;
+    right: 218px;
+  }
+  .hud-left {
+    width: 164px;
+  }
+  .hud-right {
+    width: 194px;
+  }
+  .hud.hud--firecontrol .hud-right {
+    width: 220px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .hud-workspace {
+    left: 164px;
+    right: 196px;
+  }
+  .hud-timeline {
+    left: 164px;
+    right: 196px;
+  }
+  .hud-left {
+    width: 150px;
+  }
+  .hud-right {
+    width: 180px;
+  }
+  .hud.hud--firecontrol .hud-right {
+    width: 200px;
+  }
+  .card {
+    padding: 10px 12px;
+  }
+  .card-title {
+    font-size: 10px;
+  }
+  .status-label {
+    font-size: 10px;
+  }
+  .bar-label {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hud-workspace {
+    left: 140px;
+    right: 170px;
+  }
+  .hud-timeline {
+    left: 140px;
+    right: 170px;
+  }
+  .hud-left {
+    width: 130px;
+  }
+  .hud-right {
+    width: 160px;
+  }
+  .hud.hud--firecontrol .hud-right {
+    width: 180px;
+  }
+  .hud-topmeta {
+    gap: 6px;
+  }
+  .meta-chip {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 390px) {
+  .hud-topbar {
+    height: 48px;
+    padding: 0 8px;
+    gap: 6px;
+  }
+  .hud-brand-text {
+    display: none;
+  }
+  .hud-mission {
+    flex: 1;
+    min-width: 0;
+  }
+  .hud-mission .status-chip {
+    display: none;
+  }
+  .hud-topmeta {
+    gap: 4px;
+  }
+  .hud-topmeta .meta-chip {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+  .hud-workspace {
+    left: 100px;
+    right: 120px;
+    top: 50px;
+  }
+  .hud-timeline {
+    left: 100px;
+    right: 120px;
+    height: 60px;
+  }
+  .hud-left {
+    width: 90px;
+  }
+  .hud-right {
+    width: 110px;
+  }
+  .hud.hud--firecontrol .hud-right {
+    width: 130px;
+  }
+  .card {
+    padding: 8px 10px;
+  }
+  .status-readout {
+    gap: 6px;
+  }
+  .bar-row {
+    gap: 6px;
+  }
+  .controls-card {
+    display: none !important; /* hide controls on very narrow screens */
+  }
+  .hud.hud--paused .controls-card {
+    display: flex !important; /* show in paused mode even on narrow */
+  }
+}
+
+/* Height-based adjustments */
+@media (max-height: 800px) {
+  .hud-timeline {
+    height: 70px;
+  }
+  .hud-workspace {
+    bottom: 90px;
+  }
+}
+
+@media (max-height: 600px) {
+  .hud-timeline {
+    height: 52px;
+  }
+  .hud-workspace {
+    bottom: 74px;
+  }
+  .hud-left .card:not(:first-child),
+  .hud-right .card {
+    display: none;
+  }
+  .hud.hud--paused .hud-left .card:not(:first-child),
+  .hud.hud--paused .hud-right .card {
+    display: flex;
+  }
 }
 
 /* ---------------------------------------------------------------------------

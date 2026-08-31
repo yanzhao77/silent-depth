@@ -411,7 +411,10 @@ function startMission(id: string): void {
       canvas.style.display = 'block';
       fallbackCanvas.style.display = 'none';
     } catch (error) {
-      console.error('[silent-depth] Three.js renderer unavailable; using Canvas 2D fallback.', error);
+      console.error(
+        '[silent-depth] Three.js renderer unavailable; using Canvas 2D fallback.',
+        error,
+      );
       threeRenderer = null;
       canvas.style.display = 'none';
       fallbackCanvas.style.display = 'block';
@@ -678,25 +681,25 @@ function frame(nowMs: number): void {
     settleResult(snap);
   }
 
-    // --- camera ---------------------------------------------------------------
-    if (followPlayer) {
-      camera.follow(snap.playerSub.position.x, snap.playerSub.position.y);
-    } else if (playerOffScreen(snap)) {
-      followPlayer = true;
-    }
+  // --- camera ---------------------------------------------------------------
+  if (followPlayer) {
+    camera.follow(snap.playerSub.position.x, snap.playerSub.position.y);
+  } else if (playerOffScreen(snap)) {
+    followPlayer = true;
+  }
 
-    // Cinematic preset selection (presentation-only). A manual tactical override
-    // wins; otherwise the simulation-owned periscope state, player depth and speed
-    // drive the choice. This never writes back into gameplay or deterministic sim.
-    const periState = snap.periscope?.state;
-    const periscopeRaised = periState === 'RAISED' || periState === 'OBSERVING';
-    const preset = selectCameraPreset({
-      periscopeRaised,
-      depthM: snap.playerSub.depthM ?? 0,
-      speedKt: snap.playerSub.speedKt,
-      override: cameraMode === 'tactical' ? 'tactical' : null,
-    });
-    cameraMode = preset;
+  // Cinematic preset selection (presentation-only). A manual tactical override
+  // wins; otherwise the simulation-owned periscope state, player depth and speed
+  // drive the choice. This never writes back into gameplay or deterministic sim.
+  const periState = snap.periscope?.state;
+  const periscopeRaised = periState === 'RAISED' || periState === 'OBSERVING';
+  const preset = selectCameraPreset({
+    periscopeRaised,
+    depthM: snap.playerSub.depthM ?? 0,
+    speedKt: snap.playerSub.speedKt,
+    override: cameraMode === 'tactical' ? 'tactical' : null,
+  });
+  cameraMode = preset;
 
   // --- weather (audio ambience + HUD chip) ----------------------------------
   if (renderer !== null) {
@@ -712,20 +715,20 @@ function frame(nowMs: number): void {
     }
   }
 
-    // --- render: V2 Three.js or fallback Canvas 2D -----------------------------
-    const inMission = state !== 'MENU' && state !== 'BOOT';
+  // --- render: V2 Three.js or fallback Canvas 2D -----------------------------
+  const inMission = state !== 'MENU' && state !== 'BOOT';
 
-    if (inMission && threeRenderer !== null && missionDef !== null) {
-      // V2: Convert snapshot to RenderState and render with Three.js
-      const weatherKind = activeWeatherAt(
-        missionDef.weather,
-        snap.simTime,
-        missionDef.parTimeS,
-        balance,
-      );
+  if (inMission && threeRenderer !== null && missionDef !== null) {
+    // V2: Convert snapshot to RenderState and render with Three.js
+    const _weatherKind = activeWeatherAt(
+      missionDef.weather,
+      snap.simTime,
+      missionDef.parTimeS,
+      balance,
+    );
 
-      // Collect every event emitted during this frame (see frameStartEventId).
-      const newEvents = collectFrameEvents(snap.eventLog, frameStartEventId);
+    // Collect every event emitted during this frame (see frameStartEventId).
+    const newEvents = collectFrameEvents(snap.eventLog, frameStartEventId);
 
     const renderState = snapshotToRenderState(snap, {
       balance,
@@ -772,6 +775,7 @@ function frame(nowMs: number): void {
       fps,
       showFps: save.settings.video.showFps,
       wallT,
+      cameraMode,
     });
   }
 

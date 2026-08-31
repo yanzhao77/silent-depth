@@ -59,6 +59,7 @@ import type {
 } from '../core/types';
 import { getT, LANGS, type Lang, type Translator } from './i18n';
 import { el, setText, toggleClass } from './dom';
+import { deriveHudMode, deriveVisiblePanels, type HudModeInput } from './hudPresentation';
 
 // ---------------------------------------------------------------------------
 // Pure formatting helpers (unit-testable)
@@ -344,6 +345,8 @@ export interface HudExtras {
   showFps: boolean;
   /** Wall-clock seconds (post-fire warning banner timing). */
   wallT: number;
+  /** Camera mode for cinematic detection (from render state). */
+  cameraMode: 'tactical' | 'cinematic' | 'chase' | 'surface' | 'underwater' | 'periscope';
 }
 
 export interface HudOptions {
@@ -779,6 +782,17 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
 
   root.append(topbar, workspace, leftCol, rightCol, timeline, periscopeView, fireWarn);
 
+  // --- card element references for mode-based visibility ---
+  const topbarEl = topbar;
+  const workspaceEl = workspace;
+  const tasksCardEl = tasksCard;
+  const tubesCardEl = tubesCard;
+  const periscopeCardEl = periscopeCard;
+  const contactsCardEl = rightCol.firstElementChild as HTMLElement; // contacts card wrapper
+  const fireCardEl = fireCard;
+  const controlsCardEl = controlsCard;
+  const timelineEl = timeline;
+
   // --- state ------------------------------------------------------------------------
   const contactRows = new Map<string, HTMLElement>();
   const objectiveRows = new Map<string, HTMLElement>();
@@ -812,13 +826,40 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     const sub = snapshot.playerSub;
     const bal = extras.balance;
     const now = snapshot.simTime;
-    // V2.3 world-first presentation: only reduce visual prominence while the
-    // existing snapshot says the boat is safe and there is no contact. This is
-    // a DOM class; no command, contact state, targeting or gameplay data changes.
-    const hasContact = snapshot.contacts.length > 0;
-    const hasLock = snapshot.periscope?.lockedContactId !== null && snapshot.periscope?.lockedContactId !== undefined;
-    const hudQuiet = snapshot.state === 'MISSION_RUNNING' && !hasContact && !hasLock && sub.detection < 20;
-    root.classList.toggle('hud--quiet', hudQuiet);
+
+    // V2.8: derive HUD mode from authoritative snapshot + render state.
+    const modeInput: HudModeInput = {
+      gameState: snapshot.state,
+      contacts: snapshot.contacts,
+      periscope: snapshot.periscope,
+      playerSub: snapshot.playerSub,
+      cameraMode: extras.cameraMode,
+    };
+    const mode = deriveHudMode(modeInput);
+    const panels = deriveVisiblePanels(mode);
+
+    // Apply mode class to root for CSS transitions.
+    root.className = 'hud';
+    root.classList.add(`hud--${mode}`);
+
+    // Apply panel visibility (CSS classes + inline display for periscope view).
+    toggleClass(topbarEl, 'hud-panel-hidden', !panels.topbar);
+    toggleClass(workspaceEl, 'hud-panel-hidden', !panels.workspace);
+    toggleClass(tasksCardEl, 'hud-panel-hidden', !panels.tasksCard);
+    toggleClass(tubesCardEl, 'hud-panel-hidden', !panels.torpedoesCard);
+    toggleClass(periscopeCardEl, 'hud-panel-hidden', !panels.periscopeControlCard);
+    toggleClass(contactsCardEl, 'hud-panel-hidden', !panels.contactsCard);
+    toggleClass(fireCardEl, 'hud-panel-hidden', panels.fireControlCard === 'hidden');
+    toggleClass(controlsCardEl, 'hud-panel-hidden', !panels.controlsCard);
+    toggleClass(timelineEl, 'hud-panel-hidden', !panels.timeline);
+    periscopeView.style.display = panels.periscopeView ? '' : 'none';
+
+    // Fire control card: placeholder vs solution
+    if (panels.fireControlCard === 'solution') {
+      fireCardEl.classList.remove('placeholder');
+    } else if (panels.fireControlCard === 'placeholder') {
+      fireCardEl.classList.add('placeholder');
+    }
 
     // Mission identity + status chip (top bar) + workspace meta.
     setText(missionNameEl, tt(`mission.${extras.mission.id}.name`));
