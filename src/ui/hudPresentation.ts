@@ -6,7 +6,7 @@
  *
  * Mode priority (highest first):
  *   paused      — game is paused (state PAUSED or MENU during mission)
- *   cinematic   — F12 cinematic capture active (cameraMode === 'cinematic')
+ *   cinematic   — F12 cinematic capture active (cinematicCaptureActive === true)
  *   periscope   — periscope raised/observing
  *   warning     — battery low or detection threshold exceeded
  *   firecontrol — contact selected AND fire solution exists (non-estimated preferred)
@@ -18,7 +18,6 @@
  */
 
 import type { GameSnapshot, GameState } from '../core/types';
-import type { CameraMode } from '../renderer/types';
 
 /** HUD presentation mode — controls which CSS class is applied to .hud root. */
 export type HudMode =
@@ -56,8 +55,8 @@ export interface HudModeInput {
   contacts: GameSnapshot['contacts'];
   periscope: GameSnapshot['periscope'];
   playerSub: GameSnapshot['playerSub'];
-  /** Camera mode from render state (for cinematic detection). */
-  cameraMode: CameraMode;
+  /** Whether F12 cinematic capture is currently active (not the camera preset). */
+  cinematicCaptureActive: boolean;
 }
 
 /**
@@ -65,15 +64,15 @@ export interface HudModeInput {
  * Pure function — same inputs always produce same output.
  */
 export function deriveHudMode(input: HudModeInput): HudMode {
-  const { gameState, contacts, periscope, playerSub, cameraMode } = input;
+  const { gameState, contacts, periscope, playerSub, cinematicCaptureActive } = input;
 
   // 1. Paused — highest priority, covers PAUSED and MENU during mission
   if (gameState === 'PAUSED' || gameState === 'MENU') {
     return 'paused';
   }
 
-  // 2. Cinematic — F12 capture mode (camera in cinematic mode)
-  if (cameraMode === 'cinematic') {
+  // 2. Cinematic — F12 capture mode (explicit capture flag, NOT camera preset)
+  if (cinematicCaptureActive) {
     return 'cinematic';
   }
 

@@ -142,7 +142,7 @@ function makeInput(overrides: Partial<HudModeInput> = {}): HudModeInput {
     contacts: snap.contacts,
     periscope: snap.periscope,
     playerSub: snap.playerSub,
-    cameraMode: 'tactical',
+    cinematicCaptureActive: false,
     ...overrides,
   };
 }
@@ -162,9 +162,15 @@ describe('deriveHudMode', () => {
     expect(deriveHudMode(input)).toBe('paused');
   });
 
-  it('returns "cinematic" when cameraMode is cinematic (highest after paused)', () => {
-    const input = makeInput({ cameraMode: 'cinematic' });
+  it('returns "cinematic" when cinematicCaptureActive is true (F12 capture)', () => {
+    const input = makeInput({ cinematicCaptureActive: true });
     expect(deriveHudMode(input)).toBe('cinematic');
+  });
+
+  it('does NOT return "cinematic" when cameraMode is cinematic but capture is inactive', () => {
+    // cameraMode='cinematic' is a normal game camera preset, not F12 capture
+    const input = makeInput({ cinematicCaptureActive: false });
+    expect(deriveHudMode(input)).not.toBe('cinematic');
   });
 
   it('returns "periscope" when periscope is RAISING', () => {
@@ -240,16 +246,16 @@ describe('deriveHudMode', () => {
     expect(deriveHudMode(input)).toBe('normal');
   });
 
-  it('priority: paused > cinematic > periscope > warning > firecontrol > contact > quiet > normal', () => {
+  it('priority: paused > capture > periscope > warning > firecontrol > contact > quiet > normal', () => {
     // paused beats everything
-    expect(deriveHudMode(makeInput({ gameState: 'PAUSED', cameraMode: 'cinematic' }))).toBe(
+    expect(deriveHudMode(makeInput({ gameState: 'PAUSED', cinematicCaptureActive: true }))).toBe(
       'paused',
     );
-    // cinematic beats periscope
+    // cinematic capture beats periscope
     expect(
       deriveHudMode(
         makeInput({
-          cameraMode: 'cinematic',
+          cinematicCaptureActive: true,
           periscope: { ...makeBaseSnapshot().periscope, state: 'RAISED' },
         }),
       ),
@@ -297,6 +303,67 @@ describe('deriveHudMode', () => {
         makeInput({ contacts: [], playerSub: { ...makeBaseSnapshot().playerSub, detection: 10 } }),
       ),
     ).toBe('quiet');
+  });
+
+  // --- V2.8.1: cinematic capture vs camera preset separation ---
+
+  it('F12 capture ends → HUD restores to previous mode', () => {
+    // During capture: cinematic
+    const capturing = makeInput({ cinematicCaptureActive: true });
+    expect(deriveHudMode(capturing)).toBe('cinematic');
+    // After capture ends: back to quiet (no contacts, low detection)
+    const after = makeInput({ cinematicCaptureActive: false });
+    expect(deriveHudMode(after)).toBe('quiet');
+  });
+
+  it('low speed + 12–80m depth + cinematic camera preset does NOT hide HUD', () => {
+    // Simulates CameraDirector choosing cinematic preset at normal gameplay
+    // speed 8kt, depth 18m — cinematic camera is just a presentation preset
+    const input = makeInput({
+      cinematicCaptureActive: false,
+      playerSub: {
+        ...makeBaseSnapshot().playerSub,
+        speedKt: 8,
+        depthM: 18,
+        depthLayer: 'Periscope',
+      },
+    });
+    const mode = deriveHudMode(input);
+    expect(mode).not.toBe('cinematic');
+    // Should be quiet (no contacts, no lock, detection < 20)
+    expect(mode).toBe('quiet');
+  });
+
+  it('cinematic capture overrides all lower modes except paused', () => {
+    // capture + contacts + lock + warning → still cinematic
+    const input = makeInput({
+      cinematicCaptureActive: true,
+      contacts: [makeContact({ id: 'C-01' })],
+      periscope: { ...makeBaseSnapshot().periscope, lockedContactId: 'C-01' },
+      playerSub: { ...makeBaseSnapshot().playerSub, lowBattery: true, detection: 60 },
+    });
+    expect(deriveHudMode(input)).toBe('cinematic');
+  });
+
+  it('cinematic capture active during PAUSED stays paused (paused wins)', () => {
+    const input = makeInput({
+      gameState: 'PAUSED',
+      cinematicCaptureActive: true,
+    });
+    expect(deriveHudMode(input)).toBe('paused');
+  });
+
+  it('default low speed + Periscope depth + no capture → not cinematic', () => {
+    const input = makeInput({
+      cinematicCaptureActive: false,
+      playerSub: {
+        ...makeBaseSnapshot().playerSub,
+        speedKt: 5,
+        depthM: 25,
+        depthLayer: 'Periscope',
+      },
+    });
+    expect(deriveHudMode(input)).not.toBe('cinematic');
   });
 });
 

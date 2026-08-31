@@ -345,8 +345,8 @@ export interface HudExtras {
   showFps: boolean;
   /** Wall-clock seconds (post-fire warning banner timing). */
   wallT: number;
-  /** Camera mode for cinematic detection (from render state). */
-  cameraMode: 'tactical' | 'cinematic' | 'chase' | 'surface' | 'underwater' | 'periscope';
+  /** Whether F12 cinematic capture is currently active. */
+  cinematicCaptureActive: boolean;
 }
 
 export interface HudOptions {
@@ -833,7 +833,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       contacts: snapshot.contacts,
       periscope: snapshot.periscope,
       playerSub: snapshot.playerSub,
-      cameraMode: extras.cameraMode,
+      cinematicCaptureActive: extras.cinematicCaptureActive,
     };
     const mode = deriveHudMode(modeInput);
     const panels = deriveVisiblePanels(mode);

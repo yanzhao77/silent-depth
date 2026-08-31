@@ -769,7 +769,7 @@ function frame(nowMs: number): void {
       fps,
       showFps: save.settings.video.showFps,
       wallT,
-      cameraMode,
+      cinematicCaptureActive,
     });
   }
 

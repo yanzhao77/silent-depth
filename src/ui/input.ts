@@ -65,6 +65,7 @@ export const HANDLED_KEYS: readonly string[] = [
   'KeyL',
   'KeyX',
   'Escape',
+  'F12',
 ];
 
 /** Minimal event-target surface the binding needs (window in the browser). */
