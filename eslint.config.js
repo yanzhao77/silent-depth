@@ -67,4 +67,13 @@ export default tseslint.config(
       globals: { ...globals.node },
     },
   },
+
+  // ---- .mjs tool scripts (Node.js ESM + browser globals for page.evaluate) ----
+  {
+    files: ['tools/**/*.mjs'],
+    languageOptions: {
+      globals: { ...globals.node, ...globals.browser },
+      sourceType: 'module',
+    },
+  },
 );

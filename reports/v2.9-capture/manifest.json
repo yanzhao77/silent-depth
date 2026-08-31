@@ -1,0 +1,982 @@
+[
+  {
+    "shotId": "main-menu",
+    "file": "screenshots/v2/main-menu-1440x900.png",
+    "sha256": "d09f07104649ef1c60ea6f69f14d98068f2d32e6f3f04cc5117caeeccdeadda8",
+    "width": 1440,
+    "height": 900,
+    "type": "UI CAPTURE",
+    "missionId": null,
+    "seed": null,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": null,
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 26056,
+    "description": "主菜单界面",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 14.695209362140869,
+      "variance": 377.1987130991466,
+      "distinctColors": 170,
+      "bgDiffRatio": 0.155,
+      "blank": false
+    },
+    "webglPixels": null,
+    "menuCheck": {
+      "hasContent": true,
+      "buttonCount": 4,
+      "btnTexts": [
+        "开始游戏",
+        "任务",
+        "设置",
+        "制作名单"
+      ],
+      "hasTitle": true
+    },
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "mission-select",
+    "file": "screenshots/v2/mission-select-1440x900.png",
+    "sha256": "f7a99dda2bcc8cb8f30cf2f2c4b62c0beb275de436549a4dc0bb197cefde82cd",
+    "width": 1440,
+    "height": 900,
+    "type": "UI CAPTURE",
+    "missionId": null,
+    "seed": null,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": null,
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 119257,
+    "description": "任务选择界面",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 13.927713991744358,
+      "variance": 143.88555216849926,
+      "distinctColors": 238,
+      "bgDiffRatio": 0.1913425925925926,
+      "blank": false
+    },
+    "webglPixels": null,
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "m01-clear-gameplay",
+    "file": "screenshots/v2/m01-clear-gameplay-1440x900.png",
+    "sha256": "55ecd336aa71f1082a86e94073c88e908e4cac885f702d5e799bc570f92b2d9d",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M01",
+    "seed": 1001,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Clear",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1139107,
+    "description": "M01 声呐训练 — 晴天游戏画面",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 7.098776234587275,
+      "variance": 112.24095347483242,
+      "distinctColors": 323,
+      "bgDiffRatio": 0.0552445987654321,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "m01-hero-surface",
+    "file": "screenshots/v2/m01-hero-surface-1440x900.png",
+    "sha256": "7f8f24440e8aa5de05e2778f9d813e77128623ee7b66b1dc233f67a2473d294b",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M01",
+    "seed": 1001,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Clear",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1162474,
+    "description": "玩家潜艇水面/近水面昼间英雄镜头",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 12.834856995905199,
+      "variance": 116.3660014501143,
+      "distinctColors": 347,
+      "bgDiffRatio": 0.1162554012345679,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "m05-night-hero",
+    "file": "screenshots/v2/m05-night-hero-1440x900.png",
+    "sha256": "253ab7a5364568efa4b3f9ca220b513f7a74e3c788ebf321dea4f7cb12d0d920",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M05",
+    "seed": 1005,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Night",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1138231,
+    "description": "玩家潜艇夜间英雄镜头",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 7.080364454750973,
+      "variance": 112.02552586501648,
+      "distinctColors": 324,
+      "bgDiffRatio": 0.05532021604938272,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "m03-convoy-detected",
+    "file": "screenshots/v2/m03-convoy-detected-1440x900.png",
+    "sha256": "7bf7f98f88b8a1d52a516775d2f6d806357e54db7aab80abe4f7b5d2814676cf",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M03",
+    "seed": 1003,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Cloudy->Storm",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 970842,
+    "description": "M03 护航队 — 已探测商船",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 11.02978935183393,
+      "variance": 204.30703895022944,
+      "distinctColors": 396,
+      "bgDiffRatio": 0.2643341049382716,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "m04-storm-escort",
+    "file": "screenshots/v2/m04-storm-escort-1440x900.png",
+    "sha256": "aa88da923bf151f8c950e2ce57fecaf278f70b6edb3d8323fdb5375628ca9950",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M04",
+    "seed": 1004,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Storm->Fog",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1138310,
+    "description": "M04 风暴 — 已探测护航舰",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 7.094884773685545,
+      "variance": 111.258186694623,
+      "distinctColors": 321,
+      "bgDiffRatio": 0.05518904320987654,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "m05-fog-atmosphere",
+    "file": "screenshots/v2/m05-fog-atmosphere-1440x900.png",
+    "sha256": "c8ed3a8c3e95805e62529530828fb66c9402e622d25a527f59c403d53e2bd232",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M05",
+    "seed": 1005,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Night->Fog",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1138196,
+    "description": "雾天氛围",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 7.072472479442918,
+      "variance": 111.60234436230051,
+      "distinctColors": 325,
+      "bgDiffRatio": 0.05523688271604938,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "periscope-view",
+    "file": "screenshots/v2/periscope-view-1440x900.png",
+    "sha256": "770b3d841f7f78a2c4592d285e30d0ed0e238cf6196bc1c4b68ce10bdfdca877",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M01",
+    "seed": 1001,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Clear",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1102500,
+    "description": "潜望镜视图 — 真实可见联系",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 11.42458719133811,
+      "variance": 130.84207782522708,
+      "distinctColors": 405,
+      "bgDiffRatio": 0.05676388888888889,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "tactical-view",
+    "file": "screenshots/v2/tactical-view-1440x900.png",
+    "sha256": "8a66f8e2c7ccd24667c839a7701f3b33bb7d405ae5483e8af0709663558883a4",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M01",
+    "seed": 1001,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Clear",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1136871,
+    "description": "战术视图",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 7.060727366273743,
+      "variance": 111.18290203685164,
+      "distinctColors": 323,
+      "bgDiffRatio": 0.05528395061728395,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "torpedo-launched",
+    "file": "screenshots/v2/torpedo-launched-1440x900.png",
+    "sha256": "094beaed301b1da75277df3b8f84833aa0da91fe14bb4395f7d6d4bbcf473d8a",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M02",
+    "seed": 1002,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Clear",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1137022,
+    "description": "鱼雷发射或航行",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 7.058801697549884,
+      "variance": 110.37817601941602,
+      "distinctColors": 322,
+      "bgDiffRatio": 0.05517592592592593,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "torpedo-hit",
+    "file": "screenshots/v2/torpedo-hit-1440x900.png",
+    "sha256": "c9a5f5a5d238309a4ee84bb89acbe92cf71ace97f22230b204609671fa29e3f3",
+    "width": 1440,
+    "height": 900,
+    "type": "GAMEPLAY CAPTURE",
+    "missionId": "M02",
+    "seed": 1002,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Clear",
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    ],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 1136786,
+    "description": "鱼雷命中效果",
+    "pixelMetrics": {
+      "w": 1440,
+      "h": 900,
+      "nonTransparentRatio": 1,
+      "avgBrightness": 7.051674639938021,
+      "variance": 110.42905238363402,
+      "distinctColors": 325,
+      "bgDiffRatio": 0.055281635802469135,
+      "blank": false
+    },
+    "webglPixels": {
+      "w": 1440,
+      "h": 900,
+      "samples": [
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "anyNonBlack": false
+    },
+    "menuCheck": null,
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "f12-cinematic-capture",
+    "file": null,
+    "sha256": null,
+    "width": 1440,
+    "height": 900,
+    "type": "INTERACTION VERIFICATION",
+    "missionId": "M01",
+    "seed": 1001,
+    "viewport": "1440x900",
+    "quality": "default",
+    "weather": "Clear",
+    "playerDepth": null,
+    "cameraMode": "cinematic",
+    "simTime": null,
+    "f12Triggered": true,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 0,
+    "description": "F12 cinematic capture — HUD hides, ~1.6s restores",
+    "captureResult": "OK",
+    "notVerified": []
+  },
+  {
+    "shotId": "layout-verification",
+    "file": null,
+    "sha256": null,
+    "width": null,
+    "height": null,
+    "type": "VERIFICATION",
+    "missionId": null,
+    "seed": null,
+    "viewport": "all",
+    "quality": "default",
+    "weather": null,
+    "playerDepth": null,
+    "cameraMode": null,
+    "simTime": null,
+    "f12Triggered": false,
+    "webglVendor": "Google Inc. (Google)",
+    "webglRenderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)",
+    "webglVersion": "WebGL 2.0 (OpenGL ES 3.0 Chromium)",
+    "glError": 0,
+    "consoleErrors": [],
+    "pageErrors": [],
+    "shaderErrors": [],
+    "blank": false,
+    "pngBytes": 0,
+    "description": "Layout verification at 4 viewports",
+    "captureResult": "OK",
+    "layouts": [
+      {
+        "viewport": "1440x900",
+        "ok": true,
+        "appW": 1440,
+        "appH": 900,
+        "canvasVisible": true,
+        "hudVisible": true,
+        "menuVisible": true
+      },
+      {
+        "viewport": "1280x720",
+        "ok": true,
+        "appW": 1280,
+        "appH": 720,
+        "canvasVisible": true,
+        "hudVisible": true,
+        "menuVisible": true
+      },
+      {
+        "viewport": "1024x768",
+        "ok": true,
+        "appW": 1024,
+        "appH": 768,
+        "canvasVisible": true,
+        "hudVisible": true,
+        "menuVisible": true
+      },
+      {
+        "viewport": "390x844",
+        "ok": true,
+        "appW": 390,
+        "appH": 844,
+        "canvasVisible": true,
+        "hudVisible": true,
+        "menuVisible": true
+      }
+    ],
+    "notVerified": []
+  }
+]
