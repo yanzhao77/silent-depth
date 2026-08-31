@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { AssetManager } from '../assets/AssetManager';
+import type { AssetManager } from '../assets/AssetManager';
 import {
   createSubmarineGeometry,
   SUBMARINE_LOD_DISTANCES_KM,

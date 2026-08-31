@@ -11,7 +11,7 @@
  */
 
 import * as THREE from 'three';
-import type { RenderState, RenderContact } from '../types';
+import type { RenderState } from '../types';
 
 const RAD = Math.PI / 180;
 

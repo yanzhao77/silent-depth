@@ -1,0 +1,9 @@
+# Normalize all text files to LF in the working tree and the repository.
+# The asset registry sha256 integrity tests hash on-disk source files, so the
+# checkout line-ending policy must be pinned — autocrlf=true on Windows would
+# otherwise produce CRLF working files whose hashes drift from the registry.
+* text=auto eol=lf
+
+# Binary assets must never be line-ending normalized.
+*.glb binary
+*.png binary

@@ -80,7 +80,6 @@ export class ThreeRenderer {
       canvas: opts.canvas,
       width: opts.width,
       height: opts.height,
-      quality,
     });
 
     const scene = this._sceneMgr.scene;

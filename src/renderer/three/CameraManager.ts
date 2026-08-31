@@ -157,7 +157,7 @@ export class CameraManager {
 
     let lookX = pp.x + sinH * params.lookAhead;
     let lookZ = pp.z - cosH * params.lookAhead;
-    let lookY = underwater ? pp.y + params.lookUpBias * 0.5 : Math.max(-0.012, pp.y + params.lookUpBias);
+    const lookY = underwater ? pp.y + params.lookUpBias * 0.5 : Math.max(-0.012, pp.y + params.lookUpBias);
 
     // Reveal framing: slowly pan the aim toward the detected ship and tighten the
     // field of view. The smoothing above already provides the slow pan; we only
