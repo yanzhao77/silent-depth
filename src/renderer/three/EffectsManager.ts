@@ -217,7 +217,7 @@ export class EffectsManager {
     (ping.ring2.material as THREE.MeshBasicMaterial).opacity = 0.4 * Math.max(0, 1 - p2 / 0.85);
   }
 
-  private _renderExplosion(fx: RenderEffect, dt: number): void {
+  private _renderExplosion(fx: RenderEffect, _dt: number): void {
     let exp = this._explosions.find((e) => e.fxId === fx.id);
     if (!exp) {
       const group = new THREE.Group();

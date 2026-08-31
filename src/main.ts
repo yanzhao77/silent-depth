@@ -717,12 +717,6 @@ function frame(nowMs: number): void {
 
     if (inMission && threeRenderer !== null && missionDef !== null) {
       // V2: Convert snapshot to RenderState and render with Three.js
-      const weatherKind = activeWeatherAt(
-        missionDef.weather,
-        snap.simTime,
-        missionDef.parTimeS,
-        balance,
-      );
 
       // Collect every event emitted during this frame (see frameStartEventId).
       const newEvents = collectFrameEvents(snap.eventLog, frameStartEventId);
