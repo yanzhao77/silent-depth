@@ -1,6 +1,6 @@
 # V2.9 Capture Report
 
-**Date:** 2026-08-31T06:25:46.869Z
+**Date:** 2026-09-01T03:49:10.963Z
 **Chromium:** ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (LLVM 10.0.0) (0x0000C0DE)), SwiftShader driver)
 **WebGL:** WebGL 2.0 (OpenGL ES 3.0 Chromium)
 **Total screenshots:** 12
@@ -33,16 +33,16 @@
 |---------|-------------|-------------------|----------------|----------|-----------------|-----------|
 | main-menu | UI CAPTURE | 100.0 | 14.7 | 377.2 | 170 | 15.5 |
 | mission-select | UI CAPTURE | 100.0 | 13.9 | 143.9 | 238 | 19.1 |
-| m01-clear-gameplay | GAMEPLAY CAPTURE | 100.0 | 7.1 | 112.2 | 323 | 5.5 |
-| m01-hero-surface | GAMEPLAY CAPTURE | 100.0 | 12.8 | 116.4 | 347 | 11.6 |
-| m05-night-hero | GAMEPLAY CAPTURE | 100.0 | 7.1 | 112.0 | 324 | 5.5 |
-| m03-convoy-detected | GAMEPLAY CAPTURE | 100.0 | 11.0 | 204.3 | 396 | 26.4 |
-| m04-storm-escort | GAMEPLAY CAPTURE | 100.0 | 7.1 | 111.3 | 321 | 5.5 |
-| m05-fog-atmosphere | GAMEPLAY CAPTURE | 100.0 | 7.1 | 111.6 | 325 | 5.5 |
-| periscope-view | GAMEPLAY CAPTURE | 100.0 | 11.4 | 130.8 | 405 | 5.7 |
-| tactical-view | GAMEPLAY CAPTURE | 100.0 | 7.1 | 111.2 | 323 | 5.5 |
-| torpedo-launched | GAMEPLAY CAPTURE | 100.0 | 7.1 | 110.4 | 322 | 5.5 |
-| torpedo-hit | GAMEPLAY CAPTURE | 100.0 | 7.1 | 110.4 | 325 | 5.5 |
+| m01-clear-gameplay | GAMEPLAY CAPTURE | 100.0 | 7.1 | 112.4 | 324 | 5.5 |
+| m01-hero-surface | GAMEPLAY CAPTURE | 100.0 | 12.8 | 116.3 | 343 | 11.6 |
+| m05-night-hero | GAMEPLAY CAPTURE | 100.0 | 7.1 | 112.0 | 327 | 5.5 |
+| m03-convoy-detected | GAMEPLAY CAPTURE | 100.0 | 11.0 | 204.6 | 393 | 26.4 |
+| m04-storm-escort | GAMEPLAY CAPTURE | 100.0 | 7.1 | 111.3 | 320 | 5.6 |
+| m05-fog-atmosphere | GAMEPLAY CAPTURE | 100.0 | 7.1 | 112.2 | 321 | 5.5 |
+| periscope-view | GAMEPLAY CAPTURE | 100.0 | 11.5 | 131.9 | 405 | 5.7 |
+| tactical-view | GAMEPLAY CAPTURE | 100.0 | 7.1 | 111.1 | 321 | 5.5 |
+| torpedo-launched | GAMEPLAY CAPTURE | 100.0 | 11.1 | 208.5 | 432 | 24.0 |
+| torpedo-hit | GAMEPLAY CAPTURE | 100.0 | 16.0 | 450.2 | 300 | 27.4 |
 
 ## main-menu DOM Verification
 

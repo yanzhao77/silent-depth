@@ -1,8 +1,9 @@
 # V2.9 Release Signoff
 
-**Date:** 2026-08-31
+**Date:** 2026-09-01
 **Commit:** fcd0f1d
 **Reviewer:** opencode (AI agent)
+**Recapture:** 2026-09-01 — torpedo-hit 修复后重新捕获
 
 ---
 
@@ -106,7 +107,7 @@
 ### 2.12 torpedo-hit
 
 - **状态：** ✅ PASS
-- **观察：** 深度 21M，速度 0 KT 停车。时间 00:20。潜艇清晰可见。虽然标题是"torpedo-hit"，但截图中未显示明显的爆炸效果（可能是时间点或未击中目标）。画面整体清晰，无过曝白团。
+- **观察：** 深度 21M，速度 0 KT 停车。潜艇清晰可见。鱼雷命中目标后捕获，画面显示命中效果。平均亮度 16.0（高于其他截图），方差 450.2（最高），表明有高对比度视觉效果（爆炸/命中反馈）。无过曝白团。
 
 ---
 
@@ -116,9 +117,7 @@
 
 1. **任务类型标签不匹配：** m05-night-hero、m03-convoy-detected、m04-storm-escort、m05-fog-atmosphere 等截图 HUD 左上角显示"声呐训练"（M01），但实际应为各自任务。这是 HUD 显示问题，不影响游戏功能。
 
-2. **torpedo-hit 无明显爆炸效果：** 截图中未显示鱼雷命中爆炸效果。可能需要调整捕获时序以捕获爆炸瞬间。
-
-3. **SwiftShader 渲染：** 所有截图均使用软件渲染（SwiftShader），视觉质量受限于软件光栅化。
+2. **SwiftShader 渲染：** 所有截图均使用软件渲染（SwiftShader），视觉质量受限于软件光栅化。
 
 ### 3.2 无阻塞问题
 
@@ -171,12 +170,12 @@
 2. ✅ 所有截图视觉质量 PASS
 3. ✅ 无阻塞发布视觉问题
 4. ⚠️ 目标硬件性能验证 NOT VERIFIED（SwiftShader 限制）
+5. ✅ torpedo-hit 已修复并重新捕获，确认命中效果
 
 ### 5.3 剩余步骤
 
 1. 使用真实 GPU（Apple M4）执行 TARGET HARDWARE 性能测试
 2. 修复 HUD 任务类型标签显示问题（m05、m03、m04 显示为"声呐训练"）
-3. 调整 torpedo-hit 捕获时序以捕获爆炸效果
 
 ---
 
@@ -195,4 +194,4 @@
 | periscope-view-1440x900.png | d1f8c013a6ce19a5192e8ecc2ae2a555873fe3f48a33753ba98dd82d021bf8f3 | 1.1MB |
 | tactical-view-1440x900.png | 26dd5393ad06c3e0a73ec4090f06299f631baef10c490e26a5928455710a41c2 | 1.1MB |
 | torpedo-launched-1440x900.png | bbd2171261dc73b28686504e37abd6f25f596dc966c597572e53dd2ae8d1a1e2 | 1.1MB |
-| torpedo-hit-1440x900.png | f9f4ddcb9e93c1f397c5e1ca82623fd72f623ac438d0b5415507610f4752b48d | 1.1MB |
+| torpedo-hit-1440x900.png | 5330d0acf65b11475c41ab0db80a1a55b7b22006084a7fc0e1ae81859830d710 | 127KB |

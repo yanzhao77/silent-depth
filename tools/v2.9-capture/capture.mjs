@@ -217,6 +217,216 @@ async function getWebGLPixels(page) {
 }
 
 // ---------------------------------------------------------------------------
+// __SD debug API helpers — use direct simulation control for reliable state
+// ---------------------------------------------------------------------------
+
+/** Wait for __SD debug API to be available on window. */
+async function waitForSD(page, timeoutMs = 5000) {
+  const start = Date.now();
+  while (Date.now() - start < timeoutMs) {
+    const has = await page.evaluate(() => typeof window.__SD !== 'undefined');
+    if (has) return true;
+    await sleep(100);
+  }
+  return false;
+}
+
+/** Step simulation N ticks via __SD.step(). Waits for render catch-up. */
+async function stepSim(page, ticks) {
+  await page.evaluate((n) => { window.__SD?.step(n); }, ticks);
+  await sleep(50); // let rAF render catch up
+}
+
+/** Ping synchronously via __SD.pingSync(). */
+async function pingSyncSD(page) {
+  await page.evaluate(() => { window.__SD?.pingSync(); });
+  await sleep(100);
+}
+
+/** Move at a specific throttle level via __SD.moveAt(presses, ticks). */
+async function moveAtSD(page, presses, ticks) {
+  await page.evaluate((p, t) => { window.__SD?.moveAt(p, t); }, presses, ticks);
+  await sleep(50);
+}
+
+/** Move with steering at specific throttle via __SD.moveAtWith(presses, rudder, ticks). */
+async function moveAtWithSD(page, presses, rudder, ticks) {
+  await page.evaluate((p, r, t) => { window.__SD?.moveAtWith(p, r, t); }, presses, rudder, ticks);
+  await sleep(50);
+}
+
+/** Reset throttle to 0 by pressing S 11 times (22kt / 2kt per press). */
+async function resetThrottleSD(page) {
+  await page.evaluate(() => { window.__SD?.holdKeySim('KeyS', 0); });
+  await sleep(50);
+}
+
+/** Get positions via __SD.positions(). */
+async function getPositionsSD(page) {
+  return page.evaluate(() => window.__SD?.positions() ?? []);
+}
+
+/** Get contacts via __SD.contacts(). */
+async function getContactsSD(page) {
+  return page.evaluate(() => window.__SD?.contacts() ?? []);
+}
+
+/** Get sonar state via __SD.sonarState(). */
+async function getSonarStateSD(page) {
+  return page.evaluate(() => window.__SD?.sonarState() ?? { pingCooldown: 0, battery: 100 });
+}
+
+/** Get snapshot via __SD.snapshot(). */
+async function getSnapshotSD(page) {
+  return page.evaluate(() => window.__SD?.snapshot() ?? null);
+}
+
+/** Start mission via __SD.startMission(id). */
+async function startMissionSD(page, id) {
+  await page.evaluate((mid) => { window.__SD?.startMission(mid); }, id);
+  await stepSim(page, 20); // let briefing init
+}
+
+/**
+ * Steer player toward nearest enemy and approach within sonar range.
+ * Uses CRUISE speed (6 W presses) for both steering and movement to preserve battery.
+ * If enemy is far, steps simulation forward to let enemy AI approach us.
+ * Returns { distance, detected } after approach + ping.
+ */
+async function steerAndApproach(page, { steerTicks = 0, maxPings = 6 } = {}) {
+  // Get current positions
+  const positions = await getPositionsSD(page);
+  const player = positions.find(p => p.isPlayer);
+  const enemies = positions.filter(p => !p.isPlayer);
+  if (!player || enemies.length === 0) return { distance: Infinity, detected: false };
+
+  // Find nearest enemy
+  let nearest = null;
+  let minDist = Infinity;
+  for (const e of enemies) {
+    const d = Math.sqrt((e.x - player.x) ** 2 + (e.y - player.y) ** 2);
+    if (d < minDist) { minDist = d; nearest = e; }
+  }
+  if (!nearest) return { distance: Infinity, detected: false };
+
+  // Calculate target bearing: atan2(dx, dy) gives angle from north
+  const dx = nearest.x - player.x;
+  const dy = nearest.y - player.y;
+  const targetBearing = ((Math.atan2(dx, dy) * 180) / Math.PI + 360) % 360;
+
+  const snap = await getSnapshotSD(page);
+  const currentHeading = snap?.playerSub?.headingDeg ?? 0;
+
+  // Calculate turn direction
+  let diff = targetBearing - currentHeading;
+  while (diff > 180) diff -= 360;
+  while (diff < -180) diff += 360;
+
+  console.log(
+    `    steer: heading=${currentHeading.toFixed(1)}° target=${targetBearing.toFixed(1)}° diff=${diff.toFixed(1)}° dist=${minDist.toFixed(2)}km`,
+  );
+
+  // CRUISE turn rate: 3.0 deg/s (non-FULL), dt=0.05s → 0.15 deg/tick
+  const CRUISE_DEG_PER_TICK = 3.0 * 0.05;
+  if (steerTicks === 0) {
+    steerTicks = Math.min(Math.ceil(Math.abs(diff) / CRUISE_DEG_PER_TICK), 4000);
+  }
+  const rudder = diff > 0 ? 1 : -1;
+
+  console.log(`    steer: will turn ${steerTicks} ticks (${(steerTicks * 0.05).toFixed(0)}s sim) at CRUISE`);
+
+  // Steer at CRUISE speed (6 W presses = 12kt) — battery drain = 0.22%/s
+  // Battery drain for 177° turn: ~59s × 0.22 = 13%, much better than FULL (71%)
+  if (Math.abs(diff) > 5 && steerTicks > 0) {
+    await moveAtWithSD(page, 6, rudder, steerTicks);
+  }
+
+  // Verify heading after steering
+  const postSteer = await getSnapshotSD(page);
+  const postHeading = postSteer?.playerSub?.headingDeg ?? 0;
+  const postSonar = await getSonarStateSD(page);
+  console.log(`    steer: heading after=${postHeading.toFixed(1)}° battery=${postSonar.battery.toFixed(1)}%`);
+
+  // SONAR RANGE: 10 km. Strategy:
+  // 1. If already within range, ping directly
+  // 2. If within 12 km, move at CRUISE to close gap (enemy AI also moves toward us)
+  // 3. If >12 km, step simulation to let enemy approach (saves battery)
+  const SONAR_RANGE_KM = 10;
+
+  let detected = false;
+  try {
+    for (let i = 0; i < maxPings; i++) {
+      // Check current distance
+      const posNow = await getPositionsSD(page);
+      const pNow = posNow.find(p => p.isPlayer);
+      const eNow = posNow.filter(p => !p.isPlayer);
+      let curDist = Infinity;
+      if (pNow && eNow.length > 0) {
+        curDist = Math.min(...eNow.map(e => Math.sqrt((e.x - pNow.x) ** 2 + (e.y - pNow.y) ** 2)));
+      }
+      const sonar = await getSonarStateSD(page);
+      console.log(`    iter ${i}: dist=${curDist.toFixed(2)}km battery=${sonar.battery.toFixed(1)}% cooldown=${sonar.pingCooldown.toFixed(1)}s`);
+
+      // Check battery before doing anything
+      if (sonar.battery < 5) {
+        console.log(`    battery low (${sonar.battery.toFixed(1)}%), stepping to let enemy approach...`);
+        await stepSim(page, 600); // 30s sim, enemy closes ~0.12km
+        continue;
+      }
+
+      // If within sonar range, try to ping
+      if (curDist <= SONAR_RANGE_KM && curDist < Infinity) {
+        // Wait for cooldown if needed
+        if (sonar.pingCooldown > 0) {
+          const waitTicks = Math.ceil(sonar.pingCooldown / 0.05) + 5;
+          await stepSim(page, waitTicks);
+        }
+
+        console.log(`    pinging at ${curDist.toFixed(2)}km...`);
+        await pingSyncSD(page);
+        await stepSim(page, 20); // let contacts register
+
+        const contacts = await getContactsSD(page);
+        console.log(`    ping result: ${contacts.length} contacts`);
+
+        if (contacts.length > 0) {
+          detected = true;
+          break;
+        }
+        continue;
+      }
+
+      // Outside sonar range — need to close gap
+      if (curDist > SONAR_RANGE_KM && curDist < 14) {
+        // Within 14 km: move at CRUISE toward enemy (enemy AI also closes)
+        // CRUISE = 12kt = 0.00617 km/s, enemy ~8kt = 0.0043 km/s → combined ~0.01 km/s
+        console.log(`    moving at CRUISE to close ${curDist.toFixed(2)}km gap...`);
+        const MOVE_TICKS = 600; // 30s sim → ~0.3 km
+        await moveAtSD(page, 6, MOVE_TICKS);
+        continue;
+      }
+
+      // Very far (>14 km): step simulation to let enemy approach us
+      console.log(`    stepping to let enemy approach from ${curDist.toFixed(2)}km...`);
+      await stepSim(page, 600); // 30s sim, enemy closes ~0.12km
+    }
+  } catch (loopErr) {
+    console.log(`    LOOP ERROR: ${loopErr.message}\n${loopErr.stack?.split('\n').slice(0, 3).join('\n')}`);
+  }
+
+  // Final distance
+  const finalPositions = await getPositionsSD(page);
+  const fp = finalPositions.find(p => p.isPlayer);
+  const fe = finalPositions.filter(p => !p.isPlayer);
+  let finalDist = Infinity;
+  if (fp && fe.length > 0) {
+    finalDist = Math.min(...fe.map(e => Math.sqrt((e.x - fp.x) ** 2 + (e.y - fp.y) ** 2)));
+  }
+
+  return { distance: finalDist, detected };
+}
+
+// ---------------------------------------------------------------------------
 // Shot definitions
 // ---------------------------------------------------------------------------
 
@@ -541,31 +751,156 @@ async function setupGameState(page, shot) {
     }
 
     case 'torpedo-launch': {
-      // Start M02, detect tanker, fire
-      await startMission(page, shot.missionId);
-      await sleep(4000);
-      // Ping to detect
-      await dispatchKey(page, 'Space');
-      await sleep(4000);
-      // Select contact and fire
-      await dispatchKey(page, 'KeyF');
-      await sleep(500);
-      await dispatchKey(page, 'Space');
-      await sleep(2000);
+      // Use __SD API for reliable M02 torpedo launch
+      if (!(await waitForSD(page))) { console.error('    __SD not available'); break; }
+      await startMissionSD(page, shot.missionId);
+      await sleep(2000); // let menu transition complete
+
+      // Steer toward enemy at CRUISE speed, let enemy approach, ping to detect
+      const result = await steerAndApproach(page, { maxPings: 12 });
+      console.log(`    torpedo-launch: distance=${result.distance.toFixed(2)}km detected=${result.detected}`);
+
+      // Fire at first contact
+      const contacts = await getContactsSD(page);
+      if (contacts.length > 0) {
+        const targetId = contacts[0].id;
+        console.log(`    firing at ${targetId} (${contacts[0].classification}, ${contacts[0].rangeKm?.toFixed(1)}km)`);
+        await page.evaluate((tid) => { window.__SD?.fire(tid); }, targetId);
+        await stepSim(page, 40); // let torpedo appear and travel a bit
+      } else {
+        console.log('    WARNING: no contacts to fire at');
+        await stepSim(page, 20);
+      }
       break;
     }
 
     case 'torpedo-hit': {
-      // Start M02, detect, fire, wait for hit
-      await startMission(page, shot.missionId);
-      await sleep(4000);
-      await dispatchKey(page, 'Space');
-      await sleep(4000);
-      await dispatchKey(page, 'KeyF');
-      await sleep(500);
-      await dispatchKey(page, 'Space');
-      // Wait for torpedo to reach target
-      await sleep(8000);
+      // Use __SD API for reliable M02 torpedo hit.
+      // Strategy: steer at CRUISE (13% drain → battery=87%), then approach at
+      // SILENT (4kt, 0.1%/s drain) toward enemy. Enemy approaches at ~0.004km/s.
+      // Combined closure: 0.0074 + 0.004 = 0.0114 km/s. From 11.5 to 5.5km = 526s.
+      // Battery budget: steer 13% + approach 53% + ping 2% + hit-wait 6% = ~74%
+      if (!(await waitForSD(page))) { console.error('    __SD not available'); break; }
+      await startMissionSD(page, shot.missionId);
+      await sleep(2000);
+
+      // Phase 1: Steer toward nearest enemy at CRUISE speed (12kt)
+      const hitPositions = await getPositionsSD(page);
+      const hitPlayer = hitPositions.find(p => p.isPlayer);
+      const hitEnemies = hitPositions.filter(p => !p.isPlayer);
+      if (!hitPlayer || hitEnemies.length === 0) { console.log('    torpedo-hit: no enemies found'); break; }
+
+      let hitNearest = null;
+      let hitMinDist = Infinity;
+      for (const e of hitEnemies) {
+        const d = Math.sqrt((e.x - hitPlayer.x) ** 2 + (e.y - hitPlayer.y) ** 2);
+        if (d < hitMinDist) { hitMinDist = d; hitNearest = e; }
+      }
+
+      const hitSnap = await getSnapshotSD(page);
+      const hitHeading = hitSnap?.playerSub?.headingDeg ?? 0;
+      const hitDx = hitNearest.x - hitPlayer.x;
+      const hitDy = hitNearest.y - hitPlayer.y;
+      const hitBearing = ((Math.atan2(hitDx, hitDy) * 180) / Math.PI + 360) % 360;
+      let hitDiff = hitBearing - hitHeading;
+      while (hitDiff > 180) hitDiff -= 360;
+      while (hitDiff < -180) hitDiff += 360;
+
+      const CRUISE_DEG_PER_TICK = 3.0 * 0.05;
+      const hitSteerTicks = Math.min(Math.ceil(Math.abs(hitDiff) / CRUISE_DEG_PER_TICK), 4000);
+      const hitRudder = hitDiff > 0 ? 1 : -1;
+
+      console.log(
+        `    torpedo-hit: steer heading=${hitHeading.toFixed(1)}° → ${hitBearing.toFixed(1)}° diff=${hitDiff.toFixed(1)}° dist=${hitMinDist.toFixed(2)}km`,
+      );
+      if (Math.abs(hitDiff) > 5) {
+        await moveAtWithSD(page, 6, hitRudder, hitSteerTicks);
+      }
+      // CRITICAL: reset throttle to 0 — moveAtWith sets CRUISE (12kt) but
+      // handleKey('KeyW', false) only removes from held, does NOT decrement throttle.
+      await resetThrottleSD(page);
+      const hitSonar = await getSonarStateSD(page);
+      console.log(`    torpedo-hit: battery after steer=${hitSonar.battery.toFixed(1)}%`);
+
+      // Phase 2: Approach at SILENT (2 W presses = 4kt, 0.1%/s drain).
+      // Enemy approaches at ~0.004 km/s. Combined: ~0.0114 km/s.
+      // From ~11.5km to 3.0km ≈ 746s sim ≈ 25 iterations of 600 ticks.
+      // Torpedo is STRAIGHT-LINE (no homing, DD-04) — must fire close for
+      // bearing accuracy within 40m hit radius. 5.5km → bearing jitter → miss.
+      const TORPEDO_FIRE_KM = 3.0;
+      let hitDetected = false;
+
+      for (let approach = 0; approach < 60; approach++) {
+        const posNow = await getPositionsSD(page);
+        const pNow = posNow.find(p => p.isPlayer);
+        const eNow = posNow.filter(p => !p.isPlayer);
+        let curDist = Infinity;
+        if (pNow && eNow.length > 0) {
+          curDist = Math.min(...eNow.map(e => Math.sqrt((e.x - pNow.x) ** 2 + (e.y - pNow.y) ** 2)));
+        }
+        const sonarNow = await getSonarStateSD(page);
+        console.log(
+          `    torpedo-hit approach ${approach}: dist=${curDist.toFixed(2)}km battery=${sonarNow.battery.toFixed(1)}%`,
+        );
+
+        if (curDist <= TORPEDO_FIRE_KM && curDist < Infinity) {
+          // Within torpedo range — ping and fire immediately
+          if (sonarNow.pingCooldown > 0) {
+            await stepSim(page, Math.ceil(sonarNow.pingCooldown / 0.05) + 5);
+          }
+          console.log(`    torpedo-hit: pinging at ${curDist.toFixed(2)}km...`);
+          await pingSyncSD(page);
+          await stepSim(page, 20);
+
+          const contacts = await getContactsSD(page);
+          console.log(`    torpedo-hit: ping result: ${contacts.length} contacts`);
+          if (contacts.length > 0) {
+            const targetId = contacts[0].id;
+            console.log(`    torpedo-hit: firing at ${targetId} from ${curDist.toFixed(2)}km`);
+            await page.evaluate((tid) => { window.__SD?.fire(tid); }, targetId);
+
+            // Record initial hit count before waiting (processNewEvents consumes
+            // events from snap.eventLog, so we compare stats instead).
+            const preFireSnap = await getSnapshotSD(page);
+            const initialHits = preFireSnap?.stats?.torpedoesHit ?? 0;
+            console.log(`    torpedo-hit: initialHits=${initialHits}`);
+
+            // Wait for torpedo hit: speed ~40kt (0.02 km/s), at 3km → ~150s sim.
+            // Use stats.torpedoesHit comparison (processNewEvents consumes events).
+            for (let batch = 0; batch < 30; batch++) {
+              await stepSim(page, 800);
+              const snap = await getSnapshotSD(page);
+              const currentHits = snap?.stats?.torpedoesHit ?? 0;
+              if (currentHits > initialHits) {
+                hitDetected = true;
+                console.log(`    torpedo-hit: HIT detected at batch ${batch} (hits ${initialHits}→${currentHits})`);
+                break;
+              }
+              const torpedoes = snap?.torpedoes ?? [];
+              if (torpedoes.length === 0) {
+                console.log(`    torpedo-hit: torpedo expired at batch ${batch} (hits still ${currentHits})`);
+                break;
+              }
+            }
+            if (hitDetected) {
+              await stepSim(page, 40); // let explosion render
+            }
+            console.log(`    torpedo-hit: hitDetected=${hitDetected}`);
+          } else {
+            console.log('    torpedo-hit: WARNING no contacts after ping');
+          }
+          break;
+        }
+
+        // Not yet in range — move at SILENT (2 W presses = 4kt) for 600 ticks (30s sim)
+        // SILENT drain: 0.1%/s → 30s × 0.1 = 3% per iteration
+        await moveAtSD(page, 2, 600);
+        await resetThrottleSD(page);
+      }
+
+      if (!hitDetected) {
+        console.log('    torpedo-hit: failed to reach torpedo range within timeout');
+      }
       break;
     }
   }
@@ -784,24 +1119,28 @@ async function main() {
 
   // Trigger F12
   await dispatchKey(page, 'F12');
-  await sleep(300);
+  await sleep(800); // need ≥1 game loop tick for updateHud() to read cinematicCaptureActive
 
   const modeAfterF12 = await page.evaluate(() => {
+    // Check body class (set immediately by captureCinematicFrame)
+    const bodyCinematic = document.body.classList.contains('cinematic-capture');
+    // Check HUD mode class (set by updateHud on next game tick)
     const h = document.querySelector('.hud');
-    if (!h) return 'none';
-    const mc = [...h.classList].find((c) => c.startsWith('hud--'));
-    return mc ? mc.replace('hud--', '') : 'normal';
+    const mc = h ? [...h.classList].find((c) => c.startsWith('hud--')) : null;
+    const hudMode = mc ? mc.replace('hud--', '') : 'normal';
+    return { bodyCinematic, hudMode };
   });
-  const hudHiddenByF12 = modeAfterF12 === 'cinematic';
+  const hudHiddenByF12 = modeAfterF12.bodyCinematic || modeAfterF12.hudMode === 'cinematic';
 
   await sleep(2000);
   const modeAfterRestore = await page.evaluate(() => {
+    const bodyCinematic = document.body.classList.contains('cinematic-capture');
     const h = document.querySelector('.hud');
-    if (!h) return 'none';
-    const mc = [...h.classList].find((c) => c.startsWith('hud--'));
-    return mc ? mc.replace('hud--', '') : 'normal';
+    const mc = h ? [...h.classList].find((c) => c.startsWith('hud--')) : null;
+    const hudMode = mc ? mc.replace('hud--', '') : 'normal';
+    return { bodyCinematic, hudMode };
   });
-  const hudRestored = modeAfterRestore !== 'cinematic';
+  const hudRestored = !modeAfterRestore.bodyCinematic && modeAfterRestore.hudMode !== 'cinematic';
 
   console.log(
     `  F12: hudBefore=${hudBeforeF12}, hiddenByF12=${hudHiddenByF12}, restored=${hudRestored}`,
