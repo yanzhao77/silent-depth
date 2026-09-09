@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "evidence_settings_version": 2,
+  "studio": {
+    "presentation": "neutral",
+    "floor_color": [
+      0.025,
+      0.032,
+      0.045,
+      1.0
+    ],
+    "light_powers": [
+      5760000.0,
+      2304000.0,
+      8640000.0
+    ],
+    "camera_distance": 276.0,
+    "ortho_scale": 174.0,
+    "floor_size": 24000.0,
+    "floor_offset": 0.72,
+    "clip_start": 0.12,
+    "clip_end": 120000.0
+  },
+  "requested_presentation": "neutral",
+  "subject_luminance_hint": 0.03522234389192919,
+  "render_engine": "BLENDER_EEVEE",
+  "view_transform": "AgX",
+  "exposure": 0.0,
+  "input": "/private/tmp/yasen_rebuild_v2/asset/GLB/RU_SSN_Yasen.glb",
+  "blender_version": "5.2.1 LTS",
+  "resolution": 1024,
+  "material_mode": "source",
+  "hidden_objects": [],
+  "head_texture": null,
+  "bounds": {
+    "min": [
+      -60.0,
+      -8.6,
+      -7.45
+    ],
+    "max": [
+      60.0,
+      8.6,
+      14.51
+    ],
+    "dimensions": [
+      120.0,
+      17.200001,
+      21.959999
+    ]
+  },
+  "views": [
+    "/private/tmp/yasen_rebuild_v2/asset/Preview/BAS_GLB/perspective.png",
+    "/private/tmp/yasen_rebuild_v2/asset/Preview/BAS_GLB/front.png",
+    "/private/tmp/yasen_rebuild_v2/asset/Preview/BAS_GLB/back.png",
+    "/private/tmp/yasen_rebuild_v2/asset/Preview/BAS_GLB/left.png",
+    "/private/tmp/yasen_rebuild_v2/asset/Preview/BAS_GLB/right.png",
+    "/private/tmp/yasen_rebuild_v2/asset/Preview/BAS_GLB/top.png"
+  ],
+  "contact_sheet": "/private/tmp/yasen_rebuild_v2/asset/Preview/BAS_GLB/contact_sheet.png",
+  "animation_frames": [],
+  "animation_contact_sheet": null
+}

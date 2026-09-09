@@ -1,0 +1,182 @@
+{
+  "asset_id": "RU_SSN_Yasen",
+  "status": "VALIDATING",
+  "country": "Russia",
+  "type": "SSN",
+  "class": "Yasen",
+  "project": "Project 885",
+  "not_variant": "Project 885M / Yasen-M",
+  "source_builder": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Source/build_yasen_project885.py",
+  "dimensions_m": {
+    "hull_length_reference": 120.0,
+    "hull_beam_reference": 13.0,
+    "export_bounds_with_appendages": [
+      123.325,
+      18.0,
+      21.15
+    ],
+    "sail_body_top_z": 12.9,
+    "mast_top_z": 15.35
+  },
+  "style": "polished game-ready public exterior approximation",
+  "provenance": "Local original mesh and procedural textures; public references used for exterior proportion only; no external image is shipped as texture.",
+  "license": "Original mesh and generated textures are project-owned for SILENT DEPTH commercial use; public references are not redistributed.",
+  "references": [
+    {
+      "url": "https://nuke.fas.org/guide/russia/index.html",
+      "source_type": "public/open",
+      "used_for": "research anchor"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/Category:K-560_Severodvinsk_(submarine,_2014)",
+      "source_type": "public visual reference",
+      "used_for": "exterior proportion"
+    },
+    {
+      "url": "https://www.naval-technology.com/projects/yasen-class-submarine/",
+      "source_type": "public article",
+      "used_for": "dimension cross-check"
+    }
+  ],
+  "exports": [
+    {
+      "name": "RU_SSN_Yasen_LOD0",
+      "vertices": 15733,
+      "triangles": 31170,
+      "uv_channels": 2,
+      "materials": 7,
+      "dimensions_m": [
+        123.325,
+        18.0,
+        21.15
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD1",
+      "vertices": 8563,
+      "triangles": 16830,
+      "uv_channels": 2,
+      "materials": 7,
+      "dimensions_m": [
+        123.325,
+        18.0,
+        21.1487
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD2",
+      "vertices": 4200,
+      "triangles": 8104,
+      "uv_channels": 2,
+      "materials": 7,
+      "dimensions_m": [
+        123.325,
+        17.9914,
+        21.1463
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD3",
+      "vertices": 1862,
+      "triangles": 3428,
+      "uv_channels": 2,
+      "materials": 7,
+      "dimensions_m": [
+        123.3251,
+        17.9914,
+        21.1515
+      ]
+    }
+  ],
+  "geometry_checks": {
+    "hull_closed": true,
+    "hull_nondegenerate": true,
+    "sail_closed": true,
+    "sail_nondegenerate": true,
+    "hub_closed": true,
+    "hub_nondegenerate": true,
+    "ring_closed": true,
+    "ring_nondegenerate": true,
+    "blade_01_closed": true,
+    "blade_01_nondegenerate": true,
+    "blade_02_closed": true,
+    "blade_02_nondegenerate": true,
+    "blade_03_closed": true,
+    "blade_03_nondegenerate": true,
+    "blade_04_closed": true,
+    "blade_04_nondegenerate": true,
+    "blade_05_closed": true,
+    "blade_05_nondegenerate": true,
+    "blade_06_closed": true,
+    "blade_06_nondegenerate": true,
+    "blade_07_closed": true,
+    "blade_07_nondegenerate": true,
+    "sail_intersects_hull": true,
+    "tail_roots_intersect_hull": true,
+    "propulsor_has_seven_blades": true,
+    "all_blades_intersect_hub": true,
+    "blade_pitch_decreases_root_to_tip": true,
+    "ring_centered_on_propulsor_axis": true
+  },
+  "limitations": [
+    "Public-visual game asset, not an engineering reconstruction.",
+    "Propulsor and blade geometry are stylized public-facing approximations.",
+    "Weapon hatches are exterior placeholders only; no internal mechanism is modeled.",
+    "UE4.27 actual editor import has not been executed locally."
+  ],
+  "sha256": {
+    "Blend/RU_SSN_Yasen_MASTER.blend": "3158fe3aef9087b5fc379b972e746b85c66aec712a22a685319206a2119ffb98",
+    "Collision/RU_SSN_Yasen_COLLISION.fbx": "620800c40c7218e7733444df09cf18e62862f57ffccfa70d8054c41baffab8a3",
+    "Documentation/RU_SSN_Yasen_README.md": "6052dc0c39d6506e4bb6cff010f2ba05cb9030463d9bd1173fcbd51efd9155fa",
+    "Documentation/References/reference_notes.md": "6d6f83b55f0880ed2a5243b41e1846c2c8d24aed8f2c68928b81a175daee8af8",
+    "FBX/RU_SSN_Yasen_LOD0.fbx": "bc1d230efe51cb0e657a64add4c544455c11c0c941044a9e32c08fd70cf10d4f",
+    "FBX/RU_SSN_Yasen_LOD1.fbx": "e1d67e47c349a1f329ccf96fe835bf5a6967a7358df49d70b436e1bd5edce6b9",
+    "FBX/RU_SSN_Yasen_LOD2.fbx": "64eab3ee147edf370e746f398a2d24547a2d5eb55270f6c0f98cc30be727670f",
+    "FBX/RU_SSN_Yasen_LOD3.fbx": "54773a39d5213cfa4ffe730345610879f06574c31ee905d64e04694b9df007f9",
+    "Preview/BAS_Evidence/back.png": "dafa55568cb2842f8a27dd6f4bf168d4584705e90614a9413ee53ef7c990972e",
+    "Preview/BAS_Evidence/contact_sheet.png": "242b4b556afca3051ca9f953be3b94eb41a7ae19a9066fef4f3005de12baa9d1",
+    "Preview/BAS_Evidence/evidence.json": "992a60c11cf87691cf3c2c98b84fc0667142d6554fbdd15a21c3aa56a76a06ea",
+    "Preview/BAS_Evidence/front.png": "baee148267248d1865eda28257818339a5d014cb233204093778f2a0cbef058e",
+    "Preview/BAS_Evidence/left.png": "5ffbedda67c187f46b98652cab0ca647f2b0f07b2f9c9e2e585a4a5c75815ac2",
+    "Preview/BAS_Evidence/perspective.png": "7e52df674c692c581d2bb214203a7920dbecdbd78555bcf3af19bf479cad45d4",
+    "Preview/BAS_Evidence/right.png": "515534c8768d0d8a3f402dd9c3f4e4e0942f925564d8932ba8f4f60ffc2cb03d",
+    "Preview/BAS_Evidence/top.png": "87d156513b196e6c57cad5664a64d9a4a1a19ff591307ff6d4916f9c1414bb49",
+    "Preview/BAS_Evidence_Final/back.png": "895bbf51b52775127d4460f71a19214de43a6d0e86b7923cd28324b7639f26b4",
+    "Preview/BAS_Evidence_Final/contact_sheet.png": "8cc1266585245f32cc351c5d05d88717ded820d6cf22d89cc997e32f21a539c0",
+    "Preview/BAS_Evidence_Final/evidence.json": "17751921a0671593c8b5e405df81bd02c993f5d1f4ba009f3a5526776bfe0053",
+    "Preview/BAS_Evidence_Final/front.png": "4d29ff25852aa07b2c9526b2a402d910cac081daabbf858753a2441b86d4931b",
+    "Preview/BAS_Evidence_Final/left.png": "6376148d45109ce4ac278f8cfc07f11daa340aa5272100c95741e124e5833329",
+    "Preview/BAS_Evidence_Final/perspective.png": "b233f87629e8439bafa584ece05e2897f4e62497e9f7265d21a90c96d229d205",
+    "Preview/BAS_Evidence_Final/right.png": "1adb899e60dc17767dd38e02c77708f35badf36f4599296787a5c64888073460",
+    "Preview/BAS_Evidence_Final/top.png": "9a354186458cbe55bd84c15993f323a333d29297295800426b616bfb6aada036",
+    "Preview/Bow.png": "94587291b0bacf2d018dc928c016deef3d646b4b41eaa04389a75c04bd2440b5",
+    "Preview/Deck.png": "141df9bdae3f706b09758e711e6c292dc28e7da7ecf5fa98fe3a5dca2285807a",
+    "Preview/Hero.png": "01caec8e4ef277d7e786449be1a07301e179afbc71d26bc88c4d392225087069",
+    "Preview/Profile.png": "4a1387700061bcc2f5105652f28b2f2291b19386a68398e194e75f1cac71b610",
+    "Preview/Propulsor_QA.png": "1d89fa678f0878a90f28ccc0a113e6d65a6189e9798481d3857217395406a231",
+    "Preview/Sail.png": "05f656d5e8c8ec9bd2943c663a22477eca33a273d3181c2d5ca01c71aa21257f",
+    "Preview/Stern.png": "243437dac72d2106ff86348510636208ab5baa2bf49fe42b899205111eb8f4a9",
+    "Source/build_yasen_project885.py": "d19dd2c7c585b7de9e4dcc205c82c5853bd3204c8ca163abab43315a4688e7b9",
+    "Source/refresh_yasen_metadata.py": "19ebef35ccec6d9764fbeca85bd398357a5d5f0a77e4c8f692f968112bcddf47",
+    "Source/validate_yasen_project885.py": "942f3ffd6f3cbd21ddf29494ca880987987e3ac53a65b68b20097ec739ecc429",
+    "Textures/AO/T_Yasen_Bottom_AO.png": "42d9cc1d335bcf295090ce80b53e070ce54944ab1e1da81ca620b1bf726d8625",
+    "Textures/AO/T_Yasen_Hull_AO.png": "42d9cc1d335bcf295090ce80b53e070ce54944ab1e1da81ca620b1bf726d8625",
+    "Textures/BaseColor/T_Yasen_Bottom_BaseColor.png": "973b5c3024b5a7dd6f35af7113d0f2e3ad07a7b9bc419d0fa6e0dd26a2887919",
+    "Textures/BaseColor/T_Yasen_Hull_BaseColor.png": "97994da7bd409228e025168e073dd374820de647ab021ea1f154d4cb85ccf77e",
+    "Textures/Normal/T_Yasen_Bottom_NormalGL.png": "4ca2d96989b62306a45da8231aad02521d4a8dba72b8528ba7b4ca44994ff628",
+    "Textures/Normal/T_Yasen_Hull_NormalGL.png": "4ca2d96989b62306a45da8231aad02521d4a8dba72b8528ba7b4ca44994ff628",
+    "Validation/BAS_INSPECT_LOD0.json": "7d27e5e93aadc38ade9e91ef92819a8b79cded99094aea16b5364db45e06926a",
+    "Validation/FBX_ROUNDTRIP.json": "d8af970d213648cd6d28255fdad8d34038dfd6f83bbaa996e257b90844732ddc",
+    "Validation/PREVIEW_PIXELS.json": "0a3c586510fce0b820f8a7c73c1953a457b7c222ba7aec9b2bc9a4c1fde2f1f0",
+    "Validation/RU_SSN_Yasen_FACTORY_VALIDATION.json": "9ae3830a3a24e5e0099d74a8c648a53c70b8f9bb90843c843e6f44771417da5c",
+    "Validation/RU_SSN_Yasen_VALIDATION.json": "7a71c0da909164ddc6484bd15ef6a0b797383f6553853d53f67bee1ac5eba313"
+  },
+  "validation_reports": {
+    "build_validation": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Validation/RU_SSN_Yasen_VALIDATION.json",
+    "fbx_roundtrip": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Validation/FBX_ROUNDTRIP.json",
+    "factory_validation": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Validation/RU_SSN_Yasen_FACTORY_VALIDATION.json",
+    "blender_agent_studio_inspect": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Validation/BAS_INSPECT_LOD0.json",
+    "blender_agent_studio_evidence": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/BAS_Evidence_Final/evidence.json"
+  },
+  "sha256_note": "SPEC self-hash is intentionally excluded to avoid recursive metadata churn."
+}

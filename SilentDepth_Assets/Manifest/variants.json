@@ -1,0 +1,97 @@
+{
+  "generated_at": "2026-09-08",
+  "variants": [
+    {
+      "base": "US_SSN_Virginia",
+      "variants": [
+        "Block_I",
+        "Block_II",
+        "Block_III",
+        "Block_IV",
+        "Block_V"
+      ],
+      "shared_mesh": "Virginia_Base for Blocks I-IV after visual confirmation",
+      "variant_geometry_difference": {
+        "Block_V": "independent length/module due Virginia Payload Module; create module or independent MASTER after references"
+      },
+      "decision": "Block V requires separate visible module; earlier blocks likely variants"
+    },
+    {
+      "base": "US_SSN_LosAngeles",
+      "variants": [
+        "Flight_I",
+        "Flight_II",
+        "688i"
+      ],
+      "shared_mesh": "LosAngeles_Base",
+      "variant_geometry_difference": {
+        "688i": "visible fairwater plane / bow plane and sail refinements; variant module candidate"
+      },
+      "decision": "Model 688i as variant unless silhouette QA demands separate asset"
+    },
+    {
+      "base": "RU_SSN_Yasen",
+      "variants": [
+        "Project_885",
+        "Project_885M"
+      ],
+      "shared_mesh": "Partial material/pipeline only",
+      "variant_geometry_difference": {
+        "Project_885M": "shorter hull and refined sail/launch area"
+      },
+      "decision": "Yasen-M is independent asset due visible silhouette/layout difference"
+    },
+    {
+      "base": "RU_SSBN_Borei",
+      "variants": [
+        "Project_955",
+        "Project_955A"
+      ],
+      "shared_mesh": "Common material/propulsion modules where visually defensible",
+      "variant_geometry_difference": {
+        "Project_955A": "visible sail and hull refinements"
+      },
+      "decision": "Borei-A is independent asset or heavy variant after reference board"
+    },
+    {
+      "base": "CN_SSN_Type093",
+      "variants": [
+        "Type_093",
+        "Type_093A",
+        "Type_093B"
+      ],
+      "shared_mesh": "Type093_Base until better references",
+      "variant_geometry_difference": {
+        "Type_093B": "reported payload/mission variant; visual data limited"
+      },
+      "decision": "Type 093A/B start as variants, not complete independent assets, until visible differences are reliable"
+    },
+    {
+      "base": "CN_SSBN_Type094",
+      "variants": [
+        "Type_094",
+        "Type_094A"
+      ],
+      "shared_mesh": "Type094_Base",
+      "variant_geometry_difference": {
+        "Type_094A": "reported refinement; open visual data limited"
+      },
+      "decision": "Variant module first"
+    },
+    {
+      "base": "IN_SSBN_Arihant",
+      "variants": [
+        "Arihant",
+        "Arighaat",
+        "S4",
+        "S5"
+      ],
+      "shared_mesh": "Arihant_Base for Arihant/Arighaat only",
+      "variant_geometry_difference": {
+        "S4": "reported larger follow-on",
+        "S5": "planned larger class"
+      },
+      "decision": "S4/S5 must not be completed without stronger references"
+    }
+  ]
+}

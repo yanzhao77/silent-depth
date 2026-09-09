@@ -1,0 +1,444 @@
+{
+  "result": "PASS",
+  "geometry": {
+    "topology": {
+      "SUB_Yasen_Hull": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Sail": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Tail_00": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Tail_01": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Tail_02": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Tail_03": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_ForwardPlane_00": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_ForwardPlane_01": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_PropellerHub": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_ShaftFairing": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_PropellerBlade_00": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_PropellerBlade_01": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_PropellerBlade_02": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_PropellerBlade_03": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_PropellerBlade_04": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_PropellerBlade_05": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_PropellerBlade_06": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Rim_0_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Lid_0_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Rim_0_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Lid_0_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Rim_0_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Lid_0_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Rim_0_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Lid_0_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Rim_1_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Lid_1_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Rim_1_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Lid_1_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Rim_1_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Lid_1_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Rim_1_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_VLS_Lid_1_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_DeckHatch_-31": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_DeckHatch_8": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_DeckHatch_36": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_DeckHatch_43": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FlankArray_-1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_-1_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_-1_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_-1_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_-1_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_-1_4": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_-1_5": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_BowDoor_-1_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_BowDoor_-1_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_BowDoor_-1_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FlankArray_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_1_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_1_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_1_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_1_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_1_4": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_FloodSlot_1_5": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_BowDoor_1_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_BowDoor_1_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_BowDoor_1_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_MastSocket_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Mast_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_MastHead_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_MastSocket_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Mast_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_MastHead_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_MastSocket_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Mast_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_MastHead_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_MastSocket_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_Mast_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_MastHead_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Yasen_SailHatch": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      }
+    },
+    "contacts": {
+      "sail_hull": true,
+      "tail_hull": true,
+      "plane_hull": true,
+      "shaft_hull": true,
+      "shaft_hub": true,
+      "blade_hub": true,
+      "geometric_pitch": true
+    },
+    "measured_blade_pitch": [
+      [
+        47.99996223396778,
+        21.00237253180363
+      ],
+      [
+        47.999963556403735,
+        21.002333961745883
+      ],
+      [
+        47.99996440459475,
+        21.002350534205863
+      ],
+      [
+        47.99996304998961,
+        21.002340505147735
+      ],
+      [
+        47.999961880592274,
+        21.002338739724227
+      ],
+      [
+        47.999962273101055,
+        21.00237853201219
+      ],
+      [
+        47.99996183532729,
+        21.002355795953886
+      ]
+    ]
+  },
+  "exports": [
+    {
+      "name": "RU_SSN_Yasen_LOD0",
+      "triangles": 96668,
+      "vertices": 48474,
+      "uv_channels": 2,
+      "dimensions_m": [
+        120.0,
+        17.2,
+        21.96
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD1",
+      "triangles": 48334,
+      "vertices": 24307,
+      "uv_channels": 2,
+      "dimensions_m": [
+        120.0,
+        17.2,
+        21.96
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD2",
+      "triangles": 21266,
+      "vertices": 10773,
+      "uv_channels": 2,
+      "dimensions_m": [
+        120.00005,
+        17.20009,
+        21.96003
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD3",
+      "triangles": 7732,
+      "vertices": 4006,
+      "uv_channels": 2,
+      "dimensions_m": [
+        120.00047,
+        17.20115,
+        21.96008
+      ]
+    }
+  ],
+  "ue427_executed": false,
+  "reference_fidelity": "NOT VERIFIED"
+}

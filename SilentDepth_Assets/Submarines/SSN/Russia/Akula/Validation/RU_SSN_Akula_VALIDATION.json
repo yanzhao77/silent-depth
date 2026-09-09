@@ -1,0 +1,85 @@
+{
+  "asset_id": "RU_SSN_Akula",
+  "status": "VALIDATING",
+  "geometry_checks": {
+    "hull_closed": true,
+    "hull_nondegenerate": true,
+    "sail_closed": true,
+    "sail_nondegenerate": true,
+    "hub_closed": true,
+    "hub_nondegenerate": true,
+    "blade_0_closed": true,
+    "blade_0_nondegenerate": true,
+    "blade_1_closed": true,
+    "blade_1_nondegenerate": true,
+    "blade_2_closed": true,
+    "blade_2_nondegenerate": true,
+    "blade_3_closed": true,
+    "blade_3_nondegenerate": true,
+    "blade_4_closed": true,
+    "blade_4_nondegenerate": true,
+    "blade_5_closed": true,
+    "blade_5_nondegenerate": true,
+    "blade_6_closed": true,
+    "blade_6_nondegenerate": true,
+    "sail_intersects_hull": true,
+    "all_tail_roots_intersect_hull": true,
+    "pod_intersects_upper_rudder": true,
+    "seven_blades": true,
+    "all_blades_intersect_hub": true,
+    "pitch_decreases_root_to_tip": true,
+    "all_masts_intersect_sail": true
+  },
+  "exports": [
+    {
+      "name": "RU_SSN_Akula_LOD0",
+      "vertices": 66392,
+      "triangles": 130428,
+      "uv_channels": 2,
+      "materials": 6,
+      "dimensions_m": [
+        110.1999,
+        19.6,
+        28.4397
+      ]
+    },
+    {
+      "name": "RU_SSN_Akula_LOD1",
+      "vertices": 34458,
+      "triangles": 67822,
+      "uv_channels": 2,
+      "materials": 6,
+      "dimensions_m": [
+        110.2,
+        19.6,
+        28.4397
+      ]
+    },
+    {
+      "name": "RU_SSN_Akula_LOD2",
+      "vertices": 16093,
+      "triangles": 31301,
+      "uv_channels": 2,
+      "materials": 6,
+      "dimensions_m": [
+        110.2001,
+        19.6001,
+        28.4398
+      ]
+    },
+    {
+      "name": "RU_SSN_Akula_LOD3",
+      "vertices": 6637,
+      "triangles": 12390,
+      "uv_channels": 2,
+      "materials": 6,
+      "dimensions_m": [
+        110.2008,
+        19.6003,
+        28.4399
+      ]
+    }
+  ],
+  "ue427_executed": false,
+  "result": "PASS"
+}

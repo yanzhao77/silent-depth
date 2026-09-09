@@ -1,0 +1,56 @@
+{
+  "version": "v1.0.0",
+  "status_values": [
+    "PLANNED",
+    "RESEARCH",
+    "BLOCKOUT",
+    "MODELING",
+    "DETAILING",
+    "TEXTURING",
+    "LOD",
+    "COLLISION",
+    "EXPORT",
+    "VALIDATING",
+    "COMPLETE",
+    "FAILED",
+    "BLOCKED"
+  ],
+  "required_asset_dirs": [
+    "Source",
+    "Blend",
+    "FBX",
+    "LOD",
+    "Collision",
+    "Textures/BaseColor",
+    "Textures/Normal",
+    "Textures/Roughness",
+    "Textures/Metallic",
+    "Textures/AO",
+    "Preview",
+    "Documentation",
+    "Validation"
+  ],
+  "required_complete_files": [
+    "Blend/[ASSET_ID]_MASTER.blend",
+    "FBX/[ASSET_ID]_LOD0.fbx",
+    "FBX/[ASSET_ID]_LOD1.fbx",
+    "FBX/[ASSET_ID]_LOD2.fbx",
+    "FBX/[ASSET_ID]_LOD3.fbx",
+    "Collision/[ASSET_ID]_COLLISION.fbx",
+    "Documentation/[ASSET_ID]_SPEC.json",
+    "Documentation/[ASSET_ID]_README.md",
+    "Validation/[ASSET_ID]_VALIDATION.json"
+  ],
+  "quality_gate": [
+    "recognizable_class_silhouette",
+    "correct_major_hull_proportion",
+    "recognizable_sail",
+    "reasonable_rudder_and_planes",
+    "reasonable_propulsion",
+    "major_hatches_or_tubes_when_visible",
+    "material_set_present",
+    "lod_silhouette_preserved",
+    "collision_convex_and_named",
+    "fbx_2018_binary_header_or_blender_roundtrip"
+  ]
+}

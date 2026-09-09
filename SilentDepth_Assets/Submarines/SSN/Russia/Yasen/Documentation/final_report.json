@@ -1,0 +1,27 @@
+{
+  "status": "VALIDATING",
+  "stages": {
+    "contract_references": "限制已记录；实物参考未验证",
+    "graybox": "已打开灰模侧视和斜视，圆钝艏与平顺艇体；舵根随后改为贴体",
+    "primary_secondary": "主网格全部独立重建",
+    "topology": "闭合分件、艇体/围壳/尾舵/轴/轮毂连接检查",
+    "materials": "单独艇体UV贴图，围壳及舵面独立涂层，贴图嵌入",
+    "polish": "盖板曲面细分，消除悬空杆、随机红块与正弦条纹",
+    "export": "GLB和4级FBX新进程回读，尺寸面数一致；UE4.27未验证"
+  },
+  "reference_fidelity": "NOT VERIFIED",
+  "ue427": "NOT VERIFIED",
+  "game_repository_changed": false,
+  "repository_gates": {
+    "npm_test": "38 files, 684 tests PASS",
+    "typecheck": "PASS",
+    "build": "PASS"
+  },
+  "opened_evidence": [
+    "Preview/Hero.png",
+    "Preview/Sail.png",
+    "Preview/Propeller.png",
+    "Preview/Deck.png",
+    "Preview/BAS_GLB/contact_sheet.png"
+  ]
+}

@@ -1,0 +1,1636 @@
+{
+  "generated_at": "2026-09-08",
+  "scope": "SSN and SSBN visual asset planning database, not combat performance data",
+  "entries": [
+    {
+      "asset_id": "US_SSN_Skipjack",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Skipjack",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 76.8,
+      "approx_beam_m": 9.7,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 2,
+      "tier_reason": "early teardrop nuclear attack-submarine generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSN_Sturgeon",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Sturgeon",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 89.1,
+      "approx_beam_m": 9.7,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 4,
+      "tier_reason": "Cold War mature SSN, pre-Los Angeles",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSN_LosAngeles",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Los Angeles",
+      "project": "688/688i",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 109.7,
+      "approx_beam_m": 10.1,
+      "approx_displacement_t_submerged": 6900,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 6,
+      "tier_reason": "mature Cold War high-production SSN with 688i visual variant",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSN_Seawolf",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Seawolf",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 107.6,
+      "approx_beam_m": 12.2,
+      "approx_displacement_t_submerged": 9100,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 8,
+      "tier_reason": "late Cold War / post-Cold War advanced SSN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSN_Virginia",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Virginia",
+      "project": "Blocks I-V",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 114.8,
+      "approx_beam_m": 10.4,
+      "approx_displacement_t_submerged": 7800,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 9,
+      "tier_reason": "modern modular SSN; Block V creates major hull length variant",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_GeorgeWashington",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "George Washington",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 116.3,
+      "approx_beam_m": 10.1,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 2,
+      "tier_reason": "first-generation fleet ballistic missile submarine",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_EthanAllen",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Ethan Allen",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 125.0,
+      "approx_beam_m": 10.1,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 3,
+      "tier_reason": "early dedicated SSBN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_Lafayette",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Lafayette",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 129.5,
+      "approx_beam_m": 10.1,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 4,
+      "tier_reason": "Cold War mature SSBN baseline",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_JamesMadison",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "James Madison",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 129.5,
+      "approx_beam_m": 10.1,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 4,
+      "tier_reason": "Lafayette-family visual variant candidate",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_BenjaminFranklin",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Benjamin Franklin",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 129.5,
+      "approx_beam_m": 10.1,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 5,
+      "tier_reason": "late Lafayette-family visual variant candidate",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_Ohio",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Ohio",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 170.7,
+      "approx_beam_m": 12.8,
+      "approx_displacement_t_submerged": 18750,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 8,
+      "tier_reason": "large late Cold War strategic SSBN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_Columbia",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Columbia",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 171.0,
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "future U.S. SSBN acquisition priority; visual data limited",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_November",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "November",
+      "project": "Project 627",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 107.0,
+      "approx_beam_m": 7.9,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 2,
+      "tier_reason": "first Soviet nuclear attack submarine generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_Victor",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Victor",
+      "project": "Projects 671/671RT/671RTM",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 93.0,
+      "approx_beam_m": 10.6,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 4,
+      "tier_reason": "multi-project Cold War SSN family",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_Sierra",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Sierra",
+      "project": "Project 945",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 107.0,
+      "approx_beam_m": 12.2,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 6,
+      "tier_reason": "titanium-hull advanced Cold War SSN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_Akula",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Akula",
+      "project": "Project 971",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 110.3,
+      "approx_beam_m": 13.6,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [
+        "single screw",
+        "swept forward sail",
+        "stern towed-array style pod",
+        "cruciform stern control surfaces"
+      ],
+      "tier": 7,
+      "tier_reason": "late Cold War Soviet/Russian SSN with recognizable sail and stern",
+      "asset_status": "VALIDATING",
+      "source_references": [
+        {
+          "url": "https://russianships.info/eng/submarines/project_971.htm",
+          "accessed": "2026-09-09",
+          "source_type": "public/open"
+        },
+        {
+          "url": "https://www.nti.org/wp-content/uploads/2021/09/project_971_akula.pdf",
+          "accessed": "2026-09-09",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_Yasen",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Yasen",
+      "project": "Project 885",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 139.0,
+      "approx_beam_m": 13.0,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 9,
+      "tier_reason": "modern cruise-missile attack submarine baseline",
+      "asset_status": "RESEARCH",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_YasenM",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Yasen-M",
+      "project": "Project 885M",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 130.0,
+      "approx_beam_m": 13.0,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "modern shortened/refined Yasen family variant with visible layout differences",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Hotel",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Hotel",
+      "project": "Project 658",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 114.0,
+      "approx_beam_m": 9.2,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 2,
+      "tier_reason": "early Soviet SSBN generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Yankee",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Yankee",
+      "project": "Project 667A",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 128.0,
+      "approx_beam_m": 11.7,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 4,
+      "tier_reason": "Cold War Soviet SSBN generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaI",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta I",
+      "project": "Project 667B",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 139.0,
+      "approx_beam_m": 11.7,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 5,
+      "tier_reason": "Delta family early missile-deck visual language",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaII",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta II",
+      "project": "Project 667BD",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 155.0,
+      "approx_beam_m": 11.7,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 5,
+      "tier_reason": "lengthened Delta I family",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIII",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta III",
+      "project": "Project 667BDR",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 155.0,
+      "approx_beam_m": 11.7,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 6,
+      "tier_reason": "mature Delta-family SSBN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIV",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta IV",
+      "project": "Project 667BDRM",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 167.0,
+      "approx_beam_m": 11.7,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 7,
+      "tier_reason": "late Cold War Delta family with distinct missile-deck hump",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Typhoon",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Typhoon",
+      "project": "Project 941",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 175.0,
+      "approx_beam_m": 23.0,
+      "approx_displacement_t_submerged": 49800,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 8,
+      "tier_reason": "largest distinctive Soviet SSBN; current master source asset",
+      "asset_status": "VALIDATING",
+      "source_references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/slbm/941.htm",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Borei",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Borei",
+      "project": "Project 955",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 170.0,
+      "approx_beam_m": 13.5,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 9,
+      "tier_reason": "modern Russian SSBN baseline",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://russianships.info/eng/submarines/project_955.htm",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_BoreiA",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Borei-A",
+      "project": "Project 955A",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 170.0,
+      "approx_beam_m": 13.5,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "modernized Borei family with visible sail/hull refinements",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://russianships.info/eng/submarines/project_955.htm",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Dreadnought",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Dreadnought",
+      "project": "HMS Dreadnought S101",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 81.0,
+      "approx_beam_m": 9.8,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 2,
+      "tier_reason": "first UK nuclear attack submarine era",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Valiant",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Valiant",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 86.9,
+      "approx_beam_m": 10.1,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 3,
+      "tier_reason": "early UK SSN generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Swiftsure",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Swiftsure",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 82.9,
+      "approx_beam_m": 9.8,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 5,
+      "tier_reason": "Cold War UK SSN generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Trafalgar",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Trafalgar",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 85.4,
+      "approx_beam_m": 9.8,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 6,
+      "tier_reason": "late Cold War UK SSN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Astute",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Astute",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 97.0,
+      "approx_beam_m": 11.3,
+      "approx_displacement_t_submerged": 7400,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 9,
+      "tier_reason": "modern UK SSN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_AUKUS",
+      "country": "UK",
+      "type": "SSN",
+      "class": "SSN-AUKUS",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": "UNKNOWN",
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "future AUKUS SSN; keep as planned visual target",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSBN_Resolution",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Resolution",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 129.5,
+      "approx_beam_m": 10.1,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 4,
+      "tier_reason": "UK Polaris SSBN generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSBN_Vanguard",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Vanguard",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 149.9,
+      "approx_beam_m": 12.8,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 8,
+      "tier_reason": "current UK strategic SSBN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSBN_Dreadnought",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Dreadnought",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 154.0,
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "future UK strategic SSBN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/dreadnought-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSN_Rubis",
+      "country": "France",
+      "type": "SSN",
+      "class": "Rubis",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 73.6,
+      "approx_beam_m": 7.6,
+      "approx_displacement_t_submerged": 2600,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 6,
+      "tier_reason": "compact French SSN generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine/marins/marins-nucleaires-dattaque-sna-type-rubis",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSN_Suffren",
+      "country": "France",
+      "type": "SSN",
+      "class": "Suffren",
+      "project": "Barracuda",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 99.5,
+      "approx_beam_m": 8.8,
+      "approx_displacement_t_submerged": 5300,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 9,
+      "tier_reason": "modern French Barracuda/Suffren SSN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine/marins/marins-nucleaires-dattaque-sna-type-suffren",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSBN_LeRedoutable",
+      "country": "France",
+      "type": "SSBN",
+      "class": "Le Redoutable",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 128.7,
+      "approx_beam_m": 10.6,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 4,
+      "tier_reason": "first French SSBN generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSBN_LeTriomphant",
+      "country": "France",
+      "type": "SSBN",
+      "class": "Le Triomphant",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 138.0,
+      "approx_beam_m": 12.5,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 8,
+      "tier_reason": "current French SSBN generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSBN_SNLE3G",
+      "country": "France",
+      "type": "SSBN",
+      "class": "SNLE 3G",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": "UNKNOWN",
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "future French SSBN; visual data limited",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type091",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 091",
+      "project": "Han",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 98.0,
+      "approx_beam_m": 10.0,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 4,
+      "tier_reason": "first Chinese nuclear attack submarine generation",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type093",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093",
+      "project": "Shang",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 107.0,
+      "approx_beam_m": 11.0,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 7,
+      "tier_reason": "Chinese second-generation SSN baseline",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type093A",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093A",
+      "project": "Shang variant",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": 107.0,
+      "approx_beam_m": 11.0,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 8,
+      "tier_reason": "Type 093 visible variant candidate",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type093B",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093B",
+      "project": "Shang SSGN-related variant",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": "UNKNOWN",
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 9,
+      "tier_reason": "reported/improving variant; open visual data limited",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type095",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 095",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "attack submarine",
+      "approx_length_m": "UNKNOWN",
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "planned/opaque next-generation SSN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSBN_Type092",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 092",
+      "project": "Xia",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 120.0,
+      "approx_beam_m": 10.0,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 5,
+      "tier_reason": "early Chinese SSBN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSBN_Type094",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 094",
+      "project": "Jin",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 135.0,
+      "approx_beam_m": 12.5,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 8,
+      "tier_reason": "current Chinese SSBN baseline",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSBN_Type094A",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 094A",
+      "project": "Jin variant",
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 135.0,
+      "approx_beam_m": 12.5,
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 9,
+      "tier_reason": "Type 094 variant candidate",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSBN_Type096",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 096",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": "UNKNOWN",
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "planned/opaque next-generation SSBN",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "IN_SSBN_Arihant",
+      "country": "India",
+      "type": "SSBN",
+      "class": "Arihant",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 111.0,
+      "approx_beam_m": 11.0,
+      "approx_displacement_t_submerged": 6000,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 7,
+      "tier_reason": "first Indian SSBN generation, compact strategic boat",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "IN_SSBN_Arighaat",
+      "country": "India",
+      "type": "SSBN",
+      "class": "Arighaat",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": 111.0,
+      "approx_beam_m": 11.0,
+      "approx_displacement_t_submerged": 6000,
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 8,
+      "tier_reason": "Arihant-family follow-on",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "IN_SSBN_S4",
+      "country": "India",
+      "type": "SSBN",
+      "class": "S4",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": "UNKNOWN",
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 9,
+      "tier_reason": "reported larger follow-on; limited verified visual data",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "IN_SSBN_S5",
+      "country": "India",
+      "type": "SSBN",
+      "class": "S5",
+      "project": null,
+      "variants": [],
+      "service_period": "UNKNOWN_OR_SEE_REFERENCES",
+      "role": "ballistic missile submarine",
+      "approx_length_m": "UNKNOWN",
+      "approx_beam_m": "UNKNOWN",
+      "approx_displacement_t_submerged": "UNKNOWN",
+      "propulsion_visual_features": "ESTIMATED from public exterior references; exact propulsor details may be obscured",
+      "sail_features": "To be modeled from licensed/public exterior references before MODELING status",
+      "rudder_features": "To be verified from public exterior references",
+      "propeller_features": "Module candidate; do not fabricate classified detail",
+      "sonar_features": "External bow/sail cues only when visible",
+      "missile_hatch_features": "Required for SSBN where visibly present, otherwise N/A",
+      "visual_identifiers": [],
+      "tier": 10,
+      "tier_reason": "planned larger Indian SSBN; limited verified visual data",
+      "asset_status": "PLANNED",
+      "source_references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    }
+  ]
+}

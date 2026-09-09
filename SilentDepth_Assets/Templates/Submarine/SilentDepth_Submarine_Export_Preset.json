@@ -1,0 +1,9 @@
+{
+  "engine": "UE4.27",
+  "fbx_binary_version": 7400,
+  "axis_forward": "-Y",
+  "axis_up": "Z",
+  "apply_unit_scale": true,
+  "global_scale": 1.0,
+  "embed_textures": false
+}

@@ -1,0 +1,50 @@
+{
+  "Hero.png": {
+    "width": 1800,
+    "height": 1000,
+    "stddev": 28.19466892874737,
+    "nonblank": true
+  },
+  "Stern.png": {
+    "width": 1800,
+    "height": 1000,
+    "stddev": 36.60997000091834,
+    "nonblank": true
+  },
+  "Sail.png": {
+    "width": 1800,
+    "height": 1000,
+    "stddev": 38.45556465883991,
+    "nonblank": true
+  },
+  "Deck.png": {
+    "width": 1800,
+    "height": 1000,
+    "stddev": 27.098777160952984,
+    "nonblank": true
+  },
+  "Rear.png": {
+    "width": 1800,
+    "height": 1000,
+    "stddev": 21.576222018835203,
+    "nonblank": true
+  },
+  "Tail_QA.png": {
+    "width": 1800,
+    "height": 1000,
+    "stddev": 42.81385613688108,
+    "nonblank": true
+  },
+  "Profile.png": {
+    "width": 1800,
+    "height": 1000,
+    "stddev": 34.428487920844745,
+    "nonblank": true
+  },
+  "Reference_Overlay.png": {
+    "width": 1961,
+    "height": 966,
+    "stddev": 35.40550040674127,
+    "nonblank": true
+  }
+}

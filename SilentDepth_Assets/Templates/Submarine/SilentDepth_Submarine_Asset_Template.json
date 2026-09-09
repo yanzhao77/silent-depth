@@ -1,0 +1,136 @@
+{
+  "template_id": "SilentDepth_Submarine_Asset_Template",
+  "version": "v1.0.0",
+  "created_at": "2026-09-08",
+  "source_asset": "RU_SSBN_Typhoon",
+  "source_audit": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Documentation/Typhoon_ASSET_AUDIT.json",
+  "collection_policy": {
+    "root": "SUB_[COUNTRY]_[CLASS]",
+    "required_collections": [
+      "00_ROOT",
+      "01_HULL",
+      "02_SAIL",
+      "03_SONAR",
+      "04_MASTS",
+      "05_PERISCOPES",
+      "06_DIVE_PLANES",
+      "07_RUDDER",
+      "08_PROPULSION",
+      "09_TORPEDO",
+      "10_MISSILE",
+      "11_HATCHES",
+      "12_DETAILS",
+      "20_VARIANTS",
+      "90_LOD/LOD0",
+      "90_LOD/LOD1",
+      "90_LOD/LOD2",
+      "90_LOD/LOD3",
+      "95_SOCKETS",
+      "99_COLLISION"
+    ],
+    "typhoon_observed_collections": [
+      "TYPHOON_ASSEMBLY",
+      "UE4_EXPORT_MESHES",
+      "STUDIO_NOT_FOR_EXPORT"
+    ],
+    "rule": "Preserve useful source-specific edit collections, but export only explicit game asset collections."
+  },
+  "naming_policy": {
+    "asset_id": "[COUNTRY]_[TYPE]_[CLASS]",
+    "object": "SUB_[COUNTRY]_[CLASS]_[PART]",
+    "collision": "UCX_SUB_[COUNTRY]_[CLASS]_[PART]_##",
+    "socket": "SOCKET_SUB_[COUNTRY]_[CLASS]_[PART]",
+    "forbidden_prefixes": [
+      "Cube",
+      "Object",
+      "Cylinder",
+      "Plane"
+    ]
+  },
+  "transform_rules": {
+    "units": "Metric meters",
+    "unreal_conversion": "1 Blender meter = 100 Unreal Units",
+    "axis": "Bow +X, port/starboard Y, Z up",
+    "final_scale": [
+      1,
+      1,
+      1
+    ],
+    "final_rotation": [
+      0,
+      0,
+      0
+    ],
+    "apply_transform": true
+  },
+  "origin_rules": {
+    "primary_pivot": "longitudinal center and hull vertical datum inherited from Typhoon README",
+    "variant_modules": "local pivot at functional hinge/socket when applicable"
+  },
+  "material_rules": {
+    "shared_materials": [
+      "SUB_MAT_Hull",
+      "SUB_MAT_Rubber",
+      "SUB_MAT_Metal",
+      "SUB_MAT_DarkMetal",
+      "SUB_MAT_Sonar",
+      "SUB_MAT_Glass",
+      "SUB_MAT_Propeller",
+      "SUB_MAT_RustedMetal"
+    ],
+    "texture_sets": [
+      "BaseColor",
+      "NormalDX",
+      "NormalGL",
+      "ORM"
+    ],
+    "ue_normal": "NormalDX only"
+  },
+  "uv_rules": {
+    "uv0": "surface/detail texture coordinates",
+    "uv1": "independently packed lightmap channel when static baking is needed"
+  },
+  "lod_rules": {
+    "levels": [
+      "LOD0",
+      "LOD1",
+      "LOD2",
+      "LOD3"
+    ],
+    "source": "Every LOD derives from MASTER; never LOD1 -> LOD2 -> LOD3.",
+    "silhouette_lock": [
+      "Hull",
+      "Sail",
+      "Rudder",
+      "DivePlane",
+      "Propeller",
+      "Major sonar/missile structures"
+    ]
+  },
+  "collision_rules": {
+    "prefix": "UCX_",
+    "shape": "low-poly closed convex hulls",
+    "prohibited": "high-poly render mesh as collision"
+  },
+  "socket_rules": {
+    "prefix": "SOCKET_",
+    "parts": [
+      "Propeller",
+      "Rudder",
+      "Sonar",
+      "Mast",
+      "Torpedo",
+      "Missile"
+    ]
+  },
+  "export_rules": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "axis_forward": "-Y",
+    "axis_up": "Z",
+    "apply_unit_scale": true,
+    "global_scale": 1.0,
+    "embed_textures": false
+  },
+  "validation_rules_file": "SilentDepth_Submarine_Validation_Rules.json"
+}

@@ -1,0 +1,26 @@
+{
+  "project": "SILENT DEPTH GLOBAL NUCLEAR SUBMARINE ASSET FACTORY",
+  "created_at": "2026-09-08",
+  "asset_root": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets",
+  "typhoon_source_root": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_20260908",
+  "typhoon_source_blend": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_20260908/Typhoon_UE427.blend",
+  "typhoon_backup_blend": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_20260908/Typhoon_UE427.blend1",
+  "archive_package": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_20260908/Typhoon_UE427_Package.zip",
+  "external_backup_root": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_BACKUP",
+  "runtime_rule": "All generated assets must remain offline at game runtime.",
+  "protected_gameplay_paths": [
+    "src/core",
+    "src/ai",
+    "src/sonar",
+    "src/combat",
+    "src/gameplay",
+    "src/missions",
+    "src/world"
+  ],
+  "ue_target": {
+    "engine": "Unreal Engine",
+    "version": "4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  }
+}

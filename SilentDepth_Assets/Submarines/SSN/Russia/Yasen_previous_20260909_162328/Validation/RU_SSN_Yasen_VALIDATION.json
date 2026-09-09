@@ -1,0 +1,86 @@
+{
+  "asset_id": "RU_SSN_Yasen",
+  "status": "VALIDATING",
+  "geometry_checks": {
+    "hull_closed": true,
+    "hull_nondegenerate": true,
+    "sail_closed": true,
+    "sail_nondegenerate": true,
+    "hub_closed": true,
+    "hub_nondegenerate": true,
+    "ring_closed": true,
+    "ring_nondegenerate": true,
+    "blade_01_closed": true,
+    "blade_01_nondegenerate": true,
+    "blade_02_closed": true,
+    "blade_02_nondegenerate": true,
+    "blade_03_closed": true,
+    "blade_03_nondegenerate": true,
+    "blade_04_closed": true,
+    "blade_04_nondegenerate": true,
+    "blade_05_closed": true,
+    "blade_05_nondegenerate": true,
+    "blade_06_closed": true,
+    "blade_06_nondegenerate": true,
+    "blade_07_closed": true,
+    "blade_07_nondegenerate": true,
+    "sail_intersects_hull": true,
+    "tail_roots_intersect_hull": true,
+    "propulsor_has_seven_blades": true,
+    "all_blades_intersect_hub": true,
+    "blade_pitch_decreases_root_to_tip": true,
+    "ring_centered_on_propulsor_axis": true
+  },
+  "exports": [
+    {
+      "name": "RU_SSN_Yasen_LOD0",
+      "vertices": 15733,
+      "triangles": 31170,
+      "uv_channels": 2,
+      "materials": 7,
+      "dimensions_m": [
+        123.325,
+        18.0,
+        21.15
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD1",
+      "vertices": 8563,
+      "triangles": 16830,
+      "uv_channels": 2,
+      "materials": 7,
+      "dimensions_m": [
+        123.325,
+        18.0,
+        21.1487
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD2",
+      "vertices": 4200,
+      "triangles": 8104,
+      "uv_channels": 2,
+      "materials": 7,
+      "dimensions_m": [
+        123.325,
+        17.9914,
+        21.1463
+      ]
+    },
+    {
+      "name": "RU_SSN_Yasen_LOD3",
+      "vertices": 1862,
+      "triangles": 3428,
+      "uv_channels": 2,
+      "materials": 7,
+      "dimensions_m": [
+        123.3251,
+        17.9914,
+        21.1515
+      ]
+    }
+  ],
+  "ue427_executed": false,
+  "result": "PASS"
+}

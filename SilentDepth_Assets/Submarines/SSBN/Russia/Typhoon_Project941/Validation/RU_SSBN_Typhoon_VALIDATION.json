@@ -1,0 +1,171 @@
+{
+  "blender": "5.2.1 LTS",
+  "ue427_executed": false,
+  "exports": [
+    {
+      "name": "SM_Typhoon",
+      "vertices": 77245,
+      "triangles": 152234,
+      "uv_channels": 2,
+      "materials": 8,
+      "dimensions_m": [
+        175.0,
+        29.0,
+        28.33
+      ]
+    },
+    {
+      "name": "SM_Typhoon_LOD1",
+      "vertices": 39186,
+      "triangles": 76116,
+      "uv_channels": 2,
+      "materials": 8,
+      "dimensions_m": [
+        175.0,
+        29.0,
+        28.33
+      ]
+    },
+    {
+      "name": "SM_Typhoon_LOD2",
+      "vertices": 17873,
+      "triangles": 33490,
+      "uv_channels": 2,
+      "materials": 8,
+      "dimensions_m": [
+        175.0002,
+        29.0,
+        28.3267
+      ]
+    },
+    {
+      "name": "SM_Typhoon_LOD3",
+      "vertices": 7597,
+      "triangles": 12938,
+      "uv_channels": 2,
+      "materials": 8,
+      "dimensions_m": [
+        175.0023,
+        29.0004,
+        28.3074
+      ]
+    }
+  ],
+  "checks": {
+    "convex_collision_count": 13,
+    "base_uv_channels": [
+      "UV0",
+      "UV1_Lightmap"
+    ],
+    "base_finite_vertices": true,
+    "base_degenerate_faces": 0,
+    "lightmap_uv_bounds": [
+      0.0,
+      0.0,
+      1.0,
+      1.0
+    ],
+    "lightmap_overlap_test": "Not raster-verified; Blender smart-project and packing used. Inspect in UE before static baking.",
+    "base_boundary_edges": 0,
+    "base_nonmanifold_edges": 0,
+    "fbx_binary_version": 7400,
+    "fbx_unit_scale_factor_cm": 100.0,
+    "fbx_roundtrip_dimensions_m": [
+      175.0,
+      29.000000953674316,
+      28.33000087738037
+    ],
+    "fbx_roundtrip_materials": 8,
+    "fbx_roundtrip_uv_channels": 2,
+    "fbx_roundtrip": "passed (Blender importer, not Unreal)",
+    "assembly_movable_pivots": [
+      {
+        "name": "Bow_Dive_Plane_-1",
+        "pivot_m": [
+          68.8454360961914,
+          -8.899999618530273,
+          0.6000000238418579
+        ]
+      },
+      {
+        "name": "Stern_Hydroplane_-1",
+        "pivot_m": [
+          -69.2991943359375,
+          -7.0,
+          -0.4000000059604645
+        ]
+      },
+      {
+        "name": "Upper_Rudder_-1",
+        "pivot_m": [
+          -71.31590270996094,
+          -6.25,
+          1.0
+        ]
+      },
+      {
+        "name": "Lower_Rudder_-1",
+        "pivot_m": [
+          -72.32425689697266,
+          -6.25,
+          -1.0
+        ]
+      },
+      {
+        "name": "Bow_Dive_Plane_1",
+        "pivot_m": [
+          68.8454360961914,
+          8.899999618530273,
+          0.6000000238418579
+        ]
+      },
+      {
+        "name": "Stern_Hydroplane_1",
+        "pivot_m": [
+          -69.2991943359375,
+          7.0,
+          -0.4000000059604645
+        ]
+      },
+      {
+        "name": "Upper_Rudder_1",
+        "pivot_m": [
+          -71.31590270996094,
+          6.25,
+          1.0
+        ]
+      },
+      {
+        "name": "Lower_Rudder_1",
+        "pivot_m": [
+          -72.32425689697266,
+          6.25,
+          -1.0
+        ]
+      },
+      {
+        "name": "Propeller_Right",
+        "pivot_m": [
+          -85.53370666503906,
+          -6.25,
+          -1.25
+        ]
+      },
+      {
+        "name": "Propeller_Left",
+        "pivot_m": [
+          -85.53370666503906,
+          6.25,
+          -1.25
+        ]
+      }
+    ]
+  },
+  "limitations": [
+    "Public exterior reconstruction, not an as-built vessel survey.",
+    "Minor fittings, blade shape, panel placement and aging are artistic approximations.",
+    "Overlapping closed shells are intentional; not suitable for pressure, hydrodynamic or manufacturing analysis.",
+    "UCX covers hull and sail only; fine appendages have no simple collision.",
+    "No UE4.27 runtime, lighting build, performance or LOD screen-size validation on this machine."
+  ]
+}

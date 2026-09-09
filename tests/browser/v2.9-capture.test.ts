@@ -176,3 +176,54 @@ describe('v2.9 screenshots', () => {
     }
   });
 });
+
+// ---------------------------------------------------------------------------
+// Anti-__SD compliance: capture.mjs must not reference window.__SD
+// ---------------------------------------------------------------------------
+
+describe('v2.9 capture tool anti-__SD compliance', () => {
+  test('capture.mjs contains no window.__SD references', () => {
+    const capturePath = join(ROOT, 'tools', 'v2.9-capture', 'capture.mjs');
+    const src = readFileSync(capturePath, 'utf-8');
+    const violations: string[] = [];
+    for (const [i, line] of src.split('\n').entries()) {
+      if (line.includes('window.__SD')) {
+        violations.push(`  line ${i + 1}: ${line.trim()}`);
+      }
+    }
+    expect(
+      violations.length,
+      `capture.mjs contains window.__SD references (must use DOM observation only):\n${violations.join('\n')}`,
+    ).toBe(0);
+  });
+
+  test('capture.mjs contains no __SD API function calls', () => {
+    const capturePath = join(ROOT, 'tools', 'v2.9-capture', 'capture.mjs');
+    const src = readFileSync(capturePath, 'utf-8');
+    const forbidden = [
+      'waitForSD(',
+      'getPositionsSD(',
+      'getContactsSD(',
+      'getSonarStateSD(',
+      'getSnapshotSD(',
+      'startMissionSD(',
+      'moveAtSD(',
+      'moveAtWithSD(',
+      'resetThrottleSD(',
+      'pingSyncSD(',
+      'dumpTorpedoDiag(',
+    ];
+    const violations: string[] = [];
+    for (const [i, line] of src.split('\n').entries()) {
+      for (const fn of forbidden) {
+        if (line.includes(fn)) {
+          violations.push(`  line ${i + 1}: ${line.trim()}`);
+        }
+      }
+    }
+    expect(
+      violations.length,
+      `capture.mjs contains __SD API function calls (must use DOM equivalents):\n${violations.join('\n')}`,
+    ).toBe(0);
+  });
+});

@@ -1,0 +1,61 @@
+{
+  "asset_id": "RU_SSBN_Typhoon",
+  "display_name": "Typhoon / Project 941",
+  "country": "Russia",
+  "type": "SSBN",
+  "class": "Typhoon",
+  "project": "Project 941",
+  "status": "VALIDATING",
+  "template_version": "v1.0.0",
+  "source": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_20260908/Typhoon_UE427.blend",
+  "master": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Blend/RU_SSBN_Typhoon_MASTER.blend",
+  "dimensions_m": {
+    "length": 175.0,
+    "beam": 29.0,
+    "height": 28.33,
+    "note": "Values copied from local VALIDATION.json for game asset dimensions."
+  },
+  "visual_identifiers": [
+    "very broad twin-hull-derived casing silhouette",
+    "large forward missile deck with two cover rows",
+    "broad sail set forward of missile deck",
+    "paired shrouded seven-blade propeller visual treatment"
+  ],
+  "lods": [
+    "LOD0",
+    "LOD1",
+    "LOD2",
+    "LOD3"
+  ],
+  "materials": [
+    "Hull",
+    "Rubber",
+    "PaintedSteel",
+    "Recess",
+    "Steel",
+    "Propeller",
+    "Markings",
+    "OpticalGlass"
+  ],
+  "references": [
+    {
+      "name": "Local Typhoon README",
+      "url": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_20260908/README.md",
+      "source_type": "local package",
+      "accessed": "2026-09-08"
+    },
+    {
+      "name": "FAS Project 941 page",
+      "url": "https://nuke.fas.org/guide/russia/slbm/941.htm",
+      "source_type": "public reference",
+      "accessed": "2026-09-08"
+    },
+    {
+      "name": "RussianShips Project 941 page",
+      "url": "https://russianships.info/eng/submarines/project_941.htm",
+      "source_type": "public reference",
+      "accessed": "2026-09-08"
+    }
+  ],
+  "validation_note": "Blender importer roundtrip passed in existing validation. UE4.27 editor import was not executed on this machine, so production status remains VALIDATING rather than COMPLETE."
+}

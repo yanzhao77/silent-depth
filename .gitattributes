@@ -6,4 +6,13 @@
 
 # Binary assets must never be line-ending normalized.
 *.glb binary
+*.fbx binary
+*.blend binary
+*.blend1 binary
 *.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.zip binary
+*.gz binary
+*.pyc binary

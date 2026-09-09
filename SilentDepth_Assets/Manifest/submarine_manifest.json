@@ -1,0 +1,1642 @@
+{
+  "generated_at": "2026-09-09",
+  "assets": [
+    {
+      "asset_id": "US_SSN_Skipjack",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Skipjack",
+      "project": null,
+      "tier": 2,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSN_Sturgeon",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Sturgeon",
+      "project": null,
+      "tier": 4,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSN_LosAngeles",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Los Angeles",
+      "project": "688/688i",
+      "tier": 6,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSN_Seawolf",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Seawolf",
+      "project": null,
+      "tier": 8,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSN_Virginia",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Virginia",
+      "project": "Blocks I-V",
+      "tier": 9,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_GeorgeWashington",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "George Washington",
+      "project": null,
+      "tier": 2,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_EthanAllen",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Ethan Allen",
+      "project": null,
+      "tier": 3,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_Lafayette",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Lafayette",
+      "project": null,
+      "tier": 4,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_JamesMadison",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "James Madison",
+      "project": null,
+      "tier": 4,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_BenjaminFranklin",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Benjamin Franklin",
+      "project": null,
+      "tier": 5,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_Ohio",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Ohio",
+      "project": null,
+      "tier": 8,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "US_SSBN_Columbia",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Columbia",
+      "project": null,
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_November",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "November",
+      "project": "Project 627",
+      "tier": 2,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_Victor",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Victor",
+      "project": "Projects 671/671RT/671RTM",
+      "tier": 4,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_Sierra",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Sierra",
+      "project": "Project 945",
+      "tier": 6,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_Akula",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Akula",
+      "project": "Project 971",
+      "tier": 7,
+      "source": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Source/build_akula_drawing.py",
+      "master": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Blend/RU_SSN_Akula_MASTER.blend",
+      "lod0": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD0.fbx",
+      "lod1": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD1.fbx",
+      "lod2": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD2.fbx",
+      "lod3": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD3.fbx",
+      "collision": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Collision/RU_SSN_Akula_COLLISION.fbx",
+      "materials": [
+        "SUB_MAT_Drawing_Antifouling",
+        "SUB_MAT_Drawing_Bronze",
+        "SUB_MAT_Drawing_Hull",
+        "SUB_MAT_Drawing_Metal",
+        "SUB_MAT_Drawing_Panel",
+        "SUB_MAT_Drawing_Recess"
+      ],
+      "textures": [
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Textures/BaseColor/T_Akula_Drawing_bottom.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Textures/BaseColor/T_Akula_Drawing_hull.png"
+      ],
+      "variants": [],
+      "variant_of": null,
+      "status": "VALIDATING",
+      "validation": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Validation/RU_SSN_Akula_VALIDATION.json",
+      "references": [
+        {
+          "url": "https://russianships.info/eng/submarines/project_971.htm",
+          "accessed": "2026-09-09",
+          "source_type": "public/open"
+        },
+        {
+          "url": "https://www.nti.org/wp-content/uploads/2021/09/project_971_akula.pdf",
+          "accessed": "2026-09-09",
+          "source_type": "public/open"
+        }
+      ],
+      "previews": [
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Preview/Deck.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Preview/Hero.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Preview/Profile.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Preview/Rear.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Preview/Reference_Overlay.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Preview/Sail.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Preview/Stern.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Preview/Tail_QA.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSN_Akula_MASTER.blend": "f5438f07fe648c6a406974710ac74c947da1ac2e9031be0c72d71d6967b41a9a",
+        "FBX/RU_SSN_Akula_LOD3.fbx": "89a3d1ecdba81b13a27041bcdf20bc5da750f8e2bd6f07eebd6ad0f52778f14a",
+        "FBX/RU_SSN_Akula_LOD2.fbx": "2df28a81779c8e370d0ee6f82b2406428a8de5e6a5263a959b98b7b03ac6a0fd",
+        "FBX/RU_SSN_Akula_LOD0.fbx": "56629b1ab7af7caf014116c96900a44c199b453552ae4c879b877143f2ea9161",
+        "FBX/RU_SSN_Akula_LOD1.fbx": "9089b7736c01014ef82571bca1b35d63eb6cdbe9749caf730a95225f0a5e0239",
+        "Collision/RU_SSN_Akula_COLLISION.fbx": "e77c47892966f9ac7500ab7a20a2b34b1e46ee499a911721b9a3cd978025f192",
+        "Source/build_akula_reference.py": "0c99ff23bb9e9baee1e59f7039eef1c34f1f9aea17e8eaa0bf8c1477bd147281",
+        "Source/build_akula_drawing.py": "ceba2b29d2eebec4d454430b92b23455f733006115df25106a4c2a3da4388937",
+        "Source/validate_akula_drawing.py": "e1ef586aee9bbe494519dffda23230519d4dd2185f7f0096ceffab8c4b34b766",
+        "Source/drawing_overlay.py": "af51ecb16d01ea3eb0ca548a181b4e779eca9743d76d9ad430d507d52067f3df",
+        "Source/akula_drawing_geometry.py": "8ebe2c32d4dbf53f65587ab59006405767b2712a2e2c9c900dc0bd772ae5be5b",
+        "Preview/Hero.png": "6309beb7a5f641471c6b7dee031c8b2ea05cda03f295f7680bd0ed4832768806",
+        "Preview/Stern.png": "f476e292b3303167e0838c2d7b115f6b45840bbe1141dd57123b1b5c2ef9e7d2",
+        "Preview/Sail.png": "c76f2fd3edc3314b99845870a1a92c8f06ca27dd68791e728abc8bd312dc3a4b",
+        "Preview/Deck.png": "08a2a298660dbf5fe9976c202e149ae49e30c4e5dad52ef45899e2833fb3fede",
+        "Preview/Rear.png": "f66714b974a704406706749b236a556ad323983c05e41dccb608778d7d667d64",
+        "Preview/Tail_QA.png": "5a1ecd784c98a882188a05712f29b0ef4d0d525f7f8ebdee48cf930c1287376c",
+        "Preview/Profile.png": "c91ff69335e4ad588e0e111c2ffb8b004e28c62702a9aaeca0b9308a6ce1ffa3",
+        "Preview/Reference_Overlay.png": "554dde6879b58c7d1bc4ccb08f31a1659c49ec32b66321eb7cd1ae6a70eae64b",
+        "Textures/BaseColor/T_Akula_Drawing_bottom.png": "bb730f831f9392d378ff92e531f48fe7980734619de65de4d8a87d1fd61bc5f4",
+        "Textures/BaseColor/T_Akula_Drawing_hull.png": "b215896b641c3ff843258d2e9b04dba979a700c0dd7840f7c65473c44776d1a2"
+      }
+    },
+    {
+      "asset_id": "RU_SSN_Yasen",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Yasen",
+      "project": "Project 885",
+      "tier": 9,
+      "source": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Source/build_yasen_v2.py",
+      "master": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+      "lod0": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD0.fbx",
+      "lod1": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD1.fbx",
+      "lod2": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD2.fbx",
+      "lod3": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD3.fbx",
+      "collision": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Collision/RU_SSN_Yasen_COLLISION.fbx",
+      "materials": [
+        "SUB_MAT_YasenV2_hull",
+        "SUB_MAT_YasenV2_coating",
+        "SUB_MAT_YasenV2_panel",
+        "SUB_MAT_YasenV2_array",
+        "SUB_MAT_YasenV2_recess",
+        "SUB_MAT_YasenV2_metal",
+        "SUB_MAT_YasenV2_bronze"
+      ],
+      "textures": [
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Textures/T_YasenV2_Hull_BaseColor.png"
+      ],
+      "variants": [],
+      "variant_of": null,
+      "status": "VALIDATING",
+      "validation": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Validation/ROUNDTRIP_V2.json",
+      "references": [],
+      "previews": [
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Gray_Hero.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Hero.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Gray_Profile.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Stern.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Propeller.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Sail.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Deck.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Rear.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Gray_Deck.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Profile.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSN_Yasen_MASTER.blend": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca",
+        "GLB/RU_SSN_Yasen.glb": "a8d8f0c5b3c5ce8152e4e1be50fbbb73ff9ad0911786dea58129641932ad0f27",
+        "FBX/RU_SSN_Yasen_LOD0.fbx": "104d1c316c343103d7a513079b3b17716a4d6cac94f7a35f730ec0fbb4fbb8c5",
+        "FBX/RU_SSN_Yasen_LOD1.fbx": "8cc44910269d318cf8bcbb5c382237cc8b8a5b6bcb3ebb64d0ed67c515b3b070",
+        "FBX/RU_SSN_Yasen_LOD2.fbx": "fb89e21af1ea5201293ee8f64a6899aa7123976634db3cfa81fd8e467b147938",
+        "FBX/RU_SSN_Yasen_LOD3.fbx": "d34580345bd5235652d40e6729bdf87c2b66f58d5fcf1fa845d52ccce819e7ea",
+        "Collision/RU_SSN_Yasen_COLLISION.fbx": "dbcb28e3eb4cbe7bada436377e3c3696b557196a157842059b47697c864a0f63",
+        "Source/build_yasen_v2.py": "eebc9ff1abb8a9b01991ca7786c44103fe75d79bbc82eacfd0efaf1ecbcd3ac2",
+        "Source/finalize_yasen_v2.py": "16bf4fa2b2f33cecb681380078da3116fd437aa3d6fd45a037ad7d1d3439b5cb",
+        "Source/validate_yasen_v2.py": "5db34701b38d97f95a09fed7016bbe6aa1617b363b116f9c80585d474f31ce20",
+        "Source/yasen_geometry.py": "87a0e0e3218beef94848aa4b5b912d3ee5c29eece4468451457987b56e5832ca",
+        "Textures/T_YasenV2_Hull_BaseColor.png": "b795163b719077e783d509cb9698b5674f0b6b04790926ecde109443d7d1a54c",
+        "Preview/BAS_GLB/back.png": "c9e19e6428683406893b754a04f113940eb7a898cdcc50ef3169106862be8c9a",
+        "Preview/BAS_GLB/contact_sheet.png": "a581d407db824de2fbc2416b35c30b27674b3a4f4ee693ffcbfc2a6dbbeff166",
+        "Preview/BAS_GLB/evidence.json": "98f095d1f1c2892d9501d6a7de8cbf5546f1eede8887b78f00c0ef4d6e5a7928",
+        "Preview/BAS_GLB/front.png": "e715c1a60395fb506afc2e1b0629077c4747bffb96d588aa41701d1e996c9c8a",
+        "Preview/BAS_GLB/left.png": "4086defd2355a4c9862de1ff7b19bc0764e9b8b40cc96910628b2726659d0c1f",
+        "Preview/BAS_GLB/perspective.png": "068d83ba98b7bb885166eebd6103633207b2aecfaf821cb009d3fed3fda81bba",
+        "Preview/BAS_GLB/right.png": "4737028f61c366a7f41c6953fdfded0029464012c01c1a49673d2b1040456fa3",
+        "Preview/BAS_GLB/top.png": "3610b2ca7d766f5d3ac9a2cb92ad603708f3bf8656ca4101eb82e52c86a50f92",
+        "Preview/Deck.png": "192be8c8f25a58a5d0def86120c0e30374b82cd2bb5c25b8aad2969c63efafc1",
+        "Preview/Gray_Deck.png": "610d4e3aa5481b0d7781f1be87f0a7c557be071555d3a9d99ba5bc343abc43e1",
+        "Preview/Gray_Hero.png": "b6b0328b0a5562121398caad374155ef7516dae55cde51015d7cc63be8ab1845",
+        "Preview/Gray_Profile.png": "bad9b859e08836a6df8671083f69d7cea45c273db60fbd1cd7d26d2cb2f9ffc7",
+        "Preview/Hero.png": "a73dcbaf2f8dc98f710263224d27d27f18ac01cf7873c611f90e10f516e6b4fb",
+        "Preview/Profile.png": "853ad5cc922ed526868386b9d92ef145cea242ad5698dd54194cbe021ec0910b",
+        "Preview/Propeller.png": "0be1a69c91a2ecba02a7b48a907a310e5751345cfb88fefe3ebc0bbf86e72f76",
+        "Preview/Rear.png": "89f73eea1e987d9ecaa340c13d78300441c8aa61dde70df820bb4d3b782169b6",
+        "Preview/Sail.png": "137aca2d9f9cb47946f0a85540dbe464bb58af4647b4bb25db71e50ad76a80a1",
+        "Preview/Stern.png": "12c32e23686b29e7348df0c62ade5673ea62498669965ec0dc8eac965dc1f53a",
+        "Validation/BAS_LOD0.json": "15a90db01b054aee96e486fa466acdafce43a254e23a9352cc6a9dd99a4aa5d3",
+        "Validation/FACTORY_V2.json": "a8977465a0ad4c8025406a7ec1c5454b061de721b463e94ea8068388c78c8e19",
+        "Validation/GRAYBOX.json": "0eb7fb1d08f03e72426f5c37d399b9436d0b66fd32d5e7fcfb558c42afb95598",
+        "Validation/ROUNDTRIP_V2.json": "02cfcdc7cbc1e19ccc173a9e2147d509757ef1b10c01034284c1cfdfad26bc7d",
+        "Validation/RU_SSN_Yasen_VALIDATION.json": "ec4cabf293a97d807f8bd8fb2d90863f4f82c3310d20b788ecf79559a3e5f969",
+        "Documentation/RU_SSN_Yasen_README.md": "5eef87be74a41b0edefd027d4d81466b7ea7feecda2c89b54169e0fc155b5241",
+        "Documentation/contract.md": "cdf93970b393452f358b88e432963406e3aac6f9bafa63545cf563b4c2905494",
+        "Documentation/final_report.json": "e0a359ef99b823e54066153e44223a3d6530aae6b71a60833c238a778e1afc07",
+        "Documentation/reference_notes.md": "d3e28312b7d0eacd5e38eadbb7fa194d6bef4e3c05afea80a15260c0d2437a62"
+      },
+      "glb": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/GLB/RU_SSN_Yasen.glb",
+      "reference_fidelity": "NOT VERIFIED"
+    },
+    {
+      "asset_id": "RU_SSN_YasenM",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Yasen-M",
+      "project": "Project 885M",
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Hotel",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Hotel",
+      "project": "Project 658",
+      "tier": 2,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Yankee",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Yankee",
+      "project": "Project 667A",
+      "tier": 4,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaI",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta I",
+      "project": "Project 667B",
+      "tier": 5,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaII",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta II",
+      "project": "Project 667BD",
+      "tier": 5,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIII",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta III",
+      "project": "Project 667BDR",
+      "tier": 6,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIV",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta IV",
+      "project": "Project 667BDRM",
+      "tier": 7,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/index.html",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Typhoon",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Typhoon",
+      "project": "Project 941",
+      "tier": 8,
+      "source": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_20260908/Typhoon_UE427.blend",
+      "master": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Blend/RU_SSBN_Typhoon_MASTER.blend",
+      "lod0": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD0.fbx",
+      "lod1": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD1.fbx",
+      "lod2": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD2.fbx",
+      "lod3": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD3.fbx",
+      "collision": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Collision/RU_SSBN_Typhoon_COLLISION.fbx",
+      "materials": [
+        "Hull",
+        "Rubber",
+        "PaintedSteel",
+        "Recess",
+        "Steel",
+        "Propeller",
+        "Markings",
+        "OpticalGlass"
+      ],
+      "textures": [
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/BaseColor/T_Typhoon_Hull_BaseColor.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/BaseColor/T_Typhoon_Rubber_BaseColor.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/AO/T_Typhoon_Hull_ORM.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/AO/T_Typhoon_Rubber_ORM.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/Normal/T_Typhoon_Rubber_NormalGL.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/Normal/T_Typhoon_Hull_NormalDX.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/Normal/T_Typhoon_Hull_NormalGL.png",
+        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/Normal/T_Typhoon_Rubber_NormalDX.png"
+      ],
+      "variants": [],
+      "variant_of": null,
+      "status": "VALIDATING",
+      "validation": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Validation/RU_SSBN_Typhoon_VALIDATION.json",
+      "references": [
+        {
+          "url": "https://nuke.fas.org/guide/russia/slbm/941.htm",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Borei",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Borei",
+      "project": "Project 955",
+      "tier": 9,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://russianships.info/eng/submarines/project_955.htm",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_BoreiA",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Borei-A",
+      "project": "Project 955A",
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://russianships.info/eng/submarines/project_955.htm",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Dreadnought",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Dreadnought",
+      "project": "HMS Dreadnought S101",
+      "tier": 2,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Valiant",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Valiant",
+      "project": null,
+      "tier": 3,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Swiftsure",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Swiftsure",
+      "project": null,
+      "tier": 5,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Trafalgar",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Trafalgar",
+      "project": null,
+      "tier": 6,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_Astute",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Astute",
+      "project": null,
+      "tier": 9,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSN_AUKUS",
+      "country": "UK",
+      "type": "SSN",
+      "class": "SSN-AUKUS",
+      "project": null,
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSBN_Resolution",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Resolution",
+      "project": null,
+      "tier": 4,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSBN_Vanguard",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Vanguard",
+      "project": null,
+      "tier": 8,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "UK_SSBN_Dreadnought",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Dreadnought",
+      "project": null,
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.royalnavy.mod.uk/equipment/submarine/dreadnought-class",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSN_Rubis",
+      "country": "France",
+      "type": "SSN",
+      "class": "Rubis",
+      "project": null,
+      "tier": 6,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine/marins/marins-nucleaires-dattaque-sna-type-rubis",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSN_Suffren",
+      "country": "France",
+      "type": "SSN",
+      "class": "Suffren",
+      "project": "Barracuda",
+      "tier": 9,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine/marins/marins-nucleaires-dattaque-sna-type-suffren",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSBN_LeRedoutable",
+      "country": "France",
+      "type": "SSBN",
+      "class": "Le Redoutable",
+      "project": null,
+      "tier": 4,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSBN_LeTriomphant",
+      "country": "France",
+      "type": "SSBN",
+      "class": "Le Triomphant",
+      "project": null,
+      "tier": 8,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "FR_SSBN_SNLE3G",
+      "country": "France",
+      "type": "SSBN",
+      "class": "SNLE 3G",
+      "project": null,
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.defense.gouv.fr/marine",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type091",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 091",
+      "project": "Han",
+      "tier": 4,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type093",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093",
+      "project": "Shang",
+      "tier": 7,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type093A",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093A",
+      "project": "Shang variant",
+      "tier": 8,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type093B",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093B",
+      "project": "Shang SSGN-related variant",
+      "tier": 9,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSN_Type095",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 095",
+      "project": null,
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSBN_Type092",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 092",
+      "project": "Xia",
+      "tier": 5,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSBN_Type094",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 094",
+      "project": "Jin",
+      "tier": 8,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSBN_Type094A",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 094A",
+      "project": "Jin variant",
+      "tier": 9,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "CN_SSBN_Type096",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 096",
+      "project": null,
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "IN_SSBN_Arihant",
+      "country": "India",
+      "type": "SSBN",
+      "class": "Arihant",
+      "project": null,
+      "tier": 7,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "IN_SSBN_Arighaat",
+      "country": "India",
+      "type": "SSBN",
+      "class": "Arighaat",
+      "project": null,
+      "tier": 8,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "IN_SSBN_S4",
+      "country": "India",
+      "type": "SSBN",
+      "class": "S4",
+      "project": null,
+      "tier": 9,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    },
+    {
+      "asset_id": "IN_SSBN_S5",
+      "country": "India",
+      "type": "SSBN",
+      "class": "S5",
+      "project": null,
+      "tier": 10,
+      "source": "",
+      "master": "",
+      "lod0": "",
+      "lod1": "",
+      "lod2": "",
+      "lod3": "",
+      "collision": "",
+      "materials": [],
+      "textures": [],
+      "variants": [],
+      "variant_of": null,
+      "status": "PLANNED",
+      "validation": "",
+      "references": [
+        {
+          "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+          "accessed": "2026-09-08",
+          "source_type": "public/open"
+        }
+      ]
+    }
+  ]
+}

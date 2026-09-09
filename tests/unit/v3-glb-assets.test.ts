@@ -1,6 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import registryRaw from '../../assets/v3/registry.json?raw';
-import { validateRenderAssetRegistry, type RenderAssetRegistry } from '../../src/renderer/assets/assetRegistry';
+import {
+  validateRenderAssetRegistry,
+  type RenderAssetRegistry,
+} from '../../src/renderer/assets/assetRegistry';
 
 const registry = JSON.parse(registryRaw) as RenderAssetRegistry;
 const heroLods = registry.assets
@@ -10,7 +13,11 @@ const heroLods = registry.assets
 describe('V2.3 project-owned GLB hero assets', () => {
   it('keeps the checked-in V2.3 registry valid and local-only', () => {
     expect(validateRenderAssetRegistry(registry)).toEqual([]);
-    expect(registry.policy).toMatchObject({ localOnly: true, runtimeNetwork: false, requireSha256: true });
+    expect(registry.policy).toMatchObject({
+      localOnly: true,
+      runtimeNetwork: false,
+      requireSha256: true,
+    });
   });
 
   it('registers all required hero-submarine GLB LODs with project provenance and a procedural fallback', () => {

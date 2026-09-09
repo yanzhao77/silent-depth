@@ -1,0 +1,82 @@
+{
+  "asset_id": "RU_SSN_Yasen",
+  "result": "PASS",
+  "roundtrip": [
+    {
+      "file": "RU_SSN_Yasen_LOD0.fbx",
+      "stats": {
+        "name": "RU_SSN_Yasen_LOD0",
+        "vertices": 15733,
+        "triangles": 31170,
+        "uv_channels": 2,
+        "materials": 7,
+        "dimensions_m": [
+          123.325,
+          18.0,
+          21.15
+        ]
+      },
+      "collision_count": 9,
+      "result": "PASS"
+    },
+    {
+      "file": "RU_SSN_Yasen_LOD1.fbx",
+      "stats": {
+        "name": "RU_SSN_Yasen_LOD1",
+        "vertices": 8563,
+        "triangles": 16830,
+        "uv_channels": 2,
+        "materials": 7,
+        "dimensions_m": [
+          123.325,
+          18.0,
+          21.1487
+        ]
+      },
+      "collision_count": 0,
+      "result": "PASS"
+    },
+    {
+      "file": "RU_SSN_Yasen_LOD2.fbx",
+      "stats": {
+        "name": "RU_SSN_Yasen_LOD2",
+        "vertices": 4200,
+        "triangles": 8104,
+        "uv_channels": 2,
+        "materials": 7,
+        "dimensions_m": [
+          123.325,
+          17.9914,
+          21.1463
+        ]
+      },
+      "collision_count": 0,
+      "result": "PASS"
+    },
+    {
+      "file": "RU_SSN_Yasen_LOD3.fbx",
+      "stats": {
+        "name": "RU_SSN_Yasen_LOD3",
+        "vertices": 1862,
+        "triangles": 3426,
+        "uv_channels": 2,
+        "materials": 7,
+        "dimensions_m": [
+          123.3251,
+          17.9914,
+          21.1515
+        ]
+      },
+      "collision_count": 0,
+      "result": "PASS"
+    }
+  ],
+  "collision_objects": 9,
+  "factory_validation": {
+    "asset_id": "RU_SSN_Yasen",
+    "asset_dir": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen",
+    "result": "PASS",
+    "issues": []
+  },
+  "ue427_executed": false
+}

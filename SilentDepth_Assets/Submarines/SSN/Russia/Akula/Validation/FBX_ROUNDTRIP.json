@@ -1,0 +1,54 @@
+{
+  "result": "PASS",
+  "exports": [
+    {
+      "file": "RU_SSN_Akula_LOD0.fbx",
+      "triangles": 130428,
+      "uv_channels": 2,
+      "dimensions_m": [
+        110.1999,
+        19.6,
+        28.4397
+      ],
+      "collision_count": 10,
+      "result": "PASS"
+    },
+    {
+      "file": "RU_SSN_Akula_LOD1.fbx",
+      "triangles": 67822,
+      "uv_channels": 2,
+      "dimensions_m": [
+        110.2,
+        19.6,
+        28.4397
+      ],
+      "collision_count": 0,
+      "result": "PASS"
+    },
+    {
+      "file": "RU_SSN_Akula_LOD2.fbx",
+      "triangles": 31301,
+      "uv_channels": 2,
+      "dimensions_m": [
+        110.2001,
+        19.6001,
+        28.4398
+      ],
+      "collision_count": 0,
+      "result": "PASS"
+    },
+    {
+      "file": "RU_SSN_Akula_LOD3.fbx",
+      "triangles": 12390,
+      "uv_channels": 2,
+      "dimensions_m": [
+        110.2008,
+        19.6003,
+        28.4399
+      ],
+      "collision_count": 0,
+      "result": "PASS"
+    }
+  ],
+  "ue427_executed": false
+}

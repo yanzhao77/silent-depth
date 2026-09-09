@@ -1,6 +1,10 @@
 import * as THREE from 'three';
 import { describe, expect, it } from 'vitest';
-import { AssetManager, disposeObjectResources, type GltfLoadPort } from '../../src/renderer/assets/AssetManager';
+import {
+  AssetManager,
+  disposeObjectResources,
+  type GltfLoadPort,
+} from '../../src/renderer/assets/AssetManager';
 import {
   toLocalRuntimeAssetUrl,
   validateRenderAssetRegistry,
@@ -11,32 +15,75 @@ const sha = 'a'.repeat(64);
 const registry: RenderAssetRegistry = {
   schema: 'silent-depth-render-asset-registry-v3',
   generatedAt: '2026-08-28T10:40:00.000Z',
-  policy: { localOnly: true, runtimeNetwork: false, requireSha256: true, blockUnknownLicenses: true },
-  families: [{
-    id: 'player-submarine',
-    category: 'unit',
-    requiredLods: [0, 1, 2, 3],
-    supportedFormats: ['glb', 'runtime-generated'],
-    activeFallbackId: 'proc-player-submarine-lod2',
-    performanceRole: 'hero',
-  }],
+  policy: {
+    localOnly: true,
+    runtimeNetwork: false,
+    requireSha256: true,
+    blockUnknownLicenses: true,
+  },
+  families: [
+    {
+      id: 'player-submarine',
+      category: 'unit',
+      requiredLods: [0, 1, 2, 3],
+      supportedFormats: ['glb', 'runtime-generated'],
+      activeFallbackId: 'proc-player-submarine-lod2',
+      performanceRole: 'hero',
+    },
+  ],
   assets: [
     {
-      id: 'submarine-glb-lod0', name: 'Test Submarine GLB', category: 'unit', family: 'player-submarine', lod: 0,
-      path: 'public/assets/v3/models/submarine-lod0.glb', format: 'glb', sourceKind: 'external-cc0',
-      sourceUrl: 'https://example.com/submarine-source', assetPageUrl: 'https://example.com/submarine-asset',
-      author: 'Test asset author', license: 'CC0', licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
-      commercialUse: true, redistribution: true, modification: true, attributionRequired: false, attribution: '',
-      licenseCheckedAt: '2026-08-28T10:40:00.000Z', sha256: sha, triangles: 12, materials: ['paint', 'metal'], textures: [], status: 'approved',
+      id: 'submarine-glb-lod0',
+      name: 'Test Submarine GLB',
+      category: 'unit',
+      family: 'player-submarine',
+      lod: 0,
+      path: 'public/assets/v3/models/submarine-lod0.glb',
+      format: 'glb',
+      sourceKind: 'external-cc0',
+      sourceUrl: 'https://example.com/submarine-source',
+      assetPageUrl: 'https://example.com/submarine-asset',
+      author: 'Test asset author',
+      license: 'CC0',
+      licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      commercialUse: true,
+      redistribution: true,
+      modification: true,
+      attributionRequired: false,
+      attribution: '',
+      licenseCheckedAt: '2026-08-28T10:40:00.000Z',
+      sha256: sha,
+      triangles: 12,
+      materials: ['paint', 'metal'],
+      textures: [],
+      status: 'approved',
       fallbackId: 'proc-player-submarine-lod2',
     },
     {
-      id: 'proc-player-submarine-lod2', name: 'Fallback', category: 'unit', family: 'player-submarine', lod: 2,
-      path: 'src/renderer/procedural/submarineGeometry.ts', format: 'runtime-generated', sourceKind: 'procedural',
-      sourceUrl: 'repo://src/renderer/procedural/submarineGeometry.ts', assetPageUrl: 'repo://src/renderer/procedural/submarineGeometry.ts',
-      author: 'SILENT DEPTH renderer contributors', license: 'CC0', licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
-      commercialUse: true, redistribution: true, modification: true, attributionRequired: false, attribution: '',
-      licenseCheckedAt: '2026-08-28T10:40:00.000Z', sha256: sha, triangles: 2400, materials: ['metal'], textures: [], status: 'approved',
+      id: 'proc-player-submarine-lod2',
+      name: 'Fallback',
+      category: 'unit',
+      family: 'player-submarine',
+      lod: 2,
+      path: 'src/renderer/procedural/submarineGeometry.ts',
+      format: 'runtime-generated',
+      sourceKind: 'procedural',
+      sourceUrl: 'repo://src/renderer/procedural/submarineGeometry.ts',
+      assetPageUrl: 'repo://src/renderer/procedural/submarineGeometry.ts',
+      author: 'SILENT DEPTH renderer contributors',
+      license: 'CC0',
+      licenseUrl: 'https://creativecommons.org/publicdomain/zero/1.0/',
+      commercialUse: true,
+      redistribution: true,
+      modification: true,
+      attributionRequired: false,
+      attribution: '',
+      licenseCheckedAt: '2026-08-28T10:40:00.000Z',
+      sha256: sha,
+      triangles: 2400,
+      materials: ['metal'],
+      textures: [],
+      status: 'approved',
     },
   ],
 };
@@ -54,7 +101,9 @@ function loaderThat(scene: THREE.Group): GltfLoadPort & { calls: number } {
 describe('V2.3 AssetManager', () => {
   it('keeps the v3 registry local-only and derives only public offline URLs', () => {
     expect(validateRenderAssetRegistry(registry)).toEqual([]);
-    expect(toLocalRuntimeAssetUrl('public/assets/v3/models/submarine-lod0.glb')).toBe('/assets/v3/models/submarine-lod0.glb');
+    expect(toLocalRuntimeAssetUrl('public/assets/v3/models/submarine-lod0.glb')).toBe(
+      '/assets/v3/models/submarine-lod0.glb',
+    );
     expect(toLocalRuntimeAssetUrl('assets/v3/models/submarine-lod0.glb')).toBeUndefined();
     expect(toLocalRuntimeAssetUrl('https://example.com/submarine.glb')).toBeUndefined();
   });
@@ -77,7 +126,9 @@ describe('V2.3 AssetManager', () => {
   });
 
   it('returns the procedural fallback signal when GLB loading fails', async () => {
-    const failedLoader: GltfLoadPort = { loadAsync: async () => Promise.reject(new Error('missing local GLB')) };
+    const failedLoader: GltfLoadPort = {
+      loadAsync: async () => Promise.reject(new Error('missing local GLB')),
+    };
     const manager = new AssetManager(registry, failedLoader);
     const result = await manager.loadFamilyLod('player-submarine', 0);
 

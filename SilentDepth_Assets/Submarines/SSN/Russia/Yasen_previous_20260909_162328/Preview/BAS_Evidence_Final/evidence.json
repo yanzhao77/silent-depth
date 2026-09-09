@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "evidence_settings_version": 2,
+  "studio": {
+    "presentation": "neutral",
+    "floor_color": [
+      0.025,
+      0.032,
+      0.045,
+      1.0
+    ],
+    "light_powers": [
+      6083621.948913578,
+      2433448.779565431,
+      9125432.923370367
+    ],
+    "camera_distance": 283.647492980957,
+    "ortho_scale": 178.82124557495118,
+    "floor_size": 24664.999389648438,
+    "floor_offset": 0.7399499816894531,
+    "clip_start": 0.12332499694824219,
+    "clip_end": 123324.99694824219
+  },
+  "requested_presentation": "neutral",
+  "subject_luminance_hint": 0.17904188730065826,
+  "render_engine": "BLENDER_EEVEE",
+  "view_transform": "AgX",
+  "exposure": 0.0,
+  "input": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+  "blender_version": "5.2.1 LTS",
+  "resolution": 1024,
+  "material_mode": "source",
+  "hidden_objects": [],
+  "head_texture": null,
+  "bounds": {
+    "min": [
+      -63.325001,
+      -9.0,
+      -5.8
+    ],
+    "max": [
+      60.0,
+      9.0,
+      15.35
+    ],
+    "dimensions": [
+      123.324997,
+      18.0,
+      21.150002
+    ]
+  },
+  "views": [
+    "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/BAS_Evidence_Final/perspective.png",
+    "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/BAS_Evidence_Final/front.png",
+    "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/BAS_Evidence_Final/back.png",
+    "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/BAS_Evidence_Final/left.png",
+    "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/BAS_Evidence_Final/right.png",
+    "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/BAS_Evidence_Final/top.png"
+  ],
+  "contact_sheet": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/BAS_Evidence_Final/contact_sheet.png",
+  "animation_frames": [],
+  "animation_contact_sheet": null
+}

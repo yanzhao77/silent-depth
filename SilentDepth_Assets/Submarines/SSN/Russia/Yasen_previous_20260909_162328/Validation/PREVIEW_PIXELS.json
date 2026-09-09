@@ -1,0 +1,47 @@
+{
+  "result": "PASS",
+  "files": [
+    {
+      "file": "Bow.png",
+      "sample_values": 16000,
+      "nonzero_alpha": 4000,
+      "rgb_span": 0.035294
+    },
+    {
+      "file": "Deck.png",
+      "sample_values": 16000,
+      "nonzero_alpha": 4000,
+      "rgb_span": 0.039216
+    },
+    {
+      "file": "Hero.png",
+      "sample_values": 16000,
+      "nonzero_alpha": 4000,
+      "rgb_span": 0.039216
+    },
+    {
+      "file": "Profile.png",
+      "sample_values": 16000,
+      "nonzero_alpha": 4000,
+      "rgb_span": 0.039216
+    },
+    {
+      "file": "Propulsor_QA.png",
+      "sample_values": 16000,
+      "nonzero_alpha": 4000,
+      "rgb_span": 0.568627
+    },
+    {
+      "file": "Sail.png",
+      "sample_values": 16000,
+      "nonzero_alpha": 4000,
+      "rgb_span": 0.388235
+    },
+    {
+      "file": "Stern.png",
+      "sample_values": 16000,
+      "nonzero_alpha": 4000,
+      "rgb_span": 0.035294
+    }
+  ]
+}

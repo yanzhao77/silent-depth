@@ -792,4 +792,5 @@ function playerOffScreen(snap: GameSnapshot): boolean {
 
 applySettings();
 menus.setSection('main');
+
 requestAnimationFrame(frame);

@@ -1,0 +1,22 @@
+[
+  {
+    "name": "User reference image 01",
+    "path": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Documentation/References/UserBoards/01_side_render.png",
+    "purpose": "side silhouette and exterior color layout"
+  },
+  {
+    "name": "User reference image 02",
+    "path": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Documentation/References/UserBoards/02_blueprint.png",
+    "purpose": "top, side and front proportion schematic"
+  },
+  {
+    "name": "User reference image 03",
+    "path": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Documentation/References/UserBoards/03_line_drawing.png",
+    "purpose": "Project 971 line drawing and stern arrangement"
+  },
+  {
+    "name": "User reference image 04",
+    "path": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Documentation/References/UserBoards/04_russian_scheme.png",
+    "purpose": "Project 971 plan and profile details"
+  }
+]

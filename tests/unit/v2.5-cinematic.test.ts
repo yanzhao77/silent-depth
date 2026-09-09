@@ -47,7 +47,9 @@ describe('V2.5 CameraDirector — preset selection', () => {
   });
 
   it('prioritises periscope when raised', () => {
-    expect(selectCameraPreset({ ...base, periscopeRaised: true, depthM: 200, speedKt: 20 })).toBe('periscope');
+    expect(selectCameraPreset({ ...base, periscopeRaised: true, depthM: 200, speedKt: 20 })).toBe(
+      'periscope',
+    );
   });
 
   it('selects underwater at depth >= 80 m', () => {
@@ -131,7 +133,14 @@ describe('V2.5 EnemyRevealTracker', () => {
 // ---------------------------------------------------------------------------
 
 function effect(type: RenderEffect['type'], age = 0): RenderEffect {
-  return { type, position: { x: 0, y: 0, z: 0 }, age, maxAge: 2, params: {}, id: `fx-${type}-${age}` };
+  return {
+    type,
+    position: { x: 0, y: 0, z: 0 },
+    age,
+    maxAge: 2,
+    params: {},
+    id: `fx-${type}-${age}`,
+  };
 }
 
 describe('V2.5 CombatCueTracker', () => {
@@ -206,30 +215,58 @@ describe('V2.5 adapter — combat event → effect mapping', () => {
   });
 
   it('maps depthCharge.dropped to a waterSplash at real drop coords', () => {
-    const ev: EventEntry = { id: 1, simTime: 0, type: 'depthCharge.dropped', payload: { shipId: 's', x: 2, y: 3 } };
+    const ev: EventEntry = {
+      id: 1,
+      simTime: 0,
+      type: 'depthCharge.dropped',
+      payload: { shipId: 's', x: 2, y: 3 },
+    };
     const fx = createEffectFromEvent(ev, minimalSnapshot([]));
     expect(fx?.type).toBe('waterSplash');
     expect(fx?.position).toEqual({ x: 2, y: 0, z: -3 });
   });
 
   it('maps depthCharge.detonated to a depthCharge effect', () => {
-    const ev: EventEntry = { id: 1, simTime: 0, type: 'depthCharge.detonated', payload: { shipId: 's', x: 2, y: 3 } };
+    const ev: EventEntry = {
+      id: 1,
+      simTime: 0,
+      type: 'depthCharge.detonated',
+      payload: { shipId: 's', x: 2, y: 3 },
+    };
     const fx = createEffectFromEvent(ev, minimalSnapshot([]));
     expect(fx?.type).toBe('depthCharge');
   });
 
   it('locates torpedo.hit from the real target ship (fail-closed)', () => {
     const enemies = [
-      { id: 'tgt', shipClass: 'Destroyer', position: { x: 1, y: 2 }, headingDeg: 0, speedKt: 0, aiState: 'NORMAL', hull: 1 },
+      {
+        id: 'tgt',
+        shipClass: 'Destroyer',
+        position: { x: 1, y: 2 },
+        headingDeg: 0,
+        speedKt: 0,
+        aiState: 'NORMAL',
+        hull: 1,
+      },
     ] as unknown as GameSnapshot['enemies'];
-    const ev: EventEntry = { id: 1, simTime: 0, type: 'torpedo.hit', payload: { torpedoId: 'T', targetShipId: 'tgt' } };
+    const ev: EventEntry = {
+      id: 1,
+      simTime: 0,
+      type: 'torpedo.hit',
+      payload: { torpedoId: 'T', targetShipId: 'tgt' },
+    };
     const fx = createEffectFromEvent(ev, minimalSnapshot(enemies));
     expect(fx?.type).toBe('explosion');
     expect(fx?.position).toEqual({ x: 1, y: 0, z: -2 });
   });
 
   it('refuses torpedo.hit when the target ship is gone (no guessing)', () => {
-    const ev: EventEntry = { id: 1, simTime: 0, type: 'torpedo.hit', payload: { torpedoId: 'T', targetShipId: 'missing' } };
+    const ev: EventEntry = {
+      id: 1,
+      simTime: 0,
+      type: 'torpedo.hit',
+      payload: { torpedoId: 'T', targetShipId: 'missing' },
+    };
     const fx = createEffectFromEvent(ev, minimalSnapshot([]));
     expect(fx).toBeNull();
   });
@@ -257,20 +294,49 @@ describe('V2.5 adapter — combat event → effect mapping', () => {
   it('expires and cleans up effects after their max age', () => {
     const balance = loadBalance();
     const snap = realSnapshot();
-    const ev: EventEntry = { id: 1, simTime: 0, type: 'depthCharge.detonated', payload: { shipId: 's', x: 0, y: 0 } };
+    const ev: EventEntry = {
+      id: 1,
+      simTime: 0,
+      type: 'depthCharge.detonated',
+      payload: { shipId: 's', x: 0, y: 0 },
+    };
     const activeEffects: RenderEffect[] = [];
-    snapshotToRenderState(snap, { balance, newEvents: [ev], activeEffects, dt: 0.1, cameraMode: 'cinematic' });
+    snapshotToRenderState(snap, {
+      balance,
+      newEvents: [ev],
+      activeEffects,
+      dt: 0.1,
+      cameraMode: 'cinematic',
+    });
     expect(activeEffects.length).toBe(1);
     // Advance well past the 1.5 s depth-charge max age with no new events.
-    snapshotToRenderState(snap, { balance, newEvents: [], activeEffects, dt: 2.0, cameraMode: 'cinematic' });
+    snapshotToRenderState(snap, {
+      balance,
+      newEvents: [],
+      activeEffects,
+      dt: 2.0,
+      cameraMode: 'cinematic',
+    });
     expect(activeEffects.length).toBe(0);
   });
 
   it('keeps presentation decisions deterministic across calls', () => {
     const balance = loadBalance();
     const snap = realSnapshot();
-    const a = snapshotToRenderState(snap, { balance, newEvents: [], activeEffects: [], dt: 0.016, cameraMode: 'surface' });
-    const b = snapshotToRenderState(snap, { balance, newEvents: [], activeEffects: [], dt: 0.016, cameraMode: 'surface' });
+    const a = snapshotToRenderState(snap, {
+      balance,
+      newEvents: [],
+      activeEffects: [],
+      dt: 0.016,
+      cameraMode: 'surface',
+    });
+    const b = snapshotToRenderState(snap, {
+      balance,
+      newEvents: [],
+      activeEffects: [],
+      dt: 0.016,
+      cameraMode: 'surface',
+    });
     expect(a.camera.mode).toBe(b.camera.mode);
   });
 });

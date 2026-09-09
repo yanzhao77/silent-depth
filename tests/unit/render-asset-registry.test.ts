@@ -4,7 +4,10 @@ import combatEffectsSource from '../../src/renderer/three/EffectsManager.ts?raw'
 import oceanSource from '../../src/renderer/three/OceanRenderer.ts?raw';
 import skySource from '../../src/renderer/three/SkyRenderer.ts?raw';
 import shipSource from '../../src/renderer/procedural/shipGeometry.ts?raw';
-import { createShipGeometry, createShipLodGeometry } from '../../src/renderer/procedural/shipGeometry';
+import {
+  createShipGeometry,
+  createShipLodGeometry,
+} from '../../src/renderer/procedural/shipGeometry';
 import submarineSource from '../../src/renderer/procedural/submarineGeometry.ts?raw';
 import { createSubmarineGeometry } from '../../src/renderer/procedural/submarineGeometry';
 import registryRaw from '../../assets/v2/registry.json?raw';
@@ -52,7 +55,9 @@ describe('V2.2 renderer asset pipeline', () => {
       const family = familyById.get(familyId);
       expect(family, `${familyId} family`).toBeDefined();
       expect(family?.requiredLods).toContain(2);
-      expect(registry.assets.find((asset) => asset.id === family?.activeFallbackId)?.status).toBe('approved');
+      expect(registry.assets.find((asset) => asset.id === family?.activeFallbackId)?.status).toBe(
+        'approved',
+      );
     }
   });
 
@@ -101,8 +106,13 @@ describe('V2.2 renderer asset pipeline', () => {
       const lod0 = createShipGeometry(shipClass, 0);
       const lod3 = createShipGeometry(shipClass, 3);
       expect(lod0.getObjectByName('ship-hull'), `${shipClass} hull`).toBeDefined();
-      expect(lod0.getObjectByName(requiredPart), `${shipClass} identifying silhouette part`).toBeDefined();
-      expect(lod0.children.length, `${shipClass} near detail`).toBeGreaterThan(lod3.children.length);
+      expect(
+        lod0.getObjectByName(requiredPart),
+        `${shipClass} identifying silhouette part`,
+      ).toBeDefined();
+      expect(lod0.children.length, `${shipClass} near detail`).toBeGreaterThan(
+        lod3.children.length,
+      );
       partCounts.add(lod0.children.length);
 
       const lodRoot = createShipLodGeometry(shipClass);

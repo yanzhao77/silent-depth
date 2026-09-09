@@ -94,6 +94,9 @@ Total 1000 points — Objectives 40 % (400) + Damage 20 % (200) + Detection 15 %
 
 | Doc | What it covers |
 |---|---|
+| `docs/UE4_27_MIGRATION_MASTER_PLAN.md` | UE4.27 unified migration architecture, vertical slices, parity gates, GTX 1050 target |
+| `docs/UE4_27_TARGET_ARCHITECTURE.md` | Detailed UE4.27 target modules, contracts, visibility and determinism boundaries |
+| `docs/UE4_27_MIGRATION_PLAN.md` | Detailed UE4.27 execution phases, validation, risk and release checklist |
 | `docs/GAME_ARCHITECTURE.md` | 9-system engine (world / missions / submarine / sonar / AI / combat / detection / objectives + core state machine), headless-first design, determinism contract |
 | `docs/GAME_DESIGN.md` | Design rules (FR-01…22, balance B1–B10, formulas F1–F10), missions, scoring |
 | `docs/AUDIO_DESIGN.md` | 14 WebAudio-synthesized SFX and event mapping |

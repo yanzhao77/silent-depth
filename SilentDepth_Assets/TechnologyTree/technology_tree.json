@@ -1,0 +1,438 @@
+{
+  "generated_at": "2026-09-09",
+  "note": "Game technology tree classification only; not real-world combat-performance scoring.",
+  "tiers": {
+    "T1": {
+      "SSN": {},
+      "SSBN": {}
+    },
+    "T2": {
+      "SSN": {
+        "USA": [
+          {
+            "asset_id": "US_SSN_Skipjack",
+            "class": "Skipjack",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSN_November",
+            "class": "November",
+            "status": "PLANNED"
+          }
+        ],
+        "UK": [
+          {
+            "asset_id": "UK_SSN_Dreadnought",
+            "class": "Dreadnought",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "USA": [
+          {
+            "asset_id": "US_SSBN_GeorgeWashington",
+            "class": "George Washington",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSBN_Hotel",
+            "class": "Hotel",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    },
+    "T3": {
+      "SSN": {
+        "UK": [
+          {
+            "asset_id": "UK_SSN_Valiant",
+            "class": "Valiant",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "USA": [
+          {
+            "asset_id": "US_SSBN_EthanAllen",
+            "class": "Ethan Allen",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    },
+    "T4": {
+      "SSN": {
+        "USA": [
+          {
+            "asset_id": "US_SSN_Sturgeon",
+            "class": "Sturgeon",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSN_Victor",
+            "class": "Victor",
+            "status": "PLANNED"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSN_Type091",
+            "class": "Type 091",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "USA": [
+          {
+            "asset_id": "US_SSBN_Lafayette",
+            "class": "Lafayette",
+            "status": "PLANNED"
+          },
+          {
+            "asset_id": "US_SSBN_JamesMadison",
+            "class": "James Madison",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSBN_Yankee",
+            "class": "Yankee",
+            "status": "PLANNED"
+          }
+        ],
+        "UK": [
+          {
+            "asset_id": "UK_SSBN_Resolution",
+            "class": "Resolution",
+            "status": "PLANNED"
+          }
+        ],
+        "France": [
+          {
+            "asset_id": "FR_SSBN_LeRedoutable",
+            "class": "Le Redoutable",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    },
+    "T5": {
+      "SSN": {
+        "UK": [
+          {
+            "asset_id": "UK_SSN_Swiftsure",
+            "class": "Swiftsure",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "USA": [
+          {
+            "asset_id": "US_SSBN_BenjaminFranklin",
+            "class": "Benjamin Franklin",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSBN_DeltaI",
+            "class": "Delta I",
+            "status": "PLANNED"
+          },
+          {
+            "asset_id": "RU_SSBN_DeltaII",
+            "class": "Delta II",
+            "status": "PLANNED"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSBN_Type092",
+            "class": "Type 092",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    },
+    "T6": {
+      "SSN": {
+        "USA": [
+          {
+            "asset_id": "US_SSN_LosAngeles",
+            "class": "Los Angeles",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSN_Sierra",
+            "class": "Sierra",
+            "status": "PLANNED"
+          }
+        ],
+        "UK": [
+          {
+            "asset_id": "UK_SSN_Trafalgar",
+            "class": "Trafalgar",
+            "status": "PLANNED"
+          }
+        ],
+        "France": [
+          {
+            "asset_id": "FR_SSN_Rubis",
+            "class": "Rubis",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "Russia": [
+          {
+            "asset_id": "RU_SSBN_DeltaIII",
+            "class": "Delta III",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    },
+    "T7": {
+      "SSN": {
+        "Russia": [
+          {
+            "asset_id": "RU_SSN_Akula",
+            "class": "Akula",
+            "status": "VALIDATING"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSN_Type093",
+            "class": "Type 093",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "Russia": [
+          {
+            "asset_id": "RU_SSBN_DeltaIV",
+            "class": "Delta IV",
+            "status": "PLANNED"
+          }
+        ],
+        "India": [
+          {
+            "asset_id": "IN_SSBN_Arihant",
+            "class": "Arihant",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    },
+    "T8": {
+      "SSN": {
+        "USA": [
+          {
+            "asset_id": "US_SSN_Seawolf",
+            "class": "Seawolf",
+            "status": "PLANNED"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSN_Type093A",
+            "class": "Type 093A",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "USA": [
+          {
+            "asset_id": "US_SSBN_Ohio",
+            "class": "Ohio",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSBN_Typhoon",
+            "class": "Typhoon",
+            "status": "VALIDATING"
+          }
+        ],
+        "UK": [
+          {
+            "asset_id": "UK_SSBN_Vanguard",
+            "class": "Vanguard",
+            "status": "PLANNED"
+          }
+        ],
+        "France": [
+          {
+            "asset_id": "FR_SSBN_LeTriomphant",
+            "class": "Le Triomphant",
+            "status": "PLANNED"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSBN_Type094",
+            "class": "Type 094",
+            "status": "PLANNED"
+          }
+        ],
+        "India": [
+          {
+            "asset_id": "IN_SSBN_Arighaat",
+            "class": "Arighaat",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    },
+    "T9": {
+      "SSN": {
+        "USA": [
+          {
+            "asset_id": "US_SSN_Virginia",
+            "class": "Virginia",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSN_Yasen",
+            "class": "Yasen",
+            "status": "RESEARCH"
+          }
+        ],
+        "UK": [
+          {
+            "asset_id": "UK_SSN_Astute",
+            "class": "Astute",
+            "status": "PLANNED"
+          }
+        ],
+        "France": [
+          {
+            "asset_id": "FR_SSN_Suffren",
+            "class": "Suffren",
+            "status": "PLANNED"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSN_Type093B",
+            "class": "Type 093B",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "Russia": [
+          {
+            "asset_id": "RU_SSBN_Borei",
+            "class": "Borei",
+            "status": "PLANNED"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSBN_Type094A",
+            "class": "Type 094A",
+            "status": "PLANNED"
+          }
+        ],
+        "India": [
+          {
+            "asset_id": "IN_SSBN_S4",
+            "class": "S4",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    },
+    "T10": {
+      "SSN": {
+        "Russia": [
+          {
+            "asset_id": "RU_SSN_YasenM",
+            "class": "Yasen-M",
+            "status": "PLANNED"
+          }
+        ],
+        "UK": [
+          {
+            "asset_id": "UK_SSN_AUKUS",
+            "class": "SSN-AUKUS",
+            "status": "PLANNED"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSN_Type095",
+            "class": "Type 095",
+            "status": "PLANNED"
+          }
+        ]
+      },
+      "SSBN": {
+        "USA": [
+          {
+            "asset_id": "US_SSBN_Columbia",
+            "class": "Columbia",
+            "status": "PLANNED"
+          }
+        ],
+        "Russia": [
+          {
+            "asset_id": "RU_SSBN_BoreiA",
+            "class": "Borei-A",
+            "status": "PLANNED"
+          }
+        ],
+        "UK": [
+          {
+            "asset_id": "UK_SSBN_Dreadnought",
+            "class": "Dreadnought",
+            "status": "PLANNED"
+          }
+        ],
+        "France": [
+          {
+            "asset_id": "FR_SSBN_SNLE3G",
+            "class": "SNLE 3G",
+            "status": "PLANNED"
+          }
+        ],
+        "China": [
+          {
+            "asset_id": "CN_SSBN_Type096",
+            "class": "Type 096",
+            "status": "PLANNED"
+          }
+        ],
+        "India": [
+          {
+            "asset_id": "IN_SSBN_S5",
+            "class": "S5",
+            "status": "PLANNED"
+          }
+        ]
+      }
+    }
+  }
+}

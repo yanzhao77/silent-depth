@@ -1,0 +1,158 @@
+{
+  "result": "PASS",
+  "imports": [
+    {
+      "file": "FBX/RU_SSN_Yasen_LOD0.fbx",
+      "result": "PASS",
+      "actual": {
+        "name": "RU_SSN_Yasen_LOD0",
+        "triangles": 96668,
+        "vertices": 48474,
+        "uv_channels": 2,
+        "dimensions_m": [
+          120.0,
+          17.2,
+          21.96
+        ]
+      },
+      "textures": [
+        {
+          "name": "T_YasenV2_Hull_BaseColor.png",
+          "size": [
+            2048,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "file": "FBX/RU_SSN_Yasen_LOD1.fbx",
+      "result": "PASS",
+      "actual": {
+        "name": "RU_SSN_Yasen_LOD1",
+        "triangles": 48334,
+        "vertices": 24307,
+        "uv_channels": 2,
+        "dimensions_m": [
+          120.0,
+          17.2,
+          21.96
+        ]
+      },
+      "textures": [
+        {
+          "name": "T_YasenV2_Hull_BaseColor.png",
+          "size": [
+            2048,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "file": "FBX/RU_SSN_Yasen_LOD2.fbx",
+      "result": "PASS",
+      "actual": {
+        "name": "RU_SSN_Yasen_LOD2",
+        "triangles": 21266,
+        "vertices": 10773,
+        "uv_channels": 2,
+        "dimensions_m": [
+          120.00005,
+          17.20009,
+          21.96003
+        ]
+      },
+      "textures": [
+        {
+          "name": "T_YasenV2_Hull_BaseColor.png",
+          "size": [
+            2048,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "file": "FBX/RU_SSN_Yasen_LOD3.fbx",
+      "result": "PASS",
+      "actual": {
+        "name": "RU_SSN_Yasen_LOD3",
+        "triangles": 7732,
+        "vertices": 4006,
+        "uv_channels": 2,
+        "dimensions_m": [
+          120.00047,
+          17.20115,
+          21.96008
+        ]
+      },
+      "textures": [
+        {
+          "name": "T_YasenV2_Hull_BaseColor.png",
+          "size": [
+            2048,
+            1024
+          ]
+        }
+      ]
+    },
+    {
+      "file": "GLB/RU_SSN_Yasen.glb",
+      "result": "PASS",
+      "actual": {
+        "name": "RU_SSN_Yasen_LOD0",
+        "triangles": 96668,
+        "vertices": 58208,
+        "uv_channels": 2,
+        "dimensions_m": [
+          120.0,
+          17.2,
+          21.96
+        ]
+      },
+      "textures": [
+        {
+          "name": "T_YasenV2_Hull_BaseColor",
+          "size": [
+            2048,
+            1024
+          ]
+        }
+      ]
+    }
+  ],
+  "negative_control_rejected": true,
+  "preview_pixels": [
+    {
+      "file": "Deck.png",
+      "variance": 0.00725659029558301
+    },
+    {
+      "file": "Hero.png",
+      "variance": 0.010006035678088665
+    },
+    {
+      "file": "Profile.png",
+      "variance": 0.014622167684137821
+    },
+    {
+      "file": "Propeller.png",
+      "variance": 0.03150400519371033
+    },
+    {
+      "file": "Rear.png",
+      "variance": 0.01478517521172762
+    },
+    {
+      "file": "Sail.png",
+      "variance": 0.013333057053387165
+    },
+    {
+      "file": "Stern.png",
+      "variance": 0.02007315866649151
+    }
+  ],
+  "ue427_executed": false,
+  "reference_fidelity": "NOT VERIFIED"
+}

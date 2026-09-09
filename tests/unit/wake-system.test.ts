@@ -14,7 +14,10 @@ function src(over: Partial<WakeSource> = {}): WakeSource {
   return { x: 0, z: 0, headingRad: 0, speedKt: 8, widthScale: 1, ...over };
 }
 
-function minimalState(player: Partial<RenderState['player']> = {}, ships: RenderState['ships'] = []): RenderState {
+function minimalState(
+  player: Partial<RenderState['player']> = {},
+  ships: RenderState['ships'] = [],
+): RenderState {
   return {
     player: {
       position: { x: 0, y: 0, z: 0 },
@@ -100,8 +103,28 @@ describe('V2.4 WakeSystem — source collection (RenderState only)', () => {
 
   it('includes only already-visible ships (no gameplay guessing)', () => {
     const ships: RenderState['ships'] = [
-      { id: 'a', shipClass: 'Destroyer', position: { x: 1, y: 0, z: 2 }, headingDeg: 90, speedKt: 10, aiState: 'NORMAL', visible: true, variant: 'x', hull: 1 },
-      { id: 'b', shipClass: 'Tanker', position: { x: 3, y: 0, z: 4 }, headingDeg: 45, speedKt: 8, aiState: 'NORMAL', visible: false, variant: 'y', hull: 1 },
+      {
+        id: 'a',
+        shipClass: 'Destroyer',
+        position: { x: 1, y: 0, z: 2 },
+        headingDeg: 90,
+        speedKt: 10,
+        aiState: 'NORMAL',
+        visible: true,
+        variant: 'x',
+        hull: 1,
+      },
+      {
+        id: 'b',
+        shipClass: 'Tanker',
+        position: { x: 3, y: 0, z: 4 },
+        headingDeg: 45,
+        speedKt: 8,
+        aiState: 'NORMAL',
+        visible: false,
+        variant: 'y',
+        hull: 1,
+      },
     ];
     const sources = collectWakeSources(minimalState({ speedKt: 6 }, ships));
     expect(sources.length).toBe(2);
@@ -110,16 +133,34 @@ describe('V2.4 WakeSystem — source collection (RenderState only)', () => {
 
   it('caps the number of wakes at MAX_WAKES', () => {
     const ships: RenderState['ships'] = Array.from({ length: 30 }, (_, i) => ({
-      id: `s${i}`, shipClass: 'Destroyer', position: { x: i, y: 0, z: i },
-      headingDeg: 0, speedKt: 10, aiState: 'NORMAL', visible: true, variant: 'v', hull: 1,
+      id: `s${i}`,
+      shipClass: 'Destroyer',
+      position: { x: i, y: 0, z: i },
+      headingDeg: 0,
+      speedKt: 10,
+      aiState: 'NORMAL',
+      visible: true,
+      variant: 'v',
+      hull: 1,
     }));
     const sources = collectWakeSources(minimalState({ speedKt: 6 }, ships));
     expect(sources.length).toBe(MAX_WAKES);
   });
 
   it('assigns wider wakes to tankers than to the submarine', () => {
-    const tanker: RenderState['ships'][number] = { shipClass: 'Tanker', position: { x: 0, y: 0, z: 0 }, headingDeg: 0, speedKt: 8, aiState: 'NORMAL', visible: true, variant: 'v', hull: 1, id: 't' };
-    expect(makeShipWake(tanker).widthScale)
-      .toBeGreaterThan(makePlayerWake(minimalState({ speedKt: 8 }).player).widthScale);
+    const tanker: RenderState['ships'][number] = {
+      shipClass: 'Tanker',
+      position: { x: 0, y: 0, z: 0 },
+      headingDeg: 0,
+      speedKt: 8,
+      aiState: 'NORMAL',
+      visible: true,
+      variant: 'v',
+      hull: 1,
+      id: 't',
+    };
+    expect(makeShipWake(tanker).widthScale).toBeGreaterThan(
+      makePlayerWake(minimalState({ speedKt: 8 }).player).widthScale,
+    );
   });
 });

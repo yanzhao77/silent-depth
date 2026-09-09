@@ -173,6 +173,7 @@ export function createMenus(
           onclick: () => {
             if (!locked) deps.onPlay(spec.id);
           },
+          dataset: { missionId: spec.id },
           attrs: locked ? { disabled: 'disabled', 'aria-disabled': 'true' } : undefined,
         },
         [

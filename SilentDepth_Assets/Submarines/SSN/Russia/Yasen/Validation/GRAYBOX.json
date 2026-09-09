@@ -1,0 +1,128 @@
+{
+  "topology": {
+    "SUB_Yasen_Hull": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_Sail": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_Tail_00": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_Tail_01": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_Tail_02": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_Tail_03": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_ForwardPlane_00": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_ForwardPlane_01": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_PropellerHub": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_ShaftFairing": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_PropellerBlade_00": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_PropellerBlade_01": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_PropellerBlade_02": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_PropellerBlade_03": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_PropellerBlade_04": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_PropellerBlade_05": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Yasen_PropellerBlade_06": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    }
+  },
+  "contacts": {
+    "sail_hull": true,
+    "tail_hull": true,
+    "plane_hull": true,
+    "shaft_hull": true,
+    "shaft_hub": true,
+    "blade_hub": true,
+    "geometric_pitch": true
+  },
+  "measured_blade_pitch": [
+    [
+      47.99996223396778,
+      20.999744778284956
+    ],
+    [
+      47.999963556403735,
+      20.999767344117384
+    ],
+    [
+      47.99996440459475,
+      20.9997530711128
+    ],
+    [
+      47.99996304998961,
+      20.999758718279544
+    ],
+    [
+      47.999961880592274,
+      20.999766551603464
+    ],
+    [
+      47.999962273101055,
+      20.999766786843495
+    ],
+    [
+      47.99996183532729,
+      20.99976061651544
+    ]
+  ]
+}

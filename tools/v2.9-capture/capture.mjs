@@ -13,7 +13,7 @@
  */
 import { execSync, spawn } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { writeFileSync, mkdirSync, readFileSync } from 'node:fs';
+import { writeFileSync, mkdirSync, readFileSync, copyFileSync, unlinkSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { findChrome } from './chrome.mjs';
@@ -217,213 +217,281 @@ async function getWebGLPixels(page) {
 }
 
 // ---------------------------------------------------------------------------
-// __SD debug API helpers — use direct simulation control for reliable state
+// DOM observation helpers — no __SD debug API dependency
 // ---------------------------------------------------------------------------
 
-/** Wait for __SD debug API to be available on window. */
-async function waitForSD(page, timeoutMs = 5000) {
+/**
+ * Step simulation by sleeping wall-clock time. DT=0.05s → N ticks = N*50ms.
+ * The game loop runs at 20 Hz via requestAnimationFrame.
+ */
+async function stepSim(page, ticks) {
+  await sleep(ticks * 50);
+}
+
+/** Dispatch a keyboard press+release to the window (real input path). */
+async function dispatchKeyInput(page, code) {
+  await page.evaluate((c) => {
+    window.dispatchEvent(new KeyboardEvent('keydown', { code: c, bubbles: true }));
+  }, code);
+  await sleep(20);
+  await page.evaluate((c) => {
+    window.dispatchEvent(new KeyboardEvent('keyup', { code: c, bubbles: true }));
+  }, code);
+  await sleep(30);
+}
+
+/**
+ * Ping via Space key. Waits for ping cooldown to clear by polling
+ * the DOM ping chip class (ping-ready vs ping-cooldown).
+ */
+async function pingSyncDOM(page) {
+  await dispatchKeyInput(page, 'Space');
+  // Wait up to 5s for ping cooldown to appear then clear
+  for (let w = 0; w < 50; w++) {
+    await sleep(100);
+    const cd = await page.evaluate(() => {
+      const chip = document.querySelector('.ping-row .pc-mini-chip');
+      if (!chip) return 0;
+      const cls = chip.className;
+      if (cls.includes('ping-cooldown')) {
+        const m = chip.textContent?.match(/(\d+)/);
+        return m ? Number(m[1]) : 3;
+      }
+      return 0;
+    });
+    if (cd === 0) return;
+  }
+}
+
+/**
+ * Move at throttle level via repeated W key presses.
+ * Each W press adds +2 kt (THROTTLE_STEP_KT=2).
+ * After pressing, sleep for the sim duration so the sub moves.
+ */
+async function moveAtDOM(page, presses, ticks) {
+  for (let i = 0; i < presses; i++) {
+    await dispatchKeyInput(page, 'KeyW');
+  }
+  await sleep(ticks * 50);
+}
+
+/**
+ * Move with rudder: press W for throttle, hold A/D for steering.
+ * Rudder = +1 (right/D) or -1 (left/A).
+ */
+async function moveAtWithDOM(page, presses, rudder, ticks) {
+  for (let i = 0; i < presses; i++) {
+    await dispatchKeyInput(page, 'KeyW');
+  }
+  if (rudder !== 0) {
+    const rudderKey = rudder > 0 ? 'KeyD' : 'KeyA';
+    await page.evaluate((c) => {
+      window.dispatchEvent(new KeyboardEvent('keydown', { code: c, bubbles: true }));
+    }, rudderKey);
+    await sleep(ticks * 50);
+    await page.evaluate((c) => {
+      window.dispatchEvent(new KeyboardEvent('keyup', { code: c, bubbles: true }));
+    }, rudderKey);
+    await sleep(50);
+  } else {
+    await sleep(ticks * 50);
+  }
+}
+
+/**
+ * Reset throttle to 0 by pressing S 11 times (22kt / 2kt per press).
+ */
+async function resetThrottleDOM(page) {
+  for (let i = 0; i < 11; i++) {
+    await dispatchKeyInput(page, 'KeyS');
+  }
+}
+
+/** Read contacts from DOM .contact-row elements. */
+async function getContactsDOM(page) {
+  return page.evaluate(() => {
+    const rows = [...document.querySelectorAll('.contact-row')];
+    return rows.map((r, i) => ({
+      id: `contact-${i}`,
+      index: i,
+      text: r.textContent?.trim() ?? '',
+      selected: r.classList.contains('selected'),
+    }));
+  });
+}
+
+/** Read sonar state from DOM: battery bar text, ping chip state. */
+async function getSonarStateDOM(page) {
+  return page.evaluate(() => {
+    const bars = [...document.querySelectorAll('.bar-row')];
+    const batteryRow = bars.find((b) => {
+      const lbl = b.querySelector('.bar-label');
+      return lbl?.textContent?.includes('电池') || lbl?.textContent?.includes('Battery');
+    });
+    const batteryText = batteryRow?.querySelector('.bar-value')?.textContent ?? '100%';
+    const battery = parseFloat(batteryText.replace('%', '')) || 100;
+    const chip = document.querySelector('.ping-row .pc-mini-chip');
+    const chipClass = chip?.className ?? '';
+    const chipText = chip?.textContent ?? '';
+    let pingCooldown = 0;
+    if (chipClass.includes('ping-cooldown')) {
+      const m = chipText.match(/(\d+)/);
+      pingCooldown = m ? Number(m[1]) : 3;
+    }
+    const pingReady = chipClass.includes('ping-ready');
+    return { battery, pingCooldown, pingReady };
+  });
+}
+
+/**
+ * Read snapshot-like state from DOM: periscope, contacts, timeline.
+ */
+async function getSnapshotDOM(page) {
+  return page.evaluate(() => {
+    const pcChips = [...document.querySelectorAll('.pc-mini-chip')];
+    let periscopeState = 'STOWED';
+    for (const chip of pcChips) {
+      const t = chip.textContent?.trim() ?? '';
+      if (t.includes('观测') || t.includes('Observing')) periscopeState = 'OBSERVING';
+      else if (t.includes('升起') || t.includes('Raising')) periscopeState = 'RAISING';
+      else if (t.includes('收回') || t.includes('Lowering')) periscopeState = 'LOWERING';
+      else if (t.includes('锁定') || t.includes('Locked')) periscopeState = 'LOCKED';
+    }
+    const contactRows = [...document.querySelectorAll('.contact-row')];
+    const contacts = contactRows.map((r, i) => {
+      const text = r.textContent?.trim() ?? '';
+      const bearingMatch = text.match(/(\d{3})°/);
+      const rangeMatch = text.match(/([\d.]+)\s*km/);
+      return {
+        id: `contact-${i}`,
+        bearing: bearingMatch ? Number(bearingMatch[1]) : null,
+        range: rangeMatch ? Number(rangeMatch[1]) : null,
+        visual: text.includes('✓') || text.includes('视觉'),
+        selected: r.classList.contains('selected'),
+      };
+    });
+    const tlRows = [...document.querySelectorAll('.tl-row')];
+    const timeline = tlRows.slice(-5).map((r) => ({ text: r.textContent?.trim() ?? '' }));
+    return { periscope: { state: periscopeState }, contacts, timeline };
+  });
+}
+
+/**
+ * Wait for mission to be running (HUD visible, menu hidden).
+ */
+async function waitForMissionRunning(page, timeoutMs = 15000) {
   const start = Date.now();
   while (Date.now() - start < timeoutMs) {
-    const has = await page.evaluate(() => typeof window.__SD !== 'undefined');
-    if (has) return true;
-    await sleep(100);
+    const running = await page.evaluate(() => {
+      const hud = document.querySelector('.hud-topbar');
+      const menu = document.getElementById('menu-root');
+      const hudVisible = hud && hud.offsetParent !== null;
+      const menuHidden = menu && (menu.style.display === 'none' || menu.children.length === 0);
+      return hudVisible && menuHidden;
+    });
+    if (running) return true;
+    await sleep(200);
   }
   return false;
 }
 
-/** Step simulation N ticks via __SD.step(). Waits for render catch-up. */
-async function stepSim(page, ticks) {
-  await page.evaluate((n) => { window.__SD?.step(n); }, ticks);
-  await sleep(50); // let rAF render catch up
-}
-
-/** Ping synchronously via __SD.pingSync(). */
-async function pingSyncSD(page) {
-  await page.evaluate(() => { window.__SD?.pingSync(); });
-  await sleep(100);
-}
-
-/** Move at a specific throttle level via __SD.moveAt(presses, ticks). */
-async function moveAtSD(page, presses, ticks) {
-  await page.evaluate((p, t) => { window.__SD?.moveAt(p, t); }, presses, ticks);
-  await sleep(50);
-}
-
-/** Move with steering at specific throttle via __SD.moveAtWith(presses, rudder, ticks). */
-async function moveAtWithSD(page, presses, rudder, ticks) {
-  await page.evaluate((p, r, t) => { window.__SD?.moveAtWith(p, r, t); }, presses, rudder, ticks);
-  await sleep(50);
-}
-
-/** Reset throttle to 0 by pressing S 11 times (22kt / 2kt per press). */
-async function resetThrottleSD(page) {
-  await page.evaluate(() => { window.__SD?.holdKeySim('KeyS', 0); });
-  await sleep(50);
-}
-
-/** Get positions via __SD.positions(). */
-async function getPositionsSD(page) {
-  return page.evaluate(() => window.__SD?.positions() ?? []);
-}
-
-/** Get contacts via __SD.contacts(). */
-async function getContactsSD(page) {
-  return page.evaluate(() => window.__SD?.contacts() ?? []);
-}
-
-/** Get sonar state via __SD.sonarState(). */
-async function getSonarStateSD(page) {
-  return page.evaluate(() => window.__SD?.sonarState() ?? { pingCooldown: 0, battery: 100 });
-}
-
-/** Get snapshot via __SD.snapshot(). */
-async function getSnapshotSD(page) {
-  return page.evaluate(() => window.__SD?.snapshot() ?? null);
-}
-
-/** Start mission via __SD.startMission(id). */
-async function startMissionSD(page, id) {
-  await page.evaluate((mid) => { window.__SD?.startMission(mid); }, id);
-  await stepSim(page, 20); // let briefing init
+/** Start mission via DOM buttons. */
+async function startMissionDOM(page, missionId) {
+  await page.evaluate(() => {
+    const btns = [...document.querySelectorAll('button')];
+    const start = btns.find((b) => b.textContent?.includes('开始游戏'));
+    if (start) start.click();
+  });
+  await sleep(1500);
+  await page.evaluate((id) => {
+    const btn = document.querySelector(`button[data-mission-id="${id}"]`);
+    if (btn) { btn.click(); return; }
+    const btns = [...document.querySelectorAll('button')];
+    const mission = btns.find((b) => b.textContent?.includes(id));
+    if (mission) mission.click();
+  }, missionId);
+  await sleep(1500);
+  await page.evaluate(() => {
+    const btns = [...document.querySelectorAll('button')];
+    const confirm = btns.find(
+      (b) => b.textContent?.includes('开始') || b.textContent?.includes('确认') || b.textContent?.includes('Start'),
+    );
+    if (confirm) confirm.click();
+  });
+  await sleep(500);
 }
 
 /**
- * Steer player toward nearest enemy and approach within sonar range.
- * Uses CRUISE speed (6 W presses) for both steering and movement to preserve battery.
- * If enemy is far, steps simulation forward to let enemy AI approach us.
- * Returns { distance, detected } after approach + ping.
+ * Diagnostic dump — reads DOM state for torpedo fire investigation.
+ */
+async function dumpTorpedoDiagDOM(page, tag) {
+  const snap = await getSnapshotDOM(page);
+  const sonar = await getSonarStateDOM(page);
+  const lines = [];
+  lines.push(`battery=${sonar.battery.toFixed(1)}% pingCooldown=${sonar.pingCooldown}s periscope=${snap.periscope.state}`);
+  for (const c of snap.contacts) {
+    lines.push(`contact ${c.id} bearing=${c.bearing}° range=${c.range}km visual=${c.visual} selected=${c.selected}`);
+  }
+  for (const tl of snap.timeline) {
+    lines.push(`timeline: ${tl.text}`);
+  }
+  for (const l of lines) console.log(`    [diag] ${tag}: ${l}`);
+}
+
+/**
+ * Steer player and ping to detect contacts.
+ * Keyboard-only approach (no debug API):
+ * 1. Turn right by ~90° (enemy AI closes gap while we turn)
+ * 2. Ping to detect contacts — if detected, done
+ * 3. If not, move forward and ping again
+ * Returns { detected } after approach + ping.
  */
 async function steerAndApproach(page, { steerTicks = 0, maxPings = 6 } = {}) {
-  // Get current positions
-  const positions = await getPositionsSD(page);
-  const player = positions.find(p => p.isPlayer);
-  const enemies = positions.filter(p => !p.isPlayer);
-  if (!player || enemies.length === 0) return { distance: Infinity, detected: false };
+  console.log('    steer: turning right ~90° at CRUISE and pinging...');
 
-  // Find nearest enemy
-  let nearest = null;
-  let minDist = Infinity;
-  for (const e of enemies) {
-    const d = Math.sqrt((e.x - player.x) ** 2 + (e.y - player.y) ** 2);
-    if (d < minDist) { minDist = d; nearest = e; }
-  }
-  if (!nearest) return { distance: Infinity, detected: false };
+  // Turn right ~90° (right/D) at CRUISE speed (6 W presses)
+  // CRUISE turn rate: 3.0 deg/s, 90° = 30s = 600 ticks
+  if (steerTicks === 0) steerTicks = 600;
+  await moveAtWithDOM(page, 6, 1, steerTicks);
 
-  // Calculate target bearing: atan2(dx, dy) gives angle from north
-  const dx = nearest.x - player.x;
-  const dy = nearest.y - player.y;
-  const targetBearing = ((Math.atan2(dx, dy) * 180) / Math.PI + 360) % 360;
+  const sonar0 = await getSonarStateDOM(page);
+  console.log(`    steer: battery after turn=${sonar0.battery.toFixed(1)}%`);
 
-  const snap = await getSnapshotSD(page);
-  const currentHeading = snap?.playerSub?.headingDeg ?? 0;
-
-  // Calculate turn direction
-  let diff = targetBearing - currentHeading;
-  while (diff > 180) diff -= 360;
-  while (diff < -180) diff += 360;
-
-  console.log(
-    `    steer: heading=${currentHeading.toFixed(1)}° target=${targetBearing.toFixed(1)}° diff=${diff.toFixed(1)}° dist=${minDist.toFixed(2)}km`,
-  );
-
-  // CRUISE turn rate: 3.0 deg/s (non-FULL), dt=0.05s → 0.15 deg/tick
-  const CRUISE_DEG_PER_TICK = 3.0 * 0.05;
-  if (steerTicks === 0) {
-    steerTicks = Math.min(Math.ceil(Math.abs(diff) / CRUISE_DEG_PER_TICK), 4000);
-  }
-  const rudder = diff > 0 ? 1 : -1;
-
-  console.log(`    steer: will turn ${steerTicks} ticks (${(steerTicks * 0.05).toFixed(0)}s sim) at CRUISE`);
-
-  // Steer at CRUISE speed (6 W presses = 12kt) — battery drain = 0.22%/s
-  // Battery drain for 177° turn: ~59s × 0.22 = 13%, much better than FULL (71%)
-  if (Math.abs(diff) > 5 && steerTicks > 0) {
-    await moveAtWithSD(page, 6, rudder, steerTicks);
-  }
-
-  // Verify heading after steering
-  const postSteer = await getSnapshotSD(page);
-  const postHeading = postSteer?.playerSub?.headingDeg ?? 0;
-  const postSonar = await getSonarStateSD(page);
-  console.log(`    steer: heading after=${postHeading.toFixed(1)}° battery=${postSonar.battery.toFixed(1)}%`);
-
-  // SONAR RANGE: 10 km. Strategy:
-  // 1. If already within range, ping directly
-  // 2. If within 12 km, move at CRUISE to close gap (enemy AI also moves toward us)
-  // 3. If >12 km, step simulation to let enemy approach (saves battery)
-  const SONAR_RANGE_KM = 10;
-
+  // Try up to maxPings
   let detected = false;
-  try {
-    for (let i = 0; i < maxPings; i++) {
-      // Check current distance
-      const posNow = await getPositionsSD(page);
-      const pNow = posNow.find(p => p.isPlayer);
-      const eNow = posNow.filter(p => !p.isPlayer);
-      let curDist = Infinity;
-      if (pNow && eNow.length > 0) {
-        curDist = Math.min(...eNow.map(e => Math.sqrt((e.x - pNow.x) ** 2 + (e.y - pNow.y) ** 2)));
-      }
-      const sonar = await getSonarStateSD(page);
-      console.log(`    iter ${i}: dist=${curDist.toFixed(2)}km battery=${sonar.battery.toFixed(1)}% cooldown=${sonar.pingCooldown.toFixed(1)}s`);
+  for (let i = 0; i < maxPings; i++) {
+    const sonar = await getSonarStateDOM(page);
+    console.log(`    iter ${i}: battery=${sonar.battery.toFixed(1)}% cooldown=${sonar.pingCooldown}s`);
 
-      // Check battery before doing anything
-      if (sonar.battery < 5) {
-        console.log(`    battery low (${sonar.battery.toFixed(1)}%), stepping to let enemy approach...`);
-        await stepSim(page, 600); // 30s sim, enemy closes ~0.12km
-        continue;
-      }
-
-      // If within sonar range, try to ping
-      if (curDist <= SONAR_RANGE_KM && curDist < Infinity) {
-        // Wait for cooldown if needed
-        if (sonar.pingCooldown > 0) {
-          const waitTicks = Math.ceil(sonar.pingCooldown / 0.05) + 5;
-          await stepSim(page, waitTicks);
-        }
-
-        console.log(`    pinging at ${curDist.toFixed(2)}km...`);
-        await pingSyncSD(page);
-        await stepSim(page, 20); // let contacts register
-
-        const contacts = await getContactsSD(page);
-        console.log(`    ping result: ${contacts.length} contacts`);
-
-        if (contacts.length > 0) {
-          detected = true;
-          break;
-        }
-        continue;
-      }
-
-      // Outside sonar range — need to close gap
-      if (curDist > SONAR_RANGE_KM && curDist < 14) {
-        // Within 14 km: move at CRUISE toward enemy (enemy AI also closes)
-        // CRUISE = 12kt = 0.00617 km/s, enemy ~8kt = 0.0043 km/s → combined ~0.01 km/s
-        console.log(`    moving at CRUISE to close ${curDist.toFixed(2)}km gap...`);
-        const MOVE_TICKS = 600; // 30s sim → ~0.3 km
-        await moveAtSD(page, 6, MOVE_TICKS);
-        continue;
-      }
-
-      // Very far (>14 km): step simulation to let enemy approach us
-      console.log(`    stepping to let enemy approach from ${curDist.toFixed(2)}km...`);
-      await stepSim(page, 600); // 30s sim, enemy closes ~0.12km
+    if (sonar.battery < 5) {
+      console.log(`    battery low (${sonar.battery.toFixed(1)}%), stepping to let enemy approach...`);
+      await stepSim(page, 600);
+      continue;
     }
-  } catch (loopErr) {
-    console.log(`    LOOP ERROR: ${loopErr.message}\n${loopErr.stack?.split('\n').slice(0, 3).join('\n')}`);
+
+    // Wait for ping cooldown if needed
+    if (sonar.pingCooldown > 0) {
+      await stepSim(page, Math.ceil(sonar.pingCooldown / 0.05) + 5);
+    }
+
+    console.log(`    pinging (iter ${i})...`);
+    await pingSyncDOM(page);
+    await stepSim(page, 20);
+
+    const contacts = await getContactsDOM(page);
+    console.log(`    ping result: ${contacts.length} contacts`);
+
+    if (contacts.length > 0) {
+      detected = true;
+      break;
+    }
+
+    // No contacts yet — move forward at CRUISE (6 W presses) for 30s
+    console.log('    moving at CRUISE to close gap...');
+    await moveAtDOM(page, 6, 600);
   }
 
-  // Final distance
-  const finalPositions = await getPositionsSD(page);
-  const fp = finalPositions.find(p => p.isPlayer);
-  const fe = finalPositions.filter(p => !p.isPlayer);
-  let finalDist = Infinity;
-  if (fp && fe.length > 0) {
-    finalDist = Math.min(...fe.map(e => Math.sqrt((e.x - fp.x) ** 2 + (e.y - fp.y) ** 2)));
-  }
-
-  return { distance: finalDist, detected };
+  return { detected };
 }
 
 // ---------------------------------------------------------------------------
@@ -632,7 +700,7 @@ async function captureShot(browser, page, shot, vp) {
     pixelMetrics: metrics,
     webglPixels,
     menuCheck,
-    captureResult: isBlank ? 'BLANK' : glError !== 0 ? 'GL_ERROR' : 'OK',
+    captureResult: shot.captureResult ?? (isBlank ? 'BLANK' : glError !== 0 ? 'GL_ERROR' : 'OK'),
     notVerified: [],
   };
 }
@@ -751,22 +819,44 @@ async function setupGameState(page, shot) {
     }
 
     case 'torpedo-launch': {
-      // Use __SD API for reliable M02 torpedo launch
-      if (!(await waitForSD(page))) { console.error('    __SD not available'); break; }
-      await startMissionSD(page, shot.missionId);
-      await sleep(2000); // let menu transition complete
+      // DOM-only approach: start mission via DOM, steer via keyboard,
+      // detect contacts via DOM, fire via keyboard (select → periscope → lock → fire).
+      await startMissionDOM(page, shot.missionId);
+      await waitForMissionRunning(page, 15000);
+      await sleep(2000);
 
-      // Steer toward enemy at CRUISE speed, let enemy approach, ping to detect
+      // Steer right ~90° at CRUISE, ping to detect contacts
       const result = await steerAndApproach(page, { maxPings: 12 });
-      console.log(`    torpedo-launch: distance=${result.distance.toFixed(2)}km detected=${result.detected}`);
+      console.log(`    torpedo-launch: detected=${result.detected}`);
 
-      // Fire at first contact
-      const contacts = await getContactsSD(page);
+      // Get contacts via DOM
+      const contacts = await getContactsDOM(page);
       if (contacts.length > 0) {
-        const targetId = contacts[0].id;
-        console.log(`    firing at ${targetId} (${contacts[0].classification}, ${contacts[0].rangeKm?.toFixed(1)}km)`);
-        await page.evaluate((tid) => { window.__SD?.fire(tid); }, targetId);
-        await stepSim(page, 40); // let torpedo appear and travel a bit
+        const target = contacts[0];
+        console.log(`    firing at ${target.id} (${target.text})`);
+
+        // Select the contact by clicking its DOM row
+        await page.evaluate((idx) => {
+          const rows = [...document.querySelectorAll('.contact-row')];
+          if (rows[idx]) rows[idx].click();
+        }, target.index);
+        await sleep(500);
+
+        // Raise periscope (P) for visual confirmation
+        await dispatchKeyInput(page, 'KeyP');
+        for (let w = 0; w < 30; w++) {
+          await stepSim(page, 10);
+          const snap = await getSnapshotDOM(page);
+          if (snap.periscope.state === 'OBSERVING' || snap.periscope.state === 'LOCKED') break;
+        }
+
+        // Lock target (L) for fire solution
+        await dispatchKeyInput(page, 'KeyL');
+        await stepSim(page, 20);
+
+        // Fire (F)
+        await dispatchKeyInput(page, 'KeyF');
+        await stepSim(page, 40); // let torpedo appear and travel
       } else {
         console.log('    WARNING: no contacts to fire at');
         await stepSim(page, 20);
@@ -775,131 +865,197 @@ async function setupGameState(page, shot) {
     }
 
     case 'torpedo-hit': {
-      // Use __SD API for reliable M02 torpedo hit.
-      // Strategy: steer at CRUISE (13% drain → battery=87%), then approach at
-      // SILENT (4kt, 0.1%/s drain) toward enemy. Enemy approaches at ~0.004km/s.
-      // Combined closure: 0.0074 + 0.004 = 0.0114 km/s. From 11.5 to 5.5km = 526s.
-      // Battery budget: steer 13% + approach 53% + ping 2% + hit-wait 6% = ~74%
-      if (!(await waitForSD(page))) { console.error('    __SD not available'); break; }
-      await startMissionSD(page, shot.missionId);
-      await sleep(2000);
+      // DOM-only approach: start mission via DOM, steer via keyboard (blind ~90° turn),
+      // approach at SILENT, ping to detect contacts, fire via keyboard when in range.
+      // Hit detection via DOM timeline events (torpedo.hit / ship.sunk).
+      //
+      // Battery budget: CRUISE steer ~13% + SILENT approach to 5km ~68% +
+      // periscope/lock/ping ~5% + hit-wait ~7% = ~93%.
+      //
+      // Retry loop: up to 10 attempts if torpedo misses.
 
-      // Phase 1: Steer toward nearest enemy at CRUISE speed (12kt)
-      const hitPositions = await getPositionsSD(page);
-      const hitPlayer = hitPositions.find(p => p.isPlayer);
-      const hitEnemies = hitPositions.filter(p => !p.isPlayer);
-      if (!hitPlayer || hitEnemies.length === 0) { console.log('    torpedo-hit: no enemies found'); break; }
+      const MAX_RETRIES = 10;
+      let hitDetected;
+      let firedFromDist;
 
-      let hitNearest = null;
-      let hitMinDist = Infinity;
-      for (const e of hitEnemies) {
-        const d = Math.sqrt((e.x - hitPlayer.x) ** 2 + (e.y - hitPlayer.y) ** 2);
-        if (d < hitMinDist) { hitMinDist = d; hitNearest = e; }
-      }
+      for (let retry = 0; retry <= MAX_RETRIES; retry++) {
+        hitDetected = false;
+        firedFromDist = Infinity;
 
-      const hitSnap = await getSnapshotSD(page);
-      const hitHeading = hitSnap?.playerSub?.headingDeg ?? 0;
-      const hitDx = hitNearest.x - hitPlayer.x;
-      const hitDy = hitNearest.y - hitPlayer.y;
-      const hitBearing = ((Math.atan2(hitDx, hitDy) * 180) / Math.PI + 360) % 360;
-      let hitDiff = hitBearing - hitHeading;
-      while (hitDiff > 180) hitDiff -= 360;
-      while (hitDiff < -180) hitDiff += 360;
-
-      const CRUISE_DEG_PER_TICK = 3.0 * 0.05;
-      const hitSteerTicks = Math.min(Math.ceil(Math.abs(hitDiff) / CRUISE_DEG_PER_TICK), 4000);
-      const hitRudder = hitDiff > 0 ? 1 : -1;
-
-      console.log(
-        `    torpedo-hit: steer heading=${hitHeading.toFixed(1)}° → ${hitBearing.toFixed(1)}° diff=${hitDiff.toFixed(1)}° dist=${hitMinDist.toFixed(2)}km`,
-      );
-      if (Math.abs(hitDiff) > 5) {
-        await moveAtWithSD(page, 6, hitRudder, hitSteerTicks);
-      }
-      // CRITICAL: reset throttle to 0 — moveAtWith sets CRUISE (12kt) but
-      // handleKey('KeyW', false) only removes from held, does NOT decrement throttle.
-      await resetThrottleSD(page);
-      const hitSonar = await getSonarStateSD(page);
-      console.log(`    torpedo-hit: battery after steer=${hitSonar.battery.toFixed(1)}%`);
-
-      // Phase 2: Approach at SILENT (2 W presses = 4kt, 0.1%/s drain).
-      // Enemy approaches at ~0.004 km/s. Combined: ~0.0114 km/s.
-      // From ~11.5km to 3.0km ≈ 746s sim ≈ 25 iterations of 600 ticks.
-      // Torpedo is STRAIGHT-LINE (no homing, DD-04) — must fire close for
-      // bearing accuracy within 40m hit radius. 5.5km → bearing jitter → miss.
-      const TORPEDO_FIRE_KM = 3.0;
-      let hitDetected = false;
-
-      for (let approach = 0; approach < 60; approach++) {
-        const posNow = await getPositionsSD(page);
-        const pNow = posNow.find(p => p.isPlayer);
-        const eNow = posNow.filter(p => !p.isPlayer);
-        let curDist = Infinity;
-        if (pNow && eNow.length > 0) {
-          curDist = Math.min(...eNow.map(e => Math.sqrt((e.x - pNow.x) ** 2 + (e.y - pNow.y) ** 2)));
+        if (retry > 0) {
+          console.log(`    torpedo-hit: RETRY ${retry}/${MAX_RETRIES} — navigating to fresh page`);
+          await page.goto(BASE_URL, { waitUntil: 'networkidle0', timeout: 15000 });
+          await sleep(2000);
         }
-        const sonarNow = await getSonarStateSD(page);
-        console.log(
-          `    torpedo-hit approach ${approach}: dist=${curDist.toFixed(2)}km battery=${sonarNow.battery.toFixed(1)}%`,
-        );
 
-        if (curDist <= TORPEDO_FIRE_KM && curDist < Infinity) {
-          // Within torpedo range — ping and fire immediately
+        // 1) Start mission via DOM buttons
+        await startMissionDOM(page, shot.missionId);
+        await waitForMissionRunning(page, 15000);
+        await stepSim(page, 65);
+        await sleep(500);
+
+        // 2) Verify HUD is visible (game is running)
+        const hudVisible = await page.evaluate(() => {
+          const hud = document.querySelector('.hud-topbar');
+          return hud && hud.offsetParent !== null;
+        });
+        if (!hudVisible) {
+          console.log('    torpedo-hit: HUD not visible, skipping attempt');
+          continue;
+        }
+
+        // 3) Steer right ~90° at CRUISE (blind — no positions available via DOM)
+        // CRUISE turn rate: 3.0 deg/s, 90° = 30s = 600 ticks
+        await moveAtWithDOM(page, 6, 1, 600);
+        await resetThrottleDOM(page);
+        const hitSonar = await getSonarStateDOM(page);
+        console.log(`    torpedo-hit: battery after steer=${hitSonar.battery.toFixed(1)}%`);
+
+        // 4) Approach at SILENT (4kt), ping periodically, fire when contact in range
+        const TORPEDO_FIRE_KM = 5.0;
+
+        for (let approach = 0; approach < 60; approach++) {
+          const sonarNow = await getSonarStateDOM(page);
+          console.log(`    torpedo-hit approach ${approach}: battery=${sonarNow.battery.toFixed(1)}%`);
+
+          // Ping to detect contacts
           if (sonarNow.pingCooldown > 0) {
             await stepSim(page, Math.ceil(sonarNow.pingCooldown / 0.05) + 5);
           }
-          console.log(`    torpedo-hit: pinging at ${curDist.toFixed(2)}km...`);
-          await pingSyncSD(page);
+          console.log(`    torpedo-hit: pinging (iter ${approach})...`);
+          await pingSyncDOM(page);
           await stepSim(page, 20);
 
-          const contacts = await getContactsSD(page);
-          console.log(`    torpedo-hit: ping result: ${contacts.length} contacts`);
-          if (contacts.length > 0) {
-            const targetId = contacts[0].id;
-            console.log(`    torpedo-hit: firing at ${targetId} from ${curDist.toFixed(2)}km`);
-            await page.evaluate((tid) => { window.__SD?.fire(tid); }, targetId);
+          // Check contacts via DOM — look for range ≤ FIRE_KM
+          const snap = await getSnapshotDOM(page);
+          const inRangeContact = snap.contacts.find(
+            (c) => c.range !== null && c.range <= TORPEDO_FIRE_KM,
+          );
 
-            // Record initial hit count before waiting (processNewEvents consumes
-            // events from snap.eventLog, so we compare stats instead).
-            const preFireSnap = await getSnapshotSD(page);
-            const initialHits = preFireSnap?.stats?.torpedoesHit ?? 0;
-            console.log(`    torpedo-hit: initialHits=${initialHits}`);
+          if (inRangeContact) {
+            firedFromDist = inRangeContact.range;
+            console.log(`    torpedo-hit: contact in range at ${firedFromDist}km — firing sequence`);
 
-            // Wait for torpedo hit: speed ~40kt (0.02 km/s), at 3km → ~150s sim.
-            // Use stats.torpedoesHit comparison (processNewEvents consumes events).
-            for (let batch = 0; batch < 30; batch++) {
-              await stepSim(page, 800);
-              const snap = await getSnapshotSD(page);
-              const currentHits = snap?.stats?.torpedoesHit ?? 0;
-              if (currentHits > initialHits) {
+            // Select the contact by clicking its DOM row
+            await page.evaluate((idx) => {
+              const rows = [...document.querySelectorAll('.contact-row')];
+              if (rows[idx]) rows[idx].click();
+            }, inRangeContact.id.replace('contact-', ''));
+            await sleep(500);
+
+            // Raise periscope (P) for visual confirmation
+            console.log('    torpedo-hit: raising periscope (P)...');
+            await dispatchKeyInput(page, 'KeyP');
+            let perState = null;
+            for (let w = 0; w < 30; w++) {
+              await stepSim(page, 10);
+              const ps = await getSnapshotDOM(page);
+              perState = ps.periscope.state;
+              if (perState === 'OBSERVING' || perState === 'LOCKED') break;
+            }
+            console.log(`    torpedo-hit: periscope=${perState}`);
+
+            // Lock target (L) for fire solution
+            console.log('    torpedo-hit: locking target (L)...');
+            await dispatchKeyInput(page, 'KeyL');
+            await stepSim(page, 20);
+
+            // Fire (F)
+            console.log(`    torpedo-hit: firing from ${firedFromDist}km`);
+            await dispatchKeyInput(page, 'KeyF');
+
+            // 5) Wait for torpedo hit — check DOM timeline for hit/sunk events
+            // Torpedo speed ~40kt (0.02 km/s), at 5km → ~250s sim.
+            // Check every 400 ticks (20s sim).
+            const candidateFrames = [];
+
+            for (let batch = 0; batch < 60; batch++) {
+              await stepSim(page, 400);
+
+              // Check timeline DOM for hit/sunk events
+              const tlSnap = await getSnapshotDOM(page);
+              const hitEvent = tlSnap.timeline.find(
+                (t) =>
+                  t.text.includes('命中') || t.text.includes('HIT') ||
+                  t.text.includes('击沉') || t.text.includes('SUNK') ||
+                  t.text.includes('torpedo') || t.text.includes('鱼雷'),
+              );
+
+              if (hitEvent) {
                 hitDetected = true;
-                console.log(`    torpedo-hit: HIT detected at batch ${batch} (hits ${initialHits}→${currentHits})`);
+                console.log(`    torpedo-hit: HIT detected at batch ${batch}: ${hitEvent.text}`);
+
+                // Capture rapid candidate frames to catch the explosion effect
+                for (let f = 0; f < 5; f++) {
+                  await stepSim(page, 10);
+                  const candidatePath = join(OUT_DIR, `${shot.id}-candidate-${f}.png`);
+                  await page.screenshot({ path: candidatePath, type: 'png' });
+                  const metrics = await validateScreenshot(page, candidatePath);
+                  const variance = metrics ? metrics.variance : 0;
+                  candidateFrames.push({ path: candidatePath, variance, frame: f });
+                  console.log(`    torpedo-hit: candidate frame ${f} variance=${variance.toFixed(2)}`);
+                }
+
+                // Select frame with highest variance (most visual activity = explosion)
+                if (candidateFrames.length > 0) {
+                  const bestFrame = candidateFrames.reduce((a, b) =>
+                    b.variance > a.variance ? b : a,
+                  );
+                  console.log(
+                    `    torpedo-hit: best frame = ${bestFrame.frame} (variance=${bestFrame.variance.toFixed(2)})`,
+                  );
+                  const mainPath = join(OUT_DIR, `${shot.id}-${VPS[0].n}.png`);
+                  copyFileSync(bestFrame.path, mainPath);
+                  for (const cf of candidateFrames) {
+                    try { unlinkSync(cf.path); } catch { /* ignore */ }
+                  }
+                }
                 break;
               }
-              const torpedoes = snap?.torpedoes ?? [];
-              if (torpedoes.length === 0) {
-                console.log(`    torpedo-hit: torpedo expired at batch ${batch} (hits still ${currentHits})`);
+
+              // Check if battery depleted
+              const batNow = await getSonarStateDOM(page);
+              if (batNow.battery <= 0) {
+                console.log(`    torpedo-hit: battery depleted (${batNow.battery.toFixed(1)}%), stopping wait`);
                 break;
               }
             }
-            if (hitDetected) {
-              await stepSim(page, 40); // let explosion render
+
+            if (!hitDetected) {
+              // Clean up any leftover candidate files
+              for (let f = 0; f < 5; f++) {
+                try { unlinkSync(join(OUT_DIR, `${shot.id}-candidate-${f}.png`)); } catch { /* ignore */ }
+              }
             }
-            console.log(`    torpedo-hit: hitDetected=${hitDetected}`);
-          } else {
-            console.log('    torpedo-hit: WARNING no contacts after ping');
+            break; // exit approach loop (fired or gave up)
           }
-          break;
+
+          // Not in range yet — check battery before continuing
+          if (sonarNow.battery <= 5) {
+            console.log(`    torpedo-hit: battery low (${sonarNow.battery.toFixed(1)}%), waiting for recharge...`);
+            await stepSim(page, 600);
+            continue;
+          }
+
+          // Move at SILENT (2 W presses = 4kt) for 600 ticks (30s sim)
+          await moveAtDOM(page, 2, 600);
+          await resetThrottleDOM(page);
         }
 
-        // Not yet in range — move at SILENT (2 W presses = 4kt) for 600 ticks (30s sim)
-        // SILENT drain: 0.1%/s → 30s × 0.1 = 3% per iteration
-        await moveAtSD(page, 2, 600);
-        await resetThrottleSD(page);
-      }
+        if (hitDetected) {
+          console.log(`    torpedo-hit: DONE — explosion captured from ${firedFromDist}km`);
+          break; // Success — stop retrying
+        }
+
+        if (retry < MAX_RETRIES) {
+          console.log(`    torpedo-hit: torpedo missed (fired from ${firedFromDist}km), will retry`);
+        } else {
+          console.log(`    torpedo-hit: torpedo did not hit after ${MAX_RETRIES + 1} attempts`);
+        }
+      } // end retry loop
 
       if (!hitDetected) {
-        console.log('    torpedo-hit: failed to reach torpedo range within timeout');
+        shot.captureResult = 'NOT CAPTURED';
       }
       break;
     }
@@ -1080,9 +1236,12 @@ async function main() {
 
   // Capture shots
   const shots = defineShots();
+  const onlyArgIdx = process.argv.indexOf('--only');
+  const onlyShot = onlyArgIdx >= 0 ? process.argv[onlyArgIdx + 1] : null;
+  const filterShots = onlyShot ? shots.filter((s) => s.id === onlyShot) : shots;
   const manifest = [];
 
-  for (const shot of shots) {
+  for (const shot of filterShots) {
     console.log(`Capturing: ${shot.id} (${shot.label})...`);
     // Navigate fresh for each shot to avoid state bleed
     await page.goto(BASE_URL, { waitUntil: 'networkidle0', timeout: 15000 });

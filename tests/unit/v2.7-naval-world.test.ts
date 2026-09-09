@@ -24,10 +24,7 @@ import {
   getBackgroundProfile,
   type BackgroundWorldState,
 } from '../../src/renderer/three/BackgroundWorldRenderer';
-import {
-  resolveConvoyFraming,
-  type ConvoyShipView,
-} from '../../src/renderer/three/CameraDirector';
+import { resolveConvoyFraming, type ConvoyShipView } from '../../src/renderer/three/CameraDirector';
 import { deriveWeatherVisuals } from '../../src/renderer/weather';
 import type { RenderShip } from '../../src/renderer/types';
 import { shipNavLights } from '../../src/renderer/three/ShipRenderer';
@@ -41,7 +38,12 @@ import { getQualitySettings, setQualityLevel } from '../../src/renderer/three/Qu
 const WEATHER_KINDS = ['Clear', 'Cloudy', 'Fog', 'Storm', 'Night'] as const;
 const MISSION_IDS = ['M01', 'M02', 'M03', 'M04', 'M05'] as const;
 
-function makeBgState(missionId: string, seed: number, weatherKind: string, underwater = false): BackgroundWorldState {
+function makeBgState(
+  missionId: string,
+  seed: number,
+  weatherKind: string,
+  underwater = false,
+): BackgroundWorldState {
   const quality = getQualitySettings();
   return resolveBackgroundWorldState({
     missionId,
@@ -50,7 +52,9 @@ function makeBgState(missionId: string, seed: number, weatherKind: string, under
     cameraZ: 0,
     wallTime: 10,
     weatherKind,
-    weatherVisual: deriveWeatherVisuals(weatherKind as 'Clear' | 'Cloudy' | 'Fog' | 'Storm' | 'Night'),
+    weatherVisual: deriveWeatherVisuals(
+      weatherKind as 'Clear' | 'Cloudy' | 'Fog' | 'Storm' | 'Night',
+    ),
     quality,
     underwater,
   });
@@ -80,7 +84,17 @@ describe('V2.7 background objects never enter RenderShip[]', () => {
     const state = makeBgState('M03', 100, 'Clear');
     const bgIds = new Set(state.objects.map((o) => `${o.class}:${o.position.x.toFixed(2)}`));
     const renderShips: RenderShip[] = [
-      { id: 'real-1', shipClass: 'Destroyer', position: { x: 1, y: 0, z: -2 }, headingDeg: 90, speedKt: 5, aiState: 'NORMAL', visible: true, variant: 'Destroyer', hull: 100 },
+      {
+        id: 'real-1',
+        shipClass: 'Destroyer',
+        position: { x: 1, y: 0, z: -2 },
+        headingDeg: 90,
+        speedKt: 5,
+        aiState: 'NORMAL',
+        visible: true,
+        variant: 'Destroyer',
+        hull: 100,
+      },
     ];
     // RenderShip ids must not overlap with background object classes
     for (const ship of renderShips) {
@@ -96,9 +110,15 @@ describe('V2.7 background objects never enter RenderShip[]', () => {
 describe('V2.7 hidden ships generate no visual cues', () => {
   it('hidden ship has no nav lights', () => {
     const hidden: RenderShip = {
-      id: 'h1', shipClass: 'Destroyer', position: { x: 1, y: 0, z: -2 },
-      headingDeg: 90, speedKt: 5, aiState: 'HUNTING', visible: false,
-      variant: 'Destroyer', hull: 100,
+      id: 'h1',
+      shipClass: 'Destroyer',
+      position: { x: 1, y: 0, z: -2 },
+      headingDeg: 90,
+      speedKt: 5,
+      aiState: 'HUNTING',
+      visible: false,
+      variant: 'Destroyer',
+      hull: 100,
     };
     expect(shipNavLights(hidden)).toBeNull();
   });
@@ -151,8 +171,10 @@ describe('V2.7 seed variation', () => {
     let differentCount = 0;
     const len = Math.min(a.objects.length, b.objects.length);
     for (let i = 0; i < len; i++) {
-      if (a.objects[i]!.position.x !== b.objects[i]!.position.x ||
-          a.objects[i]!.position.z !== b.objects[i]!.position.z) {
+      if (
+        a.objects[i]!.position.x !== b.objects[i]!.position.x ||
+        a.objects[i]!.position.z !== b.objects[i]!.position.z
+      ) {
         differentCount++;
       }
     }
@@ -194,10 +216,7 @@ describe('V2.7 M03 convoy framing', () => {
   });
 
   it('frames toward the nearest visible ship', () => {
-    const ships = [
-      makeShip('far', true, 5, -5),
-      makeShip('near', true, 1, -1),
-    ];
+    const ships = [makeShip('far', true, 5, -5), makeShip('near', true, 1, -1)];
     const hint = resolveConvoyFraming(0, 0, 0, ships)!;
     expect(hint).not.toBeNull();
     // With 2 ships, the target is the weighted average of both positions
@@ -209,10 +228,7 @@ describe('V2.7 M03 convoy framing', () => {
   });
 
   it('offsets framing for multiple ships', () => {
-    const ships = [
-      makeShip('a', true, 2, -2),
-      makeShip('b', true, 4, -4),
-    ];
+    const ships = [makeShip('a', true, 2, -2), makeShip('b', true, 4, -4)];
     const singleHint = resolveConvoyFraming(0, 0, 0, [ships[0]!])!;
     const multiHint = resolveConvoyFraming(0, 0, 0, ships)!;
     // Multi-ship framing should be offset from single-ship
@@ -230,10 +246,7 @@ describe('V2.7 M03 convoy framing', () => {
   });
 
   it('only considers visible ships', () => {
-    const ships = [
-      makeShip('hidden', false, 1, -1),
-      makeShip('visible', true, 3, -3),
-    ];
+    const ships = [makeShip('hidden', false, 1, -1), makeShip('visible', true, 3, -3)];
     const hint = resolveConvoyFraming(0, 0, 0, ships)!;
     // Should frame toward the visible ship, not the hidden one
     expect(hint.targetX).toBeCloseTo(3, 0);
@@ -448,7 +461,7 @@ describe('V2.7 background budget never exceeds reasonable limits', () => {
 // 13. Background objects don't appear near contact uncertainty areas
 // ---------------------------------------------------------------------------
 
-describe('V2.7 background objects don\'t cluster near player', () => {
+describe("V2.7 background objects don't cluster near player", () => {
   it('no background objects within 0.3 km of the player', () => {
     const state = makeBgState('M03', 42, 'Clear');
     for (const obj of state.objects) {
