@@ -111,6 +111,35 @@ LOD1-3 用 `EditorStaticMeshLibrary.import_lod` 从各自的 FBX 直接导入，
 - 法线走 `sample.RG × NormalStrength → append(Z=1) → lerp((0,0,1), …, NormalWeight) → normalize`，等价于「解码后的 XY 乘 0.45 再归一化」。
 - `ORMWeight` / `NormalWeight` 让缺图资产把对应通道退化成标量值，**避免采样未设置的贴图参数**。Yasen 就靠这个：它有 BaseColor 但没有 ORM 和法线。
 
+### 母材质的贴图参数必须有默认贴图
+
+这条踩过一次，代价是三艘艇全部渲染成灰色。
+
+贴图参数如果留空，UE 会回退到引擎的 `DefaultTexture`，而那张贴图的采样器类型是 `Color`。于是 `Normal` 和 `Masks` 两种采样器校验不过：
+
+```text
+LogMaterial: Warning: [AssetLog] M_SD_Submarine_PBR.uasset:
+  Failed to compile Material for platform PCD3D_SM5, Default Material will be used in game.
+  (Node TextureSampleParameter2D) Sampler type is Normal, should be Color for DefaultTexture
+  (Node TextureSampleParameter2D) Sampler type is Masks, should be Color for DefaultTexture
+```
+
+这是**母材质级**的失败，不是实例级——所以连贴图绑定完好的 Typhoon 也一起退化成默认灰材质，表现为「三艘艇都变成灰黑色」。参数回读一切正常，只有打开编辑器才会暴露。
+
+修法是给三个贴图参数各配一张真实的中性默认贴图，且压缩设置要匹配采样器类型：
+
+| 参数 | 默认贴图 | 压缩设置 | 对应采样器 |
+|---|---|---|---|
+| `BaseColorTexture` | `T_SD_Default_BaseColor`（纯白 4×4） | `TC_DEFAULT` | Color |
+| `ORMTexture` | `T_SD_Default_ORM`（R=255, G=128, B=0） | `TC_MASKS` | Masks |
+| `NormalTexture` | `T_SD_Default_Normal`（128,128,255） | `TC_NORMALMAP` | Normal |
+
+三张图由脚本用纯 Python 现场生成 PNG（不需要 Blender 或图像库），导入到 `Materials/Defaults/`。脚本在绑定后会把值读回来并打进日志，所以以后这类失败在导入阶段就能看到。
+
+### 母材质只写一次
+
+`M_SD_Submarine_PBR` / `M_SD_Submarine_Flat` 存在时，脚本只复用、不重建节点图——否则每次运行都会往图里再追加一整份重复节点。改母材质结构需要先把 `Content/SilentDepth/Art` 移走再跑。
+
 材质数值**不在这里发明**，全部取自各艇自己的 Blender 构建脚本：
 
 | 资产 | 来源 |

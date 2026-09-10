@@ -38,6 +38,9 @@ UE with an access violation.
 import os
 import re
 import shutil
+import struct
+import tempfile
+import zlib
 
 import unreal
 
@@ -45,6 +48,7 @@ REPO_ROOT = r"C:\workspace\ue4\silent-depth"
 SOURCE_ROOT = os.path.join(REPO_ROOT, "SilentDepth_Assets")
 
 MASTER_DIR = "/Game/SilentDepth/Art/Materials"
+DEFAULT_TEXTURE_DIR = MASTER_DIR + "/Defaults"
 PBR_MASTER = "M_SD_Submarine_PBR"
 FLAT_MASTER = "M_SD_Submarine_Flat"
 FALLBACK_MI = "MI_SD_Fallback"
@@ -201,7 +205,55 @@ def connect_property(source, output, prop):
     unreal.MaterialEditingLibrary.connect_material_property(source, output, prop)
 
 
-def build_pbr_master():
+def write_png(path, width, height, rows):
+    """Write an 8-bit RGB PNG. rows is a list of height lists of (r, g, b)."""
+    raw = b"".join(b"\x00" + bytes(v for pixel in row for v in pixel) for row in rows)
+
+    def chunk(tag, data):
+        return (struct.pack(">I", len(data)) + tag + data
+                + struct.pack(">I", zlib.crc32(tag + data) & 0xFFFFFFFF))
+
+    header = struct.pack(">IIBBBBB", width, height, 8, 2, 0, 0, 0)
+    with open(path, "wb") as handle:
+        handle.write(b"\x89PNG\r\n\x1a\n"
+                     + chunk(b"IHDR", header)
+                     + chunk(b"IDAT", zlib.compress(raw, 9))
+                     + chunk(b"IEND", b""))
+
+
+def ensure_default_textures():
+    """Create the neutral maps the PBR master's texture parameters point at.
+
+    A texture parameter left without a texture falls back to the engine's
+    DefaultTexture, whose sampler type is Color. UE then refuses to compile a
+    Normal or Masks sampler against it:
+
+        Failed to compile Material ... Default Material will be used in game.
+        Sampler type is Normal, should be Color for DefaultTexture
+
+    and every material instance silently renders as the default grey material.
+    These four-pixel maps keep the master valid; instances override them.
+    """
+    staging = os.path.join(tempfile.gettempdir(), "silent_depth_defaults")
+    if not os.path.isdir(staging):
+        os.makedirs(staging)
+
+    specs = (
+        ("T_SD_Default_BaseColor", (255, 255, 255), True, "TC_DEFAULT"),
+        ("T_SD_Default_ORM", (255, 128, 0), False, "TC_MASKS"),
+        ("T_SD_Default_Normal", (128, 128, 255), False, "TC_NORMALMAP"),
+    )
+    paths = {}
+    for name, color, srgb, compression in specs:
+        png = os.path.join(staging, name + ".png")
+        write_png(png, 4, 4, [[color] * 4 for _ in range(4)])
+        import_texture_file(png, DEFAULT_TEXTURE_DIR, name, srgb, compression)
+        paths[name] = "{}/{}".format(DEFAULT_TEXTURE_DIR, name)
+    log("default master textures ready: {}".format(sorted(paths)))
+    return paths
+
+
+def build_pbr_master(defaults):
     """One master covers complete and partial texture sets.
 
     ORMWeight / NormalWeight fade between the packed maps and scalar fallbacks,
@@ -209,18 +261,27 @@ def build_pbr_master():
     weight at 0 instead of sampling an unset texture parameter.
     """
     path = "{}/{}".format(MASTER_DIR, PBR_MASTER)
-    material = ensure_asset(path, PBR_MASTER, MASTER_DIR, unreal.Material, unreal.MaterialFactoryNew())
+    if unreal.EditorAssetLibrary.does_asset_exist(path):
+        # The graph is authored once. Re-running would append a second copy of
+        # every node, so an existing master is reused as-is. Move the asset out
+        # of Content to force a rebuild.
+        log("master already exists, graph left untouched: " + path)
+        return unreal.EditorAssetLibrary.load_asset(path)
+    material = asset_tools().create_asset(PBR_MASTER, MASTER_DIR, unreal.Material, unreal.MaterialFactoryNew())
     if material is None:
+        warn("create_asset failed for " + path)
         return None
 
     base_color = add_texture_parameter(
         material, "BaseColorTexture", unreal.MaterialSamplerType.SAMPLERTYPE_COLOR, -1100, -400
     )
+    set_node_texture(base_color, defaults["T_SD_Default_BaseColor"])
     connect_property(base_color, "RGB", unreal.MaterialProperty.MP_BASE_COLOR)
 
     orm = add_texture_parameter(
         material, "ORMTexture", unreal.MaterialSamplerType.SAMPLERTYPE_MASKS, -1100, -120
     )
+    set_node_texture(orm, defaults["T_SD_Default_ORM"])
     orm_weight = add_scalar(material, "ORMWeight", 1.0, -1100, 140)
     roughness = add_scalar(material, "Roughness", 0.5, -1100, 260)
     metallic = add_scalar(material, "Metallic", 0.0, -1100, 380)
@@ -240,6 +301,7 @@ def build_pbr_master():
     normal = add_texture_parameter(
         material, "NormalTexture", unreal.MaterialSamplerType.SAMPLERTYPE_NORMAL, -1100, 680
     )
+    set_node_texture(normal, defaults["T_SD_Default_Normal"])
     _connect_normal(material, normal)
 
     unreal.MaterialEditingLibrary.layout_material_expressions(material)
@@ -247,6 +309,31 @@ def build_pbr_master():
     unreal.EditorAssetLibrary.save_loaded_asset(material)
     log("built master " + path)
     return material
+
+
+def set_node_texture(node, texture_path):
+    """Bind a default texture to a texture parameter node and read it back.
+
+    A Normal or Masks sampler left unbound falls back to the engine's
+    DefaultTexture, whose sampler type is Color. UE then refuses to compile the
+    material ("Default Material will be used in game") and every instance
+    silently renders grey - only visible once the editor is opened. Reading the
+    value back here makes that failure show up in the import log instead.
+    """
+    texture = unreal.EditorAssetLibrary.load_asset(texture_path)
+    if texture is None:
+        warn("missing default texture " + texture_path)
+        return
+    set_prop(node, "texture", texture)
+    actual = node.get_editor_property("texture")
+    if actual is None:
+        warn("default texture did not stick on '{}'".format(node.get_editor_property("parameter_name")))
+        return
+    log("node '{}' -> {} ({})".format(
+        node.get_editor_property("parameter_name"),
+        actual.get_name(),
+        actual.get_editor_property("compression_settings"),
+    ))
 
 
 def _connect_normal(material, normal):
@@ -288,8 +375,12 @@ def _connect_normal(material, normal):
 
 def build_flat_master():
     path = "{}/{}".format(MASTER_DIR, FLAT_MASTER)
-    material = ensure_asset(path, FLAT_MASTER, MASTER_DIR, unreal.Material, unreal.MaterialFactoryNew())
+    if unreal.EditorAssetLibrary.does_asset_exist(path):
+        log("master already exists, graph left untouched: " + path)
+        return unreal.EditorAssetLibrary.load_asset(path)
+    material = asset_tools().create_asset(FLAT_MASTER, MASTER_DIR, unreal.Material, unreal.MaterialFactoryNew())
     if material is None:
+        warn("create_asset failed for " + path)
         return None
 
     base_color = add_vector(material, "BaseColor", (0.02, 0.02, 0.02), -600, -200)
@@ -435,14 +526,11 @@ def import_fbx(fbx_path, destination_path, destination_name):
     return imported[0]
 
 
-def import_texture(asset, relative_path, name, srgb, compression):
-    source = os.path.join(SOURCE_ROOT, asset["src"], relative_path.replace("/", os.sep))
-    if not os.path.isfile(source):
-        warn("missing source texture: " + source)
-        return
+def import_texture_file(source, destination_path, name, srgb, compression):
+    """Import one image and apply the colour space and compression settings."""
     task = unreal.AssetImportTask()
     task.set_editor_property("filename", source)
-    task.set_editor_property("destination_path", asset["dest"] + "/Textures")
+    task.set_editor_property("destination_path", destination_path)
     task.set_editor_property("destination_name", name)
     task.set_editor_property("automated", True)
     task.set_editor_property("replace_existing", True)
@@ -457,6 +545,14 @@ def import_texture(asset, relative_path, name, srgb, compression):
     set_prop(texture, "compression_settings", getattr(unreal.TextureCompressionSettings, compression))
     set_prop(texture, "flip_green_channel", False)
     unreal.EditorAssetLibrary.save_loaded_asset(texture)
+
+
+def import_texture(asset, relative_path, name, srgb, compression):
+    source = os.path.join(SOURCE_ROOT, asset["src"], relative_path.replace("/", os.sep))
+    if not os.path.isfile(source):
+        warn("missing source texture: " + source)
+        return
+    import_texture_file(source, asset["dest"] + "/Textures", name, srgb, compression)
 
 
 def import_geometry(asset):
@@ -589,7 +685,8 @@ def process_asset(asset, masters, fallback):
 
 def main():
     unreal.EditorAssetLibrary.make_directory(MASTER_DIR)
-    masters = {"pbr": build_pbr_master(), "flat": build_flat_master()}
+    defaults = ensure_default_textures()
+    masters = {"pbr": build_pbr_master(defaults), "flat": build_flat_master()}
     if masters["pbr"] is None or masters["flat"] is None:
         warn("master material creation failed, stopping")
         return
