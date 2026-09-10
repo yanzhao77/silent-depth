@@ -65,7 +65,30 @@ def main():
         doc = (getattr(func, "__doc__", "") or "").replace("\n", " | ")
         unreal.log("[probe] sig {}: {}".format(name, doc))
 
+    probe_materials()
     unreal.log("[probe] PROBE_OK")
+
+
+def probe_materials():
+    """Report which project materials can drive material instances."""
+    paths = [
+        "/Game/Materials/M_SubmarineHull",
+        "/Game/Materials/M_PropellerBronze",
+        "/Game/Materials/M_SubmarineWater",
+        "/Game/Materials/MI_Ocean_SilentDepth",
+    ]
+    for path in paths:
+        material = unreal.EditorAssetLibrary.load_asset(path)
+        if material is None:
+            unreal.log_warning("[probe] material not found: " + path)
+            continue
+        try:
+            scalars = sorted(str(n) for n in unreal.MaterialEditingLibrary.get_scalar_parameter_names(material))
+            vectors = sorted(str(n) for n in unreal.MaterialEditingLibrary.get_vector_parameter_names(material))
+            textures = sorted(str(n) for n in unreal.MaterialEditingLibrary.get_texture_parameter_names(material))
+            unreal.log("[probe] material {} scalars={} vectors={} textures={}".format(path, scalars, vectors, textures))
+        except Exception as exc:  # noqa: BLE001
+            unreal.log_warning("[probe] material introspection failed for {}: {}".format(path, exc))
 
 
 main()
