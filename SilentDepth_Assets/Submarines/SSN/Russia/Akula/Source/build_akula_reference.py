@@ -4,13 +4,19 @@ import math
 from pathlib import Path
 
 import bpy
-from mathutils import Vector
+from mathutils import Matrix, Vector
 
 
 ASSET_ID = "RU_SSN_Akula"
-ASSET_ROOT = Path("/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets")
-ROOT = ASSET_ROOT / "Submarines" / "SSN" / "Russia" / "Akula"
+# Resolve the asset root from this file's own location
+# (<root>/Submarines/SSN/Russia/Akula/Source/build_akula_reference.py) so the
+# factory runs on any machine instead of a hardcoded author path.
+ROOT = Path(__file__).resolve().parents[1]
+ASSET_ROOT = ROOT.parents[3]
 TODAY = "2026-09-09"
+
+# Collection holding the shaft, hub and blades, exported as their own asset.
+PROPULSION_COLLECTION = "07_PROPULSION"
 
 LENGTH = 110.2
 BEAM = 13.6
@@ -542,14 +548,47 @@ def object_stats(obj):
 
 def build_exports(collections, collision):
     visual = all_visual_meshes(collections)
-    meshes = [duplicate_join_export_mesh(f"{ASSET_ID}_LOD0", visual, collections["LOD0"])]
+    # The propeller is exported on its own. A hull with the blades welded in
+    # cannot animate them in an engine, which is how the first export shipped.
+    propulsion = set(collections[PROPULSION_COLLECTION].objects) if PROPULSION_COLLECTION in collections else set()
+    hull_visual = [obj for obj in visual if obj not in propulsion]
+    prop_visual = [obj for obj in visual if obj in propulsion]
+
+    meshes = [duplicate_join_export_mesh(f"{ASSET_ID}_LOD0", hull_visual, collections["LOD0"])]
     for name, ratio in (("LOD1", 0.52), ("LOD2", 0.24), ("LOD3", 0.095)):
-        meshes.append(duplicate_join_export_mesh(f"{ASSET_ID}_{name}", visual, collections[name], ratio))
+        meshes.append(duplicate_join_export_mesh(f"{ASSET_ID}_{name}", hull_visual, collections[name], ratio))
     export_selected(ROOT / "FBX" / f"{ASSET_ID}_LOD0.fbx", [meshes[0]] + collision)
     for mesh in meshes[1:]:
         export_selected(ROOT / "FBX" / f"{mesh.name}.fbx", [mesh])
     export_selected(ROOT / "Collision" / f"{ASSET_ID}_COLLISION.fbx", collision)
+
+    if prop_visual:
+        origin = propeller_shaft_origin(prop_visual)
+        propeller = duplicate_join_export_mesh(f"{ASSET_ID}_PROP", prop_visual, collections["LOD0"])
+        # Move the geometry onto the shaft and leave the object transform at the
+        # origin, so the exported pivot IS the rotation axis. Baking the shaft
+        # into the object transform instead makes the engine offset it twice.
+        propeller.data.transform(Matrix.Translation(-origin) @ propeller.matrix_world)
+        propeller.matrix_world = Matrix.Identity(4)
+        export_selected(ROOT / "FBX" / f"{ASSET_ID}_PROP.fbx", [propeller])
+        return [object_stats(mesh) for mesh in meshes] + [object_stats(propeller)]
+
     return [object_stats(mesh) for mesh in meshes]
+
+
+def propeller_shaft_origin(objects):
+    """Centre of the propeller hub, which lies on the shaft axis."""
+    hub = next((obj for obj in objects if "PropellerHub" in obj.name), None)
+    targets = [hub] if hub is not None else list(objects)
+    low = Vector((1e9, 1e9, 1e9))
+    high = Vector((-1e9, -1e9, -1e9))
+    for obj in targets:
+        for vertex in obj.data.vertices:
+            position = obj.matrix_world @ vertex.co
+            for axis in range(3):
+                low[axis] = min(low[axis], position[axis])
+                high[axis] = max(high[axis], position[axis])
+    return Vector(((low.x + high.x) / 2, (low.y + high.y) / 2, (low.z + high.z) / 2))
 
 
 def look_at(obj, target):

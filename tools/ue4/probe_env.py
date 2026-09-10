@@ -67,6 +67,7 @@ def main():
 
     probe_materials()
     probe_material_api()
+    probe_player_vessel()
     unreal.log("[probe] EditorStaticMeshLibrary all=" + str(sorted(
         n for n in dir(unreal.EditorStaticMeshLibrary) if not n.startswith("_"))))
     for name in (
@@ -156,6 +157,26 @@ def probe_material_api():
             "set_material_instance_texture_parameter_value",
         ],
     )
+
+
+def probe_player_vessel():
+    """Report where the player hull and propeller pivots sit.
+
+    A static mesh import bakes the FBX object transform into the vertices by
+    default, so a mesh can carry an offset that makes its pivot differ from its
+    geometric centre. That matters when a component is placed by hand.
+    """
+    paths = (
+        ("hull", "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula"),
+        ("prop", "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PROP"),
+    )
+    for label, path in paths:
+        if not unreal.EditorAssetLibrary.does_asset_exist(path):
+            unreal.log_warning("[probe] {} mesh missing: {}".format(label, path))
+            continue
+        bounds = unreal.EditorAssetLibrary.load_asset(path).get_bounds()
+        unreal.log("[probe] {} bounds origin={} extent={}".format(
+            label, bounds.origin, bounds.box_extent))
 
 
 main()

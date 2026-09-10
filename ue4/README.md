@@ -51,7 +51,7 @@ Blender 工程、FBX 导出、PNG 贴图、生产脚本与科技树都在仓库�
 
 - 资产按 1:1 比例导入（艇长 110.2 m），艏部朝 +X、Z 轴向上，与 Pawn 的前向一致，因此不需要相对旋转。`SD_PLAYER_HULL_YAW_DEG` 单独留作朝向开关：如果某艘艇的艏部朝向相反，把它设成 180 即可。
 - 摄像机臂长、俯视高度、艏艉浪花位置和缩放范围全部由艇体包围盒按比例推导（`SD_CAMERA_ARM_RATIO` 等常量），换一艘艇不用重新调参。
-- 螺旋桨是独立组件，绕艇体局部 X 轴旋转，转速跟着航速（`SD_PLAYER_PROP_MESH`，桨轴位置 `SD_PLAYER_PROP_SHAFT_CM = -5440`，取自 Blender 主文件里桨毂的 x = -54.4 m）。资产库原本把桨叶焊在艇体网格里，所以艇体和推进器是从源资产切出来的派生几何，见 `ue4/SilentDepthUE/ArtSource/README.md`；`SD_HULL_INCLUDES_PROPELLER` 置 true 可退回「桨叶在艇体内、不旋转」的情况。
+- 螺旋桨是独立组件，绕艇体局部 X 轴旋转，转速跟着航速（`SD_PLAYER_PROP_MESH`，桨轴位置 `SD_PLAYER_PROP_SHAFT_CM = -5440`，取自 Blender 里桨毂的 x = -54.4 m）。推进器由资产工厂单独导出（`FBX/RU_SSN_Akula_PROP.fbx`），艇体 LOD 不含桨叶；`SD_HULL_INCLUDES_PROPELLER` 置 true 可退回「桨叶在艇体内、不旋转」的情况。
 - 原来的 `SM_HeroSubmarine`（约 37 m，1.9 倍缩放）不再担任玩家载具，但资产保留，海洋展示场景仍在引用它。
 
 ## 仓库体积

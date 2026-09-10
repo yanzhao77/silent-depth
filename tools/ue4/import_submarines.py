@@ -88,11 +88,9 @@ ASSETS = [
         "src": "Submarines/SSN/Russia/Akula",
         "dest": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula",
         "lod_indices": (1, 2, 3),
-        # The library exports weld the propeller into the hull, so the blades
-        # cannot rotate. tools/ue4/export_sub_split.py cuts a UE-side derivative
-        # (hull without the propeller, plus the propeller on its own with the
-        # origin on the shaft axis) and the geometry is imported from there.
-        "fbx_src": "ue4/SilentDepthUE/ArtSource/Derived/RU_SSN_Akula",
+        # The factory exports the propeller as its own FBX (hull LODs carry no
+        # blade geometry) with the origin on the shaft axis, so a component can
+        # spin it. See the asset's Source/build_akula_reference.py.
         "prop_fbx": "RU_SSN_Akula_PROP.fbx",
         # Only the two Drawing maps are used by the current Drawing-based model.
         # T_Akula_Hull_*/Rubber_*/Reference_* belong to the abandoned earlier revision.

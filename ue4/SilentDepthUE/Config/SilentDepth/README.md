@@ -15,7 +15,7 @@
 ## 校验哈希
 
 ```text
-submarine_manifest.json d3131d15d5dcaff557d3b3697e7d15f8220201d5426ed629c53e060dc27260dd
+submarine_manifest.json 4742ee18978c00d0fff7b6ef0588364c05f42d32eacc587b41e722faca865282
 technology_tree.json    068f5db4e508035f65c204cf99f825d6bffac4b0abcef503a89629900b96c14b
 tier_manifest.json      ecb70105553111a6ee6fa20e706b5610b12e6809297a78c28091a1dca1a83b2c
 ```

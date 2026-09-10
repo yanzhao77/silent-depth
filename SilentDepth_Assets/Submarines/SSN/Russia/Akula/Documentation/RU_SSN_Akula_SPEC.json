@@ -15,50 +15,62 @@
   "exports": [
     {
       "name": "RU_SSN_Akula_LOD0",
-      "vertices": 66392,
-      "triangles": 130428,
+      "vertices": 59960,
+      "triangles": 117600,
       "uv_channels": 2,
-      "materials": 6,
+      "materials": 5,
       "dimensions_m": [
-        110.1999,
+        109.1054,
         19.6,
         28.4397
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD1",
-      "vertices": 34458,
-      "triangles": 67822,
+      "vertices": 31115,
+      "triangles": 61150,
       "uv_channels": 2,
-      "materials": 6,
+      "materials": 5,
       "dimensions_m": [
-        110.2,
+        109.1054,
         19.6,
         28.4397
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD2",
-      "vertices": 16093,
-      "triangles": 31301,
+      "vertices": 14536,
+      "triangles": 28223,
       "uv_channels": 2,
-      "materials": 6,
+      "materials": 5,
       "dimensions_m": [
-        110.2001,
+        109.1054,
         19.6001,
         28.4398
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD3",
-      "vertices": 6637,
-      "triangles": 12390,
+      "vertices": 6010,
+      "triangles": 11172,
       "uv_channels": 2,
-      "materials": 6,
+      "materials": 5,
       "dimensions_m": [
-        110.2008,
+        109.1055,
         19.6003,
         28.4399
+      ]
+    },
+    {
+      "name": "RU_SSN_Akula_PROP",
+      "vertices": 6432,
+      "triangles": 12828,
+      "uv_channels": 2,
+      "materials": 2,
+      "dimensions_m": [
+        1.75,
+        4.1502,
+        4.2353
       ]
     }
   ],
@@ -70,26 +82,27 @@
     "UE4.27实际导入未验证"
   ],
   "sha256": {
-    "Blend/RU_SSN_Akula_MASTER.blend": "f5438f07fe648c6a406974710ac74c947da1ac2e9031be0c72d71d6967b41a9a",
-    "FBX/RU_SSN_Akula_LOD3.fbx": "89a3d1ecdba81b13a27041bcdf20bc5da750f8e2bd6f07eebd6ad0f52778f14a",
-    "FBX/RU_SSN_Akula_LOD2.fbx": "2df28a81779c8e370d0ee6f82b2406428a8de5e6a5263a959b98b7b03ac6a0fd",
-    "FBX/RU_SSN_Akula_LOD0.fbx": "56629b1ab7af7caf014116c96900a44c199b453552ae4c879b877143f2ea9161",
-    "FBX/RU_SSN_Akula_LOD1.fbx": "9089b7736c01014ef82571bca1b35d63eb6cdbe9749caf730a95225f0a5e0239",
-    "Collision/RU_SSN_Akula_COLLISION.fbx": "e77c47892966f9ac7500ab7a20a2b34b1e46ee499a911721b9a3cd978025f192",
-    "Source/build_akula_reference.py": "0c99ff23bb9e9baee1e59f7039eef1c34f1f9aea17e8eaa0bf8c1477bd147281",
-    "Source/build_akula_drawing.py": "ceba2b29d2eebec4d454430b92b23455f733006115df25106a4c2a3da4388937",
-    "Source/validate_akula_drawing.py": "e1ef586aee9bbe494519dffda23230519d4dd2185f7f0096ceffab8c4b34b766",
-    "Source/drawing_overlay.py": "af51ecb16d01ea3eb0ca548a181b4e779eca9743d76d9ad430d507d52067f3df",
-    "Source/akula_drawing_geometry.py": "8ebe2c32d4dbf53f65587ab59006405767b2712a2e2c9c900dc0bd772ae5be5b",
-    "Preview/Hero.png": "6309beb7a5f641471c6b7dee031c8b2ea05cda03f295f7680bd0ed4832768806",
-    "Preview/Stern.png": "f476e292b3303167e0838c2d7b115f6b45840bbe1141dd57123b1b5c2ef9e7d2",
-    "Preview/Sail.png": "c76f2fd3edc3314b99845870a1a92c8f06ca27dd68791e728abc8bd312dc3a4b",
-    "Preview/Deck.png": "08a2a298660dbf5fe9976c202e149ae49e30c4e5dad52ef45899e2833fb3fede",
-    "Preview/Rear.png": "f66714b974a704406706749b236a556ad323983c05e41dccb608778d7d667d64",
-    "Preview/Tail_QA.png": "5a1ecd784c98a882188a05712f29b0ef4d0d525f7f8ebdee48cf930c1287376c",
-    "Preview/Profile.png": "c91ff69335e4ad588e0e111c2ffb8b004e28c62702a9aaeca0b9308a6ce1ffa3",
-    "Preview/Reference_Overlay.png": "554dde6879b58c7d1bc4ccb08f31a1659c49ec32b66321eb7cd1ae6a70eae64b",
-    "Textures/BaseColor/T_Akula_Drawing_bottom.png": "bb730f831f9392d378ff92e531f48fe7980734619de65de4d8a87d1fd61bc5f4",
-    "Textures/BaseColor/T_Akula_Drawing_hull.png": "b215896b641c3ff843258d2e9b04dba979a700c0dd7840f7c65473c44776d1a2"
+    "Blend\\RU_SSN_Akula_MASTER.blend": "73a33ed14da2be8502f258ae35f14bbc33887c3ed8fd0f00d7f862dac407d8d2",
+    "FBX\\RU_SSN_Akula_LOD0.fbx": "78ae22ed89f63dfa41143e39ada7519595bb95ea98c94cba1f3ca600feb8cc3d",
+    "FBX\\RU_SSN_Akula_LOD1.fbx": "59ec015369e9101fbb854783a3793b76e666cb59c11da51b1ef7ff5bf76f16bc",
+    "FBX\\RU_SSN_Akula_LOD2.fbx": "337f0443dcf2a041e4d2f0507fcb4d7d5071709afdf968adb28ba68857081fc2",
+    "FBX\\RU_SSN_Akula_LOD3.fbx": "666f723c44c9795db19b56a6b64f0a4c67718fe8588364a0f965d9cc0c114dfd",
+    "FBX\\RU_SSN_Akula_PROP.fbx": "d850052f03d4efc5c6ad271b9434d0d14d2c2b067b211fc28ed5d91f7623c2f2",
+    "Collision\\RU_SSN_Akula_COLLISION.fbx": "d6e26a299443444234dac9b273bd019d3de36e0d5d898f52af8872b1fc0e0fa7",
+    "Source\\akula_drawing_geometry.py": "8ebe2c32d4dbf53f65587ab59006405767b2712a2e2c9c900dc0bd772ae5be5b",
+    "Source\\build_akula_drawing.py": "5db9238606108c1db646efa472955d270d014a38fbe6044ba9c9461f14eb0f67",
+    "Source\\build_akula_reference.py": "19550f43d4b3b3eb9be62643f99b3cc82f240edf0282e6cd68d02705b20119ae",
+    "Source\\drawing_overlay.py": "af51ecb16d01ea3eb0ca548a181b4e779eca9743d76d9ad430d507d52067f3df",
+    "Source\\validate_akula_drawing.py": "e1ef586aee9bbe494519dffda23230519d4dd2185f7f0096ceffab8c4b34b766",
+    "Preview\\Deck.png": "391fa3d076111339afe7e1214b0a80f231347c3a1c4868faa53cef4ed236b84d",
+    "Preview\\Hero.png": "0097d59dbbe389accfdfacb6135ada4ee0e230d159c3aaa296ff1e8a27952b9f",
+    "Preview\\Profile.png": "919ba47bddf35f720ee9fdf3f062b47509d5e795ca63c27d9ae6708661559ef4",
+    "Preview\\Rear.png": "2eefb4c224cc03a68a834282af7f0fd404b43d48a33755d4c81fc6d7d3e5e723",
+    "Preview\\Reference_Overlay.png": "554dde6879b58c7d1bc4ccb08f31a1659c49ec32b66321eb7cd1ae6a70eae64b",
+    "Preview\\Sail.png": "675a5a39ef11629b29ffdd54d59c168adbef41bcbaa9db3224e88ca56e2c123e",
+    "Preview\\Stern.png": "c3d8a39b8b7b3a58a1208632903255c0bfe5c2b2e81ea9451e5bce326de8ef75",
+    "Preview\\Tail_QA.png": "3d476f21bbd5dbd36475e97acb72f3a8f02960b874ee3dc05487cf0e8dd1f847",
+    "Textures\\BaseColor\\T_Akula_Drawing_bottom.png": "bb730f831f9392d378ff92e531f48fe7980734619de65de4d8a87d1fd61bc5f4",
+    "Textures\\BaseColor\\T_Akula_Drawing_hull.png": "b215896b641c3ff843258d2e9b04dba979a700c0dd7840f7c65473c44776d1a2"
   }
 }

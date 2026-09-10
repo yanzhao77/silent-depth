@@ -142,20 +142,20 @@ LogMaterial: Warning: [AssetLog] M_SD_Submarine_PBR.uasset:
 
 ### 推进器切分（RU_SSN_Akula）
 
-资产库把每艘艇导成单个静态网格，推进器焊在艇体里，桨叶无法单独旋转。Akula 用一份 UE 侧派生几何解决：
+资产库最初把每艘艇导成单个静态网格，推进器焊在艇体里，桨叶无法单独旋转。**现在由资产工厂自己分开导出**，UE 直接消费：
 
 | 文件 | 内容 |
 |---|---|
-| `ArtSource/Derived/RU_SSN_Akula/RU_SSN_Akula_LOD0..3.fbx` | 艇体，已删除推进器面；LOD0 带 10 个 UCX 碰撞体 |
-| `ArtSource/Derived/RU_SSN_Akula/RU_SSN_Akula_PROP.fbx` | 推进器，原点在桨轴（Blender x = -54.4 m, y = z = 0） |
+| `SilentDepth_Assets/.../Akula/FBX/RU_SSN_Akula_LOD0..3.fbx` | 艇体，不含桨叶；LOD0 带 10 个 UCX 碰撞体 |
+| `SilentDepth_Assets/.../Akula/FBX/RU_SSN_Akula_PROP.fbx` | 推进器，原点在桨轴（Blender x = -54.4 m，y = z = 0） |
 
-切分规则按**材质**判定：`SUB_MAT_Drawing_Bronze` 只被桨毂和 7 片桨叶使用（`akula_drawing_geometry.py` 里只有两处 `m["prop"]`），所以在合并后的 LOD 网格上删除该材质的面就等于精确去掉推进器。四个 LOD 共用这一条规则。
+工厂侧实现在 `Source/build_akula_reference.py` → `build_exports()`：按 `07_PROPULSION` 集合把推进器从可视网格里分出来，艇体 LOD 只用剩下的部分；推进器单独合并后把几何平移到桨轴中心、对象变换归零，这样导出的枢轴就是旋转轴。**关键点是不能把桨轴位移留在对象变换上**——UE 导入静态网格时会把对象变换烘进顶点，枢轴留在资产原点，组件再按桨轴摆放就会偏移两次（实测偏了 54 米）。
 
-导入后的结果：艇体网格 5 个材质槽（Bronze 随桨叶消失），推进器网格 1 个槽、9,694 顶点、直径 4.25 m。
+副作用：艇体长度从 110.2 m 变成 109.1 m（桨叶原先计入包围盒），LOD 材质槽从 6 个降到 5 个。SPEC 的 `exports` 现在含 `RU_SSN_Akula_PROP`。
 
 推进器需要的材质实例由 `import_prop()` 单独补齐——它在艇体上已经不存在，不能指望艇体那一轮建出来。
 
-源资产更新后派生的 FBX 会过期，需要重跑 `tools/ue4/export_sub_split.py`。
+其余两艘（Typhoon、Yasen）的导出脚本还没做同样的切分，它们的桨叶目前仍焊在艇体里。
 
 材质数值**不在这里发明**，全部取自各艇自己的 Blender 构建脚本：
 
