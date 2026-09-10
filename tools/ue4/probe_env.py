@@ -67,6 +67,21 @@ def main():
 
     probe_materials()
     probe_material_api()
+    unreal.log("[probe] EditorStaticMeshLibrary all=" + str(sorted(
+        n for n in dir(unreal.EditorStaticMeshLibrary) if not n.startswith("_"))))
+    for name in (
+        "import_lod",
+        "add_simple_collisions",
+        "bulk_set_convex_decomposition_collisions",
+        "set_convex_decomposition_collisions",
+        "get_convex_collision_count",
+        "get_simple_collision_count",
+        "get_collision_complexity",
+        "remove_collisions",
+    ):
+        func = getattr(unreal.EditorStaticMeshLibrary, name, None)
+        doc = (getattr(func, "__doc__", "") or "").replace("\n", " | ")
+        unreal.log("[probe] sig {}: {}".format(name, doc))
     unreal.log("[probe] PROBE_OK")
 
 
@@ -106,6 +121,9 @@ def probe_material_api():
         "MaterialExpressionAppendVector",
         "MaterialExpressionNormalize",
         "MaterialExpressionTextureObjectParameter",
+        "MaterialExpressionLinearInterpolate",
+        "MaterialExpressionMultiply",
+        "MaterialExpressionSubtract",
     ]
     missing = [c for c in needed_classes if not hasattr(unreal, c)]
     unreal.log("[probe] material expression classes present={}".format(
