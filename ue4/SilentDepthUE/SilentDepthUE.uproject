@@ -17,6 +17,7 @@
 		{ "Name": "GeometryProcessing", "Enabled": true },
 		{ "Name": "BlueprintMaterialTextureNodes", "Enabled": true },
 		{ "Name": "EditorScriptingUtilities", "Enabled": true },
+		{ "Name": "PythonScriptPlugin", "Enabled": true },
 		{ "Name": "GLTFImporter", "Enabled": true }
 	]
 }

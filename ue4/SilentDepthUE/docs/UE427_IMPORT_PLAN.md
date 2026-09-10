@@ -4,7 +4,32 @@
 
 **源资产路径以仓库根为基准**：`SilentDepth_Assets/`（即本文件的 `../../../SilentDepth_Assets/`，见 `ArtSource/README.md`）。
 
-**当前状态：三个资产均为 `VALIDATING`，UE4.27 实际导入从未执行过。** 导入后必须回填 `SilentDepth_Assets/Manifest/submarine_manifest.json` 并同步到 `Config/SilentDepth/submarine_manifest.json`。
+## 当前状态
+
+| 资产 | UE 导入 | 依据 |
+|---|---|---|
+| RU_SSBN_Typhoon | 已导入 2026-09-10 | `tools/ue4/import_typhoon.py`，实测记录见下 |
+| RU_SSN_Akula | 未导入 | 仅 Blender 侧校验 |
+| RU_SSN_Yasen | 未导入 | 仅 Blender 侧校验 |
+
+三个资产在资产库 `production_status.json` 中仍是 `VALIDATING`：那反映的是 Blender 侧流水线状态，回填 `submarine_manifest.json` 的 `lod0..lod3` / `collision` 字段尚未做（字段语义未定，见文末）。
+
+### RU_SSBN_Typhoon 实测记录
+
+环境：UE 4.27.2-18319896，headless 执行 `UE4Editor-Cmd -run=pythonscript`。
+
+| 项 | 文档期望 | 实测 |
+|---|---|---|
+| LOD 数 | 4 | 4 |
+| 材质槽 | 8 | 8 |
+| 艇长 | 175 m = 17,500 cm | 17,500 cm |
+| 包围盒 | 175 x 29 x 28.33 m | 175 x 29 x 28.33 m |
+| UCX 碰撞体 | 13 | 13 |
+| 贴图 | 6 张 | 6 张，sRGB 与压缩设置按下方表格 |
+
+产物位于 `/Game/SilentDepth/Art/Submarines/SSBN/Russia/Typhoon/`，共 10 个 uasset（46 MB）。LOD1-3 的源网格保留在同目录 `LODSources/` 下，供后续重新挂载 LOD。
+
+**尚未完成**：8 个材质槽还是空的，网格目前用默认材质显示。建材质实例需要先确认项目里哪个母材质可参数化。
 
 ## 目标路径约定
 
@@ -100,3 +125,7 @@
 3. **光照。** 移动潜艇用 Movable 加动态光照；若要静态烘焙，Lightmap Coordinate Index 设 1，从 2048 起验证 padding 与重叠。
 4. **命名与注册。** 导入后把实际资产路径写回 `submarine_manifest.json` 的 `lod0..lod3` / `collision` 字段，并把三个资产从 `VALIDATING` 推进。
 5. **ProjectConfig.json 已失真。** 其 `asset_root` 等字段仍指向 macOS 旧路径 `/Users/sjw/Documents/...`；`SilentDepth_Assets/Tools/` 脚本用相对路径定位不受影响，但该配置作为记录需要更新。
+
+## 未决事项
+
+`submarine_manifest.json` 里 `master` / `lod0..lod3` / `collision` / `textures` 这些字段目前全是空字符串，语义未定义：既可以填资产库内的源文件相对路径，也可以填 UE 资产路径。两种填法对资产工厂和 UE 侧的意义不同，**在定下来之前不要回填**，否则 54 条记录会各写各的。建议由资产工厂侧先定义字段语义，UE 侧再同步。
