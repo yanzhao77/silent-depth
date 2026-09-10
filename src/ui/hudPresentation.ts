@@ -131,7 +131,7 @@ export function deriveVisiblePanels(mode: HudMode): PanelVisibility {
     periscopeControlCard: true,
     contactsCard: true,
     fireControlCard: 'placeholder',
-    controlsCard: false,
+    controlsCard: true, // in-HUD controls & key reference stays visible while running
     timeline: true,
     periscopeView: false,
   };
@@ -166,28 +166,28 @@ export function deriveVisiblePanels(mode: HudMode): PanelVisibility {
         torpedoesCard: false,
         contactsCard: false,
         fireControlCard: 'hidden',
-        controlsCard: false,
+        controlsCard: true,
         timeline: false,
         periscopeView: true,
       };
     case 'warning':
       return {
         ...base,
-        controlsCard: false,
+        controlsCard: true,
         timeline: true,
       };
     case 'firecontrol':
       return {
         ...base,
         fireControlCard: 'solution',
-        controlsCard: false,
+        controlsCard: true,
         timeline: true,
       };
     case 'contact':
       return {
         ...base,
         fireControlCard: 'placeholder',
-        controlsCard: false,
+        controlsCard: true,
         timeline: true,
       };
     case 'quiet':
@@ -197,7 +197,7 @@ export function deriveVisiblePanels(mode: HudMode): PanelVisibility {
         torpedoesCard: false,
         contactsCard: false,
         fireControlCard: 'hidden',
-        controlsCard: false,
+        controlsCard: true,
         timeline: false,
       };
     case 'normal':

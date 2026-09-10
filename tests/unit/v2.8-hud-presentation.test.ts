@@ -395,20 +395,20 @@ describe('deriveVisiblePanels', () => {
     expect(panels.periscopeView).toBe(false);
   });
 
-  it('periscope: shows periscope view, hides contacts/firecontrol/timeline', () => {
+  it('periscope: shows periscope view, hides contacts/firecontrol/timeline (controls stay visible)', () => {
     const panels = deriveVisiblePanels('periscope');
     expect(panels.periscopeView).toBe(true);
     expect(panels.contactsCard).toBe(false);
     expect(panels.fireControlCard).toBe('hidden');
     expect(panels.timeline).toBe(false);
-    expect(panels.controlsCard).toBe(false);
+    expect(panels.controlsCard).toBe(true);
     expect(panels.tasksCard).toBe(false);
     expect(panels.torpedoesCard).toBe(false);
     expect(panels.statusCard).toBe(true);
     expect(panels.periscopeControlCard).toBe(true);
   });
 
-  it('warning: shows all main panels, hides controls', () => {
+  it('warning: shows all main panels (controls visible)', () => {
     const panels = deriveVisiblePanels('warning');
     expect(panels.topbar).toBe(true);
     expect(panels.workspace).toBe(true);
@@ -418,22 +418,22 @@ describe('deriveVisiblePanels', () => {
     expect(panels.periscopeControlCard).toBe(true);
     expect(panels.contactsCard).toBe(true);
     expect(panels.fireControlCard).toBe('placeholder');
-    expect(panels.controlsCard).toBe(false);
+    expect(panels.controlsCard).toBe(true);
     expect(panels.timeline).toBe(true);
     expect(panels.periscopeView).toBe(false);
   });
 
-  it('firecontrol: shows solution (not placeholder), hides controls', () => {
+  it('firecontrol: shows solution (not placeholder), controls visible', () => {
     const panels = deriveVisiblePanels('firecontrol');
     expect(panels.fireControlCard).toBe('solution');
-    expect(panels.controlsCard).toBe(false);
+    expect(panels.controlsCard).toBe(true);
     expect(panels.periscopeView).toBe(false);
   });
 
-  it('contact: shows placeholder fire control, hides controls', () => {
+  it('contact: shows placeholder fire control, controls visible', () => {
     const panels = deriveVisiblePanels('contact');
     expect(panels.fireControlCard).toBe('placeholder');
-    expect(panels.controlsCard).toBe(false);
+    expect(panels.controlsCard).toBe(true);
     expect(panels.periscopeView).toBe(false);
   });
 
@@ -443,7 +443,7 @@ describe('deriveVisiblePanels', () => {
     expect(panels.torpedoesCard).toBe(false);
     expect(panels.contactsCard).toBe(false);
     expect(panels.fireControlCard).toBe('hidden');
-    expect(panels.controlsCard).toBe(false);
+    expect(panels.controlsCard).toBe(true);
     expect(panels.timeline).toBe(false);
     expect(panels.statusCard).toBe(true);
     expect(panels.periscopeControlCard).toBe(true);
@@ -460,7 +460,7 @@ describe('deriveVisiblePanels', () => {
     expect(panels.periscopeControlCard).toBe(true);
     expect(panels.contactsCard).toBe(true);
     expect(panels.fireControlCard).toBe('placeholder');
-    expect(panels.controlsCard).toBe(false);
+    expect(panels.controlsCard).toBe(true);
     expect(panels.timeline).toBe(true);
     expect(panels.periscopeView).toBe(false);
   });
