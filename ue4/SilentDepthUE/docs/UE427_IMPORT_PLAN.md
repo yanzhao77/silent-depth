@@ -140,6 +140,23 @@ LogMaterial: Warning: [AssetLog] M_SD_Submarine_PBR.uasset:
 
 `M_SD_Submarine_PBR` / `M_SD_Submarine_Flat` 存在时，脚本只复用、不重建节点图——否则每次运行都会往图里再追加一整份重复节点。改母材质结构需要先把 `Content/SilentDepth/Art` 移走再跑。
 
+### 推进器切分（RU_SSN_Akula）
+
+资产库把每艘艇导成单个静态网格，推进器焊在艇体里，桨叶无法单独旋转。Akula 用一份 UE 侧派生几何解决：
+
+| 文件 | 内容 |
+|---|---|
+| `ArtSource/Derived/RU_SSN_Akula/RU_SSN_Akula_LOD0..3.fbx` | 艇体，已删除推进器面；LOD0 带 10 个 UCX 碰撞体 |
+| `ArtSource/Derived/RU_SSN_Akula/RU_SSN_Akula_PROP.fbx` | 推进器，原点在桨轴（Blender x = -54.4 m, y = z = 0） |
+
+切分规则按**材质**判定：`SUB_MAT_Drawing_Bronze` 只被桨毂和 7 片桨叶使用（`akula_drawing_geometry.py` 里只有两处 `m["prop"]`），所以在合并后的 LOD 网格上删除该材质的面就等于精确去掉推进器。四个 LOD 共用这一条规则。
+
+导入后的结果：艇体网格 5 个材质槽（Bronze 随桨叶消失），推进器网格 1 个槽、9,694 顶点、直径 4.25 m。
+
+推进器需要的材质实例由 `import_prop()` 单独补齐——它在艇体上已经不存在，不能指望艇体那一轮建出来。
+
+源资产更新后派生的 FBX 会过期，需要重跑 `tools/ue4/export_sub_split.py`。
+
 材质数值**不在这里发明**，全部取自各艇自己的 Blender 构建脚本：
 
 | 资产 | 来源 |

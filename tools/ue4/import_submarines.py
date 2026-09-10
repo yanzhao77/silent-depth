@@ -88,6 +88,12 @@ ASSETS = [
         "src": "Submarines/SSN/Russia/Akula",
         "dest": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula",
         "lod_indices": (1, 2, 3),
+        # The library exports weld the propeller into the hull, so the blades
+        # cannot rotate. tools/ue4/export_sub_split.py cuts a UE-side derivative
+        # (hull without the propeller, plus the propeller on its own with the
+        # origin on the shaft axis) and the geometry is imported from there.
+        "fbx_src": "ue4/SilentDepthUE/ArtSource/Derived/RU_SSN_Akula",
+        "prop_fbx": "RU_SSN_Akula_PROP.fbx",
         # Only the two Drawing maps are used by the current Drawing-based model.
         # T_Akula_Hull_*/Rubber_*/Reference_* belong to the abandoned earlier revision.
         "textures": [
@@ -555,10 +561,18 @@ def import_texture(asset, relative_path, name, srgb, compression):
     import_texture_file(source, asset["dest"] + "/Textures", name, srgb, compression)
 
 
+def fbx_directory(asset):
+    """Where this asset's LOD exports live."""
+    if asset.get("fbx_src"):
+        return os.path.join(REPO_ROOT, asset["fbx_src"])
+    return os.path.join(SOURCE_ROOT, asset["src"], "FBX")
+
+
 def import_geometry(asset):
     src_dir = os.path.join(SOURCE_ROOT, asset["src"])
+    fbx_dir = fbx_directory(asset)
     mesh_path = import_fbx(
-        os.path.join(src_dir, "FBX", "{}_LOD0.fbx".format(asset["id"])), asset["dest"], "SM_" + asset["id"]
+        os.path.join(fbx_dir, "{}_LOD0.fbx".format(asset["id"])), asset["dest"], "SM_" + asset["id"]
     )
     if mesh_path is None:
         warn("LOD0 import failed for " + asset["id"])
@@ -566,7 +580,7 @@ def import_geometry(asset):
     mesh = unreal.EditorAssetLibrary.load_asset(mesh_path)
 
     for index in asset["lod_indices"]:
-        fbx = os.path.join(src_dir, "FBX", "{}_LOD{}.fbx".format(asset["id"], index))
+        fbx = os.path.join(fbx_dir, "{}_LOD{}.fbx".format(asset["id"], index))
         if not os.path.isfile(fbx):
             warn("missing LOD{} source for {}".format(index, asset["id"]))
             continue
@@ -577,18 +591,17 @@ def import_geometry(asset):
             warn("import_lod failed for LOD{}: {}".format(index, exc))
 
     unreal.EditorAssetLibrary.save_loaded_asset(mesh)
-    clean_sidecar_textures(src_dir)
+    clean_sidecar_textures(fbx_dir)
     return mesh_path
 
 
-def clean_sidecar_textures(src_dir):
+def clean_sidecar_textures(fbx_dir):
     """Delete the <name>.fbm sidecar folders the FBX SDK writes next to exports.
 
     UE extracts embedded FBX textures to disk even when material and texture
     import are both off. Those folders land in the shared source asset library,
     which is version controlled, so they are removed after every import.
     """
-    fbx_dir = os.path.join(src_dir, "FBX")
     if not os.path.isdir(fbx_dir):
         return
     for entry in os.listdir(fbx_dir):
@@ -642,10 +655,32 @@ def assign_slots(asset, mesh_path, discovered, fallback):
         ", unmatched={}".format(unmatched) if unmatched else ""))
 
 
-def report_mesh(asset, mesh_path):
+def import_prop(asset, masters, fallback):
+    """Import the separately exported propeller and wire up its materials.
+
+    The propeller's material is not used by the hull any more, so any instances
+    it needs are built here rather than being left over from the hull pass.
+    """
+    if not asset.get("prop_fbx"):
+        return None
+    source = os.path.join(fbx_directory(asset), asset["prop_fbx"])
+    path = import_fbx(source, asset["dest"], "SM_{}_PROP".format(asset["id"]))
+    if path is None:
+        return None
+    discovered = discover_slots(asset, path)
+    for key in sorted({key for _i, _n, key in discovered if key}):
+        display_name, spec = asset["slots"][key]
+        build_slot_material(asset, display_name, spec, masters)
+    assign_slots(asset, path, discovered, fallback)
+    report_mesh(asset, path, label="{}_PROP".format(asset["id"]))
+    return path
+
+
+def report_mesh(asset, mesh_path, label=None):
     mesh = unreal.EditorAssetLibrary.load_asset(mesh_path)
     lib = unreal.EditorStaticMeshLibrary
-    for label, call in (
+    tag = label or asset["id"]
+    for metric, call in (
         ("lod_count", lambda: lib.get_lod_count(mesh)),
         ("material_slots", lambda: lib.get_number_materials(mesh)),
         ("vertices_lod0", lambda: lib.get_number_verts(mesh, 0)),
@@ -654,15 +689,15 @@ def report_mesh(asset, mesh_path):
         ("simple_collision", lambda: lib.get_simple_collision_count(mesh)),
     ):
         try:
-            log("{} {} = {}".format(asset["id"], label, call()))
+            log("{} {} = {}".format(tag, metric, call()))
         except Exception as exc:  # noqa: BLE001
-            warn("{} {} failed: {}".format(asset["id"], label, exc))
+            warn("{} {} failed: {}".format(tag, metric, exc))
     try:
         extent = mesh.get_bounds().box_extent
         log("{} bounds_cm=({:.1f}, {:.1f}, {:.1f}) length_cm={:.1f}".format(
-            asset["id"], extent.x, extent.y, extent.z, extent.x * 2.0))
+            tag, extent.x, extent.y, extent.z, extent.x * 2.0))
     except Exception as exc:  # noqa: BLE001
-        warn("{} get_bounds failed: {}".format(asset["id"], exc))
+        warn("{} get_bounds failed: {}".format(tag, exc))
 
 
 def process_asset(asset, masters, fallback):
@@ -681,6 +716,9 @@ def process_asset(asset, masters, fallback):
         build_slot_material(asset, display_name, spec, masters)
     assign_slots(asset, mesh_path, discovered, fallback)
     report_mesh(asset, mesh_path)
+    # The propeller reuses the material instances built for the hull, so it is
+    # imported after them.
+    import_prop(asset, masters, fallback)
 
 
 def main():

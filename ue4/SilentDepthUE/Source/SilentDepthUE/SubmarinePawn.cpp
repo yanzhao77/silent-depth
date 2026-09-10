@@ -27,15 +27,24 @@ constexpr float SD_WAKE_SURFACE_HIDE_M = 20.0f;      // wake fully hidden below 
 const TCHAR* SD_PLAYER_HULL_MESH =
     TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula.SM_RU_SSN_Akula");
 
+// Separate propeller, exported by tools/ue4/export_sub_split.py with its origin
+// on the shaft axis so it can spin about the hull's local X.
+const TCHAR* SD_PLAYER_PROP_MESH =
+    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PROP.SM_RU_SSN_Akula_PROP");
+
+// Shaft position along the hull, in centimetres; the Blender master puts the
+// propeller hub at x = -54.4 m. Only meaningful for a separately exported prop.
+constexpr float SD_PLAYER_PROP_SHAFT_CM = -5440.0f;
+
 // Yaw applied to the hull mesh so its bow lines up with the pawn's +X forward.
 // The submarine assets are exported bow on +X, so this is zero; set it to 180
 // if a hull ever arrives pointing the other way.
 constexpr float SD_PLAYER_HULL_YAW_DEG = 0.0f;
 
-// The Akula mesh carries its own propeller welded into the hull, so the separate
-// spinning propeller component is left empty. Animating blades again would need
-// them split into their own asset.
-constexpr bool SD_HULL_INCLUDES_PROPELLER = true;
+// The library exports weld the propeller into the hull. Akula ships a split
+// derivative instead, so the propeller is its own component and can spin. Set
+// this back to true for a hull whose blades are part of the hull mesh.
+constexpr bool SD_HULL_INCLUDES_PROPELLER = false;
 
 // Layout ratios applied to the hull's half length / half height.
 constexpr float SD_FALLBACK_HALF_LENGTH_CM = 1800.0f;
@@ -127,13 +136,13 @@ ASubmarinePawn::ASubmarinePawn()
     Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
     Camera->SetupAttachment(SpringArm);
 
-    // Separate propeller so it can spin at the stern (bow faces +X). The Akula
-    // hull already includes its own propeller, so nothing is attached here; see
-    // SD_HULL_INCLUDES_PROPELLER.
+    // Separate propeller so it can spin at the stern (bow faces +X).
     Propeller = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Propeller"));
     Propeller->SetupAttachment(SceneRoot);
-    if (!SD_HULL_INCLUDES_PROPELLER)
+    if (SD_HULL_INCLUDES_PROPELLER)
     {
+        // Legacy path: the hero hull's blades are its own asset, so the
+        // component only supplies the spinning copy.
         static ConstructorHelpers::FObjectFinder<UStaticMesh> PropMeshObj(
             TEXT("/Game/Meshes/SM_Propeller.SM_Propeller")
         );
@@ -141,11 +150,21 @@ ASubmarinePawn::ASubmarinePawn()
         {
             Propeller->SetStaticMesh(PropMeshObj.Object);
         }
+        Propeller->SetRelativeLocation(FVector(-HullHalfLengthCm, 0.0f, 0.0f));
+        Propeller->SetRelativeScale3D(FVector(2.6f, 2.6f, 2.6f));
     }
-    // UE world units are centimetres; the stern tip sits at -half length.
-    Propeller->SetRelativeLocation(FVector(-HullHalfLengthCm, 0.0f, 0.0f));
-    Propeller->SetRelativeScale3D(FVector(2.6f, 2.6f, 2.6f));
-    Propeller->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
+    else
+    {
+        static ConstructorHelpers::FObjectFinder<UStaticMesh> PropMeshObj(SD_PLAYER_PROP_MESH);
+        if (PropMeshObj.Succeeded())
+        {
+            Propeller->SetStaticMesh(PropMeshObj.Object);
+        }
+        // The prop asset is already 1:1 and centred on the shaft axis.
+        Propeller->SetRelativeLocation(FVector(SD_PLAYER_PROP_SHAFT_CM, 0.0f, 0.0f));
+        Propeller->SetRelativeScale3D(FVector(1.0f));
+    }
+    Propeller->SetRelativeRotation(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
 
     // Bow wave (bow faces +X) and stern wake (trailing directly behind the
     // propeller hub). Both run the /Game/NS_Foam Niagara system and are
@@ -248,9 +267,10 @@ void ASubmarinePawn::Tick(float DeltaSeconds)
     if (!SD_HULL_INCLUDES_PROPELLER)
     {
         PropAngle = FMath::Fmod(PropAngle + SimState.SpeedKt * 120.0 * DeltaSeconds, 360.0);
-        const FQuat BaseYaw(FRotator(0.0f, -90.0f, 0.0f));
-        const FQuat SpinY(FVector(0.0f, 1.0f, 0.0f), FMath::DegreesToRadians(PropAngle));
-        Propeller->SetRelativeRotation((BaseYaw * SpinY).Rotator());
+        // Shaft runs along the hull's local X, so the blade spin is roll.
+        const FQuat BaseYaw(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
+        const FQuat SpinX(FVector(1.0f, 0.0f, 0.0f), FMath::DegreesToRadians(PropAngle));
+        Propeller->SetRelativeRotation((BaseYaw * SpinX).Rotator());
     }
 
     // Wake / bow foam is presentation-only and follows the propeller: it is on
