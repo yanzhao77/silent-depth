@@ -22,6 +22,7 @@ import { WeatherRenderer } from './WeatherRenderer';
 import { EffectsManager } from './EffectsManager';
 import { PeriscopeView } from './PeriscopeView';
 import { TacticalOverlay } from './TacticalOverlay';
+import { drawMinimapOverlay } from './minimap';
 import { PostProcessing } from './PostProcessing';
 import { UnderwaterRenderer } from './UnderwaterRenderer';
 import { BackgroundWorldRenderer, resolveBackgroundWorldState } from './BackgroundWorldRenderer';
@@ -32,6 +33,10 @@ export interface ThreeRendererOptions {
   canvas: HTMLCanvasElement;
   width: number;
   height: number;
+  /** V2.10: minimap canvas owned by the HUD right column (optional). */
+  minimapCanvas?: HTMLCanvasElement | null;
+  /** V2.10: world extent in km (balance.world.mapSizeKm). */
+  mapSizeKm?: number;
 }
 
 /**
@@ -69,12 +74,16 @@ export class ThreeRenderer {
   private _cueTracker: CombatCueTracker;
   private _tacticalOverlay: TacticalOverlay | null = null;
   private _tacticalCanvas: HTMLCanvasElement | null = null;
+  private _minimapCanvas: HTMLCanvasElement | null = null;
+  private _mapSizeKm: number;
   private _disposed = false;
   readonly qualityLevel: QualityLevel;
 
   constructor(opts: ThreeRendererOptions) {
     this.qualityLevel = autoDetectQuality();
     const quality = getQualitySettings();
+    this._mapSizeKm = opts.mapSizeKm ?? 30;
+    this._minimapCanvas = opts.minimapCanvas ?? null;
 
     this._sceneMgr = new SceneManager({
       canvas: opts.canvas,
@@ -246,6 +255,12 @@ export class ThreeRenderer {
       } else {
         this._tacticalCanvas.style.display = 'none';
       }
+    }
+
+    // V2.10: honest bottom-right minimap, drawn from RenderState only. Hidden
+    // ships are never shown; contacts use their uncertain estimated position.
+    if (this._minimapCanvas) {
+      drawMinimapOverlay(this._minimapCanvas, state, this._mapSizeKm);
     }
   }
 

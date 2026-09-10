@@ -379,6 +379,8 @@ export interface Hud {
   showFireWarning(): void;
   /** The HUD root element (CSS class 'hud'). */
   root: HTMLElement;
+  /** V2.10: minimap canvas in the right column (WebGL renderer draws into it). */
+  minimapCanvas: HTMLCanvasElement;
 }
 
 const LOG_CAPACITY = 50;
@@ -649,6 +651,13 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     ),
   ]);
 
+  // V2.10: real-time minimap canvas (square, drawn by the WebGL renderer from
+  // RenderState every frame). Sits in the right column above the controls card.
+  const minimapCanvas = document.createElement('canvas');
+  minimapCanvas.className = 'minimap-canvas';
+  minimapCanvas.setAttribute('aria-label', 'Minimap');
+  const minimapCard = el('div', { className: 'card minimap-card' }, [minimapCanvas]);
+
   const rightCol = el('div', { className: 'hud-right' }, [
     el('div', { className: 'card' }, [
       el('div', { className: 'card-head' }, [label('hud.contacts', 'card-title')]),
@@ -656,6 +665,10 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
       contactList,
     ]),
     fireCard,
+    // V2.10: real-time minimap (bottom-right HUD element, drawn by the WebGL
+    // renderer from RenderState). Honest visibility — only detected contacts
+    // and visible ships are rendered.
+    minimapCard,
     controlsCard,
   ]);
 
@@ -791,6 +804,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   const contactsCardEl = rightCol.firstElementChild as HTMLElement; // contacts card wrapper
   const fireCardEl = fireCard;
   const controlsCardEl = controlsCard;
+  const minimapCardEl = minimapCard;
   const timelineEl = timeline;
 
   // --- state ------------------------------------------------------------------------
@@ -851,6 +865,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
     toggleClass(contactsCardEl, 'hud-panel-hidden', !panels.contactsCard);
     toggleClass(fireCardEl, 'hud-panel-hidden', panels.fireControlCard === 'hidden');
     toggleClass(controlsCardEl, 'hud-panel-hidden', !panels.controlsCard);
+    toggleClass(minimapCardEl, 'hud-panel-hidden', !panels.controlsCard);
     toggleClass(timelineEl, 'hud-panel-hidden', !panels.timeline);
     periscopeView.style.display = panels.periscopeView ? '' : 'none';
 
@@ -1322,7 +1337,7 @@ export function createHud(root: HTMLElement, opts: HudOptions): Hud {
   const info = LANGS.find((l) => l.code === lang);
   if (info !== undefined) setText(langChip, info.label);
 
-  return { update, appendLog, reset, setLanguage, showFireWarning, root };
+  return { update, appendLog, reset, setLanguage, showFireWarning, root, minimapCanvas };
 }
 
 // ---------------------------------------------------------------------------

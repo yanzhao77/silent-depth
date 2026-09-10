@@ -407,6 +407,8 @@ function startMission(id: string): void {
         canvas,
         width: window.innerWidth,
         height: window.innerHeight,
+        minimapCanvas: hud.minimapCanvas,
+        mapSizeKm: balance.world.mapSizeKm,
       });
       canvas.style.display = 'block';
       fallbackCanvas.style.display = 'none';

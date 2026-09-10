@@ -788,6 +788,9 @@ body.cinematic-capture #tactical-overlay {
   .hud.hud--paused .controls-card {
     display: flex !important; /* show in paused mode even on narrow */
   }
+  .minimap-card {
+    display: none !important; /* hide the minimap on very narrow screens */
+  }
 }
 
 /* Height-based adjustments */
@@ -2417,6 +2420,19 @@ button {
 /* --- t-028c: in-HUD controls & keys panel --------------------------------- */
 .controls-card {
   margin-top: 10px;
+}
+/* --- V2.10: real-time minimap (right column, above the controls card) ------ */
+.minimap-card {
+  margin-top: 10px;
+  padding: 8px;
+}
+.minimap-canvas {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 6px;
+  background: rgba(11, 21, 32, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
 }
 .controls-list {
   display: flex;
