@@ -1,0 +1,22 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.27",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "SilentDepthUE",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	],
+	"Plugins": [
+		{ "Name": "Water", "Enabled": true },
+		{ "Name": "Landmass", "Enabled": true },
+		{ "Name": "Niagara", "Enabled": true },
+		{ "Name": "GeometryProcessing", "Enabled": true },
+		{ "Name": "BlueprintMaterialTextureNodes", "Enabled": true },
+		{ "Name": "EditorScriptingUtilities", "Enabled": true },
+		{ "Name": "GLTFImporter", "Enabled": true }
+	]
+}

@@ -1,0 +1,453 @@
+{
+  "T1": [],
+  "T2": [
+    {
+      "asset_id": "US_SSN_Skipjack",
+      "tier": 2,
+      "tier_reason": "early teardrop nuclear attack-submarine generation",
+      "country": "USA",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "US_SSBN_GeorgeWashington",
+      "tier": 2,
+      "tier_reason": "first-generation fleet ballistic missile submarine",
+      "country": "USA",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSN_November",
+      "tier": 2,
+      "tier_reason": "first Soviet nuclear attack submarine generation",
+      "country": "Russia",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSBN_Hotel",
+      "tier": 2,
+      "tier_reason": "early Soviet SSBN generation",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "UK_SSN_Dreadnought",
+      "tier": 2,
+      "tier_reason": "first UK nuclear attack submarine era",
+      "country": "UK",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    }
+  ],
+  "T3": [
+    {
+      "asset_id": "US_SSBN_EthanAllen",
+      "tier": 3,
+      "tier_reason": "early dedicated SSBN",
+      "country": "USA",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "UK_SSN_Valiant",
+      "tier": 3,
+      "tier_reason": "early UK SSN generation",
+      "country": "UK",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    }
+  ],
+  "T4": [
+    {
+      "asset_id": "US_SSN_Sturgeon",
+      "tier": 4,
+      "tier_reason": "Cold War mature SSN, pre-Los Angeles",
+      "country": "USA",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "US_SSBN_Lafayette",
+      "tier": 4,
+      "tier_reason": "Cold War mature SSBN baseline",
+      "country": "USA",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "US_SSBN_JamesMadison",
+      "tier": 4,
+      "tier_reason": "Lafayette-family visual variant candidate",
+      "country": "USA",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSN_Victor",
+      "tier": 4,
+      "tier_reason": "multi-project Cold War SSN family",
+      "country": "Russia",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSBN_Yankee",
+      "tier": 4,
+      "tier_reason": "Cold War Soviet SSBN generation",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "UK_SSBN_Resolution",
+      "tier": 4,
+      "tier_reason": "UK Polaris SSBN generation",
+      "country": "UK",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "FR_SSBN_LeRedoutable",
+      "tier": 4,
+      "tier_reason": "first French SSBN generation",
+      "country": "France",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSN_Type091",
+      "tier": 4,
+      "tier_reason": "first Chinese nuclear attack submarine generation",
+      "country": "China",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    }
+  ],
+  "T5": [
+    {
+      "asset_id": "US_SSBN_BenjaminFranklin",
+      "tier": 5,
+      "tier_reason": "late Lafayette-family visual variant candidate",
+      "country": "USA",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaI",
+      "tier": 5,
+      "tier_reason": "Delta family early missile-deck visual language",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaII",
+      "tier": 5,
+      "tier_reason": "lengthened Delta I family",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "UK_SSN_Swiftsure",
+      "tier": 5,
+      "tier_reason": "Cold War UK SSN generation",
+      "country": "UK",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSBN_Type092",
+      "tier": 5,
+      "tier_reason": "early Chinese SSBN",
+      "country": "China",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    }
+  ],
+  "T6": [
+    {
+      "asset_id": "US_SSN_LosAngeles",
+      "tier": 6,
+      "tier_reason": "mature Cold War high-production SSN with 688i visual variant",
+      "country": "USA",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSN_Sierra",
+      "tier": 6,
+      "tier_reason": "titanium-hull advanced Cold War SSN",
+      "country": "Russia",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIII",
+      "tier": 6,
+      "tier_reason": "mature Delta-family SSBN",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "UK_SSN_Trafalgar",
+      "tier": 6,
+      "tier_reason": "late Cold War UK SSN",
+      "country": "UK",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "FR_SSN_Rubis",
+      "tier": 6,
+      "tier_reason": "compact French SSN generation",
+      "country": "France",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    }
+  ],
+  "T7": [
+    {
+      "asset_id": "RU_SSN_Akula",
+      "tier": 7,
+      "tier_reason": "late Cold War Soviet/Russian SSN with recognizable sail and stern",
+      "country": "Russia",
+      "type": "SSN",
+      "asset_status": "VALIDATING"
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIV",
+      "tier": 7,
+      "tier_reason": "late Cold War Delta family with distinct missile-deck hump",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSN_Type093",
+      "tier": 7,
+      "tier_reason": "Chinese second-generation SSN baseline",
+      "country": "China",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "IN_SSBN_Arihant",
+      "tier": 7,
+      "tier_reason": "first Indian SSBN generation, compact strategic boat",
+      "country": "India",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    }
+  ],
+  "T8": [
+    {
+      "asset_id": "US_SSN_Seawolf",
+      "tier": 8,
+      "tier_reason": "late Cold War / post-Cold War advanced SSN",
+      "country": "USA",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "US_SSBN_Ohio",
+      "tier": 8,
+      "tier_reason": "large late Cold War strategic SSBN",
+      "country": "USA",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSBN_Typhoon",
+      "tier": 8,
+      "tier_reason": "largest distinctive Soviet SSBN; current master source asset",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "VALIDATING"
+    },
+    {
+      "asset_id": "UK_SSBN_Vanguard",
+      "tier": 8,
+      "tier_reason": "current UK strategic SSBN",
+      "country": "UK",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "FR_SSBN_LeTriomphant",
+      "tier": 8,
+      "tier_reason": "current French SSBN generation",
+      "country": "France",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSN_Type093A",
+      "tier": 8,
+      "tier_reason": "Type 093 visible variant candidate",
+      "country": "China",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSBN_Type094",
+      "tier": 8,
+      "tier_reason": "current Chinese SSBN baseline",
+      "country": "China",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "IN_SSBN_Arighaat",
+      "tier": 8,
+      "tier_reason": "Arihant-family follow-on",
+      "country": "India",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    }
+  ],
+  "T9": [
+    {
+      "asset_id": "US_SSN_Virginia",
+      "tier": 9,
+      "tier_reason": "modern modular SSN; Block V creates major hull length variant",
+      "country": "USA",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSN_Yasen",
+      "tier": 9,
+      "tier_reason": "modern cruise-missile attack submarine baseline",
+      "country": "Russia",
+      "type": "SSN",
+      "asset_status": "RESEARCH"
+    },
+    {
+      "asset_id": "RU_SSBN_Borei",
+      "tier": 9,
+      "tier_reason": "modern Russian SSBN baseline",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "UK_SSN_Astute",
+      "tier": 9,
+      "tier_reason": "modern UK SSN",
+      "country": "UK",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "FR_SSN_Suffren",
+      "tier": 9,
+      "tier_reason": "modern French Barracuda/Suffren SSN",
+      "country": "France",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSN_Type093B",
+      "tier": 9,
+      "tier_reason": "reported/improving variant; open visual data limited",
+      "country": "China",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSBN_Type094A",
+      "tier": 9,
+      "tier_reason": "Type 094 variant candidate",
+      "country": "China",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "IN_SSBN_S4",
+      "tier": 9,
+      "tier_reason": "reported larger follow-on; limited verified visual data",
+      "country": "India",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    }
+  ],
+  "T10": [
+    {
+      "asset_id": "US_SSBN_Columbia",
+      "tier": 10,
+      "tier_reason": "future U.S. SSBN acquisition priority; visual data limited",
+      "country": "USA",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSN_YasenM",
+      "tier": 10,
+      "tier_reason": "modern shortened/refined Yasen family variant with visible layout differences",
+      "country": "Russia",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "RU_SSBN_BoreiA",
+      "tier": 10,
+      "tier_reason": "modernized Borei family with visible sail/hull refinements",
+      "country": "Russia",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "UK_SSN_AUKUS",
+      "tier": 10,
+      "tier_reason": "future AUKUS SSN; keep as planned visual target",
+      "country": "UK",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "UK_SSBN_Dreadnought",
+      "tier": 10,
+      "tier_reason": "future UK strategic SSBN",
+      "country": "UK",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "FR_SSBN_SNLE3G",
+      "tier": 10,
+      "tier_reason": "future French SSBN; visual data limited",
+      "country": "France",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSN_Type095",
+      "tier": 10,
+      "tier_reason": "planned/opaque next-generation SSN",
+      "country": "China",
+      "type": "SSN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "CN_SSBN_Type096",
+      "tier": 10,
+      "tier_reason": "planned/opaque next-generation SSBN",
+      "country": "China",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    },
+    {
+      "asset_id": "IN_SSBN_S5",
+      "tier": 10,
+      "tier_reason": "planned larger Indian SSBN; limited verified visual data",
+      "country": "India",
+      "type": "SSBN",
+      "asset_status": "PLANNED"
+    }
+  ]
+}

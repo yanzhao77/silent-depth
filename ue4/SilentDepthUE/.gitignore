@@ -1,0 +1,23 @@
+# Unreal Engine 生成物：全部可重建，不入库
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+Build/
+
+# IDE / 工程文件：由 Unreal 重新生成
+.vs/
+*.sln
+*.VC.db
+*.opensdf
+*.sdf
+*.suo
+*.user
+*.xcodeproj
+*.xcworkspace
+
+# 构建日志（仓库根 .gitignore 已含 *.log，此处显式列出）
+*.log
+
+# 说明：原始美术源文件存放在仓库根的 SilentDepth_Assets/，本工程内不重复存放。
+# 见 ArtSource/README.md。

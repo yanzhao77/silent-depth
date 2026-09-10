@@ -16,3 +16,10 @@
 *.zip binary
 *.gz binary
 *.pyc binary
+
+# Unreal Engine assets are binary containers. `* text=auto eol=lf` above would
+# otherwise risk normalizing them on Windows checkouts and corrupting the asset.
+*.uasset binary
+*.umap binary
+*.uexp binary
+*.ubulk binary
