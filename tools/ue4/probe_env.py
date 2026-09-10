@@ -66,6 +66,7 @@ def main():
         unreal.log("[probe] sig {}: {}".format(name, doc))
 
     probe_materials()
+    probe_material_api()
     unreal.log("[probe] PROBE_OK")
 
 
@@ -89,6 +90,54 @@ def probe_materials():
             unreal.log("[probe] material {} scalars={} vectors={} textures={}".format(path, scalars, vectors, textures))
         except Exception as exc:  # noqa: BLE001
             unreal.log_warning("[probe] material introspection failed for {}: {}".format(path, exc))
+
+
+def probe_material_api():
+    """Report the material-graph API surface needed to author master materials."""
+    needed_classes = [
+        "MaterialExpressionVectorParameter",
+        "MaterialExpressionScalarParameter",
+        "MaterialExpressionTextureSampleParameter2D",
+        "MaterialExpressionComponentMask",
+        "MaterialExpressionMultiply",
+        "MaterialExpressionConstant",
+        "MaterialExpressionConstant2Vector",
+        "MaterialExpressionConstant3Vector",
+        "MaterialExpressionAppendVector",
+        "MaterialExpressionNormalize",
+        "MaterialExpressionTextureObjectParameter",
+    ]
+    missing = [c for c in needed_classes if not hasattr(unreal, c)]
+    unreal.log("[probe] material expression classes present={}".format(
+        [c for c in needed_classes if hasattr(unreal, c)]))
+    if missing:
+        unreal.log_warning("[probe] material expression classes MISSING={}".format(missing))
+
+    for enum_name in ("MaterialProperty", "MaterialSamplerType", "MaterialShadingModel"):
+        enum = getattr(unreal, enum_name, None)
+        if enum is None:
+            unreal.log_warning("[probe] enum missing: " + enum_name)
+        else:
+            unreal.log("[probe] {}={}".format(enum_name, sorted(e for e in dir(enum) if not e.startswith("_"))))
+
+    lib = getattr(unreal, "MaterialEditingLibrary", None)
+    if lib is None:
+        unreal.log_warning("[probe] MaterialEditingLibrary missing")
+        return
+    dump_api(
+        "MaterialEditingLibrary",
+        lib,
+        [
+            "create_material_expression",
+            "connect_material_property",
+            "connect_material_expressions",
+            "recompile_material",
+            "layout_material_expressions",
+            "set_material_instance_vector_parameter_value",
+            "set_material_instance_scalar_parameter_value",
+            "set_material_instance_texture_parameter_value",
+        ],
+    )
 
 
 main()

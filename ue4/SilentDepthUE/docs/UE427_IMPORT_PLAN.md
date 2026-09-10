@@ -29,7 +29,35 @@
 
 产物位于 `/Game/SilentDepth/Art/Submarines/SSBN/Russia/Typhoon/`，共 10 个 uasset（46 MB）。LOD1-3 的源网格保留在同目录 `LODSources/` 下，供后续重新挂载 LOD。
 
-**尚未完成**：8 个材质槽还是空的，网格目前用默认材质显示。建材质实例需要先确认项目里哪个母材质可参数化。
+材质由 `tools/ue4/build_typhoon_materials.py` 建立，8 个槽已全部指派并回读校验通过。
+
+### 材质约定
+
+项目原有的 `M_SubmarineHull` / `M_PropellerBronze` / `M_SubmarineWater` 只有 `BaseColor`（向量）+ `Metallic` / `Roughness`（标量），**没有任何贴图参数**，无法承载 PBR 贴图，因此新建两个共享母材质：
+
+| 母材质 | 位置 | 参数 |
+|---|---|---|
+| `M_SD_Submarine_PBR` | `/Game/SilentDepth/Art/Materials/` | `BaseColorTexture`、`ORMTexture`、`NormalTexture`、`NormalStrength` |
+| `M_SD_Submarine_Flat` | `/Game/SilentDepth/Art/Materials/` | `BaseColor`（向量）、`Roughness`、`Metallic` |
+
+`M_SD_Submarine_PBR` 的接线：BaseColor 贴图直连；ORM 按 R=AO、G=Roughness、B=Metallic 拆通道；法线走 `sample.RG × NormalStrength → append(Z=1) → normalize`，等价于「解码后的 XY 乘 0.45 再归一化」，强度以参数暴露给实例。母材质本身不带默认贴图，由实例提供。
+
+每个艇的材质实例放在该艇目录的 `Materials/` 下，命名 `MI_<AssetId>_<槽名>`：
+
+| 槽 | 实例 | 类型 |
+|---|---|---|
+| Hull | `MI_RU_SSBN_Typhoon_Hull` | PBR，Hull 三张贴图，NormalStrength 0.45 |
+| Rubber | `MI_RU_SSBN_Typhoon_Rubber` | PBR，Rubber 三张贴图，NormalStrength 0.45 |
+| PaintedSteel | `MI_RU_SSBN_Typhoon_PaintedSteel` | Flat，0.68 / 0.10 |
+| Recess | `MI_RU_SSBN_Typhoon_Recess` | Flat，0.83 / 0.00 |
+| Steel | `MI_RU_SSBN_Typhoon_Steel` | Flat，0.40 / 0.82 |
+| Propeller | `MI_RU_SSBN_Typhoon_Propeller` | Flat，0.43 / 0.84 |
+| Markings | `MI_RU_SSBN_Typhoon_Markings` | Flat，0.75 / 0.00 |
+| OpticalGlass | `MI_RU_SSBN_Typhoon_OpticalGlass` | Flat，0.19 / 0.12 |
+
+槽名匹配用了子串归一化（去掉非字母数字后按最长键优先匹配），因为 Blender 导出时给材质加了 `_002` 后缀，如 `M_Typhoon_Hull_002`。后续 54 艘艇可以沿用同一套母材质，只换实例。
+
+**视觉表现未验证**：材质图的接线与参数是程序化回读确认的，没有在编辑器里渲染观察过。首次打开编辑器时建议检查法线强度是否合适、ORM 通道是否与 Blender 中的观感一致。
 
 ## 目标路径约定
 
