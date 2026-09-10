@@ -21,6 +21,33 @@ constexpr float SD_WAKE_MAX_SCALE = 1.3f;            // size at full speed
 constexpr float SD_WAKE_SURFACE_FULL_M = 10.0f;      // wake fully visible at/above periscope depth
 constexpr float SD_WAKE_SURFACE_HIDE_M = 20.0f;      // wake fully hidden below this (shallow and deeper)
 
+// Starting submarine: Akula, Project 971. Imported from the asset library at
+// 1:1 scale (110.2 m) with the bow along +X and Z up, which is also the pawn's
+// forward, so the mesh needs no relative rotation. See docs/UE427_IMPORT_PLAN.md.
+const TCHAR* SD_PLAYER_HULL_MESH =
+    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula.SM_RU_SSN_Akula");
+
+// Yaw applied to the hull mesh so its bow lines up with the pawn's +X forward.
+// The submarine assets are exported bow on +X, so this is zero; set it to 180
+// if a hull ever arrives pointing the other way.
+constexpr float SD_PLAYER_HULL_YAW_DEG = 0.0f;
+
+// The Akula mesh carries its own propeller welded into the hull, so the separate
+// spinning propeller component is left empty. Animating blades again would need
+// them split into their own asset.
+constexpr bool SD_HULL_INCLUDES_PROPELLER = true;
+
+// Layout ratios applied to the hull's half length / half height.
+constexpr float SD_FALLBACK_HALF_LENGTH_CM = 1800.0f;
+constexpr float SD_FALLBACK_HALF_HEIGHT_CM = 1500.0f;
+constexpr float SD_CAMERA_ARM_RATIO = 2.4f;
+constexpr float SD_CAMERA_HEIGHT_RATIO = 0.35f;
+constexpr float SD_BOW_FOAM_RATIO = 1.0f;
+constexpr float SD_STERN_FOAM_RATIO = -1.08f;
+constexpr float SD_ZOOM_MIN_RATIO = 0.15f;
+constexpr float SD_ZOOM_MAX_RATIO = 1.8f;
+constexpr float SD_SURFACE_OFFSET_RATIO = 0.10f;
+
 ESDDepthLayer NextShallower(ESDDepthLayer L)
 {
     switch (L)
@@ -68,43 +95,55 @@ ASubmarinePawn::ASubmarinePawn()
 
     MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Hull"));
     MeshComp->SetupAttachment(SceneRoot);
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshObj(
-        TEXT("/Game/Meshes/SM_HeroSubmarine.SM_HeroSubmarine")
-    );
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshObj(SD_PLAYER_HULL_MESH);
     if (MeshObj.Succeeded())
     {
         MeshComp->SetStaticMesh(MeshObj.Object);
-        // Imported length runs along local +Y with the bow at +Y; yaw -90 aims bow at +X.
-        MeshComp->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
-        MeshComp->SetRelativeScale3D(FVector(1.9f, 1.9f, 1.9f));
+        // The submarine assets keep the bow on +X with Z up and are imported at
+        // 1:1 scale, so the hull needs no scale change.
+        MeshComp->SetRelativeRotation(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
+        MeshComp->SetRelativeScale3D(FVector(1.0f));
         MeshComp->SetRelativeLocation(FVector::ZeroVector);
+
+        const FVector Extent = MeshObj.Object->GetBounds().BoxExtent;
+        HullHalfLengthCm = FMath::Max(Extent.X, 100.0f);
+        SurfaceOffsetZCm = FMath::Max(Extent.Z, 100.0f) * SD_SURFACE_OFFSET_RATIO;
     }
+    else
+    {
+        HullHalfLengthCm = SD_FALLBACK_HALF_LENGTH_CM;
+        SurfaceOffsetZCm = SD_FALLBACK_HALF_HEIGHT_CM * SD_SURFACE_OFFSET_RATIO;
+    }
+    ZoomMinCm = HullHalfLengthCm * SD_ZOOM_MIN_RATIO;
+    ZoomMaxCm = HullHalfLengthCm * SD_ZOOM_MAX_RATIO;
 
     SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
     SpringArm->SetupAttachment(SceneRoot);
-    SpringArm->TargetArmLength = 3000.0f;
+    SpringArm->TargetArmLength = HullHalfLengthCm * SD_CAMERA_ARM_RATIO;
     SpringArm->bUsePawnControlRotation = true;    // mouse orbits the camera around the sub
     SpringArm->SetRelativeRotation(FRotator(-8.0f, 0.0f, 0.0f));
-    SpringArm->SetRelativeLocation(FVector(0.0f, 0.0f, 250.0f));
+    SpringArm->SetRelativeLocation(FVector(0.0f, 0.0f, HullHalfLengthCm * SD_CAMERA_HEIGHT_RATIO));
 
     Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
     Camera->SetupAttachment(SpringArm);
 
-    // Separate propeller so it can spin at the stern (bow faces +X).
+    // Separate propeller so it can spin at the stern (bow faces +X). The Akula
+    // hull already includes its own propeller, so nothing is attached here; see
+    // SD_HULL_INCLUDES_PROPELLER.
     Propeller = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Propeller"));
     Propeller->SetupAttachment(SceneRoot);
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> PropMeshObj(
-        TEXT("/Game/Meshes/SM_Propeller.SM_Propeller")
-    );
-    if (PropMeshObj.Succeeded())
+    if (!SD_HULL_INCLUDES_PROPELLER)
     {
-        Propeller->SetStaticMesh(PropMeshObj.Object);
+        static ConstructorHelpers::FObjectFinder<UStaticMesh> PropMeshObj(
+            TEXT("/Game/Meshes/SM_Propeller.SM_Propeller")
+        );
+        if (PropMeshObj.Succeeded())
+        {
+            Propeller->SetStaticMesh(PropMeshObj.Object);
+        }
     }
-    // UE world units are centimetres. The hull imports at 1:1 (glTF metres -> cm),
-    // so with the 1.9x hull scale the stern tip lands at x ≈ -1900 (cm) in SceneRoot
-    // space. Put the propeller hub right there, and scale it up so the ≈1.9 m blade
-    // span reads clearly against the ~37 m hull.
-    Propeller->SetRelativeLocation(FVector(-1900.0f, 0.0f, 0.0f));
+    // UE world units are centimetres; the stern tip sits at -half length.
+    Propeller->SetRelativeLocation(FVector(-HullHalfLengthCm, 0.0f, 0.0f));
     Propeller->SetRelativeScale3D(FVector(2.6f, 2.6f, 2.6f));
     Propeller->SetRelativeRotation(FRotator(0.0f, -90.0f, 0.0f));
 
@@ -113,12 +152,12 @@ ASubmarinePawn::ASubmarinePawn()
     // activated/measured by speed in Tick.
     BowFoam = CreateDefaultSubobject<UNiagaraComponent>(TEXT("BowFoam"));
     BowFoam->SetupAttachment(SceneRoot);
-    BowFoam->SetRelativeLocation(FVector(1800.0f, 0.0f, 0.0f));
+    BowFoam->SetRelativeLocation(FVector(HullHalfLengthCm * SD_BOW_FOAM_RATIO, 0.0f, 0.0f));
     BowFoam->SetAutoActivate(false);
 
     SternFoam = CreateDefaultSubobject<UNiagaraComponent>(TEXT("SternFoam"));
     SternFoam->SetupAttachment(SceneRoot);
-    SternFoam->SetRelativeLocation(FVector(-2100.0f, 0.0f, 0.0f));
+    SternFoam->SetRelativeLocation(FVector(HullHalfLengthCm * SD_STERN_FOAM_RATIO, 0.0f, 0.0f));
     SternFoam->SetAutoActivate(false);
 
     static ConstructorHelpers::FObjectFinder<UNiagaraSystem> FoamSysObj(
@@ -177,8 +216,8 @@ void ASubmarinePawn::Tick(float DeltaSeconds)
     // Mouse-wheel zoom.
     SpringArm->TargetArmLength = FMath::Clamp(
         SpringArm->TargetArmLength + ZoomValue * 200.0f,
-        800.0f,
-        6000.0f
+        ZoomMinCm,
+        ZoomMaxCm
     );
 
     // Fixed-time deterministic simulation step (20 Hz).
@@ -193,7 +232,7 @@ void ASubmarinePawn::Tick(float DeltaSeconds)
     SetActorLocation(FVector(
         SimState.PosXKm * SD_CM_PER_KM,
         SimState.PosYKm * SD_CM_PER_KM,
-        -SimState.DepthM * 100.0 + 150.0
+        -SimState.DepthM * 100.0 + SurfaceOffsetZCm
     ));
     SetActorRotation(FRotator(0.0f, 90.0f - SimState.HeadingDeg, 0.0f));
 
@@ -204,11 +243,15 @@ void ASubmarinePawn::Tick(float DeltaSeconds)
     CurrentBattery = SimState.Battery;
     CurrentNoise = SimState.Noise;
 
-    // Spin the propeller proportional to speed.
-    PropAngle = FMath::Fmod(PropAngle + SimState.SpeedKt * 120.0 * DeltaSeconds, 360.0);
-    const FQuat BaseYaw(FRotator(0.0f, -90.0f, 0.0f));
-    const FQuat SpinY(FVector(0.0f, 1.0f, 0.0f), FMath::DegreesToRadians(PropAngle));
-    Propeller->SetRelativeRotation((BaseYaw * SpinY).Rotator());
+    // Spin the propeller proportional to speed. Skipped when the hull mesh has
+    // its own welded propeller, which cannot rotate as a separate component.
+    if (!SD_HULL_INCLUDES_PROPELLER)
+    {
+        PropAngle = FMath::Fmod(PropAngle + SimState.SpeedKt * 120.0 * DeltaSeconds, 360.0);
+        const FQuat BaseYaw(FRotator(0.0f, -90.0f, 0.0f));
+        const FQuat SpinY(FVector(0.0f, 1.0f, 0.0f), FMath::DegreesToRadians(PropAngle));
+        Propeller->SetRelativeRotation((BaseYaw * SpinY).Rotator());
+    }
 
     // Wake / bow foam is presentation-only and follows the propeller: it is on
     // whenever the screw is turning, and swells with speed. We only touch the

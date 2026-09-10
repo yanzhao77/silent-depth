@@ -79,5 +79,13 @@ protected:
     UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
     UNiagaraComponent* SternFoam;
 
+    // Presentation-only layout derived from the equipped hull's bounds, so the
+    // camera rig, wake emitters and propeller follow whichever submarine is
+    // equipped instead of assuming one specific hull length.
+    float HullHalfLengthCm = 1800.0f;
+    float SurfaceOffsetZCm = 150.0f;
+    float ZoomMinCm = 800.0f;
+    float ZoomMaxCm = 6000.0f;
+
     double PropAngle = 0.0;
 };
