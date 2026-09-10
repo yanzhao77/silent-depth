@@ -92,7 +92,7 @@ ASSETS = [
         # origin on the hinge axis (hull LODs carry none of this geometry), so a
         # component can rotate each one. See the asset's
         # Source/build_akula_reference.py -> MOVABLE_PARTS.
-        "parts": ("PROP", "RUDDER", "STERNPLANES", "BOWPLANES"),
+        "parts": ("PROP", "RUDDER", "STERNPLANES", "BOWPLANES", "PERISCOPE"),
         # Only the two Drawing maps are used by the current Drawing-based model.
         # T_Akula_Hull_*/Rubber_*/Reference_* belong to the abandoned earlier revision.
         "textures": [

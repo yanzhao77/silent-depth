@@ -40,6 +40,8 @@ const TCHAR* SD_PLAYER_STERN_PLANE_MESH =
     TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_STERNPLANES.SM_RU_SSN_Akula_STERNPLANES");
 const TCHAR* SD_PLAYER_BOW_PLANE_MESH =
     TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_BOWPLANES.SM_RU_SSN_Akula_BOWPLANES");
+const TCHAR* SD_PLAYER_PERISCOPE_MESH =
+    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PERISCOPE.SM_RU_SSN_Akula_PERISCOPE");
 
 // Shaft position along the hull, in centimetres; the Blender master puts the
 // propeller hub at x = -54.4 m. Only meaningful for a separately exported prop.
@@ -54,6 +56,16 @@ constexpr float SD_PLAYER_BOW_PLANE_HINGE_CM = 4340.0f;
 // Surface deflection at full command. A real boat uses roughly 20-30 degrees.
 constexpr float SD_RUDDER_MAX_DEG = 25.0f;
 constexpr float SD_PLANE_MAX_DEG = 18.0f;
+
+// Periscope: bbox centre in the Blender master is (2.40, 0.35, 15.59) m and the
+// mast is 9.4 m tall, so retracting it by its own height stows it inside the
+// sail. It rides up at periscope depth and down everywhere else, taking a couple
+// of seconds either way.
+constexpr float SD_PLAYER_PERISCOPE_X_CM = 240.0f;
+constexpr float SD_PLAYER_PERISCOPE_Y_CM = 35.0f;
+constexpr float SD_PLAYER_PERISCOPE_Z_CM = 1559.0f;
+constexpr float SD_PERISCOPE_TRAVEL_CM = 940.0f;
+constexpr float SD_PERISCOPE_TRAVEL_SECONDS = 2.5f;
 
 // Yaw applied to the hull mesh so its bow lines up with the pawn's +X forward.
 // The submarine assets are exported bow on +X, so this is zero; set it to 180
@@ -205,6 +217,23 @@ ASubmarinePawn::ASubmarinePawn()
         BowPlanes->SetRelativeLocation(FVector(SD_PLAYER_BOW_PLANE_HINGE_CM, 0.0f, 0.0f));
     }
 
+    // Periscope: slides vertically, so it sits at its own centre rather than a
+    // hinge. Starts stowed.
+    Periscope = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Periscope"));
+    Periscope->SetupAttachment(SceneRoot);
+    {
+        static ConstructorHelpers::FObjectFinder<UStaticMesh> PeriscopeMeshObj(SD_PLAYER_PERISCOPE_MESH);
+        if (PeriscopeMeshObj.Succeeded())
+        {
+            Periscope->SetStaticMesh(PeriscopeMeshObj.Object);
+        }
+        Periscope->SetRelativeLocation(FVector(
+            SD_PLAYER_PERISCOPE_X_CM,
+            SD_PLAYER_PERISCOPE_Y_CM,
+            SD_PLAYER_PERISCOPE_Z_CM - SD_PERISCOPE_TRAVEL_CM
+        ));
+    }
+
     // Bow wave (bow faces +X) and stern wake (trailing directly behind the
     // propeller hub). Both run the /Game/NS_Foam Niagara system and are
     // activated/measured by speed in Tick.
@@ -344,6 +373,24 @@ void ASubmarinePawn::Tick(float DeltaSeconds)
     if (BowPlanes != nullptr)
     {
         BowPlanes->SetRelativeRotation(FRotator(-PlaneAngleDeg, SD_PLAYER_HULL_YAW_DEG, 0.0f));
+    }
+
+    // Periscope rides up at periscope depth and stows otherwise, moving at a
+    // constant rate so raising and lowering take the same time.
+    const float PeriscopeTarget = (SimState.DepthLayer == ESDDepthLayer::Periscope) ? 1.0f : 0.0f;
+    PeriscopeExtend = FMath::FInterpConstantTo(
+        PeriscopeExtend,
+        PeriscopeTarget,
+        DeltaSeconds,
+        1.0f / SD_PERISCOPE_TRAVEL_SECONDS
+    );
+    if (Periscope != nullptr)
+    {
+        Periscope->SetRelativeLocation(FVector(
+            SD_PLAYER_PERISCOPE_X_CM,
+            SD_PLAYER_PERISCOPE_Y_CM,
+            SD_PLAYER_PERISCOPE_Z_CM - SD_PERISCOPE_TRAVEL_CM * (1.0f - PeriscopeExtend)
+        ));
     }
 
     // Wake / bow foam is presentation-only and follows the propeller: it is on

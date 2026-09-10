@@ -84,6 +84,10 @@ protected:
     UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
     UStaticMeshComponent* BowPlanes;
 
+    // Tall thin mast: raised at periscope depth, stowed otherwise.
+    UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
+    UStaticMeshComponent* Periscope;
+
     UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
     UNiagaraComponent* BowFoam;
 
@@ -102,4 +106,5 @@ protected:
     double PropAngle = 0.0;
     float RudderAngleDeg = 0.0f;
     float PlaneAngleDeg = 0.0f;
+    float PeriscopeExtend = 0.0f;
 };

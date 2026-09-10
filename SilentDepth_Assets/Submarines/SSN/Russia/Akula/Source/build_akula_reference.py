@@ -26,6 +26,8 @@ MOVABLE_PARTS = (
     ("RUDDER", "06_TAIL", "TailVertical", "leading"),
     ("STERNPLANES", "06_TAIL", "TailHorizontal", "leading"),
     ("BOWPLANES", "05_DIVE_PLANES", "BowPlane", "leading"),
+    # Mast 03 is the tall thin mast with no head: the periscope.
+    ("PERISCOPE", "04_MASTS", "Mast_03", "center"),
 )
 
 LENGTH = 110.2
@@ -582,7 +584,12 @@ def build_exports(collections, collision):
         if not objects:
             print("WARNING: no geometry found for movable part " + suffix)
             continue
-        pivot = propeller_shaft_origin(objects) if rule == "hub" else control_surface_hinge(objects)
+        if rule == "hub":
+            pivot = propeller_shaft_origin(objects)
+        elif rule == "center":
+            pivot = bounds_center(objects)
+        else:
+            pivot = control_surface_hinge(objects)
         part = duplicate_join_export_mesh(f"{ASSET_ID}_{suffix}", objects, collections["LOD0"])
         # Move the geometry onto the pivot and leave the object transform at the
         # origin, so the exported pivot IS the rotation axis. Baking the pivot
@@ -610,6 +617,12 @@ def control_surface_hinge(objects):
     """Root leading edge of a fin, which is where it hinges."""
     _low, high = world_bounds(objects)
     return Vector((high.x, 0.0, 0.0))
+
+
+def bounds_center(objects):
+    """Centre of the part, used for parts that slide instead of hinging."""
+    low, high = world_bounds(objects)
+    return Vector(((low.x + high.x) / 2, (low.y + high.y) / 2, (low.z + high.z) / 2))
 
 
 def propeller_shaft_origin(objects):

@@ -33,50 +33,50 @@
   "exports": [
     {
       "name": "RU_SSN_Akula_LOD0",
-      "vertices": 58760,
-      "triangles": 115224,
+      "vertices": 58736,
+      "triangles": 115180,
       "uv_channels": 2,
       "materials": 5,
       "dimensions_m": [
         109.1054,
         13.674,
-        26.9976
+        23.3415
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD1",
-      "vertices": 30489,
-      "triangles": 59916,
+      "vertices": 30476,
+      "triangles": 59893,
       "uv_channels": 2,
       "materials": 5,
       "dimensions_m": [
         109.1054,
         13.674,
-        26.9976
+        23.3415
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD2",
-      "vertices": 14239,
-      "triangles": 27653,
+      "vertices": 14232,
+      "triangles": 27643,
       "uv_channels": 2,
       "materials": 5,
       "dimensions_m": [
         109.1054,
         13.6781,
-        26.9994
+        23.3432
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD3",
-      "vertices": 5885,
-      "triangles": 10946,
+      "vertices": 5881,
+      "triangles": 10942,
       "uv_channels": 2,
       "materials": 5,
       "dimensions_m": [
         109.1055,
         13.6781,
-        26.9997
+        23.3436
       ]
     },
     {
@@ -125,6 +125,18 @@
         2.4,
         19.2,
         0.3698
+      ]
+    },
+    {
+      "name": "RU_SSN_Akula_PERISCOPE",
+      "vertices": 24,
+      "triangles": 44,
+      "uv_channels": 2,
+      "materials": 1,
+      "dimensions_m": [
+        0.076,
+        0.076,
+        9.4
       ]
     }
   ],

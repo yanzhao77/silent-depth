@@ -8,3 +8,6 @@ reports/playtest/*.tmp
 # Python bytecode from editor automation scripts (tools/ue4)
 __pycache__/
 *.pyc
+
+# Firecrawl CLI cache
+.firecrawl/
