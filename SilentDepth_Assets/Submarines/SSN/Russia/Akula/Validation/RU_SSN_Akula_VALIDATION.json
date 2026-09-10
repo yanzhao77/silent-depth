@@ -33,50 +33,50 @@
   "exports": [
     {
       "name": "RU_SSN_Akula_LOD0",
-      "vertices": 59960,
-      "triangles": 117600,
+      "vertices": 58760,
+      "triangles": 115224,
       "uv_channels": 2,
       "materials": 5,
       "dimensions_m": [
         109.1054,
-        19.6,
-        28.4397
+        13.674,
+        26.9976
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD1",
-      "vertices": 31115,
-      "triangles": 61150,
+      "vertices": 30489,
+      "triangles": 59916,
       "uv_channels": 2,
       "materials": 5,
       "dimensions_m": [
         109.1054,
-        19.6,
-        28.4397
+        13.674,
+        26.9976
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD2",
-      "vertices": 14536,
-      "triangles": 28223,
+      "vertices": 14239,
+      "triangles": 27653,
       "uv_channels": 2,
       "materials": 5,
       "dimensions_m": [
         109.1054,
-        19.6001,
-        28.4398
+        13.6781,
+        26.9994
       ]
     },
     {
       "name": "RU_SSN_Akula_LOD3",
-      "vertices": 6010,
-      "triangles": 11172,
+      "vertices": 5885,
+      "triangles": 10946,
       "uv_channels": 2,
       "materials": 5,
       "dimensions_m": [
         109.1055,
-        19.6003,
-        28.4399
+        13.6781,
+        26.9997
       ]
     },
     {
@@ -89,6 +89,42 @@
         1.75,
         4.1502,
         4.2353
+      ]
+    },
+    {
+      "name": "RU_SSN_Akula_RUDDER",
+      "vertices": 480,
+      "triangles": 952,
+      "uv_channels": 2,
+      "materials": 2,
+      "dimensions_m": [
+        9.8,
+        0.6625,
+        16.3
+      ]
+    },
+    {
+      "name": "RU_SSN_Akula_STERNPLANES",
+      "vertices": 400,
+      "triangles": 792,
+      "uv_channels": 2,
+      "materials": 1,
+      "dimensions_m": [
+        10.0,
+        19.6,
+        0.7087
+      ]
+    },
+    {
+      "name": "RU_SSN_Akula_BOWPLANES",
+      "vertices": 320,
+      "triangles": 632,
+      "uv_channels": 2,
+      "materials": 1,
+      "dimensions_m": [
+        2.4,
+        19.2,
+        0.3698
       ]
     }
   ],

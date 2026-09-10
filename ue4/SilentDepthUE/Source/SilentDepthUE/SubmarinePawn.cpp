@@ -32,19 +32,33 @@ const TCHAR* SD_PLAYER_HULL_MESH =
 const TCHAR* SD_PLAYER_PROP_MESH =
     TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PROP.SM_RU_SSN_Akula_PROP");
 
+// Movable control surfaces. The factory exports each with its pivot on the
+// hinge axis, so a component only has to sit on that hinge.
+const TCHAR* SD_PLAYER_RUDDER_MESH =
+    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_RUDDER.SM_RU_SSN_Akula_RUDDER");
+const TCHAR* SD_PLAYER_STERN_PLANE_MESH =
+    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_STERNPLANES.SM_RU_SSN_Akula_STERNPLANES");
+const TCHAR* SD_PLAYER_BOW_PLANE_MESH =
+    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_BOWPLANES.SM_RU_SSN_Akula_BOWPLANES");
+
 // Shaft position along the hull, in centimetres; the Blender master puts the
 // propeller hub at x = -54.4 m. Only meaningful for a separately exported prop.
 constexpr float SD_PLAYER_PROP_SHAFT_CM = -5440.0f;
+
+// Hinge lines of the control surfaces, from the Blender master: each fin hinges
+// at its root leading edge.
+constexpr float SD_PLAYER_RUDDER_HINGE_CM = -3880.0f;
+constexpr float SD_PLAYER_STERN_PLANE_HINGE_CM = -3860.0f;
+constexpr float SD_PLAYER_BOW_PLANE_HINGE_CM = 4340.0f;
+
+// Surface deflection at full command. A real boat uses roughly 20-30 degrees.
+constexpr float SD_RUDDER_MAX_DEG = 25.0f;
+constexpr float SD_PLANE_MAX_DEG = 18.0f;
 
 // Yaw applied to the hull mesh so its bow lines up with the pawn's +X forward.
 // The submarine assets are exported bow on +X, so this is zero; set it to 180
 // if a hull ever arrives pointing the other way.
 constexpr float SD_PLAYER_HULL_YAW_DEG = 0.0f;
-
-// The library exports weld the propeller into the hull. Akula ships a split
-// derivative instead, so the propeller is its own component and can spin. Set
-// this back to true for a hull whose blades are part of the hull mesh.
-constexpr bool SD_HULL_INCLUDES_PROPELLER = false;
 
 // Layout ratios applied to the hull's half length / half height.
 constexpr float SD_FALLBACK_HALF_LENGTH_CM = 1800.0f;
@@ -55,6 +69,7 @@ constexpr float SD_BOW_FOAM_RATIO = 1.0f;
 constexpr float SD_STERN_FOAM_RATIO = -1.08f;
 constexpr float SD_ZOOM_MIN_RATIO = 0.15f;
 constexpr float SD_ZOOM_MAX_RATIO = 1.8f;
+constexpr float SD_ZOOM_STEP_RATIO = 0.05f;
 constexpr float SD_SURFACE_OFFSET_RATIO = 0.10f;
 
 ESDDepthLayer NextShallower(ESDDepthLayer L)
@@ -125,6 +140,7 @@ ASubmarinePawn::ASubmarinePawn()
     }
     ZoomMinCm = HullHalfLengthCm * SD_ZOOM_MIN_RATIO;
     ZoomMaxCm = HullHalfLengthCm * SD_ZOOM_MAX_RATIO;
+    ZoomStepCm = HullHalfLengthCm * SD_ZOOM_STEP_RATIO;
 
     SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
     SpringArm->SetupAttachment(SceneRoot);
@@ -136,35 +152,58 @@ ASubmarinePawn::ASubmarinePawn()
     Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("Camera"));
     Camera->SetupAttachment(SpringArm);
 
-    // Separate propeller so it can spin at the stern (bow faces +X).
+    // Moving parts are separate components because the hull mesh holds none of
+    // this geometry: the factory exports each with its pivot on the hinge axis.
+
+    // Propeller, spinning on the shaft (bow faces +X).
     Propeller = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Propeller"));
     Propeller->SetupAttachment(SceneRoot);
-    if (SD_HULL_INCLUDES_PROPELLER)
-    {
-        // Legacy path: the hero hull's blades are its own asset, so the
-        // component only supplies the spinning copy.
-        static ConstructorHelpers::FObjectFinder<UStaticMesh> PropMeshObj(
-            TEXT("/Game/Meshes/SM_Propeller.SM_Propeller")
-        );
-        if (PropMeshObj.Succeeded())
-        {
-            Propeller->SetStaticMesh(PropMeshObj.Object);
-        }
-        Propeller->SetRelativeLocation(FVector(-HullHalfLengthCm, 0.0f, 0.0f));
-        Propeller->SetRelativeScale3D(FVector(2.6f, 2.6f, 2.6f));
-    }
-    else
     {
         static ConstructorHelpers::FObjectFinder<UStaticMesh> PropMeshObj(SD_PLAYER_PROP_MESH);
         if (PropMeshObj.Succeeded())
         {
             Propeller->SetStaticMesh(PropMeshObj.Object);
         }
-        // The prop asset is already 1:1 and centred on the shaft axis.
         Propeller->SetRelativeLocation(FVector(SD_PLAYER_PROP_SHAFT_CM, 0.0f, 0.0f));
         Propeller->SetRelativeScale3D(FVector(1.0f));
+        Propeller->SetRelativeRotation(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
     }
-    Propeller->SetRelativeRotation(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
+
+    // Rudder: the vertical tail fins, turning about a vertical hinge.
+    Rudder = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Rudder"));
+    Rudder->SetupAttachment(SceneRoot);
+    {
+        static ConstructorHelpers::FObjectFinder<UStaticMesh> RudderMeshObj(SD_PLAYER_RUDDER_MESH);
+        if (RudderMeshObj.Succeeded())
+        {
+            Rudder->SetStaticMesh(RudderMeshObj.Object);
+        }
+        Rudder->SetRelativeLocation(FVector(SD_PLAYER_RUDDER_HINGE_CM, 0.0f, 0.0f));
+    }
+
+    // Stern planes: the horizontal tail fins, about a transverse hinge.
+    SternPlanes = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SternPlanes"));
+    SternPlanes->SetupAttachment(SceneRoot);
+    {
+        static ConstructorHelpers::FObjectFinder<UStaticMesh> SternMeshObj(SD_PLAYER_STERN_PLANE_MESH);
+        if (SternMeshObj.Succeeded())
+        {
+            SternPlanes->SetStaticMesh(SternMeshObj.Object);
+        }
+        SternPlanes->SetRelativeLocation(FVector(SD_PLAYER_STERN_PLANE_HINGE_CM, 0.0f, 0.0f));
+    }
+
+    // Bow planes: the forward dive planes, about a transverse hinge.
+    BowPlanes = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BowPlanes"));
+    BowPlanes->SetupAttachment(SceneRoot);
+    {
+        static ConstructorHelpers::FObjectFinder<UStaticMesh> BowMeshObj(SD_PLAYER_BOW_PLANE_MESH);
+        if (BowMeshObj.Succeeded())
+        {
+            BowPlanes->SetStaticMesh(BowMeshObj.Object);
+        }
+        BowPlanes->SetRelativeLocation(FVector(SD_PLAYER_BOW_PLANE_HINGE_CM, 0.0f, 0.0f));
+    }
 
     // Bow wave (bow faces +X) and stern wake (trailing directly behind the
     // propeller hub). Both run the /Game/NS_Foam Niagara system and are
@@ -232,9 +271,10 @@ void ASubmarinePawn::Tick(float DeltaSeconds)
     {
         SimInputs.DepthLayerTarget = NextDeeper(SimState.DepthLayer);
     }
-    // Mouse-wheel zoom.
+    // Mouse-wheel zoom. Scrolling forward pulls the camera in, so the axis is
+    // subtracted rather than added.
     SpringArm->TargetArmLength = FMath::Clamp(
-        SpringArm->TargetArmLength + ZoomValue * 200.0f,
+        SpringArm->TargetArmLength - ZoomValue * ZoomStepCm,
         ZoomMinCm,
         ZoomMaxCm
     );
@@ -262,15 +302,48 @@ void ASubmarinePawn::Tick(float DeltaSeconds)
     CurrentBattery = SimState.Battery;
     CurrentNoise = SimState.Noise;
 
-    // Spin the propeller proportional to speed. Skipped when the hull mesh has
-    // its own welded propeller, which cannot rotate as a separate component.
-    if (!SD_HULL_INCLUDES_PROPELLER)
+    // Spin the propeller proportional to speed. The shaft runs along the hull's
+    // local X, so the blade spin is roll.
+    PropAngle = FMath::Fmod(PropAngle + SimState.SpeedKt * 120.0 * DeltaSeconds, 360.0);
+    if (Propeller != nullptr)
     {
-        PropAngle = FMath::Fmod(PropAngle + SimState.SpeedKt * 120.0 * DeltaSeconds, 360.0);
-        // Shaft runs along the hull's local X, so the blade spin is roll.
         const FQuat BaseYaw(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
         const FQuat SpinX(FVector(1.0f, 0.0f, 0.0f), FMath::DegreesToRadians(PropAngle));
         Propeller->SetRelativeRotation((BaseYaw * SpinX).Rotator());
+    }
+
+    // Control surfaces follow the authoritative commands: the rudder tracks the
+    // helm, the dive planes track the commanded depth change and recentre once
+    // the boat reaches the new layer.
+    //
+    // Signs follow UE's rotator convention (positive pitch lifts +X toward +Z,
+    // positive yaw turns +X toward +Y). Each fin extends aft of its hinge, so
+    // positive pitch drops its trailing edge:
+    //   rudder  - trailing edge to port, which is the direction a positive
+    //             helm input steers the simulation
+    //   stern   - trailing edge down lifts the stern and drops the bow, i.e.
+    //             diving
+    //   bow     - the opposite, which is what actually pushes the bow down
+    const float RudderCommand = FMath::Clamp(static_cast<float>(SimInputs.Rudder), -1.0f, 1.0f);
+    RudderAngleDeg = RudderCommand * SD_RUDDER_MAX_DEG;
+    const int32 DepthDelta = FMath::Clamp(
+        static_cast<int32>(SimState.TargetDepthLayer) - static_cast<int32>(SimState.DepthLayer),
+        -1,
+        1
+    );
+    PlaneAngleDeg = static_cast<float>(DepthDelta) * SD_PLANE_MAX_DEG;
+
+    if (Rudder != nullptr)
+    {
+        Rudder->SetRelativeRotation(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG + RudderAngleDeg, 0.0f));
+    }
+    if (SternPlanes != nullptr)
+    {
+        SternPlanes->SetRelativeRotation(FRotator(PlaneAngleDeg, SD_PLAYER_HULL_YAW_DEG, 0.0f));
+    }
+    if (BowPlanes != nullptr)
+    {
+        BowPlanes->SetRelativeRotation(FRotator(-PlaneAngleDeg, SD_PLAYER_HULL_YAW_DEG, 0.0f));
     }
 
     // Wake / bow foam is presentation-only and follows the propeller: it is on

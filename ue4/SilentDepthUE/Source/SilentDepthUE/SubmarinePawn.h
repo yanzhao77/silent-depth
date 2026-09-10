@@ -73,6 +73,17 @@ protected:
     UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
     UStaticMeshComponent* Propeller;
 
+    // Movable control surfaces. Each asset is exported with its pivot on the
+    // hinge axis, so the component only has to sit on that hinge and rotate.
+    UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
+    UStaticMeshComponent* Rudder;
+
+    UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
+    UStaticMeshComponent* SternPlanes;
+
+    UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
+    UStaticMeshComponent* BowPlanes;
+
     UPROPERTY(VisibleAnywhere, Category = "SilentDepth")
     UNiagaraComponent* BowFoam;
 
@@ -86,6 +97,9 @@ protected:
     float SurfaceOffsetZCm = 150.0f;
     float ZoomMinCm = 800.0f;
     float ZoomMaxCm = 6000.0f;
+    float ZoomStepCm = 200.0f;
 
     double PropAngle = 0.0;
+    float RudderAngleDeg = 0.0f;
+    float PlaneAngleDeg = 0.0f;
 };

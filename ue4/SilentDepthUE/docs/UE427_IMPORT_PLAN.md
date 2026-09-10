@@ -140,22 +140,27 @@ LogMaterial: Warning: [AssetLog] M_SD_Submarine_PBR.uasset:
 
 `M_SD_Submarine_PBR` / `M_SD_Submarine_Flat` 存在时，脚本只复用、不重建节点图——否则每次运行都会往图里再追加一整份重复节点。改母材质结构需要先把 `Content/SilentDepth/Art` 移走再跑。
 
-### 推进器切分（RU_SSN_Akula）
+### 可动部件切分（RU_SSN_Akula）
 
-资产库最初把每艘艇导成单个静态网格，推进器焊在艇体里，桨叶无法单独旋转。**现在由资产工厂自己分开导出**，UE 直接消费：
+资产库最初把每艘艇导成单个静态网格，推进器和所有舵面都焊在艇体里，游戏里动不了。**现在由资产工厂自己分开导出**，UE 直接消费：
 
-| 文件 | 内容 |
-|---|---|
-| `SilentDepth_Assets/.../Akula/FBX/RU_SSN_Akula_LOD0..3.fbx` | 艇体，不含桨叶；LOD0 带 10 个 UCX 碰撞体 |
-| `SilentDepth_Assets/.../Akula/FBX/RU_SSN_Akula_PROP.fbx` | 推进器，原点在桨轴（Blender x = -54.4 m，y = z = 0） |
+| 文件 | 内容 | 铰链／轴（Blender 坐标） |
+|---|---|---|
+| `.../FBX/RU_SSN_Akula_LOD0..3.fbx` | 艇体，不含任何可动部件；LOD0 带 10 个 UCX 碰撞体 | — |
+| `.../FBX/RU_SSN_Akula_PROP.fbx` | 螺旋桨（桨轴＋桨毂＋7 片桨叶） | 桨毂中心 x = -54.4 m |
+| `.../FBX/RU_SSN_Akula_RUDDER.fbx` | 上下方向舵（垂直尾鳍） | 根弦前缘 x = -38.8 m，绕 Z |
+| `.../FBX/RU_SSN_Akula_STERNPLANES.fbx` | 尾水平舵 | 根弦前缘 x = -38.6 m，绕 Y |
+| `.../FBX/RU_SSN_Akula_BOWPLANES.fbx` | 艏水平舵 | 根弦前缘 x = 43.4 m，绕 Y |
 
-工厂侧实现在 `Source/build_akula_reference.py` → `build_exports()`：按 `07_PROPULSION` 集合把推进器从可视网格里分出来，艇体 LOD 只用剩下的部分；推进器单独合并后把几何平移到桨轴中心、对象变换归零，这样导出的枢轴就是旋转轴。**关键点是不能把桨轴位移留在对象变换上**——UE 导入静态网格时会把对象变换烘进顶点，枢轴留在资产原点，组件再按桨轴摆放就会偏移两次（实测偏了 54 米）。
+舵面的枢轴取各组包围盒的 `max_x`（根弦前缘）；螺旋桨用桨毂包围盒中心。所有部件导出时都把几何平移到枢轴、对象变换归零，所以 UE 侧组件只要落在铰链上就能正确旋转。
 
-副作用：艇体长度从 110.2 m 变成 109.1 m（桨叶原先计入包围盒），LOD 材质槽从 6 个降到 5 个。SPEC 的 `exports` 现在含 `RU_SSN_Akula_PROP`。
+工厂侧实现在 `Source/build_akula_reference.py` 的 `MOVABLE_PARTS` 与 `build_exports()`：按集合和名称前缀把可动件从可视网格里分出来，艇体 LOD 只用剩下的部分。**关键点是不能把枢轴位移留在对象变换上**——UE 导入静态网格时会把对象变换烘进顶点，枢轴留在资产原点，组件再按铰链摆放就会偏移两次（实测偏了 54 米）。
 
-推进器需要的材质实例由 `import_prop()` 单独补齐——它在艇体上已经不存在，不能指望艇体那一轮建出来。
+副作用：艇体包围盒从 110.2 × 19.6 × 28.4 m 变成 109.1 × 13.7 × 27.0 m（可动件原先计入包围盒），LOD 材质槽从 6 个降到 5 个。SPEC 的 `exports` 现在含全部 4 个可动部件。
 
-其余两艘（Typhoon、Yasen）的导出脚本还没做同样的切分，它们的桨叶目前仍焊在艇体里。
+部件的材质实例由 `import_parts()` 单独补齐——那些材质在艇体上已经不存在，不能指望艇体那一轮建出来。
+
+其余两艘（Typhoon、Yasen）的导出脚本还没做同样的切分，它们的桨叶和舵面目前仍焊在艇体里。
 
 材质数值**不在这里发明**，全部取自各艇自己的 Blender 构建脚本：
 

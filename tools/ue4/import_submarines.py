@@ -88,10 +88,11 @@ ASSETS = [
         "src": "Submarines/SSN/Russia/Akula",
         "dest": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula",
         "lod_indices": (1, 2, 3),
-        # The factory exports the propeller as its own FBX (hull LODs carry no
-        # blade geometry) with the origin on the shaft axis, so a component can
-        # spin it. See the asset's Source/build_akula_reference.py.
-        "prop_fbx": "RU_SSN_Akula_PROP.fbx",
+        # Moving parts are exported by the factory as their own FBX with the
+        # origin on the hinge axis (hull LODs carry none of this geometry), so a
+        # component can rotate each one. See the asset's
+        # Source/build_akula_reference.py -> MOVABLE_PARTS.
+        "parts": ("PROP", "RUDDER", "STERNPLANES", "BOWPLANES"),
         # Only the two Drawing maps are used by the current Drawing-based model.
         # T_Akula_Hull_*/Rubber_*/Reference_* belong to the abandoned earlier revision.
         "textures": [
@@ -653,25 +654,26 @@ def assign_slots(asset, mesh_path, discovered, fallback):
         ", unmatched={}".format(unmatched) if unmatched else ""))
 
 
-def import_prop(asset, masters, fallback):
-    """Import the separately exported propeller and wire up its materials.
+def import_parts(asset, masters, fallback):
+    """Import the separately exported moving parts and wire up their materials.
 
-    The propeller's material is not used by the hull any more, so any instances
-    it needs are built here rather than being left over from the hull pass.
+    A part's material is not used by the hull any more, so any instances it
+    needs are built here rather than being left over from the hull pass.
     """
-    if not asset.get("prop_fbx"):
-        return None
-    source = os.path.join(fbx_directory(asset), asset["prop_fbx"])
-    path = import_fbx(source, asset["dest"], "SM_{}_PROP".format(asset["id"]))
-    if path is None:
-        return None
-    discovered = discover_slots(asset, path)
-    for key in sorted({key for _i, _n, key in discovered if key}):
-        display_name, spec = asset["slots"][key]
-        build_slot_material(asset, display_name, spec, masters)
-    assign_slots(asset, path, discovered, fallback)
-    report_mesh(asset, path, label="{}_PROP".format(asset["id"]))
-    return path
+    imported = {}
+    for suffix in asset.get("parts", ()):
+        source = os.path.join(fbx_directory(asset), "{}_{}.fbx".format(asset["id"], suffix))
+        path = import_fbx(source, asset["dest"], "SM_{}_{}".format(asset["id"], suffix))
+        if path is None:
+            continue
+        discovered = discover_slots(asset, path)
+        for key in sorted({key for _i, _n, key in discovered if key}):
+            display_name, spec = asset["slots"][key]
+            build_slot_material(asset, display_name, spec, masters)
+        assign_slots(asset, path, discovered, fallback)
+        report_mesh(asset, path, label="{}_{}".format(asset["id"], suffix))
+        imported[suffix] = path
+    return imported
 
 
 def report_mesh(asset, mesh_path, label=None):
@@ -714,9 +716,9 @@ def process_asset(asset, masters, fallback):
         build_slot_material(asset, display_name, spec, masters)
     assign_slots(asset, mesh_path, discovered, fallback)
     report_mesh(asset, mesh_path)
-    # The propeller reuses the material instances built for the hull, so it is
+    # Moving parts reuse the material instances built for the hull, so they are
     # imported after them.
-    import_prop(asset, masters, fallback)
+    import_parts(asset, masters, fallback)
 
 
 def main():

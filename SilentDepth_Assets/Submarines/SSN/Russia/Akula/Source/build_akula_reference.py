@@ -18,6 +18,16 @@ TODAY = "2026-09-09"
 # Collection holding the shaft, hub and blades, exported as their own asset.
 PROPULSION_COLLECTION = "07_PROPULSION"
 
+# Parts that move in game, exported separately from the hull so an engine can
+# rotate them. Each hinges at its root leading edge (the fore/aft extreme of its
+# own bounds on the bow side), except the propeller which turns on the shaft.
+MOVABLE_PARTS = (
+    ("PROP", PROPULSION_COLLECTION, None, "hub"),
+    ("RUDDER", "06_TAIL", "TailVertical", "leading"),
+    ("STERNPLANES", "06_TAIL", "TailHorizontal", "leading"),
+    ("BOWPLANES", "05_DIVE_PLANES", "BowPlane", "leading"),
+)
+
 LENGTH = 110.2
 BEAM = 13.6
 HALF_LENGTH = LENGTH / 2.0
@@ -548,11 +558,15 @@ def object_stats(obj):
 
 def build_exports(collections, collision):
     visual = all_visual_meshes(collections)
-    # The propeller is exported on its own. A hull with the blades welded in
-    # cannot animate them in an engine, which is how the first export shipped.
-    propulsion = set(collections[PROPULSION_COLLECTION].objects) if PROPULSION_COLLECTION in collections else set()
-    hull_visual = [obj for obj in visual if obj not in propulsion]
-    prop_visual = [obj for obj in visual if obj in propulsion]
+    # Moving parts are exported on their own. A hull with the blades and fins
+    # welded in cannot animate them in an engine, which is how the first export
+    # shipped.
+    part_objects = {
+        suffix: movable_part_objects(collections, collection_key, name_filter)
+        for suffix, collection_key, name_filter, _rule in MOVABLE_PARTS
+    }
+    movable = {obj for objects in part_objects.values() for obj in objects}
+    hull_visual = [obj for obj in visual if obj not in movable]
 
     meshes = [duplicate_join_export_mesh(f"{ASSET_ID}_LOD0", hull_visual, collections["LOD0"])]
     for name, ratio in (("LOD1", 0.52), ("LOD2", 0.24), ("LOD3", 0.095)):
@@ -562,33 +576,59 @@ def build_exports(collections, collision):
         export_selected(ROOT / "FBX" / f"{mesh.name}.fbx", [mesh])
     export_selected(ROOT / "Collision" / f"{ASSET_ID}_COLLISION.fbx", collision)
 
-    if prop_visual:
-        origin = propeller_shaft_origin(prop_visual)
-        propeller = duplicate_join_export_mesh(f"{ASSET_ID}_PROP", prop_visual, collections["LOD0"])
-        # Move the geometry onto the shaft and leave the object transform at the
-        # origin, so the exported pivot IS the rotation axis. Baking the shaft
+    stats = [object_stats(mesh) for mesh in meshes]
+    for suffix, collection_key, name_filter, rule in MOVABLE_PARTS:
+        objects = part_objects[suffix]
+        if not objects:
+            print("WARNING: no geometry found for movable part " + suffix)
+            continue
+        pivot = propeller_shaft_origin(objects) if rule == "hub" else control_surface_hinge(objects)
+        part = duplicate_join_export_mesh(f"{ASSET_ID}_{suffix}", objects, collections["LOD0"])
+        # Move the geometry onto the pivot and leave the object transform at the
+        # origin, so the exported pivot IS the rotation axis. Baking the pivot
         # into the object transform instead makes the engine offset it twice.
-        propeller.data.transform(Matrix.Translation(-origin) @ propeller.matrix_world)
-        propeller.matrix_world = Matrix.Identity(4)
-        export_selected(ROOT / "FBX" / f"{ASSET_ID}_PROP.fbx", [propeller])
-        return [object_stats(mesh) for mesh in meshes] + [object_stats(propeller)]
+        part.data.transform(Matrix.Translation(-pivot) @ part.matrix_world)
+        part.matrix_world = Matrix.Identity(4)
+        export_selected(ROOT / "FBX" / f"{ASSET_ID}_{suffix}.fbx", [part])
+        stats.append(object_stats(part))
+    return stats
 
-    return [object_stats(mesh) for mesh in meshes]
+
+def movable_part_objects(collections, collection_key, name_filter):
+    collection = collections.get(collection_key)
+    if collection is None:
+        return []
+    return [
+        obj for obj in collection.objects
+        if obj.type == "MESH"
+        and not obj.name.startswith("UCX_")
+        and (name_filter is None or name_filter in obj.name)
+    ]
+
+
+def control_surface_hinge(objects):
+    """Root leading edge of a fin, which is where it hinges."""
+    _low, high = world_bounds(objects)
+    return Vector((high.x, 0.0, 0.0))
 
 
 def propeller_shaft_origin(objects):
     """Centre of the propeller hub, which lies on the shaft axis."""
     hub = next((obj for obj in objects if "PropellerHub" in obj.name), None)
-    targets = [hub] if hub is not None else list(objects)
+    low, high = world_bounds([hub] if hub is not None else objects)
+    return Vector(((low.x + high.x) / 2, (low.y + high.y) / 2, (low.z + high.z) / 2))
+
+
+def world_bounds(objects):
     low = Vector((1e9, 1e9, 1e9))
     high = Vector((-1e9, -1e9, -1e9))
-    for obj in targets:
+    for obj in objects:
         for vertex in obj.data.vertices:
             position = obj.matrix_world @ vertex.co
             for axis in range(3):
                 low[axis] = min(low[axis], position[axis])
                 high[axis] = max(high[axis], position[axis])
-    return Vector(((low.x + high.x) / 2, (low.y + high.y) / 2, (low.z + high.z) / 2))
+    return low, high
 
 
 def look_at(obj, target):
