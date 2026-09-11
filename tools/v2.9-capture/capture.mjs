@@ -405,7 +405,10 @@ async function startMissionDOM(page, missionId) {
   await sleep(1500);
   await page.evaluate((id) => {
     const btn = document.querySelector(`button[data-mission-id="${id}"]`);
-    if (btn) { btn.click(); return; }
+    if (btn) {
+      btn.click();
+      return;
+    }
     const btns = [...document.querySelectorAll('button')];
     const mission = btns.find((b) => b.textContent?.includes(id));
     if (mission) mission.click();
@@ -414,7 +417,10 @@ async function startMissionDOM(page, missionId) {
   await page.evaluate(() => {
     const btns = [...document.querySelectorAll('button')];
     const confirm = btns.find(
-      (b) => b.textContent?.includes('开始') || b.textContent?.includes('确认') || b.textContent?.includes('Start'),
+      (b) =>
+        b.textContent?.includes('开始') ||
+        b.textContent?.includes('确认') ||
+        b.textContent?.includes('Start'),
     );
     if (confirm) confirm.click();
   });
@@ -444,10 +450,14 @@ async function steerAndApproach(page, { steerTicks = 0, maxPings = 6 } = {}) {
   let detected = false;
   for (let i = 0; i < maxPings; i++) {
     const sonar = await getSonarStateDOM(page);
-    console.log(`    iter ${i}: battery=${sonar.battery.toFixed(1)}% cooldown=${sonar.pingCooldown}s`);
+    console.log(
+      `    iter ${i}: battery=${sonar.battery.toFixed(1)}% cooldown=${sonar.pingCooldown}s`,
+    );
 
     if (sonar.battery < 5) {
-      console.log(`    battery low (${sonar.battery.toFixed(1)}%), stepping to let enemy approach...`);
+      console.log(
+        `    battery low (${sonar.battery.toFixed(1)}%), stepping to let enemy approach...`,
+      );
       await stepSim(page, 600);
       continue;
     }
@@ -899,7 +909,9 @@ async function setupGameState(page, shot) {
 
         for (let approach = 0; approach < 60; approach++) {
           const sonarNow = await getSonarStateDOM(page);
-          console.log(`    torpedo-hit approach ${approach}: battery=${sonarNow.battery.toFixed(1)}%`);
+          console.log(
+            `    torpedo-hit approach ${approach}: battery=${sonarNow.battery.toFixed(1)}%`,
+          );
 
           // Ping to detect contacts
           if (sonarNow.pingCooldown > 0) {
@@ -917,13 +929,18 @@ async function setupGameState(page, shot) {
 
           if (inRangeContact) {
             firedFromDist = inRangeContact.range;
-            console.log(`    torpedo-hit: contact in range at ${firedFromDist}km — firing sequence`);
+            console.log(
+              `    torpedo-hit: contact in range at ${firedFromDist}km — firing sequence`,
+            );
 
             // Select the contact by clicking its DOM row
-            await page.evaluate((idx) => {
-              const rows = [...document.querySelectorAll('.contact-row')];
-              if (rows[idx]) rows[idx].click();
-            }, inRangeContact.id.replace('contact-', ''));
+            await page.evaluate(
+              (idx) => {
+                const rows = [...document.querySelectorAll('.contact-row')];
+                if (rows[idx]) rows[idx].click();
+              },
+              inRangeContact.id.replace('contact-', ''),
+            );
             await sleep(500);
 
             // Raise periscope (P) for visual confirmation
@@ -959,9 +976,12 @@ async function setupGameState(page, shot) {
               const tlSnap = await getSnapshotDOM(page);
               const hitEvent = tlSnap.timeline.find(
                 (t) =>
-                  t.text.includes('命中') || t.text.includes('HIT') ||
-                  t.text.includes('击沉') || t.text.includes('SUNK') ||
-                  t.text.includes('torpedo') || t.text.includes('鱼雷'),
+                  t.text.includes('命中') ||
+                  t.text.includes('HIT') ||
+                  t.text.includes('击沉') ||
+                  t.text.includes('SUNK') ||
+                  t.text.includes('torpedo') ||
+                  t.text.includes('鱼雷'),
               );
 
               if (hitEvent) {
@@ -976,7 +996,9 @@ async function setupGameState(page, shot) {
                   const metrics = await validateScreenshot(page, candidatePath);
                   const variance = metrics ? metrics.variance : 0;
                   candidateFrames.push({ path: candidatePath, variance, frame: f });
-                  console.log(`    torpedo-hit: candidate frame ${f} variance=${variance.toFixed(2)}`);
+                  console.log(
+                    `    torpedo-hit: candidate frame ${f} variance=${variance.toFixed(2)}`,
+                  );
                 }
 
                 // Select frame with highest variance (most visual activity = explosion)
@@ -990,7 +1012,11 @@ async function setupGameState(page, shot) {
                   const mainPath = join(OUT_DIR, `${shot.id}-${VPS[0].n}.png`);
                   copyFileSync(bestFrame.path, mainPath);
                   for (const cf of candidateFrames) {
-                    try { unlinkSync(cf.path); } catch { /* ignore */ }
+                    try {
+                      unlinkSync(cf.path);
+                    } catch {
+                      /* ignore */
+                    }
                   }
                 }
                 break;
@@ -999,7 +1025,9 @@ async function setupGameState(page, shot) {
               // Check if battery depleted
               const batNow = await getSonarStateDOM(page);
               if (batNow.battery <= 0) {
-                console.log(`    torpedo-hit: battery depleted (${batNow.battery.toFixed(1)}%), stopping wait`);
+                console.log(
+                  `    torpedo-hit: battery depleted (${batNow.battery.toFixed(1)}%), stopping wait`,
+                );
                 break;
               }
             }
@@ -1007,7 +1035,11 @@ async function setupGameState(page, shot) {
             if (!hitDetected) {
               // Clean up any leftover candidate files
               for (let f = 0; f < 5; f++) {
-                try { unlinkSync(join(OUT_DIR, `${shot.id}-candidate-${f}.png`)); } catch { /* ignore */ }
+                try {
+                  unlinkSync(join(OUT_DIR, `${shot.id}-candidate-${f}.png`));
+                } catch {
+                  /* ignore */
+                }
               }
             }
             break; // exit approach loop (fired or gave up)
@@ -1015,7 +1047,9 @@ async function setupGameState(page, shot) {
 
           // Not in range yet — check battery before continuing
           if (sonarNow.battery <= 5) {
-            console.log(`    torpedo-hit: battery low (${sonarNow.battery.toFixed(1)}%), waiting for recharge...`);
+            console.log(
+              `    torpedo-hit: battery low (${sonarNow.battery.toFixed(1)}%), waiting for recharge...`,
+            );
             await stepSim(page, 600);
             continue;
           }
@@ -1031,7 +1065,9 @@ async function setupGameState(page, shot) {
         }
 
         if (retry < MAX_RETRIES) {
-          console.log(`    torpedo-hit: torpedo missed (fired from ${firedFromDist}km), will retry`);
+          console.log(
+            `    torpedo-hit: torpedo missed (fired from ${firedFromDist}km), will retry`,
+          );
         } else {
           console.log(`    torpedo-hit: torpedo did not hit after ${MAX_RETRIES + 1} attempts`);
         }

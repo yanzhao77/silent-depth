@@ -27,7 +27,7 @@ export interface VisualRng {
  */
 export function createVisualRng(seed?: number): VisualRng {
   // xorshift32 state — must be non-zero.
-  let state = (seed ?? (Date.now() ^ 0xdeadbeef)) >>> 0;
+  let state = (seed ?? Date.now() ^ 0xdeadbeef) >>> 0;
   if (state === 0) state = 1;
 
   function next(): number {

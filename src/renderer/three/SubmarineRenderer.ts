@@ -87,7 +87,9 @@ export class SubmarineRenderer {
   }
 
   private async loadApprovedGlbLods(lodDistanceMultiplier: number): Promise<void> {
-    const loaded = await Promise.all(LOD_LEVELS.map((lod) => this.assetManager.loadFamilyLod('player-submarine', lod)));
+    const loaded = await Promise.all(
+      LOD_LEVELS.map((lod) => this.assetManager.loadFamilyLod('player-submarine', lod)),
+    );
     if (loaded.some((result) => result.usingFallback || !result.scene)) return;
 
     for (const lod of LOD_LEVELS) {
@@ -132,9 +134,10 @@ export class SubmarineRenderer {
     }
     for (const lod of LOD_LEVELS) this.partsByLod[lod].propeller.rotation.x = this.propAngle;
 
-    const headingDelta = this.lastHeadingDeg === null
-      ? 0
-      : THREE.MathUtils.euclideanModulo(player.headingDeg - this.lastHeadingDeg + 180, 360) - 180;
+    const headingDelta =
+      this.lastHeadingDeg === null
+        ? 0
+        : THREE.MathUtils.euclideanModulo(player.headingDeg - this.lastHeadingDeg + 180, 360) - 180;
     this.lastHeadingDeg = player.headingDeg;
     const rudderAngle = THREE.MathUtils.clamp(-headingDelta * 0.75, -12, 12) * RAD;
     for (const lod of LOD_LEVELS) {

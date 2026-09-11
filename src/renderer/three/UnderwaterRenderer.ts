@@ -132,11 +132,7 @@ export class UnderwaterRenderer {
     scene.add(this._caustic);
   }
 
-  update(
-    underwater: UnderwaterVisual | null,
-    cameraPos: THREE.Vector3,
-    wallTime: number,
-  ): void {
+  update(underwater: UnderwaterVisual | null, cameraPos: THREE.Vector3, wallTime: number): void {
     if (!underwater) {
       this._particles.visible = false;
       this._caustic.visible = false;

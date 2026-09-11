@@ -147,12 +147,7 @@ export interface RenderMission {
  * world perspective camera configured with per-preset parameters.
  */
 export type CameraMode =
-  | 'tactical'
-  | 'cinematic'
-  | 'chase'
-  | 'surface'
-  | 'underwater'
-  | 'periscope';
+  'tactical' | 'cinematic' | 'chase' | 'surface' | 'underwater' | 'periscope';
 
 export interface RenderCamera {
   mode: CameraMode;

@@ -48,8 +48,12 @@ export class SceneManager {
     this.scene.fog = new THREE.FogExp2(0x050a12, 0.008);
   }
 
-  get width(): number { return this._width; }
-  get height(): number { return this._height; }
+  get width(): number {
+    return this._width;
+  }
+  get height(): number {
+    return this._height;
+  }
 
   resize(width: number, height: number): void {
     this._width = width;

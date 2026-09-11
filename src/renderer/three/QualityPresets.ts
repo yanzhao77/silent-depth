@@ -126,9 +126,7 @@ export function autoDetectQuality(): QualityLevel {
   if (!gl) return 'LOW';
 
   const debugInfo = gl.getExtension('WEBGL_debug_renderer_info');
-  const renderer = debugInfo
-    ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL)
-    : '';
+  const renderer = debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : '';
 
   const maxTextureSize = gl.getParameter(gl.MAX_TEXTURE_SIZE);
   const maxRenderbufferSize = gl.getParameter(gl.MAX_RENDERBUFFER_SIZE);

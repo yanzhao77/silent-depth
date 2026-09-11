@@ -36,9 +36,9 @@ export class CameraManager {
   private _prevMode: CameraMode = 'cinematic';
 
   // World camera orbit parameters (kilometre world units; hull ≈ 67 m).
-  private _orbitDistance = 0.20;
+  private _orbitDistance = 0.2;
   private _orbitHeight = 0.085;
-  private _targetDistance = 0.20;
+  private _targetDistance = 0.2;
   private _targetHeight = 0.085;
 
   private _camPos = new THREE.Vector3();
@@ -50,14 +50,27 @@ export class CameraManager {
   private readonly _visualRng: VisualRng = createVisualRng();
 
   constructor(width: number, height: number) {
-    this.worldCamera = new THREE.PerspectiveCamera(PRESET_FOV.cinematic, width / height, 0.001, 200);
-    this.periscopeCamera = new THREE.PerspectiveCamera(PRESET_FOV.periscope, width / height, 0.001, 100);
+    this.worldCamera = new THREE.PerspectiveCamera(
+      PRESET_FOV.cinematic,
+      width / height,
+      0.001,
+      200,
+    );
+    this.periscopeCamera = new THREE.PerspectiveCamera(
+      PRESET_FOV.periscope,
+      width / height,
+      0.001,
+      100,
+    );
     const aspect = width / height;
     const frustumSize = 15;
     this.tacticalCamera = new THREE.OrthographicCamera(
-      -frustumSize * aspect / 2, frustumSize * aspect / 2,
-      frustumSize / 2, -frustumSize / 2,
-      0.01, 200,
+      (-frustumSize * aspect) / 2,
+      (frustumSize * aspect) / 2,
+      frustumSize / 2,
+      -frustumSize / 2,
+      0.01,
+      200,
     );
     this.tacticalCamera.position.set(0, 50, 0);
     this.tacticalCamera.lookAt(0, 0, 0);
@@ -65,13 +78,18 @@ export class CameraManager {
 
   get activeCamera(): THREE.Camera {
     switch (this._mode) {
-      case 'periscope': return this.periscopeCamera;
-      case 'tactical': return this.tacticalCamera;
-      default: return this.worldCamera;
+      case 'periscope':
+        return this.periscopeCamera;
+      case 'tactical':
+        return this.tacticalCamera;
+      default:
+        return this.worldCamera;
     }
   }
 
-  get mode(): CameraMode { return this._mode; }
+  get mode(): CameraMode {
+    return this._mode;
+  }
 
   setMode(mode: CameraMode): void {
     if (mode === this._mode) return;
@@ -97,8 +115,8 @@ export class CameraManager {
     this.periscopeCamera.aspect = aspect;
     this.periscopeCamera.updateProjectionMatrix();
     const frustumSize = 15;
-    this.tacticalCamera.left = -frustumSize * aspect / 2;
-    this.tacticalCamera.right = frustumSize * aspect / 2;
+    this.tacticalCamera.left = (-frustumSize * aspect) / 2;
+    this.tacticalCamera.right = (frustumSize * aspect) / 2;
     this.tacticalCamera.top = frustumSize / 2;
     this.tacticalCamera.bottom = -frustumSize / 2;
     this.tacticalCamera.updateProjectionMatrix();
@@ -146,7 +164,8 @@ export class CameraManager {
     const sinH = Math.sin(hdgRad);
     const cosH = Math.cos(hdgRad);
 
-    const sideOffset = this._orbitDistance * (params.sideOffset / Math.max(0.0001, params.distance));
+    const sideOffset =
+      this._orbitDistance * (params.sideOffset / Math.max(0.0001, params.distance));
     const targetX = pp.x - sinH * this._orbitDistance + cosH * sideOffset;
     const targetZ = pp.z + cosH * this._orbitDistance + sinH * sideOffset;
 
@@ -157,7 +176,9 @@ export class CameraManager {
 
     let lookX = pp.x + sinH * params.lookAhead;
     let lookZ = pp.z - cosH * params.lookAhead;
-    const lookY = underwater ? pp.y + params.lookUpBias * 0.5 : Math.max(-0.012, pp.y + params.lookUpBias);
+    const lookY = underwater
+      ? pp.y + params.lookUpBias * 0.5
+      : Math.max(-0.012, pp.y + params.lookUpBias);
 
     // Reveal framing: slowly pan the aim toward the detected ship and tighten the
     // field of view. The smoothing above already provides the slow pan; we only

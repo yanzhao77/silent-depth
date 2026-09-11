@@ -106,7 +106,9 @@ function pushPath(root: JsonObject, path: readonly JsonPathSegment[], value: Jso
 }
 
 function issueText(issues: readonly SubmarineAssemblyValidationIssue[]): string {
-  return issues.map((issue) => `${issue.source}:${issue.keyword ?? 'custom'}:${issue.path}:${issue.message}`).join('\n');
+  return issues
+    .map((issue) => `${issue.source}:${issue.keyword ?? 'custom'}:${issue.path}:${issue.message}`)
+    .join('\n');
 }
 
 function expectIssue(
@@ -123,10 +125,7 @@ function expectIssue(
   ).toBe(true);
 }
 
-function expectSchemaInvalid(
-  mutator: (assembly: JsonObject) => void,
-  expectedText: string,
-): void {
+function expectSchemaInvalid(mutator: (assembly: JsonObject) => void, expectedText: string): void {
   const assembly = cloneJsonObject(minimalExample);
   mutator(assembly);
   const issues = validateSubmarineAssemblySchema(assembly);
@@ -143,10 +142,7 @@ function expectContractInvalid(
   expectIssue(issues, expectedText);
 }
 
-function expectFormalInvalid(
-  mutator: (assembly: JsonObject) => void,
-  expectedText: string,
-): void {
+function expectFormalInvalid(mutator: (assembly: JsonObject) => void, expectedText: string): void {
   const assembly = cloneJsonObject(minimalExample);
   mutator(assembly);
   const issues = validateSubmarineAssembly(assembly);
@@ -233,8 +229,20 @@ describe('潜艇 Assembly Schema 和模板契约', () => {
         'Validation/[ASSET_ID]_VALIDATION.json',
       ]),
     );
-    expect(getPath(validationRules, ['conditional_part_validation', 'torpedo_doors', 'not_required_for_every_submarine'])).toBe(true);
-    expect(getPath(validationRules, ['conditional_part_validation', 'vls_doors', 'not_required_for_every_submarine'])).toBe(true);
+    expect(
+      getPath(validationRules, [
+        'conditional_part_validation',
+        'torpedo_doors',
+        'not_required_for_every_submarine',
+      ]),
+    ).toBe(true);
+    expect(
+      getPath(validationRules, [
+        'conditional_part_validation',
+        'vls_doors',
+        'not_required_for_every_submarine',
+      ]),
+    ).toBe(true);
 
     const emptyRequired = cloneJsonObject(minimalExample);
     setPath(emptyRequired, ['validation', 'requiredParts'], []);
@@ -344,7 +352,10 @@ describe('潜艇 Assembly JSON Schema 拒绝结构错误', () => {
     setPath(assembly, ['parts', 0, 'collision', 'sourceObjects'], ['UCX_ORPHAN_COLLISION']);
 
     expectIssue(validateSubmarineAssemblySchema(assembly), 'oneOf');
-    expectIssue(validateSubmarineAssemblyContract(assembly), 'none/none collision 不得声明 sourceObjects');
+    expectIssue(
+      validateSubmarineAssemblyContract(assembly),
+      'none/none collision 不得声明 sourceObjects',
+    );
   });
 
   it('拒绝 hull/inherit_hull collision 在 Part 声明 sourceObjects', () => {
@@ -366,7 +377,10 @@ describe('潜艇 Assembly JSON Schema 拒绝结构错误', () => {
     setPath(assembly, ['parts', 0, 'collision', 'strategy'], 'owned_ucx');
 
     expectIssue(validateSubmarineAssemblySchema(assembly), 'oneOf');
-    expectIssue(validateSubmarineAssemblyContract(assembly), 'part/owned_ucx collision 必须声明 sourceObjects');
+    expectIssue(
+      validateSubmarineAssemblyContract(assembly),
+      'part/owned_ucx collision 必须声明 sourceObjects',
+    );
   });
 
   it('拒绝 part/simple_convex collision 携带 sourceObjects', () => {
@@ -417,7 +431,10 @@ describe('潜艇 Assembly JSON Schema 拒绝结构错误', () => {
     deletePath(assembly, ['hull', 'collision', 'path']);
 
     expectIssue(validateSubmarineAssemblySchema(assembly), 'oneOf');
-    expectIssue(validateSubmarineAssemblyContract(assembly), 'separate_fbx Hull collision 必须声明 path');
+    expectIssue(
+      validateSubmarineAssemblyContract(assembly),
+      'separate_fbx Hull collision 必须声明 path',
+    );
   });
 
   it('拒绝 ucx_embedded Hull collision 携带 path', () => {
@@ -425,7 +442,10 @@ describe('潜艇 Assembly JSON Schema 拒绝结构错误', () => {
     setPath(assembly, ['hull', 'collision', 'strategy'], 'ucx_embedded');
 
     expectIssue(validateSubmarineAssemblySchema(assembly), 'oneOf');
-    expectIssue(validateSubmarineAssemblyContract(assembly), 'ucx_embedded Hull collision 不得声明独立 path');
+    expectIssue(
+      validateSubmarineAssemblyContract(assembly),
+      'ucx_embedded Hull collision 不得声明独立 path',
+    );
   });
 
   it('拒绝 ucx_embedded Hull collision 缺少 sourceObjects', () => {
@@ -436,7 +456,10 @@ describe('潜艇 Assembly JSON Schema 拒绝结构错误', () => {
     });
 
     expectIssue(validateSubmarineAssemblySchema(assembly), 'oneOf');
-    expectIssue(validateSubmarineAssemblyContract(assembly), 'ucx_embedded Hull collision 必须声明 sourceObjects');
+    expectIssue(
+      validateSubmarineAssemblyContract(assembly),
+      'ucx_embedded Hull collision 必须声明 sourceObjects',
+    );
   });
 
   it('拒绝 simple_convex Hull collision 携带 path 或 sourceObjects', () => {
@@ -444,7 +467,10 @@ describe('潜艇 Assembly JSON Schema 拒绝结构错误', () => {
     setPath(assembly, ['hull', 'collision', 'strategy'], 'simple_convex');
 
     expectIssue(validateSubmarineAssemblySchema(assembly), 'oneOf');
-    expectIssue(validateSubmarineAssemblyContract(assembly), 'simple_convex Hull collision 由工具生成');
+    expectIssue(
+      validateSubmarineAssemblyContract(assembly),
+      'simple_convex Hull collision 由工具生成',
+    );
   });
 
   it('拒绝 Hull collision path 不在标准 Collision 输出目录', () => {
@@ -481,7 +507,11 @@ describe('潜艇 Assembly 跨字段校验拒绝不安全或含糊的契约', () 
 
   it('拒绝碰撞文件名只匹配 assetId 前缀但不是标准输出名', () => {
     expectFormalInvalid((assembly) => {
-      setPath(assembly, ['hull', 'collision', 'path'], 'Collision/ZZ_SSN_MinimalTemplate_COLLISION_EXTRA.fbx');
+      setPath(
+        assembly,
+        ['hull', 'collision', 'path'],
+        'Collision/ZZ_SSN_MinimalTemplate_COLLISION_EXTRA.fbx',
+      );
     }, '路径必须为 Collision/ZZ_SSN_MinimalTemplate_COLLISION.fbx');
   });
 
@@ -547,7 +577,10 @@ describe('潜艇 Assembly 跨字段校验拒绝不安全或含糊的契约', () 
 
   it('拒绝连续旋转同时声明有限旋转范围', () => {
     expectContractInvalid((assembly) => {
-      setPath(assembly, ['parts', 0, 'motion', 'rotationRangeDegrees'], { min: -180.0, max: 180.0 });
+      setPath(assembly, ['parts', 0, 'motion', 'rotationRangeDegrees'], {
+        min: -180.0,
+        max: 180.0,
+      });
     }, 'continuousRotation 不能同时声明有限旋转范围');
   });
 

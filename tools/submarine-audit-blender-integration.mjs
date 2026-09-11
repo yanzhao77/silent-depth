@@ -9,7 +9,10 @@ import assert from 'node:assert/strict';
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const BLENDER = process.env.BLENDER_BIN ?? '/Applications/Blender.app/Contents/MacOS/Blender';
-const CLI = resolve(ROOT, 'SilentDepth_Assets/Templates/Submarine/Scripts/submarine_blender_audit_cli.mjs');
+const CLI = resolve(
+  ROOT,
+  'SilentDepth_Assets/Templates/Submarine/Scripts/submarine_blender_audit_cli.mjs',
+);
 
 function sha256(path) {
   const hash = createHash('sha256');
@@ -34,10 +37,14 @@ empty.empty_display_type = 'ARROWS'
 bpy.context.scene.collection.objects.link(empty)
 bpy.ops.wm.save_as_mainfile(filepath=${JSON.stringify(blendPath)})
 `;
-  const result = spawnSync(BLENDER, ['--background', '--factory-startup', '--python-expr', script], {
-    encoding: 'utf-8',
-    maxBuffer: 1024 * 1024 * 16,
-  });
+  const result = spawnSync(
+    BLENDER,
+    ['--background', '--factory-startup', '--python-expr', script],
+    {
+      encoding: 'utf-8',
+      maxBuffer: 1024 * 1024 * 16,
+    },
+  );
   assert.equal(result.status, 0, `${result.stderr}\n${result.stdout}`);
 }
 
@@ -86,7 +93,9 @@ function main() {
     assert.ok(report.issues.some((item) => item.ruleId === 'SUBMOD-022-DEGENERATE_FACE'));
     assert.ok(report.issues.some((item) => item.ruleId === 'SUBMOD-022-NO_MATERIAL_SLOT'));
     assert.ok(report.issues.some((item) => item.ruleId === 'SUBMOD-022-NEGATIVE_SCALE'));
-    assert.ok(report.assemblyAudit.anchorReports.some((item) => item.name === 'SOCKET_AUDIT_CANDIDATE'));
+    assert.ok(
+      report.assemblyAudit.anchorReports.some((item) => item.name === 'SOCKET_AUDIT_CANDIDATE'),
+    );
     console.log(`Blender 集成审计通过：${BLENDER}`);
   } finally {
     rmSync(dir, { recursive: true, force: true });

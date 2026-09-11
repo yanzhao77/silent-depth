@@ -38,12 +38,16 @@ export class TacticalOverlay {
     const ctx = this._ctx;
     ctx.clearRect(0, 0, width, height);
 
-    const project = (wx: number, wy: number, wz: number): { x: number; y: number; visible: boolean } => {
+    const project = (
+      wx: number,
+      wy: number,
+      wz: number,
+    ): { x: number; y: number; visible: boolean } => {
       const v = new THREE.Vector3(wx, wy, wz);
       v.project(camera);
       return {
-        x: (v.x + 1) / 2 * width,
-        y: (-v.y + 1) / 2 * height,
+        x: ((v.x + 1) / 2) * width,
+        y: ((-v.y + 1) / 2) * height,
         visible: v.z < 1 && v.z > -1,
       };
     };
@@ -116,14 +120,14 @@ export class TacticalOverlay {
       const hasResolvedCenter = contact.classification !== 'Unknown' && contact.confidence > 30;
       // Ellipse remains the primary representation for uncertain observations.
       ctx.fillStyle = color;
-      ctx.globalAlpha = hasResolvedCenter ? (contact.selected ? 0.10 : 0.055) : 0.028;
+      ctx.globalAlpha = hasResolvedCenter ? (contact.selected ? 0.1 : 0.055) : 0.028;
       ctx.beginPath();
       ctx.ellipse(0, 0, rxScreen, ryScreen, 0, 0, Math.PI * 2);
       ctx.fill();
 
       ctx.strokeStyle = color;
       ctx.lineWidth = contact.selected && hasResolvedCenter ? 2 : 1;
-      ctx.globalAlpha = hasResolvedCenter ? (contact.selected ? 0.90 : 0.52) : 0.32;
+      ctx.globalAlpha = hasResolvedCenter ? (contact.selected ? 0.9 : 0.52) : 0.32;
       ctx.setLineDash(hasResolvedCenter ? [3, 3] : [5, 5]);
       ctx.beginPath();
       ctx.ellipse(0, 0, rxScreen, ryScreen, 0, 0, Math.PI * 2);
@@ -145,7 +149,11 @@ export class TacticalOverlay {
         ctx.font = '9px "SF Mono", Consolas, monospace';
         ctx.textAlign = 'center';
         ctx.globalAlpha = 0.75;
-        ctx.fillText(`${contact.classification.substring(0, 5).toUpperCase()} ${Math.round(contact.confidence)}%`, screen.x, screen.y - ryScreen - 6);
+        ctx.fillText(
+          `${contact.classification.substring(0, 5).toUpperCase()} ${Math.round(contact.confidence)}%`,
+          screen.x,
+          screen.y - ryScreen - 6,
+        );
       }
     }
     ctx.globalAlpha = 1;

@@ -101,8 +101,11 @@ export class EffectsManager {
     this._splashGeo = new THREE.RingGeometry(0.7, 1.0, 40);
     this._splashGeo.rotateX(-Math.PI / 2);
     this._splashMat = new THREE.MeshBasicMaterial({
-      color: 0xcfe8f2, transparent: true, opacity: 0.8,
-      side: THREE.DoubleSide, depthWrite: false,
+      color: 0xcfe8f2,
+      transparent: true,
+      opacity: 0.8,
+      side: THREE.DoubleSide,
+      depthWrite: false,
     });
 
     // --- Bubble trail puff (rising bubbles) ---
@@ -110,7 +113,9 @@ export class EffectsManager {
     const bPos = new Float32Array(bCount * 3);
     const bVel = new Float32Array(bCount * 3);
     for (let i = 0; i < bCount; i++) {
-      bPos[i * 3] = 0; bPos[i * 3 + 1] = 0; bPos[i * 3 + 2] = 0;
+      bPos[i * 3] = 0;
+      bPos[i * 3 + 1] = 0;
+      bPos[i * 3 + 2] = 0;
       const theta = Math.random() * Math.PI * 2;
       const speed = 0.05 + Math.random() * 0.12;
       bVel[i * 3] = Math.cos(theta) * speed;
@@ -121,7 +126,10 @@ export class EffectsManager {
     this._bubbleGeo.setAttribute('position', new THREE.BufferAttribute(bPos, 3));
     this._bubbleGeo.userData = { velocities: bVel };
     this._bubbleMat = new THREE.PointsMaterial({
-      color: 0xbfe6ef, size: 0.01, transparent: true, opacity: 0.8,
+      color: 0xbfe6ef,
+      size: 0.01,
+      transparent: true,
+      opacity: 0.8,
       depthWrite: false,
     });
   }
@@ -160,7 +168,7 @@ export class EffectsManager {
       this._splashes.push(s);
     }
     const progress = fx.age / fx.maxAge;
-    const scale = Math.max(0.005, (0.02 + progress * 0.10) * (fx.params.scale ?? 1));
+    const scale = Math.max(0.005, (0.02 + progress * 0.1) * (fx.params.scale ?? 1));
     s.mesh.scale.set(scale, scale, scale);
     (s.mesh.material as THREE.MeshBasicMaterial).opacity = Math.max(0, 0.8 * (1 - progress));
   }
@@ -212,7 +220,7 @@ export class EffectsManager {
 
     // Secondary ring (delayed)
     const p2 = Math.max(0, progress - 0.15);
-    const scale2 = Math.max(0.01, (p2 / 0.85) * radiusKm / 0.01);
+    const scale2 = Math.max(0.01, ((p2 / 0.85) * radiusKm) / 0.01);
     ping.ring2.scale.set(scale2, scale2, scale2);
     (ping.ring2.material as THREE.MeshBasicMaterial).opacity = 0.4 * Math.max(0, 1 - p2 / 0.85);
   }
@@ -227,14 +235,18 @@ export class EffectsManager {
       // A torpedo hit reads warm and brief; a depth charge is colder and wider.
       // Both are visual-only reflections of an effect already emitted by the
       // simulation adapter.
-      const flash = new THREE.PointLight(isDepthCharge ? 0xd7ecff : 0xffa94d, isDepthCharge ? 8 : 12, isDepthCharge ? 0.72 : 0.56);
+      const flash = new THREE.PointLight(
+        isDepthCharge ? 0xd7ecff : 0xffa94d,
+        isDepthCharge ? 8 : 12,
+        isDepthCharge ? 0.72 : 0.56,
+      );
       group.add(flash);
 
       // Particles
       const particles = new THREE.Points(this._particleGeo.clone(), this._particleMat.clone());
       const particleMat = particles.material as THREE.PointsMaterial;
       particleMat.color.setHex(isDepthCharge ? 0xb9d7e5 : 0xffd479);
-      particleMat.size = isDepthCharge ? 0.030 : 0.025;
+      particleMat.size = isDepthCharge ? 0.03 : 0.025;
       group.add(particles);
 
       // Surface/underwater shockwave ring
@@ -243,7 +255,7 @@ export class EffectsManager {
       const shockMat = new THREE.MeshBasicMaterial({
         color: isDepthCharge ? 0xc9e2ed : 0xffe1a3,
         transparent: true,
-        opacity: isDepthCharge ? 0.48 : 0.60,
+        opacity: isDepthCharge ? 0.48 : 0.6,
         side: THREE.DoubleSide,
         depthWrite: false,
       });
@@ -299,7 +311,7 @@ export class EffectsManager {
     }
 
     const progress = fx.age / fx.maxAge;
-    const scale = (fx.params.scale ?? 1) * (fx.type === 'depthCharge' ? 0.024 : 0.020);
+    const scale = (fx.params.scale ?? 1) * (fx.type === 'depthCharge' ? 0.024 : 0.02);
 
     const isDepthCharge = fx.type === 'depthCharge';
     // Flash fades fast enough to avoid persistent point-light cost while the
@@ -330,9 +342,12 @@ export class EffectsManager {
 
     // Shockwave is broader for a depth charge, but remains subordinate to the
     // existing tactical uncertainty overlay.
-    const shockScale = progress * (isDepthCharge ? 0.44 : 0.30);
+    const shockScale = progress * (isDepthCharge ? 0.44 : 0.3);
     exp.shockwave.scale.set(shockScale, shockScale, shockScale);
-    (exp.shockwave.material as THREE.MeshBasicMaterial).opacity = Math.max(0, (isDepthCharge ? 0.42 : 0.55) * (1 - progress * 1.9));
+    (exp.shockwave.material as THREE.MeshBasicMaterial).opacity = Math.max(
+      0,
+      (isDepthCharge ? 0.42 : 0.55) * (1 - progress * 1.9),
+    );
 
     const columnMaterial = exp.waterColumn.material as THREE.MeshBasicMaterial;
     if (isDepthCharge) {

@@ -17,7 +17,10 @@ const ROOT = resolve(__dirname, '../..');
 const YASEN_DIR = resolve(ROOT, 'SilentDepth_Assets/Submarines/SSN/Russia/Yasen');
 const ASSEMBLY_PATH = resolve(YASEN_DIR, 'Documentation/RU_SSN_Yasen_ASSEMBLY.json');
 const MASTER_AUDIT_PATH = resolve(YASEN_DIR, 'Validation/RU_SSN_Yasen_MASTER_AUDIT.json');
-const MUZZLE_DERIVATION_PATH = resolve(YASEN_DIR, 'Validation/RU_SSN_Yasen_TORPEDO_MUZZLE_DERIVATION.json');
+const MUZZLE_DERIVATION_PATH = resolve(
+  YASEN_DIR,
+  'Validation/RU_SSN_Yasen_TORPEDO_MUZZLE_DERIVATION.json',
+);
 const NOTES_PATH = resolve(YASEN_DIR, 'Documentation/RU_SSN_Yasen_ASSEMBLY_NOTES.md');
 
 interface InventoryObject {
@@ -116,7 +119,9 @@ function duplicateValues(values: readonly string[]): readonly string[] {
 }
 
 function issueRules(issues: readonly AuditIssue[]): readonly string[] {
-  return [...new Set(issues.map((issue) => issue.ruleId))].sort((left, right) => left.localeCompare(right, 'en'));
+  return [...new Set(issues.map((issue) => issue.ruleId))].sort((left, right) =>
+    left.localeCompare(right, 'en'),
+  );
 }
 
 const EXPECTED_UCX = [
@@ -131,10 +136,7 @@ const EXPECTED_UCX = [
   'UCX_RU_SSN_Yasen_LOD0_08',
 ] as const;
 
-const EXPECTED_ANCHOR_ERRORS = [
-  'SUBMOD-023-PIVOT_MISSING',
-  'SUBMOD-023-SOCKET_MISSING',
-] as const;
+const EXPECTED_ANCHOR_ERRORS = ['SUBMOD-023-PIVOT_MISSING', 'SUBMOD-023-SOCKET_MISSING'] as const;
 
 describe('Yasen SUBMOD-030 Assembly 配置', () => {
   it('JSON 可解析并通过 Draft 2020-12 Schema 与 TypeScript 契约', () => {
@@ -255,14 +257,22 @@ describe('Yasen SUBMOD-030 Assembly 配置', () => {
     expect(sourceObjects.some((name) => name.startsWith('CAM_'))).toBe(false);
     expect(sourceObjects.some((name) => ['Key', 'Fill', 'Rim'].includes(name))).toBe(false);
     expect(sourceObjects.some((name) => /^RU_SSN_Yasen_LOD[0-3]$/.test(name))).toBe(false);
-    expect(sourceObjects.some((name) => /Torpedo|Missile|Weapon|VLS_.*Body/i.test(name))).toBe(false);
+    expect(sourceObjects.some((name) => /Torpedo|Missile|Weapon|VLS_.*Body/i.test(name))).toBe(
+      false,
+    );
   });
 
   it('所有可视源对象都存在于 P2 MASTER 库存中', () => {
     const assembly = readAssembly();
-    const inventoryNames = new Set(readInventoryReport().scene.objects.map((object) => object.name));
+    const inventoryNames = new Set(
+      readInventoryReport().scene.objects.map((object) => object.name),
+    );
 
-    expect([...assembly.hull.sourceObjects, ...partSourceObjects(assembly)].every((name) => inventoryNames.has(name))).toBe(true);
+    expect(
+      [...assembly.hull.sourceObjects, ...partSourceObjects(assembly)].every((name) =>
+        inventoryNames.has(name),
+      ),
+    ).toBe(true);
   });
 
   it('固定与活动对象分类结果稳定', () => {
@@ -297,8 +307,14 @@ describe('Yasen SUBMOD-030 Assembly 配置', () => {
     expect(rules).toEqual(EXPECTED_ANCHOR_ERRORS);
     expect(result.issues).toHaveLength(6);
     expect(result.matches.every((match) => match.status === 'PASS')).toBe(true);
-    expect(result.issues.some((issue) => issue.ruleId === 'SUBMOD-021-EMPTY_OBJECT_MATCH')).toBe(false);
-    expect(result.issues.some((issue) => issue.ruleId === 'SUBMOD-021-WILDCARD_OBJECT_MATCH')).toBe(false);
-    expect(result.issues.some((issue) => issue.ruleId === 'SUBMOD-021-DUPLICATE_OWNERSHIP')).toBe(false);
+    expect(result.issues.some((issue) => issue.ruleId === 'SUBMOD-021-EMPTY_OBJECT_MATCH')).toBe(
+      false,
+    );
+    expect(result.issues.some((issue) => issue.ruleId === 'SUBMOD-021-WILDCARD_OBJECT_MATCH')).toBe(
+      false,
+    );
+    expect(result.issues.some((issue) => issue.ruleId === 'SUBMOD-021-DUPLICATE_OWNERSHIP')).toBe(
+      false,
+    );
   });
 });

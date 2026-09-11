@@ -128,10 +128,10 @@ export function getBackgroundProfile(missionId: string): BackgroundWorldProfile 
 /** Quality-scaled budget multiplier [0..1]. */
 function qualityBudgetFactor(quality: QualitySettings): number {
   const bb = quality.backgroundBudget;
-  if (bb <= 0) return 0.0;   // LOW: no background
-  if (bb <= 4) return 0.5;   // MEDIUM
-  if (bb <= 7) return 0.8;   // HIGH
-  return 1.0;                // ULTRA
+  if (bb <= 0) return 0.0; // LOW: no background
+  if (bb <= 4) return 0.5; // MEDIUM
+  if (bb <= 7) return 0.8; // HIGH
+  return 1.0; // ULTRA
 }
 
 export interface BackgroundBudget {
@@ -153,17 +153,13 @@ export function resolveBackgroundBudget(
   const f = qualityBudgetFactor(quality);
   const isFog = weatherKind === 'Fog';
   const isNight = weatherKind === 'Night';
-  const distMult = (isFog || isNight)
-    ? profile.fogNightDistanceMultiplier
-    : 1.0;
+  const distMult = isFog || isNight ? profile.fogNightDistanceMultiplier : 1.0;
 
   return {
     silhouettes: Math.floor(profile.maxSilhouettes * f),
     smokeColumns: Math.floor(profile.maxSmokeColumns * f),
     debris: Math.floor(profile.maxDebris * f),
-    rainCurtains: weatherKind === 'Storm'
-      ? Math.floor(profile.maxRainCurtains * f)
-      : 0,
+    rainCurtains: weatherKind === 'Storm' ? Math.floor(profile.maxRainCurtains * f) : 0,
     aircraft: f > 0.5 && quality.backgroundBudget >= 4,
     seabirds: f > 0.0 && quality.backgroundBudget >= 1,
     distanceMultiplier: distMult,
@@ -176,12 +172,7 @@ export function resolveBackgroundBudget(
 
 /** Classifies a background object. Never overlaps with gameplay entities. */
 export type BackgroundObjectClass =
-  | 'silhouette'
-  | 'smokeColumn'
-  | 'debris'
-  | 'rainCurtain'
-  | 'aircraft'
-  | 'seabird';
+  'silhouette' | 'smokeColumn' | 'debris' | 'rainCurtain' | 'aircraft' | 'seabird';
 
 /** A single background object in world space. All positions in km (Three.js units). */
 export interface BackgroundObject {
@@ -232,7 +223,10 @@ export function resolveBackgroundWorldState(opts: {
   const profile = getBackgroundProfile(missionId);
   const budget = resolveBackgroundBudget(profile, quality, weatherKind);
 
-  if (underwater || budget.silhouettes + budget.smokeColumns + budget.debris + budget.rainCurtains === 0) {
+  if (
+    underwater ||
+    budget.silhouettes + budget.smokeColumns + budget.debris + budget.rainCurtains === 0
+  ) {
     return { profile, budget, objects: [], underwater };
   }
 
@@ -298,7 +292,7 @@ export function resolveBackgroundWorldState(opts: {
       position: { x, y: -0.001, z },
       headingDeg: heading,
       scale,
-      opacity: rng.range(0.15, 0.30),
+      opacity: rng.range(0.15, 0.3),
       tint,
     });
   }
@@ -309,7 +303,7 @@ export function resolveBackgroundWorldState(opts: {
     const dist = rng.range(1.0, maxDist * 0.6);
     const x = cameraX + Math.cos(angle) * dist;
     const z = cameraZ - Math.sin(angle) * dist;
-    const height = rng.range(0.04, 0.10);
+    const height = rng.range(0.04, 0.1);
     const scale = rng.range(0.5, 1.5);
 
     objects.push({
@@ -336,7 +330,7 @@ export function resolveBackgroundWorldState(opts: {
       position: { x, y: rng.range(0.8, 1.2), z },
       headingDeg: rng.range(0, 360),
       scale: rng.range(0.15, 0.35),
-      opacity: weatherKind === 'Night' ? 0.12 : 0.20,
+      opacity: weatherKind === 'Night' ? 0.12 : 0.2,
       tint: 0x334455,
     });
   }
@@ -354,7 +348,7 @@ export function resolveBackgroundWorldState(opts: {
       position: { x, y: rng.range(0.01, 0.04), z },
       headingDeg: rng.range(0, 360),
       scale: rng.range(0.08, 0.18),
-      opacity: weatherKind === 'Night' ? 0.10 : 0.22,
+      opacity: weatherKind === 'Night' ? 0.1 : 0.22,
       tint: 0x444455,
     });
   }
@@ -462,10 +456,7 @@ function makeAircraftMaterial(tint: number, opacity: number): THREE.MeshBasicMat
 
 const SEABIRD_GEOMETRY = new THREE.BufferGeometry();
 const SEABIRD_POSITIONS = new Float32Array([
-  -0.0003, 0, 0,
-  0.0003, 0, 0,
-  0, 0, 0.0001,
-  0, 0, -0.0001,
+  -0.0003, 0, 0, 0.0003, 0, 0, 0, 0, 0.0001, 0, 0, -0.0001,
 ]);
 SEABIRD_GEOMETRY.setAttribute('position', new THREE.BufferAttribute(SEABIRD_POSITIONS, 3));
 
@@ -537,7 +528,7 @@ export class BackgroundWorldRenderer {
       this._debris.push({ mesh, targetPos: new THREE.Vector3() });
     }
     for (let i = 0; i < MAX_POOL.rainCurtain; i++) {
-      const mesh = new THREE.Mesh(RAIN_CURTAIN_GEOMETRY, makeRainCurtainMaterial(0.10));
+      const mesh = new THREE.Mesh(RAIN_CURTAIN_GEOMETRY, makeRainCurtainMaterial(0.1));
       mesh.visible = false;
       mesh.userData.visualOnly = true;
       group.add(mesh);

@@ -121,8 +121,12 @@ export class PostProcessing {
     });
   }
 
-  get enabled(): boolean { return this._enabled; }
-  set enabled(v: boolean) { this._enabled = v; }
+  get enabled(): boolean {
+    return this._enabled;
+  }
+  set enabled(v: boolean) {
+    this._enabled = v;
+  }
 
   setQuality(enabled: boolean, bloomStrength: number, vignetteStrength: number): void {
     this._enabled = enabled;

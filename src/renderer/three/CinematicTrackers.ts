@@ -32,11 +32,16 @@ const CUE_PRIORITY: readonly CombatCue[] = ['impact', 'depthCharge', 'launch', '
 
 function effectToCue(type: RenderEffect['type']): CombatCue | null {
   switch (type) {
-    case 'explosion': return 'impact';
-    case 'depthCharge': return 'depthCharge';
-    case 'waterSplash': return 'splash';
-    case 'bubbleTrail': return 'launch';
-    default: return null;
+    case 'explosion':
+      return 'impact';
+    case 'depthCharge':
+      return 'depthCharge';
+    case 'waterSplash':
+      return 'splash';
+    case 'bubbleTrail':
+      return 'launch';
+    default:
+      return null;
   }
 }
 

@@ -194,7 +194,9 @@ export class ShipRenderer {
 
   private async loadGlbPrototype(shipClass: string): Promise<void> {
     const family = shipClass.toLowerCase();
-    const loaded = await Promise.all(([1, 2, 3] as const).map((lod) => this.assetManager.loadFamilyLod(family, lod)));
+    const loaded = await Promise.all(
+      ([1, 2, 3] as const).map((lod) => this.assetManager.loadFamilyLod(family, lod)),
+    );
     if (loaded.some((result) => result.usingFallback || !result.scene)) return;
 
     const root = new THREE.Group();

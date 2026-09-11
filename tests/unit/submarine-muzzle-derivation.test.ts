@@ -14,7 +14,10 @@ import {
 } from '../../src/assets/submarineMuzzleDerivation';
 import type { SubmarineAssembly } from '../../src/assets/submarineAssembly';
 
-function candidate(name: string, normal: readonly [number, number, number]): MuzzleDerivationCandidateInput {
+function candidate(
+  name: string,
+  normal: readonly [number, number, number],
+): MuzzleDerivationCandidateInput {
   return {
     areaWeightedNormal: normal,
     boundsWorld: { max: [39, 6.4, 1.9], min: [32, 6.1, 1.3] },
@@ -99,8 +102,20 @@ describe('submarine muzzle derivation rules', () => {
       xRank: 1,
     })[0]!;
     const scores: readonly CandidateScore[] = [
-      { direction, objectName: 'SUB_Yasen_BowDoor_1_2', reasons: [], score: 10, status: 'ACCEPTED' },
-      { direction, objectName: 'SUB_Yasen_BowDoor_-1_2', reasons: [], score: 10, status: 'ACCEPTED' },
+      {
+        direction,
+        objectName: 'SUB_Yasen_BowDoor_1_2',
+        reasons: [],
+        score: 10,
+        status: 'ACCEPTED',
+      },
+      {
+        direction,
+        objectName: 'SUB_Yasen_BowDoor_-1_2',
+        reasons: [],
+        score: 10,
+        status: 'ACCEPTED',
+      },
     ];
 
     expect(selectBestCandidate(scores).objectName).toBe('SUB_Yasen_BowDoor_-1_2');
@@ -108,7 +123,9 @@ describe('submarine muzzle derivation rules', () => {
 
   it('空候选和退化 mesh 会失败，不生成假结果', () => {
     expect(() => validateCandidateInputs([])).toThrow('候选对象列表为空');
-    expect(() => validateCandidateInputs([candidate('SUB_Yasen_BowDoor_1_0', [0, 0, 0])])).toThrow();
+    expect(() =>
+      validateCandidateInputs([candidate('SUB_Yasen_BowDoor_1_0', [0, 0, 0])]),
+    ).toThrow();
     expect(() => selectBestCandidate([])).toThrow('没有找到满足清障规则');
   });
 
@@ -118,7 +135,12 @@ describe('submarine muzzle derivation rules', () => {
       coordinateSystem: { forward: '+X', right: '+Y', up: '+Z' },
       hull: {
         collision: { owner: 'hull', strategy: 'simple_convex' },
-        lods: { LOD0: 'FBX/RU_SSN_Yasen_LOD0.fbx', LOD1: 'FBX/RU_SSN_Yasen_LOD1.fbx', LOD2: 'FBX/RU_SSN_Yasen_LOD2.fbx', LOD3: 'FBX/RU_SSN_Yasen_LOD3.fbx' },
+        lods: {
+          LOD0: 'FBX/RU_SSN_Yasen_LOD0.fbx',
+          LOD1: 'FBX/RU_SSN_Yasen_LOD1.fbx',
+          LOD2: 'FBX/RU_SSN_Yasen_LOD2.fbx',
+          LOD3: 'FBX/RU_SSN_Yasen_LOD3.fbx',
+        },
         sourceObjects: ['SUB_Yasen_Hull'],
       },
       parts: [],
@@ -129,7 +151,11 @@ describe('submarine muzzle derivation rules', () => {
           parent: 'root',
           purpose: 'torpedo_muzzle',
           sourceAnchor: 'SOCKET_SUB_RU_YASEN_TORPEDO_TUBE_01_MUZZLE',
-          transform: { rotationDegrees: [0, 0, 0], scale: [1, 1, 1], translation: [55.799972534, 0, 7.26317358] },
+          transform: {
+            rotationDegrees: [0, 0, 0],
+            scale: [1, 1, 1],
+            translation: [55.799972534, 0, 7.26317358],
+          },
         },
       ],
       units: 'meters',

@@ -44,7 +44,8 @@ export class PeriscopeView {
   }
 
   update(state: RenderState, dt: number): void {
-    const isPeriscope = state.camera.mode === 'periscope' ||
+    const isPeriscope =
+      state.camera.mode === 'periscope' ||
       state.player.periscopeState.state === 'RAISED' ||
       state.player.periscopeState.state === 'OBSERVING';
 
@@ -177,7 +178,11 @@ export class PeriscopeView {
       const innerR = radius - (isMajor ? 15 : isMedium ? 10 : 6);
 
       // Tick
-      ctx.strokeStyle = isMajor ? 'rgba(165, 198, 214, 0.68)' : isMedium ? 'rgba(140, 175, 195, 0.42)' : 'rgba(140, 175, 195, 0.22)';
+      ctx.strokeStyle = isMajor
+        ? 'rgba(165, 198, 214, 0.68)'
+        : isMedium
+          ? 'rgba(140, 175, 195, 0.42)'
+          : 'rgba(140, 175, 195, 0.22)';
       ctx.lineWidth = isMajor ? 1.5 : isMedium ? 1 : 0.65;
       ctx.beginPath();
       ctx.moveTo(cx + Math.cos(angle) * innerR, cy + Math.sin(angle) * innerR);
@@ -204,7 +209,9 @@ export class PeriscopeView {
       const py = cy + Math.sin(angle) * dist * 0.35;
 
       const color = contact.selected ? '#22d3ee' : this._stateColor(contact.state);
-      const confidenceAlpha = contact.selected ? 0.95 : Math.max(0.28, Math.min(0.78, contact.confidence / 100));
+      const confidenceAlpha = contact.selected
+        ? 0.95
+        : Math.max(0.28, Math.min(0.78, contact.confidence / 100));
       ctx.strokeStyle = color;
       ctx.globalAlpha = confidenceAlpha;
       ctx.lineWidth = contact.selected ? 1.8 : 1.2;
@@ -237,14 +244,22 @@ export class PeriscopeView {
           ctx.lineWidth = 2;
           const s = 10;
           ctx.beginPath();
-          ctx.moveTo(px - s, py - s); ctx.lineTo(px - s + 4, py - s);
-          ctx.moveTo(px - s, py - s); ctx.lineTo(px - s, py - s + 4);
-          ctx.moveTo(px + s, py - s); ctx.lineTo(px + s - 4, py - s);
-          ctx.moveTo(px + s, py - s); ctx.lineTo(px + s, py - s + 4);
-          ctx.moveTo(px - s, py + s); ctx.lineTo(px - s + 4, py + s);
-          ctx.moveTo(px - s, py + s); ctx.lineTo(px - s, py + s - 4);
-          ctx.moveTo(px + s, py + s); ctx.lineTo(px + s - 4, py + s);
-          ctx.moveTo(px + s, py + s); ctx.lineTo(px + s, py + s - 4);
+          ctx.moveTo(px - s, py - s);
+          ctx.lineTo(px - s + 4, py - s);
+          ctx.moveTo(px - s, py - s);
+          ctx.lineTo(px - s, py - s + 4);
+          ctx.moveTo(px + s, py - s);
+          ctx.lineTo(px + s - 4, py - s);
+          ctx.moveTo(px + s, py - s);
+          ctx.lineTo(px + s, py - s + 4);
+          ctx.moveTo(px - s, py + s);
+          ctx.lineTo(px - s + 4, py + s);
+          ctx.moveTo(px - s, py + s);
+          ctx.lineTo(px - s, py + s - 4);
+          ctx.moveTo(px + s, py + s);
+          ctx.lineTo(px + s - 4, py + s);
+          ctx.moveTo(px + s, py + s);
+          ctx.lineTo(px + s, py + s - 4);
           ctx.stroke();
 
           ctx.fillStyle = '#f87171';
@@ -286,7 +301,11 @@ export class PeriscopeView {
     ctx.fillStyle = 'rgba(140, 175, 195, 0.6)';
     ctx.font = '11px "SF Mono", Consolas, monospace';
     ctx.textAlign = 'left';
-    ctx.fillText(`BRG ${String(Math.round(headingDeg)).padStart(3, '0')}°`, cx - radius + 15, cy + radius - 15);
+    ctx.fillText(
+      `BRG ${String(Math.round(headingDeg)).padStart(3, '0')}°`,
+      cx - radius + 15,
+      cy + radius - 15,
+    );
     ctx.textAlign = 'right';
     const expBand = state.player.periscopeState.exposureBand;
     if (expBand !== 'NONE') {
@@ -343,12 +362,18 @@ export class PeriscopeView {
 
   private _stateColor(state: string): string {
     switch (state) {
-      case 'UNKNOWN': return '#6b7280';
-      case 'SUSPECTED': return '#fbbf24';
-      case 'CLASSIFIED': return '#22d3ee';
-      case 'TRACKED': return '#60a5fa';
-      case 'CONFIRMED': return '#f87171';
-      default: return '#6b7280';
+      case 'UNKNOWN':
+        return '#6b7280';
+      case 'SUSPECTED':
+        return '#fbbf24';
+      case 'CLASSIFIED':
+        return '#22d3ee';
+      case 'TRACKED':
+        return '#60a5fa';
+      case 'CONFIRMED':
+        return '#f87171';
+      default:
+        return '#6b7280';
     }
   }
 

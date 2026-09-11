@@ -166,7 +166,8 @@ class BlenderRunError extends Error {
 function finalExitCode(report, failOnWarning) {
   const summary = report.summary ?? {};
   if ((summary.errorCount ?? 0) > 0) return SUBMARINE_AUDIT_EXIT_CODES.auditIssues;
-  if (failOnWarning && (summary.warningCount ?? 0) > 0) return SUBMARINE_AUDIT_EXIT_CODES.auditIssues;
+  if (failOnWarning && (summary.warningCount ?? 0) > 0)
+    return SUBMARINE_AUDIT_EXIT_CODES.auditIssues;
   return SUBMARINE_AUDIT_EXIT_CODES.ok;
 }
 
@@ -174,7 +175,11 @@ function main() {
   const parsed = parseSubmarineAuditArgs(process.argv.slice(2));
   if (parsed.options?.help === true) {
     printHelp();
-    process.exit(parsed.errors.length > 0 ? SUBMARINE_AUDIT_EXIT_CODES.inputError : SUBMARINE_AUDIT_EXIT_CODES.ok);
+    process.exit(
+      parsed.errors.length > 0
+        ? SUBMARINE_AUDIT_EXIT_CODES.inputError
+        : SUBMARINE_AUDIT_EXIT_CODES.ok,
+    );
   }
   if (parsed.errors.length > 0 || parsed.options === undefined) {
     console.error(parsed.errors.join('\n'));
@@ -186,7 +191,11 @@ function main() {
     inputs = validateSubmarineAuditInputs(parsed.options);
   } catch (error) {
     console.error(error instanceof Error ? error.message : String(error));
-    process.exit(error instanceof AssemblyValidationError ? SUBMARINE_AUDIT_EXIT_CODES.assemblyInvalid : SUBMARINE_AUDIT_EXIT_CODES.inputError);
+    process.exit(
+      error instanceof AssemblyValidationError
+        ? SUBMARINE_AUDIT_EXIT_CODES.assemblyInvalid
+        : SUBMARINE_AUDIT_EXIT_CODES.inputError,
+    );
   }
 
   const before = fingerprint(inputs.master);
@@ -219,7 +228,11 @@ function main() {
     };
   } catch (error) {
     console.error(error instanceof Error ? error.message : String(error));
-    process.exit(error instanceof BlenderRunError ? SUBMARINE_AUDIT_EXIT_CODES.blenderOpenFailed : SUBMARINE_AUDIT_EXIT_CODES.internalError);
+    process.exit(
+      error instanceof BlenderRunError
+        ? SUBMARINE_AUDIT_EXIT_CODES.blenderOpenFailed
+        : SUBMARINE_AUDIT_EXIT_CODES.internalError,
+    );
   }
 
   writeJson(inputs.output, report);

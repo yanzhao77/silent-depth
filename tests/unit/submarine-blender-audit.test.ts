@@ -12,7 +12,10 @@ import {
   validateSubmarineAuditInputs,
   type AuditSceneSnapshot,
 } from '../../src/assets/submarineBlenderAudit';
-import { assertSubmarineAssembly, type SubmarineAssembly } from '../../src/assets/submarineAssembly';
+import {
+  assertSubmarineAssembly,
+  type SubmarineAssembly,
+} from '../../src/assets/submarineAssembly';
 
 const ROOT = resolve(__dirname, '../..');
 const MINIMAL_ASSEMBLY_PATH = resolve(
@@ -36,7 +39,11 @@ interface MutableAssemblySocket {
 
 interface MutableAssembly {
   assetId: string;
-  hull: { sourceObjects: string[]; sourceCollections?: string[]; collision: { sourceObjects?: string[] } };
+  hull: {
+    sourceObjects: string[];
+    sourceCollections?: string[];
+    collision: { sourceObjects?: string[] };
+  };
   parts: MutableAssemblyPart[];
   sockets: MutableAssemblySocket[];
 }
@@ -108,7 +115,12 @@ describe('潜艇 Blender 审计 CLI 参数和输入校验', () => {
   });
 
   it('完整 Assembly 审计缺少 Assembly 时返回参数错误', () => {
-    const parsed = parseSubmarineAuditArgs(['--master', '/tmp/RU_SSN_Yasen_MASTER.blend', '--output', '/tmp/out.json']);
+    const parsed = parseSubmarineAuditArgs([
+      '--master',
+      '/tmp/RU_SSN_Yasen_MASTER.blend',
+      '--output',
+      '/tmp/out.json',
+    ]);
     expect(parsed.errors.join('\n')).toContain('完整 Assembly 审计必须提供 --assembly');
   });
 
@@ -195,7 +207,9 @@ describe('潜艇 Assembly 与场景匹配审计', () => {
   it('对象和 Collection 匹配结果稳定排序', () => {
     const result = auditAssemblyOwnership(sceneWithMinimalNames(), readMinimalAssembly());
     expect(result.matches.map((match) => `${match.owner}:${match.reference}`)).toEqual(
-      [...result.matches.map((match) => `${match.owner}:${match.reference}`)].sort((left, right) => left.localeCompare(right, 'en')),
+      [...result.matches.map((match) => `${match.owner}:${match.reference}`)].sort((left, right) =>
+        left.localeCompare(right, 'en'),
+      ),
     );
   });
 
@@ -203,38 +217,54 @@ describe('潜艇 Assembly 与场景匹配审计', () => {
     const assembly = mutableAssembly();
     assembly.parts[0]!.sourceObjects = ['MISSING_PROPULSOR'];
     const result = auditAssemblyOwnership(sceneWithMinimalNames(), assembly);
-    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-021-EMPTY_OBJECT_MATCH')).toBe(true);
+    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-021-EMPTY_OBJECT_MATCH')).toBe(
+      true,
+    );
   });
 
   it('重复对象归属会报错', () => {
     const assembly = mutableAssembly();
     assembly.parts[1]!.sourceObjects = ['SUB_ZZ_MINIMAL_PROPULSOR_HUB_01'];
     const result = auditAssemblyOwnership(sceneWithMinimalNames(), assembly);
-    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-021-DUPLICATE_OWNERSHIP')).toBe(true);
+    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-021-DUPLICATE_OWNERSHIP')).toBe(
+      true,
+    );
   });
 
   it('Hull 与 Part 重复拥有同一对象会报错', () => {
     const assembly = mutableAssembly();
     assembly.parts[0]!.sourceObjects = ['SUB_ZZ_MINIMAL_HULL_BODY'];
     const result = auditAssemblyOwnership(sceneWithMinimalNames(), assembly);
-    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-021-DUPLICATE_OWNERSHIP')).toBe(true);
+    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-021-DUPLICATE_OWNERSHIP')).toBe(
+      true,
+    );
   });
 
   it('Socket parent 不存在会报错', () => {
     const assembly = mutableAssembly();
     assembly.sockets[0]!.parent = 'missing_part';
     const result = auditAssemblyOwnership(sceneWithMinimalNames(), assembly);
-    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-023-SOCKET_PARENT_MISSING')).toBe(true);
+    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-023-SOCKET_PARENT_MISSING')).toBe(
+      true,
+    );
   });
 
   it('零长度轴会报错，非归一化轴会警告', () => {
     const zeroAxis = mutableAssembly();
     zeroAxis.parts[0]!.motion.axis = [0, 0, 0];
-    expect(auditAssemblyOwnership(sceneWithMinimalNames(), zeroAxis).issues.some((item) => item.ruleId === 'SUBMOD-023-ZERO_LENGTH_AXIS')).toBe(true);
+    expect(
+      auditAssemblyOwnership(sceneWithMinimalNames(), zeroAxis).issues.some(
+        (item) => item.ruleId === 'SUBMOD-023-ZERO_LENGTH_AXIS',
+      ),
+    ).toBe(true);
 
     const longAxis = mutableAssembly();
     longAxis.parts[0]!.motion.axis = [2, 0, 0];
-    expect(auditAssemblyOwnership(sceneWithMinimalNames(), longAxis).issues.some((item) => item.ruleId === 'SUBMOD-023-NON_NORMALIZED_AXIS')).toBe(true);
+    expect(
+      auditAssemblyOwnership(sceneWithMinimalNames(), longAxis).issues.some(
+        (item) => item.ruleId === 'SUBMOD-023-NON_NORMALIZED_AXIS',
+      ),
+    ).toBe(true);
   });
 
   it('inventory-only 明确标记 Assembly 检查跳过', () => {
@@ -261,7 +291,9 @@ describe('潜艇 Mesh 质量纯逻辑审计', () => {
         ],
       },
     ]);
-    expect(result.issues).toContainEqual(expect.objectContaining({ objectName: 'NEG_SCALE', ruleId: 'SUBMOD-022-NEGATIVE_SCALE' }));
+    expect(result.issues).toContainEqual(
+      expect.objectContaining({ objectName: 'NEG_SCALE', ruleId: 'SUBMOD-022-NEGATIVE_SCALE' }),
+    );
   });
 
   it('零长度边会生成定位到对象的警告', () => {
@@ -280,7 +312,9 @@ describe('潜艇 Mesh 质量纯逻辑审计', () => {
         ],
       },
     ]);
-    expect(result.issues).toContainEqual(expect.objectContaining({ objectName: 'ZERO_EDGE', ruleId: 'SUBMOD-022-ZERO_LENGTH_EDGE' }));
+    expect(result.issues).toContainEqual(
+      expect.objectContaining({ objectName: 'ZERO_EDGE', ruleId: 'SUBMOD-022-ZERO_LENGTH_EDGE' }),
+    );
   });
 
   it('退化面会生成定位到对象的警告', () => {
@@ -299,7 +333,12 @@ describe('潜艇 Mesh 质量纯逻辑审计', () => {
         ],
       },
     ]);
-    expect(result.issues).toContainEqual(expect.objectContaining({ objectName: 'DEGENERATE_FACE', ruleId: 'SUBMOD-022-DEGENERATE_FACE' }));
+    expect(result.issues).toContainEqual(
+      expect.objectContaining({
+        objectName: 'DEGENERATE_FACE',
+        ruleId: 'SUBMOD-022-DEGENERATE_FACE',
+      }),
+    );
   });
 
   it('未分配材质和空材质槽都会报告', () => {
@@ -319,13 +358,41 @@ describe('潜艇 Mesh 质量纯逻辑审计', () => {
       },
     ]);
     expect(result.issues.some((item) => item.ruleId === 'SUBMOD-022-NO_MATERIAL_SLOT')).toBe(true);
-    expect(result.issues.some((item) => item.ruleId === 'SUBMOD-022-EMPTY_MATERIAL_SLOT_FACE')).toBe(true);
+    expect(
+      result.issues.some((item) => item.ruleId === 'SUBMOD-022-EMPTY_MATERIAL_SLOT_FACE'),
+    ).toBe(true);
   });
 
   it('相同输入连续运行报告一致且输出排序稳定', () => {
     const meshes = [
-      { edges: [[0, 1]] as const, faceMaterialIndices: [0], faces: [[0, 1, 2]] as const, materialSlots: ['Hull'], meshDataName: 'Shared', objectName: 'B', scale: [1, 1, 1] as const, vertices: [{ x: 0, y: 0, z: 0 }, { x: 1, y: 0, z: 0 }, { x: 0, y: 1, z: 0 }] },
-      { edges: [[0, 1]] as const, faceMaterialIndices: [0], faces: [[0, 1, 2]] as const, materialSlots: ['Hull'], meshDataName: 'Shared', objectName: 'A', scale: [1, 1, 1] as const, vertices: [{ x: 0, y: 0, z: 0 }, { x: 1, y: 0, z: 0 }, { x: 0, y: 1, z: 0 }] },
+      {
+        edges: [[0, 1]] as const,
+        faceMaterialIndices: [0],
+        faces: [[0, 1, 2]] as const,
+        materialSlots: ['Hull'],
+        meshDataName: 'Shared',
+        objectName: 'B',
+        scale: [1, 1, 1] as const,
+        vertices: [
+          { x: 0, y: 0, z: 0 },
+          { x: 1, y: 0, z: 0 },
+          { x: 0, y: 1, z: 0 },
+        ],
+      },
+      {
+        edges: [[0, 1]] as const,
+        faceMaterialIndices: [0],
+        faces: [[0, 1, 2]] as const,
+        materialSlots: ['Hull'],
+        meshDataName: 'Shared',
+        objectName: 'A',
+        scale: [1, 1, 1] as const,
+        vertices: [
+          { x: 0, y: 0, z: 0 },
+          { x: 1, y: 0, z: 0 },
+          { x: 0, y: 1, z: 0 },
+        ],
+      },
     ];
     expect(auditMeshFixtures(meshes)).toEqual(auditMeshFixtures(meshes));
     expect(auditMeshFixtures(meshes).issues[0]?.ruleId).toBe('SUBMOD-022-DUPLICATE_MESH_DATABLOCK');

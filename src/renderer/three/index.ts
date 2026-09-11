@@ -99,11 +99,7 @@ export class ThreeRenderer {
     this._revealTracker = new EnemyRevealTracker();
     this._cueTracker = new CombatCueTracker();
     this._periscopeView = new PeriscopeView();
-    this._postProcessing = new PostProcessing(
-      this._sceneMgr.renderer,
-      opts.width,
-      opts.height,
-    );
+    this._postProcessing = new PostProcessing(this._sceneMgr.renderer, opts.width, opts.height);
     this._postProcessing.setQuality(
       quality.postProcessing,
       quality.bloomStrength,
@@ -113,7 +109,8 @@ export class ThreeRenderer {
     // Tactical overlay
     this._tacticalCanvas = document.createElement('canvas');
     this._tacticalCanvas.id = 'tactical-overlay';
-    this._tacticalCanvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5;';
+    this._tacticalCanvas.style.cssText =
+      'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:5;';
     document.body.appendChild(this._tacticalCanvas);
     this._tacticalOverlay = new TacticalOverlay(this._tacticalCanvas);
 
@@ -140,15 +137,14 @@ export class ThreeRenderer {
     // change what the player sees, never simulation or sonar truth.
     const quality = getQualitySettings();
     const playerDepthM = state.player.depthM ?? 0;
-    const underwater = playerDepthM > 0.001
-      ? deriveUnderwaterVisuals(playerDepthM, {
-          underwaterParticles: quality.underwaterParticles,
-          underwaterCaustics: quality.underwaterCaustics,
-        })
-      : null;
-    const lightning = state.weather.kind === 'Storm'
-      ? stormLightningIntensity(state.wallTime)
-      : 0;
+    const underwater =
+      playerDepthM > 0.001
+        ? deriveUnderwaterVisuals(playerDepthM, {
+            underwaterParticles: quality.underwaterParticles,
+            underwaterCaustics: quality.underwaterCaustics,
+          })
+        : null;
+    const lightning = state.weather.kind === 'Storm' ? stormLightningIntensity(state.wallTime) : 0;
 
     // Update all sub-renderers
     this._ocean.update(
@@ -168,13 +164,10 @@ export class ThreeRenderer {
       lightning,
       underwaterAttenuation: underwater ? underwater.lightAttenuation : 1,
     });
-    this._weather.update(
-      state.weather,
-      state.player.position.x,
-      state.player.position.z,
-      dt,
-      { lightning, underwater: !!underwater },
-    );
+    this._weather.update(state.weather, state.player.position.x, state.player.position.z, dt, {
+      lightning,
+      underwater: !!underwater,
+    });
     this._underwater.update(underwater, this._cameraMgr.activeCamera.position, state.wallTime);
 
     // Background world: distant silhouettes, smoke, debris, rain curtains.
@@ -206,7 +199,9 @@ export class ThreeRenderer {
     const revealId = this._revealTracker.update(state.ships, state.wallTime);
     if (revealId) {
       const ship = state.ships.find((s) => s.id === revealId);
-      this._cameraMgr.setFocus(ship && ship.visible ? { x: ship.position.x, z: ship.position.z } : null);
+      this._cameraMgr.setFocus(
+        ship && ship.visible ? { x: ship.position.x, z: ship.position.z } : null,
+      );
     } else {
       this._cameraMgr.setFocus(null);
     }
@@ -225,9 +220,10 @@ export class ThreeRenderer {
     const depthM = state.player.depthM ?? 0;
     const periscopeDepth = 15;
     const shallowDepth = 50;
-    const depthFraction = depthM > periscopeDepth
-      ? Math.min(1, (depthM - periscopeDepth) / (shallowDepth - periscopeDepth))
-      : 0;
+    const depthFraction =
+      depthM > periscopeDepth
+        ? Math.min(1, (depthM - periscopeDepth) / (shallowDepth - periscopeDepth))
+        : 0;
 
     // Render 3D scene with post-processing
     this._postProcessing.render(
@@ -242,7 +238,12 @@ export class ThreeRenderer {
     if (this._tacticalOverlay && this._tacticalCanvas) {
       if (state.camera.mode !== 'periscope' && state.camera.mode !== 'tactical') {
         this._tacticalCanvas.style.display = '';
-        this._tacticalOverlay.update(state, this._cameraMgr.activeCamera, this._sceneMgr.width, this._sceneMgr.height);
+        this._tacticalOverlay.update(
+          state,
+          this._cameraMgr.activeCamera,
+          this._sceneMgr.width,
+          this._sceneMgr.height,
+        );
       } else {
         this._tacticalCanvas.style.display = 'none';
       }

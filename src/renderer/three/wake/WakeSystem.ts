@@ -124,12 +124,13 @@ export function wakeFoamIntensity(px: number, pz: number, src: WakeSource): numb
   if (speedF <= 0.001) return 0;
 
   // Bow wave — a compact crescent just forward of the bow.
-  const bow = smoothstep(0.0055, 0.0006, Math.abs(along - 0.0016))
-    * smoothstep(0.0042, 0.0004, Math.abs(lateral));
+  const bow =
+    smoothstep(0.0055, 0.0006, Math.abs(along - 0.0016)) *
+    smoothstep(0.0042, 0.0004, Math.abs(lateral));
 
   // Stern turbulent wake — trails behind, length & width grow with speed.
   const behind = -along;
-  const reach = 0.020 + src.speedKt * 0.0042;
+  const reach = 0.02 + src.speedKt * 0.0042;
   const sternMask = smoothstep(0.0, 0.0022, behind) * (1 - smoothstep(reach * 0.45, reach, behind));
   const halfWidth = (0.0014 + behind * 0.085) * src.widthScale;
   const center = 1 - smoothstep(halfWidth * 0.5, halfWidth, Math.abs(lateral));
@@ -137,9 +138,10 @@ export function wakeFoamIntensity(px: number, pz: number, src: WakeSource): numb
 
   // Kelvin V-wake — two diverging lines at ~19.5° (tan ≈ 0.354) behind the bow.
   const vHalf = 0.354 * behind;
-  const vLine = (1 - smoothstep(0.0007, 0.0026, Math.abs(Math.abs(lateral) - vHalf)))
-    * smoothstep(0.001, 0.018, behind)
-    * (1 - smoothstep(reach * 0.7, reach * 1.15, behind));
+  const vLine =
+    (1 - smoothstep(0.0007, 0.0026, Math.abs(Math.abs(lateral) - vHalf))) *
+    smoothstep(0.001, 0.018, behind) *
+    (1 - smoothstep(reach * 0.7, reach * 1.15, behind));
 
   // Break up the stern band with a faint transverse ripple.
   const breakup = 0.78 + 0.22 * Math.sin(behind * 150 - lateral * 70 + src.x * 9);

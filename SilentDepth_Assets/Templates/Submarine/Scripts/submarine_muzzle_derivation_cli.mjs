@@ -13,7 +13,14 @@ import {
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_BLENDER = '/Applications/Blender.app/Contents/MacOS/Blender';
 const WORKER = resolve(SCRIPT_DIR, 'submarine_muzzle_derivation_worker.py');
-const VALUE_FLAGS = new Set(['--master', '--assembly', '--output', '--summary-output', '--blender', '--candidates']);
+const VALUE_FLAGS = new Set([
+  '--master',
+  '--assembly',
+  '--output',
+  '--summary-output',
+  '--blender',
+  '--candidates',
+]);
 const BOOLEAN_FLAGS = new Set(['--dry-run', '--help', '-h']);
 
 function printHelp() {
@@ -122,7 +129,8 @@ function runBlender(inputs, before) {
   const blenderPath = inputs.blender ?? DEFAULT_BLENDER;
   if (!existsSync(blenderPath)) throw new Error(`找不到 Blender 可执行文件：${blenderPath}`);
   const versionText = blenderVersion(blenderPath);
-  if (!versionText.startsWith('Blender 5.2.1 LTS')) throw new Error(`Blender 版本不是 5.2.1 LTS：\n${versionText}`);
+  if (!versionText.startsWith('Blender 5.2.1 LTS'))
+    throw new Error(`Blender 版本不是 5.2.1 LTS：\n${versionText}`);
   const args = [
     '--background',
     inputs.master,
@@ -152,7 +160,9 @@ function runBlender(inputs, before) {
   ];
   const result = spawnSync(blenderPath, args, { encoding: 'utf-8', maxBuffer: 1024 * 1024 * 64 });
   if (result.status !== 0) {
-    throw new Error(`Blender muzzle 推导失败，退出码 ${result.status ?? 'unknown'}\n${result.stderr ?? ''}\n${result.stdout ?? ''}`);
+    throw new Error(
+      `Blender muzzle 推导失败，退出码 ${result.status ?? 'unknown'}\n${result.stderr ?? ''}\n${result.stdout ?? ''}`,
+    );
   }
   return { blenderPath, versionText };
 }
@@ -211,10 +221,17 @@ function main() {
     const master = validatePath(parsed.options.master, '--master', '.blend');
     const assembly = validatePath(parsed.options.assembly, '--assembly', '.json');
     const output = resolve(parsed.options.output);
-    const summaryOutput = parsed.options.summary_output === undefined ? undefined : resolve(parsed.options.summary_output);
-    const candidates = parsed.options.candidates === undefined
-      ? [...MUZZLE_DERIVATION_CONSTANTS.bowDoorObjectNames]
-      : parsed.options.candidates.split(',').map((item) => item.trim()).filter((item) => item.length > 0);
+    const summaryOutput =
+      parsed.options.summary_output === undefined
+        ? undefined
+        : resolve(parsed.options.summary_output);
+    const candidates =
+      parsed.options.candidates === undefined
+        ? [...MUZZLE_DERIVATION_CONSTANTS.bowDoorObjectNames]
+        : parsed.options.candidates
+            .split(',')
+            .map((item) => item.trim())
+            .filter((item) => item.length > 0);
     const assemblyData = assertAssemblyForMuzzleDerivation(readJson(assembly));
     const before = fingerprint(master);
     runBlender({ assembly, blender: parsed.options.blender, candidates, master, output }, before);
@@ -222,8 +239,18 @@ function main() {
     const after = fingerprint(master);
     const report = {
       ...rawReport,
-      assembly: { ...rawReport.assembly, repositoryRelativePath: relative(process.cwd(), assembly) },
-      blenderIntegrity: { after, before, unchanged: before.sha256 === after.sha256 && before.sizeBytes === after.sizeBytes && before.mtimeMs === after.mtimeMs },
+      assembly: {
+        ...rawReport.assembly,
+        repositoryRelativePath: relative(process.cwd(), assembly),
+      },
+      blenderIntegrity: {
+        after,
+        before,
+        unchanged:
+          before.sha256 === after.sha256 &&
+          before.sizeBytes === after.sizeBytes &&
+          before.mtimeMs === after.mtimeMs,
+      },
       master: { ...rawReport.master, repositoryRelativePath: relative(process.cwd(), master) },
     };
     writeJson(output, report);
@@ -231,7 +258,8 @@ function main() {
       const updated = updateTorpedoMuzzleTransform(assemblyData, selectedTransform(report));
       writeJson(assembly, updated);
     }
-    if (summaryOutput !== undefined) writeSummary(summaryOutput, report, before, after, parsed.options.dryRun);
+    if (summaryOutput !== undefined)
+      writeSummary(summaryOutput, report, before, after, parsed.options.dryRun);
   } catch (error) {
     console.error(error instanceof Error ? error.message : String(error));
     process.exit(1);

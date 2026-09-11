@@ -58,11 +58,7 @@ const SURFACE_Y = 0;
 // ---------------------------------------------------------------------------
 
 /** Convert engine position (km, x=east, y=north) + depth (metres) to Three.js Vec3. */
-export function engineToThree(
-  ex: number,
-  ey: number,
-  depthM: number = 0,
-): Vec3 {
+export function engineToThree(ex: number, ey: number, depthM: number = 0): Vec3 {
   return {
     x: ex * WORLD_SCALE,
     y: SURFACE_Y - depthM / 1000, // depth in km, negative y
@@ -104,10 +100,7 @@ const WEATHER_VISUALS: Record<WeatherKind, WeatherVisualParams> = {
   Night: { waveHeight: 0.4, windSpeed: 3, fogDensity: 0.008, cloudCover: 0.2 },
 };
 
-function deriveWeather(
-  kind: WeatherKind,
-  balance: BalanceConfig,
-): RenderWeather {
+function deriveWeather(kind: WeatherKind, balance: BalanceConfig): RenderWeather {
   const mods = weatherModifiers(kind, balance);
   const vis = WEATHER_VISUALS[kind];
   return {
@@ -199,17 +192,17 @@ export function collectFrameEvents(log: readonly EventEntry[], sinceId: number):
  * longer present (e.g. it sank and was removed) — callers MUST fail closed and
  * produce no effect rather than guess a position.
  */
-function findEnemyPosition(snapshot: GameSnapshot, shipId: unknown): { x: number; y: number } | null {
+function findEnemyPosition(
+  snapshot: GameSnapshot,
+  shipId: unknown,
+): { x: number; y: number } | null {
   if (typeof shipId !== 'string') return null;
   const ship = snapshot.enemies.find((e) => e.id === shipId);
   if (!ship) return null;
   return { x: ship.position.x, y: ship.position.y };
 }
 
-export function createEffectFromEvent(
-  ev: EventEntry,
-  snapshot: GameSnapshot,
-): RenderEffect | null {
+export function createEffectFromEvent(ev: EventEntry, snapshot: GameSnapshot): RenderEffect | null {
   const p = ev.payload;
   switch (ev.type) {
     case 'sonar.ping': {
@@ -327,10 +320,7 @@ export interface AdapterOptions {
  * Convert a GameSnapshot into a RenderState. Pure except for effect lifecycle
  * mutations on the provided activeEffects array.
  */
-export function snapshotToRenderState(
-  snapshot: GameSnapshot,
-  opts: AdapterOptions,
-): RenderState {
+export function snapshotToRenderState(snapshot: GameSnapshot, opts: AdapterOptions): RenderState {
   const {
     balance,
     prevSnapshot,

@@ -38,14 +38,23 @@ export class TorpedoRenderer {
     this._bodyGeo = new THREE.CapsuleGeometry(0.0011, 0.012, 4, 8);
     this._bodyGeo.rotateZ(Math.PI / 2);
     this._bodyMat = new THREE.MeshStandardMaterial({
-      color: 0x2a2f33, roughness: 0.5, metalness: 0.5,
-      emissive: 0x06222b, emissiveIntensity: 0.25,
+      color: 0x2a2f33,
+      roughness: 0.5,
+      metalness: 0.5,
+      emissive: 0x06222b,
+      emissiveIntensity: 0.25,
     });
 
     this._bubbleGeo = new THREE.BufferGeometry();
-    this._bubbleGeo.setAttribute('position', new THREE.BufferAttribute(new Float32Array(BUBBLE_COUNT * 3), 3));
+    this._bubbleGeo.setAttribute(
+      'position',
+      new THREE.BufferAttribute(new Float32Array(BUBBLE_COUNT * 3), 3),
+    );
     this._bubbleMat = new THREE.PointsMaterial({
-      color: 0xbfe6ef, size: 0.004, transparent: true, opacity: 0.7,
+      color: 0xbfe6ef,
+      size: 0.004,
+      transparent: true,
+      opacity: 0.7,
       depthWrite: false,
     });
   }
@@ -102,7 +111,7 @@ export class TorpedoRenderer {
       const vels = view.bubbleVelocities;
       const phase = (view.bubbles.geometry.userData?.phase as number) ?? 0;
       for (let i = 0; i < BUBBLE_COUNT; i++) {
-        const t = ((wallTime * 0.6 + phase + i / BUBBLE_COUNT) % 1);
+        const t = (wallTime * 0.6 + phase + i / BUBBLE_COUNT) % 1;
         const back = -0.002 - t * 0.02; // trail length behind the torpedo
         arr[i * 3] = back + vels[i * 3]! * t;
         arr[i * 3 + 1] = t * 0.02 + Math.sin(wallTime * 3 + i) * 0.0015;

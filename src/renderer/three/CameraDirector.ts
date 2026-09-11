@@ -59,24 +59,49 @@ export const PRESET_FOV: Record<CameraMode, number> = {
 };
 
 /** Framing parameters for the four world-family presets. */
-export const PRESET_PARAMS: Record<'cinematic' | 'chase' | 'surface' | 'underwater', PresetParams> = {
-  cinematic: {
-    distance: 0.20, height: 0.085, sideOffset: 0.10, lookAhead: 0.06,
-    lookUpBias: 0.020, fov: PRESET_FOV.cinematic, underwater: false, smoothing: 4,
-  },
-  chase: {
-    distance: 0.30, height: 0.105, sideOffset: 0.16, lookAhead: 0.11,
-    lookUpBias: 0.018, fov: PRESET_FOV.chase, underwater: false, smoothing: 6,
-  },
-  surface: {
-    distance: 0.16, height: 0.045, sideOffset: 0.06, lookAhead: 0.05,
-    lookUpBias: 0.012, fov: PRESET_FOV.surface, underwater: false, smoothing: 5,
-  },
-  underwater: {
-    distance: 0.13, height: 0.012, sideOffset: 0.05, lookAhead: 0.05,
-    lookUpBias: 0.010, fov: PRESET_FOV.underwater, underwater: true, smoothing: 5,
-  },
-};
+export const PRESET_PARAMS: Record<'cinematic' | 'chase' | 'surface' | 'underwater', PresetParams> =
+  {
+    cinematic: {
+      distance: 0.2,
+      height: 0.085,
+      sideOffset: 0.1,
+      lookAhead: 0.06,
+      lookUpBias: 0.02,
+      fov: PRESET_FOV.cinematic,
+      underwater: false,
+      smoothing: 4,
+    },
+    chase: {
+      distance: 0.3,
+      height: 0.105,
+      sideOffset: 0.16,
+      lookAhead: 0.11,
+      lookUpBias: 0.018,
+      fov: PRESET_FOV.chase,
+      underwater: false,
+      smoothing: 6,
+    },
+    surface: {
+      distance: 0.16,
+      height: 0.045,
+      sideOffset: 0.06,
+      lookAhead: 0.05,
+      lookUpBias: 0.012,
+      fov: PRESET_FOV.surface,
+      underwater: false,
+      smoothing: 5,
+    },
+    underwater: {
+      distance: 0.13,
+      height: 0.012,
+      sideOffset: 0.05,
+      lookAhead: 0.05,
+      lookUpBias: 0.01,
+      fov: PRESET_FOV.underwater,
+      underwater: true,
+      smoothing: 5,
+    },
+  };
 
 /** Depth (m) thresholds for the surface / underwater presets. */
 export const SURFACE_DEPTH_M = 12;
@@ -107,9 +132,12 @@ export function selectCameraPreset(input: CameraSelectionInput): CameraMode {
  */
 export function resolvePresetParams(mode: CameraMode): PresetParams {
   switch (mode) {
-    case 'chase': return PRESET_PARAMS.chase;
-    case 'surface': return PRESET_PARAMS.surface;
-    case 'underwater': return PRESET_PARAMS.underwater;
+    case 'chase':
+      return PRESET_PARAMS.chase;
+    case 'surface':
+      return PRESET_PARAMS.surface;
+    case 'underwater':
+      return PRESET_PARAMS.underwater;
     case 'cinematic':
     default:
       return PRESET_PARAMS.cinematic;

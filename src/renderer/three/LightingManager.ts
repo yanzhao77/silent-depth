@@ -63,7 +63,11 @@ export class LightingManager {
     const underwater = options.underwaterAttenuation ?? 1;
 
     // Key light tracks the weather's sun/moon direction.
-    this.sunLight.position.set(v.sunDirection.x * 100, v.sunDirection.y * 100, v.sunDirection.z * 100);
+    this.sunLight.position.set(
+      v.sunDirection.x * 100,
+      v.sunDirection.y * 100,
+      v.sunDirection.z * 100,
+    );
 
     let sunIntensity = v.sunIntensity;
     let ambientIntensity = v.ambientIntensity;
