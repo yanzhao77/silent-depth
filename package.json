@@ -22,7 +22,9 @@
     "lint": "tsc --noEmit && eslint .",
     "lint:fix": "tsc --noEmit && eslint . --fix && prettier --write .",
     "capture:v2.9": "node tools/v2.9-capture/capture.mjs",
-    "capture:v2.9:headless": "node tools/v2.9-capture/capture.mjs --headless"
+    "capture:v2.9:headless": "node tools/v2.9-capture/capture.mjs --headless",
+    "check:runtime-data": "node tools/ue4/sync-tech-tree-data.mjs --check",
+    "sync:runtime-data": "node tools/ue4/sync-tech-tree-data.mjs"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

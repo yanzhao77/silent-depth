@@ -1,0 +1,2592 @@
+{
+  "schema": "silent-depth-defensive-technology-tree-v1",
+  "generated_at": "2026-09-11",
+  "note_zh": "这是游戏科技树层级，不是现实作战能力评分；T1-T10 只是游戏内列装顺序。",
+  "root": "DEFENSIVE SYSTEM",
+  "branches": [
+    "ESM",
+    "THREAT_WARNING",
+    "ACOUSTIC_COUNTERMEASURE",
+    "DECOY",
+    "NOISE_MAKER",
+    "TORPEDO_DEFENSE",
+    "LAUNCHER",
+    "DEFENSIVE_CONTROL",
+    "INTEGRATED_DEFENSE"
+  ],
+  "tiers": {
+    "T1": {
+      "label": "Basic Warning",
+      "label_zh": "基础告警",
+      "nodes": [
+        {
+          "family_id": "TW-RADAR-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Radar Warning",
+          "label_zh": "雷达告警",
+          "tier_min": 1,
+          "tier_max": 4,
+          "era": "1960s-1980s",
+          "game_tier_entered": 1,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-BASIC-DETECTION",
+          "branch": "ESM",
+          "label": "Basic Signal Detection",
+          "label_zh": "基础信号截获",
+          "tier_min": 1,
+          "tier_max": 2,
+          "era": "1960s-1970s",
+          "game_tier_entered": 1,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ACM-NOISE-MAKER",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Noise Maker",
+          "label_zh": "噪声弹",
+          "tier_min": 1,
+          "tier_max": 4,
+          "era": "1960s-1990s",
+          "game_tier_entered": 1,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-PASSIVE",
+          "branch": "DECOY",
+          "label": "Passive Decoy",
+          "label_zh": "被动诱饵",
+          "tier_min": 1,
+          "tier_max": 3,
+          "era": "1960s-1970s",
+          "game_tier_entered": 1,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "NM-EARLY",
+          "branch": "NOISE_MAKER",
+          "label": "Early Noise Maker",
+          "label_zh": "早期噪声弹",
+          "tier_min": 1,
+          "tier_max": 2,
+          "era": "1960s",
+          "game_tier_entered": 1,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T2": {
+      "label": "Basic Acoustic Countermeasure",
+      "label_zh": "基础声学对抗",
+      "nodes": [
+        {
+          "family_id": "ESM-BASIC-DETECTION",
+          "branch": "ESM",
+          "label": "Basic Signal Detection",
+          "label_zh": "基础信号截获",
+          "tier_min": 1,
+          "tier_max": 2,
+          "era": "1960s-1970s",
+          "game_tier_entered": 2,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-IMPROVED-DETECTION",
+          "branch": "ESM",
+          "label": "Improved Detection",
+          "label_zh": "改进型截获",
+          "tier_min": 2,
+          "tier_max": 3,
+          "era": "1970s",
+          "game_tier_entered": 2,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ACM-ACOUSTIC-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Acoustic Decoy",
+          "label_zh": "声学诱饵",
+          "tier_min": 2,
+          "tier_max": 6,
+          "era": "1970s-2000s",
+          "game_tier_entered": 2,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "DEC-ACOUSTIC",
+          "branch": "DECOY",
+          "label": "Acoustic Decoy",
+          "label_zh": "声学诱饵",
+          "tier_min": 2,
+          "tier_max": 6,
+          "era": "1970s-2000s",
+          "game_tier_entered": 2,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-EXTERNAL",
+          "branch": "LAUNCHER",
+          "label": "External Launcher",
+          "label_zh": "外部发射器",
+          "tier_min": 2,
+          "tier_max": 4,
+          "era": "1960s-1980s",
+          "game_tier_entered": 2,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "DC-CONSOLE",
+          "branch": "DEFENSIVE_CONTROL",
+          "label": "Defensive Control Console",
+          "label_zh": "防御控制台",
+          "tier_min": 2,
+          "tier_max": 5,
+          "era": "1970s-1990s",
+          "game_tier_entered": 2,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "NM-EARLY",
+          "branch": "NOISE_MAKER",
+          "label": "Early Noise Maker",
+          "label_zh": "早期噪声弹",
+          "tier_min": 1,
+          "tier_max": 2,
+          "era": "1960s",
+          "game_tier_entered": 2,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T3": {
+      "label": "Improved Decoy",
+      "label_zh": "改进型诱饵",
+      "nodes": [
+        {
+          "family_id": "ESM-IMPROVED-DETECTION",
+          "branch": "ESM",
+          "label": "Improved Detection",
+          "label_zh": "改进型截获",
+          "tier_min": 2,
+          "tier_max": 3,
+          "era": "1970s",
+          "game_tier_entered": 3,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-CLASSIFICATION",
+          "branch": "ESM",
+          "label": "Signal Classification",
+          "label_zh": "信号分类",
+          "tier_min": 3,
+          "tier_max": 4,
+          "era": "1970s-1980s",
+          "game_tier_entered": 3,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-PASSIVE",
+          "branch": "DECOY",
+          "label": "Passive Decoy",
+          "label_zh": "被动诱饵",
+          "tier_min": 1,
+          "tier_max": 3,
+          "era": "1960s-1970s",
+          "game_tier_entered": 3,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-ACTIVE",
+          "branch": "DECOY",
+          "label": "Active Decoy",
+          "label_zh": "主动诱饵",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "game_tier_entered": 3,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ACM-NOISE-MAKER",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Noise Maker",
+          "label_zh": "噪声弹",
+          "tier_min": 1,
+          "tier_max": 4,
+          "era": "1960s-1990s",
+          "game_tier_entered": 3,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-TUBE",
+          "branch": "LAUNCHER",
+          "label": "Countermeasure Tube",
+          "label_zh": "对抗管",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "game_tier_entered": 3,
+          "asset_ids": [
+            "GEN_CML_TUBE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "NM-IMPROVED",
+          "branch": "NOISE_MAKER",
+          "label": "Improved Noise Maker",
+          "label_zh": "改进型噪声弹",
+          "tier_min": 3,
+          "tier_max": 5,
+          "era": "1970s-1980s",
+          "game_tier_entered": 3,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ELECTRONIC-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Electronic Threat Warning",
+          "label_zh": "电子威胁告警",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "game_tier_entered": 3,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T4": {
+      "label": "Improved Threat Warning",
+      "label_zh": "改进型威胁告警",
+      "nodes": [
+        {
+          "family_id": "TW-RADAR-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Radar Warning",
+          "label_zh": "雷达告警",
+          "tier_min": 1,
+          "tier_max": 4,
+          "era": "1960s-1980s",
+          "game_tier_entered": 4,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ELECTRONIC-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Electronic Threat Warning",
+          "label_zh": "电子威胁告警",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "game_tier_entered": 4,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ACTIVE-SONAR-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Active Sonar Warning",
+          "label_zh": "主动声呐告警",
+          "tier_min": 4,
+          "tier_max": 7,
+          "era": "1980s-2000s",
+          "game_tier_entered": 4,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ESM-CLASSIFICATION",
+          "branch": "ESM",
+          "label": "Signal Classification",
+          "label_zh": "信号分类",
+          "tier_min": 3,
+          "tier_max": 4,
+          "era": "1970s-1980s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-DIGITAL",
+          "branch": "ESM",
+          "label": "Digital ESM",
+          "label_zh": "数字式 ESM",
+          "tier_min": 4,
+          "tier_max": 6,
+          "era": "1980s-1990s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_BLQ10",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ACM-ACOUSTIC-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Acoustic Decoy",
+          "label_zh": "声学诱饵",
+          "tier_min": 2,
+          "tier_max": 6,
+          "era": "1970s-2000s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ACM-TORPEDO-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA",
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "DEC-TORPEDO",
+          "branch": "DECOY",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "CML-EXTERNAL",
+          "branch": "LAUNCHER",
+          "label": "External Launcher",
+          "label_zh": "外部发射器",
+          "tier_min": 2,
+          "tier_max": 4,
+          "era": "1960s-1980s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "CML-TUBE",
+          "branch": "LAUNCHER",
+          "label": "Countermeasure Tube",
+          "label_zh": "对抗管",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "GEN_CML_TUBE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-ACOUSTIC-DEVICE",
+          "branch": "LAUNCHER",
+          "label": "Acoustic Device Launcher",
+          "label_zh": "声学装置发射器",
+          "tier_min": 4,
+          "tier_max": 7,
+          "era": "1980s-2000s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "TD-WARNING",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Torpedo Warning",
+          "label_zh": "鱼雷告警",
+          "tier_min": 4,
+          "tier_max": 6,
+          "era": "1980s-1990s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "GEN_TW_TORPEDO_WARNING_SENSOR"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "NM-IMPROVED",
+          "branch": "NOISE_MAKER",
+          "label": "Improved Noise Maker",
+          "label_zh": "改进型噪声弹",
+          "tier_min": 3,
+          "tier_max": 5,
+          "era": "1970s-1980s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DC-CONSOLE",
+          "branch": "DEFENSIVE_CONTROL",
+          "label": "Defensive Control Console",
+          "label_zh": "防御控制台",
+          "tier_min": 2,
+          "tier_max": 5,
+          "era": "1970s-1990s",
+          "game_tier_entered": 4,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T5": {
+      "label": "Digital ESM",
+      "label_zh": "数字式 ESM",
+      "nodes": [
+        {
+          "family_id": "ESM-DIGITAL",
+          "branch": "ESM",
+          "label": "Digital ESM",
+          "label_zh": "数字式 ESM",
+          "tier_min": 4,
+          "tier_max": 6,
+          "era": "1980s-1990s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_BLQ10",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ESM-MULTIBAND",
+          "branch": "ESM",
+          "label": "Multi-Band ESM",
+          "label_zh": "多频段 ESM",
+          "tier_min": 5,
+          "tier_max": 7,
+          "era": "1990s-2000s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "GEN_EW_ANTENNA_ARRAY",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-TORPEDO-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Torpedo Warning",
+          "label_zh": "鱼雷告警",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1980s-2010s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "GEN_TW_TORPEDO_WARNING_SENSOR"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ACM-TORPEDO-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA",
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "ACM-MOBILE-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Mobile Acoustic Decoy",
+          "label_zh": "机动声学诱饵",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1990s-2010s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "DEC-ACTIVE",
+          "branch": "DECOY",
+          "label": "Active Decoy",
+          "label_zh": "主动诱饵",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-ACOUSTIC",
+          "branch": "DECOY",
+          "label": "Acoustic Decoy",
+          "label_zh": "声学诱饵",
+          "tier_min": 2,
+          "tier_max": 6,
+          "era": "1970s-2000s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-TORPEDO",
+          "branch": "DECOY",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "DEC-MOBILE",
+          "branch": "DECOY",
+          "label": "Mobile Decoy",
+          "label_zh": "机动诱饵",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1990s-2010s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "NM-IMPROVED",
+          "branch": "NOISE_MAKER",
+          "label": "Improved Noise Maker",
+          "label_zh": "改进型噪声弹",
+          "tier_min": 3,
+          "tier_max": 5,
+          "era": "1970s-1980s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-ACOUSTIC-DEVICE",
+          "branch": "LAUNCHER",
+          "label": "Acoustic Device Launcher",
+          "label_zh": "声学装置发射器",
+          "tier_min": 4,
+          "tier_max": 7,
+          "era": "1980s-2000s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "TD-COUNTERMEASURE",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Countermeasure",
+          "label_zh": "对抗",
+          "tier_min": 5,
+          "tier_max": 8,
+          "era": "1980s-2000s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "DC-CONSOLE",
+          "branch": "DEFENSIVE_CONTROL",
+          "label": "Defensive Control Console",
+          "label_zh": "防御控制台",
+          "tier_min": 2,
+          "tier_max": 5,
+          "era": "1970s-1990s",
+          "game_tier_entered": 5,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T6": {
+      "label": "Integrated Countermeasure",
+      "label_zh": "整合对抗",
+      "nodes": [
+        {
+          "family_id": "ESM-INTEGRATED",
+          "branch": "ESM",
+          "label": "Integrated ESM",
+          "label_zh": "整合式 ESM",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "2000s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-MULTIBAND",
+          "branch": "ESM",
+          "label": "Multi-Band ESM",
+          "label_zh": "多频段 ESM",
+          "tier_min": 5,
+          "tier_max": 7,
+          "era": "1990s-2000s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "GEN_EW_ANTENNA_ARRAY",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ELECTRONIC-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Electronic Threat Warning",
+          "label_zh": "电子威胁告警",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "game_tier_entered": 6,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+          "branch": "THREAT_WARNING",
+          "label": "Acoustic Threat Classification",
+          "label_zh": "声学威胁分类",
+          "tier_min": 6,
+          "tier_max": 10,
+          "era": "1990s-2020s",
+          "game_tier_entered": 6,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ACM-ACOUSTIC-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Acoustic Decoy",
+          "label_zh": "声学诱饵",
+          "tier_min": 2,
+          "tier_max": 6,
+          "era": "1970s-2000s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ACM-TORPEDO-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA",
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "DEC-TORPEDO",
+          "branch": "DECOY",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "NM-MODERN",
+          "branch": "NOISE_MAKER",
+          "label": "Modern Noise Maker",
+          "label_zh": "现代噪声弹",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2000s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-TUBE",
+          "branch": "LAUNCHER",
+          "label": "Countermeasure Tube",
+          "label_zh": "对抗管",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "GEN_CML_TUBE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TD-WARNING",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Torpedo Warning",
+          "label_zh": "鱼雷告警",
+          "tier_min": 4,
+          "tier_max": 6,
+          "era": "1980s-1990s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "GEN_TW_TORPEDO_WARNING_SENSOR"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TD-COUNTERMEASURE",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Countermeasure",
+          "label_zh": "对抗",
+          "tier_min": 5,
+          "tier_max": 8,
+          "era": "1980s-2000s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "DC-INTEGRATED-CONTROL",
+          "branch": "DEFENSIVE_CONTROL",
+          "label": "Integrated Defensive Control",
+          "label_zh": "整合防御控制",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2010s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "IDS-CORE",
+          "branch": "INTEGRATED_DEFENSE",
+          "label": "Integrated Defensive System",
+          "label_zh": "整合防御系统",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2010s",
+          "game_tier_entered": 6,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T7": {
+      "label": "Advanced Acoustic Defense",
+      "label_zh": "先进声学防御",
+      "nodes": [
+        {
+          "family_id": "ESM-ADVANCED-THREAT-WARNING",
+          "branch": "ESM",
+          "label": "Advanced Threat Warning",
+          "label_zh": "先进威胁告警",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-MULTIBAND",
+          "branch": "ESM",
+          "label": "Multi-Band ESM",
+          "label_zh": "多频段 ESM",
+          "tier_min": 5,
+          "tier_max": 7,
+          "era": "1990s-2000s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "GEN_EW_ANTENNA_ARRAY",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ACTIVE-SONAR-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Active Sonar Warning",
+          "label_zh": "主动声呐告警",
+          "tier_min": 4,
+          "tier_max": 7,
+          "era": "1980s-2000s",
+          "game_tier_entered": 7,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "TW-TORPEDO-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Torpedo Warning",
+          "label_zh": "鱼雷告警",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1980s-2010s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "GEN_TW_TORPEDO_WARNING_SENSOR"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ACM-TORPEDO-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA",
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "ACM-ADVANCED",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-ADVANCED",
+          "branch": "DECOY",
+          "label": "Advanced Decoy",
+          "label_zh": "先进诱饵",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-TORPEDO",
+          "branch": "DECOY",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "NM-MODERN",
+          "branch": "NOISE_MAKER",
+          "label": "Modern Noise Maker",
+          "label_zh": "现代噪声弹",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2000s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-ADVANCED",
+          "branch": "LAUNCHER",
+          "label": "Advanced Launcher",
+          "label_zh": "先进发射器",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TD-ADVANCED",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Advanced Countermeasure",
+          "label_zh": "先进对抗",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TD-COUNTERMEASURE",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Countermeasure",
+          "label_zh": "对抗",
+          "tier_min": 5,
+          "tier_max": 8,
+          "era": "1980s-2000s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "DC-INTEGRATED-CONTROL",
+          "branch": "DEFENSIVE_CONTROL",
+          "label": "Integrated Defensive Control",
+          "label_zh": "整合防御控制",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2010s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "IDS-CORE",
+          "branch": "INTEGRATED_DEFENSE",
+          "label": "Integrated Defensive System",
+          "label_zh": "整合防御系统",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2010s",
+          "game_tier_entered": 7,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T8": {
+      "label": "Multi-Sensor Threat Fusion",
+      "label_zh": "多传感器威胁融合",
+      "nodes": [
+        {
+          "family_id": "ESM-MULTISENSOR-FUSION",
+          "branch": "ESM",
+          "label": "Multi-Sensor Fusion",
+          "label_zh": "多传感器融合",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-INTEGRATED",
+          "branch": "ESM",
+          "label": "Integrated ESM",
+          "label_zh": "整合式 ESM",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "2000s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-ADVANCED-THREAT-WARNING",
+          "branch": "ESM",
+          "label": "Advanced Threat Warning",
+          "label_zh": "先进威胁告警",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-TORPEDO-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Torpedo Warning",
+          "label_zh": "鱼雷告警",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1980s-2010s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "GEN_TW_TORPEDO_WARNING_SENSOR"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+          "branch": "THREAT_WARNING",
+          "label": "Acoustic Threat Classification",
+          "label_zh": "声学威胁分类",
+          "tier_min": 6,
+          "tier_max": 10,
+          "era": "1990s-2020s",
+          "game_tier_entered": 8,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ACM-ADVANCED",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ACM-INTEGRATED",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Integrated Acoustic Defense",
+          "label_zh": "整合声学防御",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-ADVANCED",
+          "branch": "DECOY",
+          "label": "Advanced Decoy",
+          "label_zh": "先进诱饵",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-MOBILE",
+          "branch": "DECOY",
+          "label": "Mobile Decoy",
+          "label_zh": "机动诱饵",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1990s-2010s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "NM-ADVANCED",
+          "branch": "NOISE_MAKER",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗（噪声源）",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-ADVANCED",
+          "branch": "LAUNCHER",
+          "label": "Advanced Launcher",
+          "label_zh": "先进发射器",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-INTEGRATED",
+          "branch": "LAUNCHER",
+          "label": "Integrated Launcher",
+          "label_zh": "整合发射系统",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TD-COUNTERMEASURE",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Countermeasure",
+          "label_zh": "对抗",
+          "tier_min": 5,
+          "tier_max": 8,
+          "era": "1980s-2000s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "TD-ADVANCED",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Advanced Countermeasure",
+          "label_zh": "先进对抗",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DC-AUTOMATED",
+          "branch": "DEFENSIVE_CONTROL",
+          "label": "Automated Defensive Control",
+          "label_zh": "自动化防御控制",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "IDS-CORE",
+          "branch": "INTEGRATED_DEFENSE",
+          "label": "Integrated Defensive System",
+          "label_zh": "整合防御系统",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2010s",
+          "game_tier_entered": 8,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T9": {
+      "label": "Integrated Defensive Warfare",
+      "label_zh": "整合防御作战",
+      "nodes": [
+        {
+          "family_id": "ESM-ADVANCED-EW",
+          "branch": "ESM",
+          "label": "Advanced Integrated EW",
+          "label_zh": "先进整合电子战",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-MULTISENSOR-FUSION",
+          "branch": "ESM",
+          "label": "Multi-Sensor Fusion",
+          "label_zh": "多传感器融合",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-TORPEDO-WARNING",
+          "branch": "THREAT_WARNING",
+          "label": "Torpedo Warning",
+          "label_zh": "鱼雷告警",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1980s-2010s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "GEN_TW_TORPEDO_WARNING_SENSOR"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+          "branch": "THREAT_WARNING",
+          "label": "Acoustic Threat Classification",
+          "label_zh": "声学威胁分类",
+          "tier_min": 6,
+          "tier_max": 10,
+          "era": "1990s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ACM-MOBILE-DECOY",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Mobile Acoustic Decoy",
+          "label_zh": "机动声学诱饵",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1990s-2010s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "ACM-ADVANCED",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ACM-INTEGRATED",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Integrated Acoustic Defense",
+          "label_zh": "整合声学防御",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-ADVANCED",
+          "branch": "DECOY",
+          "label": "Advanced Decoy",
+          "label_zh": "先进诱饵",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-MOBILE",
+          "branch": "DECOY",
+          "label": "Mobile Decoy",
+          "label_zh": "机动诱饵",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1990s-2010s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": [
+            "Russia"
+          ]
+        },
+        {
+          "family_id": "NM-ADVANCED",
+          "branch": "NOISE_MAKER",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗（噪声源）",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-ADVANCED",
+          "branch": "LAUNCHER",
+          "label": "Advanced Launcher",
+          "label_zh": "先进发射器",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-INTEGRATED",
+          "branch": "LAUNCHER",
+          "label": "Integrated Launcher",
+          "label_zh": "整合发射系统",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TD-INTEGRATED",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Integrated Torpedo Defense",
+          "label_zh": "整合鱼雷防御",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TD-ADVANCED",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Advanced Countermeasure",
+          "label_zh": "先进对抗",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DC-AUTOMATED",
+          "branch": "DEFENSIVE_CONTROL",
+          "label": "Automated Defensive Control",
+          "label_zh": "自动化防御控制",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "IDS-ADVANCED",
+          "branch": "INTEGRATED_DEFENSE",
+          "label": "Next Generation Defensive System",
+          "label_zh": "下一代防御系统",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 9,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    },
+    "T10": {
+      "label": "Next Generation Defensive System",
+      "label_zh": "下一代防御系统",
+      "nodes": [
+        {
+          "family_id": "ESM-NEXTGEN",
+          "branch": "ESM",
+          "label": "Next Generation Defensive Electronic System",
+          "label_zh": "下一代防御电子系统",
+          "tier_min": 10,
+          "tier_max": 10,
+          "era": "2020s+",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-ADVANCED-EW",
+          "branch": "ESM",
+          "label": "Advanced Integrated EW",
+          "label_zh": "先进整合电子战",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ESM-MULTISENSOR-FUSION",
+          "branch": "ESM",
+          "label": "Multi-Sensor Fusion",
+          "label_zh": "多传感器融合",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+          "branch": "THREAT_WARNING",
+          "label": "Acoustic Threat Classification",
+          "label_zh": "声学威胁分类",
+          "tier_min": 6,
+          "tier_max": 10,
+          "era": "1990s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [],
+          "database_only": true,
+          "anchored_countries": [
+            "USA"
+          ]
+        },
+        {
+          "family_id": "ACM-INTEGRATED",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Integrated Acoustic Defense",
+          "label_zh": "整合声学防御",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "ACM-ADVANCED",
+          "branch": "ACOUSTIC_COUNTERMEASURE",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DEC-ADVANCED",
+          "branch": "DECOY",
+          "label": "Advanced Decoy",
+          "label_zh": "先进诱饵",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "NM-ADVANCED",
+          "branch": "NOISE_MAKER",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗（噪声源）",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "CML-INTEGRATED",
+          "branch": "LAUNCHER",
+          "label": "Integrated Launcher",
+          "label_zh": "整合发射系统",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "TD-INTEGRATED",
+          "branch": "TORPEDO_DEFENSE",
+          "label": "Integrated Torpedo Defense",
+          "label_zh": "整合鱼雷防御",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "DC-AUTOMATED",
+          "branch": "DEFENSIVE_CONTROL",
+          "label": "Automated Defensive Control",
+          "label_zh": "自动化防御控制",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        },
+        {
+          "family_id": "IDS-ADVANCED",
+          "branch": "INTEGRATED_DEFENSE",
+          "label": "Next Generation Defensive System",
+          "label_zh": "下一代防御系统",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "game_tier_entered": 10,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ],
+          "database_only": false,
+          "anchored_countries": []
+        }
+      ]
+    }
+  },
+  "branch_trees": {
+    "ESM": {
+      "label": "ESM",
+      "label_zh": "电子支援措施",
+      "summary_zh": "被动截获、分类与整合的电子支援措施谱系。",
+      "nodes": [
+        {
+          "family_id": "ESM-BASIC-DETECTION",
+          "label": "Basic Signal Detection",
+          "label_zh": "基础信号截获",
+          "tier_min": 1,
+          "tier_max": 2,
+          "era": "1960s-1970s",
+          "prerequisite": null,
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-IMPROVED-DETECTION",
+          "label": "Improved Detection",
+          "label_zh": "改进型截获",
+          "tier_min": 2,
+          "tier_max": 3,
+          "era": "1970s",
+          "prerequisite": "ESM-BASIC-DETECTION",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-CLASSIFICATION",
+          "label": "Signal Classification",
+          "label_zh": "信号分类",
+          "tier_min": 3,
+          "tier_max": 4,
+          "era": "1970s-1980s",
+          "prerequisite": "ESM-IMPROVED-DETECTION",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-DIGITAL",
+          "label": "Digital ESM",
+          "label_zh": "数字式 ESM",
+          "tier_min": 4,
+          "tier_max": 6,
+          "era": "1980s-1990s",
+          "prerequisite": "ESM-CLASSIFICATION",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_BLQ10",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-MULTIBAND",
+          "label": "Multi-Band ESM",
+          "label_zh": "多频段 ESM",
+          "tier_min": 5,
+          "tier_max": 7,
+          "era": "1990s-2000s",
+          "prerequisite": "ESM-DIGITAL",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "GEN_EW_ANTENNA_ARRAY",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-INTEGRATED",
+          "label": "Integrated ESM",
+          "label_zh": "整合式 ESM",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "2000s",
+          "prerequisite": "ESM-MULTIBAND",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-ADVANCED-THREAT-WARNING",
+          "label": "Advanced Threat Warning",
+          "label_zh": "先进威胁告警",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "prerequisite": "ESM-INTEGRATED",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-MULTISENSOR-FUSION",
+          "label": "Multi-Sensor Fusion",
+          "label_zh": "多传感器融合",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s",
+          "prerequisite": "ESM-ADVANCED-THREAT-WARNING",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-ADVANCED-EW",
+          "label": "Advanced Integrated EW",
+          "label_zh": "先进整合电子战",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "prerequisite": "ESM-MULTISENSOR-FUSION",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        },
+        {
+          "family_id": "ESM-NEXTGEN",
+          "label": "Next Generation Defensive Electronic System",
+          "label_zh": "下一代防御电子系统",
+          "tier_min": 10,
+          "tier_max": 10,
+          "era": "2020s+",
+          "prerequisite": "ESM-ADVANCED-EW",
+          "asset_ids": [
+            "CN_EW_TYPE093",
+            "RU_EW_AKULA",
+            "UK_EW_ASTUTE",
+            "US_EW_ESM_GENERIC"
+          ]
+        }
+      ]
+    },
+    "THREAT_WARNING": {
+      "label": "Threat Warning",
+      "label_zh": "威胁告警",
+      "summary_zh": "雷达告警、电子威胁告警、主动声呐告警、鱼雷告警与声学威胁分类。",
+      "nodes": [
+        {
+          "family_id": "TW-RADAR-WARNING",
+          "label": "Radar Warning",
+          "label_zh": "雷达告警",
+          "tier_min": 1,
+          "tier_max": 4,
+          "era": "1960s-1980s",
+          "prerequisite": null,
+          "asset_ids": []
+        },
+        {
+          "family_id": "TW-ELECTRONIC-WARNING",
+          "label": "Electronic Threat Warning",
+          "label_zh": "电子威胁告警",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "prerequisite": "TW-RADAR-WARNING",
+          "asset_ids": []
+        },
+        {
+          "family_id": "TW-ACTIVE-SONAR-WARNING",
+          "label": "Active Sonar Warning",
+          "label_zh": "主动声呐告警",
+          "tier_min": 4,
+          "tier_max": 7,
+          "era": "1980s-2000s",
+          "prerequisite": "TW-ELECTRONIC-WARNING",
+          "asset_ids": []
+        },
+        {
+          "family_id": "TW-TORPEDO-WARNING",
+          "label": "Torpedo Warning",
+          "label_zh": "鱼雷告警",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1980s-2010s",
+          "prerequisite": "TW-ACTIVE-SONAR-WARNING",
+          "asset_ids": [
+            "GEN_TW_TORPEDO_WARNING_SENSOR"
+          ]
+        },
+        {
+          "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+          "label": "Acoustic Threat Classification",
+          "label_zh": "声学威胁分类",
+          "tier_min": 6,
+          "tier_max": 10,
+          "era": "1990s-2020s",
+          "prerequisite": "TW-TORPEDO-WARNING",
+          "asset_ids": []
+        }
+      ]
+    },
+    "ACOUSTIC_COUNTERMEASURE": {
+      "label": "Acoustic Countermeasure",
+      "label_zh": "声学对抗",
+      "summary_zh": "噪声弹、声学诱饵、鱼雷诱饵、机动诱饵到整合声学防御。",
+      "nodes": [
+        {
+          "family_id": "ACM-NOISE-MAKER",
+          "label": "Noise Maker",
+          "label_zh": "噪声弹",
+          "tier_min": 1,
+          "tier_max": 4,
+          "era": "1960s-1990s",
+          "prerequisite": null,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ]
+        },
+        {
+          "family_id": "ACM-ACOUSTIC-DECOY",
+          "label": "Acoustic Decoy",
+          "label_zh": "声学诱饵",
+          "tier_min": 2,
+          "tier_max": 6,
+          "era": "1970s-2000s",
+          "prerequisite": "ACM-NOISE-MAKER",
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ]
+        },
+        {
+          "family_id": "ACM-TORPEDO-DECOY",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "prerequisite": "ACM-ACOUSTIC-DECOY",
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ]
+        },
+        {
+          "family_id": "ACM-MOBILE-DECOY",
+          "label": "Mobile Acoustic Decoy",
+          "label_zh": "机动声学诱饵",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1990s-2010s",
+          "prerequisite": "ACM-TORPEDO-DECOY",
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ]
+        },
+        {
+          "family_id": "ACM-ADVANCED",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "prerequisite": "ACM-MOBILE-DECOY",
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ]
+        },
+        {
+          "family_id": "ACM-INTEGRATED",
+          "label": "Integrated Acoustic Defense",
+          "label_zh": "整合声学防御",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "prerequisite": "ACM-ADVANCED",
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ]
+        }
+      ]
+    },
+    "DECOY": {
+      "label": "Decoy",
+      "label_zh": "诱饵",
+      "summary_zh": "被动、主动、声学、鱼雷、机动与先进诱饵谱系。",
+      "nodes": [
+        {
+          "family_id": "DEC-PASSIVE",
+          "label": "Passive Decoy",
+          "label_zh": "被动诱饵",
+          "tier_min": 1,
+          "tier_max": 3,
+          "era": "1960s-1970s",
+          "prerequisite": null,
+          "asset_ids": []
+        },
+        {
+          "family_id": "DEC-ACOUSTIC",
+          "label": "Acoustic Decoy",
+          "label_zh": "声学诱饵",
+          "tier_min": 2,
+          "tier_max": 6,
+          "era": "1970s-2000s",
+          "prerequisite": "DEC-PASSIVE",
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ]
+        },
+        {
+          "family_id": "DEC-ACTIVE",
+          "label": "Active Decoy",
+          "label_zh": "主动诱饵",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "prerequisite": "DEC-ACOUSTIC",
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ]
+        },
+        {
+          "family_id": "DEC-TORPEDO",
+          "label": "Torpedo Decoy",
+          "label_zh": "鱼雷诱饵",
+          "tier_min": 4,
+          "tier_max": 8,
+          "era": "1980s-2010s",
+          "prerequisite": "DEC-ACTIVE",
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ]
+        },
+        {
+          "family_id": "DEC-MOBILE",
+          "label": "Mobile Decoy",
+          "label_zh": "机动诱饵",
+          "tier_min": 5,
+          "tier_max": 9,
+          "era": "1990s-2010s",
+          "prerequisite": "DEC-TORPEDO",
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ]
+        },
+        {
+          "family_id": "DEC-ADVANCED",
+          "label": "Advanced Decoy",
+          "label_zh": "先进诱饵",
+          "tier_min": 7,
+          "tier_max": 10,
+          "era": "2000s-2020s",
+          "prerequisite": "DEC-MOBILE",
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ]
+        }
+      ]
+    },
+    "NOISE_MAKER": {
+      "label": "Noise Maker",
+      "label_zh": "噪声弹",
+      "summary_zh": "早期到先进的噪声源谱系。",
+      "nodes": [
+        {
+          "family_id": "NM-EARLY",
+          "label": "Early Noise Maker",
+          "label_zh": "早期噪声弹",
+          "tier_min": 1,
+          "tier_max": 2,
+          "era": "1960s",
+          "prerequisite": null,
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ]
+        },
+        {
+          "family_id": "NM-IMPROVED",
+          "label": "Improved Noise Maker",
+          "label_zh": "改进型噪声弹",
+          "tier_min": 3,
+          "tier_max": 5,
+          "era": "1970s-1980s",
+          "prerequisite": "NM-EARLY",
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ]
+        },
+        {
+          "family_id": "NM-MODERN",
+          "label": "Modern Noise Maker",
+          "label_zh": "现代噪声弹",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2000s",
+          "prerequisite": "NM-IMPROVED",
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ]
+        },
+        {
+          "family_id": "NM-ADVANCED",
+          "label": "Advanced Acoustic Countermeasure",
+          "label_zh": "先进声学对抗（噪声源）",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "prerequisite": "NM-MODERN",
+          "asset_ids": [
+            "GEN_ACM_NOISE_MAKER"
+          ]
+        }
+      ]
+    },
+    "TORPEDO_DEFENSE": {
+      "label": "Torpedo Defense",
+      "label_zh": "鱼雷防御",
+      "summary_zh": "告警—对抗—先进对抗—整合鱼雷防御。",
+      "nodes": [
+        {
+          "family_id": "TD-WARNING",
+          "label": "Torpedo Warning",
+          "label_zh": "鱼雷告警",
+          "tier_min": 4,
+          "tier_max": 6,
+          "era": "1980s-1990s",
+          "prerequisite": null,
+          "asset_ids": [
+            "GEN_TW_TORPEDO_WARNING_SENSOR"
+          ]
+        },
+        {
+          "family_id": "TD-COUNTERMEASURE",
+          "label": "Countermeasure",
+          "label_zh": "对抗",
+          "tier_min": 5,
+          "tier_max": 8,
+          "era": "1980s-2000s",
+          "prerequisite": "TD-WARNING",
+          "asset_ids": [
+            "US_ACM_TORPEDO_DECOY"
+          ]
+        },
+        {
+          "family_id": "TD-ADVANCED",
+          "label": "Advanced Countermeasure",
+          "label_zh": "先进对抗",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "prerequisite": "TD-COUNTERMEASURE",
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ]
+        },
+        {
+          "family_id": "TD-INTEGRATED",
+          "label": "Integrated Torpedo Defense",
+          "label_zh": "整合鱼雷防御",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "prerequisite": "TD-ADVANCED",
+          "asset_ids": [
+            "US_ACM_MOBILE_DECOY"
+          ]
+        }
+      ]
+    },
+    "LAUNCHER": {
+      "label": "Countermeasure Launcher",
+      "label_zh": "对抗发射装置",
+      "summary_zh": "外部发射器、对抗管、声学装置发射器到整合发射系统。",
+      "nodes": [
+        {
+          "family_id": "CML-EXTERNAL",
+          "label": "External Launcher",
+          "label_zh": "外部发射器",
+          "tier_min": 2,
+          "tier_max": 4,
+          "era": "1960s-1980s",
+          "prerequisite": null,
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ]
+        },
+        {
+          "family_id": "CML-TUBE",
+          "label": "Countermeasure Tube",
+          "label_zh": "对抗管",
+          "tier_min": 3,
+          "tier_max": 6,
+          "era": "1970s-1990s",
+          "prerequisite": "CML-EXTERNAL",
+          "asset_ids": [
+            "GEN_CML_TUBE"
+          ]
+        },
+        {
+          "family_id": "CML-ACOUSTIC-DEVICE",
+          "label": "Acoustic Device Launcher",
+          "label_zh": "声学装置发射器",
+          "tier_min": 4,
+          "tier_max": 7,
+          "era": "1980s-2000s",
+          "prerequisite": "CML-TUBE",
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ]
+        },
+        {
+          "family_id": "CML-ADVANCED",
+          "label": "Advanced Launcher",
+          "label_zh": "先进发射器",
+          "tier_min": 7,
+          "tier_max": 9,
+          "era": "2000s-2010s",
+          "prerequisite": "CML-ACOUSTIC-DEVICE",
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ]
+        },
+        {
+          "family_id": "CML-INTEGRATED",
+          "label": "Integrated Launcher",
+          "label_zh": "整合发射系统",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "prerequisite": "CML-ADVANCED",
+          "asset_ids": [
+            "US_CML_DECOY_LAUNCHER"
+          ]
+        }
+      ]
+    },
+    "DEFENSIVE_CONTROL": {
+      "label": "Defensive Control",
+      "label_zh": "防御控制",
+      "summary_zh": "控制台、整合控制、自动化防御控制。",
+      "nodes": [
+        {
+          "family_id": "DC-CONSOLE",
+          "label": "Defensive Control Console",
+          "label_zh": "防御控制台",
+          "tier_min": 2,
+          "tier_max": 5,
+          "era": "1970s-1990s",
+          "prerequisite": null,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ]
+        },
+        {
+          "family_id": "DC-INTEGRATED-CONTROL",
+          "label": "Integrated Defensive Control",
+          "label_zh": "整合防御控制",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2010s",
+          "prerequisite": "DC-CONSOLE",
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ]
+        },
+        {
+          "family_id": "DC-AUTOMATED",
+          "label": "Automated Defensive Control",
+          "label_zh": "自动化防御控制",
+          "tier_min": 8,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "prerequisite": "DC-INTEGRATED-CONTROL",
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ]
+        }
+      ]
+    },
+    "INTEGRATED_DEFENSE": {
+      "label": "Integrated Defense",
+      "label_zh": "整合防御",
+      "summary_zh": "把上述分支整合为单一防御系统身份。",
+      "nodes": [
+        {
+          "family_id": "IDS-CORE",
+          "label": "Integrated Defensive System",
+          "label_zh": "整合防御系统",
+          "tier_min": 6,
+          "tier_max": 8,
+          "era": "1990s-2010s",
+          "prerequisite": null,
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ]
+        },
+        {
+          "family_id": "IDS-ADVANCED",
+          "label": "Next Generation Defensive System",
+          "label_zh": "下一代防御系统",
+          "tier_min": 9,
+          "tier_max": 10,
+          "era": "2010s-2020s",
+          "prerequisite": "IDS-CORE",
+          "asset_ids": [
+            "US_DCM_CONSOLE"
+          ]
+        }
+      ]
+    }
+  },
+  "totals": {
+    "tiers": 10,
+    "nodes": 118,
+    "families": 45,
+    "database_only_families": 5
+  }
+}

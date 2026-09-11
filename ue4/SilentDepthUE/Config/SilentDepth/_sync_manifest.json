@@ -1,0 +1,101 @@
+{
+  "schema": "silent-depth-runtime-data-sync-v1",
+  "note": "生成物。唯一权威是 SilentDepth_Assets；本文件记录每个运行时副本的来源与哈希。请勿手工编辑。",
+  "files": [
+    {
+      "path": "TechTree/submarine_catalogue.json",
+      "source": "Manifest/submarine_manifest.json",
+      "sha256": "80ee7908b6b7344dbb30bda130c88af68a1608b073ed0bbbc77a4921ff07e540"
+    },
+    {
+      "path": "TechTree/submarine_tree.json",
+      "source": "TechnologyTree/tier_manifest.json",
+      "sha256": "ecb70105553111a6ee6fa20e706b5610b12e6809297a78c28091a1dca1a83b2c"
+    },
+    {
+      "path": "TechTree/weapon_catalogue.json",
+      "source": "Weapons/Manifest/weapon_manifest.json",
+      "sha256": "d2869e64a80bcc6e0a2a6e957b471e9f7b771bc9508604fe9a9391c78d47fee3"
+    },
+    {
+      "path": "TechTree/weapon_tree.json",
+      "source": "Weapons/TechnologyTree/weapon_technology_tree.json",
+      "sha256": "2140395ada16bcd79170ab747c0608411b01a062f09b869c946904c45ae8e0e4"
+    },
+    {
+      "path": "TechTree/sensor_catalogue.json",
+      "source": "Sensors/Manifest/sensor_manifest.json",
+      "sha256": "6a79448ae8a6b6901e435a8601ce056da4ed4453b472ebf36ac3a68ccae7e0e7"
+    },
+    {
+      "path": "TechTree/sensor_tree.json",
+      "source": "Sensors/TechnologyTree/sensor_technology_tree.json",
+      "sha256": "7b008f04d228ec0ed4bf795c8205b092d7385a12924305a8bbdef61ea1b43ce3"
+    },
+    {
+      "path": "TechTree/defensive_catalogue.json",
+      "source": "DefensiveSystems/Manifest/defensive_system_manifest.json",
+      "sha256": "57ad4fbfd54db272925157b1c6d8ffb73ae0434f226317ba5fafc936e7c9c818"
+    },
+    {
+      "path": "TechTree/defensive_tree.json",
+      "source": "DefensiveSystems/TechnologyTree/defensive_technology_tree.json",
+      "sha256": "bc7ef7be2101bbc856244bfb46d5d58de55bf53b5bc52a6aac883232d1a8c271"
+    },
+    {
+      "path": "TechTree/propulsion_catalogue.json",
+      "source": "Propulsion/Manifest/propulsion_manifest.json",
+      "sha256": "d162a64640e7d8f4c405c5446d1b781456945912e6022682211f8cf60e08a765"
+    },
+    {
+      "path": "TechTree/propulsion_tree.json",
+      "source": "Propulsion/TechnologyTree/propulsion_technology_tree.json",
+      "sha256": "f716ce00f483a8dec5508df505aa7d40d8c307a21cfe83570e66c6fd708488fb"
+    },
+    {
+      "path": "TechTree/weapon_compatibility.json",
+      "source": "Weapons/Manifest/weapon_submarine_compatibility.json",
+      "sha256": "e626689b759b52fc165313e5b0a7c578a04adb96960b4efc7ffcb29c539b2fbc"
+    },
+    {
+      "path": "TechTree/weapon_slots.json",
+      "source": "Weapons/Manifest/loadout_manifest.json",
+      "sha256": "9e5afda7ad5cdce8cf2952f2e49b75859ebbb6a4b30a915a5c4cd8ae3169bb4a"
+    },
+    {
+      "path": "TechTree/sensor_compatibility.json",
+      "source": "Sensors/Manifest/submarine_sensor_compatibility.json",
+      "sha256": "bdc0a609f69d8604c8900909ea00835b57e3715b4191198c8190acaabaa2a628"
+    },
+    {
+      "path": "TechTree/defensive_compatibility.json",
+      "source": "DefensiveSystems/Manifest/submarine_defensive_compatibility.json",
+      "sha256": "54053546b7165f9739fb0ef105c709c0f9b6285df86ee7f1b970360f5b7b07dc"
+    },
+    {
+      "path": "TechTree/defensive_slots.json",
+      "source": "DefensiveSystems/Manifest/defensive_loadout_manifest.json",
+      "sha256": "18be174d0363a76cbce22ef5556f65970218a7dd1cbd9a028f5f23dcc7ef7d36"
+    },
+    {
+      "path": "TechTree/propulsion_compatibility.json",
+      "source": "Propulsion/Manifest/submarine_propulsion_compatibility.json",
+      "sha256": "1cf9e7dbcfd08d3e09604016a8737455d7df7ce6c44607e99c80b13aad481afe"
+    },
+    {
+      "path": "submarine_manifest.json",
+      "source": "Manifest/submarine_manifest.json",
+      "sha256": "80ee7908b6b7344dbb30bda130c88af68a1608b073ed0bbbc77a4921ff07e540"
+    },
+    {
+      "path": "technology_tree.json",
+      "source": "TechnologyTree/technology_tree.json",
+      "sha256": "068f5db4e508035f65c204cf99f825d6bffac4b0abcef503a89629900b96c14b"
+    },
+    {
+      "path": "tier_manifest.json",
+      "source": "TechnologyTree/tier_manifest.json",
+      "sha256": "ecb70105553111a6ee6fa20e706b5610b12e6809297a78c28091a1dca1a83b2c"
+    }
+  ]
+}

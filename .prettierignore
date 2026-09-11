@@ -22,3 +22,7 @@ SilentDepth_Assets/**/*.json
 
 # UE4 工程的资产清单同为工具生成产物
 ue4/SilentDepthUE/Config/SilentDepth/submarine_manifest.json
+
+# 科技树运行时数据由 tools/ue4/sync-tech-tree-data.mjs 从资产库原样复制，
+# 格式由生成器决定，不做前端风格检查。
+ue4/SilentDepthUE/Config/SilentDepth/TechTree

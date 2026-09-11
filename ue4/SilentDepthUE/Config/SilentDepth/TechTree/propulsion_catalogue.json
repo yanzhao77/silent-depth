@@ -1,0 +1,1455 @@
+{
+  "generated_at": "2026-09-11",
+  "schema": "silent-depth-propulsion-manifest-v1",
+  "root": "SilentDepth_Assets/Propulsion",
+  "template": "Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "note": "推进系统资产清单。只描述技术、资产与外形身份，不含功率/航速/噪声等游戏平衡数据。",
+  "counts": {
+    "assets": 20,
+    "complete_3d": 20
+  },
+  "assets": [
+    {
+      "asset_id": "PROP_T01_EARLY",
+      "display_name": "T1 早期双叶螺旋桨（通用科技树件）",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "FAM_PROP_CONVENTIONAL",
+      "country": "GENERIC",
+      "tier": 1,
+      "era": "1940s-1950s",
+      "technology_route": "early plain propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 1728,
+        "1": 944,
+        "2": 464,
+        "3": 216
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        3.245,
+        3.2,
+        0.7332
+      ],
+      "paths": {
+        "blend": "Propellers/PROP_T01_EARLY/Blend/PROP_T01_EARLY_MASTER.blend",
+        "lod0": "Propellers/PROP_T01_EARLY/FBX/PROP_T01_EARLY_LOD0.fbx",
+        "lod1": "Propellers/PROP_T01_EARLY/FBX/PROP_T01_EARLY_LOD1.fbx",
+        "lod2": "Propellers/PROP_T01_EARLY/FBX/PROP_T01_EARLY_LOD2.fbx",
+        "lod3": "Propellers/PROP_T01_EARLY/FBX/PROP_T01_EARLY_LOD3.fbx",
+        "combined": "Propellers/PROP_T01_EARLY/FBX/PROP_T01_EARLY_COMBINED.fbx",
+        "collision": "Propellers/PROP_T01_EARLY/Collision/PROP_T01_EARLY_COLLISION.fbx",
+        "spec": "Propellers/PROP_T01_EARLY/Documentation/PROP_T01_EARLY_SPEC.json",
+        "readme": "Propellers/PROP_T01_EARLY/Documentation/PROP_T01_EARLY_README.md",
+        "build_report": "Propellers/PROP_T01_EARLY/Validation/PROP_T01_EARLY_BUILD_REPORT.json",
+        "validation": "Propellers/PROP_T01_EARLY/Validation/PROP_T01_EARLY_VALIDATION.json",
+        "preview": [
+          "Propellers/PROP_T01_EARLY/Preview/PROP_T01_EARLY_Rear.png",
+          "Propellers/PROP_T01_EARLY/Preview/PROP_T01_EARLY_Side.png",
+          "Propellers/PROP_T01_EARLY/Preview/PROP_T01_EARLY_ThreeQuarter.png",
+          "Propellers/PROP_T01_EARLY/Preview/PROP_T01_EARLY_Top.png"
+        ]
+      },
+      "validation": "Propellers/PROP_T01_EARLY/Validation/PROP_T01_EARLY_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          324.5,
+          320.0,
+          73.32
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "PROP_T01_EARLY_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "PROP_T02_IMPROVED",
+      "display_name": "T2 改进型三叶螺旋桨（通用科技树件）",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "FAM_PROP_CONVENTIONAL",
+      "country": "GENERIC",
+      "tier": 2,
+      "era": "1950s",
+      "technology_route": "improved plain propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 2448,
+        "1": 1296,
+        "2": 624,
+        "3": 276
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        3.74,
+        2.9546,
+        3.2164
+      ],
+      "paths": {
+        "blend": "Propellers/PROP_T02_IMPROVED/Blend/PROP_T02_IMPROVED_MASTER.blend",
+        "lod0": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_LOD0.fbx",
+        "lod1": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_LOD1.fbx",
+        "lod2": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_LOD2.fbx",
+        "lod3": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_LOD3.fbx",
+        "combined": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_COMBINED.fbx",
+        "collision": "Propellers/PROP_T02_IMPROVED/Collision/PROP_T02_IMPROVED_COLLISION.fbx",
+        "spec": "Propellers/PROP_T02_IMPROVED/Documentation/PROP_T02_IMPROVED_SPEC.json",
+        "readme": "Propellers/PROP_T02_IMPROVED/Documentation/PROP_T02_IMPROVED_README.md",
+        "build_report": "Propellers/PROP_T02_IMPROVED/Validation/PROP_T02_IMPROVED_BUILD_REPORT.json",
+        "validation": "Propellers/PROP_T02_IMPROVED/Validation/PROP_T02_IMPROVED_VALIDATION.json",
+        "preview": [
+          "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_Rear.png",
+          "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_Side.png",
+          "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_ThreeQuarter.png",
+          "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_Top.png"
+        ]
+      },
+      "validation": "Propellers/PROP_T02_IMPROVED/Validation/PROP_T02_IMPROVED_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          374.0,
+          295.46,
+          321.64
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "PROP_T02_IMPROVED_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "PROP_T03_MULTIBLADE",
+      "display_name": "T3 多叶螺旋桨（通用科技树件）",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "FAM_PROP_MULTIBLADE",
+      "country": "GENERIC",
+      "tier": 3,
+      "era": "1960s",
+      "technology_route": "multi-blade propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 3168,
+        "1": 1648,
+        "2": 784,
+        "3": 336
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        4.235,
+        3.9662,
+        3.9662
+      ],
+      "paths": {
+        "blend": "Propellers/PROP_T03_MULTIBLADE/Blend/PROP_T03_MULTIBLADE_MASTER.blend",
+        "lod0": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_LOD0.fbx",
+        "lod1": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_LOD1.fbx",
+        "lod2": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_LOD2.fbx",
+        "lod3": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_LOD3.fbx",
+        "combined": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_COMBINED.fbx",
+        "collision": "Propellers/PROP_T03_MULTIBLADE/Collision/PROP_T03_MULTIBLADE_COLLISION.fbx",
+        "spec": "Propellers/PROP_T03_MULTIBLADE/Documentation/PROP_T03_MULTIBLADE_SPEC.json",
+        "readme": "Propellers/PROP_T03_MULTIBLADE/Documentation/PROP_T03_MULTIBLADE_README.md",
+        "build_report": "Propellers/PROP_T03_MULTIBLADE/Validation/PROP_T03_MULTIBLADE_BUILD_REPORT.json",
+        "validation": "Propellers/PROP_T03_MULTIBLADE/Validation/PROP_T03_MULTIBLADE_VALIDATION.json",
+        "preview": [
+          "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_Rear.png",
+          "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_Side.png",
+          "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_ThreeQuarter.png",
+          "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_Top.png"
+        ]
+      },
+      "validation": "Propellers/PROP_T03_MULTIBLADE/Validation/PROP_T03_MULTIBLADE_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          423.5,
+          396.62,
+          396.62
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "PROP_T03_MULTIBLADE_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "PROP_T04_SKEWED",
+      "display_name": "T4 后掠螺旋桨（通用科技树件）",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "FAM_PROP_SKEWED",
+      "country": "GENERIC",
+      "tier": 4,
+      "era": "1960s-1970s",
+      "technology_route": "skewed propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 3888,
+        "1": 2000,
+        "2": 944,
+        "3": 396
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        4.73,
+        4.1343,
+        4.1115
+      ],
+      "paths": {
+        "blend": "Propellers/PROP_T04_SKEWED/Blend/PROP_T04_SKEWED_MASTER.blend",
+        "lod0": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_LOD0.fbx",
+        "lod1": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_LOD1.fbx",
+        "lod2": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_LOD2.fbx",
+        "lod3": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_LOD3.fbx",
+        "combined": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_COMBINED.fbx",
+        "collision": "Propellers/PROP_T04_SKEWED/Collision/PROP_T04_SKEWED_COLLISION.fbx",
+        "spec": "Propellers/PROP_T04_SKEWED/Documentation/PROP_T04_SKEWED_SPEC.json",
+        "readme": "Propellers/PROP_T04_SKEWED/Documentation/PROP_T04_SKEWED_README.md",
+        "build_report": "Propellers/PROP_T04_SKEWED/Validation/PROP_T04_SKEWED_BUILD_REPORT.json",
+        "validation": "Propellers/PROP_T04_SKEWED/Validation/PROP_T04_SKEWED_VALIDATION.json",
+        "preview": [
+          "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_Rear.png",
+          "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_Side.png",
+          "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_ThreeQuarter.png",
+          "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_Top.png"
+        ]
+      },
+      "validation": "Propellers/PROP_T04_SKEWED/Validation/PROP_T04_SKEWED_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          473.0,
+          413.43,
+          411.15
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "PROP_T04_SKEWED_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "PROP_T05_QUIET",
+      "display_name": "T5 高后掠静音螺旋桨（通用科技树件）",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "FAM_PROP_QUIET",
+      "country": "GENERIC",
+      "tier": 5,
+      "era": "1970s",
+      "technology_route": "advanced quiet propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 5328,
+        "1": 2704,
+        "2": 1264,
+        "3": 516
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        5.225,
+        4.5457,
+        4.4772
+      ],
+      "paths": {
+        "blend": "Propellers/PROP_T05_QUIET/Blend/PROP_T05_QUIET_MASTER.blend",
+        "lod0": "Propellers/PROP_T05_QUIET/FBX/PROP_T05_QUIET_LOD0.fbx",
+        "lod1": "Propellers/PROP_T05_QUIET/FBX/PROP_T05_QUIET_LOD1.fbx",
+        "lod2": "Propellers/PROP_T05_QUIET/FBX/PROP_T05_QUIET_LOD2.fbx",
+        "lod3": "Propellers/PROP_T05_QUIET/FBX/PROP_T05_QUIET_LOD3.fbx",
+        "combined": "Propellers/PROP_T05_QUIET/FBX/PROP_T05_QUIET_COMBINED.fbx",
+        "collision": "Propellers/PROP_T05_QUIET/Collision/PROP_T05_QUIET_COLLISION.fbx",
+        "spec": "Propellers/PROP_T05_QUIET/Documentation/PROP_T05_QUIET_SPEC.json",
+        "readme": "Propellers/PROP_T05_QUIET/Documentation/PROP_T05_QUIET_README.md",
+        "build_report": "Propellers/PROP_T05_QUIET/Validation/PROP_T05_QUIET_BUILD_REPORT.json",
+        "validation": "Propellers/PROP_T05_QUIET/Validation/PROP_T05_QUIET_VALIDATION.json",
+        "preview": [
+          "Propellers/PROP_T05_QUIET/Preview/PROP_T05_QUIET_Rear.png",
+          "Propellers/PROP_T05_QUIET/Preview/PROP_T05_QUIET_Side.png",
+          "Propellers/PROP_T05_QUIET/Preview/PROP_T05_QUIET_ThreeQuarter.png",
+          "Propellers/PROP_T05_QUIET/Preview/PROP_T05_QUIET_Top.png"
+        ]
+      },
+      "validation": "Propellers/PROP_T05_QUIET/Validation/PROP_T05_QUIET_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          522.5,
+          454.57,
+          447.72
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "PROP_T05_QUIET_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "RU_PROP_Typhoon",
+      "display_name": "Typhoon / Project 941 七叶导管螺旋桨",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "RU_PROP_SHROUDED",
+      "country": "Russia",
+      "tier": 8,
+      "era": "1980s",
+      "technology_route": "shrouded skewed propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 5584,
+        "1": 2896,
+        "2": 1392,
+        "3": 612
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        7.995,
+        7.0,
+        7.0
+      ],
+      "paths": {
+        "blend": "Propellers/RU_PROP_Typhoon/Blend/RU_PROP_Typhoon_MASTER.blend",
+        "lod0": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_LOD0.fbx",
+        "lod1": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_LOD1.fbx",
+        "lod2": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_LOD2.fbx",
+        "lod3": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_LOD3.fbx",
+        "combined": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_COMBINED.fbx",
+        "collision": "Propellers/RU_PROP_Typhoon/Collision/RU_PROP_Typhoon_COLLISION.fbx",
+        "spec": "Propellers/RU_PROP_Typhoon/Documentation/RU_PROP_Typhoon_SPEC.json",
+        "readme": "Propellers/RU_PROP_Typhoon/Documentation/RU_PROP_Typhoon_README.md",
+        "build_report": "Propellers/RU_PROP_Typhoon/Validation/RU_PROP_Typhoon_BUILD_REPORT.json",
+        "validation": "Propellers/RU_PROP_Typhoon/Validation/RU_PROP_Typhoon_VALIDATION.json",
+        "preview": [
+          "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_Rear.png",
+          "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_Side.png",
+          "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_ThreeQuarter.png",
+          "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_Top.png"
+        ]
+      },
+      "validation": "Propellers/RU_PROP_Typhoon/Validation/RU_PROP_Typhoon_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          799.5,
+          700.0,
+          700.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "RU_PROP_Typhoon_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "RU_PROP_Akula",
+      "display_name": "Akula / Project 971 七叶后掠螺旋桨",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "RU_PROP_SKEWED",
+      "country": "Russia",
+      "tier": 7,
+      "era": "1980s",
+      "technology_route": "skewed propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 5328,
+        "1": 2704,
+        "2": 1264,
+        "3": 516
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "paths": {
+        "blend": "Propellers/RU_PROP_Akula/Blend/RU_PROP_Akula_MASTER.blend",
+        "lod0": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_LOD0.fbx",
+        "lod1": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_LOD1.fbx",
+        "lod2": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_LOD2.fbx",
+        "lod3": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_LOD3.fbx",
+        "combined": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_COMBINED.fbx",
+        "collision": "Propellers/RU_PROP_Akula/Collision/RU_PROP_Akula_COLLISION.fbx",
+        "spec": "Propellers/RU_PROP_Akula/Documentation/RU_PROP_Akula_SPEC.json",
+        "readme": "Propellers/RU_PROP_Akula/Documentation/RU_PROP_Akula_README.md",
+        "build_report": "Propellers/RU_PROP_Akula/Validation/RU_PROP_Akula_BUILD_REPORT.json",
+        "validation": "Propellers/RU_PROP_Akula/Validation/RU_PROP_Akula_VALIDATION.json",
+        "preview": [
+          "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_Rear.png",
+          "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_Side.png",
+          "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_ThreeQuarter.png",
+          "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_Top.png"
+        ]
+      },
+      "validation": "Propellers/RU_PROP_Akula/Validation/RU_PROP_Akula_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          562.5,
+          452.07,
+          452.32
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "RU_PROP_Akula_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "US_PROP_LosAngeles",
+      "display_name": "Los Angeles 级高后掠七叶螺旋桨",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "US_PROP_SKEWED",
+      "country": "USA",
+      "tier": 6,
+      "era": "1970s-1990s",
+      "technology_route": "highly skewed propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 5328,
+        "1": 2704,
+        "2": 1264,
+        "3": 516
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        6.12,
+        4.8465,
+        4.7357
+      ],
+      "paths": {
+        "blend": "Propellers/US_PROP_LosAngeles/Blend/US_PROP_LosAngeles_MASTER.blend",
+        "lod0": "Propellers/US_PROP_LosAngeles/FBX/US_PROP_LosAngeles_LOD0.fbx",
+        "lod1": "Propellers/US_PROP_LosAngeles/FBX/US_PROP_LosAngeles_LOD1.fbx",
+        "lod2": "Propellers/US_PROP_LosAngeles/FBX/US_PROP_LosAngeles_LOD2.fbx",
+        "lod3": "Propellers/US_PROP_LosAngeles/FBX/US_PROP_LosAngeles_LOD3.fbx",
+        "combined": "Propellers/US_PROP_LosAngeles/FBX/US_PROP_LosAngeles_COMBINED.fbx",
+        "collision": "Propellers/US_PROP_LosAngeles/Collision/US_PROP_LosAngeles_COLLISION.fbx",
+        "spec": "Propellers/US_PROP_LosAngeles/Documentation/US_PROP_LosAngeles_SPEC.json",
+        "readme": "Propellers/US_PROP_LosAngeles/Documentation/US_PROP_LosAngeles_README.md",
+        "build_report": "Propellers/US_PROP_LosAngeles/Validation/US_PROP_LosAngeles_BUILD_REPORT.json",
+        "validation": "Propellers/US_PROP_LosAngeles/Validation/US_PROP_LosAngeles_VALIDATION.json",
+        "preview": [
+          "Propellers/US_PROP_LosAngeles/Preview/US_PROP_LosAngeles_Rear.png",
+          "Propellers/US_PROP_LosAngeles/Preview/US_PROP_LosAngeles_Side.png",
+          "Propellers/US_PROP_LosAngeles/Preview/US_PROP_LosAngeles_ThreeQuarter.png",
+          "Propellers/US_PROP_LosAngeles/Preview/US_PROP_LosAngeles_Top.png"
+        ]
+      },
+      "validation": "Propellers/US_PROP_LosAngeles/Validation/US_PROP_LosAngeles_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          612.0,
+          484.65,
+          473.57
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "US_PROP_LosAngeles_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "CN_PROP_Type093",
+      "display_name": "Type 093 七叶后掠螺旋桨",
+      "category": "Propellers",
+      "kind": "PROPELLER",
+      "family_id": "CN_PROP_SKEWED",
+      "country": "China",
+      "tier": 7,
+      "era": "2000s",
+      "technology_route": "skewed propeller",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 5328,
+        "1": 2704,
+        "2": 1264,
+        "3": 516
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        5.3775,
+        4.3041,
+        4.3406
+      ],
+      "paths": {
+        "blend": "Propellers/CN_PROP_Type093/Blend/CN_PROP_Type093_MASTER.blend",
+        "lod0": "Propellers/CN_PROP_Type093/FBX/CN_PROP_Type093_LOD0.fbx",
+        "lod1": "Propellers/CN_PROP_Type093/FBX/CN_PROP_Type093_LOD1.fbx",
+        "lod2": "Propellers/CN_PROP_Type093/FBX/CN_PROP_Type093_LOD2.fbx",
+        "lod3": "Propellers/CN_PROP_Type093/FBX/CN_PROP_Type093_LOD3.fbx",
+        "combined": "Propellers/CN_PROP_Type093/FBX/CN_PROP_Type093_COMBINED.fbx",
+        "collision": "Propellers/CN_PROP_Type093/Collision/CN_PROP_Type093_COLLISION.fbx",
+        "spec": "Propellers/CN_PROP_Type093/Documentation/CN_PROP_Type093_SPEC.json",
+        "readme": "Propellers/CN_PROP_Type093/Documentation/CN_PROP_Type093_README.md",
+        "build_report": "Propellers/CN_PROP_Type093/Validation/CN_PROP_Type093_BUILD_REPORT.json",
+        "validation": "Propellers/CN_PROP_Type093/Validation/CN_PROP_Type093_VALIDATION.json",
+        "preview": [
+          "Propellers/CN_PROP_Type093/Preview/CN_PROP_Type093_Rear.png",
+          "Propellers/CN_PROP_Type093/Preview/CN_PROP_Type093_Side.png",
+          "Propellers/CN_PROP_Type093/Preview/CN_PROP_Type093_ThreeQuarter.png",
+          "Propellers/CN_PROP_Type093/Preview/CN_PROP_Type093_Top.png"
+        ]
+      },
+      "validation": "Propellers/CN_PROP_Type093/Validation/CN_PROP_Type093_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          537.75,
+          430.41,
+          434.06
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "CN_PROP_Type093_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "US_PJ_Seawolf",
+      "display_name": "Seawolf 级泵喷推进器",
+      "category": "PumpJets",
+      "kind": "PUMPJET",
+      "family_id": "US_PUMPJET_SEAWOLF",
+      "country": "USA",
+      "tier": 8,
+      "era": "1990s",
+      "technology_route": "pump-jet propulsor",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 14016,
+        "1": 7152,
+        "2": 3408,
+        "3": 1464
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT",
+        "SOCKET_PUMPJET"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        6.27,
+        6.1,
+        6.1
+      ],
+      "paths": {
+        "blend": "PumpJets/US_PJ_Seawolf/Blend/US_PJ_Seawolf_MASTER.blend",
+        "lod0": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_LOD0.fbx",
+        "lod1": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_LOD1.fbx",
+        "lod2": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_LOD2.fbx",
+        "lod3": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_LOD3.fbx",
+        "combined": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_COMBINED.fbx",
+        "collision": "PumpJets/US_PJ_Seawolf/Collision/US_PJ_Seawolf_COLLISION.fbx",
+        "spec": "PumpJets/US_PJ_Seawolf/Documentation/US_PJ_Seawolf_SPEC.json",
+        "readme": "PumpJets/US_PJ_Seawolf/Documentation/US_PJ_Seawolf_README.md",
+        "build_report": "PumpJets/US_PJ_Seawolf/Validation/US_PJ_Seawolf_BUILD_REPORT.json",
+        "validation": "PumpJets/US_PJ_Seawolf/Validation/US_PJ_Seawolf_VALIDATION.json",
+        "preview": [
+          "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_Rear.png",
+          "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_Side.png",
+          "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_ThreeQuarter.png",
+          "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_Top.png"
+        ]
+      },
+      "validation": "PumpJets/US_PJ_Seawolf/Validation/US_PJ_Seawolf_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          627.0,
+          610.0,
+          610.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "US_PJ_Seawolf_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "US_PJ_Virginia",
+      "display_name": "Virginia 级泵喷推进器",
+      "category": "PumpJets",
+      "kind": "PUMPJET",
+      "family_id": "US_PUMPJET_VIRGINIA",
+      "country": "USA",
+      "tier": 9,
+      "era": "2000s",
+      "technology_route": "pump-jet propulsor",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 14016,
+        "1": 7152,
+        "2": 3408,
+        "3": 1464
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT",
+        "SOCKET_PUMPJET"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        5.78,
+        5.7,
+        5.7
+      ],
+      "paths": {
+        "blend": "PumpJets/US_PJ_Virginia/Blend/US_PJ_Virginia_MASTER.blend",
+        "lod0": "PumpJets/US_PJ_Virginia/FBX/US_PJ_Virginia_LOD0.fbx",
+        "lod1": "PumpJets/US_PJ_Virginia/FBX/US_PJ_Virginia_LOD1.fbx",
+        "lod2": "PumpJets/US_PJ_Virginia/FBX/US_PJ_Virginia_LOD2.fbx",
+        "lod3": "PumpJets/US_PJ_Virginia/FBX/US_PJ_Virginia_LOD3.fbx",
+        "combined": "PumpJets/US_PJ_Virginia/FBX/US_PJ_Virginia_COMBINED.fbx",
+        "collision": "PumpJets/US_PJ_Virginia/Collision/US_PJ_Virginia_COLLISION.fbx",
+        "spec": "PumpJets/US_PJ_Virginia/Documentation/US_PJ_Virginia_SPEC.json",
+        "readme": "PumpJets/US_PJ_Virginia/Documentation/US_PJ_Virginia_README.md",
+        "build_report": "PumpJets/US_PJ_Virginia/Validation/US_PJ_Virginia_BUILD_REPORT.json",
+        "validation": "PumpJets/US_PJ_Virginia/Validation/US_PJ_Virginia_VALIDATION.json",
+        "preview": [
+          "PumpJets/US_PJ_Virginia/Preview/US_PJ_Virginia_Rear.png",
+          "PumpJets/US_PJ_Virginia/Preview/US_PJ_Virginia_Side.png",
+          "PumpJets/US_PJ_Virginia/Preview/US_PJ_Virginia_ThreeQuarter.png",
+          "PumpJets/US_PJ_Virginia/Preview/US_PJ_Virginia_Top.png"
+        ]
+      },
+      "validation": "PumpJets/US_PJ_Virginia/Validation/US_PJ_Virginia_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          578.0,
+          570.0,
+          570.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "US_PJ_Virginia_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "UK_PJ_Astute",
+      "display_name": "Astute 级泵喷推进器",
+      "category": "PumpJets",
+      "kind": "PUMPJET",
+      "family_id": "UK_PUMPJET_ASTUTE",
+      "country": "UK",
+      "tier": 9,
+      "era": "2000s-2010s",
+      "technology_route": "pump-jet propulsor",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 12576,
+        "1": 6448,
+        "2": 3088,
+        "3": 1344
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT",
+        "SOCKET_PUMPJET"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "paths": {
+        "blend": "PumpJets/UK_PJ_Astute/Blend/UK_PJ_Astute_MASTER.blend",
+        "lod0": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_LOD0.fbx",
+        "lod1": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_LOD1.fbx",
+        "lod2": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_LOD2.fbx",
+        "lod3": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_LOD3.fbx",
+        "combined": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_COMBINED.fbx",
+        "collision": "PumpJets/UK_PJ_Astute/Collision/UK_PJ_Astute_COLLISION.fbx",
+        "spec": "PumpJets/UK_PJ_Astute/Documentation/UK_PJ_Astute_SPEC.json",
+        "readme": "PumpJets/UK_PJ_Astute/Documentation/UK_PJ_Astute_README.md",
+        "build_report": "PumpJets/UK_PJ_Astute/Validation/UK_PJ_Astute_BUILD_REPORT.json",
+        "validation": "PumpJets/UK_PJ_Astute/Validation/UK_PJ_Astute_VALIDATION.json",
+        "preview": [
+          "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_Rear.png",
+          "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_Side.png",
+          "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_ThreeQuarter.png",
+          "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_Top.png"
+        ]
+      },
+      "validation": "PumpJets/UK_PJ_Astute/Validation/UK_PJ_Astute_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          553.5,
+          550.0,
+          550.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "UK_PJ_Astute_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "RU_PJ_Yasen",
+      "display_name": "Yasen / Project 885 泵喷推进器",
+      "category": "PumpJets",
+      "kind": "PUMPJET",
+      "family_id": "RU_PUMPJET_YASEN",
+      "country": "Russia",
+      "tier": 9,
+      "era": "2010s",
+      "technology_route": "pump-jet propulsor",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 12576,
+        "1": 6448,
+        "2": 3088,
+        "3": 1344
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT",
+        "SOCKET_PUMPJET"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        6.025,
+        5.9,
+        5.9
+      ],
+      "paths": {
+        "blend": "PumpJets/RU_PJ_Yasen/Blend/RU_PJ_Yasen_MASTER.blend",
+        "lod0": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_LOD0.fbx",
+        "lod1": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_LOD1.fbx",
+        "lod2": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_LOD2.fbx",
+        "lod3": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_LOD3.fbx",
+        "combined": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_COMBINED.fbx",
+        "collision": "PumpJets/RU_PJ_Yasen/Collision/RU_PJ_Yasen_COLLISION.fbx",
+        "spec": "PumpJets/RU_PJ_Yasen/Documentation/RU_PJ_Yasen_SPEC.json",
+        "readme": "PumpJets/RU_PJ_Yasen/Documentation/RU_PJ_Yasen_README.md",
+        "build_report": "PumpJets/RU_PJ_Yasen/Validation/RU_PJ_Yasen_BUILD_REPORT.json",
+        "validation": "PumpJets/RU_PJ_Yasen/Validation/RU_PJ_Yasen_VALIDATION.json",
+        "preview": [
+          "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_Rear.png",
+          "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_Side.png",
+          "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_ThreeQuarter.png",
+          "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_Top.png"
+        ]
+      },
+      "validation": "PumpJets/RU_PJ_Yasen/Validation/RU_PJ_Yasen_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          602.5,
+          590.0,
+          590.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "RU_PJ_Yasen_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "FR_PJ_Suffren",
+      "display_name": "Suffren / Barracuda 级泵喷推进器",
+      "category": "PumpJets",
+      "kind": "PUMPJET",
+      "family_id": "FR_PUMPJET_SUFFREN",
+      "country": "France",
+      "tier": 9,
+      "era": "2010s-2020s",
+      "technology_route": "pump-jet propulsor",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 12576,
+        "1": 6448,
+        "2": 3088,
+        "3": 1344
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT",
+        "SOCKET_PUMPJET"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        5.34,
+        5.3,
+        5.3
+      ],
+      "paths": {
+        "blend": "PumpJets/FR_PJ_Suffren/Blend/FR_PJ_Suffren_MASTER.blend",
+        "lod0": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_LOD0.fbx",
+        "lod1": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_LOD1.fbx",
+        "lod2": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_LOD2.fbx",
+        "lod3": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_LOD3.fbx",
+        "combined": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_COMBINED.fbx",
+        "collision": "PumpJets/FR_PJ_Suffren/Collision/FR_PJ_Suffren_COLLISION.fbx",
+        "spec": "PumpJets/FR_PJ_Suffren/Documentation/FR_PJ_Suffren_SPEC.json",
+        "readme": "PumpJets/FR_PJ_Suffren/Documentation/FR_PJ_Suffren_README.md",
+        "build_report": "PumpJets/FR_PJ_Suffren/Validation/FR_PJ_Suffren_BUILD_REPORT.json",
+        "validation": "PumpJets/FR_PJ_Suffren/Validation/FR_PJ_Suffren_VALIDATION.json",
+        "preview": [
+          "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_Rear.png",
+          "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_Side.png",
+          "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_ThreeQuarter.png",
+          "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_Top.png"
+        ]
+      },
+      "validation": "PumpJets/FR_PJ_Suffren/Validation/FR_PJ_Suffren_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          534.0,
+          530.0,
+          530.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "FR_PJ_Suffren_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "SHAFT_PLAIN",
+      "display_name": "直轴（基础世代）",
+      "category": "Shafts",
+      "kind": "SHAFT",
+      "family_id": "FAM_SHAFT_DIRECT",
+      "country": "GENERIC",
+      "tier": 2,
+      "era": "1950s",
+      "technology_route": "direct shaft",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 256,
+        "1": 128,
+        "2": 64,
+        "3": 32
+      },
+      "sockets": [
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "paths": {
+        "blend": "Shafts/SHAFT_PLAIN/Blend/SHAFT_PLAIN_MASTER.blend",
+        "lod0": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_LOD0.fbx",
+        "lod1": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_LOD1.fbx",
+        "lod2": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_LOD2.fbx",
+        "lod3": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_LOD3.fbx",
+        "combined": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_COMBINED.fbx",
+        "collision": "Shafts/SHAFT_PLAIN/Collision/SHAFT_PLAIN_COLLISION.fbx",
+        "spec": "Shafts/SHAFT_PLAIN/Documentation/SHAFT_PLAIN_SPEC.json",
+        "readme": "Shafts/SHAFT_PLAIN/Documentation/SHAFT_PLAIN_README.md",
+        "build_report": "Shafts/SHAFT_PLAIN/Validation/SHAFT_PLAIN_BUILD_REPORT.json",
+        "validation": "Shafts/SHAFT_PLAIN/Validation/SHAFT_PLAIN_VALIDATION.json",
+        "preview": [
+          "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_Rear.png",
+          "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_Side.png",
+          "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_ThreeQuarter.png",
+          "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_Top.png"
+        ]
+      },
+      "validation": "Shafts/SHAFT_PLAIN/Validation/SHAFT_PLAIN_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          600.0,
+          72.0,
+          72.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "SHAFT_PLAIN_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "SHAFT_GEARED",
+      "display_name": "齿轮减速轴系",
+      "category": "Shafts",
+      "kind": "SHAFT",
+      "family_id": "FAM_SHAFT_GEARED",
+      "country": "GENERIC",
+      "tier": 5,
+      "era": "1960s-1970s",
+      "technology_route": "geared shaft",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 576,
+        "1": 288,
+        "2": 144,
+        "3": 72
+      },
+      "sockets": [
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        7.5,
+        1.6,
+        1.6
+      ],
+      "paths": {
+        "blend": "Shafts/SHAFT_GEARED/Blend/SHAFT_GEARED_MASTER.blend",
+        "lod0": "Shafts/SHAFT_GEARED/FBX/SHAFT_GEARED_LOD0.fbx",
+        "lod1": "Shafts/SHAFT_GEARED/FBX/SHAFT_GEARED_LOD1.fbx",
+        "lod2": "Shafts/SHAFT_GEARED/FBX/SHAFT_GEARED_LOD2.fbx",
+        "lod3": "Shafts/SHAFT_GEARED/FBX/SHAFT_GEARED_LOD3.fbx",
+        "combined": "Shafts/SHAFT_GEARED/FBX/SHAFT_GEARED_COMBINED.fbx",
+        "collision": "Shafts/SHAFT_GEARED/Collision/SHAFT_GEARED_COLLISION.fbx",
+        "spec": "Shafts/SHAFT_GEARED/Documentation/SHAFT_GEARED_SPEC.json",
+        "readme": "Shafts/SHAFT_GEARED/Documentation/SHAFT_GEARED_README.md",
+        "build_report": "Shafts/SHAFT_GEARED/Validation/SHAFT_GEARED_BUILD_REPORT.json",
+        "validation": "Shafts/SHAFT_GEARED/Validation/SHAFT_GEARED_VALIDATION.json",
+        "preview": [
+          "Shafts/SHAFT_GEARED/Preview/SHAFT_GEARED_Rear.png",
+          "Shafts/SHAFT_GEARED/Preview/SHAFT_GEARED_Side.png",
+          "Shafts/SHAFT_GEARED/Preview/SHAFT_GEARED_ThreeQuarter.png",
+          "Shafts/SHAFT_GEARED/Preview/SHAFT_GEARED_Top.png"
+        ]
+      },
+      "validation": "Shafts/SHAFT_GEARED/Validation/SHAFT_GEARED_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          750.0,
+          160.0,
+          160.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "SHAFT_GEARED_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "SHAFT_FAIRING_LONG",
+      "display_name": "长轴包（Typhoon 实测）",
+      "category": "Shafts",
+      "kind": "SHAFT",
+      "family_id": "RU_SHAFT_FAIRED",
+      "country": "Russia",
+      "tier": 8,
+      "era": "1980s",
+      "technology_route": "direct shaft with long fairing",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 448,
+        "1": 224,
+        "2": 112,
+        "3": 56
+      },
+      "sockets": [
+        "SOCKET_SHAFT"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "paths": {
+        "blend": "Shafts/SHAFT_FAIRING_LONG/Blend/SHAFT_FAIRING_LONG_MASTER.blend",
+        "lod0": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_LOD0.fbx",
+        "lod1": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_LOD1.fbx",
+        "lod2": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_LOD2.fbx",
+        "lod3": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_LOD3.fbx",
+        "combined": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_COMBINED.fbx",
+        "collision": "Shafts/SHAFT_FAIRING_LONG/Collision/SHAFT_FAIRING_LONG_COLLISION.fbx",
+        "spec": "Shafts/SHAFT_FAIRING_LONG/Documentation/SHAFT_FAIRING_LONG_SPEC.json",
+        "readme": "Shafts/SHAFT_FAIRING_LONG/Documentation/SHAFT_FAIRING_LONG_README.md",
+        "build_report": "Shafts/SHAFT_FAIRING_LONG/Validation/SHAFT_FAIRING_LONG_BUILD_REPORT.json",
+        "validation": "Shafts/SHAFT_FAIRING_LONG/Validation/SHAFT_FAIRING_LONG_VALIDATION.json",
+        "preview": [
+          "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_Rear.png",
+          "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_Side.png",
+          "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_ThreeQuarter.png",
+          "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_Top.png"
+        ]
+      },
+      "validation": "Shafts/SHAFT_FAIRING_LONG/Validation/SHAFT_FAIRING_LONG_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          1210.0,
+          480.0,
+          480.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "SHAFT_FAIRING_LONG_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "THRUSTER_TUNNEL",
+      "display_name": "隧道式侧推器",
+      "category": "Thrusters",
+      "kind": "THRUSTER",
+      "family_id": "FAM_THRUSTER_TUNNEL",
+      "country": "GENERIC",
+      "tier": 6,
+      "era": "1970s-1990s",
+      "technology_route": "tunnel thruster",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 4048,
+        "1": 2112,
+        "2": 1024,
+        "3": 460
+      },
+      "sockets": [
+        "SOCKET_THRUSTER"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        1.44,
+        1.9,
+        1.9
+      ],
+      "paths": {
+        "blend": "Thrusters/THRUSTER_TUNNEL/Blend/THRUSTER_TUNNEL_MASTER.blend",
+        "lod0": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_LOD0.fbx",
+        "lod1": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_LOD1.fbx",
+        "lod2": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_LOD2.fbx",
+        "lod3": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_LOD3.fbx",
+        "combined": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_COMBINED.fbx",
+        "collision": "Thrusters/THRUSTER_TUNNEL/Collision/THRUSTER_TUNNEL_COLLISION.fbx",
+        "spec": "Thrusters/THRUSTER_TUNNEL/Documentation/THRUSTER_TUNNEL_SPEC.json",
+        "readme": "Thrusters/THRUSTER_TUNNEL/Documentation/THRUSTER_TUNNEL_README.md",
+        "build_report": "Thrusters/THRUSTER_TUNNEL/Validation/THRUSTER_TUNNEL_BUILD_REPORT.json",
+        "validation": "Thrusters/THRUSTER_TUNNEL/Validation/THRUSTER_TUNNEL_VALIDATION.json",
+        "preview": [
+          "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_Rear.png",
+          "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_Side.png",
+          "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_ThreeQuarter.png",
+          "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_Top.png"
+        ]
+      },
+      "validation": "Thrusters/THRUSTER_TUNNEL/Validation/THRUSTER_TUNNEL_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          144.0,
+          190.0,
+          190.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "THRUSTER_TUNNEL_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "THRUSTER_RIM_DRIVEN",
+      "display_name": "轮缘驱动环形推进器",
+      "category": "Thrusters",
+      "kind": "THRUSTER",
+      "family_id": "FAM_THRUSTER_RIM",
+      "country": "GENERIC",
+      "tier": 10,
+      "era": "2020s+",
+      "technology_route": "rim-driven thruster",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 6832,
+        "1": 3440,
+        "2": 1616,
+        "3": 668
+      },
+      "sockets": [
+        "SOCKET_THRUSTER"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "paths": {
+        "blend": "Thrusters/THRUSTER_RIM_DRIVEN/Blend/THRUSTER_RIM_DRIVEN_MASTER.blend",
+        "lod0": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_LOD0.fbx",
+        "lod1": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_LOD1.fbx",
+        "lod2": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_LOD2.fbx",
+        "lod3": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_LOD3.fbx",
+        "combined": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_COMBINED.fbx",
+        "collision": "Thrusters/THRUSTER_RIM_DRIVEN/Collision/THRUSTER_RIM_DRIVEN_COLLISION.fbx",
+        "spec": "Thrusters/THRUSTER_RIM_DRIVEN/Documentation/THRUSTER_RIM_DRIVEN_SPEC.json",
+        "readme": "Thrusters/THRUSTER_RIM_DRIVEN/Documentation/THRUSTER_RIM_DRIVEN_README.md",
+        "build_report": "Thrusters/THRUSTER_RIM_DRIVEN/Validation/THRUSTER_RIM_DRIVEN_BUILD_REPORT.json",
+        "validation": "Thrusters/THRUSTER_RIM_DRIVEN/Validation/THRUSTER_RIM_DRIVEN_VALIDATION.json",
+        "preview": [
+          "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_Rear.png",
+          "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_Side.png",
+          "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_ThreeQuarter.png",
+          "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_Top.png"
+        ]
+      },
+      "validation": "Thrusters/THRUSTER_RIM_DRIVEN/Validation/THRUSTER_RIM_DRIVEN_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          55.0,
+          162.0,
+          162.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "THRUSTER_RIM_DRIVEN_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
+    {
+      "asset_id": "PJ_T10_NEXTGEN",
+      "display_name": "T10 下一代泵喷推进器（通用科技树件）",
+      "category": "PumpJets",
+      "kind": "PUMPJET",
+      "family_id": "FAM_PJ_NEXTGEN",
+      "country": "GENERIC",
+      "tier": 10,
+      "era": "2020s+",
+      "technology_route": "next generation integrated propulsor",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 16800,
+        "1": 8480,
+        "2": 4000,
+        "3": 1672
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT",
+        "SOCKET_PUMPJET"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        5.076,
+        6.1,
+        6.1
+      ],
+      "paths": {
+        "blend": "PumpJets/PJ_T10_NEXTGEN/Blend/PJ_T10_NEXTGEN_MASTER.blend",
+        "lod0": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_LOD0.fbx",
+        "lod1": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_LOD1.fbx",
+        "lod2": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_LOD2.fbx",
+        "lod3": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_LOD3.fbx",
+        "combined": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_COMBINED.fbx",
+        "collision": "PumpJets/PJ_T10_NEXTGEN/Collision/PJ_T10_NEXTGEN_COLLISION.fbx",
+        "spec": "PumpJets/PJ_T10_NEXTGEN/Documentation/PJ_T10_NEXTGEN_SPEC.json",
+        "readme": "PumpJets/PJ_T10_NEXTGEN/Documentation/PJ_T10_NEXTGEN_README.md",
+        "build_report": "PumpJets/PJ_T10_NEXTGEN/Validation/PJ_T10_NEXTGEN_BUILD_REPORT.json",
+        "validation": "PumpJets/PJ_T10_NEXTGEN/Validation/PJ_T10_NEXTGEN_VALIDATION.json",
+        "preview": [
+          "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_Rear.png",
+          "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_Side.png",
+          "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_ThreeQuarter.png",
+          "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_Top.png"
+        ]
+      },
+      "validation": "PumpJets/PJ_T10_NEXTGEN/Validation/PJ_T10_NEXTGEN_VALIDATION.json",
+      "ue427_import": {
+        "imported": true,
+        "lod_count": 4,
+        "dimensions_cm": [
+          507.6,
+          610.0,
+          610.0
+        ],
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "base_source": "PJ_T10_NEXTGEN_COMBINED.fbx"
+      },
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    }
+  ],
+  "validated_at": "2026-09-11"
+}

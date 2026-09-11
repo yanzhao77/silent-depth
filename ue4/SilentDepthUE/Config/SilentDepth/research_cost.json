@@ -1,0 +1,10 @@
+{
+  "schema": "silent-depth-research-cost-v1",
+  "noteZh": "DEC-004 初版研究经济规则。数值由配置驱动，不在 C++ 中硬编码；调整只改本文件。",
+  "pointsPerTier": 100,
+  "firstClearBonus": 50,
+  "scoreDivisor": 10,
+  "minimumScoreForReward": 400,
+  "gateNoteZh": "层阶门槛：Tier N 需要同类别、下方最近非空层阶里已解锁 N 个节点。1 = 逐层解锁（DEC-007 决定）；0 = 关闭。",
+  "tierGateRequiredUnlocked": 1
+}

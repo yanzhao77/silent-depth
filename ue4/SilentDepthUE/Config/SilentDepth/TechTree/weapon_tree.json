@@ -1,0 +1,5488 @@
+{
+  "tree": "SilentDepth_Weapon_Technology_Tree",
+  "generated_at": "2026-09-12",
+  "note": "T1-T10 仅为 Silent Depth 游戏科技树分层，不是现实军事官方等级。",
+  "tier_framework": {
+    "inputs": [
+      "历史时代",
+      "技术代际",
+      "制导代际",
+      "推进代际",
+      "发射技术",
+      "射程级别",
+      "目标角色",
+      "传感器/制导复杂度",
+      "平台整合",
+      "视觉与玩法区分度"
+    ],
+    "rule": "不强制每个 Tier 填满所有类别，也不为凑层级制造不存在的型号。",
+    "tiers": {
+      "T1": "T1 早期潜艇鱼雷 / 基础武器",
+      "T2": "T2 早期制导鱼雷 / 初代潜射导弹",
+      "T3": "T3 冷战早期成熟鱼雷 / 初期巡航导弹",
+      "T4": "T4 冷战中期鱼雷 / 反舰导弹",
+      "T5": "T5 冷战后期先进鱼雷 / 远程导弹 / SLBM",
+      "T6": "T6 现代早期武器",
+      "T7": "T7 现代成熟武器",
+      "T8": "T8 现代先进武器",
+      "T9": "T9 新一代高端武器",
+      "T10": "T10 现代/未来顶级游戏武器"
+    }
+  },
+  "summary": {
+    "families": 87,
+    "variants": 124,
+    "per_tier": {
+      "T1": 3,
+      "T2": 6,
+      "T3": 9,
+      "T4": 11,
+      "T5": 12,
+      "T6": 25,
+      "T7": 21,
+      "T8": 26,
+      "T9": 9,
+      "T10": 2
+    },
+    "per_branch": {
+      "TORP": 46,
+      "ASM": 15,
+      "LAM": 8,
+      "ASW": 7,
+      "SLBM": 30,
+      "STRAT": 3,
+      "MINE": 5,
+      "DECOY": 5,
+      "SPECIAL": 5
+    }
+  },
+  "tiers": {
+    "T1": {
+      "tier": 1,
+      "label": "T1 早期潜艇鱼雷 / 基础武器",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "US_TORP_Mk14",
+            "display_name": "Mk 14 torpedo",
+            "family": "US_TORP_Mk14",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk18",
+            "display_name": "Mk 18 torpedo",
+            "family": "US_TORP_Mk14",
+            "country": "USA",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk23",
+            "display_name": "Mk 23 torpedo",
+            "family": "US_TORP_Mk14",
+            "country": "USA",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 3
+      },
+      "total": 3
+    },
+    "T2": {
+      "tier": 2,
+      "label": "T2 早期制导鱼雷 / 初代潜射导弹",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "CN_TORP_Yu1",
+            "display_name": "Yu-1 torpedo",
+            "family": "CN_TORP_Yu1",
+            "country": "China",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "UK_TORP_Mk8",
+            "display_name": "Mk 8 Mod 4 torpedo",
+            "family": "UK_TORP_Mk8",
+            "country": "UK",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk16",
+            "display_name": "Mk 16 torpedo",
+            "family": "US_TORP_Mk16",
+            "country": "USA",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk27",
+            "display_name": "Mk 27 Mod 4 torpedo",
+            "family": "US_TORP_Mk27",
+            "country": "USA",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "RU_SLBM_R13",
+            "display_name": "R-13 (SS-N-4)",
+            "family": "RU_SLBM_R13",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_SLBM_Polaris_A1",
+            "display_name": "Polaris A1",
+            "family": "US_SLBM_Polaris",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 4,
+        "SLBM": 2
+      },
+      "total": 6
+    },
+    "T3": {
+      "tier": 3,
+      "label": "T3 冷战早期成熟鱼雷 / 初期巡航导弹",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "RU_TORP_SET53",
+            "display_name": "SET-53 torpedo",
+            "family": "RU_TORP_SET53",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk37",
+            "display_name": "Mk 37 Mod 0 torpedo",
+            "family": "US_TORP_Mk37",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASM": [
+          {
+            "weapon_id": "RU_ASM_P5",
+            "display_name": "P-5 Pyatyorka",
+            "family": "RU_ASM_P5",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_ASM_P6",
+            "display_name": "P-6 Progress",
+            "family": "RU_ASM_P5",
+            "country": "Russia",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "FR_SLBM_M1",
+            "display_name": "M1",
+            "family": "FR_SLBM_M1",
+            "country": "France",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R21",
+            "display_name": "R-21 (SS-N-5)",
+            "family": "RU_SLBM_R21",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_SLBM_Polaris_A3",
+            "display_name": "Polaris A3",
+            "family": "US_SLBM_Polaris",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "MINE": [
+          {
+            "weapon_id": "UK_MINE_SeaUrchin",
+            "display_name": "Sea Urchin",
+            "family": "UK_MINE_SeaUrchin",
+            "country": "UK",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "DECOY": [
+          {
+            "weapon_id": "UK_DECOY_SSE_Mk3",
+            "display_name": "SSE Mk 3",
+            "family": "UK_DECOY_SSE_Mk3",
+            "country": "UK",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 2,
+        "ASM": 2,
+        "SLBM": 3,
+        "MINE": 1,
+        "DECOY": 1
+      },
+      "total": 9
+    },
+    "T4": {
+      "tier": 4,
+      "label": "T4 冷战中期鱼雷 / 反舰导弹",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "CN_TORP_Yu4",
+            "display_name": "Yu-4 torpedo",
+            "family": "CN_TORP_Yu3",
+            "country": "China",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_SAET60",
+            "display_name": "SAET-60 torpedo",
+            "family": "RU_TORP_SET53",
+            "country": "Russia",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_SET65",
+            "display_name": "SET-65 torpedo",
+            "family": "RU_TORP_SET53",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk37_Mod2",
+            "display_name": "Mk 37 Mod 2 torpedo",
+            "family": "US_TORP_Mk37",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASM": [
+          {
+            "weapon_id": "RU_ASM_P70",
+            "display_name": "P-70 Ametist",
+            "family": "RU_ASM_P70",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASW": [
+          {
+            "weapon_id": "RU_ASW_Vyuga",
+            "display_name": "RPK-2 Vyuga",
+            "family": "RU_ASW_Vyuga",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "CN_SLBM_JL1",
+            "display_name": "JL-1",
+            "family": "CN_SLBM_JL1",
+            "country": "China",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "FR_SLBM_M2",
+            "display_name": "M2",
+            "family": "FR_SLBM_M2",
+            "country": "France",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R27",
+            "display_name": "R-27 (SS-N-6)",
+            "family": "RU_SLBM_R27",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_SLBM_Poseidon_C3",
+            "display_name": "Poseidon C3",
+            "family": "US_SLBM_Poseidon",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "STRAT": [
+          {
+            "weapon_id": "US_STRAT_RegulusII",
+            "display_name": "SSM-N-8B Regulus II",
+            "family": "US_STRAT_RegulusII",
+            "country": "USA",
+            "asset_priority": "LOW",
+            "confidence": "ESTIMATED"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 4,
+        "ASM": 1,
+        "ASW": 1,
+        "SLBM": 4,
+        "STRAT": 1
+      },
+      "total": 11
+    },
+    "T5": {
+      "tier": 5,
+      "label": "T5 冷战后期先进鱼雷 / 远程导弹 / SLBM",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "CN_TORP_Yu3",
+            "display_name": "Yu-3 torpedo",
+            "family": "CN_TORP_Yu3",
+            "country": "China",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "FR_TORP_L5_Mod3",
+            "display_name": "L5 Mod 3 torpedo",
+            "family": "FR_TORP_L5",
+            "country": "France",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_5365K",
+            "display_name": "53-65K torpedo",
+            "family": "RU_TORP_5365",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk45",
+            "display_name": "Mk 45 ASTOR torpedo",
+            "family": "US_TORP_Mk45",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASM": [
+          {
+            "weapon_id": "RU_ASM_P120",
+            "display_name": "P-120 Malakhit",
+            "family": "RU_ASM_P120",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASW": [
+          {
+            "weapon_id": "US_ASW_SUBROC",
+            "display_name": "UUM-44 SUBROC",
+            "family": "US_ASW_SUBROC",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "FR_SLBM_M20",
+            "display_name": "M20",
+            "family": "FR_SLBM_M2",
+            "country": "France",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R29",
+            "display_name": "R-29 (SS-N-8)",
+            "family": "RU_SLBM_R29",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_SLBM_Trident_C4",
+            "display_name": "Trident I C4",
+            "family": "US_SLBM_Trident",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "MINE": [
+          {
+            "weapon_id": "RU_MINE_MDM6",
+            "display_name": "MDM-6",
+            "family": "RU_MINE_MDM6",
+            "country": "Russia",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_MINE_PMR2",
+            "display_name": "PMR-2",
+            "family": "RU_MINE_PMR2",
+            "country": "Russia",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_MINE_Mk60_CAPTOR",
+            "display_name": "Mk 60 CAPTOR",
+            "family": "US_MINE_Mk60_CAPTOR",
+            "country": "USA",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 4,
+        "ASM": 1,
+        "ASW": 1,
+        "SLBM": 3,
+        "MINE": 3
+      },
+      "total": 12
+    },
+    "T6": {
+      "tier": 6,
+      "label": "T6 现代早期武器",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "FR_TORP_F17",
+            "display_name": "F17 Mod 2 torpedo",
+            "family": "FR_TORP_F17",
+            "country": "France",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "FR_TORP_L5_Mod4",
+            "display_name": "L5 Mod 4 torpedo",
+            "family": "FR_TORP_L5",
+            "country": "France",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_5365M",
+            "display_name": "53-65M torpedo",
+            "family": "RU_TORP_5365",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_6576",
+            "display_name": "65-76 Kit torpedo",
+            "family": "RU_TORP_6576",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_TEST71",
+            "display_name": "TEST-71 torpedo",
+            "family": "RU_TORP_TEST71",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_USET80",
+            "display_name": "USET-80 torpedo",
+            "family": "RU_TORP_USET80",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "UK_TORP_Tigerfish",
+            "display_name": "Tigerfish Mod 0",
+            "family": "UK_TORP_Tigerfish",
+            "country": "UK",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "UK_TORP_Tigerfish_Mod1",
+            "display_name": "Tigerfish Mod 1",
+            "family": "UK_TORP_Tigerfish",
+            "country": "UK",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk48",
+            "display_name": "Mk 48 Mod 1 torpedo",
+            "family": "US_TORP_Mk48",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASM": [
+          {
+            "weapon_id": "CN_ASM_YJ8",
+            "display_name": "YJ-8 / YJ-82",
+            "family": "CN_ASM_YJ8",
+            "country": "China",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_ASM_P500",
+            "display_name": "P-500 Bazalt",
+            "family": "RU_ASM_P500",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_ASM_Harpoon",
+            "display_name": "UGM-84 Sub-Harpoon",
+            "family": "US_ASM_Harpoon",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_ASM_Tomahawk_TASM",
+            "display_name": "BGM-109B TASM",
+            "family": "US_LAM_Tomahawk",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "LAM": [
+          {
+            "weapon_id": "RU_LAM_Granat",
+            "display_name": "RK-55 Granat",
+            "family": "RU_LAM_Granat",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_LAM_Tomahawk",
+            "display_name": "BGM-109 Tomahawk",
+            "family": "US_LAM_Tomahawk",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASW": [
+          {
+            "weapon_id": "CN_ASW_CY1",
+            "display_name": "CY-1 anti-submarine missile",
+            "family": "CN_ASW_CY1",
+            "country": "China",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_ASW_Vodopad",
+            "display_name": "RPK-6 Vodopad",
+            "family": "RU_ASW_Vodopad",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_ASW_SeaLance",
+            "display_name": "UUM-125 Sea Lance",
+            "family": "US_ASW_SeaLance",
+            "country": "USA",
+            "asset_priority": null,
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "FR_SLBM_M4",
+            "display_name": "M4",
+            "family": "FR_SLBM_M4",
+            "country": "France",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "IN_SLBM_K15",
+            "display_name": "K-15 Sagarika",
+            "family": "IN_SLBM_K15",
+            "country": "India",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R29R",
+            "display_name": "R-29R (SS-N-18)",
+            "family": "RU_SLBM_R29",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "MINE": [
+          {
+            "weapon_id": "US_MINE_Mk67_SLMM",
+            "display_name": "Mk 67 SLMM",
+            "family": "US_MINE_Mk67_SLMM",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "DECOY": [
+          {
+            "weapon_id": "RU_DECOY_MG74",
+            "display_name": "MG-74",
+            "family": "RU_DECOY_MG74",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_DECOY_Mk70_MOSS",
+            "display_name": "Mk 70 MOSS",
+            "family": "US_DECOY_Mk70_MOSS",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SPECIAL": [
+          {
+            "weapon_id": "RU_SPECIAL_SDV_Sirena",
+            "display_name": "Sirena",
+            "family": "RU_SPECIAL_SDV_Sirena",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 9,
+        "ASM": 4,
+        "LAM": 2,
+        "ASW": 3,
+        "SLBM": 3,
+        "MINE": 1,
+        "DECOY": 2,
+        "SPECIAL": 1
+      },
+      "total": 25
+    },
+    "T7": {
+      "tier": 7,
+      "label": "T7 现代成熟武器",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "CN_TORP_Yu5",
+            "display_name": "Yu-5 torpedo",
+            "family": "CN_TORP_Yu5",
+            "country": "China",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "CN_TORP_Yu7",
+            "display_name": "Yu-7 torpedo",
+            "family": "CN_TORP_Yu7",
+            "country": "China",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "IN_TORP_TAL",
+            "display_name": "TAL Shyena lightweight torpedo",
+            "family": "IN_TORP_TAL",
+            "country": "India",
+            "asset_priority": null,
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_6576A",
+            "display_name": "65-76A torpedo",
+            "family": "RU_TORP_6576",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_Shkval",
+            "display_name": "VA-111 Shkval",
+            "family": "RU_TORP_Shkval",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_TEST71M",
+            "display_name": "TEST-71M torpedo",
+            "family": "RU_TORP_TEST71",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_UGST",
+            "display_name": "UGST torpedo",
+            "family": "RU_TORP_UGST",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_USET80K",
+            "display_name": "USET-80K torpedo",
+            "family": "RU_TORP_USET80",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "UK_TORP_StingRay",
+            "display_name": "Sting Ray Mod 1",
+            "family": "UK_TORP_StingRay",
+            "country": "UK",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk48_ADCAP",
+            "display_name": "Mk 48 Mod 4 ADCAP",
+            "family": "US_TORP_Mk48",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASM": [
+          {
+            "weapon_id": "FR_ASM_Exocet_SM39",
+            "display_name": "Exocet SM39",
+            "family": "FR_ASM_Exocet_SM39",
+            "country": "France",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_ASM_P1000",
+            "display_name": "P-1000 Vulkan",
+            "family": "RU_ASM_P500",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_ASM_P700",
+            "display_name": "P-700 Granit",
+            "family": "RU_ASM_P700",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "LAM": [
+          {
+            "weapon_id": "US_LAM_Tomahawk_BlockIII",
+            "display_name": "Tomahawk Block III",
+            "family": "US_LAM_Tomahawk",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASW": [
+          {
+            "weapon_id": "RU_ASW_Veter",
+            "display_name": "RPK-7 Veter",
+            "family": "RU_ASW_Veter",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "CN_SLBM_JL2",
+            "display_name": "JL-2",
+            "family": "CN_SLBM_JL2",
+            "country": "China",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "FR_SLBM_M45",
+            "display_name": "M45",
+            "family": "FR_SLBM_M4",
+            "country": "France",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R29RM",
+            "display_name": "R-29RM",
+            "family": "RU_SLBM_R29",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "UK_SLBM_Polaris_A3TK",
+            "display_name": "Polaris A3TK (Chevaline)",
+            "family": "UK_SLBM_Polaris_A3TK",
+            "country": "UK",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "DECOY": [
+          {
+            "weapon_id": "US_DECOY_ADC_Mk4",
+            "display_name": "ADC Mk 4",
+            "family": "US_DECOY_ADC",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SPECIAL": [
+          {
+            "weapon_id": "US_SPECIAL_SDV_Mk8",
+            "display_name": "Mk 8 SEAL Delivery Vehicle",
+            "family": "US_SPECIAL_SDV_Mk8",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 10,
+        "ASM": 3,
+        "LAM": 1,
+        "ASW": 1,
+        "SLBM": 4,
+        "DECOY": 1,
+        "SPECIAL": 1
+      },
+      "total": 21
+    },
+    "T8": {
+      "tier": 8,
+      "label": "T8 现代先进武器",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "CN_TORP_Yu6",
+            "display_name": "Yu-6 torpedo",
+            "family": "CN_TORP_Yu6",
+            "country": "China",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "IN_TORP_Varunastra",
+            "display_name": "Varunastra torpedo",
+            "family": "IN_TORP_Varunastra",
+            "country": "India",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_TEST96",
+            "display_name": "TEST-96 torpedo",
+            "family": "RU_TORP_TEST71",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_UGST_M",
+            "display_name": "UGST-M torpedo",
+            "family": "RU_TORP_UGST",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "UK_TORP_Spearfish",
+            "display_name": "Spearfish Mod 0",
+            "family": "UK_TORP_Spearfish",
+            "country": "UK",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk48_Mod6",
+            "display_name": "Mk 48 Mod 6 CBASS",
+            "family": "US_TORP_Mk48",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_TORP_Mk48_Mod7",
+            "display_name": "Mk 48 Mod 7 CBASS",
+            "family": "US_TORP_Mk48",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASM": [
+          {
+            "weapon_id": "CN_ASM_YJ18",
+            "display_name": "YJ-18",
+            "family": "CN_ASM_YJ18",
+            "country": "China",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_ASM_Kalibr_3M54",
+            "display_name": "Kalibr 3M54",
+            "family": "RU_MISSILE_Kalibr",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_ASM_Oniks",
+            "display_name": "P-800 Oniks",
+            "family": "RU_ASM_Oniks",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "LAM": [
+          {
+            "weapon_id": "CN_LAM_YJ18_LandAttack",
+            "display_name": "YJ-18 对陆攻击型",
+            "family": "CN_ASM_YJ18",
+            "country": "China",
+            "asset_priority": null,
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "FR_LAM_MdCN",
+            "display_name": "MdCN / SCALP Naval",
+            "family": "FR_LAM_MdCN",
+            "country": "France",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_LAM_Kalibr_3M14",
+            "display_name": "Kalibr 3M14",
+            "family": "RU_MISSILE_Kalibr",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_LAM_Tomahawk_BlockIV",
+            "display_name": "Tomahawk Block IV",
+            "family": "US_LAM_Tomahawk",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "ASW": [
+          {
+            "weapon_id": "RU_ASW_Otvet",
+            "display_name": "91R Otvet",
+            "family": "RU_ASW_Otvet",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "FR_SLBM_M51",
+            "display_name": "M51",
+            "family": "FR_SLBM_M51",
+            "country": "France",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "IN_SLBM_K4",
+            "display_name": "K-4",
+            "family": "IN_SLBM_K4",
+            "country": "India",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R29RMU2_Liner",
+            "display_name": "R-29RMU2.1 Liner",
+            "family": "RU_SLBM_R29",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R29RMU2_Sineva",
+            "display_name": "R-29RMU2 Sineva",
+            "family": "RU_SLBM_R29",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_SLBM_Trident_D5",
+            "display_name": "Trident II D5",
+            "family": "US_SLBM_Trident",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "STRAT": [
+          {
+            "weapon_id": "RU_STRAT_Meteorit",
+            "display_name": "P-750 Meteorit (SS-N-24)",
+            "family": "RU_STRAT_Meteorit",
+            "country": "Russia",
+            "asset_priority": "MEDIUM",
+            "confidence": "ESTIMATED"
+          },
+          {
+            "weapon_id": "US_STRAT_TLAM_N",
+            "display_name": "BGM-109A Tomahawk TLAM-N",
+            "family": "US_STRAT_TLAM_N",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "DECOY": [
+          {
+            "weapon_id": "US_DECOY_ADC_Mk5",
+            "display_name": "ADC Mk 5",
+            "family": "US_DECOY_ADC",
+            "country": "USA",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SPECIAL": [
+          {
+            "weapon_id": "UK_SPECIAL_DDS",
+            "display_name": "UK Dry Deck Shelter",
+            "family": "UK_SPECIAL_DDS",
+            "country": "UK",
+            "asset_priority": "LOW",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_SPECIAL_ASDS",
+            "display_name": "Advanced SEAL Delivery System",
+            "family": "US_SPECIAL_ASDS",
+            "country": "USA",
+            "asset_priority": "MEDIUM",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "US_SPECIAL_DDS",
+            "display_name": "Dry Deck Shelter",
+            "family": "US_SPECIAL_DDS",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 7,
+        "ASM": 3,
+        "LAM": 4,
+        "ASW": 1,
+        "SLBM": 5,
+        "STRAT": 2,
+        "DECOY": 1,
+        "SPECIAL": 3
+      },
+      "total": 26
+    },
+    "T9": {
+      "tier": 9,
+      "label": "T9 新一代高端武器",
+      "categories": {
+        "TORP": [
+          {
+            "weapon_id": "FR_TORP_F21",
+            "display_name": "F21 Artemis torpedo",
+            "family": "FR_TORP_F21",
+            "country": "France",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_TORP_Fizik",
+            "display_name": "Fizik torpedo",
+            "family": "RU_TORP_Fizik",
+            "country": "Russia",
+            "asset_priority": "LOW",
+            "confidence": "ESTIMATED"
+          },
+          {
+            "weapon_id": "UK_TORP_Spearfish_Mod1",
+            "display_name": "Spearfish Mod 1",
+            "family": "UK_TORP_Spearfish",
+            "country": "UK",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "LAM": [
+          {
+            "weapon_id": "US_LAM_Tomahawk_BlockV",
+            "display_name": "Tomahawk Block V",
+            "family": "US_LAM_Tomahawk",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "CN_SLBM_JL3",
+            "display_name": "JL-3",
+            "family": "CN_SLBM_JL3",
+            "country": "China",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R30_Bulava",
+            "display_name": "R-30 Bulava",
+            "family": "RU_SLBM_R30",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R39",
+            "display_name": "R-39 (SS-N-20 Sturgeon)",
+            "family": "RU_SLBM_R39",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          },
+          {
+            "weapon_id": "RU_SLBM_R39M",
+            "display_name": "R-39M (Bark)",
+            "family": "RU_SLBM_R39",
+            "country": "Russia",
+            "asset_priority": "LOW",
+            "confidence": "ESTIMATED"
+          },
+          {
+            "weapon_id": "US_SLBM_Trident_D5LE",
+            "display_name": "Trident II D5LE",
+            "family": "US_SLBM_Trident",
+            "country": "USA",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "TORP": 3,
+        "LAM": 1,
+        "SLBM": 5
+      },
+      "total": 9
+    },
+    "T10": {
+      "tier": 10,
+      "label": "T10 现代/未来顶级游戏武器",
+      "categories": {
+        "ASM": [
+          {
+            "weapon_id": "RU_ASM_Zircon",
+            "display_name": "3M22 Tsirkon",
+            "family": "RU_ASM_Zircon",
+            "country": "Russia",
+            "asset_priority": "HIGH",
+            "confidence": "PUBLIC"
+          }
+        ],
+        "SLBM": [
+          {
+            "weapon_id": "IN_SLBM_K5",
+            "display_name": "K-5",
+            "family": "IN_SLBM_K5",
+            "country": "India",
+            "asset_priority": null,
+            "confidence": "PUBLIC"
+          }
+        ]
+      },
+      "counts": {
+        "ASM": 1,
+        "SLBM": 1
+      },
+      "total": 2
+    }
+  },
+  "branches": {
+    "TORP": {
+      "label": "Torpedo",
+      "families": [
+        "CN_TORP_Yu1",
+        "CN_TORP_Yu3",
+        "CN_TORP_Yu5",
+        "CN_TORP_Yu6",
+        "CN_TORP_Yu7",
+        "FR_TORP_F17",
+        "FR_TORP_F21",
+        "FR_TORP_L5",
+        "IN_TORP_TAL",
+        "IN_TORP_Varunastra",
+        "RU_TORP_5365",
+        "RU_TORP_6576",
+        "RU_TORP_Fizik",
+        "RU_TORP_SET53",
+        "RU_TORP_Shkval",
+        "RU_TORP_TEST71",
+        "RU_TORP_UGST",
+        "RU_TORP_USET80",
+        "UK_TORP_Mk8",
+        "UK_TORP_Spearfish",
+        "UK_TORP_StingRay",
+        "UK_TORP_Tigerfish",
+        "US_TORP_Mk14",
+        "US_TORP_Mk16",
+        "US_TORP_Mk27",
+        "US_TORP_Mk37",
+        "US_TORP_Mk45",
+        "US_TORP_Mk48"
+      ],
+      "by_tier": {
+        "T1": [
+          "US_TORP_Mk14",
+          "US_TORP_Mk18",
+          "US_TORP_Mk23"
+        ],
+        "T2": [
+          "CN_TORP_Yu1",
+          "UK_TORP_Mk8",
+          "US_TORP_Mk16",
+          "US_TORP_Mk27"
+        ],
+        "T3": [
+          "RU_TORP_SET53",
+          "US_TORP_Mk37"
+        ],
+        "T4": [
+          "CN_TORP_Yu4",
+          "RU_TORP_SAET60",
+          "RU_TORP_SET65",
+          "US_TORP_Mk37_Mod2"
+        ],
+        "T5": [
+          "CN_TORP_Yu3",
+          "FR_TORP_L5_Mod3",
+          "RU_TORP_5365K",
+          "US_TORP_Mk45"
+        ],
+        "T6": [
+          "FR_TORP_F17",
+          "FR_TORP_L5_Mod4",
+          "RU_TORP_5365M",
+          "RU_TORP_6576",
+          "RU_TORP_TEST71",
+          "RU_TORP_USET80",
+          "UK_TORP_Tigerfish",
+          "UK_TORP_Tigerfish_Mod1",
+          "US_TORP_Mk48"
+        ],
+        "T7": [
+          "CN_TORP_Yu5",
+          "CN_TORP_Yu7",
+          "IN_TORP_TAL",
+          "RU_TORP_6576A",
+          "RU_TORP_Shkval",
+          "RU_TORP_TEST71M",
+          "RU_TORP_UGST",
+          "RU_TORP_USET80K",
+          "UK_TORP_StingRay",
+          "US_TORP_Mk48_ADCAP"
+        ],
+        "T8": [
+          "CN_TORP_Yu6",
+          "IN_TORP_Varunastra",
+          "RU_TORP_TEST96",
+          "RU_TORP_UGST_M",
+          "UK_TORP_Spearfish",
+          "US_TORP_Mk48_Mod6",
+          "US_TORP_Mk48_Mod7"
+        ],
+        "T9": [
+          "FR_TORP_F21",
+          "RU_TORP_Fizik",
+          "UK_TORP_Spearfish_Mod1"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "US_TORP_Mk14",
+          "parent": null,
+          "tier": 1
+        },
+        {
+          "weapon_id": "US_TORP_Mk18",
+          "parent": "US_TORP_Mk14",
+          "tier": 1
+        },
+        {
+          "weapon_id": "US_TORP_Mk23",
+          "parent": "US_TORP_Mk18",
+          "tier": 1
+        },
+        {
+          "weapon_id": "CN_TORP_Yu1",
+          "parent": "UK_TORP_Mk8",
+          "tier": 2
+        },
+        {
+          "weapon_id": "UK_TORP_Mk8",
+          "parent": "US_TORP_Mk16",
+          "tier": 2
+        },
+        {
+          "weapon_id": "US_TORP_Mk16",
+          "parent": "US_TORP_Mk27",
+          "tier": 2
+        },
+        {
+          "weapon_id": "US_TORP_Mk27",
+          "parent": "US_TORP_Mk23",
+          "tier": 2
+        },
+        {
+          "weapon_id": "RU_TORP_SET53",
+          "parent": "CN_TORP_Yu1",
+          "tier": 3
+        },
+        {
+          "weapon_id": "US_TORP_Mk37",
+          "parent": "RU_TORP_SET53",
+          "tier": 3
+        },
+        {
+          "weapon_id": "CN_TORP_Yu4",
+          "parent": "RU_TORP_SET65",
+          "tier": 4
+        },
+        {
+          "weapon_id": "RU_TORP_SAET60",
+          "parent": "US_TORP_Mk37",
+          "tier": 4
+        },
+        {
+          "weapon_id": "RU_TORP_SET65",
+          "parent": "US_TORP_Mk37_Mod2",
+          "tier": 4
+        },
+        {
+          "weapon_id": "US_TORP_Mk37_Mod2",
+          "parent": "RU_TORP_SAET60",
+          "tier": 4
+        },
+        {
+          "weapon_id": "CN_TORP_Yu3",
+          "parent": "FR_TORP_L5_Mod3",
+          "tier": 5
+        },
+        {
+          "weapon_id": "FR_TORP_L5_Mod3",
+          "parent": "US_TORP_Mk45",
+          "tier": 5
+        },
+        {
+          "weapon_id": "RU_TORP_5365K",
+          "parent": "CN_TORP_Yu4",
+          "tier": 5
+        },
+        {
+          "weapon_id": "US_TORP_Mk45",
+          "parent": "RU_TORP_5365K",
+          "tier": 5
+        },
+        {
+          "weapon_id": "FR_TORP_F17",
+          "parent": "UK_TORP_Tigerfish_Mod1",
+          "tier": 6
+        },
+        {
+          "weapon_id": "FR_TORP_L5_Mod4",
+          "parent": "UK_TORP_Tigerfish",
+          "tier": 6
+        },
+        {
+          "weapon_id": "RU_TORP_5365M",
+          "parent": "CN_TORP_Yu3",
+          "tier": 6
+        },
+        {
+          "weapon_id": "RU_TORP_6576",
+          "parent": "RU_TORP_5365M",
+          "tier": 6
+        },
+        {
+          "weapon_id": "RU_TORP_TEST71",
+          "parent": "RU_TORP_6576",
+          "tier": 6
+        },
+        {
+          "weapon_id": "RU_TORP_USET80",
+          "parent": "FR_TORP_F17",
+          "tier": 6
+        },
+        {
+          "weapon_id": "UK_TORP_Tigerfish",
+          "parent": "US_TORP_Mk48",
+          "tier": 6
+        },
+        {
+          "weapon_id": "UK_TORP_Tigerfish_Mod1",
+          "parent": "FR_TORP_L5_Mod4",
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_TORP_Mk48",
+          "parent": "RU_TORP_TEST71",
+          "tier": 6
+        },
+        {
+          "weapon_id": "CN_TORP_Yu5",
+          "parent": "US_TORP_Mk48_ADCAP",
+          "tier": 7
+        },
+        {
+          "weapon_id": "CN_TORP_Yu7",
+          "parent": "RU_TORP_6576A",
+          "tier": 7
+        },
+        {
+          "weapon_id": "IN_TORP_TAL",
+          "parent": "RU_TORP_USET80K",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_TORP_6576A",
+          "parent": "CN_TORP_Yu5",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_TORP_Shkval",
+          "parent": "RU_TORP_USET80",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_TORP_TEST71M",
+          "parent": "RU_TORP_Shkval",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_TORP_UGST",
+          "parent": "CN_TORP_Yu7",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_TORP_USET80K",
+          "parent": "RU_TORP_UGST",
+          "tier": 7
+        },
+        {
+          "weapon_id": "UK_TORP_StingRay",
+          "parent": "RU_TORP_TEST71M",
+          "tier": 7
+        },
+        {
+          "weapon_id": "US_TORP_Mk48_ADCAP",
+          "parent": "UK_TORP_StingRay",
+          "tier": 7
+        },
+        {
+          "weapon_id": "CN_TORP_Yu6",
+          "parent": "UK_TORP_Spearfish",
+          "tier": 8
+        },
+        {
+          "weapon_id": "IN_TORP_Varunastra",
+          "parent": "US_TORP_Mk48_Mod7",
+          "tier": 8
+        },
+        {
+          "weapon_id": "RU_TORP_TEST96",
+          "parent": "IN_TORP_TAL",
+          "tier": 8
+        },
+        {
+          "weapon_id": "RU_TORP_UGST_M",
+          "parent": "CN_TORP_Yu6",
+          "tier": 8
+        },
+        {
+          "weapon_id": "UK_TORP_Spearfish",
+          "parent": "RU_TORP_TEST96",
+          "tier": 8
+        },
+        {
+          "weapon_id": "US_TORP_Mk48_Mod6",
+          "parent": "RU_TORP_UGST_M",
+          "tier": 8
+        },
+        {
+          "weapon_id": "US_TORP_Mk48_Mod7",
+          "parent": "US_TORP_Mk48_Mod6",
+          "tier": 8
+        },
+        {
+          "weapon_id": "FR_TORP_F21",
+          "parent": "RU_TORP_Fizik",
+          "tier": 9
+        },
+        {
+          "weapon_id": "RU_TORP_Fizik",
+          "parent": "IN_TORP_Varunastra",
+          "tier": 9
+        },
+        {
+          "weapon_id": "UK_TORP_Spearfish_Mod1",
+          "parent": "FR_TORP_F21",
+          "tier": 9
+        }
+      ]
+    },
+    "ASM": {
+      "label": "Anti-Ship Missile",
+      "families": [
+        "CN_ASM_YJ18",
+        "CN_ASM_YJ8",
+        "FR_ASM_Exocet_SM39",
+        "RU_ASM_Oniks",
+        "RU_ASM_P120",
+        "RU_ASM_P5",
+        "RU_ASM_P500",
+        "RU_ASM_P70",
+        "RU_ASM_P700",
+        "RU_ASM_Zircon",
+        "RU_MISSILE_Kalibr",
+        "US_ASM_Harpoon",
+        "US_LAM_Tomahawk"
+      ],
+      "by_tier": {
+        "T3": [
+          "RU_ASM_P5",
+          "RU_ASM_P6"
+        ],
+        "T4": [
+          "RU_ASM_P70"
+        ],
+        "T5": [
+          "RU_ASM_P120"
+        ],
+        "T6": [
+          "CN_ASM_YJ8",
+          "RU_ASM_P500",
+          "US_ASM_Harpoon",
+          "US_ASM_Tomahawk_TASM"
+        ],
+        "T7": [
+          "FR_ASM_Exocet_SM39",
+          "RU_ASM_P1000",
+          "RU_ASM_P700"
+        ],
+        "T8": [
+          "CN_ASM_YJ18",
+          "RU_ASM_Kalibr_3M54",
+          "RU_ASM_Oniks"
+        ],
+        "T10": [
+          "RU_ASM_Zircon"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "RU_ASM_P5",
+          "parent": null,
+          "tier": 3
+        },
+        {
+          "weapon_id": "RU_ASM_P6",
+          "parent": "RU_ASM_P5",
+          "tier": 3
+        },
+        {
+          "weapon_id": "RU_ASM_P70",
+          "parent": "RU_ASM_P6",
+          "tier": 4
+        },
+        {
+          "weapon_id": "RU_ASM_P120",
+          "parent": "RU_ASM_P70",
+          "tier": 5
+        },
+        {
+          "weapon_id": "CN_ASM_YJ8",
+          "parent": "US_ASM_Harpoon",
+          "tier": 6
+        },
+        {
+          "weapon_id": "RU_ASM_P500",
+          "parent": "RU_ASM_P120",
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_ASM_Harpoon",
+          "parent": "US_ASM_Tomahawk_TASM",
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_ASM_Tomahawk_TASM",
+          "parent": "RU_ASM_P500",
+          "tier": 6
+        },
+        {
+          "weapon_id": "FR_ASM_Exocet_SM39",
+          "parent": "CN_ASM_YJ8",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_ASM_P1000",
+          "parent": "FR_ASM_Exocet_SM39",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_ASM_P700",
+          "parent": "RU_ASM_P1000",
+          "tier": 7
+        },
+        {
+          "weapon_id": "CN_ASM_YJ18",
+          "parent": "RU_ASM_Oniks",
+          "tier": 8
+        },
+        {
+          "weapon_id": "RU_ASM_Kalibr_3M54",
+          "parent": "RU_ASM_P700",
+          "tier": 8
+        },
+        {
+          "weapon_id": "RU_ASM_Oniks",
+          "parent": "RU_ASM_Kalibr_3M54",
+          "tier": 8
+        },
+        {
+          "weapon_id": "RU_ASM_Zircon",
+          "parent": "CN_ASM_YJ18",
+          "tier": 10
+        }
+      ]
+    },
+    "LAM": {
+      "label": "Land-Attack Missile",
+      "families": [
+        "CN_ASM_YJ18",
+        "FR_LAM_MdCN",
+        "RU_LAM_Granat",
+        "RU_MISSILE_Kalibr",
+        "US_LAM_Tomahawk"
+      ],
+      "by_tier": {
+        "T6": [
+          "RU_LAM_Granat",
+          "US_LAM_Tomahawk"
+        ],
+        "T7": [
+          "US_LAM_Tomahawk_BlockIII"
+        ],
+        "T8": [
+          "CN_LAM_YJ18_LandAttack",
+          "FR_LAM_MdCN",
+          "RU_LAM_Kalibr_3M14",
+          "US_LAM_Tomahawk_BlockIV"
+        ],
+        "T9": [
+          "US_LAM_Tomahawk_BlockV"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "RU_LAM_Granat",
+          "parent": null,
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_LAM_Tomahawk",
+          "parent": "RU_LAM_Granat",
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_LAM_Tomahawk_BlockIII",
+          "parent": "US_LAM_Tomahawk",
+          "tier": 7
+        },
+        {
+          "weapon_id": "CN_LAM_YJ18_LandAttack",
+          "parent": "US_LAM_Tomahawk_BlockIV",
+          "tier": 8
+        },
+        {
+          "weapon_id": "FR_LAM_MdCN",
+          "parent": "CN_LAM_YJ18_LandAttack",
+          "tier": 8
+        },
+        {
+          "weapon_id": "RU_LAM_Kalibr_3M14",
+          "parent": "US_LAM_Tomahawk_BlockIII",
+          "tier": 8
+        },
+        {
+          "weapon_id": "US_LAM_Tomahawk_BlockIV",
+          "parent": "RU_LAM_Kalibr_3M14",
+          "tier": 8
+        },
+        {
+          "weapon_id": "US_LAM_Tomahawk_BlockV",
+          "parent": "FR_LAM_MdCN",
+          "tier": 9
+        }
+      ]
+    },
+    "ASW": {
+      "label": "Anti-Submarine Missile",
+      "families": [
+        "CN_ASW_CY1",
+        "RU_ASW_Otvet",
+        "RU_ASW_Veter",
+        "RU_ASW_Vodopad",
+        "RU_ASW_Vyuga",
+        "US_ASW_SUBROC",
+        "US_ASW_SeaLance"
+      ],
+      "by_tier": {
+        "T4": [
+          "RU_ASW_Vyuga"
+        ],
+        "T5": [
+          "US_ASW_SUBROC"
+        ],
+        "T6": [
+          "CN_ASW_CY1",
+          "RU_ASW_Vodopad",
+          "US_ASW_SeaLance"
+        ],
+        "T7": [
+          "RU_ASW_Veter"
+        ],
+        "T8": [
+          "RU_ASW_Otvet"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "RU_ASW_Vyuga",
+          "parent": null,
+          "tier": 4
+        },
+        {
+          "weapon_id": "US_ASW_SUBROC",
+          "parent": "RU_ASW_Vyuga",
+          "tier": 5
+        },
+        {
+          "weapon_id": "CN_ASW_CY1",
+          "parent": "RU_ASW_Vodopad",
+          "tier": 6
+        },
+        {
+          "weapon_id": "RU_ASW_Vodopad",
+          "parent": "US_ASW_SeaLance",
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_ASW_SeaLance",
+          "parent": "US_ASW_SUBROC",
+          "tier": 6
+        },
+        {
+          "weapon_id": "RU_ASW_Veter",
+          "parent": "CN_ASW_CY1",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_ASW_Otvet",
+          "parent": "RU_ASW_Veter",
+          "tier": 8
+        }
+      ]
+    },
+    "SLBM": {
+      "label": "Ballistic Missile",
+      "families": [
+        "CN_SLBM_JL1",
+        "CN_SLBM_JL2",
+        "CN_SLBM_JL3",
+        "FR_SLBM_M1",
+        "FR_SLBM_M2",
+        "FR_SLBM_M4",
+        "FR_SLBM_M51",
+        "IN_SLBM_K15",
+        "IN_SLBM_K4",
+        "IN_SLBM_K5",
+        "RU_SLBM_R13",
+        "RU_SLBM_R21",
+        "RU_SLBM_R27",
+        "RU_SLBM_R29",
+        "RU_SLBM_R30",
+        "RU_SLBM_R39",
+        "UK_SLBM_Polaris_A3TK",
+        "US_SLBM_Polaris",
+        "US_SLBM_Poseidon",
+        "US_SLBM_Trident"
+      ],
+      "by_tier": {
+        "T2": [
+          "RU_SLBM_R13",
+          "US_SLBM_Polaris_A1"
+        ],
+        "T3": [
+          "FR_SLBM_M1",
+          "RU_SLBM_R21",
+          "US_SLBM_Polaris_A3"
+        ],
+        "T4": [
+          "CN_SLBM_JL1",
+          "FR_SLBM_M2",
+          "RU_SLBM_R27",
+          "US_SLBM_Poseidon_C3"
+        ],
+        "T5": [
+          "FR_SLBM_M20",
+          "RU_SLBM_R29",
+          "US_SLBM_Trident_C4"
+        ],
+        "T6": [
+          "FR_SLBM_M4",
+          "IN_SLBM_K15",
+          "RU_SLBM_R29R"
+        ],
+        "T7": [
+          "CN_SLBM_JL2",
+          "FR_SLBM_M45",
+          "RU_SLBM_R29RM",
+          "UK_SLBM_Polaris_A3TK"
+        ],
+        "T8": [
+          "FR_SLBM_M51",
+          "IN_SLBM_K4",
+          "RU_SLBM_R29RMU2_Liner",
+          "RU_SLBM_R29RMU2_Sineva",
+          "US_SLBM_Trident_D5"
+        ],
+        "T9": [
+          "CN_SLBM_JL3",
+          "RU_SLBM_R30_Bulava",
+          "RU_SLBM_R39",
+          "RU_SLBM_R39M",
+          "US_SLBM_Trident_D5LE"
+        ],
+        "T10": [
+          "IN_SLBM_K5"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "RU_SLBM_R13",
+          "parent": "US_SLBM_Polaris_A1",
+          "tier": 2
+        },
+        {
+          "weapon_id": "US_SLBM_Polaris_A1",
+          "parent": null,
+          "tier": 2
+        },
+        {
+          "weapon_id": "FR_SLBM_M1",
+          "parent": "US_SLBM_Polaris_A3",
+          "tier": 3
+        },
+        {
+          "weapon_id": "RU_SLBM_R21",
+          "parent": "RU_SLBM_R13",
+          "tier": 3
+        },
+        {
+          "weapon_id": "US_SLBM_Polaris_A3",
+          "parent": "RU_SLBM_R21",
+          "tier": 3
+        },
+        {
+          "weapon_id": "CN_SLBM_JL1",
+          "parent": "FR_SLBM_M2",
+          "tier": 4
+        },
+        {
+          "weapon_id": "FR_SLBM_M2",
+          "parent": "US_SLBM_Poseidon_C3",
+          "tier": 4
+        },
+        {
+          "weapon_id": "RU_SLBM_R27",
+          "parent": "FR_SLBM_M1",
+          "tier": 4
+        },
+        {
+          "weapon_id": "US_SLBM_Poseidon_C3",
+          "parent": "RU_SLBM_R27",
+          "tier": 4
+        },
+        {
+          "weapon_id": "FR_SLBM_M20",
+          "parent": "RU_SLBM_R29",
+          "tier": 5
+        },
+        {
+          "weapon_id": "RU_SLBM_R29",
+          "parent": "CN_SLBM_JL1",
+          "tier": 5
+        },
+        {
+          "weapon_id": "US_SLBM_Trident_C4",
+          "parent": "FR_SLBM_M20",
+          "tier": 5
+        },
+        {
+          "weapon_id": "FR_SLBM_M4",
+          "parent": "RU_SLBM_R29R",
+          "tier": 6
+        },
+        {
+          "weapon_id": "IN_SLBM_K15",
+          "parent": "FR_SLBM_M4",
+          "tier": 6
+        },
+        {
+          "weapon_id": "RU_SLBM_R29R",
+          "parent": "US_SLBM_Trident_C4",
+          "tier": 6
+        },
+        {
+          "weapon_id": "CN_SLBM_JL2",
+          "parent": "FR_SLBM_M45",
+          "tier": 7
+        },
+        {
+          "weapon_id": "FR_SLBM_M45",
+          "parent": "RU_SLBM_R29RM",
+          "tier": 7
+        },
+        {
+          "weapon_id": "RU_SLBM_R29RM",
+          "parent": "UK_SLBM_Polaris_A3TK",
+          "tier": 7
+        },
+        {
+          "weapon_id": "UK_SLBM_Polaris_A3TK",
+          "parent": "IN_SLBM_K15",
+          "tier": 7
+        },
+        {
+          "weapon_id": "FR_SLBM_M51",
+          "parent": "RU_SLBM_R29RMU2_Sineva",
+          "tier": 8
+        },
+        {
+          "weapon_id": "IN_SLBM_K4",
+          "parent": "RU_SLBM_R29RMU2_Liner",
+          "tier": 8
+        },
+        {
+          "weapon_id": "RU_SLBM_R29RMU2_Liner",
+          "parent": "FR_SLBM_M51",
+          "tier": 8
+        },
+        {
+          "weapon_id": "RU_SLBM_R29RMU2_Sineva",
+          "parent": "US_SLBM_Trident_D5",
+          "tier": 8
+        },
+        {
+          "weapon_id": "US_SLBM_Trident_D5",
+          "parent": "CN_SLBM_JL2",
+          "tier": 8
+        },
+        {
+          "weapon_id": "CN_SLBM_JL3",
+          "parent": "RU_SLBM_R30_Bulava",
+          "tier": 9
+        },
+        {
+          "weapon_id": "RU_SLBM_R30_Bulava",
+          "parent": "US_SLBM_Trident_D5LE",
+          "tier": 9
+        },
+        {
+          "weapon_id": "RU_SLBM_R39",
+          "parent": "IN_SLBM_K4",
+          "tier": 9
+        },
+        {
+          "weapon_id": "RU_SLBM_R39M",
+          "parent": "RU_SLBM_R39",
+          "tier": 9
+        },
+        {
+          "weapon_id": "US_SLBM_Trident_D5LE",
+          "parent": "RU_SLBM_R39M",
+          "tier": 9
+        },
+        {
+          "weapon_id": "IN_SLBM_K5",
+          "parent": "CN_SLBM_JL3",
+          "tier": 10
+        }
+      ]
+    },
+    "STRAT": {
+      "label": "Strategic Missile",
+      "families": [
+        "RU_STRAT_Meteorit",
+        "US_STRAT_RegulusII",
+        "US_STRAT_TLAM_N"
+      ],
+      "by_tier": {
+        "T4": [
+          "US_STRAT_RegulusII"
+        ],
+        "T8": [
+          "RU_STRAT_Meteorit",
+          "US_STRAT_TLAM_N"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "US_STRAT_RegulusII",
+          "parent": null,
+          "tier": 4
+        },
+        {
+          "weapon_id": "RU_STRAT_Meteorit",
+          "parent": "US_STRAT_RegulusII",
+          "tier": 8
+        },
+        {
+          "weapon_id": "US_STRAT_TLAM_N",
+          "parent": "RU_STRAT_Meteorit",
+          "tier": 8
+        }
+      ]
+    },
+    "MINE": {
+      "label": "Mine",
+      "families": [
+        "RU_MINE_MDM6",
+        "RU_MINE_PMR2",
+        "UK_MINE_SeaUrchin",
+        "US_MINE_Mk60_CAPTOR",
+        "US_MINE_Mk67_SLMM"
+      ],
+      "by_tier": {
+        "T3": [
+          "UK_MINE_SeaUrchin"
+        ],
+        "T5": [
+          "RU_MINE_MDM6",
+          "RU_MINE_PMR2",
+          "US_MINE_Mk60_CAPTOR"
+        ],
+        "T6": [
+          "US_MINE_Mk67_SLMM"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "UK_MINE_SeaUrchin",
+          "parent": null,
+          "tier": 3
+        },
+        {
+          "weapon_id": "RU_MINE_MDM6",
+          "parent": "UK_MINE_SeaUrchin",
+          "tier": 5
+        },
+        {
+          "weapon_id": "RU_MINE_PMR2",
+          "parent": "RU_MINE_MDM6",
+          "tier": 5
+        },
+        {
+          "weapon_id": "US_MINE_Mk60_CAPTOR",
+          "parent": "RU_MINE_PMR2",
+          "tier": 5
+        },
+        {
+          "weapon_id": "US_MINE_Mk67_SLMM",
+          "parent": "US_MINE_Mk60_CAPTOR",
+          "tier": 6
+        }
+      ]
+    },
+    "DECOY": {
+      "label": "Decoy System",
+      "families": [
+        "RU_DECOY_MG74",
+        "UK_DECOY_SSE_Mk3",
+        "US_DECOY_ADC",
+        "US_DECOY_Mk70_MOSS"
+      ],
+      "by_tier": {
+        "T3": [
+          "UK_DECOY_SSE_Mk3"
+        ],
+        "T6": [
+          "RU_DECOY_MG74",
+          "US_DECOY_Mk70_MOSS"
+        ],
+        "T7": [
+          "US_DECOY_ADC_Mk4"
+        ],
+        "T8": [
+          "US_DECOY_ADC_Mk5"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "UK_DECOY_SSE_Mk3",
+          "parent": null,
+          "tier": 3
+        },
+        {
+          "weapon_id": "RU_DECOY_MG74",
+          "parent": "UK_DECOY_SSE_Mk3",
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_DECOY_Mk70_MOSS",
+          "parent": "RU_DECOY_MG74",
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_DECOY_ADC_Mk4",
+          "parent": "US_DECOY_Mk70_MOSS",
+          "tier": 7
+        },
+        {
+          "weapon_id": "US_DECOY_ADC_Mk5",
+          "parent": "US_DECOY_ADC_Mk4",
+          "tier": 8
+        }
+      ]
+    },
+    "SPECIAL": {
+      "label": "Special Payload",
+      "families": [
+        "RU_SPECIAL_SDV_Sirena",
+        "UK_SPECIAL_DDS",
+        "US_SPECIAL_ASDS",
+        "US_SPECIAL_DDS",
+        "US_SPECIAL_SDV_Mk8"
+      ],
+      "by_tier": {
+        "T6": [
+          "RU_SPECIAL_SDV_Sirena"
+        ],
+        "T7": [
+          "US_SPECIAL_SDV_Mk8"
+        ],
+        "T8": [
+          "UK_SPECIAL_DDS",
+          "US_SPECIAL_ASDS",
+          "US_SPECIAL_DDS"
+        ]
+      },
+      "chain": [
+        {
+          "weapon_id": "RU_SPECIAL_SDV_Sirena",
+          "parent": null,
+          "tier": 6
+        },
+        {
+          "weapon_id": "US_SPECIAL_SDV_Mk8",
+          "parent": "RU_SPECIAL_SDV_Sirena",
+          "tier": 7
+        },
+        {
+          "weapon_id": "UK_SPECIAL_DDS",
+          "parent": "US_SPECIAL_DDS",
+          "tier": 8
+        },
+        {
+          "weapon_id": "US_SPECIAL_ASDS",
+          "parent": "UK_SPECIAL_DDS",
+          "tier": 8
+        },
+        {
+          "weapon_id": "US_SPECIAL_DDS",
+          "parent": "US_SPECIAL_SDV_Mk8",
+          "tier": 8
+        }
+      ]
+    }
+  },
+  "dependencies": {
+    "US_TORP_Mk14": null,
+    "US_TORP_Mk18": "US_TORP_Mk14",
+    "US_TORP_Mk23": "US_TORP_Mk18",
+    "US_TORP_Mk27": "US_TORP_Mk23",
+    "US_TORP_Mk16": "US_TORP_Mk27",
+    "UK_TORP_Mk8": "US_TORP_Mk16",
+    "CN_TORP_Yu1": "UK_TORP_Mk8",
+    "RU_TORP_SET53": "CN_TORP_Yu1",
+    "US_TORP_Mk37": "RU_TORP_SET53",
+    "RU_TORP_SAET60": "US_TORP_Mk37",
+    "US_TORP_Mk37_Mod2": "RU_TORP_SAET60",
+    "RU_TORP_SET65": "US_TORP_Mk37_Mod2",
+    "CN_TORP_Yu4": "RU_TORP_SET65",
+    "RU_TORP_5365K": "CN_TORP_Yu4",
+    "US_TORP_Mk45": "RU_TORP_5365K",
+    "FR_TORP_L5_Mod3": "US_TORP_Mk45",
+    "CN_TORP_Yu3": "FR_TORP_L5_Mod3",
+    "RU_TORP_5365M": "CN_TORP_Yu3",
+    "RU_TORP_6576": "RU_TORP_5365M",
+    "RU_TORP_TEST71": "RU_TORP_6576",
+    "US_TORP_Mk48": "RU_TORP_TEST71",
+    "UK_TORP_Tigerfish": "US_TORP_Mk48",
+    "FR_TORP_L5_Mod4": "UK_TORP_Tigerfish",
+    "UK_TORP_Tigerfish_Mod1": "FR_TORP_L5_Mod4",
+    "FR_TORP_F17": "UK_TORP_Tigerfish_Mod1",
+    "RU_TORP_USET80": "FR_TORP_F17",
+    "RU_TORP_Shkval": "RU_TORP_USET80",
+    "RU_TORP_TEST71M": "RU_TORP_Shkval",
+    "UK_TORP_StingRay": "RU_TORP_TEST71M",
+    "US_TORP_Mk48_ADCAP": "UK_TORP_StingRay",
+    "CN_TORP_Yu5": "US_TORP_Mk48_ADCAP",
+    "RU_TORP_6576A": "CN_TORP_Yu5",
+    "CN_TORP_Yu7": "RU_TORP_6576A",
+    "RU_TORP_UGST": "CN_TORP_Yu7",
+    "RU_TORP_USET80K": "RU_TORP_UGST",
+    "IN_TORP_TAL": "RU_TORP_USET80K",
+    "RU_TORP_TEST96": "IN_TORP_TAL",
+    "UK_TORP_Spearfish": "RU_TORP_TEST96",
+    "CN_TORP_Yu6": "UK_TORP_Spearfish",
+    "RU_TORP_UGST_M": "CN_TORP_Yu6",
+    "US_TORP_Mk48_Mod6": "RU_TORP_UGST_M",
+    "US_TORP_Mk48_Mod7": "US_TORP_Mk48_Mod6",
+    "IN_TORP_Varunastra": "US_TORP_Mk48_Mod7",
+    "RU_TORP_Fizik": "IN_TORP_Varunastra",
+    "FR_TORP_F21": "RU_TORP_Fizik",
+    "UK_TORP_Spearfish_Mod1": "FR_TORP_F21",
+    "US_SLBM_Polaris_A1": null,
+    "RU_SLBM_R13": "US_SLBM_Polaris_A1",
+    "RU_SLBM_R21": "RU_SLBM_R13",
+    "US_SLBM_Polaris_A3": "RU_SLBM_R21",
+    "FR_SLBM_M1": "US_SLBM_Polaris_A3",
+    "RU_SLBM_R27": "FR_SLBM_M1",
+    "US_SLBM_Poseidon_C3": "RU_SLBM_R27",
+    "FR_SLBM_M2": "US_SLBM_Poseidon_C3",
+    "CN_SLBM_JL1": "FR_SLBM_M2",
+    "RU_SLBM_R29": "CN_SLBM_JL1",
+    "FR_SLBM_M20": "RU_SLBM_R29",
+    "US_SLBM_Trident_C4": "FR_SLBM_M20",
+    "RU_SLBM_R29R": "US_SLBM_Trident_C4",
+    "FR_SLBM_M4": "RU_SLBM_R29R",
+    "IN_SLBM_K15": "FR_SLBM_M4",
+    "UK_SLBM_Polaris_A3TK": "IN_SLBM_K15",
+    "RU_SLBM_R29RM": "UK_SLBM_Polaris_A3TK",
+    "FR_SLBM_M45": "RU_SLBM_R29RM",
+    "CN_SLBM_JL2": "FR_SLBM_M45",
+    "US_SLBM_Trident_D5": "CN_SLBM_JL2",
+    "RU_SLBM_R29RMU2_Sineva": "US_SLBM_Trident_D5",
+    "FR_SLBM_M51": "RU_SLBM_R29RMU2_Sineva",
+    "RU_SLBM_R29RMU2_Liner": "FR_SLBM_M51",
+    "IN_SLBM_K4": "RU_SLBM_R29RMU2_Liner",
+    "RU_SLBM_R39": "IN_SLBM_K4",
+    "RU_SLBM_R39M": "RU_SLBM_R39",
+    "US_SLBM_Trident_D5LE": "RU_SLBM_R39M",
+    "RU_SLBM_R30_Bulava": "US_SLBM_Trident_D5LE",
+    "CN_SLBM_JL3": "RU_SLBM_R30_Bulava",
+    "IN_SLBM_K5": "CN_SLBM_JL3",
+    "RU_ASM_P5": null,
+    "RU_ASM_P6": "RU_ASM_P5",
+    "RU_ASM_P70": "RU_ASM_P6",
+    "RU_ASM_P120": "RU_ASM_P70",
+    "RU_ASM_P500": "RU_ASM_P120",
+    "US_ASM_Tomahawk_TASM": "RU_ASM_P500",
+    "US_ASM_Harpoon": "US_ASM_Tomahawk_TASM",
+    "CN_ASM_YJ8": "US_ASM_Harpoon",
+    "FR_ASM_Exocet_SM39": "CN_ASM_YJ8",
+    "RU_ASM_P1000": "FR_ASM_Exocet_SM39",
+    "RU_ASM_P700": "RU_ASM_P1000",
+    "RU_ASM_Kalibr_3M54": "RU_ASM_P700",
+    "RU_ASM_Oniks": "RU_ASM_Kalibr_3M54",
+    "CN_ASM_YJ18": "RU_ASM_Oniks",
+    "RU_ASM_Zircon": "CN_ASM_YJ18",
+    "UK_DECOY_SSE_Mk3": null,
+    "RU_DECOY_MG74": "UK_DECOY_SSE_Mk3",
+    "US_DECOY_Mk70_MOSS": "RU_DECOY_MG74",
+    "US_DECOY_ADC_Mk4": "US_DECOY_Mk70_MOSS",
+    "US_DECOY_ADC_Mk5": "US_DECOY_ADC_Mk4",
+    "UK_MINE_SeaUrchin": null,
+    "RU_MINE_MDM6": "UK_MINE_SeaUrchin",
+    "RU_MINE_PMR2": "RU_MINE_MDM6",
+    "US_MINE_Mk60_CAPTOR": "RU_MINE_PMR2",
+    "US_MINE_Mk67_SLMM": "US_MINE_Mk60_CAPTOR",
+    "RU_ASW_Vyuga": null,
+    "US_ASW_SUBROC": "RU_ASW_Vyuga",
+    "US_ASW_SeaLance": "US_ASW_SUBROC",
+    "RU_ASW_Vodopad": "US_ASW_SeaLance",
+    "CN_ASW_CY1": "RU_ASW_Vodopad",
+    "RU_ASW_Veter": "CN_ASW_CY1",
+    "RU_ASW_Otvet": "RU_ASW_Veter",
+    "US_STRAT_RegulusII": null,
+    "RU_STRAT_Meteorit": "US_STRAT_RegulusII",
+    "US_STRAT_TLAM_N": "RU_STRAT_Meteorit",
+    "RU_LAM_Granat": null,
+    "US_LAM_Tomahawk": "RU_LAM_Granat",
+    "US_LAM_Tomahawk_BlockIII": "US_LAM_Tomahawk",
+    "RU_LAM_Kalibr_3M14": "US_LAM_Tomahawk_BlockIII",
+    "US_LAM_Tomahawk_BlockIV": "RU_LAM_Kalibr_3M14",
+    "CN_LAM_YJ18_LandAttack": "US_LAM_Tomahawk_BlockIV",
+    "FR_LAM_MdCN": "CN_LAM_YJ18_LandAttack",
+    "US_LAM_Tomahawk_BlockV": "FR_LAM_MdCN",
+    "RU_SPECIAL_SDV_Sirena": null,
+    "US_SPECIAL_SDV_Mk8": "RU_SPECIAL_SDV_Sirena",
+    "US_SPECIAL_DDS": "US_SPECIAL_SDV_Mk8",
+    "UK_SPECIAL_DDS": "US_SPECIAL_DDS",
+    "US_SPECIAL_ASDS": "UK_SPECIAL_DDS"
+  },
+  "ui_nodes": [
+    {
+      "weapon_id": "US_TORP_Mk14",
+      "parent": null,
+      "tier": 1,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 14 torpedo",
+      "short_name": "Mk14",
+      "family": "US_TORP_Mk14",
+      "role": "早期重型蒸汽鱼雷",
+      "era": "Early",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk14\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk14\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T1 早期潜艇鱼雷 / 基础武器"
+      },
+      "compatible_submarines": [
+        "US_SSBN_EthanAllen",
+        "US_SSBN_GeorgeWashington",
+        "US_SSN_Skipjack"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk18",
+      "parent": "US_TORP_Mk14",
+      "tier": 1,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 18 torpedo",
+      "short_name": "Mk18",
+      "family": "US_TORP_Mk14",
+      "role": "早期电动鱼雷",
+      "era": "Early",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk18\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk18\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk14",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T1 早期潜艇鱼雷 / 基础武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_TORP_Mk23",
+      "parent": "US_TORP_Mk18",
+      "tier": 1,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 23 torpedo",
+      "short_name": "Mk23",
+      "family": "US_TORP_Mk14",
+      "role": "早期无航迹鱼雷",
+      "era": "Early",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk23\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk23\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk18",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T1 早期潜艇鱼雷 / 基础武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_SLBM_R13",
+      "parent": "US_SLBM_Polaris_A1",
+      "tier": 2,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-13 (SS-N-4)",
+      "short_name": "R-13",
+      "family": "RU_SLBM_R13",
+      "role": "第一代潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R13\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R13\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_SLBM_Polaris_A1",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T2 早期制导鱼雷 / 初代潜射导弹"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Hotel"
+      ]
+    },
+    {
+      "weapon_id": "US_SLBM_Polaris_A1",
+      "parent": null,
+      "tier": 2,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "USA",
+      "display_name": "Polaris A1",
+      "short_name": "Polaris A1",
+      "family": "US_SLBM_Polaris",
+      "role": "第一代潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Polaris_A1\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Polaris_A1\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T2 早期制导鱼雷 / 初代潜射导弹"
+      },
+      "compatible_submarines": [
+        "US_SSBN_EthanAllen",
+        "US_SSBN_GeorgeWashington"
+      ]
+    },
+    {
+      "weapon_id": "CN_TORP_Yu1",
+      "parent": "UK_TORP_Mk8",
+      "tier": 2,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "China",
+      "display_name": "Yu-1 torpedo",
+      "short_name": "Yu-1",
+      "family": "CN_TORP_Yu1",
+      "role": "早期蒸汽鱼雷",
+      "era": "Cold War",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu1\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu1\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_TORP_Mk8",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T2 早期制导鱼雷 / 初代潜射导弹"
+      },
+      "compatible_submarines": [
+        "CN_SSN_Type091"
+      ]
+    },
+    {
+      "weapon_id": "UK_TORP_Mk8",
+      "parent": "US_TORP_Mk16",
+      "tier": 2,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "UK",
+      "display_name": "Mk 8 Mod 4 torpedo",
+      "short_name": "Mk8",
+      "family": "UK_TORP_Mk8",
+      "role": "早期蒸汽鱼雷",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Mk8\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Mk8\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk16",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T2 早期制导鱼雷 / 初代潜射导弹"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Resolution",
+        "UK_SSN_Dreadnought",
+        "UK_SSN_Valiant"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk16",
+      "parent": "US_TORP_Mk27",
+      "tier": 2,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 16 torpedo",
+      "short_name": "Mk16",
+      "family": "US_TORP_Mk16",
+      "role": "战后高速蒸汽鱼雷",
+      "era": "Cold War",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk16\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk16\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk27",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T2 早期制导鱼雷 / 初代潜射导弹"
+      },
+      "compatible_submarines": [
+        "US_SSN_Skipjack"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk27",
+      "parent": "US_TORP_Mk23",
+      "tier": 2,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 27 Mod 4 torpedo",
+      "short_name": "Mk27",
+      "family": "US_TORP_Mk27",
+      "role": "早期声自导鱼雷",
+      "era": "Early",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk27\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk27\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk23",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T2 早期制导鱼雷 / 初代潜射导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_ASM_P5",
+      "parent": null,
+      "tier": 3,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "P-5 Pyatyorka",
+      "short_name": "P-5",
+      "family": "RU_ASM_P5",
+      "role": "早期潜射反舰巡航导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P5\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P5\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_ASM_P6",
+      "parent": "RU_ASM_P5",
+      "tier": 3,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "P-6 Progress",
+      "short_name": "P-6",
+      "family": "RU_ASM_P5",
+      "role": "冷战早期远程反舰导弹",
+      "era": "Cold War",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P6\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P6\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_P5",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "UK_DECOY_SSE_Mk3",
+      "parent": null,
+      "tier": 3,
+      "category": "DECOY",
+      "category_label": "Decoy System",
+      "country": "UK",
+      "display_name": "SSE Mk 3",
+      "short_name": "SSE-Mk3",
+      "family": "UK_DECOY_SSE_Mk3",
+      "role": "潜用信号发射器",
+      "era": "Cold War",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\UK_DECOY_SSE_Mk3\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\UK_DECOY_SSE_Mk3\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Dreadnought",
+        "UK_SSN_Astute",
+        "UK_SSN_Swiftsure",
+        "UK_SSN_Trafalgar"
+      ]
+    },
+    {
+      "weapon_id": "UK_MINE_SeaUrchin",
+      "parent": null,
+      "tier": 3,
+      "category": "MINE",
+      "category_label": "Mine",
+      "country": "UK",
+      "display_name": "Sea Urchin",
+      "short_name": "SeaUrchin",
+      "family": "UK_MINE_SeaUrchin",
+      "role": "潜艇布放水雷",
+      "era": "Cold War",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\UK_MINE_SeaUrchin\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\UK_MINE_SeaUrchin\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": [
+        "UK_SSN_Trafalgar"
+      ]
+    },
+    {
+      "weapon_id": "FR_SLBM_M1",
+      "parent": "US_SLBM_Polaris_A3",
+      "tier": 3,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "France",
+      "display_name": "M1",
+      "short_name": "M1",
+      "family": "FR_SLBM_M1",
+      "role": "第一代潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M1\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M1\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_SLBM_Polaris_A3",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_SLBM_R21",
+      "parent": "RU_SLBM_R13",
+      "tier": 3,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-21 (SS-N-5)",
+      "short_name": "R-21",
+      "family": "RU_SLBM_R21",
+      "role": "水下发射早期潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R21\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R21\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R13",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Hotel"
+      ]
+    },
+    {
+      "weapon_id": "US_SLBM_Polaris_A3",
+      "parent": "RU_SLBM_R21",
+      "tier": 3,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "USA",
+      "display_name": "Polaris A3",
+      "short_name": "Polaris A3",
+      "family": "US_SLBM_Polaris",
+      "role": "潜射弹道导弹改进型",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Polaris_A3\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Polaris_A3\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R21",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Resolution",
+        "US_SSBN_EthanAllen",
+        "US_SSBN_GeorgeWashington",
+        "US_SSBN_Lafayette"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_SET53",
+      "parent": "CN_TORP_Yu1",
+      "tier": 3,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "SET-53 torpedo",
+      "short_name": "SET-53",
+      "family": "RU_TORP_SET53",
+      "role": "早期电动反潜鱼雷",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SET53\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SET53\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_TORP_Yu1",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Hotel",
+        "RU_SSN_November"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk37",
+      "parent": "RU_TORP_SET53",
+      "tier": 3,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 37 Mod 0 torpedo",
+      "short_name": "Mk37",
+      "family": "US_TORP_Mk37",
+      "role": "冷战早期反潜鱼雷",
+      "era": "Cold War",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk37\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk37\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_SET53",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T3 冷战早期成熟鱼雷 / 初期巡航导弹"
+      },
+      "compatible_submarines": [
+        "US_SSBN_BenjaminFranklin",
+        "US_SSBN_EthanAllen",
+        "US_SSBN_GeorgeWashington",
+        "US_SSBN_JamesMadison",
+        "US_SSBN_Lafayette",
+        "US_SSN_Skipjack",
+        "US_SSN_Sturgeon"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASM_P70",
+      "parent": "RU_ASM_P6",
+      "tier": 4,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "P-70 Ametist",
+      "short_name": "P-70",
+      "family": "RU_ASM_P70",
+      "role": "水下发射反舰导弹",
+      "era": "Cold War",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P70\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P70\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_P6",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Victor"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASW_Vyuga",
+      "parent": null,
+      "tier": 4,
+      "category": "ASW",
+      "category_label": "Anti-Submarine Missile",
+      "country": "Russia",
+      "display_name": "RPK-2 Vyuga",
+      "short_name": "Vyuga",
+      "family": "RU_ASW_Vyuga",
+      "role": "早期潜射反潜导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Vyuga\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Vyuga\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "CN_SLBM_JL1",
+      "parent": "FR_SLBM_M2",
+      "tier": 4,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "China",
+      "display_name": "JL-1",
+      "short_name": "JL-1",
+      "family": "CN_SLBM_JL1",
+      "role": "第一代潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL1\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL1\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_SLBM_M2",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": [
+        "CN_SSBN_Type092"
+      ]
+    },
+    {
+      "weapon_id": "FR_SLBM_M2",
+      "parent": "US_SLBM_Poseidon_C3",
+      "tier": 4,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "France",
+      "display_name": "M2",
+      "short_name": "M2",
+      "family": "FR_SLBM_M2",
+      "role": "改进型潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M2\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M2\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_SLBM_Poseidon_C3",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_SLBM_R27",
+      "parent": "FR_SLBM_M1",
+      "tier": 4,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-27 (SS-N-6)",
+      "short_name": "R-27",
+      "family": "RU_SLBM_R27",
+      "role": "紧凑型潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R27\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R27\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_SLBM_M1",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Yankee"
+      ]
+    },
+    {
+      "weapon_id": "US_SLBM_Poseidon_C3",
+      "parent": "RU_SLBM_R27",
+      "tier": 4,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "USA",
+      "display_name": "Poseidon C3",
+      "short_name": "Poseidon C3",
+      "family": "US_SLBM_Poseidon",
+      "role": "多弹头潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Poseidon_C3\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Poseidon_C3\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R27",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": [
+        "US_SSBN_BenjaminFranklin",
+        "US_SSBN_JamesMadison",
+        "US_SSBN_Lafayette"
+      ]
+    },
+    {
+      "weapon_id": "US_STRAT_RegulusII",
+      "parent": null,
+      "tier": 4,
+      "category": "STRAT",
+      "category_label": "Strategic Missile",
+      "country": "USA",
+      "display_name": "SSM-N-8B Regulus II",
+      "short_name": "Regulus II",
+      "family": "US_STRAT_RegulusII",
+      "role": "潜射战略巡航导弹（取消项目）",
+      "era": "Cold War",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\US_STRAT_RegulusII\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\US_STRAT_RegulusII\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "CN_TORP_Yu4",
+      "parent": "RU_TORP_SET65",
+      "tier": 4,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "China",
+      "display_name": "Yu-4 torpedo",
+      "short_name": "Yu-4",
+      "family": "CN_TORP_Yu3",
+      "role": "热动力鱼雷",
+      "era": "Cold War",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu4\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu4\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_SET65",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": [
+        "CN_SSN_Type091",
+        "CN_SSN_Type093"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_SAET60",
+      "parent": "US_TORP_Mk37",
+      "tier": 4,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "SAET-60 torpedo",
+      "short_name": "SAET-60",
+      "family": "RU_TORP_SET53",
+      "role": "高速电动鱼雷",
+      "era": "Cold War",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SAET60\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SAET60\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk37",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_TORP_SET65",
+      "parent": "US_TORP_Mk37_Mod2",
+      "tier": 4,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "SET-65 torpedo",
+      "short_name": "SET-65",
+      "family": "RU_TORP_SET53",
+      "role": "电动声自导鱼雷",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SET65\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SET65\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk37_Mod2",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaI",
+        "RU_SSBN_DeltaII",
+        "RU_SSBN_Typhoon",
+        "RU_SSBN_Yankee",
+        "RU_SSN_November",
+        "RU_SSN_Victor"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk37_Mod2",
+      "parent": "RU_TORP_SAET60",
+      "tier": 4,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 37 Mod 2 torpedo",
+      "short_name": "Mk37-2",
+      "family": "US_TORP_Mk37",
+      "role": "线导反潜鱼雷",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk37_Mod2\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk37_Mod2\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_SAET60",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T4 冷战中期鱼雷 / 反舰导弹"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_ASM_P120",
+      "parent": "RU_ASM_P70",
+      "tier": 5,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "P-120 Malakhit",
+      "short_name": "P-120",
+      "family": "RU_ASM_P120",
+      "role": "冷战反舰巡航导弹（潜射型）",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P120\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P120\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_P70",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_ASW_SUBROC",
+      "parent": "RU_ASW_Vyuga",
+      "tier": 5,
+      "category": "ASW",
+      "category_label": "Anti-Submarine Missile",
+      "country": "USA",
+      "display_name": "UUM-44 SUBROC",
+      "short_name": "SUBROC",
+      "family": "US_ASW_SUBROC",
+      "role": "潜射反潜火箭",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\US_ASW_SUBROC\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\US_ASW_SUBROC\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASW_Vyuga",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "US_SSN_LosAngeles",
+        "US_SSN_Sturgeon"
+      ]
+    },
+    {
+      "weapon_id": "RU_MINE_MDM6",
+      "parent": "UK_MINE_SeaUrchin",
+      "tier": 5,
+      "category": "MINE",
+      "category_label": "Mine",
+      "country": "Russia",
+      "display_name": "MDM-6",
+      "short_name": "MDM-6",
+      "family": "RU_MINE_MDM6",
+      "role": "潜艇布放沉底水雷",
+      "era": "Cold War Late",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\RU_MINE_MDM6\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\RU_MINE_MDM6\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_MINE_SeaUrchin",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_MINE_PMR2",
+      "parent": "RU_MINE_MDM6",
+      "tier": 5,
+      "category": "MINE",
+      "category_label": "Mine",
+      "country": "Russia",
+      "display_name": "PMR-2",
+      "short_name": "PMR-2",
+      "family": "RU_MINE_PMR2",
+      "role": "潜艇布放系留水雷",
+      "era": "Cold War Late",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\RU_MINE_PMR2\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\RU_MINE_PMR2\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_MINE_MDM6",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_MINE_Mk60_CAPTOR",
+      "parent": "RU_MINE_PMR2",
+      "tier": 5,
+      "category": "MINE",
+      "category_label": "Mine",
+      "country": "USA",
+      "display_name": "Mk 60 CAPTOR",
+      "short_name": "Mk60",
+      "family": "US_MINE_Mk60_CAPTOR",
+      "role": "封装式反潜水雷",
+      "era": "Cold War Late",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\US_MINE_Mk60_CAPTOR\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\US_MINE_Mk60_CAPTOR\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_MINE_PMR2",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "US_SSN_LosAngeles",
+        "US_SSN_Seawolf",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "FR_SLBM_M20",
+      "parent": "RU_SLBM_R29",
+      "tier": 5,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "France",
+      "display_name": "M20",
+      "short_name": "M20",
+      "family": "FR_SLBM_M2",
+      "role": "热核弹头潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M20\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M20\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R29",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "FR_SSBN_LeRedoutable"
+      ]
+    },
+    {
+      "weapon_id": "RU_SLBM_R29",
+      "parent": "CN_SLBM_JL1",
+      "tier": 5,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-29 (SS-N-8)",
+      "short_name": "R-29",
+      "family": "RU_SLBM_R29",
+      "role": "远程潜射弹道导弹",
+      "era": "Cold War",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_SLBM_JL1",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaI",
+        "RU_SSBN_DeltaII",
+        "RU_SSBN_Yankee"
+      ]
+    },
+    {
+      "weapon_id": "US_SLBM_Trident_C4",
+      "parent": "FR_SLBM_M20",
+      "tier": 5,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "USA",
+      "display_name": "Trident I C4",
+      "short_name": "Trident C4",
+      "family": "US_SLBM_Trident",
+      "role": "远程潜射弹道导弹",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_C4\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_C4\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_SLBM_M20",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "US_SSBN_BenjaminFranklin",
+        "US_SSBN_JamesMadison",
+        "US_SSBN_Ohio"
+      ]
+    },
+    {
+      "weapon_id": "CN_TORP_Yu3",
+      "parent": "FR_TORP_L5_Mod3",
+      "tier": 5,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "China",
+      "display_name": "Yu-3 torpedo",
+      "short_name": "Yu-3",
+      "family": "CN_TORP_Yu3",
+      "role": "电动声自导鱼雷",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu3\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu3\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_TORP_L5_Mod3",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "CN_SSBN_Type092",
+        "CN_SSN_Type091",
+        "CN_SSN_Type093"
+      ]
+    },
+    {
+      "weapon_id": "FR_TORP_L5_Mod3",
+      "parent": "US_TORP_Mk45",
+      "tier": 5,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "France",
+      "display_name": "L5 Mod 3 torpedo",
+      "short_name": "L5-3",
+      "family": "FR_TORP_L5",
+      "role": "电动线导鱼雷",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_L5_Mod3\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_L5_Mod3\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk45",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "FR_SSBN_LeRedoutable",
+        "FR_SSN_Rubis"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_5365K",
+      "parent": "CN_TORP_Yu4",
+      "tier": 5,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "53-65K torpedo",
+      "short_name": "53-65K",
+      "family": "RU_TORP_5365",
+      "role": "尾流自导反舰鱼雷",
+      "era": "Cold War",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_5365K\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_5365K\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_TORP_Yu4",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaII",
+        "RU_SSBN_Yankee",
+        "RU_SSN_November",
+        "RU_SSN_Victor"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk45",
+      "parent": "RU_TORP_5365K",
+      "tier": 5,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 45 ASTOR torpedo",
+      "short_name": "Mk45",
+      "family": "US_TORP_Mk45",
+      "role": "核装药反潜鱼雷",
+      "era": "Cold War",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk45\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk45\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_5365K",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T5 冷战后期先进鱼雷 / 远程导弹 / SLBM"
+      },
+      "compatible_submarines": [
+        "US_SSN_Sturgeon"
+      ]
+    },
+    {
+      "weapon_id": "CN_ASM_YJ8",
+      "parent": "US_ASM_Harpoon",
+      "tier": 6,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "China",
+      "display_name": "YJ-8 / YJ-82",
+      "short_name": "YJ-8",
+      "family": "CN_ASM_YJ8",
+      "role": "潜射反舰巡航导弹",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\CN_ASM_YJ8\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\CN_ASM_YJ8\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_ASM_Harpoon",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "CN_SSN_Type093",
+        "CN_SSN_Type093A"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASM_P500",
+      "parent": "RU_ASM_P120",
+      "tier": 6,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "P-500 Bazalt",
+      "short_name": "P-500",
+      "family": "RU_ASM_P500",
+      "role": "重型超音速反舰导弹",
+      "era": "Cold War",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P500\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P500\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_P120",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_ASM_Harpoon",
+      "parent": "US_ASM_Tomahawk_TASM",
+      "tier": 6,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "USA",
+      "display_name": "UGM-84 Sub-Harpoon",
+      "short_name": "Harpoon",
+      "family": "US_ASM_Harpoon",
+      "role": "潜射反舰巡航导弹",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\US_ASM_Harpoon\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\US_ASM_Harpoon\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_ASM_Tomahawk_TASM",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "UK_SSN_Swiftsure",
+        "UK_SSN_Trafalgar",
+        "UK_SSN_Valiant",
+        "US_SSN_LosAngeles",
+        "US_SSN_Sturgeon"
+      ]
+    },
+    {
+      "weapon_id": "US_ASM_Tomahawk_TASM",
+      "parent": "RU_ASM_P500",
+      "tier": 6,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "USA",
+      "display_name": "BGM-109B TASM",
+      "short_name": "TASM",
+      "family": "US_LAM_Tomahawk",
+      "role": "反舰型巡航导弹（已退役）",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\US_ASM_Tomahawk_TASM\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\US_ASM_Tomahawk_TASM\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_P500",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "CN_ASW_CY1",
+      "parent": "RU_ASW_Vodopad",
+      "tier": 6,
+      "category": "ASW",
+      "category_label": "Anti-Submarine Missile",
+      "country": "China",
+      "display_name": "CY-1 anti-submarine missile",
+      "short_name": "CY-1",
+      "family": "CN_ASW_CY1",
+      "role": "潜射反潜导弹",
+      "era": "Modern",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\CN_ASW_CY1\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\CN_ASW_CY1\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASW_Vodopad",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "CN_SSN_Type093",
+        "CN_SSN_Type093A"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASW_Vodopad",
+      "parent": "US_ASW_SeaLance",
+      "tier": 6,
+      "category": "ASW",
+      "category_label": "Anti-Submarine Missile",
+      "country": "Russia",
+      "display_name": "RPK-6 Vodopad",
+      "short_name": "Vodopad",
+      "family": "RU_ASW_Vodopad",
+      "role": "潜射反潜导弹",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Vodopad\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Vodopad\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_ASW_SeaLance",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaIII",
+        "RU_SSBN_DeltaIV",
+        "RU_SSBN_Typhoon",
+        "RU_SSN_Akula",
+        "RU_SSN_Sierra",
+        "RU_SSN_Victor"
+      ]
+    },
+    {
+      "weapon_id": "US_ASW_SeaLance",
+      "parent": "US_ASW_SUBROC",
+      "tier": 6,
+      "category": "ASW",
+      "category_label": "Anti-Submarine Missile",
+      "country": "USA",
+      "display_name": "UUM-125 Sea Lance",
+      "short_name": "SeaLance",
+      "family": "US_ASW_SeaLance",
+      "role": "潜射反潜导弹（取消）",
+      "era": "Cold War Late",
+      "asset_priority": null,
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\US_ASW_SeaLance\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\US_ASW_SeaLance\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_ASW_SUBROC",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_DECOY_MG74",
+      "parent": "UK_DECOY_SSE_Mk3",
+      "tier": 6,
+      "category": "DECOY",
+      "category_label": "Decoy System",
+      "country": "Russia",
+      "display_name": "MG-74",
+      "short_name": "MG-74",
+      "family": "RU_DECOY_MG74",
+      "role": "声学诱饵",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\RU_DECOY_MG74\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\RU_DECOY_MG74\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_DECOY_SSE_Mk3",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Borei",
+        "RU_SSBN_BoreiA",
+        "RU_SSBN_DeltaIV",
+        "RU_SSN_Akula",
+        "RU_SSN_Victor",
+        "RU_SSN_Yasen",
+        "RU_SSN_YasenM"
+      ]
+    },
+    {
+      "weapon_id": "US_DECOY_Mk70_MOSS",
+      "parent": "RU_DECOY_MG74",
+      "tier": 6,
+      "category": "DECOY",
+      "category_label": "Decoy System",
+      "country": "USA",
+      "display_name": "Mk 70 MOSS",
+      "short_name": "MOSS",
+      "family": "US_DECOY_Mk70_MOSS",
+      "role": "潜艇模拟器",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_Mk70_MOSS\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_Mk70_MOSS\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_DECOY_MG74",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "US_SSBN_Ohio",
+        "US_SSN_LosAngeles",
+        "US_SSN_Seawolf",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "RU_LAM_Granat",
+      "parent": null,
+      "tier": 6,
+      "category": "LAM",
+      "category_label": "Land-Attack Missile",
+      "country": "Russia",
+      "display_name": "RK-55 Granat",
+      "short_name": "Granat",
+      "family": "RU_LAM_Granat",
+      "role": "早期对陆攻击巡航导弹",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\RU_LAM_Granat\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\RU_LAM_Granat\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Akula"
+      ]
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk",
+      "parent": "RU_LAM_Granat",
+      "tier": 6,
+      "category": "LAM",
+      "category_label": "Land-Attack Missile",
+      "country": "USA",
+      "display_name": "BGM-109 Tomahawk",
+      "short_name": "Tomahawk",
+      "family": "US_LAM_Tomahawk",
+      "role": "早期对陆攻击巡航导弹",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_LAM_Granat",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_MINE_Mk67_SLMM",
+      "parent": "US_MINE_Mk60_CAPTOR",
+      "tier": 6,
+      "category": "MINE",
+      "category_label": "Mine",
+      "country": "USA",
+      "display_name": "Mk 67 SLMM",
+      "short_name": "Mk67-SLMM",
+      "family": "US_MINE_Mk67_SLMM",
+      "role": "潜艇布放机动水雷",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\US_MINE_Mk67_SLMM\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\US_MINE_Mk67_SLMM\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_MINE_Mk60_CAPTOR",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "US_SSN_LosAngeles",
+        "US_SSN_Seawolf",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "FR_SLBM_M4",
+      "parent": "RU_SLBM_R29R",
+      "tier": 6,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "France",
+      "display_name": "M4",
+      "short_name": "M4",
+      "family": "FR_SLBM_M4",
+      "role": "多弹头潜射弹道导弹",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M4\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M4\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R29R",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "FR_SSBN_LeRedoutable"
+      ]
+    },
+    {
+      "weapon_id": "IN_SLBM_K15",
+      "parent": "FR_SLBM_M4",
+      "tier": 6,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "India",
+      "display_name": "K-15 Sagarika",
+      "short_name": "K-15",
+      "family": "IN_SLBM_K15",
+      "role": "近程潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K15\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K15\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_SLBM_M4",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "IN_SSBN_Arighaat",
+        "IN_SSBN_Arihant"
+      ]
+    },
+    {
+      "weapon_id": "RU_SLBM_R29R",
+      "parent": "US_SLBM_Trident_C4",
+      "tier": 6,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-29R (SS-N-18)",
+      "short_name": "R-29R",
+      "family": "RU_SLBM_R29",
+      "role": "多弹头远程潜射弹道导弹",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29R\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29R\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_SLBM_Trident_C4",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaII",
+        "RU_SSBN_DeltaIII"
+      ]
+    },
+    {
+      "weapon_id": "RU_SPECIAL_SDV_Sirena",
+      "parent": null,
+      "tier": 6,
+      "category": "SPECIAL",
+      "category_label": "Special Payload",
+      "country": "Russia",
+      "display_name": "Sirena",
+      "short_name": "Sirena",
+      "family": "RU_SPECIAL_SDV_Sirena",
+      "role": "水下输送载具",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\RU_SPECIAL_SDV_Sirena\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\RU_SPECIAL_SDV_Sirena\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": null,
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "FR_TORP_F17",
+      "parent": "UK_TORP_Tigerfish_Mod1",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "France",
+      "display_name": "F17 Mod 2 torpedo",
+      "short_name": "F17-2",
+      "family": "FR_TORP_F17",
+      "role": "热动力重型鱼雷",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_F17\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_F17\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_TORP_Tigerfish_Mod1",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "FR_SSBN_LeTriomphant",
+        "FR_SSN_Rubis",
+        "FR_SSN_Suffren"
+      ]
+    },
+    {
+      "weapon_id": "FR_TORP_L5_Mod4",
+      "parent": "UK_TORP_Tigerfish",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "France",
+      "display_name": "L5 Mod 4 torpedo",
+      "short_name": "L5-4",
+      "family": "FR_TORP_L5",
+      "role": "电动线导鱼雷改进型",
+      "era": "Cold War Late",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_L5_Mod4\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_L5_Mod4\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_TORP_Tigerfish",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "FR_SSN_Rubis"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_5365M",
+      "parent": "CN_TORP_Yu3",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "53-65M torpedo",
+      "short_name": "53-65M",
+      "family": "RU_TORP_5365",
+      "role": "尾流自导反舰鱼雷改进型",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_5365M\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_5365M\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_TORP_Yu3",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_November"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_6576",
+      "parent": "RU_TORP_5365M",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "65-76 Kit torpedo",
+      "short_name": "65-76",
+      "family": "RU_TORP_6576",
+      "role": "650 毫米重型远程鱼雷",
+      "era": "Cold War",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_6576\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_6576\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_5365M",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Akula",
+        "RU_SSN_Sierra",
+        "RU_SSN_Victor"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_TEST71",
+      "parent": "RU_TORP_6576",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "TEST-71 torpedo",
+      "short_name": "TEST-71",
+      "family": "RU_TORP_TEST71",
+      "role": "线导反潜鱼雷",
+      "era": "Cold War",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST71\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST71\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_6576",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Victor"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_USET80",
+      "parent": "FR_TORP_F17",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "USET-80 torpedo",
+      "short_name": "USET-80",
+      "family": "RU_TORP_USET80",
+      "role": "通用电动鱼雷",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_USET80\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_USET80\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_TORP_F17",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaIII",
+        "RU_SSBN_DeltaIV",
+        "RU_SSBN_Typhoon",
+        "RU_SSN_Akula",
+        "RU_SSN_Sierra",
+        "RU_SSN_Victor"
+      ]
+    },
+    {
+      "weapon_id": "UK_TORP_Tigerfish",
+      "parent": "US_TORP_Mk48",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "UK",
+      "display_name": "Tigerfish Mod 0",
+      "short_name": "Tigerfish",
+      "family": "UK_TORP_Tigerfish",
+      "role": "线导反潜/反舰鱼雷",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Tigerfish\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Tigerfish\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk48",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Resolution",
+        "UK_SSN_Dreadnought",
+        "UK_SSN_Swiftsure",
+        "UK_SSN_Trafalgar",
+        "UK_SSN_Valiant"
+      ]
+    },
+    {
+      "weapon_id": "UK_TORP_Tigerfish_Mod1",
+      "parent": "FR_TORP_L5_Mod4",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "UK",
+      "display_name": "Tigerfish Mod 1",
+      "short_name": "Tigerfish-1",
+      "family": "UK_TORP_Tigerfish",
+      "role": "线导鱼雷改进型",
+      "era": "Cold War Late",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Tigerfish_Mod1\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Tigerfish_Mod1\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_TORP_L5_Mod4",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_TORP_Mk48",
+      "parent": "RU_TORP_TEST71",
+      "tier": 6,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 48 Mod 1 torpedo",
+      "short_name": "Mk48-1",
+      "family": "US_TORP_Mk48",
+      "role": "重型线导鱼雷",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_TEST71",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T6 现代早期武器"
+      },
+      "compatible_submarines": [
+        "US_SSBN_Lafayette",
+        "US_SSN_LosAngeles",
+        "US_SSN_Skipjack",
+        "US_SSN_Sturgeon"
+      ]
+    },
+    {
+      "weapon_id": "FR_ASM_Exocet_SM39",
+      "parent": "CN_ASM_YJ8",
+      "tier": 7,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "France",
+      "display_name": "Exocet SM39",
+      "short_name": "SM39",
+      "family": "FR_ASM_Exocet_SM39",
+      "role": "潜射反舰巡航导弹",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\FR_ASM_Exocet_SM39\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\FR_ASM_Exocet_SM39\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_ASM_YJ8",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "FR_SSBN_LeRedoutable",
+        "FR_SSBN_LeTriomphant",
+        "FR_SSBN_SNLE3G",
+        "FR_SSN_Rubis",
+        "FR_SSN_Suffren"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASM_P1000",
+      "parent": "FR_ASM_Exocet_SM39",
+      "tier": 7,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "P-1000 Vulkan",
+      "short_name": "P-1000",
+      "family": "RU_ASM_P500",
+      "role": "超音速反舰导弹改进型",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P1000\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P1000\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_ASM_Exocet_SM39",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_ASM_P700",
+      "parent": "RU_ASM_P1000",
+      "tier": 7,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "P-700 Granit",
+      "short_name": "P-700",
+      "family": "RU_ASM_P700",
+      "role": "冷战后期重型超音速反舰导弹",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P700\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P700\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_P1000",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Sierra"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASW_Veter",
+      "parent": "CN_ASW_CY1",
+      "tier": 7,
+      "category": "ASW",
+      "category_label": "Anti-Submarine Missile",
+      "country": "Russia",
+      "display_name": "RPK-7 Veter",
+      "short_name": "Veter",
+      "family": "RU_ASW_Veter",
+      "role": "远程反潜导弹",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Veter\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Veter\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_ASW_CY1",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_DECOY_ADC_Mk4",
+      "parent": "US_DECOY_Mk70_MOSS",
+      "tier": 7,
+      "category": "DECOY",
+      "category_label": "Decoy System",
+      "country": "USA",
+      "display_name": "ADC Mk 4",
+      "short_name": "ADC-Mk4",
+      "family": "US_DECOY_ADC",
+      "role": "声学对抗装置",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_ADC_Mk4\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_ADC_Mk4\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_DECOY_Mk70_MOSS",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "US_SSBN_Columbia",
+        "US_SSN_Seawolf",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk_BlockIII",
+      "parent": "US_LAM_Tomahawk",
+      "tier": 7,
+      "category": "LAM",
+      "category_label": "Land-Attack Missile",
+      "country": "USA",
+      "display_name": "Tomahawk Block III",
+      "short_name": "TACTOM III",
+      "family": "US_LAM_Tomahawk",
+      "role": "对陆攻击巡航导弹",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockIII\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockIII\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_LAM_Tomahawk",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "UK_SSN_Astute",
+        "UK_SSN_Swiftsure",
+        "UK_SSN_Trafalgar",
+        "US_SSN_LosAngeles",
+        "US_SSN_Sturgeon"
+      ]
+    },
+    {
+      "weapon_id": "CN_SLBM_JL2",
+      "parent": "FR_SLBM_M45",
+      "tier": 7,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "China",
+      "display_name": "JL-2",
+      "short_name": "JL-2",
+      "family": "CN_SLBM_JL2",
+      "role": "远程潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL2\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL2\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_SLBM_M45",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "CN_SSBN_Type094",
+        "CN_SSBN_Type094A"
+      ]
+    },
+    {
+      "weapon_id": "FR_SLBM_M45",
+      "parent": "RU_SLBM_R29RM",
+      "tier": 7,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "France",
+      "display_name": "M45",
+      "short_name": "M45",
+      "family": "FR_SLBM_M4",
+      "role": "改进型潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M45\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M45\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R29RM",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "FR_SSBN_LeRedoutable",
+        "FR_SSBN_LeTriomphant"
+      ]
+    },
+    {
+      "weapon_id": "RU_SLBM_R29RM",
+      "parent": "UK_SLBM_Polaris_A3TK",
+      "tier": 7,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-29RM",
+      "short_name": "R-29RM",
+      "family": "RU_SLBM_R29",
+      "role": "现代化潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RM\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RM\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_SLBM_Polaris_A3TK",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaIII",
+        "RU_SSBN_DeltaIV",
+        "RU_SSBN_Typhoon"
+      ]
+    },
+    {
+      "weapon_id": "UK_SLBM_Polaris_A3TK",
+      "parent": "IN_SLBM_K15",
+      "tier": 7,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "UK",
+      "display_name": "Polaris A3TK (Chevaline)",
+      "short_name": "A3TK",
+      "family": "UK_SLBM_Polaris_A3TK",
+      "role": "潜射弹道导弹（英国改进型）",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\UK_SLBM_Polaris_A3TK\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\UK_SLBM_Polaris_A3TK\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "IN_SLBM_K15",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_SPECIAL_SDV_Mk8",
+      "parent": "RU_SPECIAL_SDV_Sirena",
+      "tier": 7,
+      "category": "SPECIAL",
+      "category_label": "Special Payload",
+      "country": "USA",
+      "display_name": "Mk 8 SEAL Delivery Vehicle",
+      "short_name": "SDV-Mk8",
+      "family": "US_SPECIAL_SDV_Mk8",
+      "role": "水下输送载具",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_SDV_Mk8\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_SDV_Mk8\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SPECIAL_SDV_Sirena",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "CN_TORP_Yu5",
+      "parent": "US_TORP_Mk48_ADCAP",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "China",
+      "display_name": "Yu-5 torpedo",
+      "short_name": "Yu-5",
+      "family": "CN_TORP_Yu5",
+      "role": "线导热动力鱼雷",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu5\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu5\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk48_ADCAP",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "CN_TORP_Yu7",
+      "parent": "RU_TORP_6576A",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "China",
+      "display_name": "Yu-7 torpedo",
+      "short_name": "Yu-7",
+      "family": "CN_TORP_Yu7",
+      "role": "轻型反潜鱼雷",
+      "era": "Modern",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu7\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu7\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_6576A",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "CN_SSBN_Type094",
+        "CN_SSBN_Type094A",
+        "CN_SSBN_Type096",
+        "CN_SSN_Type093B"
+      ]
+    },
+    {
+      "weapon_id": "IN_TORP_TAL",
+      "parent": "RU_TORP_USET80K",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "India",
+      "display_name": "TAL Shyena lightweight torpedo",
+      "short_name": "TAL",
+      "family": "IN_TORP_TAL",
+      "role": "轻型反潜鱼雷",
+      "era": "Modern",
+      "asset_priority": null,
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\IN_TORP_TAL\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\IN_TORP_TAL\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_USET80K",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "IN_SSBN_Arihant"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_6576A",
+      "parent": "CN_TORP_Yu5",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "65-76A torpedo",
+      "short_name": "65-76A",
+      "family": "RU_TORP_6576",
+      "role": "650 毫米重型鱼雷改进型",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_6576A\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_6576A\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_TORP_Yu5",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_TORP_Shkval",
+      "parent": "RU_TORP_USET80",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "VA-111 Shkval",
+      "short_name": "Shkval",
+      "family": "RU_TORP_Shkval",
+      "role": "超空泡火箭鱼雷",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_Shkval\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_Shkval\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_USET80",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Typhoon",
+        "RU_SSN_Akula",
+        "RU_SSN_Sierra",
+        "RU_SSN_Yasen"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_TEST71M",
+      "parent": "RU_TORP_Shkval",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "TEST-71M torpedo",
+      "short_name": "TEST-71M",
+      "family": "RU_TORP_TEST71",
+      "role": "线导反潜鱼雷改进型",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST71M\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST71M\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_Shkval",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaIV",
+        "RU_SSN_Akula",
+        "RU_SSN_Sierra"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_UGST",
+      "parent": "CN_TORP_Yu7",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "UGST torpedo",
+      "short_name": "UGST",
+      "family": "RU_TORP_UGST",
+      "role": "现代热动力重型鱼雷",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_UGST\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_UGST\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_TORP_Yu7",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Borei",
+        "RU_SSN_Akula",
+        "RU_SSN_Sierra",
+        "RU_SSN_Yasen"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_USET80K",
+      "parent": "RU_TORP_UGST",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "USET-80K torpedo",
+      "short_name": "USET-80K",
+      "family": "RU_TORP_USET80",
+      "role": "通用电动鱼雷改进型",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_USET80K\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_USET80K\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_UGST",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Borei",
+        "RU_SSN_Yasen"
+      ]
+    },
+    {
+      "weapon_id": "UK_TORP_StingRay",
+      "parent": "RU_TORP_TEST71M",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "UK",
+      "display_name": "Sting Ray Mod 1",
+      "short_name": "StingRay",
+      "family": "UK_TORP_StingRay",
+      "role": "轻型反潜鱼雷",
+      "era": "Modern",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_StingRay\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_StingRay\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_TEST71M",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Vanguard",
+        "UK_SSN_AUKUS",
+        "UK_SSN_Astute",
+        "UK_SSN_Trafalgar"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_ADCAP",
+      "parent": "UK_TORP_StingRay",
+      "tier": 7,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 48 Mod 4 ADCAP",
+      "short_name": "Mk48-ADCAP",
+      "family": "US_TORP_Mk48",
+      "role": "远程重型鱼雷",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_ADCAP\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_ADCAP\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_TORP_StingRay",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T7 现代成熟武器"
+      },
+      "compatible_submarines": [
+        "US_SSBN_Ohio",
+        "US_SSN_LosAngeles",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "CN_ASM_YJ18",
+      "parent": "RU_ASM_Oniks",
+      "tier": 8,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "China",
+      "display_name": "YJ-18",
+      "short_name": "YJ-18",
+      "family": "CN_ASM_YJ18",
+      "role": "现代远程反舰巡航导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\CN_ASM_YJ18\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\CN_ASM_YJ18\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_Oniks",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "CN_SSN_Type093A",
+        "CN_SSN_Type093B",
+        "CN_SSN_Type095"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASM_Kalibr_3M54",
+      "parent": "RU_ASM_P700",
+      "tier": 8,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "Kalibr 3M54",
+      "short_name": "3M54",
+      "family": "RU_MISSILE_Kalibr",
+      "role": "现代反舰巡航导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Kalibr_3M54\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Kalibr_3M54\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_P700",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Akula",
+        "RU_SSN_Yasen",
+        "RU_SSN_YasenM"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASM_Oniks",
+      "parent": "RU_ASM_Kalibr_3M54",
+      "tier": 8,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "P-800 Oniks",
+      "short_name": "Oniks",
+      "family": "RU_ASM_Oniks",
+      "role": "现代超音速反舰导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Oniks\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Oniks\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASM_Kalibr_3M54",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Yasen",
+        "RU_SSN_YasenM"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASW_Otvet",
+      "parent": "RU_ASW_Veter",
+      "tier": 8,
+      "category": "ASW",
+      "category_label": "Anti-Submarine Missile",
+      "country": "Russia",
+      "display_name": "91R Otvet",
+      "short_name": "Otvet",
+      "family": "RU_ASW_Otvet",
+      "role": "现代反潜导弹",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Otvet\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Otvet\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_ASW_Veter",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_DECOY_ADC_Mk5",
+      "parent": "US_DECOY_ADC_Mk4",
+      "tier": 8,
+      "category": "DECOY",
+      "category_label": "Decoy System",
+      "country": "USA",
+      "display_name": "ADC Mk 5",
+      "short_name": "ADC-Mk5",
+      "family": "US_DECOY_ADC",
+      "role": "声学对抗装置",
+      "era": "Modern",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_ADC_Mk5\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_ADC_Mk5\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_DECOY_ADC_Mk4",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "CN_LAM_YJ18_LandAttack",
+      "parent": "US_LAM_Tomahawk_BlockIV",
+      "tier": 8,
+      "category": "LAM",
+      "category_label": "Land-Attack Missile",
+      "country": "China",
+      "display_name": "YJ-18 对陆攻击型",
+      "short_name": "YJ-18 LAM",
+      "family": "CN_ASM_YJ18",
+      "role": "对陆攻击巡航导弹型号",
+      "era": "Modern",
+      "asset_priority": null,
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\CN_LAM_YJ18_LandAttack\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\CN_LAM_YJ18_LandAttack\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_LAM_Tomahawk_BlockIV",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "CN_SSN_Type093B",
+        "CN_SSN_Type095"
+      ]
+    },
+    {
+      "weapon_id": "FR_LAM_MdCN",
+      "parent": "CN_LAM_YJ18_LandAttack",
+      "tier": 8,
+      "category": "LAM",
+      "category_label": "Land-Attack Missile",
+      "country": "France",
+      "display_name": "MdCN / SCALP Naval",
+      "short_name": "MdCN",
+      "family": "FR_LAM_MdCN",
+      "role": "对陆攻击巡航导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\FR_LAM_MdCN\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\FR_LAM_MdCN\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_LAM_YJ18_LandAttack",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "FR_SSN_Suffren"
+      ]
+    },
+    {
+      "weapon_id": "RU_LAM_Kalibr_3M14",
+      "parent": "US_LAM_Tomahawk_BlockIII",
+      "tier": 8,
+      "category": "LAM",
+      "category_label": "Land-Attack Missile",
+      "country": "Russia",
+      "display_name": "Kalibr 3M14",
+      "short_name": "3M14",
+      "family": "RU_MISSILE_Kalibr",
+      "role": "现代对陆攻击巡航导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\RU_LAM_Kalibr_3M14\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\RU_LAM_Kalibr_3M14\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_LAM_Tomahawk_BlockIII",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Yasen",
+        "RU_SSN_YasenM"
+      ]
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk_BlockIV",
+      "parent": "RU_LAM_Kalibr_3M14",
+      "tier": 8,
+      "category": "LAM",
+      "category_label": "Land-Attack Missile",
+      "country": "USA",
+      "display_name": "Tomahawk Block IV",
+      "short_name": "TACTOM IV",
+      "family": "US_LAM_Tomahawk",
+      "role": "现代对陆攻击巡航导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockIV\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockIV\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_LAM_Kalibr_3M14",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "UK_SSN_Astute",
+        "UK_SSN_Trafalgar",
+        "US_SSN_LosAngeles",
+        "US_SSN_Seawolf",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "FR_SLBM_M51",
+      "parent": "RU_SLBM_R29RMU2_Sineva",
+      "tier": 8,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "France",
+      "display_name": "M51",
+      "short_name": "M51",
+      "family": "FR_SLBM_M51",
+      "role": "现役潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M51\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M51\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R29RMU2_Sineva",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "FR_SSBN_LeTriomphant",
+        "FR_SSBN_SNLE3G"
+      ]
+    },
+    {
+      "weapon_id": "IN_SLBM_K4",
+      "parent": "RU_SLBM_R29RMU2_Liner",
+      "tier": 8,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "India",
+      "display_name": "K-4",
+      "short_name": "K-4",
+      "family": "IN_SLBM_K4",
+      "role": "中程潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K4\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K4\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R29RMU2_Liner",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "IN_SSBN_Arighaat",
+        "IN_SSBN_Arihant",
+        "IN_SSBN_S4",
+        "IN_SSBN_S5"
+      ]
+    },
+    {
+      "weapon_id": "RU_SLBM_R29RMU2_Liner",
+      "parent": "FR_SLBM_M51",
+      "tier": 8,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-29RMU2.1 Liner",
+      "short_name": "Liner",
+      "family": "RU_SLBM_R29",
+      "role": "改进型潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RMU2_Liner\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RMU2_Liner\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_SLBM_M51",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaIV"
+      ]
+    },
+    {
+      "weapon_id": "RU_SLBM_R29RMU2_Sineva",
+      "parent": "US_SLBM_Trident_D5",
+      "tier": 8,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-29RMU2 Sineva",
+      "short_name": "Sineva",
+      "family": "RU_SLBM_R29",
+      "role": "现役潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RMU2_Sineva\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RMU2_Sineva\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_SLBM_Trident_D5",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_DeltaIV"
+      ]
+    },
+    {
+      "weapon_id": "US_SLBM_Trident_D5",
+      "parent": "CN_SLBM_JL2",
+      "tier": 8,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "USA",
+      "display_name": "Trident II D5",
+      "short_name": "Trident D5",
+      "family": "US_SLBM_Trident",
+      "role": "现役主力潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_D5\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_D5\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_SLBM_JL2",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Vanguard",
+        "US_SSBN_Ohio"
+      ]
+    },
+    {
+      "weapon_id": "UK_SPECIAL_DDS",
+      "parent": "US_SPECIAL_DDS",
+      "tier": 8,
+      "category": "SPECIAL",
+      "category_label": "Special Payload",
+      "country": "UK",
+      "display_name": "UK Dry Deck Shelter",
+      "short_name": "DDS-UK",
+      "family": "UK_SPECIAL_DDS",
+      "role": "干式甲板掩体",
+      "era": "Cold War Late",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\UK_SPECIAL_DDS\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\UK_SPECIAL_DDS\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_SPECIAL_DDS",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_SPECIAL_ASDS",
+      "parent": "UK_SPECIAL_DDS",
+      "tier": 8,
+      "category": "SPECIAL",
+      "category_label": "Special Payload",
+      "country": "USA",
+      "display_name": "Advanced SEAL Delivery System",
+      "short_name": "ASDS",
+      "family": "US_SPECIAL_ASDS",
+      "role": "先进水下输送载具",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_ASDS\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_ASDS\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_SPECIAL_DDS",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "US_SPECIAL_DDS",
+      "parent": "US_SPECIAL_SDV_Mk8",
+      "tier": 8,
+      "category": "SPECIAL",
+      "category_label": "Special Payload",
+      "country": "USA",
+      "display_name": "Dry Deck Shelter",
+      "short_name": "DDS",
+      "family": "US_SPECIAL_DDS",
+      "role": "干式甲板掩体",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_DDS\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_DDS\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_SPECIAL_SDV_Mk8",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "RU_STRAT_Meteorit",
+      "parent": "US_STRAT_RegulusII",
+      "tier": 8,
+      "category": "STRAT",
+      "category_label": "Strategic Missile",
+      "country": "Russia",
+      "display_name": "P-750 Meteorit (SS-N-24)",
+      "short_name": "Meteorit",
+      "family": "RU_STRAT_Meteorit",
+      "role": "潜射战略巡航导弹",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\RU_STRAT_Meteorit\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\RU_STRAT_Meteorit\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_STRAT_RegulusII",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_STRAT_TLAM_N",
+      "parent": "RU_STRAT_Meteorit",
+      "tier": 8,
+      "category": "STRAT",
+      "category_label": "Strategic Missile",
+      "country": "USA",
+      "display_name": "BGM-109A Tomahawk TLAM-N",
+      "short_name": "TLAM-N",
+      "family": "US_STRAT_TLAM_N",
+      "role": "潜射战略巡航导弹",
+      "era": "Cold War Late",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\US_STRAT_TLAM_N\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\US_STRAT_TLAM_N\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_STRAT_Meteorit",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "CN_TORP_Yu6",
+      "parent": "UK_TORP_Spearfish",
+      "tier": 8,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "China",
+      "display_name": "Yu-6 torpedo",
+      "short_name": "Yu-6",
+      "family": "CN_TORP_Yu6",
+      "role": "现代重型鱼雷",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu6\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu6\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "UK_TORP_Spearfish",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "CN_SSBN_Type094",
+        "CN_SSBN_Type094A",
+        "CN_SSN_Type093",
+        "CN_SSN_Type093A",
+        "CN_SSN_Type093B",
+        "CN_SSN_Type095"
+      ]
+    },
+    {
+      "weapon_id": "IN_TORP_Varunastra",
+      "parent": "US_TORP_Mk48_Mod7",
+      "tier": 8,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "India",
+      "display_name": "Varunastra torpedo",
+      "short_name": "Varunastra",
+      "family": "IN_TORP_Varunastra",
+      "role": "重型线导鱼雷",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\IN_TORP_Varunastra\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\IN_TORP_Varunastra\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk48_Mod7",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "IN_SSBN_Arighaat",
+        "IN_SSBN_Arihant",
+        "IN_SSBN_S4",
+        "IN_SSBN_S5"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_TEST96",
+      "parent": "IN_TORP_TAL",
+      "tier": 8,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "TEST-96 torpedo",
+      "short_name": "TEST-96",
+      "family": "RU_TORP_TEST71",
+      "role": "深水线导鱼雷",
+      "era": "Modern",
+      "asset_priority": "MEDIUM",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST96\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST96\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "IN_TORP_TAL",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_TORP_UGST_M",
+      "parent": "CN_TORP_Yu6",
+      "tier": 8,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "UGST-M torpedo",
+      "short_name": "UGST-M",
+      "family": "RU_TORP_UGST",
+      "role": "现代热动力重型鱼雷改进型",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_UGST_M\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_UGST_M\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_TORP_Yu6",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_BoreiA",
+        "RU_SSN_YasenM"
+      ]
+    },
+    {
+      "weapon_id": "UK_TORP_Spearfish",
+      "parent": "RU_TORP_TEST96",
+      "tier": 8,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "UK",
+      "display_name": "Spearfish Mod 0",
+      "short_name": "Spearfish",
+      "family": "UK_TORP_Spearfish",
+      "role": "深水重型鱼雷",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Spearfish\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Spearfish\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_TEST96",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Vanguard",
+        "UK_SSN_Astute",
+        "UK_SSN_Swiftsure",
+        "UK_SSN_Trafalgar",
+        "UK_SSN_Valiant"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_Mod6",
+      "parent": "RU_TORP_UGST_M",
+      "tier": 8,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 48 Mod 6 CBASS",
+      "short_name": "Mk48-6",
+      "family": "US_TORP_Mk48",
+      "role": "现代重型鱼雷",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_Mod6\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_Mod6\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_UGST_M",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "US_SSN_LosAngeles",
+        "US_SSN_Seawolf",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_Mod7",
+      "parent": "US_TORP_Mk48_Mod6",
+      "tier": 8,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "USA",
+      "display_name": "Mk 48 Mod 7 CBASS",
+      "short_name": "Mk48-7",
+      "family": "US_TORP_Mk48",
+      "role": "现代先进重型鱼雷",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_Mod7\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_Mod7\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_TORP_Mk48_Mod6",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T8 现代先进武器"
+      },
+      "compatible_submarines": [
+        "US_SSBN_Columbia",
+        "US_SSN_Seawolf",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk_BlockV",
+      "parent": "FR_LAM_MdCN",
+      "tier": 9,
+      "category": "LAM",
+      "category_label": "Land-Attack Missile",
+      "country": "USA",
+      "display_name": "Tomahawk Block V",
+      "short_name": "TACTOM V",
+      "family": "US_LAM_Tomahawk",
+      "role": "现代多用途巡航导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockV\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockV\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_LAM_MdCN",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": [
+        "UK_SSN_AUKUS",
+        "UK_SSN_Astute",
+        "US_SSN_Virginia"
+      ]
+    },
+    {
+      "weapon_id": "CN_SLBM_JL3",
+      "parent": "RU_SLBM_R30_Bulava",
+      "tier": 9,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "China",
+      "display_name": "JL-3",
+      "short_name": "JL-3",
+      "family": "CN_SLBM_JL3",
+      "role": "新一代远程潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL3\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL3\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R30_Bulava",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": [
+        "CN_SSBN_Type096"
+      ]
+    },
+    {
+      "weapon_id": "RU_SLBM_R30_Bulava",
+      "parent": "US_SLBM_Trident_D5LE",
+      "tier": 9,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-30 Bulava",
+      "short_name": "Bulava",
+      "family": "RU_SLBM_R30",
+      "role": "现役潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R30_Bulava\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R30_Bulava\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "US_SLBM_Trident_D5LE",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_Borei",
+        "RU_SSBN_BoreiA"
+      ]
+    },
+    {
+      "weapon_id": "RU_SLBM_R39",
+      "parent": "IN_SLBM_K4",
+      "tier": 9,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-39 (SS-N-20 Sturgeon)",
+      "short_name": "R-39",
+      "family": "RU_SLBM_R39",
+      "role": "潜射弹道导弹（固体燃料）",
+      "era": "Cold War Late",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R39\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R39\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "IN_SLBM_K4",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "RU_SLBM_R39M",
+      "parent": "RU_SLBM_R39",
+      "tier": 9,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "Russia",
+      "display_name": "R-39M (Bark)",
+      "short_name": "R-39M",
+      "family": "RU_SLBM_R39",
+      "role": "潜射弹道导弹（取消项目）",
+      "era": "Cold War Late",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R39M\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R39M\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R39",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": []
+    },
+    {
+      "weapon_id": "US_SLBM_Trident_D5LE",
+      "parent": "RU_SLBM_R39M",
+      "tier": 9,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "USA",
+      "display_name": "Trident II D5LE",
+      "short_name": "D5LE",
+      "family": "US_SLBM_Trident",
+      "role": "延寿型潜射弹道导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_D5LE\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_D5LE\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_SLBM_R39M",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Dreadnought",
+        "UK_SSBN_Vanguard",
+        "US_SSBN_Columbia",
+        "US_SSBN_Ohio"
+      ]
+    },
+    {
+      "weapon_id": "FR_TORP_F21",
+      "parent": "RU_TORP_Fizik",
+      "tier": 9,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "France",
+      "display_name": "F21 Artemis torpedo",
+      "short_name": "F21",
+      "family": "FR_TORP_F21",
+      "role": "现代重型鱼雷",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_F21\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_F21\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "RU_TORP_Fizik",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": [
+        "FR_SSBN_LeTriomphant",
+        "FR_SSBN_SNLE3G",
+        "FR_SSN_Rubis",
+        "FR_SSN_Suffren"
+      ]
+    },
+    {
+      "weapon_id": "RU_TORP_Fizik",
+      "parent": "IN_TORP_Varunastra",
+      "tier": 9,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "Russia",
+      "display_name": "Fizik torpedo",
+      "short_name": "Fizik",
+      "family": "RU_TORP_Fizik",
+      "role": "新一代深水高速鱼雷",
+      "era": "Modern",
+      "asset_priority": "LOW",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_Fizik\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_Fizik\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "IN_TORP_Varunastra",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": [
+        "RU_SSBN_BoreiA",
+        "RU_SSN_Yasen",
+        "RU_SSN_YasenM"
+      ]
+    },
+    {
+      "weapon_id": "UK_TORP_Spearfish_Mod1",
+      "parent": "FR_TORP_F21",
+      "tier": 9,
+      "category": "TORP",
+      "category_label": "Torpedo",
+      "country": "UK",
+      "display_name": "Spearfish Mod 1",
+      "short_name": "Spearfish-1",
+      "family": "UK_TORP_Spearfish",
+      "role": "深水重型鱼雷升级型",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Spearfish_Mod1\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Spearfish_Mod1\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "FR_TORP_F21",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T9 新一代高端武器"
+      },
+      "compatible_submarines": [
+        "UK_SSBN_Dreadnought",
+        "UK_SSN_AUKUS",
+        "UK_SSN_Astute"
+      ]
+    },
+    {
+      "weapon_id": "RU_ASM_Zircon",
+      "parent": "CN_ASM_YJ18",
+      "tier": 10,
+      "category": "ASM",
+      "category_label": "Anti-Ship Missile",
+      "country": "Russia",
+      "display_name": "3M22 Tsirkon",
+      "short_name": "Zircon",
+      "family": "RU_ASM_Zircon",
+      "role": "新一代高超音速反舰导弹",
+      "era": "Modern",
+      "asset_priority": "HIGH",
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Zircon\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Zircon\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_ASM_YJ18",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T10 现代/未来顶级游戏武器"
+      },
+      "compatible_submarines": [
+        "RU_SSN_Yasen",
+        "RU_SSN_YasenM"
+      ]
+    },
+    {
+      "weapon_id": "IN_SLBM_K5",
+      "parent": "CN_SLBM_JL3",
+      "tier": 10,
+      "category": "SLBM",
+      "category_label": "Ballistic Missile",
+      "country": "India",
+      "display_name": "K-5",
+      "short_name": "K-5",
+      "family": "IN_SLBM_K5",
+      "role": "计划中的远程潜射弹道导弹",
+      "era": "Future",
+      "asset_priority": null,
+      "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K5\\Preview\\Icon_256.png",
+      "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K5\\Preview\\Hero.png",
+      "unlock_requirements": {
+        "previous_weapon": "CN_SLBM_JL3",
+        "platform_requirement": "需要与该武器存在 CONFIRMED/PROBABLE 兼容关系的潜艇平台。",
+        "game_tier_requirement": "玩家科技树达到 T10 现代/未来顶级游戏武器"
+      },
+      "compatible_submarines": [
+        "IN_SSBN_S4",
+        "IN_SSBN_S5"
+      ]
+    }
+  ]
+}

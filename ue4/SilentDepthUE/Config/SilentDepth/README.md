@@ -1,39 +1,38 @@
-# Config/SilentDepth — 运行时数据
+# Config/SilentDepth — 运行时数据（生成物）
 
-本目录存放游戏在运行时读取的 JSON 数据，与 `Config/balance.json` 同级同机制（`FPaths::ProjectConfigDir()` + `FFileHelper::LoadFileToString`，见 `Source/SilentDepthUE/Core/Balance.cpp` 与 `SubmarinePawn.cpp`）。
+游戏在运行时读取的 JSON 数据，与 `Config/balance.json` 同级同机制
+（`FPaths::ProjectConfigDir()` + `FFileHelper::LoadFileToString`）。
+
+## 唯一权威
+
+**权威是仓库根的 `SilentDepth_Assets/`（生产数据）。** 本目录下的一切都是生成物：
+
+```text
+SilentDepth_Assets/                       生产数据（唯一权威）
+        │  node tools/ue4/sync-tech-tree-data.mjs
+        ▼
+ue4/SilentDepthUE/Config/SilentDepth/     运行时副本 + 哈希清单
+```
+
+- 运行时只读本目录，绝不读资产库——打包版本旁边没有仓库。
+- 反向的"以 Config 为准"不再成立：手工改本目录的文件会被漂移检查判为错误。
+- 每个副本的来源与 SHA-256 记录在 `_sync_manifest.json`，`--check` 逐项比对。
 
 ## 文件
 
-| 文件 | 内容 | 来源 |
-|---|---|---|
-| `technology_tree.json` | 科技树：按 T 级 / 国家 / 艇型组织的解锁节点 | `ArtSource/SilentDepth_Assets/TechnologyTree/` |
-| `tier_manifest.json` | 每条资产的 tier、tier 理由、国家、艇型、资产状态 | 同上 |
-| `submarine_manifest.json` | 54 条资产的主清单：LOD/碰撞/贴图路径、变体、状态、来源引用 | `ArtSource/SilentDepth_Assets/Manifest/` |
+| 路径 | 内容 |
+|---|---|
+| `TechTree/*.json` | 五类科技树的目录、层阶与分支文档、兼容矩阵、安装位定义（16 个） |
+| `_sync_manifest.json` | 全部运行时副本的来源与哈希清单（19 项，含下列历史副本） |
+| `submarine_manifest.json`、`technology_tree.json`、`tier_manifest.json` | 早期手工复制的副本，现纳入同一同步与哈希检查 |
+| `research_cost.json` | DEC-004 研究经济数值（手写配置，不是生成物） |
 
-复制于 2026-09-10，源文件生成日期为 2026-09-08 / 09-09。
+科技树的运行时 schema、加载器与失败关闭规则见
+`docs/UE4_TECH_TREE_SCHEMA.md`。
 
-## 校验哈希
-
-```text
-submarine_manifest.json 3cc7e46690bbc34d1840973dedcbb111253e87c67bb987ca0fa0199259299ce7
-technology_tree.json    068f5db4e508035f65c204cf99f825d6bffac4b0abcef503a89629900b96c14b
-tier_manifest.json      ecb70105553111a6ee6fa20e706b5610b12e6809297a78c28091a1dca1a83b2c
-```
-
-## 漂移风险
-
-这三个文件是 `ArtSource/SilentDepth_Assets/` 的副本，而资产工厂的 `Tools/production_runner.py` 与 `Tools/create_submarine_asset.py` 写入的是 `ArtSource` 侧。**两边会各自演进。**
-
-当前约定：
-
-- **`Config/SilentDepth/` 是运行时权威**，游戏与 C++ 只读这里。
-- `ArtSource/` 侧是生产流水线的工作区，产出变更后需要显式同步过来。
-- `submarine_manifest.json` 的 `lod0..lod3` / `collision` 字段在 UE 导入完成后必须回填，否则清单与实际导入结果不符。
-
-检查是否漂移：
+## 检查漂移
 
 ```powershell
-Get-ChildItem "Config\SilentDepth\*.json" | ForEach-Object {
-  "$($_.Name) $((Get-FileHash $_.FullName -Algorithm SHA256).Hash.ToLower())"
-}
+node tools/ue4/sync-tech-tree-data.mjs --check   # 有漂移则非零退出
+node tools/ue4/sync-tech-tree-data.mjs           # 重新生成
 ```

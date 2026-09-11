@@ -1,0 +1,2182 @@
+{
+  "schema": "silent-depth-defensive-asset-manifest-v1",
+  "generated_at": "2026-09-11",
+  "ue_target": {
+    "engine": "Unreal Engine",
+    "version": "4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "shared_materials": [
+    "Metal",
+    "DarkMetal",
+    "Rubber",
+    "Composite",
+    "Paint",
+    "Glass",
+    "AntennaMaterial"
+  ],
+  "sockets": {
+    "SOCKET_EW_MAST": "ESM / electronic warfare mast seat",
+    "SOCKET_EW_ANTENNA": "ESM antenna or antenna array seat",
+    "SOCKET_DECOY_LAUNCHER_01": "forward decoy launcher seat",
+    "SOCKET_DECOY_LAUNCHER_02": "aft decoy launcher seat",
+    "SOCKET_COUNTERMEASURE_01": "forward countermeasure tube seat",
+    "SOCKET_COUNTERMEASURE_02": "aft countermeasure tube seat"
+  },
+  "policy_zh": [
+    "manifest 记录磁盘真实状态；缺失文件如实为 present=false，不写占位。",
+    "每个资产由 sds_dataset.ASSETS 定义，未登记的目录视为越权创建并在此列出。"
+  ],
+  "assets": [
+    {
+      "asset_id": "US_EW_ESM_GENERIC",
+      "category": "ESM",
+      "category_dir": "ESM",
+      "branch": "ESM",
+      "family_id": "ESM-DIGITAL",
+      "country": "USA",
+      "priority": "HIGH",
+      "label": "Generic ESM mast assembly",
+      "label_zh": "通用 ESM 桅杆组件",
+      "geometry": "esm_mast",
+      "dimensions_m": {
+        "height": 9.4,
+        "diameter": 0.34
+      },
+      "sockets": [
+        "SOCKET_EW_MAST",
+        "SOCKET_EW_ANTENNA"
+      ],
+      "materials": [
+        "Metal",
+        "DarkMetal",
+        "Composite",
+        "AntennaMaterial",
+        "Rubber"
+      ],
+      "interior": false,
+      "asset_dir": "ESM/US_EW_ESM_GENERIC",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/US_EW_ESM_GENERIC_MASTER.blend",
+        "present": true,
+        "sha256": "93b01440be21afb64b3af08fa5ebe175dd3d3d3a88e726d86b06af8d06dff35c"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/US_EW_ESM_GENERIC_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "9525b0eeca3cf348bd3eb24087ac40cb29d41ba52d42f677c2782914f4267c33"
+        },
+        "LOD1": {
+          "path": "FBX/US_EW_ESM_GENERIC_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "b194141dd69e1eacd18d57458f86f2a0fa6fa49559f67ed393b6a218bb0e2089"
+        },
+        "LOD2": {
+          "path": "FBX/US_EW_ESM_GENERIC_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "2e4e05cab9edc6ab917054f513f9109c7b97d9a4f56630317ca32f3dbb6a5df1"
+        },
+        "LOD3": {
+          "path": "FBX/US_EW_ESM_GENERIC_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "12590bfda5ada8c8b2ff8f11db2dc370ced42536317e6a42172ea06d1d4aa146"
+        }
+      },
+      "collision": {
+        "path": "Collision/US_EW_ESM_GENERIC_COLLISION.fbx",
+        "present": true,
+        "sha256": "e56e25581f3831b8d9fb3cf59699d55bdddaa9e0bb060741d8c3ed3a71e5896b"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "US_EW_ESM_GENERIC_LOD0",
+          "triangles": 5028,
+          "vertices": 3228
+        },
+        {
+          "name": "US_EW_ESM_GENERIC_LOD1",
+          "triangles": 2514,
+          "vertices": 1815
+        },
+        {
+          "name": "US_EW_ESM_GENERIC_LOD2",
+          "triangles": 1106,
+          "vertices": 973
+        },
+        {
+          "name": "US_EW_ESM_GENERIC_LOD3",
+          "triangles": 426,
+          "vertices": 430
+        }
+      ],
+      "triangles_lod0": 5028,
+      "files": {
+        "Blend/US_EW_ESM_GENERIC_MASTER.blend": {
+          "bytes": 192450,
+          "sha256": "93b01440be21afb64b3af08fa5ebe175dd3d3d3a88e726d86b06af8d06dff35c"
+        },
+        "Blend/US_EW_ESM_GENERIC_MASTER.blend1": {
+          "bytes": 192463,
+          "sha256": "af6679372ace1b2b491fccd7872f5a02b279c6c2359c23196c5a6d162a3ed9e0"
+        },
+        "Collision/US_EW_ESM_GENERIC_COLLISION.fbx": {
+          "bytes": 22700,
+          "sha256": "e56e25581f3831b8d9fb3cf59699d55bdddaa9e0bb060741d8c3ed3a71e5896b"
+        },
+        "Documentation/US_EW_ESM_GENERIC_README.md": {
+          "bytes": 685,
+          "sha256": "e1a6052ba7699d994b19b9e558b8f3d3e7afb42ebdc0419029298fbe15565199"
+        },
+        "Documentation/US_EW_ESM_GENERIC_SPEC.json": {
+          "bytes": 3672,
+          "sha256": "a104948a04a7cb8bc40be0a77961edf26c132d1cec5baa91a77e6059daf391c2"
+        },
+        "FBX/US_EW_ESM_GENERIC_LOD0.fbx": {
+          "bytes": 142716,
+          "sha256": "9525b0eeca3cf348bd3eb24087ac40cb29d41ba52d42f677c2782914f4267c33"
+        },
+        "FBX/US_EW_ESM_GENERIC_LOD1.fbx": {
+          "bytes": 231356,
+          "sha256": "b194141dd69e1eacd18d57458f86f2a0fa6fa49559f67ed393b6a218bb0e2089"
+        },
+        "FBX/US_EW_ESM_GENERIC_LOD2.fbx": {
+          "bytes": 113692,
+          "sha256": "2e4e05cab9edc6ab917054f513f9109c7b97d9a4f56630317ca32f3dbb6a5df1"
+        },
+        "FBX/US_EW_ESM_GENERIC_LOD3.fbx": {
+          "bytes": 59708,
+          "sha256": "12590bfda5ada8c8b2ff8f11db2dc370ced42536317e6a42172ea06d1d4aa146"
+        },
+        "Preview/US_EW_ESM_GENERIC_Detail.png": {
+          "bytes": 308329,
+          "sha256": "924c0697418b67fdbffea842f64f94630723fb112912c5c7b950b1357a9a0dd4"
+        },
+        "Preview/US_EW_ESM_GENERIC_Front.png": {
+          "bytes": 302423,
+          "sha256": "7a56e439afd389e339dcb8306a22577d0a58165c65fcc48e99e798c54e350910"
+        },
+        "Preview/US_EW_ESM_GENERIC_Gray_Front.png": {
+          "bytes": 304663,
+          "sha256": "27880d3a24ba0d802574752f155c361a82194abe1f0a609a8510dcbfc502932f"
+        },
+        "Preview/US_EW_ESM_GENERIC_Gray_ThreeQuarter.png": {
+          "bytes": 305000,
+          "sha256": "1c664bae504fbd20983b6e95f4841fdffdbd25eaedcfdbc64cfff7cc694404d1"
+        },
+        "Preview/US_EW_ESM_GENERIC_Side.png": {
+          "bytes": 306025,
+          "sha256": "23a7489da9383823bf9c3cdf160ee9e3d33de62d3fb5d8e442102fa88f554ac2"
+        },
+        "Preview/US_EW_ESM_GENERIC_ThreeQuarter.png": {
+          "bytes": 306384,
+          "sha256": "ae6a7e3133d3cf09801dd98f37b310f517c88ea133e9d4a806bf2066c54da34f"
+        },
+        "Preview/US_EW_ESM_GENERIC_Top.png": {
+          "bytes": 302910,
+          "sha256": "c29f5f8f47aa589877c701b8b4be91bae427d3b3283f7dd881efe98977d77d70"
+        },
+        "Validation/US_EW_ESM_GENERIC_BUILD_STATS.json": {
+          "bytes": 1412,
+          "sha256": "ac17ba5f78e12b5537115fe8df369cf905fcfbcdee6c16c265e649b58764f8a4"
+        },
+        "Validation/US_EW_ESM_GENERIC_VALIDATION.json": {
+          "bytes": 2429,
+          "sha256": "f72c8f3242ee87ccafe54c7df66f5e2ffec9d54b2638810f17ea81135253d8f6"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "US_EW_BLQ10",
+      "category": "ESM",
+      "category_dir": "ESM",
+      "branch": "ESM",
+      "family_id": "ESM-DIGITAL",
+      "country": "USA",
+      "priority": "HIGH",
+      "label": "AN/BLQ-10 class integrated ESM mast",
+      "label_zh": "AN/BLQ-10 级整合 ESM 桅杆",
+      "geometry": "esm_mast_integrated",
+      "dimensions_m": {
+        "height": 10.2,
+        "diameter": 0.4
+      },
+      "sockets": [
+        "SOCKET_EW_MAST",
+        "SOCKET_EW_ANTENNA"
+      ],
+      "materials": [
+        "Metal",
+        "DarkMetal",
+        "Composite",
+        "AntennaMaterial",
+        "Rubber"
+      ],
+      "interior": false,
+      "asset_dir": "ESM/US_EW_BLQ10",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/US_EW_BLQ10_MASTER.blend",
+        "present": true,
+        "sha256": "a0871648822102528b2c8bee5697652787119b5124d62b30580bd909506bb05d"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/US_EW_BLQ10_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "dc6896931afd8df8ba1c7f394dc45890a406da9301f08ba2ef0f5eff1b00e2c3"
+        },
+        "LOD1": {
+          "path": "FBX/US_EW_BLQ10_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "eb25fc0a0fa77b845c20a1c7e9ca3ef963cf42b06ebadb8b446ad428e3ea078d"
+        },
+        "LOD2": {
+          "path": "FBX/US_EW_BLQ10_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "39f3f5c38b634acc3119a8f1ac2437fcd062ff108cca59f8a20f30373eed66f9"
+        },
+        "LOD3": {
+          "path": "FBX/US_EW_BLQ10_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "bcdf917b1e183d67357b21c4b478e3c7f7503299cbf530cf8cfae2778f25f8c7"
+        }
+      },
+      "collision": {
+        "path": "Collision/US_EW_BLQ10_COLLISION.fbx",
+        "present": true,
+        "sha256": "6313ba9c1eeb5a27704e89ff97b7c8c501b948f3c0e925423b55f44d30b53c84"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "US_EW_BLQ10_LOD0",
+          "triangles": 5472,
+          "vertices": 3560
+        },
+        {
+          "name": "US_EW_BLQ10_LOD1",
+          "triangles": 2736,
+          "vertices": 2000
+        },
+        {
+          "name": "US_EW_BLQ10_LOD2",
+          "triangles": 1202,
+          "vertices": 993
+        },
+        {
+          "name": "US_EW_BLQ10_LOD3",
+          "triangles": 465,
+          "vertices": 501
+        }
+      ],
+      "triangles_lod0": 5472,
+      "files": {
+        "Blend/US_EW_BLQ10_MASTER.blend": {
+          "bytes": 205759,
+          "sha256": "a0871648822102528b2c8bee5697652787119b5124d62b30580bd909506bb05d"
+        },
+        "Blend/US_EW_BLQ10_MASTER.blend1": {
+          "bytes": 205783,
+          "sha256": "9030e4143d398fe9ba7c8836b17eebe44d73faa570a4df3550c27abe66a99fe7"
+        },
+        "Collision/US_EW_BLQ10_COLLISION.fbx": {
+          "bytes": 22716,
+          "sha256": "6313ba9c1eeb5a27704e89ff97b7c8c501b948f3c0e925423b55f44d30b53c84"
+        },
+        "Documentation/US_EW_BLQ10_README.md": {
+          "bytes": 702,
+          "sha256": "e0726c18aa5f2edbbc0fbcf3d58ee882523aa59f401cec9e353e8cf5bde4c229"
+        },
+        "Documentation/US_EW_BLQ10_SPEC.json": {
+          "bytes": 3601,
+          "sha256": "b2543f6ca19913ad00b2d57a910becb82e26f18cfe09ea49cdc6ec5908c52c28"
+        },
+        "FBX/US_EW_BLQ10_LOD0.fbx": {
+          "bytes": 160204,
+          "sha256": "dc6896931afd8df8ba1c7f394dc45890a406da9301f08ba2ef0f5eff1b00e2c3"
+        },
+        "FBX/US_EW_BLQ10_LOD1.fbx": {
+          "bytes": 269548,
+          "sha256": "eb25fc0a0fa77b845c20a1c7e9ca3ef963cf42b06ebadb8b446ad428e3ea078d"
+        },
+        "FBX/US_EW_BLQ10_LOD2.fbx": {
+          "bytes": 125420,
+          "sha256": "39f3f5c38b634acc3119a8f1ac2437fcd062ff108cca59f8a20f30373eed66f9"
+        },
+        "FBX/US_EW_BLQ10_LOD3.fbx": {
+          "bytes": 64844,
+          "sha256": "bcdf917b1e183d67357b21c4b478e3c7f7503299cbf530cf8cfae2778f25f8c7"
+        },
+        "Preview/US_EW_BLQ10_Detail.png": {
+          "bytes": 315145,
+          "sha256": "3e3fd7016b27ced77a8194b54e1034d47dea4ed887a77d7f82a6b82343005800"
+        },
+        "Preview/US_EW_BLQ10_Front.png": {
+          "bytes": 298971,
+          "sha256": "cb4eaa13ba97d205fbefa6fdcd4c1e9654da93b1a85151e846c40c9720f1fb00"
+        },
+        "Preview/US_EW_BLQ10_Gray_Front.png": {
+          "bytes": 305327,
+          "sha256": "2170335333800ce50c6033291a045483dd3e9c0b4e2daf1e15233cc488826551"
+        },
+        "Preview/US_EW_BLQ10_Gray_ThreeQuarter.png": {
+          "bytes": 305708,
+          "sha256": "cf8ae032f470dfd8c7e1555cf591616a060fffa4c6788866ba9609fd0e6ee621"
+        },
+        "Preview/US_EW_BLQ10_Side.png": {
+          "bytes": 306053,
+          "sha256": "8a8614457f34f121db87afc7016510959ae718db1d274d07f5a255946635cc28"
+        },
+        "Preview/US_EW_BLQ10_ThreeQuarter.png": {
+          "bytes": 298921,
+          "sha256": "febdd4e5479c904ccd101f1f549cd63e165f7da80f2ebe375f00d64249ed52f3"
+        },
+        "Preview/US_EW_BLQ10_Top.png": {
+          "bytes": 303179,
+          "sha256": "128020d777c4d35c8a356c6e97a2df9b16163d8096c6021014cc0630bd76e57c"
+        },
+        "Validation/US_EW_BLQ10_BUILD_STATS.json": {
+          "bytes": 1427,
+          "sha256": "3a301d18e3150f79f8c366c7ee882f8df82a24eb521188804823774494d53af8"
+        },
+        "Validation/US_EW_BLQ10_VALIDATION.json": {
+          "bytes": 2423,
+          "sha256": "b2c946441c68af710f36e05f51a8e587fb96ed09669ddda7184a8cca5c70a833"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "UK_EW_ASTUTE",
+      "category": "ESM",
+      "category_dir": "ESM",
+      "branch": "ESM",
+      "family_id": "ESM-MULTIBAND",
+      "country": "UK",
+      "priority": "MEDIUM",
+      "label": "UK SSN ESM mast",
+      "label_zh": "英国攻击核潜艇 ESM 桅杆",
+      "geometry": "esm_mast_blade",
+      "dimensions_m": {
+        "height": 9.8,
+        "diameter": 0.36
+      },
+      "sockets": [
+        "SOCKET_EW_MAST"
+      ],
+      "materials": [
+        "Metal",
+        "DarkMetal",
+        "Composite",
+        "AntennaMaterial"
+      ],
+      "interior": false,
+      "asset_dir": "ESM/UK_EW_ASTUTE",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/UK_EW_ASTUTE_MASTER.blend",
+        "present": true,
+        "sha256": "10e3d80691952c9a8daaf7f8c6d518dd1fff7cf470ce7546140d1f8c4dfe6910"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/UK_EW_ASTUTE_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "a27d0f8d5e7a8d1f208c4d57958d89e4b5a8b3855acd29ae48f79ca85990fc63"
+        },
+        "LOD1": {
+          "path": "FBX/UK_EW_ASTUTE_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "41078866edda9d013445e9bb4dc4d6222cb2d145a3ec188ab98eb4e47ff3cf5a"
+        },
+        "LOD2": {
+          "path": "FBX/UK_EW_ASTUTE_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "f5bb3cd36a44ab464ff549f872d4b6c2c0257fc7555007f60b342b8416aef03a"
+        },
+        "LOD3": {
+          "path": "FBX/UK_EW_ASTUTE_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "7e0561a70d3af117b69ccc0ddff415a7f6c3bac0cf946c8bb900f0776b493707"
+        }
+      },
+      "collision": {
+        "path": "Collision/UK_EW_ASTUTE_COLLISION.fbx",
+        "present": true,
+        "sha256": "15891dec9e37c77b3374e2d3bc7b4291d284b3f2cf116363fefc7609d3911670"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "UK_EW_ASTUTE_LOD0",
+          "triangles": 3368,
+          "vertices": 2256
+        },
+        {
+          "name": "UK_EW_ASTUTE_LOD1",
+          "triangles": 1684,
+          "vertices": 1254
+        },
+        {
+          "name": "UK_EW_ASTUTE_LOD2",
+          "triangles": 740,
+          "vertices": 598
+        },
+        {
+          "name": "UK_EW_ASTUTE_LOD3",
+          "triangles": 286,
+          "vertices": 332
+        }
+      ],
+      "triangles_lod0": 3368,
+      "files": {
+        "Blend/UK_EW_ASTUTE_MASTER.blend": {
+          "bytes": 160286,
+          "sha256": "10e3d80691952c9a8daaf7f8c6d518dd1fff7cf470ce7546140d1f8c4dfe6910"
+        },
+        "Blend/UK_EW_ASTUTE_MASTER.blend1": {
+          "bytes": 160287,
+          "sha256": "acb128f5a2c8fe4482c991836753a4f5e765400ba6e9134563138e184cea3a04"
+        },
+        "Collision/UK_EW_ASTUTE_COLLISION.fbx": {
+          "bytes": 22684,
+          "sha256": "15891dec9e37c77b3374e2d3bc7b4291d284b3f2cf116363fefc7609d3911670"
+        },
+        "Documentation/UK_EW_ASTUTE_README.md": {
+          "bytes": 644,
+          "sha256": "527359d5efc7a294b1537e02ea783b44058b970dc39be78f4078d5b78c3a8728"
+        },
+        "Documentation/UK_EW_ASTUTE_SPEC.json": {
+          "bytes": 3534,
+          "sha256": "28a5504f48af7df143ebe91c133a4a1809611abe28ae359aa296bfca50d7786e"
+        },
+        "FBX/UK_EW_ASTUTE_LOD0.fbx": {
+          "bytes": 107836,
+          "sha256": "a27d0f8d5e7a8d1f208c4d57958d89e4b5a8b3855acd29ae48f79ca85990fc63"
+        },
+        "FBX/UK_EW_ASTUTE_LOD1.fbx": {
+          "bytes": 159276,
+          "sha256": "41078866edda9d013445e9bb4dc4d6222cb2d145a3ec188ab98eb4e47ff3cf5a"
+        },
+        "FBX/UK_EW_ASTUTE_LOD2.fbx": {
+          "bytes": 78124,
+          "sha256": "f5bb3cd36a44ab464ff549f872d4b6c2c0257fc7555007f60b342b8416aef03a"
+        },
+        "FBX/UK_EW_ASTUTE_LOD3.fbx": {
+          "bytes": 47596,
+          "sha256": "7e0561a70d3af117b69ccc0ddff415a7f6c3bac0cf946c8bb900f0776b493707"
+        },
+        "Preview/UK_EW_ASTUTE_Detail.png": {
+          "bytes": 305785,
+          "sha256": "1a3292194792ea8631b4cba27468084e83eb8ee40a0e099cf8c81b6bcf604d8d"
+        },
+        "Preview/UK_EW_ASTUTE_Front.png": {
+          "bytes": 300778,
+          "sha256": "ebb208bb0807549ed9946795417a1a492ce19270351983b54d27ddfc9319079c"
+        },
+        "Preview/UK_EW_ASTUTE_Gray_Front.png": {
+          "bytes": 302897,
+          "sha256": "0a85382b54acda82e1c52feaec9241280bb4155eb33050ef90d59f968461e613"
+        },
+        "Preview/UK_EW_ASTUTE_Gray_ThreeQuarter.png": {
+          "bytes": 304888,
+          "sha256": "d3686b22f78a676090855939ae864a13d86fab9e01b6bfe5312a1db7940e2543"
+        },
+        "Preview/UK_EW_ASTUTE_Side.png": {
+          "bytes": 304283,
+          "sha256": "eb2489675aa9427c338a570f40ebbde11cb3ca1dd4577d39bf50e5e3f007a9f3"
+        },
+        "Preview/UK_EW_ASTUTE_ThreeQuarter.png": {
+          "bytes": 312726,
+          "sha256": "e7ffe85a841caec5ffb4e4f0a46b135ab714a7dfcd09310babeb9e83fd5f49da"
+        },
+        "Preview/UK_EW_ASTUTE_Top.png": {
+          "bytes": 302514,
+          "sha256": "ea0491a5c654fbbaff5d14fc70f949426c1ced36cb2ae39c325848fba61cb9b2"
+        },
+        "Validation/UK_EW_ASTUTE_BUILD_STATS.json": {
+          "bytes": 1304,
+          "sha256": "54e0b50534a2fce7092b23f4fbe43da0f11b26be7b007ce8dde4268d15358838"
+        },
+        "Validation/UK_EW_ASTUTE_VALIDATION.json": {
+          "bytes": 2408,
+          "sha256": "cc8381877ef97cc97c3a2d77eeaaf95e075d1f3b492332a5fd187478f6688a4b"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "RU_EW_AKULA",
+      "category": "ESM",
+      "category_dir": "ESM",
+      "branch": "ESM",
+      "family_id": "ESM-CLASSIFICATION",
+      "country": "Russia",
+      "priority": "MEDIUM",
+      "label": "Russian SSN ESM mast",
+      "label_zh": "俄制攻击核潜艇 ESM 桅杆",
+      "geometry": "esm_mast_rugged",
+      "dimensions_m": {
+        "height": 8.6,
+        "diameter": 0.42
+      },
+      "sockets": [
+        "SOCKET_EW_MAST"
+      ],
+      "materials": [
+        "Metal",
+        "DarkMetal",
+        "Rubber",
+        "AntennaMaterial"
+      ],
+      "interior": false,
+      "asset_dir": "ESM/RU_EW_AKULA",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/RU_EW_AKULA_MASTER.blend",
+        "present": true,
+        "sha256": "12c4309c9f6e7c2f110d70ffdbcedeae96dbd8b70e03d0e24774abf30cb197c2"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/RU_EW_AKULA_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "ca79c536ed78b276b856472304a0ad838f12e0bc1d739d37dca069b7391c8c8c"
+        },
+        "LOD1": {
+          "path": "FBX/RU_EW_AKULA_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "30d977cfbfd394bb7ba41346f384e5017383cafa7c7a66c2bf110909a03b2525"
+        },
+        "LOD2": {
+          "path": "FBX/RU_EW_AKULA_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "78881b5690daf17c096ed2f86881aacc8e9011812268da4598bb8c57f092c3ce"
+        },
+        "LOD3": {
+          "path": "FBX/RU_EW_AKULA_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "7128877c0b4b3fcd7722e884813b8bae0dea470c602797e22b7ef9f740215e10"
+        }
+      },
+      "collision": {
+        "path": "Collision/RU_EW_AKULA_COLLISION.fbx",
+        "present": true,
+        "sha256": "f95635d7990dd8fa8c19898a74acfd7a242cd91a006958b498d7d4702ee8af73"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "RU_EW_AKULA_LOD0",
+          "triangles": 2696,
+          "vertices": 1852
+        },
+        {
+          "name": "RU_EW_AKULA_LOD1",
+          "triangles": 1348,
+          "vertices": 1178
+        },
+        {
+          "name": "RU_EW_AKULA_LOD2",
+          "triangles": 593,
+          "vertices": 641
+        },
+        {
+          "name": "RU_EW_AKULA_LOD3",
+          "triangles": 229,
+          "vertices": 293
+        }
+      ],
+      "triangles_lod0": 2696,
+      "files": {
+        "Blend/RU_EW_AKULA_MASTER.blend": {
+          "bytes": 147899,
+          "sha256": "12c4309c9f6e7c2f110d70ffdbcedeae96dbd8b70e03d0e24774abf30cb197c2"
+        },
+        "Blend/RU_EW_AKULA_MASTER.blend1": {
+          "bytes": 147919,
+          "sha256": "884d3a1d693147fcbd6f84677f86f4d312a9e4f0b813fa4f52ea555599ea0057"
+        },
+        "Collision/RU_EW_AKULA_COLLISION.fbx": {
+          "bytes": 22636,
+          "sha256": "f95635d7990dd8fa8c19898a74acfd7a242cd91a006958b498d7d4702ee8af73"
+        },
+        "Documentation/RU_EW_AKULA_README.md": {
+          "bytes": 640,
+          "sha256": "b728f3d4103dcf5e481489fc3227047149f630e87bed2da823682942b3197068"
+        },
+        "Documentation/RU_EW_AKULA_SPEC.json": {
+          "bytes": 3557,
+          "sha256": "6d50780d09989f5b4eb0718f7f68e1e3da2e113c219b3b297d2b6f1ee277abdc"
+        },
+        "FBX/RU_EW_AKULA_LOD0.fbx": {
+          "bytes": 93244,
+          "sha256": "ca79c536ed78b276b856472304a0ad838f12e0bc1d739d37dca069b7391c8c8c"
+        },
+        "FBX/RU_EW_AKULA_LOD1.fbx": {
+          "bytes": 137724,
+          "sha256": "30d977cfbfd394bb7ba41346f384e5017383cafa7c7a66c2bf110909a03b2525"
+        },
+        "FBX/RU_EW_AKULA_LOD2.fbx": {
+          "bytes": 69900,
+          "sha256": "78881b5690daf17c096ed2f86881aacc8e9011812268da4598bb8c57f092c3ce"
+        },
+        "FBX/RU_EW_AKULA_LOD3.fbx": {
+          "bytes": 42924,
+          "sha256": "7128877c0b4b3fcd7722e884813b8bae0dea470c602797e22b7ef9f740215e10"
+        },
+        "Preview/RU_EW_AKULA_Detail.png": {
+          "bytes": 310261,
+          "sha256": "b19a7a792c34e1b3f8eeb606e0d7b128d3b9eac8207d66135efaa23529f0ba54"
+        },
+        "Preview/RU_EW_AKULA_Front.png": {
+          "bytes": 304134,
+          "sha256": "66d80ba1e49d9c8a335299b62bb1064845430592994d50c396d901869248d09a"
+        },
+        "Preview/RU_EW_AKULA_Gray_Front.png": {
+          "bytes": 306417,
+          "sha256": "5ab4ffece7e85942618158d00d25384538e366ca36e26b31f8185788a380eb51"
+        },
+        "Preview/RU_EW_AKULA_Gray_ThreeQuarter.png": {
+          "bytes": 307617,
+          "sha256": "3572abfe946848511b2a69b5d8b9b53900c0c94cf12f7576e20087fef5ab3bc6"
+        },
+        "Preview/RU_EW_AKULA_Side.png": {
+          "bytes": 307023,
+          "sha256": "faa2ae4cc2d0eb52272373a3752cc1ef97fe58d75c331955f0480da09f7557e3"
+        },
+        "Preview/RU_EW_AKULA_ThreeQuarter.png": {
+          "bytes": 307400,
+          "sha256": "9240883a5e9816cea02c0c0b7d2910be05f905ebcbf5008b1fe0033f874552f7"
+        },
+        "Preview/RU_EW_AKULA_Top.png": {
+          "bytes": 303804,
+          "sha256": "0ba16feaa59a34f1c0ef337c771e82b967eb18bf15efff227f6e848835d6523e"
+        },
+        "Validation/RU_EW_AKULA_BUILD_STATS.json": {
+          "bytes": 1406,
+          "sha256": "c277e49c7feaf54d187ac3b9e314053a2c9f7a107b7573c2a19f38685d11238f"
+        },
+        "Validation/RU_EW_AKULA_VALIDATION.json": {
+          "bytes": 2416,
+          "sha256": "fc292aa867670ab541bb75bbc5347473320057bccda5c604191e4a7f34630b4e"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "CN_EW_TYPE093",
+      "category": "ESM",
+      "category_dir": "ESM",
+      "branch": "ESM",
+      "family_id": "ESM-MULTIBAND",
+      "country": "China",
+      "priority": "MEDIUM",
+      "label": "Chinese SSN ESM mast",
+      "label_zh": "中国攻击核潜艇 ESM 桅杆",
+      "geometry": "esm_mast_slim",
+      "dimensions_m": {
+        "height": 8.0,
+        "diameter": 0.3
+      },
+      "sockets": [
+        "SOCKET_EW_MAST"
+      ],
+      "materials": [
+        "Metal",
+        "DarkMetal",
+        "Composite",
+        "AntennaMaterial"
+      ],
+      "interior": false,
+      "asset_dir": "ESM/CN_EW_TYPE093",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/CN_EW_TYPE093_MASTER.blend",
+        "present": true,
+        "sha256": "d656b21ccb92e1b1dcb4178443f9fa9f348f8671323b0d21367796dafc7674da"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/CN_EW_TYPE093_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "ac591687fda9c0fdc530871a31651876d8f2cf3eb6e3002748cce78e5f2efb40"
+        },
+        "LOD1": {
+          "path": "FBX/CN_EW_TYPE093_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "0b62dba7ce2d04e103baec6e41557f36578e65ccd263360187e024da9dbaae17"
+        },
+        "LOD2": {
+          "path": "FBX/CN_EW_TYPE093_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "b17fa2effeb53a73848529ed982caa73688b39788e07aca0b53f3afa3c551199"
+        },
+        "LOD3": {
+          "path": "FBX/CN_EW_TYPE093_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "0fd283aecf98ebd03c6050f85fabf1c35878364016b73b6231ce4a85727958ca"
+        }
+      },
+      "collision": {
+        "path": "Collision/CN_EW_TYPE093_COLLISION.fbx",
+        "present": true,
+        "sha256": "a42aa05c0b3a433ba504ba647c7b6186f7abb08f803a8a1abb045fdd4848d29a"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "CN_EW_TYPE093_LOD0",
+          "triangles": 4148,
+          "vertices": 2544
+        },
+        {
+          "name": "CN_EW_TYPE093_LOD1",
+          "triangles": 2074,
+          "vertices": 1379
+        },
+        {
+          "name": "CN_EW_TYPE093_LOD2",
+          "triangles": 912,
+          "vertices": 714
+        },
+        {
+          "name": "CN_EW_TYPE093_LOD3",
+          "triangles": 352,
+          "vertices": 311
+        }
+      ],
+      "triangles_lod0": 4148,
+      "files": {
+        "Blend/CN_EW_TYPE093_MASTER.blend": {
+          "bytes": 173812,
+          "sha256": "d656b21ccb92e1b1dcb4178443f9fa9f348f8671323b0d21367796dafc7674da"
+        },
+        "Collision/CN_EW_TYPE093_COLLISION.fbx": {
+          "bytes": 22684,
+          "sha256": "a42aa05c0b3a433ba504ba647c7b6186f7abb08f803a8a1abb045fdd4848d29a"
+        },
+        "Documentation/CN_EW_TYPE093_README.md": {
+          "bytes": 636,
+          "sha256": "455b89f7da6a7f857196a0f0da49aaddd014bc55c728f7e1ee0414b606931bdc"
+        },
+        "Documentation/CN_EW_TYPE093_SPEC.json": {
+          "bytes": 3445,
+          "sha256": "dc7b168a628c47f9c65914a9640ba607f0e9dbfc0e99a2185bddc830b0c54cfc"
+        },
+        "FBX/CN_EW_TYPE093_LOD0.fbx": {
+          "bytes": 120156,
+          "sha256": "ac591687fda9c0fdc530871a31651876d8f2cf3eb6e3002748cce78e5f2efb40"
+        },
+        "FBX/CN_EW_TYPE093_LOD1.fbx": {
+          "bytes": 190124,
+          "sha256": "0b62dba7ce2d04e103baec6e41557f36578e65ccd263360187e024da9dbaae17"
+        },
+        "FBX/CN_EW_TYPE093_LOD2.fbx": {
+          "bytes": 89260,
+          "sha256": "b17fa2effeb53a73848529ed982caa73688b39788e07aca0b53f3afa3c551199"
+        },
+        "FBX/CN_EW_TYPE093_LOD3.fbx": {
+          "bytes": 50348,
+          "sha256": "0fd283aecf98ebd03c6050f85fabf1c35878364016b73b6231ce4a85727958ca"
+        },
+        "Preview/CN_EW_TYPE093_Detail.png": {
+          "bytes": 318849,
+          "sha256": "66e6ef5a40d8d6b61a54a2c08f84485af8f9a17036644f317ce3f320da7032c7"
+        },
+        "Preview/CN_EW_TYPE093_Front.png": {
+          "bytes": 298181,
+          "sha256": "d394dcbf85f318e48356f55ef887e1bbc29587905d29de250ad8d0fda7a86eae"
+        },
+        "Preview/CN_EW_TYPE093_Gray_Front.png": {
+          "bytes": 307562,
+          "sha256": "9d4edff9664fe0e346202ac8a0d2a91bb565b72cfb0ef1da81567413e4d05a38"
+        },
+        "Preview/CN_EW_TYPE093_Gray_ThreeQuarter.png": {
+          "bytes": 307504,
+          "sha256": "83e67ed8134ada59fdb7c10117ee8262632e0a5e79a23f681c194556a09b13db"
+        },
+        "Preview/CN_EW_TYPE093_Side.png": {
+          "bytes": 306966,
+          "sha256": "c855c14107d719cc64975bbc324a9a2bbc1674a52451363ebea8bda4de06c1f4"
+        },
+        "Preview/CN_EW_TYPE093_ThreeQuarter.png": {
+          "bytes": 299233,
+          "sha256": "5fc385952d3573f1783539cc9823958d65e9433825acd606be41c5e399278518"
+        },
+        "Preview/CN_EW_TYPE093_Top.png": {
+          "bytes": 302294,
+          "sha256": "a16b00829ea729c9686d0e64059fe6bb5a8ba42a679ddf58819dd29b7edfc2ff"
+        },
+        "Validation/CN_EW_TYPE093_BUILD_STATS.json": {
+          "bytes": 1303,
+          "sha256": "c8a07eb99f81798d7934115843c24ebc8fcaf0b260428a66f877689088540e61"
+        },
+        "Validation/CN_EW_TYPE093_VALIDATION.json": {
+          "bytes": 2408,
+          "sha256": "2b4c6f8f367df8edfd47f7057c59aa4a588799d96aa4415e48d83cff3de79963"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "GEN_EW_ANTENNA_ARRAY",
+      "category": "ANTENNA",
+      "category_dir": "Antennas",
+      "branch": "ESM",
+      "family_id": "ESM-MULTIBAND",
+      "country": "USA",
+      "priority": "HIGH",
+      "label": "Conformal ESM antenna array",
+      "label_zh": "共形 ESM 天线阵面板",
+      "geometry": "antenna_array",
+      "dimensions_m": {
+        "length": 3.2,
+        "width": 0.62,
+        "thickness": 0.18
+      },
+      "sockets": [
+        "SOCKET_EW_ANTENNA"
+      ],
+      "materials": [
+        "Composite",
+        "DarkMetal",
+        "Glass",
+        "AntennaMaterial",
+        "Rubber"
+      ],
+      "interior": false,
+      "asset_dir": "Antennas/GEN_EW_ANTENNA_ARRAY",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/GEN_EW_ANTENNA_ARRAY_MASTER.blend",
+        "present": true,
+        "sha256": "23cdc6274d4a499856e5b27f08145ab3bc1934a0e6e601fbd6a70ae3f7d9d51a"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/GEN_EW_ANTENNA_ARRAY_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "ff1ab03a374d4bde169f7c314f224fe00040178bfcf7d95312269fdb60006f95"
+        },
+        "LOD1": {
+          "path": "FBX/GEN_EW_ANTENNA_ARRAY_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "97a7b657e77b7e24be4d524403aebfa36b67048ee8b32a0680848ca3dec93208"
+        },
+        "LOD2": {
+          "path": "FBX/GEN_EW_ANTENNA_ARRAY_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "c489cd9b53852d3faf84018be8b6a11eb0ac85a306ed7070a06f45c55543f8c6"
+        },
+        "LOD3": {
+          "path": "FBX/GEN_EW_ANTENNA_ARRAY_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "d0fa0d6c63614583453af78fa7e62e7f78f8eb263095adee3df776f587a5920f"
+        }
+      },
+      "collision": {
+        "path": "Collision/GEN_EW_ANTENNA_ARRAY_COLLISION.fbx",
+        "present": true,
+        "sha256": "079a9676f43ab9ce60f62979e1304ac17c2e0ae286e3bc2748834fbb03034493"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "GEN_EW_ANTENNA_ARRAY_LOD0",
+          "triangles": 2484,
+          "vertices": 2208
+        },
+        {
+          "name": "GEN_EW_ANTENNA_ARRAY_LOD1",
+          "triangles": 1242,
+          "vertices": 1518
+        },
+        {
+          "name": "GEN_EW_ANTENNA_ARRAY_LOD2",
+          "triangles": 546,
+          "vertices": 822
+        },
+        {
+          "name": "GEN_EW_ANTENNA_ARRAY_LOD3",
+          "triangles": 211,
+          "vertices": 487
+        }
+      ],
+      "triangles_lod0": 2484,
+      "files": {
+        "Blend/GEN_EW_ANTENNA_ARRAY_MASTER.blend": {
+          "bytes": 148790,
+          "sha256": "23cdc6274d4a499856e5b27f08145ab3bc1934a0e6e601fbd6a70ae3f7d9d51a"
+        },
+        "Collision/GEN_EW_ANTENNA_ARRAY_COLLISION.fbx": {
+          "bytes": 13084,
+          "sha256": "079a9676f43ab9ce60f62979e1304ac17c2e0ae286e3bc2748834fbb03034493"
+        },
+        "Documentation/GEN_EW_ANTENNA_ARRAY_README.md": {
+          "bytes": 671,
+          "sha256": "34c00ef224c5c24ca4c2178e9ac30509e15de7b8e30c6d7ed3a31e4c5115690e"
+        },
+        "Documentation/GEN_EW_ANTENNA_ARRAY_SPEC.json": {
+          "bytes": 3661,
+          "sha256": "fe47cc9d3c22d4f1f8b809226de834356113c8638f3428700daacd5087338e66"
+        },
+        "FBX/GEN_EW_ANTENNA_ARRAY_LOD0.fbx": {
+          "bytes": 174236,
+          "sha256": "ff1ab03a374d4bde169f7c314f224fe00040178bfcf7d95312269fdb60006f95"
+        },
+        "FBX/GEN_EW_ANTENNA_ARRAY_LOD1.fbx": {
+          "bytes": 132828,
+          "sha256": "97a7b657e77b7e24be4d524403aebfa36b67048ee8b32a0680848ca3dec93208"
+        },
+        "FBX/GEN_EW_ANTENNA_ARRAY_LOD2.fbx": {
+          "bytes": 73532,
+          "sha256": "c489cd9b53852d3faf84018be8b6a11eb0ac85a306ed7070a06f45c55543f8c6"
+        },
+        "FBX/GEN_EW_ANTENNA_ARRAY_LOD3.fbx": {
+          "bytes": 44540,
+          "sha256": "d0fa0d6c63614583453af78fa7e62e7f78f8eb263095adee3df776f587a5920f"
+        },
+        "Preview/GEN_EW_ANTENNA_ARRAY_Detail.png": {
+          "bytes": 299880,
+          "sha256": "41c4e3939dc183cf4b5280f02d797254c4060b1375ec5abd0f3466ab8a85203a"
+        },
+        "Preview/GEN_EW_ANTENNA_ARRAY_Front.png": {
+          "bytes": 301418,
+          "sha256": "41efae82d28c5c5cfe618ffd5e25bcc12ef1a296c248358ae98ee507ca70f61d"
+        },
+        "Preview/GEN_EW_ANTENNA_ARRAY_Gray_Front.png": {
+          "bytes": 301315,
+          "sha256": "f04534c036f3d10ba204c8b586a71495c5809519f37a685ce4a5887d41d84270"
+        },
+        "Preview/GEN_EW_ANTENNA_ARRAY_Gray_ThreeQuarter.png": {
+          "bytes": 308894,
+          "sha256": "4cf449505dde2a2ccef3486992d72c2dc28960195e07096fb5a5ac15a449017b"
+        },
+        "Preview/GEN_EW_ANTENNA_ARRAY_Side.png": {
+          "bytes": 302714,
+          "sha256": "de2cea191723df447850023ce3ae1b8a09ea3db871e6958023d54ba230dcec95"
+        },
+        "Preview/GEN_EW_ANTENNA_ARRAY_ThreeQuarter.png": {
+          "bytes": 307965,
+          "sha256": "d74b10cd53f040785a14533b231249333c64b9f8313660b79804cf5e172525bc"
+        },
+        "Preview/GEN_EW_ANTENNA_ARRAY_Top.png": {
+          "bytes": 315987,
+          "sha256": "e84c7f7702c7aec9296fa6ee3a2a20d67170276aece69921bc1b743306198851"
+        },
+        "Validation/GEN_EW_ANTENNA_ARRAY_BUILD_STATS.json": {
+          "bytes": 1530,
+          "sha256": "5f3a77b97cdfc751ebe309cc97b2060c550186e486b4914f8111b9a482fbc064"
+        },
+        "Validation/GEN_EW_ANTENNA_ARRAY_VALIDATION.json": {
+          "bytes": 2465,
+          "sha256": "9b912eb7a57da2aec31c1ecf26841340e05192b15a89f48a89a2bb7a107d34bc"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "US_ACM_TORPEDO_DECOY",
+      "category": "ACOUSTIC_COUNTERMEASURE",
+      "category_dir": "AcousticCountermeasure",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "family_id": "ACM-TORPEDO-DECOY",
+      "country": "USA",
+      "priority": "HIGH",
+      "label": "Acoustic device countermeasure (ADC family)",
+      "label_zh": "声学装置对抗器材（ADC 族）",
+      "geometry": "decoy_canister",
+      "dimensions_m": {
+        "length": 1.05,
+        "diameter": 0.15
+      },
+      "sockets": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02"
+      ],
+      "materials": [
+        "Metal",
+        "Rubber",
+        "Composite",
+        "Paint"
+      ],
+      "interior": false,
+      "asset_dir": "AcousticCountermeasure/US_ACM_TORPEDO_DECOY",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/US_ACM_TORPEDO_DECOY_MASTER.blend",
+        "present": true,
+        "sha256": "a89b78e9eb530c3f5cda2bce30b73888e256c59b709e31bef2fbe0ad89302a4d"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/US_ACM_TORPEDO_DECOY_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "e773e1e359ec23f7658c808b59178bd8b6d396575c578fb19b07d5916972cddf"
+        },
+        "LOD1": {
+          "path": "FBX/US_ACM_TORPEDO_DECOY_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "4fedfc1d7b57c4f93efbc7f511b7fedd082a078d7d90e30994bbe53373d928ca"
+        },
+        "LOD2": {
+          "path": "FBX/US_ACM_TORPEDO_DECOY_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "2cd74aaded23c9d815c62486b9143e2851b1cd287e3168100f6cc56f5af23818"
+        },
+        "LOD3": {
+          "path": "FBX/US_ACM_TORPEDO_DECOY_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "186c0dd2c45aad626544d366dfbe539c12d506a069238f92b4b865cb5a52b3c6"
+        }
+      },
+      "collision": {
+        "path": "Collision/US_ACM_TORPEDO_DECOY_COLLISION.fbx",
+        "present": true,
+        "sha256": "8fcfa773c712177573218615bd582c63db7af83eef2c02f7a4a45aae2a6b1ebb"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "US_ACM_TORPEDO_DECOY_LOD0",
+          "triangles": 2964,
+          "vertices": 1990
+        },
+        {
+          "name": "US_ACM_TORPEDO_DECOY_LOD1",
+          "triangles": 1482,
+          "vertices": 1225
+        },
+        {
+          "name": "US_ACM_TORPEDO_DECOY_LOD2",
+          "triangles": 651,
+          "vertices": 688
+        },
+        {
+          "name": "US_ACM_TORPEDO_DECOY_LOD3",
+          "triangles": 251,
+          "vertices": 384
+        }
+      ],
+      "triangles_lod0": 2964,
+      "files": {
+        "Blend/US_ACM_TORPEDO_DECOY_MASTER.blend": {
+          "bytes": 154982,
+          "sha256": "a89b78e9eb530c3f5cda2bce30b73888e256c59b709e31bef2fbe0ad89302a4d"
+        },
+        "Blend/US_ACM_TORPEDO_DECOY_MASTER.blend1": {
+          "bytes": 156539,
+          "sha256": "a3863a229eba6a20055463c0fe18e209e81117f79e65d560d83e70b648a36602"
+        },
+        "Collision/US_ACM_TORPEDO_DECOY_COLLISION.fbx": {
+          "bytes": 16284,
+          "sha256": "8fcfa773c712177573218615bd582c63db7af83eef2c02f7a4a45aae2a6b1ebb"
+        },
+        "Documentation/US_ACM_TORPEDO_DECOY_README.md": {
+          "bytes": 774,
+          "sha256": "5e2e7970fc2534dfa8ff91ae73f33db521dfa11e2b2b81386c96e37992b9c041"
+        },
+        "Documentation/US_ACM_TORPEDO_DECOY_SPEC.json": {
+          "bytes": 3850,
+          "sha256": "fba0428f7e477b02f5a4c2141bcfb52d44f4fc2e271fd74ce95648fae4613efc"
+        },
+        "FBX/US_ACM_TORPEDO_DECOY_LOD0.fbx": {
+          "bytes": 96780,
+          "sha256": "e773e1e359ec23f7658c808b59178bd8b6d396575c578fb19b07d5916972cddf"
+        },
+        "FBX/US_ACM_TORPEDO_DECOY_LOD1.fbx": {
+          "bytes": 149452,
+          "sha256": "4fedfc1d7b57c4f93efbc7f511b7fedd082a078d7d90e30994bbe53373d928ca"
+        },
+        "FBX/US_ACM_TORPEDO_DECOY_LOD2.fbx": {
+          "bytes": 76844,
+          "sha256": "2cd74aaded23c9d815c62486b9143e2851b1cd287e3168100f6cc56f5af23818"
+        },
+        "FBX/US_ACM_TORPEDO_DECOY_LOD3.fbx": {
+          "bytes": 46860,
+          "sha256": "186c0dd2c45aad626544d366dfbe539c12d506a069238f92b4b865cb5a52b3c6"
+        },
+        "Preview/US_ACM_TORPEDO_DECOY_Detail.png": {
+          "bytes": 299894,
+          "sha256": "65ff2058ee99b92923cd95024b77689ed04c388ca2ead9a439e42bcfc3c5578b"
+        },
+        "Preview/US_ACM_TORPEDO_DECOY_Front.png": {
+          "bytes": 302777,
+          "sha256": "977ac3adc5d92c2830eebee4ad5c761613d7a6a03fc8546afa8c43b5bcec9696"
+        },
+        "Preview/US_ACM_TORPEDO_DECOY_Gray_Front.png": {
+          "bytes": 302591,
+          "sha256": "56bd861ddfe35873b629077131c00902026b2b05dae4e6cd2ba9910e4a9072c4"
+        },
+        "Preview/US_ACM_TORPEDO_DECOY_Gray_ThreeQuarter.png": {
+          "bytes": 307918,
+          "sha256": "92a4b88520e58cb480ddc41dd805b7084ae9efccc055b1671992116dc05523c3"
+        },
+        "Preview/US_ACM_TORPEDO_DECOY_Side.png": {
+          "bytes": 304475,
+          "sha256": "db6a38feed82af4122f458ce69c8f9325c39ea120ca98f8dca8d0f761b6ddac8"
+        },
+        "Preview/US_ACM_TORPEDO_DECOY_ThreeQuarter.png": {
+          "bytes": 308491,
+          "sha256": "633854420c3394444607f40ae2668d4f8d3da34ce272c9cc633fed4b6721fe8d"
+        },
+        "Preview/US_ACM_TORPEDO_DECOY_Top.png": {
+          "bytes": 300938,
+          "sha256": "8a89cf153d215b9f3c90658ec254f1d105b0f6238a259af270c8368a66bc99e0"
+        },
+        "Validation/US_ACM_TORPEDO_DECOY_BUILD_STATS.json": {
+          "bytes": 1381,
+          "sha256": "eac8cc8c1921ce171bcb8b6886ad147803a38338425deb03182158e7b89b08a2"
+        },
+        "Validation/US_ACM_TORPEDO_DECOY_VALIDATION.json": {
+          "bytes": 2456,
+          "sha256": "80ed2d57545bdd948c23b34c31217704df6a2aa24a08d7fa764defefd8647f92"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "US_ACM_MOBILE_DECOY",
+      "category": "DECOY",
+      "category_dir": "Decoys",
+      "branch": "DECOY",
+      "family_id": "DEC-MOBILE",
+      "country": "USA",
+      "priority": "MEDIUM",
+      "label": "Mobile acoustic decoy",
+      "label_zh": "机动声学诱饵",
+      "geometry": "decoy_mobile",
+      "dimensions_m": {
+        "length": 1.9,
+        "diameter": 0.32
+      },
+      "sockets": [
+        "SOCKET_COUNTERMEASURE_01"
+      ],
+      "materials": [
+        "Metal",
+        "Rubber",
+        "Composite",
+        "Paint"
+      ],
+      "interior": false,
+      "asset_dir": "Decoys/US_ACM_MOBILE_DECOY",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/US_ACM_MOBILE_DECOY_MASTER.blend",
+        "present": true,
+        "sha256": "09463fe94f37ca39e9a3be752908226ccb38fd9de059dd9329cfe47a6c20103e"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/US_ACM_MOBILE_DECOY_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "c6c09f319e1d7f5bbf94c4f636ca40ca66373964333c2e7d3280daec7d368b89"
+        },
+        "LOD1": {
+          "path": "FBX/US_ACM_MOBILE_DECOY_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "63387fef35754c088aac6acd3b71733f00e3bc2d9d0df3e82ad02bffdadb8811"
+        },
+        "LOD2": {
+          "path": "FBX/US_ACM_MOBILE_DECOY_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "dce35ab46caf7963e87e2235d114b0197dc56ac02b6b5ae05226fadf099dc93d"
+        },
+        "LOD3": {
+          "path": "FBX/US_ACM_MOBILE_DECOY_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "1365b7b6e8c3959a39ad214e5954a5188be8c51a015d286d0cb82bf143d81f14"
+        }
+      },
+      "collision": {
+        "path": "Collision/US_ACM_MOBILE_DECOY_COLLISION.fbx",
+        "present": true,
+        "sha256": "c7b8221b3ada7f5769b8ca294952a94a6f1a1a6ef73ffad9a6c1b757d0f1d43c"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "US_ACM_MOBILE_DECOY_LOD0",
+          "triangles": 3180,
+          "vertices": 2039
+        },
+        {
+          "name": "US_ACM_MOBILE_DECOY_LOD1",
+          "triangles": 1589,
+          "vertices": 1243
+        },
+        {
+          "name": "US_ACM_MOBILE_DECOY_LOD2",
+          "triangles": 699,
+          "vertices": 590
+        },
+        {
+          "name": "US_ACM_MOBILE_DECOY_LOD3",
+          "triangles": 270,
+          "vertices": 322
+        }
+      ],
+      "triangles_lod0": 3180,
+      "files": {
+        "Blend/US_ACM_MOBILE_DECOY_MASTER.blend": {
+          "bytes": 159759,
+          "sha256": "09463fe94f37ca39e9a3be752908226ccb38fd9de059dd9329cfe47a6c20103e"
+        },
+        "Blend/US_ACM_MOBILE_DECOY_MASTER.blend1": {
+          "bytes": 160765,
+          "sha256": "ecf856d25555babe1ef48134ff8f0881338cc8c7db7b099b3efda2806dbe77f0"
+        },
+        "Collision/US_ACM_MOBILE_DECOY_COLLISION.fbx": {
+          "bytes": 16252,
+          "sha256": "c7b8221b3ada7f5769b8ca294952a94a6f1a1a6ef73ffad9a6c1b757d0f1d43c"
+        },
+        "Documentation/US_ACM_MOBILE_DECOY_README.md": {
+          "bytes": 659,
+          "sha256": "e48836df39150a621bde03b4bc9e4f7d0a23a73bc84e6cbd126b5a8ea30c8ddb"
+        },
+        "Documentation/US_ACM_MOBILE_DECOY_SPEC.json": {
+          "bytes": 3683,
+          "sha256": "2dcb186df48f45b841ba39169326a769ab66fc1ca257957c06fbdf54a8f6fed1"
+        },
+        "FBX/US_ACM_MOBILE_DECOY_LOD0.fbx": {
+          "bytes": 101900,
+          "sha256": "c6c09f319e1d7f5bbf94c4f636ca40ca66373964333c2e7d3280daec7d368b89"
+        },
+        "FBX/US_ACM_MOBILE_DECOY_LOD1.fbx": {
+          "bytes": 157036,
+          "sha256": "63387fef35754c088aac6acd3b71733f00e3bc2d9d0df3e82ad02bffdadb8811"
+        },
+        "FBX/US_ACM_MOBILE_DECOY_LOD2.fbx": {
+          "bytes": 77052,
+          "sha256": "dce35ab46caf7963e87e2235d114b0197dc56ac02b6b5ae05226fadf099dc93d"
+        },
+        "FBX/US_ACM_MOBILE_DECOY_LOD3.fbx": {
+          "bytes": 47884,
+          "sha256": "1365b7b6e8c3959a39ad214e5954a5188be8c51a015d286d0cb82bf143d81f14"
+        },
+        "Preview/US_ACM_MOBILE_DECOY_Detail.png": {
+          "bytes": 299875,
+          "sha256": "95aca9a8c2bc0e1158c6b9d19d1a9b30bb879ec8288f3746dc3e76404b050763"
+        },
+        "Preview/US_ACM_MOBILE_DECOY_Front.png": {
+          "bytes": 302295,
+          "sha256": "8009f8d9af92768cf3990435fc9b50d9369d69dda184b5a1c43f5d8984c83f68"
+        },
+        "Preview/US_ACM_MOBILE_DECOY_Gray_Front.png": {
+          "bytes": 302394,
+          "sha256": "8e1b37c4a591d6de107316659b9d5798f7e2b9631d0bbe228ce29c7fc00260b1"
+        },
+        "Preview/US_ACM_MOBILE_DECOY_Gray_ThreeQuarter.png": {
+          "bytes": 307626,
+          "sha256": "deeaa5128d4741c82bb5398e91ea7845a1268949796cecac2566f76c9385bd3d"
+        },
+        "Preview/US_ACM_MOBILE_DECOY_Side.png": {
+          "bytes": 302946,
+          "sha256": "2d2730c57d5233f9a3c7762910f0fb63ceed176550a4dacd939ef854ab0a794a"
+        },
+        "Preview/US_ACM_MOBILE_DECOY_ThreeQuarter.png": {
+          "bytes": 307094,
+          "sha256": "bfc057206dd5110a114b1cba4c0a552d879e37ea2aaffa2d5c04930e126ea222"
+        },
+        "Preview/US_ACM_MOBILE_DECOY_Top.png": {
+          "bytes": 299938,
+          "sha256": "c291fbd6c1f9cba17710853684db055737c2e36d0fdaf9187b60ee3dcfa13c89"
+        },
+        "Validation/US_ACM_MOBILE_DECOY_BUILD_STATS.json": {
+          "bytes": 1383,
+          "sha256": "f559f1cfdb5d41c76144c8217e31335bf7b517a6efb7142407f31d42ac1eeb3a"
+        },
+        "Validation/US_ACM_MOBILE_DECOY_VALIDATION.json": {
+          "bytes": 2439,
+          "sha256": "76da038ceaebbf4468ab24c2d4a72dba1d3f48b3327c12d8d47732b12bf268f5"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "GEN_ACM_NOISE_MAKER",
+      "category": "NOISE_MAKER",
+      "category_dir": "NoiseMakers",
+      "branch": "NOISE_MAKER",
+      "family_id": "NM-MODERN",
+      "country": "USA",
+      "priority": "MEDIUM",
+      "label": "Noise maker canister",
+      "label_zh": "噪声弹发射筒",
+      "geometry": "noise_maker",
+      "dimensions_m": {
+        "length": 0.78,
+        "diameter": 0.2
+      },
+      "sockets": [
+        "SOCKET_COUNTERMEASURE_02"
+      ],
+      "materials": [
+        "Metal",
+        "Rubber",
+        "Paint"
+      ],
+      "interior": false,
+      "asset_dir": "NoiseMakers/GEN_ACM_NOISE_MAKER",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/GEN_ACM_NOISE_MAKER_MASTER.blend",
+        "present": true,
+        "sha256": "26aa4901153552e943d6aa0cb37eefe4d20f2fcff0caaff738fdf57cff15573b"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/GEN_ACM_NOISE_MAKER_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "4d72b43dcfb642c7cc61f00dba806b4c0c1d761b88495eff26e9cb6e16afadee"
+        },
+        "LOD1": {
+          "path": "FBX/GEN_ACM_NOISE_MAKER_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "922f06856a81b9a5d656dd11368d45a1c6181313c563165699bfae981bb68ce9"
+        },
+        "LOD2": {
+          "path": "FBX/GEN_ACM_NOISE_MAKER_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "2f6999da72faedff52dfaf6816c99f27438016744801eb337e9bb7adbd58054c"
+        },
+        "LOD3": {
+          "path": "FBX/GEN_ACM_NOISE_MAKER_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "5b6cab44fc0a10ab6029e4e25313cdcd1ec0bca12beb608c809580818492340b"
+        }
+      },
+      "collision": {
+        "path": "Collision/GEN_ACM_NOISE_MAKER_COLLISION.fbx",
+        "present": true,
+        "sha256": "42c8cb7cf7b1baba6e312085810c83c156f1c00dc7f97aa6a781ee6f3a0c749c"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "GEN_ACM_NOISE_MAKER_LOD0",
+          "triangles": 2916,
+          "vertices": 2161
+        },
+        {
+          "name": "GEN_ACM_NOISE_MAKER_LOD1",
+          "triangles": 1457,
+          "vertices": 1347
+        },
+        {
+          "name": "GEN_ACM_NOISE_MAKER_LOD2",
+          "triangles": 641,
+          "vertices": 730
+        },
+        {
+          "name": "GEN_ACM_NOISE_MAKER_LOD3",
+          "triangles": 247,
+          "vertices": 374
+        }
+      ],
+      "triangles_lod0": 2916,
+      "files": {
+        "Blend/GEN_ACM_NOISE_MAKER_MASTER.blend": {
+          "bytes": 156764,
+          "sha256": "26aa4901153552e943d6aa0cb37eefe4d20f2fcff0caaff738fdf57cff15573b"
+        },
+        "Blend/GEN_ACM_NOISE_MAKER_MASTER.blend1": {
+          "bytes": 156025,
+          "sha256": "58c2e68c3fbef45c4f20201b3bb2271ee001a9e5a7ed05c2539acdfc8ca4359f"
+        },
+        "Collision/GEN_ACM_NOISE_MAKER_COLLISION.fbx": {
+          "bytes": 16284,
+          "sha256": "42c8cb7cf7b1baba6e312085810c83c156f1c00dc7f97aa6a781ee6f3a0c749c"
+        },
+        "Documentation/GEN_ACM_NOISE_MAKER_README.md": {
+          "bytes": 650,
+          "sha256": "c1e2e9e00d1586fb0a447d16fbfd15dacaae35aa8ce75fd798ba1042c63c579f"
+        },
+        "Documentation/GEN_ACM_NOISE_MAKER_SPEC.json": {
+          "bytes": 3699,
+          "sha256": "42c79733419675e5f6b7dd900634982e840955be07cd0655d6ded238a2b5ab16"
+        },
+        "FBX/GEN_ACM_NOISE_MAKER_LOD0.fbx": {
+          "bytes": 99660,
+          "sha256": "4d72b43dcfb642c7cc61f00dba806b4c0c1d761b88495eff26e9cb6e16afadee"
+        },
+        "FBX/GEN_ACM_NOISE_MAKER_LOD1.fbx": {
+          "bytes": 153820,
+          "sha256": "922f06856a81b9a5d656dd11368d45a1c6181313c563165699bfae981bb68ce9"
+        },
+        "FBX/GEN_ACM_NOISE_MAKER_LOD2.fbx": {
+          "bytes": 80028,
+          "sha256": "2f6999da72faedff52dfaf6816c99f27438016744801eb337e9bb7adbd58054c"
+        },
+        "FBX/GEN_ACM_NOISE_MAKER_LOD3.fbx": {
+          "bytes": 49036,
+          "sha256": "5b6cab44fc0a10ab6029e4e25313cdcd1ec0bca12beb608c809580818492340b"
+        },
+        "Preview/GEN_ACM_NOISE_MAKER_Detail.png": {
+          "bytes": 299880,
+          "sha256": "bc912507e1c9ec367601e7da13ae418ca9e1c71da2cfc4b9eb6579bdc474fbc9"
+        },
+        "Preview/GEN_ACM_NOISE_MAKER_Front.png": {
+          "bytes": 303255,
+          "sha256": "1b2da825ddb09ec904d99248f5f502840de75f1526ef43db71fbb6fa3d5e2096"
+        },
+        "Preview/GEN_ACM_NOISE_MAKER_Gray_Front.png": {
+          "bytes": 303180,
+          "sha256": "dc6af5ab547c24d9c74f2a481f191d870c341123f9c0f0799533f55f3ca26b49"
+        },
+        "Preview/GEN_ACM_NOISE_MAKER_Gray_ThreeQuarter.png": {
+          "bytes": 310226,
+          "sha256": "5d95a3f911229492ecb5a19cbc2a43cf87036ab34ab6f199143121269a69f793"
+        },
+        "Preview/GEN_ACM_NOISE_MAKER_Side.png": {
+          "bytes": 303948,
+          "sha256": "4d4d075381c01a0cf8f96d0679b6244d87c89959c9e6c6792cbd193aa9a114c5"
+        },
+        "Preview/GEN_ACM_NOISE_MAKER_ThreeQuarter.png": {
+          "bytes": 309865,
+          "sha256": "55752ef59a580fb4ce5a6b8aea6b86b281a4eb2f091dddaf3f2a07cde99bd1b7"
+        },
+        "Preview/GEN_ACM_NOISE_MAKER_Top.png": {
+          "bytes": 302579,
+          "sha256": "6b27aba56229ab194e7a1d826e1c0bc0ed89703f016c8c039e2738733c3e669e"
+        },
+        "Validation/GEN_ACM_NOISE_MAKER_BUILD_STATS.json": {
+          "bytes": 1386,
+          "sha256": "649e040aff0c64af6dd15245d9189b9976f60f6cdf84b9645b1b03343379ce80"
+        },
+        "Validation/GEN_ACM_NOISE_MAKER_VALIDATION.json": {
+          "bytes": 2449,
+          "sha256": "c1962a78a9b718a3f67797ea6544c1f4f8496eb5f470cccfaab9260d9aa0969e"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "US_CML_DECOY_LAUNCHER",
+      "category": "LAUNCHER",
+      "category_dir": "Launchers",
+      "branch": "LAUNCHER",
+      "family_id": "CML-ADVANCED",
+      "country": "USA",
+      "priority": "HIGH",
+      "label": "External countermeasure launcher housing",
+      "label_zh": "外部对抗器材发射器",
+      "geometry": "launcher_external",
+      "dimensions_m": {
+        "length": 1.6,
+        "width": 0.92,
+        "height": 0.72
+      },
+      "sockets": [
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02"
+      ],
+      "materials": [
+        "Metal",
+        "DarkMetal",
+        "Rubber",
+        "Paint"
+      ],
+      "interior": false,
+      "asset_dir": "Launchers/US_CML_DECOY_LAUNCHER",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/US_CML_DECOY_LAUNCHER_MASTER.blend",
+        "present": true,
+        "sha256": "a0e3d651d26588ad0a9e36a828127e5ab255b9e318edbb14d27f7d26431aa5e4"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/US_CML_DECOY_LAUNCHER_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "4807232ff9d5fc3550e4af388544fa1a689df49956a9c69a2ba48ee8de6799d3"
+        },
+        "LOD1": {
+          "path": "FBX/US_CML_DECOY_LAUNCHER_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "16b14230baf9bdc8a4d1c9a85af29d721294706f41bbb44e4ba9b6d880515808"
+        },
+        "LOD2": {
+          "path": "FBX/US_CML_DECOY_LAUNCHER_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "6023cb3c37229e22d2f4fed435674fa0af87a59149b1100d3be8aecc116c7d22"
+        },
+        "LOD3": {
+          "path": "FBX/US_CML_DECOY_LAUNCHER_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "c9953ce56df985380ca6cbf112741a45ff55c4e8499701c6710dd2ff0654e900"
+        }
+      },
+      "collision": {
+        "path": "Collision/US_CML_DECOY_LAUNCHER_COLLISION.fbx",
+        "present": true,
+        "sha256": "8d02a20fd851456e07649d051c8c80c2a178e1ab1d030e51b004f9f992919fe7"
+      },
+      "spec_present": true,
+      "preview_count": 6,
+      "export_stats": [
+        {
+          "name": "US_CML_DECOY_LAUNCHER_LOD0",
+          "triangles": 3908,
+          "vertices": 2728
+        },
+        {
+          "name": "US_CML_DECOY_LAUNCHER_LOD1",
+          "triangles": 1954,
+          "vertices": 1751
+        },
+        {
+          "name": "US_CML_DECOY_LAUNCHER_LOD2",
+          "triangles": 859,
+          "vertices": 943
+        },
+        {
+          "name": "US_CML_DECOY_LAUNCHER_LOD3",
+          "triangles": 332,
+          "vertices": 492
+        }
+      ],
+      "triangles_lod0": 3908,
+      "files": {
+        "Blend/US_CML_DECOY_LAUNCHER_MASTER.blend": {
+          "bytes": 169256,
+          "sha256": "a0e3d651d26588ad0a9e36a828127e5ab255b9e318edbb14d27f7d26431aa5e4"
+        },
+        "Collision/US_CML_DECOY_LAUNCHER_COLLISION.fbx": {
+          "bytes": 16604,
+          "sha256": "8d02a20fd851456e07649d051c8c80c2a178e1ab1d030e51b004f9f992919fe7"
+        },
+        "Documentation/US_CML_DECOY_LAUNCHER_README.md": {
+          "bytes": 703,
+          "sha256": "58628c236d2f88d4eb60ea4649234d4c25efc55557324e1399f1710b87a1f0c9"
+        },
+        "Documentation/US_CML_DECOY_LAUNCHER_SPEC.json": {
+          "bytes": 3592,
+          "sha256": "e7e6f38eadb4e689671b27334fd860c5b1bd12c92af82b916c4d87c9390765d4"
+        },
+        "FBX/US_CML_DECOY_LAUNCHER_LOD0.fbx": {
+          "bytes": 113324,
+          "sha256": "4807232ff9d5fc3550e4af388544fa1a689df49956a9c69a2ba48ee8de6799d3"
+        },
+        "FBX/US_CML_DECOY_LAUNCHER_LOD1.fbx": {
+          "bytes": 189612,
+          "sha256": "16b14230baf9bdc8a4d1c9a85af29d721294706f41bbb44e4ba9b6d880515808"
+        },
+        "FBX/US_CML_DECOY_LAUNCHER_LOD2.fbx": {
+          "bytes": 98780,
+          "sha256": "6023cb3c37229e22d2f4fed435674fa0af87a59149b1100d3be8aecc116c7d22"
+        },
+        "FBX/US_CML_DECOY_LAUNCHER_LOD3.fbx": {
+          "bytes": 56476,
+          "sha256": "c9953ce56df985380ca6cbf112741a45ff55c4e8499701c6710dd2ff0654e900"
+        },
+        "Preview/US_CML_DECOY_LAUNCHER_Front.png": {
+          "bytes": 110457,
+          "sha256": "d56cb20b25f2c2e92414af9f37ccb6b8ef09338f897fae75240b47b96d095e9a"
+        },
+        "Preview/US_CML_DECOY_LAUNCHER_Gray_Front.png": {
+          "bytes": 108105,
+          "sha256": "3373342191cb03b7099506283dba29049d92483181f420e99b7c66cfd19730a5"
+        },
+        "Preview/US_CML_DECOY_LAUNCHER_Gray_ThreeQuarter.png": {
+          "bytes": 113857,
+          "sha256": "1b8a6fcfff5abac9756c010982189fd7e860d74338b7da44ce1cfc9352e7871d"
+        },
+        "Preview/US_CML_DECOY_LAUNCHER_Side.png": {
+          "bytes": 107455,
+          "sha256": "b0d6f04c541f35f9b885da9c0050e16ca9333fe02c7f1f095aa36df521eac228"
+        },
+        "Preview/US_CML_DECOY_LAUNCHER_ThreeQuarter.png": {
+          "bytes": 115180,
+          "sha256": "db9c2c9132b0fa5e583b86672bbe6007f3eeb9d49007a9894fd1cbcfb51b6a9d"
+        },
+        "Preview/US_CML_DECOY_LAUNCHER_Top.png": {
+          "bytes": 110118,
+          "sha256": "5120270c67ad964292b10ada94ff2c2fb00cc4412aeddff5776da859fc5a4155"
+        },
+        "Validation/US_CML_DECOY_LAUNCHER_BUILD_STATS.json": {
+          "bytes": 1475,
+          "sha256": "852315453fbdba0d8721e40c30553988ba1024535ea35fbb7d880e1d4bd83d12"
+        },
+        "Validation/US_CML_DECOY_LAUNCHER_VALIDATION.json": {
+          "bytes": 2459,
+          "sha256": "9c175d59c26616a3e6514421bbedf88f67c70e6530b8829d91a9698a24d837b8"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "GEN_CML_TUBE",
+      "category": "LAUNCHER",
+      "category_dir": "Launchers",
+      "branch": "LAUNCHER",
+      "family_id": "CML-TUBE",
+      "country": "USA",
+      "priority": "MEDIUM",
+      "label": "Countermeasure tube",
+      "label_zh": "对抗器材发射管",
+      "geometry": "launcher_tube",
+      "dimensions_m": {
+        "length": 1.3,
+        "diameter": 0.26
+      },
+      "sockets": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02"
+      ],
+      "materials": [
+        "Metal",
+        "DarkMetal",
+        "Rubber"
+      ],
+      "interior": false,
+      "asset_dir": "Launchers/GEN_CML_TUBE",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/GEN_CML_TUBE_MASTER.blend",
+        "present": true,
+        "sha256": "382669bfdd3361763f84da6a18eecac10cca966f93578bf64e65a9a8843da6bf"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/GEN_CML_TUBE_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "bf973e8072dbb072d40668bd48611f1cabb038faea5ba78c297461d38a60fa6d"
+        },
+        "LOD1": {
+          "path": "FBX/GEN_CML_TUBE_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "d909aaeb136dc2ecdf61c19d06fc4b1e7b82446100845080324ad33e12774054"
+        },
+        "LOD2": {
+          "path": "FBX/GEN_CML_TUBE_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "4835beae1c4b97088a52856f0843df3675c55537836124080949418dd63f493b"
+        },
+        "LOD3": {
+          "path": "FBX/GEN_CML_TUBE_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "8803bcd57b17f54faebb161ccbad22e68889e12ce6d4e387e5cfa5cdbbc921da"
+        }
+      },
+      "collision": {
+        "path": "Collision/GEN_CML_TUBE_COLLISION.fbx",
+        "present": true,
+        "sha256": "d3c062946787bf2a81f32ecae9a00297b592ec9f837339ed59c263de54f345c0"
+      },
+      "spec_present": true,
+      "preview_count": 7,
+      "export_stats": [
+        {
+          "name": "GEN_CML_TUBE_LOD0",
+          "triangles": 2040,
+          "vertices": 1400
+        },
+        {
+          "name": "GEN_CML_TUBE_LOD1",
+          "triangles": 1020,
+          "vertices": 880
+        },
+        {
+          "name": "GEN_CML_TUBE_LOD2",
+          "triangles": 448,
+          "vertices": 457
+        },
+        {
+          "name": "GEN_CML_TUBE_LOD3",
+          "triangles": 173,
+          "vertices": 224
+        }
+      ],
+      "triangles_lod0": 2040,
+      "files": {
+        "Blend/GEN_CML_TUBE_MASTER.blend": {
+          "bytes": 136329,
+          "sha256": "382669bfdd3361763f84da6a18eecac10cca966f93578bf64e65a9a8843da6bf"
+        },
+        "Blend/GEN_CML_TUBE_MASTER.blend1": {
+          "bytes": 136567,
+          "sha256": "8c0c3942817bcebe911455f1f6fe7b49de03d1169707febb0057e26d5bbf433a"
+        },
+        "Collision/GEN_CML_TUBE_COLLISION.fbx": {
+          "bytes": 16252,
+          "sha256": "d3c062946787bf2a81f32ecae9a00297b592ec9f837339ed59c263de54f345c0"
+        },
+        "Documentation/GEN_CML_TUBE_README.md": {
+          "bytes": 672,
+          "sha256": "576c958f137d68eb2752cf0ddadd2dd4b527869fdf7d8d6f26b41fd7ebd62df4"
+        },
+        "Documentation/GEN_CML_TUBE_SPEC.json": {
+          "bytes": 3599,
+          "sha256": "076fb7e2ffa7a2b3c69d592f131172e8a5088c73c61188519a7e2d2587bfcdc8"
+        },
+        "FBX/GEN_CML_TUBE_LOD0.fbx": {
+          "bytes": 73692,
+          "sha256": "bf973e8072dbb072d40668bd48611f1cabb038faea5ba78c297461d38a60fa6d"
+        },
+        "FBX/GEN_CML_TUBE_LOD1.fbx": {
+          "bytes": 109356,
+          "sha256": "d909aaeb136dc2ecdf61c19d06fc4b1e7b82446100845080324ad33e12774054"
+        },
+        "FBX/GEN_CML_TUBE_LOD2.fbx": {
+          "bytes": 58780,
+          "sha256": "4835beae1c4b97088a52856f0843df3675c55537836124080949418dd63f493b"
+        },
+        "FBX/GEN_CML_TUBE_LOD3.fbx": {
+          "bytes": 38892,
+          "sha256": "8803bcd57b17f54faebb161ccbad22e68889e12ce6d4e387e5cfa5cdbbc921da"
+        },
+        "Preview/GEN_CML_TUBE_Detail.png": {
+          "bytes": 299857,
+          "sha256": "302887e1e2c2da337dcd62dfab17fcaad9cb6283059ac7f2fed04b7f37f01665"
+        },
+        "Preview/GEN_CML_TUBE_Front.png": {
+          "bytes": 303128,
+          "sha256": "13d9027df928028985f27f4cc84c741d8689c1aa9160d16ed5b6a1cc01489214"
+        },
+        "Preview/GEN_CML_TUBE_Gray_Front.png": {
+          "bytes": 303334,
+          "sha256": "1f76c2848fc839437300710a3db42ceb1e2e357a3fdd93f5841c2dea3c23ca31"
+        },
+        "Preview/GEN_CML_TUBE_Gray_ThreeQuarter.png": {
+          "bytes": 311594,
+          "sha256": "a8551c00df3922c44ca0f91eb144bb00cd683f61fc96f66bd962f5d091da68c9"
+        },
+        "Preview/GEN_CML_TUBE_Side.png": {
+          "bytes": 305285,
+          "sha256": "981bf30e2444551b211bb87ffe1da455b10a4b63ac1171508617a3ec273237bb"
+        },
+        "Preview/GEN_CML_TUBE_ThreeQuarter.png": {
+          "bytes": 311768,
+          "sha256": "1c20479d9d7a5997c61bd15f8f6694c54ebf66fc095b1b83017030a74b3a3b4b"
+        },
+        "Preview/GEN_CML_TUBE_Top.png": {
+          "bytes": 301503,
+          "sha256": "885eea6f6ff661669c2c96ecda33dee2f40397cbd4233108277ab8e167b7f66d"
+        },
+        "Validation/GEN_CML_TUBE_BUILD_STATS.json": {
+          "bytes": 1366,
+          "sha256": "df44d328db29347396bfb649c5debc888990551caacc084eb47b945b562f8858"
+        },
+        "Validation/GEN_CML_TUBE_VALIDATION.json": {
+          "bytes": 2436,
+          "sha256": "65eb34814e6c6129bbebef86346197f6ee31569ee337a2851c68427a1758a951"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "GEN_TW_TORPEDO_WARNING_SENSOR",
+      "category": "TORPEDO_DEFENSE",
+      "category_dir": "TorpedoDefense",
+      "branch": "TORPEDO_DEFENSE",
+      "family_id": "TD-WARNING",
+      "country": "USA",
+      "priority": "HIGH",
+      "label": "Torpedo warning sensor",
+      "label_zh": "鱼雷告警传感器",
+      "geometry": "torpedo_warning_sensor",
+      "dimensions_m": {
+        "length": 1.4,
+        "width": 0.52,
+        "height": 0.36
+      },
+      "sockets": [
+        "SOCKET_EW_ANTENNA"
+      ],
+      "materials": [
+        "Composite",
+        "Metal",
+        "Rubber",
+        "AntennaMaterial"
+      ],
+      "interior": false,
+      "asset_dir": "TorpedoDefense/GEN_TW_TORPEDO_WARNING_SENSOR",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/GEN_TW_TORPEDO_WARNING_SENSOR_MASTER.blend",
+        "present": true,
+        "sha256": "95b0203122aaa2ab77cdbe75e40fa94f3775239646b2769cb49db35eb0f54c25"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "e0a14d7c2ceeb186025cc67cdedc90df6791139e28293d10b6e88c2416ed512b"
+        },
+        "LOD1": {
+          "path": "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "246574dd9c413c16654c5644e738eaa2e13224f0cfd4da2ec6122d4f9ac5243c"
+        },
+        "LOD2": {
+          "path": "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "90b9c72f447cd0ee1d1abdd00317e851040c95b5188a4b60c605c954cd08b969"
+        },
+        "LOD3": {
+          "path": "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "a50ec09cfa35d3eb0b1a39d446cd8429033d256d259a4394e08c9a5e90a54b4d"
+        }
+      },
+      "collision": {
+        "path": "Collision/GEN_TW_TORPEDO_WARNING_SENSOR_COLLISION.fbx",
+        "present": true,
+        "sha256": "c07901f4974851335ea0aef24ecbe3034af2bc76ed485dec3e9b6d6122dfa79c"
+      },
+      "spec_present": true,
+      "preview_count": 6,
+      "export_stats": [
+        {
+          "name": "GEN_TW_TORPEDO_WARNING_SENSOR_LOD0",
+          "triangles": 1428,
+          "vertices": 1015
+        },
+        {
+          "name": "GEN_TW_TORPEDO_WARNING_SENSOR_LOD1",
+          "triangles": 713,
+          "vertices": 657
+        },
+        {
+          "name": "GEN_TW_TORPEDO_WARNING_SENSOR_LOD2",
+          "triangles": 313,
+          "vertices": 332
+        },
+        {
+          "name": "GEN_TW_TORPEDO_WARNING_SENSOR_LOD3",
+          "triangles": 121,
+          "vertices": 175
+        }
+      ],
+      "triangles_lod0": 1428,
+      "files": {
+        "Blend/GEN_TW_TORPEDO_WARNING_SENSOR_MASTER.blend": {
+          "bytes": 124773,
+          "sha256": "95b0203122aaa2ab77cdbe75e40fa94f3775239646b2769cb49db35eb0f54c25"
+        },
+        "Collision/GEN_TW_TORPEDO_WARNING_SENSOR_COLLISION.fbx": {
+          "bytes": 16604,
+          "sha256": "c07901f4974851335ea0aef24ecbe3034af2bc76ed485dec3e9b6d6122dfa79c"
+        },
+        "Documentation/GEN_TW_TORPEDO_WARNING_SENSOR_README.md": {
+          "bytes": 692,
+          "sha256": "87d89d42421e12fc38fdf8a31639d82e0401cdea8b37f9352ada050d662ef6f1"
+        },
+        "Documentation/GEN_TW_TORPEDO_WARNING_SENSOR_SPEC.json": {
+          "bytes": 3691,
+          "sha256": "ec5b78bdda2f4b508c0e16e4feae09f45c181c63b983402d1a73b97c09a70d6c"
+        },
+        "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD0.fbx": {
+          "bytes": 61260,
+          "sha256": "e0a14d7c2ceeb186025cc67cdedc90df6791139e28293d10b6e88c2416ed512b"
+        },
+        "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD1.fbx": {
+          "bytes": 75084,
+          "sha256": "246574dd9c413c16654c5644e738eaa2e13224f0cfd4da2ec6122d4f9ac5243c"
+        },
+        "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD2.fbx": {
+          "bytes": 47116,
+          "sha256": "90b9c72f447cd0ee1d1abdd00317e851040c95b5188a4b60c605c954cd08b969"
+        },
+        "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD3.fbx": {
+          "bytes": 34220,
+          "sha256": "a50ec09cfa35d3eb0b1a39d446cd8429033d256d259a4394e08c9a5e90a54b4d"
+        },
+        "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Front.png": {
+          "bytes": 108250,
+          "sha256": "66efd705fcbfc70c3bfd697c53fc959b122f9074a325aa15778f7d91bed1c4b7"
+        },
+        "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Gray_Front.png": {
+          "bytes": 106376,
+          "sha256": "969481b58ef9588e0bdd9211039c04b6000b1058770b6073aa5e5385e19f1760"
+        },
+        "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Gray_ThreeQuarter.png": {
+          "bytes": 110448,
+          "sha256": "3e74aaa06ad36d7acf1ca140bfc3585582179baf3032ab7e5a86492c6893fa84"
+        },
+        "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Side.png": {
+          "bytes": 107768,
+          "sha256": "4c1654f4dbbc988673f0cff3bf776cf34ac90a938cff24c659f8c700e6e6b051"
+        },
+        "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_ThreeQuarter.png": {
+          "bytes": 113071,
+          "sha256": "5c3ebce7d61f373aae465b0880f6f03dd94c2c1b5757f345306be28dfc8b4e0e"
+        },
+        "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Top.png": {
+          "bytes": 106396,
+          "sha256": "eb91fccf571855f3bab945a1e01687959ee4ecff990576e6fed57b65a5c86650"
+        },
+        "Validation/GEN_TW_TORPEDO_WARNING_SENSOR_BUILD_STATS.json": {
+          "bytes": 1484,
+          "sha256": "2903d96b1a2918a4a3dece0585f9d2ef015c32d58f3574481189bf99d6d204d2"
+        },
+        "Validation/GEN_TW_TORPEDO_WARNING_SENSOR_VALIDATION.json": {
+          "bytes": 2479,
+          "sha256": "98bbb6d6e4b88013e2309ceb62fe53e127f82b989329fa0bbbbcd4b6fdf564a1"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    },
+    {
+      "asset_id": "US_DCM_CONSOLE",
+      "category": "CONTROL",
+      "category_dir": "Control",
+      "branch": "DEFENSIVE_CONTROL",
+      "family_id": "DC-INTEGRATED-CONTROL",
+      "country": "USA",
+      "priority": "HIGH",
+      "label": "Defensive control console module",
+      "label_zh": "防御控制台模块",
+      "geometry": "control_console",
+      "dimensions_m": {
+        "length": 1.8,
+        "width": 0.9,
+        "height": 1.2
+      },
+      "sockets": [],
+      "materials": [
+        "Metal",
+        "DarkMetal",
+        "Glass",
+        "Composite",
+        "Paint"
+      ],
+      "interior": true,
+      "asset_dir": "Control/US_DCM_CONSOLE",
+      "missing_dirs": [],
+      "master": {
+        "path": "Blend/US_DCM_CONSOLE_MASTER.blend",
+        "present": true,
+        "sha256": "a8b54d997e8269e9f7a73774c3a1f8ed2e9cc4ae15cc62d4df56f768b2dcdf05"
+      },
+      "lod_fbx": {
+        "LOD0": {
+          "path": "FBX/US_DCM_CONSOLE_LOD0.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "7f2c54fcf1827b73f8b104fd872d5dd5bee747f612a7874c21ab6af1d247c8a7"
+        },
+        "LOD1": {
+          "path": "FBX/US_DCM_CONSOLE_LOD1.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "74041b90f185299027a69dd36362c8259b42270d9b350919143e93e41edb66b6"
+        },
+        "LOD2": {
+          "path": "FBX/US_DCM_CONSOLE_LOD2.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "74a79fc53aa94a5937242f2686418b76f3f8e6192bea01516ab80bc69d97b7af"
+        },
+        "LOD3": {
+          "path": "FBX/US_DCM_CONSOLE_LOD3.fbx",
+          "present": true,
+          "fbx_binary_version": 7400,
+          "sha256": "237932b82c737c0c565aef0e99d8d552adff4a8b72bfdaa62c6ab5779d60ca7b"
+        }
+      },
+      "collision": {
+        "path": "Collision/US_DCM_CONSOLE_COLLISION.fbx",
+        "present": true,
+        "sha256": "98ccd42caa9e6077e48336f273ca2eb083bb15362598891013ccec77f4f1544c"
+      },
+      "spec_present": true,
+      "preview_count": 6,
+      "export_stats": [
+        {
+          "name": "US_DCM_CONSOLE_LOD0",
+          "triangles": 1296,
+          "vertices": 1152
+        },
+        {
+          "name": "US_DCM_CONSOLE_LOD1",
+          "triangles": 648,
+          "vertices": 792
+        },
+        {
+          "name": "US_DCM_CONSOLE_LOD2",
+          "triangles": 285,
+          "vertices": 429
+        },
+        {
+          "name": "US_DCM_CONSOLE_LOD3",
+          "triangles": 110,
+          "vertices": 254
+        }
+      ],
+      "triangles_lod0": 1296,
+      "files": {
+        "Blend/US_DCM_CONSOLE_MASTER.blend": {
+          "bytes": 123340,
+          "sha256": "a8b54d997e8269e9f7a73774c3a1f8ed2e9cc4ae15cc62d4df56f768b2dcdf05"
+        },
+        "Collision/US_DCM_CONSOLE_COLLISION.fbx": {
+          "bytes": 16508,
+          "sha256": "98ccd42caa9e6077e48336f273ca2eb083bb15362598891013ccec77f4f1544c"
+        },
+        "Documentation/US_DCM_CONSOLE_README.md": {
+          "bytes": 701,
+          "sha256": "646f2e788054fc303ce2551c7273298e11eef278f15de8a7c1d3fc7fbe81c1c8"
+        },
+        "Documentation/US_DCM_CONSOLE_SPEC.json": {
+          "bytes": 3394,
+          "sha256": "4639bdd4ffccd1b46df5b884b733a69dac7b070d45309d2f53e155fa0abee6f8"
+        },
+        "FBX/US_DCM_CONSOLE_LOD0.fbx": {
+          "bytes": 98636,
+          "sha256": "7f2c54fcf1827b73f8b104fd872d5dd5bee747f612a7874c21ab6af1d247c8a7"
+        },
+        "FBX/US_DCM_CONSOLE_LOD1.fbx": {
+          "bytes": 78140,
+          "sha256": "74041b90f185299027a69dd36362c8259b42270d9b350919143e93e41edb66b6"
+        },
+        "FBX/US_DCM_CONSOLE_LOD2.fbx": {
+          "bytes": 49532,
+          "sha256": "74a79fc53aa94a5937242f2686418b76f3f8e6192bea01516ab80bc69d97b7af"
+        },
+        "FBX/US_DCM_CONSOLE_LOD3.fbx": {
+          "bytes": 33692,
+          "sha256": "237932b82c737c0c565aef0e99d8d552adff4a8b72bfdaa62c6ab5779d60ca7b"
+        },
+        "Preview/US_DCM_CONSOLE_Front.png": {
+          "bytes": 105710,
+          "sha256": "c01958701b38c435a44bdcc3b7bb0a89556b9a38186e7892c92f0b6510df7421"
+        },
+        "Preview/US_DCM_CONSOLE_Gray_Front.png": {
+          "bytes": 104942,
+          "sha256": "8061958135592cd3a069fc548325ff63ab9b6e7fd6645f317e9a697df54e772b"
+        },
+        "Preview/US_DCM_CONSOLE_Gray_ThreeQuarter.png": {
+          "bytes": 114689,
+          "sha256": "d7f464577e3124bd228a5e7b0f98f45ff63536fd992e1362a51c3932bb8b3385"
+        },
+        "Preview/US_DCM_CONSOLE_Side.png": {
+          "bytes": 104574,
+          "sha256": "f4912bb8883662d7251e9054dcd2f1db970811044d722232739277ba3e049f1e"
+        },
+        "Preview/US_DCM_CONSOLE_ThreeQuarter.png": {
+          "bytes": 115192,
+          "sha256": "fdcc0fddcade541f591efae06f08ae2300202d3ff71c45a5836c4fbfc7d8d5b9"
+        },
+        "Preview/US_DCM_CONSOLE_Top.png": {
+          "bytes": 106686,
+          "sha256": "404c51d95a0b0e3a31833c821089dd9ddb850100123c6561d1f2af9ce850dc09"
+        },
+        "Validation/US_DCM_CONSOLE_BUILD_STATS.json": {
+          "bytes": 1365,
+          "sha256": "8c44165f81d397d919567d6c93399d12c1ba549d5434a37edbe65757755dc86b"
+        },
+        "Validation/US_DCM_CONSOLE_VALIDATION.json": {
+          "bytes": 2417,
+          "sha256": "30da6e6477bf59a679429f790adcef35a6230d39130bcd777da88c4ac45af5e8"
+        }
+      },
+      "status": "COMPLETE",
+      "priority_valid": true
+    }
+  ],
+  "unregistered_asset_dirs": [],
+  "totals": {
+    "assets": 13,
+    "high_priority": 7,
+    "with_master_blend": 13,
+    "with_full_lod_set": 13,
+    "with_collision": 13,
+    "with_spec": 13,
+    "with_previews": 13,
+    "pipeline_complete": 13,
+    "unregistered_asset_dirs": 0
+  },
+  "pipeline_complete_assets": [
+    "US_EW_ESM_GENERIC",
+    "US_EW_BLQ10",
+    "UK_EW_ASTUTE",
+    "RU_EW_AKULA",
+    "CN_EW_TYPE093",
+    "GEN_EW_ANTENNA_ARRAY",
+    "US_ACM_TORPEDO_DECOY",
+    "US_ACM_MOBILE_DECOY",
+    "GEN_ACM_NOISE_MAKER",
+    "US_CML_DECOY_LAUNCHER",
+    "GEN_CML_TUBE",
+    "GEN_TW_TORPEDO_WARNING_SENSOR",
+    "US_DCM_CONSOLE"
+  ]
+}

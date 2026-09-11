@@ -1,0 +1,637 @@
+{
+  "generated_at": "2026-09-11",
+  "schema": "silent-depth-propulsion-technology-tree-v1",
+  "note": "所有 Tier 均为游戏科技层级，不等于历史事实或工程事实。",
+  "history_vs_game_tier": "历史服役年份与技术世代只作为 Tier 划分的参考；Tier 是游戏数值与内容组织的层级标签。",
+  "branches": [
+    {
+      "branch_id": "BRANCH_PROPULSOR",
+      "display_name": "推进器（Propeller / Pump-Jet）",
+      "note": "T1–T5 是桨型世代，T6–T10 是整机与泵喷世代。叶片数量本身不构成 Tier 判定。",
+      "tiers": [
+        {
+          "tier": 1,
+          "public_label": "Early Propeller",
+          "display_name_cn": "早期少叶螺旋桨",
+          "description": "两叶、几乎无后掠、厚叶型；以可靠性为主，降噪不是设计目标。",
+          "linked_assets": [
+            "PROP_T01_EARLY"
+          ]
+        },
+        {
+          "tier": 2,
+          "public_label": "Improved Propeller",
+          "display_name_cn": "改进型螺旋桨",
+          "description": "桨叶型线与螺距分布改进，开始出现轻微后掠。",
+          "linked_assets": [
+            "PROP_T02_IMPROVED"
+          ]
+        },
+        {
+          "tier": 3,
+          "public_label": "Multi-Blade Propeller",
+          "display_name_cn": "多叶螺旋桨",
+          "description": "叶片数量增加、单叶载荷下降；注意叶片数不是 Tier 判定标准。",
+          "linked_assets": [
+            "PROP_T03_MULTIBLADE"
+          ]
+        },
+        {
+          "tier": 4,
+          "public_label": "Skewed Propeller",
+          "display_name_cn": "后掠螺旋桨",
+          "description": "后掠（skew）成为主要降噪手段，兼顾空泡控制。",
+          "linked_assets": [
+            "PROP_T04_SKEWED"
+          ]
+        },
+        {
+          "tier": 5,
+          "public_label": "Advanced Quiet Propeller",
+          "display_name_cn": "先进静音螺旋桨",
+          "description": "高后掠 + 多叶 + 薄叶型的综合设计成熟度。",
+          "linked_assets": [
+            "PROP_T05_QUIET"
+          ]
+        },
+        {
+          "tier": 6,
+          "public_label": "Improved Propulsion Plant",
+          "display_name_cn": "改进型推进装置",
+          "description": "桨型趋于成熟，改进重心转到整机布置与轴系。",
+          "linked_assets": [
+            "US_PROP_LosAngeles"
+          ]
+        },
+        {
+          "tier": 7,
+          "public_label": "Advanced Integrated Propulsion",
+          "display_name_cn": "先进综合推进",
+          "description": "推进器与艇尾一体化设计，舵与桨的耦合被纳入外形设计。",
+          "linked_assets": [
+            "RU_PROP_Akula",
+            "CN_PROP_Type093"
+          ]
+        },
+        {
+          "tier": 8,
+          "public_label": "Modern Pump-Jet",
+          "display_name_cn": "现代泵喷",
+          "description": "导管 + 转子 + 定子的泵喷构型成为主流降噪方案。",
+          "linked_assets": [
+            "RU_PROP_Typhoon",
+            "US_PJ_Seawolf"
+          ]
+        },
+        {
+          "tier": 9,
+          "public_label": "Advanced Pump-Jet",
+          "display_name_cn": "先进泵喷",
+          "description": "泵喷的壳体一体化与定子优化，外形更紧凑。",
+          "linked_assets": [
+            "US_PJ_Virginia",
+            "UK_PJ_Astute",
+            "RU_PJ_Yasen",
+            "FR_PJ_Suffren"
+          ]
+        },
+        {
+          "tier": 10,
+          "public_label": "Next Generation Propulsion",
+          "display_name_cn": "下一代推进",
+          "description": "集成式推进概念：无外露轴系、推进与操纵进一步融合。",
+          "linked_assets": [
+            "PJ_T10_NEXTGEN",
+            "THRUSTER_RIM_DRIVEN"
+          ]
+        }
+      ]
+    },
+    {
+      "branch_id": "BRANCH_REACTOR",
+      "display_name": "反应堆（世代）",
+      "note": "游戏没有显示需求，因此该分支只建立数据库条目，不产出内部工程模型。",
+      "tiers": [
+        {
+          "tier": 1,
+          "public_label": "Early Naval Reactor",
+          "display_name_cn": "早期海军反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 2,
+          "public_label": "Improved Naval Reactor",
+          "display_name_cn": "改进型海军反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 3,
+          "public_label": "Compact Reactor",
+          "display_name_cn": "紧凑型反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 4,
+          "public_label": "Advanced Naval Reactor",
+          "display_name_cn": "先进海军反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 5,
+          "public_label": "Improved Core-Life Reactor",
+          "display_name_cn": "长寿命堆芯改进型反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 6,
+          "public_label": "Modern Naval Reactor",
+          "display_name_cn": "现代海军反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 7,
+          "public_label": "Advanced Long-Life Reactor",
+          "display_name_cn": "先进长寿命反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 8,
+          "public_label": "Integrated Advanced Reactor",
+          "display_name_cn": "综合先进反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 9,
+          "public_label": "Next Generation Reactor",
+          "display_name_cn": "下一代反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        },
+        {
+          "tier": 10,
+          "public_label": "Future Naval Reactor",
+          "display_name_cn": "未来海军反应堆",
+          "description": "只定义公开资料层面的世代名称与时代区间；功率、燃料与内部结构一律不进入本资产库。",
+          "linked_assets": [],
+          "asset_policy": "DATABASE_ONLY"
+        }
+      ]
+    },
+    {
+      "branch_id": "BRANCH_POWER_CONVERSION",
+      "display_name": "能量转换",
+      "note": "公开技术路线：蒸汽轮机直驱 → 齿轮减速 → 涡轮发电 → 电力推进 → 综合电力推进。",
+      "tiers": [
+        {
+          "tier": 1,
+          "public_label": "Steam Turbine (Direct)",
+          "display_name_cn": "蒸汽轮机直驱",
+          "description": "蒸汽轮机直驱",
+          "linked_assets": []
+        },
+        {
+          "tier": 2,
+          "public_label": "Improved Steam Plant",
+          "display_name_cn": "改进型蒸汽动力装置",
+          "description": "改进型蒸汽动力装置",
+          "linked_assets": []
+        },
+        {
+          "tier": 3,
+          "public_label": "Geared Steam Turbine",
+          "display_name_cn": "齿轮减速汽轮机",
+          "description": "齿轮减速汽轮机",
+          "linked_assets": []
+        },
+        {
+          "tier": 4,
+          "public_label": "Turbo-electric",
+          "display_name_cn": "涡轮发电传动",
+          "description": "涡轮发电传动",
+          "linked_assets": []
+        },
+        {
+          "tier": 5,
+          "public_label": "Improved Turbo-electric",
+          "display_name_cn": "改进型涡轮发电传动",
+          "description": "改进型涡轮发电传动",
+          "linked_assets": []
+        },
+        {
+          "tier": 6,
+          "public_label": "Electric Drive",
+          "display_name_cn": "电力推进",
+          "description": "电力推进",
+          "linked_assets": []
+        },
+        {
+          "tier": 7,
+          "public_label": "Integrated Electric Drive",
+          "display_name_cn": "综合电力推进",
+          "description": "综合电力推进",
+          "linked_assets": []
+        },
+        {
+          "tier": 8,
+          "public_label": "Integrated Electric Propulsion",
+          "display_name_cn": "综合电力推进系统",
+          "description": "综合电力推进系统",
+          "linked_assets": []
+        },
+        {
+          "tier": 9,
+          "public_label": "Advanced Integrated Electric Propulsion",
+          "display_name_cn": "先进综合电力推进",
+          "description": "先进综合电力推进",
+          "linked_assets": []
+        },
+        {
+          "tier": 10,
+          "public_label": "Next Generation Power Conversion",
+          "display_name_cn": "下一代能量转换",
+          "description": "下一代能量转换",
+          "linked_assets": []
+        }
+      ]
+    },
+    {
+      "branch_id": "BRANCH_TRANSMISSION",
+      "display_name": "传动",
+      "note": "公开技术路线：直轴 → 齿轮轴系 → 电力传动 → 混合/综合传动。",
+      "tiers": [
+        {
+          "tier": 1,
+          "public_label": "Direct Shaft",
+          "display_name_cn": "直轴传动",
+          "description": "直轴传动",
+          "linked_assets": [
+            "SHAFT_PLAIN"
+          ]
+        },
+        {
+          "tier": 2,
+          "public_label": "Improved Direct Shaft",
+          "display_name_cn": "改进型直轴",
+          "description": "改进型直轴",
+          "linked_assets": [
+            "SHAFT_PLAIN"
+          ]
+        },
+        {
+          "tier": 3,
+          "public_label": "Geared Shaft",
+          "display_name_cn": "齿轮减速轴系",
+          "description": "齿轮减速轴系",
+          "linked_assets": [
+            "SHAFT_GEARED"
+          ]
+        },
+        {
+          "tier": 4,
+          "public_label": "Multi-shaft Geared",
+          "display_name_cn": "多轴齿轮传动",
+          "description": "多轴齿轮传动",
+          "linked_assets": [
+            "SHAFT_GEARED"
+          ]
+        },
+        {
+          "tier": 5,
+          "public_label": "Quiet Geared Shaft",
+          "display_name_cn": "低噪声齿轮轴系",
+          "description": "低噪声齿轮轴系",
+          "linked_assets": [
+            "SHAFT_GEARED"
+          ]
+        },
+        {
+          "tier": 6,
+          "public_label": "Electric Drive",
+          "display_name_cn": "电力传动",
+          "description": "电力传动",
+          "linked_assets": [
+            "SHAFT_GEARED"
+          ]
+        },
+        {
+          "tier": 7,
+          "public_label": "Hybrid / Integrated",
+          "display_name_cn": "混合/综合传动",
+          "description": "混合/综合传动",
+          "linked_assets": [
+            "SHAFT_FAIRING_LONG"
+          ]
+        },
+        {
+          "tier": 8,
+          "public_label": "Integrated Electric Drive",
+          "display_name_cn": "综合电力传动",
+          "description": "综合电力传动",
+          "linked_assets": [
+            "SHAFT_FAIRING_LONG"
+          ]
+        },
+        {
+          "tier": 9,
+          "public_label": "Advanced Integrated Transmission",
+          "display_name_cn": "先进综合传动",
+          "description": "先进综合传动",
+          "linked_assets": [
+            "SHAFT_FAIRING_LONG"
+          ]
+        },
+        {
+          "tier": 10,
+          "public_label": "Next Generation Transmission",
+          "display_name_cn": "下一代传动",
+          "description": "下一代传动",
+          "linked_assets": []
+        }
+      ]
+    },
+    {
+      "branch_id": "BRANCH_SHAFT",
+      "display_name": "轴系",
+      "note": "轴系是传动分支的可视化部分；长轴包尺寸取自 Typhoon 母版实测。",
+      "tiers": [
+        {
+          "tier": 1,
+          "public_label": "Direct Shaft",
+          "display_name_cn": "直轴传动",
+          "description": "直轴传动",
+          "linked_assets": [
+            "SHAFT_PLAIN"
+          ]
+        },
+        {
+          "tier": 2,
+          "public_label": "Improved Direct Shaft",
+          "display_name_cn": "改进型直轴",
+          "description": "改进型直轴",
+          "linked_assets": [
+            "SHAFT_PLAIN"
+          ]
+        },
+        {
+          "tier": 3,
+          "public_label": "Geared Shaft",
+          "display_name_cn": "齿轮减速轴系",
+          "description": "齿轮减速轴系",
+          "linked_assets": [
+            "SHAFT_GEARED"
+          ]
+        },
+        {
+          "tier": 4,
+          "public_label": "Multi-shaft Geared",
+          "display_name_cn": "多轴齿轮传动",
+          "description": "多轴齿轮传动",
+          "linked_assets": [
+            "SHAFT_GEARED"
+          ]
+        },
+        {
+          "tier": 5,
+          "public_label": "Quiet Geared Shaft",
+          "display_name_cn": "低噪声齿轮轴系",
+          "description": "低噪声齿轮轴系",
+          "linked_assets": [
+            "SHAFT_GEARED"
+          ]
+        },
+        {
+          "tier": 6,
+          "public_label": "Electric Drive",
+          "display_name_cn": "电力传动",
+          "description": "电力传动",
+          "linked_assets": [
+            "SHAFT_GEARED"
+          ]
+        },
+        {
+          "tier": 7,
+          "public_label": "Hybrid / Integrated",
+          "display_name_cn": "混合/综合传动",
+          "description": "混合/综合传动",
+          "linked_assets": [
+            "SHAFT_FAIRING_LONG"
+          ]
+        },
+        {
+          "tier": 8,
+          "public_label": "Integrated Electric Drive",
+          "display_name_cn": "综合电力传动",
+          "description": "综合电力传动",
+          "linked_assets": [
+            "SHAFT_FAIRING_LONG"
+          ]
+        },
+        {
+          "tier": 9,
+          "public_label": "Advanced Integrated Transmission",
+          "display_name_cn": "先进综合传动",
+          "description": "先进综合传动",
+          "linked_assets": [
+            "SHAFT_FAIRING_LONG"
+          ]
+        },
+        {
+          "tier": 10,
+          "public_label": "Next Generation Transmission",
+          "display_name_cn": "下一代传动",
+          "description": "下一代传动",
+          "linked_assets": []
+        }
+      ]
+    },
+    {
+      "branch_id": "BRANCH_THRUSTER",
+      "display_name": "辅助推进",
+      "note": "侧推与辅助推进器，用于 T3 以后的机动性表达。",
+      "tiers": [
+        {
+          "tier": 1,
+          "public_label": "None",
+          "display_name_cn": "无辅助推进",
+          "description": "无辅助推进",
+          "linked_assets": []
+        },
+        {
+          "tier": 2,
+          "public_label": "None",
+          "display_name_cn": "无辅助推进",
+          "description": "无辅助推进",
+          "linked_assets": []
+        },
+        {
+          "tier": 3,
+          "public_label": "Basic Tunnel Thruster",
+          "display_name_cn": "基础隧道侧推",
+          "description": "基础隧道侧推",
+          "linked_assets": [
+            "THRUSTER_TUNNEL"
+          ]
+        },
+        {
+          "tier": 4,
+          "public_label": "Improved Tunnel Thruster",
+          "display_name_cn": "改进型隧道侧推",
+          "description": "改进型隧道侧推",
+          "linked_assets": [
+            "THRUSTER_TUNNEL"
+          ]
+        },
+        {
+          "tier": 5,
+          "public_label": "Quiet Tunnel Thruster",
+          "display_name_cn": "低噪声隧道侧推",
+          "description": "低噪声隧道侧推",
+          "linked_assets": [
+            "THRUSTER_TUNNEL"
+          ]
+        },
+        {
+          "tier": 6,
+          "public_label": "Tunnel Thruster",
+          "display_name_cn": "隧道式侧推",
+          "description": "隧道式侧推",
+          "linked_assets": [
+            "THRUSTER_TUNNEL"
+          ]
+        },
+        {
+          "tier": 7,
+          "public_label": "Ducted Auxiliary Thruster",
+          "display_name_cn": "导管式辅助推进",
+          "description": "导管式辅助推进",
+          "linked_assets": [
+            "THRUSTER_TUNNEL"
+          ]
+        },
+        {
+          "tier": 8,
+          "public_label": "Integrated Auxiliary Thruster",
+          "display_name_cn": "综合辅助推进",
+          "description": "综合辅助推进",
+          "linked_assets": [
+            "THRUSTER_TUNNEL"
+          ]
+        },
+        {
+          "tier": 9,
+          "public_label": "Advanced Auxiliary Thruster",
+          "display_name_cn": "先进辅助推进",
+          "description": "先进辅助推进",
+          "linked_assets": [
+            "THRUSTER_TUNNEL"
+          ]
+        },
+        {
+          "tier": 10,
+          "public_label": "Rim-Driven Thruster",
+          "display_name_cn": "轮缘驱动推进器",
+          "description": "轮缘驱动推进器",
+          "linked_assets": [
+            "THRUSTER_RIM_DRIVEN"
+          ]
+        }
+      ]
+    },
+    {
+      "branch_id": "BRANCH_CONTROL",
+      "display_name": "控制",
+      "note": "只描述控制架构世代，不涉及任何具体实现参数。",
+      "tiers": [
+        {
+          "tier": 1,
+          "public_label": "Manual / Mechanical",
+          "display_name_cn": "机械/手动操纵",
+          "description": "机械/手动操纵",
+          "linked_assets": []
+        },
+        {
+          "tier": 2,
+          "public_label": "Assisted Mechanical",
+          "display_name_cn": "助力机械操纵",
+          "description": "助力机械操纵",
+          "linked_assets": []
+        },
+        {
+          "tier": 3,
+          "public_label": "Analogue Control",
+          "display_name_cn": "模拟量控制",
+          "description": "模拟量控制",
+          "linked_assets": []
+        },
+        {
+          "tier": 4,
+          "public_label": "Early Digital Monitoring",
+          "display_name_cn": "早期数字监控",
+          "description": "早期数字监控",
+          "linked_assets": []
+        },
+        {
+          "tier": 5,
+          "public_label": "Digital Control",
+          "display_name_cn": "数字控制",
+          "description": "数字控制",
+          "linked_assets": []
+        },
+        {
+          "tier": 6,
+          "public_label": "Integrated Digital Control",
+          "display_name_cn": "综合数字控制",
+          "description": "综合数字控制",
+          "linked_assets": []
+        },
+        {
+          "tier": 7,
+          "public_label": "Automated Propulsion Control",
+          "display_name_cn": "自动化推进控制",
+          "description": "自动化推进控制",
+          "linked_assets": []
+        },
+        {
+          "tier": 8,
+          "public_label": "Integrated Platform Control",
+          "display_name_cn": "平台综合控制",
+          "description": "平台综合控制",
+          "linked_assets": []
+        },
+        {
+          "tier": 9,
+          "public_label": "Advanced Automation",
+          "display_name_cn": "先进自动化",
+          "description": "先进自动化",
+          "linked_assets": []
+        },
+        {
+          "tier": 10,
+          "public_label": "Autonomous Propulsion Control",
+          "display_name_cn": "自主推进控制",
+          "description": "自主推进控制",
+          "linked_assets": []
+        }
+      ]
+    }
+  ],
+  "powerplant_research_available": true,
+  "propulsor_research_available": true
+}
