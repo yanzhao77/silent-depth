@@ -422,23 +422,6 @@ async function startMissionDOM(page, missionId) {
 }
 
 /**
- * Diagnostic dump — reads DOM state for torpedo fire investigation.
- */
-async function dumpTorpedoDiagDOM(page, tag) {
-  const snap = await getSnapshotDOM(page);
-  const sonar = await getSonarStateDOM(page);
-  const lines = [];
-  lines.push(`battery=${sonar.battery.toFixed(1)}% pingCooldown=${sonar.pingCooldown}s periscope=${snap.periscope.state}`);
-  for (const c of snap.contacts) {
-    lines.push(`contact ${c.id} bearing=${c.bearing}° range=${c.range}km visual=${c.visual} selected=${c.selected}`);
-  }
-  for (const tl of snap.timeline) {
-    lines.push(`timeline: ${tl.text}`);
-  }
-  for (const l of lines) console.log(`    [diag] ${tag}: ${l}`);
-}
-
-/**
  * Steer player and ping to detect contacts.
  * Keyboard-only approach (no debug API):
  * 1. Turn right by ~90° (enemy AI closes gap while we turn)
