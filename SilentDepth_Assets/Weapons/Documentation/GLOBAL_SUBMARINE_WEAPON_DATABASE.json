@@ -1,6 +1,6 @@
 {
   "database": "GLOBAL_SUBMARINE_WEAPON_DATABASE",
-  "generated_at": "2026-09-10",
+  "generated_at": "2026-09-12",
   "scope": "全部潜射 / 潜艇布放武器；不含水面舰、飞机、陆基武器。",
   "schema": {
     "weapon_id": "[COUNTRY]_[CATEGORY]_[FAMILY]",
@@ -51,8 +51,8 @@
     },
     "by_production_decision": {
       "DATABASE_ONLY": 4,
-      "DEFERRED": 89,
-      "MODEL_NOW": 31
+      "MODEL_EXTENDED": 74,
+      "MODEL_NOW": 46
     },
     "submarines_with_fit_data": 54,
     "submarines_with_launch_interface": 54
@@ -114,7 +114,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_TORP_Yu1",
@@ -123,8 +123,8 @@
       "family_id": "CN_TORP_Yu1",
       "family_name": "Yu-1",
       "base_geometry": "cn_torp_yu1",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "CN_TORP_Yu4",
@@ -181,7 +181,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_TORP_Yu4",
@@ -190,8 +190,8 @@
       "family_id": "CN_TORP_Yu3",
       "family_name": "Yu-3 / Yu-4",
       "base_geometry": "cn_torp_yu3",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "CN_TORP_Yu3",
@@ -247,7 +247,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_TORP_Yu3",
@@ -256,8 +256,8 @@
       "family_id": "CN_TORP_Yu3",
       "family_name": "Yu-3 / Yu-4",
       "base_geometry": "cn_torp_yu3",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "CN_TORP_Yu5",
@@ -314,7 +314,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_TORP_Yu5",
@@ -323,8 +323,8 @@
       "family_id": "CN_TORP_Yu5",
       "family_name": "Yu-5",
       "base_geometry": "cn_torp_yu5",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "CN_TORP_Yu7",
@@ -381,7 +381,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_TORP_Yu7",
@@ -390,8 +390,8 @@
       "family_id": "CN_TORP_Yu7",
       "family_name": "Yu-7",
       "base_geometry": "cn_torp_yu7",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "CN_TORP_Yu6",
@@ -450,7 +450,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_TORP_Yu6",
@@ -530,7 +530,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_ASM_YJ8",
@@ -539,8 +539,8 @@
       "family_id": "CN_ASM_YJ8",
       "family_name": "YJ-8 / YJ-82",
       "base_geometry": "cn_asm_yj8",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "CN_ASM_YJ18",
@@ -612,7 +612,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_ASM_YJ18",
@@ -694,7 +694,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_LAM_YJ18_LandAttack",
@@ -704,7 +704,7 @@
       "family_name": "YJ-18 family",
       "base_geometry": "cn_asm_yj18",
       "production_decision": "DATABASE_ONLY",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "CN_ASW_CY1",
@@ -761,7 +761,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_ASW_CY1",
@@ -770,8 +770,8 @@
       "family_id": "CN_ASW_CY1",
       "family_name": "CY-1",
       "base_geometry": "cn_asw_cy1",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "CN_SLBM_JL1",
@@ -833,7 +833,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_SLBM_JL1",
@@ -842,8 +842,8 @@
       "family_id": "CN_SLBM_JL1",
       "family_name": "JL-1",
       "base_geometry": "cn_slbm_jl1",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "中国第一代 SLBM，Type 092 配套武器。"
     },
     {
       "weapon_id": "CN_SLBM_JL2",
@@ -907,7 +907,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_SLBM_JL2",
@@ -982,7 +982,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "CN_SLBM_JL3",
@@ -1049,7 +1049,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_TORP_L5_Mod3",
@@ -1058,8 +1058,8 @@
       "family_id": "FR_TORP_L5",
       "family_name": "L5",
       "base_geometry": "fr_torp_l5",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "FR_TORP_F17",
@@ -1117,7 +1117,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_TORP_F17",
@@ -1126,8 +1126,8 @@
       "family_id": "FR_TORP_F17",
       "family_name": "F17",
       "base_geometry": "fr_torp_f17",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "FR_TORP_L5_Mod4",
@@ -1185,7 +1185,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_TORP_L5_Mod4",
@@ -1194,8 +1194,8 @@
       "family_id": "FR_TORP_L5",
       "family_name": "L5",
       "base_geometry": "fr_torp_l5",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "FR_TORP_F21",
@@ -1254,7 +1254,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_TORP_F21",
@@ -1335,7 +1335,7 @@
           "name": "MBDA public product pages",
           "url": "https://www.mbda-systems.com/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_ASM_Exocet_SM39",
@@ -1344,8 +1344,8 @@
       "family_id": "FR_ASM_Exocet_SM39",
       "family_name": "Exocet SM39",
       "base_geometry": "fr_asm_sm39",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "FR_LAM_MdCN",
@@ -1416,7 +1416,7 @@
           "name": "MBDA public product pages",
           "url": "https://www.mbda-systems.com/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_LAM_MdCN",
@@ -1488,7 +1488,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_SLBM_M1",
@@ -1497,8 +1497,8 @@
       "family_id": "FR_SLBM_M1",
       "family_name": "M1",
       "base_geometry": "fr_slbm_m1",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "FR_SLBM_M2",
@@ -1560,7 +1560,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_SLBM_M2",
@@ -1569,8 +1569,8 @@
       "family_id": "FR_SLBM_M2",
       "family_name": "M2 / M20",
       "base_geometry": "fr_slbm_m2",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "FR_SLBM_M20",
@@ -1632,7 +1632,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_SLBM_M20",
@@ -1641,8 +1641,8 @@
       "family_id": "FR_SLBM_M2",
       "family_name": "M2 / M20",
       "base_geometry": "fr_slbm_m2",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "FR_SLBM_M4",
@@ -1705,7 +1705,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_SLBM_M4",
@@ -1714,8 +1714,8 @@
       "family_id": "FR_SLBM_M4",
       "family_name": "M4 / M45",
       "base_geometry": "fr_slbm_m4",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "法国第二代 SLBM，Le Redoutable 级后期武器。"
     },
     {
       "weapon_id": "FR_SLBM_M45",
@@ -1778,7 +1778,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_SLBM_M45",
@@ -1787,8 +1787,8 @@
       "family_id": "FR_SLBM_M4",
       "family_name": "M4 / M45",
       "base_geometry": "fr_slbm_m4",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "FR_SLBM_M51",
@@ -1852,7 +1852,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "FR_SLBM_M51",
@@ -1861,8 +1861,8 @@
       "family_id": "FR_SLBM_M51",
       "family_name": "M51",
       "base_geometry": "fr_slbm_m51",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "法国现役 SLBM，Le Triomphant 与 SNLE 3G 的核心武器。"
     },
     {
       "weapon_id": "IN_TORP_TAL",
@@ -1918,7 +1918,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "IN_TORP_TAL",
@@ -1928,7 +1928,7 @@
       "family_name": "TAL / Shyena",
       "base_geometry": "in_torp_tal",
       "production_decision": "DATABASE_ONLY",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "IN_TORP_Varunastra",
@@ -1986,7 +1986,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "IN_TORP_Varunastra",
@@ -2059,7 +2059,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "IN_SLBM_K15",
@@ -2068,8 +2068,8 @@
       "family_id": "IN_SLBM_K15",
       "family_name": "K-15 Sagarika",
       "base_geometry": "in_slbm_k15",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "印度歼敌者级的初始武器。"
     },
     {
       "weapon_id": "IN_SLBM_K4",
@@ -2132,7 +2132,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "IN_SLBM_K4",
@@ -2206,7 +2206,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "IN_SLBM_K5",
@@ -2216,7 +2216,7 @@
       "family_name": "K-5",
       "base_geometry": "in_slbm_k5",
       "production_decision": "DATABASE_ONLY",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_SET53",
@@ -2272,13 +2272,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_SET53",
@@ -2287,8 +2287,8 @@
       "family_id": "RU_TORP_SET53",
       "family_name": "SET-53 / SET-65 / SAET-60",
       "base_geometry": "ru_torp_set53",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_SAET60",
@@ -2345,7 +2345,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_SAET60",
@@ -2354,8 +2354,8 @@
       "family_id": "RU_TORP_SET53",
       "family_name": "SET-53 / SET-65 / SAET-60",
       "base_geometry": "ru_torp_set53",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_SET65",
@@ -2411,7 +2411,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_SET65",
@@ -2420,8 +2420,8 @@
       "family_id": "RU_TORP_SET53",
       "family_name": "SET-53 / SET-65 / SAET-60",
       "base_geometry": "ru_torp_set53",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_5365K",
@@ -2477,13 +2477,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_5365K",
@@ -2549,7 +2549,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_5365M",
@@ -2558,8 +2558,8 @@
       "family_id": "RU_TORP_5365",
       "family_name": "53-65",
       "base_geometry": "ru_torp_5365",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_6576",
@@ -2617,13 +2617,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_6576",
@@ -2689,13 +2689,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_TEST71",
@@ -2762,13 +2762,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_USET80",
@@ -2777,8 +2777,8 @@
       "family_id": "RU_TORP_USET80",
       "family_name": "USET-80",
       "base_geometry": "ru_torp_uset80",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_6576A",
@@ -2836,7 +2836,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_6576A",
@@ -2845,8 +2845,8 @@
       "family_id": "RU_TORP_6576",
       "family_name": "65-76 Kit",
       "base_geometry": "ru_torp_6576",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_Shkval",
@@ -2904,7 +2904,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_Shkval",
@@ -2971,7 +2971,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_TEST71M",
@@ -2980,8 +2980,8 @@
       "family_id": "RU_TORP_TEST71",
       "family_name": "TEST-71 / TEST-96",
       "base_geometry": "ru_torp_test71",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_UGST",
@@ -3039,13 +3039,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_UGST",
@@ -3113,7 +3113,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_USET80K",
@@ -3122,8 +3122,8 @@
       "family_id": "RU_TORP_USET80",
       "family_name": "USET-80",
       "base_geometry": "ru_torp_uset80",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_TEST96",
@@ -3181,7 +3181,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_TEST96",
@@ -3190,8 +3190,8 @@
       "family_id": "RU_TORP_TEST71",
       "family_name": "TEST-71 / TEST-96",
       "base_geometry": "ru_torp_test71",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_UGST_M",
@@ -3249,7 +3249,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_UGST_M",
@@ -3258,8 +3258,8 @@
       "family_id": "RU_TORP_UGST",
       "family_name": "UGST",
       "base_geometry": "ru_torp_ugst",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_TORP_Fizik",
@@ -3316,7 +3316,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_TORP_Fizik",
@@ -3325,8 +3325,8 @@
       "family_id": "RU_TORP_Fizik",
       "family_name": "Fizik",
       "base_geometry": "ru_torp_fizik",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASM_P5",
@@ -3396,13 +3396,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_P5",
@@ -3411,8 +3411,8 @@
       "family_id": "RU_ASM_P5",
       "family_name": "P-5 Pyatyorka",
       "base_geometry": "ru_asm_p5",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASM_P6",
@@ -3482,7 +3482,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_P6",
@@ -3491,8 +3491,8 @@
       "family_id": "RU_ASM_P5",
       "family_name": "P-5 Pyatyorka",
       "base_geometry": "ru_asm_p5",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASM_P70",
@@ -3563,13 +3563,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_P70",
@@ -3578,8 +3578,8 @@
       "family_id": "RU_ASM_P70",
       "family_name": "P-70 Ametist",
       "base_geometry": "ru_asm_p70",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASM_P120",
@@ -3647,7 +3647,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_P120",
@@ -3656,8 +3656,8 @@
       "family_id": "RU_ASM_P120",
       "family_name": "P-120 Malakhit",
       "base_geometry": "ru_asm_p120",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASM_P500",
@@ -3728,13 +3728,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_P500",
@@ -3743,8 +3743,8 @@
       "family_id": "RU_ASM_P500",
       "family_name": "P-500 Bazalt",
       "base_geometry": "ru_asm_p500",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "冷战大型超音速反舰导弹，与 P-700 形成层级对照。"
     },
     {
       "weapon_id": "RU_ASM_P1000",
@@ -3816,7 +3816,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_P1000",
@@ -3825,8 +3825,8 @@
       "family_id": "RU_ASM_P500",
       "family_name": "P-500 Bazalt",
       "base_geometry": "ru_asm_p500",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASM_P700",
@@ -3898,13 +3898,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_P700",
@@ -3986,13 +3986,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_Kalibr_3M54",
@@ -4074,13 +4074,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_Oniks",
@@ -4148,7 +4148,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASM_Zircon",
@@ -4157,8 +4157,8 @@
       "family_id": "RU_ASM_Zircon",
       "family_name": "3M22 Tsirkon",
       "base_geometry": "ru_asm_zircon",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "新一代高超音速反舰导弹，科技树 T9-T10 分支。"
     },
     {
       "weapon_id": "RU_LAM_Granat",
@@ -4227,7 +4227,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_LAM_Granat",
@@ -4236,8 +4236,8 @@
       "family_id": "RU_LAM_Granat",
       "family_name": "RK-55 Granat",
       "base_geometry": "ru_lam_granat",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_LAM_Kalibr_3M14",
@@ -4309,13 +4309,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_LAM_Kalibr_3M14",
@@ -4324,8 +4324,8 @@
       "family_id": "RU_MISSILE_Kalibr",
       "family_name": "Kalibr family",
       "base_geometry": "ru_missile_kalibr",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASW_Vyuga",
@@ -4382,13 +4382,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASW_Vyuga",
@@ -4397,8 +4397,8 @@
       "family_id": "RU_ASW_Vyuga",
       "family_name": "RPK-2 Vyuga",
       "base_geometry": "ru_asw_vyuga",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASW_Vodopad",
@@ -4456,13 +4456,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASW_Vodopad",
@@ -4471,8 +4471,8 @@
       "family_id": "RU_ASW_Vodopad",
       "family_name": "RPK-6 Vodopad",
       "base_geometry": "ru_asw_vodopad",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASW_Veter",
@@ -4532,7 +4532,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASW_Veter",
@@ -4541,8 +4541,8 @@
       "family_id": "RU_ASW_Veter",
       "family_name": "RPK-7 Veter",
       "base_geometry": "ru_asw_veter",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_ASW_Otvet",
@@ -4602,7 +4602,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_ASW_Otvet",
@@ -4611,8 +4611,8 @@
       "family_id": "RU_ASW_Otvet",
       "family_name": "91R Otvet",
       "base_geometry": "ru_asw_otvet",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_SLBM_R13",
@@ -4676,13 +4676,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R13",
@@ -4691,8 +4691,8 @@
       "family_id": "RU_SLBM_R13",
       "family_name": "R-13",
       "base_geometry": "ru_slbm_r13",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "苏联第一代液体燃料 SLBM，Hotel 级配套武器。"
     },
     {
       "weapon_id": "RU_SLBM_R21",
@@ -4754,7 +4754,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R21",
@@ -4763,8 +4763,8 @@
       "family_id": "RU_SLBM_R21",
       "family_name": "R-21",
       "base_geometry": "ru_slbm_r21",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_SLBM_R27",
@@ -4826,7 +4826,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R27",
@@ -4835,8 +4835,8 @@
       "family_id": "RU_SLBM_R27",
       "family_name": "R-27",
       "base_geometry": "ru_slbm_r27",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "Yankee 级主力 SLBM。"
     },
     {
       "weapon_id": "RU_SLBM_R29",
@@ -4899,13 +4899,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R29",
@@ -4914,8 +4914,8 @@
       "family_id": "RU_SLBM_R29",
       "family_name": "R-29 family",
       "base_geometry": "ru_slbm_r29",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_SLBM_R29R",
@@ -4979,7 +4979,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R29R",
@@ -4988,8 +4988,8 @@
       "family_id": "RU_SLBM_R29",
       "family_name": "R-29 family",
       "base_geometry": "ru_slbm_r29",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "Delta III 级 SLBM。"
     },
     {
       "weapon_id": "RU_SLBM_R29RM",
@@ -5053,13 +5053,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R29RM",
@@ -5068,8 +5068,8 @@
       "family_id": "RU_SLBM_R29",
       "family_name": "R-29 family",
       "base_geometry": "ru_slbm_r29",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "Delta IV 级 SLBM。"
     },
     {
       "weapon_id": "RU_SLBM_R29RMU2_Liner",
@@ -5133,7 +5133,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R29RMU2_Liner",
@@ -5142,8 +5142,8 @@
       "family_id": "RU_SLBM_R29",
       "family_name": "R-29 family",
       "base_geometry": "ru_slbm_r29",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_SLBM_R29RMU2_Sineva",
@@ -5207,7 +5207,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R29RMU2_Sineva",
@@ -5216,8 +5216,8 @@
       "family_id": "RU_SLBM_R29",
       "family_name": "R-29 family",
       "base_geometry": "ru_slbm_r29",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "Delta IV 现代化批次使用的 SLBM。"
     },
     {
       "weapon_id": "RU_SLBM_R30_Bulava",
@@ -5280,13 +5280,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R30_Bulava",
@@ -5360,13 +5360,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R39",
@@ -5439,13 +5439,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SLBM_R39M",
@@ -5454,8 +5454,8 @@
       "family_id": "RU_SLBM_R39",
       "family_name": "R-39 (SS-N-20)",
       "base_geometry": "ru_slbm_r39",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_STRAT_Meteorit",
@@ -5528,13 +5528,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_STRAT_Meteorit",
@@ -5543,8 +5543,8 @@
       "family_id": "RU_STRAT_Meteorit",
       "family_name": "P-750 Meteorit",
       "base_geometry": "ru_strat_meteorit",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_MINE_MDM6",
@@ -5603,7 +5603,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_MINE_MDM6",
@@ -5612,8 +5612,8 @@
       "family_id": "RU_MINE_MDM6",
       "family_name": "MDM-6",
       "base_geometry": "ru_mine_mdm6",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_MINE_PMR2",
@@ -5672,7 +5672,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_MINE_PMR2",
@@ -5681,8 +5681,8 @@
       "family_id": "RU_MINE_PMR2",
       "family_name": "PMR-2",
       "base_geometry": "ru_mine_pmr2",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_DECOY_MG74",
@@ -5740,13 +5740,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_DECOY_MG74",
@@ -5755,8 +5755,8 @@
       "family_id": "RU_DECOY_MG74",
       "family_name": "MG-74",
       "base_geometry": "ru_decoy_mg74",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "RU_SPECIAL_SDV_Sirena",
@@ -5812,7 +5812,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "RU_SPECIAL_SDV_Sirena",
@@ -5821,8 +5821,8 @@
       "family_id": "RU_SPECIAL_SDV_Sirena",
       "family_name": "Sirena",
       "base_geometry": "ru_special_sdv_sirena",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "UK_TORP_Mk8",
@@ -5878,7 +5878,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_TORP_Mk8",
@@ -5887,8 +5887,8 @@
       "family_id": "UK_TORP_Mk8",
       "family_name": "Mk 8",
       "base_geometry": "uk_torp_mk8",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "UK_TORP_Tigerfish",
@@ -5945,7 +5945,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_TORP_Tigerfish",
@@ -5954,8 +5954,8 @@
       "family_id": "UK_TORP_Tigerfish",
       "family_name": "Tigerfish",
       "base_geometry": "uk_torp_tigerfish",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "英国线导鱼雷一代，连接 Mk 8 与 Spearfish。"
     },
     {
       "weapon_id": "UK_TORP_Tigerfish_Mod1",
@@ -6013,7 +6013,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_TORP_Tigerfish_Mod1",
@@ -6022,8 +6022,8 @@
       "family_id": "UK_TORP_Tigerfish",
       "family_name": "Tigerfish",
       "base_geometry": "uk_torp_tigerfish",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "UK_TORP_StingRay",
@@ -6081,7 +6081,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_TORP_StingRay",
@@ -6090,8 +6090,8 @@
       "family_id": "UK_TORP_StingRay",
       "family_name": "Sting Ray",
       "base_geometry": "uk_torp_stingray",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "UK_TORP_Spearfish",
@@ -6149,7 +6149,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_TORP_Spearfish",
@@ -6218,7 +6218,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_TORP_Spearfish_Mod1",
@@ -6227,8 +6227,8 @@
       "family_id": "UK_TORP_Spearfish",
       "family_name": "Spearfish",
       "base_geometry": "uk_torp_spearfish",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "UK_SLBM_Polaris_A3TK",
@@ -6291,7 +6291,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_SLBM_Polaris_A3TK",
@@ -6300,8 +6300,8 @@
       "family_id": "UK_SLBM_Polaris_A3TK",
       "family_name": "Polaris A3TK (Chevaline)",
       "base_geometry": "uk_slbm_polaris_a3tk",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "UK_MINE_SeaUrchin",
@@ -6360,7 +6360,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_MINE_SeaUrchin",
@@ -6369,8 +6369,8 @@
       "family_id": "UK_MINE_SeaUrchin",
       "family_name": "Sea Urchin",
       "base_geometry": "uk_mine_sea_urchin",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "UK_DECOY_SSE_Mk3",
@@ -6428,7 +6428,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_DECOY_SSE_Mk3",
@@ -6437,8 +6437,8 @@
       "family_id": "UK_DECOY_SSE_Mk3",
       "family_name": "SSE Mk 3",
       "base_geometry": "uk_decoy_sse_mk3",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "UK_SPECIAL_DDS",
@@ -6489,7 +6489,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "UK_SPECIAL_DDS",
@@ -6498,8 +6498,8 @@
       "family_id": "UK_SPECIAL_DDS",
       "family_name": "Dry Deck Shelter",
       "base_geometry": "uk_special_dds",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk14",
@@ -6555,13 +6555,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk14",
@@ -6627,7 +6627,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk18",
@@ -6636,8 +6636,8 @@
       "family_id": "US_TORP_Mk14",
       "family_name": "Mk 14 / Mk 18 / Mk 23",
       "base_geometry": "us_torp_mk14",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk23",
@@ -6693,7 +6693,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk23",
@@ -6702,8 +6702,8 @@
       "family_id": "US_TORP_Mk14",
       "family_name": "Mk 14 / Mk 18 / Mk 23",
       "base_geometry": "us_torp_mk14",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk16",
@@ -6758,7 +6758,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk16",
@@ -6767,8 +6767,8 @@
       "family_id": "US_TORP_Mk16",
       "family_name": "Mk 16",
       "base_geometry": "us_torp_mk16",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk27",
@@ -6824,7 +6824,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk27",
@@ -6833,8 +6833,8 @@
       "family_id": "US_TORP_Mk27",
       "family_name": "Mk 27",
       "base_geometry": "us_torp_mk27",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk37",
@@ -6890,13 +6890,13 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk37",
@@ -6962,7 +6962,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk37_Mod2",
@@ -6971,8 +6971,8 @@
       "family_id": "US_TORP_Mk37",
       "family_name": "Mk 37",
       "base_geometry": "us_torp_mk37",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk45",
@@ -7029,7 +7029,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk45",
@@ -7038,8 +7038,8 @@
       "family_id": "US_TORP_Mk45",
       "family_name": "Mk 45 ASTOR",
       "base_geometry": "us_torp_mk45",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk48",
@@ -7096,13 +7096,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk48",
@@ -7111,8 +7111,8 @@
       "family_id": "US_TORP_Mk48",
       "family_name": "Mk 48",
       "base_geometry": "us_torp_mk48",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk48_ADCAP",
@@ -7170,13 +7170,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk48_ADCAP",
@@ -7244,7 +7244,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk48_Mod6",
@@ -7253,8 +7253,8 @@
       "family_id": "US_TORP_Mk48",
       "family_name": "Mk 48",
       "base_geometry": "us_torp_mk48",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_TORP_Mk48_Mod7",
@@ -7312,7 +7312,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_TORP_Mk48_Mod7",
@@ -7393,13 +7393,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "RTX / Raytheon public product pages",
           "url": "https://www.rtx.com/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_ASM_Harpoon",
@@ -7480,7 +7480,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_ASM_Tomahawk_TASM",
@@ -7489,8 +7489,8 @@
       "family_id": "US_LAM_Tomahawk",
       "family_name": "Tomahawk",
       "base_geometry": "us_lam_tomahawk",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_LAM_Tomahawk",
@@ -7560,13 +7560,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_LAM_Tomahawk",
@@ -7575,8 +7575,8 @@
       "family_id": "US_LAM_Tomahawk",
       "family_name": "Tomahawk",
       "base_geometry": "us_lam_tomahawk",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_LAM_Tomahawk_BlockIII",
@@ -7647,7 +7647,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_LAM_Tomahawk_BlockIII",
@@ -7656,8 +7656,8 @@
       "family_id": "US_LAM_Tomahawk",
       "family_name": "Tomahawk",
       "base_geometry": "us_lam_tomahawk",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_LAM_Tomahawk_BlockIV",
@@ -7730,13 +7730,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "RTX / Raytheon public product pages",
           "url": "https://www.rtx.com/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_LAM_Tomahawk_BlockIV",
@@ -7819,7 +7819,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_LAM_Tomahawk_BlockV",
@@ -7887,7 +7887,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_ASW_SUBROC",
@@ -7955,7 +7955,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_ASW_SeaLance",
@@ -7965,7 +7965,7 @@
       "family_name": "UUM-125 Sea Lance",
       "base_geometry": "us_asw_sealance",
       "production_decision": "DATABASE_ONLY",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_SLBM_Polaris_A1",
@@ -8027,13 +8027,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SLBM_Polaris_A1",
@@ -8042,8 +8042,8 @@
       "family_id": "US_SLBM_Polaris",
       "family_name": "Polaris",
       "base_geometry": "us_slbm_polaris",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_SLBM_Polaris_A3",
@@ -8105,7 +8105,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SLBM_Polaris_A3",
@@ -8114,8 +8114,8 @@
       "family_id": "US_SLBM_Polaris",
       "family_name": "Polaris",
       "base_geometry": "us_slbm_polaris",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "Polaris 家族代表，覆盖第一代美国 SSBN 与英国 Resolution 级。"
     },
     {
       "weapon_id": "US_SLBM_Poseidon_C3",
@@ -8177,7 +8177,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SLBM_Poseidon_C3",
@@ -8186,8 +8186,8 @@
       "family_id": "US_SLBM_Poseidon",
       "family_name": "Poseidon",
       "base_geometry": "us_slbm_poseidon",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "Poseidon C3，连接 Polaris 与 Trident 的中间层级节点。"
     },
     {
       "weapon_id": "US_SLBM_Trident_C4",
@@ -8250,13 +8250,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SLBM_Trident_C4",
@@ -8265,8 +8265,8 @@
       "family_id": "US_SLBM_Trident",
       "family_name": "Trident",
       "base_geometry": "us_slbm_trident",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_NOW",
+      "production_reason": "Trident I，用于区分 C4 与 D5 两代弹体长度。"
     },
     {
       "weapon_id": "US_SLBM_Trident_D5",
@@ -8330,7 +8330,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SLBM_Trident_D5",
@@ -8404,7 +8404,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SLBM_Trident_D5LE",
@@ -8413,8 +8413,8 @@
       "family_id": "US_SLBM_Trident",
       "family_name": "Trident",
       "base_geometry": "us_slbm_trident",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_STRAT_RegulusII",
@@ -8487,13 +8487,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_STRAT_RegulusII",
@@ -8502,8 +8502,8 @@
       "family_id": "US_STRAT_RegulusII",
       "family_name": "SSM-N-8B Regulus II",
       "base_geometry": "us_strat_regulus2",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_STRAT_TLAM_N",
@@ -8575,13 +8575,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_STRAT_TLAM_N",
@@ -8590,8 +8590,8 @@
       "family_id": "US_STRAT_TLAM_N",
       "family_name": "BGM-109A TLAM-N",
       "base_geometry": "us_strat_tlam_n",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_MINE_Mk60_CAPTOR",
@@ -8650,7 +8650,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_MINE_Mk60_CAPTOR",
@@ -8659,8 +8659,8 @@
       "family_id": "US_MINE_Mk60_CAPTOR",
       "family_name": "Mk 60 CAPTOR",
       "base_geometry": "us_mine_mk60_captor",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_MINE_Mk67_SLMM",
@@ -8719,13 +8719,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_MINE_Mk67_SLMM",
@@ -8793,13 +8793,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_DECOY_Mk70_MOSS",
@@ -8867,7 +8867,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_DECOY_ADC_Mk4",
@@ -8876,8 +8876,8 @@
       "family_id": "US_DECOY_ADC",
       "family_name": "ADC Mk 4 / Mk 5",
       "base_geometry": "us_decoy_adc",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_DECOY_ADC_Mk5",
@@ -8935,7 +8935,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_DECOY_ADC_Mk4",
@@ -8944,8 +8944,8 @@
       "family_id": "US_DECOY_ADC",
       "family_name": "ADC Mk 4 / Mk 5",
       "base_geometry": "us_decoy_adc",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_SPECIAL_SDV_Mk8",
@@ -9002,7 +9002,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SPECIAL_SDV_Mk8",
@@ -9011,8 +9011,8 @@
       "family_id": "US_SPECIAL_SDV_Mk8",
       "family_name": "Mk 8 SEAL Delivery Vehicle",
       "base_geometry": "us_special_sdv_mk8",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_SPECIAL_ASDS",
@@ -9069,7 +9069,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SPECIAL_ASDS",
@@ -9078,8 +9078,8 @@
       "family_id": "US_SPECIAL_ASDS",
       "family_name": "Advanced SEAL Delivery System",
       "base_geometry": "us_special_asds",
-      "production_decision": "DEFERRED",
-      "production_reason": "本轮不建模：沿用数据库与兼容矩阵，后续批次按优先级推进。"
+      "production_decision": "MODEL_EXTENDED",
+      "production_reason": "第二批：数据完整且与既有潜艇平台存在兼容关系的非数据库条目，在第一批完成后按同一管线补建，避免资产库出现只存在于表里的空洞。"
     },
     {
       "weapon_id": "US_SPECIAL_DDS",
@@ -9131,7 +9131,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ],
       "variant_of": "US_SPECIAL_DDS",

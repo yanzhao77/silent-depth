@@ -26,6 +26,7 @@ from weapon_dataset import FAMILIES_BY_ID, VARIANTS_BY_ID  # noqa: E402
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from build_compatibility import build as build_matrix  # noqa: E402
+from dataset_index import published_priority  # noqa: E402
 
 TIER_LABEL = {
     1: 'T1 早期潜艇鱼雷 / 基础武器',
@@ -82,7 +83,7 @@ def build() -> dict:
                     'display_name': v['display_name'],
                     'family': v['family_id'],
                     'country': v['country'],
-                    'asset_priority': v['asset_priority'],
+                    'asset_priority': published_priority(v),
                     'confidence': v['confidence'],
                 }
                 for v in sorted(items, key=lambda v: v['weapon_id'])
@@ -130,7 +131,7 @@ def build() -> dict:
             'family': variant['family_id'],
             'role': variant['role'],
             'era': variant['era'],
-            'asset_priority': variant['asset_priority'],
+            'asset_priority': published_priority(variant),
             'icon': str(asset_dir / 'Preview' / 'Icon_256.png'),
             'preview': str(asset_dir / 'Preview' / 'Hero.png'),
             'unlock_requirements': {

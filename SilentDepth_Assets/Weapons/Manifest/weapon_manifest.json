@@ -1,17 +1,15 @@
 {
   "manifest": "weapon_manifest",
-  "generated_at": "2026-09-10",
+  "generated_at": "2026-09-12",
   "source_of_truth": "Weapons/Tools/weapon_dataset.py",
   "totals": {
     "families": 87,
     "variants": 124,
     "by_asset_status": {
-      "DATABASE_ONLY": 4,
-      "PARTIAL": 46,
-      "PLANNED": 74
+      "COMPLETE": 120,
+      "DATABASE_ONLY": 4
     },
     "by_asset_priority": {
-      "DATABASE_ONLY": 4,
       "HIGH": 46,
       "LOW": 23,
       "MEDIUM": 51
@@ -51,7 +49,7 @@
         "scale_note": "早期仿制型号，公开资料为级别近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -86,11 +84,11 @@
       "readme": "Weapons/Torpedoes/CN_TORP_Yu1/Documentation/CN_TORP_Yu1_README.md",
       "validation": "Weapons/Torpedoes/CN_TORP_Yu1/Validation/CN_TORP_Yu1_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "CN_SSN_Type091"
@@ -101,7 +99,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -139,7 +137,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -173,11 +171,11 @@
       "readme": "Weapons/Torpedoes/CN_TORP_Yu4/Documentation/CN_TORP_Yu4_README.md",
       "validation": "Weapons/Torpedoes/CN_TORP_Yu4/Validation/CN_TORP_Yu4_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "CN_SSN_Type091",
@@ -189,7 +187,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -226,7 +224,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -277,7 +275,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -315,7 +313,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -349,11 +347,11 @@
       "readme": "Weapons/Torpedoes/CN_TORP_Yu5/Documentation/CN_TORP_Yu5_README.md",
       "validation": "Weapons/Torpedoes/CN_TORP_Yu5/Validation/CN_TORP_Yu5_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -362,7 +360,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -401,7 +399,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -434,11 +432,11 @@
       "readme": "Weapons/Torpedoes/CN_TORP_Yu7/Documentation/CN_TORP_Yu7_README.md",
       "validation": "Weapons/Torpedoes/CN_TORP_Yu7/Validation/CN_TORP_Yu7_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "CN_SSBN_Type094",
@@ -452,7 +450,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -490,7 +488,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -526,11 +524,11 @@
       "readme": "Weapons/Torpedoes/CN_TORP_Yu6/Documentation/CN_TORP_Yu6_README.md",
       "validation": "Weapons/Torpedoes/CN_TORP_Yu6/Validation/CN_TORP_Yu6_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "CN_SSBN_Type094",
@@ -546,7 +544,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -585,7 +583,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -631,11 +629,11 @@
       "readme": "Weapons/AntiShipMissiles/CN_ASM_YJ8/Documentation/CN_ASM_YJ8_README.md",
       "validation": "Weapons/AntiShipMissiles/CN_ASM_YJ8/Validation/CN_ASM_YJ8_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "CN_SSN_Type093",
@@ -647,7 +645,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -687,7 +685,7 @@
         "scale_note": "公开资料存在多个版本，取与发射管匹配的级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -751,7 +749,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -790,7 +788,7 @@
         "scale_source": "GAMEPLAY_SCALE",
         "scale_note": "公开资料不足，按同族发射管级别估计。"
       },
-      "asset_priority": "DATABASE_ONLY",
+      "asset_priority": null,
       "asset_status": "DATABASE_ONLY",
       "geometry": {
         "kind": "cruise_missile",
@@ -854,7 +852,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -892,7 +890,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "rocket_payload",
         "features": [
@@ -926,11 +924,11 @@
       "readme": "Weapons/AntiSubmarineMissiles/CN_ASW_CY1/Documentation/CN_ASW_CY1_README.md",
       "validation": "Weapons/AntiSubmarineMissiles/CN_ASW_CY1/Validation/CN_ASW_CY1_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "CN_SSN_Type093",
@@ -942,7 +940,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -980,7 +978,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -1034,7 +1032,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1073,7 +1071,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -1129,7 +1127,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1168,7 +1166,7 @@
         "scale_note": "公开资料有限，取公开报道的级别近似值。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -1224,7 +1222,7 @@
           "name": "Public open-source summaries of Chinese naval weapons",
           "url": "https://www.globalsecurity.org/military/world/china/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1262,7 +1260,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -1296,11 +1294,11 @@
       "readme": "Weapons/Torpedoes/FR_TORP_L5_Mod3/Documentation/FR_TORP_L5_Mod3_README.md",
       "validation": "Weapons/Torpedoes/FR_TORP_L5_Mod3/Validation/FR_TORP_L5_Mod3_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "FR_SSBN_LeRedoutable",
@@ -1312,7 +1310,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1350,7 +1348,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -1385,11 +1383,11 @@
       "readme": "Weapons/Torpedoes/FR_TORP_F17/Documentation/FR_TORP_F17_README.md",
       "validation": "Weapons/Torpedoes/FR_TORP_F17/Validation/FR_TORP_F17_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "FR_SSBN_LeTriomphant",
@@ -1402,7 +1400,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1440,7 +1438,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -1475,11 +1473,11 @@
       "readme": "Weapons/Torpedoes/FR_TORP_L5_Mod4/Documentation/FR_TORP_L5_Mod4_README.md",
       "validation": "Weapons/Torpedoes/FR_TORP_L5_Mod4/Validation/FR_TORP_L5_Mod4_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "FR_SSN_Rubis"
@@ -1490,7 +1488,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1528,7 +1526,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -1564,11 +1562,11 @@
       "readme": "Weapons/Torpedoes/FR_TORP_F21/Documentation/FR_TORP_F21_README.md",
       "validation": "Weapons/Torpedoes/FR_TORP_F21/Validation/FR_TORP_F21_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "FR_SSBN_LeTriomphant",
@@ -1582,7 +1580,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1621,7 +1619,7 @@
         "scale_note": "公开资料长度约 4.7 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -1668,11 +1666,11 @@
       "readme": "Weapons/AntiShipMissiles/FR_ASM_Exocet_SM39/Documentation/FR_ASM_Exocet_SM39_README.md",
       "validation": "Weapons/AntiShipMissiles/FR_ASM_Exocet_SM39/Validation/FR_ASM_Exocet_SM39_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "FR_SSBN_LeRedoutable",
@@ -1687,7 +1685,7 @@
           "name": "MBDA public product pages",
           "url": "https://www.mbda-systems.com/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1726,7 +1724,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -1773,11 +1771,11 @@
       "readme": "Weapons/LandAttackMissiles/FR_LAM_MdCN/Documentation/FR_LAM_MdCN_README.md",
       "validation": "Weapons/LandAttackMissiles/FR_LAM_MdCN/Validation/FR_LAM_MdCN_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "FR_SSN_Suffren"
@@ -1788,7 +1786,7 @@
           "name": "MBDA public product pages",
           "url": "https://www.mbda-systems.com/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1826,7 +1824,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -1878,7 +1876,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -1916,7 +1914,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -1968,7 +1966,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2006,7 +2004,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -2060,7 +2058,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2099,7 +2097,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -2153,7 +2151,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2192,7 +2190,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -2246,7 +2244,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2285,7 +2283,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -2341,7 +2339,7 @@
           "name": "French Ministry of Armed Forces public equipment pages",
           "url": "https://www.defense.gouv.fr/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2378,7 +2376,7 @@
         "scale_source": "ESTIMATED",
         "scale_note": "公开资料为级别近似。"
       },
-      "asset_priority": "DATABASE_ONLY",
+      "asset_priority": null,
       "asset_status": "DATABASE_ONLY",
       "geometry": {
         "kind": "torpedo",
@@ -2427,7 +2425,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2465,7 +2463,7 @@
         "scale_note": "公开资料长度口径存在多个版本，取中间值并标记估计。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -2500,11 +2498,11 @@
       "readme": "Weapons/Torpedoes/IN_TORP_Varunastra/Documentation/IN_TORP_Varunastra_README.md",
       "validation": "Weapons/Torpedoes/IN_TORP_Varunastra/Validation/IN_TORP_Varunastra_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "IN_SSBN_Arighaat",
@@ -2518,7 +2516,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2556,7 +2554,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -2612,7 +2610,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2650,7 +2648,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -2708,7 +2706,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2746,7 +2744,7 @@
         "scale_source": "GAMEPLAY_SCALE",
         "scale_note": "公开资料缺乏，按同级远程型号的级别近似。"
       },
-      "asset_priority": "DATABASE_ONLY",
+      "asset_priority": null,
       "asset_status": "DATABASE_ONLY",
       "geometry": {
         "kind": "slbm",
@@ -2803,7 +2801,7 @@
           "name": "DRDO / Indian Navy public equipment releases",
           "url": "https://www.drdo.gov.in/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2840,7 +2838,7 @@
         "scale_note": "公开资料只给出级别尺寸，取近似值。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -2874,11 +2872,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_SET53/Documentation/RU_TORP_SET53_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_SET53/Validation/RU_TORP_SET53_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_Hotel",
@@ -2890,13 +2888,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -2934,7 +2932,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -2968,11 +2966,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_SAET60/Documentation/RU_TORP_SAET60_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_SAET60/Validation/RU_TORP_SAET60_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -2981,7 +2979,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3018,7 +3016,7 @@
         "scale_note": "沿用同族尺寸近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3052,11 +3050,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_SET65/Documentation/RU_TORP_SET65_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_SET65/Validation/RU_TORP_SET65_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_DeltaI",
@@ -3072,7 +3070,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3109,7 +3107,7 @@
         "scale_note": "公开资料长度约 7 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3143,11 +3141,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_5365K/Documentation/RU_TORP_5365K_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_5365K/Validation/RU_TORP_5365K_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_DeltaII",
@@ -3160,13 +3158,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3203,7 +3201,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3237,11 +3235,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_5365M/Documentation/RU_TORP_5365M_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_5365M/Validation/RU_TORP_5365M_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -3250,7 +3248,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3288,7 +3286,7 @@
         "scale_note": "公开资料 650 毫米口径重型鱼雷。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3340,13 +3338,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3383,7 +3381,7 @@
         "scale_note": "公开资料为级别近似，长度约 8 米级。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3417,11 +3415,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_TEST71/Documentation/RU_TORP_TEST71_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_TEST71/Validation/RU_TORP_TEST71_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSN_Victor"
@@ -3432,13 +3430,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3476,7 +3474,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3510,11 +3508,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_USET80/Documentation/RU_TORP_USET80_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_USET80/Validation/RU_TORP_USET80_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_DeltaIII",
@@ -3530,13 +3528,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3574,7 +3572,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3622,7 +3620,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3660,7 +3658,7 @@
         "scale_note": "公开资料长度约 8 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3695,11 +3693,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_Shkval/Documentation/RU_TORP_Shkval_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_Shkval/Validation/RU_TORP_Shkval_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_Typhoon",
@@ -3713,7 +3711,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3750,7 +3748,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3785,11 +3783,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_TEST71M/Documentation/RU_TORP_TEST71M_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_TEST71M/Validation/RU_TORP_TEST71M_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_DeltaIV",
@@ -3802,7 +3800,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3840,7 +3838,7 @@
         "scale_note": "公开资料为级别近似，长度约 6 米级。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3893,13 +3891,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -3937,7 +3935,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -3972,11 +3970,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_USET80K/Documentation/RU_TORP_USET80K_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_USET80K/Validation/RU_TORP_USET80K_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_Borei",
@@ -3988,7 +3986,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4026,7 +4024,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -4061,11 +4059,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_TEST96/Documentation/RU_TORP_TEST96_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_TEST96/Validation/RU_TORP_TEST96_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -4074,7 +4072,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4112,7 +4110,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -4147,11 +4145,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_UGST_M/Documentation/RU_TORP_UGST_M_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_UGST_M/Validation/RU_TORP_UGST_M_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_BoreiA",
@@ -4163,7 +4161,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4200,7 +4198,7 @@
         "scale_note": "公开资料不足，尺寸为级别估计。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -4235,11 +4233,11 @@
       "readme": "Weapons/Torpedoes/RU_TORP_Fizik/Documentation/RU_TORP_Fizik_README.md",
       "validation": "Weapons/Torpedoes/RU_TORP_Fizik/Validation/RU_TORP_Fizik_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_BoreiA",
@@ -4252,7 +4250,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4291,7 +4289,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -4337,11 +4335,11 @@
       "readme": "Weapons/AntiShipMissiles/RU_ASM_P5/Documentation/RU_ASM_P5_README.md",
       "validation": "Weapons/AntiShipMissiles/RU_ASM_P5/Validation/RU_ASM_P5_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -4350,13 +4348,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4395,7 +4393,7 @@
         "scale_note": "沿用同族级别近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -4454,7 +4452,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4493,7 +4491,7 @@
         "scale_note": "公开资料长度约 7 米，与 533 毫米发射管匹配。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -4540,11 +4538,11 @@
       "readme": "Weapons/AntiShipMissiles/RU_ASM_P70/Documentation/RU_ASM_P70_README.md",
       "validation": "Weapons/AntiShipMissiles/RU_ASM_P70/Validation/RU_ASM_P70_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSN_Victor"
@@ -4555,13 +4553,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4598,7 +4596,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -4644,11 +4642,11 @@
       "readme": "Weapons/AntiShipMissiles/RU_ASM_P120/Documentation/RU_ASM_P120_README.md",
       "validation": "Weapons/AntiShipMissiles/RU_ASM_P120/Validation/RU_ASM_P120_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -4657,7 +4655,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4696,7 +4694,7 @@
         "scale_note": "公开资料长度约 11.7 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "supersonic_missile",
         "features": [
@@ -4756,13 +4754,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4802,7 +4800,7 @@
         "scale_note": "沿用同族级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "supersonic_missile",
         "features": [
@@ -4862,7 +4860,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -4902,7 +4900,7 @@
         "scale_note": "公开资料长度约 10 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "supersonic_missile",
         "features": [
@@ -4964,13 +4962,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5010,7 +5008,7 @@
         "scale_note": "公开资料与 533 毫米发射管匹配。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -5057,11 +5055,11 @@
       "readme": "Weapons/AntiShipMissiles/RU_ASM_Kalibr_3M54/Documentation/RU_ASM_Kalibr_3M54_README.md",
       "validation": "Weapons/AntiShipMissiles/RU_ASM_Kalibr_3M54/Validation/RU_ASM_Kalibr_3M54_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSN_Akula",
@@ -5074,13 +5072,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5120,7 +5118,7 @@
         "scale_note": "公开资料长度约 8.9 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "supersonic_missile",
         "features": [
@@ -5167,11 +5165,11 @@
       "readme": "Weapons/AntiShipMissiles/RU_ASM_Oniks/Documentation/RU_ASM_Oniks_README.md",
       "validation": "Weapons/AntiShipMissiles/RU_ASM_Oniks/Validation/RU_ASM_Oniks_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSN_Yasen",
@@ -5183,13 +5181,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5228,7 +5226,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "glide_body",
         "features": [
@@ -5278,7 +5276,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5316,7 +5314,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -5362,11 +5360,11 @@
       "readme": "Weapons/LandAttackMissiles/RU_LAM_Granat/Documentation/RU_LAM_Granat_README.md",
       "validation": "Weapons/LandAttackMissiles/RU_LAM_Granat/Validation/RU_LAM_Granat_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSN_Akula"
@@ -5377,7 +5375,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5417,7 +5415,7 @@
         "scale_note": "公开资料与发射管口径匹配。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -5464,11 +5462,11 @@
       "readme": "Weapons/LandAttackMissiles/RU_LAM_Kalibr_3M14/Documentation/RU_LAM_Kalibr_3M14_README.md",
       "validation": "Weapons/LandAttackMissiles/RU_LAM_Kalibr_3M14/Validation/RU_LAM_Kalibr_3M14_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSN_Yasen",
@@ -5480,13 +5478,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5524,7 +5522,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "rocket_payload",
         "features": [
@@ -5558,11 +5556,11 @@
       "readme": "Weapons/AntiSubmarineMissiles/RU_ASW_Vyuga/Documentation/RU_ASW_Vyuga_README.md",
       "validation": "Weapons/AntiSubmarineMissiles/RU_ASW_Vyuga/Validation/RU_ASW_Vyuga_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -5571,13 +5569,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5615,7 +5613,7 @@
         "scale_note": "公开资料长度约 8 米级。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "rocket_payload",
         "features": [
@@ -5650,11 +5648,11 @@
       "readme": "Weapons/AntiSubmarineMissiles/RU_ASW_Vodopad/Documentation/RU_ASW_Vodopad_README.md",
       "validation": "Weapons/AntiSubmarineMissiles/RU_ASW_Vodopad/Validation/RU_ASW_Vodopad_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_DeltaIII",
@@ -5670,13 +5668,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5716,7 +5714,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "rocket_payload",
         "features": [
@@ -5764,7 +5762,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5804,7 +5802,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "rocket_payload",
         "features": [
@@ -5839,11 +5837,11 @@
       "readme": "Weapons/AntiSubmarineMissiles/RU_ASW_Otvet/Documentation/RU_ASW_Otvet_README.md",
       "validation": "Weapons/AntiSubmarineMissiles/RU_ASW_Otvet/Validation/RU_ASW_Otvet_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -5852,7 +5850,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5891,7 +5889,7 @@
         "scale_note": "公开资料存在多个版本，取级别近似值。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -5946,13 +5944,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -5990,7 +5988,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6044,7 +6042,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6082,7 +6080,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6121,11 +6119,11 @@
       "readme": "Weapons/BallisticMissiles/RU_SLBM_R27/Documentation/RU_SLBM_R27_README.md",
       "validation": "Weapons/BallisticMissiles/RU_SLBM_R27/Validation/RU_SLBM_R27_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_Yankee"
@@ -6136,7 +6134,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6175,7 +6173,7 @@
         "scale_note": "公开资料长度约 13 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6230,13 +6228,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6275,7 +6273,7 @@
         "scale_note": "公开资料长度约 14 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6331,7 +6329,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6370,7 +6368,7 @@
         "scale_note": "公开资料长度约 14.8 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6427,13 +6425,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6472,7 +6470,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6527,7 +6525,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6566,7 +6564,7 @@
         "scale_note": "与 R-29RM 同级尺寸。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6621,7 +6619,7 @@
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6659,7 +6657,7 @@
         "scale_note": "公开资料长度约 12 米级。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6715,13 +6713,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6758,7 +6756,7 @@
         "scale_note": "公开资料常见数据，取级别近似值；长度与直径按米级取整。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6800,11 +6798,11 @@
       "readme": "Weapons/BallisticMissiles/RU_SLBM_R39/Documentation/RU_SLBM_R39_README.md",
       "validation": "Weapons/BallisticMissiles/RU_SLBM_R39/Validation/RU_SLBM_R39_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "Typhoon/Project 941 每艇可搭载 20 枚，是 SSBN 科技树的高端节点。",
@@ -6813,13 +6811,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6856,7 +6854,7 @@
         "scale_note": "同一发射筒体系下的改进方案，尺寸沿用近似值。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -6897,11 +6895,11 @@
       "readme": "Weapons/BallisticMissiles/RU_SLBM_R39M/Documentation/RU_SLBM_R39M_README.md",
       "validation": "Weapons/BallisticMissiles/RU_SLBM_R39M/Validation/RU_SLBM_R39M_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "公开资料有限，标记为 ESTIMATED。",
@@ -6910,13 +6908,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -6955,7 +6953,7 @@
         "scale_note": "公开资料不足，尺寸为级别估计。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -7004,11 +7002,11 @@
       "readme": "Weapons/Strategic/RU_STRAT_Meteorit/Documentation/RU_STRAT_Meteorit_README.md",
       "validation": "Weapons/Strategic/RU_STRAT_Meteorit/Validation/RU_STRAT_Meteorit_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "公开资料有限，几何按可确认的巡航导弹外形特征建模。",
@@ -7017,13 +7015,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7061,7 +7059,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "mine",
         "features": [
@@ -7097,11 +7095,11 @@
       "readme": "Weapons/Mines/RU_MINE_MDM6/Documentation/RU_MINE_MDM6_README.md",
       "validation": "Weapons/Mines/RU_MINE_MDM6/Validation/RU_MINE_MDM6_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -7110,7 +7108,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7148,7 +7146,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "mine",
         "features": [
@@ -7184,11 +7182,11 @@
       "readme": "Weapons/Mines/RU_MINE_PMR2/Documentation/RU_MINE_PMR2_README.md",
       "validation": "Weapons/Mines/RU_MINE_PMR2/Validation/RU_MINE_PMR2_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -7197,7 +7195,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7235,7 +7233,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "decoy",
         "features": [
@@ -7270,11 +7268,11 @@
       "readme": "Weapons/Decoys/RU_DECOY_MG74/Documentation/RU_DECOY_MG74_README.md",
       "validation": "Weapons/Decoys/RU_DECOY_MG74/Validation/RU_DECOY_MG74_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "RU_SSBN_Borei",
@@ -7291,13 +7289,13 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public Russian submarine weapon reference pages",
           "url": "https://nuke.fas.org/guide/russia/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7335,7 +7333,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "sdv",
         "features": [
@@ -7368,11 +7366,11 @@
       "readme": "Weapons/SpecialPayload/RU_SPECIAL_SDV_Sirena/Documentation/RU_SPECIAL_SDV_Sirena_README.md",
       "validation": "Weapons/SpecialPayload/RU_SPECIAL_SDV_Sirena/Validation/RU_SPECIAL_SDV_Sirena_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -7381,7 +7379,7 @@
           "name": "russianships.info public project reference pages",
           "url": "https://russianships.info/eng/submarines/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7418,7 +7416,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -7452,11 +7450,11 @@
       "readme": "Weapons/Torpedoes/UK_TORP_Mk8/Documentation/UK_TORP_Mk8_README.md",
       "validation": "Weapons/Torpedoes/UK_TORP_Mk8/Validation/UK_TORP_Mk8_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSBN_Resolution",
@@ -7469,7 +7467,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7507,7 +7505,7 @@
         "scale_note": "公开资料为级别近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -7560,7 +7558,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7598,7 +7596,7 @@
         "scale_note": "沿用同族近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -7633,11 +7631,11 @@
       "readme": "Weapons/Torpedoes/UK_TORP_Tigerfish_Mod1/Documentation/UK_TORP_Tigerfish_Mod1_README.md",
       "validation": "Weapons/Torpedoes/UK_TORP_Tigerfish_Mod1/Validation/UK_TORP_Tigerfish_Mod1_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -7646,7 +7644,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7685,7 +7683,7 @@
         "scale_note": "公开资料为 324 毫米轻型鱼雷。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -7719,11 +7717,11 @@
       "readme": "Weapons/Torpedoes/UK_TORP_StingRay/Documentation/UK_TORP_StingRay_README.md",
       "validation": "Weapons/Torpedoes/UK_TORP_StingRay/Validation/UK_TORP_StingRay_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSBN_Vanguard",
@@ -7737,7 +7735,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7775,7 +7773,7 @@
         "scale_note": "公开资料长度约 7 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -7829,7 +7827,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7867,7 +7865,7 @@
         "scale_note": "与 Mod 0 同级尺寸。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -7903,11 +7901,11 @@
       "readme": "Weapons/Torpedoes/UK_TORP_Spearfish_Mod1/Documentation/UK_TORP_Spearfish_Mod1_README.md",
       "validation": "Weapons/Torpedoes/UK_TORP_Spearfish_Mod1/Validation/UK_TORP_Spearfish_Mod1_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSBN_Dreadnought",
@@ -7920,7 +7918,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -7957,7 +7955,7 @@
         "scale_note": "公开资料常见 Polaris A3 级别尺寸。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -7998,11 +7996,11 @@
       "readme": "Weapons/BallisticMissiles/UK_SLBM_Polaris_A3TK/Documentation/UK_SLBM_Polaris_A3TK_README.md",
       "validation": "Weapons/BallisticMissiles/UK_SLBM_Polaris_A3TK/Validation/UK_SLBM_Polaris_A3TK_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "英国 Resolution 级 SSBN 的武器，用于与美制 Polaris 家族区分。",
@@ -8011,7 +8009,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8049,7 +8047,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "mine",
         "features": [
@@ -8085,11 +8083,11 @@
       "readme": "Weapons/Mines/UK_MINE_SeaUrchin/Documentation/UK_MINE_SeaUrchin_README.md",
       "validation": "Weapons/Mines/UK_MINE_SeaUrchin/Validation/UK_MINE_SeaUrchin_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSN_Trafalgar"
@@ -8100,7 +8098,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8138,7 +8136,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "decoy",
         "features": [
@@ -8173,11 +8171,11 @@
       "readme": "Weapons/Decoys/UK_DECOY_SSE_Mk3/Documentation/UK_DECOY_SSE_Mk3_README.md",
       "validation": "Weapons/Decoys/UK_DECOY_SSE_Mk3/Validation/UK_DECOY_SSE_Mk3_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSBN_Dreadnought",
@@ -8191,7 +8189,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8229,7 +8227,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "shelter",
         "features": [
@@ -8270,7 +8268,7 @@
           "name": "Royal Navy public equipment pages",
           "url": "https://www.royalnavy.mod.uk/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8307,7 +8305,7 @@
         "scale_note": "公开资料常见数据，保留为整数级近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -8358,13 +8356,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8401,7 +8399,7 @@
         "scale_note": "电动型尺寸与 Mk 14 同级别，取公开近似值。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -8448,7 +8446,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8485,7 +8483,7 @@
         "scale_note": "Mk 14 弹体的改型，尺寸沿用公开近似。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -8532,7 +8530,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8569,7 +8567,7 @@
         "scale_note": "公开资料尺寸与 Mk 14 同级，取近似值。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -8602,11 +8600,11 @@
       "readme": "Weapons/Torpedoes/US_TORP_Mk16/Documentation/US_TORP_Mk16_README.md",
       "validation": "Weapons/Torpedoes/US_TORP_Mk16/Validation/US_TORP_Mk16_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSN_Skipjack"
@@ -8617,7 +8615,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8654,7 +8652,7 @@
         "scale_note": "短弹体，公开资料长度约 3.2 米。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -8701,7 +8699,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8738,7 +8736,7 @@
         "scale_note": "公开资料口径 48 厘米级。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -8793,13 +8791,13 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8836,7 +8834,7 @@
         "scale_note": "Mod 2 尺寸沿用基础型公开近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -8870,11 +8868,11 @@
       "readme": "Weapons/Torpedoes/US_TORP_Mk37_Mod2/Documentation/US_TORP_Mk37_Mod2_README.md",
       "validation": "Weapons/Torpedoes/US_TORP_Mk37_Mod2/Validation/US_TORP_Mk37_Mod2_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -8883,7 +8881,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -8921,7 +8919,7 @@
         "scale_note": "Mk 45 ASTOR 公开资料为 19 英寸（483 毫米）弹径，长度约 5.8 米。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -8955,11 +8953,11 @@
       "readme": "Weapons/Torpedoes/US_TORP_Mk45/Documentation/US_TORP_Mk45_README.md",
       "validation": "Weapons/Torpedoes/US_TORP_Mk45/Validation/US_TORP_Mk45_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSN_Sturgeon"
@@ -8970,7 +8968,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9008,7 +9006,7 @@
         "scale_note": "公开资料 533 毫米口径标准重型鱼雷尺寸。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -9060,13 +9058,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9104,7 +9102,7 @@
         "scale_note": "ADCAP 公开质量约 1.6 吨级。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -9139,11 +9137,11 @@
       "readme": "Weapons/Torpedoes/US_TORP_Mk48_ADCAP/Documentation/US_TORP_Mk48_ADCAP_README.md",
       "validation": "Weapons/Torpedoes/US_TORP_Mk48_ADCAP/Validation/US_TORP_Mk48_ADCAP_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSBN_Ohio",
@@ -9156,13 +9154,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9200,7 +9198,7 @@
         "scale_note": "与 ADCAP 同级尺寸。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -9235,11 +9233,11 @@
       "readme": "Weapons/Torpedoes/US_TORP_Mk48_Mod6/Documentation/US_TORP_Mk48_Mod6_README.md",
       "validation": "Weapons/Torpedoes/US_TORP_Mk48_Mod6/Validation/US_TORP_Mk48_Mod6_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSN_LosAngeles",
@@ -9252,7 +9250,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9290,7 +9288,7 @@
         "scale_note": "与 Mod 6 同级尺寸。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "torpedo",
         "features": [
@@ -9325,11 +9323,11 @@
       "readme": "Weapons/Torpedoes/US_TORP_Mk48_Mod7/Documentation/US_TORP_Mk48_Mod7_README.md",
       "validation": "Weapons/Torpedoes/US_TORP_Mk48_Mod7/Validation/US_TORP_Mk48_Mod7_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSBN_Columbia",
@@ -9342,7 +9340,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9381,7 +9379,7 @@
         "scale_note": "公开资料长度约 4.6 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -9428,11 +9426,11 @@
       "readme": "Weapons/AntiShipMissiles/US_ASM_Harpoon/Documentation/US_ASM_Harpoon_README.md",
       "validation": "Weapons/AntiShipMissiles/US_ASM_Harpoon/Validation/US_ASM_Harpoon_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSN_Swiftsure",
@@ -9447,13 +9445,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "RTX / Raytheon public product pages",
           "url": "https://www.rtx.com/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9492,7 +9490,7 @@
         "scale_note": "与同族同级尺寸。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -9539,11 +9537,11 @@
       "readme": "Weapons/AntiShipMissiles/US_ASM_Tomahawk_TASM/Documentation/US_ASM_Tomahawk_TASM_README.md",
       "validation": "Weapons/AntiShipMissiles/US_ASM_Tomahawk_TASM/Validation/US_ASM_Tomahawk_TASM_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -9552,7 +9550,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9591,7 +9589,7 @@
         "scale_note": "Block II 级尺寸按公开资料近似。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -9637,11 +9635,11 @@
       "readme": "Weapons/LandAttackMissiles/US_LAM_Tomahawk/Documentation/US_LAM_Tomahawk_README.md",
       "validation": "Weapons/LandAttackMissiles/US_LAM_Tomahawk/Validation/US_LAM_Tomahawk_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "",
@@ -9650,13 +9648,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9695,7 +9693,7 @@
         "scale_note": "公开资料长度约 6.25 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -9742,11 +9740,11 @@
       "readme": "Weapons/LandAttackMissiles/US_LAM_Tomahawk_BlockIII/Documentation/US_LAM_Tomahawk_BlockIII_README.md",
       "validation": "Weapons/LandAttackMissiles/US_LAM_Tomahawk_BlockIII/Validation/US_LAM_Tomahawk_BlockIII_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSN_Astute",
@@ -9761,7 +9759,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9802,7 +9800,7 @@
         "scale_note": "与 Block III 同级尺寸。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -9849,11 +9847,11 @@
       "readme": "Weapons/LandAttackMissiles/US_LAM_Tomahawk_BlockIV/Documentation/US_LAM_Tomahawk_BlockIV_README.md",
       "validation": "Weapons/LandAttackMissiles/US_LAM_Tomahawk_BlockIV/Validation/US_LAM_Tomahawk_BlockIV_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSN_Astute",
@@ -9868,13 +9866,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "RTX / Raytheon public product pages",
           "url": "https://www.rtx.com/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -9915,7 +9913,7 @@
         "scale_note": "公开资料为同族尺寸。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -9962,11 +9960,11 @@
       "readme": "Weapons/LandAttackMissiles/US_LAM_Tomahawk_BlockV/Documentation/US_LAM_Tomahawk_BlockV_README.md",
       "validation": "Weapons/LandAttackMissiles/US_LAM_Tomahawk_BlockV/Validation/US_LAM_Tomahawk_BlockV_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSN_AUKUS",
@@ -9979,7 +9977,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10017,7 +10015,7 @@
         "scale_note": "公开资料长度约 6.7 米。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "rocket_payload",
         "features": [
@@ -10052,11 +10050,11 @@
       "readme": "Weapons/AntiSubmarineMissiles/US_ASW_SUBROC/Documentation/US_ASW_SUBROC_README.md",
       "validation": "Weapons/AntiSubmarineMissiles/US_ASW_SUBROC/Validation/US_ASW_SUBROC_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSN_LosAngeles",
@@ -10068,7 +10066,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10106,7 +10104,7 @@
         "scale_source": "ESTIMATED",
         "scale_note": "公开资料不足，按同代级别估计。"
       },
-      "asset_priority": "DATABASE_ONLY",
+      "asset_priority": null,
       "asset_status": "DATABASE_ONLY",
       "geometry": {
         "kind": "rocket_payload",
@@ -10154,7 +10152,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10192,7 +10190,7 @@
         "scale_note": "公开资料长度约 8.5 米。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -10231,11 +10229,11 @@
       "readme": "Weapons/BallisticMissiles/US_SLBM_Polaris_A1/Documentation/US_SLBM_Polaris_A1_README.md",
       "validation": "Weapons/BallisticMissiles/US_SLBM_Polaris_A1/Validation/US_SLBM_Polaris_A1_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSBN_EthanAllen",
@@ -10247,13 +10245,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10291,7 +10289,7 @@
         "scale_note": "公开资料长度约 9.9 米。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -10330,11 +10328,11 @@
       "readme": "Weapons/BallisticMissiles/US_SLBM_Polaris_A3/Documentation/US_SLBM_Polaris_A3_README.md",
       "validation": "Weapons/BallisticMissiles/US_SLBM_Polaris_A3/Validation/US_SLBM_Polaris_A3_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "UK_SSBN_Resolution",
@@ -10348,7 +10346,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10386,7 +10384,7 @@
         "scale_note": "公开资料长度约 10.4 米。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -10442,7 +10440,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10481,7 +10479,7 @@
         "scale_note": "公开资料长度约 10.4 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -10537,13 +10535,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10582,7 +10580,7 @@
         "scale_note": "公开资料长度约 13.6 米、直径约 2.1 米。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -10638,7 +10636,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10677,7 +10675,7 @@
         "scale_note": "与 D5 同级尺寸。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "slbm",
         "features": [
@@ -10735,7 +10733,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10774,7 +10772,7 @@
         "scale_note": "取消项目，公开资料尺寸为级别近似值。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -10823,11 +10821,11 @@
       "readme": "Weapons/Strategic/US_STRAT_RegulusII/Documentation/US_STRAT_RegulusII_README.md",
       "validation": "Weapons/Strategic/US_STRAT_RegulusII/Validation/US_STRAT_RegulusII_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "项目取消，仅作为科技树历史节点保留，资料不足处标记 ESTIMATED。",
@@ -10836,13 +10834,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10881,7 +10879,7 @@
         "scale_note": "公开资料 Tomahawk 级别尺寸。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "cruise_missile",
         "features": [
@@ -10929,11 +10927,11 @@
       "readme": "Weapons/Strategic/US_STRAT_TLAM_N/Documentation/US_STRAT_TLAM_N_README.md",
       "validation": "Weapons/Strategic/US_STRAT_TLAM_N/Validation/US_STRAT_TLAM_N_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [],
       "notes": "与 US_LAM_Tomahawk 家族共享几何，数据层通过 weapon_role 区分。",
@@ -10942,13 +10940,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -10986,7 +10984,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "mine",
         "features": [
@@ -11022,11 +11020,11 @@
       "readme": "Weapons/Mines/US_MINE_Mk60_CAPTOR/Documentation/US_MINE_Mk60_CAPTOR_README.md",
       "validation": "Weapons/Mines/US_MINE_Mk60_CAPTOR/Validation/US_MINE_Mk60_CAPTOR_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSN_LosAngeles",
@@ -11039,7 +11037,7 @@
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -11077,7 +11075,7 @@
         "scale_note": "公开资料沿用 Mk 37 鱼雷弹体量级。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "mine",
         "features": [
@@ -11113,11 +11111,11 @@
       "readme": "Weapons/Mines/US_MINE_Mk67_SLMM/Documentation/US_MINE_Mk67_SLMM_README.md",
       "validation": "Weapons/Mines/US_MINE_Mk67_SLMM/Validation/US_MINE_Mk67_SLMM_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSN_LosAngeles",
@@ -11130,13 +11128,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -11174,7 +11172,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "decoy",
         "features": [
@@ -11209,11 +11207,11 @@
       "readme": "Weapons/Decoys/US_DECOY_Mk70_MOSS/Documentation/US_DECOY_Mk70_MOSS_README.md",
       "validation": "Weapons/Decoys/US_DECOY_Mk70_MOSS/Validation/US_DECOY_Mk70_MOSS_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSBN_Ohio",
@@ -11227,13 +11225,13 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         },
         {
           "name": "FAS / public torpedo and missile reference pages",
           "url": "https://nuke.fas.org/guide/usa/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -11271,7 +11269,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "decoy",
         "features": [
@@ -11306,11 +11304,11 @@
       "readme": "Weapons/Decoys/US_DECOY_ADC_Mk4/Documentation/US_DECOY_ADC_Mk4_README.md",
       "validation": "Weapons/Decoys/US_DECOY_ADC_Mk4/Validation/US_DECOY_ADC_Mk4_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSBN_Columbia",
@@ -11323,7 +11321,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -11361,7 +11359,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "LOW",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "decoy",
         "features": [
@@ -11396,11 +11394,11 @@
       "readme": "Weapons/Decoys/US_DECOY_ADC_Mk5/Documentation/US_DECOY_ADC_Mk5_README.md",
       "validation": "Weapons/Decoys/US_DECOY_ADC_Mk5/Validation/US_DECOY_ADC_Mk5_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSN_Virginia"
@@ -11411,7 +11409,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -11449,7 +11447,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PLANNED",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "sdv",
         "features": [
@@ -11483,11 +11481,11 @@
       "readme": "Weapons/SpecialPayload/US_SPECIAL_SDV_Mk8/Documentation/US_SPECIAL_SDV_Mk8_README.md",
       "validation": "Weapons/SpecialPayload/US_SPECIAL_SDV_Mk8/Validation/US_SPECIAL_SDV_Mk8_VALIDATION.json",
       "fbx_versions": {
-        "lod0": null,
-        "lod1": null,
-        "lod2": null,
-        "lod3": null,
-        "collision": null
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400,
+        "collision": 7400
       },
       "compatible_submarines": [
         "US_SSN_Virginia"
@@ -11498,7 +11496,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -11536,7 +11534,7 @@
         "scale_note": "公开资料给出整体量级尺寸。"
       },
       "asset_priority": "MEDIUM",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "sdv",
         "features": [
@@ -11585,7 +11583,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     },
@@ -11623,7 +11621,7 @@
         "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
       },
       "asset_priority": "HIGH",
-      "asset_status": "PARTIAL",
+      "asset_status": "COMPLETE",
       "geometry": {
         "kind": "shelter",
         "features": [
@@ -11667,7 +11665,7 @@
           "name": "US Navy Fact File / public ship and submarine references",
           "url": "https://www.navy.mil/Resources/Fact-Files/",
           "source_type": "public/open",
-          "accessed": "2026-09-10"
+          "accessed": "2026-09-12"
         }
       ]
     }

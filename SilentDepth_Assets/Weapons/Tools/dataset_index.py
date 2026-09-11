@@ -93,6 +93,17 @@ def fbx_versions(weapon: dict) -> dict:
     return versions
 
 
+def published_priority(weapon: dict) -> str | None:
+    """对外发布时该字段只表达排序优先级。
+
+    策展数据用 asset_priority == 'DATABASE_ONLY' 标记"不进生产队列"，
+    那是覆盖范围而不是优先级。发布到清单与科技树时把它归一为 None，
+    由 asset_status 单独承载 DATABASE_ONLY 语义；生产队列内部仍用原标记排序。
+    """
+    priority = weapon['asset_priority']
+    return None if priority == 'DATABASE_ONLY' else priority
+
+
 def fit_index() -> dict:
     """潜艇 -> 适配条目列表（data_submarine_fits 的 dict 视图）。"""
     return {

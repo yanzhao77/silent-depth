@@ -21,6 +21,7 @@ from dataset_index import (
     asset_status,
     compatible_submarines,
     fbx_versions,
+    published_priority,
     sorted_variants,
     submarine_rows,
 )
@@ -61,7 +62,7 @@ def manifest_entry(weapon: dict, family: dict) -> dict:
         'propulsion': weapon['propulsion'],
         'launch_methods': list(weapon['launch_methods']),
         'dimensions': weapon['dimensions'],
-        'asset_priority': weapon['asset_priority'],
+        'asset_priority': published_priority(weapon),
         'asset_status': asset_status(weapon),
         'geometry': weapon['geometry'],
         'confidence': weapon['confidence'],
@@ -96,7 +97,11 @@ def build_manifest() -> dict:
             'families': len(FAMILIES),
             'variants': len(entries),
             'by_asset_status': dict(sorted(Counter(e['asset_status'] for e in entries).items())),
-            'by_asset_priority': dict(sorted(Counter(e['asset_priority'] for e in entries).items())),
+            # Database-only entries carry no ordering priority, so they are not
+            # counted here; asset_status is what records their coverage.
+            'by_asset_priority': dict(sorted(Counter(
+                e['asset_priority'] for e in entries if e['asset_priority']
+            ).items())),
         },
         'weapons': entries,
     }

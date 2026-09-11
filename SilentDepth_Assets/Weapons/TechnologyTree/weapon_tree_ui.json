@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-10",
+  "generated_at": "2026-09-12",
   "note": "T1-T10 仅为 Silent Depth 游戏科技树分层，不是现实军事官方等级。",
   "nodes": [
     {
@@ -1160,7 +1160,7 @@
       "family": "US_ASW_SeaLance",
       "role": "潜射反潜导弹（取消）",
       "era": "Cold War Late",
-      "asset_priority": "DATABASE_ONLY",
+      "asset_priority": null,
       "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\US_ASW_SeaLance\\Preview\\Icon_256.png",
       "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\US_ASW_SeaLance\\Preview\\Hero.png",
       "unlock_requirements": {
@@ -1958,7 +1958,7 @@
       "family": "IN_TORP_TAL",
       "role": "轻型反潜鱼雷",
       "era": "Modern",
-      "asset_priority": "DATABASE_ONLY",
+      "asset_priority": null,
       "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\IN_TORP_TAL\\Preview\\Icon_256.png",
       "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\IN_TORP_TAL\\Preview\\Hero.png",
       "unlock_requirements": {
@@ -2285,7 +2285,7 @@
       "family": "CN_ASM_YJ18",
       "role": "对陆攻击巡航导弹型号",
       "era": "Modern",
-      "asset_priority": "DATABASE_ONLY",
+      "asset_priority": null,
       "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\CN_LAM_YJ18_LandAttack\\Preview\\Icon_256.png",
       "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\CN_LAM_YJ18_LandAttack\\Preview\\Hero.png",
       "unlock_requirements": {
@@ -3059,7 +3059,7 @@
       "family": "IN_SLBM_K5",
       "role": "计划中的远程潜射弹道导弹",
       "era": "Future",
-      "asset_priority": "DATABASE_ONLY",
+      "asset_priority": null,
       "icon": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K5\\Preview\\Icon_256.png",
       "preview": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K5\\Preview\\Hero.png",
       "unlock_requirements": {
