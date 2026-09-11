@@ -1,0 +1,74 @@
+{
+  "asset_id": "GEN_TW_TORPEDO_WARNING_SENSOR",
+  "stats": {
+    "LOD0": {
+      "triangles": 1428,
+      "vertices": 1015,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.204,
+        0.5908,
+        1.4
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Glass",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD1": {
+      "triangles": 713,
+      "vertices": 657,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.20248,
+        0.58924,
+        1.4
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Glass",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD2": {
+      "triangles": 313,
+      "vertices": 332,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.20132,
+        0.58812,
+        1.4
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Glass",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD3": {
+      "triangles": 121,
+      "vertices": 175,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.20132,
+        0.58812,
+        1.4
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Glass",
+        "M_Def_Rubber"
+      ]
+    }
+  },
+  "generated_at": "2026-09-10"
+}

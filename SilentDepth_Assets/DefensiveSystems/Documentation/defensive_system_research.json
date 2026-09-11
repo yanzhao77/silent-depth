@@ -1,0 +1,171 @@
+{
+  "schema": "silent-depth-defensive-research-v1",
+  "generated_at": "2026-09-10",
+  "policy_zh": [
+    "只记录本次实际抓取过的公开来源；没抓到可靠来源就不写，绝不推断。",
+    "只记录身份级信息：型号名、厂商/发布机构、公开报道的搭载艇级与用途类别。",
+    "禁止记录或推断：频率、功率、干扰与欺骗参数、算法、识别阈值、鱼雷规避战术、交战流程。",
+    "本文件中没有出现的变体一律视为 GAMEPLAY（游戏设定）或 UNKNOWN，不做任何补写。"
+  ],
+  "sources": {
+    "DOTE_FY2013_ANBLQ10": {
+      "title": "DOT&E FY2013 Annual Report — AN/BLQ-10 Submarine Electronic Warfare Support System",
+      "url": "https://www.dote.osd.mil/Portals/97/pub/reports/FY2013/navy/2013anblq10.pdf?ver=2019-08-22-111213-470",
+      "source_type": "government",
+      "publisher": "US Department of Defense, Director, Operational Test & Evaluation",
+      "accessed": "2026-09-10"
+    },
+    "MILPERISCOPE_WLR9": {
+      "title": "AN/WLR-9 (Military Periscope equipment overview)",
+      "url": "https://www.militaryperiscope.com/weapons/electronics/electronic-warfare/anwlr-9/overview/",
+      "source_type": "reference",
+      "publisher": "Military Periscope",
+      "accessed": "2026-09-10"
+    },
+    "NAVSEA_ADC_MK2": {
+      "title": "Acoustic Device Countermeasure (ADC) MK 2 & ADC MK 2 Training Device — Sources Sought Notice",
+      "url": "https://www.highergov.com/contract-opportunity/acoustic-device-countermeasure-adc-mk-2-adc-mk-n00024-26-r-6262-r-f9206/",
+      "source_type": "government",
+      "publisher": "Department of the Navy, Naval Sea Systems Command (NAVSEA), PEO UWS PMS415",
+      "accessed": "2026-09-10"
+    },
+    "RUSSIANSHIPS_P971": {
+      "title": "Nuclear-Powered Submarines — Project 971 (armament and countermeasure fit)",
+      "url": "https://russianships.info/eng/submarines/project_971.htm",
+      "source_type": "reference",
+      "publisher": "russianships.info",
+      "accessed": "2026-09-10"
+    },
+    "WIKI_SONAR_DECOY": {
+      "title": "Sonar decoy — Submarine decoys and example decoys",
+      "url": "https://en.wikipedia.org/wiki/Sonar_decoy",
+      "source_type": "wikipedia",
+      "publisher": "Wikipedia",
+      "accessed": "2026-09-10"
+    }
+  },
+  "variants": {
+    "ESM-DIGITAL-US": {
+      "anchor": "AN/BLQ-10",
+      "status": "CONFIRMED",
+      "sources": ["DOTE_FY2013_ANBLQ10"],
+      "note_zh": "DOT&E 年度报告把 AN/BLQ-10 记为潜艇电子战支援系统，并说明其在弗吉尼亚级上使用；主承包商记为 Lockheed Martin。仅记身份级信息。"
+    },
+    "TW-ACTIVE-SONAR-WARNING-US": {
+      "anchor": "AN/WLR-9",
+      "status": "PROBABLE",
+      "sources": ["MILPERISCOPE_WLR9"],
+      "note_zh": "公开资料把 AN/WLR-9 描述为潜艇声学截获接收机（AIR）系列的首型，属于声学截获/告警类，而不是雷达告警接收机。因此本库把它锚定在「主动声呐告警/声学截获」分支，原先把 WLR-9 当作雷达告警的候选已撤销。"
+    },
+    "TW-ACOUSTIC-CLASSIFICATION-US": {
+      "anchor": "AN/WLR-9 series (acoustic intercept receivers)",
+      "status": "PROBABLE",
+      "sources": ["MILPERISCOPE_WLR9"],
+      "note_zh": "同一来源把 WLR 系列描述为安装于围壳与艇体的水听器阵加接收/处理与显示设备，属于声学截获与分类类别。"
+    },
+    "ACM-ACOUSTIC-DECOY-US": {
+      "anchor": "ADC Mk 2 (Acoustic Device Countermeasure)",
+      "status": "CONFIRMED",
+      "sources": ["NAVSEA_ADC_MK2"],
+      "note_zh": "NAVSEA 以官方招标公告形式使用「Acoustic Device Countermeasure (ADC) MK 2」这一型号名，并说明其存在水面舰与潜艇两种发射变体。"
+    },
+    "ACM-TORPEDO-DECOY-US": {
+      "anchor": "ADC Mk 2",
+      "status": "CONFIRMED",
+      "sources": ["NAVSEA_ADC_MK2"],
+      "note_zh": "同一公告描述该器材为消耗式对抗装置，用于应对鱼雷威胁；本任务只记录这一身份与用途类别。"
+    },
+    "TD-COUNTERMEASURE-US": {
+      "anchor": "ADC Mk 2",
+      "status": "CONFIRMED",
+      "sources": ["NAVSEA_ADC_MK2"],
+      "note_zh": "鱼雷防御链中的对抗级即上述 ADC 系列器材。"
+    },
+    "CML-ACOUSTIC-DEVICE-US": {
+      "anchor": "Internal Countermeasure Launcher (ICL)",
+      "status": "CONFIRMED",
+      "sources": ["NAVSEA_ADC_MK2"],
+      "note_zh": "官方公告明确提到潜艇变体由内部对抗发射装置（ICL）发射，因此把 ICL 作为美国声学装置发射器的公开身份。"
+    },
+    "ACM-MOBILE-DECOY-RU": {
+      "anchor": "MG-74 Korund-2",
+      "status": "PROBABLE",
+      "sources": ["RUSSIANSHIPS_P971", "WIKI_SONAR_DECOY"],
+      "note_zh": "公开资料把 MG-74 Korund-2 记为苏/俄潜艇用机动式诱饵，可由鱼雷发射管或专用外部发射器投放；本库据此锚定机动声学诱饵分支。"
+    },
+    "ACM-TORPEDO-DECOY-RU": {
+      "anchor": "MG-74 Korund-2 / MG-104 Brosok / MG-114 Berill",
+      "status": "PROBABLE",
+      "sources": ["RUSSIANSHIPS_P971"],
+      "note_zh": "Project 971 资料把上述三种型号列为鱼雷诱饵，并给出其外部发射器配置。"
+    },
+    "DEC-MOBILE-RU": {
+      "anchor": "MG-74 Korund-2",
+      "status": "PROBABLE",
+      "sources": ["RUSSIANSHIPS_P971", "WIKI_SONAR_DECOY"],
+      "note_zh": "同一来源与百科条目都把 MG-74 描述为可自主航行（游动）的诱饵。"
+    },
+    "DEC-TORPEDO-RU": {
+      "anchor": "MG-104 Brosok / MG-114 Berill",
+      "status": "PROBABLE",
+      "sources": ["RUSSIANSHIPS_P971"],
+      "note_zh": "Project 971 的外部发射器配置中列出这两种鱼雷诱饵型号。"
+    },
+    "CML-EXTERNAL-RU": {
+      "anchor": "REPS-324 Shlagbaum",
+      "status": "PROBABLE",
+      "sources": ["RUSSIANSHIPS_P971"],
+      "note_zh": "公开资料把 REPS-324 Shlagbaum 记为 Project 971 上的外部诱饵发射装置（6 具）。"
+    }
+  },
+  "compatibility": {
+    "US_SSN_Virginia|ESM-DIGITAL": {
+      "status": "CONFIRMED",
+      "system": "AN/BLQ-10",
+      "sources": ["DOTE_FY2013_ANBLQ10"],
+      "note_zh": "官方测试报告把 AN/BLQ-10 与弗吉尼亚级一同描述。"
+    },
+    "RU_SSN_Akula|CML-EXTERNAL": {
+      "status": "PROBABLE",
+      "system": "REPS-324 Shlagbaum",
+      "sources": ["RUSSIANSHIPS_P971"],
+      "note_zh": "Project 971（阿库拉级）资料列出 6 具 REPS-324 Shlagbaum 外部发射器。"
+    },
+    "RU_SSN_Akula|DEC-MOBILE": {
+      "status": "PROBABLE",
+      "system": "MG-74 Korund-2",
+      "sources": ["RUSSIANSHIPS_P971", "WIKI_SONAR_DECOY"],
+      "note_zh": "阿库拉级被公开资料列为 MG-74 Korund-2 的使用者。"
+    },
+    "RU_SSN_Akula|ACM-MOBILE-DECOY": {
+      "status": "PROBABLE",
+      "system": "MG-74 Korund-2",
+      "sources": ["RUSSIANSHIPS_P971"],
+      "note_zh": "同上，声学对抗分支同样锚定到该型号。"
+    },
+    "RU_SSN_Akula|DEC-TORPEDO": {
+      "status": "PROBABLE",
+      "system": "MG-104 Brosok / MG-114 Berill",
+      "sources": ["RUSSIANSHIPS_P971"],
+      "note_zh": "外部发射器配载清单中列出这两种鱼雷诱饵。"
+    },
+    "RU_SSBN_DeltaIV|DEC-MOBILE": {
+      "status": "PROBABLE",
+      "system": "MG-74 Korund-2",
+      "sources": ["WIKI_SONAR_DECOY"],
+      "note_zh": "百科条目在列举 MG-74 使用时提到 Delta IV 级以 533 mm 鱼雷发射管投放；该条目的引用来源为 russianships.info 的 Project 667BDRM 页面。"
+    }
+  },
+  "unverified": [
+    "ESM-DIGITAL-UK", "ESM-DIGITAL-FR", "ESM-DIGITAL-CN", "ESM-DIGITAL-IN",
+    "ACM-TORPEDO-DECOY-UK", "ACM-TORPEDO-DECOY-FR", "ACM-TORPEDO-DECOY-CN", "ACM-TORPEDO-DECOY-IN",
+    "CML-EXTERNAL-UK", "CML-EXTERNAL-FR", "CML-EXTERNAL-CN", "CML-EXTERNAL-IN",
+    "TW-RADAR-WARNING-US", "TW-TORPEDO-WARNING-US", "TD-INTEGRATED-US",
+    "ACM-ACOUSTIC-DECOY-CN", "ACM-ACOUSTIC-DECOY-IN", "DC-INTEGRATED-CONTROL-US"
+  ],
+  "notes_zh": [
+    "TW-RADAR-WARNING 的候选型号 AN/WLR-9 经核验属于声学截获接收机，已从该家族撤销候选；该家族目前没有公开锚定型号。",
+    "英国、法国、中国、印度的防御系统分支只查到通用性描述，没有可引用的具体型号，因此保持 GAMEPLAY/UNKNOWN。",
+    "本次核验未使用、也未记录任何频率、功率、干扰或欺骗参数与战术内容。"
+  ]
+}

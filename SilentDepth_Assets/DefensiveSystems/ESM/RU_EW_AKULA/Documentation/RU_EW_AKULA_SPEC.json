@@ -1,0 +1,109 @@
+{
+  "asset_id": "RU_EW_AKULA",
+  "status": "VALIDATING",
+  "category": "ESM",
+  "category_dir": "ESM",
+  "branch": "ESM",
+  "family_id": "ESM-CLASSIFICATION",
+  "country": "Russia",
+  "priority": "MEDIUM",
+  "label": "Russian SSN ESM mast",
+  "label_zh": "俄制攻击核潜艇 ESM 桅杆",
+  "geometry": "esm_mast_rugged",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "height": 8.6,
+      "diameter": 0.42
+    },
+    "bounds_lod0": [
+      0.8824,
+      0.8824,
+      8.76
+    ]
+  },
+  "exports": [
+    {
+      "name": "RU_EW_AKULA_LOD0",
+      "triangles": 2696,
+      "vertices": 1852,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.8824,
+        0.8824,
+        8.76
+      ]
+    },
+    {
+      "name": "RU_EW_AKULA_LOD1",
+      "triangles": 1348,
+      "vertices": 1178,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.88248,
+        0.88249,
+        8.76
+      ]
+    },
+    {
+      "name": "RU_EW_AKULA_LOD2",
+      "triangles": 593,
+      "vertices": 641,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.88004,
+        0.88071,
+        8.75811
+      ]
+    },
+    {
+      "name": "RU_EW_AKULA_LOD3",
+      "triangles": 229,
+      "vertices": 293,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.88004,
+        0.87967,
+        8.7616
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Metal",
+    "M_Def_DarkMetal",
+    "M_Def_AntennaMaterial",
+    "M_Def_Rubber"
+  ],
+  "sockets": [
+    "SOCKET_EW_MAST"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-10",
+  "sha256": {
+    "Blend/RU_EW_AKULA_MASTER.blend": "12c4309c9f6e7c2f110d70ffdbcedeae96dbd8b70e03d0e24774abf30cb197c2",
+    "Blend/RU_EW_AKULA_MASTER.blend1": "884d3a1d693147fcbd6f84677f86f4d312a9e4f0b813fa4f52ea555599ea0057",
+    "FBX/RU_EW_AKULA_LOD0.fbx": "ca79c536ed78b276b856472304a0ad838f12e0bc1d739d37dca069b7391c8c8c",
+    "FBX/RU_EW_AKULA_LOD1.fbx": "30d977cfbfd394bb7ba41346f384e5017383cafa7c7a66c2bf110909a03b2525",
+    "FBX/RU_EW_AKULA_LOD2.fbx": "78881b5690daf17c096ed2f86881aacc8e9011812268da4598bb8c57f092c3ce",
+    "FBX/RU_EW_AKULA_LOD3.fbx": "7128877c0b4b3fcd7722e884813b8bae0dea470c602797e22b7ef9f740215e10",
+    "Collision/RU_EW_AKULA_COLLISION.fbx": "f95635d7990dd8fa8c19898a74acfd7a242cd91a006958b498d7d4702ee8af73",
+    "Preview/RU_EW_AKULA_Detail.png": "b19a7a792c34e1b3f8eeb606e0d7b128d3b9eac8207d66135efaa23529f0ba54",
+    "Preview/RU_EW_AKULA_Front.png": "66d80ba1e49d9c8a335299b62bb1064845430592994d50c396d901869248d09a",
+    "Preview/RU_EW_AKULA_Gray_Front.png": "5ab4ffece7e85942618158d00d25384538e366ca36e26b31f8185788a380eb51",
+    "Preview/RU_EW_AKULA_Gray_ThreeQuarter.png": "3572abfe946848511b2a69b5d8b9b53900c0c94cf12f7576e20087fef5ab3bc6",
+    "Preview/RU_EW_AKULA_Side.png": "faa2ae4cc2d0eb52272373a3752cc1ef97fe58d75c331955f0480da09f7557e3",
+    "Preview/RU_EW_AKULA_ThreeQuarter.png": "9240883a5e9816cea02c0c0b7d2910be05f905ebcbf5008b1fe0033f874552f7",
+    "Preview/RU_EW_AKULA_Top.png": "0ba16feaa59a34f1c0ef337c771e82b967eb18bf15efff227f6e848835d6523e"
+  }
+}

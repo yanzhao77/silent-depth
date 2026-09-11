@@ -1,0 +1,109 @@
+{
+  "asset_id": "US_ACM_MOBILE_DECOY",
+  "status": "VALIDATING",
+  "category": "DECOY",
+  "category_dir": "Decoys",
+  "branch": "DECOY",
+  "family_id": "DEC-MOBILE",
+  "country": "USA",
+  "priority": "MEDIUM",
+  "label": "Mobile acoustic decoy",
+  "label_zh": "机动声学诱饵",
+  "geometry": "decoy_mobile",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "length": 1.9,
+      "diameter": 0.32
+    },
+    "bounds_lod0": [
+      1.9,
+      0.347,
+      0.347
+    ]
+  },
+  "exports": [
+    {
+      "name": "US_ACM_MOBILE_DECOY_LOD0",
+      "triangles": 3180,
+      "vertices": 2039,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.9,
+        0.347,
+        0.347
+      ]
+    },
+    {
+      "name": "US_ACM_MOBILE_DECOY_LOD1",
+      "triangles": 1589,
+      "vertices": 1243,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.9,
+        0.34544,
+        0.34544
+      ]
+    },
+    {
+      "name": "US_ACM_MOBILE_DECOY_LOD2",
+      "triangles": 699,
+      "vertices": 590,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.9,
+        0.34432,
+        0.34432
+      ]
+    },
+    {
+      "name": "US_ACM_MOBILE_DECOY_LOD3",
+      "triangles": 270,
+      "vertices": 322,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.89641,
+        0.34432,
+        0.34432
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Composite",
+    "M_Def_DarkMetal",
+    "M_Def_Metal",
+    "M_Def_Rubber"
+  ],
+  "sockets": [
+    "SOCKET_COUNTERMEASURE_01"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-11",
+  "sha256": {
+    "Blend/US_ACM_MOBILE_DECOY_MASTER.blend": "09463fe94f37ca39e9a3be752908226ccb38fd9de059dd9329cfe47a6c20103e",
+    "Blend/US_ACM_MOBILE_DECOY_MASTER.blend1": "ecf856d25555babe1ef48134ff8f0881338cc8c7db7b099b3efda2806dbe77f0",
+    "FBX/US_ACM_MOBILE_DECOY_LOD0.fbx": "c6c09f319e1d7f5bbf94c4f636ca40ca66373964333c2e7d3280daec7d368b89",
+    "FBX/US_ACM_MOBILE_DECOY_LOD1.fbx": "63387fef35754c088aac6acd3b71733f00e3bc2d9d0df3e82ad02bffdadb8811",
+    "FBX/US_ACM_MOBILE_DECOY_LOD2.fbx": "dce35ab46caf7963e87e2235d114b0197dc56ac02b6b5ae05226fadf099dc93d",
+    "FBX/US_ACM_MOBILE_DECOY_LOD3.fbx": "1365b7b6e8c3959a39ad214e5954a5188be8c51a015d286d0cb82bf143d81f14",
+    "Collision/US_ACM_MOBILE_DECOY_COLLISION.fbx": "c7b8221b3ada7f5769b8ca294952a94a6f1a1a6ef73ffad9a6c1b757d0f1d43c",
+    "Preview/US_ACM_MOBILE_DECOY_Detail.png": "95aca9a8c2bc0e1158c6b9d19d1a9b30bb879ec8288f3746dc3e76404b050763",
+    "Preview/US_ACM_MOBILE_DECOY_Front.png": "8009f8d9af92768cf3990435fc9b50d9369d69dda184b5a1c43f5d8984c83f68",
+    "Preview/US_ACM_MOBILE_DECOY_Gray_Front.png": "8e1b37c4a591d6de107316659b9d5798f7e2b9631d0bbe228ce29c7fc00260b1",
+    "Preview/US_ACM_MOBILE_DECOY_Gray_ThreeQuarter.png": "deeaa5128d4741c82bb5398e91ea7845a1268949796cecac2566f76c9385bd3d",
+    "Preview/US_ACM_MOBILE_DECOY_Side.png": "2d2730c57d5233f9a3c7762910f0fb63ceed176550a4dacd939ef854ab0a794a",
+    "Preview/US_ACM_MOBILE_DECOY_ThreeQuarter.png": "bfc057206dd5110a114b1cba4c0a552d879e37ea2aaffa2d5c04930e126ea222",
+    "Preview/US_ACM_MOBILE_DECOY_Top.png": "c291fbd6c1f9cba17710853684db055737c2e36d0fdaf9187b60ee3dcfa13c89"
+  }
+}

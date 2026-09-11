@@ -1,0 +1,110 @@
+{
+  "asset_id": "GEN_CML_TUBE",
+  "status": "VALIDATING",
+  "category": "LAUNCHER",
+  "category_dir": "Launchers",
+  "branch": "LAUNCHER",
+  "family_id": "CML-TUBE",
+  "country": "USA",
+  "priority": "MEDIUM",
+  "label": "Countermeasure tube",
+  "label_zh": "对抗器材发射管",
+  "geometry": "launcher_tube",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "length": 1.3,
+      "diameter": 0.26
+    },
+    "bounds_lod0": [
+      1.345,
+      0.3668,
+      0.37919
+    ]
+  },
+  "exports": [
+    {
+      "name": "GEN_CML_TUBE_LOD0",
+      "triangles": 2040,
+      "vertices": 1400,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.345,
+        0.3668,
+        0.37919
+      ]
+    },
+    {
+      "name": "GEN_CML_TUBE_LOD1",
+      "triangles": 1020,
+      "vertices": 880,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.345,
+        0.36532,
+        0.378
+      ]
+    },
+    {
+      "name": "GEN_CML_TUBE_LOD2",
+      "triangles": 448,
+      "vertices": 457,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.34454,
+        0.36412,
+        0.3768
+      ]
+    },
+    {
+      "name": "GEN_CML_TUBE_LOD3",
+      "triangles": 173,
+      "vertices": 224,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.3439,
+        0.36412,
+        0.37667
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Metal",
+    "M_Def_Paint",
+    "M_Def_DarkMetal",
+    "M_Def_Rubber"
+  ],
+  "sockets": [
+    "SOCKET_COUNTERMEASURE_01",
+    "SOCKET_COUNTERMEASURE_02"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-11",
+  "sha256": {
+    "Blend/GEN_CML_TUBE_MASTER.blend": "382669bfdd3361763f84da6a18eecac10cca966f93578bf64e65a9a8843da6bf",
+    "Blend/GEN_CML_TUBE_MASTER.blend1": "8c0c3942817bcebe911455f1f6fe7b49de03d1169707febb0057e26d5bbf433a",
+    "FBX/GEN_CML_TUBE_LOD0.fbx": "bf973e8072dbb072d40668bd48611f1cabb038faea5ba78c297461d38a60fa6d",
+    "FBX/GEN_CML_TUBE_LOD1.fbx": "d909aaeb136dc2ecdf61c19d06fc4b1e7b82446100845080324ad33e12774054",
+    "FBX/GEN_CML_TUBE_LOD2.fbx": "4835beae1c4b97088a52856f0843df3675c55537836124080949418dd63f493b",
+    "FBX/GEN_CML_TUBE_LOD3.fbx": "8803bcd57b17f54faebb161ccbad22e68889e12ce6d4e387e5cfa5cdbbc921da",
+    "Collision/GEN_CML_TUBE_COLLISION.fbx": "d3c062946787bf2a81f32ecae9a00297b592ec9f837339ed59c263de54f345c0",
+    "Preview/GEN_CML_TUBE_Detail.png": "302887e1e2c2da337dcd62dfab17fcaad9cb6283059ac7f2fed04b7f37f01665",
+    "Preview/GEN_CML_TUBE_Front.png": "13d9027df928028985f27f4cc84c741d8689c1aa9160d16ed5b6a1cc01489214",
+    "Preview/GEN_CML_TUBE_Gray_Front.png": "1f76c2848fc839437300710a3db42ceb1e2e357a3fdd93f5841c2dea3c23ca31",
+    "Preview/GEN_CML_TUBE_Gray_ThreeQuarter.png": "a8551c00df3922c44ca0f91eb144bb00cd683f61fc96f66bd962f5d091da68c9",
+    "Preview/GEN_CML_TUBE_Side.png": "981bf30e2444551b211bb87ffe1da455b10a4b63ac1171508617a3ec273237bb",
+    "Preview/GEN_CML_TUBE_ThreeQuarter.png": "1c20479d9d7a5997c61bd15f8f6694c54ebf66fc095b1b83017030a74b3a3b4b",
+    "Preview/GEN_CML_TUBE_Top.png": "885eea6f6ff661669c2c96ecda33dee2f40397cbd4233108277ab8e167b7f66d"
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "schema": "silent-depth-defensive-input-audit-v1",
+  "generated_at": "2026-09-10",
+  "requirement_steps_zh": {
+    "step_1": "读取现有潜艇科技树",
+    "step_2": "读取武器科技树"
+  },
+  "submarine_technology_tree": {
+    "records": [
+      {
+        "path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Manifest\\submarine_manifest.json",
+        "exists": true,
+        "sha256": "80ee7908b6b7344dbb30bda130c88af68a1608b073ed0bbbc77a4921ff07e540",
+        "bytes": 51983,
+        "role_zh": "平台清单（54 条，权威来源）",
+        "entries": 54
+      },
+      {
+        "path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Documentation\\GLOBAL_SUBMARINE_DATABASE.json",
+        "exists": true,
+        "sha256": "53fb91a118ac155ba44154bb9af679951585ad3acfaebabddd057adf08b5afa0",
+        "bytes": 70300,
+        "role_zh": "平台数据库（尺寸与公开来源）",
+        "entries": 54
+      },
+      {
+        "path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\TechnologyTree\\technology_tree.json",
+        "exists": true,
+        "sha256": "068f5db4e508035f65c204cf99f825d6bffac4b0abcef503a89629900b96c14b",
+        "bytes": 9473,
+        "role_zh": "平台科技树（T1-T10）",
+        "tier_counts": {
+          "T1": 0,
+          "T2": 5,
+          "T3": 2,
+          "T4": 7,
+          "T5": 4,
+          "T6": 5,
+          "T7": 4,
+          "T8": 8,
+          "T9": 8,
+          "T10": 9
+        }
+      },
+      {
+        "path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\TechnologyTree\\tier_manifest.json",
+        "exists": true,
+        "sha256": "ecb70105553111a6ee6fa20e706b5610b12e6809297a78c28091a1dca1a83b2c",
+        "bytes": 11496,
+        "role_zh": "平台层级清单"
+      }
+    ],
+    "by_country": {
+      "USA": 12,
+      "Russia": 15,
+      "UK": 9,
+      "France": 5,
+      "China": 9,
+      "India": 4
+    },
+    "by_type": {
+      "SSN": 24,
+      "SSBN": 30
+    },
+    "local_complete_assets": [
+      {
+        "asset_dir": "Typhoon_Project941",
+        "blend": [
+          "RU_SSBN_Typhoon_MASTER.blend"
+        ]
+      },
+      {
+        "asset_dir": "Akula",
+        "blend": [
+          "RU_SSN_Akula_MASTER.blend"
+        ]
+      },
+      {
+        "asset_dir": "Yasen",
+        "blend": [
+          "RU_SSN_Yasen_MASTER.blend"
+        ]
+      },
+      {
+        "asset_dir": "Yasen_previous_20260909_162328",
+        "blend": [
+          "RU_SSN_Yasen_MASTER.blend"
+        ]
+      }
+    ]
+  },
+  "weapon_technology_tree": {
+    "records": [
+      {
+        "path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Documentation\\SubmarineWeaponIntegrationAudit.json",
+        "exists": true,
+        "sha256": "6d90d39adbcdbf211e988f50361ca727237eb40c03dd1e5bb6e3a1f04b8a5db8",
+        "bytes": 110714,
+        "role_zh": "武器集成审计（武器工厂当前唯一产物）",
+        "totals": {
+          "submarines": 54,
+          "with_master_blend": 3,
+          "with_full_lod_set": 3,
+          "with_collision": 3,
+          "with_launch_interface": 0,
+          "tier_coverage": {
+            "T1": 0,
+            "T2": 5,
+            "T3": 2,
+            "T4": 8,
+            "T5": 5,
+            "T6": 5,
+            "T7": 4,
+            "T8": 8,
+            "T9": 8,
+            "T10": 9
+          }
+        }
+      }
+    ],
+    "files_present": [
+      "Weapons/Documentation/SubmarineWeaponIntegrationAudit.json",
+      "Weapons/Tools/__pycache__/data_missiles.cpython-310.pyc",
+      "Weapons/Tools/__pycache__/data_slbm.cpython-310.pyc",
+      "Weapons/Tools/__pycache__/data_submarine_fits.cpython-310.pyc",
+      "Weapons/Tools/__pycache__/data_support.cpython-310.pyc",
+      "Weapons/Tools/__pycache__/data_torpedoes.cpython-310.pyc",
+      "Weapons/Tools/__pycache__/sdw_common.cpython-310.pyc",
+      "Weapons/Tools/__pycache__/weapon_dataset.cpython-310.pyc",
+      "Weapons/Tools/__pycache__/weapon_geometry_kit.cpython-310.pyc",
+      "Weapons/Tools/__pycache__/weapon_records.cpython-310.pyc",
+      "Weapons/Tools/audit_submarine_weapon_integration.py",
+      "Weapons/Tools/build_compatibility.py",
+      "Weapons/Tools/build_loadout.py",
+      "Weapons/Tools/build_production_queue.py",
+      "Weapons/Tools/build_technology_tree.py",
+      "Weapons/Tools/build_weapon_assets.py",
+      "Weapons/Tools/build_weapon_manifest.py",
+      "Weapons/Tools/data_missiles.py",
+      "Weapons/Tools/data_slbm.py",
+      "Weapons/Tools/data_submarine_fits.py",
+      "Weapons/Tools/data_support.py",
+      "Weapons/Tools/data_torpedoes.py",
+      "Weapons/Tools/dataset_index.py",
+      "Weapons/Tools/sdw_common.py",
+      "Weapons/Tools/weapon_dataset.py",
+      "Weapons/Tools/weapon_factory_blender.py",
+      "Weapons/Tools/weapon_geometry_kit.py",
+      "Weapons/Tools/WEAPON_ID_ROSTER.md",
+      "Weapons/Tools/weapon_records.py",
+      "Weapons/Tools/weapon_validator.py"
+    ],
+    "observation_zh": "武器科技树目前只有第 1 阶段产物：SubmarineWeaponIntegrationAudit.json 与两个工具脚本，武器数据集与武器树尚未生成。因此本任务只把它当作\"平台集成槽位契约\"读取，不修改、不补写任何武器数据。"
+  },
+  "write_scope_zh": [
+    "本任务只在 SilentDepth_Assets/DefensiveSystems/ 下写入。",
+    "未修改 Submarines/、Weapons/、src/、ue4/ 下的任何文件。"
+  ],
+  "defensive_root": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems"
+}

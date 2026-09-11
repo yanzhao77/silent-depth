@@ -1,0 +1,109 @@
+{
+  "asset_id": "GEN_TW_TORPEDO_WARNING_SENSOR",
+  "status": "VALIDATING",
+  "category": "TORPEDO_DEFENSE",
+  "category_dir": "TorpedoDefense",
+  "branch": "TORPEDO_DEFENSE",
+  "family_id": "TD-WARNING",
+  "country": "USA",
+  "priority": "HIGH",
+  "label": "Torpedo warning sensor",
+  "label_zh": "鱼雷告警传感器",
+  "geometry": "torpedo_warning_sensor",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "length": 1.4,
+      "width": 0.52,
+      "height": 0.36
+    },
+    "bounds_lod0": [
+      1.204,
+      0.5908,
+      1.4
+    ]
+  },
+  "exports": [
+    {
+      "name": "GEN_TW_TORPEDO_WARNING_SENSOR_LOD0",
+      "triangles": 1428,
+      "vertices": 1015,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.204,
+        0.5908,
+        1.4
+      ]
+    },
+    {
+      "name": "GEN_TW_TORPEDO_WARNING_SENSOR_LOD1",
+      "triangles": 713,
+      "vertices": 657,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.20248,
+        0.58924,
+        1.4
+      ]
+    },
+    {
+      "name": "GEN_TW_TORPEDO_WARNING_SENSOR_LOD2",
+      "triangles": 313,
+      "vertices": 332,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.20132,
+        0.58812,
+        1.4
+      ]
+    },
+    {
+      "name": "GEN_TW_TORPEDO_WARNING_SENSOR_LOD3",
+      "triangles": 121,
+      "vertices": 175,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.20132,
+        0.58812,
+        1.4
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Composite",
+    "M_Def_Metal",
+    "M_Def_DarkMetal",
+    "M_Def_Glass",
+    "M_Def_Rubber"
+  ],
+  "sockets": [
+    "SOCKET_EW_ANTENNA"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 6,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-10",
+  "sha256": {
+    "Blend/GEN_TW_TORPEDO_WARNING_SENSOR_MASTER.blend": "95b0203122aaa2ab77cdbe75e40fa94f3775239646b2769cb49db35eb0f54c25",
+    "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD0.fbx": "e0a14d7c2ceeb186025cc67cdedc90df6791139e28293d10b6e88c2416ed512b",
+    "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD1.fbx": "246574dd9c413c16654c5644e738eaa2e13224f0cfd4da2ec6122d4f9ac5243c",
+    "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD2.fbx": "90b9c72f447cd0ee1d1abdd00317e851040c95b5188a4b60c605c954cd08b969",
+    "FBX/GEN_TW_TORPEDO_WARNING_SENSOR_LOD3.fbx": "a50ec09cfa35d3eb0b1a39d446cd8429033d256d259a4394e08c9a5e90a54b4d",
+    "Collision/GEN_TW_TORPEDO_WARNING_SENSOR_COLLISION.fbx": "c07901f4974851335ea0aef24ecbe3034af2bc76ed485dec3e9b6d6122dfa79c",
+    "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Front.png": "66efd705fcbfc70c3bfd697c53fc959b122f9074a325aa15778f7d91bed1c4b7",
+    "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Gray_Front.png": "969481b58ef9588e0bdd9211039c04b6000b1058770b6073aa5e5385e19f1760",
+    "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Gray_ThreeQuarter.png": "3e74aaa06ad36d7acf1ca140bfc3585582179baf3032ab7e5a86492c6893fa84",
+    "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Side.png": "4c1654f4dbbc988673f0cff3bf776cf34ac90a938cff24c659f8c700e6e6b051",
+    "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_ThreeQuarter.png": "5c3ebce7d61f373aae465b0880f6f03dd94c2c1b5757f345306be28dfc8b4e0e",
+    "Preview/GEN_TW_TORPEDO_WARNING_SENSOR_Top.png": "eb91fccf571855f3bab945a1e01687959ee4ecff990576e6fed57b65a5c86650"
+  }
+}

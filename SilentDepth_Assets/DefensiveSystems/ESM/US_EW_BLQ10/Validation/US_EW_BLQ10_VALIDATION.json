@@ -1,0 +1,98 @@
+{
+  "asset_id": "US_EW_BLQ10",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\ESM\\US_EW_BLQ10",
+  "generated_at": "2026-09-11",
+  "result": "PASS",
+  "checks": [
+    {
+      "rule": "directories",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "rule": "pipeline_files",
+      "status": "PASS",
+      "detail": "all present"
+    },
+    {
+      "rule": "documentation",
+      "status": "PASS",
+      "detail": "spec=True readme=True"
+    },
+    {
+      "rule": "preview",
+      "status": "PASS",
+      "detail": "7 png"
+    },
+    {
+      "rule": "fbx_binary_version",
+      "status": "PASS",
+      "detail": "all FBX are 7400"
+    },
+    {
+      "rule": "geometry_reinspection",
+      "status": "PASS",
+      "detail": "re-imported every FBX into an empty scene"
+    },
+    {
+      "rule": "lod_triangle_monotonic",
+      "status": "PASS",
+      "detail": "triangles LOD0..3 = [5648, 2736, 1202, 465]"
+    },
+    {
+      "rule": "collision_hulls",
+      "status": "PASS",
+      "detail": "4 UCX objects inside LOD0"
+    },
+    {
+      "rule": "collision_asset",
+      "status": "PASS",
+      "detail": "4 UCX objects in the standalone collision FBX"
+    },
+    {
+      "rule": "materials_registered",
+      "status": "PASS",
+      "detail": "5 shared materials registered"
+    },
+    {
+      "rule": "material_slots_match",
+      "status": "PASS",
+      "detail": "slots=['AntennaMaterial', 'Composite', 'DarkMetal', 'Metal'] unexpected=[]"
+    },
+    {
+      "rule": "textures_local",
+      "status": "PASS",
+      "detail": "0 local texture files, 0 suspicious names"
+    },
+    {
+      "rule": "sockets_in_vocabulary",
+      "status": "PASS",
+      "detail": "2 sockets declared"
+    },
+    {
+      "rule": "scale_primary_axis",
+      "status": "PASS",
+      "detail": "declared 10.2 m vs measured 10.725 m (x1.051)"
+    },
+    {
+      "rule": "origin_rule",
+      "status": "PASS",
+      "detail": "base at z=0.0 m (tolerance 0.306 m)"
+    },
+    {
+      "rule": "manifest_consistency",
+      "status": "PASS",
+      "detail": "hashes and paths agree with disk"
+    },
+    {
+      "rule": "spec_hash_coverage",
+      "status": "PASS",
+      "detail": "14 hashed files"
+    }
+  ],
+  "summary": {
+    "PASS": 17,
+    "FAIL": 0,
+    "NOT_VERIFIED": 0
+  }
+}

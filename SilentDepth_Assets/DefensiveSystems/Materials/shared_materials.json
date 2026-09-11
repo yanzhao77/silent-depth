@@ -1,0 +1,84 @@
+{
+  "schema": "silent-depth-defensive-materials-v1",
+  "generated_at": "2026-09-10",
+  "note_zh": "防御系统资产共享材质库。Blender 侧作为 Principled BSDF 参数；UE 侧按此重建材质实例。数值为线性空间。",
+  "materials": {
+    "Metal": {
+      "material_name": "M_Def_Metal",
+      "base_color_linear": [
+        0.28,
+        0.3,
+        0.32
+      ],
+      "metallic": 0.85,
+      "roughness": 0.38,
+      "usage_zh": "通用金属：桅杆本体、法兰、支架"
+    },
+    "DarkMetal": {
+      "material_name": "M_Def_DarkMetal",
+      "base_color_linear": [
+        0.06,
+        0.07,
+        0.08
+      ],
+      "metallic": 0.75,
+      "roughness": 0.52,
+      "usage_zh": "深色金属：天线罩、观察窗框、接口面板"
+    },
+    "Rubber": {
+      "material_name": "M_Def_Rubber",
+      "base_color_linear": [
+        0.02,
+        0.02,
+        0.025
+      ],
+      "metallic": 0.0,
+      "roughness": 0.86,
+      "usage_zh": "橡胶：密封环、减振垫、导轨护条"
+    },
+    "Composite": {
+      "material_name": "M_Def_Composite",
+      "base_color_linear": [
+        0.14,
+        0.15,
+        0.16
+      ],
+      "metallic": 0.1,
+      "roughness": 0.62,
+      "usage_zh": "复合材料：共形阵盖板、诱饵弹体、整流罩"
+    },
+    "Paint": {
+      "material_name": "M_Def_Paint",
+      "base_color_linear": [
+        0.1,
+        0.12,
+        0.13
+      ],
+      "metallic": 0.25,
+      "roughness": 0.55,
+      "usage_zh": "涂装表面：发射器外壳、控制台外壳"
+    },
+    "Glass": {
+      "material_name": "M_Def_Glass",
+      "base_color_linear": [
+        0.08,
+        0.1,
+        0.12
+      ],
+      "metallic": 0.0,
+      "roughness": 0.12,
+      "usage_zh": "玻璃：显控屏、换能器窗口"
+    },
+    "AntennaMaterial": {
+      "material_name": "M_Def_AntennaMaterial",
+      "base_color_linear": [
+        0.2,
+        0.21,
+        0.22
+      ],
+      "metallic": 0.35,
+      "roughness": 0.45,
+      "usage_zh": "天线介质材料：阵面、刀形天线"
+    }
+  }
+}

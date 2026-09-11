@@ -1,0 +1,70 @@
+{
+  "asset_id": "US_ACM_TORPEDO_DECOY",
+  "stats": {
+    "LOD0": {
+      "triangles": 2964,
+      "vertices": 1990,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.05,
+        0.17279,
+        0.17279
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Glass",
+        "M_Def_Metal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD1": {
+      "triangles": 1482,
+      "vertices": 1225,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.05001,
+        0.17314,
+        0.17312
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Glass",
+        "M_Def_Metal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD2": {
+      "triangles": 651,
+      "vertices": 688,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.04983,
+        0.17243,
+        0.17251
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Glass",
+        "M_Def_Metal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD3": {
+      "triangles": 251,
+      "vertices": 384,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.05003,
+        0.17243,
+        0.17448
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Glass",
+        "M_Def_Metal",
+        "M_Def_Rubber"
+      ]
+    }
+  },
+  "generated_at": "2026-09-11"
+}

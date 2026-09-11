@@ -1,0 +1,1288 @@
+{
+  "schema": "silent-depth-defensive-validation-v1",
+  "generated_at": "2026-09-11",
+  "blender": "C:\\tools\\Blender Foundation\\Blender 5.2\\blender.exe",
+  "shared_materials_known": 7,
+  "totals": {
+    "assets": 13,
+    "PASS": 13,
+    "FAIL": 0,
+    "NOT_VERIFIED": 0
+  },
+  "assets": [
+    {
+      "asset_id": "US_EW_ESM_GENERIC",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\ESM\\US_EW_ESM_GENERIC",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [5204, 2514, 1106, 426]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "4 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "4 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "5 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['AntennaMaterial', 'DarkMetal', 'Metal', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "2 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 9.4 m vs measured 9.46 m (x1.006)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "base at z=0.0 m (tolerance 0.282 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "14 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "US_EW_BLQ10",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\ESM\\US_EW_BLQ10",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [5648, 2736, 1202, 465]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "4 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "4 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "5 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['AntennaMaterial', 'Composite', 'DarkMetal', 'Metal'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "2 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 10.2 m vs measured 10.725 m (x1.051)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "base at z=0.0 m (tolerance 0.306 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "14 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "UK_EW_ASTUTE",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\ESM\\UK_EW_ASTUTE",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [3544, 1684, 740, 286]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "4 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "4 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "4 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['AntennaMaterial', 'DarkMetal', 'Metal'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "1 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 9.8 m vs measured 9.87 m (x1.007)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "base at z=0.0 m (tolerance 0.294 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "14 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "RU_EW_AKULA",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\ESM\\RU_EW_AKULA",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [2872, 1348, 593, 229]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "4 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "4 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "4 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['AntennaMaterial', 'DarkMetal', 'Metal', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "1 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 8.6 m vs measured 8.76 m (x1.019)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "base at z=0.0 m (tolerance 0.258 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "14 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "CN_EW_TYPE093",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\ESM\\CN_EW_TYPE093",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [4324, 2074, 912, 352]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "4 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "4 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "4 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['AntennaMaterial', 'DarkMetal', 'Metal'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "1 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 8.0 m vs measured 8.1 m (x1.012)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "base at z=0.0 m (tolerance 0.24 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "13 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "GEN_EW_ANTENNA_ARRAY",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\Antennas\\GEN_EW_ANTENNA_ARRAY",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [2496, 1242, 546, 211]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "1 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "1 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "5 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['AntennaMaterial', 'Composite', 'DarkMetal', 'Metal', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "1 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 3.2 m vs measured 3.2 m (x1.000)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "bbox centre [0.0, 0.0, -0.017] (tolerance 0.32 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "13 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "US_ACM_TORPEDO_DECOY",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\AcousticCountermeasure\\US_ACM_TORPEDO_DECOY",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [3052, 1482, 651, 251]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "2 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "2 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "4 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['Composite', 'Glass', 'Metal', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "2 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 1.05 m vs measured 1.05 m (x1.000)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "bbox centre [0.0, 0.0, 0.0] (tolerance 0.105 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "14 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "US_ACM_MOBILE_DECOY",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\Decoys\\US_ACM_MOBILE_DECOY",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [3268, 1589, 699, 270]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "2 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "2 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "4 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['Composite', 'DarkMetal', 'Metal', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "1 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 1.9 m vs measured 1.9 m (x1.000)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "bbox centre [0.0, 0.0, 0.0] (tolerance 0.19 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "14 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "GEN_ACM_NOISE_MAKER",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\NoiseMakers\\GEN_ACM_NOISE_MAKER",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [3004, 1457, 641, 247]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "2 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "2 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "3 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['Composite', 'DarkMetal', 'Metal', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "1 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 0.78 m vs measured 0.79 m (x1.013)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "bbox centre [0.005, 0.0, 0.0] (tolerance 0.079 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "14 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "US_CML_DECOY_LAUNCHER",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\Launchers\\US_CML_DECOY_LAUNCHER",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "6 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [3932, 1954, 859, 332]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "2 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "2 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "4 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['Composite', 'DarkMetal', 'Metal', 'Paint', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "2 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 1.6 m vs measured 1.632 m (x1.020)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "bbox centre [0.0, 0.0, 0.0] (tolerance 0.1632 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "12 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "GEN_CML_TUBE",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\Launchers\\GEN_CML_TUBE",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "7 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [2128, 1020, 448, 173]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "2 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "2 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "3 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['DarkMetal', 'Metal', 'Paint', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "2 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 1.3 m vs measured 1.345 m (x1.035)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "bbox centre [0.0225, 0.0, -0.00619] (tolerance 0.1345 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "14 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "GEN_TW_TORPEDO_WARNING_SENSOR",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\TorpedoDefense\\GEN_TW_TORPEDO_WARNING_SENSOR",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "6 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [1452, 713, 313, 121]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "2 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "2 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "4 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['Composite', 'DarkMetal', 'Glass', 'Metal', 'Rubber'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "1 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 1.4 m vs measured 1.428 m (x1.020)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "bbox centre [0.0, 0.0, 0.0] (tolerance 0.1428 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "12 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    },
+    {
+      "asset_id": "US_DCM_CONSOLE",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems\\Control\\US_DCM_CONSOLE",
+      "generated_at": "2026-09-11",
+      "result": "PASS",
+      "checks": [
+        {
+          "rule": "directories",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "pipeline_files",
+          "status": "PASS",
+          "detail": "all present"
+        },
+        {
+          "rule": "documentation",
+          "status": "PASS",
+          "detail": "spec=True readme=True"
+        },
+        {
+          "rule": "preview",
+          "status": "PASS",
+          "detail": "6 png"
+        },
+        {
+          "rule": "fbx_binary_version",
+          "status": "PASS",
+          "detail": "all FBX are 7400"
+        },
+        {
+          "rule": "geometry_reinspection",
+          "status": "PASS",
+          "detail": "re-imported every FBX into an empty scene"
+        },
+        {
+          "rule": "lod_triangle_monotonic",
+          "status": "PASS",
+          "detail": "triangles LOD0..3 = [1320, 648, 285, 110]"
+        },
+        {
+          "rule": "collision_hulls",
+          "status": "PASS",
+          "detail": "2 UCX objects inside LOD0"
+        },
+        {
+          "rule": "collision_asset",
+          "status": "PASS",
+          "detail": "2 UCX objects in the standalone collision FBX"
+        },
+        {
+          "rule": "materials_registered",
+          "status": "PASS",
+          "detail": "5 shared materials registered"
+        },
+        {
+          "rule": "material_slots_match",
+          "status": "PASS",
+          "detail": "slots=['DarkMetal', 'Glass', 'Metal', 'Paint'] unexpected=[]"
+        },
+        {
+          "rule": "textures_local",
+          "status": "PASS",
+          "detail": "0 local texture files, 0 suspicious names"
+        },
+        {
+          "rule": "sockets_in_vocabulary",
+          "status": "PASS",
+          "detail": "0 sockets declared"
+        },
+        {
+          "rule": "scale_primary_axis",
+          "status": "PASS",
+          "detail": "declared 1.2 m vs measured 1.20161 m (x1.001)"
+        },
+        {
+          "rule": "origin_rule",
+          "status": "PASS",
+          "detail": "base at z=0.0 m (tolerance 0.036 m)"
+        },
+        {
+          "rule": "manifest_consistency",
+          "status": "PASS",
+          "detail": "hashes and paths agree with disk"
+        },
+        {
+          "rule": "spec_hash_coverage",
+          "status": "PASS",
+          "detail": "12 hashed files"
+        }
+      ],
+      "summary": {
+        "PASS": 17,
+        "FAIL": 0,
+        "NOT_VERIFIED": 0
+      }
+    }
+  ]
+}

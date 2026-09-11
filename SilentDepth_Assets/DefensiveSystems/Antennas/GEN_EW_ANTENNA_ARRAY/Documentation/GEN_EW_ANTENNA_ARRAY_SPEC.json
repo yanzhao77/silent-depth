@@ -1,0 +1,110 @@
+{
+  "asset_id": "GEN_EW_ANTENNA_ARRAY",
+  "status": "VALIDATING",
+  "category": "ANTENNA",
+  "category_dir": "Antennas",
+  "branch": "ESM",
+  "family_id": "ESM-MULTIBAND",
+  "country": "USA",
+  "priority": "HIGH",
+  "label": "Conformal ESM antenna array",
+  "label_zh": "共形 ESM 天线阵面板",
+  "geometry": "antenna_array",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "length": 3.2,
+      "width": 0.62,
+      "thickness": 0.18
+    },
+    "bounds_lod0": [
+      3.2,
+      0.6204,
+      0.4075
+    ]
+  },
+  "exports": [
+    {
+      "name": "GEN_EW_ANTENNA_ARRAY_LOD0",
+      "triangles": 2484,
+      "vertices": 2208,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.2,
+        0.6204,
+        0.4075
+      ]
+    },
+    {
+      "name": "GEN_EW_ANTENNA_ARRAY_LOD1",
+      "triangles": 1242,
+      "vertices": 1518,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.19844,
+        0.61884,
+        0.40602
+      ]
+    },
+    {
+      "name": "GEN_EW_ANTENNA_ARRAY_LOD2",
+      "triangles": 546,
+      "vertices": 822,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.19844,
+        0.61884,
+        0.40602
+      ]
+    },
+    {
+      "name": "GEN_EW_ANTENNA_ARRAY_LOD3",
+      "triangles": 211,
+      "vertices": 487,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.19732,
+        0.61732,
+        0.40482
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Composite",
+    "M_Def_DarkMetal",
+    "M_Def_AntennaMaterial",
+    "M_Def_Rubber",
+    "M_Def_Metal"
+  ],
+  "sockets": [
+    "SOCKET_EW_ANTENNA"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-10",
+  "sha256": {
+    "Blend/GEN_EW_ANTENNA_ARRAY_MASTER.blend": "23cdc6274d4a499856e5b27f08145ab3bc1934a0e6e601fbd6a70ae3f7d9d51a",
+    "FBX/GEN_EW_ANTENNA_ARRAY_LOD0.fbx": "ff1ab03a374d4bde169f7c314f224fe00040178bfcf7d95312269fdb60006f95",
+    "FBX/GEN_EW_ANTENNA_ARRAY_LOD1.fbx": "97a7b657e77b7e24be4d524403aebfa36b67048ee8b32a0680848ca3dec93208",
+    "FBX/GEN_EW_ANTENNA_ARRAY_LOD2.fbx": "c489cd9b53852d3faf84018be8b6a11eb0ac85a306ed7070a06f45c55543f8c6",
+    "FBX/GEN_EW_ANTENNA_ARRAY_LOD3.fbx": "d0fa0d6c63614583453af78fa7e62e7f78f8eb263095adee3df776f587a5920f",
+    "Collision/GEN_EW_ANTENNA_ARRAY_COLLISION.fbx": "079a9676f43ab9ce60f62979e1304ac17c2e0ae286e3bc2748834fbb03034493",
+    "Preview/GEN_EW_ANTENNA_ARRAY_Detail.png": "41c4e3939dc183cf4b5280f02d797254c4060b1375ec5abd0f3466ab8a85203a",
+    "Preview/GEN_EW_ANTENNA_ARRAY_Front.png": "41efae82d28c5c5cfe618ffd5e25bcc12ef1a296c248358ae98ee507ca70f61d",
+    "Preview/GEN_EW_ANTENNA_ARRAY_Gray_Front.png": "f04534c036f3d10ba204c8b586a71495c5809519f37a685ce4a5887d41d84270",
+    "Preview/GEN_EW_ANTENNA_ARRAY_Gray_ThreeQuarter.png": "4cf449505dde2a2ccef3486992d72c2dc28960195e07096fb5a5ac15a449017b",
+    "Preview/GEN_EW_ANTENNA_ARRAY_Side.png": "de2cea191723df447850023ce3ae1b8a09ea3db871e6958023d54ba230dcec95",
+    "Preview/GEN_EW_ANTENNA_ARRAY_ThreeQuarter.png": "d74b10cd53f040785a14533b231249333c64b9f8313660b79804cf5e172525bc",
+    "Preview/GEN_EW_ANTENNA_ARRAY_Top.png": "e84c7f7702c7aec9296fa6ee3a2a20d67170276aece69921bc1b743306198851"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "asset_id": "US_EW_ESM_GENERIC",
+  "stats": {
+    "LOD0": {
+      "triangles": 5028,
+      "vertices": 3228,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.595,
+        0.623,
+        9.46
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD1": {
+      "triangles": 2514,
+      "vertices": 1815,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.59335,
+        0.62144,
+        9.46
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD2": {
+      "triangles": 1106,
+      "vertices": 973,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.59335,
+        0.62032,
+        9.45903
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD3": {
+      "triangles": 426,
+      "vertices": 430,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.59703,
+        0.62032,
+        9.45816
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber",
+        "M_Def_AntennaMaterial"
+      ]
+    }
+  },
+  "generated_at": "2026-09-11"
+}

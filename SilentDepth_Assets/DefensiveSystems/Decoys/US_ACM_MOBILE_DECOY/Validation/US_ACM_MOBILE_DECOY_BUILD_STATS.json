@@ -1,0 +1,70 @@
+{
+  "asset_id": "US_ACM_MOBILE_DECOY",
+  "stats": {
+    "LOD0": {
+      "triangles": 3180,
+      "vertices": 2039,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.9,
+        0.347,
+        0.347
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_Metal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD1": {
+      "triangles": 1589,
+      "vertices": 1243,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.9,
+        0.34544,
+        0.34544
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_Metal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD2": {
+      "triangles": 699,
+      "vertices": 590,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.9,
+        0.34432,
+        0.34432
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_Metal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD3": {
+      "triangles": 270,
+      "vertices": 322,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.89641,
+        0.34432,
+        0.34432
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_Metal",
+        "M_Def_Rubber"
+      ]
+    }
+  },
+  "generated_at": "2026-09-11"
+}

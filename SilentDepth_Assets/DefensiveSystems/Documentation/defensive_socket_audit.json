@@ -1,0 +1,1318 @@
+{
+  "schema": "silent-depth-defensive-socket-audit-v1",
+  "generated_at": "2026-09-10",
+  "sockets_vocabulary": {
+    "SOCKET_EW_MAST": "ESM / electronic warfare mast seat",
+    "SOCKET_EW_ANTENNA": "ESM antenna or antenna array seat",
+    "SOCKET_DECOY_LAUNCHER_01": "forward decoy launcher seat",
+    "SOCKET_DECOY_LAUNCHER_02": "aft decoy launcher seat",
+    "SOCKET_COUNTERMEASURE_01": "forward countermeasure tube seat",
+    "SOCKET_COUNTERMEASURE_02": "aft countermeasure tube seat"
+  },
+  "policy_zh": [
+    "审计只读：不创建、不移动、不修改任何潜艇对象。",
+    "缺少 socket 的艇在接入防御系统前需要一次专门的挂点作业（本任务不做）。",
+    "socket 词表由 sds_common.SOCKETS 唯一定义。"
+  ],
+  "totals": {
+    "submarines": 54,
+    "masters_scanned": 3,
+    "with_defensive_socket": 0,
+    "without_defensive_socket": 3,
+    "no_local_master": 51
+  },
+  "entries": [
+    {
+      "submarine": "US_SSN_Skipjack",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Skipjack",
+      "tier": 2,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSN_Sturgeon",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Sturgeon",
+      "tier": 4,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSN_LosAngeles",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Los Angeles",
+      "tier": 6,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSN_Seawolf",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Seawolf",
+      "tier": 8,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSN_Virginia",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Virginia",
+      "tier": 9,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSBN_GeorgeWashington",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "George Washington",
+      "tier": 2,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSBN_EthanAllen",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Ethan Allen",
+      "tier": 3,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSBN_Lafayette",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Lafayette",
+      "tier": 4,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSBN_JamesMadison",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "James Madison",
+      "tier": 4,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSBN_BenjaminFranklin",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Benjamin Franklin",
+      "tier": 5,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSBN_Ohio",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Ohio",
+      "tier": 8,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "US_SSBN_Columbia",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Columbia",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSN_November",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "November",
+      "tier": 2,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSN_Victor",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Victor",
+      "tier": 4,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSN_Sierra",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Sierra",
+      "tier": 6,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSN_Akula",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Akula",
+      "tier": 7,
+      "master_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Blend\\RU_SSN_Akula_MASTER.blend",
+      "inherited_model": true,
+      "scan": {
+        "status": "SCANNED",
+        "socket_objects": [],
+        "mount_objects": [],
+        "ucx_objects": [
+          "UCX_RU_SSN_Akula_LOD0_00",
+          "UCX_RU_SSN_Akula_LOD0_01",
+          "UCX_RU_SSN_Akula_LOD0_02",
+          "UCX_RU_SSN_Akula_LOD0_03",
+          "UCX_RU_SSN_Akula_LOD0_04",
+          "UCX_RU_SSN_Akula_LOD0_05",
+          "UCX_RU_SSN_Akula_LOD0_06",
+          "UCX_RU_SSN_Akula_LOD0_07",
+          "UCX_RU_SSN_Akula_LOD0_08",
+          "UCX_RU_SSN_Akula_LOD0_09"
+        ],
+        "object_count": 210,
+        "collection_count": 18
+      },
+      "defensive_sockets_present": [],
+      "available_mount_points": [],
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSN_Yasen",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Yasen",
+      "tier": 9,
+      "master_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\Blend\\RU_SSN_Yasen_MASTER.blend",
+      "inherited_model": true,
+      "scan": {
+        "status": "SCANNED",
+        "socket_objects": [],
+        "mount_objects": [],
+        "ucx_objects": [
+          "UCX_RU_SSN_Yasen_LOD0_00",
+          "UCX_RU_SSN_Yasen_LOD0_01",
+          "UCX_RU_SSN_Yasen_LOD0_02",
+          "UCX_RU_SSN_Yasen_LOD0_03",
+          "UCX_RU_SSN_Yasen_LOD0_04",
+          "UCX_RU_SSN_Yasen_LOD0_05",
+          "UCX_RU_SSN_Yasen_LOD0_06",
+          "UCX_RU_SSN_Yasen_LOD0_07",
+          "UCX_RU_SSN_Yasen_LOD0_08"
+        ],
+        "object_count": 93,
+        "collection_count": 4
+      },
+      "defensive_sockets_present": [],
+      "available_mount_points": [],
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSN_YasenM",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Yasen-M",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_Hotel",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Hotel",
+      "tier": 2,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_Yankee",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Yankee",
+      "tier": 4,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_DeltaI",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta I",
+      "tier": 5,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_DeltaII",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta II",
+      "tier": 5,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_DeltaIII",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta III",
+      "tier": 6,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_DeltaIV",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta IV",
+      "tier": 7,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_Typhoon",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Typhoon",
+      "tier": 8,
+      "master_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Blend\\RU_SSBN_Typhoon_MASTER.blend",
+      "inherited_model": true,
+      "scan": {
+        "status": "SCANNED",
+        "socket_objects": [],
+        "mount_objects": [],
+        "ucx_objects": [
+          "UCX_SM_Typhoon_00",
+          "UCX_SM_Typhoon_01",
+          "UCX_SM_Typhoon_02",
+          "UCX_SM_Typhoon_03",
+          "UCX_SM_Typhoon_04",
+          "UCX_SM_Typhoon_05",
+          "UCX_SM_Typhoon_06",
+          "UCX_SM_Typhoon_07",
+          "UCX_SM_Typhoon_08",
+          "UCX_SM_Typhoon_09",
+          "UCX_SM_Typhoon_10",
+          "UCX_SM_Typhoon_11",
+          "UCX_SM_Typhoon_12"
+        ],
+        "object_count": 603,
+        "collection_count": 4
+      },
+      "defensive_sockets_present": [],
+      "available_mount_points": [],
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_Borei",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Borei",
+      "tier": 9,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "RU_SSBN_BoreiA",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Borei-A",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSN_Dreadnought",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Dreadnought",
+      "tier": 2,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSN_Valiant",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Valiant",
+      "tier": 3,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSN_Swiftsure",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Swiftsure",
+      "tier": 5,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSN_Trafalgar",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Trafalgar",
+      "tier": 6,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSN_Astute",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Astute",
+      "tier": 9,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSN_AUKUS",
+      "country": "UK",
+      "type": "SSN",
+      "class": "SSN-AUKUS",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSBN_Resolution",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Resolution",
+      "tier": 4,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSBN_Vanguard",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Vanguard",
+      "tier": 8,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "UK_SSBN_Dreadnought",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Dreadnought",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "FR_SSN_Rubis",
+      "country": "France",
+      "type": "SSN",
+      "class": "Rubis",
+      "tier": 6,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "FR_SSN_Suffren",
+      "country": "France",
+      "type": "SSN",
+      "class": "Suffren",
+      "tier": 9,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "FR_SSBN_LeRedoutable",
+      "country": "France",
+      "type": "SSBN",
+      "class": "Le Redoutable",
+      "tier": 4,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "FR_SSBN_LeTriomphant",
+      "country": "France",
+      "type": "SSBN",
+      "class": "Le Triomphant",
+      "tier": 8,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "FR_SSBN_SNLE3G",
+      "country": "France",
+      "type": "SSBN",
+      "class": "SNLE 3G",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSN_Type091",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 091",
+      "tier": 4,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSN_Type093",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093",
+      "tier": 7,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSN_Type093A",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093A",
+      "tier": 8,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSN_Type093B",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093B",
+      "tier": 9,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSN_Type095",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 095",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSBN_Type092",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 092",
+      "tier": 5,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSBN_Type094",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 094",
+      "tier": 8,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSBN_Type094A",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 094A",
+      "tier": 9,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "CN_SSBN_Type096",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 096",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "IN_SSBN_Arihant",
+      "country": "India",
+      "type": "SSBN",
+      "class": "Arihant",
+      "tier": 7,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "IN_SSBN_Arighaat",
+      "country": "India",
+      "type": "SSBN",
+      "class": "Arighaat",
+      "tier": 8,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "IN_SSBN_S4",
+      "country": "India",
+      "type": "SSBN",
+      "class": "S4",
+      "tier": 9,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    },
+    {
+      "submarine": "IN_SSBN_S5",
+      "country": "India",
+      "type": "SSBN",
+      "class": "S5",
+      "tier": 10,
+      "master_blend": null,
+      "inherited_model": true,
+      "scan": {
+        "status": "NO_LOCAL_MASTER"
+      },
+      "defensive_sockets_present": null,
+      "available_mount_points": null,
+      "required_for_loadout": [
+        "SOCKET_COUNTERMEASURE_01",
+        "SOCKET_COUNTERMEASURE_02",
+        "SOCKET_DECOY_LAUNCHER_01",
+        "SOCKET_DECOY_LAUNCHER_02",
+        "SOCKET_EW_ANTENNA",
+        "SOCKET_EW_MAST"
+      ],
+      "note_zh": "继承资产不做几何修改；防御系统以附加展示层资产与统一 socket 词表接入。本艇当前是否存在 socket 以 scan 结果为准。"
+    }
+  ]
+}

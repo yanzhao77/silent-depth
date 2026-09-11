@@ -1,0 +1,1362 @@
+{
+  "T1": [
+    {
+      "family_id": "TW-RADAR-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Radar Warning",
+      "tier_min": 1,
+      "tier_max": 4,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "ESM-BASIC-DETECTION",
+      "branch": "ESM",
+      "label": "Basic Signal Detection",
+      "tier_min": 1,
+      "tier_max": 2,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-NOISE-MAKER",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Noise Maker",
+      "tier_min": 1,
+      "tier_max": 4,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-PASSIVE",
+      "branch": "DECOY",
+      "label": "Passive Decoy",
+      "tier_min": 1,
+      "tier_max": 3,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "NM-EARLY",
+      "branch": "NOISE_MAKER",
+      "label": "Early Noise Maker",
+      "tier_min": 1,
+      "tier_max": 2,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    }
+  ],
+  "T2": [
+    {
+      "family_id": "ESM-BASIC-DETECTION",
+      "branch": "ESM",
+      "label": "Basic Signal Detection",
+      "tier_min": 1,
+      "tier_max": 2,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-IMPROVED-DETECTION",
+      "branch": "ESM",
+      "label": "Improved Detection",
+      "tier_min": 2,
+      "tier_max": 3,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-ACOUSTIC-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Acoustic Decoy",
+      "tier_min": 2,
+      "tier_max": 6,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-ACOUSTIC",
+      "branch": "DECOY",
+      "label": "Acoustic Decoy",
+      "tier_min": 2,
+      "tier_max": 6,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-EXTERNAL",
+      "branch": "LAUNCHER",
+      "label": "External Launcher",
+      "tier_min": 2,
+      "tier_max": 4,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DC-CONSOLE",
+      "branch": "DEFENSIVE_CONTROL",
+      "label": "Defensive Control Console",
+      "tier_min": 2,
+      "tier_max": 5,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-EARLY",
+      "branch": "NOISE_MAKER",
+      "label": "Early Noise Maker",
+      "tier_min": 1,
+      "tier_max": 2,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    }
+  ],
+  "T3": [
+    {
+      "family_id": "ESM-IMPROVED-DETECTION",
+      "branch": "ESM",
+      "label": "Improved Detection",
+      "tier_min": 2,
+      "tier_max": 3,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-CLASSIFICATION",
+      "branch": "ESM",
+      "label": "Signal Classification",
+      "tier_min": 3,
+      "tier_max": 4,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-PASSIVE",
+      "branch": "DECOY",
+      "label": "Passive Decoy",
+      "tier_min": 1,
+      "tier_max": 3,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "DEC-ACTIVE",
+      "branch": "DECOY",
+      "label": "Active Decoy",
+      "tier_min": 3,
+      "tier_max": 6,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-NOISE-MAKER",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Noise Maker",
+      "tier_min": 1,
+      "tier_max": 4,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-TUBE",
+      "branch": "LAUNCHER",
+      "label": "Countermeasure Tube",
+      "tier_min": 3,
+      "tier_max": 6,
+      "asset_ids": [
+        "GEN_CML_TUBE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-IMPROVED",
+      "branch": "NOISE_MAKER",
+      "label": "Improved Noise Maker",
+      "tier_min": 3,
+      "tier_max": 5,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-ELECTRONIC-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Electronic Threat Warning",
+      "tier_min": 3,
+      "tier_max": 6,
+      "asset_ids": [],
+      "database_only": true
+    }
+  ],
+  "T4": [
+    {
+      "family_id": "TW-RADAR-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Radar Warning",
+      "tier_min": 1,
+      "tier_max": 4,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "TW-ELECTRONIC-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Electronic Threat Warning",
+      "tier_min": 3,
+      "tier_max": 6,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "TW-ACTIVE-SONAR-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Active Sonar Warning",
+      "tier_min": 4,
+      "tier_max": 7,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "ESM-CLASSIFICATION",
+      "branch": "ESM",
+      "label": "Signal Classification",
+      "tier_min": 3,
+      "tier_max": 4,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-DIGITAL",
+      "branch": "ESM",
+      "label": "Digital ESM",
+      "tier_min": 4,
+      "tier_max": 6,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_BLQ10",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-ACOUSTIC-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Acoustic Decoy",
+      "tier_min": 2,
+      "tier_max": 6,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-TORPEDO-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Torpedo Decoy",
+      "tier_min": 4,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-TORPEDO",
+      "branch": "DECOY",
+      "label": "Torpedo Decoy",
+      "tier_min": 4,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-EXTERNAL",
+      "branch": "LAUNCHER",
+      "label": "External Launcher",
+      "tier_min": 2,
+      "tier_max": 4,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-TUBE",
+      "branch": "LAUNCHER",
+      "label": "Countermeasure Tube",
+      "tier_min": 3,
+      "tier_max": 6,
+      "asset_ids": [
+        "GEN_CML_TUBE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-ACOUSTIC-DEVICE",
+      "branch": "LAUNCHER",
+      "label": "Acoustic Device Launcher",
+      "tier_min": 4,
+      "tier_max": 7,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-WARNING",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Torpedo Warning",
+      "tier_min": 4,
+      "tier_max": 6,
+      "asset_ids": [
+        "GEN_TW_TORPEDO_WARNING_SENSOR"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-IMPROVED",
+      "branch": "NOISE_MAKER",
+      "label": "Improved Noise Maker",
+      "tier_min": 3,
+      "tier_max": 5,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DC-CONSOLE",
+      "branch": "DEFENSIVE_CONTROL",
+      "label": "Defensive Control Console",
+      "tier_min": 2,
+      "tier_max": 5,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    }
+  ],
+  "T5": [
+    {
+      "family_id": "ESM-DIGITAL",
+      "branch": "ESM",
+      "label": "Digital ESM",
+      "tier_min": 4,
+      "tier_max": 6,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_BLQ10",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-MULTIBAND",
+      "branch": "ESM",
+      "label": "Multi-Band ESM",
+      "tier_min": 5,
+      "tier_max": 7,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "GEN_EW_ANTENNA_ARRAY",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-TORPEDO-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Torpedo Warning",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "GEN_TW_TORPEDO_WARNING_SENSOR"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-TORPEDO-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Torpedo Decoy",
+      "tier_min": 4,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-MOBILE-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Mobile Acoustic Decoy",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-ACTIVE",
+      "branch": "DECOY",
+      "label": "Active Decoy",
+      "tier_min": 3,
+      "tier_max": 6,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-ACOUSTIC",
+      "branch": "DECOY",
+      "label": "Acoustic Decoy",
+      "tier_min": 2,
+      "tier_max": 6,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-TORPEDO",
+      "branch": "DECOY",
+      "label": "Torpedo Decoy",
+      "tier_min": 4,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-MOBILE",
+      "branch": "DECOY",
+      "label": "Mobile Decoy",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-IMPROVED",
+      "branch": "NOISE_MAKER",
+      "label": "Improved Noise Maker",
+      "tier_min": 3,
+      "tier_max": 5,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-ACOUSTIC-DEVICE",
+      "branch": "LAUNCHER",
+      "label": "Acoustic Device Launcher",
+      "tier_min": 4,
+      "tier_max": 7,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-COUNTERMEASURE",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Countermeasure",
+      "tier_min": 5,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DC-CONSOLE",
+      "branch": "DEFENSIVE_CONTROL",
+      "label": "Defensive Control Console",
+      "tier_min": 2,
+      "tier_max": 5,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    }
+  ],
+  "T6": [
+    {
+      "family_id": "ESM-INTEGRATED",
+      "branch": "ESM",
+      "label": "Integrated ESM",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-MULTIBAND",
+      "branch": "ESM",
+      "label": "Multi-Band ESM",
+      "tier_min": 5,
+      "tier_max": 7,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "GEN_EW_ANTENNA_ARRAY",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-ELECTRONIC-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Electronic Threat Warning",
+      "tier_min": 3,
+      "tier_max": 6,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+      "branch": "THREAT_WARNING",
+      "label": "Acoustic Threat Classification",
+      "tier_min": 6,
+      "tier_max": 10,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "ACM-ACOUSTIC-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Acoustic Decoy",
+      "tier_min": 2,
+      "tier_max": 6,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-TORPEDO-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Torpedo Decoy",
+      "tier_min": 4,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-TORPEDO",
+      "branch": "DECOY",
+      "label": "Torpedo Decoy",
+      "tier_min": 4,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-MODERN",
+      "branch": "NOISE_MAKER",
+      "label": "Modern Noise Maker",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-TUBE",
+      "branch": "LAUNCHER",
+      "label": "Countermeasure Tube",
+      "tier_min": 3,
+      "tier_max": 6,
+      "asset_ids": [
+        "GEN_CML_TUBE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-WARNING",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Torpedo Warning",
+      "tier_min": 4,
+      "tier_max": 6,
+      "asset_ids": [
+        "GEN_TW_TORPEDO_WARNING_SENSOR"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-COUNTERMEASURE",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Countermeasure",
+      "tier_min": 5,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DC-INTEGRATED-CONTROL",
+      "branch": "DEFENSIVE_CONTROL",
+      "label": "Integrated Defensive Control",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "IDS-CORE",
+      "branch": "INTEGRATED_DEFENSE",
+      "label": "Integrated Defensive System",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    }
+  ],
+  "T7": [
+    {
+      "family_id": "ESM-ADVANCED-THREAT-WARNING",
+      "branch": "ESM",
+      "label": "Advanced Threat Warning",
+      "tier_min": 7,
+      "tier_max": 9,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-MULTIBAND",
+      "branch": "ESM",
+      "label": "Multi-Band ESM",
+      "tier_min": 5,
+      "tier_max": 7,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "GEN_EW_ANTENNA_ARRAY",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-ACTIVE-SONAR-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Active Sonar Warning",
+      "tier_min": 4,
+      "tier_max": 7,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "TW-TORPEDO-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Torpedo Warning",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "GEN_TW_TORPEDO_WARNING_SENSOR"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-TORPEDO-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Torpedo Decoy",
+      "tier_min": 4,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-ADVANCED",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Advanced Acoustic Countermeasure",
+      "tier_min": 7,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-ADVANCED",
+      "branch": "DECOY",
+      "label": "Advanced Decoy",
+      "tier_min": 7,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-TORPEDO",
+      "branch": "DECOY",
+      "label": "Torpedo Decoy",
+      "tier_min": 4,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-MODERN",
+      "branch": "NOISE_MAKER",
+      "label": "Modern Noise Maker",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-ADVANCED",
+      "branch": "LAUNCHER",
+      "label": "Advanced Launcher",
+      "tier_min": 7,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-ADVANCED",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Advanced Countermeasure",
+      "tier_min": 7,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-COUNTERMEASURE",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Countermeasure",
+      "tier_min": 5,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DC-INTEGRATED-CONTROL",
+      "branch": "DEFENSIVE_CONTROL",
+      "label": "Integrated Defensive Control",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "IDS-CORE",
+      "branch": "INTEGRATED_DEFENSE",
+      "label": "Integrated Defensive System",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    }
+  ],
+  "T8": [
+    {
+      "family_id": "ESM-MULTISENSOR-FUSION",
+      "branch": "ESM",
+      "label": "Multi-Sensor Fusion",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-INTEGRATED",
+      "branch": "ESM",
+      "label": "Integrated ESM",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-ADVANCED-THREAT-WARNING",
+      "branch": "ESM",
+      "label": "Advanced Threat Warning",
+      "tier_min": 7,
+      "tier_max": 9,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-TORPEDO-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Torpedo Warning",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "GEN_TW_TORPEDO_WARNING_SENSOR"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+      "branch": "THREAT_WARNING",
+      "label": "Acoustic Threat Classification",
+      "tier_min": 6,
+      "tier_max": 10,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "ACM-ADVANCED",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Advanced Acoustic Countermeasure",
+      "tier_min": 7,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-INTEGRATED",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Integrated Acoustic Defense",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-ADVANCED",
+      "branch": "DECOY",
+      "label": "Advanced Decoy",
+      "tier_min": 7,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-MOBILE",
+      "branch": "DECOY",
+      "label": "Mobile Decoy",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-ADVANCED",
+      "branch": "NOISE_MAKER",
+      "label": "Advanced Acoustic Countermeasure",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-ADVANCED",
+      "branch": "LAUNCHER",
+      "label": "Advanced Launcher",
+      "tier_min": 7,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-INTEGRATED",
+      "branch": "LAUNCHER",
+      "label": "Integrated Launcher",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-COUNTERMEASURE",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Countermeasure",
+      "tier_min": 5,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_ACM_TORPEDO_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-ADVANCED",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Advanced Countermeasure",
+      "tier_min": 7,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DC-AUTOMATED",
+      "branch": "DEFENSIVE_CONTROL",
+      "label": "Automated Defensive Control",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "IDS-CORE",
+      "branch": "INTEGRATED_DEFENSE",
+      "label": "Integrated Defensive System",
+      "tier_min": 6,
+      "tier_max": 8,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    }
+  ],
+  "T9": [
+    {
+      "family_id": "ESM-ADVANCED-EW",
+      "branch": "ESM",
+      "label": "Advanced Integrated EW",
+      "tier_min": 9,
+      "tier_max": 10,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-MULTISENSOR-FUSION",
+      "branch": "ESM",
+      "label": "Multi-Sensor Fusion",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-TORPEDO-WARNING",
+      "branch": "THREAT_WARNING",
+      "label": "Torpedo Warning",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "GEN_TW_TORPEDO_WARNING_SENSOR"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+      "branch": "THREAT_WARNING",
+      "label": "Acoustic Threat Classification",
+      "tier_min": 6,
+      "tier_max": 10,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "ACM-MOBILE-DECOY",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Mobile Acoustic Decoy",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-ADVANCED",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Advanced Acoustic Countermeasure",
+      "tier_min": 7,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-INTEGRATED",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Integrated Acoustic Defense",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-ADVANCED",
+      "branch": "DECOY",
+      "label": "Advanced Decoy",
+      "tier_min": 7,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-MOBILE",
+      "branch": "DECOY",
+      "label": "Mobile Decoy",
+      "tier_min": 5,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-ADVANCED",
+      "branch": "NOISE_MAKER",
+      "label": "Advanced Acoustic Countermeasure",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-ADVANCED",
+      "branch": "LAUNCHER",
+      "label": "Advanced Launcher",
+      "tier_min": 7,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-INTEGRATED",
+      "branch": "LAUNCHER",
+      "label": "Integrated Launcher",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-INTEGRATED",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Integrated Torpedo Defense",
+      "tier_min": 9,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-ADVANCED",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Advanced Countermeasure",
+      "tier_min": 7,
+      "tier_max": 9,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DC-AUTOMATED",
+      "branch": "DEFENSIVE_CONTROL",
+      "label": "Automated Defensive Control",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "IDS-ADVANCED",
+      "branch": "INTEGRATED_DEFENSE",
+      "label": "Next Generation Defensive System",
+      "tier_min": 9,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    }
+  ],
+  "T10": [
+    {
+      "family_id": "ESM-NEXTGEN",
+      "branch": "ESM",
+      "label": "Next Generation Defensive Electronic System",
+      "tier_min": 10,
+      "tier_max": 10,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-ADVANCED-EW",
+      "branch": "ESM",
+      "label": "Advanced Integrated EW",
+      "tier_min": 9,
+      "tier_max": 10,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ESM-MULTISENSOR-FUSION",
+      "branch": "ESM",
+      "label": "Multi-Sensor Fusion",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "CN_EW_TYPE093",
+        "RU_EW_AKULA",
+        "UK_EW_ASTUTE",
+        "US_EW_ESM_GENERIC"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TW-ACOUSTIC-CLASSIFICATION",
+      "branch": "THREAT_WARNING",
+      "label": "Acoustic Threat Classification",
+      "tier_min": 6,
+      "tier_max": 10,
+      "asset_ids": [],
+      "database_only": true
+    },
+    {
+      "family_id": "ACM-INTEGRATED",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Integrated Acoustic Defense",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "ACM-ADVANCED",
+      "branch": "ACOUSTIC_COUNTERMEASURE",
+      "label": "Advanced Acoustic Countermeasure",
+      "tier_min": 7,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DEC-ADVANCED",
+      "branch": "DECOY",
+      "label": "Advanced Decoy",
+      "tier_min": 7,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "NM-ADVANCED",
+      "branch": "NOISE_MAKER",
+      "label": "Advanced Acoustic Countermeasure",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "GEN_ACM_NOISE_MAKER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "CML-INTEGRATED",
+      "branch": "LAUNCHER",
+      "label": "Integrated Launcher",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_CML_DECOY_LAUNCHER"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "TD-INTEGRATED",
+      "branch": "TORPEDO_DEFENSE",
+      "label": "Integrated Torpedo Defense",
+      "tier_min": 9,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_ACM_MOBILE_DECOY"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "DC-AUTOMATED",
+      "branch": "DEFENSIVE_CONTROL",
+      "label": "Automated Defensive Control",
+      "tier_min": 8,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    },
+    {
+      "family_id": "IDS-ADVANCED",
+      "branch": "INTEGRATED_DEFENSE",
+      "label": "Next Generation Defensive System",
+      "tier_min": 9,
+      "tier_max": 10,
+      "asset_ids": [
+        "US_DCM_CONSOLE"
+      ],
+      "database_only": false
+    }
+  ]
+}

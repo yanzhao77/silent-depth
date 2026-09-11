@@ -1,0 +1,55 @@
+{
+  "template_version": "1.0.0",
+  "asset_id": "<COUNTRY>_<BRANCH>_<NAME>",
+  "status": "PLANNED",
+  "category": "<ESM|THREAT_WARNING|ACOUSTIC_COUNTERMEASURE|DECOY|NOISE_MAKER|TORPEDO_DEFENSE|LAUNCHER|DEFENSIVE_CONTROL|ANTENNA>",
+  "category_dir": "<见 sds_common.CATEGORY_DIR>",
+  "branch": "<见 sds_common.BRANCH_BY_ID>",
+  "family_id": "<sds_dataset.FAMILIES 里的 family_id>",
+  "country": "<USA|Russia|UK|France|China|India>",
+  "priority": "<HIGH|MEDIUM|LOW|DATABASE_ONLY>",
+  "label": "<English label>",
+  "label_zh": "<中文名>",
+  "geometry": "<sds_geometry.BUILDERS 里的几何类型>",
+  "dimensions_m": {
+    "height": 0.0,
+    "diameter": 0.0
+  },
+  "sockets": [
+    "SOCKET_EW_MAST"
+  ],
+  "materials": [
+    "Metal",
+    "DarkMetal",
+    "Rubber",
+    "Composite",
+    "Paint",
+    "Glass",
+    "AntennaMaterial"
+  ],
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "pipeline": {
+    "Source": "构建脚本",
+    "Blend": "<AssetId>_MASTER.blend",
+    "FBX": "<AssetId>_LOD0..3.fbx",
+    "LOD": "LOD 派生规则：0.50 / 0.22 / 0.085",
+    "Collision": "<AssetId>_COLLISION.fbx（UCX 凸包）",
+    "Textures": "可选，必须本地且带 sha256",
+    "Preview": "至少 4 张 png",
+    "Documentation": "<AssetId>_SPEC.json 与 <AssetId>_README.md",
+    "Validation": "<AssetId>_VALIDATION.json"
+  },
+  "rules": [
+    "只能使用 sds_common.SOCKETS 里的 socket 名。",
+    "材质必须来自 Materials/shared_materials.json。",
+    "不得写入任何真实电子战参数、频率、功率或战术内容。",
+    "找不到公开资料的家族登记为 DATABASE_ONLY，不生成几何体。"
+  ]
+}

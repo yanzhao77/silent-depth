@@ -1,0 +1,70 @@
+{
+  "asset_id": "RU_EW_AKULA",
+  "stats": {
+    "LOD0": {
+      "triangles": 2696,
+      "vertices": 1852,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.8824,
+        0.8824,
+        8.76
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD1": {
+      "triangles": 1348,
+      "vertices": 1178,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.88248,
+        0.88249,
+        8.76
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD2": {
+      "triangles": 593,
+      "vertices": 641,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.88004,
+        0.88071,
+        8.75811
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD3": {
+      "triangles": 229,
+      "vertices": 293,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.88004,
+        0.87967,
+        8.7616
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial",
+        "M_Def_Rubber"
+      ]
+    }
+  },
+  "generated_at": "2026-09-10"
+}

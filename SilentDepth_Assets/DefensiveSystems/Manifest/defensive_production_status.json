@@ -1,0 +1,134 @@
+{
+  "schema": "silent-depth-defensive-production-status-v1",
+  "generated_at": "2026-09-11",
+  "updated_at": "2026-09-11",
+  "asset_root": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\DefensiveSystems",
+  "queue_order": [
+    "GEN_EW_ANTENNA_ARRAY",
+    "GEN_TW_TORPEDO_WARNING_SENSOR",
+    "US_ACM_TORPEDO_DECOY",
+    "US_CML_DECOY_LAUNCHER",
+    "US_DCM_CONSOLE",
+    "US_EW_BLQ10",
+    "US_EW_ESM_GENERIC",
+    "CN_EW_TYPE093",
+    "GEN_ACM_NOISE_MAKER",
+    "GEN_CML_TUBE",
+    "RU_EW_AKULA",
+    "UK_EW_ASTUTE",
+    "US_ACM_MOBILE_DECOY"
+  ],
+  "status_by_asset": {
+    "US_EW_ESM_GENERIC": "COMPLETE",
+    "US_EW_BLQ10": "COMPLETE",
+    "UK_EW_ASTUTE": "COMPLETE",
+    "RU_EW_AKULA": "COMPLETE",
+    "CN_EW_TYPE093": "COMPLETE",
+    "GEN_EW_ANTENNA_ARRAY": "COMPLETE",
+    "US_ACM_TORPEDO_DECOY": "COMPLETE",
+    "US_ACM_MOBILE_DECOY": "COMPLETE",
+    "GEN_ACM_NOISE_MAKER": "COMPLETE",
+    "US_CML_DECOY_LAUNCHER": "COMPLETE",
+    "GEN_CML_TUBE": "COMPLETE",
+    "GEN_TW_TORPEDO_WARNING_SENSOR": "COMPLETE",
+    "US_DCM_CONSOLE": "COMPLETE"
+  },
+  "evidence": {
+    "US_EW_ESM_GENERIC": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "US_EW_BLQ10": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "UK_EW_ASTUTE": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "RU_EW_AKULA": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "CN_EW_TYPE093": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "GEN_EW_ANTENNA_ARRAY": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "US_ACM_TORPEDO_DECOY": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "US_ACM_MOBILE_DECOY": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "GEN_ACM_NOISE_MAKER": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "US_CML_DECOY_LAUNCHER": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "GEN_CML_TUBE": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "GEN_TW_TORPEDO_WARNING_SENSOR": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    },
+    "US_DCM_CONSOLE": {
+      "master_blend": true,
+      "lod_fbx_present": 4,
+      "collision_fbx": true,
+      "spec_json": true,
+      "validator_result": "PASS"
+    }
+  },
+  "blocking_conditions": {},
+  "policy_zh": [
+    "COMPLETE 只由验证器 PASS 判定；没有验证证据的资产最高为 VALIDATING。",
+    "BLOCKED 只来自构建报告里真实的失败记录。"
+  ]
+}

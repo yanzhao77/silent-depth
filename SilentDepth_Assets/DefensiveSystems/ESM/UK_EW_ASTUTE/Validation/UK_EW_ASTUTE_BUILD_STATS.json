@@ -1,0 +1,66 @@
+{
+  "asset_id": "UK_EW_ASTUTE",
+  "stats": {
+    "LOD0": {
+      "triangles": 3368,
+      "vertices": 2256,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.54,
+        0.862,
+        9.87
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD1": {
+      "triangles": 1684,
+      "vertices": 1254,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.53891,
+        0.86052,
+        9.87
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD2": {
+      "triangles": 740,
+      "vertices": 598,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.53856,
+        0.85932,
+        9.86889
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD3": {
+      "triangles": 286,
+      "vertices": 332,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.53729,
+        0.85932,
+        9.8667
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial"
+      ]
+    }
+  },
+  "generated_at": "2026-09-10"
+}

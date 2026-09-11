@@ -1,0 +1,74 @@
+{
+  "asset_id": "GEN_EW_ANTENNA_ARRAY",
+  "stats": {
+    "LOD0": {
+      "triangles": 2484,
+      "vertices": 2208,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.2,
+        0.6204,
+        0.4075
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial",
+        "M_Def_Rubber",
+        "M_Def_Metal"
+      ]
+    },
+    "LOD1": {
+      "triangles": 1242,
+      "vertices": 1518,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.19844,
+        0.61884,
+        0.40602
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial",
+        "M_Def_Rubber",
+        "M_Def_Metal"
+      ]
+    },
+    "LOD2": {
+      "triangles": 546,
+      "vertices": 822,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.19844,
+        0.61884,
+        0.40602
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial",
+        "M_Def_Rubber",
+        "M_Def_Metal"
+      ]
+    },
+    "LOD3": {
+      "triangles": 211,
+      "vertices": 487,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.19732,
+        0.61732,
+        0.40482
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial",
+        "M_Def_Rubber",
+        "M_Def_Metal"
+      ]
+    }
+  },
+  "generated_at": "2026-09-10"
+}

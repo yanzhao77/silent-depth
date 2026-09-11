@@ -1,0 +1,70 @@
+{
+  "asset_id": "US_DCM_CONSOLE",
+  "stats": {
+    "LOD0": {
+      "triangles": 1296,
+      "vertices": 1152,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.838,
+        0.9,
+        1.20161
+      ],
+      "material_slots": [
+        "M_Def_Paint",
+        "M_Def_DarkMetal",
+        "M_Def_Metal",
+        "M_Def_Glass"
+      ]
+    },
+    "LOD1": {
+      "triangles": 648,
+      "vertices": 792,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.83644,
+        0.89852,
+        1.20122
+      ],
+      "material_slots": [
+        "M_Def_Paint",
+        "M_Def_DarkMetal",
+        "M_Def_Metal",
+        "M_Def_Glass"
+      ]
+    },
+    "LOD2": {
+      "triangles": 285,
+      "vertices": 429,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.83644,
+        0.89852,
+        1.20122
+      ],
+      "material_slots": [
+        "M_Def_Paint",
+        "M_Def_DarkMetal",
+        "M_Def_Metal",
+        "M_Def_Glass"
+      ]
+    },
+    "LOD3": {
+      "triangles": 110,
+      "vertices": 254,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.8352,
+        0.89732,
+        1.19997
+      ],
+      "material_slots": [
+        "M_Def_Paint",
+        "M_Def_DarkMetal",
+        "M_Def_Metal",
+        "M_Def_Glass"
+      ]
+    }
+  },
+  "generated_at": "2026-09-10"
+}

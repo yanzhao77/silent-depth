@@ -1,0 +1,28 @@
+{
+  "template_version": "1.0.0",
+  "validator": "Tools/defensive_system_validator.py",
+  "rules": [
+    {"rule_id": "directories", "checks": "Source/Blend/FBX/LOD/Collision/Textures/Preview/Documentation/Validation 全部存在", "threshold": "全部存在", "severity": "FAIL"},
+    {"rule_id": "pipeline_files", "checks": "MASTER.blend、LOD0-3.fbx、COLLISION.fbx 存在", "threshold": "全部存在", "severity": "FAIL"},
+    {"rule_id": "documentation", "checks": "SPEC.json 与 README.md 存在", "threshold": "全部存在", "severity": "FAIL"},
+    {"rule_id": "preview", "checks": "Preview 下 png 数量", "threshold": ">= 4", "severity": "FAIL"},
+    {"rule_id": "fbx_binary_version", "checks": "所有 FBX 的二进制版本", "threshold": "7400", "severity": "FAIL"},
+    {"rule_id": "geometry_reinspection", "checks": "用 Blender 在空场景重新导入每个 FBX 并读取真实几何", "threshold": "全部可导入", "severity": "NOT_VERIFIED"},
+    {"rule_id": "lod_triangle_monotonic", "checks": "LOD0 > LOD1 > LOD2 > LOD3 三角面数", "threshold": "严格递减", "severity": "FAIL"},
+    {"rule_id": "collision_hulls", "checks": "LOD0 内 UCX 凸包数量", "threshold": ">= 1", "severity": "FAIL"},
+    {"rule_id": "collision_asset", "checks": "独立碰撞 FBX 内 UCX 数量", "threshold": ">= 1", "severity": "FAIL"},
+    {"rule_id": "materials_registered", "checks": "声明材质是否都在 Materials/shared_materials.json", "threshold": "100%", "severity": "FAIL"},
+    {"rule_id": "material_slots_match", "checks": "LOD0 实际材质槽是否属于共享材质库", "threshold": "无未登记槽", "severity": "FAIL"},
+    {"rule_id": "textures_local", "checks": "Textures 内不得出现远程引用", "threshold": "0 个远程", "severity": "FAIL"},
+    {"rule_id": "sockets_in_vocabulary", "checks": "socket 名必须属于 sds_common.SOCKETS", "threshold": "100%", "severity": "FAIL"},
+    {"rule_id": "scale_primary_axis", "checks": "LOD0 实测主尺寸与规格声明值之比", "threshold": "0.90 - 1.25", "severity": "FAIL"},
+    {"rule_id": "origin_rule", "checks": "原点规则：底面中心或几何中心", "threshold": "底面 <= 3% 主尺寸；中心偏移 <= 10% 最大尺寸", "severity": "FAIL"},
+    {"rule_id": "manifest_consistency", "checks": "manifest 记录与磁盘文件、sha256 一致", "threshold": "完全一致", "severity": "FAIL"},
+    {"rule_id": "spec_hash_coverage", "checks": "SPEC.sha256 覆盖的文件都存在", "threshold": "全部存在", "severity": "FAIL"}
+  ],
+  "honesty_rules_zh": [
+    "无法证明的项一律 NOT_VERIFIED，不判 PASS。",
+    "COMPLETE 只能由验证器 PASS 给出，且验证器必须真的跑过。",
+    "不得为了让验证通过而删减检查项。"
+  ]
+}

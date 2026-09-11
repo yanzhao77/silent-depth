@@ -1,0 +1,106 @@
+{
+  "asset_id": "US_DCM_CONSOLE",
+  "status": "VALIDATING",
+  "category": "CONTROL",
+  "category_dir": "Control",
+  "branch": "DEFENSIVE_CONTROL",
+  "family_id": "DC-INTEGRATED-CONTROL",
+  "country": "USA",
+  "priority": "HIGH",
+  "label": "Defensive control console module",
+  "label_zh": "防御控制台模块",
+  "geometry": "control_console",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "length": 1.8,
+      "width": 0.9,
+      "height": 1.2
+    },
+    "bounds_lod0": [
+      1.838,
+      0.9,
+      1.20161
+    ]
+  },
+  "exports": [
+    {
+      "name": "US_DCM_CONSOLE_LOD0",
+      "triangles": 1296,
+      "vertices": 1152,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.838,
+        0.9,
+        1.20161
+      ]
+    },
+    {
+      "name": "US_DCM_CONSOLE_LOD1",
+      "triangles": 648,
+      "vertices": 792,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.83644,
+        0.89852,
+        1.20122
+      ]
+    },
+    {
+      "name": "US_DCM_CONSOLE_LOD2",
+      "triangles": 285,
+      "vertices": 429,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.83644,
+        0.89852,
+        1.20122
+      ]
+    },
+    {
+      "name": "US_DCM_CONSOLE_LOD3",
+      "triangles": 110,
+      "vertices": 254,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.8352,
+        0.89732,
+        1.19997
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Paint",
+    "M_Def_DarkMetal",
+    "M_Def_Metal",
+    "M_Def_Glass"
+  ],
+  "sockets": [],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 6,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-10",
+  "sha256": {
+    "Blend/US_DCM_CONSOLE_MASTER.blend": "a8b54d997e8269e9f7a73774c3a1f8ed2e9cc4ae15cc62d4df56f768b2dcdf05",
+    "FBX/US_DCM_CONSOLE_LOD0.fbx": "7f2c54fcf1827b73f8b104fd872d5dd5bee747f612a7874c21ab6af1d247c8a7",
+    "FBX/US_DCM_CONSOLE_LOD1.fbx": "74041b90f185299027a69dd36362c8259b42270d9b350919143e93e41edb66b6",
+    "FBX/US_DCM_CONSOLE_LOD2.fbx": "74a79fc53aa94a5937242f2686418b76f3f8e6192bea01516ab80bc69d97b7af",
+    "FBX/US_DCM_CONSOLE_LOD3.fbx": "237932b82c737c0c565aef0e99d8d552adff4a8b72bfdaa62c6ab5779d60ca7b",
+    "Collision/US_DCM_CONSOLE_COLLISION.fbx": "98ccd42caa9e6077e48336f273ca2eb083bb15362598891013ccec77f4f1544c",
+    "Preview/US_DCM_CONSOLE_Front.png": "c01958701b38c435a44bdcc3b7bb0a89556b9a38186e7892c92f0b6510df7421",
+    "Preview/US_DCM_CONSOLE_Gray_Front.png": "8061958135592cd3a069fc548325ff63ab9b6e7fd6645f317e9a697df54e772b",
+    "Preview/US_DCM_CONSOLE_Gray_ThreeQuarter.png": "d7f464577e3124bd228a5e7b0f98f45ff63536fd992e1362a51c3932bb8b3385",
+    "Preview/US_DCM_CONSOLE_Side.png": "f4912bb8883662d7251e9054dcd2f1db970811044d722232739277ba3e049f1e",
+    "Preview/US_DCM_CONSOLE_ThreeQuarter.png": "fdcc0fddcade541f591efae06f08ae2300202d3ff71c45a5836c4fbfc7d8d5b9",
+    "Preview/US_DCM_CONSOLE_Top.png": "404c51d95a0b0e3a31833c821089dd9ddb850100123c6561d1f2af9ce850dc09"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "template_version": "1.0.0",
+  "target": {
+    "engine": "Unreal Engine",
+    "version": "4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "units": {
+    "global_scale": 1.0,
+    "apply_unit_scale": true,
+    "apply_scale_options": "FBX_SCALE_UNITS",
+    "axis_forward": "-Y",
+    "axis_up": "Z",
+    "use_space_transform": true,
+    "bake_space_transform": false,
+    "world_unit": "metre",
+    "note_zh": "与既有潜艇导出脚本保持一致；尺寸以米写入 SPEC，UE 侧 Import Uniform Scale = 1.0。"
+  },
+  "mesh": {
+    "use_mesh_modifiers": true,
+    "mesh_smooth_type": "FACE",
+    "use_tspace": true,
+    "add_leaf_bones": false,
+    "bake_anim": false,
+    "path_mode": "STRIP",
+    "embed_textures": false
+  },
+  "lod": {
+    "LOD0": 1.0,
+    "LOD1": 0.5,
+    "LOD2": 0.22,
+    "LOD3": 0.085,
+    "note_zh": "LOD 由 LOD0 派生并应用 Decimate；LOD0 内嵌 UCX 凸包。"
+  },
+  "collision": {
+    "naming": "UCX_<AssetId>_<NN>",
+    "export": "Collision/<AssetId>_COLLISION.fbx 与 LOD0 内的 UCX 体",
+    "ue_import": "Auto Generate Collision = Off，导入器直接识别 UCX 体"
+  },
+  "ue_import_settings": {
+    "import_uniform_scale": 1.0,
+    "convert_scene": true,
+    "convert_scene_unit": true,
+    "import_normals": true,
+    "import_tangents": true,
+    "generate_lightmap_uvs": true,
+    "auto_generate_collision": false,
+    "import_materials": false,
+    "import_textures": false,
+    "combine_meshes": false
+  }
+}

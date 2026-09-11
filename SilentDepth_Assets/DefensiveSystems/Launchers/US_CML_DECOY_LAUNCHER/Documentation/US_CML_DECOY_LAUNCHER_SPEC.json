@@ -1,0 +1,110 @@
+{
+  "asset_id": "US_CML_DECOY_LAUNCHER",
+  "status": "VALIDATING",
+  "category": "LAUNCHER",
+  "category_dir": "Launchers",
+  "branch": "LAUNCHER",
+  "family_id": "CML-ADVANCED",
+  "country": "USA",
+  "priority": "HIGH",
+  "label": "External countermeasure launcher housing",
+  "label_zh": "外部对抗器材发射器",
+  "geometry": "launcher_external",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "length": 1.6,
+      "width": 0.92,
+      "height": 0.72
+    },
+    "bounds_lod0": [
+      1.6,
+      0.92,
+      1.6
+    ]
+  },
+  "exports": [
+    {
+      "name": "US_CML_DECOY_LAUNCHER_LOD0",
+      "triangles": 3908,
+      "vertices": 2728,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.6,
+        0.92,
+        1.6
+      ]
+    },
+    {
+      "name": "US_CML_DECOY_LAUNCHER_LOD1",
+      "triangles": 1954,
+      "vertices": 1751,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.59844,
+        0.92,
+        1.6
+      ]
+    },
+    {
+      "name": "US_CML_DECOY_LAUNCHER_LOD2",
+      "triangles": 859,
+      "vertices": 943,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.59732,
+        0.89776,
+        1.6
+      ]
+    },
+    {
+      "name": "US_CML_DECOY_LAUNCHER_LOD3",
+      "triangles": 332,
+      "vertices": 492,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.59732,
+        0.89771,
+        1.59678
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Composite",
+    "M_Def_Paint",
+    "M_Def_Metal",
+    "M_Def_DarkMetal",
+    "M_Def_Rubber"
+  ],
+  "sockets": [
+    "SOCKET_DECOY_LAUNCHER_01",
+    "SOCKET_DECOY_LAUNCHER_02"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 6,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-10",
+  "sha256": {
+    "Blend/US_CML_DECOY_LAUNCHER_MASTER.blend": "a0e3d651d26588ad0a9e36a828127e5ab255b9e318edbb14d27f7d26431aa5e4",
+    "FBX/US_CML_DECOY_LAUNCHER_LOD0.fbx": "4807232ff9d5fc3550e4af388544fa1a689df49956a9c69a2ba48ee8de6799d3",
+    "FBX/US_CML_DECOY_LAUNCHER_LOD1.fbx": "16b14230baf9bdc8a4d1c9a85af29d721294706f41bbb44e4ba9b6d880515808",
+    "FBX/US_CML_DECOY_LAUNCHER_LOD2.fbx": "6023cb3c37229e22d2f4fed435674fa0af87a59149b1100d3be8aecc116c7d22",
+    "FBX/US_CML_DECOY_LAUNCHER_LOD3.fbx": "c9953ce56df985380ca6cbf112741a45ff55c4e8499701c6710dd2ff0654e900",
+    "Collision/US_CML_DECOY_LAUNCHER_COLLISION.fbx": "8d02a20fd851456e07649d051c8c80c2a178e1ab1d030e51b004f9f992919fe7",
+    "Preview/US_CML_DECOY_LAUNCHER_Front.png": "d56cb20b25f2c2e92414af9f37ccb6b8ef09338f897fae75240b47b96d095e9a",
+    "Preview/US_CML_DECOY_LAUNCHER_Gray_Front.png": "3373342191cb03b7099506283dba29049d92483181f420e99b7c66cfd19730a5",
+    "Preview/US_CML_DECOY_LAUNCHER_Gray_ThreeQuarter.png": "1b8a6fcfff5abac9756c010982189fd7e860d74338b7da44ce1cfc9352e7871d",
+    "Preview/US_CML_DECOY_LAUNCHER_Side.png": "b0d6f04c541f35f9b885da9c0050e16ca9333fe02c7f1f095aa36df521eac228",
+    "Preview/US_CML_DECOY_LAUNCHER_ThreeQuarter.png": "db9c2c9132b0fa5e583b86672bbe6007f3eeb9d49007a9894fd1cbcfb51b6a9d",
+    "Preview/US_CML_DECOY_LAUNCHER_Top.png": "5120270c67ad964292b10ada94ff2c2fb00cc4412aeddff5776da859fc5a4155"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "asset_id": "GEN_ACM_NOISE_MAKER",
+  "stats": {
+    "LOD0": {
+      "triangles": 2916,
+      "vertices": 2161,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.79,
+        0.245,
+        0.2
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD1": {
+      "triangles": 1457,
+      "vertices": 1347,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.79005,
+        0.24394,
+        0.2
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD2": {
+      "triangles": 641,
+      "vertices": 730,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.78947,
+        0.24314,
+        0.20019
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD3": {
+      "triangles": 247,
+      "vertices": 374,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.78943,
+        0.24314,
+        0.20892
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    }
+  },
+  "generated_at": "2026-09-11"
+}

@@ -1,0 +1,110 @@
+{
+  "asset_id": "US_ACM_TORPEDO_DECOY",
+  "status": "VALIDATING",
+  "category": "ACOUSTIC_COUNTERMEASURE",
+  "category_dir": "AcousticCountermeasure",
+  "branch": "ACOUSTIC_COUNTERMEASURE",
+  "family_id": "ACM-TORPEDO-DECOY",
+  "country": "USA",
+  "priority": "HIGH",
+  "label": "Acoustic device countermeasure (ADC family)",
+  "label_zh": "声学装置对抗器材（ADC 族）",
+  "geometry": "decoy_canister",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "length": 1.05,
+      "diameter": 0.15
+    },
+    "bounds_lod0": [
+      1.05,
+      0.17279,
+      0.17279
+    ]
+  },
+  "exports": [
+    {
+      "name": "US_ACM_TORPEDO_DECOY_LOD0",
+      "triangles": 2964,
+      "vertices": 1990,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.05,
+        0.17279,
+        0.17279
+      ]
+    },
+    {
+      "name": "US_ACM_TORPEDO_DECOY_LOD1",
+      "triangles": 1482,
+      "vertices": 1225,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.05001,
+        0.17314,
+        0.17312
+      ]
+    },
+    {
+      "name": "US_ACM_TORPEDO_DECOY_LOD2",
+      "triangles": 651,
+      "vertices": 688,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.04983,
+        0.17243,
+        0.17251
+      ]
+    },
+    {
+      "name": "US_ACM_TORPEDO_DECOY_LOD3",
+      "triangles": 251,
+      "vertices": 384,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.05003,
+        0.17243,
+        0.17448
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Composite",
+    "M_Def_Glass",
+    "M_Def_Metal",
+    "M_Def_Rubber"
+  ],
+  "sockets": [
+    "SOCKET_COUNTERMEASURE_01",
+    "SOCKET_COUNTERMEASURE_02"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-11",
+  "sha256": {
+    "Blend/US_ACM_TORPEDO_DECOY_MASTER.blend": "a89b78e9eb530c3f5cda2bce30b73888e256c59b709e31bef2fbe0ad89302a4d",
+    "Blend/US_ACM_TORPEDO_DECOY_MASTER.blend1": "a3863a229eba6a20055463c0fe18e209e81117f79e65d560d83e70b648a36602",
+    "FBX/US_ACM_TORPEDO_DECOY_LOD0.fbx": "e773e1e359ec23f7658c808b59178bd8b6d396575c578fb19b07d5916972cddf",
+    "FBX/US_ACM_TORPEDO_DECOY_LOD1.fbx": "4fedfc1d7b57c4f93efbc7f511b7fedd082a078d7d90e30994bbe53373d928ca",
+    "FBX/US_ACM_TORPEDO_DECOY_LOD2.fbx": "2cd74aaded23c9d815c62486b9143e2851b1cd287e3168100f6cc56f5af23818",
+    "FBX/US_ACM_TORPEDO_DECOY_LOD3.fbx": "186c0dd2c45aad626544d366dfbe539c12d506a069238f92b4b865cb5a52b3c6",
+    "Collision/US_ACM_TORPEDO_DECOY_COLLISION.fbx": "8fcfa773c712177573218615bd582c63db7af83eef2c02f7a4a45aae2a6b1ebb",
+    "Preview/US_ACM_TORPEDO_DECOY_Detail.png": "65ff2058ee99b92923cd95024b77689ed04c388ca2ead9a439e42bcfc3c5578b",
+    "Preview/US_ACM_TORPEDO_DECOY_Front.png": "977ac3adc5d92c2830eebee4ad5c761613d7a6a03fc8546afa8c43b5bcec9696",
+    "Preview/US_ACM_TORPEDO_DECOY_Gray_Front.png": "56bd861ddfe35873b629077131c00902026b2b05dae4e6cd2ba9910e4a9072c4",
+    "Preview/US_ACM_TORPEDO_DECOY_Gray_ThreeQuarter.png": "92a4b88520e58cb480ddc41dd805b7084ae9efccc055b1671992116dc05523c3",
+    "Preview/US_ACM_TORPEDO_DECOY_Side.png": "db6a38feed82af4122f458ce69c8f9325c39ea120ca98f8dca8d0f761b6ddac8",
+    "Preview/US_ACM_TORPEDO_DECOY_ThreeQuarter.png": "633854420c3394444607f40ae2668d4f8d3da34ce272c9cc633fed4b6721fe8d",
+    "Preview/US_ACM_TORPEDO_DECOY_Top.png": "8a89cf153d215b9f3c90658ec254f1d105b0f6238a259af270c8368a66bc99e0"
+  }
+}

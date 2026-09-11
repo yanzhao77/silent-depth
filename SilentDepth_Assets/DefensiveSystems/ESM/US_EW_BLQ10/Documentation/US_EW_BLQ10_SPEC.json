@@ -1,0 +1,110 @@
+{
+  "asset_id": "US_EW_BLQ10",
+  "status": "VALIDATING",
+  "category": "ESM",
+  "category_dir": "ESM",
+  "branch": "ESM",
+  "family_id": "ESM-DIGITAL",
+  "country": "USA",
+  "priority": "HIGH",
+  "label": "AN/BLQ-10 class integrated ESM mast",
+  "label_zh": "AN/BLQ-10 级整合 ESM 桅杆",
+  "geometry": "esm_mast_integrated",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "height": 10.2,
+      "diameter": 0.4
+    },
+    "bounds_lod0": [
+      0.72,
+      0.72704,
+      10.725
+    ]
+  },
+  "exports": [
+    {
+      "name": "US_EW_BLQ10_LOD0",
+      "triangles": 5472,
+      "vertices": 3560,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.72,
+        0.72704,
+        10.725
+      ]
+    },
+    {
+      "name": "US_EW_BLQ10_LOD1",
+      "triangles": 2736,
+      "vertices": 2000,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.71835,
+        0.72762,
+        10.72422
+      ]
+    },
+    {
+      "name": "US_EW_BLQ10_LOD2",
+      "triangles": 1202,
+      "vertices": 993,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.71835,
+        0.72645,
+        10.72315
+      ]
+    },
+    {
+      "name": "US_EW_BLQ10_LOD3",
+      "triangles": 465,
+      "vertices": 501,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.71751,
+        0.72645,
+        10.72307
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Metal",
+    "M_Def_Composite",
+    "M_Def_DarkMetal",
+    "M_Def_AntennaMaterial"
+  ],
+  "sockets": [
+    "SOCKET_EW_MAST",
+    "SOCKET_EW_ANTENNA"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-10",
+  "sha256": {
+    "Blend/US_EW_BLQ10_MASTER.blend": "a0871648822102528b2c8bee5697652787119b5124d62b30580bd909506bb05d",
+    "Blend/US_EW_BLQ10_MASTER.blend1": "9030e4143d398fe9ba7c8836b17eebe44d73faa570a4df3550c27abe66a99fe7",
+    "FBX/US_EW_BLQ10_LOD0.fbx": "dc6896931afd8df8ba1c7f394dc45890a406da9301f08ba2ef0f5eff1b00e2c3",
+    "FBX/US_EW_BLQ10_LOD1.fbx": "eb25fc0a0fa77b845c20a1c7e9ca3ef963cf42b06ebadb8b446ad428e3ea078d",
+    "FBX/US_EW_BLQ10_LOD2.fbx": "39f3f5c38b634acc3119a8f1ac2437fcd062ff108cca59f8a20f30373eed66f9",
+    "FBX/US_EW_BLQ10_LOD3.fbx": "bcdf917b1e183d67357b21c4b478e3c7f7503299cbf530cf8cfae2778f25f8c7",
+    "Collision/US_EW_BLQ10_COLLISION.fbx": "6313ba9c1eeb5a27704e89ff97b7c8c501b948f3c0e925423b55f44d30b53c84",
+    "Preview/US_EW_BLQ10_Detail.png": "3e3fd7016b27ced77a8194b54e1034d47dea4ed887a77d7f82a6b82343005800",
+    "Preview/US_EW_BLQ10_Front.png": "cb4eaa13ba97d205fbefa6fdcd4c1e9654da93b1a85151e846c40c9720f1fb00",
+    "Preview/US_EW_BLQ10_Gray_Front.png": "2170335333800ce50c6033291a045483dd3e9c0b4e2daf1e15233cc488826551",
+    "Preview/US_EW_BLQ10_Gray_ThreeQuarter.png": "cf8ae032f470dfd8c7e1555cf591616a060fffa4c6788866ba9609fd0e6ee621",
+    "Preview/US_EW_BLQ10_Side.png": "8a8614457f34f121db87afc7016510959ae718db1d274d07f5a255946635cc28",
+    "Preview/US_EW_BLQ10_ThreeQuarter.png": "febdd4e5479c904ccd101f1f549cd63e165f7da80f2ebe375f00d64249ed52f3",
+    "Preview/US_EW_BLQ10_Top.png": "128020d777c4d35c8a356c6e97a2df9b16163d8096c6021014cc0630bd76e57c"
+  }
+}

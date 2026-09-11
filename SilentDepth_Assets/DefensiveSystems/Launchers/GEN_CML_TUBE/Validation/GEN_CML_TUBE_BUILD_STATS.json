@@ -1,0 +1,70 @@
+{
+  "asset_id": "GEN_CML_TUBE",
+  "stats": {
+    "LOD0": {
+      "triangles": 2040,
+      "vertices": 1400,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.345,
+        0.3668,
+        0.37919
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_Paint",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD1": {
+      "triangles": 1020,
+      "vertices": 880,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.345,
+        0.36532,
+        0.378
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_Paint",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD2": {
+      "triangles": 448,
+      "vertices": 457,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.34454,
+        0.36412,
+        0.3768
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_Paint",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD3": {
+      "triangles": 173,
+      "vertices": 224,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.3439,
+        0.36412,
+        0.37667
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_Paint",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    }
+  },
+  "generated_at": "2026-09-11"
+}

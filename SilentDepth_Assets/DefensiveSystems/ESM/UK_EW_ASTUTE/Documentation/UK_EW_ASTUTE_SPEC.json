@@ -1,0 +1,108 @@
+{
+  "asset_id": "UK_EW_ASTUTE",
+  "status": "VALIDATING",
+  "category": "ESM",
+  "category_dir": "ESM",
+  "branch": "ESM",
+  "family_id": "ESM-MULTIBAND",
+  "country": "UK",
+  "priority": "MEDIUM",
+  "label": "UK SSN ESM mast",
+  "label_zh": "英国攻击核潜艇 ESM 桅杆",
+  "geometry": "esm_mast_blade",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "height": 9.8,
+      "diameter": 0.36
+    },
+    "bounds_lod0": [
+      0.54,
+      0.862,
+      9.87
+    ]
+  },
+  "exports": [
+    {
+      "name": "UK_EW_ASTUTE_LOD0",
+      "triangles": 3368,
+      "vertices": 2256,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.54,
+        0.862,
+        9.87
+      ]
+    },
+    {
+      "name": "UK_EW_ASTUTE_LOD1",
+      "triangles": 1684,
+      "vertices": 1254,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.53891,
+        0.86052,
+        9.87
+      ]
+    },
+    {
+      "name": "UK_EW_ASTUTE_LOD2",
+      "triangles": 740,
+      "vertices": 598,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.53856,
+        0.85932,
+        9.86889
+      ]
+    },
+    {
+      "name": "UK_EW_ASTUTE_LOD3",
+      "triangles": 286,
+      "vertices": 332,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.53729,
+        0.85932,
+        9.8667
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Metal",
+    "M_Def_DarkMetal",
+    "M_Def_AntennaMaterial"
+  ],
+  "sockets": [
+    "SOCKET_EW_MAST"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-10",
+  "sha256": {
+    "Blend/UK_EW_ASTUTE_MASTER.blend": "10e3d80691952c9a8daaf7f8c6d518dd1fff7cf470ce7546140d1f8c4dfe6910",
+    "Blend/UK_EW_ASTUTE_MASTER.blend1": "acb128f5a2c8fe4482c991836753a4f5e765400ba6e9134563138e184cea3a04",
+    "FBX/UK_EW_ASTUTE_LOD0.fbx": "a27d0f8d5e7a8d1f208c4d57958d89e4b5a8b3855acd29ae48f79ca85990fc63",
+    "FBX/UK_EW_ASTUTE_LOD1.fbx": "41078866edda9d013445e9bb4dc4d6222cb2d145a3ec188ab98eb4e47ff3cf5a",
+    "FBX/UK_EW_ASTUTE_LOD2.fbx": "f5bb3cd36a44ab464ff549f872d4b6c2c0257fc7555007f60b342b8416aef03a",
+    "FBX/UK_EW_ASTUTE_LOD3.fbx": "7e0561a70d3af117b69ccc0ddff415a7f6c3bac0cf946c8bb900f0776b493707",
+    "Collision/UK_EW_ASTUTE_COLLISION.fbx": "15891dec9e37c77b3374e2d3bc7b4291d284b3f2cf116363fefc7609d3911670",
+    "Preview/UK_EW_ASTUTE_Detail.png": "1a3292194792ea8631b4cba27468084e83eb8ee40a0e099cf8c81b6bcf604d8d",
+    "Preview/UK_EW_ASTUTE_Front.png": "ebb208bb0807549ed9946795417a1a492ce19270351983b54d27ddfc9319079c",
+    "Preview/UK_EW_ASTUTE_Gray_Front.png": "0a85382b54acda82e1c52feaec9241280bb4155eb33050ef90d59f968461e613",
+    "Preview/UK_EW_ASTUTE_Gray_ThreeQuarter.png": "d3686b22f78a676090855939ae864a13d86fab9e01b6bfe5312a1db7940e2543",
+    "Preview/UK_EW_ASTUTE_Side.png": "eb2489675aa9427c338a570f40ebbde11cb3ca1dd4577d39bf50e5e3f007a9f3",
+    "Preview/UK_EW_ASTUTE_ThreeQuarter.png": "e7ffe85a841caec5ffb4e4f0a46b135ab714a7dfcd09310babeb9e83fd5f49da",
+    "Preview/UK_EW_ASTUTE_Top.png": "ea0491a5c654fbbaff5d14fc70f949426c1ced36cb2ae39c325848fba61cb9b2"
+  }
+}

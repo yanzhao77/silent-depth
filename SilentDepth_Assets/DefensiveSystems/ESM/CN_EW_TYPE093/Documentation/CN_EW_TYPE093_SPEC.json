@@ -1,0 +1,107 @@
+{
+  "asset_id": "CN_EW_TYPE093",
+  "status": "VALIDATING",
+  "category": "ESM",
+  "category_dir": "ESM",
+  "branch": "ESM",
+  "family_id": "ESM-MULTIBAND",
+  "country": "China",
+  "priority": "MEDIUM",
+  "label": "Chinese SSN ESM mast",
+  "label_zh": "中国攻击核潜艇 ESM 桅杆",
+  "geometry": "esm_mast_slim",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "height": 8.0,
+      "diameter": 0.3
+    },
+    "bounds_lod0": [
+      0.48,
+      0.48,
+      8.1
+    ]
+  },
+  "exports": [
+    {
+      "name": "CN_EW_TYPE093_LOD0",
+      "triangles": 4148,
+      "vertices": 2544,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.48,
+        0.48,
+        8.1
+      ]
+    },
+    {
+      "name": "CN_EW_TYPE093_LOD1",
+      "triangles": 2074,
+      "vertices": 1379,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.47834,
+        0.47834,
+        8.1
+      ]
+    },
+    {
+      "name": "CN_EW_TYPE093_LOD2",
+      "triangles": 912,
+      "vertices": 714,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.47814,
+        0.47794,
+        8.09893
+      ]
+    },
+    {
+      "name": "CN_EW_TYPE093_LOD3",
+      "triangles": 352,
+      "vertices": 311,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.49791,
+        0.49791,
+        8.09843
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Metal",
+    "M_Def_AntennaMaterial",
+    "M_Def_DarkMetal"
+  ],
+  "sockets": [
+    "SOCKET_EW_MAST"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-10",
+  "sha256": {
+    "Blend/CN_EW_TYPE093_MASTER.blend": "d656b21ccb92e1b1dcb4178443f9fa9f348f8671323b0d21367796dafc7674da",
+    "FBX/CN_EW_TYPE093_LOD0.fbx": "ac591687fda9c0fdc530871a31651876d8f2cf3eb6e3002748cce78e5f2efb40",
+    "FBX/CN_EW_TYPE093_LOD1.fbx": "0b62dba7ce2d04e103baec6e41557f36578e65ccd263360187e024da9dbaae17",
+    "FBX/CN_EW_TYPE093_LOD2.fbx": "b17fa2effeb53a73848529ed982caa73688b39788e07aca0b53f3afa3c551199",
+    "FBX/CN_EW_TYPE093_LOD3.fbx": "0fd283aecf98ebd03c6050f85fabf1c35878364016b73b6231ce4a85727958ca",
+    "Collision/CN_EW_TYPE093_COLLISION.fbx": "a42aa05c0b3a433ba504ba647c7b6186f7abb08f803a8a1abb045fdd4848d29a",
+    "Preview/CN_EW_TYPE093_Detail.png": "66e6ef5a40d8d6b61a54a2c08f84485af8f9a17036644f317ce3f320da7032c7",
+    "Preview/CN_EW_TYPE093_Front.png": "d394dcbf85f318e48356f55ef887e1bbc29587905d29de250ad8d0fda7a86eae",
+    "Preview/CN_EW_TYPE093_Gray_Front.png": "9d4edff9664fe0e346202ac8a0d2a91bb565b72cfb0ef1da81567413e4d05a38",
+    "Preview/CN_EW_TYPE093_Gray_ThreeQuarter.png": "83e67ed8134ada59fdb7c10117ee8262632e0a5e79a23f681c194556a09b13db",
+    "Preview/CN_EW_TYPE093_Side.png": "c855c14107d719cc64975bbc324a9a2bbc1674a52451363ebea8bda4de06c1f4",
+    "Preview/CN_EW_TYPE093_ThreeQuarter.png": "5fc385952d3573f1783539cc9823958d65e9433825acd606be41c5e399278518",
+    "Preview/CN_EW_TYPE093_Top.png": "a16b00829ea729c9686d0e64059fe6bb5a8ba42a679ddf58819dd29b7edfc2ff"
+  }
+}

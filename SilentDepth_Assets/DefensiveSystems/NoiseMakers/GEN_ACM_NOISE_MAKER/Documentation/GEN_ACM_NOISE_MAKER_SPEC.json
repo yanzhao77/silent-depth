@@ -1,0 +1,109 @@
+{
+  "asset_id": "GEN_ACM_NOISE_MAKER",
+  "status": "VALIDATING",
+  "category": "NOISE_MAKER",
+  "category_dir": "NoiseMakers",
+  "branch": "NOISE_MAKER",
+  "family_id": "NM-MODERN",
+  "country": "USA",
+  "priority": "MEDIUM",
+  "label": "Noise maker canister",
+  "label_zh": "噪声弹发射筒",
+  "geometry": "noise_maker",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "length": 0.78,
+      "diameter": 0.2
+    },
+    "bounds_lod0": [
+      0.79,
+      0.245,
+      0.2
+    ]
+  },
+  "exports": [
+    {
+      "name": "GEN_ACM_NOISE_MAKER_LOD0",
+      "triangles": 2916,
+      "vertices": 2161,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.79,
+        0.245,
+        0.2
+      ]
+    },
+    {
+      "name": "GEN_ACM_NOISE_MAKER_LOD1",
+      "triangles": 1457,
+      "vertices": 1347,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.79005,
+        0.24394,
+        0.2
+      ]
+    },
+    {
+      "name": "GEN_ACM_NOISE_MAKER_LOD2",
+      "triangles": 641,
+      "vertices": 730,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.78947,
+        0.24314,
+        0.20019
+      ]
+    },
+    {
+      "name": "GEN_ACM_NOISE_MAKER_LOD3",
+      "triangles": 247,
+      "vertices": 374,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.78943,
+        0.24314,
+        0.20892
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Composite",
+    "M_Def_Metal",
+    "M_Def_DarkMetal",
+    "M_Def_Rubber"
+  ],
+  "sockets": [
+    "SOCKET_COUNTERMEASURE_02"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-11",
+  "sha256": {
+    "Blend/GEN_ACM_NOISE_MAKER_MASTER.blend": "26aa4901153552e943d6aa0cb37eefe4d20f2fcff0caaff738fdf57cff15573b",
+    "Blend/GEN_ACM_NOISE_MAKER_MASTER.blend1": "58c2e68c3fbef45c4f20201b3bb2271ee001a9e5a7ed05c2539acdfc8ca4359f",
+    "FBX/GEN_ACM_NOISE_MAKER_LOD0.fbx": "4d72b43dcfb642c7cc61f00dba806b4c0c1d761b88495eff26e9cb6e16afadee",
+    "FBX/GEN_ACM_NOISE_MAKER_LOD1.fbx": "922f06856a81b9a5d656dd11368d45a1c6181313c563165699bfae981bb68ce9",
+    "FBX/GEN_ACM_NOISE_MAKER_LOD2.fbx": "2f6999da72faedff52dfaf6816c99f27438016744801eb337e9bb7adbd58054c",
+    "FBX/GEN_ACM_NOISE_MAKER_LOD3.fbx": "5b6cab44fc0a10ab6029e4e25313cdcd1ec0bca12beb608c809580818492340b",
+    "Collision/GEN_ACM_NOISE_MAKER_COLLISION.fbx": "42c8cb7cf7b1baba6e312085810c83c156f1c00dc7f97aa6a781ee6f3a0c749c",
+    "Preview/GEN_ACM_NOISE_MAKER_Detail.png": "bc912507e1c9ec367601e7da13ae418ca9e1c71da2cfc4b9eb6579bdc474fbc9",
+    "Preview/GEN_ACM_NOISE_MAKER_Front.png": "1b2da825ddb09ec904d99248f5f502840de75f1526ef43db71fbb6fa3d5e2096",
+    "Preview/GEN_ACM_NOISE_MAKER_Gray_Front.png": "dc6af5ab547c24d9c74f2a481f191d870c341123f9c0f0799533f55f3ca26b49",
+    "Preview/GEN_ACM_NOISE_MAKER_Gray_ThreeQuarter.png": "5d95a3f911229492ecb5a19cbc2a43cf87036ab34ab6f199143121269a69f793",
+    "Preview/GEN_ACM_NOISE_MAKER_Side.png": "4d4d075381c01a0cf8f96d0679b6244d87c89959c9e6c6792cbd193aa9a114c5",
+    "Preview/GEN_ACM_NOISE_MAKER_ThreeQuarter.png": "55752ef59a580fb4ce5a6b8aea6b86b281a4eb2f091dddaf3f2a07cde99bd1b7",
+    "Preview/GEN_ACM_NOISE_MAKER_Top.png": "6b27aba56229ab194e7a1d826e1c0bc0ed89703f016c8c039e2738733c3e669e"
+  }
+}

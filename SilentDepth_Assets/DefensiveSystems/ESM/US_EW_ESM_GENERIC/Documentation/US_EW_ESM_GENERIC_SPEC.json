@@ -1,0 +1,110 @@
+{
+  "asset_id": "US_EW_ESM_GENERIC",
+  "status": "VALIDATING",
+  "category": "ESM",
+  "category_dir": "ESM",
+  "branch": "ESM",
+  "family_id": "ESM-DIGITAL",
+  "country": "USA",
+  "priority": "HIGH",
+  "label": "Generic ESM mast assembly",
+  "label_zh": "通用 ESM 桅杆组件",
+  "geometry": "esm_mast",
+  "provenance": "本地程序化生成网格与材质，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "representation_zh": "游戏化的外形表达，不是对真实装备的测绘复刻",
+  "dimensions_m": {
+    "declared": {
+      "height": 9.4,
+      "diameter": 0.34
+    },
+    "bounds_lod0": [
+      0.595,
+      0.623,
+      9.46
+    ]
+  },
+  "exports": [
+    {
+      "name": "US_EW_ESM_GENERIC_LOD0",
+      "triangles": 5028,
+      "vertices": 3228,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.595,
+        0.623,
+        9.46
+      ]
+    },
+    {
+      "name": "US_EW_ESM_GENERIC_LOD1",
+      "triangles": 2514,
+      "vertices": 1815,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.59335,
+        0.62144,
+        9.46
+      ]
+    },
+    {
+      "name": "US_EW_ESM_GENERIC_LOD2",
+      "triangles": 1106,
+      "vertices": 973,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.59335,
+        0.62032,
+        9.45903
+      ]
+    },
+    {
+      "name": "US_EW_ESM_GENERIC_LOD3",
+      "triangles": 426,
+      "vertices": 430,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.59703,
+        0.62032,
+        9.45816
+      ]
+    }
+  ],
+  "materials": [
+    "M_Def_Metal",
+    "M_Def_DarkMetal",
+    "M_Def_Rubber",
+    "M_Def_AntennaMaterial"
+  ],
+  "sockets": [
+    "SOCKET_EW_MAST",
+    "SOCKET_EW_ANTENNA"
+  ],
+  "collision": {
+    "objects": [],
+    "embedded_in_lod0": true
+  },
+  "preview_count": 7,
+  "ue_target": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible"
+  },
+  "generated_at": "2026-09-11",
+  "sha256": {
+    "Blend/US_EW_ESM_GENERIC_MASTER.blend": "93b01440be21afb64b3af08fa5ebe175dd3d3d3a88e726d86b06af8d06dff35c",
+    "Blend/US_EW_ESM_GENERIC_MASTER.blend1": "af6679372ace1b2b491fccd7872f5a02b279c6c2359c23196c5a6d162a3ed9e0",
+    "FBX/US_EW_ESM_GENERIC_LOD0.fbx": "9525b0eeca3cf348bd3eb24087ac40cb29d41ba52d42f677c2782914f4267c33",
+    "FBX/US_EW_ESM_GENERIC_LOD1.fbx": "b194141dd69e1eacd18d57458f86f2a0fa6fa49559f67ed393b6a218bb0e2089",
+    "FBX/US_EW_ESM_GENERIC_LOD2.fbx": "2e4e05cab9edc6ab917054f513f9109c7b97d9a4f56630317ca32f3dbb6a5df1",
+    "FBX/US_EW_ESM_GENERIC_LOD3.fbx": "12590bfda5ada8c8b2ff8f11db2dc370ced42536317e6a42172ea06d1d4aa146",
+    "Collision/US_EW_ESM_GENERIC_COLLISION.fbx": "e56e25581f3831b8d9fb3cf59699d55bdddaa9e0bb060741d8c3ed3a71e5896b",
+    "Preview/US_EW_ESM_GENERIC_Detail.png": "924c0697418b67fdbffea842f64f94630723fb112912c5c7b950b1357a9a0dd4",
+    "Preview/US_EW_ESM_GENERIC_Front.png": "7a56e439afd389e339dcb8306a22577d0a58165c65fcc48e99e798c54e350910",
+    "Preview/US_EW_ESM_GENERIC_Gray_Front.png": "27880d3a24ba0d802574752f155c361a82194abe1f0a609a8510dcbfc502932f",
+    "Preview/US_EW_ESM_GENERIC_Gray_ThreeQuarter.png": "1c664bae504fbd20983b6e95f4841fdffdbd25eaedcfdbc64cfff7cc694404d1",
+    "Preview/US_EW_ESM_GENERIC_Side.png": "23a7489da9383823bf9c3cdf160ee9e3d33de62d3fb5d8e442102fa88f554ac2",
+    "Preview/US_EW_ESM_GENERIC_ThreeQuarter.png": "ae6a7e3133d3cf09801dd98f37b310f517c88ea133e9d4a806bf2066c54da34f",
+    "Preview/US_EW_ESM_GENERIC_Top.png": "c29f5f8f47aa589877c701b8b4be91bae427d3b3283f7dd881efe98977d77d70"
+  }
+}

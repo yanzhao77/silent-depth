@@ -1,0 +1,66 @@
+{
+  "asset_id": "CN_EW_TYPE093",
+  "stats": {
+    "LOD0": {
+      "triangles": 4148,
+      "vertices": 2544,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.48,
+        0.48,
+        8.1
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_AntennaMaterial",
+        "M_Def_DarkMetal"
+      ]
+    },
+    "LOD1": {
+      "triangles": 2074,
+      "vertices": 1379,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.47834,
+        0.47834,
+        8.1
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_AntennaMaterial",
+        "M_Def_DarkMetal"
+      ]
+    },
+    "LOD2": {
+      "triangles": 912,
+      "vertices": 714,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.47814,
+        0.47794,
+        8.09893
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_AntennaMaterial",
+        "M_Def_DarkMetal"
+      ]
+    },
+    "LOD3": {
+      "triangles": 352,
+      "vertices": 311,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.49791,
+        0.49791,
+        8.09843
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_AntennaMaterial",
+        "M_Def_DarkMetal"
+      ]
+    }
+  },
+  "generated_at": "2026-09-10"
+}

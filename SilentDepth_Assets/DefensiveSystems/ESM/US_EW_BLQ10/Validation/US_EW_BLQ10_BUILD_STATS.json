@@ -1,0 +1,70 @@
+{
+  "asset_id": "US_EW_BLQ10",
+  "stats": {
+    "LOD0": {
+      "triangles": 5472,
+      "vertices": 3560,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.72,
+        0.72704,
+        10.725
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD1": {
+      "triangles": 2736,
+      "vertices": 2000,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.71835,
+        0.72762,
+        10.72422
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD2": {
+      "triangles": 1202,
+      "vertices": 993,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.71835,
+        0.72645,
+        10.72315
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial"
+      ]
+    },
+    "LOD3": {
+      "triangles": 465,
+      "vertices": 501,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.71751,
+        0.72645,
+        10.72307
+      ],
+      "material_slots": [
+        "M_Def_Metal",
+        "M_Def_Composite",
+        "M_Def_DarkMetal",
+        "M_Def_AntennaMaterial"
+      ]
+    }
+  },
+  "generated_at": "2026-09-10"
+}

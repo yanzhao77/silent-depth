@@ -1,0 +1,74 @@
+{
+  "asset_id": "US_CML_DECOY_LAUNCHER",
+  "stats": {
+    "LOD0": {
+      "triangles": 3908,
+      "vertices": 2728,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.6,
+        0.92,
+        1.6
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Paint",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD1": {
+      "triangles": 1954,
+      "vertices": 1751,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.59844,
+        0.92,
+        1.6
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Paint",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD2": {
+      "triangles": 859,
+      "vertices": 943,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.59732,
+        0.89776,
+        1.6
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Paint",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    },
+    "LOD3": {
+      "triangles": 332,
+      "vertices": 492,
+      "uv_channels": 1,
+      "dimensions_m": [
+        1.59732,
+        0.89771,
+        1.59678
+      ],
+      "material_slots": [
+        "M_Def_Composite",
+        "M_Def_Paint",
+        "M_Def_Metal",
+        "M_Def_DarkMetal",
+        "M_Def_Rubber"
+      ]
+    }
+  },
+  "generated_at": "2026-09-10"
+}
