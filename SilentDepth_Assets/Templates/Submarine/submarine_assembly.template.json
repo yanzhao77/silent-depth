@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "assetId": "ZZ_SSN_Template",
+  "templateNotice": "本文件只提供潜艇 Assembly JSON 填写模板，所有尺寸、角度、距离和锚点名称都是模板值，不是真实艇型测量数据。",
+  "units": "meters",
+  "coordinateSystem": {
+    "forward": "+X",
+    "up": "+Z",
+    "right": "+Y",
+    "unrealConversion": "1 Blender meter = 100 Unreal Units"
+  },
+  "hull": {
+    "sourceObjects": ["SUB_ZZ_TEMPLATE_HULL_SOURCE"],
+    "sourceCollections": ["10_STATIC/HULL"],
+    "lods": {
+      "LOD0": "FBX/ZZ_SSN_Template_LOD0.fbx",
+      "LOD1": "FBX/ZZ_SSN_Template_LOD1.fbx",
+      "LOD2": "FBX/ZZ_SSN_Template_LOD2.fbx",
+      "LOD3": "FBX/ZZ_SSN_Template_LOD3.fbx"
+    },
+    "collision": {
+      "owner": "hull",
+      "strategy": "separate_fbx",
+      "path": "Collision/ZZ_SSN_Template_COLLISION.fbx",
+      "sourceObjects": ["UCX_SUB_ZZ_TEMPLATE_HULL_01"]
+    }
+  },
+  "parts": [
+    {
+      "id": "propulsor_01",
+      "semanticGroup": "20_MOVABLE/PROPULSOR",
+      "exportName": "ZZ_SSN_Template_PROPULSOR_01",
+      "sourceObjects": ["SUB_ZZ_TEMPLATE_PROPULSOR_HUB_01", "SUB_ZZ_TEMPLATE_PROPULSOR_BLADE_*"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_TEMPLATE_PROPULSOR_01",
+      "parent": "root",
+      "mountTransform": {
+        "translation": [-48.0, 0.0, 0.0],
+        "rotationDegrees": [0.0, 0.0, 0.0],
+        "scale": [1.0, 1.0, 1.0]
+      },
+      "motion": {
+        "type": "rotate",
+        "axis": [1.0, 0.0, 0.0],
+        "continuousRotation": true,
+        "stateSource": "propulsor_rpm"
+      },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": {
+        "levels": ["LOD0", "LOD1", "LOD2"],
+        "visibleDistanceMeters": [0.0, 1800.0],
+        "hideBeyondMeters": 1800.0,
+        "fallback": "hide"
+      }
+    }
+  ],
+  "sockets": [
+    {
+      "id": "torpedo_tube_01_muzzle",
+      "sourceAnchor": "SOCKET_SUB_ZZ_TEMPLATE_TORPEDO_TUBE_01_MUZZLE",
+      "purpose": "torpedo_muzzle",
+      "parent": "root",
+      "transform": {
+        "translation": [42.0, 1.2, -1.0],
+        "rotationDegrees": [0.0, 0.0, 0.0],
+        "scale": [1.0, 1.0, 1.0]
+      }
+    }
+  ],
+  "validation": {
+    "requiredParts": ["propulsor_01"],
+    "requiredSockets": ["torpedo_tube_01_muzzle"]
+  }
+}

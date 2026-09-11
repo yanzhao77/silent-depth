@@ -1,5 +1,5 @@
 {
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "status_values": [
     "PLANNED",
     "RESEARCH",
@@ -36,11 +36,85 @@
     "FBX/[ASSET_ID]_LOD1.fbx",
     "FBX/[ASSET_ID]_LOD2.fbx",
     "FBX/[ASSET_ID]_LOD3.fbx",
+    "Documentation/[ASSET_ID]_ASSEMBLY.json",
+    "Validation/[ASSET_ID]_ASSEMBLY_AUDIT.json",
+    "Validation/[ASSET_ID]_EXPORT_REPORT.json",
     "Collision/[ASSET_ID]_COLLISION.fbx",
     "Documentation/[ASSET_ID]_SPEC.json",
     "Documentation/[ASSET_ID]_README.md",
     "Validation/[ASSET_ID]_VALIDATION.json"
   ],
+  "assembly_required_schema": "SilentDepth_Assets/Templates/Submarine/submarine_assembly.schema.json",
+  "assembly_required_fields": [
+    "schemaVersion",
+    "assetId",
+    "units",
+    "coordinateSystem",
+    "hull.lods.LOD0",
+    "hull.lods.LOD1",
+    "hull.lods.LOD2",
+    "hull.lods.LOD3",
+    "hull.collision.owner",
+    "parts[].id",
+    "parts[].exportName",
+    "parts[].pivotAnchor",
+    "parts[].parent",
+    "parts[].mountTransform",
+    "parts[].motion.type",
+    "parts[].motion.axis",
+    "parts[].motion.stateSource",
+    "parts[].collision",
+    "parts[].lodPolicy",
+    "sockets[].id",
+    "sockets[].sourceAnchor",
+    "sockets[].purpose",
+    "sockets[].transform",
+    "validation.requiredParts",
+    "validation.requiredSockets"
+  ],
+  "assembly_fail_closed_rules": [
+    "Part ID 和 Socket ID 必须唯一且非空。",
+    "Hull LOD0-LOD3 必须全部存在并使用资产目录内相对路径。",
+    "路径不得是绝对路径、URL、Windows 盘符路径或包含 .. 穿越。",
+    "运动轴必须非零且归一化。",
+    "范围 min 不得大于 max。",
+    "continuousRotation 不能同时声明有限 rotationRangeDegrees。",
+    "motion.type 和 stateSource 必须来自支持枚举。",
+    "一个源对象不能同时属于 Hull 和活动 Part，也不能被多个活动 Part 重复拥有。"
+  ],
+  "required_references_policy": "validation.requiredParts 和 validation.requiredSockets 允许为空数组；空数组表示该资产没有额外强制活动件或强制 Socket。",
+  "conditional_part_validation": {
+    "torpedo_doors": {
+      "required_when_declared": [
+        "sourceObjects or sourceCollections",
+        "pivotAnchor",
+        "mountTransform",
+        "motion.type=rotate",
+        "motion.axis",
+        "rotationRangeDegrees",
+        "stateSource=torpedo_door_open",
+        "collision",
+        "lodPolicy",
+        "matching torpedo_muzzle socket for every playable tube"
+      ],
+      "not_required_for_every_submarine": true
+    },
+    "vls_doors": {
+      "required_when_declared": [
+        "sourceObjects or sourceCollections",
+        "pivotAnchor",
+        "mountTransform",
+        "motion.type=rotate",
+        "motion.axis",
+        "rotationRangeDegrees",
+        "stateSource=vls_door_open",
+        "collision",
+        "lodPolicy",
+        "matching vls_muzzle socket for every playable cell"
+      ],
+      "not_required_for_every_submarine": true
+    }
+  },
   "quality_gate": [
     "recognizable_class_silhouette",
     "correct_major_hull_proportion",

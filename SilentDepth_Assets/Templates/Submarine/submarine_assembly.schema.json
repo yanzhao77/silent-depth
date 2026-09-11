@@ -1,0 +1,360 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://silent-depth.local/schemas/submarine_assembly.schema.json",
+  "title": "SilentDepth 潜艇 Assembly",
+  "description": "潜艇模块化 Assembly JSON 的结构契约。跨字段约束由 TypeScript 校验器补充。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "assetId",
+    "units",
+    "coordinateSystem",
+    "hull",
+    "parts",
+    "sockets",
+    "validation"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "assetId": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}_[A-Z0-9]+_[A-Za-z0-9_]+$",
+      "minLength": 1
+    },
+    "templateNotice": { "type": "string" },
+    "units": { "const": "meters" },
+    "coordinateSystem": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["forward", "up", "right"],
+      "properties": {
+        "forward": { "const": "+X" },
+        "up": { "const": "+Z" },
+        "right": { "enum": ["+Y", "-Y"] },
+        "unrealConversion": { "const": "1 Blender meter = 100 Unreal Units" }
+      }
+    },
+    "hull": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceObjects", "lods", "collision"],
+      "properties": {
+        "sourceObjects": { "$ref": "#/$defs/sourceObjectList" },
+        "sourceCollections": { "$ref": "#/$defs/sourceCollectionList" },
+        "lods": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["LOD0", "LOD1", "LOD2", "LOD3"],
+          "properties": {
+            "LOD0": { "$ref": "#/$defs/assetPath" },
+            "LOD1": { "$ref": "#/$defs/assetPath" },
+            "LOD2": { "$ref": "#/$defs/assetPath" },
+            "LOD3": { "$ref": "#/$defs/assetPath" }
+          }
+        },
+        "collision": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["owner", "strategy"],
+          "oneOf": [
+            {
+              "required": ["owner", "strategy", "sourceObjects"],
+              "properties": {
+                "owner": { "const": "hull" },
+                "strategy": { "const": "ucx_embedded" },
+                "path": false,
+                "sourceObjects": { "$ref": "#/$defs/sourceObjectList" }
+              }
+            },
+            {
+              "required": ["owner", "strategy", "path"],
+              "properties": {
+                "owner": { "const": "hull" },
+                "strategy": { "const": "separate_fbx" },
+                "path": { "$ref": "#/$defs/collisionPath" },
+                "sourceObjects": { "$ref": "#/$defs/sourceObjectList" }
+              }
+            },
+            {
+              "required": ["owner", "strategy"],
+              "properties": {
+                "owner": { "const": "hull" },
+                "strategy": { "const": "simple_convex" },
+                "path": false,
+                "sourceObjects": false
+              }
+            }
+          ],
+          "properties": {
+            "owner": { "const": "hull" },
+            "strategy": { "enum": ["ucx_embedded", "separate_fbx", "simple_convex"] },
+            "path": { "$ref": "#/$defs/collisionPath" },
+            "sourceObjects": { "$ref": "#/$defs/sourceObjectList" }
+          }
+        }
+      }
+    },
+    "parts": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/part" }
+    },
+    "sockets": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/socket" }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requiredParts", "requiredSockets"],
+      "properties": {
+        "requiredParts": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/id" }
+        },
+        "requiredSockets": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/id" }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]*$",
+      "minLength": 1
+    },
+    "exportName": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_]+$",
+      "minLength": 1
+    },
+    "assetPath": {
+      "type": "string",
+      "minLength": 1,
+      "allOf": [
+        { "not": { "pattern": "^/" } },
+        { "not": { "pattern": "^[A-Za-z]:[\\\\/]" } },
+        { "not": { "pattern": "://" } },
+        { "not": { "pattern": "(^|[\\\\/])\\.\\.($|[\\\\/])" } }
+      ]
+    },
+    "collisionPath": {
+      "type": "string",
+      "pattern": "^Collision/[A-Z]{2}_[A-Z0-9]+_[A-Za-z0-9_]+_COLLISION\\.fbx$",
+      "allOf": [{ "$ref": "#/$defs/assetPath" }]
+    },
+    "sourceObjectList": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "sourceCollectionList": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/assetPath" }
+    },
+    "number3": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": { "type": "number" }
+    },
+    "range": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["min", "max"],
+      "properties": {
+        "min": { "type": "number" },
+        "max": { "type": "number" }
+      }
+    },
+    "transform": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["translation", "rotationDegrees"],
+      "properties": {
+        "translation": { "$ref": "#/$defs/number3" },
+        "rotationDegrees": { "$ref": "#/$defs/number3" },
+        "scale": { "$ref": "#/$defs/number3" }
+      }
+    },
+    "motion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "axis", "stateSource"],
+      "properties": {
+        "type": { "enum": ["static", "rotate", "translate", "rotate_translate"] },
+        "axis": { "$ref": "#/$defs/number3" },
+        "rotationRangeDegrees": { "$ref": "#/$defs/range" },
+        "translationRangeMeters": { "$ref": "#/$defs/range" },
+        "continuousRotation": { "type": "boolean" },
+        "stateSource": {
+          "enum": [
+            "none",
+            "propulsor_rpm",
+            "rudder_angle",
+            "bow_planes_angle",
+            "stern_planes_angle",
+            "periscope_extension",
+            "mast_extension",
+            "torpedo_door_open",
+            "vls_door_open",
+            "damage_state",
+            "mission_script",
+            "camera_mode",
+            "audio_state",
+            "vfx_state"
+          ]
+        }
+      }
+    },
+    "collision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["owner", "strategy"],
+      "oneOf": [
+        {
+          "required": ["owner", "strategy"],
+          "properties": {
+            "owner": { "const": "none" },
+            "strategy": { "const": "none" },
+            "sourceObjects": false
+          }
+        },
+        {
+          "required": ["owner", "strategy"],
+          "properties": {
+            "owner": { "const": "part" },
+            "strategy": { "const": "simple_convex" },
+            "sourceObjects": false
+          }
+        },
+        {
+          "required": ["owner", "strategy", "sourceObjects"],
+          "properties": {
+            "owner": { "const": "part" },
+            "strategy": { "const": "owned_ucx" },
+            "sourceObjects": { "$ref": "#/$defs/sourceObjectList" }
+          }
+        },
+        {
+          "required": ["owner", "strategy"],
+          "properties": {
+            "owner": { "const": "hull" },
+            "strategy": { "const": "inherit_hull" },
+            "sourceObjects": false
+          }
+        }
+      ],
+      "properties": {
+        "owner": { "enum": ["hull", "part", "none"] },
+        "strategy": { "enum": ["none", "simple_convex", "owned_ucx", "inherit_hull"] },
+        "sourceObjects": { "$ref": "#/$defs/sourceObjectList" }
+      }
+    },
+    "lodPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["levels", "visibleDistanceMeters"],
+      "properties": {
+        "levels": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "enum": ["LOD0", "LOD1", "LOD2", "LOD3"] }
+        },
+        "visibleDistanceMeters": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "number" }
+        },
+        "hideBeyondMeters": { "type": "number" },
+        "fallback": { "enum": ["hide", "merge_to_hull_lod3", "keep_last_lod"] }
+      }
+    },
+    "part": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "semanticGroup",
+        "exportName",
+        "pivotAnchor",
+        "parent",
+        "mountTransform",
+        "motion",
+        "collision",
+        "lodPolicy"
+      ],
+      "anyOf": [
+        {
+          "required": ["sourceObjects"],
+          "properties": { "sourceObjects": { "$ref": "#/$defs/sourceObjectList" } }
+        },
+        {
+          "required": ["sourceCollections"],
+          "properties": { "sourceCollections": { "$ref": "#/$defs/sourceCollectionList" } }
+        }
+      ],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "semanticGroup": {
+          "enum": [
+            "20_MOVABLE/PROPULSOR",
+            "20_MOVABLE/RUDDER",
+            "20_MOVABLE/BOW_PLANES",
+            "20_MOVABLE/STERN_PLANES",
+            "20_MOVABLE/MASTS",
+            "20_MOVABLE/PERISCOPES",
+            "20_MOVABLE/TORPEDO_DOORS",
+            "20_MOVABLE/VLS_DOORS",
+            "20_MOVABLE/OTHER_HATCHES"
+          ]
+        },
+        "exportName": { "$ref": "#/$defs/exportName" },
+        "sourceObjects": { "$ref": "#/$defs/sourceObjectList" },
+        "sourceCollections": { "$ref": "#/$defs/sourceCollectionList" },
+        "pivotAnchor": { "type": "string", "minLength": 1 },
+        "parent": { "type": "string", "minLength": 1 },
+        "mountTransform": { "$ref": "#/$defs/transform" },
+        "motion": { "$ref": "#/$defs/motion" },
+        "collision": { "$ref": "#/$defs/collision" },
+        "lodPolicy": { "$ref": "#/$defs/lodPolicy" }
+      }
+    },
+    "socket": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "sourceAnchor", "purpose", "transform", "parent"],
+      "properties": {
+        "id": { "$ref": "#/$defs/id" },
+        "sourceAnchor": { "type": "string", "minLength": 1 },
+        "purpose": {
+          "enum": [
+            "torpedo_muzzle",
+            "vls_muzzle",
+            "decoy_launcher",
+            "sensor_mount",
+            "defense_mount",
+            "propulsion_mount",
+            "vfx_anchor",
+            "audio_anchor",
+            "camera_anchor"
+          ]
+        },
+        "transform": { "$ref": "#/$defs/transform" },
+        "parent": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}

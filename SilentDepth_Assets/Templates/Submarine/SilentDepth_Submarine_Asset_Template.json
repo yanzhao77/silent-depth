@@ -1,42 +1,77 @@
 {
   "template_id": "SilentDepth_Submarine_Asset_Template",
-  "version": "v1.0.0",
+  "version": "v1.1.0",
   "created_at": "2026-09-08",
   "source_asset": "RU_SSBN_Typhoon",
-  "source_audit": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Documentation/Typhoon_ASSET_AUDIT.json",
+  "source_audit": "Documentation/Typhoon_ASSET_AUDIT.json",
+  "assembly_schema": "submarine_assembly.schema.json",
+  "assembly_template": "submarine_assembly.template.json",
   "collection_policy": {
     "root": "SUB_[COUNTRY]_[CLASS]",
     "required_collections": [
       "00_ROOT",
-      "01_HULL",
-      "02_SAIL",
-      "03_SONAR",
-      "04_MASTS",
-      "05_PERISCOPES",
-      "06_DIVE_PLANES",
-      "07_RUDDER",
-      "08_PROPULSION",
-      "09_TORPEDO",
-      "10_MISSILE",
-      "11_HATCHES",
-      "12_DETAILS",
-      "20_VARIANTS",
-      "90_LOD/LOD0",
-      "90_LOD/LOD1",
-      "90_LOD/LOD2",
-      "90_LOD/LOD3",
-      "95_SOCKETS",
-      "99_COLLISION"
+      "10_STATIC/HULL",
+      "10_STATIC/SAIL",
+      "10_STATIC/FIXED_SONAR",
+      "10_STATIC/FIXED_DETAILS",
+      "20_MOVABLE/PROPULSOR",
+      "20_MOVABLE/RUDDER",
+      "20_MOVABLE/BOW_PLANES",
+      "20_MOVABLE/STERN_PLANES",
+      "20_MOVABLE/MASTS",
+      "20_MOVABLE/PERISCOPES",
+      "20_MOVABLE/TORPEDO_DOORS",
+      "20_MOVABLE/VLS_DOORS",
+      "20_MOVABLE/OTHER_HATCHES",
+      "30_SOCKETS/WEAPONS",
+      "30_SOCKETS/SENSORS",
+      "30_SOCKETS/DEFENSE",
+      "30_SOCKETS/PROPULSION",
+      "30_SOCKETS/VFX",
+      "30_SOCKETS/AUDIO",
+      "30_SOCKETS/CAMERA",
+      "40_COLLISION",
+      "50_LOD_SOURCE/LOD0",
+      "50_LOD_SOURCE/LOD1",
+      "50_LOD_SOURCE/LOD2",
+      "50_LOD_SOURCE/LOD3",
+      "90_EXPORT_PREVIEW"
+    ],
+    "legacy_collection_aliases": {
+      "01_HULL": "10_STATIC/HULL",
+      "02_SAIL": "10_STATIC/SAIL",
+      "03_SONAR": "10_STATIC/FIXED_SONAR",
+      "04_MASTS": "20_MOVABLE/MASTS",
+      "05_PERISCOPES": "20_MOVABLE/PERISCOPES",
+      "06_DIVE_PLANES": "20_MOVABLE/BOW_PLANES or 20_MOVABLE/STERN_PLANES",
+      "07_RUDDER": "20_MOVABLE/RUDDER",
+      "08_PROPULSION": "20_MOVABLE/PROPULSOR",
+      "09_TORPEDO": "20_MOVABLE/TORPEDO_DOORS and 30_SOCKETS/WEAPONS",
+      "10_MISSILE": "20_MOVABLE/VLS_DOORS and 30_SOCKETS/WEAPONS",
+      "11_HATCHES": "20_MOVABLE/OTHER_HATCHES",
+      "12_DETAILS": "10_STATIC/FIXED_DETAILS",
+      "90_LOD": "50_LOD_SOURCE",
+      "95_SOCKETS": "30_SOCKETS",
+      "99_COLLISION": "40_COLLISION"
+    },
+    "runtime_semantic_groups": [
+      "10_STATIC",
+      "20_MOVABLE",
+      "30_SOCKETS",
+      "40_COLLISION",
+      "50_LOD_SOURCE",
+      "90_EXPORT_PREVIEW"
     ],
     "typhoon_observed_collections": [
       "TYPHOON_ASSEMBLY",
       "UE4_EXPORT_MESHES",
       "STUDIO_NOT_FOR_EXPORT"
     ],
-    "rule": "Preserve useful source-specific edit collections, but export only explicit game asset collections."
+    "rule": "保留有用的源编辑集合，但运行时导出只消费 Assembly JSON 显式声明的语义集合和对象。"
   },
   "naming_policy": {
     "asset_id": "[COUNTRY]_[TYPE]_[CLASS]",
+    "asset_id_prefix_rule": "Hull LOD 文件名必须为 [ASSET_ID]_LOD0.fbx 到 [ASSET_ID]_LOD3.fbx；Part exportName 和碰撞 FBX 文件名前缀必须与 assetId 一致。",
     "object": "SUB_[COUNTRY]_[CLASS]_[PART]",
     "collision": "UCX_SUB_[COUNTRY]_[CLASS]_[PART]_##",
     "socket": "SOCKET_SUB_[COUNTRY]_[CLASS]_[PART]",
@@ -65,7 +100,54 @@
   },
   "origin_rules": {
     "primary_pivot": "longitudinal center and hull vertical datum inherited from Typhoon README",
-    "variant_modules": "local pivot at functional hinge/socket when applicable"
+    "variant_modules": "local pivot at functional hinge/socket when applicable",
+    "pivot_anchor_prefix": "PIVOT_SUB_[COUNTRY]_[CLASS]_[PART]",
+    "rule": "每个活动程序集必须声明功能 Pivot Anchor；导出件顶点转换到 Pivot 局部空间，安装变换写入 Assembly JSON。"
+  },
+  "runtime_assembly_rules": {
+    "authority": "Documentation/[ASSET_ID]_ASSEMBLY.json 是 Blender 导出和 UE4 表现组装的单一权威；UE DataAsset 只能由该文件生成或同步。",
+    "grouping_rule": "活动件按共同运动划分程序集，不按一个 Blender Object 一个 UE Component 划分。共享同一局部变换的多个源对象应合成一个 Part。",
+    "hull_part_exclusivity": "一个源对象不能同时属于 Hull 和活动 Part；不同活动 Part 也不能拥有同一个源对象。不得靠 UE 隐藏重复艇体来掩盖错误导出。",
+    "required_references_policy": "validation.requiredParts 和 validation.requiredSockets 允许为空数组；空数组表示该资产没有额外强制活动件或强制 Socket。",
+    "required_part_fields": [
+      "id",
+      "exportName",
+      "sourceObjects or sourceCollections",
+      "pivotAnchor",
+      "parent",
+      "mountTransform",
+      "motion",
+      "collision",
+      "lodPolicy"
+    ],
+    "required_socket_fields": [
+      "id",
+      "sourceAnchor",
+      "purpose",
+      "parent",
+      "transform"
+    ]
+  },
+  "motion_rules": {
+    "supported_types": ["static", "rotate", "translate", "rotate_translate"],
+    "axis_rule": "运动轴必须是非零归一化局部轴。",
+    "range_rule": "旋转和平移范围的 min 不得大于 max；连续旋转不能同时声明有限旋转范围。",
+    "state_sources": [
+      "none",
+      "propulsor_rpm",
+      "rudder_angle",
+      "bow_planes_angle",
+      "stern_planes_angle",
+      "periscope_extension",
+      "mast_extension",
+      "torpedo_door_open",
+      "vls_door_open",
+      "damage_state",
+      "mission_script",
+      "camera_mode",
+      "audio_state",
+      "vfx_state"
+    ]
   },
   "material_rules": {
     "shared_materials": [
@@ -110,18 +192,41 @@
   "collision_rules": {
     "prefix": "UCX_",
     "shape": "low-poly closed convex hulls",
-    "prohibited": "high-poly render mesh as collision"
+    "prohibited": "high-poly render mesh as collision",
+    "ownership": "碰撞体必须有唯一所有者：Hull、Part 或 none。Hull 的 UCX 不得重复出现在独立 Part 资产中。",
+    "hull_strategy_matrix": {
+      "ucx_embedded": "必须声明 sourceObjects，不得声明独立 path；UCX 体随 Hull LOD FBX 内嵌导出。",
+      "separate_fbx": "必须声明 path，且文件名必须为 Collision/[ASSET_ID]_COLLISION.fbx；可声明该独立 FBX 内的 sourceObjects。",
+      "simple_convex": "由离线工具从 Hull 几何生成简化凸包，禁止声明 path 和 sourceObjects。"
+    },
+    "part_strategy_matrix": {
+      "none/none": "禁止声明 sourceObjects。",
+      "hull/inherit_hull": "禁止 Part 自己声明 sourceObjects，运行时继承 Hull 碰撞。",
+      "part/owned_ucx": "必须声明 sourceObjects，且这些 UCX 源对象只属于该 Part。",
+      "part/simple_convex": "由离线工具从 Part 几何生成简化凸包，禁止声明 sourceObjects。"
+    },
+    "movable_default": "螺旋桨、桅杆、舵面和舱盖默认不参与碰撞，除非玩法明确需要。"
   },
   "socket_rules": {
     "prefix": "SOCKET_",
-    "parts": [
-      "Propeller",
-      "Rudder",
-      "Sonar",
-      "Mast",
-      "Torpedo",
-      "Missile"
-    ]
+    "source_anchor_prefix": "SOCKET_SUB_[COUNTRY]_[CLASS]_[PURPOSE]",
+    "purposes": [
+      "torpedo_muzzle",
+      "vls_muzzle",
+      "decoy_launcher",
+      "sensor_mount",
+      "defense_mount",
+      "propulsion_mount",
+      "vfx_anchor",
+      "audio_anchor",
+      "camera_anchor"
+    ],
+    "direction_rule": "武器和特效 Socket 的 +X 必须指向发射或发出方向。"
+  },
+  "weapon_boundary_rules": {
+    "torpedo_body": "鱼雷本体是独立武器资产，不属于潜艇 Hull 或活动 Part。潜艇只提供鱼雷舱盖、浅层门框和 Muzzle Socket。",
+    "vls_body": "导弹本体是独立武器资产，不属于潜艇 Hull 或活动 Part。潜艇只提供 VLS 舱盖和 Muzzle Socket。",
+    "optional_doors": "不是每艘潜艇都必须声明鱼雷门或 VLS 门；一旦 Assembly 声明，对应 Part、Pivot、运动范围和相关 Socket 必须完整验证。"
   },
   "export_rules": {
     "engine": "UE4.27",
@@ -130,7 +235,13 @@
     "axis_up": "Z",
     "apply_unit_scale": true,
     "global_scale": 1.0,
-    "embed_textures": false
+    "embed_textures": false,
+    "groups": {
+      "hull": "Hull LOD0-LOD3 从 10_STATIC 与 50_LOD_SOURCE 明确源生成，不包含任何 20_MOVABLE 源对象。",
+      "parts": "每个 Part 按 Assembly JSON 的 sourceObjects/sourceCollections 和 pivotAnchor 导出为独立 FBX。",
+      "sockets": "30_SOCKETS 只导出为 Assembly JSON 逻辑锚点，第一版 UE4 侧创建运行时 USceneComponent。",
+      "collision": "40_COLLISION 按 owner 写入 Hull 或 Part，不生成无所有者碰撞。"
+    }
   },
   "validation_rules_file": "SilentDepth_Submarine_Validation_Rules.json"
 }

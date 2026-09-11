@@ -1,0 +1,182 @@
+{
+  "schemaVersion": 1,
+  "assetId": "ZZ_SSN_CompleteTemplate",
+  "templateNotice": "完整示例只用于验证潜艇模块化 Assembly 契约，所有数值均为模板值，不是 Akula、Yasen、Typhoon 或任何真实潜艇的测量数据。鱼雷和导弹本体是独立武器资产，本文件只声明舱盖活动件与发射 Socket。",
+  "units": "meters",
+  "coordinateSystem": {
+    "forward": "+X",
+    "up": "+Z",
+    "right": "+Y",
+    "unrealConversion": "1 Blender meter = 100 Unreal Units"
+  },
+  "hull": {
+    "sourceObjects": [
+      "SUB_ZZ_COMPLETE_HULL_BODY",
+      "SUB_ZZ_COMPLETE_SAIL_FIXED",
+      "SUB_ZZ_COMPLETE_FIXED_SONAR_01",
+      "SUB_ZZ_COMPLETE_FIXED_DETAILS_*"
+    ],
+    "sourceCollections": ["10_STATIC/HULL", "10_STATIC/SAIL", "10_STATIC/FIXED_SONAR", "10_STATIC/FIXED_DETAILS"],
+    "lods": {
+      "LOD0": "FBX/ZZ_SSN_CompleteTemplate_LOD0.fbx",
+      "LOD1": "FBX/ZZ_SSN_CompleteTemplate_LOD1.fbx",
+      "LOD2": "FBX/ZZ_SSN_CompleteTemplate_LOD2.fbx",
+      "LOD3": "FBX/ZZ_SSN_CompleteTemplate_LOD3.fbx"
+    },
+    "collision": {
+      "owner": "hull",
+      "strategy": "separate_fbx",
+      "path": "Collision/ZZ_SSN_CompleteTemplate_COLLISION.fbx",
+      "sourceObjects": ["UCX_SUB_ZZ_COMPLETE_HULL_01", "UCX_SUB_ZZ_COMPLETE_SAIL_01"]
+    }
+  },
+  "parts": [
+    {
+      "id": "propulsor_01",
+      "semanticGroup": "20_MOVABLE/PROPULSOR",
+      "exportName": "ZZ_SSN_CompleteTemplate_PROPULSOR_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_PROPULSOR_HUB_01", "SUB_ZZ_COMPLETE_PROPULSOR_BLADE_*"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_PROPULSOR_01",
+      "parent": "root",
+      "mountTransform": { "translation": [-54.0, 0.0, 0.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "rotate", "axis": [1.0, 0.0, 0.0], "continuousRotation": true, "stateSource": "propulsor_rpm" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1", "LOD2"], "visibleDistanceMeters": [0.0, 1800.0], "hideBeyondMeters": 1800.0, "fallback": "hide" }
+    },
+    {
+      "id": "rudder_01",
+      "semanticGroup": "20_MOVABLE/RUDDER",
+      "exportName": "ZZ_SSN_CompleteTemplate_RUDDER_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_RUDDER_UPPER_01", "SUB_ZZ_COMPLETE_RUDDER_LOWER_01"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_RUDDER_01",
+      "parent": "root",
+      "mountTransform": { "translation": [-43.0, 0.0, 0.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "rotate", "axis": [0.0, 0.0, 1.0], "rotationRangeDegrees": { "min": -28.0, "max": 28.0 }, "stateSource": "rudder_angle" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1", "LOD2"], "visibleDistanceMeters": [0.0, 1600.0], "hideBeyondMeters": 1600.0, "fallback": "hide" }
+    },
+    {
+      "id": "bow_planes_01",
+      "semanticGroup": "20_MOVABLE/BOW_PLANES",
+      "exportName": "ZZ_SSN_CompleteTemplate_BOW_PLANES_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_BOW_PLANE_L_01", "SUB_ZZ_COMPLETE_BOW_PLANE_R_01"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_BOW_PLANES_01",
+      "parent": "root",
+      "mountTransform": { "translation": [38.0, 0.0, -0.4], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "rotate", "axis": [0.0, 1.0, 0.0], "rotationRangeDegrees": { "min": -22.0, "max": 22.0 }, "stateSource": "bow_planes_angle" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1", "LOD2"], "visibleDistanceMeters": [0.0, 1500.0], "hideBeyondMeters": 1500.0, "fallback": "hide" }
+    },
+    {
+      "id": "stern_planes_01",
+      "semanticGroup": "20_MOVABLE/STERN_PLANES",
+      "exportName": "ZZ_SSN_CompleteTemplate_STERN_PLANES_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_STERN_PLANE_L_01", "SUB_ZZ_COMPLETE_STERN_PLANE_R_01"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_STERN_PLANES_01",
+      "parent": "root",
+      "mountTransform": { "translation": [-42.5, 0.0, -0.2], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "rotate", "axis": [0.0, 1.0, 0.0], "rotationRangeDegrees": { "min": -24.0, "max": 24.0 }, "stateSource": "stern_planes_angle" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1", "LOD2"], "visibleDistanceMeters": [0.0, 1500.0], "hideBeyondMeters": 1500.0, "fallback": "hide" }
+    },
+    {
+      "id": "periscope_01",
+      "semanticGroup": "20_MOVABLE/PERISCOPES",
+      "exportName": "ZZ_SSN_CompleteTemplate_PERISCOPE_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_PERISCOPE_01"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_PERISCOPE_01",
+      "parent": "root",
+      "mountTransform": { "translation": [4.0, 0.0, 8.4], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "translate", "axis": [0.0, 0.0, 1.0], "translationRangeMeters": { "min": 0.0, "max": 6.5 }, "stateSource": "periscope_extension" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1"], "visibleDistanceMeters": [0.0, 900.0], "hideBeyondMeters": 900.0, "fallback": "hide" }
+    },
+    {
+      "id": "sensor_mast_01",
+      "semanticGroup": "20_MOVABLE/MASTS",
+      "exportName": "ZZ_SSN_CompleteTemplate_SENSOR_MAST_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_SENSOR_MAST_01"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_SENSOR_MAST_01",
+      "parent": "root",
+      "mountTransform": { "translation": [1.0, 0.6, 8.2], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "translate", "axis": [0.0, 0.0, 1.0], "translationRangeMeters": { "min": 0.0, "max": 5.8 }, "stateSource": "mast_extension" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1"], "visibleDistanceMeters": [0.0, 850.0], "hideBeyondMeters": 850.0, "fallback": "hide" }
+    },
+    {
+      "id": "torpedo_door_l_01",
+      "semanticGroup": "20_MOVABLE/TORPEDO_DOORS",
+      "exportName": "ZZ_SSN_CompleteTemplate_TORPEDO_DOOR_L_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_TORPEDO_DOOR_L_01"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_TORPEDO_DOOR_L_01",
+      "parent": "root",
+      "mountTransform": { "translation": [44.0, 1.3, -0.9], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "rotate", "axis": [0.0, 0.0, 1.0], "rotationRangeDegrees": { "min": 0.0, "max": 82.0 }, "stateSource": "torpedo_door_open" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1"], "visibleDistanceMeters": [0.0, 800.0], "hideBeyondMeters": 800.0, "fallback": "hide" }
+    },
+    {
+      "id": "torpedo_door_r_01",
+      "semanticGroup": "20_MOVABLE/TORPEDO_DOORS",
+      "exportName": "ZZ_SSN_CompleteTemplate_TORPEDO_DOOR_R_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_TORPEDO_DOOR_R_01"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_TORPEDO_DOOR_R_01",
+      "parent": "root",
+      "mountTransform": { "translation": [44.0, -1.3, -0.9], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "rotate", "axis": [0.0, 0.0, -1.0], "rotationRangeDegrees": { "min": 0.0, "max": 82.0 }, "stateSource": "torpedo_door_open" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1"], "visibleDistanceMeters": [0.0, 800.0], "hideBeyondMeters": 800.0, "fallback": "hide" }
+    },
+    {
+      "id": "vls_door_01",
+      "semanticGroup": "20_MOVABLE/VLS_DOORS",
+      "exportName": "ZZ_SSN_CompleteTemplate_VLS_DOOR_01",
+      "sourceObjects": ["SUB_ZZ_COMPLETE_VLS_DOOR_01"],
+      "pivotAnchor": "PIVOT_SUB_ZZ_COMPLETE_VLS_DOOR_01",
+      "parent": "root",
+      "mountTransform": { "translation": [20.0, 0.0, 5.2], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] },
+      "motion": { "type": "rotate", "axis": [0.0, 1.0, 0.0], "rotationRangeDegrees": { "min": 0.0, "max": 92.0 }, "stateSource": "vls_door_open" },
+      "collision": { "owner": "none", "strategy": "none" },
+      "lodPolicy": { "levels": ["LOD0", "LOD1"], "visibleDistanceMeters": [0.0, 850.0], "hideBeyondMeters": 850.0, "fallback": "hide" }
+    }
+  ],
+  "sockets": [
+    { "id": "torpedo_tube_l_01_muzzle", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_TORPEDO_TUBE_L_01_MUZZLE", "purpose": "torpedo_muzzle", "parent": "root", "transform": { "translation": [45.0, 1.2, -1.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "torpedo_tube_r_01_muzzle", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_TORPEDO_TUBE_R_01_MUZZLE", "purpose": "torpedo_muzzle", "parent": "root", "transform": { "translation": [45.0, -1.2, -1.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "vls_cell_01_muzzle", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_VLS_CELL_01_MUZZLE", "purpose": "vls_muzzle", "parent": "root", "transform": { "translation": [20.0, 0.0, 6.0], "rotationDegrees": [0.0, -90.0, 0.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "decoy_launcher_01", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_DECOY_LAUNCHER_01", "purpose": "decoy_launcher", "parent": "root", "transform": { "translation": [-18.0, 3.2, 0.5], "rotationDegrees": [0.0, 0.0, 90.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "sensor_mast_mount_01", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_SENSOR_MAST_01", "purpose": "sensor_mount", "parent": "sensor_mast_01", "transform": { "translation": [1.0, 0.6, 14.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "defense_launcher_01", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_DEFENSE_LAUNCHER_01", "purpose": "defense_mount", "parent": "root", "transform": { "translation": [-12.0, -3.0, 1.0], "rotationDegrees": [0.0, 0.0, -90.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "propulsor_mount_01", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_PROPULSOR_01", "purpose": "propulsion_mount", "parent": "propulsor_01", "transform": { "translation": [-54.0, 0.0, 0.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "vfx_wake_stern", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_WAKE_STERN", "purpose": "vfx_anchor", "parent": "root", "transform": { "translation": [-55.0, 0.0, 0.0], "rotationDegrees": [0.0, 0.0, 180.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "vfx_bubble_torpedo_l_01", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_TORPEDO_BUBBLE_L_01", "purpose": "vfx_anchor", "parent": "root", "transform": { "translation": [45.0, 1.2, -1.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "audio_propulsor", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_AUDIO_PROPULSOR", "purpose": "audio_anchor", "parent": "propulsor_01", "transform": { "translation": [-54.0, 0.0, 0.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "audio_torpedo_l_01", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_AUDIO_TORPEDO_L_01", "purpose": "audio_anchor", "parent": "root", "transform": { "translation": [45.0, 1.2, -1.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] } },
+    { "id": "camera_periscope", "sourceAnchor": "SOCKET_SUB_ZZ_COMPLETE_CAMERA_PERISCOPE", "purpose": "camera_anchor", "parent": "periscope_01", "transform": { "translation": [4.0, 0.0, 15.0], "rotationDegrees": [0.0, 0.0, 0.0], "scale": [1.0, 1.0, 1.0] } }
+  ],
+  "validation": {
+    "requiredParts": [
+      "propulsor_01",
+      "rudder_01",
+      "bow_planes_01",
+      "stern_planes_01",
+      "periscope_01",
+      "sensor_mast_01",
+      "torpedo_door_l_01",
+      "torpedo_door_r_01",
+      "vls_door_01"
+    ],
+    "requiredSockets": [
+      "torpedo_tube_l_01_muzzle",
+      "torpedo_tube_r_01_muzzle",
+      "vls_cell_01_muzzle",
+      "decoy_launcher_01",
+      "sensor_mast_mount_01",
+      "defense_launcher_01",
+      "propulsor_mount_01",
+      "vfx_wake_stern",
+      "audio_propulsor",
+      "camera_periscope"
+    ]
+  }
+}

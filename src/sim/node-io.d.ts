@@ -29,9 +29,15 @@ declare module 'node:child_process' {
     command: string,
     opts?: { encoding?: string; stdio?: unknown[] },
   ): string | Buffer;
+  export function execFileSync(
+    file: string,
+    args?: string[],
+    opts?: { encoding?: string; stdio?: unknown[] },
+  ): string | Buffer;
 }
 
 /** Node's process global — only the surface the playtest tooling touches. */
 declare const process: {
+  execPath: string;
   cwd(): string;
 };
