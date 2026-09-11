@@ -1,0 +1,37 @@
+{
+  "sensor_id": "US_SONAR_BQS15",
+  "form_factor": "hf_dome",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_SONAR_BOW",
+  "note": "高频声呐导流罩外形",
+  "triangles": {
+    "LOD0": 900,
+    "LOD1": 264,
+    "LOD2": 136,
+    "LOD3": 104
+  },
+  "collision_faces": 59,
+  "collision_object": "UCX_SEN_US_SONAR_BQS15_00",
+  "object_names": [
+    "SEN_US_SONAR_BQS15_LOD0",
+    "SEN_US_SONAR_BQS15_LOD1",
+    "SEN_US_SONAR_BQS15_LOD2",
+    "SEN_US_SONAR_BQS15_LOD3",
+    "UCX_SEN_US_SONAR_BQS15_00",
+    "SOCKET_SONAR_BOW"
+  ],
+  "mesh_names": [
+    "SEN_US_SONAR_BQS15_LOD0",
+    "SEN_US_SONAR_BQS15_LOD1",
+    "SEN_US_SONAR_BQS15_LOD2",
+    "SEN_US_SONAR_BQS15_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\HighFrequency\\US_SONAR_BQS15\\Blend\\US_SONAR_BQS15_MASTER.blend",
+  "previews": [
+    "US_SONAR_BQS15_Front.png",
+    "US_SONAR_BQS15_Side.png",
+    "US_SONAR_BQS15_Top.png",
+    "US_SONAR_BQS15_Perspective.png"
+  ]
+}

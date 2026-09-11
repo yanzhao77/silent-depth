@@ -1,0 +1,34 @@
+{
+  "asset_id": "GEN_MAST_PHO_T4",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "PHOTONICS",
+  "tier": "T4",
+  "country": "GENERIC",
+  "family": "GEN_PHO",
+  "name": "Electronic Periscope",
+  "status": "GAMEPLAY",
+  "confidence": "GAMEPLAY",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_PERISCOPE",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 9.5,
+    "diameter": 0.28,
+    "height": 0.28
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [],
+  "references": []
+}

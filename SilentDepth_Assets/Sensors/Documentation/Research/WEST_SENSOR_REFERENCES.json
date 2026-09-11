@@ -1,0 +1,456 @@
+{
+  "region": "WEST",
+  "countries": ["USA", "UK", "France"],
+  "generated_at": "2026-09-10",
+  "policy": "只记录公开来源可支持的名称、类别、平台关系、安装方式与时代；不记录任何分类频率、声源级、探测距离等作战参数。",
+  "confidence_rule": "CONFIRMED 要求至少两条独立公开来源一致确认系统与平台的对应关系，其中至少一条为官方/政府/制造商/专业工程媒体；否则最高只能标 PROBABLE。仅有一条二手来源时不得标 CONFIRMED。",
+  "entries": [
+    {
+      "sensor_id_candidate": "US_SONAR_BQQ5",
+      "name": "AN/BQQ-5",
+      "family": "AN/BQQ",
+      "country": "USA",
+      "category": "BowSonar",
+      "sub_category": "Spherical Bow Array",
+      "era": "1970s-2000s",
+      "status": "HISTORICAL",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["US_SSN_LosAngeles", "US_SSN_Sturgeon"],
+      "mount_type": "Hull-integrated bow spherical array with conformal hull array and towed arrays",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Los_Angeles-class_submarine",
+          "title": "Los Angeles-class submarine",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://www.forecastinternational.com/archive/disp_pdf.cfm?DACH_RECNO=1641",
+          "title": "BQQ-5(V)",
+          "publisher": "Forecast International",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "公开资料一致描述为 Los Angeles 级的综合声呐套件，含 AN/BQS-13 球形阵、共形阵与拖曳阵；未取得一手政府文件的平台对应表，保持 PROBABLE。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_SONAR_BQQ6",
+      "name": "AN/BQQ-6",
+      "family": "AN/BQQ",
+      "country": "USA",
+      "category": "BowSonar",
+      "sub_category": "Spherical Bow Array",
+      "era": "1980s-2000s",
+      "status": "HISTORICAL",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["US_SSBN_Ohio"],
+      "mount_type": "Hull-integrated bow sphere",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://nuclearcompanion.com/data/ohio-class-ssbn-726-submarine-technical-specification/",
+          "title": "Ohio-Class (SSBN-726) Submarine Technical Specification",
+          "publisher": "Nuclear Companion",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Ohio-class_submarine",
+          "title": "Ohio-class submarine",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "公开资料称 Ohio 级装 AN/BQQ-6，为 AN/BQQ-5 的被动型；仅二手资料，保持 PROBABLE。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_SONAR_BQQ10",
+      "name": "AN/BQQ-10",
+      "family": "AN/BQQ",
+      "country": "USA",
+      "category": "BowSonar",
+      "sub_category": "Integrated Sonar Suite",
+      "era": "2000s-present",
+      "status": "IN_SERVICE",
+      "confidence": "CONFIRMED",
+      "compatible_submarines": ["US_SSN_Virginia", "US_SSN_LosAngeles", "US_SSN_Seawolf"],
+      "mount_type": "Hull-integrated bow array with A-RCI processing",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://www.dote.osd.mil/Portals/97/pub/reports/FY2018/navy/2018arci.pdf",
+          "title": "Acoustic Rapid Commercial Off-the-Shelf Insertion (A-RCI) for AN/BQQ-10(V) Sonar",
+          "publisher": "Director, Operational Test and Evaluation (DOT&E), U.S. Department of Defense",
+          "accessed": "2026-09-10",
+          "source_type": "government"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Virginia-class_submarine",
+          "title": "Virginia-class submarine",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://archive.navalsubleague.org/2005/the-an-bqq-lov-sonar-maintaining-leading-edge-technology-for-the-submarine-force",
+          "title": "The AN/BQQ-10(V) Sonar: Maintaining Leading Edge Technology for the Submarine Force",
+          "publisher": "Naval Submarine League",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "DOT&E 政府报告明确 AN/BQQ-10(V) A-RCI 是美国潜艇使用的水下探测系统；Virginia 级艇艏球形阵的对应关系由公开参考确认。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_SONAR_LAB",
+      "name": "Large Aperture Bow (LAB) Array",
+      "family": "LAB",
+      "country": "USA",
+      "category": "BowSonar",
+      "sub_category": "Large Aperture Bow",
+      "era": "2000s-present",
+      "status": "IN_SERVICE",
+      "confidence": "CONFIRMED",
+      "compatible_submarines": ["US_SSN_Virginia"],
+      "mount_type": "Water-backed large aperture bow array",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Virginia-class_submarine",
+          "title": "Virginia-class submarine（Block III 段落引用 NAVSEA 与 L-3 KEO 资料）",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://www.defenseindustrydaily.com/virginia-block-iii-the-revised-bow-04159/",
+          "title": "Virginia Block III: The Revised Bow",
+          "publisher": "Defense Industry Daily",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://www.navsource.net/archives/08/08784.htm",
+          "title": "North Dakota (SSN-784)",
+          "publisher": "NavSource Naval History",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "多份独立公开资料一致：Block III（SSN-784 起）把气背衬球形阵改为水背衬 Large Aperture Bow 阵，Defense Industry Daily 的合同条目标注 NAVSEA 为采购方，Wikipedia 的 Block III 段落引用 NAVSEA 与 L-3 KEO 资料。未取得单一一手文件全文，因此来源标注为公开参考而非政府原文。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_SONAR_BQS15",
+      "name": "AN/BQS-15",
+      "family": "AN/BQS",
+      "country": "USA",
+      "category": "HighFrequencySonar",
+      "sub_category": "Under Ice",
+      "era": "1970s-present",
+      "status": "IN_SERVICE",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["US_SSN_LosAngeles", "US_SSBN_Ohio"],
+      "mount_type": "Hull-mounted high frequency sonar",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://man.fas.org/dod-101/sys/ship/weaps/an-bqs-15.htm",
+          "title": "AN/BQS-15",
+          "publisher": "Federation of American Scientists (FAS)",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Los_Angeles-class_submarine",
+          "title": "Los Angeles-class submarine",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "任务书 §10 点名的历史系统；FAS 记为 Los Angeles 级的探雷/避雷与冰下导航声呐，Ohio 级亦装同系列。只有二手资料，保持 PROBABLE。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_SONAR_TB16",
+      "name": "TB-16 Tactical Towed Array",
+      "family": "TB",
+      "country": "USA",
+      "category": "TowedArray",
+      "sub_category": "Legacy Towed Array",
+      "era": "1970s-2000s",
+      "status": "HISTORICAL",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["US_SSN_LosAngeles"],
+      "mount_type": "Towed array housing with fairing",
+      "socket": "SOCKET_TOWED_ARRAY",
+      "references": [
+        {
+          "url": "https://www.dote.osd.mil/Portals/97/pub/reports/FY2010/navy/2010tb34.pdf",
+          "title": "TB-34 Towed Array",
+          "publisher": "Director, Operational Test and Evaluation (DOT&E), U.S. Department of Defense",
+          "accessed": "2026-09-10",
+          "source_type": "government"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Los_Angeles-class_submarine",
+          "title": "Los Angeles-class submarine（TB-12 → TB-16 → TB-23/TB-29 演进段落）",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "DOT&E 政府报告在 TB-34 条目中把 TB-16 记为被替换的 legacy tactical towed array；平台对应关系来自公开参考。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_SONAR_TB29",
+      "name": "TB-29 Thin Line Towed Array",
+      "family": "TB",
+      "country": "USA",
+      "category": "TowedArray",
+      "sub_category": "Low Frequency Towed Array",
+      "era": "1990s-present",
+      "status": "IN_SERVICE",
+      "confidence": "CONFIRMED",
+      "compatible_submarines": ["US_SSN_Virginia", "US_SSN_LosAngeles"],
+      "mount_type": "Thin-line towed array",
+      "socket": "SOCKET_TOWED_ARRAY",
+      "references": [
+        {
+          "url": "https://man.fas.org/dod-101/sys/ship/weaps/tb-29.htm",
+          "title": "TB-29 Thin Line Towed Array",
+          "publisher": "Federation of American Scientists (FAS)",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://www.l3harris.com/all-capabilities/submarine-towed-arrays",
+          "title": "Submarine Towed Arrays",
+          "publisher": "L3Harris Technologies",
+          "accessed": "2026-09-10",
+          "source_type": "manufacturer"
+        },
+        {
+          "url": "https://www.militaryaerospace.com/sensors/article/55344179/l3harris-technologies-navy-asks-l3harris-for-submarine-based-long-range-towed-array-sonar-to-detect-quiet-enemy-submarines",
+          "title": "Navy asks L3Harris for submarine-based long-range towed array sonar",
+          "publisher": "Military & Aerospace Electronics",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "制造商 L3Harris 公开说明其细线拖曳阵与 TB-29A 同形制；FAS 记录 TB-29 面向 Los Angeles 与 Virginia 级。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_PHO_Virginia",
+      "name": "Virginia-class Photonics Mast",
+      "family": "US_PHO",
+      "country": "USA",
+      "category": "PhotonicsMast",
+      "sub_category": "Photonics Mast",
+      "era": "2000s-present",
+      "status": "IN_SERVICE",
+      "confidence": "CONFIRMED",
+      "compatible_submarines": ["US_SSN_Virginia"],
+      "mount_type": "Non-penetrating photonics mast (low profile)",
+      "socket": "SOCKET_PHOTONICS_MAST",
+      "references": [
+        {
+          "url": "https://www.l3harris.com/all-capabilities/optronic-imaging-surface-ship-and-submarine-imaging-and-communications",
+          "title": "Optronic Imaging, Surface Ship and Submarine Imaging and Communications",
+          "publisher": "L3Harris Technologies",
+          "accessed": "2026-09-10",
+          "source_type": "manufacturer"
+        },
+        {
+          "url": "https://www.militaryaerospace.com/sensors/article/14178191/electro-optical-submarines-stealth",
+          "title": "L3Harris KEO to build electro-optical photonics masts for Virginia-class attack submarines",
+          "publisher": "Military & Aerospace Electronics",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://www.spie.org/news/the-eyes-of-a-submarine_photonics-masts",
+          "title": "The eyes of a submarine",
+          "publisher": "SPIE",
+          "accessed": "2026-09-10",
+          "source_type": "academic"
+        }
+      ],
+      "notes": "任务书 §11 指定资产。制造商与公开报道均确认 Virginia 级使用光电桅杆，取代穿透式潜望镜。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_RADAR_BPS16",
+      "name": "AN/BPS-15/16 Radar",
+      "family": "AN/BPS",
+      "country": "USA",
+      "category": "Radar",
+      "sub_category": "Mast Radar",
+      "era": "1990s-present",
+      "status": "IN_SERVICE",
+      "confidence": "CONFIRMED",
+      "compatible_submarines": ["US_SSN_Virginia", "US_SSN_Seawolf", "US_SSBN_Ohio", "US_SSN_LosAngeles"],
+      "mount_type": "Mast-mounted surface search antenna",
+      "socket": "SOCKET_RADAR",
+      "references": [
+        {
+          "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2166767/anbps-1516-radar/",
+          "title": "AN/BPS-15/16 Radar",
+          "publisher": "United States Navy (navy.mil Fact File)",
+          "accessed": "2026-09-10",
+          "source_type": "official"
+        }
+      ],
+      "notes": "海军官方事实文件明确：BPS 系列雷达装在全部潜艇平台上；(V)3 为 Seawolf 级前装，(V)4/(V)5 为 Virginia 级前装，(V)2 为最后四艘 Ohio 级 SSBN 前装，(V)15H 为 Los Angeles 级改装。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "US_ESM_BLQ10",
+      "name": "AN/BLQ-10(V) Submarine EW Support System",
+      "family": "AN/BLQ",
+      "country": "USA",
+      "category": "ESM",
+      "sub_category": "Digital ESM",
+      "era": "2000s-present",
+      "status": "IN_SERVICE",
+      "confidence": "CONFIRMED",
+      "compatible_submarines": ["US_SSN_Virginia", "US_SSN_LosAngeles", "US_SSN_Seawolf"],
+      "mount_type": "Mast-mounted ESM antenna group",
+      "socket": "SOCKET_ESM",
+      "references": [
+        {
+          "url": "https://www.dote.osd.mil/Portals/97/pub/reports/FY2013/navy/2013anblq10.pdf",
+          "title": "AN/BLQ-10 Submarine Electronic Warfare Support System",
+          "publisher": "Director, Operational Test and Evaluation (DOT&E), U.S. Department of Defense",
+          "accessed": "2026-09-10",
+          "source_type": "government"
+        },
+        {
+          "url": "https://www.lockheedmartin.com/en-us/capabilities/electronic-warfare/maritime-electronic-warfare.html",
+          "title": "Maritime Electronic Warfare — AN/BLQ-10(V) Submarine EW",
+          "publisher": "Lockheed Martin",
+          "accessed": "2026-09-10",
+          "source_type": "manufacturer"
+        }
+      ],
+      "notes": "DOT&E 报告把 AN/BLQ-10 记为潜艇电子战支援（ESM）系统，并说明雷达信号由成像桅杆采集（Virginia 级）；制造商页面同样定位为 ESM 探测/识别/定位。电子攻击不属于本条目。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "UK_SONAR_Astute",
+      "name": "Sonar 2076",
+      "family": "Thales2076",
+      "country": "UK",
+      "category": "BowSonar",
+      "sub_category": "Integrated Sonar Suite",
+      "era": "2000s-present",
+      "status": "IN_SERVICE",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["UK_SSN_Astute"],
+      "mount_type": "Integrated bow/flank/sail sonar suite",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Sonar_2076",
+          "title": "Sonar 2076",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://www.naval-technology.com/projects/astute/",
+          "title": "SSN Astute-Class Nuclear Submarines, UK",
+          "publisher": "Naval Technology",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://dsm.forecastinternational.com/2015/03/26/sonar-2076-poised-only-to-equip-royal-navys-astute-class-submarines/",
+          "title": "Sonar 2076 Poised Only to Equip Royal Navy's Astute-Class Submarines",
+          "publisher": "Forecast International",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "任务书 §23 点名示例。公开资料一致指向 Thales 的综合主/被动声呐套件用于 Astute 级，但未取得制造商或政府的一手平台对应页面，保持 PROBABLE。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "UK_SONAR_2074",
+      "name": "Sonar 2074",
+      "family": "Thales2074",
+      "country": "UK",
+      "category": "BowSonar",
+      "sub_category": "Integrated Sonar Suite",
+      "era": "1990s-2000s",
+      "status": "HISTORICAL",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["UK_SSN_Trafalgar", "UK_SSN_Swiftsure"],
+      "mount_type": "Integrated sonar suite",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://publications.parliament.uk/pa/cm200203/cmselect/cmdfence/694/694we10.htm",
+          "title": "House of Commons Defence Committee — Written Evidence",
+          "publisher": "UK Parliament",
+          "accessed": "2026-09-10",
+          "source_type": "government"
+        }
+      ],
+      "notes": "英国议会书面证词提到 Sonar 2074 与 2082 的声呐能力升级；系统名称有政府来源，具体艇级对应仍属二手推断，因此条目保持 PROBABLE。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "UK_PHO_CM010",
+      "name": "CM010 Optronic Mast",
+      "family": "CM010",
+      "country": "UK",
+      "category": "PhotonicsMast",
+      "sub_category": "Advanced Photonics Mast",
+      "era": "2000s-present",
+      "status": "IN_SERVICE",
+      "confidence": "CONFIRMED",
+      "compatible_submarines": ["UK_SSN_Astute"],
+      "mount_type": "Non-penetrating optronic mast",
+      "socket": "SOCKET_PHOTONICS_MAST",
+      "references": [
+        {
+          "url": "https://www.thalesgroup.com/en/solutions-catalogue/defence/naval/optronics-mast-family",
+          "title": "Optronics Mast Family",
+          "publisher": "Thales Group",
+          "accessed": "2026-09-10",
+          "source_type": "manufacturer"
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Photonics_mast",
+          "title": "Photonics mast",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "制造商 Thales 官方页面明确 CM010 光电桅杆已部署于英国 HMS Astute，属于平台—系统一手对应。",
+      "classified_parameter_check": "none-recorded"
+    }
+  ],
+  "not_found": [
+    {
+      "topic": "法国 Suffren/Barracuda 与 Triomphant 级的公开声呐具体型号",
+      "reason": "本轮检索未取得制造商或法国海军的一手命名页面，按 §29 不编造型号，保持 UNKNOWN。"
+    },
+    {
+      "topic": "英国 Sonar 2019 平面阵",
+      "reason": "未找到可靠公开页面，未纳入数据库。"
+    }
+  ]
+}

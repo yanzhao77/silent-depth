@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_SONAR_FLK_T6",
+  "form_factor": "flank_conformal",
+  "form_factor_note": "共形侧阵",
+  "dimensions_m": {
+    "length": 14.0,
+    "diameter": 0.35,
+    "height": 0.35
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "GAMEPLAY_FORM",
+  "source_note": "共形侧阵代表性外形。",
+  "branch": "FLANK",
+  "branch_label_zh": "侧阵",
+  "socket": "SOCKET_SONAR_FLANK_R",
+  "tier": "T6"
+}

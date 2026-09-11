@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_RADAR_T3",
+  "form_factor": "radar_dish",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_RADAR",
+  "note": "对海搜索/导航雷达天线外形",
+  "triangles": {
+    "LOD0": 240,
+    "LOD1": 128,
+    "LOD2": 88,
+    "LOD3": 72
+  },
+  "collision_faces": 31,
+  "collision_object": "UCX_SEN_GEN_RADAR_T3_00",
+  "object_names": [
+    "SEN_GEN_RADAR_T3_LOD0",
+    "SEN_GEN_RADAR_T3_LOD1",
+    "SEN_GEN_RADAR_T3_LOD2",
+    "SEN_GEN_RADAR_T3_LOD3",
+    "UCX_SEN_GEN_RADAR_T3_00",
+    "SOCKET_RADAR"
+  ],
+  "mesh_names": [
+    "SEN_GEN_RADAR_T3_LOD0",
+    "SEN_GEN_RADAR_T3_LOD1",
+    "SEN_GEN_RADAR_T3_LOD2",
+    "SEN_GEN_RADAR_T3_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Radar\\GEN_RADAR_T3\\Blend\\GEN_RADAR_T3_MASTER.blend",
+  "previews": [
+    "GEN_RADAR_T3_Front.png",
+    "GEN_RADAR_T3_Side.png",
+    "GEN_RADAR_T3_Top.png",
+    "GEN_RADAR_T3_Perspective.png"
+  ]
+}

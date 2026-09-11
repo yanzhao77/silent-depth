@@ -1,0 +1,122 @@
+{
+  "asset_id": "UK_PHO_CM010",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\UK_PHO_CM010",
+    "fbx": [
+      {
+        "file": "UK_PHO_CM010_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 36796
+      },
+      {
+        "file": "UK_PHO_CM010_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 28716
+      },
+      {
+        "file": "UK_PHO_CM010_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 25404
+      },
+      {
+        "file": "UK_PHO_CM010_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 24908
+      },
+      {
+        "file": "UK_PHO_CM010_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 24348
+      }
+    ],
+    "geometry": {
+      "sensor_id": "UK_PHO_CM010",
+      "form_factor": "mast_photonics",
+      "geometry_source": "PUBLIC_FORM",
+      "socket": "SOCKET_PHOTONICS_MAST",
+      "note": "光电桅杆外形",
+      "triangles": {
+        "LOD0": 360,
+        "LOD1": 176,
+        "LOD2": 100,
+        "LOD3": 92
+      },
+      "collision_faces": 42,
+      "collision_object": "UCX_SEN_UK_PHO_CM010_00",
+      "object_names": [
+        "SEN_UK_PHO_CM010_LOD0",
+        "SEN_UK_PHO_CM010_LOD1",
+        "SEN_UK_PHO_CM010_LOD2",
+        "SEN_UK_PHO_CM010_LOD3",
+        "UCX_SEN_UK_PHO_CM010_00",
+        "SOCKET_PHOTONICS_MAST"
+      ],
+      "mesh_names": [
+        "SEN_UK_PHO_CM010_LOD0",
+        "SEN_UK_PHO_CM010_LOD1",
+        "SEN_UK_PHO_CM010_LOD2",
+        "SEN_UK_PHO_CM010_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\UK_PHO_CM010\\Blend\\UK_PHO_CM010_MASTER.blend",
+      "previews": [
+        "UK_PHO_CM010_Front.png",
+        "UK_PHO_CM010_Side.png",
+        "UK_PHO_CM010_Top.png",
+        "UK_PHO_CM010_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 8.218,
+        "stddev_subject": 12.308,
+        "subject_fraction": 0.06604,
+        "file": "UK_PHO_CM010_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.946,
+        "stddev_subject": 11.888,
+        "subject_fraction": 0.07594,
+        "file": "UK_PHO_CM010_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.557,
+        "stddev_subject": 6.319,
+        "subject_fraction": 0.06892,
+        "file": "UK_PHO_CM010_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 24.141,
+        "stddev_subject": 24.175,
+        "subject_fraction": 0.35766,
+        "file": "UK_PHO_CM010_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

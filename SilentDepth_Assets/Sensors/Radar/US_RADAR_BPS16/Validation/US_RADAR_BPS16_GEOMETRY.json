@@ -1,0 +1,37 @@
+{
+  "sensor_id": "US_RADAR_BPS16",
+  "form_factor": "radar_dish",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_RADAR",
+  "note": "对海搜索/导航雷达天线外形",
+  "triangles": {
+    "LOD0": 240,
+    "LOD1": 128,
+    "LOD2": 88,
+    "LOD3": 72
+  },
+  "collision_faces": 31,
+  "collision_object": "UCX_SEN_US_RADAR_BPS16_00",
+  "object_names": [
+    "SEN_US_RADAR_BPS16_LOD0",
+    "SEN_US_RADAR_BPS16_LOD1",
+    "SEN_US_RADAR_BPS16_LOD2",
+    "SEN_US_RADAR_BPS16_LOD3",
+    "UCX_SEN_US_RADAR_BPS16_00",
+    "SOCKET_RADAR"
+  ],
+  "mesh_names": [
+    "SEN_US_RADAR_BPS16_LOD0",
+    "SEN_US_RADAR_BPS16_LOD1",
+    "SEN_US_RADAR_BPS16_LOD2",
+    "SEN_US_RADAR_BPS16_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Radar\\US_RADAR_BPS16\\Blend\\US_RADAR_BPS16_MASTER.blend",
+  "previews": [
+    "US_RADAR_BPS16_Front.png",
+    "US_RADAR_BPS16_Side.png",
+    "US_RADAR_BPS16_Top.png",
+    "US_RADAR_BPS16_Perspective.png"
+  ]
+}

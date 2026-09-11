@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_SONAR_PSV_T8",
+  "form_factor": "distributed_pod",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_SONAR_FLANK_R",
+  "note": "分布式阵节点外形",
+  "triangles": {
+    "LOD0": 836,
+    "LOD1": 570,
+    "LOD2": 124,
+    "LOD3": 124
+  },
+  "collision_faces": 63,
+  "collision_object": "UCX_SEN_GEN_SONAR_PSV_T8_00",
+  "object_names": [
+    "SEN_GEN_SONAR_PSV_T8_LOD0",
+    "SEN_GEN_SONAR_PSV_T8_LOD1",
+    "SEN_GEN_SONAR_PSV_T8_LOD2",
+    "SEN_GEN_SONAR_PSV_T8_LOD3",
+    "UCX_SEN_GEN_SONAR_PSV_T8_00",
+    "SOCKET_SONAR_FLANK_R"
+  ],
+  "mesh_names": [
+    "SEN_GEN_SONAR_PSV_T8_LOD0",
+    "SEN_GEN_SONAR_PSV_T8_LOD1",
+    "SEN_GEN_SONAR_PSV_T8_LOD2",
+    "SEN_GEN_SONAR_PSV_T8_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Passive\\GEN_SONAR_PSV_T8\\Blend\\GEN_SONAR_PSV_T8_MASTER.blend",
+  "previews": [
+    "GEN_SONAR_PSV_T8_Front.png",
+    "GEN_SONAR_PSV_T8_Side.png",
+    "GEN_SONAR_PSV_T8_Top.png",
+    "GEN_SONAR_PSV_T8_Perspective.png"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "asset_id": "US_ESM_BLQ10",
+  "generated_at": "2026-09-10T16:08:45Z",
+  "branch": "ESM",
+  "tier": "T7",
+  "country": "USA",
+  "family": "AN/BLQ",
+  "socket": "SOCKET_ESM",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 2.8,
+    "diameter": 0.3,
+    "height": 0.3
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/US_ESM_BLQ10_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 598110,
+      "sha256": "ff7f2e1d2bc9afae9e0b1dbc59c3d42baeaa4b815483e12ecd8b46b51605871c"
+    },
+    {
+      "path": "FBX/US_ESM_BLQ10_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23868,
+      "sha256": "2f83a89471da05d913faef370b6f3a141fd075f41fbf14387acd71cf4201a872",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_ESM_BLQ10_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 22044,
+      "sha256": "ea5d2786b5237d2ff2f46230545ab7dda1dd99acd9ab4a596d9bbaef70c1e0d5",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_ESM_BLQ10_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20252,
+      "sha256": "3654125cd119a745e56e8d889a9e31803327e81763bf4b3e0dffe7190373ae0c",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_ESM_BLQ10_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20252,
+      "sha256": "e57f88787ad520af30c5506812d588b971d1868078529832debadbcfe73ed240",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/US_ESM_BLQ10_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20316,
+      "sha256": "297ca3a55cf58fab5c2b79b5917207004c58f23db99a3bd9cbc62a9602934d7e",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/US_ESM_BLQ10_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 120346,
+      "sha256": "f776c1265e474c8f80fa8b7a4bf53c77e1a6f6a5858304d2911dd47a02bc59df"
+    },
+    {
+      "path": "Preview/US_ESM_BLQ10_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 128708,
+      "sha256": "896a7b9cdba580c4ebe5dc532a603baa04af18b45dd9c8d8d1e45645f2c7bb08"
+    },
+    {
+      "path": "Preview/US_ESM_BLQ10_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 115158,
+      "sha256": "54e2422236a28aefd47a0e0df3c55bc90be9a026652c8e29eadcd90f95019002"
+    },
+    {
+      "path": "Preview/US_ESM_BLQ10_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 125698,
+      "sha256": "a658f2b9ab744079a85767c869f2f7de0022a4b50cce2a8b654d9e95a57457e2"
+    }
+  ]
+}

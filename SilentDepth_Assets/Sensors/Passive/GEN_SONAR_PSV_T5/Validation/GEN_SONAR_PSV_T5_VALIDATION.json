@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_SONAR_PSV_T5",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Passive\\GEN_SONAR_PSV_T5",
+    "fbx": [
+      {
+        "file": "GEN_SONAR_PSV_T5_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 56268
+      },
+      {
+        "file": "GEN_SONAR_PSV_T5_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 39564
+      },
+      {
+        "file": "GEN_SONAR_PSV_T5_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 18380
+      },
+      {
+        "file": "GEN_SONAR_PSV_T5_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 18380
+      },
+      {
+        "file": "GEN_SONAR_PSV_T5_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 17884
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_SONAR_PSV_T5",
+      "form_factor": "flank_panel",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_SONAR_FLANK_R",
+      "note": "侧舷阵板外形",
+      "triangles": {
+        "LOD0": 828,
+        "LOD1": 476,
+        "LOD2": 36,
+        "LOD3": 36
+      },
+      "collision_faces": 7,
+      "collision_object": "UCX_SEN_GEN_SONAR_PSV_T5_00",
+      "object_names": [
+        "SEN_GEN_SONAR_PSV_T5_LOD0",
+        "SEN_GEN_SONAR_PSV_T5_LOD1",
+        "SEN_GEN_SONAR_PSV_T5_LOD2",
+        "SEN_GEN_SONAR_PSV_T5_LOD3",
+        "UCX_SEN_GEN_SONAR_PSV_T5_00",
+        "SOCKET_SONAR_FLANK_R"
+      ],
+      "mesh_names": [
+        "SEN_GEN_SONAR_PSV_T5_LOD0",
+        "SEN_GEN_SONAR_PSV_T5_LOD1",
+        "SEN_GEN_SONAR_PSV_T5_LOD2",
+        "SEN_GEN_SONAR_PSV_T5_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Passive\\GEN_SONAR_PSV_T5\\Blend\\GEN_SONAR_PSV_T5_MASTER.blend",
+      "previews": [
+        "GEN_SONAR_PSV_T5_Front.png",
+        "GEN_SONAR_PSV_T5_Side.png",
+        "GEN_SONAR_PSV_T5_Top.png",
+        "GEN_SONAR_PSV_T5_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 4.357,
+        "stddev_subject": 4.505,
+        "subject_fraction": 0.01435,
+        "file": "GEN_SONAR_PSV_T5_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 4.094,
+        "stddev_subject": 7.931,
+        "subject_fraction": 0.01546,
+        "file": "GEN_SONAR_PSV_T5_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 5.407,
+        "stddev_subject": 8.388,
+        "subject_fraction": 0.02745,
+        "file": "GEN_SONAR_PSV_T5_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 6.889,
+        "stddev_subject": 11.874,
+        "subject_fraction": 0.01119,
+        "file": "GEN_SONAR_PSV_T5_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

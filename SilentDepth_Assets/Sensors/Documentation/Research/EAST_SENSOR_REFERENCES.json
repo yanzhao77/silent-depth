@@ -1,0 +1,179 @@
+{
+  "region": "EAST",
+  "countries": ["Russia", "China", "India"],
+  "generated_at": "2026-09-10",
+  "policy": "只记录公开来源可支持的名称、类别、平台关系、安装方式与时代；不记录任何分类频率、声源级、探测距离等作战参数。",
+  "confidence_rule": "CONFIRMED 要求至少两条独立公开来源一致确认系统与平台的对应关系，其中至少一条为官方/政府/制造商/专业工程媒体；否则最高只能标 PROBABLE。俄中印大量系统缺少公开来源，必须如实标注 UNKNOWN，不得凑数。",
+  "entries": [
+    {
+      "sensor_id_candidate": "RU_SONAR_MGK540",
+      "name": "MGK-540 Skat-3",
+      "family": "MGK",
+      "country": "Russia",
+      "category": "BowSonar",
+      "sub_category": "Integrated Sonar Suite",
+      "era": "1980s-2000s",
+      "status": "HISTORICAL",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["RU_SSN_Akula"],
+      "mount_type": "Integrated bow/flank/towed suite",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Akula-class_submarine",
+          "title": "Akula-class submarine",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        },
+        {
+          "url": "https://www.19fortyfive.com/2025/07/russias-akula-class-nuclear-submarine-was-built-to-hunt-the-u-s-navy/",
+          "title": "Russia's Akula-Class Nuclear Submarine",
+          "publisher": "19FortyFive",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "公开资料一致把 MGK-540 Skat-3 记作 Project 971（Akula I）的综合声呐系统；无俄方一手文件，保持 PROBABLE。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "RU_SONAR_Yasen",
+      "name": "MGK-600 Irtysh-Amfora",
+      "family": "Irtysh",
+      "country": "Russia",
+      "category": "BowSonar",
+      "sub_category": "Large Aperture Bow",
+      "era": "2010s-present",
+      "status": "IN_SERVICE",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["RU_SSN_Yasen", "RU_SSN_YasenM"],
+      "mount_type": "Spherical bow array with flank and towed arrays",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Yasen-class_submarine",
+          "title": "Yasen-class submarine",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "任务书 §23 点名示例。公开资料记为 MGK-600 Irtysh-Amfora 球形艇艏阵，另配侧阵与拖曳阵；俄罗斯官方未公开确认，保持 PROBABLE。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "RU_RADAR_MRK50",
+      "name": "MRK-50 Albatross",
+      "family": "MRK",
+      "country": "Russia",
+      "category": "Radar",
+      "sub_category": "Surface Search Radar",
+      "era": "1990s-present",
+      "status": "IN_SERVICE",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["RU_SSN_Yasen", "RU_SSN_YasenM"],
+      "mount_type": "Mast-mounted surface search antenna",
+      "socket": "SOCKET_RADAR",
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Yasen-class_submarine",
+          "title": "Yasen-class submarine",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "公开资料把 MRK-50 Albatross 列为 Yasen 级对海搜索雷达；无一手来源，保持 PROBABLE。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "RU_ESM_RimHat",
+      "name": "Rim Hat ESM",
+      "family": "RimHat",
+      "country": "Russia",
+      "category": "ESM",
+      "sub_category": "Signal Awareness",
+      "era": "2010s-present",
+      "status": "IN_SERVICE",
+      "confidence": "PROBABLE",
+      "compatible_submarines": ["RU_SSN_Yasen", "RU_SSN_YasenM"],
+      "mount_type": "Mast-mounted ESM antenna group",
+      "socket": "SOCKET_ESM",
+      "references": [
+        {
+          "url": "https://en.wikipedia.org/wiki/Yasen-class_submarine",
+          "title": "Yasen-class submarine",
+          "publisher": "Wikipedia",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "公开资料把 Rim Hat 列为 Yasen 级的电子支援/对抗系统；本条目只记录电子支援（探测与态势感知）部分，电子攻击属于电子战树。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "CN_SONAR_Type093",
+      "name": "Type 093 Sonar（公开型号未知）",
+      "family": "UNKNOWN_CN",
+      "country": "China",
+      "category": "BowSonar",
+      "sub_category": "Integrated Sonar Suite",
+      "era": "2000s-present",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "compatible_submarines": [],
+      "mount_type": "Hull-integrated bow with flank arrays and towed array",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [
+        {
+          "url": "https://odin.t2com.army.mil/WEG/Asset/1b0710a0bcd37135265c7b4a4063cb93",
+          "title": "Type 093 Class (Shang Class) Chinese Nuclear-Powered Attack Submarine",
+          "publisher": "ODIN, U.S. Army",
+          "accessed": "2026-09-10",
+          "source_type": "government"
+        },
+        {
+          "url": "https://www.hisutton.com/Chinese-Navy-Type-093-Shang-Class-Submarine.html",
+          "title": "Chinese Type-093 (Type-09III) Class Submarine",
+          "publisher": "Covert Shores (H. I. Sutton)",
+          "accessed": "2026-09-10",
+          "source_type": "reference"
+        }
+      ],
+      "notes": "美国陆军 ODIN 公开条目记录 Type 093 舷侧可见六组侧阵，公开分析另述其配备整体式拖曳阵；但没有任何来源给出声呐型号。按 §29，条目保持 UNKNOWN，不写推测型号。",
+      "classified_parameter_check": "none-recorded"
+    },
+    {
+      "sensor_id_candidate": "IN_SONAR_Arihant",
+      "name": "Arihant Sonar（公开型号未知）",
+      "family": "UNKNOWN_IN",
+      "country": "India",
+      "category": "BowSonar",
+      "sub_category": "Integrated Sonar Suite",
+      "era": "2010s-present",
+      "status": "UNKNOWN",
+      "confidence": "UNKNOWN",
+      "compatible_submarines": [],
+      "mount_type": "Hull-integrated bow",
+      "socket": "SOCKET_SONAR_BOW",
+      "references": [],
+      "notes": "本轮检索未取得印度官方或制造商公开的声呐型号，保持 UNKNOWN。",
+      "classified_parameter_check": "none-recorded"
+    }
+  ],
+  "not_found": [
+    {
+      "topic": "俄罗斯 Pelamida 拖曳阵",
+      "reason": "仅有论坛与二手转述，无可核验的可靠公开页面，按 §28/§29 不纳入正式条目。"
+    },
+    {
+      "topic": "中国 Type 091/093A/093B/094/095/096 的声呐、雷达、光电桅杆型号",
+      "reason": "公开资料均未给出型号；只记录可观察到的外形特征，不编造型号。"
+    },
+    {
+      "topic": "印度 Arihant / Arighaat / S4 / S5 的传感器型号",
+      "reason": "未找到可靠公开来源，保持 UNKNOWN。"
+    }
+  ]
+}

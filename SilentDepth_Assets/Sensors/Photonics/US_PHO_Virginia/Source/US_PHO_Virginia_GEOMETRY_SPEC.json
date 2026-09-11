@@ -1,0 +1,29 @@
+{
+  "sensor_id": "US_PHO_Virginia",
+  "form_factor": "mast_photonics",
+  "form_factor_note": "光电桅杆",
+  "dimensions_m": {
+    "length": 10.5,
+    "diameter": 0.42,
+    "height": 0.42
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "PUBLIC_FORM",
+  "source_note": "任务书 §11 指定资产：Virginia 级光电桅杆外形。",
+  "branch": "PHOTONICS",
+  "branch_label_zh": "潜望镜与光电桅杆",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "tier": "T6"
+}

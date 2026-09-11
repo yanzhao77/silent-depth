@@ -1,0 +1,38 @@
+{
+  "asset_id": "US_SONAR_TB29",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "TOWED",
+  "tier": "T6",
+  "country": "USA",
+  "family": "TB",
+  "name": "TB-29 Towed Array",
+  "status": "IN_SERVICE",
+  "confidence": "UNKNOWN",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 24.0,
+    "diameter": 0.09,
+    "height": 0.09
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [
+    "US_SSN_Virginia",
+    "US_SSN_Seawolf",
+    "US_SSBN_Ohio"
+  ],
+  "references": []
+}

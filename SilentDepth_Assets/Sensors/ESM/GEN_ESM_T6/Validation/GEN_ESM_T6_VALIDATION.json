@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_ESM_T6",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\ESM\\GEN_ESM_T6",
+    "fbx": [
+      {
+        "file": "GEN_ESM_T6_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 23852
+      },
+      {
+        "file": "GEN_ESM_T6_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 21852
+      },
+      {
+        "file": "GEN_ESM_T6_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 20188
+      },
+      {
+        "file": "GEN_ESM_T6_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 20188
+      },
+      {
+        "file": "GEN_ESM_T6_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 20428
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_ESM_T6",
+      "form_factor": "esm_mast",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_ESM",
+      "note": "电子支援天线组外形",
+      "triangles": {
+        "LOD0": 132,
+        "LOD1": 92,
+        "LOD2": 64,
+        "LOD3": 64
+      },
+      "collision_faces": 36,
+      "collision_object": "UCX_SEN_GEN_ESM_T6_00",
+      "object_names": [
+        "SEN_GEN_ESM_T6_LOD0",
+        "SEN_GEN_ESM_T6_LOD1",
+        "SEN_GEN_ESM_T6_LOD2",
+        "SEN_GEN_ESM_T6_LOD3",
+        "UCX_SEN_GEN_ESM_T6_00",
+        "SOCKET_ESM"
+      ],
+      "mesh_names": [
+        "SEN_GEN_ESM_T6_LOD0",
+        "SEN_GEN_ESM_T6_LOD1",
+        "SEN_GEN_ESM_T6_LOD2",
+        "SEN_GEN_ESM_T6_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\ESM\\GEN_ESM_T6\\Blend\\GEN_ESM_T6_MASTER.blend",
+      "previews": [
+        "GEN_ESM_T6_Front.png",
+        "GEN_ESM_T6_Side.png",
+        "GEN_ESM_T6_Top.png",
+        "GEN_ESM_T6_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.135,
+        "stddev_subject": 15.89,
+        "subject_fraction": 0.04107,
+        "file": "GEN_ESM_T6_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.577,
+        "stddev_subject": 6.062,
+        "subject_fraction": 0.06244,
+        "file": "GEN_ESM_T6_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.401,
+        "stddev_subject": 3.372,
+        "subject_fraction": 0.07504,
+        "file": "GEN_ESM_T6_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 13.705,
+        "stddev_subject": 20.236,
+        "subject_fraction": 0.12971,
+        "file": "GEN_ESM_T6_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "asset_id": "US_PHO_Virginia",
+  "generated_at": "2026-09-10T16:08:44Z",
+  "branch": "PHOTONICS",
+  "tier": "T6",
+  "country": "USA",
+  "family": "US_PHO",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 10.5,
+    "diameter": 0.42,
+    "height": 0.42
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/US_PHO_Virginia_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 693828,
+      "sha256": "e1fa52db06ad0aa9c3c26e24ca44c975c33da6abc3a30d854b62b69bfa5d5478"
+    },
+    {
+      "path": "FBX/US_PHO_Virginia_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 36540,
+      "sha256": "640fc93931369e498fd135119644f8f1ed80056b10b4df901a957bd313794153",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_PHO_Virginia_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 28860,
+      "sha256": "24722cbad31d3fecf1717d202b2cf0bcb81111bf576d2a56ce827d049421a59d",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_PHO_Virginia_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 25260,
+      "sha256": "e17f97967598aef8cf178afe2199047c99942a546d08ccc5ee7b31547e2ed805",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_PHO_Virginia_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 24972,
+      "sha256": "cab9a2f403590b8a6dc9dc692f4acd384b2b648f0b43f0d621e0f553ad441dea",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/US_PHO_Virginia_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 24140,
+      "sha256": "6e78b89c7750f6a4aa17c528ef5d5b62e4a126967a4e9e08f9ca0c6edbca8771",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/US_PHO_Virginia_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 130958,
+      "sha256": "79c8d260e92c57f3ecb1ef0edd48ba928b6e5ff4aa77282642a7411c1af4d51d"
+    },
+    {
+      "path": "Preview/US_PHO_Virginia_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 129553,
+      "sha256": "feab829ab250c46e22f396f8c38212f1d3a929e8471eae64fb377cb53b66cb60"
+    },
+    {
+      "path": "Preview/US_PHO_Virginia_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 190669,
+      "sha256": "8be9715cb608c2dc00fd7214608f3c20efa41a5d1ce2c0cd3f876d15be77c51d"
+    },
+    {
+      "path": "Preview/US_PHO_Virginia_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 131859,
+      "sha256": "781153879fe06b6e36375479805d7fbaba08e93116dbe8d58b0997c0644b2549"
+    }
+  ]
+}

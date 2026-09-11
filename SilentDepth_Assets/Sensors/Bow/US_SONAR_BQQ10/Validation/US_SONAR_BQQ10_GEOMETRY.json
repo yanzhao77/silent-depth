@@ -1,0 +1,37 @@
+{
+  "sensor_id": "US_SONAR_BQQ10",
+  "form_factor": "bow_dome_sphere",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_SONAR_BOW",
+  "note": "艇艏球形阵（公开外形）",
+  "triangles": {
+    "LOD0": 2492,
+    "LOD1": 900,
+    "LOD2": 704,
+    "LOD3": 616
+  },
+  "collision_faces": 199,
+  "collision_object": "UCX_SEN_US_SONAR_BQQ10_00",
+  "object_names": [
+    "SEN_US_SONAR_BQQ10_LOD0",
+    "SEN_US_SONAR_BQQ10_LOD1",
+    "SEN_US_SONAR_BQQ10_LOD2",
+    "SEN_US_SONAR_BQQ10_LOD3",
+    "UCX_SEN_US_SONAR_BQQ10_00",
+    "SOCKET_SONAR_BOW"
+  ],
+  "mesh_names": [
+    "SEN_US_SONAR_BQQ10_LOD0",
+    "SEN_US_SONAR_BQQ10_LOD1",
+    "SEN_US_SONAR_BQQ10_LOD2",
+    "SEN_US_SONAR_BQQ10_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\US_SONAR_BQQ10\\Blend\\US_SONAR_BQQ10_MASTER.blend",
+  "previews": [
+    "US_SONAR_BQQ10_Front.png",
+    "US_SONAR_BQQ10_Side.png",
+    "US_SONAR_BQQ10_Top.png",
+    "US_SONAR_BQQ10_Perspective.png"
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "sensor_id": "US_SONAR_TB16",
+  "form_factor": "towed_housing",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "note": "拖曳阵收放舱外形",
+  "triangles": {
+    "LOD0": 240,
+    "LOD1": 128,
+    "LOD2": 88,
+    "LOD3": 72
+  },
+  "collision_faces": 34,
+  "collision_object": "UCX_SEN_US_SONAR_TB16_00",
+  "object_names": [
+    "SEN_US_SONAR_TB16_LOD0",
+    "SEN_US_SONAR_TB16_LOD1",
+    "SEN_US_SONAR_TB16_LOD2",
+    "SEN_US_SONAR_TB16_LOD3",
+    "UCX_SEN_US_SONAR_TB16_00",
+    "SOCKET_TOWED_ARRAY"
+  ],
+  "mesh_names": [
+    "SEN_US_SONAR_TB16_LOD0",
+    "SEN_US_SONAR_TB16_LOD1",
+    "SEN_US_SONAR_TB16_LOD2",
+    "SEN_US_SONAR_TB16_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Towed\\US_SONAR_TB16\\Blend\\US_SONAR_TB16_MASTER.blend",
+  "previews": [
+    "US_SONAR_TB16_Front.png",
+    "US_SONAR_TB16_Side.png",
+    "US_SONAR_TB16_Top.png",
+    "US_SONAR_TB16_Perspective.png"
+  ]
+}

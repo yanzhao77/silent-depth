@@ -1,0 +1,122 @@
+{
+  "asset_id": "US_PHO_Virginia",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\US_PHO_Virginia",
+    "fbx": [
+      {
+        "file": "US_PHO_Virginia_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 36540
+      },
+      {
+        "file": "US_PHO_Virginia_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 28860
+      },
+      {
+        "file": "US_PHO_Virginia_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 25260
+      },
+      {
+        "file": "US_PHO_Virginia_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 24972
+      },
+      {
+        "file": "US_PHO_Virginia_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 24140
+      }
+    ],
+    "geometry": {
+      "sensor_id": "US_PHO_Virginia",
+      "form_factor": "mast_photonics",
+      "geometry_source": "PUBLIC_FORM",
+      "socket": "SOCKET_PHOTONICS_MAST",
+      "note": "光电桅杆外形",
+      "triangles": {
+        "LOD0": 360,
+        "LOD1": 176,
+        "LOD2": 100,
+        "LOD3": 92
+      },
+      "collision_faces": 38,
+      "collision_object": "UCX_SEN_US_PHO_Virginia_00",
+      "object_names": [
+        "SEN_US_PHO_Virginia_LOD0",
+        "SEN_US_PHO_Virginia_LOD1",
+        "SEN_US_PHO_Virginia_LOD2",
+        "SEN_US_PHO_Virginia_LOD3",
+        "UCX_SEN_US_PHO_Virginia_00",
+        "SOCKET_PHOTONICS_MAST"
+      ],
+      "mesh_names": [
+        "SEN_US_PHO_Virginia_LOD0",
+        "SEN_US_PHO_Virginia_LOD1",
+        "SEN_US_PHO_Virginia_LOD2",
+        "SEN_US_PHO_Virginia_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\US_PHO_Virginia\\Blend\\US_PHO_Virginia_MASTER.blend",
+      "previews": [
+        "US_PHO_Virginia_Front.png",
+        "US_PHO_Virginia_Side.png",
+        "US_PHO_Virginia_Top.png",
+        "US_PHO_Virginia_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 8.258,
+        "stddev_subject": 12.462,
+        "subject_fraction": 0.06748,
+        "file": "US_PHO_Virginia_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.963,
+        "stddev_subject": 11.893,
+        "subject_fraction": 0.07653,
+        "file": "US_PHO_Virginia_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.512,
+        "stddev_subject": 5.566,
+        "subject_fraction": 0.06955,
+        "file": "US_PHO_Virginia_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 23.523,
+        "stddev_subject": 23.416,
+        "subject_fraction": 0.35766,
+        "file": "US_PHO_Virginia_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

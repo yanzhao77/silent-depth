@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_SONAR_PSV_T1",
+  "form_factor": "hydrophone_pair",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_SONAR_FLANK_L",
+  "note": "舷侧水听器外形",
+  "triangles": {
+    "LOD0": 192,
+    "LOD1": 96,
+    "LOD2": 12,
+    "LOD3": 12
+  },
+  "collision_faces": 9,
+  "collision_object": "UCX_SEN_GEN_SONAR_PSV_T1_00",
+  "object_names": [
+    "SEN_GEN_SONAR_PSV_T1_LOD0",
+    "SEN_GEN_SONAR_PSV_T1_LOD1",
+    "SEN_GEN_SONAR_PSV_T1_LOD2",
+    "SEN_GEN_SONAR_PSV_T1_LOD3",
+    "UCX_SEN_GEN_SONAR_PSV_T1_00",
+    "SOCKET_SONAR_FLANK_L"
+  ],
+  "mesh_names": [
+    "SEN_GEN_SONAR_PSV_T1_LOD0",
+    "SEN_GEN_SONAR_PSV_T1_LOD1",
+    "SEN_GEN_SONAR_PSV_T1_LOD2",
+    "SEN_GEN_SONAR_PSV_T1_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Passive\\GEN_SONAR_PSV_T1\\Blend\\GEN_SONAR_PSV_T1_MASTER.blend",
+  "previews": [
+    "GEN_SONAR_PSV_T1_Front.png",
+    "GEN_SONAR_PSV_T1_Side.png",
+    "GEN_SONAR_PSV_T1_Top.png",
+    "GEN_SONAR_PSV_T1_Perspective.png"
+  ]
+}

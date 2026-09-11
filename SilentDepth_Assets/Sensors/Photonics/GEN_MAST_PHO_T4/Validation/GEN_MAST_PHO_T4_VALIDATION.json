@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_MAST_PHO_T4",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\GEN_MAST_PHO_T4",
+    "fbx": [
+      {
+        "file": "GEN_MAST_PHO_T4_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 31532
+      },
+      {
+        "file": "GEN_MAST_PHO_T4_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 25276
+      },
+      {
+        "file": "GEN_MAST_PHO_T4_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 23756
+      },
+      {
+        "file": "GEN_MAST_PHO_T4_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 23292
+      },
+      {
+        "file": "GEN_MAST_PHO_T4_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 22252
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_MAST_PHO_T4",
+      "form_factor": "mast_periscope",
+      "geometry_source": "PUBLIC_FORM",
+      "socket": "SOCKET_PERISCOPE",
+      "note": "潜望镜外形",
+      "triangles": {
+        "LOD0": 252,
+        "LOD1": 132,
+        "LOD2": 92,
+        "LOD3": 84
+      },
+      "collision_faces": 33,
+      "collision_object": "UCX_SEN_GEN_MAST_PHO_T4_00",
+      "object_names": [
+        "SEN_GEN_MAST_PHO_T4_LOD0",
+        "SEN_GEN_MAST_PHO_T4_LOD1",
+        "SEN_GEN_MAST_PHO_T4_LOD2",
+        "SEN_GEN_MAST_PHO_T4_LOD3",
+        "UCX_SEN_GEN_MAST_PHO_T4_00",
+        "SOCKET_PERISCOPE"
+      ],
+      "mesh_names": [
+        "SEN_GEN_MAST_PHO_T4_LOD0",
+        "SEN_GEN_MAST_PHO_T4_LOD1",
+        "SEN_GEN_MAST_PHO_T4_LOD2",
+        "SEN_GEN_MAST_PHO_T4_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\GEN_MAST_PHO_T4\\Blend\\GEN_MAST_PHO_T4_MASTER.blend",
+      "previews": [
+        "GEN_MAST_PHO_T4_Front.png",
+        "GEN_MAST_PHO_T4_Side.png",
+        "GEN_MAST_PHO_T4_Top.png",
+        "GEN_MAST_PHO_T4_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.07,
+        "stddev_subject": 13.093,
+        "subject_fraction": 0.04586,
+        "file": "GEN_MAST_PHO_T4_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 9.195,
+        "stddev_subject": 15.49,
+        "subject_fraction": 0.05769,
+        "file": "GEN_MAST_PHO_T4_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 8.63,
+        "stddev_subject": 7.943,
+        "subject_fraction": 0.05488,
+        "file": "GEN_MAST_PHO_T4_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 26.975,
+        "stddev_subject": 22.416,
+        "subject_fraction": 0.35803,
+        "file": "GEN_MAST_PHO_T4_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

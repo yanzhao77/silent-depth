@@ -1,0 +1,37 @@
+{
+  "sensor_id": "US_PHO_Virginia",
+  "form_factor": "mast_photonics",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "note": "光电桅杆外形",
+  "triangles": {
+    "LOD0": 360,
+    "LOD1": 176,
+    "LOD2": 100,
+    "LOD3": 92
+  },
+  "collision_faces": 38,
+  "collision_object": "UCX_SEN_US_PHO_Virginia_00",
+  "object_names": [
+    "SEN_US_PHO_Virginia_LOD0",
+    "SEN_US_PHO_Virginia_LOD1",
+    "SEN_US_PHO_Virginia_LOD2",
+    "SEN_US_PHO_Virginia_LOD3",
+    "UCX_SEN_US_PHO_Virginia_00",
+    "SOCKET_PHOTONICS_MAST"
+  ],
+  "mesh_names": [
+    "SEN_US_PHO_Virginia_LOD0",
+    "SEN_US_PHO_Virginia_LOD1",
+    "SEN_US_PHO_Virginia_LOD2",
+    "SEN_US_PHO_Virginia_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\US_PHO_Virginia\\Blend\\US_PHO_Virginia_MASTER.blend",
+  "previews": [
+    "US_PHO_Virginia_Front.png",
+    "US_PHO_Virginia_Side.png",
+    "US_PHO_Virginia_Top.png",
+    "US_PHO_Virginia_Perspective.png"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_EOIR_T6",
+  "generated_at": "2026-09-10T16:08:44Z",
+  "branch": "EOIR",
+  "tier": "T6",
+  "country": "GENERIC",
+  "family": "GEN_EOIR",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.1,
+    "diameter": 0.75,
+    "height": 0.75
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_EOIR_T6_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 694528,
+      "sha256": "b225494c0d8569c50cbfbbb3cce64e1f21ac548a07355edcd6bc147a94138cf4"
+    },
+    {
+      "path": "FBX/GEN_EOIR_T6_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 65692,
+      "sha256": "a3fce594ac51ff9271f4706392ddc71dace7a131f61f497fedf76b2d8990dc30",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_EOIR_T6_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 38268,
+      "sha256": "9c8d736068f0a96e98cf13c5700769eed7703b1da5ada30ed48c6e59b7b71c60",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_EOIR_T6_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 27980,
+      "sha256": "45d57124d8aebd480016e146ca8902132d262b45324d8b0dc4e10849c7c6bb1b",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_EOIR_T6_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 26108,
+      "sha256": "39e4055deffb8ae4b9c3dd7466f11cc5866a868f54fd2755d6b8a75709ef322b",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_EOIR_T6_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23964,
+      "sha256": "7a511a1f54d13d89ca9ec511b62fc1992b337741b6434f867f459ab022fd17d6",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_EOIR_T6_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 221354,
+      "sha256": "2c872c0b3b181964852a39605dc24fbf89167a7ad58b03876309566f34b36f1d"
+    },
+    {
+      "path": "Preview/GEN_EOIR_T6_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 206017,
+      "sha256": "4731f85a823fd249748d0251f37a02a79763011c82a4af54a6e852e26899da0f"
+    },
+    {
+      "path": "Preview/GEN_EOIR_T6_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 188324,
+      "sha256": "29891eda4f253658608dcf408f20f7b67667861da62766a96ff88d445099ace3"
+    },
+    {
+      "path": "Preview/GEN_EOIR_T6_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 157285,
+      "sha256": "6a81931b6841a30b5d612bc145bc6f1ef1824be41cb187d6f6348437097720e3"
+    }
+  ]
+}

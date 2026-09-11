@@ -1,0 +1,29 @@
+{
+  "sensor_id": "US_SONAR_TB29",
+  "form_factor": "towed_line",
+  "form_factor_note": "拖曳线列阵与拖缆",
+  "dimensions_m": {
+    "length": 24.0,
+    "diameter": 0.09,
+    "height": 0.09
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "PUBLIC_FORM",
+  "source_note": "公开资料记载的细线拖曳阵外形，只建外形与接口。",
+  "branch": "TOWED",
+  "branch_label_zh": "拖曳阵",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "tier": "T6"
+}

@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_SONAR_MINE_T4",
+  "generated_at": "2026-09-10T16:08:43Z",
+  "branch": "MINE",
+  "tier": "T4",
+  "country": "GENERIC",
+  "family": "GEN_MINE",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 1.2,
+    "height": 1.2
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_SONAR_MINE_T4_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 630172,
+      "sha256": "36c2e63312ddbfa28a10d7b82f64faf670819b6e508a4872fd1fb045d45accf1"
+    },
+    {
+      "path": "FBX/GEN_SONAR_MINE_T4_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 29612,
+      "sha256": "410d92cbdd02fc28c27db07ba1979404063b5798036b0a038fbd064ef21c5d03",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_MINE_T4_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 24812,
+      "sha256": "5c2e7dd52ffe4fefd6b85970fdfa92d217eec5c46ddf5bf05d0dacb22b08de5f",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_MINE_T4_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21516,
+      "sha256": "b0a5abaca93e9571f3d8652757da0d8f4f53f588b918d70bb58aa3f01503b427",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_MINE_T4_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21052,
+      "sha256": "60440c20a95cc49c91db80449adf09e766179cb708a9beedf0438949a9ebdc84",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_SONAR_MINE_T4_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21020,
+      "sha256": "8de31af7a444db03e4f0e9bda41b6e2cf4ea7d136052a33e17a87515cee0a98b",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_SONAR_MINE_T4_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 213171,
+      "sha256": "19c6f5b5f7d4a77fca4711eb7e0971df503d7ede3ccc276d952695f4480b0a4e"
+    },
+    {
+      "path": "Preview/GEN_SONAR_MINE_T4_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 161336,
+      "sha256": "b3c91157e84a0b7a3753557f68e37c2012a424a6d6a81d35205f5fb4bfe60aea"
+    },
+    {
+      "path": "Preview/GEN_SONAR_MINE_T4_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 151021,
+      "sha256": "9c5d58709e1436d55c5376045a7d5ea7038af983f591c72b738fc9139307630d"
+    },
+    {
+      "path": "Preview/GEN_SONAR_MINE_T4_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 159595,
+      "sha256": "469b05f421a3bdbea5e4b86c9298f569e8a737157b6b40b537887fb34f62406e"
+    }
+  ]
+}

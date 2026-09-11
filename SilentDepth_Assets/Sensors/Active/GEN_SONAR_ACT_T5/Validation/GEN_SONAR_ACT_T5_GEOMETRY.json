@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_SONAR_ACT_T5",
+  "form_factor": "bow_dome_sphere",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_SONAR_BOW",
+  "note": "艇艏球形阵（公开外形）",
+  "triangles": {
+    "LOD0": 2492,
+    "LOD1": 900,
+    "LOD2": 704,
+    "LOD3": 616
+  },
+  "collision_faces": 199,
+  "collision_object": "UCX_SEN_GEN_SONAR_ACT_T5_00",
+  "object_names": [
+    "SEN_GEN_SONAR_ACT_T5_LOD0",
+    "SEN_GEN_SONAR_ACT_T5_LOD1",
+    "SEN_GEN_SONAR_ACT_T5_LOD2",
+    "SEN_GEN_SONAR_ACT_T5_LOD3",
+    "UCX_SEN_GEN_SONAR_ACT_T5_00",
+    "SOCKET_SONAR_BOW"
+  ],
+  "mesh_names": [
+    "SEN_GEN_SONAR_ACT_T5_LOD0",
+    "SEN_GEN_SONAR_ACT_T5_LOD1",
+    "SEN_GEN_SONAR_ACT_T5_LOD2",
+    "SEN_GEN_SONAR_ACT_T5_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Active\\GEN_SONAR_ACT_T5\\Blend\\GEN_SONAR_ACT_T5_MASTER.blend",
+  "previews": [
+    "GEN_SONAR_ACT_T5_Front.png",
+    "GEN_SONAR_ACT_T5_Side.png",
+    "GEN_SONAR_ACT_T5_Top.png",
+    "GEN_SONAR_ACT_T5_Perspective.png"
+  ]
+}

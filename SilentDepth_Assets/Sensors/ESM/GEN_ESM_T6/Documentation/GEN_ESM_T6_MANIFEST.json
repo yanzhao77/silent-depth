@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_ESM_T6",
+  "generated_at": "2026-09-10T16:08:45Z",
+  "branch": "ESM",
+  "tier": "T6",
+  "country": "GENERIC",
+  "family": "GEN_ESM",
+  "socket": "SOCKET_ESM",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 2.4,
+    "diameter": 0.3,
+    "height": 0.3
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_ESM_T6_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 598110,
+      "sha256": "fbb7eb04ffaede65d7c99ee92427b7c498b534e57ddc593175e58f8a596f0a64"
+    },
+    {
+      "path": "FBX/GEN_ESM_T6_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23852,
+      "sha256": "1544b95e6593e5ee1ba0e60ec9b6e77d3f4ebf99d722eaa0e0eda3d278a951d9",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_ESM_T6_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21852,
+      "sha256": "6780abd8eedb923c57e43f5bb110d90c824fff96dc058ffd4e124b258e390c05",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_ESM_T6_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20188,
+      "sha256": "4cb4b488456ed19e6d0320bc58fc046498b9a771bae1e4c69041558d71659aa1",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_ESM_T6_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20188,
+      "sha256": "d0df5935ee3b2b68394934c5b136642a24170608a9fd5bea65d59e231c2e456d",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_ESM_T6_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20428,
+      "sha256": "630399a81c58bcea9485fb102ab57369ca6b8cc1aa09793aad7ab4b80599a26b",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_ESM_T6_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 121684,
+      "sha256": "c0fac1b05ca720b71acea1f50e318c08a6adb97cc881457fdf05715c95931c1b"
+    },
+    {
+      "path": "Preview/GEN_ESM_T6_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 131120,
+      "sha256": "9befeb153f5bd592508cbca95f6b6396df1bfa2445f3abaab7ad9bcb622c3925"
+    },
+    {
+      "path": "Preview/GEN_ESM_T6_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 114793,
+      "sha256": "f6f813f524f928a8dee58654adf3efee71195892134140f9bbcc16f7ee8db8a6"
+    },
+    {
+      "path": "Preview/GEN_ESM_T6_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 127727,
+      "sha256": "fb546c4492b4b6f95ef51f99f0dc75ee1d6a45246198dac6f32c3f10b3d4abd3"
+    }
+  ]
+}

@@ -1,0 +1,122 @@
+{
+  "asset_id": "US_SONAR_BQS15",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\HighFrequency\\US_SONAR_BQS15",
+    "fbx": [
+      {
+        "file": "US_SONAR_BQS15_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 73628
+      },
+      {
+        "file": "US_SONAR_BQS15_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 34572
+      },
+      {
+        "file": "US_SONAR_BQS15_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 26268
+      },
+      {
+        "file": "US_SONAR_BQS15_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 23852
+      },
+      {
+        "file": "US_SONAR_BQS15_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 22828
+      }
+    ],
+    "geometry": {
+      "sensor_id": "US_SONAR_BQS15",
+      "form_factor": "hf_dome",
+      "geometry_source": "PUBLIC_FORM",
+      "socket": "SOCKET_SONAR_BOW",
+      "note": "高频声呐导流罩外形",
+      "triangles": {
+        "LOD0": 900,
+        "LOD1": 264,
+        "LOD2": 136,
+        "LOD3": 104
+      },
+      "collision_faces": 59,
+      "collision_object": "UCX_SEN_US_SONAR_BQS15_00",
+      "object_names": [
+        "SEN_US_SONAR_BQS15_LOD0",
+        "SEN_US_SONAR_BQS15_LOD1",
+        "SEN_US_SONAR_BQS15_LOD2",
+        "SEN_US_SONAR_BQS15_LOD3",
+        "UCX_SEN_US_SONAR_BQS15_00",
+        "SOCKET_SONAR_BOW"
+      ],
+      "mesh_names": [
+        "SEN_US_SONAR_BQS15_LOD0",
+        "SEN_US_SONAR_BQS15_LOD1",
+        "SEN_US_SONAR_BQS15_LOD2",
+        "SEN_US_SONAR_BQS15_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\HighFrequency\\US_SONAR_BQS15\\Blend\\US_SONAR_BQS15_MASTER.blend",
+      "previews": [
+        "US_SONAR_BQS15_Front.png",
+        "US_SONAR_BQS15_Side.png",
+        "US_SONAR_BQS15_Top.png",
+        "US_SONAR_BQS15_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 29.084,
+        "stddev_subject": 25.563,
+        "subject_fraction": 0.29322,
+        "file": "US_SONAR_BQS15_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 23.032,
+        "stddev_subject": 23.96,
+        "subject_fraction": 0.15254,
+        "file": "US_SONAR_BQS15_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 27.392,
+        "stddev_subject": 20.469,
+        "subject_fraction": 0.29194,
+        "file": "US_SONAR_BQS15_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 31.346,
+        "stddev_subject": 26.269,
+        "subject_fraction": 0.35766,
+        "file": "US_SONAR_BQS15_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

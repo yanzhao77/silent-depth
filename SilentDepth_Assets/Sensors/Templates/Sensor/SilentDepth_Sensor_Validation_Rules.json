@@ -1,0 +1,66 @@
+{
+  "version": "v1.0.0",
+  "generated_at": "2026-09-10",
+  "status_values": [
+    "PLANNED",
+    "RESEARCH",
+    "REFERENCE",
+    "BLOCKOUT",
+    "MODELING",
+    "DETAILING",
+    "TEXTURING",
+    "LOD",
+    "COLLISION",
+    "EXPORT",
+    "VALIDATING",
+    "COMPLETE",
+    "FAILED",
+    "BLOCKED",
+    "DATABASE_ONLY"
+  ],
+  "required_asset_dirs": [
+    "Source",
+    "Blend",
+    "FBX",
+    "LOD",
+    "Collision",
+    "Textures",
+    "Preview",
+    "Documentation",
+    "Validation"
+  ],
+  "required_complete_files": [
+    "Blend/[SENSOR_ID]_MASTER.blend",
+    "FBX/[SENSOR_ID]_LOD0.fbx",
+    "FBX/[SENSOR_ID]_LOD1.fbx",
+    "FBX/[SENSOR_ID]_LOD2.fbx",
+    "FBX/[SENSOR_ID]_LOD3.fbx",
+    "Collision/[SENSOR_ID]_COLLISION.fbx",
+    "Documentation/[SENSOR_ID]_SPEC.json",
+    "Documentation/[SENSOR_ID]_README.md",
+    "Documentation/[SENSOR_ID]_MANIFEST.json",
+    "Validation/[SENSOR_ID]_VALIDATION.json"
+  ],
+  "machine_checks": [
+    "fbx_binary_version == 7400",
+    "lod_triangles_monotonic_non_increasing",
+    "lod3_triangles < lod0_triangles",
+    "collision_is_convex_hull_with_ucx_prefix",
+    "collision_faces <= lod3_faces",
+    "preview_png_non_blank",
+    "no_default_object_names",
+    "offline_runtime_no_remote_assets"
+  ],
+  "quality_gate": [
+    "外形可识别（阵面/桅杆/舱体可辨识）",
+    "尺寸与公开或游戏代表性外形一致",
+    "插槽命名符合 §20",
+    "LOD 轮廓保持",
+    "碰撞体闭合且命名规范",
+    "预览四视角齐全",
+    "文档齐全且不含作战参数"
+  ],
+  "human_required": [
+    "UE4.27 编辑器内的实际导入与外观确认"
+  ]
+}

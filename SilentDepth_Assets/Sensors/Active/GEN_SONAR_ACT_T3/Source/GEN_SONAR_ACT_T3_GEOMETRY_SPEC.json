@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_SONAR_ACT_T3",
+  "form_factor": "bow_dome_cylinder",
+  "form_factor_note": "艇艏柱形阵",
+  "dimensions_m": {
+    "length": 2.4,
+    "diameter": 4.4,
+    "height": 4.4
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "GAMEPLAY_FORM",
+  "source_note": "游戏科技树 T3 中频主动阵，代表性外形。",
+  "branch": "ACTIVE",
+  "branch_label_zh": "主动声呐",
+  "socket": "SOCKET_SONAR_BOW",
+  "tier": "T3"
+}

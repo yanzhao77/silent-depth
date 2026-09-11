@@ -1,0 +1,975 @@
+{
+  "generated_at": "2026-09-11",
+  "branches": {
+    "PASSIVE": [
+      {
+        "tier": "T1",
+        "name": "Early Passive Hydrophone",
+        "name_zh": "早期被动水听器",
+        "sensor_id": "GEN_SONAR_PSV_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Improved Hydrophone",
+        "name_zh": "改进型水听器",
+        "sensor_id": "GEN_SONAR_PSV_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Bow Passive Array",
+        "name_zh": "艇艏被动阵",
+        "sensor_id": "GEN_SONAR_PSV_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Advanced Bow Array",
+        "name_zh": "先进艇艏阵",
+        "sensor_id": "GEN_SONAR_PSV_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Flank Array",
+        "name_zh": "侧阵",
+        "sensor_id": "GEN_SONAR_PSV_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Towed Array",
+        "name_zh": "拖曳阵",
+        "sensor_id": "GEN_SONAR_PSV_T6",
+        "real_systems": []
+      },
+      {
+        "tier": "T7",
+        "name": "Low Frequency Towed Array",
+        "name_zh": "低频拖曳阵",
+        "sensor_id": "GEN_SONAR_PSV_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Advanced Distributed Array",
+        "name_zh": "先进分布式阵列",
+        "sensor_id": "GEN_SONAR_PSV_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Integrated Multi-Array Sonar",
+        "name_zh": "综合多阵声呐",
+        "sensor_id": "GEN_SONAR_PSV_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Integrated Acoustic System",
+        "name_zh": "下一代综合水声系统",
+        "sensor_id": "GEN_SONAR_PSV_T10",
+        "real_systems": []
+      }
+    ],
+    "ACTIVE": [
+      {
+        "tier": "T1",
+        "name": "Early Active Sonar",
+        "name_zh": "早期主动声呐",
+        "sensor_id": "GEN_SONAR_ACT_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Improved Active Sonar",
+        "name_zh": "改进型主动声呐",
+        "sensor_id": "GEN_SONAR_ACT_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Mid-Frequency Active Sonar",
+        "name_zh": "中频主动声呐",
+        "sensor_id": "GEN_SONAR_ACT_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Advanced Active Sonar",
+        "name_zh": "先进主动声呐",
+        "sensor_id": "GEN_SONAR_ACT_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Integrated Active/Passive Sonar",
+        "name_zh": "主被动综合声呐",
+        "sensor_id": "GEN_SONAR_ACT_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Modern Integrated Sonar",
+        "name_zh": "现代综合声呐",
+        "sensor_id": "GEN_SONAR_ACT_T6",
+        "real_systems": []
+      },
+      {
+        "tier": "T7",
+        "name": "Next Generation Acoustic System",
+        "name_zh": "下一代水声系统",
+        "sensor_id": "GEN_SONAR_ACT_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Active Bow Aperture Integration",
+        "name_zh": "主动艇艏孔径综合",
+        "sensor_id": "GEN_SONAR_ACT_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Cooperative Active Processing",
+        "name_zh": "协同主动处理",
+        "sensor_id": "GEN_SONAR_ACT_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Active Suite",
+        "name_zh": "下一代主动声呐套件",
+        "sensor_id": "GEN_SONAR_ACT_T10",
+        "real_systems": []
+      }
+    ],
+    "BOW": [
+      {
+        "tier": "T1",
+        "name": "Early Bow Dome Sonar",
+        "name_zh": "早期艇艏导流罩声呐",
+        "sensor_id": "GEN_SONAR_BOW_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Spherical Bow Array",
+        "name_zh": "球形艇艏阵",
+        "sensor_id": "GEN_SONAR_BOW_T2",
+        "real_systems": [
+          "US_SONAR_BQQ5"
+        ]
+      },
+      {
+        "tier": "T3",
+        "name": "Cylindrical Bow Array",
+        "name_zh": "柱形艇艏阵",
+        "sensor_id": "GEN_SONAR_BOW_T3",
+        "real_systems": [
+          "US_SONAR_BQQ6"
+        ]
+      },
+      {
+        "tier": "T4",
+        "name": "Water-backed Cylindrical Array",
+        "name_zh": "水背衬柱形阵",
+        "sensor_id": "GEN_SONAR_BOW_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Large Aperture Bow",
+        "name_zh": "大型孔径艇艏阵",
+        "sensor_id": "GEN_SONAR_BOW_T5",
+        "real_systems": [
+          "US_SONAR_LAB"
+        ]
+      },
+      {
+        "tier": "T6",
+        "name": "Wide Aperture Conformal Bow",
+        "name_zh": "宽孔径共形艇艏阵",
+        "sensor_id": "GEN_SONAR_BOW_T6",
+        "real_systems": [
+          "US_SONAR_BQQ10",
+          "UK_SONAR_2074",
+          "RU_SONAR_MGK540",
+          "CN_SONAR_Type093",
+          "IN_SONAR_Arihant"
+        ]
+      },
+      {
+        "tier": "T7",
+        "name": "Bow Array with Flank Integration",
+        "name_zh": "艇艏/侧阵综合",
+        "sensor_id": "GEN_SONAR_BOW_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Distributed Bow Aperture",
+        "name_zh": "分布式艇艏孔径",
+        "sensor_id": "GEN_SONAR_BOW_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Bow Multi-Array Fusion",
+        "name_zh": "艇艏多阵融合",
+        "sensor_id": "GEN_SONAR_BOW_T9",
+        "real_systems": [
+          "UK_SONAR_Astute",
+          "RU_SONAR_Yasen"
+        ]
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Bow Aperture System",
+        "name_zh": "下一代艇艏孔径系统",
+        "sensor_id": "GEN_SONAR_BOW_T10",
+        "real_systems": []
+      }
+    ],
+    "FLANK": [
+      {
+        "tier": "T1",
+        "name": "Experimental Flank Hydrophone",
+        "name_zh": "试验性侧舷水听器",
+        "sensor_id": "GEN_SONAR_FLK_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Early Flank Array",
+        "name_zh": "早期侧阵",
+        "sensor_id": "GEN_SONAR_FLK_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Improved Flank Array",
+        "name_zh": "改进型侧阵",
+        "sensor_id": "GEN_SONAR_FLK_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Modern Flank Array",
+        "name_zh": "现代侧阵",
+        "sensor_id": "GEN_SONAR_FLK_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Large Flank Aperture",
+        "name_zh": "大型侧舷孔径",
+        "sensor_id": "GEN_SONAR_FLK_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Conformal Flank Array",
+        "name_zh": "共形侧阵",
+        "sensor_id": "GEN_SONAR_FLK_T6",
+        "real_systems": []
+      },
+      {
+        "tier": "T7",
+        "name": "Distributed Flank Array",
+        "name_zh": "分布式侧阵",
+        "sensor_id": "GEN_SONAR_FLK_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Integrated Flank Array",
+        "name_zh": "综合侧阵",
+        "sensor_id": "GEN_SONAR_FLK_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Flank and Towed Fusion",
+        "name_zh": "侧阵与拖曳阵融合",
+        "sensor_id": "GEN_SONAR_FLK_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Flank Aperture",
+        "name_zh": "下一代侧舷孔径",
+        "sensor_id": "GEN_SONAR_FLK_T10",
+        "real_systems": []
+      }
+    ],
+    "TOWED": [
+      {
+        "tier": "T1",
+        "name": "Towed Array Housing",
+        "name_zh": "拖曳阵收放舱",
+        "sensor_id": "GEN_SONAR_TWD_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Legacy Towed Array",
+        "name_zh": "早期拖曳阵",
+        "sensor_id": "GEN_SONAR_TWD_T2",
+        "real_systems": [
+          "US_SONAR_TB16"
+        ]
+      },
+      {
+        "tier": "T3",
+        "name": "Improved Towed Array",
+        "name_zh": "改进型拖曳阵",
+        "sensor_id": "GEN_SONAR_TWD_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Modern Towed Array",
+        "name_zh": "现代拖曳阵",
+        "sensor_id": "GEN_SONAR_TWD_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Thin-Line Towed Array",
+        "name_zh": "细线拖曳阵",
+        "sensor_id": "GEN_SONAR_TWD_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Low Frequency Towed Array",
+        "name_zh": "低频拖曳阵",
+        "sensor_id": "GEN_SONAR_TWD_T6",
+        "real_systems": [
+          "US_SONAR_TB29",
+          "RU_SONAR_Pelamida"
+        ]
+      },
+      {
+        "tier": "T7",
+        "name": "Wide Aperture Towed Array",
+        "name_zh": "宽孔径拖曳阵",
+        "sensor_id": "GEN_SONAR_TWD_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Advanced Towed Array",
+        "name_zh": "先进拖曳阵",
+        "sensor_id": "GEN_SONAR_TWD_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Distributed Towed and Hull Fusion",
+        "name_zh": "拖曳阵与艇壳融合",
+        "sensor_id": "GEN_SONAR_TWD_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Towed System",
+        "name_zh": "下一代拖曳系统",
+        "sensor_id": "GEN_SONAR_TWD_T10",
+        "real_systems": []
+      }
+    ],
+    "HF": [
+      {
+        "tier": "T1",
+        "name": "Early High Frequency Sonar",
+        "name_zh": "早期高频声呐",
+        "sensor_id": "GEN_SONAR_HF_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Improved High Frequency Sonar",
+        "name_zh": "改进型高频声呐",
+        "sensor_id": "GEN_SONAR_HF_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Hull-Mounted High Frequency Sonar",
+        "name_zh": "艇壳高频声呐",
+        "sensor_id": "GEN_SONAR_HF_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Mine Detection Sonar",
+        "name_zh": "探雷声呐",
+        "sensor_id": "GEN_SONAR_HF_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Navigation Sonar",
+        "name_zh": "导航声呐",
+        "sensor_id": "GEN_SONAR_HF_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Under-Ice Sonar",
+        "name_zh": "冰下声呐",
+        "sensor_id": "GEN_SONAR_HF_T6",
+        "real_systems": [
+          "US_SONAR_BQS15"
+        ]
+      },
+      {
+        "tier": "T7",
+        "name": "Close Range High Frequency Sonar",
+        "name_zh": "近程高频声呐",
+        "sensor_id": "GEN_SONAR_HF_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Forward-Looking High Frequency Array",
+        "name_zh": "前视高频阵",
+        "sensor_id": "GEN_SONAR_HF_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Multi-Function High Frequency Suite",
+        "name_zh": "多功能高频套件",
+        "sensor_id": "GEN_SONAR_HF_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation High Frequency System",
+        "name_zh": "下一代高频系统",
+        "sensor_id": "GEN_SONAR_HF_T10",
+        "real_systems": []
+      }
+    ],
+    "MINE": [
+      {
+        "tier": "T1",
+        "name": "Visual Mine Watch",
+        "name_zh": "目视水雷警戒",
+        "sensor_id": "GEN_SONAR_MINE_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Early Mine Detection Sonar",
+        "name_zh": "早期探雷声呐",
+        "sensor_id": "GEN_SONAR_MINE_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Hull Mine Detection Sonar",
+        "name_zh": "艇壳探雷声呐",
+        "sensor_id": "GEN_SONAR_MINE_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "High Resolution Mine Sonar",
+        "name_zh": "高分辨率探雷声呐",
+        "sensor_id": "GEN_SONAR_MINE_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Forward-Looking Mine Sonar",
+        "name_zh": "前视探雷声呐",
+        "sensor_id": "GEN_SONAR_MINE_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Wideband Mine Classification",
+        "name_zh": "宽带水雷分类",
+        "sensor_id": "GEN_SONAR_MINE_T6",
+        "real_systems": []
+      },
+      {
+        "tier": "T7",
+        "name": "Synthetic Aperture Mine Sonar",
+        "name_zh": "合成孔径探雷声呐",
+        "sensor_id": "GEN_SONAR_MINE_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Autonomous Mine Detection",
+        "name_zh": "自主探雷",
+        "sensor_id": "GEN_SONAR_MINE_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Mine and Navigation Fusion",
+        "name_zh": "探雷/导航融合",
+        "sensor_id": "GEN_SONAR_MINE_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Mine Detection",
+        "name_zh": "下一代探雷系统",
+        "sensor_id": "GEN_SONAR_MINE_T10",
+        "real_systems": []
+      }
+    ],
+    "NAV": [
+      {
+        "tier": "T1",
+        "name": "Echo Sounder",
+        "name_zh": "测深仪",
+        "sensor_id": "GEN_SONAR_NAV_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Improved Echo Sounder",
+        "name_zh": "改进型测深仪",
+        "sensor_id": "GEN_SONAR_NAV_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Navigation Sonar",
+        "name_zh": "导航声呐",
+        "sensor_id": "GEN_SONAR_NAV_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Doppler Velocity Log",
+        "name_zh": "多普勒测速仪",
+        "sensor_id": "GEN_SONAR_NAV_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Under-Ice Navigation Sonar",
+        "name_zh": "冰下导航声呐",
+        "sensor_id": "GEN_SONAR_NAV_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Navigation and Mine Avoidance",
+        "name_zh": "导航与避雷综合",
+        "sensor_id": "GEN_SONAR_NAV_T6",
+        "real_systems": []
+      },
+      {
+        "tier": "T7",
+        "name": "Digital Navigation Suite",
+        "name_zh": "数字化导航套件",
+        "sensor_id": "GEN_SONAR_NAV_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Terrain-Aided Navigation",
+        "name_zh": "地形辅助导航",
+        "sensor_id": "GEN_SONAR_NAV_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Navigation Fusion",
+        "name_zh": "组合导航融合",
+        "sensor_id": "GEN_SONAR_NAV_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Navigation System",
+        "name_zh": "下一代导航系统",
+        "sensor_id": "GEN_SONAR_NAV_T10",
+        "real_systems": []
+      }
+    ],
+    "PHOTONICS": [
+      {
+        "tier": "T1",
+        "name": "Optical Periscope",
+        "name_zh": "光学潜望镜",
+        "sensor_id": "GEN_MAST_PHO_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Improved Periscope",
+        "name_zh": "改进型潜望镜",
+        "sensor_id": "GEN_MAST_PHO_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Attack Periscope",
+        "name_zh": "攻击潜望镜",
+        "sensor_id": "GEN_MAST_PHO_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Electronic Periscope",
+        "name_zh": "电子潜望镜",
+        "sensor_id": "GEN_MAST_PHO_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Optronic Periscope",
+        "name_zh": "光电潜望镜",
+        "sensor_id": "GEN_MAST_PHO_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Photonics Mast",
+        "name_zh": "光电桅杆",
+        "sensor_id": "GEN_MAST_PHO_T6",
+        "real_systems": [
+          "US_PHO_Virginia"
+        ]
+      },
+      {
+        "tier": "T7",
+        "name": "Advanced Photonics Mast",
+        "name_zh": "先进光电桅杆",
+        "sensor_id": "GEN_MAST_PHO_T7",
+        "real_systems": [
+          "UK_PHO_CM010"
+        ]
+      },
+      {
+        "tier": "T8",
+        "name": "Multi-Sensor Mast",
+        "name_zh": "多传感器桅杆",
+        "sensor_id": "GEN_MAST_PHO_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Integrated Mast Suite",
+        "name_zh": "综合桅杆套件",
+        "sensor_id": "GEN_MAST_PHO_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Mast System",
+        "name_zh": "下一代桅杆系统",
+        "sensor_id": "GEN_MAST_PHO_T10",
+        "real_systems": []
+      }
+    ],
+    "EOIR": [
+      {
+        "tier": "T1",
+        "name": "Electro Optical",
+        "name_zh": "光电观瞄",
+        "sensor_id": "GEN_EOIR_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Infrared",
+        "name_zh": "红外",
+        "sensor_id": "GEN_EOIR_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Digital Camera",
+        "name_zh": "数字相机",
+        "sensor_id": "GEN_EOIR_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Low Light",
+        "name_zh": "微光",
+        "sensor_id": "GEN_EOIR_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Thermal",
+        "name_zh": "热成像",
+        "sensor_id": "GEN_EOIR_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Integrated EO/IR",
+        "name_zh": "综合光电/红外",
+        "sensor_id": "GEN_EOIR_T6",
+        "real_systems": []
+      },
+      {
+        "tier": "T7",
+        "name": "High Definition EO/IR",
+        "name_zh": "高清光电/红外",
+        "sensor_id": "GEN_EOIR_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Multi-Spectral EO/IR",
+        "name_zh": "多光谱光电/红外",
+        "sensor_id": "GEN_EOIR_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "EO/IR Mast Fusion",
+        "name_zh": "光电/桅杆融合",
+        "sensor_id": "GEN_EOIR_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation EO/IR",
+        "name_zh": "下一代光电/红外",
+        "sensor_id": "GEN_EOIR_T10",
+        "real_systems": []
+      }
+    ],
+    "RADAR": [
+      {
+        "tier": "T1",
+        "name": "Early Surface Search Radar",
+        "name_zh": "早期对海搜索雷达",
+        "sensor_id": "GEN_RADAR_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Improved Surface Search Radar",
+        "name_zh": "改进型对海搜索雷达",
+        "sensor_id": "GEN_RADAR_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Navigation Radar",
+        "name_zh": "导航雷达",
+        "sensor_id": "GEN_RADAR_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Periscope Radar",
+        "name_zh": "潜望镜雷达",
+        "sensor_id": "GEN_RADAR_T4",
+        "real_systems": [
+          "RU_RADAR_MRK50"
+        ]
+      },
+      {
+        "tier": "T5",
+        "name": "Mast Radar",
+        "name_zh": "桅杆雷达",
+        "sensor_id": "GEN_RADAR_T5",
+        "real_systems": [
+          "US_RADAR_BPS16"
+        ]
+      },
+      {
+        "tier": "T6",
+        "name": "Frequency Agile Surface Search",
+        "name_zh": "频率捷变对海搜索",
+        "sensor_id": "GEN_RADAR_T6",
+        "real_systems": []
+      },
+      {
+        "tier": "T7",
+        "name": "Low Probability of Intercept Radar",
+        "name_zh": "低截获概率雷达",
+        "sensor_id": "GEN_RADAR_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Digital Mast Radar",
+        "name_zh": "数字化桅杆雷达",
+        "sensor_id": "GEN_RADAR_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "Radar and ESM Fusion",
+        "name_zh": "雷达/电子支援融合",
+        "sensor_id": "GEN_RADAR_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Submarine Radar",
+        "name_zh": "下一代潜艇雷达",
+        "sensor_id": "GEN_RADAR_T10",
+        "real_systems": []
+      }
+    ],
+    "ESM": [
+      {
+        "tier": "T1",
+        "name": "Basic Signal Detection",
+        "name_zh": "基础信号探测",
+        "sensor_id": "GEN_ESM_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Improved Signal Detection",
+        "name_zh": "改进型信号探测",
+        "sensor_id": "GEN_ESM_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Radar Warning Receiver",
+        "name_zh": "雷达告警接收机",
+        "sensor_id": "GEN_ESM_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Direction Finding",
+        "name_zh": "测向",
+        "sensor_id": "GEN_ESM_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Classification Library",
+        "name_zh": "信号分类库",
+        "sensor_id": "GEN_ESM_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Modern ESM",
+        "name_zh": "现代电子支援措施",
+        "sensor_id": "GEN_ESM_T6",
+        "real_systems": [
+          "RU_ESM_RimHat"
+        ]
+      },
+      {
+        "tier": "T7",
+        "name": "Digital ESM",
+        "name_zh": "数字电子支援措施",
+        "sensor_id": "GEN_ESM_T7",
+        "real_systems": [
+          "US_ESM_BLQ10"
+        ]
+      },
+      {
+        "tier": "T8",
+        "name": "Wideband ESM",
+        "name_zh": "宽带电子支援措施",
+        "sensor_id": "GEN_ESM_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "ESM and EO/IR Fusion",
+        "name_zh": "电子支援/光电融合",
+        "sensor_id": "GEN_ESM_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation ESM",
+        "name_zh": "下一代电子支援措施",
+        "sensor_id": "GEN_ESM_T10",
+        "real_systems": []
+      }
+    ],
+    "PROCESSING": [
+      {
+        "tier": "T1",
+        "name": "Basic Processing",
+        "name_zh": "基础处理",
+        "sensor_id": "GEN_PROC_T1",
+        "real_systems": []
+      },
+      {
+        "tier": "T2",
+        "name": "Analog Processing",
+        "name_zh": "模拟处理",
+        "sensor_id": "GEN_PROC_T2",
+        "real_systems": []
+      },
+      {
+        "tier": "T3",
+        "name": "Digital Processing",
+        "name_zh": "数字处理",
+        "sensor_id": "GEN_PROC_T3",
+        "real_systems": []
+      },
+      {
+        "tier": "T4",
+        "name": "Integrated Processing",
+        "name_zh": "综合处理",
+        "sensor_id": "GEN_PROC_T4",
+        "real_systems": []
+      },
+      {
+        "tier": "T5",
+        "name": "Advanced Beamforming",
+        "name_zh": "先进波束形成",
+        "sensor_id": "GEN_PROC_T5",
+        "real_systems": []
+      },
+      {
+        "tier": "T6",
+        "name": "Broadband Processing",
+        "name_zh": "宽带处理",
+        "sensor_id": "GEN_PROC_T6",
+        "real_systems": []
+      },
+      {
+        "tier": "T7",
+        "name": "Multi-Array Fusion",
+        "name_zh": "多阵融合",
+        "sensor_id": "GEN_PROC_T7",
+        "real_systems": []
+      },
+      {
+        "tier": "T8",
+        "name": "Adaptive Processing",
+        "name_zh": "自适应处理",
+        "sensor_id": "GEN_PROC_T8",
+        "real_systems": []
+      },
+      {
+        "tier": "T9",
+        "name": "AI-Assisted Acoustic Processing",
+        "name_zh": "AI 辅助声学处理",
+        "sensor_id": "GEN_PROC_T9",
+        "real_systems": []
+      },
+      {
+        "tier": "T10",
+        "name": "Next Generation Acoustic Processing",
+        "name_zh": "下一代声学处理",
+        "sensor_id": "GEN_PROC_T10",
+        "real_systems": []
+      }
+    ]
+  }
+}

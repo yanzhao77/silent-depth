@@ -1,0 +1,164 @@
+{
+  "generated_at": "2026-09-11",
+  "total": 39,
+  "complete": 39,
+  "incomplete": 0,
+  "assets": {
+    "GEN_SONAR_PSV_T1": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_PSV_T3": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_PSV_T5": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_PSV_T6": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_PSV_T7": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_PSV_T8": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_ACT_T3": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_ACT_T5": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_SONAR_BQQ5": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_SONAR_BQQ6": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_SONAR_BQQ10": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_SONAR_LAB": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_BOW_T4": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_FLK_T2": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_FLK_T4": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_FLK_T6": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_SONAR_TB16": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_SONAR_TB29": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_TWD_T6": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_HF_T3": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_SONAR_BQS15": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_HF_T4": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_MINE_T4": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_NAV_T4": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_SONAR_NAV_T5": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_MAST_PHO_T1": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_MAST_PHO_T3": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_MAST_PHO_T4": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_PHO_Virginia": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "UK_PHO_CM010": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_EOIR_T5": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_EOIR_T6": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_RADAR_T3": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_RADAR_BPS16": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_ESM_T6": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "US_ESM_BLQ10": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_PROC_T3": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_PROC_T7": {
+      "status": "COMPLETE",
+      "issues": []
+    },
+    "GEN_PROC_T9": {
+      "status": "COMPLETE",
+      "issues": []
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_SONAR_NAV_T4",
+  "form_factor": "dvl_probe",
+  "form_factor_note": "多普勒测速换能器",
+  "dimensions_m": {
+    "length": 1.0,
+    "diameter": 0.7,
+    "height": 0.7
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "GAMEPLAY_FORM",
+  "source_note": "多普勒测速换能器代表性外形。",
+  "branch": "NAV",
+  "branch_label_zh": "导航声呐",
+  "socket": "SOCKET_SONAR_BOW",
+  "tier": "T4"
+}

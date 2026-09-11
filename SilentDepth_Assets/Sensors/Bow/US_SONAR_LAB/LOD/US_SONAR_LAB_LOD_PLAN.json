@@ -1,0 +1,30 @@
+{
+  "sensor_id": "US_SONAR_LAB",
+  "levels": [
+    {
+      "level": "LOD0",
+      "role": "完整外形与阵元细节",
+      "ratio_to_source": 1.0
+    },
+    {
+      "level": "LOD1",
+      "role": "减少阵元数量",
+      "ratio_to_source": 0.5
+    },
+    {
+      "level": "LOD2",
+      "role": "仅保留主要体块",
+      "ratio_to_source": 0.25
+    },
+    {
+      "level": "LOD3",
+      "role": "轮廓锁定的最简外形",
+      "ratio_to_source": 0.12
+    }
+  ],
+  "rules": [
+    "全部 LOD 由同一程序化构建器按 detail 档位独立生成，不做 LOD1→LOD2 串联简化。",
+    "轮廓件（阵面、桅杆杆体、拖曳舱体）在所有 LOD 中保留。",
+    "三角计数必须自 LOD0 向 LOD3 单调不增。"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_SONAR_ACT_T3",
+  "generated_at": "2026-09-10T16:08:40Z",
+  "branch": "ACTIVE",
+  "tier": "T3",
+  "country": "GENERIC",
+  "family": "GEN_ACT",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 2.4,
+    "diameter": 4.4,
+    "height": 4.4
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_SONAR_ACT_T3_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 754862,
+      "sha256": "8337851df6424615c0b5902000a6f6f66b89fe5ccbc756331a9d4d2ff481f3cf"
+    },
+    {
+      "path": "FBX/GEN_SONAR_ACT_T3_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 71356,
+      "sha256": "08606fed9f5e10060dd2bd703415f66d9fa7671c7ed5608b8d0f3df512127e83",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_ACT_T3_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 64556,
+      "sha256": "693c91680856c53b0b6e06751adead63f2c64deda4aa7d5dba8e40941abba9cf",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_ACT_T3_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 22252,
+      "sha256": "492077c5e6e8bb131800b3da5a4e3d8da91aaf3ff8122b8700264d2f7a65a32f",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_ACT_T3_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 19292,
+      "sha256": "727c2a8d503bcab0e06e037d98148b924396dd29e1bebcc687ead6fb8f5d835f",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_SONAR_ACT_T3_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 19516,
+      "sha256": "9e7bd2b9bf85e79656ca28bac44030f2eee0a97eb33c946d7c3f4195525ee442",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_SONAR_ACT_T3_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 215922,
+      "sha256": "e6b3172ed522c2bc6d174f80d974c3c427f365b80151fc95194a24ad19663c22"
+    },
+    {
+      "path": "Preview/GEN_SONAR_ACT_T3_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 170173,
+      "sha256": "d3de459e28821f239cb83a22fee4ac3b72f66760bb1473762c26b573f9990a91"
+    },
+    {
+      "path": "Preview/GEN_SONAR_ACT_T3_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 218876,
+      "sha256": "7e1670c50595089ed26ad53bdc993fd084edc2d76cd6bc5bbb936f00ecdd4fa6"
+    },
+    {
+      "path": "Preview/GEN_SONAR_ACT_T3_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 191798,
+      "sha256": "4d5815f2c8bca817630fd7d5cfc6be53b75d09729d46f80a180901cc20acadef"
+    }
+  ]
+}

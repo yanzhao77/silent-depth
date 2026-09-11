@@ -1,0 +1,38 @@
+{
+  "asset_id": "US_SONAR_BQQ10",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "BOW",
+  "tier": "T6",
+  "country": "USA",
+  "family": "AN/BQQ",
+  "name": "AN/BQQ-10",
+  "status": "IN_SERVICE",
+  "confidence": "UNKNOWN",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 3.6,
+    "diameter": 4.6,
+    "height": 4.6
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [
+    "US_SSN_Virginia",
+    "US_SSN_LosAngeles",
+    "US_SSN_Seawolf"
+  ],
+  "references": []
+}

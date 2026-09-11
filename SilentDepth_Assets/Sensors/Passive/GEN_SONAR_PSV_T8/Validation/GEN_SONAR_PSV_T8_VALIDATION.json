@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_SONAR_PSV_T8",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Passive\\GEN_SONAR_PSV_T8",
+    "fbx": [
+      {
+        "file": "GEN_SONAR_PSV_T8_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 68796
+      },
+      {
+        "file": "GEN_SONAR_PSV_T8_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 52956
+      },
+      {
+        "file": "GEN_SONAR_PSV_T8_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 25660
+      },
+      {
+        "file": "GEN_SONAR_PSV_T8_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 25612
+      },
+      {
+        "file": "GEN_SONAR_PSV_T8_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 22956
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_SONAR_PSV_T8",
+      "form_factor": "distributed_pod",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_SONAR_FLANK_R",
+      "note": "分布式阵节点外形",
+      "triangles": {
+        "LOD0": 836,
+        "LOD1": 570,
+        "LOD2": 124,
+        "LOD3": 124
+      },
+      "collision_faces": 63,
+      "collision_object": "UCX_SEN_GEN_SONAR_PSV_T8_00",
+      "object_names": [
+        "SEN_GEN_SONAR_PSV_T8_LOD0",
+        "SEN_GEN_SONAR_PSV_T8_LOD1",
+        "SEN_GEN_SONAR_PSV_T8_LOD2",
+        "SEN_GEN_SONAR_PSV_T8_LOD3",
+        "UCX_SEN_GEN_SONAR_PSV_T8_00",
+        "SOCKET_SONAR_FLANK_R"
+      ],
+      "mesh_names": [
+        "SEN_GEN_SONAR_PSV_T8_LOD0",
+        "SEN_GEN_SONAR_PSV_T8_LOD1",
+        "SEN_GEN_SONAR_PSV_T8_LOD2",
+        "SEN_GEN_SONAR_PSV_T8_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Passive\\GEN_SONAR_PSV_T8\\Blend\\GEN_SONAR_PSV_T8_MASTER.blend",
+      "previews": [
+        "GEN_SONAR_PSV_T8_Front.png",
+        "GEN_SONAR_PSV_T8_Side.png",
+        "GEN_SONAR_PSV_T8_Top.png",
+        "GEN_SONAR_PSV_T8_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 21.687,
+        "stddev_subject": 22.303,
+        "subject_fraction": 0.24097,
+        "file": "GEN_SONAR_PSV_T8_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 16.298,
+        "stddev_subject": 22.223,
+        "subject_fraction": 0.09624,
+        "file": "GEN_SONAR_PSV_T8_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 22.102,
+        "stddev_subject": 29.676,
+        "subject_fraction": 0.14055,
+        "file": "GEN_SONAR_PSV_T8_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 19.042,
+        "stddev_subject": 21.962,
+        "subject_fraction": 0.15662,
+        "file": "GEN_SONAR_PSV_T8_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

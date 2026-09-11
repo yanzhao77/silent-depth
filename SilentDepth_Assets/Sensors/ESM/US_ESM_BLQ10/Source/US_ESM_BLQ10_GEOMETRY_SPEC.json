@@ -1,0 +1,29 @@
+{
+  "sensor_id": "US_ESM_BLQ10",
+  "form_factor": "esm_mast",
+  "form_factor_note": "电子支援天线组",
+  "dimensions_m": {
+    "length": 2.8,
+    "diameter": 0.3,
+    "height": 0.3
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "PUBLIC_FORM",
+  "source_note": "公开资料记载的电子支援天线组外形。",
+  "branch": "ESM",
+  "branch_label_zh": "电子支援措施",
+  "socket": "SOCKET_ESM",
+  "tier": "T7"
+}

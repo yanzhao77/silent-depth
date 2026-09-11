@@ -1,0 +1,122 @@
+{
+  "asset_id": "US_SONAR_LAB",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\US_SONAR_LAB",
+    "fbx": [
+      {
+        "file": "US_SONAR_LAB_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 137516
+      },
+      {
+        "file": "US_SONAR_LAB_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 93676
+      },
+      {
+        "file": "US_SONAR_LAB_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 60828
+      },
+      {
+        "file": "US_SONAR_LAB_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 57532
+      },
+      {
+        "file": "US_SONAR_LAB_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 34364
+      }
+    ],
+    "geometry": {
+      "sensor_id": "US_SONAR_LAB",
+      "form_factor": "bow_large_aperture",
+      "geometry_source": "PUBLIC_FORM",
+      "socket": "SOCKET_SONAR_BOW",
+      "note": "大型孔径艇艏阵（Virginia Block III 公开外形）",
+      "triangles": {
+        "LOD0": 2520,
+        "LOD1": 1448,
+        "LOD2": 680,
+        "LOD3": 600
+      },
+      "collision_faces": 186,
+      "collision_object": "UCX_SEN_US_SONAR_LAB_00",
+      "object_names": [
+        "SEN_US_SONAR_LAB_LOD0",
+        "SEN_US_SONAR_LAB_LOD1",
+        "SEN_US_SONAR_LAB_LOD2",
+        "SEN_US_SONAR_LAB_LOD3",
+        "UCX_SEN_US_SONAR_LAB_00",
+        "SOCKET_SONAR_BOW"
+      ],
+      "mesh_names": [
+        "SEN_US_SONAR_LAB_LOD0",
+        "SEN_US_SONAR_LAB_LOD1",
+        "SEN_US_SONAR_LAB_LOD2",
+        "SEN_US_SONAR_LAB_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\US_SONAR_LAB\\Blend\\US_SONAR_LAB_MASTER.blend",
+      "previews": [
+        "US_SONAR_LAB_Front.png",
+        "US_SONAR_LAB_Side.png",
+        "US_SONAR_LAB_Top.png",
+        "US_SONAR_LAB_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 14.426,
+        "stddev_subject": 7.972,
+        "subject_fraction": 0.36625,
+        "file": "US_SONAR_LAB_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 14.957,
+        "stddev_subject": 18.007,
+        "subject_fraction": 0.30076,
+        "file": "US_SONAR_LAB_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 18.663,
+        "stddev_subject": 23.471,
+        "subject_fraction": 0.14863,
+        "file": "US_SONAR_LAB_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 21.274,
+        "stddev_subject": 24.796,
+        "subject_fraction": 0.2534,
+        "file": "US_SONAR_LAB_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

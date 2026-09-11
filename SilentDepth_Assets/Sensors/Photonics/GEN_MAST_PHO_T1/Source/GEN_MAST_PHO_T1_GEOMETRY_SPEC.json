@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_MAST_PHO_T1",
+  "form_factor": "mast_periscope",
+  "form_factor_note": "潜望镜",
+  "dimensions_m": {
+    "length": 9.5,
+    "diameter": 0.28,
+    "height": 0.28
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "PUBLIC_FORM",
+  "source_note": "光学潜望镜外形（任务书 §11 T1）。",
+  "branch": "PHOTONICS",
+  "branch_label_zh": "潜望镜与光电桅杆",
+  "socket": "SOCKET_PERISCOPE",
+  "tier": "T1"
+}

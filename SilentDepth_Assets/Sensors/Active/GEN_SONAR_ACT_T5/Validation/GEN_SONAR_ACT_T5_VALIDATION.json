@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_SONAR_ACT_T5",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Active\\GEN_SONAR_ACT_T5",
+    "fbx": [
+      {
+        "file": "GEN_SONAR_ACT_T5_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 166892
+      },
+      {
+        "file": "GEN_SONAR_ACT_T5_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 79964
+      },
+      {
+        "file": "GEN_SONAR_ACT_T5_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 66476
+      },
+      {
+        "file": "GEN_SONAR_ACT_T5_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 60604
+      },
+      {
+        "file": "GEN_SONAR_ACT_T5_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 37932
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_SONAR_ACT_T5",
+      "form_factor": "bow_dome_sphere",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_SONAR_BOW",
+      "note": "艇艏球形阵（公开外形）",
+      "triangles": {
+        "LOD0": 2492,
+        "LOD1": 900,
+        "LOD2": 704,
+        "LOD3": 616
+      },
+      "collision_faces": 199,
+      "collision_object": "UCX_SEN_GEN_SONAR_ACT_T5_00",
+      "object_names": [
+        "SEN_GEN_SONAR_ACT_T5_LOD0",
+        "SEN_GEN_SONAR_ACT_T5_LOD1",
+        "SEN_GEN_SONAR_ACT_T5_LOD2",
+        "SEN_GEN_SONAR_ACT_T5_LOD3",
+        "UCX_SEN_GEN_SONAR_ACT_T5_00",
+        "SOCKET_SONAR_BOW"
+      ],
+      "mesh_names": [
+        "SEN_GEN_SONAR_ACT_T5_LOD0",
+        "SEN_GEN_SONAR_ACT_T5_LOD1",
+        "SEN_GEN_SONAR_ACT_T5_LOD2",
+        "SEN_GEN_SONAR_ACT_T5_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Active\\GEN_SONAR_ACT_T5\\Blend\\GEN_SONAR_ACT_T5_MASTER.blend",
+      "previews": [
+        "GEN_SONAR_ACT_T5_Front.png",
+        "GEN_SONAR_ACT_T5_Side.png",
+        "GEN_SONAR_ACT_T5_Top.png",
+        "GEN_SONAR_ACT_T5_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 16.083,
+        "stddev_subject": 10.398,
+        "subject_fraction": 0.42273,
+        "file": "GEN_SONAR_ACT_T5_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 15.876,
+        "stddev_subject": 19.038,
+        "subject_fraction": 0.22193,
+        "file": "GEN_SONAR_ACT_T5_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 25.901,
+        "stddev_subject": 23.553,
+        "subject_fraction": 0.38691,
+        "file": "GEN_SONAR_ACT_T5_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 23.478,
+        "stddev_subject": 22.563,
+        "subject_fraction": 0.38541,
+        "file": "GEN_SONAR_ACT_T5_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

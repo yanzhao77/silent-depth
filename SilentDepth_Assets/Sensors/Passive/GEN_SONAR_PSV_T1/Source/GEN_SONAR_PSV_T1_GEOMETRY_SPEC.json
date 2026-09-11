@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_SONAR_PSV_T1",
+  "form_factor": "hydrophone_pair",
+  "form_factor_note": "舷侧水听器对",
+  "dimensions_m": {
+    "length": 1.2,
+    "diameter": 0.35,
+    "height": 0.35
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "GAMEPLAY_FORM",
+  "source_note": "游戏科技树 T1 被动听音件，代表性外形。",
+  "branch": "PASSIVE",
+  "branch_label_zh": "被动声呐",
+  "socket": "SOCKET_SONAR_FLANK_L",
+  "tier": "T1"
+}

@@ -1,0 +1,37 @@
+{
+  "sensor_id": "US_ESM_BLQ10",
+  "form_factor": "esm_mast",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_ESM",
+  "note": "电子支援天线组外形",
+  "triangles": {
+    "LOD0": 132,
+    "LOD1": 92,
+    "LOD2": 64,
+    "LOD3": 64
+  },
+  "collision_faces": 36,
+  "collision_object": "UCX_SEN_US_ESM_BLQ10_00",
+  "object_names": [
+    "SEN_US_ESM_BLQ10_LOD0",
+    "SEN_US_ESM_BLQ10_LOD1",
+    "SEN_US_ESM_BLQ10_LOD2",
+    "SEN_US_ESM_BLQ10_LOD3",
+    "UCX_SEN_US_ESM_BLQ10_00",
+    "SOCKET_ESM"
+  ],
+  "mesh_names": [
+    "SEN_US_ESM_BLQ10_LOD0",
+    "SEN_US_ESM_BLQ10_LOD1",
+    "SEN_US_ESM_BLQ10_LOD2",
+    "SEN_US_ESM_BLQ10_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\ESM\\US_ESM_BLQ10\\Blend\\US_ESM_BLQ10_MASTER.blend",
+  "previews": [
+    "US_ESM_BLQ10_Front.png",
+    "US_ESM_BLQ10_Side.png",
+    "US_ESM_BLQ10_Top.png",
+    "US_ESM_BLQ10_Perspective.png"
+  ]
+}

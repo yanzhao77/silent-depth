@@ -1,0 +1,36 @@
+{
+  "asset_id": "US_SONAR_LAB",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "BOW",
+  "tier": "T5",
+  "country": "USA",
+  "family": "LAB",
+  "name": "Large Aperture Bow Array",
+  "status": "IN_SERVICE",
+  "confidence": "UNKNOWN",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 7.6,
+    "height": 7.6
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [
+    "US_SSN_Virginia"
+  ],
+  "references": []
+}

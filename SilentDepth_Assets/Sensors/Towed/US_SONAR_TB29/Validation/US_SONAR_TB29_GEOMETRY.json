@@ -1,0 +1,37 @@
+{
+  "sensor_id": "US_SONAR_TB29",
+  "form_factor": "towed_line",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "note": "拖曳线列阵外形（不含内部结构）",
+  "triangles": {
+    "LOD0": 4268,
+    "LOD1": 2140,
+    "LOD2": 60,
+    "LOD3": 60
+  },
+  "collision_faces": 21,
+  "collision_object": "UCX_SEN_US_SONAR_TB29_00",
+  "object_names": [
+    "SEN_US_SONAR_TB29_LOD0",
+    "SEN_US_SONAR_TB29_LOD1",
+    "SEN_US_SONAR_TB29_LOD2",
+    "SEN_US_SONAR_TB29_LOD3",
+    "UCX_SEN_US_SONAR_TB29_00",
+    "SOCKET_TOWED_ARRAY"
+  ],
+  "mesh_names": [
+    "SEN_US_SONAR_TB29_LOD0",
+    "SEN_US_SONAR_TB29_LOD1",
+    "SEN_US_SONAR_TB29_LOD2",
+    "SEN_US_SONAR_TB29_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Towed\\US_SONAR_TB29\\Blend\\US_SONAR_TB29_MASTER.blend",
+  "previews": [
+    "US_SONAR_TB29_Front.png",
+    "US_SONAR_TB29_Side.png",
+    "US_SONAR_TB29_Top.png",
+    "US_SONAR_TB29_Perspective.png"
+  ]
+}

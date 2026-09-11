@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_RADAR_T3",
+  "generated_at": "2026-09-10T16:08:45Z",
+  "branch": "RADAR",
+  "tier": "T3",
+  "country": "GENERIC",
+  "family": "GEN_RADAR",
+  "socket": "SOCKET_RADAR",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 1.8,
+    "height": 1.8
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_RADAR_T3_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 633240,
+      "sha256": "7cf3c600fc7c6a1513df81b987297ef7658df62e930d5fe86dc8ea31cd873060"
+    },
+    {
+      "path": "FBX/GEN_RADAR_T3_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 33308,
+      "sha256": "1779b4c60382ac6baf607fecbe284f30b563aa3ef36ed709ad1a229471dc8a58",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_RADAR_T3_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 26364,
+      "sha256": "91b88a03cc5514a8ef977a4c4a9c23ab20660454b2c7ce3e974045f88540cc9d",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_RADAR_T3_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23596,
+      "sha256": "b5be697946ba0aefdd89c6e45fc4126ef3db41f8b2468b0f9a04b74306d1c065",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_RADAR_T3_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 22748,
+      "sha256": "7d71b749eff5e05947a64b72c9696324d3ded4d9f4b7d0065a4093af462076b2",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_RADAR_T3_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21564,
+      "sha256": "ee18f188ab527fdb30b583d6b6e39882a1708bcff22a344aeb03422f5cfbe828",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_RADAR_T3_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 133493,
+      "sha256": "d11b7f4322b04a5e0d9319474022463817c1e71b4e93c3e008be01951b694dae"
+    },
+    {
+      "path": "Preview/GEN_RADAR_T3_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 201359,
+      "sha256": "37d6f6e5c5722bbbcfe1a8755ba085c00c27c758236839a4a8fb1a62a990485e"
+    },
+    {
+      "path": "Preview/GEN_RADAR_T3_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 117550,
+      "sha256": "f05ccdd1bc321db73bcc5f6e065d437aeb3052b87ab4838946374f51f18d95ec"
+    },
+    {
+      "path": "Preview/GEN_RADAR_T3_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 144165,
+      "sha256": "cf8dfd4658f8f467279dbcc0869242003f104301682fe955283d2e32fb43b1b9"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_RADAR_BPS16",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "RADAR",
+  "tier": "T5",
+  "country": "USA",
+  "family": "AN/BPS",
+  "name": "AN/BPS-16",
+  "status": "IN_SERVICE",
+  "confidence": "UNKNOWN",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_RADAR",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 1.8,
+    "height": 1.8
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [
+    "US_SSN_Virginia",
+    "US_SSN_LosAngeles",
+    "US_SSN_Seawolf",
+    "US_SSBN_Ohio"
+  ],
+  "references": []
+}

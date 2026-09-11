@@ -1,0 +1,126 @@
+{
+  "sensor_id": "GEN_SONAR_FLK_T2",
+  "texture_policy": "程序化材质；无外部位图；运行期完全离线。",
+  "materials": [
+    {
+      "material_id": "SEN_MAT_ArrayFace",
+      "label": "声呐阵面",
+      "base_color": [
+        0.05,
+        0.07,
+        0.08,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.55
+    },
+    {
+      "material_id": "SEN_MAT_Hull",
+      "label": "传感器壳体",
+      "base_color": [
+        0.1,
+        0.12,
+        0.14,
+        1.0
+      ],
+      "metallic": 0.25,
+      "roughness": 0.6
+    },
+    {
+      "material_id": "SEN_MAT_DarkMetal",
+      "label": "深色金属",
+      "base_color": [
+        0.06,
+        0.06,
+        0.07,
+        1.0
+      ],
+      "metallic": 0.85,
+      "roughness": 0.35
+    },
+    {
+      "material_id": "SEN_MAT_Mast",
+      "label": "桅杆涂层",
+      "base_color": [
+        0.13,
+        0.15,
+        0.16,
+        1.0
+      ],
+      "metallic": 0.15,
+      "roughness": 0.65
+    },
+    {
+      "material_id": "SEN_MAT_Glass",
+      "label": "光学窗口",
+      "base_color": [
+        0.05,
+        0.1,
+        0.12,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.05
+    },
+    {
+      "material_id": "SEN_MAT_Composite",
+      "label": "复合罩壳",
+      "base_color": [
+        0.16,
+        0.17,
+        0.18,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.75
+    },
+    {
+      "material_id": "SEN_MAT_Cable",
+      "label": "拖缆",
+      "base_color": [
+        0.04,
+        0.04,
+        0.05,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.85
+    },
+    {
+      "material_id": "SEN_MAT_Rack",
+      "label": "处理机柜",
+      "base_color": [
+        0.12,
+        0.13,
+        0.15,
+        1.0
+      ],
+      "metallic": 0.55,
+      "roughness": 0.45
+    },
+    {
+      "material_id": "SEN_MAT_RadarFace",
+      "label": "雷达天线面",
+      "base_color": [
+        0.18,
+        0.19,
+        0.2,
+        1.0
+      ],
+      "metallic": 0.3,
+      "roughness": 0.5
+    },
+    {
+      "material_id": "SEN_MAT_ESM",
+      "label": "电子支援天线",
+      "base_color": [
+        0.09,
+        0.1,
+        0.11,
+        1.0
+      ],
+      "metallic": 0.7,
+      "roughness": 0.3
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_SONAR_NAV_T5",
+  "generated_at": "2026-09-10T16:08:43Z",
+  "branch": "NAV",
+  "tier": "T5",
+  "country": "GENERIC",
+  "family": "GEN_NAV",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.4,
+    "diameter": 1.5,
+    "height": 1.5
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_SONAR_NAV_T5_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 700432,
+      "sha256": "d61c49428c4db4a2b07fb234c9c3e504000f4f73c67df02678077c23aee5a0ca"
+    },
+    {
+      "path": "FBX/GEN_SONAR_NAV_T5_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 73644,
+      "sha256": "155315aa87526553da91313bdbf30ec6d0fe4dcb1d7a29095f2011502e25c105",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_NAV_T5_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 34300,
+      "sha256": "c411324db3b9fae6c42e8a3f43cceb3ea740f2baccf228e4e20c1aebf73c625c",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_NAV_T5_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 26268,
+      "sha256": "33a60fe50904a6e737567d3a94a9e260e08d80d1269d73f93994d571a74e435a",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_NAV_T5_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23820,
+      "sha256": "c63b19df14688296c05ac6254c5975ac00c3c1003355a2a210abb7cd867fb948",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_SONAR_NAV_T5_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 22844,
+      "sha256": "dd8cd81cfd0be521a47a3f0c22fc682551c1c961873dba6aa7f7fd5cc3d7395e",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_SONAR_NAV_T5_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 174274,
+      "sha256": "f3dd6699a0e7c6ef3431f0d1159646439ced72797476bdb8e10a03f1e53dedf9"
+    },
+    {
+      "path": "Preview/GEN_SONAR_NAV_T5_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 173428,
+      "sha256": "4b1c6f7906f2b5cd539dfc20bb8b22787205ebbeacead607cbf62a16771e08f3"
+    },
+    {
+      "path": "Preview/GEN_SONAR_NAV_T5_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 205623,
+      "sha256": "df8a260c10181e213e1e7609b433352916eb2abe9492c20e4fc3ce158dddd68a"
+    },
+    {
+      "path": "Preview/GEN_SONAR_NAV_T5_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 133417,
+      "sha256": "1f0b00a013807a870ee3a96347061aa5f5a534e7e10ae70a449512142d2858fa"
+    }
+  ]
+}

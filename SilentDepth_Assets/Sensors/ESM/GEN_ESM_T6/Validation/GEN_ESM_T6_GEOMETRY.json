@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_ESM_T6",
+  "form_factor": "esm_mast",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_ESM",
+  "note": "电子支援天线组外形",
+  "triangles": {
+    "LOD0": 132,
+    "LOD1": 92,
+    "LOD2": 64,
+    "LOD3": 64
+  },
+  "collision_faces": 36,
+  "collision_object": "UCX_SEN_GEN_ESM_T6_00",
+  "object_names": [
+    "SEN_GEN_ESM_T6_LOD0",
+    "SEN_GEN_ESM_T6_LOD1",
+    "SEN_GEN_ESM_T6_LOD2",
+    "SEN_GEN_ESM_T6_LOD3",
+    "UCX_SEN_GEN_ESM_T6_00",
+    "SOCKET_ESM"
+  ],
+  "mesh_names": [
+    "SEN_GEN_ESM_T6_LOD0",
+    "SEN_GEN_ESM_T6_LOD1",
+    "SEN_GEN_ESM_T6_LOD2",
+    "SEN_GEN_ESM_T6_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\ESM\\GEN_ESM_T6\\Blend\\GEN_ESM_T6_MASTER.blend",
+  "previews": [
+    "GEN_ESM_T6_Front.png",
+    "GEN_ESM_T6_Side.png",
+    "GEN_ESM_T6_Top.png",
+    "GEN_ESM_T6_Perspective.png"
+  ]
+}

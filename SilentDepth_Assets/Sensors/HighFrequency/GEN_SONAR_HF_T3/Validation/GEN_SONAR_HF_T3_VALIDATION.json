@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_SONAR_HF_T3",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\HighFrequency\\GEN_SONAR_HF_T3",
+    "fbx": [
+      {
+        "file": "GEN_SONAR_HF_T3_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 73692
+      },
+      {
+        "file": "GEN_SONAR_HF_T3_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 34620
+      },
+      {
+        "file": "GEN_SONAR_HF_T3_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 26252
+      },
+      {
+        "file": "GEN_SONAR_HF_T3_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 23852
+      },
+      {
+        "file": "GEN_SONAR_HF_T3_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 22828
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_SONAR_HF_T3",
+      "form_factor": "hf_dome",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_SONAR_BOW",
+      "note": "高频声呐导流罩外形",
+      "triangles": {
+        "LOD0": 900,
+        "LOD1": 264,
+        "LOD2": 136,
+        "LOD3": 104
+      },
+      "collision_faces": 59,
+      "collision_object": "UCX_SEN_GEN_SONAR_HF_T3_00",
+      "object_names": [
+        "SEN_GEN_SONAR_HF_T3_LOD0",
+        "SEN_GEN_SONAR_HF_T3_LOD1",
+        "SEN_GEN_SONAR_HF_T3_LOD2",
+        "SEN_GEN_SONAR_HF_T3_LOD3",
+        "UCX_SEN_GEN_SONAR_HF_T3_00",
+        "SOCKET_SONAR_BOW"
+      ],
+      "mesh_names": [
+        "SEN_GEN_SONAR_HF_T3_LOD0",
+        "SEN_GEN_SONAR_HF_T3_LOD1",
+        "SEN_GEN_SONAR_HF_T3_LOD2",
+        "SEN_GEN_SONAR_HF_T3_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\HighFrequency\\GEN_SONAR_HF_T3\\Blend\\GEN_SONAR_HF_T3_MASTER.blend",
+      "previews": [
+        "GEN_SONAR_HF_T3_Front.png",
+        "GEN_SONAR_HF_T3_Side.png",
+        "GEN_SONAR_HF_T3_Top.png",
+        "GEN_SONAR_HF_T3_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 29.084,
+        "stddev_subject": 25.563,
+        "subject_fraction": 0.29322,
+        "file": "GEN_SONAR_HF_T3_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 23.032,
+        "stddev_subject": 23.96,
+        "subject_fraction": 0.15254,
+        "file": "GEN_SONAR_HF_T3_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 27.392,
+        "stddev_subject": 20.469,
+        "subject_fraction": 0.29194,
+        "file": "GEN_SONAR_HF_T3_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 31.346,
+        "stddev_subject": 26.269,
+        "subject_fraction": 0.35766,
+        "file": "GEN_SONAR_HF_T3_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

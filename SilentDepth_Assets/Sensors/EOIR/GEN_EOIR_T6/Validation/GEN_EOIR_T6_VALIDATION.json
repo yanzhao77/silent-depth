@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_EOIR_T6",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\EOIR\\GEN_EOIR_T6",
+    "fbx": [
+      {
+        "file": "GEN_EOIR_T6_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 65692
+      },
+      {
+        "file": "GEN_EOIR_T6_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 38268
+      },
+      {
+        "file": "GEN_EOIR_T6_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 27980
+      },
+      {
+        "file": "GEN_EOIR_T6_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 26108
+      },
+      {
+        "file": "GEN_EOIR_T6_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 23964
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_EOIR_T6",
+      "form_factor": "eo_turret",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_PHOTONICS_MAST",
+      "note": "光电/红外转塔外形",
+      "triangles": {
+        "LOD0": 732,
+        "LOD1": 320,
+        "LOD2": 156,
+        "LOD3": 124
+      },
+      "collision_faces": 52,
+      "collision_object": "UCX_SEN_GEN_EOIR_T6_00",
+      "object_names": [
+        "SEN_GEN_EOIR_T6_LOD0",
+        "SEN_GEN_EOIR_T6_LOD1",
+        "SEN_GEN_EOIR_T6_LOD2",
+        "SEN_GEN_EOIR_T6_LOD3",
+        "UCX_SEN_GEN_EOIR_T6_00",
+        "SOCKET_PHOTONICS_MAST"
+      ],
+      "mesh_names": [
+        "SEN_GEN_EOIR_T6_LOD0",
+        "SEN_GEN_EOIR_T6_LOD1",
+        "SEN_GEN_EOIR_T6_LOD2",
+        "SEN_GEN_EOIR_T6_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\EOIR\\GEN_EOIR_T6\\Blend\\GEN_EOIR_T6_MASTER.blend",
+      "previews": [
+        "GEN_EOIR_T6_Front.png",
+        "GEN_EOIR_T6_Side.png",
+        "GEN_EOIR_T6_Top.png",
+        "GEN_EOIR_T6_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 25.27,
+        "stddev_subject": 23.324,
+        "subject_fraction": 0.4373,
+        "file": "GEN_EOIR_T6_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 22.024,
+        "stddev_subject": 24.074,
+        "subject_fraction": 0.2178,
+        "file": "GEN_EOIR_T6_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 25.34,
+        "stddev_subject": 21.482,
+        "subject_fraction": 0.40486,
+        "file": "GEN_EOIR_T6_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 26.252,
+        "stddev_subject": 25.618,
+        "subject_fraction": 0.32195,
+        "file": "GEN_EOIR_T6_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

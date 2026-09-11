@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_MAST_PHO_T3",
+  "form_factor": "mast_periscope",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_PERISCOPE",
+  "note": "潜望镜外形",
+  "triangles": {
+    "LOD0": 252,
+    "LOD1": 132,
+    "LOD2": 92,
+    "LOD3": 84
+  },
+  "collision_faces": 37,
+  "collision_object": "UCX_SEN_GEN_MAST_PHO_T3_00",
+  "object_names": [
+    "SEN_GEN_MAST_PHO_T3_LOD0",
+    "SEN_GEN_MAST_PHO_T3_LOD1",
+    "SEN_GEN_MAST_PHO_T3_LOD2",
+    "SEN_GEN_MAST_PHO_T3_LOD3",
+    "UCX_SEN_GEN_MAST_PHO_T3_00",
+    "SOCKET_PERISCOPE"
+  ],
+  "mesh_names": [
+    "SEN_GEN_MAST_PHO_T3_LOD0",
+    "SEN_GEN_MAST_PHO_T3_LOD1",
+    "SEN_GEN_MAST_PHO_T3_LOD2",
+    "SEN_GEN_MAST_PHO_T3_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\GEN_MAST_PHO_T3\\Blend\\GEN_MAST_PHO_T3_MASTER.blend",
+  "previews": [
+    "GEN_MAST_PHO_T3_Front.png",
+    "GEN_MAST_PHO_T3_Side.png",
+    "GEN_MAST_PHO_T3_Top.png",
+    "GEN_MAST_PHO_T3_Perspective.png"
+  ]
+}

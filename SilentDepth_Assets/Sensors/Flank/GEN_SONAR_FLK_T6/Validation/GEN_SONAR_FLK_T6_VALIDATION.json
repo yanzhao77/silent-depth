@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_SONAR_FLK_T6",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Flank\\GEN_SONAR_FLK_T6",
+    "fbx": [
+      {
+        "file": "GEN_SONAR_FLK_T6_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 21516
+      },
+      {
+        "file": "GEN_SONAR_FLK_T6_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 21516
+      },
+      {
+        "file": "GEN_SONAR_FLK_T6_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 20060
+      },
+      {
+        "file": "GEN_SONAR_FLK_T6_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 20060
+      },
+      {
+        "file": "GEN_SONAR_FLK_T6_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 20364
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_SONAR_FLK_T6",
+      "form_factor": "flank_conformal",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_SONAR_FLANK_R",
+      "note": "共形侧阵外形",
+      "triangles": {
+        "LOD0": 72,
+        "LOD1": 72,
+        "LOD2": 48,
+        "LOD3": 48
+      },
+      "collision_faces": 29,
+      "collision_object": "UCX_SEN_GEN_SONAR_FLK_T6_00",
+      "object_names": [
+        "SEN_GEN_SONAR_FLK_T6_LOD0",
+        "SEN_GEN_SONAR_FLK_T6_LOD1",
+        "SEN_GEN_SONAR_FLK_T6_LOD2",
+        "SEN_GEN_SONAR_FLK_T6_LOD3",
+        "UCX_SEN_GEN_SONAR_FLK_T6_00",
+        "SOCKET_SONAR_FLANK_R"
+      ],
+      "mesh_names": [
+        "SEN_GEN_SONAR_FLK_T6_LOD0",
+        "SEN_GEN_SONAR_FLK_T6_LOD1",
+        "SEN_GEN_SONAR_FLK_T6_LOD2",
+        "SEN_GEN_SONAR_FLK_T6_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Flank\\GEN_SONAR_FLK_T6\\Blend\\GEN_SONAR_FLK_T6_MASTER.blend",
+      "previews": [
+        "GEN_SONAR_FLK_T6_Front.png",
+        "GEN_SONAR_FLK_T6_Side.png",
+        "GEN_SONAR_FLK_T6_Top.png",
+        "GEN_SONAR_FLK_T6_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 8.664,
+        "stddev_subject": 12.996,
+        "subject_fraction": 0.06248,
+        "file": "GEN_SONAR_FLK_T6_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 6.239,
+        "stddev_subject": 6.406,
+        "subject_fraction": 0.02511,
+        "file": "GEN_SONAR_FLK_T6_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 6.732,
+        "stddev_subject": 16.225,
+        "subject_fraction": 0.01773,
+        "file": "GEN_SONAR_FLK_T6_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 6.447,
+        "stddev_subject": 21.86,
+        "subject_fraction": 0.01858,
+        "file": "GEN_SONAR_FLK_T6_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

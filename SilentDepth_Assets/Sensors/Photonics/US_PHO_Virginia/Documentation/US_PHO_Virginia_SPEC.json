@@ -1,0 +1,36 @@
+{
+  "asset_id": "US_PHO_Virginia",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "PHOTONICS",
+  "tier": "T6",
+  "country": "USA",
+  "family": "US_PHO",
+  "name": "Virginia Photonics Mast",
+  "status": "IN_SERVICE",
+  "confidence": "UNKNOWN",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 10.5,
+    "diameter": 0.42,
+    "height": 0.42
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [
+    "US_SSN_Virginia"
+  ],
+  "references": []
+}

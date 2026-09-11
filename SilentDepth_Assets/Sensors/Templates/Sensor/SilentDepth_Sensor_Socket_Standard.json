@@ -1,0 +1,55 @@
+{
+  "standard": "SILENT DEPTH 潜艇传感器统一插槽（任务书 §20）",
+  "version": "v1.0.0",
+  "generated_at": "2026-09-10",
+  "sockets": [
+    {
+      "socket": "SOCKET_SONAR_BOW",
+      "label_zh": "艇艏声呐插槽",
+      "mount": "艇艏导流罩内/后，朝向 +X",
+      "branches": ["PASSIVE", "ACTIVE", "BOW", "HF", "MINE", "NAV"]
+    },
+    {
+      "socket": "SOCKET_SONAR_FLANK_L",
+      "label_zh": "左舷声呐插槽",
+      "mount": "艇体左舷（+Y），阵板沿 X 展开",
+      "branches": ["PASSIVE", "FLANK"]
+    },
+    {
+      "socket": "SOCKET_SONAR_FLANK_R",
+      "label_zh": "右舷声呐插槽",
+      "mount": "艇体右舷（-Y），阵板沿 X 展开",
+      "branches": ["PASSIVE", "FLANK"]
+    },
+    {
+      "socket": "SOCKET_TOWED_ARRAY",
+      "label_zh": "拖曳阵插槽",
+      "mount": "上部/尾部收放舱，朝 -X 释放",
+      "branches": ["PASSIVE", "TOWED"]
+    },
+    {
+      "socket": "SOCKET_PHOTONICS_MAST",
+      "label_zh": "光电桅杆插槽",
+      "mount": "指挥台围壳顶部，朝 +Z 升降",
+      "branches": ["PHOTONICS", "EOIR"]
+    },
+    {
+      "socket": "SOCKET_PERISCOPE",
+      "label_zh": "潜望镜插槽",
+      "mount": "指挥台围壳顶部，朝 +Z 升降",
+      "branches": ["PHOTONICS"]
+    },
+    {
+      "socket": "SOCKET_RADAR",
+      "label_zh": "雷达插槽",
+      "mount": "桅杆顶部或围壳，可升降",
+      "branches": ["RADAR"]
+    },
+    {
+      "socket": "SOCKET_ESM",
+      "label_zh": "电子支援插槽",
+      "mount": "桅杆/围壳顶部天线组",
+      "branches": ["ESM"]
+    }
+  ]
+}

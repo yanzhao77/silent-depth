@@ -1,0 +1,122 @@
+{
+  "asset_id": "US_ESM_BLQ10",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\ESM\\US_ESM_BLQ10",
+    "fbx": [
+      {
+        "file": "US_ESM_BLQ10_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 23868
+      },
+      {
+        "file": "US_ESM_BLQ10_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 22044
+      },
+      {
+        "file": "US_ESM_BLQ10_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 20252
+      },
+      {
+        "file": "US_ESM_BLQ10_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 20252
+      },
+      {
+        "file": "US_ESM_BLQ10_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 20316
+      }
+    ],
+    "geometry": {
+      "sensor_id": "US_ESM_BLQ10",
+      "form_factor": "esm_mast",
+      "geometry_source": "PUBLIC_FORM",
+      "socket": "SOCKET_ESM",
+      "note": "电子支援天线组外形",
+      "triangles": {
+        "LOD0": 132,
+        "LOD1": 92,
+        "LOD2": 64,
+        "LOD3": 64
+      },
+      "collision_faces": 36,
+      "collision_object": "UCX_SEN_US_ESM_BLQ10_00",
+      "object_names": [
+        "SEN_US_ESM_BLQ10_LOD0",
+        "SEN_US_ESM_BLQ10_LOD1",
+        "SEN_US_ESM_BLQ10_LOD2",
+        "SEN_US_ESM_BLQ10_LOD3",
+        "UCX_SEN_US_ESM_BLQ10_00",
+        "SOCKET_ESM"
+      ],
+      "mesh_names": [
+        "SEN_US_ESM_BLQ10_LOD0",
+        "SEN_US_ESM_BLQ10_LOD1",
+        "SEN_US_ESM_BLQ10_LOD2",
+        "SEN_US_ESM_BLQ10_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\ESM\\US_ESM_BLQ10\\Blend\\US_ESM_BLQ10_MASTER.blend",
+      "previews": [
+        "US_ESM_BLQ10_Front.png",
+        "US_ESM_BLQ10_Side.png",
+        "US_ESM_BLQ10_Top.png",
+        "US_ESM_BLQ10_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 6.615,
+        "stddev_subject": 15.568,
+        "subject_fraction": 0.0379,
+        "file": "US_ESM_BLQ10_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 7.081,
+        "stddev_subject": 6.084,
+        "subject_fraction": 0.05457,
+        "file": "US_ESM_BLQ10_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 6.908,
+        "stddev_subject": 3.268,
+        "subject_fraction": 0.06467,
+        "file": "US_ESM_BLQ10_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 13.753,
+        "stddev_subject": 20.153,
+        "subject_fraction": 0.12971,
+        "file": "US_ESM_BLQ10_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

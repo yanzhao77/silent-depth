@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_PROC_T7",
+  "form_factor": "processor_rack",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_SENSOR_ORIGIN",
+  "note": "处理机柜外形（软件层的机柜化表现）",
+  "triangles": {
+    "LOD0": 84,
+    "LOD1": 84,
+    "LOD2": 48,
+    "LOD3": 48
+  },
+  "collision_faces": 21,
+  "collision_object": "UCX_SEN_GEN_PROC_T7_00",
+  "object_names": [
+    "SEN_GEN_PROC_T7_LOD0",
+    "SEN_GEN_PROC_T7_LOD1",
+    "SEN_GEN_PROC_T7_LOD2",
+    "SEN_GEN_PROC_T7_LOD3",
+    "UCX_SEN_GEN_PROC_T7_00",
+    "SOCKET_SENSOR_ORIGIN"
+  ],
+  "mesh_names": [
+    "SEN_GEN_PROC_T7_LOD0",
+    "SEN_GEN_PROC_T7_LOD1",
+    "SEN_GEN_PROC_T7_LOD2",
+    "SEN_GEN_PROC_T7_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Processing\\GEN_PROC_T7\\Blend\\GEN_PROC_T7_MASTER.blend",
+  "previews": [
+    "GEN_PROC_T7_Front.png",
+    "GEN_PROC_T7_Side.png",
+    "GEN_PROC_T7_Top.png",
+    "GEN_PROC_T7_Perspective.png"
+  ]
+}

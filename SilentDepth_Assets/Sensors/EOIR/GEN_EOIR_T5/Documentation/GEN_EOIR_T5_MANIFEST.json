@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_EOIR_T5",
+  "generated_at": "2026-09-10T16:08:44Z",
+  "branch": "EOIR",
+  "tier": "T5",
+  "country": "GENERIC",
+  "family": "GEN_EOIR",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.1,
+    "diameter": 0.75,
+    "height": 0.75
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_EOIR_T5_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 694528,
+      "sha256": "0c426857dd86d7ae9771b1011a94437ab20ef7fb717294e593e86c9951730b28"
+    },
+    {
+      "path": "FBX/GEN_EOIR_T5_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 65676,
+      "sha256": "38bd68ff44308cd9c819561b81494b5b79f180eae5846c21a722e8479d532075",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_EOIR_T5_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 38236,
+      "sha256": "bbba8ec8fb0085cc341e9328ae0ede3f8678ec8b3dc01c16279d4fd220bc4d1a",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_EOIR_T5_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 28012,
+      "sha256": "73226908fed21e73bec805f3fbf1555b559cc1279fb5e845b64631dad00ac2b7",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_EOIR_T5_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 26092,
+      "sha256": "1498189a6e669c088e6504e296e170a185b0e6363e579a916799179d1222b2bc",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_EOIR_T5_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23948,
+      "sha256": "b13297181f57e9ba96dc06e3c45c7566dd3d4b43036652bbdadf13bc469d8415",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_EOIR_T5_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 221354,
+      "sha256": "624aa3975f2be5f17a58c5716e7ba120981460a5f9d6abbe911439aebb922fc8"
+    },
+    {
+      "path": "Preview/GEN_EOIR_T5_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 206017,
+      "sha256": "8f6334fa49d5aff14e7c671fb2a09076975775602f7c9af2c67196057b41cad5"
+    },
+    {
+      "path": "Preview/GEN_EOIR_T5_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 188324,
+      "sha256": "913b1fdc512b280e0e1a7c6705ffed09e01af5d066a08ad5b083d5231c953cfb"
+    },
+    {
+      "path": "Preview/GEN_EOIR_T5_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 157285,
+      "sha256": "e8c37aecbabe88e3126fe60874ff77c209198a0ab3fc7971f5d06c3bf16edc79"
+    }
+  ]
+}

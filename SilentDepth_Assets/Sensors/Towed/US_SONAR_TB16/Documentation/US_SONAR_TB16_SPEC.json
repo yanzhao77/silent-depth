@@ -1,0 +1,36 @@
+{
+  "asset_id": "US_SONAR_TB16",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "TOWED",
+  "tier": "T2",
+  "country": "USA",
+  "family": "TB",
+  "name": "TB-16 Towed Array",
+  "status": "HISTORICAL",
+  "confidence": "UNKNOWN",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 3.2,
+    "diameter": 0.9,
+    "height": 0.9
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [
+    "US_SSN_LosAngeles"
+  ],
+  "references": []
+}

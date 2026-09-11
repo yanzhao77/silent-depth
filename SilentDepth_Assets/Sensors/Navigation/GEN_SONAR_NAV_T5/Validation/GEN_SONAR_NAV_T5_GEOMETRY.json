@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_SONAR_NAV_T5",
+  "form_factor": "hf_dome",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_SONAR_BOW",
+  "note": "高频声呐导流罩外形",
+  "triangles": {
+    "LOD0": 900,
+    "LOD1": 264,
+    "LOD2": 136,
+    "LOD3": 104
+  },
+  "collision_faces": 59,
+  "collision_object": "UCX_SEN_GEN_SONAR_NAV_T5_00",
+  "object_names": [
+    "SEN_GEN_SONAR_NAV_T5_LOD0",
+    "SEN_GEN_SONAR_NAV_T5_LOD1",
+    "SEN_GEN_SONAR_NAV_T5_LOD2",
+    "SEN_GEN_SONAR_NAV_T5_LOD3",
+    "UCX_SEN_GEN_SONAR_NAV_T5_00",
+    "SOCKET_SONAR_BOW"
+  ],
+  "mesh_names": [
+    "SEN_GEN_SONAR_NAV_T5_LOD0",
+    "SEN_GEN_SONAR_NAV_T5_LOD1",
+    "SEN_GEN_SONAR_NAV_T5_LOD2",
+    "SEN_GEN_SONAR_NAV_T5_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Navigation\\GEN_SONAR_NAV_T5\\Blend\\GEN_SONAR_NAV_T5_MASTER.blend",
+  "previews": [
+    "GEN_SONAR_NAV_T5_Front.png",
+    "GEN_SONAR_NAV_T5_Side.png",
+    "GEN_SONAR_NAV_T5_Top.png",
+    "GEN_SONAR_NAV_T5_Perspective.png"
+  ]
+}

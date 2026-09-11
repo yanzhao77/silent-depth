@@ -1,0 +1,29 @@
+{
+  "sensor_id": "US_SONAR_BQQ5",
+  "form_factor": "bow_dome_sphere",
+  "form_factor_note": "艇艏球形阵",
+  "dimensions_m": {
+    "length": 3.6,
+    "diameter": 4.6,
+    "height": 4.6
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "PUBLIC_FORM",
+  "source_note": "公开资料确认的艇艏球形阵外形（AN/BQQ-5）。",
+  "branch": "BOW",
+  "branch_label_zh": "艇艏声呐阵",
+  "socket": "SOCKET_SONAR_BOW",
+  "tier": "T2"
+}

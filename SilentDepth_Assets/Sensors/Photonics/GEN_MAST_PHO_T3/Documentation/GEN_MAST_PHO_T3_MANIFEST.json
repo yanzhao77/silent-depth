@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_MAST_PHO_T3",
+  "generated_at": "2026-09-10T16:08:44Z",
+  "branch": "PHOTONICS",
+  "tier": "T3",
+  "country": "GENERIC",
+  "family": "GEN_PHO",
+  "socket": "SOCKET_PERISCOPE",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 9.5,
+    "diameter": 0.22,
+    "height": 0.22
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_MAST_PHO_T3_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 658594,
+      "sha256": "09e9f629449fb20b4a8043d00aa497690b6b4f75fbe9833411eb56c341d817b7"
+    },
+    {
+      "path": "FBX/GEN_MAST_PHO_T3_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 31468,
+      "sha256": "fc9692a17649e35a2585cb22c7c21c995a644f8259e3d797798dbd29fd44b3f5",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_MAST_PHO_T3_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 25516,
+      "sha256": "823c4dba809f0442e1589d34de47094085510f04d6622144b29d7bb3f6c52b7a",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_MAST_PHO_T3_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23548,
+      "sha256": "01239a193aa15245239722fc7ae7ecf0c0378e6449cdb6ae6c61a68a13f25437",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_MAST_PHO_T3_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23388,
+      "sha256": "8dfeaf5eab018e4a2a956fd902108c4752d3406647cd326d05b5f4758d0fda4b",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_MAST_PHO_T3_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 22428,
+      "sha256": "1d5123d169213c83bc6ddc112208d623386d94917050f98198954da41238dd0b",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_MAST_PHO_T3_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 121256,
+      "sha256": "5156331f3084947d77c482392fcfaabf73693092c906536c174d743d75a2a32b"
+    },
+    {
+      "path": "Preview/GEN_MAST_PHO_T3_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 122772,
+      "sha256": "d7e259368f76651c9b1804b9adf43bed1638cf371cc710fa81d1cbb406284704"
+    },
+    {
+      "path": "Preview/GEN_MAST_PHO_T3_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 176629,
+      "sha256": "02ed865a5b2baa701b0103bdd5978bf07d08f24f0ab3aab90c0469c6034acc67"
+    },
+    {
+      "path": "Preview/GEN_MAST_PHO_T3_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 122512,
+      "sha256": "b67a58395c9f1d7eba3cc5280ef977424632c9592c1ae636dc55990f4c7e6510"
+    }
+  ]
+}

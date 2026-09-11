@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_SONAR_FLK_T2",
+  "form_factor": "flank_panel",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_SONAR_FLANK_L",
+  "note": "侧舷阵板外形",
+  "triangles": {
+    "LOD0": 828,
+    "LOD1": 476,
+    "LOD2": 36,
+    "LOD3": 36
+  },
+  "collision_faces": 7,
+  "collision_object": "UCX_SEN_GEN_SONAR_FLK_T2_00",
+  "object_names": [
+    "SEN_GEN_SONAR_FLK_T2_LOD0",
+    "SEN_GEN_SONAR_FLK_T2_LOD1",
+    "SEN_GEN_SONAR_FLK_T2_LOD2",
+    "SEN_GEN_SONAR_FLK_T2_LOD3",
+    "UCX_SEN_GEN_SONAR_FLK_T2_00",
+    "SOCKET_SONAR_FLANK_L"
+  ],
+  "mesh_names": [
+    "SEN_GEN_SONAR_FLK_T2_LOD0",
+    "SEN_GEN_SONAR_FLK_T2_LOD1",
+    "SEN_GEN_SONAR_FLK_T2_LOD2",
+    "SEN_GEN_SONAR_FLK_T2_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Flank\\GEN_SONAR_FLK_T2\\Blend\\GEN_SONAR_FLK_T2_MASTER.blend",
+  "previews": [
+    "GEN_SONAR_FLK_T2_Front.png",
+    "GEN_SONAR_FLK_T2_Side.png",
+    "GEN_SONAR_FLK_T2_Top.png",
+    "GEN_SONAR_FLK_T2_Perspective.png"
+  ]
+}

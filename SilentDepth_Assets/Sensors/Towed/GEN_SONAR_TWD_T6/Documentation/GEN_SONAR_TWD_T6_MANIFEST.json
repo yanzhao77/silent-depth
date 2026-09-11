@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_SONAR_TWD_T6",
+  "generated_at": "2026-09-10T16:08:42Z",
+  "branch": "TOWED",
+  "tier": "T6",
+  "country": "GENERIC",
+  "family": "GEN_TWD",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 30.0,
+    "diameter": 0.09,
+    "height": 0.09
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_SONAR_TWD_T6_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 1076404,
+      "sha256": "e38045c92ff85e3303dae2677399f5147b2da0ccda2c4821a25624d90e03c32b"
+    },
+    {
+      "path": "FBX/GEN_SONAR_TWD_T6_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 292860,
+      "sha256": "5dbc986c8f3298e1185552ae2810e16b29006ce6ee32c41b2c7b8c0fc6e6b0b4",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_TWD_T6_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 159036,
+      "sha256": "a9ddf5f7f1048c83154eb215daabf21befedef2da162fea528dcc859061f9e65",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_TWD_T6_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21116,
+      "sha256": "1c8d3933376066b3665bad17586a0b1dcfc53ce639455c4090e8e6b30c82f680",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_TWD_T6_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21116,
+      "sha256": "1c67d10f20d0e4eaac1ab421b2f35ba584ec4ffdb1729f84fbde9c1d07481f7e",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_SONAR_TWD_T6_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20380,
+      "sha256": "bac47857d3512b579233c6e0f17683fea8907c57c1390cd92ca9c1d0a5af447e",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_SONAR_TWD_T6_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 122163,
+      "sha256": "936adc6d061d708175941e522f7f7dd7986ac645b0089e1c17393ae9233664fd"
+    },
+    {
+      "path": "Preview/GEN_SONAR_TWD_T6_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 71873,
+      "sha256": "3d816c016fe2e856fd0c5255030ba41225a89d676757553416e348528f0bd374"
+    },
+    {
+      "path": "Preview/GEN_SONAR_TWD_T6_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 71823,
+      "sha256": "77f87a7d9e7341626e58f6e117e96fa932bffe3450969a82779afffe0f7d5706"
+    },
+    {
+      "path": "Preview/GEN_SONAR_TWD_T6_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 84062,
+      "sha256": "3927d80a3b1543f887bdacabb2c76952ebe2ac29b1c4b5807b69cad4d6f5446d"
+    }
+  ]
+}

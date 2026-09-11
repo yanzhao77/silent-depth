@@ -1,0 +1,37 @@
+{
+  "sensor_id": "US_SONAR_LAB",
+  "form_factor": "bow_large_aperture",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_SONAR_BOW",
+  "note": "大型孔径艇艏阵（Virginia Block III 公开外形）",
+  "triangles": {
+    "LOD0": 2520,
+    "LOD1": 1448,
+    "LOD2": 680,
+    "LOD3": 600
+  },
+  "collision_faces": 186,
+  "collision_object": "UCX_SEN_US_SONAR_LAB_00",
+  "object_names": [
+    "SEN_US_SONAR_LAB_LOD0",
+    "SEN_US_SONAR_LAB_LOD1",
+    "SEN_US_SONAR_LAB_LOD2",
+    "SEN_US_SONAR_LAB_LOD3",
+    "UCX_SEN_US_SONAR_LAB_00",
+    "SOCKET_SONAR_BOW"
+  ],
+  "mesh_names": [
+    "SEN_US_SONAR_LAB_LOD0",
+    "SEN_US_SONAR_LAB_LOD1",
+    "SEN_US_SONAR_LAB_LOD2",
+    "SEN_US_SONAR_LAB_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\US_SONAR_LAB\\Blend\\US_SONAR_LAB_MASTER.blend",
+  "previews": [
+    "US_SONAR_LAB_Front.png",
+    "US_SONAR_LAB_Side.png",
+    "US_SONAR_LAB_Top.png",
+    "US_SONAR_LAB_Perspective.png"
+  ]
+}

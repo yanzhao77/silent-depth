@@ -1,0 +1,36 @@
+{
+  "asset_id": "UK_PHO_CM010",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "PHOTONICS",
+  "tier": "T7",
+  "country": "UK",
+  "family": "CM010",
+  "name": "CM010 EOM Mast",
+  "status": "IN_SERVICE",
+  "confidence": "UNKNOWN",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 10.0,
+    "diameter": 0.38,
+    "height": 0.38
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [
+    "UK_SSN_Astute"
+  ],
+  "references": []
+}

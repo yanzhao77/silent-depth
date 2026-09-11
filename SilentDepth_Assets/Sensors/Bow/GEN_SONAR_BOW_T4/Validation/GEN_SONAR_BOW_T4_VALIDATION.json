@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_SONAR_BOW_T4",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\GEN_SONAR_BOW_T4",
+    "fbx": [
+      {
+        "file": "GEN_SONAR_BOW_T4_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 74076
+      },
+      {
+        "file": "GEN_SONAR_BOW_T4_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 67340
+      },
+      {
+        "file": "GEN_SONAR_BOW_T4_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 24156
+      },
+      {
+        "file": "GEN_SONAR_BOW_T4_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 21020
+      },
+      {
+        "file": "GEN_SONAR_BOW_T4_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 21276
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_SONAR_BOW_T4",
+      "form_factor": "bow_water_backed",
+      "geometry_source": "PUBLIC_FORM",
+      "socket": "SOCKET_SONAR_BOW",
+      "note": "水背衬柱形阵（公开结构项）",
+      "triangles": {
+        "LOD0": 1260,
+        "LOD1": 1100,
+        "LOD2": 108,
+        "LOD3": 52
+      },
+      "collision_faces": 25,
+      "collision_object": "UCX_SEN_GEN_SONAR_BOW_T4_00",
+      "object_names": [
+        "SEN_GEN_SONAR_BOW_T4_LOD0",
+        "SEN_GEN_SONAR_BOW_T4_LOD1",
+        "SEN_GEN_SONAR_BOW_T4_LOD2",
+        "SEN_GEN_SONAR_BOW_T4_LOD3",
+        "UCX_SEN_GEN_SONAR_BOW_T4_00",
+        "SOCKET_SONAR_BOW"
+      ],
+      "mesh_names": [
+        "SEN_GEN_SONAR_BOW_T4_LOD0",
+        "SEN_GEN_SONAR_BOW_T4_LOD1",
+        "SEN_GEN_SONAR_BOW_T4_LOD2",
+        "SEN_GEN_SONAR_BOW_T4_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\GEN_SONAR_BOW_T4\\Blend\\GEN_SONAR_BOW_T4_MASTER.blend",
+      "previews": [
+        "GEN_SONAR_BOW_T4_Front.png",
+        "GEN_SONAR_BOW_T4_Side.png",
+        "GEN_SONAR_BOW_T4_Top.png",
+        "GEN_SONAR_BOW_T4_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 19.974,
+        "stddev_subject": 14.026,
+        "subject_fraction": 0.49961,
+        "file": "GEN_SONAR_BOW_T4_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 21.662,
+        "stddev_subject": 20.122,
+        "subject_fraction": 0.35087,
+        "file": "GEN_SONAR_BOW_T4_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 25.555,
+        "stddev_subject": 16.462,
+        "subject_fraction": 0.41593,
+        "file": "GEN_SONAR_BOW_T4_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 37.488,
+        "stddev_subject": 26.288,
+        "subject_fraction": 0.57985,
+        "file": "GEN_SONAR_BOW_T4_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

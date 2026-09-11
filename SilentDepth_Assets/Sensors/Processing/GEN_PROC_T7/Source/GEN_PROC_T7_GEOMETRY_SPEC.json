@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_PROC_T7",
+  "form_factor": "processor_rack",
+  "form_factor_note": "处理机柜",
+  "dimensions_m": {
+    "length": 1.2,
+    "diameter": 2.2,
+    "height": 2.2
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "GAMEPLAY_FORM",
+  "source_note": "多阵融合处理机柜代表性外形。",
+  "branch": "PROCESSING",
+  "branch_label_zh": "声学处理",
+  "socket": "",
+  "tier": "T7"
+}

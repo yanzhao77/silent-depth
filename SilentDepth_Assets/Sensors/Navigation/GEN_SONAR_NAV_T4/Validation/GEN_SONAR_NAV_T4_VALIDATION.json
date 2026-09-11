@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_SONAR_NAV_T4",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Navigation\\GEN_SONAR_NAV_T4",
+    "fbx": [
+      {
+        "file": "GEN_SONAR_NAV_T4_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 29916
+      },
+      {
+        "file": "GEN_SONAR_NAV_T4_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 24476
+      },
+      {
+        "file": "GEN_SONAR_NAV_T4_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 22284
+      },
+      {
+        "file": "GEN_SONAR_NAV_T4_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 21852
+      },
+      {
+        "file": "GEN_SONAR_NAV_T4_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 19468
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_SONAR_NAV_T4",
+      "form_factor": "dvl_probe",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_SONAR_BOW",
+      "note": "多普勒测速换能器外形",
+      "triangles": {
+        "LOD0": 268,
+        "LOD1": 156,
+        "LOD2": 108,
+        "LOD3": 100
+      },
+      "collision_faces": 30,
+      "collision_object": "UCX_SEN_GEN_SONAR_NAV_T4_00",
+      "object_names": [
+        "SEN_GEN_SONAR_NAV_T4_LOD0",
+        "SEN_GEN_SONAR_NAV_T4_LOD1",
+        "SEN_GEN_SONAR_NAV_T4_LOD2",
+        "SEN_GEN_SONAR_NAV_T4_LOD3",
+        "UCX_SEN_GEN_SONAR_NAV_T4_00",
+        "SOCKET_SONAR_BOW"
+      ],
+      "mesh_names": [
+        "SEN_GEN_SONAR_NAV_T4_LOD0",
+        "SEN_GEN_SONAR_NAV_T4_LOD1",
+        "SEN_GEN_SONAR_NAV_T4_LOD2",
+        "SEN_GEN_SONAR_NAV_T4_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Navigation\\GEN_SONAR_NAV_T4\\Blend\\GEN_SONAR_NAV_T4_MASTER.blend",
+      "previews": [
+        "GEN_SONAR_NAV_T4_Front.png",
+        "GEN_SONAR_NAV_T4_Side.png",
+        "GEN_SONAR_NAV_T4_Top.png",
+        "GEN_SONAR_NAV_T4_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 19.507,
+        "stddev_subject": 13.835,
+        "subject_fraction": 0.258,
+        "file": "GEN_SONAR_NAV_T4_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 16.081,
+        "stddev_subject": 11.2,
+        "subject_fraction": 0.13666,
+        "file": "GEN_SONAR_NAV_T4_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 18.979,
+        "stddev_subject": 11.378,
+        "subject_fraction": 0.25813,
+        "file": "GEN_SONAR_NAV_T4_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 35.77,
+        "stddev_subject": 4.801,
+        "subject_fraction": 0.35766,
+        "file": "GEN_SONAR_NAV_T4_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

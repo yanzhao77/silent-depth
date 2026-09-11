@@ -1,0 +1,38 @@
+{
+  "asset_id": "US_ESM_BLQ10",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "ESM",
+  "tier": "T7",
+  "country": "USA",
+  "family": "AN/BLQ",
+  "name": "AN/BLQ-10",
+  "status": "IN_SERVICE",
+  "confidence": "UNKNOWN",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_ESM",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 2.8,
+    "diameter": 0.3,
+    "height": 0.3
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [
+    "US_SSN_Virginia",
+    "US_SSN_LosAngeles",
+    "US_SSN_Seawolf"
+  ],
+  "references": []
+}

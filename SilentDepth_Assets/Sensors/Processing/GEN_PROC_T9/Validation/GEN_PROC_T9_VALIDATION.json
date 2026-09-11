@@ -1,0 +1,122 @@
+{
+  "asset_id": "GEN_PROC_T9",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Processing\\GEN_PROC_T9",
+    "fbx": [
+      {
+        "file": "GEN_PROC_T9_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 20812
+      },
+      {
+        "file": "GEN_PROC_T9_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 20812
+      },
+      {
+        "file": "GEN_PROC_T9_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 19772
+      },
+      {
+        "file": "GEN_PROC_T9_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 19772
+      },
+      {
+        "file": "GEN_PROC_T9_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 19436
+      }
+    ],
+    "geometry": {
+      "sensor_id": "GEN_PROC_T9",
+      "form_factor": "processor_rack",
+      "geometry_source": "GAMEPLAY_FORM",
+      "socket": "SOCKET_SENSOR_ORIGIN",
+      "note": "处理机柜外形（软件层的机柜化表现）",
+      "triangles": {
+        "LOD0": 84,
+        "LOD1": 84,
+        "LOD2": 48,
+        "LOD3": 48
+      },
+      "collision_faces": 21,
+      "collision_object": "UCX_SEN_GEN_PROC_T9_00",
+      "object_names": [
+        "SEN_GEN_PROC_T9_LOD0",
+        "SEN_GEN_PROC_T9_LOD1",
+        "SEN_GEN_PROC_T9_LOD2",
+        "SEN_GEN_PROC_T9_LOD3",
+        "UCX_SEN_GEN_PROC_T9_00",
+        "SOCKET_SENSOR_ORIGIN"
+      ],
+      "mesh_names": [
+        "SEN_GEN_PROC_T9_LOD0",
+        "SEN_GEN_PROC_T9_LOD1",
+        "SEN_GEN_PROC_T9_LOD2",
+        "SEN_GEN_PROC_T9_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Processing\\GEN_PROC_T9\\Blend\\GEN_PROC_T9_MASTER.blend",
+      "previews": [
+        "GEN_PROC_T9_Front.png",
+        "GEN_PROC_T9_Side.png",
+        "GEN_PROC_T9_Top.png",
+        "GEN_PROC_T9_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 22.326,
+        "stddev_subject": 9.017,
+        "subject_fraction": 0.57159,
+        "file": "GEN_PROC_T9_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 20.395,
+        "stddev_subject": 14.45,
+        "subject_fraction": 0.4846,
+        "file": "GEN_PROC_T9_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 21.489,
+        "stddev_subject": 5.164,
+        "subject_fraction": 0.33635,
+        "file": "GEN_PROC_T9_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 36.11,
+        "stddev_subject": 4.971,
+        "subject_fraction": 0.47342,
+        "file": "GEN_PROC_T9_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

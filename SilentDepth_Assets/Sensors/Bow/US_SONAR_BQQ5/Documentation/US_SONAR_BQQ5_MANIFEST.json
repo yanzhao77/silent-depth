@@ -1,0 +1,93 @@
+{
+  "asset_id": "US_SONAR_BQQ5",
+  "generated_at": "2026-09-10T16:08:41Z",
+  "branch": "BOW",
+  "tier": "T2",
+  "country": "USA",
+  "family": "AN/BQQ",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 3.6,
+    "diameter": 4.6,
+    "height": 4.6
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/US_SONAR_BQQ5_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 957068,
+      "sha256": "cf67460165a26acef23836f3712c2bf0991bfaebd8a2ca91e2d26ed0f7d8176a"
+    },
+    {
+      "path": "FBX/US_SONAR_BQQ5_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 167100,
+      "sha256": "b194c812fcf2914983345bc5f766adc36c49c7c787647b5ee887242bb630cad1",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_SONAR_BQQ5_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 79948,
+      "sha256": "807deea48b9c9b9d0d0949974bf83460e9afc2b2dd9581e17aef979db69a0349",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_SONAR_BQQ5_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 66396,
+      "sha256": "5afd66b7cfcd1b9ed8e4e7e88c9147aa93d74e0767069379d6e1a22659e0f4e0",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_SONAR_BQQ5_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 60572,
+      "sha256": "c6cf7457b978ccf9c3b4a682a751e64b7722ecd5b84604b48a4b7dd2c7a37833",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/US_SONAR_BQQ5_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 37884,
+      "sha256": "c63181bdb44439809e7310c62d6c59b25db4bc19c2fdcee88758c5d9ee9ac26c",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/US_SONAR_BQQ5_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 217470,
+      "sha256": "9ea6221f690fac7aff6538d169a7f1e1f0f98daa8ab558d3c88bf3953ef61286"
+    },
+    {
+      "path": "Preview/US_SONAR_BQQ5_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 200061,
+      "sha256": "a41ac99633d54eda26cd94fc548f5b91c6ac568a98ee0446a41b70578663c77d"
+    },
+    {
+      "path": "Preview/US_SONAR_BQQ5_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 207154,
+      "sha256": "9e84e188400cdeb40f2e48603d1310638fa62503197b2962b3eec1758c517815"
+    },
+    {
+      "path": "Preview/US_SONAR_BQQ5_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 158059,
+      "sha256": "ecbb0926ede1cc84d5d0d9f4620db13e93d3a92f15efd86ca46960033f60af49"
+    }
+  ]
+}

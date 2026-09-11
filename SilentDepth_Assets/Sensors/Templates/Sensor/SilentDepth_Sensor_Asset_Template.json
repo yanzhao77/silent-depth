@@ -1,0 +1,113 @@
+{
+  "template_id": "SilentDepth_Sensor_Asset_Template",
+  "version": "v1.0.0",
+  "created_at": "2026-09-10",
+  "scope": "SILENT DEPTH submarine sensor / sonar asset factory (third independent tree)",
+  "collection_policy": {
+    "root": "SEN_[SENSOR_ID]",
+    "required_collections": [
+      "90_LOD/LOD0",
+      "90_LOD/LOD1",
+      "90_LOD/LOD2",
+      "90_LOD/LOD3",
+      "95_SOCKETS",
+      "99_COLLISION"
+    ],
+    "optional_collections": [
+      "01_STRUCTURE",
+      "02_ARRAY_FACE",
+      "03_CABLE",
+      "04_OPTICS"
+    ],
+    "rule": "只导出明确的游戏资产集合；不要把工作集合混入导出。"
+  },
+  "naming_policy": {
+    "asset_id": "SEN_[SENSOR_ID]",
+    "object": "SEN_[SENSOR_ID]_LOD[n]",
+    "collision": "UCX_SEN_[SENSOR_ID]_##",
+    "socket": "SOCKET_*（见 §20 统一插槽）",
+    "forbidden_prefixes": [
+      "Cube",
+      "Object",
+      "Cylinder",
+      "Plane",
+      "Sphere",
+      "Torus",
+      "Cone"
+    ]
+  },
+  "transform_rules": {
+    "units": "Metric meters",
+    "unreal_conversion": "1 Blender meter = 100 Unreal Units",
+    "axis": "Bow +X, port/starboard Y, Z up",
+    "final_scale": [
+      1,
+      1,
+      1
+    ],
+    "final_rotation": [
+      0,
+      0,
+      0
+    ],
+    "apply_transform": true
+  },
+  "origin_rules": {
+    "primary_pivot": "传感器本体中心",
+    "socket_pivot": "与潜艇插槽对齐的安装面原点"
+  },
+  "material_rules": {
+    "shared_materials": [
+      "SEN_MAT_ArrayFace",
+      "SEN_MAT_Hull",
+      "SEN_MAT_DarkMetal",
+      "SEN_MAT_Mast",
+      "SEN_MAT_Glass",
+      "SEN_MAT_Composite",
+      "SEN_MAT_Cable",
+      "SEN_MAT_Rack",
+      "SEN_MAT_RadarFace",
+      "SEN_MAT_ESM"
+    ],
+    "texture_policy": "程序化材质，无外部位图，运行期完全离线"
+  },
+  "uv_rules": {
+    "uv0": "智能展开的材质贴图坐标",
+    "uv1": "需要静态烘焙时再补的光照贴图通道"
+  },
+  "lod_rules": {
+    "levels": [
+      "LOD0",
+      "LOD1",
+      "LOD2",
+      "LOD3"
+    ],
+    "source": "所有 LOD 由同一程序化构建器按 detail 档位独立生成，不做 LOD 串联简化。",
+    "silhouette_lock": [
+      "阵面",
+      "桅杆杆体",
+      "拖曳舱体",
+      "天线面"
+    ]
+  },
+  "collision_rules": {
+    "prefix": "UCX_",
+    "shape": "低面数闭合凸包",
+    "prohibited": "以渲染网格直接充当碰撞"
+  },
+  "socket_rules": {
+    "standard_file": "SilentDepth_Sensor_Socket_Standard.json",
+    "rule": "资产内部插槽必须使用 §20 的统一命名，不得自创插槽名。"
+  },
+  "export_rules": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible",
+    "axis_forward": "-Y",
+    "axis_up": "Z",
+    "apply_unit_scale": true,
+    "global_scale": 1.0,
+    "embed_textures": false
+  },
+  "validation_rules_file": "SilentDepth_Sensor_Validation_Rules.json"
+}

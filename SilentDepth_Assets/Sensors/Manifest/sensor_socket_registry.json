@@ -1,0 +1,218 @@
+{
+  "generated_at": "2026-09-11",
+  "standard": "SILENT DEPTH sensor socket naming (§20)",
+  "sockets": [
+    {
+      "socket": "SOCKET_SONAR_BOW",
+      "branches": [
+        "PASSIVE",
+        "ACTIVE",
+        "BOW",
+        "HF",
+        "MINE",
+        "NAV"
+      ],
+      "users": [
+        "CN_SONAR_Type093",
+        "GEN_SONAR_ACT_T1",
+        "GEN_SONAR_ACT_T10",
+        "GEN_SONAR_ACT_T2",
+        "GEN_SONAR_ACT_T3",
+        "GEN_SONAR_ACT_T4",
+        "GEN_SONAR_ACT_T5",
+        "GEN_SONAR_ACT_T6",
+        "GEN_SONAR_ACT_T7",
+        "GEN_SONAR_ACT_T8",
+        "GEN_SONAR_ACT_T9",
+        "GEN_SONAR_BOW_T1",
+        "GEN_SONAR_BOW_T10",
+        "GEN_SONAR_BOW_T2",
+        "GEN_SONAR_BOW_T3",
+        "GEN_SONAR_BOW_T4",
+        "GEN_SONAR_BOW_T5",
+        "GEN_SONAR_BOW_T6",
+        "GEN_SONAR_BOW_T7",
+        "GEN_SONAR_BOW_T8",
+        "GEN_SONAR_BOW_T9",
+        "GEN_SONAR_HF_T1",
+        "GEN_SONAR_HF_T10",
+        "GEN_SONAR_HF_T2",
+        "GEN_SONAR_HF_T3",
+        "GEN_SONAR_HF_T4",
+        "GEN_SONAR_HF_T5",
+        "GEN_SONAR_HF_T6",
+        "GEN_SONAR_HF_T7",
+        "GEN_SONAR_HF_T8",
+        "GEN_SONAR_HF_T9",
+        "GEN_SONAR_MINE_T1",
+        "GEN_SONAR_MINE_T10",
+        "GEN_SONAR_MINE_T2",
+        "GEN_SONAR_MINE_T3",
+        "GEN_SONAR_MINE_T4",
+        "GEN_SONAR_MINE_T5",
+        "GEN_SONAR_MINE_T6",
+        "GEN_SONAR_MINE_T7",
+        "GEN_SONAR_MINE_T8",
+        "GEN_SONAR_MINE_T9",
+        "GEN_SONAR_NAV_T1",
+        "GEN_SONAR_NAV_T10",
+        "GEN_SONAR_NAV_T2",
+        "GEN_SONAR_NAV_T3",
+        "GEN_SONAR_NAV_T4",
+        "GEN_SONAR_NAV_T5",
+        "GEN_SONAR_NAV_T6",
+        "GEN_SONAR_NAV_T7",
+        "GEN_SONAR_NAV_T8",
+        "GEN_SONAR_NAV_T9",
+        "GEN_SONAR_PSV_T1",
+        "GEN_SONAR_PSV_T10",
+        "GEN_SONAR_PSV_T2",
+        "GEN_SONAR_PSV_T3",
+        "GEN_SONAR_PSV_T4",
+        "GEN_SONAR_PSV_T5",
+        "GEN_SONAR_PSV_T6",
+        "GEN_SONAR_PSV_T7",
+        "GEN_SONAR_PSV_T8",
+        "GEN_SONAR_PSV_T9",
+        "IN_SONAR_Arihant",
+        "RU_SONAR_MGK540",
+        "RU_SONAR_Yasen",
+        "UK_SONAR_2074",
+        "UK_SONAR_Astute",
+        "US_SONAR_BQQ10",
+        "US_SONAR_BQQ5",
+        "US_SONAR_BQQ6",
+        "US_SONAR_BQS15",
+        "US_SONAR_LAB"
+      ]
+    },
+    {
+      "socket": "SOCKET_SONAR_FLANK_L",
+      "branches": [
+        "PASSIVE",
+        "FLANK"
+      ],
+      "users": [
+        "GEN_SONAR_FLK_T1",
+        "GEN_SONAR_FLK_T10",
+        "GEN_SONAR_FLK_T2",
+        "GEN_SONAR_FLK_T3",
+        "GEN_SONAR_FLK_T4",
+        "GEN_SONAR_FLK_T5",
+        "GEN_SONAR_FLK_T6",
+        "GEN_SONAR_FLK_T7",
+        "GEN_SONAR_FLK_T8",
+        "GEN_SONAR_FLK_T9"
+      ]
+    },
+    {
+      "socket": "SOCKET_SONAR_FLANK_R",
+      "branches": [
+        "PASSIVE",
+        "FLANK"
+      ],
+      "users": []
+    },
+    {
+      "socket": "SOCKET_TOWED_ARRAY",
+      "branches": [
+        "PASSIVE",
+        "TOWED"
+      ],
+      "users": [
+        "GEN_SONAR_TWD_T1",
+        "GEN_SONAR_TWD_T10",
+        "GEN_SONAR_TWD_T2",
+        "GEN_SONAR_TWD_T3",
+        "GEN_SONAR_TWD_T4",
+        "GEN_SONAR_TWD_T5",
+        "GEN_SONAR_TWD_T6",
+        "GEN_SONAR_TWD_T7",
+        "GEN_SONAR_TWD_T8",
+        "GEN_SONAR_TWD_T9",
+        "RU_SONAR_Pelamida",
+        "US_SONAR_TB16",
+        "US_SONAR_TB29"
+      ]
+    },
+    {
+      "socket": "SOCKET_PHOTONICS_MAST",
+      "branches": [
+        "PHOTONICS",
+        "EOIR"
+      ],
+      "users": [
+        "GEN_EOIR_T1",
+        "GEN_EOIR_T10",
+        "GEN_EOIR_T2",
+        "GEN_EOIR_T3",
+        "GEN_EOIR_T4",
+        "GEN_EOIR_T5",
+        "GEN_EOIR_T6",
+        "GEN_EOIR_T7",
+        "GEN_EOIR_T8",
+        "GEN_EOIR_T9",
+        "UK_PHO_CM010",
+        "US_PHO_Virginia"
+      ]
+    },
+    {
+      "socket": "SOCKET_PERISCOPE",
+      "branches": [
+        "PHOTONICS"
+      ],
+      "users": [
+        "GEN_MAST_PHO_T1",
+        "GEN_MAST_PHO_T10",
+        "GEN_MAST_PHO_T2",
+        "GEN_MAST_PHO_T3",
+        "GEN_MAST_PHO_T4",
+        "GEN_MAST_PHO_T5",
+        "GEN_MAST_PHO_T6",
+        "GEN_MAST_PHO_T7",
+        "GEN_MAST_PHO_T8",
+        "GEN_MAST_PHO_T9"
+      ]
+    },
+    {
+      "socket": "SOCKET_RADAR",
+      "branches": [
+        "RADAR"
+      ],
+      "users": [
+        "GEN_RADAR_T1",
+        "GEN_RADAR_T10",
+        "GEN_RADAR_T2",
+        "GEN_RADAR_T3",
+        "GEN_RADAR_T4",
+        "GEN_RADAR_T5",
+        "GEN_RADAR_T6",
+        "GEN_RADAR_T7",
+        "GEN_RADAR_T8",
+        "GEN_RADAR_T9",
+        "RU_RADAR_MRK50",
+        "US_RADAR_BPS16"
+      ]
+    },
+    {
+      "socket": "SOCKET_ESM",
+      "branches": [
+        "ESM"
+      ],
+      "users": [
+        "GEN_ESM_T1",
+        "GEN_ESM_T10",
+        "GEN_ESM_T2",
+        "GEN_ESM_T3",
+        "GEN_ESM_T4",
+        "GEN_ESM_T5",
+        "GEN_ESM_T6",
+        "GEN_ESM_T7",
+        "GEN_ESM_T8",
+        "GEN_ESM_T9",
+        "RU_ESM_RimHat",
+        "US_ESM_BLQ10"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "asset_id": "US_RADAR_BPS16",
+  "generated_at": "2026-09-10T16:08:45Z",
+  "branch": "RADAR",
+  "tier": "T5",
+  "country": "USA",
+  "family": "AN/BPS",
+  "socket": "SOCKET_RADAR",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 1.8,
+    "height": 1.8
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/US_RADAR_BPS16_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 633240,
+      "sha256": "34483e7d26955bcec0887852dcd73d18b420f5ca90cf80ea75f2d505d4c75822"
+    },
+    {
+      "path": "FBX/US_RADAR_BPS16_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 33324,
+      "sha256": "04790bf9680d59c48032b18f8584d4f48a1fd3ca8b1ac5b16530b431986064e2",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_RADAR_BPS16_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 26380,
+      "sha256": "3f7f967375f2ec3cf77746722acc3ecfd6409e8cf49305c331daa70d437ff2b3",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_RADAR_BPS16_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 23612,
+      "sha256": "bab2b340597d00f123b820b77b5e6fc69dd0a8bc682c156663bffb0f839d1f05",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_RADAR_BPS16_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 22748,
+      "sha256": "80c6f6dc632a3a27c57ad371f9048f5f9c503f5547abc7678e17ac824eb8e170",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/US_RADAR_BPS16_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21564,
+      "sha256": "1450d86724ce3f0fb2e15187c17f11ff7d6e954c972aeb68ada2916509556a70",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/US_RADAR_BPS16_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 133495,
+      "sha256": "8a94c379f1fdddae8f5d34e41ddf3978f692e61e4fc9cca9131f3acc843d76f3"
+    },
+    {
+      "path": "Preview/US_RADAR_BPS16_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 201361,
+      "sha256": "eaa654772db25d82fa4caacca483822762d6e0f3bb8fbefd81677c7e9277ed4a"
+    },
+    {
+      "path": "Preview/US_RADAR_BPS16_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 117552,
+      "sha256": "70e2ec8715681aa1af3a67ef873c87849d39a1b2a0b795627c9c0e59b582dc93"
+    },
+    {
+      "path": "Preview/US_RADAR_BPS16_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 144167,
+      "sha256": "78063cc2a525fad30ab183a7124616f3dac494e547047f80ebfce3ece0c63896"
+    }
+  ]
+}

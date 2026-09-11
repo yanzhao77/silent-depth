@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_SONAR_HF_T3",
+  "form_factor": "hf_dome",
+  "geometry_source": "GAMEPLAY_FORM",
+  "socket": "SOCKET_SONAR_BOW",
+  "note": "高频声呐导流罩外形",
+  "triangles": {
+    "LOD0": 900,
+    "LOD1": 264,
+    "LOD2": 136,
+    "LOD3": 104
+  },
+  "collision_faces": 59,
+  "collision_object": "UCX_SEN_GEN_SONAR_HF_T3_00",
+  "object_names": [
+    "SEN_GEN_SONAR_HF_T3_LOD0",
+    "SEN_GEN_SONAR_HF_T3_LOD1",
+    "SEN_GEN_SONAR_HF_T3_LOD2",
+    "SEN_GEN_SONAR_HF_T3_LOD3",
+    "UCX_SEN_GEN_SONAR_HF_T3_00",
+    "SOCKET_SONAR_BOW"
+  ],
+  "mesh_names": [
+    "SEN_GEN_SONAR_HF_T3_LOD0",
+    "SEN_GEN_SONAR_HF_T3_LOD1",
+    "SEN_GEN_SONAR_HF_T3_LOD2",
+    "SEN_GEN_SONAR_HF_T3_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\HighFrequency\\GEN_SONAR_HF_T3\\Blend\\GEN_SONAR_HF_T3_MASTER.blend",
+  "previews": [
+    "GEN_SONAR_HF_T3_Front.png",
+    "GEN_SONAR_HF_T3_Side.png",
+    "GEN_SONAR_HF_T3_Top.png",
+    "GEN_SONAR_HF_T3_Perspective.png"
+  ]
+}

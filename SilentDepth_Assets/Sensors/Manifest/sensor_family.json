@@ -1,0 +1,1467 @@
+{
+  "generated_at": "2026-09-11",
+  "note": "家族 → 变体；同一家族的不同 Block 不各自建模，按 §16 归并。",
+  "families": [
+    {
+      "family_id": "AN/BLQ",
+      "label": "AN/BLQ 电子战/电子支援家族",
+      "country": "USA",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "US_ESM_BLQ10",
+          "variant": "BLQ-10",
+          "name": "AN/BLQ-10(V) Submarine EW Support System",
+          "confidence": "CONFIRMED",
+          "branch": "ESM",
+          "branch_tier": 7
+        }
+      ],
+      "notes": "美国海军潜艇电子支援公开代号族。"
+    },
+    {
+      "family_id": "AN/BPS",
+      "label": "AN/BPS 潜艇雷达家族",
+      "country": "USA",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "US_RADAR_BPS16",
+          "variant": "BPS-16",
+          "name": "AN/BPS-15/16 Radar",
+          "confidence": "CONFIRMED",
+          "branch": "RADAR",
+          "branch_tier": 5
+        }
+      ],
+      "notes": "美国海军潜艇雷达公开代号族。"
+    },
+    {
+      "family_id": "AN/BQQ",
+      "label": "AN/BQQ 综合声呐家族",
+      "country": "USA",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "US_SONAR_BQQ5",
+          "variant": "BQQ-5",
+          "name": "AN/BQQ-5",
+          "confidence": "PROBABLE",
+          "branch": "BOW",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "US_SONAR_BQQ6",
+          "variant": "BQQ-6",
+          "name": "AN/BQQ-6",
+          "confidence": "PROBABLE",
+          "branch": "BOW",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "US_SONAR_BQQ10",
+          "variant": "BQQ-10",
+          "name": "AN/BQQ-10",
+          "confidence": "CONFIRMED",
+          "branch": "BOW",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "美国海军潜艇综合声呐系列的公开代号族。"
+    },
+    {
+      "family_id": "AN/BQS",
+      "label": "AN/BQS 声呐家族",
+      "country": "USA",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "US_SONAR_BQS15",
+          "variant": "BQS-15",
+          "name": "AN/BQS-15",
+          "confidence": "PROBABLE",
+          "branch": "HF",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "美国海军潜艇专用声呐公开代号族。"
+    },
+    {
+      "family_id": "CM010",
+      "label": "CM010 光电桅杆",
+      "country": "UK",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "UK_PHO_CM010",
+          "variant": "CM010",
+          "name": "CM010 Optronic Mast",
+          "confidence": "CONFIRMED",
+          "branch": "PHOTONICS",
+          "branch_tier": 7
+        }
+      ],
+      "notes": "英国潜艇光电桅杆公开称谓。"
+    },
+    {
+      "family_id": "GEN_ACT",
+      "label": "通用主动声呐（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_SONAR_ACT_T1",
+          "variant": "T1",
+          "name": "Early Active Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T2",
+          "variant": "T2",
+          "name": "Improved Active Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T3",
+          "variant": "T3",
+          "name": "Mid-Frequency Active Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T4",
+          "variant": "T4",
+          "name": "Advanced Active Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T5",
+          "variant": "T5",
+          "name": "Integrated Active/Passive Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T6",
+          "variant": "T6",
+          "name": "Modern Integrated Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T7",
+          "variant": "T7",
+          "name": "Next Generation Acoustic System",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T8",
+          "variant": "T8",
+          "name": "Active Bow Aperture Integration",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T9",
+          "variant": "T9",
+          "name": "Cooperative Active Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_SONAR_ACT_T10",
+          "variant": "T10",
+          "name": "Next Generation Active Suite",
+          "confidence": "GAMEPLAY",
+          "branch": "ACTIVE",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_BOW",
+      "label": "通用艇艏阵（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_SONAR_BOW_T1",
+          "variant": "T1",
+          "name": "Early Bow Dome Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T2",
+          "variant": "T2",
+          "name": "Spherical Bow Array",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T3",
+          "variant": "T3",
+          "name": "Cylindrical Bow Array",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T4",
+          "variant": "T4",
+          "name": "Water-backed Cylindrical Array",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T5",
+          "variant": "T5",
+          "name": "Large Aperture Bow",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T6",
+          "variant": "T6",
+          "name": "Wide Aperture Conformal Bow",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T7",
+          "variant": "T7",
+          "name": "Bow Array with Flank Integration",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T8",
+          "variant": "T8",
+          "name": "Distributed Bow Aperture",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T9",
+          "variant": "T9",
+          "name": "Bow Multi-Array Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_SONAR_BOW_T10",
+          "variant": "T10",
+          "name": "Next Generation Bow Aperture System",
+          "confidence": "GAMEPLAY",
+          "branch": "BOW",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_EOIR",
+      "label": "通用光电/红外（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_EOIR_T1",
+          "variant": "T1",
+          "name": "Electro Optical",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_EOIR_T2",
+          "variant": "T2",
+          "name": "Infrared",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_EOIR_T3",
+          "variant": "T3",
+          "name": "Digital Camera",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_EOIR_T4",
+          "variant": "T4",
+          "name": "Low Light",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_EOIR_T5",
+          "variant": "T5",
+          "name": "Thermal",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_EOIR_T6",
+          "variant": "T6",
+          "name": "Integrated EO/IR",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_EOIR_T7",
+          "variant": "T7",
+          "name": "High Definition EO/IR",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_EOIR_T8",
+          "variant": "T8",
+          "name": "Multi-Spectral EO/IR",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_EOIR_T9",
+          "variant": "T9",
+          "name": "EO/IR Mast Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_EOIR_T10",
+          "variant": "T10",
+          "name": "Next Generation EO/IR",
+          "confidence": "GAMEPLAY",
+          "branch": "EOIR",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_ESM",
+      "label": "通用电子支援措施（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_ESM_T1",
+          "variant": "T1",
+          "name": "Basic Signal Detection",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_ESM_T2",
+          "variant": "T2",
+          "name": "Improved Signal Detection",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_ESM_T3",
+          "variant": "T3",
+          "name": "Radar Warning Receiver",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_ESM_T4",
+          "variant": "T4",
+          "name": "Direction Finding",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_ESM_T5",
+          "variant": "T5",
+          "name": "Classification Library",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_ESM_T6",
+          "variant": "T6",
+          "name": "Modern ESM",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_ESM_T7",
+          "variant": "T7",
+          "name": "Digital ESM",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_ESM_T8",
+          "variant": "T8",
+          "name": "Wideband ESM",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_ESM_T9",
+          "variant": "T9",
+          "name": "ESM and EO/IR Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_ESM_T10",
+          "variant": "T10",
+          "name": "Next Generation ESM",
+          "confidence": "GAMEPLAY",
+          "branch": "ESM",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_FLK",
+      "label": "通用侧阵（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_SONAR_FLK_T1",
+          "variant": "T1",
+          "name": "Experimental Flank Hydrophone",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T2",
+          "variant": "T2",
+          "name": "Early Flank Array",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T3",
+          "variant": "T3",
+          "name": "Improved Flank Array",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T4",
+          "variant": "T4",
+          "name": "Modern Flank Array",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T5",
+          "variant": "T5",
+          "name": "Large Flank Aperture",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T6",
+          "variant": "T6",
+          "name": "Conformal Flank Array",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T7",
+          "variant": "T7",
+          "name": "Distributed Flank Array",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T8",
+          "variant": "T8",
+          "name": "Integrated Flank Array",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T9",
+          "variant": "T9",
+          "name": "Flank and Towed Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_SONAR_FLK_T10",
+          "variant": "T10",
+          "name": "Next Generation Flank Aperture",
+          "confidence": "GAMEPLAY",
+          "branch": "FLANK",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_HF",
+      "label": "通用高频声呐（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_SONAR_HF_T1",
+          "variant": "T1",
+          "name": "Early High Frequency Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T2",
+          "variant": "T2",
+          "name": "Improved High Frequency Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T3",
+          "variant": "T3",
+          "name": "Hull-Mounted High Frequency Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T4",
+          "variant": "T4",
+          "name": "Mine Detection Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T5",
+          "variant": "T5",
+          "name": "Navigation Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T6",
+          "variant": "T6",
+          "name": "Under-Ice Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T7",
+          "variant": "T7",
+          "name": "Close Range High Frequency Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T8",
+          "variant": "T8",
+          "name": "Forward-Looking High Frequency Array",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T9",
+          "variant": "T9",
+          "name": "Multi-Function High Frequency Suite",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_SONAR_HF_T10",
+          "variant": "T10",
+          "name": "Next Generation High Frequency System",
+          "confidence": "GAMEPLAY",
+          "branch": "HF",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_MINE",
+      "label": "通用探雷声呐（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_SONAR_MINE_T1",
+          "variant": "T1",
+          "name": "Visual Mine Watch",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T2",
+          "variant": "T2",
+          "name": "Early Mine Detection Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T3",
+          "variant": "T3",
+          "name": "Hull Mine Detection Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T4",
+          "variant": "T4",
+          "name": "High Resolution Mine Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T5",
+          "variant": "T5",
+          "name": "Forward-Looking Mine Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T6",
+          "variant": "T6",
+          "name": "Wideband Mine Classification",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T7",
+          "variant": "T7",
+          "name": "Synthetic Aperture Mine Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T8",
+          "variant": "T8",
+          "name": "Autonomous Mine Detection",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T9",
+          "variant": "T9",
+          "name": "Mine and Navigation Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_SONAR_MINE_T10",
+          "variant": "T10",
+          "name": "Next Generation Mine Detection",
+          "confidence": "GAMEPLAY",
+          "branch": "MINE",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_NAV",
+      "label": "通用导航声呐（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_SONAR_NAV_T1",
+          "variant": "T1",
+          "name": "Echo Sounder",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T2",
+          "variant": "T2",
+          "name": "Improved Echo Sounder",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T3",
+          "variant": "T3",
+          "name": "Navigation Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T4",
+          "variant": "T4",
+          "name": "Doppler Velocity Log",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T5",
+          "variant": "T5",
+          "name": "Under-Ice Navigation Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T6",
+          "variant": "T6",
+          "name": "Navigation and Mine Avoidance",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T7",
+          "variant": "T7",
+          "name": "Digital Navigation Suite",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T8",
+          "variant": "T8",
+          "name": "Terrain-Aided Navigation",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T9",
+          "variant": "T9",
+          "name": "Navigation Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_SONAR_NAV_T10",
+          "variant": "T10",
+          "name": "Next Generation Navigation System",
+          "confidence": "GAMEPLAY",
+          "branch": "NAV",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_PHO",
+      "label": "通用潜望镜/光电桅杆（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_MAST_PHO_T1",
+          "variant": "T1",
+          "name": "Optical Periscope",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T2",
+          "variant": "T2",
+          "name": "Improved Periscope",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T3",
+          "variant": "T3",
+          "name": "Attack Periscope",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T4",
+          "variant": "T4",
+          "name": "Electronic Periscope",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T5",
+          "variant": "T5",
+          "name": "Optronic Periscope",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T6",
+          "variant": "T6",
+          "name": "Photonics Mast",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T7",
+          "variant": "T7",
+          "name": "Advanced Photonics Mast",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T8",
+          "variant": "T8",
+          "name": "Multi-Sensor Mast",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T9",
+          "variant": "T9",
+          "name": "Integrated Mast Suite",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_MAST_PHO_T10",
+          "variant": "T10",
+          "name": "Next Generation Mast System",
+          "confidence": "GAMEPLAY",
+          "branch": "PHOTONICS",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_PROC",
+      "label": "通用声学处理（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_PROC_T1",
+          "variant": "T1",
+          "name": "Basic Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_PROC_T2",
+          "variant": "T2",
+          "name": "Analog Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_PROC_T3",
+          "variant": "T3",
+          "name": "Digital Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_PROC_T4",
+          "variant": "T4",
+          "name": "Integrated Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_PROC_T5",
+          "variant": "T5",
+          "name": "Advanced Beamforming",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_PROC_T6",
+          "variant": "T6",
+          "name": "Broadband Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_PROC_T7",
+          "variant": "T7",
+          "name": "Multi-Array Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_PROC_T8",
+          "variant": "T8",
+          "name": "Adaptive Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_PROC_T9",
+          "variant": "T9",
+          "name": "AI-Assisted Acoustic Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_PROC_T10",
+          "variant": "T10",
+          "name": "Next Generation Acoustic Processing",
+          "confidence": "GAMEPLAY",
+          "branch": "PROCESSING",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_PSV",
+      "label": "通用被动声呐（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_SONAR_PSV_T1",
+          "variant": "T1",
+          "name": "Early Passive Hydrophone",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T2",
+          "variant": "T2",
+          "name": "Improved Hydrophone",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T3",
+          "variant": "T3",
+          "name": "Bow Passive Array",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T4",
+          "variant": "T4",
+          "name": "Advanced Bow Array",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T5",
+          "variant": "T5",
+          "name": "Flank Array",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T6",
+          "variant": "T6",
+          "name": "Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T7",
+          "variant": "T7",
+          "name": "Low Frequency Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T8",
+          "variant": "T8",
+          "name": "Advanced Distributed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T9",
+          "variant": "T9",
+          "name": "Integrated Multi-Array Sonar",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_SONAR_PSV_T10",
+          "variant": "T10",
+          "name": "Next Generation Integrated Acoustic System",
+          "confidence": "GAMEPLAY",
+          "branch": "PASSIVE",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_RADAR",
+      "label": "通用潜艇雷达（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_RADAR_T1",
+          "variant": "T1",
+          "name": "Early Surface Search Radar",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_RADAR_T2",
+          "variant": "T2",
+          "name": "Improved Surface Search Radar",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_RADAR_T3",
+          "variant": "T3",
+          "name": "Navigation Radar",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_RADAR_T4",
+          "variant": "T4",
+          "name": "Periscope Radar",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_RADAR_T5",
+          "variant": "T5",
+          "name": "Mast Radar",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_RADAR_T6",
+          "variant": "T6",
+          "name": "Frequency Agile Surface Search",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_RADAR_T7",
+          "variant": "T7",
+          "name": "Low Probability of Intercept Radar",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_RADAR_T8",
+          "variant": "T8",
+          "name": "Digital Mast Radar",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_RADAR_T9",
+          "variant": "T9",
+          "name": "Radar and ESM Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_RADAR_T10",
+          "variant": "T10",
+          "name": "Next Generation Submarine Radar",
+          "confidence": "GAMEPLAY",
+          "branch": "RADAR",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "GEN_TWD",
+      "label": "通用拖曳阵（游戏设定）",
+      "country": "GENERIC",
+      "kind": "GAMEPLAY",
+      "variants": [
+        {
+          "sensor_id": "GEN_SONAR_TWD_T1",
+          "variant": "T1",
+          "name": "Towed Array Housing",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 1
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T2",
+          "variant": "T2",
+          "name": "Legacy Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T3",
+          "variant": "T3",
+          "name": "Improved Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 3
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T4",
+          "variant": "T4",
+          "name": "Modern Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 4
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T5",
+          "variant": "T5",
+          "name": "Thin-Line Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 5
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T6",
+          "variant": "T6",
+          "name": "Low Frequency Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T7",
+          "variant": "T7",
+          "name": "Wide Aperture Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 7
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T8",
+          "variant": "T8",
+          "name": "Advanced Towed Array",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 8
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T9",
+          "variant": "T9",
+          "name": "Distributed Towed and Hull Fusion",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 9
+        },
+        {
+          "sensor_id": "GEN_SONAR_TWD_T10",
+          "variant": "T10",
+          "name": "Next Generation Towed System",
+          "confidence": "GAMEPLAY",
+          "branch": "TOWED",
+          "branch_tier": 10
+        }
+      ],
+      "notes": "纯游戏科技树家族，不对应现实型号。"
+    },
+    {
+      "family_id": "Irtysh",
+      "label": "Irtysh / Amfora",
+      "country": "Russia",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "RU_SONAR_Yasen",
+          "variant": "Yasen",
+          "name": "MGK-600 Irtysh-Amfora",
+          "confidence": "PROBABLE",
+          "branch": "BOW",
+          "branch_tier": 9
+        }
+      ],
+      "notes": "俄罗斯潜艇综合声呐公开报道名称。"
+    },
+    {
+      "family_id": "LAB",
+      "label": "Large Aperture Bow 家族",
+      "country": "USA",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "US_SONAR_LAB",
+          "variant": "LAB",
+          "name": "Large Aperture Bow (LAB) Array",
+          "confidence": "CONFIRMED",
+          "branch": "BOW",
+          "branch_tier": 5
+        }
+      ],
+      "notes": "大型孔径艇艏阵公开称谓。"
+    },
+    {
+      "family_id": "MGK",
+      "label": "MGK 声呐家族",
+      "country": "Russia",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "RU_SONAR_MGK540",
+          "variant": "MGK-540",
+          "name": "MGK-540 Skat-3",
+          "confidence": "PROBABLE",
+          "branch": "BOW",
+          "branch_tier": 6
+        },
+        {
+          "sensor_id": "RU_SONAR_Pelamida",
+          "variant": "Pelamida",
+          "name": "Pelamida Towed Array",
+          "confidence": "UNKNOWN",
+          "branch": "TOWED",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "苏联/俄罗斯潜艇声呐公开代号族。"
+    },
+    {
+      "family_id": "MRK",
+      "label": "MRK 潜艇雷达家族",
+      "country": "Russia",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "RU_RADAR_MRK50",
+          "variant": "MRK-50",
+          "name": "MRK-50 Albatross",
+          "confidence": "PROBABLE",
+          "branch": "RADAR",
+          "branch_tier": 4
+        }
+      ],
+      "notes": "俄罗斯潜艇雷达公开报道代号族。"
+    },
+    {
+      "family_id": "RimHat",
+      "label": "Rim Hat 电子支援系统",
+      "country": "Russia",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "RU_ESM_RimHat",
+          "variant": "RimHat",
+          "name": "Rim Hat ESM",
+          "confidence": "PROBABLE",
+          "branch": "ESM",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "俄罗斯潜艇电子支援公开报道名称。"
+    },
+    {
+      "family_id": "TB",
+      "label": "TB 系列拖曳阵",
+      "country": "USA",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "US_SONAR_TB16",
+          "variant": "TB-16",
+          "name": "TB-16 Tactical Towed Array",
+          "confidence": "PROBABLE",
+          "branch": "TOWED",
+          "branch_tier": 2
+        },
+        {
+          "sensor_id": "US_SONAR_TB29",
+          "variant": "TB-29",
+          "name": "TB-29 Thin Line Towed Array",
+          "confidence": "CONFIRMED",
+          "branch": "TOWED",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "美国海军拖曳线列阵公开代号族。"
+    },
+    {
+      "family_id": "Thales2074",
+      "label": "Thales Sonar 2074",
+      "country": "UK",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "UK_SONAR_2074",
+          "variant": "2074",
+          "name": "Sonar 2074",
+          "confidence": "PROBABLE",
+          "branch": "BOW",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "英国潜艇声呐升级公开名称。"
+    },
+    {
+      "family_id": "Thales2076",
+      "label": "Thales Sonar 2076",
+      "country": "UK",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "UK_SONAR_Astute",
+          "variant": "2076",
+          "name": "Sonar 2076",
+          "confidence": "PROBABLE",
+          "branch": "BOW",
+          "branch_tier": 9
+        }
+      ],
+      "notes": "英国 Astute 级公开声呐套件名称。"
+    },
+    {
+      "family_id": "UNKNOWN_CN",
+      "label": "中国潜艇声呐型号未公开",
+      "country": "UNKNOWN",
+      "kind": "UNKNOWN",
+      "variants": [
+        {
+          "sensor_id": "CN_SONAR_Type093",
+          "variant": "Type093",
+          "name": "Type 093 Sonar (公开型号未知)",
+          "confidence": "UNKNOWN",
+          "branch": "BOW",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "公开资料未给出型号，族系留空。"
+    },
+    {
+      "family_id": "UNKNOWN_IN",
+      "label": "印度潜艇声呐型号未公开",
+      "country": "UNKNOWN",
+      "kind": "UNKNOWN",
+      "variants": [
+        {
+          "sensor_id": "IN_SONAR_Arihant",
+          "variant": "Arihant",
+          "name": "Arihant Sonar (公开型号未知)",
+          "confidence": "UNKNOWN",
+          "branch": "BOW",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "公开资料未给出型号，族系留空。"
+    },
+    {
+      "family_id": "US_PHO",
+      "label": "美国光电桅杆家族",
+      "country": "USA",
+      "kind": "REAL_PUBLIC",
+      "variants": [
+        {
+          "sensor_id": "US_PHO_Virginia",
+          "variant": "Virginia",
+          "name": "Virginia-class Photonics Mast",
+          "confidence": "CONFIRMED",
+          "branch": "PHOTONICS",
+          "branch_tier": 6
+        }
+      ],
+      "notes": "美国核潜艇光电桅杆公开称谓。"
+    }
+  ]
+}

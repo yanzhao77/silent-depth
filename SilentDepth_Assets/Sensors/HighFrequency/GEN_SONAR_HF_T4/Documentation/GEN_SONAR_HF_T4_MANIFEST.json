@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_SONAR_HF_T4",
+  "generated_at": "2026-09-10T16:08:43Z",
+  "branch": "HF",
+  "tier": "T4",
+  "country": "GENERIC",
+  "family": "GEN_HF",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 1.2,
+    "height": 1.2
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_SONAR_HF_T4_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 630172,
+      "sha256": "ddf780eaf661b3169ea1e0850f15cf8551844eb60e8b9d36de703701a0550366"
+    },
+    {
+      "path": "FBX/GEN_SONAR_HF_T4_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 29612,
+      "sha256": "d0aae5fcd6178d49498bd6080ecbc2eb33a9bf1cfe1121f2ba07f1efe7fdfb43",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_HF_T4_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 24812,
+      "sha256": "342ee0fed2f2834186d2fcb768bc4cbb78f842a30a9c7066a40b348a04b9bf4f",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_HF_T4_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21516,
+      "sha256": "c6ff8ee0d6fa9a843076949c3e7d7540ed8519907486b95a0268a0afb9430705",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_HF_T4_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21052,
+      "sha256": "e4247960462f9688a93b064eaad3054341e6fad371b2ac61fb28f1f17f747d72",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_SONAR_HF_T4_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21004,
+      "sha256": "86026964e4c09753b5b7b5a90f293bbe1da000fa24188d503a9efbfbdd5437fe",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_SONAR_HF_T4_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 213169,
+      "sha256": "a2fd9779d96703dc93b3a089a734e672ac33d90f7222e48ab84599c76b372004"
+    },
+    {
+      "path": "Preview/GEN_SONAR_HF_T4_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 161334,
+      "sha256": "59511560387f7a3b8268be3f0fe28a13d32d8d3f9b148b58e30318ec2204c402"
+    },
+    {
+      "path": "Preview/GEN_SONAR_HF_T4_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 151019,
+      "sha256": "c107c20c573815fb41d93b54c8ddcdbe750b40084e403c7ba9e978bb9ad38212"
+    },
+    {
+      "path": "Preview/GEN_SONAR_HF_T4_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 159593,
+      "sha256": "637fb4db86508d3b86817e29be82865291bd9873a7717e22abf92dde11fe4fe0"
+    }
+  ]
+}

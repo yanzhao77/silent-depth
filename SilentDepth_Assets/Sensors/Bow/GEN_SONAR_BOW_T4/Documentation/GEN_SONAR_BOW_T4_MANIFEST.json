@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_SONAR_BOW_T4",
+  "generated_at": "2026-09-10T16:08:41Z",
+  "branch": "BOW",
+  "tier": "T4",
+  "country": "GENERIC",
+  "family": "GEN_BOW",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 2.8,
+    "diameter": 4.4,
+    "height": 4.4
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_SONAR_BOW_T4_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 781460,
+      "sha256": "1eb997402afeedbd2e028ee504a62b0fa1d4f02febe814bd751d68e14a501653"
+    },
+    {
+      "path": "FBX/GEN_SONAR_BOW_T4_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 74076,
+      "sha256": "018d03237d965c371bcb4ae47dd19d3ea7763e253106b680bfb5172c8b2936f0",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_BOW_T4_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 67340,
+      "sha256": "eef47395ac436d98d3e67e8553da7b6280393571ca116c7adabe42b2bc6f67a2",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_BOW_T4_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 24156,
+      "sha256": "cdf9f94b558a689dae9643f6fbe2a4d0fd86d42ed71458a1e18416493f0c42a2",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_BOW_T4_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21020,
+      "sha256": "0ba3cf7b5c85b7c9b31922d9e885a0b1386d1354cfafa7df18204c7f28504283",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_SONAR_BOW_T4_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21276,
+      "sha256": "5a51cddcb285b36acd3c466afbb1e1253bc47e69eb16141ba395b4c36bfaff7a",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_SONAR_BOW_T4_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 236726,
+      "sha256": "44895de7a909a17bc7f8974aa4157b4ccc5afa932bd997557286e1c0fc7718a7"
+    },
+    {
+      "path": "Preview/GEN_SONAR_BOW_T4_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 214135,
+      "sha256": "890cd0b4d8daeadd0b8d2737db7f43873c7c084d4f6cb78ab3c12681e1b1557d"
+    },
+    {
+      "path": "Preview/GEN_SONAR_BOW_T4_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 253681,
+      "sha256": "b016f4ffad26ee20212ab2633909cb51026e4c1507cfadb6b5d35a43ddd8ed04"
+    },
+    {
+      "path": "Preview/GEN_SONAR_BOW_T4_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 198247,
+      "sha256": "2662eb255943967e511347acda3f2218dfa787fcd22c68fb6fd8c76526c632e8"
+    }
+  ]
+}

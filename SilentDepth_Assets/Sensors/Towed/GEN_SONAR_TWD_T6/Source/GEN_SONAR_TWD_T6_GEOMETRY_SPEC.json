@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_SONAR_TWD_T6",
+  "form_factor": "towed_line",
+  "form_factor_note": "拖曳线列阵与拖缆",
+  "dimensions_m": {
+    "length": 30.0,
+    "diameter": 0.09,
+    "height": 0.09
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "GAMEPLAY_FORM",
+  "source_note": "低频拖曳阵代表性外形。",
+  "branch": "TOWED",
+  "branch_label_zh": "拖曳阵",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "tier": "T6"
+}

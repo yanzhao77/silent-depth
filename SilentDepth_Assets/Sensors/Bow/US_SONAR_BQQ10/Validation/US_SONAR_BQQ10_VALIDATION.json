@@ -1,0 +1,122 @@
+{
+  "asset_id": "US_SONAR_BQQ10",
+  "validated_at": "2026-09-11",
+  "status": "COMPLETE",
+  "checks": {
+    "required_dirs": "PASS",
+    "required_files": "PASS",
+    "fbx_version_7400": "PASS",
+    "lod_chain": "PASS",
+    "collision": "PASS",
+    "preview": "PASS",
+    "naming": "PASS",
+    "offline_runtime": "PASS"
+  },
+  "issues": [],
+  "evidence": {
+    "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\US_SONAR_BQQ10",
+    "fbx": [
+      {
+        "file": "US_SONAR_BQQ10_LOD0.fbx",
+        "fbx_version": 7400,
+        "bytes": 167212
+      },
+      {
+        "file": "US_SONAR_BQQ10_LOD1.fbx",
+        "fbx_version": 7400,
+        "bytes": 79884
+      },
+      {
+        "file": "US_SONAR_BQQ10_LOD2.fbx",
+        "fbx_version": 7400,
+        "bytes": 66460
+      },
+      {
+        "file": "US_SONAR_BQQ10_LOD3.fbx",
+        "fbx_version": 7400,
+        "bytes": 60620
+      },
+      {
+        "file": "US_SONAR_BQQ10_COLLISION.fbx",
+        "fbx_version": 7400,
+        "bytes": 37900
+      }
+    ],
+    "geometry": {
+      "sensor_id": "US_SONAR_BQQ10",
+      "form_factor": "bow_dome_sphere",
+      "geometry_source": "PUBLIC_FORM",
+      "socket": "SOCKET_SONAR_BOW",
+      "note": "艇艏球形阵（公开外形）",
+      "triangles": {
+        "LOD0": 2492,
+        "LOD1": 900,
+        "LOD2": 704,
+        "LOD3": 616
+      },
+      "collision_faces": 199,
+      "collision_object": "UCX_SEN_US_SONAR_BQQ10_00",
+      "object_names": [
+        "SEN_US_SONAR_BQQ10_LOD0",
+        "SEN_US_SONAR_BQQ10_LOD1",
+        "SEN_US_SONAR_BQQ10_LOD2",
+        "SEN_US_SONAR_BQQ10_LOD3",
+        "UCX_SEN_US_SONAR_BQQ10_00",
+        "SOCKET_SONAR_BOW"
+      ],
+      "mesh_names": [
+        "SEN_US_SONAR_BQQ10_LOD0",
+        "SEN_US_SONAR_BQQ10_LOD1",
+        "SEN_US_SONAR_BQQ10_LOD2",
+        "SEN_US_SONAR_BQQ10_LOD3"
+      ],
+      "units": "meters",
+      "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\US_SONAR_BQQ10\\Blend\\US_SONAR_BQQ10_MASTER.blend",
+      "previews": [
+        "US_SONAR_BQQ10_Front.png",
+        "US_SONAR_BQQ10_Side.png",
+        "US_SONAR_BQQ10_Top.png",
+        "US_SONAR_BQQ10_Perspective.png"
+      ]
+    },
+    "previews": [
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 16.083,
+        "stddev_subject": 10.398,
+        "subject_fraction": 0.42273,
+        "file": "US_SONAR_BQQ10_Front.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 15.876,
+        "stddev_subject": 19.038,
+        "subject_fraction": 0.22193,
+        "file": "US_SONAR_BQQ10_Perspective.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 25.901,
+        "stddev_subject": 23.553,
+        "subject_fraction": 0.38691,
+        "file": "US_SONAR_BQQ10_Side.png"
+      },
+      {
+        "checked": true,
+        "width": 640,
+        "height": 480,
+        "stddev": 23.478,
+        "stddev_subject": 22.563,
+        "subject_fraction": 0.38541,
+        "file": "US_SONAR_BQQ10_Top.png"
+      }
+    ],
+    "json_with_urls": []
+  }
+}

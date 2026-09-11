@@ -1,0 +1,93 @@
+{
+  "asset_id": "US_SONAR_LAB",
+  "generated_at": "2026-09-10T16:08:41Z",
+  "branch": "BOW",
+  "tier": "T5",
+  "country": "USA",
+  "family": "LAB",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 7.6,
+    "height": 7.6
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/US_SONAR_LAB_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 996028,
+      "sha256": "315e8e6201e2c978a8dd2dc66f66d5d26041b4314efe7cb52887fe8472b44083"
+    },
+    {
+      "path": "FBX/US_SONAR_LAB_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 137516,
+      "sha256": "edcc2d0103035895fb9a0b97be17f0e70d736da0eeab63e002e5d21e227d89c8",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_SONAR_LAB_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 93676,
+      "sha256": "3764385775fefa9643a3ebb7a3cf88abb5f3b0898f13225717b6b189c3dc60e2",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_SONAR_LAB_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 60828,
+      "sha256": "124ed2b0b690e4750f10a4591d116b7bd3e36830a677fdbf593e89f16020a4f6",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/US_SONAR_LAB_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 57532,
+      "sha256": "569adf67aa1c87e994cf6c7fd74a8e69d251214830b615c22b70bf57ebd7676b",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/US_SONAR_LAB_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 34364,
+      "sha256": "a6d3cdc0d11aaaded175ed25dd377dfe8220de1ceaf5d73c3ba1ec67fe1fbe8a",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/US_SONAR_LAB_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 200407,
+      "sha256": "4a6c9f36a496f794151740d9cd424899857badeea738c78eb4f1ff2ea80730d2"
+    },
+    {
+      "path": "Preview/US_SONAR_LAB_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 149059,
+      "sha256": "fa2bafc96e7b93f70d1ad3bc5f7e0bcfbe5dad09074198e03ac2370707626879"
+    },
+    {
+      "path": "Preview/US_SONAR_LAB_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 179651,
+      "sha256": "26ee9cb6765c989d7665956602f5e4e61ffa85af5d97c5bf8c20d3dd35fdcfab"
+    },
+    {
+      "path": "Preview/US_SONAR_LAB_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 186402,
+      "sha256": "01a87e5f50ab08fb81aa39ed5777d5dae019b84e38f9c6919cbc4f0358b12a12"
+    }
+  ]
+}

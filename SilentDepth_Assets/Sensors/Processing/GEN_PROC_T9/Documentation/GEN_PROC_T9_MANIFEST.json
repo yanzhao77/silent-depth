@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_PROC_T9",
+  "generated_at": "2026-09-10T16:08:45Z",
+  "branch": "PROCESSING",
+  "tier": "T9",
+  "country": "GENERIC",
+  "family": "GEN_PROC",
+  "socket": "",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.4,
+    "diameter": 2.4,
+    "height": 2.4
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_PROC_T9_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 612900,
+      "sha256": "cbbd34fda712cf21ccd28cacc9fb9efd9303901210de902c1fc4445cd59fbeed"
+    },
+    {
+      "path": "FBX/GEN_PROC_T9_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20812,
+      "sha256": "6d5a7910b522fdd17ed890cbaa3910be8c8902e08d1a10f100865d8be0099a4d",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_PROC_T9_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20812,
+      "sha256": "c8aea86be2c4e09816c45bbb3ad3a907a67ba7bc44e714f5fc143fd12c43e512",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_PROC_T9_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 19772,
+      "sha256": "aa1110eaf7baaa343fb4049c7bd85910ef9aa148933afd329c2d0e853f42318f",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_PROC_T9_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 19772,
+      "sha256": "b4d9475e1d6476eecb38ae30d053f2a24e8e27069f8af2a920a18ff94cdb91a4",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_PROC_T9_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 19436,
+      "sha256": "fbbd0f161332bd813464b4aba1ce0b5da5c03a3a79abfce269bf3c6dc33dfb6f",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_PROC_T9_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 231919,
+      "sha256": "d6fdafa69a0e6c8eb70e9b4a8da713d5baedefa6762e39e0e254bd532d489421"
+    },
+    {
+      "path": "Preview/GEN_PROC_T9_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 183883,
+      "sha256": "847e0defb14e09aaea26784a1e1307b6ef0da8a911dbc3262989b1ad8764aba0"
+    },
+    {
+      "path": "Preview/GEN_PROC_T9_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 217595,
+      "sha256": "8348ed7c45054abb2b050a535f05dec23cc2ee029660bc9c01dc8b197bda042f"
+    },
+    {
+      "path": "Preview/GEN_PROC_T9_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 224183,
+      "sha256": "4ba1e38d9b005d8e9a19adf7f6c1ed8fe5498ff084e12011dfdcb938b51fea7e"
+    }
+  ]
+}

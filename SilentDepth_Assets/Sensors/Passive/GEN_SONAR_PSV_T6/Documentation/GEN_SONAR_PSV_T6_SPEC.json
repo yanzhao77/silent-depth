@@ -1,0 +1,34 @@
+{
+  "asset_id": "GEN_SONAR_PSV_T6",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "PASSIVE",
+  "tier": "T6",
+  "country": "GENERIC",
+  "family": "GEN_PSV",
+  "name": "Towed Array",
+  "status": "GAMEPLAY",
+  "confidence": "GAMEPLAY",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 3.2,
+    "diameter": 0.9,
+    "height": 0.9
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [],
+  "references": []
+}

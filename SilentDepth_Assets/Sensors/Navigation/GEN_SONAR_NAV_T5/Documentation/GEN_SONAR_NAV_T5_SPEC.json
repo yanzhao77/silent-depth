@@ -1,0 +1,34 @@
+{
+  "asset_id": "GEN_SONAR_NAV_T5",
+  "generated_at": "2026-09-10",
+  "template_version": "v1.0.0",
+  "branch": "NAV",
+  "tier": "T5",
+  "country": "GENERIC",
+  "family": "GEN_NAV",
+  "name": "Under-Ice Navigation Sonar",
+  "status": "GAMEPLAY",
+  "confidence": "GAMEPLAY",
+  "asset_status": "PLANNED",
+  "socket": "SOCKET_SONAR_BOW",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.4,
+    "diameter": 1.5,
+    "height": 1.5
+  },
+  "materials": [
+    "SEN_MAT_ArrayFace",
+    "SEN_MAT_Hull",
+    "SEN_MAT_DarkMetal",
+    "SEN_MAT_Mast",
+    "SEN_MAT_Glass",
+    "SEN_MAT_Composite",
+    "SEN_MAT_Cable",
+    "SEN_MAT_Rack",
+    "SEN_MAT_RadarFace",
+    "SEN_MAT_ESM"
+  ],
+  "compatible_submarines": [],
+  "references": []
+}

@@ -1,0 +1,29 @@
+{
+  "sensor_id": "US_SONAR_LAB",
+  "form_factor": "bow_large_aperture",
+  "form_factor_note": "大型孔径艇艏阵",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 7.6,
+    "height": 7.6
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "PUBLIC_FORM",
+  "source_note": "任务书 §7：Virginia Block III 大型孔径艇艏阵，外形为宽孔径而非球形。",
+  "branch": "BOW",
+  "branch_label_zh": "艇艏声呐阵",
+  "socket": "SOCKET_SONAR_BOW",
+  "tier": "T5"
+}

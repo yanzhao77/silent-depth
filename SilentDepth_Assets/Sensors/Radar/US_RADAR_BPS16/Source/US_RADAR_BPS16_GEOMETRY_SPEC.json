@@ -1,0 +1,29 @@
+{
+  "sensor_id": "US_RADAR_BPS16",
+  "form_factor": "radar_dish",
+  "form_factor_note": "雷达天线",
+  "dimensions_m": {
+    "length": 1.6,
+    "diameter": 1.8,
+    "height": 1.8
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "PUBLIC_FORM",
+  "source_note": "公开资料记载的潜艇对海搜索雷达天线外形。",
+  "branch": "RADAR",
+  "branch_label_zh": "潜艇雷达",
+  "socket": "SOCKET_RADAR",
+  "tier": "T5"
+}

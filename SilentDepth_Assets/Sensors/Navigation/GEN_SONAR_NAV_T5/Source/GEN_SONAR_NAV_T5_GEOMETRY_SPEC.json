@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_SONAR_NAV_T5",
+  "form_factor": "hf_dome",
+  "form_factor_note": "高频声呐导流罩",
+  "dimensions_m": {
+    "length": 1.4,
+    "diameter": 1.5,
+    "height": 1.5
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "GAMEPLAY_FORM",
+  "source_note": "冰下导航声呐代表性外形。",
+  "branch": "NAV",
+  "branch_label_zh": "导航声呐",
+  "socket": "SOCKET_SONAR_BOW",
+  "tier": "T5"
+}

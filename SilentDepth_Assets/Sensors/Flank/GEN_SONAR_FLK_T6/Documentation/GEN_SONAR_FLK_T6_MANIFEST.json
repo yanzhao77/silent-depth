@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_SONAR_FLK_T6",
+  "generated_at": "2026-09-10T16:08:42Z",
+  "branch": "FLANK",
+  "tier": "T6",
+  "country": "GENERIC",
+  "family": "GEN_FLK",
+  "socket": "SOCKET_SONAR_FLANK_R",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 14.0,
+    "diameter": 0.35,
+    "height": 0.35
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_SONAR_FLK_T6_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 589326,
+      "sha256": "264b3fb847a9bc4eea1539d588fcf0bebb76beab262a5f23137cab478caa9d5a"
+    },
+    {
+      "path": "FBX/GEN_SONAR_FLK_T6_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21516,
+      "sha256": "f24f2a78db492cc442fbd60c6bb45d8a187b29e17c8f8b9ce40bd623d9145ee6",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_FLK_T6_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21516,
+      "sha256": "1e8fbe11f53dee0ffe697a30785451bc71a8a8deff022b63fde48c6f877f89de",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_FLK_T6_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20060,
+      "sha256": "19b7c2b7b9a6c9651760a17de7a5289e7e24f3ef1e5bc7c7379bc9bac83332e3",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_SONAR_FLK_T6_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20060,
+      "sha256": "d729e0cdfbdff7586126b1782a768a0b3461a1acf75ee415c46fff584f4194d1",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_SONAR_FLK_T6_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 20364,
+      "sha256": "dd1987fa2eee690cd83f386e475f0b93d2b4d8aa23f705631530b7e024f23668",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_SONAR_FLK_T6_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 128831,
+      "sha256": "417becd7283c3991a63daec2723e2ae2ccaa9437db43fd8a1bc5476db90fc980"
+    },
+    {
+      "path": "Preview/GEN_SONAR_FLK_T6_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 74778,
+      "sha256": "903bbfe69998c1087fb47748914aef92b71faa35e45ca1b3fa51b7bacc770424"
+    },
+    {
+      "path": "Preview/GEN_SONAR_FLK_T6_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 74780,
+      "sha256": "3b7c75219b36ae8819448ff87833590372da6be644ebcbfd7e4b4632ea5ab8a9"
+    },
+    {
+      "path": "Preview/GEN_SONAR_FLK_T6_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 88153,
+      "sha256": "f833a949f95e11164a2e8f03b53d32eeb8e94e122ca30d407b3568a853497c2e"
+    }
+  ]
+}

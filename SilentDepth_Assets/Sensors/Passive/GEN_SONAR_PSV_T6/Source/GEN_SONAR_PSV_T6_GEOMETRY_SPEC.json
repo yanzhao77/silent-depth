@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_SONAR_PSV_T6",
+  "form_factor": "towed_housing",
+  "form_factor_note": "拖曳阵收放舱",
+  "dimensions_m": {
+    "length": 3.2,
+    "diameter": 0.9,
+    "height": 0.9
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "GAMEPLAY_FORM",
+  "source_note": "游戏科技树 T6 拖曳阵收放舱，代表性外形。",
+  "branch": "PASSIVE",
+  "branch_label_zh": "被动声呐",
+  "socket": "SOCKET_TOWED_ARRAY",
+  "tier": "T6"
+}

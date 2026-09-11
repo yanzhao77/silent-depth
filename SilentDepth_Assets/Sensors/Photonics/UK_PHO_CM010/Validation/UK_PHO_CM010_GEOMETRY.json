@@ -1,0 +1,37 @@
+{
+  "sensor_id": "UK_PHO_CM010",
+  "form_factor": "mast_photonics",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "note": "光电桅杆外形",
+  "triangles": {
+    "LOD0": 360,
+    "LOD1": 176,
+    "LOD2": 100,
+    "LOD3": 92
+  },
+  "collision_faces": 42,
+  "collision_object": "UCX_SEN_UK_PHO_CM010_00",
+  "object_names": [
+    "SEN_UK_PHO_CM010_LOD0",
+    "SEN_UK_PHO_CM010_LOD1",
+    "SEN_UK_PHO_CM010_LOD2",
+    "SEN_UK_PHO_CM010_LOD3",
+    "UCX_SEN_UK_PHO_CM010_00",
+    "SOCKET_PHOTONICS_MAST"
+  ],
+  "mesh_names": [
+    "SEN_UK_PHO_CM010_LOD0",
+    "SEN_UK_PHO_CM010_LOD1",
+    "SEN_UK_PHO_CM010_LOD2",
+    "SEN_UK_PHO_CM010_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Photonics\\UK_PHO_CM010\\Blend\\UK_PHO_CM010_MASTER.blend",
+  "previews": [
+    "UK_PHO_CM010_Front.png",
+    "UK_PHO_CM010_Side.png",
+    "UK_PHO_CM010_Top.png",
+    "UK_PHO_CM010_Perspective.png"
+  ]
+}

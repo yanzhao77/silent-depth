@@ -1,0 +1,37 @@
+{
+  "sensor_id": "GEN_SONAR_BOW_T4",
+  "form_factor": "bow_water_backed",
+  "geometry_source": "PUBLIC_FORM",
+  "socket": "SOCKET_SONAR_BOW",
+  "note": "水背衬柱形阵（公开结构项）",
+  "triangles": {
+    "LOD0": 1260,
+    "LOD1": 1100,
+    "LOD2": 108,
+    "LOD3": 52
+  },
+  "collision_faces": 25,
+  "collision_object": "UCX_SEN_GEN_SONAR_BOW_T4_00",
+  "object_names": [
+    "SEN_GEN_SONAR_BOW_T4_LOD0",
+    "SEN_GEN_SONAR_BOW_T4_LOD1",
+    "SEN_GEN_SONAR_BOW_T4_LOD2",
+    "SEN_GEN_SONAR_BOW_T4_LOD3",
+    "UCX_SEN_GEN_SONAR_BOW_T4_00",
+    "SOCKET_SONAR_BOW"
+  ],
+  "mesh_names": [
+    "SEN_GEN_SONAR_BOW_T4_LOD0",
+    "SEN_GEN_SONAR_BOW_T4_LOD1",
+    "SEN_GEN_SONAR_BOW_T4_LOD2",
+    "SEN_GEN_SONAR_BOW_T4_LOD3"
+  ],
+  "units": "meters",
+  "master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Sensors\\Bow\\GEN_SONAR_BOW_T4\\Blend\\GEN_SONAR_BOW_T4_MASTER.blend",
+  "previews": [
+    "GEN_SONAR_BOW_T4_Front.png",
+    "GEN_SONAR_BOW_T4_Side.png",
+    "GEN_SONAR_BOW_T4_Top.png",
+    "GEN_SONAR_BOW_T4_Perspective.png"
+  ]
+}

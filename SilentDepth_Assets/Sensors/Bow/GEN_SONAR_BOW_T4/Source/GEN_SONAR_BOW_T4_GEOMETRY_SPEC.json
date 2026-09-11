@@ -1,0 +1,29 @@
+{
+  "sensor_id": "GEN_SONAR_BOW_T4",
+  "form_factor": "bow_water_backed",
+  "form_factor_note": "水背衬柱形阵",
+  "dimensions_m": {
+    "length": 2.8,
+    "diameter": 4.4,
+    "height": 4.4
+  },
+  "axes": {
+    "forward": "+X",
+    "port_starboard": "Y",
+    "up": "Z"
+  },
+  "units": "meters (1 Blender meter = 100 Unreal Units)",
+  "lod_detail_levels": {
+    "LOD0": 0,
+    "LOD1": 1,
+    "LOD2": 2,
+    "LOD3": 3
+  },
+  "determinism": "完全程序化构建；无随机数；同一输入必然产出同一网格。",
+  "geometry_source": "PUBLIC_FORM",
+  "source_note": "水背衬柱形阵外形（任务书 §7 结构项）。",
+  "branch": "BOW",
+  "branch_label_zh": "艇艏声呐阵",
+  "socket": "SOCKET_SONAR_BOW",
+  "tier": "T4"
+}

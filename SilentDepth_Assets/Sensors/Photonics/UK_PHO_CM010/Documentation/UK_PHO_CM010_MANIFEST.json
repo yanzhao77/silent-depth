@@ -1,0 +1,93 @@
+{
+  "asset_id": "UK_PHO_CM010",
+  "generated_at": "2026-09-10T16:08:44Z",
+  "branch": "PHOTONICS",
+  "tier": "T7",
+  "country": "UK",
+  "family": "CM010",
+  "socket": "SOCKET_PHOTONICS_MAST",
+  "geometry_source": "PUBLIC_FORM",
+  "dimensions_m": {
+    "length": 10.0,
+    "diameter": 0.38,
+    "height": 0.38
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/UK_PHO_CM010_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 694124,
+      "sha256": "e98eb895e54d94188bd504a91b68dcd271212a9be84fe47a4b7e1c403bc25786"
+    },
+    {
+      "path": "FBX/UK_PHO_CM010_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 36796,
+      "sha256": "f3be2f04d0666c88287799750aba85adb65645e8768275440adc8af90e5d2bc5",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/UK_PHO_CM010_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 28716,
+      "sha256": "580ee077235cdcc1256187d0c4f3f857f098814a15a9707630c7e538d71186ca",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/UK_PHO_CM010_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 25404,
+      "sha256": "211af5030e29a05deac2bafbde7219c9dbba3e990b445358b0b38340fd7e7048",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/UK_PHO_CM010_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 24908,
+      "sha256": "6aa455c7ac198bbf2d953a2af2005884c01288c0f5ee6aa7ca53d1f5d1497e49",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/UK_PHO_CM010_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 24348,
+      "sha256": "21302f9ec61c2b90f548ab5fc536343d1a6087e74f1b649687c6d8afa8533f66",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/UK_PHO_CM010_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 130673,
+      "sha256": "b9d048b61fcdf96b2105a4fd4de8db9cebc7b2b157eacb04680e5a2401cf3f6a"
+    },
+    {
+      "path": "Preview/UK_PHO_CM010_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 128918,
+      "sha256": "f9630d8f52ada36f6bbb0e53011aaf9c7d7c20c18f9bd89d9ccf62f22005f732"
+    },
+    {
+      "path": "Preview/UK_PHO_CM010_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 190067,
+      "sha256": "6c619267fdd19aec1c1a5f6dbd1784f90b3e276bbf11e645ce0e0ba2a85cd073"
+    },
+    {
+      "path": "Preview/UK_PHO_CM010_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 131439,
+      "sha256": "d84f7e70e4da822ff24b11762c153b555b51cfe1af15c117ff7f56cb0e0d3a8c"
+    }
+  ]
+}

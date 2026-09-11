@@ -1,0 +1,93 @@
+{
+  "asset_id": "GEN_PROC_T3",
+  "generated_at": "2026-09-10T16:11:37Z",
+  "branch": "PROCESSING",
+  "tier": "T3",
+  "country": "GENERIC",
+  "family": "GEN_PROC",
+  "socket": "",
+  "geometry_source": "GAMEPLAY_FORM",
+  "dimensions_m": {
+    "length": 1.0,
+    "diameter": 1.9,
+    "height": 1.9
+  },
+  "template_version": "v1.0.0",
+  "files": [
+    {
+      "path": "Blend/GEN_PROC_T3_MASTER.blend",
+      "kind": "blend",
+      "present": true,
+      "bytes": 612900,
+      "sha256": "95fff623339e5c713698f80faa78c95466ba44a8ab3785a5da3e82ee7728dde8"
+    },
+    {
+      "path": "FBX/GEN_PROC_T3_LOD0.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21100,
+      "sha256": "30e09ed92bf6a60724442593e3eb3e46e1156a7988a43b5f20ab53b9c2124155",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_PROC_T3_LOD1.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 21100,
+      "sha256": "fceaecef47b0ca302d927c082f35a53bda8717676a90ccb1962b25fa6fca3cfc",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_PROC_T3_LOD2.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 19980,
+      "sha256": "78e4371fffa06a7e200096a02ac24aed967230f11b97ac4e3c9e350d1f25eff0",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "FBX/GEN_PROC_T3_LOD3.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 19980,
+      "sha256": "4dfa253e08ccde227012bf8375de2beda1ad9a1147f5c5273f3429b99d0f1740",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Collision/GEN_PROC_T3_COLLISION.fbx",
+      "kind": "fbx",
+      "present": true,
+      "bytes": 19404,
+      "sha256": "1592d3c0fac72346e0ba43aad369cec904d3a422949d447cb187d93ac7eba339",
+      "fbx_binary_version": 7400
+    },
+    {
+      "path": "Preview/GEN_PROC_T3_Front.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 231000,
+      "sha256": "b33cfeb59f5959750850a00d2e9570b1941a1f6e3aed9d03e7ead855764b55a7"
+    },
+    {
+      "path": "Preview/GEN_PROC_T3_Side.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 178566,
+      "sha256": "44691fe2fc08db54f11fda35b8b10291b3fa029e91a8d6d1de06d6ee4621d508"
+    },
+    {
+      "path": "Preview/GEN_PROC_T3_Top.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 210028,
+      "sha256": "93646edbbe5e1e0c3dcefd0ef97234b04a026a29016c6562edd7920fd0473e17"
+    },
+    {
+      "path": "Preview/GEN_PROC_T3_Perspective.png",
+      "kind": "png",
+      "present": true,
+      "bytes": 219185,
+      "sha256": "b3762e5260b92659abc97365c09ec4c5ce10191f490af760b82a9db31d560dde"
+    }
+  ]
+}
