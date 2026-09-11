@@ -11,6 +11,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
+    "test:submarine-audit:blender": "node tools/submarine-audit-blender-integration.mjs",
     "sim": "node --experimental-strip-types src/sim/runner.ts",
     "playtest": "node --experimental-strip-types src/sim/playtest.ts",
     "typecheck": "tsc --noEmit",

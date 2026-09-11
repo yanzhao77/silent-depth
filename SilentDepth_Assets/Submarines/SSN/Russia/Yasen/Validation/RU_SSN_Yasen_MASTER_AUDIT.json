@@ -1,0 +1,6653 @@
+{
+  "assemblyAudit": {
+    "anchorReports": [],
+    "matches": [],
+    "status": "SKIPPED_MISSING_ASSEMBLY"
+  },
+  "auditMode": "inventory-only",
+  "blenderExecutable": "/Applications/Blender.app/Contents/MacOS/Blender",
+  "blenderVersionCommand": "Blender 5.2.1 LTS\n\tbuild date: 2026-08-25\n\tbuild time: 01:35:57\n\tbuild commit date: 2026-08-24\n\tbuild commit time: 16:50\n\tbuild hash: 9e2066aef7ef\n\tbuild branch: blender-v5.2-release\n\tbuild platform: Darwin\n\tbuild type: Release\n\tbuild c flags:  -Wall -Werror=implicit-function-declaration -Werror=return-type -Wno-tautological-compare -Wno-unknown-pragmas -Wno-char-subscripts -Wstrict-prototypes -Wmissing-prototypes -Wunused-parameter -Wundef -Wundef-prefix -Werror=unguarded-availability-new  -mmacosx-version-min=11.2  -std=gnu11  -pipe -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild c++ flags:  -Wall -Wno-tautological-compare -Wno-unknown-pragmas -Wno-char-subscripts -Wno-overloaded-virtual -Wno-sign-compare -Wno-invalid-offsetof -Wno-suggest-override -Wundef -Wundef-prefix -Wunused-parameter -Wmismatched-tags -Werror=unguarded-availability-new  -mmacosx-version-min=11.2 -ftemplate-depth=1024   -pipe -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild link flags: -fexceptions -framework CoreServices -framework Foundation -framework IOKit -framework AppKit -framework Cocoa -framework Carbon -framework AudioUnit -framework AudioToolbox -framework CoreAudio -framework Metal -framework QuartzCore -framework CoreImage -framework OpenGL -framework Accelerate -liconv -Xlinker -no_warn_duplicate_libraries\n\tbuild system: CMake",
+  "environment": {
+    "blender": {
+      "buildBranch": "blender-v5.2-release",
+      "buildHash": "9e2066aef7ef",
+      "savedFileVersion": [
+        5,
+        2,
+        44
+      ],
+      "version": [
+        5,
+        2,
+        1
+      ],
+      "versionString": "5.2.1 LTS"
+    },
+    "platform": {
+      "machine": "arm64",
+      "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+      "system": "Darwin"
+    },
+    "python": {
+      "version": "3.13.13 (main, Apr 25 2025, 12:39:20) [Clang 21.0.0 (clang-2100.0.123.102)]"
+    },
+    "sourceFile": "/Users/sjw/Documents/GitHub/silent-depth/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend"
+  },
+  "externalDependencies": {
+    "dependencies": [],
+    "hasLinkedLibraries": false,
+    "linkedLibraries": [],
+    "missingFileCount": 0,
+    "missingFiles": []
+  },
+  "fileIntegrity": {
+    "after": {
+      "mtimeMs": 1788943518907.4785,
+      "path": "/Users/sjw/Documents/GitHub/silent-depth/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+      "sha256": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca",
+      "sizeBytes": 7938661
+    },
+    "before": {
+      "mtimeMs": 1788943518907.4785,
+      "path": "/Users/sjw/Documents/GitHub/silent-depth/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+      "sha256": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca",
+      "sizeBytes": 7938661
+    },
+    "unchanged": true
+  },
+  "issues": [
+    {
+      "blocksExport": false,
+      "context": {
+        "reason": "SKIPPED_MISSING_ASSEMBLY"
+      },
+      "message": "缺少真实 Assembly，Assembly 相关检查已跳过",
+      "ruleId": "SUBMOD-021-025-SKIPPED_MISSING_ASSEMBLY",
+      "status": "SKIPPED"
+    }
+  ],
+  "master": {
+    "assetId": "RU_SSN_Yasen",
+    "path": "/Users/sjw/Documents/GitHub/silent-depth/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+    "sha256": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca"
+  },
+  "meshQuality": {
+    "objects": [
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 145002,
+        "faceCount": 96668,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "RU_SSN_Yasen_LOD0",
+        "vertexCount": 48474,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 72501,
+        "faceCount": 48334,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "RU_SSN_Yasen_LOD1",
+        "vertexCount": 24307,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 31899,
+        "faceCount": 21266,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "RU_SSN_Yasen_LOD2",
+        "vertexCount": 10773,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 11598,
+        "faceCount": 7732,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "RU_SSN_Yasen_LOD3",
+        "vertexCount": 4006,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_BowDoor_-1_0",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_BowDoor_-1_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_BowDoor_-1_2",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_BowDoor_1_0",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_BowDoor_1_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_BowDoor_1_2",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_DeckHatch_-31",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_DeckHatch_36",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_DeckHatch_43",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_DeckHatch_8",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FlankArray_-1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FlankArray_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_-1_0",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_-1_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_-1_2",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_-1_3",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_-1_4",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_-1_5",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_1_0",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_1_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_1_2",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_1_3",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_1_4",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_FloodSlot_1_5",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1200,
+        "faceCount": 578,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_ForwardPlane_00",
+        "vertexCount": 624,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1200,
+        "faceCount": 578,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_ForwardPlane_01",
+        "vertexCount": 624,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 49280,
+        "faceCount": 24704,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Hull",
+        "vertexCount": 24578,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_MastHead_0",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_MastHead_1",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_MastHead_2",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_MastHead_3",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_MastSocket_0",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_MastSocket_1",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_MastSocket_2",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_MastSocket_3",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Mast_0",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Mast_1",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Mast_2",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Mast_3",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1080,
+        "faceCount": 530,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_PropellerBlade_00",
+        "vertexCount": 552,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1080,
+        "faceCount": 530,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_PropellerBlade_01",
+        "vertexCount": 552,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1080,
+        "faceCount": 530,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_PropellerBlade_02",
+        "vertexCount": 552,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1080,
+        "faceCount": 530,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_PropellerBlade_03",
+        "vertexCount": 552,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1080,
+        "faceCount": 530,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_PropellerBlade_04",
+        "vertexCount": 552,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1080,
+        "faceCount": 530,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_PropellerBlade_05",
+        "vertexCount": 552,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1080,
+        "faceCount": 530,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_PropellerBlade_06",
+        "vertexCount": 552,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 704,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_PropellerHub",
+        "vertexCount": 384,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 880,
+        "faceCount": 402,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Sail",
+        "vertexCount": 480,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 96,
+        "faceCount": 34,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_SailHatch",
+        "vertexCount": 64,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 320,
+        "faceCount": 130,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_ShaftFairing",
+        "vertexCount": 192,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1200,
+        "faceCount": 578,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Tail_00",
+        "vertexCount": 624,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1200,
+        "faceCount": 578,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Tail_01",
+        "vertexCount": 624,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1200,
+        "faceCount": 578,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Tail_02",
+        "vertexCount": 624,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1200,
+        "faceCount": 578,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_Tail_03",
+        "vertexCount": 624,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Lid_0_0",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Lid_0_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Lid_0_2",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Lid_0_3",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Lid_1_0",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Lid_1_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Lid_1_2",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Lid_1_3",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Rim_0_0",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Rim_0_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Rim_0_2",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Rim_0_3",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Rim_1_0",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Rim_1_1",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Rim_1_2",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 680,
+        "faceCount": 322,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "SUB_Yasen_VLS_Rim_1_3",
+        "vertexCount": 360,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 114,
+        "faceCount": 76,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_00",
+        "vertexCount": 40,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 114,
+        "faceCount": 76,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_01",
+        "vertexCount": 40,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 354,
+        "faceCount": 236,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_02",
+        "vertexCount": 120,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 306,
+        "faceCount": 204,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_03",
+        "vertexCount": 104,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 114,
+        "faceCount": 76,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_04",
+        "vertexCount": 40,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 318,
+        "faceCount": 212,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_05",
+        "vertexCount": 108,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 354,
+        "faceCount": 236,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_06",
+        "vertexCount": 120,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 297,
+        "faceCount": 198,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_07",
+        "vertexCount": 101,
+        "zeroLengthEdgeCount": 0
+      },
+      {
+        "degenerateFaceCount": 0,
+        "edgeCount": 1140,
+        "faceCount": 760,
+        "looseEdgeCount": 0,
+        "looseVertexCount": 0,
+        "nonManifoldEdgeCount": 0,
+        "objectName": "UCX_RU_SSN_Yasen_LOD0_08",
+        "vertexCount": 382,
+        "zeroLengthEdgeCount": 0
+      }
+    ],
+    "thresholds": {
+      "degenerateFaceAreaSquareMeters": 1e-10,
+      "exampleLimit": 12,
+      "farAnchorHullDiagonalMultiplier": 2,
+      "nearZeroScale": 0.000001,
+      "normalizedAxisTolerance": 0.001,
+      "unappliedScaleTolerance": 0.0001,
+      "zeroLengthEdgeMeters": 0.000001
+    }
+  },
+  "reportFormatVersion": 1,
+  "scene": {
+    "activeScene": "Scene",
+    "collections": [
+      {
+        "childCollections": [],
+        "name": "COLLISION",
+        "objectCount": 9,
+        "objects": [
+          "UCX_RU_SSN_Yasen_LOD0_00",
+          "UCX_RU_SSN_Yasen_LOD0_01",
+          "UCX_RU_SSN_Yasen_LOD0_02",
+          "UCX_RU_SSN_Yasen_LOD0_03",
+          "UCX_RU_SSN_Yasen_LOD0_04",
+          "UCX_RU_SSN_Yasen_LOD0_05",
+          "UCX_RU_SSN_Yasen_LOD0_06",
+          "UCX_RU_SSN_Yasen_LOD0_07",
+          "UCX_RU_SSN_Yasen_LOD0_08"
+        ],
+        "path": "Scene Collection/COLLISION"
+      },
+      {
+        "childCollections": [],
+        "name": "EDITABLE",
+        "objectCount": 70,
+        "objects": [
+          "SUB_Yasen_BowDoor_-1_0",
+          "SUB_Yasen_BowDoor_-1_1",
+          "SUB_Yasen_BowDoor_-1_2",
+          "SUB_Yasen_BowDoor_1_0",
+          "SUB_Yasen_BowDoor_1_1",
+          "SUB_Yasen_BowDoor_1_2",
+          "SUB_Yasen_DeckHatch_-31",
+          "SUB_Yasen_DeckHatch_36",
+          "SUB_Yasen_DeckHatch_43",
+          "SUB_Yasen_DeckHatch_8",
+          "SUB_Yasen_FlankArray_-1",
+          "SUB_Yasen_FlankArray_1",
+          "SUB_Yasen_FloodSlot_-1_0",
+          "SUB_Yasen_FloodSlot_-1_1",
+          "SUB_Yasen_FloodSlot_-1_2",
+          "SUB_Yasen_FloodSlot_-1_3",
+          "SUB_Yasen_FloodSlot_-1_4",
+          "SUB_Yasen_FloodSlot_-1_5",
+          "SUB_Yasen_FloodSlot_1_0",
+          "SUB_Yasen_FloodSlot_1_1",
+          "SUB_Yasen_FloodSlot_1_2",
+          "SUB_Yasen_FloodSlot_1_3",
+          "SUB_Yasen_FloodSlot_1_4",
+          "SUB_Yasen_FloodSlot_1_5",
+          "SUB_Yasen_ForwardPlane_00",
+          "SUB_Yasen_ForwardPlane_01",
+          "SUB_Yasen_Hull",
+          "SUB_Yasen_MastHead_0",
+          "SUB_Yasen_MastHead_1",
+          "SUB_Yasen_MastHead_2",
+          "SUB_Yasen_MastHead_3",
+          "SUB_Yasen_MastSocket_0",
+          "SUB_Yasen_MastSocket_1",
+          "SUB_Yasen_MastSocket_2",
+          "SUB_Yasen_MastSocket_3",
+          "SUB_Yasen_Mast_0",
+          "SUB_Yasen_Mast_1",
+          "SUB_Yasen_Mast_2",
+          "SUB_Yasen_Mast_3",
+          "SUB_Yasen_PropellerBlade_00",
+          "SUB_Yasen_PropellerBlade_01",
+          "SUB_Yasen_PropellerBlade_02",
+          "SUB_Yasen_PropellerBlade_03",
+          "SUB_Yasen_PropellerBlade_04",
+          "SUB_Yasen_PropellerBlade_05",
+          "SUB_Yasen_PropellerBlade_06",
+          "SUB_Yasen_PropellerHub",
+          "SUB_Yasen_Sail",
+          "SUB_Yasen_SailHatch",
+          "SUB_Yasen_ShaftFairing",
+          "SUB_Yasen_Tail_00",
+          "SUB_Yasen_Tail_01",
+          "SUB_Yasen_Tail_02",
+          "SUB_Yasen_Tail_03",
+          "SUB_Yasen_VLS_Lid_0_0",
+          "SUB_Yasen_VLS_Lid_0_1",
+          "SUB_Yasen_VLS_Lid_0_2",
+          "SUB_Yasen_VLS_Lid_0_3",
+          "SUB_Yasen_VLS_Lid_1_0",
+          "SUB_Yasen_VLS_Lid_1_1",
+          "SUB_Yasen_VLS_Lid_1_2",
+          "SUB_Yasen_VLS_Lid_1_3",
+          "SUB_Yasen_VLS_Rim_0_0",
+          "SUB_Yasen_VLS_Rim_0_1",
+          "SUB_Yasen_VLS_Rim_0_2",
+          "SUB_Yasen_VLS_Rim_0_3",
+          "SUB_Yasen_VLS_Rim_1_0",
+          "SUB_Yasen_VLS_Rim_1_1",
+          "SUB_Yasen_VLS_Rim_1_2",
+          "SUB_Yasen_VLS_Rim_1_3"
+        ],
+        "path": "Scene Collection/EDITABLE"
+      },
+      {
+        "childCollections": [],
+        "name": "EXPORTS",
+        "objectCount": 4,
+        "objects": [
+          "RU_SSN_Yasen_LOD0",
+          "RU_SSN_Yasen_LOD1",
+          "RU_SSN_Yasen_LOD2",
+          "RU_SSN_Yasen_LOD3"
+        ],
+        "path": "Scene Collection/EXPORTS"
+      },
+      {
+        "childCollections": [],
+        "name": "STUDIO",
+        "objectCount": 10,
+        "objects": [
+          "CAM_Deck",
+          "CAM_Hero",
+          "CAM_Profile",
+          "CAM_Propeller",
+          "CAM_Rear",
+          "CAM_Sail",
+          "CAM_Stern",
+          "Fill",
+          "Key",
+          "Rim"
+        ],
+        "path": "Scene Collection/STUDIO"
+      }
+    ],
+    "coordinateSystem": {
+      "blenderForward": "+X",
+      "blenderUp": "+Z",
+      "unrealConversion": "1 Blender meter = 100 Unreal Units"
+    },
+    "counts": {
+      "collectionCount": 4,
+      "emptyObjectCount": 0,
+      "materialCount": 7,
+      "meshObjectCount": 83,
+      "objectCount": 93,
+      "sceneCount": 1
+    },
+    "materials": [
+      "SUB_MAT_YasenV2_array",
+      "SUB_MAT_YasenV2_bronze",
+      "SUB_MAT_YasenV2_coating",
+      "SUB_MAT_YasenV2_hull",
+      "SUB_MAT_YasenV2_metal",
+      "SUB_MAT_YasenV2_panel",
+      "SUB_MAT_YasenV2_recess"
+    ],
+    "objects": [
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "CAM_Deck",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          160
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "CAM_Deck",
+        "parent": null,
+        "type": "CAMERA",
+        "worldLocation": [
+          0,
+          0,
+          160
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "CAM_Hero",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          75,
+          -125,
+          60
+        ],
+        "localRotationEuler": [
+          1.186213374,
+          3e-9,
+          0.540419459
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "CAM_Hero",
+        "parent": null,
+        "type": "CAMERA",
+        "worldLocation": [
+          75,
+          -125,
+          60
+        ],
+        "worldRotationEuler": [
+          1.186213493,
+          2e-9,
+          0.540419579
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "CAM_Profile",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          -160,
+          0
+        ],
+        "localRotationEuler": [
+          1.577046275,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "CAM_Profile",
+        "parent": null,
+        "type": "CAMERA",
+        "worldLocation": [
+          0,
+          -160,
+          0
+        ],
+        "worldRotationEuler": [
+          1.577046275,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          0.99999994,
+          0.99999994
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "CAM_Propeller",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          -74,
+          -10,
+          7
+        ],
+        "localRotationEuler": [
+          1.215537786,
+          8.3e-8,
+          -1.012197018
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "CAM_Propeller",
+        "parent": null,
+        "type": "CAMERA",
+        "worldLocation": [
+          -74,
+          -10,
+          7
+        ],
+        "worldRotationEuler": [
+          1.215537906,
+          1.31e-7,
+          -1.012197137
+        ],
+        "worldScale": [
+          1,
+          0.99999994,
+          1
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "CAM_Rear",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          -160,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          1.570796371,
+          0,
+          -1.570796371
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "CAM_Rear",
+        "parent": null,
+        "type": "CAMERA",
+        "worldLocation": [
+          -160,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          1.570796371,
+          0,
+          -1.570796371
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "CAM_Sail",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          42,
+          -30,
+          24
+        ],
+        "localRotationEuler": [
+          1.164628506,
+          -3.8e-8,
+          0.632748842
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "CAM_Sail",
+        "parent": null,
+        "type": "CAMERA",
+        "worldLocation": [
+          42,
+          -30,
+          24
+        ],
+        "worldRotationEuler": [
+          1.164628506,
+          -3.8e-8,
+          0.632748842
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "CAM_Stern",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          -85,
+          -24,
+          15
+        ],
+        "localRotationEuler": [
+          1.242950916,
+          6.7e-8,
+          -0.995371878
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "CAM_Stern",
+        "parent": null,
+        "type": "CAMERA",
+        "worldLocation": [
+          -85,
+          -24,
+          15
+        ],
+        "worldRotationEuler": [
+          1.242951155,
+          6.1e-8,
+          -0.995371997
+        ],
+        "worldScale": [
+          1,
+          0.99999994,
+          0.99999994
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "Fill",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          -35,
+          25,
+          30
+        ],
+        "localRotationEuler": [
+          0.961759746,
+          2.77e-7,
+          -2.191046
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "Fill",
+        "parent": null,
+        "type": "LIGHT",
+        "worldLocation": [
+          -35,
+          25,
+          30
+        ],
+        "worldRotationEuler": [
+          0.961759746,
+          2.53e-7,
+          -2.191046
+        ],
+        "worldScale": [
+          0.99999994,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "Key",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          28,
+          -40,
+          55
+        ],
+        "localRotationEuler": [
+          0.726005673,
+          7.1e-8,
+          0.610725999
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "Key",
+        "parent": null,
+        "type": "LIGHT",
+        "worldLocation": [
+          28,
+          -40,
+          55
+        ],
+        "worldRotationEuler": [
+          0.726005733,
+          8.1e-8,
+          0.610725999
+        ],
+        "worldScale": [
+          1,
+          1,
+          0.99999994
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            60,
+            8.600000381,
+            14.510000229
+          ],
+          "min": [
+            -60,
+            -8.600000381,
+            -7.449999809
+          ]
+        },
+        "collections": [
+          "Scene Collection/EXPORTS"
+        ],
+        "dataName": "Hull.001",
+        "dimensions": [
+          120,
+          17.200000763,
+          21.959999084
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 7,
+        "modifierCount": 0,
+        "name": "RU_SSN_Yasen_LOD0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            60,
+            8.600001335,
+            14.510000229
+          ],
+          "min": [
+            -60.000003815,
+            -8.600001335,
+            -7.450000286
+          ]
+        },
+        "collections": [
+          "Scene Collection/EXPORTS"
+        ],
+        "dataName": "Hull.002",
+        "dimensions": [
+          120,
+          17.20000267,
+          21.960000992
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 7,
+        "modifierCount": 0,
+        "name": "RU_SSN_Yasen_LOD1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            60,
+            8.60004425,
+            14.510000229
+          ],
+          "min": [
+            -60.000053406,
+            -8.60004425,
+            -7.450027466
+          ]
+        },
+        "collections": [
+          "Scene Collection/EXPORTS"
+        ],
+        "dataName": "Hull.003",
+        "dimensions": [
+          120.000053406,
+          17.200088501,
+          21.960027695
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 7,
+        "modifierCount": 0,
+        "name": "RU_SSN_Yasen_LOD2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            59.999706268,
+            8.600575447,
+            14.510000229
+          ],
+          "min": [
+            -60.000762939,
+            -8.600575447,
+            -7.450079918
+          ]
+        },
+        "collections": [
+          "Scene Collection/EXPORTS"
+        ],
+        "dataName": "Hull.004",
+        "dimensions": [
+          120.000473022,
+          17.201150894,
+          21.960079193
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 7,
+        "modifierCount": 0,
+        "name": "RU_SSN_Yasen_LOD3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": null,
+        "collections": [
+          "Scene Collection/STUDIO"
+        ],
+        "dataName": "Rim",
+        "dimensions": [
+          0,
+          0,
+          0
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          -55,
+          -12,
+          28
+        ],
+        "localRotationEuler": [
+          1.109239101,
+          -7e-8,
+          -1.355980992
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 0,
+        "modifierCount": 0,
+        "name": "Rim",
+        "parent": null,
+        "type": "LIGHT",
+        "worldLocation": [
+          -55,
+          -12,
+          28
+        ],
+        "worldRotationEuler": [
+          1.109239101,
+          -3e-8,
+          -1.355980992
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            34.099998474,
+            6.352287292,
+            1.879052997
+          ],
+          "min": [
+            31.899999619,
+            6.129492283,
+            1.338148355
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "BowDoor_-1_0",
+        "dimensions": [
+          2.199998856,
+          0.22279501,
+          0.540904641
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_BowDoor_-1_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            36.900001526,
+            6.357350826,
+            1.880399466
+          ],
+          "min": [
+            34.700000763,
+            6.134870529,
+            1.339493036
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "BowDoor_-1_1",
+        "dimensions": [
+          2.200000763,
+          0.222480297,
+          0.540906429
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_BowDoor_-1_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            39.700000763,
+            6.361427307,
+            1.881507516
+          ],
+          "min": [
+            37.5,
+            6.1393857,
+            1.340599775
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "BowDoor_-1_2",
+        "dimensions": [
+          2.200000763,
+          0.222041607,
+          0.540907741
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_BowDoor_-1_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            34.099998474,
+            -6.129492283,
+            1.879052997
+          ],
+          "min": [
+            31.899999619,
+            -6.352287292,
+            1.338148355
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "BowDoor_1_0",
+        "dimensions": [
+          2.199998856,
+          0.22279501,
+          0.540904641
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_BowDoor_1_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            36.900001526,
+            -6.134870529,
+            1.880399466
+          ],
+          "min": [
+            34.700000763,
+            -6.357350826,
+            1.339493036
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "BowDoor_1_1",
+        "dimensions": [
+          2.200000763,
+          0.222480297,
+          0.540906429
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_BowDoor_1_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            39.700000763,
+            -6.1393857,
+            1.881507516
+          ],
+          "min": [
+            37.5,
+            -6.361427307,
+            1.340599775
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "BowDoor_1_2",
+        "dimensions": [
+          2.200000763,
+          0.222041607,
+          0.540907741
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_BowDoor_1_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -30.25,
+            0.681794345,
+            5.795648098
+          ],
+          "min": [
+            -31.75,
+            -0.681794345,
+            5.44058609
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "DeckHatch_-31",
+        "dimensions": [
+          1.5,
+          1.363588691,
+          0.355062008
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_DeckHatch_-31",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            36.75,
+            0.677105844,
+            6.296651363
+          ],
+          "min": [
+            35.25,
+            -0.677105844,
+            6.169521332
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "DeckHatch_36",
+        "dimensions": [
+          1.5,
+          1.354211688,
+          0.127130032
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_DeckHatch_36",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            43.75,
+            0.677104652,
+            6.304009438
+          ],
+          "min": [
+            42.25,
+            -0.677104652,
+            6.178158283
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "DeckHatch_43",
+        "dimensions": [
+          1.5,
+          1.354209304,
+          0.125851154
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_DeckHatch_43",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            8.75,
+            0.677111208,
+            6.257603645
+          ],
+          "min": [
+            7.25,
+            -0.677111208,
+            6.131399632
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "DeckHatch_8",
+        "dimensions": [
+          1.5,
+          1.354222417,
+          0.126204014
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_DeckHatch_8",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            6.5,
+            5.638149738,
+            4.231668472
+          ],
+          "min": [
+            -18.5,
+            4.726412773,
+            3.076373577
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FlankArray_-1",
+        "dimensions": [
+          25,
+          0.911736965,
+          1.155294895
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FlankArray_-1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            6.5,
+            -4.726412773,
+            4.231668472
+          ],
+          "min": [
+            -18.5,
+            -5.638149738,
+            3.076373577
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FlankArray_1",
+        "dimensions": [
+          25,
+          0.911736965,
+          1.155294895
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FlankArray_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -32.150001526,
+            3.148808956,
+            4.591253757
+          ],
+          "min": [
+            -33.849998474,
+            2.822734594,
+            4.198951244
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_-1_0",
+        "dimensions": [
+          1.699996948,
+          0.326074362,
+          0.392302513
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_-1_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -29.149999619,
+            3.420734644,
+            4.989607334
+          ],
+          "min": [
+            -30.850000381,
+            3.137980461,
+            4.665338993
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_-1_1",
+        "dimensions": [
+          1.700000763,
+          0.282754183,
+          0.324268341
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_-1_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -26.149999619,
+            3.588888168,
+            5.234380245
+          ],
+          "min": [
+            -27.850000381,
+            3.360788822,
+            4.996851444
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_-1_2",
+        "dimensions": [
+          1.700000763,
+          0.228099346,
+          0.237528801
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_-1_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -23.149999619,
+            3.635500431,
+            5.29873848
+          ],
+          "min": [
+            -24.850000381,
+            3.461274862,
+            5.150863171
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_-1_3",
+        "dimensions": [
+          1.700000763,
+          0.174225569,
+          0.147875309
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_-1_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -20.149999619,
+            3.635006666,
+            5.29803133
+          ],
+          "min": [
+            -21.850000381,
+            3.462215424,
+            5.153459072
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_-1_4",
+        "dimensions": [
+          1.700000763,
+          0.172791243,
+          0.144572258
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_-1_4",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -17.149999619,
+            3.633561134,
+            5.296103954
+          ],
+          "min": [
+            -18.850000381,
+            3.46077013,
+            5.151134491
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_-1_5",
+        "dimensions": [
+          1.700000763,
+          0.172791004,
+          0.144969463
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_-1_5",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -32.150001526,
+            -2.822734594,
+            4.591253757
+          ],
+          "min": [
+            -33.849998474,
+            -3.148808956,
+            4.198951244
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_1_0",
+        "dimensions": [
+          1.699996948,
+          0.326074362,
+          0.392302513
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_1_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -29.149999619,
+            -3.137980461,
+            4.989607334
+          ],
+          "min": [
+            -30.850000381,
+            -3.420734644,
+            4.665338993
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_1_1",
+        "dimensions": [
+          1.700000763,
+          0.282754183,
+          0.324268341
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_1_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -26.149999619,
+            -3.360788822,
+            5.234380245
+          ],
+          "min": [
+            -27.850000381,
+            -3.588888168,
+            4.996851444
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_1_2",
+        "dimensions": [
+          1.700000763,
+          0.228099346,
+          0.237528801
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_1_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -23.149999619,
+            -3.461274862,
+            5.29873848
+          ],
+          "min": [
+            -24.850000381,
+            -3.635500431,
+            5.150863171
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_1_3",
+        "dimensions": [
+          1.700000763,
+          0.174225569,
+          0.147875309
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_1_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -20.149999619,
+            -3.462215424,
+            5.29803133
+          ],
+          "min": [
+            -21.850000381,
+            -3.635006666,
+            5.153459072
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_1_4",
+        "dimensions": [
+          1.700000763,
+          0.172791243,
+          0.144572258
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_1_4",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -17.149999619,
+            -3.46077013,
+            5.296103954
+          ],
+          "min": [
+            -18.850000381,
+            -3.633561134,
+            5.151134491
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "FloodSlot_1_5",
+        "dimensions": [
+          1.700000763,
+          0.172791004,
+          0.144969463
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_FloodSlot_1_5",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            36.799999237,
+            8.600000381,
+            0.449999988
+          ],
+          "min": [
+            30.799999237,
+            5.443304539,
+            -0.449999988
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "ForwardPlane_00",
+        "dimensions": [
+          6,
+          3.156695843,
+          0.899999976
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_ForwardPlane_00",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            36.799999237,
+            -5.443304539,
+            0.449999988
+          ],
+          "min": [
+            30.799999237,
+            -8.600000381,
+            -0.449999988
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "ForwardPlane_01",
+        "dimensions": [
+          6,
+          3.156695843,
+          0.899999976
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_ForwardPlane_01",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            60,
+            6.5,
+            6.272500038
+          ],
+          "min": [
+            -57.200000763,
+            -6.5,
+            -6.272500038
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Hull",
+        "dimensions": [
+          117.199996948,
+          13,
+          12.545000076
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Hull",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            17.202999115,
+            0.202999994,
+            13.960000038
+          ],
+          "min": [
+            16.797000885,
+            -0.202999994,
+            13.640000343
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "MastHead_0",
+        "dimensions": [
+          0.40599823,
+          0.405999988,
+          0.319999695
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_MastHead_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            20.232000351,
+            0.712000012,
+            13.609999657
+          ],
+          "min": [
+            19.767999649,
+            0.247999996,
+            13.289999962
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "MastHead_1",
+        "dimensions": [
+          0.464000702,
+          0.464000016,
+          0.319999695
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_MastHead_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            23.188499451,
+            -0.2315,
+            14.510000229
+          ],
+          "min": [
+            22.811500549,
+            -0.608500004,
+            14.18999958
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "MastHead_2",
+        "dimensions": [
+          0.376998901,
+          0.377000004,
+          0.320000648
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_MastHead_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            25.659500122,
+            0.259499997,
+            13.06000042
+          ],
+          "min": [
+            25.340499878,
+            -0.059500001,
+            12.739999771
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "MastHead_3",
+        "dimensions": [
+          0.319000244,
+          0.319000006,
+          0.320000648
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_MastHead_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            17.23800087,
+            0.238000005,
+            11.890000343
+          ],
+          "min": [
+            16.76199913,
+            -0.238000005,
+            11.710000038
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "MastSocket_0",
+        "dimensions": [
+          0.47600174,
+          0.476000011,
+          0.180000305
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_MastSocket_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            20.271999359,
+            0.751999974,
+            11.890000343
+          ],
+          "min": [
+            19.728000641,
+            0.208000004,
+            11.710000038
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "MastSocket_1",
+        "dimensions": [
+          0.543998718,
+          0.54399997,
+          0.180000305
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_MastSocket_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            23.221000671,
+            -0.199000001,
+            11.890000343
+          ],
+          "min": [
+            22.778999329,
+            -0.640999973,
+            11.710000038
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "MastSocket_2",
+        "dimensions": [
+          0.442001343,
+          0.441999972,
+          0.180000305
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_MastSocket_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            25.687000275,
+            0.287,
+            11.890000343
+          ],
+          "min": [
+            25.312999725,
+            -0.086999997,
+            11.710000038
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "MastSocket_3",
+        "dimensions": [
+          0.374000549,
+          0.374000013,
+          0.180000305
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_MastSocket_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            17.13999939,
+            0.140000001,
+            13.800000191
+          ],
+          "min": [
+            16.86000061,
+            -0.140000001,
+            11.699999809
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Mast_0",
+        "dimensions": [
+          0.279998779,
+          0.280000001,
+          2.100000381
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Mast_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            20.159999847,
+            0.639999986,
+            13.449999809
+          ],
+          "min": [
+            19.840000153,
+            0.319999993,
+            11.699999809
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Mast_1",
+        "dimensions": [
+          0.319999695,
+          0.319999993,
+          1.75
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Mast_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            23.129999161,
+            -0.289999992,
+            14.350000381
+          ],
+          "min": [
+            22.870000839,
+            -0.550000012,
+            11.699999809
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Mast_2",
+        "dimensions": [
+          0.259998322,
+          0.26000002,
+          2.650000572
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Mast_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            25.61000061,
+            0.209999993,
+            12.899999619
+          ],
+          "min": [
+            25.38999939,
+            -0.01,
+            11.699999809
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Mast_3",
+        "dimensions": [
+          0.220001221,
+          0.219999999,
+          1.199999809
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Mast_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -58.377651215,
+            2.909858942,
+            1.949098945
+          ],
+          "min": [
+            -59.38155365,
+            0.625977874,
+            -0.46050635
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "PropellerBlade_00",
+        "dimensions": [
+          1.003902435,
+          2.283881187,
+          2.409605265
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_PropellerBlade_00",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -58.377651215,
+            1.618041992,
+            3.273771524
+          ],
+          "min": [
+            -59.38155365,
+            0.028276622,
+            0.381912291
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "PropellerBlade_01",
+        "dimensions": [
+          1.003902435,
+          1.58976531,
+          2.891859293
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_PropellerBlade_01",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -58.377651215,
+            0.120338827,
+            2.649054527
+          ],
+          "min": [
+            -59.38155365,
+            -2.459144115,
+            0.564136624
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "PropellerBlade_02",
+        "dimensions": [
+          1.003902435,
+          2.579483032,
+          2.084918022
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_PropellerBlade_02",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -58.377651215,
+            -0.491960973,
+            1.229971409
+          ],
+          "min": [
+            -59.38155365,
+            -3.247839212,
+            -0.666277885
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "PropellerBlade_03",
+        "dimensions": [
+          1.003902435,
+          2.75587821,
+          1.896249294
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_PropellerBlade_03",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -58.377651215,
+            -0.474007219,
+            -0.110841423
+          ],
+          "min": [
+            -59.38155365,
+            -2.330019712,
+            -2.86060214
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "PropellerBlade_04",
+        "dimensions": [
+          1.003902435,
+          1.856012464,
+          2.749760628
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_PropellerBlade_04",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -58.377651215,
+            1.34131813,
+            -0.577340722
+          ],
+          "min": [
+            -59.38155365,
+            -0.839368045,
+            -3.107688665
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "PropellerBlade_05",
+        "dimensions": [
+          1.003902435,
+          2.180686235,
+          2.530347824
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_PropellerBlade_05",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -58.377651215,
+            3.146064997,
+            -0.360109091
+          ],
+          "min": [
+            -59.38155365,
+            0.252712935,
+            -1.98633039
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "PropellerBlade_06",
+        "dimensions": [
+          1.003902435,
+          2.893352032,
+          1.626221299
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_PropellerBlade_06",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -57.549999237,
+            0.779999971,
+            0.779999971
+          ],
+          "min": [
+            -60,
+            -0.779999971,
+            -0.779999971
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "PropellerHub",
+        "dimensions": [
+          2.450000763,
+          1.559999943,
+          1.559999943
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_PropellerHub",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            30.299999237,
+            1.819002748,
+            11.850000381
+          ],
+          "min": [
+            9.699999809,
+            -1.819002748,
+            5.25
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Sail",
+        "dimensions": [
+          20.599998474,
+          3.638005495,
+          6.600000381
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Sail",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            15.880000114,
+            0.479999989,
+            11.895000458
+          ],
+          "min": [
+            14.920000076,
+            -0.479999989,
+            11.824999809
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "SailHatch",
+        "dimensions": [
+          0.960000038,
+          0.959999979,
+          0.070000648
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_SailHatch",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -56.299999237,
+            0.75999999,
+            0.75999999
+          ],
+          "min": [
+            -58.150001526,
+            -0.75999999,
+            -0.75999999
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "ShaftFairing",
+        "dimensions": [
+          1.850002289,
+          1.519999981,
+          1.519999981
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_ShaftFairing",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -43,
+            7.449999809,
+            0.449999988
+          ],
+          "min": [
+            -54.700000763,
+            0.599451542,
+            -0.449999988
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Tail_00",
+        "dimensions": [
+          11.700000763,
+          6.850548267,
+          0.899999976
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Tail_00",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -43,
+            0.449999988,
+            7.449999809
+          ],
+          "min": [
+            -54.700000763,
+            -0.449999988,
+            0.599451542
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Tail_01",
+        "dimensions": [
+          11.700000763,
+          0.899999976,
+          6.850548267
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Tail_01",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -43,
+            -0.599451542,
+            0.449999988
+          ],
+          "min": [
+            -54.700000763,
+            -7.449999809,
+            -0.449999988
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Tail_02",
+        "dimensions": [
+          11.700000763,
+          6.850548267,
+          0.899999976
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Tail_02",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -43,
+            0.449999988,
+            -0.599451542
+          ],
+          "min": [
+            -54.700000763,
+            -0.449999988,
+            -7.449999809
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "Tail_03",
+        "dimensions": [
+          11.700000763,
+          0.899999976,
+          6.850548267
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_Tail_03",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -11.260000229,
+            2.720733881,
+            6.282286644
+          ],
+          "min": [
+            -15.739999771,
+            0.58109659,
+            5.639163971
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Lid_0_0",
+        "dimensions": [
+          4.479999542,
+          2.139637232,
+          0.643122673
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Lid_0_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -5.860000134,
+            2.717829227,
+            6.272284031
+          ],
+          "min": [
+            -10.340000153,
+            0.578232706,
+            5.628300667
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Lid_0_1",
+        "dimensions": [
+          4.480000019,
+          2.139596462,
+          0.643983364
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Lid_0_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -0.460000008,
+            2.714709282,
+            6.260930538
+          ],
+          "min": [
+            -4.940000057,
+            0.57515651,
+            5.617186069
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Lid_0_2",
+        "dimensions": [
+          4.480000019,
+          2.139552832,
+          0.643744469
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Lid_0_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            4.940000057,
+            2.7120924,
+            6.250842571
+          ],
+          "min": [
+            0.460000008,
+            0.572576642,
+            5.607954979
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Lid_0_3",
+        "dimensions": [
+          4.480000019,
+          2.139515877,
+          0.642887592
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Lid_0_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -11.260000229,
+            -0.58109659,
+            6.282286644
+          ],
+          "min": [
+            -15.739999771,
+            -2.720733881,
+            5.639163971
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Lid_1_0",
+        "dimensions": [
+          4.479999542,
+          2.139637232,
+          0.643122673
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Lid_1_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -5.860000134,
+            -0.578232706,
+            6.272284031
+          ],
+          "min": [
+            -10.340000153,
+            -2.717829227,
+            5.628300667
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Lid_1_1",
+        "dimensions": [
+          4.480000019,
+          2.139596462,
+          0.643983364
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Lid_1_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -0.460000008,
+            -0.57515651,
+            6.260930538
+          ],
+          "min": [
+            -4.940000057,
+            -2.714709282,
+            5.617186069
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Lid_1_2",
+        "dimensions": [
+          4.480000019,
+          2.139552832,
+          0.643744469
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Lid_1_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            4.940000057,
+            -0.572576642,
+            6.250842571
+          ],
+          "min": [
+            0.460000008,
+            -2.7120924,
+            5.607954979
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Lid_1_3",
+        "dimensions": [
+          4.480000019,
+          2.139515877,
+          0.642887592
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Lid_1_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -11.175000191,
+            2.78151679,
+            6.270612717
+          ],
+          "min": [
+            -15.824999809,
+            0.507056952,
+            5.608978271
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Rim_0_0",
+        "dimensions": [
+          4.649999619,
+          2.274459839,
+          0.661634445
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Rim_0_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -5.775000095,
+            2.778598547,
+            6.260610104
+          ],
+          "min": [
+            -10.425000191,
+            0.504192352,
+            5.598161697
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Rim_0_1",
+        "dimensions": [
+          4.650000095,
+          2.274406195,
+          0.662448406
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Rim_0_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -0.375,
+            2.775463581,
+            6.249233246
+          ],
+          "min": [
+            -5.025000095,
+            0.501115382,
+            5.587034225
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Rim_0_2",
+        "dimensions": [
+          4.650000095,
+          2.274348259,
+          0.66219902
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Rim_0_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            5.025000095,
+            2.772834063,
+            6.239103317
+          ],
+          "min": [
+            0.375,
+            0.498534888,
+            5.577672958
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Rim_0_3",
+        "dimensions": [
+          4.650000095,
+          2.274299145,
+          0.661430359
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Rim_0_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -11.175000191,
+            -0.507056952,
+            6.270612717
+          ],
+          "min": [
+            -15.824999809,
+            -2.78151679,
+            5.608978271
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Rim_1_0",
+        "dimensions": [
+          4.649999619,
+          2.274459839,
+          0.661634445
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Rim_1_0",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -5.775000095,
+            -0.504192352,
+            6.260610104
+          ],
+          "min": [
+            -10.425000191,
+            -2.778598547,
+            5.598161697
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Rim_1_1",
+        "dimensions": [
+          4.650000095,
+          2.274406195,
+          0.662448406
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Rim_1_1",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -0.375,
+            -0.501115382,
+            6.249233246
+          ],
+          "min": [
+            -5.025000095,
+            -2.775463581,
+            5.587034225
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Rim_1_2",
+        "dimensions": [
+          4.650000095,
+          2.274348259,
+          0.66219902
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Rim_1_2",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            5.025000095,
+            -0.498534888,
+            6.239103317
+          ],
+          "min": [
+            0.375,
+            -2.772834063,
+            5.577672958
+          ]
+        },
+        "collections": [
+          "Scene Collection/EDITABLE"
+        ],
+        "dataName": "VLS_Rim_1_3",
+        "dimensions": [
+          4.650000095,
+          2.274299145,
+          0.661430359
+        ],
+        "hidden": false,
+        "hideRender": false,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "SUB_Yasen_VLS_Rim_1_3",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -48,
+            1.797794461,
+            1.734871626
+          ],
+          "min": [
+            -57.200000763,
+            -1.797794461,
+            -1.734871626
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Hull",
+        "dimensions": [
+          9.200000763,
+          3.595588923,
+          3.469743252
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_00",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -38,
+            4.310782433,
+            4.159904957
+          ],
+          "min": [
+            -48,
+            -4.310782433,
+            -4.159904957
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Hull.001",
+        "dimensions": [
+          10,
+          8.621564865,
+          8.319809914
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_01",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            -24,
+            6.5,
+            6.272500038
+          ],
+          "min": [
+            -38,
+            -6.5,
+            -6.272500038
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Hull.002",
+        "dimensions": [
+          14,
+          13,
+          12.545000076
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_02",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            0,
+            6.5,
+            6.272500038
+          ],
+          "min": [
+            -24,
+            -6.5,
+            -6.272500038
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Hull.003",
+        "dimensions": [
+          24,
+          13,
+          12.545000076
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_03",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            24,
+            6.465174198,
+            6.238893509
+          ],
+          "min": [
+            0,
+            -6.465174198,
+            -6.238893509
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Hull.004",
+        "dimensions": [
+          24,
+          12.930348396,
+          12.477787018
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_04",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            46,
+            6.5,
+            6.272500038
+          ],
+          "min": [
+            24,
+            -6.5,
+            -6.272500038
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Hull.005",
+        "dimensions": [
+          22,
+          13,
+          12.545000076
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_05",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            56,
+            6.5,
+            6.272500038
+          ],
+          "min": [
+            46,
+            -6.5,
+            -6.272500038
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Hull.006",
+        "dimensions": [
+          10,
+          13,
+          12.545000076
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_06",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            60,
+            4.549052238,
+            4.389835358
+          ],
+          "min": [
+            56,
+            -4.549052238,
+            -4.389835358
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Hull.007",
+        "dimensions": [
+          4,
+          9.098104477,
+          8.779670715
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_07",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "boundsWorld": {
+          "max": [
+            30.299999237,
+            1.819002748,
+            11.850000381
+          ],
+          "min": [
+            9.699999809,
+            -1.819002748,
+            5.25
+          ]
+        },
+        "collections": [
+          "Scene Collection/COLLISION"
+        ],
+        "dataName": "UCX_Sail",
+        "dimensions": [
+          20.599998474,
+          3.638005495,
+          6.600000381
+        ],
+        "hidden": false,
+        "hideRender": true,
+        "localLocation": [
+          0,
+          0,
+          0
+        ],
+        "localRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "localScale": [
+          1,
+          1,
+          1
+        ],
+        "materialSlotCount": 1,
+        "modifierCount": 0,
+        "name": "UCX_RU_SSN_Yasen_LOD0_08",
+        "parent": null,
+        "type": "MESH",
+        "worldLocation": [
+          0,
+          0,
+          0
+        ],
+        "worldRotationEuler": [
+          0,
+          0,
+          0
+        ],
+        "worldScale": [
+          1,
+          1,
+          1
+        ]
+      }
+    ],
+    "scenes": [
+      "Scene"
+    ],
+    "unitSettings": {
+      "lengthUnit": "METERS",
+      "scaleLength": 1,
+      "system": "METRIC"
+    },
+    "wholeMeshBounds": {
+      "diagonal": 123.200277021,
+      "max": [
+        60,
+        8.600575447,
+        14.510000229
+      ],
+      "min": [
+        -60.000762939,
+        -8.600575447,
+        -7.450079918
+      ]
+    }
+  },
+  "summary": {
+    "errorCount": 0,
+    "notVerifiedCount": 0,
+    "skippedCount": 1,
+    "warningCount": 0
+  },
+  "workerVersion": "1.0.0"
+}

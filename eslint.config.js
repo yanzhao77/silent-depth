@@ -70,7 +70,7 @@ export default tseslint.config(
 
   // ---- .mjs tool scripts (Node.js ESM + browser globals for page.evaluate) ----
   {
-    files: ['tools/**/*.mjs'],
+    files: ['tools/**/*.mjs', 'SilentDepth_Assets/Templates/Submarine/Scripts/**/*.mjs'],
     languageOptions: {
       globals: { ...globals.node, ...globals.browser },
       sourceType: 'module',
