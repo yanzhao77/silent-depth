@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_SSBN_Columbia",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Columbia_class_submarine_Wikiped.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Columbia-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Artist_rendering_of_a_Columbia-class_ballistic_missile_submarine%2C_2019_%28190306-N-N0101-125%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Columbia-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Columbia_class_submarine_Wikiped.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Columbia-class_submarine",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ca/SSBN-X.jpg/250px-SSBN-X.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Columbia-class submarine - Wikipedia"
+    },
+    {
+      "file": "05_New_Submarines_Compared_Columbia.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2021/11/new-submarines-compared-columbia-class-dreadnought-class-and-snle-3g/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/11/US-Navy-Royal-Navy-French-Navy-Ballistic-Missile-Submarines-SSBNs.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "New Submarines Compared: Columbia Class, Dreadnought Class And SNLE-3G -  Naval News"
+    },
+    {
+      "file": "07_First_Columbia_class_Sub_Trackin.jpg",
+      "source_page": "https://news.usni.org/2026/04/29/first-columbia-class-sub-tracking-to-2028-delivery-general-dynamics-says",
+      "image_url": "https://news.usni.org/wp-content/uploads/2026/04/960x0-1.jpeg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "First Columbia-class Sub Tracking to 2028 Delivery, General Dynamics Says -  USNI News"
+    }
+  ]
+}

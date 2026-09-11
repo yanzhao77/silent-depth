@@ -1,0 +1,39 @@
+{
+  "asset_id": "UK_SSN_Dreadnought",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Dreadnought_class_submarine_Wiki.webp",
+      "source_page": "https://en.wikipedia.org/wiki/Dreadnought-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/Rendering_of_Dreadnought-class_submarine.webp?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Dreadnought-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Britain_s_New_Dreadnought_Nuclea.jpg",
+      "source_page": "https://nationalinterest.org/blog/buzz/britains-new-dreadnought-nuclear-submarine-will-soon-become-a-reality",
+      "image_url": "https://nationalinterest.org/wp-content/uploads/2025/03/minnesotasub_wikimedia.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Britain's New “Dreadnought” Nuclear Submarine Will Soon Become a Reality -  The National I"
+    },
+    {
+      "file": "03_New_Submarines_Compared_Columbia.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2021/11/new-submarines-compared-columbia-class-dreadnought-class-and-snle-3g/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/11/US-Navy-Royal-Navy-French-Navy-Ballistic-Missile-Submarines-SSBNs.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "New Submarines Compared: Columbia Class, Dreadnought Class And SNLE-3G -  Naval News"
+    },
+    {
+      "file": "05_Dreadnought_Class_Nuclear_Powere.jpg",
+      "source_page": "https://www.naval-technology.com/projects/dreadnought-class-nuclear-powered-ballistic-missile-submarines/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2020/03/Featured-Image-Dreadnought-Class-Nuclear-Powered-Ballistic-Missile-Submarines.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Dreadnought-Class Nuclear-Powered Ballistic Missile Submarines, UK"
+    }
+  ]
+}

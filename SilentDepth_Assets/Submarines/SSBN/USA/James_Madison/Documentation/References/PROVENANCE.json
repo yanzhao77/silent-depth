@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_SSBN_JamesMadison",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_James_Madison_class_submarine_Wi.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/James_Madison-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/53/USS_John_C._Calhoun_%28SSBN-630%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "James Madison-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_USS_James_Madison_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/USS_James_Madison",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/00/USS_James_Madison_SSBN-627.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "USS James Madison - Wikipedia"
+    },
+    {
+      "file": "04_James_Madison_Class_SSBN_627_Bal.webp",
+      "source_page": "https://nuclearcompanion.com/data/james-madison-class-ssbn-627-ballistic-missile-submarines/",
+      "image_url": "https://cdn-nuclearcomp.pressidium.com/wp-content/uploads/2024/02/aerial-starboard-bow-view-uss-casimir-pulaski-ssbn-633-1024x819.webp",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "James Madison-Class (SSBN-627) Ballistic Missile Submarines - Nuclear  Companion: A nuclea"
+    },
+    {
+      "file": "05_James_Madison_Class_SSBN_627_Bal.webp",
+      "source_page": "https://nuclearcompanion.com/data/james-madison-class-ssbn-627-ballistic-missile-submarines/",
+      "image_url": "https://cdn-nuclearcomp.pressidium.com/wp-content/uploads/2024/02/port-bow-view-docked-uss-stonewall-jackson-ssbn-634-1024x669.webp",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "James Madison-Class (SSBN-627) Ballistic Missile Submarines - Nuclear  Companion: A nuclea"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "asset_id": "CN_SSBN_Type092",
+  "generated_at": "2026-09-10",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。模型厂商渲染图仅作外形参考。",
+  "images": [
+    {
+      "file": "02_Type_092_NATO_Xia_class_SSBN_198.jpg",
+      "source_page": "https://naval-encyclopedia.com/cold-war/china/xia-class-ssbn-1981.php",
+      "image_url": "https://i.imgur.com/1XzlO.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "Type 092 (NATO Xia class) SSBN (1981) – naval encyclopedia"
+    },
+    {
+      "file": "03_PLAN_Type_092_Xia_Class_SSBN_059.jpg",
+      "source_page": "https://www.trumpeter-china.com/index.php?g=home&m=product&a=show&id=3687&l=en",
+      "image_url": "https://www.trumpeter-china.com/Uploads/202206/62aae28daca1e.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "PLAN Type 092 Xia Class SSBN 05910-1/144 Series-TRUMPETER（china）"
+    },
+    {
+      "file": "05_PLAN_Type_092_Xia_Class_SSBN_059.jpg",
+      "source_page": "https://www.trumpeter-china.com/index.php?g=home&m=product&a=show&id=3687&l=en",
+      "image_url": "https://www.trumpeter-china.com/Uploads/202208/63005536d4ca8.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "PLAN Type 092 Xia Class SSBN 05910-1/144 Series-TRUMPETER（china）"
+    },
+    {
+      "file": "06_Type_92_Xia_China_Nuclear_Forces.jpg",
+      "source_page": "https://nuke.fas.org/guide/china/slbm/type_92.htm",
+      "image_url": "https://nuke.fas.org/guide/china/slbm/xia.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public Domain (US Government / FAS)",
+      "description": "Type 92 Xia - China Nuclear Forces"
+    },
+    {
+      "file": "08_705910_1_144_PLAN_Type_092_Xia_C.jpg",
+      "source_page": "https://www.modelrectifier.com/product-p/705910.htm",
+      "image_url": "https://cdn4.volusion.store/zckyo-xqfqa/v/vspfiles/photos/705910-2.jpg?v-cache=1726831205",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "705910 1/144 PLAN Type 092 Xia Class SSBN"
+    }
+  ]
+}

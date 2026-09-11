@@ -1,0 +1,39 @@
+{
+  "asset_id": "CN_SSN_Type093B",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Type_093B_China_Could_Soon_Have_.jpg",
+      "source_page": "https://nationalinterest.org/blog/buzz/type-093b-china-could-soon-have-fleet-guided-missile-nuclear-submarines-210469",
+      "image_url": "https://nationalinterest.org/wp-content/uploads/2024/08/Type-093B-Submarine-SSGN-from-China-Screengrab.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 093B: China Could Soon Have Fleet of Guided Missile 'Nuclear'  Submarines - The Natio"
+    },
+    {
+      "file": "02_China_unveils_new_6_200_ton_Type.jpg",
+      "source_page": "https://www.armyrecognition.com/archives/archives-naval-defense/2024/china-unveils-new-6-200-ton-type-093b-nuclear-submarine-model-with-18-vertical-launch-units",
+      "image_url": "https://www.armyrecognition.com/media/yootheme/cache/eb/China_unveils_new_6200-ton_Type_093B_nuclear_submarine_model_with_18_Vertical_Launch_Units-ebfa4e48.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "China unveils new 6,200-ton Type 093B nuclear submarine model with 18  Vertical Launch Uni"
+    },
+    {
+      "file": "04_Cutout_of_PLAN_Type_093B_SSN_r_s.png",
+      "source_page": "https://www.reddit.com/r/submarines/comments/1i757k3/cutout_of_plan_type_093b_ssn/",
+      "image_url": "https://preview.redd.it/cutout-of-plan-type-093b-ssn-v0-byjy2estrhee1.png?auto=webp&s=325add58525746aa0d7ae0ccc414b7e597a55292",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Cutout of PLAN Type 093B SSN. : r/submarines"
+    },
+    {
+      "file": "05_Chinese_Navy_Type_093_Shang_Clas.jpg",
+      "source_page": "https://www.hisutton.com/Chinese-Navy-Type-093-Shang-Class-Submarine.html",
+      "image_url": "https://www.hisutton.com/images/China-Type-093-Submarine-Cutaway.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Chinese-Navy-Type-093-Shang-Class-Submarine | Covert Shores"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_SSN_Virginia",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Virginia_class_submarine_Wikiped.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Virginia-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/bb/US_Navy_040730-N-1234E-002_PCU_Virginia_%28SSN_774%29_returns_to_the_General_Dynamics_Electric_Boat_shipyard.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Virginia-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_U_S_Navy_to_Reclassify_Virginia_.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2026/08/u-s-navy-to-reclassify-virginia-payload-module-equipped-ssns-to-ssgns/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/07/US-Navy-Virginia-Block-V-Cutaway-scaled.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "U.S. Navy to Reclassify Virginia Payload Module-equipped SSNs to SSGNs -  Naval News"
+    },
+    {
+      "file": "03_Virginia_class_Attack_Submarine_.jpg",
+      "source_page": "https://www.seaforces.org/usnships/ssn/Virginia-class.htm",
+      "image_url": "https://www.seaforces.org/usnships/ssn/SSN-774_DAT/SSN-774-USS-Virginia-026.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Virginia class Attack Submarine SSN US Navy"
+    },
+    {
+      "file": "05_How_the_Virginia_class_sub_keeps.jpg",
+      "source_page": "https://navalinstitute.com.au/how-the-virginia-class-sub-keeps-developing/",
+      "image_url": "https://navalinstitute.com.au/wp-content/uploads/SSN-783-Minnesota-Virginia-class-under-construction-web_121101-N-ZZ999-205-e1684418134534.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "How the Virginia-class sub keeps developing | The Australian Naval Institute"
+    }
+  ]
+}

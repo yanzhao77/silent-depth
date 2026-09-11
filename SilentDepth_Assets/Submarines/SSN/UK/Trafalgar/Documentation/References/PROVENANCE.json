@@ -1,0 +1,39 @@
+{
+  "asset_id": "UK_SSN_Trafalgar",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "02_Royal_Navy_Trafalgar_Class_Subma.jpg",
+      "source_page": "https://www.hisutton.com/Royal-Navy-Trafalgar-Class-Submarine.html",
+      "image_url": "https://www.hisutton.com/images/RN-Trafalgar-Class-Submarine-Cutaway.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Royal-Navy-Trafalgar-Class-Submarine | Covert Shores"
+    },
+    {
+      "file": "04_Trafalgar_class_Attack_Submarine.jpg",
+      "source_page": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Trafalgar-class.htm",
+      "image_url": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Trafalgar-class_DAT/S92-HMS-Talent-007.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Trafalgar class Attack Submarine SSN - Royal Navy"
+    },
+    {
+      "file": "05_Trafalgar_class_Attack_Submarine.jpg",
+      "source_page": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Trafalgar-class.htm",
+      "image_url": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Trafalgar-class_DAT/S90-HMS-Torbay-005.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Trafalgar class Attack Submarine SSN - Royal Navy"
+    },
+    {
+      "file": "06_Royal_Navy_Trafalgar_Class_Subma.jpg",
+      "source_page": "https://www.hisutton.com/Royal-Navy-Trafalgar-Class-Submarine.html",
+      "image_url": "https://www.hisutton.com/images/Royal-Navy-SOKS-Trafalgar-class.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Royal-Navy-Trafalgar-Class-Submarine | Covert Shores"
+    }
+  ]
+}

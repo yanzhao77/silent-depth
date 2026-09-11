@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSN_Victor",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Victor_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Victor-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Victor_I_class_submarine.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Victor-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Victor_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Victor-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Victor_III_class_submarine.jpg/250px-Victor_III_class_submarine.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Victor-class submarine - Wikipedia"
+    },
+    {
+      "file": "04_Victor_class_submarine_in_dry_do.jpg",
+      "source_page": "https://www.reddit.com/r/WarshipPorn/comments/369fn7/victor_class_submarine_in_dry_dock_3264_2448/",
+      "image_url": "https://external-preview.redd.it/victor-class-submarine-in-dry-dock-3264-2448-v0-6vJLq_oLzYOUvhA7M9swTUaoDkVoqvoPSTJeWK4AwO0.jpg?auto=webp&s=e2eafba090782edef4c3c785cf107b2c8e01c642",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Victor class submarine in dry dock [3264 × 2448] : r/WarshipPorn"
+    },
+    {
+      "file": "05_1_350_VICTOR_III_CLASS_PROJECT_6.jpg",
+      "source_page": "https://brookhursthobbies.com/1-350-victor-iii-class-project-671rtmk-ssn-83529/",
+      "image_url": "https://cdn11.bigcommerce.com/s-viosv0vywl/images/stencil/1280x1280/products/21748/28861/5583e3517a59b__10957.1676591714.jpg?c=1",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "1/350 VICTOR III CLASS (PROJECT 671RTMK)SSN - 83529"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "asset_id": "FR_SSN_Rubis",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Rubis_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Rubis-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/6d/FS_Saphir_01.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Rubis-class submarine - Wikipedia"
+    },
+    {
+      "file": "03_Rubis_Class_Attack_Submarines_De.jpg",
+      "source_page": "https://www.defenseadvancement.com/projects/rubis-class-attack-submarines/",
+      "image_url": "https://www.defenseadvancement.com/wp-content/uploads/2024/12/FNS-Amethyste-Rubis-Class-Submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Rubis-Class Attack Submarines - Defense Advancement"
+    },
+    {
+      "file": "04_Saphir_Rubis_class_submarine.jpg",
+      "source_page": "https://www.modelshipmaster.com/products/submarines/Le-Saphir-Submarine.htm",
+      "image_url": "https://www.modelshipmaster.com/products/submarines/saphir/saphir-submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Saphir Rubis class submarine"
+    },
+    {
+      "file": "05_Rubis_class_Archives_Naval_News.png",
+      "source_page": "https://www.navalnews.com/tag/rubis-class/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/10/French-SSN-Submarine-Perle-repaired-1.png",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Rubis-class Archives - Naval News"
+    }
+  ]
+}

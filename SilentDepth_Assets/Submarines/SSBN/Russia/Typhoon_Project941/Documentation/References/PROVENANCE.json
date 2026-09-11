@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSBN_Typhoon",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Typhoon_class_submarine_Wikipedi.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Typhoon-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Typhoon3.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Typhoon-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Soviet_submarine_TK_202_Wikipedi.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Soviet_submarine_TK-202",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Russian_Typhoon-class_submarine.jpg/1280px-Russian_Typhoon-class_submarine.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Soviet submarine TK-202 - Wikipedia"
+    },
+    {
+      "file": "03_Last_Typhoon_Can_The_World_s_Lar.jpg",
+      "source_page": "https://www.forbes.com/sites/hisutton/2020/08/23/last-typhoon-can-the-worlds-largest-submarine-still-destroy-the-world/",
+      "image_url": "https://imageio.forbes.com/specials-images/imageserve/5f40d782893045cf9ab150c8/Typhoon-Class-SSBN-submarine/0x0.jpg?crop=1482%2C834%2Cx2%2Cy0%2Csafe&height=400&width=480&fit=bounds",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Last Typhoon: Can The World's Largest Submarine Still Destroy The World?"
+    },
+    {
+      "file": "04_Project_941_is_one_of_the_most_i.jpg",
+      "source_page": "https://www.instagram.com/p/DW9kYqHEeVz/",
+      "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3872410839932861154",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Project 941 is one of the most insane engineering feats ever created 鈿擄笍 Project  941 Akul"
+    }
+  ]
+}

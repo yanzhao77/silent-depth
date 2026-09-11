@@ -1,0 +1,39 @@
+{
+  "asset_id": "CN_SSN_Type091",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Type_091_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Type_091_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Han_class.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 091 submarine - Wikipedia"
+    },
+    {
+      "file": "02_Type_091_Han_class_nuclear_attac.jpg",
+      "source_page": "https://naval-encyclopedia.com/cold-war/china/type-091-han-class-nuclear-attack-submarines-1970.php",
+      "image_url": "https://www.naval-encyclopedia.com/wp-content/uploads/2019/10/Han_class_SSN2.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 091 (Han class) nuclear attack submarines (1970) – naval encyclopedia"
+    },
+    {
+      "file": "03_Type_091_Han_class_nuclear_attac.jpg",
+      "source_page": "https://naval-encyclopedia.com/cold-war/china/type-091-han-class-nuclear-attack-submarines-1970.php",
+      "image_url": "https://www.naval-encyclopedia.com/wp-content/uploads/2019/10/Type-091_Han-class_image.30.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 091 (Han class) nuclear attack submarines (1970) – naval encyclopedia"
+    },
+    {
+      "file": "04_Type_091_Han_class_nuclear_attac.jpg",
+      "source_page": "https://naval-encyclopedia.com/cold-war/china/type-091-han-class-nuclear-attack-submarines-1970.php",
+      "image_url": "https://www.naval-encyclopedia.com/wp-content/uploads/2019/10/Type-091_Han_sinodefence.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 091 (Han class) nuclear attack submarines (1970) – naval encyclopedia"
+    }
+  ]
+}

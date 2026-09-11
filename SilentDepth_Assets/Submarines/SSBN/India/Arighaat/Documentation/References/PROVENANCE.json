@@ -1,0 +1,39 @@
+{
+  "asset_id": "IN_SSBN_Arighaat",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_INS_Arighaat_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/INS_Arighaat",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e3/Arihant_1.svg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "INS Arighaat - Wikipedia"
+    },
+    {
+      "file": "02_India_s_INS_Arighaat_A_Credible_.jpg",
+      "source_page": "https://www.geopoliticalmonitor.com/indias-ins-arighaat-a-credible-deterrence/",
+      "image_url": "https://www.geopoliticalmonitor.com/wp-content/uploads/2024/09/CHAKRA.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "India's INS Arighaat: A Credible Deterrence? | Geopolitical Monitor"
+    },
+    {
+      "file": "03_INS_Arighaat_How_a_second_nuclea.jpg",
+      "source_page": "https://www.indiatoday.in/india/story/ins-arighaat-how-a-second-nuclear-submarine-boosts-indias-strategic-reach-2591300-2024-08-31",
+      "image_url": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202408/ins-arighaat-31582222-3x4.jpg?VersionId=5CGz5CR4SSFBNTvBMgeoHTncMZRFdsZt",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "INS Arighaat: How a second nuclear submarine boosts India's strategic reach  - India Today"
+    },
+    {
+      "file": "05_India_Successfully_Tests_K_4_Bal.webp",
+      "source_page": "https://defensefeeds.com/news/naval-news/india-successfully-tests-k-4-ballistic-missile/",
+      "image_url": "https://defensefeeds.com/wp-content/uploads/2025/12/Indian-Arihant-Class-Submarine-1200x678.webp",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "India Successfully Tests K-4 Ballistic Missile from INS Arighaat Submarine"
+    }
+  ]
+}

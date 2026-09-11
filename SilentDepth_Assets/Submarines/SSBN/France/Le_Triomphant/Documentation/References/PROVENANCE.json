@@ -1,0 +1,39 @@
+{
+  "asset_id": "FR_SSBN_LeTriomphant",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "03_France_s_New_Submarine_Will_Be_E.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2021/02/frances-new-submarine-will-be-even-quieter-than-the-ocean/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/02/French-Navy-SNLE-3G-Submarine-Cutaway.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "France's New Submarine Will Be Even Quieter Than The Ocean - Naval News"
+    },
+    {
+      "file": "04_Le_Triomphant_Ballistic_Missile_.jpg",
+      "source_page": "https://www.seaforces.org/marint/French-Navy/Submarine/Le-Triomphant-class.htm",
+      "image_url": "https://www.seaforces.org/marint/French-Navy/Submarine/LeTriomphant-class_DAT/LeTriomphant-class-SSBN-26.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Le Triomphant Ballistic Missile Submarine SSBN French Navy"
+    },
+    {
+      "file": "05_SSBN_Triomphant_Class_Naval_Tech.jpg",
+      "source_page": "https://www.naval-technology.com/projects/triomphant/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2017/09/triom4.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "SSBN Triomphant Class - Naval Technology"
+    },
+    {
+      "file": "06_Le_Triomphant_class_Submarine_Fu.webp",
+      "source_page": "https://www.globalmilitary.net/ships/triomphant/",
+      "image_url": "https://media.globalmilitary.net/world/images/models/ship/profile/triomphant.webp",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Le Triomphant-class Submarine: Full Specs & Armament"
+    }
+  ]
+}

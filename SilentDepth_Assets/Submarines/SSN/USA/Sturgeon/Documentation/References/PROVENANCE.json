@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_SSN_Sturgeon",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Sturgeon_class_submarine_Wikiped.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Sturgeon-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/1/1e/USS_Sturgeon_%28SSN-637%29_Launch.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Sturgeon-class submarine - Wikipedia"
+    },
+    {
+      "file": "03_List_of_Sturgeon_class_submarine.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/List_of_Sturgeon-class_submarines",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/USS_Tunny_%28SSN-682%29_launch.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "List of Sturgeon-class submarines - Wikipedia"
+    },
+    {
+      "file": "04_List_of_Sturgeon_class_submarine.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/List_of_Sturgeon-class_submarines",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/USS_William_H._Bates_%28SSN-680%29.jpg/250px-USS_William_H._Bates_%28SSN-680%29.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "List of Sturgeon-class submarines - Wikipedia"
+    },
+    {
+      "file": "05_Sturgeon_SSN_Covert_Shores.jpg",
+      "source_page": "https://www.hisutton.com/Sturgeon_SSN.html",
+      "image_url": "https://www.hisutton.com/images/US-Navy_Nuclear_Attack_Submarine_Cutaway.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Sturgeon_SSN | Covert Shores"
+    }
+  ]
+}

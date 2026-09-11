@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSN_November",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Soviet_submarine_K_11_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Soviet_submarine_K-11",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/November_submarine.svg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Soviet submarine K-11 - Wikipedia"
+    },
+    {
+      "file": "02_Russia_s_November_Class_Submarin.jpg",
+      "source_page": "https://nationalinterest.org/blog/buzz/russias-november-class-submarine-was-something-navy-could-never-match-209260",
+      "image_url": "https://nationalinterest.org/wp-content/uploads/2024/02/November-Class-Submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Russia's November-Class Submarine Was Something the Navy Could Never Match  - The National"
+    },
+    {
+      "file": "03_Zvezda_1_350_November_class_subm.jpg",
+      "source_page": "https://modelingmadness.com/review/misc/ships/cainov.htm",
+      "image_url": "https://modelingmadness.com/review/misc/ships/cainovc.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Zvezda 1/350 'November' class submarine, by Ingemar Caisander"
+    },
+    {
+      "file": "04_November_class_submarine_K_3_Len.jpg",
+      "source_page": "https://www.reddit.com/r/WarshipPorn/comments/18tuwhs/november_class_submarine_k3_leninsky_komsomol/",
+      "image_url": "https://preview.redd.it/november-class-submarine-k-3-leninsky-komsomol-ussrs-first-v0-xwlqehc6aa9c1.jpeg?auto=webp&s=c0fb4a1e074e154b49cd997be32259cf240f0cc3",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "November class submarine K-3 \"Leninsky Komsomol\", USSR's first nuclear  submarine in his r"
+    }
+  ]
+}

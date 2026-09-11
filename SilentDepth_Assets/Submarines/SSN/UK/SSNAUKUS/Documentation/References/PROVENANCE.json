@@ -1,0 +1,39 @@
+{
+  "asset_id": "UK_SSN_AUKUS",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_SSN_AUKUS_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/SSN-AUKUS",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a1/SSN-AUKUS_submarine.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "SSN-AUKUS - Wikipedia"
+    },
+    {
+      "file": "02_Building_SSN_AUKUS_Australia_s_3.webp",
+      "source_page": "https://www.navylookout.com/building-ssn-aukus-australias-30bn-nuclear-submarine-yard-at-osborne/",
+      "image_url": "https://www.navylookout.com/app/uploads/2026/02/Building-SSN-AUKUS-Australia-AUS30bn-Nuclear-Submarine-Yard-at-Osborne-scaled.webp",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Building SSN-AUKUS: Australia's $30bn Nuclear Submarine Yard at Osborne -  Navy Lookout"
+    },
+    {
+      "file": "03_Royal_Navy_s_SSN_AUKUS_Submarine.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2026/03/royal-navys-ssn-aukus-submarines-to-feature-vls/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2025/11/2-scaled.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Royal Navy's SSN-AUKUS Submarines to feature VLS - Naval News"
+    },
+    {
+      "file": "04_The_5_Main_Options_For_Australia.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2021/09/the-5-main-options-for-australias-aukus-nuclear-submarine-deal/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/09/AUKUS-Submarine-Virginia-Astute.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "The 5 Main Options For Australia's AUKUS Nuclear Submarine Deal - Naval News"
+    }
+  ]
+}

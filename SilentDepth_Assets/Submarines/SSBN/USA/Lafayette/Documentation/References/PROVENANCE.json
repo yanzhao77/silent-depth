@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_SSBN_Lafayette",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Lafayette_class_submarine_Wikipe.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Lafayette-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/6/63/Woodrow_Wilson_sub.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Lafayette-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_USS_Lafayette_SSBN_616_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/USS_Lafayette_(SSBN-616)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/de/USS_Lafayette_SSBN-616.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "USS Lafayette (SSBN-616) - Wikipedia"
+    },
+    {
+      "file": "03_The_U_S_Navy_s_Lafayette_Class_S.jpg",
+      "source_page": "https://nationalinterest.org/blog/buzz/us-navys-lafayette-class-submarines-went-all-out-beat-russia-208800",
+      "image_url": "https://nationalinterest.org/wp-content/uploads/2024/09/Lafayette-class-SSBN-U.S.-Navy.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "The U.S. Navy's Lafayette-Class Submarines Went All Out to Beat Russia -  The National Int"
+    },
+    {
+      "file": "05_Lafayette_Class_SSBN_616_Ballist.webp",
+      "source_page": "https://nuclearcompanion.com/data/lafayette-class-ssbn-616-ballistic-missile-submarines/",
+      "image_url": "https://cdn-nuclearcomp.pressidium.com/wp-content/uploads/2024/02/starboard-view-uss-alexander-hamilton-ssbn-617-1024x678.webp",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Lafayette-Class (SSBN-616) Ballistic Missile Submarines - Nuclear  Companion: A nuclear gu"
+    }
+  ]
+}

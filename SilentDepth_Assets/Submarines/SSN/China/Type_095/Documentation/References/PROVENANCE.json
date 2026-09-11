@@ -1,0 +1,39 @@
+{
+  "asset_id": "CN_SSN_Type095",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_China_s_Own_Seawolf_class_Submar.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2026/03/chinas-own-seawolf-class-submarine-the-type-095/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2026/03/Type-095-Seawolf-submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "China's Own Seawolf-class Submarine: The Type 095 - Naval News"
+    },
+    {
+      "file": "02_Chinese_Type_09V_Next_Generation.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2026/02/chinese-type-09v-next-generation-ssn-appears-at-bohai/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2026/02/Type-095-China-Submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Chinese Type 09V Next Generation SSN Appears At Bohai"
+    },
+    {
+      "file": "04_Chinese_Navy_Steps_Closer_To_New.jpg",
+      "source_page": "https://www.forbes.com/sites/hisutton/2020/06/19/chinese-navy-gets-closer-to-new-generation-of-nuclear-submarines/",
+      "image_url": "https://imageio.forbes.com/specials-images/imageserve/5eeb7c2356a3a10006ee0990/0x0.jpg?format=jpg&crop=1478,831,x0,y24,safe&height=900&width=1600&fit=bounds",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Chinese Navy Steps Closer To New Generation Of Nuclear Submarines"
+    },
+    {
+      "file": "05_China_s_New_Type_095_Nuclear_Att.jpg",
+      "source_page": "https://nationalinterest.org/blog/buzz/chinas-new-type-095-nuclear-attack-submarine-threat-us-navy-208457",
+      "image_url": "https://nationalinterest.org/wp-content/uploads/2024/01/China-Type-095-Submarine-1.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "China's New Type 095 Nuclear Attack Submarine: Threat to the U.S. Navy? -  The National In"
+    }
+  ]
+}

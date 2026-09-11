@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSN_Sierra",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Sierra_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Sierra-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Sierra_class_SSN.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Sierra-class submarine - Wikipedia"
+    },
+    {
+      "file": "03_Putin_s_Sierra_Class_Titanium_Su.jpg",
+      "source_page": "https://nationalinterest.org/blog/buzz/putins-sierra-class-titanium-sub-us-navy-has-nothing-it-210569",
+      "image_url": "https://nationalinterest.org/wp-content/uploads/2024/05/Sierra-II-Class-Submarine-from-Russia.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Putin's Sierra-Class Titanium Sub: The U.S. Navy Has Nothing Like It - The  National Inter"
+    },
+    {
+      "file": "04_Russia_s_Sierra_Class_II_Titaniu.jpg",
+      "source_page": "https://nationalinterest.org/blog/buzz/russias-sierra-class-ii-titanium-submarines-are-giant-mystery-208299",
+      "image_url": "https://nationalinterest.org/wp-content/uploads/2024/01/Russian-Submarine_0.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Russia's Sierra-Class II Titanium Submarines Are a Giant Mystery - The  National Interest"
+    },
+    {
+      "file": "05_Russian_SIERRA_Class_Titanium_hu.jpg",
+      "source_page": "https://www.hisutton.com/Russian-20SIERRA-20Class-20Titanium-hulled-20attack-20sub.html",
+      "image_url": "https://www.hisutton.com/images/SIERRA_shark1.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Russian SIERRA Class Titanium-hulled attack sub | Covert Shores"
+    }
+  ]
+}

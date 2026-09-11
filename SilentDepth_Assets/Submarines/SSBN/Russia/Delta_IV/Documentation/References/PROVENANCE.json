@@ -1,0 +1,55 @@
+{
+  "asset_id": "RU_SSBN_DeltaIV",
+  "generated_at": "2026-09-10",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_delta4.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta_IV_class_SSBN.svg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Delta_IV_class_SSBN.svg/1920px-Delta_IV_class_SSBN.svg.png",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 3.0 (Wikimedia Commons, 作者 Mike1979 Russia)",
+      "description": "Delta IV（667BDRM Delfin）侧视轮廓图"
+    },
+    {
+      "file": "02_delta4.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta_IV_class_SSBN_variant.svg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Delta_IV_class_SSBN_variant.svg/1920px-Delta_IV_class_SSBN_variant.svg.png",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 3.0 (Wikimedia Commons, 作者 Mike1979 Russia)",
+      "description": "Delta IV 早期艇体（K-114 Tula）外形变体轮廓图"
+    },
+    {
+      "file": "03_delta4.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Projekt667BDRM-Sensor-DE.svg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Projekt667BDRM-Sensor-DE.svg/1920px-Projekt667BDRM-Sensor-DE.svg.png",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 3.0 (Wikimedia Commons, 作者 Alexpl)",
+      "description": "667BDRM 围壳顶部传感器与天线桅杆布置图（德文标注）"
+    },
+    {
+      "file": "04_delta4.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Russian_submarine_Tula_(K-114).jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Russian_submarine_Tula_%28K-114%29.jpg",
+      "accessed": "2026-09-10",
+      "license": "CC BY 4.0 (Wikimedia Commons, 俄罗斯国防部)",
+      "description": "K-114 图拉号停泊于 Skalisty 潜艇基地（实艇涂装与舷号参考）"
+    },
+    {
+      "file": "05_delta4.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Submarine_Delta_IV_class.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Submarine_Delta_IV_class.jpg/1920px-Submarine_Delta_IV_class.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public domain (美国国防部, DN-SC-96-00524)",
+      "description": "北方舰队 Delta IV 水面航行右前视图（推断为 K-18 Karelia）"
+    },
+    {
+      "file": "06_delta4.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Umka-2021_surfaced_subs.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Umka-2021_surfaced_subs.jpg",
+      "accessed": "2026-09-10",
+      "license": "CC BY 4.0 (Wikimedia Commons, 作者未知)",
+      "description": "Umka-2021 演习中北方舰队核潜艇同时上浮（含 Delta IV）"
+    }
+  ]
+}

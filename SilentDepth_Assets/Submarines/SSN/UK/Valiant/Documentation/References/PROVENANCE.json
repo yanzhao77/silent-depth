@@ -1,0 +1,39 @@
+{
+  "asset_id": "UK_SSN_Valiant",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Valiant_class_submarine_Wikipedi.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Valiant-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Valiant_class_submarine_1986.jpeg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Valiant-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_HMS_Valiant_S102_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/HMS_Valiant_(S102)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0b/HMS_Valiant_S102_01.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "HMS Valiant (S102) - Wikipedia"
+    },
+    {
+      "file": "03_Valiant_class_Attack_Submarine_S.jpg",
+      "source_page": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Valiant-class.htm",
+      "image_url": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Valiant-class_DAT/S102-HMS-Valiant-007.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Valiant class Attack Submarine SSN - Royal Navy"
+    },
+    {
+      "file": "05_Churchill_Valiant_Class_Submarin.jpg",
+      "source_page": "https://www.endtas.com/churchill-valiant-class-submarines/",
+      "image_url": "https://www.endtas.com/wp-content/uploads/2023/10/02.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Churchill/Valiant Class Submarines – EnDTaS"
+    }
+  ]
+}

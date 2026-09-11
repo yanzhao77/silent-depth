@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSBN_Yankee",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Yankee_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Yankee-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Submarine_Yankee_I_class.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Yankee-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Yankee_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Yankee-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Submarine_Yankee_I_damaged.jpg/250px-Submarine_Yankee_I_damaged.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Yankee-class submarine - Wikipedia"
+    },
+    {
+      "file": "03_Yankee_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Yankee-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Submarine_Yankee_II_class.jpg/250px-Submarine_Yankee_II_class.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Yankee-class submarine - Wikipedia"
+    },
+    {
+      "file": "06_1024_x_661_The_unique_Project_66.jpg",
+      "source_page": "https://www.reddit.com/r/submarines/comments/rpzana/1024_x_661_the_unique_project_667m_yankee_sidecar/",
+      "image_url": "https://preview.redd.it/bfzkzhvonzz61.jpg?width=1024&auto=webp&s=1608748dfba2cb505a72644cb2d69bcb2f787ec0",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "1024 x 661] The unique Project 667M \"Yankee Sidecar,\" a Yankee-class SSBN  converted to an"
+    }
+  ]
+}

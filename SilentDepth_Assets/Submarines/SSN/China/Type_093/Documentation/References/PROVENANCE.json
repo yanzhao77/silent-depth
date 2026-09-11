@@ -1,0 +1,39 @@
+{
+  "asset_id": "CN_SSN_Type093",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "02_The_Chinese_Navy_s_Most_Powerful.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2020/11/the-chinese-navys-most-powerful-attack-submarine-the-type-093a/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2020/11/Chinese-Navy-Type-093A-Submarine-Cutaway-1.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "The Chinese Navy's Most Powerful Attack Submarine: The Type-093A - Naval  News"
+    },
+    {
+      "file": "04_Chinese_Navy_Type_093_Shang_Clas.jpg",
+      "source_page": "https://www.hisutton.com/Chinese-Navy-Type-093-Shang-Class-Submarine.html",
+      "image_url": "https://www.hisutton.com/images/China-Type-093A-SSN-Submarine-progression.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Chinese-Navy-Type-093-Shang-Class-Submarine | Covert Shores"
+    },
+    {
+      "file": "05_Chinese_Navy_Type_093_Shang_Clas.jpg",
+      "source_page": "https://www.hisutton.com/Chinese-Navy-Type-093-Shang-Class-Submarine.html",
+      "image_url": "https://www.hisutton.com/images/China-Type-093A-SSN-Submarine-profile.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Chinese-Navy-Type-093-Shang-Class-Submarine | Covert Shores"
+    },
+    {
+      "file": "06_China_s_New_Type_093B_Submarine_.jpg",
+      "source_page": "https://nationalsecurityjournal.org/chinas-new-type-093b-submarine-was-built-for-1-mission/",
+      "image_url": "https://nationalsecurityjournal.org/wp-content/uploads/2025/06/Type-093B-China-Submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "China's New Type 093B Submarine Was Built for 1 Mission - National Security  Journal"
+    }
+  ]
+}

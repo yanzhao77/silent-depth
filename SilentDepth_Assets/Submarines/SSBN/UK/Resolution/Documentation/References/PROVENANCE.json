@@ -1,0 +1,39 @@
+{
+  "asset_id": "UK_SSBN_Resolution",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Resolution_class_submarine_Wikip.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Resolution-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/44/HMS_Repulse_%28S23%29_in_the_Firth_of_Clyde_c1979.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Resolution-class submarine - Wikipedia"
+    },
+    {
+      "file": "03_Resolution_class_Ballistic_Missi.jpg",
+      "source_page": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Resolution-class.htm",
+      "image_url": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Resolution-class_DAT/Resolution-class-SSBN-04.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Resolution class Ballistic Missile Submarine SSBN Royal Navy"
+    },
+    {
+      "file": "04_Resolution_class_Ballistic_Missi.jpg",
+      "source_page": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Resolution-class.htm",
+      "image_url": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Resolution-class_DAT/S22-HMS-Resolution-010.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Resolution class Ballistic Missile Submarine SSBN Royal Navy"
+    },
+    {
+      "file": "05_Whole_model_cut_away_longitudina.jpg",
+      "source_page": "https://collection.sciencemuseumgroup.org.uk/objects/co42092/whole-model-cut-away-longitudinally-and-transverse-sectional-model-of-the-balistic-missile-carrying-nuclear-powered-submarine-h-m-s-resolution-1966",
+      "image_url": "https://coimages.sciencemuseumgroup.org.uk/32/281/medium_1987_0611_0001.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Whole model, cut-away longitudinally; and transverse sectional model, of  the balistic mis"
+    }
+  ]
+}

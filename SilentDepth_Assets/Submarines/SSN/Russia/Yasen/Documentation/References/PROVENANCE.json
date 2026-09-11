@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSN_Yasen",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Yasen_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Yasen-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/4/40/%D0%9A-560_%C2%AB%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%BD%D1%81%D0%BA%C2%BB.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Yasen-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Pr885_Severodvinsk_Class_Covert_.jpg",
+      "source_page": "https://www.hisutton.com/Pr885_Severodvinsk_Class.html",
+      "image_url": "https://www.hisutton.com/images/Ru_Pr885M_cutaway.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Pr885_Severodvinsk_Class | Covert Shores"
+    },
+    {
+      "file": "03_The_Yasen_M_and_the_Future_of_Ru.jpg",
+      "source_page": "https://www.rusi.org/explore-our-research/publications/rusi-defence-systems/yasen-m-and-future-russian-submarine-forces",
+      "image_url": "https://ik.imagekit.io/po8th4g4eqj/production/severodvinsk_graphic.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "The Yasen-M and the Future of Russian Submarine Forces | Royal United  Services Institute"
+    },
+    {
+      "file": "04_How_Russia_s_Yasen_M_Submarine_C.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2021/08/how-russias-yasen-m-submarine-compares-to-the-u-s-navys-block-v-virginia/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/08/US-Navy-And-Russian-Navy-Submarines-Compared.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "How Russia's Yasen-M Submarine Compares To The U.S. Navy's Block-V Virginia  - Naval News"
+    }
+  ]
+}

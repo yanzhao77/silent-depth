@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_SSBN_Ohio",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Ohio_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Ohio-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Good_Luck_Ohio.JPEG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Ohio-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_U_S_Navy_s_Ohio_Class_Submarine_.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2020/12/u-s-navys-ohio-class-submarine-to-get-new-hypersonic-weapons/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2020/12/US-Navy-Ohio-Class-Submarine-Cutaway-1-scaled.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "U.S. Navy's Ohio Class Submarine To Get New Hypersonic Weapons - Naval News"
+    },
+    {
+      "file": "04_An_Ohio_Class_Nuclear_Submarine_.jpg",
+      "source_page": "https://www.19fortyfive.com/2023/11/an-ohio-class-nuclear-submarine-has-arrived-in-the-middle-east/",
+      "image_url": "https://www.19fortyfive.com/wp-content/uploads/2022/09/Ohio-Class-SSBN.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "An Ohio-Class Nuclear Submarine Has Arrived in the Middle East - 19FortyFive"
+    },
+    {
+      "file": "07_The_Incredible_Shrinking_SSBN_X_.jpg",
+      "source_page": "https://www.usni.org/magazines/proceedings/2012/june/incredible-shrinking-ssbnx",
+      "image_url": "https://www.usni.org/sites/default/files/styles/hero_image/public/DobbsF0Jun12.jpg?itok=2aeB_81V",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "The Incredible Shrinking SSBN(X) | Proceedings - June 2012 Vol. 138/6/1,312"
+    }
+  ]
+}

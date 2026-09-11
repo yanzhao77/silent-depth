@@ -1,0 +1,79 @@
+{
+  "asset_id": "RU_SSBN_DeltaI",
+  "generated_at": "2026-09-10",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_line_drawing.png",
+      "source_page": "https://en.wikipedia.org/wiki/Delta-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Delta_I_class_SSBN.svg/960px-Delta_I_class_SSBN.svg.png",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 4.0 (Wikimedia Commons)",
+      "description": "Delta I（667B）侧视线图"
+    },
+    {
+      "file": "02_naval_technology_profile.jpg",
+      "source_page": "https://www.naval-technology.com/projects/delta-class-submarine/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2017/09/delta1.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "Delta 级外形剖面参考图"
+    },
+    {
+      "file": "04_sevmash_k1.jpg",
+      "source_page": "https://seawaves.com/",
+      "image_url": "https://seawaves.com/wp-content/uploads/2023/01/2404.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "Project 667B 首艇 K-1 相关照片"
+    },
+    {
+      "file": "03_delta1_navalen.png",
+      "source_page": "https://naval-encyclopedia.com/cold-war/ussr/delta-i-class-submarine.php",
+      "image_url": "https://naval-encyclopedia.com/wp-content/uploads/2024/05/Project667BMurena.png",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "Project 667B Murena 三视线型图（Naval Encyclopedia）"
+    },
+    {
+      "file": "05_delta1_silhouette.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta_I_class_SSBN.svg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Delta_I_class_SSBN.svg/1920px-Delta_I_class_SSBN.svg.png",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 3.0 (Wikimedia Commons, 作者 Mike1979 Russia)",
+      "description": "Delta I（667B）侧视轮廓图，用于核对围壳、龟背与艏艉线型"
+    },
+    {
+      "file": "06_delta1_photo.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta_class_nuclear-powered_ballistic_missle_submarine.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Delta_class_nuclear-powered_ballistic_missle_submarine.jpg/1920px-Delta_class_nuclear-powered_ballistic_missle_submarine.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public domain",
+      "description": "Delta 级实艇照片（水面状态）"
+    },
+    {
+      "file": "extra/07_delta1_profile.png",
+      "source_page": "https://naval-encyclopedia.com/cold-war/ussr/delta-i-class-submarine.php",
+      "image_url": "https://naval-encyclopedia.com/wp-content/uploads/2024/05/Delta-I-profile.png",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "Delta I 侧视线型图（补充参考，分辨率更高）"
+    },
+    {
+      "file": "extra/08_delta1_murena_photo.jpg",
+      "source_page": "https://naval-encyclopedia.com/cold-war/ussr/delta-i-class-submarine.php",
+      "image_url": "https://naval-encyclopedia.com/wp-content/uploads/2024/05/DeltaIProject667BMurena.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "Project 667B Murena 实艇照（补充参考）"
+    },
+    {
+      "file": "extra/09_delta1_blueprint.png",
+      "source_page": "https://naval-encyclopedia.com/cold-war/ussr/delta-i-class-submarine.php",
+      "image_url": "https://naval-encyclopedia.com/wp-content/uploads/2024/05/ussr-project-667b-murena-delta-i-class-submarine-2.png",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "667B 线图（补充参考）"
+    }
+  ]
+}

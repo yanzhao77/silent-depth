@@ -1,0 +1,39 @@
+{
+  "asset_id": "UK_SSN_Astute",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "02_The_Royal_Navy_s_Astute_class_su.jpg",
+      "source_page": "https://www.navylookout.com/the-royal-navys-astute-class-submarines-part-1-development-and-delivery/",
+      "image_url": "https://www.navylookout.com/app/uploads/2022/10/History-of-Astute-Class-Submarines.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "The Royal Navy's Astute class submarines: Part 1 – development and delivery  - Navy Lookou"
+    },
+    {
+      "file": "03_Astute_Class_Attack_Submarine_Ro.png",
+      "source_page": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+      "image_url": "https://sccd.royalnavy.mod.uk/-/media/rnweb/homepage/3d-models/3548-astute-sub.png?h=1350&iar=0&w=3000&rev=25fabe3bcb86433e863704058abdb1b0&hash=3D867C7A7E7BF8CBF5599AF9102C41DB",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Astute Class Attack Submarine | Royal Navy"
+    },
+    {
+      "file": "05_Astute_Class_Attack_Submarine_Ro.jpg",
+      "source_page": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
+      "image_url": "https://sccd.royalnavy.mod.uk/-/media/rnweb/equipment/submarines/astute-class/mobile/royal-navy-equipment-astute-01-astute-class-mob.jpg?h=2000&iar=0&w=1000&rev=19e217fc0a5249079b8613750753e0f1&hash=227AD84F635ABAB864FE18BAE45627E2",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Astute Class Attack Submarine | Royal Navy"
+    },
+    {
+      "file": "06_SSN_Astute_Class_Nuclear_Submari.jpg",
+      "source_page": "https://www.naval-technology.com/projects/astute/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2018/05/Image-3-SSN-Astute-Class-Nuclear-Submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "SSN Astute-Class Nuclear Submarines, UK"
+    }
+  ]
+}

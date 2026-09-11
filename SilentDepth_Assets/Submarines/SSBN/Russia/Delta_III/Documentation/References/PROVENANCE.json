@@ -1,0 +1,55 @@
+{
+  "asset_id": "RU_SSBN_DeltaIII",
+  "generated_at": "2026-09-10",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_delta3.gif",
+      "source_page": "https://commons.wikimedia.org/wiki/File:667bdr.gif",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8e/667bdr.gif",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 4.0 (Wikimedia Commons, 作者 Svch433)",
+      "description": "667BDR 线图（含结构分区示意）"
+    },
+    {
+      "file": "02_delta3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta-III_nuclear-powered_ballistic_missle_submarine.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Delta-III_nuclear-powered_ballistic_missle_submarine.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public domain",
+      "description": "Delta III 实艇照片（水面航行）"
+    },
+    {
+      "file": "03_delta3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta-class-submarine-firing-SS-N-18-DIA.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Delta-class-submarine-firing-SS-N-18-DIA.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public domain (DIA 插图, 作者 Edward L. Cooper)",
+      "description": "Delta III 发射 SS-N-18 弹道导弹示意（DIA 官方插画）"
+    },
+    {
+      "file": "04_delta3.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta_III_class_SSBN.svg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Delta_III_class_SSBN.svg/1920px-Delta_III_class_SSBN.svg.png",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 3.0 (Wikimedia Commons, 作者 Mike1979 Russia)",
+      "description": "Delta III（667BDR）侧视轮廓图，用于核对龟背长度与围壳位置"
+    },
+    {
+      "file": "05_delta3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Submarine_Delta_III_class.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Submarine_Delta_III_class.jpg/1920px-Submarine_Delta_III_class.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public domain (Soviet Military Power 1983, 美国国防部出版物)",
+      "description": "Delta III 右后方视角实艇照（可见龟背与艉部）"
+    },
+    {
+      "file": "06_delta3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:K-433_Святой_Георгий_Победоносец.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f4/K-433_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9_%D0%93%D0%B5%D0%BE%D1%80%D0%B3%D0%B8%D0%B9_%D0%9F%D0%BE%D0%B1%D0%B5%D0%B4%D0%BE%D0%BD%D0%BE%D1%81%D0%B5%D1%86.jpg",
+      "accessed": "2026-09-10",
+      "license": "CC BY 4.0 (Wikimedia Commons, 作者 Sergey Konovalov)",
+      "description": "K-433 圣格奥尔基号（现役艇之一）实船照"
+    }
+  ]
+}

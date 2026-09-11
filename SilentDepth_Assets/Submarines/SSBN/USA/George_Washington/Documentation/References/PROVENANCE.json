@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_SSBN_GeorgeWashington",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_George_Washington_class_submarin.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/George_Washington-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/33/USS_George_Washington_%28SSBN-598%29_underway_at_sea%2C_circa_in_the_1970s.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "George Washington-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_USS_George_Washington_Launched_T.jpg",
+      "source_page": "https://connecticuthistory.org/uss-george-washington-launched-today-in-history/",
+      "image_url": "https://connecticuthistory.org/wp-content/uploads/sites/6/2012/04/USSGeorgeWashington.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "USS George Washington Launched – Today in History: June 9 - Connecticut  History | a CTHum"
+    },
+    {
+      "file": "05_George_Washington_Class_SSBN_598.webp",
+      "source_page": "https://nuclearcompanion.com/data/george-washington-class-ssbn-598-ballistic-missile-submarines/",
+      "image_url": "https://cdn-nuclearcomp.pressidium.com/wp-content/uploads/2024/02/USS-GEORGE-WASHINGTON-SSBN-598-model-1024x700.webp",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "George Washington-Class (SSBN-598) Ballistic Missile Submarines - Nuclear  Companion: A nu"
+    },
+    {
+      "file": "06_Submarine_Photo_Index.jpg",
+      "source_page": "https://www.navsource.net/archives/08/08598.htm",
+      "image_url": "http://navsource.net/archives/08/600/0859805.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Submarine Photo Index"
+    }
+  ]
+}

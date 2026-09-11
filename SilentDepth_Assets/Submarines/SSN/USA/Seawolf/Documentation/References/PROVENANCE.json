@@ -1,0 +1,39 @@
+{
+  "asset_id": "US_SSN_Seawolf",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Seawolf_class_submarine_Wikipedi.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Seawolf-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/USS_Connecticut_SSN_22.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Seawolf-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_China_s_Own_Seawolf_class_Submar.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2026/03/chinas-own-seawolf-class-submarine-the-type-095/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2026/03/Type-095-Seawolf-submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "China's Own Seawolf-class Submarine: The Type 095 - Naval News"
+    },
+    {
+      "file": "03_Run_Silent_Run_Deep_PM_Meets_the.jpg",
+      "source_page": "https://www.popularmechanics.com/military/navy-ships/a34827041/seawolf-submarine-history/",
+      "image_url": "https://hips.hearstapps.com/hmg-prod/images/screen-shot-2020-11-30-at-4-31-21-pm-1606783284.jpg?resize=2048:*",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Run Silent, Run Deep: PM Meets the Deadly Seawolf Submarine"
+    },
+    {
+      "file": "04_Seawolf_class_submarine_Length_M.jpg",
+      "source_page": "https://www.britannica.com/technology/Seawolf-class-submarine",
+      "image_url": "https://cdn.britannica.com/54/266354-050-CEA9A964/Seawolf-class-attack-submarine-USS-Connecticut-underway-Pacific-Ocean-US-Navy.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Seawolf-class submarine | Length, Maximum Depth, Cost, & Facts | Britannica"
+    }
+  ]
+}

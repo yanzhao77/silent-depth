@@ -1,0 +1,39 @@
+{
+  "asset_id": "IN_SSBN_S5",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_S_5_SSBN_Covert_Shores.jpg",
+      "source_page": "https://www.hisutton.com/S-5_SSBN.html",
+      "image_url": "https://www.hisutton.com/images/In_S-5_Profile.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "S-5_SSBN | Covert Shores"
+    },
+    {
+      "file": "02_Infographic_on_the_Present_Opera.jpg",
+      "source_page": "https://www.reddit.com/r/IndianDefense/comments/1pzctgj/infographic_on_the_present_operational_indian/",
+      "image_url": "https://i.redd.it/031gusuzxaag1.jpeg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Infographic on the Present Operational Indian SSBN fleet. And the future  Fleet of S5 Clas"
+    },
+    {
+      "file": "03_INS_S5_is_coming_soon_Modern_War.jpg",
+      "source_page": "https://modernwarships.com/news/ins-s5-is-coming-soon",
+      "image_url": "https://modernwarships.com/upload/image/s5class_main_996a865a214fd9e7f6e6353e7ab2118c.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "INS S5 is coming soon - Modern Warships: Naval Battles – a free military  action game for "
+    },
+    {
+      "file": "04_Upcoming_big_bully_of_indian_Nav.jpg",
+      "source_page": "https://www.reddit.com/r/IndianDefense/comments/1htzzz4/upcoming_big_bully_of_indian_navy_the_s5_class/",
+      "image_url": "https://i.redd.it/upcoming-big-bully-of-indian-navy-the-s5-class-nuclear-v0-gbne0j9bi4be1.jpg?width=2143&format=pjpg&auto=webp&s=c712cd5be82b3f44476abfa5482132cf9a4312a0",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Upcoming big bully of indian Navy the S5 Class Nuclear ballistic missile  submarine compar"
+    }
+  ]
+}

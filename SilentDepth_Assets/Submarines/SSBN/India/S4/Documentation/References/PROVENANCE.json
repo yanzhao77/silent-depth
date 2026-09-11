@@ -1,0 +1,39 @@
+{
+  "asset_id": "IN_SSBN_S4",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "02_Indian_Navy_s_Third_Ballistic_Mi.jpg",
+      "source_page": "https://www.hisutton.com/Indian-Navy-S4-SSBN.html",
+      "image_url": "https://www.hisutton.com/images/Arihant-Class-Submarine-Cutaway.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Indian Navy's Third Ballistic Missile Submarine Doubles Missile Armament |  Covert Shores"
+    },
+    {
+      "file": "03_India_s_S4_SSBN_is_set_for_induc.jpg",
+      "source_page": "https://www.instagram.com/p/DSCnU-Rk2jq/",
+      "image_url": "https://lookaside.instagram.com/seo/google_widget/crawler/?media_id=3783759602014972138",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "India's S4 SSBN is set for induction by late 2026 bringing the Navy closer  to continuous "
+    },
+    {
+      "file": "04_India_launches_nuclear_powered_s.png",
+      "source_page": "https://www.wionews.com/india-news/india-launches-nuclear-powered-submarine-s4-equipped-with-75-per-cent-indigenous-parts-769650",
+      "image_url": "https://cdn.wionews.com/sites/default/files/2024/10/22/461608-new-wion-2024-10-22t104601689.png",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "India launches nuclear-powered submarine S4, equipped with 75 per cent  indigenous parts -"
+    },
+    {
+      "file": "05_Indian_Navy_s_Third_Ballistic_Mi.jpg",
+      "source_page": "https://www.hisutton.com/Indian-Navy-S4-SSBN.html",
+      "image_url": "https://www.hisutton.com/images/India-Arihant-Class-SSBN-Compared.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Indian Navy's Third Ballistic Missile Submarine Doubles Missile Armament |  Covert Shores"
+    }
+  ]
+}

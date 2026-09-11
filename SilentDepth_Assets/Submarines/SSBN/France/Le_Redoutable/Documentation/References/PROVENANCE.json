@@ -1,0 +1,39 @@
+{
+  "asset_id": "FR_SSBN_LeRedoutable",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Redoutable_class_submarine_1967_.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Redoutable-class_submarine_(1967)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/7/75/FS_Redoutable.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Redoutable-class submarine (1967) - Wikipedia"
+    },
+    {
+      "file": "02_Redoutable_class_submarine_1928_.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Redoutable-class_submarine_(1928)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/27/Sous_marin_Ajax.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Redoutable-class submarine (1928) - Wikipedia"
+    },
+    {
+      "file": "04_The_French_Navy_s_former_SSBN_th.jpg",
+      "source_page": "https://www.reddit.com/r/submarines/comments/1aji4ri/the_french_navys_former_ssbn_the_le_redoutable/",
+      "image_url": "https://i.redd.it/the-french-navys-former-ssbn-the-le-redoutable-class-with-v0-t3po4d1a4sgc1.jpg?width=1302&format=pjpg&auto=webp&s=765b10b3c52d031a05ee125d435f2bfd90b5173e",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "The French Navy's former SSBN— the Le Redoutable class, with the last boat  decommissioned"
+    },
+    {
+      "file": "05_Le_Redoutable_Ballistic_Missile_.jpg",
+      "source_page": "https://www.seaforces.org/marint/French-Navy/Submarine/Le-Redoutable-class.htm",
+      "image_url": "https://www.seaforces.org/marint/French-Navy/Submarine/LeRedoutable-class_DAT/S613-LIndomptable-02.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Le Redoutable Ballistic Missile Submarine SSBN French Navy"
+    }
+  ]
+}

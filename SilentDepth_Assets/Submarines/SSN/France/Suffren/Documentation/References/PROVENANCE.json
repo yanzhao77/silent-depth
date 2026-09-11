@@ -1,0 +1,39 @@
+{
+  "asset_id": "FR_SSN_Suffren",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_The_French_Navy_s_New_Suffren_Cl.jpg",
+      "source_page": "https://www.forbes.com/sites/hisutton/2020/05/02/the-french-navys-new-suffren-class-attack-submarine/",
+      "image_url": "https://imageio.forbes.com/specials-images/imageserve/5ead69b74b7b1b000761440d/0x0.jpg?format=jpg&crop=960,540,x0,y0,safe&height=900&width=1600&fit=bounds",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "The French Navy's New Suffren Class Attack Submarine"
+    },
+    {
+      "file": "02_France_s_Submarine_Game_Changer_.jpg",
+      "source_page": "https://www.navalnews.com/event-news/euronaval-2020/2020/10/frances-submarine-game-changer-the-new-suffren-class/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2020/10/France-Navy-Barracuda-Suffren-Cutaway-3.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "France's Submarine Game Changer: The New Suffren-class - Naval News"
+    },
+    {
+      "file": "03_World_s_Newest_Class_of_Nuclear_.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2021/10/rare-access-inside-suffren-submarine/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/10/Worlds-Newest-Class-of-Nuclear-Attack-Submarine-SSN-Rare-Access-Inside-Suffren-scaled.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "World's Newest Class of Nuclear Attack Submarine: Rare Access Inside Suffren  - Naval News"
+    },
+    {
+      "file": "04_France_welcomes_arrival_of_secon.jpg",
+      "source_page": "https://www.naval-technology.com/news/france-welcomes-arrival-of-second-suffren-class-submarine/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2023/08/NIK_5525-e1692177868248.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "France welcomes arrival of second Suffren-class submarine"
+    }
+  ]
+}

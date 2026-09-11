@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSN_Akula",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Akula_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Akula-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/36/%D0%90%D0%9F%D0%9B_%22%D0%9A%D1%83%D0%B7%D0%B1%D0%B0%D1%81%D1%81%22.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Akula-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Akula_class_submarine_Wikipedia.png",
+      "source_page": "https://en.wikipedia.org/wiki/Akula-class_submarine",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/82/AkulaProjekt971klein.png/250px-AkulaProjekt971klein.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Akula-class submarine - Wikipedia"
+    },
+    {
+      "file": "04_SSN_Akula_Class_Bars_Type_971_Nu.jpg",
+      "source_page": "https://www.naval-technology.com/projects/akula/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2017/09/akula1.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "SSN Akula Class (Bars Type 971) Nuclear Submarine - Naval Technology"
+    },
+    {
+      "file": "05_SSN_Akula_Class_Bars_Type_971_Nu.jpg",
+      "source_page": "https://www.naval-technology.com/projects/akula/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2017/09/akula2.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "SSN Akula Class (Bars Type 971) Nuclear Submarine - Naval Technology"
+    }
+  ]
+}

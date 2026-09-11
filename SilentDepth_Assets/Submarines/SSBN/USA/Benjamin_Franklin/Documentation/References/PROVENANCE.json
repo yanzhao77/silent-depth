@@ -1,0 +1,47 @@
+{
+  "asset_id": "US_SSBN_BenjaminFranklin",
+  "generated_at": "2026-09-10",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Benjamin_Franklin_class_submarin.gif",
+      "source_page": "https://en.wikipedia.org/wiki/Benjamin_Franklin-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/3/34/USS_Benjamin_Franklin_%28SSBN-640%29.gif",
+      "accessed": "2026-09-10",
+      "license": "Public Domain (US Navy)",
+      "description": "USS Benjamin Franklin (SSBN-640) 侧视照片"
+    },
+    {
+      "file": "02_Benjamin_Franklin_Class_SSBN_640.webp",
+      "source_page": "https://nuclearcompanion.com/data/benjamin-franklin-class-ssbn-640-ballistic-missile-submarines/",
+      "image_url": "https://nuclearcompanion.com/wp-content/uploads/2024/02/aerial-port-bow-view-uss-ben-franklin-ssbn-640.webp",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "USS Benjamin Franklin 艏部俯视航拍"
+    },
+    {
+      "file": "04_Benjamin_Franklin_Class_SSBN_640.webp",
+      "source_page": "https://nuclearcompanion.com/data/benjamin-franklin-class-ssbn-640-ballistic-missile-submarines/",
+      "image_url": "https://cdn-nuclearcomp.pressidium.com/wp-content/uploads/2024/02/an-hh-46a-sea-knight-helicopter-hovers-over-uss-george-washington-carver-ssbn-656-1024x678.webp",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "USS George Washington Carver (SSBN-656) 与直升机"
+    },
+    {
+      "file": "05_Benjamin_Franklin_Class_SSBN_640.webp",
+      "source_page": "https://nuclearcompanion.com/data/benjamin-franklin-class-ssbn-640-ballistic-missile-submarines/",
+      "image_url": "https://cdn-nuclearcomp.pressidium.com/wp-content/uploads/2024/02/starboard-view-uss-lewis-and-clark-ssbn-644-1024x687.webp",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "USS Lewis and Clark (SSBN-644) 右舷视图"
+    },
+    {
+      "file": "06_Submarine_Photo_Index.jpg",
+      "source_page": "https://www.navsource.net/archives/08/08640.htm",
+      "image_url": "http://navsource.net/archives/08/641/0864009.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN (US Navy photo, navsource archive)",
+      "description": "本级实艇照片（navsource 档案）"
+    }
+  ]
+}

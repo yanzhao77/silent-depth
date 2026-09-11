@@ -1,0 +1,39 @@
+{
+  "asset_id": "FR_SSBN_SNLE3G",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_L_Invincible_class_submarine_Wik.png",
+      "source_page": "https://en.wikipedia.org/wiki/L%27Invincible-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e7/SNLE-3G-210221105752293576.png?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "L'Invincible-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_New_Submarines_Compared_Columbia.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2021/11/new-submarines-compared-columbia-class-dreadnought-class-and-snle-3g/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/02/French-Navy-SNLE-3G-Submarine-Cutaway.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "New Submarines Compared: Columbia Class, Dreadnought Class And SNLE-3G -  Naval News"
+    },
+    {
+      "file": "03_France_s_Third_Generation_M51_3_.jpg",
+      "source_page": "https://www.armyrecognition.com/archives/archives-naval-defense/naval-news-navy-2025/france-bolsters-its-nuclear-deterrence-with-operational-m51-3-long-range-ballistic-missile",
+      "image_url": "https://www.armyrecognition.com/images/stories/news/2025/October/France_Bolsters_Its_Nuclear_Deterrence_With_Operational_M51.3_Long-Range_Ballistic_Missile.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "France's Third-Generation M51.3 Submarine-Launched Ballistic Missile Enters  Service"
+    },
+    {
+      "file": "04_SNLE_3G_Programme_France.jpg",
+      "source_page": "https://www.naval-technology.com/projects/snle-3g-programme-france/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2024/05/Featured-Image-SNLE-3G-vessel.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "SNLE 3G Programme, France"
+    }
+  ]
+}

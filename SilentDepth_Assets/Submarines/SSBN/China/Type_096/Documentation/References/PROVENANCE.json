@@ -1,0 +1,39 @@
+{
+  "asset_id": "CN_SSBN_Type096",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Tang_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Tang-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d3/USS_Gudgeon_%3B0856710.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Tang-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_China_s_Type_096_Ballistic_Missi.jpg",
+      "source_page": "https://defencesecurityasia.com/en/china-type-096-ssbn-undersea-nuclear-deterrence-us-navy/",
+      "image_url": "https://i0.wp.com/defencesecurityasia.com/wp-content/uploads/2026/01/20260116_000416.jpg?fit=1412%2C855&ssl=1",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "China's Type 096 Ballistic Missile Submarine Emerges as a Strategic  Watershed Challenging"
+    },
+    {
+      "file": "03_Type_096_ballistic_missile_subma.jpg",
+      "source_page": "https://www.globalsecurity.org/wmd/world/china/type-096-pics.htm",
+      "image_url": "https://www.globalsecurity.org/wmd/world/china/images/type-096-image02.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 096 ballistic missile submarine"
+    },
+    {
+      "file": "04_Type_096_China_s_Advanced_Nuclea.png",
+      "source_page": "https://compass.rauias.com/current-affairs/type-096-chinas-advanced-nuclear-armed-submarines/",
+      "image_url": "https://i0.wp.com/compass.rauias.com/wp-content/uploads/2023/10/image-24.png",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 096: China's Advanced Nuclear Armed Submarines - Rau's IAS"
+    }
+  ]
+}

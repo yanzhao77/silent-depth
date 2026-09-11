@@ -1,0 +1,39 @@
+{
+  "asset_id": "UK_SSBN_Vanguard",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "02_HMS_Vanguard_S28_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/HMS_Vanguard_(S28)",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Vanguard_at_Faslane_02.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "HMS Vanguard (S28) - Wikipedia"
+    },
+    {
+      "file": "03_SSBN_Vanguard_Class_Naval_Techno.jpg",
+      "source_page": "https://www.naval-technology.com/projects/vanguard-submarine/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/sites/15/2017/09/vanguard1.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "SSBN Vanguard Class - Naval Technology"
+    },
+    {
+      "file": "04_Vanguard_United_Kingdom_Nuclear_.jpg",
+      "source_page": "https://nuke.fas.org/guide/uk/slbm/vanguard.htm",
+      "image_url": "https://nuke.fas.org/guide/uk/slbm/vanguardprofile.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Vanguard - United Kingdom Nuclear Forces"
+    },
+    {
+      "file": "05_Vanguard_Meet_the_Royal_Navy_s_P.jpg",
+      "source_page": "https://www.19fortyfive.com/2022/02/vanguard-meet-the-royal-navys-powerful-nuclear-missile-submarines/",
+      "image_url": "https://www.19fortyfive.com/wp-content/uploads/2022/02/Vanguard.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Vanguard: Meet the Royal Navy's Powerful Nuclear Missile Submarines -  19FortyFive"
+    }
+  ]
+}

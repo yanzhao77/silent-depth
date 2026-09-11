@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSBN_Hotel",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Hotel_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Hotel-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Submarine_Hotel_II_class.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Hotel-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Hotel_class_submarine_Wikipedia.png",
+      "source_page": "https://en.wikipedia.org/wiki/Hotel-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Hotel_I_class_SSBN.svg/330px-Hotel_I_class_SSBN.svg.png?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Hotel-class submarine - Wikipedia"
+    },
+    {
+      "file": "03_hotel_class_submarine_NamuWiki.webp",
+      "source_page": "https://en.namu.wiki/w/%ED%98%B8%ED%85%94%EA%B8%89%20%EC%9E%A0%EC%88%98%ED%95%A8",
+      "image_url": "https://i.namu.wiki/i/GfVrBHBSo-hZ2sDpH9BM5E2Bqa049EAphx_a4SIAAV8eo1dqjgFDGB5jf22ub48FWwWLqMaow3I40B2C3ss4jQ.webp",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "hotel class submarine - NamuWiki"
+    },
+    {
+      "file": "05_Zvezda_1_350_K_19_Hotel_class_SS.jpg",
+      "source_page": "https://modelingmadness.com/review/misc/ships/caik19.htm",
+      "image_url": "https://modelingmadness.com/review/misc/ships/caik19b.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Zvezda 1/350 K-19 (Hotel class SSBN), by Ingemar Caisander"
+    }
+  ]
+}

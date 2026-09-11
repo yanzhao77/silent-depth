@@ -1,0 +1,63 @@
+{
+  "asset_id": "RU_SSBN_DeltaII",
+  "generated_at": "2026-09-10",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_line_drawing.png",
+      "source_page": "https://en.wikipedia.org/wiki/Delta-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Delta_II_class_SSBN.svg/960px-Delta_II_class_SSBN.svg.png",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 4.0 (Wikimedia Commons)",
+      "description": "Delta II（667BD）侧视线图"
+    },
+    {
+      "file": "02_photo.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Delta-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Delta-II_class_nuclear-powered_ballistic_missle_submarine_2.jpg/500px-Delta-II_class_nuclear-powered_ballistic_missle_submarine_2.jpg",
+      "accessed": "2026-09-10",
+      "license": "Wikimedia Commons (UNKNOWN detail)",
+      "description": "Delta II 实艇照片"
+    },
+    {
+      "file": "03_667b_photo.jpg",
+      "source_page": "https://www.reddit.com/r/submarines/",
+      "image_url": "https://i.redd.it/z7aeag6qaa8a1.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "Project 667B/667BD 相关照片"
+    },
+    {
+      "file": "04_delta2_silhouette.png",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta_II_class_SSBN.svg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Delta_II_class_SSBN.svg/1920px-Delta_II_class_SSBN.svg.png",
+      "accessed": "2026-09-10",
+      "license": "CC BY-SA 3.0 (Wikimedia Commons, 作者 Mike1979 Russia)",
+      "description": "Delta II（667BD Murena-M）侧视轮廓图"
+    },
+    {
+      "file": "05_delta2_photo2.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta-II_class_nuclear-powered_ballistic_missle_submarine_2.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Delta-II_class_nuclear-powered_ballistic_missle_submarine_2.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public domain",
+      "description": "Delta II 实艇照片（水面状态，补充）"
+    },
+    {
+      "file": "extra/06_delta2_photo3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta-II_class_nuclear-powered_ballistic_missle_submarine_3.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Delta-II_class_nuclear-powered_ballistic_missle_submarine_3.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public domain",
+      "description": "Delta II 实艇照片（补充参考）"
+    },
+    {
+      "file": "extra/07_delta2_nuclear.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Delta-II_nuclear-powered_ballistic_missle_submarine.jpg",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Delta-II_nuclear-powered_ballistic_missle_submarine.jpg/1920px-Delta-II_nuclear-powered_ballistic_missle_submarine.jpg",
+      "accessed": "2026-09-10",
+      "license": "Public domain",
+      "description": "Delta II 实艇照片（补充参考）"
+    }
+  ]
+}

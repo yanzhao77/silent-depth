@@ -1,0 +1,39 @@
+{
+  "asset_id": "UK_SSN_Swiftsure",
+  "generated_at": "2026-09-10",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可状态未核实的图片不得再分发。",
+  "images": [
+    {
+      "file": "01_HMS_Spartan_Faslane_1993.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Swiftsure-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/8/8b/HMS_Spartan_Leaves_Faslane_MOD_45138100.jpg",
+      "accessed": "2026-09-10",
+      "license": "MOD / Crown Copyright (Open Government Licence)",
+      "description": "HMS Spartan 1993 年离开 Faslane，侧视实艇照"
+    },
+    {
+      "file": "02_HMS_Superb.jpg",
+      "source_page": "https://naval-encyclopedia.com/cold-war/uk/swiftsure-class.php",
+      "image_url": "https://naval-encyclopedia.com/wp-content/uploads/2024/11/HMS_Superb_MOD_45138106.jpg",
+      "accessed": "2026-09-10",
+      "license": "MOD / Crown Copyright (Open Government Licence)",
+      "description": "HMS Superb 实艇照"
+    },
+    {
+      "file": "03_HMS_Superb_seaforces.jpg",
+      "source_page": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Swiftsure-class.htm",
+      "image_url": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Swiftsure-class-DAT/S109-HMS-Superb-002.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "HMS Superb（S109）实艇照"
+    },
+    {
+      "file": "04_HMS_Sceptre.jpg",
+      "source_page": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Swiftsure-class.htm",
+      "image_url": "https://www.seaforces.org/marint/Royal-Navy/Submarine/Swiftsure-class-DAT/S104-HMS-Sceptre-02.jpg",
+      "accessed": "2026-09-10",
+      "license": "UNKNOWN",
+      "description": "HMS Sceptre（S104）实船照"
+    }
+  ]
+}

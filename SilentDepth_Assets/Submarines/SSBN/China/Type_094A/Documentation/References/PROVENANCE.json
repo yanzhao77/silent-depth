@@ -1,0 +1,39 @@
+{
+  "asset_id": "CN_SSBN_Type094A",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Type_094_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Type_094_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Jin_%28Type_094%29_Class_Ballistic_Missile_Submarine.JPG?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 094 submarine - Wikipedia"
+    },
+    {
+      "file": "02_Type_094_nuclear_submarine_is_Ch.jpg",
+      "source_page": "https://www.scmp.com/news/china/military/article/3298032/type-094-nuclear-submarine-chinas-king-south-china-sea-bid-deterrence",
+      "image_url": "https://cdn.i-scmp.com/sites/default/files/d8/images/canvas/2025/01/22/7945f54d-7a34-426c-b83e-09ba0510c2b4_17ca5efe.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Type 094 nuclear submarine is China's 'King of the South China Sea' in bid  for deterrence"
+    },
+    {
+      "file": "03_China_Now_Has_Six_Type_094A_Jin_.jpg",
+      "source_page": "https://nationalinterest.org/blog/buzz/china-now-has-six-type-094a-jin-class-nuclear-powered-missile-submarines-151186",
+      "image_url": "https://nationalinterest.org/wp-content/uploads/2020/05/jinclasssubmarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "China Now Has Six Type 094A Jin-Class Nuclear Powered Missile Submarines -  The National I"
+    },
+    {
+      "file": "04_New_Chinese_Type_094A_SSBN_Cover.jpg",
+      "source_page": "https://www.hisutton.com/New-20Chinese-20Type-094A-20SSBN.html",
+      "image_url": "https://www.hisutton.com/images/SSBNs_Jin1800.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "New Chinese Type-094A SSBN | Covert Shores"
+    }
+  ]
+}

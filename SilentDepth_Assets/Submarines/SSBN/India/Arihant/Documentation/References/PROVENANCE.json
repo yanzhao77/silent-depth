@@ -1,0 +1,39 @@
+{
+  "asset_id": "IN_SSBN_Arihant",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "03_INS_Arihant_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/INS_Arihant",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/0/02/INS_Arihant_at_sea_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "INS Arihant - Wikipedia"
+    },
+    {
+      "file": "04_5_Years_Of_Submarine_Secrecy_Ind.jpg",
+      "source_page": "https://www.navalnews.com/naval-news/2021/05/5-years-of-submarine-secrecy-indias-unique-arihant-class-is-still-in-hiding/",
+      "image_url": "https://www.navalnews.com/wp-content/uploads/2021/05/Indian-Navy-Arihant-Class-Submarine-Cutaway-scaled.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "5 Years Of Submarine Secrecy: India's Unique Arihant Class Is Still In  Hiding - Naval New"
+    },
+    {
+      "file": "05_India_Submarine_Capabilities.jpg",
+      "source_page": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
+      "image_url": "https://www.nti.org/wp-content/uploads/2024/08/india_submarine_head.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "India Submarine Capabilities"
+    },
+    {
+      "file": "06_India_s_Nuclear_Submarine_The_IN.jpg",
+      "source_page": "https://www.geopoliticalmonitor.com/indias-nuclear-submarine-the-ins-arihant/",
+      "image_url": "https://www.geopoliticalmonitor.com/wp-content/uploads/2019/04/First_torpedo_firing_trials_of_INS_Kalvari_S50_-_1.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "India's Nuclear Submarine: The INS Arihant | Geopolitical Monitor"
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "asset_id": "RU_SSBN_Borei",
+  "generated_at": "2026-09-11",
+  "note": "参考图仅供本地审阅，不进入运行时资产包。许可未核实者不得再分发。",
+  "images": [
+    {
+      "file": "01_Borei_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Borei-class_submarine",
+      "image_url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/%C2%AB%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%9D%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%C2%BB_%D0%B2_%D0%92%D0%B8%D0%BB%D1%8E%D1%87%D0%B8%D0%BD%D1%81%D0%BA%D0%B5.jpg?utm_source=en.wikipedia.org&utm_campaign=index&utm_content=original",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Borei-class submarine - Wikipedia"
+    },
+    {
+      "file": "02_Borei_class_submarine_Wikipedia.jpg",
+      "source_page": "https://en.wikipedia.org/wiki/Borei-class_submarine",
+      "image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/%D0%A0%D0%B0%D0%BA%D0%B5%D1%82%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BF%D0%BE%D0%B4%D0%B2%D0%BE%D0%B4%D0%BD%D0%BE%D0%B3%D0%BE_%D0%BA%D1%80%D0%B5%D0%B9%D1%81%D0%B5%D1%80%D0%B0_%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B3%D0%BE_%D0%BD%D0%B0%D0%B7%D0%BD%D0%B0%D1%87%D0%B5%D0%BD%D0%B8%D1%8F_%D0%A1%D0%B5%D0%B2%D0%B5%D1%80%D0%BD%D0%BE%D0%B3%D0%BE_%D1%84%D0%BB%D0%BE%D1%82%D0%B0_%C2%AB%D0%AE%D1%80%D0%B8%D0%B9_%D0%94%D0%BE%D0%BB%D0%B3%D0%BE%D1%80%D1%83%D0%BA%D0%B8%D0%B9%C2%BB_01.jpg/250px-thumbnail.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Borei-class submarine - Wikipedia"
+    },
+    {
+      "file": "03_Borei_A_Covert_Shores.jpg",
+      "source_page": "https://www.hisutton.com/Borei-A.html",
+      "image_url": "https://www.hisutton.com/images/BOREI-II_3d.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "Borei-A | Covert Shores"
+    },
+    {
+      "file": "04_SSBN_Yury_Dolgoruky_Borei_Class_.jpg",
+      "source_page": "https://www.naval-technology.com/projects/ssbn-yury-dolgoruky-russia/",
+      "image_url": "https://www.naval-technology.com/wp-content/uploads/static-progressive/SSBN%20Nuclear%20Submarine.jpg",
+      "accessed": "2026-09-11",
+      "license": "UNKNOWN",
+      "description": "SSBN Yury Dolgoruky Borei Class Nuclear Submarine - Naval Technology"
+    }
+  ]
+}
