@@ -1,0 +1,95 @@
+{
+  "asset_id": "SHAFT_PLAIN",
+  "display_name": "直轴（基础世代）",
+  "category": "Shafts",
+  "kind": "SHAFT",
+  "country": "GENERIC",
+  "tier": 2,
+  "era": "1950s",
+  "technology_route": "direct shaft",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 0.45,
+    "shaft": {
+      "enabled": true,
+      "length_m": 6.0,
+      "diameter_m": 0.45,
+      "tail_cone": false
+    },
+    "shroud": {
+      "enabled": false,
+      "outer_diameter_m": 0.0,
+      "length_m": 0.0,
+      "thickness_m": 0.0,
+      "mode": "NONE"
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "coupling": {
+      "enabled": true,
+      "diameter_m": 0.72,
+      "length_m": 0.55
+    },
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "通用轴系是游戏科技树的基础件，不代表任何具体艇级。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "通用轴系是游戏科技树的基础件，不代表任何具体艇级。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 256,
+    "1": 128,
+    "2": 64,
+    "3": 32
+  },
+  "dimensions_m": [
+    6.0,
+    0.72,
+    0.72
+  ],
+  "sockets": [
+    "SOCKET_SHAFT"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Shafts/SHAFT_PLAIN/Blend/SHAFT_PLAIN_MASTER.blend",
+    "lod0": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_LOD0.fbx",
+    "lod1": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_LOD1.fbx",
+    "lod2": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_LOD2.fbx",
+    "lod3": "Shafts/SHAFT_PLAIN/FBX/SHAFT_PLAIN_LOD3.fbx",
+    "collision": "Shafts/SHAFT_PLAIN/Collision/SHAFT_PLAIN_COLLISION.fbx",
+    "spec": "Shafts/SHAFT_PLAIN/Documentation/SHAFT_PLAIN_SPEC.json",
+    "readme": "Shafts/SHAFT_PLAIN/Documentation/SHAFT_PLAIN_README.md",
+    "preview": [
+      "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_ThreeQuarter.png",
+      "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_Side.png",
+      "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_Rear.png",
+      "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_Top.png"
+    ]
+  },
+  "validation": "Shafts/SHAFT_PLAIN/Validation/SHAFT_PLAIN_VALIDATION.json",
+  "build_report": "Shafts/SHAFT_PLAIN/Validation/SHAFT_PLAIN_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "asset_id": "PROP_T02_IMPROVED",
+  "display_name": "T2 改进型三叶螺旋桨（通用科技树件）",
+  "category": "Propellers",
+  "kind": "PROPELLER",
+  "country": "GENERIC",
+  "tier": 2,
+  "era": "1950s",
+  "technology_route": "improved plain propeller",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 3.6,
+    "hub_diameter_m": 0.8,
+    "hub_length_m": 1.2,
+    "blade_count": 3,
+    "skew_deg": 6.0,
+    "rake_m": 0.14,
+    "pitch_ratio": 0.95,
+    "blade_thickness_ratio": 0.082,
+    "shroud": {
+      "enabled": false,
+      "outer_diameter_m": 0.0,
+      "length_m": 0.0,
+      "thickness_m": 0.0,
+      "mode": "NONE"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 2.6,
+      "diameter_m": 0.44,
+      "tail_cone": false
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": false,
+      "length_m": 0.0,
+      "exit_diameter_m": 0.0
+    },
+    "stator_count": 0,
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "通用科技树件：表达桨叶型线改进与轻微后掠，不代表任何具体艇级。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "通用科技树件：表达桨叶型线改进与轻微后掠，不代表任何具体艇级。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 2448,
+    "1": 1296,
+    "2": 624,
+    "3": 276
+  },
+  "dimensions_m": [
+    3.74,
+    2.9546,
+    3.2164
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Propellers/PROP_T02_IMPROVED/Blend/PROP_T02_IMPROVED_MASTER.blend",
+    "lod0": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_LOD0.fbx",
+    "lod1": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_LOD1.fbx",
+    "lod2": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_LOD2.fbx",
+    "lod3": "Propellers/PROP_T02_IMPROVED/FBX/PROP_T02_IMPROVED_LOD3.fbx",
+    "collision": "Propellers/PROP_T02_IMPROVED/Collision/PROP_T02_IMPROVED_COLLISION.fbx",
+    "spec": "Propellers/PROP_T02_IMPROVED/Documentation/PROP_T02_IMPROVED_SPEC.json",
+    "readme": "Propellers/PROP_T02_IMPROVED/Documentation/PROP_T02_IMPROVED_README.md",
+    "preview": [
+      "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_ThreeQuarter.png",
+      "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_Side.png",
+      "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_Rear.png",
+      "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_Top.png"
+    ]
+  },
+  "validation": "Propellers/PROP_T02_IMPROVED/Validation/PROP_T02_IMPROVED_VALIDATION.json",
+  "build_report": "Propellers/PROP_T02_IMPROVED/Validation/PROP_T02_IMPROVED_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

@@ -1,0 +1,362 @@
+{
+  "asset_id": "RU_PROP_Akula",
+  "category": "Propellers",
+  "kind": "PROPELLER",
+  "generated_at": "2026-09-10",
+  "blender_version": "5.2.1 LTS",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0
+  },
+  "origin_rule": "PIVOT_ON_SHAFT_AXIS",
+  "origin_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "sockets": [
+    {
+      "name": "SOCKET_PROPULSOR",
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent": null
+    },
+    {
+      "name": "SOCKET_SHAFT",
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent": null
+    }
+  ],
+  "lods": [
+    {
+      "lod": 0,
+      "objects": [
+        "RU_PROP_Akula_LOD0_Hub",
+        "RU_PROP_Akula_LOD0_Blade_00",
+        "RU_PROP_Akula_LOD0_Blade_01",
+        "RU_PROP_Akula_LOD0_Blade_02",
+        "RU_PROP_Akula_LOD0_Blade_03",
+        "RU_PROP_Akula_LOD0_Blade_04",
+        "RU_PROP_Akula_LOD0_Blade_05",
+        "RU_PROP_Akula_LOD0_Blade_06",
+        "RU_PROP_Akula_LOD0_Shaft"
+      ],
+      "vertices": 2682,
+      "triangles": 5328,
+      "dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 1,
+      "objects": [
+        "RU_PROP_Akula_LOD1_Hub",
+        "RU_PROP_Akula_LOD1_Blade_00",
+        "RU_PROP_Akula_LOD1_Blade_01",
+        "RU_PROP_Akula_LOD1_Blade_02",
+        "RU_PROP_Akula_LOD1_Blade_03",
+        "RU_PROP_Akula_LOD1_Blade_04",
+        "RU_PROP_Akula_LOD1_Blade_05",
+        "RU_PROP_Akula_LOD1_Blade_06",
+        "RU_PROP_Akula_LOD1_Shaft"
+      ],
+      "vertices": 1370,
+      "triangles": 2704,
+      "dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 2,
+      "objects": [
+        "RU_PROP_Akula_LOD2_Hub",
+        "RU_PROP_Akula_LOD2_Blade_00",
+        "RU_PROP_Akula_LOD2_Blade_01",
+        "RU_PROP_Akula_LOD2_Blade_02",
+        "RU_PROP_Akula_LOD2_Blade_03",
+        "RU_PROP_Akula_LOD2_Blade_04",
+        "RU_PROP_Akula_LOD2_Blade_05",
+        "RU_PROP_Akula_LOD2_Blade_06",
+        "RU_PROP_Akula_LOD2_Shaft"
+      ],
+      "vertices": 650,
+      "triangles": 1264,
+      "dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 3,
+      "objects": [
+        "RU_PROP_Akula_LOD3_Hub",
+        "RU_PROP_Akula_LOD3_Blade_00",
+        "RU_PROP_Akula_LOD3_Blade_01",
+        "RU_PROP_Akula_LOD3_Blade_02",
+        "RU_PROP_Akula_LOD3_Blade_03",
+        "RU_PROP_Akula_LOD3_Blade_04",
+        "RU_PROP_Akula_LOD3_Blade_05",
+        "RU_PROP_Akula_LOD3_Blade_06",
+        "RU_PROP_Akula_LOD3_Shaft"
+      ],
+      "vertices": 276,
+      "triangles": 516,
+      "dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "M_Propulsor_Blade",
+      "base_color_linear": [
+        0.25,
+        0.18,
+        0.075
+      ],
+      "roughness": 0.43,
+      "metallic": 0.84,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Hub",
+      "base_color_linear": [
+        0.19,
+        0.23,
+        0.25
+      ],
+      "roughness": 0.4,
+      "metallic": 0.82,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Duct",
+      "base_color_linear": [
+        0.105,
+        0.13,
+        0.145
+      ],
+      "roughness": 0.64,
+      "metallic": 0.35,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Rubber",
+      "base_color_linear": [
+        0.018,
+        0.027,
+        0.035
+      ],
+      "roughness": 0.83,
+      "metallic": 0.08,
+      "texture_files": []
+    }
+  ],
+  "collision": {
+    "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\Collision\\RU_PROP_Akula_COLLISION.fbx",
+    "convex_hull_count": 2,
+    "objects": [
+      "UCX_RU_PROP_Akula_01",
+      "UCX_RU_PROP_Akula_00"
+    ]
+  },
+  "exports": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_LOD0.fbx",
+      "lod": 0,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_LOD1.fbx",
+      "lod": 1,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_LOD2.fbx",
+      "lod": 2,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_LOD3.fbx",
+      "lod": 3,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    }
+  ],
+  "previews": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\Preview\\RU_PROP_Akula_ThreeQuarter.png",
+      "view": "ThreeQuarter",
+      "non_background_fraction": 0.1992,
+      "mean_luminance": 0.2741,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\Preview\\RU_PROP_Akula_Side.png",
+      "view": "Side",
+      "non_background_fraction": 0.1365,
+      "mean_luminance": 0.2653,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\Preview\\RU_PROP_Akula_Rear.png",
+      "view": "Rear",
+      "non_background_fraction": 0.2419,
+      "mean_luminance": 0.2811,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\Preview\\RU_PROP_Akula_Top.png",
+      "view": "Top",
+      "non_background_fraction": 0.1364,
+      "mean_luminance": 0.2699,
+      "resolution": [
+        800,
+        450
+      ]
+    }
+  ],
+  "roundtrip": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_LOD0.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "roundtrip_triangles": 5328,
+      "roundtrip_objects": 9,
+      "lod": 0
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_LOD1.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "roundtrip_triangles": 2704,
+      "roundtrip_objects": 9,
+      "lod": 1
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_LOD2.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "roundtrip_triangles": 1264,
+      "roundtrip_objects": 9,
+      "lod": 2
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_LOD3.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        5.625,
+        4.5207,
+        4.5232
+      ],
+      "roundtrip_triangles": 516,
+      "roundtrip_objects": 9,
+      "lod": 3
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\Collision\\RU_PROP_Akula_COLLISION.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        1.5,
+        4.6,
+        4.6
+      ],
+      "roundtrip_triangles": 120,
+      "roundtrip_objects": 2
+    }
+  ],
+  "checks": {
+    "scale_applied": true,
+    "object_transforms_applied": true,
+    "forbidden_names": [],
+    "objects_missing_uv": [],
+    "objects_missing_material": []
+  },
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ],
+  "combined_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_COMBINED.fbx",
+  "hulls_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\RU_PROP_Akula\\FBX\\RU_PROP_Akula_HULLS.fbx"
+}

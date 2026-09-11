@@ -1,0 +1,105 @@
+{
+  "asset_id": "FR_PJ_Suffren",
+  "display_name": "Suffren / Barracuda 级泵喷推进器",
+  "category": "PumpJets",
+  "kind": "PUMPJET",
+  "country": "France",
+  "tier": 9,
+  "era": "2010s-2020s",
+  "technology_route": "pump-jet propulsor",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 4.8,
+    "hub_diameter_m": 1.3,
+    "hub_length_m": 2.2,
+    "blade_count": 7,
+    "stator_count": 9,
+    "skew_deg": 30.0,
+    "rake_m": 0.17,
+    "pitch_ratio": 1.1,
+    "blade_thickness_ratio": 0.06,
+    "shroud": {
+      "enabled": true,
+      "outer_diameter_m": 5.3,
+      "length_m": 3.2,
+      "thickness_m": 0.29,
+      "mode": "HOUSING"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 1.85,
+      "diameter_m": 0.62,
+      "tail_cone": false
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": true,
+      "length_m": 0.9,
+      "exit_diameter_m": 3.9
+    },
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "泵喷构型为公开报道；几何为游戏美术取值。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "泵喷构型为公开报道；几何为游戏美术取值。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 12576,
+    "1": 6448,
+    "2": 3088,
+    "3": 1344
+  },
+  "dimensions_m": [
+    5.34,
+    5.3,
+    5.3
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT",
+    "SOCKET_PUMPJET"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "PumpJets/FR_PJ_Suffren/Blend/FR_PJ_Suffren_MASTER.blend",
+    "lod0": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_LOD0.fbx",
+    "lod1": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_LOD1.fbx",
+    "lod2": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_LOD2.fbx",
+    "lod3": "PumpJets/FR_PJ_Suffren/FBX/FR_PJ_Suffren_LOD3.fbx",
+    "collision": "PumpJets/FR_PJ_Suffren/Collision/FR_PJ_Suffren_COLLISION.fbx",
+    "spec": "PumpJets/FR_PJ_Suffren/Documentation/FR_PJ_Suffren_SPEC.json",
+    "readme": "PumpJets/FR_PJ_Suffren/Documentation/FR_PJ_Suffren_README.md",
+    "preview": [
+      "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_ThreeQuarter.png",
+      "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_Side.png",
+      "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_Rear.png",
+      "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_Top.png"
+    ]
+  },
+  "validation": "PumpJets/FR_PJ_Suffren/Validation/FR_PJ_Suffren_VALIDATION.json",
+  "build_report": "PumpJets/FR_PJ_Suffren/Validation/FR_PJ_Suffren_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

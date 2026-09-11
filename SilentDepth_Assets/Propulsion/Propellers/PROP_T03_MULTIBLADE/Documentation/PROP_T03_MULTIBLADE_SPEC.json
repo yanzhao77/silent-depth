@@ -1,0 +1,104 @@
+{
+  "asset_id": "PROP_T03_MULTIBLADE",
+  "display_name": "T3 多叶螺旋桨（通用科技树件）",
+  "category": "Propellers",
+  "kind": "PROPELLER",
+  "country": "GENERIC",
+  "tier": 3,
+  "era": "1960s",
+  "technology_route": "multi-blade propeller",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 4.0,
+    "hub_diameter_m": 0.88,
+    "hub_length_m": 1.3,
+    "blade_count": 4,
+    "skew_deg": 12.0,
+    "rake_m": 0.18,
+    "pitch_ratio": 1.0,
+    "blade_thickness_ratio": 0.075,
+    "shroud": {
+      "enabled": false,
+      "outer_diameter_m": 0.0,
+      "length_m": 0.0,
+      "thickness_m": 0.0,
+      "mode": "NONE"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 3.0,
+      "diameter_m": 0.48,
+      "tail_cone": true
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": false,
+      "length_m": 0.0,
+      "exit_diameter_m": 0.0
+    },
+    "stator_count": 0,
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "通用科技树件：T3 表达叶片数量增加与桨盘载荷下降，叶片数本身不等于更高 Tier。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "通用科技树件：T3 表达叶片数量增加与桨盘载荷下降，叶片数本身不等于更高 Tier。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 3168,
+    "1": 1648,
+    "2": 784,
+    "3": 336
+  },
+  "dimensions_m": [
+    4.235,
+    3.9662,
+    3.9662
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Propellers/PROP_T03_MULTIBLADE/Blend/PROP_T03_MULTIBLADE_MASTER.blend",
+    "lod0": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_LOD0.fbx",
+    "lod1": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_LOD1.fbx",
+    "lod2": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_LOD2.fbx",
+    "lod3": "Propellers/PROP_T03_MULTIBLADE/FBX/PROP_T03_MULTIBLADE_LOD3.fbx",
+    "collision": "Propellers/PROP_T03_MULTIBLADE/Collision/PROP_T03_MULTIBLADE_COLLISION.fbx",
+    "spec": "Propellers/PROP_T03_MULTIBLADE/Documentation/PROP_T03_MULTIBLADE_SPEC.json",
+    "readme": "Propellers/PROP_T03_MULTIBLADE/Documentation/PROP_T03_MULTIBLADE_README.md",
+    "preview": [
+      "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_ThreeQuarter.png",
+      "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_Side.png",
+      "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_Rear.png",
+      "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_Top.png"
+    ]
+  },
+  "validation": "Propellers/PROP_T03_MULTIBLADE/Validation/PROP_T03_MULTIBLADE_VALIDATION.json",
+  "build_report": "Propellers/PROP_T03_MULTIBLADE/Validation/PROP_T03_MULTIBLADE_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

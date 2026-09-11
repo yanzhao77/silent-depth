@@ -1,0 +1,310 @@
+{
+  "generated_at": "2026-09-10",
+  "scope": "本文件只记录公开可确认的外部推进器构型：推进器种类、叶片数量（若有公开报道）、是否有导管/围罩、轴系数量、时代与公认降噪概念。",
+  "policy": "不含任何性能或受控参数：没有功率、转速、噪声分贝、水动力系数、叶片型线参数或内部结构。无法从公开资料确认的字段一律为 UNKNOWN。",
+  "source_type_legend": {
+    "official": "官方海军/政府发布",
+    "government": "政府文件或议会材料",
+    "manufacturer": "制造商公开资料",
+    "reliable_historical": "可靠历史/军事参考站",
+    "open_encyclopedia": "开放百科条目（含其引用）",
+    "open_web_report": "公开网络报道/分析文章"
+  },
+  "entries": [
+    {
+      "propulsor_id": "RU_PROP_Typhoon",
+      "country": "Russia",
+      "platform_class": "Typhoon / Project 941",
+      "platform_type": "SSBN",
+      "propulsor_kind": "PROPELLER",
+      "blade_count": 7,
+      "shrouded": true,
+      "shaft_configuration": "双轴，每轴一具七叶带围罩螺旋桨",
+      "era": "1970s-1980s",
+      "noise_reduction_concepts": ["导管/围罩屏蔽", "七叶多叶桨", "双桨对称布置"],
+      "confidence": "CONFIRMED",
+      "notes": "公开资料对“两根轴、每轴一具七叶带围罩螺旋桨”的表述一致；本库的桨盘直径与导管外径来自 Typhoon 母版实测，不是公开规格。",
+      "sources": [
+        {
+          "name": "Wikipedia: Typhoon-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Typhoon-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "推进装置条目写明「2 shafts with 7-bladed shrouded screws」。"
+        },
+        {
+          "name": "FAS: Project 941 Typhoon-class",
+          "url": "https://nuke.fas.org/guide/russia/slbm/941.htm",
+          "source_type": "reliable_historical",
+          "accessed": "2026-09-10",
+          "claim": "公开档案页面描述该级采用成对布置的带围罩螺旋桨。"
+        }
+      ]
+    },
+    {
+      "propulsor_id": "RU_PROP_Akula",
+      "country": "Russia",
+      "platform_class": "Akula / Project 971",
+      "platform_type": "SSN",
+      "propulsor_kind": "PROPELLER",
+      "blade_count": 7,
+      "shrouded": false,
+      "shaft_configuration": "单轴七叶螺旋桨，另有可收放辅助电力推进器",
+      "era": "1980s",
+      "noise_reduction_concepts": ["七叶桨", "后掠桨叶", "辅助电力推进用于低速静音机动"],
+      "confidence": "CONFIRMED",
+      "notes": "公开条目明确写出「1 seven-bladed propeller」，并提到两具可收放电力推进器；后者对应本库的推进槽分支，而不是主推进器。",
+      "sources": [
+        {
+          "name": "Wikipedia: Akula-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Akula-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "推进条目标注「1 seven-bladed propeller」以及可收放电力推进器。"
+        }
+      ]
+    },
+    {
+      "propulsor_id": "RU_PJ_Yasen",
+      "country": "Russia",
+      "platform_class": "Yasen / Project 885 and 885M",
+      "platform_type": "SSN",
+      "propulsor_kind": "PUMPJET",
+      "blade_count": "UNKNOWN",
+      "shrouded": true,
+      "shaft_configuration": "单轴泵喷推进器",
+      "era": "2010s",
+      "noise_reduction_concepts": ["泵喷导管屏蔽", "转子-定子构型"],
+      "confidence": "REPORTED",
+      "notes": "公开分析文章普遍描述该级采用泵喷推进器，但缺少官方确认，因此标记为 REPORTED。转子/定子叶片数量属于无法公开确认的细节，保持 UNKNOWN。",
+      "sources": [
+        {
+          "name": "GlobalSecurity: Project 885 Yasen design",
+          "url": "https://www.globalsecurity.org/military/world/russia/885-design.htm",
+          "source_type": "reliable_historical",
+          "accessed": "2026-09-10",
+          "claim": "公开分析描述该级使用泵喷推进器，并讨论与之配套的减速传动。"
+        },
+        {
+          "name": "The War Zone: why pump-jets are superior to props on modern submarines",
+          "url": "https://www.twz.com/31708/veteran-sonarman-explains-why-pump-jets-are-superior-to-props-on-modern-submarines",
+          "source_type": "open_web_report",
+          "accessed": "2026-09-10",
+          "claim": "公开分析文把 Yasen 级与美制 Virginia、英制 Astute 并列为采用泵喷的核潜艇。"
+        }
+      ]
+    },
+    {
+      "propulsor_id": "US_PROP_LosAngeles",
+      "country": "USA",
+      "platform_class": "Los Angeles / 688 and 688i",
+      "platform_type": "SSN",
+      "propulsor_kind": "PROPELLER",
+      "blade_count": "UNKNOWN",
+      "shrouded": false,
+      "shaft_configuration": "单轴，汽轮机经减速齿轮驱动螺旋桨",
+      "era": "1970s-1990s",
+      "noise_reduction_concepts": ["后掠多叶桨（公开报道层面）", "减速齿轮传动"],
+      "confidence": "CONFIRMED",
+      "notes": "公开条目明确描述推进涡轮经减速齿轮驱动轴与螺旋桨，因此推进器种类可确认；具体叶片数量公开资料不足，保持 UNKNOWN。",
+      "sources": [
+        {
+          "name": "Wikipedia: Los Angeles-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Los_Angeles-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "推进章节写明高速推进涡轮通过减速齿轮驱动轴与螺旋桨。"
+        }
+      ]
+    },
+    {
+      "propulsor_id": "US_PJ_Seawolf",
+      "country": "USA",
+      "platform_class": "Seawolf / SSN-21",
+      "platform_type": "SSN",
+      "propulsor_kind": "PUMPJET",
+      "blade_count": "UNKNOWN",
+      "shrouded": true,
+      "shaft_configuration": "单轴泵喷推进器",
+      "era": "1990s",
+      "noise_reduction_concepts": ["低噪声泵喷", "导管屏蔽"],
+      "confidence": "CONFIRMED",
+      "notes": "公开条目在推进栏与正文中直接写明低噪声泵喷推进器（low-noise pump-jet）。",
+      "sources": [
+        {
+          "name": "Wikipedia: Seawolf-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Seawolf-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "正文写明每艘艇由单座反应堆驱动一具低噪声泵喷推进器。"
+        }
+      ]
+    },
+    {
+      "propulsor_id": "US_PJ_Virginia",
+      "country": "USA",
+      "platform_class": "Virginia / SSN-774",
+      "platform_type": "SSN",
+      "propulsor_kind": "PUMPJET",
+      "blade_count": "UNKNOWN",
+      "shrouded": true,
+      "shaft_configuration": "单轴泵喷推进器，另有辅助推进电机",
+      "era": "2000s",
+      "noise_reduction_concepts": ["泵喷（与常规桨相比降低空泡风险）", "导管屏蔽", "单轴布置"],
+      "confidence": "CONFIRMED",
+      "notes": "公开条目推进栏明确为单轴泵喷推进器，并在正文说明由 BAE Systems 提供、相比传统桨叶显著降低空泡风险。",
+      "sources": [
+        {
+          "name": "Wikipedia: Virginia-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Virginia-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "推进栏写明「1 × single shaft pump-jet propulsor」，正文说明其对空泡与噪声的影响。"
+        }
+      ]
+    },
+    {
+      "propulsor_id": "UK_PJ_Astute",
+      "country": "UK",
+      "platform_class": "Astute",
+      "platform_type": "SSN",
+      "propulsor_kind": "PUMPJET",
+      "blade_count": "UNKNOWN",
+      "shrouded": true,
+      "shaft_configuration": "单轴泵喷推进器",
+      "era": "2000s-2010s",
+      "noise_reduction_concepts": ["泵喷导管屏蔽", "与艇体一体化的尾段外形"],
+      "confidence": "CONFIRMED",
+      "notes": "公开条目在推进章节直接写明该级装备泵喷推进器（fitted with a pump-jet propulsor）。",
+      "sources": [
+        {
+          "name": "Wikipedia: Astute-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Astute-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "推进与总体规格章节写明装备泵喷推进器。"
+        }
+      ]
+    },
+    {
+      "propulsor_id": "FR_PJ_Suffren",
+      "country": "France",
+      "platform_class": "Suffren / Barracuda",
+      "platform_type": "SSN",
+      "propulsor_kind": "PUMPJET",
+      "blade_count": "UNKNOWN",
+      "shrouded": true,
+      "shaft_configuration": "单轴泵喷推进器",
+      "era": "2010s-2020s",
+      "noise_reduction_concepts": ["泵喷推进（沿用 Triomphant 级技术）"],
+      "confidence": "CONFIRMED",
+      "notes": "公开条目说明该级整合了 Triomphant 级的技术，包括泵喷推进。",
+      "sources": [
+        {
+          "name": "Wikipedia: Suffren-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Suffren-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "正文写明 Barracuda 级整合 Triomphant 级技术，包括泵喷推进。"
+        }
+      ]
+    },
+    {
+      "propulsor_id": "CN_PROP_Type093",
+      "country": "China",
+      "platform_class": "Type 093 / 093B",
+      "platform_type": "SSN",
+      "propulsor_kind": "PROPELLER",
+      "blade_count": "UNKNOWN",
+      "shrouded": false,
+      "shaft_configuration": "单轴；093B 公开报道改为泵喷",
+      "era": "2000s-2010s",
+      "noise_reduction_concepts": ["后掠桨（公开资料有限）", "093B 起采用泵喷"],
+      "confidence": "REPORTED",
+      "notes": "公开条目只明确 093B 采用泵喷；基础型 093 的推进器种类与叶片数量公开资料不足。因此本库把基础型标为 PROPELLER 但置信度 REPORTED，并把 093B 单列为待建泵喷资产。",
+      "sources": [
+        {
+          "name": "Wikipedia: Type 093 submarine",
+          "url": "https://en.wikipedia.org/wiki/Type_093_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "条目写明 093B 采用泵喷推进，另有条目描述该艇带泵喷推进器。"
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "platform_asset_id": "RU_SSBN_Typhoon",
+      "propulsor_id": "RU_PROP_Typhoon",
+      "status": "CONFIRMED",
+      "rationale": "公开资料一致描述双轴七叶带围罩螺旋桨。"
+    },
+    {
+      "platform_asset_id": "RU_SSN_Akula",
+      "propulsor_id": "RU_PROP_Akula",
+      "status": "CONFIRMED",
+      "rationale": "公开条目明确单具七叶螺旋桨。"
+    },
+    {
+      "platform_asset_id": "RU_SSN_Yasen",
+      "propulsor_id": "RU_PJ_Yasen",
+      "status": "REPORTED",
+      "rationale": "公开分析普遍描述为泵喷，但无官方确认。"
+    },
+    {
+      "platform_asset_id": "RU_SSN_YasenM",
+      "propulsor_id": "RU_PJ_Yasen",
+      "status": "REPORTED",
+      "rationale": "Yasen-M 沿用同级推进器，公开分析描述为泵喷。"
+    },
+    {
+      "platform_asset_id": "US_SSN_LosAngeles",
+      "propulsor_id": "US_PROP_LosAngeles",
+      "status": "CONFIRMED",
+      "rationale": "公开条目明确为减速齿轮驱动的螺旋桨。"
+    },
+    {
+      "platform_asset_id": "US_SSN_Seawolf",
+      "propulsor_id": "US_PJ_Seawolf",
+      "status": "CONFIRMED",
+      "rationale": "公开条目明确为低噪声泵喷推进器。"
+    },
+    {
+      "platform_asset_id": "US_SSN_Virginia",
+      "propulsor_id": "US_PJ_Virginia",
+      "status": "CONFIRMED",
+      "rationale": "公开条目明确为单轴泵喷推进器。"
+    },
+    {
+      "platform_asset_id": "UK_SSN_Astute",
+      "propulsor_id": "UK_PJ_Astute",
+      "status": "CONFIRMED",
+      "rationale": "公开条目明确装备泵喷推进器。"
+    },
+    {
+      "platform_asset_id": "FR_SSN_Suffren",
+      "propulsor_id": "FR_PJ_Suffren",
+      "status": "CONFIRMED",
+      "rationale": "公开条目明确整合泵喷推进技术。"
+    },
+    {
+      "platform_asset_id": "CN_SSN_Type093",
+      "propulsor_id": "CN_PROP_Type093",
+      "status": "REPORTED",
+      "rationale": "公开资料有限，基础型按螺旋桨处理，置信度 REPORTED。"
+    },
+    {
+      "platform_asset_id": "CN_SSN_Type093B",
+      "propulsor_id": "CN_PJ_Type093B",
+      "status": "REPORTED",
+      "rationale": "公开条目明确 093B 采用泵喷；本库尚无对应 3D 泵喷资产，记为缺口。"
+    }
+  ],
+  "unknowns": [
+    "所有泵喷推进器的转子与定子叶片数量：公开资料不足以确认，本库的叶片数为游戏美术取值。",
+    "Los Angeles 级、Type 093 基础型的螺旋桨叶片数量。",
+    "Yasen 级泵喷推进器的官方确认与具体构型。",
+    "各级推进器的真实尺寸与螺距参数：本库只用游戏美术尺度，不做公开规格声明。"
+  ]
+}

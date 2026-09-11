@@ -1,0 +1,1744 @@
+{
+  "results": [
+    {
+      "asset_id": "PROP_T01_EARLY",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5430>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C53D0>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C54F0>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C53F0>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5450>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'PROP_T01_EARLY', 'path': '/Game/Propulsion/Propellers/PROP_T01_EARLY.PROP_T01_EARLY', 'lod_count': 4, 'material_slots': 14, 'bounds_cm': {'size': [324.5, 320.0, 73.32], 'origin': [107.25, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "PROP_T01_EARLY_COMBINED.fbx",
+      "mesh": {
+        "name": "PROP_T01_EARLY",
+        "path": "/Game/Propulsion/Propellers/PROP_T01_EARLY.PROP_T01_EARLY",
+        "lod_count": 4,
+        "material_slots": 14,
+        "bounds_cm": {
+          "size": [
+            324.5,
+            320.0,
+            73.32
+          ],
+          "origin": [
+            107.25,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "PROP_T02_IMPROVED",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C55D0>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5590>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5670>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5570>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C55F0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'PROP_T02_IMPROVED', 'path': '/Game/Propulsion/Propellers/PROP_T02_IMPROVED.PROP_T02_IMPROVED', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [374.0, 295.46, 321.64], 'origin': [127.0, -32.5, -8.35]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "PROP_T02_IMPROVED_COMBINED.fbx",
+      "mesh": {
+        "name": "PROP_T02_IMPROVED",
+        "path": "/Game/Propulsion/Propellers/PROP_T02_IMPROVED.PROP_T02_IMPROVED",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            374.0,
+            295.46,
+            321.64
+          ],
+          "origin": [
+            127.0,
+            -32.5,
+            -8.35
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "PROP_T03_MULTIBLADE",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C56D0>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5630>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5770>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5590>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C56F0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'PROP_T03_MULTIBLADE', 'path': '/Game/Propulsion/Propellers/PROP_T03_MULTIBLADE.PROP_T03_MULTIBLADE', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [423.5, 396.62, 396.62], 'origin': [146.75, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "PROP_T03_MULTIBLADE_COMBINED.fbx",
+      "mesh": {
+        "name": "PROP_T03_MULTIBLADE",
+        "path": "/Game/Propulsion/Propellers/PROP_T03_MULTIBLADE.PROP_T03_MULTIBLADE",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            423.5,
+            396.62,
+            396.62
+          ],
+          "origin": [
+            146.75,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "PROP_T04_SKEWED",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5830>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C57F0>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C58D0>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C57D0>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5850>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'PROP_T04_SKEWED', 'path': '/Game/Propulsion/Propellers/PROP_T04_SKEWED.PROP_T04_SKEWED', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [473.0, 413.43, 411.15], 'origin': [166.5, 7.42, 9.25]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "PROP_T04_SKEWED_COMBINED.fbx",
+      "mesh": {
+        "name": "PROP_T04_SKEWED",
+        "path": "/Game/Propulsion/Propellers/PROP_T04_SKEWED.PROP_T04_SKEWED",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            473.0,
+            413.43,
+            411.15
+          ],
+          "origin": [
+            166.5,
+            7.42,
+            9.25
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "PROP_T05_QUIET",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5990>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5950>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5A30>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5930>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C59B0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'PROP_T05_QUIET', 'path': '/Game/Propulsion/Propellers/PROP_T05_QUIET.PROP_T05_QUIET', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [522.5, 454.57, 447.72], 'origin': [186.25, 1.65, 6.57]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "PROP_T05_QUIET_COMBINED.fbx",
+      "mesh": {
+        "name": "PROP_T05_QUIET",
+        "path": "/Game/Propulsion/Propellers/PROP_T05_QUIET.PROP_T05_QUIET",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            522.5,
+            454.57,
+            447.72
+          ],
+          "origin": [
+            186.25,
+            1.65,
+            6.57
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "RU_PROP_Typhoon",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5AD0>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5A90>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5B70>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5550>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5AF0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'RU_PROP_Typhoon', 'path': '/Game/Propulsion/Propellers/RU_PROP_Typhoon.RU_PROP_Typhoon', 'lod_count': 4, 'material_slots': 120, 'bounds_cm': {'size': [799.5, 700.0, 700.0], 'origin': [205.75, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "RU_PROP_Typhoon_COMBINED.fbx",
+      "mesh": {
+        "name": "RU_PROP_Typhoon",
+        "path": "/Game/Propulsion/Propellers/RU_PROP_Typhoon.RU_PROP_Typhoon",
+        "lod_count": 4,
+        "material_slots": 120,
+        "bounds_cm": {
+          "size": [
+            799.5,
+            700.0,
+            700.0
+          ],
+          "origin": [
+            205.75,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "RU_PROP_Akula",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5C30>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5BF0>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5CD0>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5BD0>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5C50>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'RU_PROP_Akula', 'path': '/Game/Propulsion/Propellers/RU_PROP_Akula.RU_PROP_Akula', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [562.5, 452.07, 452.32], 'origin': [206.25, 4.2, 4.02]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "RU_PROP_Akula_COMBINED.fbx",
+      "mesh": {
+        "name": "RU_PROP_Akula",
+        "path": "/Game/Propulsion/Propellers/RU_PROP_Akula.RU_PROP_Akula",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            562.5,
+            452.07,
+            452.32
+          ],
+          "origin": [
+            206.25,
+            4.2,
+            4.02
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "US_PROP_LosAngeles",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5D90>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5D50>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5E30>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5D30>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5DB0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'US_PROP_LosAngeles', 'path': '/Game/Propulsion/Propellers/US_PROP_LosAngeles.US_PROP_LosAngeles', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [612.0, 484.65, 473.57], 'origin': [226.0, 0.39, 8.36]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "US_PROP_LosAngeles_COMBINED.fbx",
+      "mesh": {
+        "name": "US_PROP_LosAngeles",
+        "path": "/Game/Propulsion/Propellers/US_PROP_LosAngeles.US_PROP_LosAngeles",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            612.0,
+            484.65,
+            473.57
+          ],
+          "origin": [
+            226.0,
+            0.39,
+            8.36
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "CN_PROP_Type093",
+      "category": "Propellers",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5EF0>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5EB0>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5F90>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5E90>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5F10>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'CN_PROP_Type093', 'path': '/Game/Propulsion/Propellers/CN_PROP_Type093.CN_PROP_Type093', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [537.75, 430.41, 434.06], 'origin': [196.38, 5.24, 2.63]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "CN_PROP_Type093_COMBINED.fbx",
+      "mesh": {
+        "name": "CN_PROP_Type093",
+        "path": "/Game/Propulsion/Propellers/CN_PROP_Type093.CN_PROP_Type093",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            537.75,
+            430.41,
+            434.06
+          ],
+          "origin": [
+            196.38,
+            5.24,
+            2.63
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "US_PJ_Seawolf",
+      "category": "PumpJets",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0090>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0050>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0130>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0030>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E00B0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'US_PJ_Seawolf', 'path': '/Game/Propulsion/PumpJets/US_PJ_Seawolf.US_PJ_Seawolf', 'lod_count': 4, 'material_slots': 16, 'bounds_cm': {'size': [627.0, 610.0, 610.0], 'origin': [23.5, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "US_PJ_Seawolf_COMBINED.fbx",
+      "mesh": {
+        "name": "US_PJ_Seawolf",
+        "path": "/Game/Propulsion/PumpJets/US_PJ_Seawolf.US_PJ_Seawolf",
+        "lod_count": 4,
+        "material_slots": 16,
+        "bounds_cm": {
+          "size": [
+            627.0,
+            610.0,
+            610.0
+          ],
+          "origin": [
+            23.5,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "US_PJ_Virginia",
+      "category": "PumpJets",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E01F0>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E01B0>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0290>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0190>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0210>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'US_PJ_Virginia', 'path': '/Game/Propulsion/PumpJets/US_PJ_Virginia.US_PJ_Virginia', 'lod_count': 4, 'material_slots': 28, 'bounds_cm': {'size': [578.0, 570.0, 570.0], 'origin': [19.0, -0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "US_PJ_Virginia_COMBINED.fbx",
+      "mesh": {
+        "name": "US_PJ_Virginia",
+        "path": "/Game/Propulsion/PumpJets/US_PJ_Virginia.US_PJ_Virginia",
+        "lod_count": 4,
+        "material_slots": 28,
+        "bounds_cm": {
+          "size": [
+            578.0,
+            570.0,
+            570.0
+          ],
+          "origin": [
+            19.0,
+            -0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "UK_PJ_Astute",
+      "category": "PumpJets",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0350>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0310>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E03F0>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E02F0>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0370>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'UK_PJ_Astute', 'path': '/Game/Propulsion/PumpJets/UK_PJ_Astute.UK_PJ_Astute', 'lod_count': 4, 'material_slots': 16, 'bounds_cm': {'size': [553.5, 550.0, 550.0], 'origin': [16.75, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "UK_PJ_Astute_COMBINED.fbx",
+      "mesh": {
+        "name": "UK_PJ_Astute",
+        "path": "/Game/Propulsion/PumpJets/UK_PJ_Astute.UK_PJ_Astute",
+        "lod_count": 4,
+        "material_slots": 16,
+        "bounds_cm": {
+          "size": [
+            553.5,
+            550.0,
+            550.0
+          ],
+          "origin": [
+            16.75,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "RU_PJ_Yasen",
+      "category": "PumpJets",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E04B0>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0470>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0550>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0450>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E04D0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'RU_PJ_Yasen', 'path': '/Game/Propulsion/PumpJets/RU_PJ_Yasen.RU_PJ_Yasen', 'lod_count': 4, 'material_slots': 16, 'bounds_cm': {'size': [602.5, 590.0, 590.0], 'origin': [21.25, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "RU_PJ_Yasen_COMBINED.fbx",
+      "mesh": {
+        "name": "RU_PJ_Yasen",
+        "path": "/Game/Propulsion/PumpJets/RU_PJ_Yasen.RU_PJ_Yasen",
+        "lod_count": 4,
+        "material_slots": 16,
+        "bounds_cm": {
+          "size": [
+            602.5,
+            590.0,
+            590.0
+          ],
+          "origin": [
+            21.25,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "FR_PJ_Suffren",
+      "category": "PumpJets",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0610>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E05D0>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E06B0>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E05B0>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0630>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'FR_PJ_Suffren', 'path': '/Game/Propulsion/PumpJets/FR_PJ_Suffren.FR_PJ_Suffren', 'lod_count': 4, 'material_slots': 16, 'bounds_cm': {'size': [534.0, 530.0, 530.0], 'origin': [17.0, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "FR_PJ_Suffren_COMBINED.fbx",
+      "mesh": {
+        "name": "FR_PJ_Suffren",
+        "path": "/Game/Propulsion/PumpJets/FR_PJ_Suffren.FR_PJ_Suffren",
+        "lod_count": 4,
+        "material_slots": 16,
+        "bounds_cm": {
+          "size": [
+            534.0,
+            530.0,
+            530.0
+          ],
+          "origin": [
+            17.0,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "SHAFT_PLAIN",
+      "category": "Shafts",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0770>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0730>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0810>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0710>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0790>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'SHAFT_PLAIN', 'path': '/Game/Propulsion/Shafts/SHAFT_PLAIN.SHAFT_PLAIN', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [600.0, 72.0, 72.0], 'origin': [0.0, -0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "SHAFT_PLAIN_COMBINED.fbx",
+      "mesh": {
+        "name": "SHAFT_PLAIN",
+        "path": "/Game/Propulsion/Shafts/SHAFT_PLAIN.SHAFT_PLAIN",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            600.0,
+            72.0,
+            72.0
+          ],
+          "origin": [
+            0.0,
+            -0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "SHAFT_GEARED",
+      "category": "Shafts",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E08D0>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0890>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0970>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0870>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E08F0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'SHAFT_GEARED', 'path': '/Game/Propulsion/Shafts/SHAFT_GEARED.SHAFT_GEARED', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [750.0, 160.0, 160.0], 'origin': [0.0, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "SHAFT_GEARED_COMBINED.fbx",
+      "mesh": {
+        "name": "SHAFT_GEARED",
+        "path": "/Game/Propulsion/Shafts/SHAFT_GEARED.SHAFT_GEARED",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            750.0,
+            160.0,
+            160.0
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "SHAFT_FAIRING_LONG",
+      "category": "Shafts",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0A30>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E09F0>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0AD0>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E09D0>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0A50>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'SHAFT_FAIRING_LONG', 'path': '/Game/Propulsion/Shafts/SHAFT_FAIRING_LONG.SHAFT_FAIRING_LONG', 'lod_count': 4, 'material_slots': 8, 'bounds_cm': {'size': [1210.0, 480.0, 480.0], 'origin': [0.0, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "SHAFT_FAIRING_LONG_COMBINED.fbx",
+      "mesh": {
+        "name": "SHAFT_FAIRING_LONG",
+        "path": "/Game/Propulsion/Shafts/SHAFT_FAIRING_LONG.SHAFT_FAIRING_LONG",
+        "lod_count": 4,
+        "material_slots": 8,
+        "bounds_cm": {
+          "size": [
+            1210.0,
+            480.0,
+            480.0
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "THRUSTER_TUNNEL",
+      "category": "Thrusters",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5D90>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5F10>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5BD0>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5EF0>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5DB0>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'THRUSTER_TUNNEL', 'path': '/Game/Propulsion/Thrusters/THRUSTER_TUNNEL.THRUSTER_TUNNEL', 'lod_count': 4, 'material_slots': 12, 'bounds_cm': {'size': [144.0, 190.0, 190.0], 'origin': [12.0, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "THRUSTER_TUNNEL_COMBINED.fbx",
+      "mesh": {
+        "name": "THRUSTER_TUNNEL",
+        "path": "/Game/Propulsion/Thrusters/THRUSTER_TUNNEL.THRUSTER_TUNNEL",
+        "lod_count": 4,
+        "material_slots": 12,
+        "bounds_cm": {
+          "size": [
+            144.0,
+            190.0,
+            190.0
+          ],
+          "origin": [
+            12.0,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "THRUSTER_RIM_DRIVEN",
+      "category": "Thrusters",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5930>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5990>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C56F0>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5550>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12C5830>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'THRUSTER_RIM_DRIVEN', 'path': '/Game/Propulsion/Thrusters/THRUSTER_RIM_DRIVEN.THRUSTER_RIM_DRIVEN', 'lod_count': 4, 'material_slots': 12, 'bounds_cm': {'size': [55.0, 162.0, 162.0], 'origin': [0.0, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "THRUSTER_RIM_DRIVEN_COMBINED.fbx",
+      "mesh": {
+        "name": "THRUSTER_RIM_DRIVEN",
+        "path": "/Game/Propulsion/Thrusters/THRUSTER_RIM_DRIVEN.THRUSTER_RIM_DRIVEN",
+        "lod_count": 4,
+        "material_slots": 12,
+        "bounds_cm": {
+          "size": [
+            55.0,
+            162.0,
+            162.0
+          ],
+          "origin": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    },
+    {
+      "asset_id": "PJ_T10_NEXTGEN",
+      "category": "PumpJets",
+      "steps": [
+        {
+          "step": "import_base",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E08F0>]"
+        },
+        {
+          "step": "import_lod1",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E09D0>]"
+        },
+        {
+          "step": "set_lod1",
+          "ok": true,
+          "detail": "1"
+        },
+        {
+          "step": "import_lod2",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0610>]"
+        },
+        {
+          "step": "set_lod2",
+          "ok": true,
+          "detail": "2"
+        },
+        {
+          "step": "import_lod3",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0A50>]"
+        },
+        {
+          "step": "set_lod3",
+          "ok": true,
+          "detail": "3"
+        },
+        {
+          "step": "import_collision_hulls",
+          "ok": true,
+          "detail": "[<StaticMesh object at 0x0000022CC12E0870>]"
+        },
+        {
+          "step": "set_convex_collision",
+          "ok": false,
+          "detail": "TypeError: 7 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (7 given) | 6 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (6 given) | 5 params: bulk_set_convex_decomposition_collisions() takes at most 4 arguments (5 given) | 4 params: EditorStaticMeshLibrary: Failed to convert parameter 'static_meshes' when calling function 'EditorStaticMe"
+        },
+        {
+          "step": "report",
+          "ok": true,
+          "detail": "True"
+        },
+        {
+          "step": "mesh_report",
+          "ok": true,
+          "detail": "{'name': 'PJ_T10_NEXTGEN', 'path': '/Game/Propulsion/PumpJets/PJ_T10_NEXTGEN.PJ_T10_NEXTGEN', 'lod_count': 4, 'material_slots': 16, 'bounds_cm': {'size': [507.6, 610.0, 610.0], 'origin': [-56.2, 0.0, 0.0]}, 'convex_collision_count': 0, 'simple_collision_count': 0, 'triangles_lod0': None, 'triangles_lod1': None, 'triangles_lod2': None, 'triangles_lod3': None}"
+        }
+      ],
+      "ok": true,
+      "base_source": "PJ_T10_NEXTGEN_COMBINED.fbx",
+      "mesh": {
+        "name": "PJ_T10_NEXTGEN",
+        "path": "/Game/Propulsion/PumpJets/PJ_T10_NEXTGEN.PJ_T10_NEXTGEN",
+        "lod_count": 4,
+        "material_slots": 16,
+        "bounds_cm": {
+          "size": [
+            507.6,
+            610.0,
+            610.0
+          ],
+          "origin": [
+            -56.2,
+            0.0,
+            0.0
+          ]
+        },
+        "convex_collision_count": 0,
+        "simple_collision_count": 0,
+        "triangles_lod0": null,
+        "triangles_lod1": null,
+        "triangles_lod2": null,
+        "triangles_lod3": null
+      }
+    }
+  ]
+}

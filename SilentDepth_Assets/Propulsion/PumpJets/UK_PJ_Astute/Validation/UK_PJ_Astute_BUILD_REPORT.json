@@ -1,0 +1,433 @@
+{
+  "asset_id": "UK_PJ_Astute",
+  "category": "PumpJets",
+  "kind": "PUMPJET",
+  "generated_at": "2026-09-10",
+  "blender_version": "5.2.1 LTS",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0
+  },
+  "origin_rule": "PIVOT_ON_SHAFT_AXIS",
+  "origin_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "sockets": [
+    {
+      "name": "SOCKET_PROPULSOR",
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent": null
+    },
+    {
+      "name": "SOCKET_SHAFT",
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent": null
+    },
+    {
+      "name": "SOCKET_PUMPJET",
+      "location_m": [
+        -1.65,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent": null
+    }
+  ],
+  "lods": [
+    {
+      "lod": 0,
+      "objects": [
+        "UK_PJ_Astute_LOD0_Hub",
+        "UK_PJ_Astute_LOD0_Housing",
+        "UK_PJ_Astute_LOD0_Lining",
+        "UK_PJ_Astute_LOD0_Rotor_00",
+        "UK_PJ_Astute_LOD0_Rotor_01",
+        "UK_PJ_Astute_LOD0_Rotor_02",
+        "UK_PJ_Astute_LOD0_Rotor_03",
+        "UK_PJ_Astute_LOD0_Rotor_04",
+        "UK_PJ_Astute_LOD0_Rotor_05",
+        "UK_PJ_Astute_LOD0_Rotor_06",
+        "UK_PJ_Astute_LOD0_Stator_00",
+        "UK_PJ_Astute_LOD0_Stator_01",
+        "UK_PJ_Astute_LOD0_Stator_02",
+        "UK_PJ_Astute_LOD0_Stator_03",
+        "UK_PJ_Astute_LOD0_Stator_04",
+        "UK_PJ_Astute_LOD0_Stator_05",
+        "UK_PJ_Astute_LOD0_Stator_06",
+        "UK_PJ_Astute_LOD0_Stator_07",
+        "UK_PJ_Astute_LOD0_Stator_08",
+        "UK_PJ_Astute_LOD0_Nozzle",
+        "UK_PJ_Astute_LOD0_Shaft"
+      ],
+      "vertices": 6324,
+      "triangles": 12576,
+      "dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 1,
+      "objects": [
+        "UK_PJ_Astute_LOD1_Hub",
+        "UK_PJ_Astute_LOD1_Housing",
+        "UK_PJ_Astute_LOD1_Lining",
+        "UK_PJ_Astute_LOD1_Rotor_00",
+        "UK_PJ_Astute_LOD1_Rotor_01",
+        "UK_PJ_Astute_LOD1_Rotor_02",
+        "UK_PJ_Astute_LOD1_Rotor_03",
+        "UK_PJ_Astute_LOD1_Rotor_04",
+        "UK_PJ_Astute_LOD1_Rotor_05",
+        "UK_PJ_Astute_LOD1_Rotor_06",
+        "UK_PJ_Astute_LOD1_Stator_00",
+        "UK_PJ_Astute_LOD1_Stator_01",
+        "UK_PJ_Astute_LOD1_Stator_02",
+        "UK_PJ_Astute_LOD1_Stator_03",
+        "UK_PJ_Astute_LOD1_Stator_04",
+        "UK_PJ_Astute_LOD1_Stator_05",
+        "UK_PJ_Astute_LOD1_Stator_06",
+        "UK_PJ_Astute_LOD1_Stator_07",
+        "UK_PJ_Astute_LOD1_Stator_08",
+        "UK_PJ_Astute_LOD1_Nozzle",
+        "UK_PJ_Astute_LOD1_Shaft"
+      ],
+      "vertices": 3260,
+      "triangles": 6448,
+      "dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 2,
+      "objects": [
+        "UK_PJ_Astute_LOD2_Hub",
+        "UK_PJ_Astute_LOD2_Housing",
+        "UK_PJ_Astute_LOD2_Lining",
+        "UK_PJ_Astute_LOD2_Rotor_00",
+        "UK_PJ_Astute_LOD2_Rotor_01",
+        "UK_PJ_Astute_LOD2_Rotor_02",
+        "UK_PJ_Astute_LOD2_Rotor_03",
+        "UK_PJ_Astute_LOD2_Rotor_04",
+        "UK_PJ_Astute_LOD2_Rotor_05",
+        "UK_PJ_Astute_LOD2_Rotor_06",
+        "UK_PJ_Astute_LOD2_Stator_00",
+        "UK_PJ_Astute_LOD2_Stator_01",
+        "UK_PJ_Astute_LOD2_Stator_02",
+        "UK_PJ_Astute_LOD2_Stator_03",
+        "UK_PJ_Astute_LOD2_Stator_04",
+        "UK_PJ_Astute_LOD2_Stator_05",
+        "UK_PJ_Astute_LOD2_Stator_06",
+        "UK_PJ_Astute_LOD2_Stator_07",
+        "UK_PJ_Astute_LOD2_Stator_08",
+        "UK_PJ_Astute_LOD2_Nozzle",
+        "UK_PJ_Astute_LOD2_Shaft"
+      ],
+      "vertices": 1580,
+      "triangles": 3088,
+      "dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 3,
+      "objects": [
+        "UK_PJ_Astute_LOD3_Hub",
+        "UK_PJ_Astute_LOD3_Housing",
+        "UK_PJ_Astute_LOD3_Lining",
+        "UK_PJ_Astute_LOD3_Rotor_00",
+        "UK_PJ_Astute_LOD3_Rotor_01",
+        "UK_PJ_Astute_LOD3_Rotor_02",
+        "UK_PJ_Astute_LOD3_Rotor_03",
+        "UK_PJ_Astute_LOD3_Rotor_04",
+        "UK_PJ_Astute_LOD3_Rotor_05",
+        "UK_PJ_Astute_LOD3_Rotor_06",
+        "UK_PJ_Astute_LOD3_Stator_00",
+        "UK_PJ_Astute_LOD3_Stator_01",
+        "UK_PJ_Astute_LOD3_Stator_02",
+        "UK_PJ_Astute_LOD3_Stator_03",
+        "UK_PJ_Astute_LOD3_Stator_04",
+        "UK_PJ_Astute_LOD3_Stator_05",
+        "UK_PJ_Astute_LOD3_Stator_06",
+        "UK_PJ_Astute_LOD3_Stator_07",
+        "UK_PJ_Astute_LOD3_Stator_08",
+        "UK_PJ_Astute_LOD3_Nozzle",
+        "UK_PJ_Astute_LOD3_Shaft"
+      ],
+      "vertices": 708,
+      "triangles": 1344,
+      "dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "M_Propulsor_Blade",
+      "base_color_linear": [
+        0.25,
+        0.18,
+        0.075
+      ],
+      "roughness": 0.43,
+      "metallic": 0.84,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Hub",
+      "base_color_linear": [
+        0.19,
+        0.23,
+        0.25
+      ],
+      "roughness": 0.4,
+      "metallic": 0.82,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Duct",
+      "base_color_linear": [
+        0.105,
+        0.13,
+        0.145
+      ],
+      "roughness": 0.64,
+      "metallic": 0.35,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Rubber",
+      "base_color_linear": [
+        0.018,
+        0.027,
+        0.035
+      ],
+      "roughness": 0.83,
+      "metallic": 0.08,
+      "texture_files": []
+    }
+  ],
+  "collision": {
+    "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\Collision\\UK_PJ_Astute_COLLISION.fbx",
+    "convex_hull_count": 3,
+    "objects": [
+      "UCX_UK_PJ_Astute_02",
+      "UCX_UK_PJ_Astute_00",
+      "UCX_UK_PJ_Astute_01"
+    ]
+  },
+  "exports": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_LOD0.fbx",
+      "lod": 0,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_LOD1.fbx",
+      "lod": 1,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_LOD2.fbx",
+      "lod": 2,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_LOD3.fbx",
+      "lod": 3,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    }
+  ],
+  "previews": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\Preview\\UK_PJ_Astute_ThreeQuarter.png",
+      "view": "ThreeQuarter",
+      "non_background_fraction": 0.4414,
+      "mean_luminance": 0.2932,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\Preview\\UK_PJ_Astute_Side.png",
+      "view": "Side",
+      "non_background_fraction": 0.407,
+      "mean_luminance": 0.3167,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\Preview\\UK_PJ_Astute_Rear.png",
+      "view": "Rear",
+      "non_background_fraction": 0.4171,
+      "mean_luminance": 0.2795,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\Preview\\UK_PJ_Astute_Top.png",
+      "view": "Top",
+      "non_background_fraction": 0.3963,
+      "mean_luminance": 0.3416,
+      "resolution": [
+        800,
+        450
+      ]
+    }
+  ],
+  "roundtrip": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_LOD0.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "roundtrip_triangles": 12576,
+      "roundtrip_objects": 21,
+      "lod": 0
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_LOD1.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "roundtrip_triangles": 6448,
+      "roundtrip_objects": 21,
+      "lod": 1
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_LOD2.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "roundtrip_triangles": 3088,
+      "roundtrip_objects": 21,
+      "lod": 2
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_LOD3.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        5.535,
+        5.5,
+        5.5
+      ],
+      "roundtrip_triangles": 1344,
+      "roundtrip_objects": 21,
+      "lod": 3
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\Collision\\UK_PJ_Astute_COLLISION.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        3.3,
+        5.5,
+        5.5
+      ],
+      "roundtrip_triangles": 180,
+      "roundtrip_objects": 3
+    }
+  ],
+  "checks": {
+    "scale_applied": true,
+    "object_transforms_applied": true,
+    "forbidden_names": [],
+    "objects_missing_uv": [],
+    "objects_missing_material": []
+  },
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ],
+  "combined_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_COMBINED.fbx",
+  "hulls_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\PumpJets\\UK_PJ_Astute\\FBX\\UK_PJ_Astute_HULLS.fbx"
+}

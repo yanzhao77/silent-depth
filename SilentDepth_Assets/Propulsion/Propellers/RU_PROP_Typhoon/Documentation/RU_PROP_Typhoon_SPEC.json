@@ -1,0 +1,104 @@
+{
+  "asset_id": "RU_PROP_Typhoon",
+  "display_name": "Typhoon / Project 941 七叶导管螺旋桨",
+  "category": "Propellers",
+  "kind": "PROPELLER",
+  "country": "Russia",
+  "tier": 8,
+  "era": "1980s",
+  "technology_route": "shrouded skewed propeller",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 5.88,
+    "hub_diameter_m": 1.25,
+    "hub_length_m": 1.9,
+    "blade_count": 7,
+    "skew_deg": 25.0,
+    "rake_m": 0.35,
+    "pitch_ratio": 1.05,
+    "blade_thickness_ratio": 0.055,
+    "shroud": {
+      "enabled": true,
+      "outer_diameter_m": 7.0,
+      "length_m": 3.88,
+      "thickness_m": 0.45,
+      "mode": "DUCT"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 5.2,
+      "diameter_m": 0.62,
+      "tail_cone": true
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": false,
+      "length_m": 0.0,
+      "exit_diameter_m": 0.0
+    },
+    "stator_count": 0,
+    "count_provenance": "MEASURED",
+    "provenance_note": "桨盘直径 5.88 m、导管外径 7.0 m 与枢轴取自 Typhoon 母版实测；七叶为公开资料报道的构型。"
+  },
+  "provenance": {
+    "count_provenance": "MEASURED",
+    "note": "桨盘直径 5.88 m、导管外径 7.0 m 与枢轴取自 Typhoon 母版实测；七叶为公开资料报道的构型。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 5584,
+    "1": 2896,
+    "2": 1392,
+    "3": 612
+  },
+  "dimensions_m": [
+    7.995,
+    7.0,
+    7.0
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Propellers/RU_PROP_Typhoon/Blend/RU_PROP_Typhoon_MASTER.blend",
+    "lod0": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_LOD0.fbx",
+    "lod1": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_LOD1.fbx",
+    "lod2": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_LOD2.fbx",
+    "lod3": "Propellers/RU_PROP_Typhoon/FBX/RU_PROP_Typhoon_LOD3.fbx",
+    "collision": "Propellers/RU_PROP_Typhoon/Collision/RU_PROP_Typhoon_COLLISION.fbx",
+    "spec": "Propellers/RU_PROP_Typhoon/Documentation/RU_PROP_Typhoon_SPEC.json",
+    "readme": "Propellers/RU_PROP_Typhoon/Documentation/RU_PROP_Typhoon_README.md",
+    "preview": [
+      "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_ThreeQuarter.png",
+      "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_Side.png",
+      "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_Rear.png",
+      "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_Top.png"
+    ]
+  },
+  "validation": "Propellers/RU_PROP_Typhoon/Validation/RU_PROP_Typhoon_VALIDATION.json",
+  "build_report": "Propellers/RU_PROP_Typhoon/Validation/RU_PROP_Typhoon_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

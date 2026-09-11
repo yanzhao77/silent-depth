@@ -1,0 +1,105 @@
+{
+  "asset_id": "RU_PJ_Yasen",
+  "display_name": "Yasen / Project 885 泵喷推进器",
+  "category": "PumpJets",
+  "kind": "PUMPJET",
+  "country": "Russia",
+  "tier": 9,
+  "era": "2010s",
+  "technology_route": "pump-jet propulsor",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 5.4,
+    "hub_diameter_m": 1.45,
+    "hub_length_m": 2.5,
+    "blade_count": 7,
+    "stator_count": 9,
+    "skew_deg": 28.0,
+    "rake_m": 0.2,
+    "pitch_ratio": 1.1,
+    "blade_thickness_ratio": 0.06,
+    "shroud": {
+      "enabled": true,
+      "outer_diameter_m": 5.9,
+      "length_m": 3.5,
+      "thickness_m": 0.31,
+      "mode": "HOUSING"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 2.1,
+      "diameter_m": 0.66,
+      "tail_cone": false
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": true,
+      "length_m": 1.05,
+      "exit_diameter_m": 4.4
+    },
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "泵喷构型为公开报道；几何为游戏美术取值。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "泵喷构型为公开报道；几何为游戏美术取值。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 12576,
+    "1": 6448,
+    "2": 3088,
+    "3": 1344
+  },
+  "dimensions_m": [
+    6.025,
+    5.9,
+    5.9
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT",
+    "SOCKET_PUMPJET"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "PumpJets/RU_PJ_Yasen/Blend/RU_PJ_Yasen_MASTER.blend",
+    "lod0": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_LOD0.fbx",
+    "lod1": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_LOD1.fbx",
+    "lod2": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_LOD2.fbx",
+    "lod3": "PumpJets/RU_PJ_Yasen/FBX/RU_PJ_Yasen_LOD3.fbx",
+    "collision": "PumpJets/RU_PJ_Yasen/Collision/RU_PJ_Yasen_COLLISION.fbx",
+    "spec": "PumpJets/RU_PJ_Yasen/Documentation/RU_PJ_Yasen_SPEC.json",
+    "readme": "PumpJets/RU_PJ_Yasen/Documentation/RU_PJ_Yasen_README.md",
+    "preview": [
+      "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_ThreeQuarter.png",
+      "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_Side.png",
+      "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_Rear.png",
+      "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_Top.png"
+    ]
+  },
+  "validation": "PumpJets/RU_PJ_Yasen/Validation/RU_PJ_Yasen_VALIDATION.json",
+  "build_report": "PumpJets/RU_PJ_Yasen/Validation/RU_PJ_Yasen_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

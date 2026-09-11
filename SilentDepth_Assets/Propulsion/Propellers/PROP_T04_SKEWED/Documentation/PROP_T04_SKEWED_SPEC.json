@@ -1,0 +1,104 @@
+{
+  "asset_id": "PROP_T04_SKEWED",
+  "display_name": "T4 后掠螺旋桨（通用科技树件）",
+  "category": "Propellers",
+  "kind": "PROPELLER",
+  "country": "GENERIC",
+  "tier": 4,
+  "era": "1960s-1970s",
+  "technology_route": "skewed propeller",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 4.3,
+    "hub_diameter_m": 0.95,
+    "hub_length_m": 1.4,
+    "blade_count": 5,
+    "skew_deg": 26.0,
+    "rake_m": 0.22,
+    "pitch_ratio": 1.02,
+    "blade_thickness_ratio": 0.068,
+    "shroud": {
+      "enabled": false,
+      "outer_diameter_m": 0.0,
+      "length_m": 0.0,
+      "thickness_m": 0.0,
+      "mode": "NONE"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 3.4,
+      "diameter_m": 0.52,
+      "tail_cone": true
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": false,
+      "length_m": 0.0,
+      "exit_diameter_m": 0.0
+    },
+    "stator_count": 0,
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "通用科技树件：T4 的关键是后掠（skew）降噪概念，而不是叶片数量。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "通用科技树件：T4 的关键是后掠（skew）降噪概念，而不是叶片数量。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 3888,
+    "1": 2000,
+    "2": 944,
+    "3": 396
+  },
+  "dimensions_m": [
+    4.73,
+    4.1343,
+    4.1115
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Propellers/PROP_T04_SKEWED/Blend/PROP_T04_SKEWED_MASTER.blend",
+    "lod0": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_LOD0.fbx",
+    "lod1": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_LOD1.fbx",
+    "lod2": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_LOD2.fbx",
+    "lod3": "Propellers/PROP_T04_SKEWED/FBX/PROP_T04_SKEWED_LOD3.fbx",
+    "collision": "Propellers/PROP_T04_SKEWED/Collision/PROP_T04_SKEWED_COLLISION.fbx",
+    "spec": "Propellers/PROP_T04_SKEWED/Documentation/PROP_T04_SKEWED_SPEC.json",
+    "readme": "Propellers/PROP_T04_SKEWED/Documentation/PROP_T04_SKEWED_README.md",
+    "preview": [
+      "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_ThreeQuarter.png",
+      "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_Side.png",
+      "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_Rear.png",
+      "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_Top.png"
+    ]
+  },
+  "validation": "Propellers/PROP_T04_SKEWED/Validation/PROP_T04_SKEWED_VALIDATION.json",
+  "build_report": "Propellers/PROP_T04_SKEWED/Validation/PROP_T04_SKEWED_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

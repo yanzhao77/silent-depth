@@ -1,0 +1,4341 @@
+{
+  "source_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Blend\\RU_SSBN_Typhoon_MASTER.blend",
+  "blender_version": "5.2.1 LTS",
+  "scene": {
+    "name": "Typhoon_941_Exterior",
+    "unit_system": "METRIC",
+    "scale_length": 1.0,
+    "object_count": 603,
+    "mesh_object_count": 592,
+    "collections": [
+      "Collection",
+      "STUDIO_NOT_FOR_EXPORT",
+      "TYPHOON_ASSEMBLY",
+      "UE4_EXPORT_MESHES"
+    ]
+  },
+  "propulsion_related_objects": [
+    {
+      "name": "Bow_Dive_Plane_-1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        68.845436,
+        -8.9,
+        0.6
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        6.538162,
+        5.0,
+        1.052032
+      ],
+      "bound_box_world_m": [
+        [
+          65.281914,
+          -13.9,
+          0.073984
+        ],
+        [
+          65.281914,
+          -13.9,
+          1.126016
+        ],
+        [
+          65.281914,
+          -8.9,
+          1.126016
+        ],
+        [
+          65.281914,
+          -8.9,
+          0.073984
+        ],
+        [
+          71.820076,
+          -13.9,
+          0.073984
+        ],
+        [
+          71.820076,
+          -13.9,
+          1.126016
+        ],
+        [
+          71.820076,
+          -8.9,
+          1.126016
+        ],
+        [
+          71.820076,
+          -8.9,
+          0.073984
+        ]
+      ],
+      "vertices": 416,
+      "polygons": 386,
+      "triangles": 828,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Rubber.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          68.8454360961914,
+          -8.899999618530273,
+          0.6000000238418579
+        ]
+      }
+    },
+    {
+      "name": "Bow_Dive_Plane_1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        68.845436,
+        8.9,
+        0.6
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        6.538162,
+        5.0,
+        1.052032
+      ],
+      "bound_box_world_m": [
+        [
+          65.281914,
+          8.9,
+          0.073984
+        ],
+        [
+          65.281914,
+          8.9,
+          1.126016
+        ],
+        [
+          65.281914,
+          13.9,
+          1.126016
+        ],
+        [
+          65.281914,
+          13.9,
+          0.073984
+        ],
+        [
+          71.820076,
+          8.9,
+          0.073984
+        ],
+        [
+          71.820076,
+          8.9,
+          1.126016
+        ],
+        [
+          71.820076,
+          13.9,
+          1.126016
+        ],
+        [
+          71.820076,
+          13.9,
+          0.073984
+        ]
+      ],
+      "vertices": 416,
+      "polygons": 386,
+      "triangles": 828,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Rubber.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          68.8454360961914,
+          8.899999618530273,
+          0.6000000238418579
+        ]
+      }
+    },
+    {
+      "name": "Camera_Stern",
+      "type": "CAMERA",
+      "parent": null,
+      "collections": [
+        "STUDIO_NOT_FOR_EXPORT"
+      ],
+      "location_m": [
+        -118.0,
+        -40.0,
+        22.0
+      ],
+      "rotation_euler_rad": [
+        1.209067,
+        -0.0,
+        -0.832981
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    {
+      "name": "Louvre_Blade",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -29.590174,
+          -3.53,
+          9.9625
+        ],
+        [
+          -29.590174,
+          -3.53,
+          9.9975
+        ],
+        [
+          -29.590174,
+          -3.43,
+          9.9975
+        ],
+        [
+          -29.590174,
+          -3.43,
+          9.9625
+        ],
+        [
+          -28.944826,
+          -3.53,
+          9.9625
+        ],
+        [
+          -28.944826,
+          -3.53,
+          9.9975
+        ],
+        [
+          -28.944826,
+          -3.43,
+          9.9975
+        ],
+        [
+          -28.944826,
+          -3.43,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.001",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -29.590174,
+          -3.53,
+          10.1025
+        ],
+        [
+          -29.590174,
+          -3.53,
+          10.1375
+        ],
+        [
+          -29.590174,
+          -3.43,
+          10.1375
+        ],
+        [
+          -29.590174,
+          -3.43,
+          10.1025
+        ],
+        [
+          -28.944826,
+          -3.53,
+          10.1025
+        ],
+        [
+          -28.944826,
+          -3.53,
+          10.1375
+        ],
+        [
+          -28.944826,
+          -3.43,
+          10.1375
+        ],
+        [
+          -28.944826,
+          -3.43,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.002",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -29.590174,
+          -3.53,
+          10.2425
+        ],
+        [
+          -29.590174,
+          -3.53,
+          10.2775
+        ],
+        [
+          -29.590174,
+          -3.43,
+          10.2775
+        ],
+        [
+          -29.590174,
+          -3.43,
+          10.2425
+        ],
+        [
+          -28.944826,
+          -3.53,
+          10.2425
+        ],
+        [
+          -28.944826,
+          -3.53,
+          10.2775
+        ],
+        [
+          -28.944826,
+          -3.43,
+          10.2775
+        ],
+        [
+          -28.944826,
+          -3.43,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.003",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -30.8002,
+          -3.53,
+          9.9625
+        ],
+        [
+          -30.8002,
+          -3.53,
+          9.9975
+        ],
+        [
+          -30.8002,
+          -3.43,
+          9.9975
+        ],
+        [
+          -30.8002,
+          -3.43,
+          9.9625
+        ],
+        [
+          -30.154852,
+          -3.53,
+          9.9625
+        ],
+        [
+          -30.154852,
+          -3.53,
+          9.9975
+        ],
+        [
+          -30.154852,
+          -3.43,
+          9.9975
+        ],
+        [
+          -30.154852,
+          -3.43,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.004",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -30.8002,
+          -3.53,
+          10.1025
+        ],
+        [
+          -30.8002,
+          -3.53,
+          10.1375
+        ],
+        [
+          -30.8002,
+          -3.43,
+          10.1375
+        ],
+        [
+          -30.8002,
+          -3.43,
+          10.1025
+        ],
+        [
+          -30.154852,
+          -3.53,
+          10.1025
+        ],
+        [
+          -30.154852,
+          -3.53,
+          10.1375
+        ],
+        [
+          -30.154852,
+          -3.43,
+          10.1375
+        ],
+        [
+          -30.154852,
+          -3.43,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.005",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -30.8002,
+          -3.53,
+          10.2425
+        ],
+        [
+          -30.8002,
+          -3.53,
+          10.2775
+        ],
+        [
+          -30.8002,
+          -3.43,
+          10.2775
+        ],
+        [
+          -30.8002,
+          -3.43,
+          10.2425
+        ],
+        [
+          -30.154852,
+          -3.53,
+          10.2425
+        ],
+        [
+          -30.154852,
+          -3.53,
+          10.2775
+        ],
+        [
+          -30.154852,
+          -3.43,
+          10.2775
+        ],
+        [
+          -30.154852,
+          -3.43,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.006",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.64535,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -32.010227,
+          -3.53,
+          9.9625
+        ],
+        [
+          -32.010227,
+          -3.53,
+          9.9975
+        ],
+        [
+          -32.010227,
+          -3.43,
+          9.9975
+        ],
+        [
+          -32.010227,
+          -3.43,
+          9.9625
+        ],
+        [
+          -31.364878,
+          -3.53,
+          9.9625
+        ],
+        [
+          -31.364878,
+          -3.53,
+          9.9975
+        ],
+        [
+          -31.364878,
+          -3.43,
+          9.9975
+        ],
+        [
+          -31.364878,
+          -3.43,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.007",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.64535,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -32.010227,
+          -3.53,
+          10.1025
+        ],
+        [
+          -32.010227,
+          -3.53,
+          10.1375
+        ],
+        [
+          -32.010227,
+          -3.43,
+          10.1375
+        ],
+        [
+          -32.010227,
+          -3.43,
+          10.1025
+        ],
+        [
+          -31.364878,
+          -3.53,
+          10.1025
+        ],
+        [
+          -31.364878,
+          -3.53,
+          10.1375
+        ],
+        [
+          -31.364878,
+          -3.43,
+          10.1375
+        ],
+        [
+          -31.364878,
+          -3.43,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.008",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.64535,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -32.010227,
+          -3.53,
+          10.2425
+        ],
+        [
+          -32.010227,
+          -3.53,
+          10.2775
+        ],
+        [
+          -32.010227,
+          -3.43,
+          10.2775
+        ],
+        [
+          -32.010227,
+          -3.43,
+          10.2425
+        ],
+        [
+          -31.364878,
+          -3.53,
+          10.2425
+        ],
+        [
+          -31.364878,
+          -3.53,
+          10.2775
+        ],
+        [
+          -31.364878,
+          -3.43,
+          10.2775
+        ],
+        [
+          -31.364878,
+          -3.43,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.009",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -38.362862,
+          -3.53,
+          9.9625
+        ],
+        [
+          -38.362862,
+          -3.53,
+          9.9975
+        ],
+        [
+          -38.362862,
+          -3.43,
+          9.9975
+        ],
+        [
+          -38.362862,
+          -3.43,
+          9.9625
+        ],
+        [
+          -37.717514,
+          -3.53,
+          9.9625
+        ],
+        [
+          -37.717514,
+          -3.53,
+          9.9975
+        ],
+        [
+          -37.717514,
+          -3.43,
+          9.9975
+        ],
+        [
+          -37.717514,
+          -3.43,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.010",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -38.362862,
+          -3.53,
+          10.1025
+        ],
+        [
+          -38.362862,
+          -3.53,
+          10.1375
+        ],
+        [
+          -38.362862,
+          -3.43,
+          10.1375
+        ],
+        [
+          -38.362862,
+          -3.43,
+          10.1025
+        ],
+        [
+          -37.717514,
+          -3.53,
+          10.1025
+        ],
+        [
+          -37.717514,
+          -3.53,
+          10.1375
+        ],
+        [
+          -37.717514,
+          -3.43,
+          10.1375
+        ],
+        [
+          -37.717514,
+          -3.43,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.011",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -38.362862,
+          -3.53,
+          10.2425
+        ],
+        [
+          -38.362862,
+          -3.53,
+          10.2775
+        ],
+        [
+          -38.362862,
+          -3.43,
+          10.2775
+        ],
+        [
+          -38.362862,
+          -3.43,
+          10.2425
+        ],
+        [
+          -37.717514,
+          -3.53,
+          10.2425
+        ],
+        [
+          -37.717514,
+          -3.53,
+          10.2775
+        ],
+        [
+          -37.717514,
+          -3.43,
+          10.2775
+        ],
+        [
+          -37.717514,
+          -3.43,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.012",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -39.572887,
+          -3.53,
+          9.9625
+        ],
+        [
+          -39.572887,
+          -3.53,
+          9.9975
+        ],
+        [
+          -39.572887,
+          -3.43,
+          9.9975
+        ],
+        [
+          -39.572887,
+          -3.43,
+          9.9625
+        ],
+        [
+          -38.92754,
+          -3.53,
+          9.9625
+        ],
+        [
+          -38.92754,
+          -3.53,
+          9.9975
+        ],
+        [
+          -38.92754,
+          -3.43,
+          9.9975
+        ],
+        [
+          -38.92754,
+          -3.43,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.013",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -39.572887,
+          -3.53,
+          10.1025
+        ],
+        [
+          -39.572887,
+          -3.53,
+          10.1375
+        ],
+        [
+          -39.572887,
+          -3.43,
+          10.1375
+        ],
+        [
+          -39.572887,
+          -3.43,
+          10.1025
+        ],
+        [
+          -38.92754,
+          -3.53,
+          10.1025
+        ],
+        [
+          -38.92754,
+          -3.53,
+          10.1375
+        ],
+        [
+          -38.92754,
+          -3.43,
+          10.1375
+        ],
+        [
+          -38.92754,
+          -3.43,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.014",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -39.572887,
+          -3.53,
+          10.2425
+        ],
+        [
+          -39.572887,
+          -3.53,
+          10.2775
+        ],
+        [
+          -39.572887,
+          -3.43,
+          10.2775
+        ],
+        [
+          -39.572887,
+          -3.43,
+          10.2425
+        ],
+        [
+          -38.92754,
+          -3.53,
+          10.2425
+        ],
+        [
+          -38.92754,
+          -3.53,
+          10.2775
+        ],
+        [
+          -38.92754,
+          -3.43,
+          10.2775
+        ],
+        [
+          -38.92754,
+          -3.43,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.015",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645344,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -40.782913,
+          -3.53,
+          9.9625
+        ],
+        [
+          -40.782913,
+          -3.53,
+          9.9975
+        ],
+        [
+          -40.782913,
+          -3.43,
+          9.9975
+        ],
+        [
+          -40.782913,
+          -3.43,
+          9.9625
+        ],
+        [
+          -40.137569,
+          -3.53,
+          9.9625
+        ],
+        [
+          -40.137569,
+          -3.53,
+          9.9975
+        ],
+        [
+          -40.137569,
+          -3.43,
+          9.9975
+        ],
+        [
+          -40.137569,
+          -3.43,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.016",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645344,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -40.782913,
+          -3.53,
+          10.1025
+        ],
+        [
+          -40.782913,
+          -3.53,
+          10.1375
+        ],
+        [
+          -40.782913,
+          -3.43,
+          10.1375
+        ],
+        [
+          -40.782913,
+          -3.43,
+          10.1025
+        ],
+        [
+          -40.137569,
+          -3.53,
+          10.1025
+        ],
+        [
+          -40.137569,
+          -3.53,
+          10.1375
+        ],
+        [
+          -40.137569,
+          -3.43,
+          10.1375
+        ],
+        [
+          -40.137569,
+          -3.43,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.017",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645344,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -40.782913,
+          -3.53,
+          10.2425
+        ],
+        [
+          -40.782913,
+          -3.53,
+          10.2775
+        ],
+        [
+          -40.782913,
+          -3.43,
+          10.2775
+        ],
+        [
+          -40.782913,
+          -3.43,
+          10.2425
+        ],
+        [
+          -40.137569,
+          -3.53,
+          10.2425
+        ],
+        [
+          -40.137569,
+          -3.53,
+          10.2775
+        ],
+        [
+          -40.137569,
+          -3.43,
+          10.2775
+        ],
+        [
+          -40.137569,
+          -3.43,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.018",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -29.590174,
+          3.43,
+          9.9625
+        ],
+        [
+          -29.590174,
+          3.43,
+          9.9975
+        ],
+        [
+          -29.590174,
+          3.53,
+          9.9975
+        ],
+        [
+          -29.590174,
+          3.53,
+          9.9625
+        ],
+        [
+          -28.944826,
+          3.43,
+          9.9625
+        ],
+        [
+          -28.944826,
+          3.43,
+          9.9975
+        ],
+        [
+          -28.944826,
+          3.53,
+          9.9975
+        ],
+        [
+          -28.944826,
+          3.53,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.019",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -29.590174,
+          3.43,
+          10.1025
+        ],
+        [
+          -29.590174,
+          3.43,
+          10.1375
+        ],
+        [
+          -29.590174,
+          3.53,
+          10.1375
+        ],
+        [
+          -29.590174,
+          3.53,
+          10.1025
+        ],
+        [
+          -28.944826,
+          3.43,
+          10.1025
+        ],
+        [
+          -28.944826,
+          3.43,
+          10.1375
+        ],
+        [
+          -28.944826,
+          3.53,
+          10.1375
+        ],
+        [
+          -28.944826,
+          3.53,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.020",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -29.590174,
+          3.43,
+          10.2425
+        ],
+        [
+          -29.590174,
+          3.43,
+          10.2775
+        ],
+        [
+          -29.590174,
+          3.53,
+          10.2775
+        ],
+        [
+          -29.590174,
+          3.53,
+          10.2425
+        ],
+        [
+          -28.944826,
+          3.43,
+          10.2425
+        ],
+        [
+          -28.944826,
+          3.43,
+          10.2775
+        ],
+        [
+          -28.944826,
+          3.53,
+          10.2775
+        ],
+        [
+          -28.944826,
+          3.53,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.021",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -30.8002,
+          3.43,
+          9.9625
+        ],
+        [
+          -30.8002,
+          3.43,
+          9.9975
+        ],
+        [
+          -30.8002,
+          3.53,
+          9.9975
+        ],
+        [
+          -30.8002,
+          3.53,
+          9.9625
+        ],
+        [
+          -30.154852,
+          3.43,
+          9.9625
+        ],
+        [
+          -30.154852,
+          3.43,
+          9.9975
+        ],
+        [
+          -30.154852,
+          3.53,
+          9.9975
+        ],
+        [
+          -30.154852,
+          3.53,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.022",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -30.8002,
+          3.43,
+          10.1025
+        ],
+        [
+          -30.8002,
+          3.43,
+          10.1375
+        ],
+        [
+          -30.8002,
+          3.53,
+          10.1375
+        ],
+        [
+          -30.8002,
+          3.53,
+          10.1025
+        ],
+        [
+          -30.154852,
+          3.43,
+          10.1025
+        ],
+        [
+          -30.154852,
+          3.43,
+          10.1375
+        ],
+        [
+          -30.154852,
+          3.53,
+          10.1375
+        ],
+        [
+          -30.154852,
+          3.53,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.023",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -30.8002,
+          3.43,
+          10.2425
+        ],
+        [
+          -30.8002,
+          3.43,
+          10.2775
+        ],
+        [
+          -30.8002,
+          3.53,
+          10.2775
+        ],
+        [
+          -30.8002,
+          3.53,
+          10.2425
+        ],
+        [
+          -30.154852,
+          3.43,
+          10.2425
+        ],
+        [
+          -30.154852,
+          3.43,
+          10.2775
+        ],
+        [
+          -30.154852,
+          3.53,
+          10.2775
+        ],
+        [
+          -30.154852,
+          3.53,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.024",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.64535,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -32.010227,
+          3.43,
+          9.9625
+        ],
+        [
+          -32.010227,
+          3.43,
+          9.9975
+        ],
+        [
+          -32.010227,
+          3.53,
+          9.9975
+        ],
+        [
+          -32.010227,
+          3.53,
+          9.9625
+        ],
+        [
+          -31.364878,
+          3.43,
+          9.9625
+        ],
+        [
+          -31.364878,
+          3.43,
+          9.9975
+        ],
+        [
+          -31.364878,
+          3.53,
+          9.9975
+        ],
+        [
+          -31.364878,
+          3.53,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.025",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.64535,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -32.010227,
+          3.43,
+          10.1025
+        ],
+        [
+          -32.010227,
+          3.43,
+          10.1375
+        ],
+        [
+          -32.010227,
+          3.53,
+          10.1375
+        ],
+        [
+          -32.010227,
+          3.53,
+          10.1025
+        ],
+        [
+          -31.364878,
+          3.43,
+          10.1025
+        ],
+        [
+          -31.364878,
+          3.43,
+          10.1375
+        ],
+        [
+          -31.364878,
+          3.53,
+          10.1375
+        ],
+        [
+          -31.364878,
+          3.53,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.026",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.64535,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -32.010227,
+          3.43,
+          10.2425
+        ],
+        [
+          -32.010227,
+          3.43,
+          10.2775
+        ],
+        [
+          -32.010227,
+          3.53,
+          10.2775
+        ],
+        [
+          -32.010227,
+          3.53,
+          10.2425
+        ],
+        [
+          -31.364878,
+          3.43,
+          10.2425
+        ],
+        [
+          -31.364878,
+          3.43,
+          10.2775
+        ],
+        [
+          -31.364878,
+          3.53,
+          10.2775
+        ],
+        [
+          -31.364878,
+          3.53,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.027",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -38.362862,
+          3.43,
+          9.9625
+        ],
+        [
+          -38.362862,
+          3.43,
+          9.9975
+        ],
+        [
+          -38.362862,
+          3.53,
+          9.9975
+        ],
+        [
+          -38.362862,
+          3.53,
+          9.9625
+        ],
+        [
+          -37.717514,
+          3.43,
+          9.9625
+        ],
+        [
+          -37.717514,
+          3.43,
+          9.9975
+        ],
+        [
+          -37.717514,
+          3.53,
+          9.9975
+        ],
+        [
+          -37.717514,
+          3.53,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.028",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -38.362862,
+          3.43,
+          10.1025
+        ],
+        [
+          -38.362862,
+          3.43,
+          10.1375
+        ],
+        [
+          -38.362862,
+          3.53,
+          10.1375
+        ],
+        [
+          -38.362862,
+          3.53,
+          10.1025
+        ],
+        [
+          -37.717514,
+          3.43,
+          10.1025
+        ],
+        [
+          -37.717514,
+          3.43,
+          10.1375
+        ],
+        [
+          -37.717514,
+          3.53,
+          10.1375
+        ],
+        [
+          -37.717514,
+          3.53,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.029",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -38.362862,
+          3.43,
+          10.2425
+        ],
+        [
+          -38.362862,
+          3.43,
+          10.2775
+        ],
+        [
+          -38.362862,
+          3.53,
+          10.2775
+        ],
+        [
+          -38.362862,
+          3.53,
+          10.2425
+        ],
+        [
+          -37.717514,
+          3.43,
+          10.2425
+        ],
+        [
+          -37.717514,
+          3.43,
+          10.2775
+        ],
+        [
+          -37.717514,
+          3.53,
+          10.2775
+        ],
+        [
+          -37.717514,
+          3.53,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.030",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -39.572887,
+          3.43,
+          9.9625
+        ],
+        [
+          -39.572887,
+          3.43,
+          9.9975
+        ],
+        [
+          -39.572887,
+          3.53,
+          9.9975
+        ],
+        [
+          -39.572887,
+          3.53,
+          9.9625
+        ],
+        [
+          -38.92754,
+          3.43,
+          9.9625
+        ],
+        [
+          -38.92754,
+          3.43,
+          9.9975
+        ],
+        [
+          -38.92754,
+          3.53,
+          9.9975
+        ],
+        [
+          -38.92754,
+          3.53,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.031",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -39.572887,
+          3.43,
+          10.1025
+        ],
+        [
+          -39.572887,
+          3.43,
+          10.1375
+        ],
+        [
+          -39.572887,
+          3.53,
+          10.1375
+        ],
+        [
+          -39.572887,
+          3.53,
+          10.1025
+        ],
+        [
+          -38.92754,
+          3.43,
+          10.1025
+        ],
+        [
+          -38.92754,
+          3.43,
+          10.1375
+        ],
+        [
+          -38.92754,
+          3.53,
+          10.1375
+        ],
+        [
+          -38.92754,
+          3.53,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.032",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645348,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -39.572887,
+          3.43,
+          10.2425
+        ],
+        [
+          -39.572887,
+          3.43,
+          10.2775
+        ],
+        [
+          -39.572887,
+          3.53,
+          10.2775
+        ],
+        [
+          -39.572887,
+          3.53,
+          10.2425
+        ],
+        [
+          -38.92754,
+          3.43,
+          10.2425
+        ],
+        [
+          -38.92754,
+          3.43,
+          10.2775
+        ],
+        [
+          -38.92754,
+          3.53,
+          10.2775
+        ],
+        [
+          -38.92754,
+          3.53,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.033",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645344,
+        0.1,
+        0.035001
+      ],
+      "bound_box_world_m": [
+        [
+          -40.782913,
+          3.43,
+          9.9625
+        ],
+        [
+          -40.782913,
+          3.43,
+          9.9975
+        ],
+        [
+          -40.782913,
+          3.53,
+          9.9975
+        ],
+        [
+          -40.782913,
+          3.53,
+          9.9625
+        ],
+        [
+          -40.137569,
+          3.43,
+          9.9625
+        ],
+        [
+          -40.137569,
+          3.43,
+          9.9975
+        ],
+        [
+          -40.137569,
+          3.53,
+          9.9975
+        ],
+        [
+          -40.137569,
+          3.53,
+          9.9625
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.034",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645344,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -40.782913,
+          3.43,
+          10.1025
+        ],
+        [
+          -40.782913,
+          3.43,
+          10.1375
+        ],
+        [
+          -40.782913,
+          3.53,
+          10.1375
+        ],
+        [
+          -40.782913,
+          3.53,
+          10.1025
+        ],
+        [
+          -40.137569,
+          3.43,
+          10.1025
+        ],
+        [
+          -40.137569,
+          3.43,
+          10.1375
+        ],
+        [
+          -40.137569,
+          3.53,
+          10.1375
+        ],
+        [
+          -40.137569,
+          3.53,
+          10.1025
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Louvre_Blade.035",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        0.645344,
+        0.1,
+        0.035
+      ],
+      "bound_box_world_m": [
+        [
+          -40.782913,
+          3.43,
+          10.2425
+        ],
+        [
+          -40.782913,
+          3.43,
+          10.2775
+        ],
+        [
+          -40.782913,
+          3.53,
+          10.2775
+        ],
+        [
+          -40.782913,
+          3.53,
+          10.2425
+        ],
+        [
+          -40.137569,
+          3.43,
+          10.2425
+        ],
+        [
+          -40.137569,
+          3.43,
+          10.2775
+        ],
+        [
+          -40.137569,
+          3.53,
+          10.2775
+        ],
+        [
+          -40.137569,
+          3.53,
+          10.2425
+        ]
+      ],
+      "vertices": 8,
+      "polygons": 6,
+      "triangles": 12,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [
+        "BEVEL"
+      ],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Lower_Rudder_-1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        -72.324257,
+        -6.25,
+        -1.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        8.087006,
+        1.248174,
+        5.7
+      ],
+      "bound_box_world_m": [
+        [
+          -76.882019,
+          -6.874087,
+          -6.7
+        ],
+        [
+          -76.882019,
+          -6.874087,
+          -1.0
+        ],
+        [
+          -76.882019,
+          -5.625913,
+          -1.0
+        ],
+        [
+          -76.882019,
+          -5.625913,
+          -6.7
+        ],
+        [
+          -68.795013,
+          -6.874087,
+          -6.7
+        ],
+        [
+          -68.795013,
+          -6.874087,
+          -1.0
+        ],
+        [
+          -68.795013,
+          -5.625913,
+          -1.0
+        ],
+        [
+          -68.795013,
+          -5.625913,
+          -6.7
+        ]
+      ],
+      "vertices": 416,
+      "polygons": 386,
+      "triangles": 828,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Rubber.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          -72.32425689697266,
+          -6.25,
+          -1.0
+        ]
+      }
+    },
+    {
+      "name": "Lower_Rudder_1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        -72.324257,
+        6.25,
+        -1.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        8.087006,
+        1.248174,
+        5.7
+      ],
+      "bound_box_world_m": [
+        [
+          -76.882019,
+          5.625913,
+          -6.7
+        ],
+        [
+          -76.882019,
+          5.625913,
+          -1.0
+        ],
+        [
+          -76.882019,
+          6.874087,
+          -1.0
+        ],
+        [
+          -76.882019,
+          6.874087,
+          -6.7
+        ],
+        [
+          -68.795013,
+          5.625913,
+          -6.7
+        ],
+        [
+          -68.795013,
+          5.625913,
+          -1.0
+        ],
+        [
+          -68.795013,
+          6.874087,
+          -1.0
+        ],
+        [
+          -68.795013,
+          6.874087,
+          -6.7
+        ]
+      ],
+      "vertices": 416,
+      "polygons": 386,
+      "triangles": 828,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Rubber.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          -72.32425689697266,
+          6.25,
+          -1.0
+        ]
+      }
+    },
+    {
+      "name": "Propeller_Left",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        -85.533707,
+        6.25,
+        -1.25
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        3.932587,
+        5.88362,
+        5.797424
+      ],
+      "bound_box_world_m": [
+        [
+          -87.5,
+          3.332358,
+          -4.057448
+        ],
+        [
+          -87.5,
+          3.332358,
+          1.739977
+        ],
+        [
+          -87.5,
+          9.215979,
+          1.739977
+        ],
+        [
+          -87.5,
+          9.215979,
+          -4.057448
+        ],
+        [
+          -83.567413,
+          3.332358,
+          -4.057448
+        ],
+        [
+          -83.567413,
+          3.332358,
+          1.739977
+        ],
+        [
+          -83.567413,
+          9.215979,
+          1.739977
+        ],
+        [
+          -83.567413,
+          9.215979,
+          -4.057448
+        ]
+      ],
+      "vertices": 3190,
+      "polygons": 3130,
+      "triangles": 6348,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Propeller.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          -85.53370666503906,
+          6.25,
+          -1.25
+        ]
+      }
+    },
+    {
+      "name": "Propeller_Right",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        -85.533707,
+        -6.25,
+        -1.25
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        3.932587,
+        5.88362,
+        5.797424
+      ],
+      "bound_box_world_m": [
+        [
+          -87.5,
+          -9.167642,
+          -4.239976
+        ],
+        [
+          -87.5,
+          -9.167642,
+          1.557448
+        ],
+        [
+          -87.5,
+          -3.284021,
+          1.557448
+        ],
+        [
+          -87.5,
+          -3.284021,
+          -4.239976
+        ],
+        [
+          -83.567413,
+          -9.167642,
+          -4.239976
+        ],
+        [
+          -83.567413,
+          -9.167642,
+          1.557448
+        ],
+        [
+          -83.567413,
+          -3.284021,
+          1.557448
+        ],
+        [
+          -83.567413,
+          -3.284021,
+          -4.239976
+        ]
+      ],
+      "vertices": 3190,
+      "polygons": 3130,
+      "triangles": 6348,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Propeller.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          -85.53370666503906,
+          -6.25,
+          -1.25
+        ]
+      }
+    },
+    {
+      "name": "Propeller_Shroud_-1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        3.882164,
+        7.0,
+        7.0
+      ],
+      "bound_box_world_m": [
+        [
+          -87.096657,
+          -9.75,
+          -4.75
+        ],
+        [
+          -87.096657,
+          -9.75,
+          2.25
+        ],
+        [
+          -87.096657,
+          -2.75,
+          2.25
+        ],
+        [
+          -87.096657,
+          -2.75,
+          -4.75
+        ],
+        [
+          -83.214493,
+          -9.75,
+          -4.75
+        ],
+        [
+          -83.214493,
+          -9.75,
+          2.25
+        ],
+        [
+          -83.214493,
+          -2.75,
+          2.25
+        ],
+        [
+          -83.214493,
+          -2.75,
+          -4.75
+        ]
+      ],
+      "vertices": 576,
+      "polygons": 576,
+      "triangles": 1152,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Propeller_Shroud_1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        3.882164,
+        7.0,
+        7.0
+      ],
+      "bound_box_world_m": [
+        [
+          -87.096657,
+          2.75,
+          -4.75
+        ],
+        [
+          -87.096657,
+          2.75,
+          2.25
+        ],
+        [
+          -87.096657,
+          9.75,
+          2.25
+        ],
+        [
+          -87.096657,
+          9.75,
+          -4.75
+        ],
+        [
+          -83.214493,
+          2.75,
+          -4.75
+        ],
+        [
+          -83.214493,
+          2.75,
+          2.25
+        ],
+        [
+          -83.214493,
+          9.75,
+          2.25
+        ],
+        [
+          -83.214493,
+          9.75,
+          -4.75
+        ]
+      ],
+      "vertices": 576,
+      "polygons": 576,
+      "triangles": 1152,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Shaft_Fairing_-1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        12.100258,
+        4.8,
+        4.8
+      ],
+      "bound_box_world_m": [
+        [
+          -83.416161,
+          -8.65,
+          -3.65
+        ],
+        [
+          -83.416161,
+          -8.65,
+          1.15
+        ],
+        [
+          -83.416161,
+          -3.85,
+          1.15
+        ],
+        [
+          -83.416161,
+          -3.85,
+          -3.65
+        ],
+        [
+          -71.315903,
+          -8.65,
+          -3.65
+        ],
+        [
+          -71.315903,
+          -8.65,
+          1.15
+        ],
+        [
+          -71.315903,
+          -3.85,
+          1.15
+        ],
+        [
+          -71.315903,
+          -3.85,
+          -3.65
+        ]
+      ],
+      "vertices": 128,
+      "polygons": 66,
+      "triangles": 252,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Shaft_Fairing_1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        12.100258,
+        4.8,
+        4.8
+      ],
+      "bound_box_world_m": [
+        [
+          -83.416161,
+          3.85,
+          -3.65
+        ],
+        [
+          -83.416161,
+          3.85,
+          1.15
+        ],
+        [
+          -83.416161,
+          8.65,
+          1.15
+        ],
+        [
+          -83.416161,
+          8.65,
+          -3.65
+        ],
+        [
+          -71.315903,
+          3.85,
+          -3.65
+        ],
+        [
+          -71.315903,
+          3.85,
+          1.15
+        ],
+        [
+          -71.315903,
+          8.65,
+          1.15
+        ],
+        [
+          -71.315903,
+          8.65,
+          -3.65
+        ]
+      ],
+      "vertices": 128,
+      "polygons": 66,
+      "triangles": 252,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_PaintedSteel.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual"
+      }
+    },
+    {
+      "name": "Stern_Hydroplane_-1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        -69.299194,
+        -7.0,
+        -0.4
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        11.374245,
+        7.5,
+        1.872261
+      ],
+      "bound_box_world_m": [
+        [
+          -75.37957,
+          -14.5,
+          -1.33613
+        ],
+        [
+          -75.37957,
+          -14.5,
+          0.53613
+        ],
+        [
+          -75.37957,
+          -7.0,
+          0.53613
+        ],
+        [
+          -75.37957,
+          -7.0,
+          -1.33613
+        ],
+        [
+          -64.005325,
+          -14.5,
+          -1.33613
+        ],
+        [
+          -64.005325,
+          -14.5,
+          0.53613
+        ],
+        [
+          -64.005325,
+          -7.0,
+          0.53613
+        ],
+        [
+          -64.005325,
+          -7.0,
+          -1.33613
+        ]
+      ],
+      "vertices": 416,
+      "polygons": 386,
+      "triangles": 828,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Rubber.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          -69.2991943359375,
+          -7.0,
+          -0.4000000059604645
+        ]
+      }
+    },
+    {
+      "name": "Stern_Hydroplane_1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        -69.299194,
+        7.0,
+        -0.4
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        11.374245,
+        7.5,
+        1.872261
+      ],
+      "bound_box_world_m": [
+        [
+          -75.37957,
+          7.0,
+          -1.33613
+        ],
+        [
+          -75.37957,
+          7.0,
+          0.53613
+        ],
+        [
+          -75.37957,
+          14.5,
+          0.53613
+        ],
+        [
+          -75.37957,
+          14.5,
+          -1.33613
+        ],
+        [
+          -64.005325,
+          7.0,
+          -1.33613
+        ],
+        [
+          -64.005325,
+          7.0,
+          0.53613
+        ],
+        [
+          -64.005325,
+          14.5,
+          0.53613
+        ],
+        [
+          -64.005325,
+          14.5,
+          -1.33613
+        ]
+      ],
+      "vertices": 416,
+      "polygons": 386,
+      "triangles": 828,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Rubber.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          -69.2991943359375,
+          7.0,
+          -0.4000000059604645
+        ]
+      }
+    },
+    {
+      "name": "Upper_Rudder_-1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        -71.315903,
+        -6.25,
+        1.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        9.63987,
+        1.515639,
+        7.1
+      ],
+      "bound_box_world_m": [
+        [
+          -76.670265,
+          -7.00782,
+          1.0
+        ],
+        [
+          -76.670265,
+          -7.00782,
+          8.1
+        ],
+        [
+          -76.670265,
+          -5.49218,
+          8.1
+        ],
+        [
+          -76.670265,
+          -5.49218,
+          1.0
+        ],
+        [
+          -67.030396,
+          -7.00782,
+          1.0
+        ],
+        [
+          -67.030396,
+          -7.00782,
+          8.1
+        ],
+        [
+          -67.030396,
+          -5.49218,
+          8.1
+        ],
+        [
+          -67.030396,
+          -5.49218,
+          1.0
+        ]
+      ],
+      "vertices": 416,
+      "polygons": 386,
+      "triangles": 828,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Rubber.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          -71.31590270996094,
+          -6.25,
+          1.0
+        ]
+      }
+    },
+    {
+      "name": "Upper_Rudder_1",
+      "type": "MESH",
+      "parent": null,
+      "collections": [
+        "TYPHOON_ASSEMBLY"
+      ],
+      "location_m": [
+        -71.315903,
+        6.25,
+        1.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "dimensions_m": [
+        9.63987,
+        1.515639,
+        7.1
+      ],
+      "bound_box_world_m": [
+        [
+          -76.670265,
+          5.49218,
+          1.0
+        ],
+        [
+          -76.670265,
+          5.49218,
+          8.1
+        ],
+        [
+          -76.670265,
+          7.00782,
+          8.1
+        ],
+        [
+          -76.670265,
+          7.00782,
+          1.0
+        ],
+        [
+          -67.030396,
+          5.49218,
+          1.0
+        ],
+        [
+          -67.030396,
+          5.49218,
+          8.1
+        ],
+        [
+          -67.030396,
+          7.00782,
+          8.1
+        ],
+        [
+          -67.030396,
+          7.00782,
+          1.0
+        ]
+      ],
+      "vertices": 416,
+      "polygons": 386,
+      "triangles": 828,
+      "uv_layers": [
+        "UV0"
+      ],
+      "materials": [
+        "M_Typhoon_Rubber.002"
+      ],
+      "modifiers": [],
+      "custom_properties": {
+        "asset_role": "exterior_visual",
+        "movable_part": true,
+        "hinge_pivot_m": [
+          -71.31590270996094,
+          6.25,
+          1.0
+        ]
+      }
+    }
+  ],
+  "propulsion_mesh_totals": {
+    "vertices": 11404,
+    "triangles": 22560
+  },
+  "socket_like_objects": [],
+  "material_names": [
+    "M_Typhoon_Hull.002",
+    "M_Typhoon_Markings.002",
+    "M_Typhoon_OpticalGlass",
+    "M_Typhoon_PaintedSteel.002",
+    "M_Typhoon_Propeller.002",
+    "M_Typhoon_Recess.002",
+    "M_Typhoon_Rubber.002",
+    "M_Typhoon_Steel.002",
+    "Material",
+    "Studio_Charcoal.002"
+  ]
+}

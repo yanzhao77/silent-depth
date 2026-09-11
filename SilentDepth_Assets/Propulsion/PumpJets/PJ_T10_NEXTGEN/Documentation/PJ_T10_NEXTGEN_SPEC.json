@@ -1,0 +1,105 @@
+{
+  "asset_id": "PJ_T10_NEXTGEN",
+  "display_name": "T10 下一代泵喷推进器（通用科技树件）",
+  "category": "PumpJets",
+  "kind": "PUMPJET",
+  "country": "GENERIC",
+  "tier": 10,
+  "era": "2020s+",
+  "technology_route": "next generation integrated propulsor",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 5.6,
+    "hub_diameter_m": 1.5,
+    "hub_length_m": 2.6,
+    "blade_count": 9,
+    "stator_count": 13,
+    "skew_deg": 34.0,
+    "rake_m": 0.2,
+    "pitch_ratio": 1.2,
+    "blade_thickness_ratio": 0.055,
+    "shroud": {
+      "enabled": true,
+      "outer_diameter_m": 6.1,
+      "length_m": 3.8,
+      "thickness_m": 0.28,
+      "mode": "HOUSING"
+    },
+    "shaft": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0,
+      "tail_cone": false
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": true,
+      "length_m": 1.2,
+      "exit_diameter_m": 4.5
+    },
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "通用科技树件：T10 表达集成式下一代推进器概念（无外露轴系），不代表任何在研型号。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "通用科技树件：T10 表达集成式下一代推进器概念（无外露轴系），不代表任何在研型号。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 16800,
+    "1": 8480,
+    "2": 4000,
+    "3": 1672
+  },
+  "dimensions_m": [
+    5.076,
+    6.1,
+    6.1
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT",
+    "SOCKET_PUMPJET"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "PumpJets/PJ_T10_NEXTGEN/Blend/PJ_T10_NEXTGEN_MASTER.blend",
+    "lod0": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_LOD0.fbx",
+    "lod1": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_LOD1.fbx",
+    "lod2": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_LOD2.fbx",
+    "lod3": "PumpJets/PJ_T10_NEXTGEN/FBX/PJ_T10_NEXTGEN_LOD3.fbx",
+    "collision": "PumpJets/PJ_T10_NEXTGEN/Collision/PJ_T10_NEXTGEN_COLLISION.fbx",
+    "spec": "PumpJets/PJ_T10_NEXTGEN/Documentation/PJ_T10_NEXTGEN_SPEC.json",
+    "readme": "PumpJets/PJ_T10_NEXTGEN/Documentation/PJ_T10_NEXTGEN_README.md",
+    "preview": [
+      "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_ThreeQuarter.png",
+      "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_Side.png",
+      "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_Rear.png",
+      "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_Top.png"
+    ]
+  },
+  "validation": "PumpJets/PJ_T10_NEXTGEN/Validation/PJ_T10_NEXTGEN_VALIDATION.json",
+  "build_report": "PumpJets/PJ_T10_NEXTGEN/Validation/PJ_T10_NEXTGEN_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

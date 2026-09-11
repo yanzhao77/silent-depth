@@ -1,0 +1,320 @@
+{
+  "asset_id": "SHAFT_FAIRING_LONG",
+  "category": "Shafts",
+  "kind": "SHAFT",
+  "generated_at": "2026-09-11",
+  "blender_version": "5.2.1 LTS",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0
+  },
+  "origin_rule": "ORIGIN_AT_ASSEMBLY_CENTER",
+  "origin_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "sockets": [
+    {
+      "name": "SOCKET_SHAFT",
+      "location_m": [
+        -6.05,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent": null
+    }
+  ],
+  "lods": [
+    {
+      "lod": 0,
+      "objects": [
+        "SHAFT_FAIRING_LONG_LOD0_Shaft",
+        "SHAFT_FAIRING_LONG_LOD0_Fairing"
+      ],
+      "vertices": 258,
+      "triangles": 448,
+      "dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 1,
+      "objects": [
+        "SHAFT_FAIRING_LONG_LOD1_Shaft",
+        "SHAFT_FAIRING_LONG_LOD1_Fairing"
+      ],
+      "vertices": 130,
+      "triangles": 224,
+      "dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 2,
+      "objects": [
+        "SHAFT_FAIRING_LONG_LOD2_Shaft",
+        "SHAFT_FAIRING_LONG_LOD2_Fairing"
+      ],
+      "vertices": 66,
+      "triangles": 112,
+      "dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 3,
+      "objects": [
+        "SHAFT_FAIRING_LONG_LOD3_Shaft",
+        "SHAFT_FAIRING_LONG_LOD3_Fairing"
+      ],
+      "vertices": 34,
+      "triangles": 56,
+      "dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "M_Propulsor_Blade",
+      "base_color_linear": [
+        0.25,
+        0.18,
+        0.075
+      ],
+      "roughness": 0.43,
+      "metallic": 0.84,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Hub",
+      "base_color_linear": [
+        0.19,
+        0.23,
+        0.25
+      ],
+      "roughness": 0.4,
+      "metallic": 0.82,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Duct",
+      "base_color_linear": [
+        0.105,
+        0.13,
+        0.145
+      ],
+      "roughness": 0.64,
+      "metallic": 0.35,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Rubber",
+      "base_color_linear": [
+        0.018,
+        0.027,
+        0.035
+      ],
+      "roughness": 0.83,
+      "metallic": 0.08,
+      "texture_files": []
+    }
+  ],
+  "collision": {
+    "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\Collision\\SHAFT_FAIRING_LONG_COLLISION.fbx",
+    "convex_hull_count": 2,
+    "objects": [
+      "UCX_SHAFT_FAIRING_LONG_01",
+      "UCX_SHAFT_FAIRING_LONG_00"
+    ]
+  },
+  "exports": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_LOD0.fbx",
+      "lod": 0,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_LOD1.fbx",
+      "lod": 1,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_LOD2.fbx",
+      "lod": 2,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_LOD3.fbx",
+      "lod": 3,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    }
+  ],
+  "previews": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\Preview\\SHAFT_FAIRING_LONG_ThreeQuarter.png",
+      "view": "ThreeQuarter",
+      "non_background_fraction": 0.1685,
+      "mean_luminance": 0.2475,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\Preview\\SHAFT_FAIRING_LONG_Side.png",
+      "view": "Side",
+      "non_background_fraction": 0.1856,
+      "mean_luminance": 0.2412,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\Preview\\SHAFT_FAIRING_LONG_Rear.png",
+      "view": "Rear",
+      "non_background_fraction": 0.0855,
+      "mean_luminance": 0.2481,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\Preview\\SHAFT_FAIRING_LONG_Top.png",
+      "view": "Top",
+      "non_background_fraction": 0.1787,
+      "mean_luminance": 0.2479,
+      "resolution": [
+        800,
+        450
+      ]
+    }
+  ],
+  "roundtrip": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_LOD0.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "roundtrip_triangles": 448,
+      "roundtrip_objects": 2,
+      "lod": 0
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_LOD1.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "roundtrip_triangles": 224,
+      "roundtrip_objects": 2,
+      "lod": 1
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_LOD2.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "roundtrip_triangles": 112,
+      "roundtrip_objects": 2,
+      "lod": 2
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_LOD3.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "roundtrip_triangles": 56,
+      "roundtrip_objects": 2,
+      "lod": 3
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\Collision\\SHAFT_FAIRING_LONG_COLLISION.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        12.1,
+        4.8,
+        4.8
+      ],
+      "roundtrip_triangles": 120,
+      "roundtrip_objects": 2
+    }
+  ],
+  "checks": {
+    "scale_applied": true,
+    "object_transforms_applied": true,
+    "forbidden_names": [],
+    "objects_missing_uv": [],
+    "objects_missing_material": []
+  },
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ],
+  "combined_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_COMBINED.fbx",
+  "hulls_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_FAIRING_LONG\\FBX\\SHAFT_FAIRING_LONG_HULLS.fbx"
+}

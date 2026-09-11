@@ -1,0 +1,105 @@
+{
+  "asset_id": "UK_PJ_Astute",
+  "display_name": "Astute 级泵喷推进器",
+  "category": "PumpJets",
+  "kind": "PUMPJET",
+  "country": "UK",
+  "tier": 9,
+  "era": "2000s-2010s",
+  "technology_route": "pump-jet propulsor",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 5.0,
+    "hub_diameter_m": 1.35,
+    "hub_length_m": 2.3,
+    "blade_count": 7,
+    "stator_count": 9,
+    "skew_deg": 30.0,
+    "rake_m": 0.18,
+    "pitch_ratio": 1.1,
+    "blade_thickness_ratio": 0.06,
+    "shroud": {
+      "enabled": true,
+      "outer_diameter_m": 5.5,
+      "length_m": 3.3,
+      "thickness_m": 0.3,
+      "mode": "HOUSING"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 1.9,
+      "diameter_m": 0.65,
+      "tail_cone": false
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": true,
+      "length_m": 0.95,
+      "exit_diameter_m": 4.1
+    },
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "泵喷构型为公开报道；几何为游戏美术取值。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "泵喷构型为公开报道；几何为游戏美术取值。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 12576,
+    "1": 6448,
+    "2": 3088,
+    "3": 1344
+  },
+  "dimensions_m": [
+    5.535,
+    5.5,
+    5.5
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT",
+    "SOCKET_PUMPJET"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "PumpJets/UK_PJ_Astute/Blend/UK_PJ_Astute_MASTER.blend",
+    "lod0": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_LOD0.fbx",
+    "lod1": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_LOD1.fbx",
+    "lod2": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_LOD2.fbx",
+    "lod3": "PumpJets/UK_PJ_Astute/FBX/UK_PJ_Astute_LOD3.fbx",
+    "collision": "PumpJets/UK_PJ_Astute/Collision/UK_PJ_Astute_COLLISION.fbx",
+    "spec": "PumpJets/UK_PJ_Astute/Documentation/UK_PJ_Astute_SPEC.json",
+    "readme": "PumpJets/UK_PJ_Astute/Documentation/UK_PJ_Astute_README.md",
+    "preview": [
+      "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_ThreeQuarter.png",
+      "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_Side.png",
+      "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_Rear.png",
+      "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_Top.png"
+    ]
+  },
+  "validation": "PumpJets/UK_PJ_Astute/Validation/UK_PJ_Astute_VALIDATION.json",
+  "build_report": "PumpJets/UK_PJ_Astute/Validation/UK_PJ_Astute_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

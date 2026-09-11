@@ -1,0 +1,104 @@
+{
+  "asset_id": "RU_PROP_Akula",
+  "display_name": "Akula / Project 971 七叶后掠螺旋桨",
+  "category": "Propellers",
+  "kind": "PROPELLER",
+  "country": "Russia",
+  "tier": 7,
+  "era": "1980s",
+  "technology_route": "skewed propeller",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 4.6,
+    "hub_diameter_m": 1.0,
+    "hub_length_m": 1.5,
+    "blade_count": 7,
+    "skew_deg": 32.0,
+    "rake_m": 0.28,
+    "pitch_ratio": 1.0,
+    "blade_thickness_ratio": 0.055,
+    "shroud": {
+      "enabled": false,
+      "outer_diameter_m": 0.0,
+      "length_m": 0.0,
+      "thickness_m": 0.0,
+      "mode": "NONE"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 4.2,
+      "diameter_m": 0.55,
+      "tail_cone": true
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": false,
+      "length_m": 0.0,
+      "exit_diameter_m": 0.0
+    },
+    "stator_count": 0,
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "七叶后掠为公开资料层面可确认的概念；具体桨径与螺距比是游戏美术取值，不是实测数据。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "七叶后掠为公开资料层面可确认的概念；具体桨径与螺距比是游戏美术取值，不是实测数据。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 5328,
+    "1": 2704,
+    "2": 1264,
+    "3": 516
+  },
+  "dimensions_m": [
+    5.625,
+    4.5207,
+    4.5232
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Propellers/RU_PROP_Akula/Blend/RU_PROP_Akula_MASTER.blend",
+    "lod0": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_LOD0.fbx",
+    "lod1": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_LOD1.fbx",
+    "lod2": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_LOD2.fbx",
+    "lod3": "Propellers/RU_PROP_Akula/FBX/RU_PROP_Akula_LOD3.fbx",
+    "collision": "Propellers/RU_PROP_Akula/Collision/RU_PROP_Akula_COLLISION.fbx",
+    "spec": "Propellers/RU_PROP_Akula/Documentation/RU_PROP_Akula_SPEC.json",
+    "readme": "Propellers/RU_PROP_Akula/Documentation/RU_PROP_Akula_README.md",
+    "preview": [
+      "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_ThreeQuarter.png",
+      "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_Side.png",
+      "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_Rear.png",
+      "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_Top.png"
+    ]
+  },
+  "validation": "Propellers/RU_PROP_Akula/Validation/RU_PROP_Akula_VALIDATION.json",
+  "build_report": "Propellers/RU_PROP_Akula/Validation/RU_PROP_Akula_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

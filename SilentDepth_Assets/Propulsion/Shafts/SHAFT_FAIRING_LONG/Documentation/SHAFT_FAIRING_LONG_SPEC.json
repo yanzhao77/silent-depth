@@ -1,0 +1,95 @@
+{
+  "asset_id": "SHAFT_FAIRING_LONG",
+  "display_name": "长轴包（Typhoon 实测）",
+  "category": "Shafts",
+  "kind": "SHAFT",
+  "country": "Russia",
+  "tier": 8,
+  "era": "1980s",
+  "technology_route": "direct shaft with long fairing",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 4.8,
+    "shaft": {
+      "enabled": true,
+      "length_m": 12.1,
+      "diameter_m": 0.72,
+      "tail_cone": false
+    },
+    "shroud": {
+      "enabled": false,
+      "outer_diameter_m": 0.0,
+      "length_m": 0.0,
+      "thickness_m": 0.0,
+      "mode": "NONE"
+    },
+    "fairing": {
+      "enabled": true,
+      "length_m": 12.1,
+      "diameter_m": 4.8
+    },
+    "coupling": {
+      "enabled": false,
+      "diameter_m": 0.0,
+      "length_m": 0.0
+    },
+    "count_provenance": "MEASURED",
+    "provenance_note": "尺寸来自 Typhoon 母版 Shaft_Fairing 实测（12.100 × 4.800 × 4.800 m）。"
+  },
+  "provenance": {
+    "count_provenance": "MEASURED",
+    "note": "尺寸来自 Typhoon 母版 Shaft_Fairing 实测（12.100 × 4.800 × 4.800 m）。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 448,
+    "1": 224,
+    "2": 112,
+    "3": 56
+  },
+  "dimensions_m": [
+    12.1,
+    4.8,
+    4.8
+  ],
+  "sockets": [
+    "SOCKET_SHAFT"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Shafts/SHAFT_FAIRING_LONG/Blend/SHAFT_FAIRING_LONG_MASTER.blend",
+    "lod0": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_LOD0.fbx",
+    "lod1": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_LOD1.fbx",
+    "lod2": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_LOD2.fbx",
+    "lod3": "Shafts/SHAFT_FAIRING_LONG/FBX/SHAFT_FAIRING_LONG_LOD3.fbx",
+    "collision": "Shafts/SHAFT_FAIRING_LONG/Collision/SHAFT_FAIRING_LONG_COLLISION.fbx",
+    "spec": "Shafts/SHAFT_FAIRING_LONG/Documentation/SHAFT_FAIRING_LONG_SPEC.json",
+    "readme": "Shafts/SHAFT_FAIRING_LONG/Documentation/SHAFT_FAIRING_LONG_README.md",
+    "preview": [
+      "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_ThreeQuarter.png",
+      "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_Side.png",
+      "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_Rear.png",
+      "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_Top.png"
+    ]
+  },
+  "validation": "Shafts/SHAFT_FAIRING_LONG/Validation/SHAFT_FAIRING_LONG_VALIDATION.json",
+  "build_report": "Shafts/SHAFT_FAIRING_LONG/Validation/SHAFT_FAIRING_LONG_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

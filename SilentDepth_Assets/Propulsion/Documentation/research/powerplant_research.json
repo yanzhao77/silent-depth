@@ -1,0 +1,589 @@
+{
+  "generated_at": "2026-09-10",
+  "scope": "反应堆、能量转换、传动、控制、辅机与冷却/安全的公开资料层面世代划分。只记录公开可查的世代标签、技术路线与时代区间。",
+  "policy": "本文件不含任何受控信息：没有核燃料配方、燃料制造流程、核材料参数、反应堆内部敏感结构，也没有功率、温度、压力、寿命、转速等数值。凡是本质上需要受控信息的字段一律写 WITHHELD_BY_POLICY。反应堆条目只允许「世代名称 + 时代区间 + 公开技术路线标签」。",
+  "source_type_legend": {
+    "official": "官方海军/政府发布",
+    "government": "政府文件或议会材料",
+    "manufacturer": "制造商公开资料",
+    "reliable_historical": "可靠历史/军事参考站",
+    "open_encyclopedia": "开放百科条目（含其引用）",
+    "open_web_report": "公开网络报道/分析文章"
+  },
+  "reactor_generations": [
+    {
+      "generation_id": "REACTOR_GEN_01",
+      "public_label": "Early Naval Reactor",
+      "era": "1940s-1950s",
+      "public_technical_route": ["加压水堆（PWR）成为标准路线"],
+      "notes": "第一代试验性舰用动力堆阶段：公开资料记载的陆上原型堆与首艘核动力潜艇属于这一世代。具体堆芯设计、燃料与参数不在本库范围内。",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: United States naval reactors",
+          "url": "https://en.wikipedia.org/wiki/United_States_naval_reactors",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目记载首座陆上原型堆与 1955 年首艘核动力潜艇，并说明加压水堆被选为标准路线。"
+        },
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目说明绝大多数舰用核反应堆为加压水堆。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_02",
+      "public_label": "Improved Naval Reactor",
+      "era": "1950s-1960s",
+      "public_technical_route": ["加压水堆批量化", "面向整舰队部署的可靠性改进"],
+      "notes": "公开资料以型号序号（如 S5W 一类写法）区分世代，本库只保留「世代序号」这一层信息。",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: United States naval reactors",
+          "url": "https://en.wikipedia.org/wiki/United_States_naval_reactors",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目说明型号命名中包含世代数字，并列举多个世代的原型与发展顺序。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_03",
+      "public_label": "Compact Reactor",
+      "era": "1960s",
+      "public_technical_route": ["小体积堆舱布置", "针对更紧凑艇体的动力装置集成"],
+      "notes": "紧凑化是公开讨论的设计方向；具体体积、屏蔽与布置细节属于受控工程范围，本库不记录。",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目讨论舰用动力装置的总体布置与推进方式差异。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_04",
+      "public_label": "Advanced Naval Reactor",
+      "era": "1960s-1970s",
+      "public_technical_route": ["加压水堆", "面向高航速与大型艇体的动力装置"],
+      "notes": "公开资料把苏/俄 OK-650 一类动力装置标注为第三代潜艇用堆，并说明其用于 Typhoon、Oscar、Sierra 等艇。本库只保留世代与装配对象，不记录任何参数。",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: OK-650 reactor",
+          "url": "https://en.wikipedia.org/wiki/OK-650_reactor",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目说明该型加压水堆用于第三代潜艇（含 Typhoon 级），并用于后续第四代艇。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_05",
+      "public_label": "Improved Core-Life Reactor",
+      "era": "1970s-1980s",
+      "public_technical_route": ["延长换料周期的公开设计目标"],
+      "notes": "「长寿命堆芯」是被公开反复提及的设计目标；具体寿命数值属于受控信息，本库写 WITHHELD_BY_POLICY。",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: United States naval reactors",
+          "url": "https://en.wikipedia.org/wiki/United_States_naval_reactors",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目讨论堆芯寿命与换料周期作为世代演进的设计方向。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_06",
+      "public_label": "Modern Naval Reactor",
+      "era": "1980s-1990s",
+      "public_technical_route": ["加压水堆", "与降噪设计同步的动力装置整体布置"],
+      "notes": "公开资料记载英国 PWR1/PWR2 系列的演进，以及美制 S6W、S9G 一类世代序号型号。全部参数不记录。",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Rolls-Royce PWR",
+          "url": "https://en.wikipedia.org/wiki/Rolls-Royce_PWR",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述英国舰用加压水堆系列的世代演进，以及隔振浮筏与早期泵喷等技术。"
+        },
+        {
+          "name": "Wikipedia: United States naval reactors",
+          "url": "https://en.wikipedia.org/wiki/United_States_naval_reactors",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目说明型号命名里的世代数字含义，并给出多代型号的发展顺序。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_07",
+      "public_label": "Advanced Long-Life Reactor",
+      "era": "1990s-2000s",
+      "public_technical_route": ["全寿命堆芯的公开设计目标", "降低全寿期维护需求"],
+      "notes": "公开资料把「全寿命堆芯」描述为潜艇动力装置的发展方向；数值与实现细节不在本库。",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Rolls-Royce PWR",
+          "url": "https://en.wikipedia.org/wiki/Rolls-Royce_PWR",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述后续世代以延长堆芯寿命、减少换料为目标。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_08",
+      "public_label": "Integrated Advanced Reactor",
+      "era": "2000s-2010s",
+      "public_technical_route": ["加压水堆", "与综合电力推进系统配套的整体动力架构"],
+      "notes": "公开条目把苏/俄 OK-650KPM 标注为用于第四代 Yasen-M 的动力装置；法国 K15、英国 PWR2 亦见于公开资料。全部参数不记录。",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: OK-650 reactor",
+          "url": "https://en.wikipedia.org/wiki/OK-650_reactor",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目说明该系列用于第四代 Borei 与 Yasen 级潜艇。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_09",
+      "public_label": "Next Generation Reactor",
+      "era": "2010s-2020s",
+      "public_technical_route": ["新一代加压水堆（公开名称层面）", "与综合电力推进、全电化平台配套"],
+      "notes": "公开资料以新一代型号名称（如英国 PWR3、美制新一代潜艇用堆）描述这一世代；设计与参数属于受控范围。",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Rolls-Royce PWR",
+          "url": "https://en.wikipedia.org/wiki/Rolls-Royce_PWR",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目列举英国后续世代（PWR2 之后的型号）用于新一代潜艇。"
+        }
+      ]
+    },
+    {
+      "generation_id": "REACTOR_GEN_10",
+      "public_label": "Future Naval Reactor",
+      "era": "2020s+",
+      "public_technical_route": ["未来海军动力装置（公开规划层面）"],
+      "notes": "这一世代在游戏里只作为 Tier 标签存在。公开资料仅有规划性描述，本库不记录任何实现细节。",
+      "confidence": "UNKNOWN",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目讨论舰用核动力的总体技术路线与未来应用方向。"
+        }
+      ]
+    }
+  ],
+  "power_conversion_routes": [
+    {
+      "route_id": "PC_STEAM_TURBINE",
+      "public_label": "Steam Turbine",
+      "era": "1950s 起",
+      "description": "反应堆产生的蒸汽直接驱动推进汽轮机。美、俄、英三国的核潜艇长期采用这条路线。",
+      "public_platform_examples": ["美制核潜艇", "苏/俄核潜艇", "英制核潜艇"],
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目写明俄、美、英海军依赖直接蒸汽轮机推进。"
+        }
+      ]
+    },
+    {
+      "route_id": "PC_TURBO_ELECTRIC",
+      "public_label": "Turbo-electric",
+      "era": "1960s 起",
+      "description": "汽轮机先带动发电机，再由电动机驱动推进轴。公开条目指出法国与中国舰艇采用这种涡轮发电传动。",
+      "public_platform_examples": ["法制核潜艇", "中国核潜艇"],
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目写明法国与中国舰艇用汽轮机发电、再用于推进（涡轮发电传动）。"
+        }
+      ]
+    },
+    {
+      "route_id": "PC_ELECTRIC_DRIVE",
+      "public_label": "Electric Drive",
+      "era": "1980s 起",
+      "description": "以电力作为推进能量传递形式，公开资料把它描述为可减少或取消机械齿轮箱的路线。",
+      "public_platform_examples": ["采用电力推进的核潜艇"],
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Integrated electric propulsion",
+          "url": "https://en.wikipedia.org/wiki/Integrated_electric_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目说明电力推进以减少或取消齿轮箱为特征。"
+        }
+      ]
+    },
+    {
+      "route_id": "PC_INTEGRATED_ELECTRIC_PROPULSION",
+      "public_label": "Integrated Electric Propulsion",
+      "era": "2000s 起",
+      "description": "核动力装置产生蒸汽驱动涡轮发电机，再由电力推进电机驱动轴系；电力系统同时供给全舰用电。",
+      "public_platform_examples": ["新一代综合电力推进舰艇"],
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Integrated electric propulsion",
+          "url": "https://en.wikipedia.org/wiki/Integrated_electric_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述核动力装置产生蒸汽、驱动涡轮发电机、再供电给推进电机的架构。"
+        }
+      ]
+    }
+  ],
+  "transmission_routes": [
+    {
+      "route_id": "TX_DIRECT_SHAFT",
+      "public_label": "Direct Shaft",
+      "description": "汽轮机经轴系直接驱动推进器，是本库 T1 世代的基础传动路线。",
+      "era": "1950s 起",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Los Angeles-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Los_Angeles-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述推进涡轮驱动轴与螺旋桨。"
+        }
+      ]
+    },
+    {
+      "route_id": "TX_GEARED_SHAFT",
+      "public_label": "Geared Shaft",
+      "description": "在涡轮与轴之间加装减速齿轮，让涡轮工作在高转速、轴工作在低转速；公开条目明确记载这一布置。",
+      "era": "1950s-1980s",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Los Angeles-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Los_Angeles-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目写明推进涡轮通过减速齿轮驱动轴与螺旋桨。"
+        },
+        {
+          "name": "Wikipedia: Typhoon-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Typhoon-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目的推进栏包含齿轮减速汽轮机与双轴布置。"
+        }
+      ]
+    },
+    {
+      "route_id": "TX_ELECTRIC_DRIVE",
+      "public_label": "Electric Drive",
+      "description": "推进能量以电力形式传递到推进电机，取消或大幅减少机械齿轮传动。",
+      "era": "1980s 起",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Integrated electric propulsion",
+          "url": "https://en.wikipedia.org/wiki/Integrated_electric_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目说明电力传动取代机械传动、减少齿轮箱需求。"
+        }
+      ]
+    },
+    {
+      "route_id": "TX_HYBRID_INTEGRATED",
+      "public_label": "Hybrid / Integrated",
+      "description": "机械与电力传动并存的混合布置，或与全舰电力系统整合的综合传动；游戏里用于 T7 以后的世代。",
+      "era": "2000s 起",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Integrated electric propulsion",
+          "url": "https://en.wikipedia.org/wiki/Integrated_electric_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述综合电力推进把推进与全舰用电整合在同一个电力系统中。"
+        }
+      ]
+    }
+  ],
+  "control_systems": [
+    {
+      "control_id": "CTL_MANUAL",
+      "public_label": "Manual / Mechanical",
+      "description": "早期潜艇依靠机械连杆与人工指令操纵推进与舵面。",
+      "era": "1940s-1950s",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述早期舰用核动力装置的运行与操纵方式。"
+        }
+      ]
+    },
+    {
+      "control_id": "CTL_ANALOGUE",
+      "public_label": "Analogue Control",
+      "description": "以模拟量仪表与模拟控制系统集中监控推进装置。",
+      "era": "1960s-1970s",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目讨论舰用动力装置的监控与运行方式演进。"
+        }
+      ]
+    },
+    {
+      "control_id": "CTL_DIGITAL",
+      "public_label": "Digital Control",
+      "description": "以数字控制系统替代模拟控制，推进装置的监控与保护进入数字化阶段。",
+      "era": "1980s-1990s",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Integrated electric propulsion",
+          "url": "https://en.wikipedia.org/wiki/Integrated_electric_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目讨论电力推进系统的功率管理与控制架构。"
+        }
+      ]
+    },
+    {
+      "control_id": "CTL_INTEGRATED",
+      "public_label": "Integrated Digital Control",
+      "description": "推进控制与平台其他系统整合，形成统一的数字化监控界面。",
+      "era": "1990s-2000s",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Integrated electric propulsion",
+          "url": "https://en.wikipedia.org/wiki/Integrated_electric_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述推进与全舰用电统一管理带来的控制架构变化。"
+        }
+      ]
+    },
+    {
+      "control_id": "CTL_AUTOMATED",
+      "public_label": "Automated Propulsion Control",
+      "description": "推进系统的自动化程度提高，减少人工干预、提高响应一致性。",
+      "era": "2000s-2010s",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: Integrated electric propulsion",
+          "url": "https://en.wikipedia.org/wiki/Integrated_electric_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目讨论综合电力推进的自动化与功率分配。"
+        }
+      ]
+    },
+    {
+      "control_id": "CTL_AUTONOMOUS",
+      "public_label": "Autonomous Propulsion Control",
+      "description": "T10 世代的游戏化表达：推进装置自主管理运行工况与降噪模式。属于游戏科技树层级，不代表在研型号。",
+      "era": "2020s+（游戏 Tier）",
+      "confidence": "UNKNOWN",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目讨论舰用核动力的未来发展方向。"
+        }
+      ]
+    }
+  ],
+  "auxiliary_power": [
+    {
+      "aux_id": "AUX_BATTERY",
+      "public_label": "Battery",
+      "description": "蓄电池组用于应急与静音工况；公开资料把辅助电力来源与主推进分开描述。",
+      "era": "1950s 起",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述核潜艇的推进与辅助电力构成。"
+        }
+      ]
+    },
+    {
+      "aux_id": "AUX_TURBINE_GENERATOR",
+      "public_label": "Ship Service Turbine Generator",
+      "description": "舰用汽轮发电机为全舰提供电力；公开条目在描述推进路线时提到发电环节。",
+      "era": "1950s 起",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Los Angeles-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Los_Angeles-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目提到舰用汽轮发电机为潜艇提供电力。"
+        }
+      ]
+    },
+    {
+      "aux_id": "AUX_RETRACTABLE_PROPULSOR",
+      "public_label": "Retractable Electric Propulsor",
+      "description": "可收放辅助电力推进器用于低速静音机动；公开资料在 Akula 级条目中明确提到两具此类装置。",
+      "era": "1980s",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Akula-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Akula-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "推进条目标注两具可收放电力推进器，用于低速静音机动。"
+        }
+      ]
+    },
+    {
+      "aux_id": "AUX_SECONDARY_PROPULSION_MOTOR",
+      "public_label": "Secondary Propulsion Motor",
+      "description": "辅助推进电机，与主推进器分开；公开条目在 Virginia 级推进栏中列出。",
+      "era": "2000s",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Virginia-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Virginia-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "推进栏列出单轴泵喷推进器与辅助推进电机。"
+        }
+      ]
+    }
+  ],
+  "cooling_and_safety": [
+    {
+      "item_id": "COOL_PRIMARY_LOOP",
+      "public_label": "Primary Coolant Loop",
+      "description": "加压水堆的一回路概念属于公开常识层面；任何流量、温度、压力参数均为 WITHHELD_BY_POLICY。",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Nuclear marine propulsion",
+          "url": "https://en.wikipedia.org/wiki/Nuclear_marine_propulsion",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目说明舰用堆以加压水堆为主，属于一回路冷却概念。"
+        }
+      ]
+    },
+    {
+      "item_id": "COOL_STEAM_GENERATOR",
+      "public_label": "Steam Generator / Secondary Loop",
+      "description": "一回路把热量传给二回路的蒸汽发生器，形成公开的「反应堆—蒸汽—汽轮机」链路。参数一律不记录。",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Los Angeles-class submarine",
+          "url": "https://en.wikipedia.org/wiki/Los_Angeles-class_submarine",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目描述反应堆冷却水加热蒸汽发生器、产生蒸汽驱动推进涡轮。"
+        }
+      ]
+    },
+    {
+      "item_id": "SAFE_EMERGENCY_COOLING",
+      "public_label": "Emergency Cooling Systems",
+      "description": "公开条目提到新一代应急冷却系统作为世代演进的改进点；具体实现属于受控内容，本库不记录。",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: OK-650 reactor",
+          "url": "https://en.wikipedia.org/wiki/OK-650_reactor",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目提到该系列包含新一代应急冷却系统与泄漏监测子系统。"
+        }
+      ]
+    },
+    {
+      "item_id": "SAFE_NOISE_ISOLATION",
+      "public_label": "Rafting / Vibration Isolation",
+      "description": "把动力装置安装在隔振浮筏上是公开讨论的降噪手段；属于整机布置层面，不涉及参数。",
+      "confidence": "CONFIRMED",
+      "sources": [
+        {
+          "name": "Wikipedia: Rolls-Royce PWR",
+          "url": "https://en.wikipedia.org/wiki/Rolls-Royce_PWR",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目提到隔振浮筏与早期泵喷等技术对潜艇降噪的作用。"
+        }
+      ]
+    },
+    {
+      "item_id": "SAFE_TRAINING_AND_PROTECTION",
+      "public_label": "Operational Protection & Monitoring",
+      "description": "本库只记录「有监测与保护系统」这一公开层面事实，不记录任何阈值或策略细节。",
+      "confidence": "REPORTED",
+      "sources": [
+        {
+          "name": "Wikipedia: OK-650 reactor",
+          "url": "https://en.wikipedia.org/wiki/OK-650_reactor",
+          "source_type": "open_encyclopedia",
+          "accessed": "2026-09-10",
+          "claim": "公开条目提到泄漏快速检测的监测子系统。"
+        }
+      ]
+    }
+  ],
+  "unknowns": [
+    "所有反应堆的功率、温度、压力、寿命与燃料参数：按项目规则一律不记录（WITHHELD_BY_POLICY）。",
+    "各型反应堆的内部结构、屏蔽布置与冷却回路细节：属于受控范围。",
+    "未来海军反应堆（REACTOR_GEN_10）的具体技术路线：公开资料只有规划性描述。",
+    "控制系统的具体实现与软件架构：公开资料只到「自动化程度提高」这一层面。"
+  ]
+}

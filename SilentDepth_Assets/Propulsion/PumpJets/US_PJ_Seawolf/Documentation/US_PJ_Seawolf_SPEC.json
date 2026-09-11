@@ -1,0 +1,105 @@
+{
+  "asset_id": "US_PJ_Seawolf",
+  "display_name": "Seawolf 级泵喷推进器",
+  "category": "PumpJets",
+  "kind": "PUMPJET",
+  "country": "USA",
+  "tier": 8,
+  "era": "1990s",
+  "technology_route": "pump-jet propulsor",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 5.6,
+    "hub_diameter_m": 1.5,
+    "hub_length_m": 2.6,
+    "blade_count": 7,
+    "stator_count": 11,
+    "skew_deg": 30.0,
+    "rake_m": 0.2,
+    "pitch_ratio": 1.15,
+    "blade_thickness_ratio": 0.06,
+    "shroud": {
+      "enabled": true,
+      "outer_diameter_m": 6.1,
+      "length_m": 3.6,
+      "thickness_m": 0.32,
+      "mode": "HOUSING"
+    },
+    "shaft": {
+      "enabled": true,
+      "length_m": 2.2,
+      "diameter_m": 0.7,
+      "tail_cone": false
+    },
+    "fairing": {
+      "enabled": false,
+      "length_m": 0.0,
+      "diameter_m": 0.0
+    },
+    "nozzle": {
+      "enabled": true,
+      "length_m": 1.1,
+      "exit_diameter_m": 4.6
+    },
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "泵喷构型为公开报道；转子/定子叶片数量与外壳尺寸为游戏美术取值，不作为事实声明。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "泵喷构型为公开报道；转子/定子叶片数量与外壳尺寸为游戏美术取值，不作为事实声明。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 14016,
+    "1": 7152,
+    "2": 3408,
+    "3": 1464
+  },
+  "dimensions_m": [
+    6.27,
+    6.1,
+    6.1
+  ],
+  "sockets": [
+    "SOCKET_PROPULSOR",
+    "SOCKET_SHAFT",
+    "SOCKET_PUMPJET"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "PumpJets/US_PJ_Seawolf/Blend/US_PJ_Seawolf_MASTER.blend",
+    "lod0": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_LOD0.fbx",
+    "lod1": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_LOD1.fbx",
+    "lod2": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_LOD2.fbx",
+    "lod3": "PumpJets/US_PJ_Seawolf/FBX/US_PJ_Seawolf_LOD3.fbx",
+    "collision": "PumpJets/US_PJ_Seawolf/Collision/US_PJ_Seawolf_COLLISION.fbx",
+    "spec": "PumpJets/US_PJ_Seawolf/Documentation/US_PJ_Seawolf_SPEC.json",
+    "readme": "PumpJets/US_PJ_Seawolf/Documentation/US_PJ_Seawolf_README.md",
+    "preview": [
+      "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_ThreeQuarter.png",
+      "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_Side.png",
+      "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_Rear.png",
+      "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_Top.png"
+    ]
+  },
+  "validation": "PumpJets/US_PJ_Seawolf/Validation/US_PJ_Seawolf_VALIDATION.json",
+  "build_report": "PumpJets/US_PJ_Seawolf/Validation/US_PJ_Seawolf_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

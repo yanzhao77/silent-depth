@@ -1,0 +1,119 @@
+{
+  "asset_id": "PROP_T04_SKEWED",
+  "category": "Propellers",
+  "kind": "PROPELLER",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Propellers\\PROP_T04_SKEWED",
+  "result": "PASS",
+  "warn_count": 0,
+  "fail_count": 0,
+  "checks": [
+    {
+      "check": "files_present",
+      "result": "PASS",
+      "detail": "全部存在"
+    },
+    {
+      "check": "preview_present",
+      "result": "PASS",
+      "detail": "4 张预览"
+    },
+    {
+      "check": "preview_files",
+      "result": "PASS",
+      "detail": "PNG 头与体积合格"
+    },
+    {
+      "check": "fbx_binary_version",
+      "result": "PASS",
+      "detail": "5 个 FBX 均为 7400"
+    },
+    {
+      "check": "build_report_readable",
+      "result": "PASS",
+      "detail": "LOD 条目：[0, 1, 2, 3]"
+    },
+    {
+      "check": "lod_triangle_monotonic",
+      "result": "PASS",
+      "detail": "面数：{0: 3888, 1: 2000, 2: 944, 3: 396}"
+    },
+    {
+      "check": "lod_triangle_ratio",
+      "result": "PASS",
+      "detail": "各 LOD 比例在建议范围内"
+    },
+    {
+      "check": "lod_dimension_consistency",
+      "result": "PASS",
+      "detail": "最大相对误差 0.00%（None）"
+    },
+    {
+      "check": "origin_rule",
+      "result": "PASS",
+      "detail": "origin_rule = PIVOT_ON_SHAFT_AXIS"
+    },
+    {
+      "check": "socket_prefix",
+      "result": "PASS",
+      "detail": "插槽：['SOCKET_PROPULSOR', 'SOCKET_SHAFT']"
+    },
+    {
+      "check": "socket_required_kind",
+      "result": "PASS",
+      "detail": "含 SOCKET_PROPULSOR"
+    },
+    {
+      "check": "scale_applied",
+      "result": "PASS",
+      "detail": "缩放已应用"
+    },
+    {
+      "check": "transforms_applied",
+      "result": "PASS",
+      "detail": "旋转已应用"
+    },
+    {
+      "check": "forbidden_names",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "uv_present",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "material_present",
+      "result": "PASS",
+      "detail": "[]"
+    },
+    {
+      "check": "material_named",
+      "result": "PASS",
+      "detail": "4 个材质"
+    },
+    {
+      "check": "textures_resolve",
+      "result": "PASS",
+      "detail": "无外部贴图依赖或贴图齐全"
+    },
+    {
+      "check": "collision",
+      "result": "PASS",
+      "detail": "['UCX_PROP_T04_SKEWED_01', 'UCX_PROP_T04_SKEWED_00'] 文件=PROP_T04_SKEWED_COLLISION.fbx"
+    },
+    {
+      "check": "manifest_consistency",
+      "result": "PASS",
+      "detail": "清单与资产规格一致"
+    },
+    {
+      "check": "manifest_paths",
+      "result": "PASS",
+      "detail": "清单路径全部存在"
+    }
+  ],
+  "issues": [],
+  "validated_at": "2026-09-11T00:32:48",
+  "validator_version": "1.0.0"
+}

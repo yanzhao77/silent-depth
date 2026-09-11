@@ -1,0 +1,319 @@
+{
+  "asset_id": "SHAFT_PLAIN",
+  "category": "Shafts",
+  "kind": "SHAFT",
+  "generated_at": "2026-09-11",
+  "blender_version": "5.2.1 LTS",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0
+  },
+  "origin_rule": "ORIGIN_AT_ASSEMBLY_CENTER",
+  "origin_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "sockets": [
+    {
+      "name": "SOCKET_SHAFT",
+      "location_m": [
+        -3.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent": null
+    }
+  ],
+  "lods": [
+    {
+      "lod": 0,
+      "objects": [
+        "SHAFT_PLAIN_LOD0_Shaft",
+        "SHAFT_PLAIN_LOD0_Coupling"
+      ],
+      "vertices": 132,
+      "triangles": 256,
+      "dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 1,
+      "objects": [
+        "SHAFT_PLAIN_LOD1_Shaft",
+        "SHAFT_PLAIN_LOD1_Coupling"
+      ],
+      "vertices": 68,
+      "triangles": 128,
+      "dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 2,
+      "objects": [
+        "SHAFT_PLAIN_LOD2_Shaft",
+        "SHAFT_PLAIN_LOD2_Coupling"
+      ],
+      "vertices": 36,
+      "triangles": 64,
+      "dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 3,
+      "objects": [
+        "SHAFT_PLAIN_LOD3_Shaft",
+        "SHAFT_PLAIN_LOD3_Coupling"
+      ],
+      "vertices": 20,
+      "triangles": 32,
+      "dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "materials": [
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "M_Propulsor_Blade",
+      "base_color_linear": [
+        0.25,
+        0.18,
+        0.075
+      ],
+      "roughness": 0.43,
+      "metallic": 0.84,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Hub",
+      "base_color_linear": [
+        0.19,
+        0.23,
+        0.25
+      ],
+      "roughness": 0.4,
+      "metallic": 0.82,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Duct",
+      "base_color_linear": [
+        0.105,
+        0.13,
+        0.145
+      ],
+      "roughness": 0.64,
+      "metallic": 0.35,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Rubber",
+      "base_color_linear": [
+        0.018,
+        0.027,
+        0.035
+      ],
+      "roughness": 0.83,
+      "metallic": 0.08,
+      "texture_files": []
+    }
+  ],
+  "collision": {
+    "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\Collision\\SHAFT_PLAIN_COLLISION.fbx",
+    "convex_hull_count": 1,
+    "objects": [
+      "UCX_SHAFT_PLAIN_00"
+    ]
+  },
+  "exports": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_LOD0.fbx",
+      "lod": 0,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_LOD1.fbx",
+      "lod": 1,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_LOD2.fbx",
+      "lod": 2,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_LOD3.fbx",
+      "lod": 3,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    }
+  ],
+  "previews": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\Preview\\SHAFT_PLAIN_ThreeQuarter.png",
+      "view": "ThreeQuarter",
+      "non_background_fraction": 0.0365,
+      "mean_luminance": 0.2583,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\Preview\\SHAFT_PLAIN_Side.png",
+      "view": "Side",
+      "non_background_fraction": 0.0515,
+      "mean_luminance": 0.2625,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\Preview\\SHAFT_PLAIN_Rear.png",
+      "view": "Rear",
+      "non_background_fraction": 0.0195,
+      "mean_luminance": 0.2556,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\Preview\\SHAFT_PLAIN_Top.png",
+      "view": "Top",
+      "non_background_fraction": 0.0431,
+      "mean_luminance": 0.2609,
+      "resolution": [
+        800,
+        450
+      ]
+    }
+  ],
+  "roundtrip": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_LOD0.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "roundtrip_triangles": 256,
+      "roundtrip_objects": 2,
+      "lod": 0
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_LOD1.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "roundtrip_triangles": 128,
+      "roundtrip_objects": 2,
+      "lod": 1
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_LOD2.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "roundtrip_triangles": 64,
+      "roundtrip_objects": 2,
+      "lod": 2
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_LOD3.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        6.0,
+        0.72,
+        0.72
+      ],
+      "roundtrip_triangles": 32,
+      "roundtrip_objects": 2,
+      "lod": 3
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\Collision\\SHAFT_PLAIN_COLLISION.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        6.0,
+        0.45,
+        0.45
+      ],
+      "roundtrip_triangles": 60,
+      "roundtrip_objects": 1
+    }
+  ],
+  "checks": {
+    "scale_applied": true,
+    "object_transforms_applied": true,
+    "forbidden_names": [],
+    "objects_missing_uv": [],
+    "objects_missing_material": []
+  },
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ],
+  "combined_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_COMBINED.fbx",
+  "hulls_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Shafts\\SHAFT_PLAIN\\FBX\\SHAFT_PLAIN_HULLS.fbx"
+}

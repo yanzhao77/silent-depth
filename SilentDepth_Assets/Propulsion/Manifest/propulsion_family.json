@@ -1,0 +1,274 @@
+{
+  "generated_at": "2026-09-11",
+  "schema": "silent-depth-propulsion-family-v1",
+  "note": "家族划分按公开技术路线，只描述外形族系与世代，不定义任何性能参数。",
+  "families": [
+    {
+      "family_id": "FAM_PROP_CONVENTIONAL",
+      "display_name": "常规少叶螺旋桨",
+      "kind": "PROPELLER",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "early / improved plain propeller",
+      "description": "两叶到三叶、几乎无后掠的早期桨型，用来表达 T1–T2 世代。",
+      "members": [
+        "PROP_T01_EARLY",
+        "PROP_T02_IMPROVED"
+      ],
+      "member_count": 2
+    },
+    {
+      "family_id": "FAM_PROP_MULTIBLADE",
+      "display_name": "多叶螺旋桨",
+      "kind": "PROPELLER",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "multi-blade propeller",
+      "description": "T3 世代：叶片数增加、单叶载荷下降；叶片数本身不等于更高 Tier。",
+      "members": [
+        "PROP_T03_MULTIBLADE"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "FAM_PROP_SKEWED",
+      "display_name": "后掠螺旋桨（通用）",
+      "kind": "PROPELLER",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "skewed propeller",
+      "description": "T4 世代：后掠（skew）是主要降噪概念。",
+      "members": [
+        "PROP_T04_SKEWED"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "FAM_PROP_QUIET",
+      "display_name": "高后掠静音螺旋桨（通用）",
+      "kind": "PROPELLER",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "advanced quiet propeller",
+      "description": "T5 世代：高后掠 + 多叶 + 薄叶型的综合降噪设计成熟度。",
+      "members": [
+        "PROP_T05_QUIET"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "RU_PROP_SHROUDED",
+      "display_name": "苏/俄导管螺旋桨",
+      "kind": "PROPELLER",
+      "country_scope": [
+        "Russia"
+      ],
+      "public_label": "shrouded propeller",
+      "description": "带围罩的螺旋桨构型，代表作为 Project 941 的双桨布置。",
+      "members": [
+        "RU_PROP_Typhoon"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "RU_PROP_SKEWED",
+      "display_name": "苏/俄后掠螺旋桨",
+      "kind": "PROPELLER",
+      "country_scope": [
+        "Russia"
+      ],
+      "public_label": "skewed propeller",
+      "description": "苏/俄多叶后掠桨家族。",
+      "members": [
+        "RU_PROP_Akula"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "US_PROP_SKEWED",
+      "display_name": "美制高后掠螺旋桨",
+      "kind": "PROPELLER",
+      "country_scope": [
+        "USA"
+      ],
+      "public_label": "highly skewed propeller",
+      "description": "美制核潜艇上长期使用的高后掠多叶桨。",
+      "members": [
+        "US_PROP_LosAngeles"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "CN_PROP_SKEWED",
+      "display_name": "中国后掠螺旋桨",
+      "kind": "PROPELLER",
+      "country_scope": [
+        "China"
+      ],
+      "public_label": "skewed propeller",
+      "description": "公开资料有限的桨型；几何为游戏美术取值。",
+      "members": [
+        "CN_PROP_Type093"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "US_PUMPJET_SEAWOLF",
+      "display_name": "美制泵喷（Seawolf 世代）",
+      "kind": "PUMPJET",
+      "country_scope": [
+        "USA"
+      ],
+      "public_label": "pump-jet propulsor",
+      "description": "Seawolf 级公开报道的泵喷构型。",
+      "members": [
+        "US_PJ_Seawolf"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "US_PUMPJET_VIRGINIA",
+      "display_name": "美制泵喷（Virginia 世代）",
+      "kind": "PUMPJET",
+      "country_scope": [
+        "USA"
+      ],
+      "public_label": "pump-jet propulsor",
+      "description": "Virginia 级公开报道的泵喷构型。",
+      "members": [
+        "US_PJ_Virginia"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "UK_PUMPJET_ASTUTE",
+      "display_name": "英制泵喷（Astute 世代）",
+      "kind": "PUMPJET",
+      "country_scope": [
+        "UK"
+      ],
+      "public_label": "pump-jet propulsor",
+      "description": "Astute 级公开报道的泵喷构型。",
+      "members": [
+        "UK_PJ_Astute"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "RU_PUMPJET_YASEN",
+      "display_name": "俄制泵喷（Yasen 世代）",
+      "kind": "PUMPJET",
+      "country_scope": [
+        "Russia"
+      ],
+      "public_label": "pump-jet propulsor",
+      "description": "Yasen 级公开报道的泵喷构型。",
+      "members": [
+        "RU_PJ_Yasen"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "FR_PUMPJET_SUFFREN",
+      "display_name": "法制泵喷（Suffren 世代）",
+      "kind": "PUMPJET",
+      "country_scope": [
+        "France"
+      ],
+      "public_label": "pump-jet propulsor",
+      "description": "Suffren / Barracuda 级公开报道的泵喷构型。",
+      "members": [
+        "FR_PJ_Suffren"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "FAM_PJ_NEXTGEN",
+      "display_name": "下一代集成推进器（通用）",
+      "kind": "PUMPJET",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "next generation integrated propulsor",
+      "description": "T10 世代表达：无外露轴系的集成式推进器概念。",
+      "members": [
+        "PJ_T10_NEXTGEN"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "FAM_SHAFT_DIRECT",
+      "display_name": "直轴",
+      "kind": "SHAFT",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "direct shaft",
+      "description": "基础直轴系。",
+      "members": [
+        "SHAFT_PLAIN"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "FAM_SHAFT_GEARED",
+      "display_name": "齿轮减速轴系",
+      "kind": "SHAFT",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "geared shaft",
+      "description": "带齿轮减速的轴系路线。",
+      "members": [
+        "SHAFT_GEARED"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "RU_SHAFT_FAIRED",
+      "display_name": "长轴包",
+      "kind": "SHAFT",
+      "country_scope": [
+        "Russia"
+      ],
+      "public_label": "faired shaft",
+      "description": "带长整流包覆的轴系，尺寸取自 Typhoon 母版实测。",
+      "members": [
+        "SHAFT_FAIRING_LONG"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "FAM_THRUSTER_TUNNEL",
+      "display_name": "隧道式侧推",
+      "kind": "THRUSTER",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "tunnel thruster",
+      "description": "横向隧道式辅助推进器。",
+      "members": [
+        "THRUSTER_TUNNEL"
+      ],
+      "member_count": 1
+    },
+    {
+      "family_id": "FAM_THRUSTER_RIM",
+      "display_name": "轮缘驱动推进器",
+      "kind": "THRUSTER",
+      "country_scope": [
+        "GENERIC"
+      ],
+      "public_label": "rim-driven thruster",
+      "description": "T10 世代辅助推进器概念。",
+      "members": [
+        "THRUSTER_RIM_DRIVEN"
+      ],
+      "member_count": 1
+    }
+  ]
+}

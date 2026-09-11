@@ -1,0 +1,89 @@
+{
+  "asset_id": "THRUSTER_TUNNEL",
+  "display_name": "隧道式侧推器",
+  "category": "Thrusters",
+  "kind": "THRUSTER",
+  "country": "GENERIC",
+  "tier": 6,
+  "era": "1970s-1990s",
+  "technology_route": "tunnel thruster",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 1.6,
+    "blade_count": 5,
+    "skew_deg": 15.0,
+    "hub_diameter_m": 0.4,
+    "pitch_ratio": 0.9,
+    "blade_thickness_ratio": 0.09,
+    "shroud": {
+      "enabled": true,
+      "outer_diameter_m": 1.9,
+      "length_m": 1.2,
+      "thickness_m": 0.15,
+      "mode": "DUCT"
+    },
+    "coupling": {
+      "enabled": true,
+      "diameter_m": 0.55,
+      "length_m": 0.3
+    },
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "隧道侧推是公开技术路线，具体几何为游戏美术取值。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "隧道侧推是公开技术路线，具体几何为游戏美术取值。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 4048,
+    "1": 2112,
+    "2": 1024,
+    "3": 460
+  },
+  "dimensions_m": [
+    1.44,
+    1.9,
+    1.9
+  ],
+  "sockets": [
+    "SOCKET_THRUSTER"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Thrusters/THRUSTER_TUNNEL/Blend/THRUSTER_TUNNEL_MASTER.blend",
+    "lod0": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_LOD0.fbx",
+    "lod1": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_LOD1.fbx",
+    "lod2": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_LOD2.fbx",
+    "lod3": "Thrusters/THRUSTER_TUNNEL/FBX/THRUSTER_TUNNEL_LOD3.fbx",
+    "collision": "Thrusters/THRUSTER_TUNNEL/Collision/THRUSTER_TUNNEL_COLLISION.fbx",
+    "spec": "Thrusters/THRUSTER_TUNNEL/Documentation/THRUSTER_TUNNEL_SPEC.json",
+    "readme": "Thrusters/THRUSTER_TUNNEL/Documentation/THRUSTER_TUNNEL_README.md",
+    "preview": [
+      "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_ThreeQuarter.png",
+      "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_Side.png",
+      "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_Rear.png",
+      "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_Top.png"
+    ]
+  },
+  "validation": "Thrusters/THRUSTER_TUNNEL/Validation/THRUSTER_TUNNEL_VALIDATION.json",
+  "build_report": "Thrusters/THRUSTER_TUNNEL/Validation/THRUSTER_TUNNEL_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}

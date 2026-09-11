@@ -1,0 +1,41 @@
+{
+  "generated_at": "2026-09-10",
+  "note": "统一的推进系统插槽命名。所有推进资产导出时至少包含其中一个，键名用英文，说明用简体中文。",
+  "sockets": [
+    {
+      "name": "SOCKET_PROPULSOR",
+      "display_name": "推进器基准",
+      "meaning": "推进器安装与旋转基准，原点落在桨盘中心、也就是桨轴轴线上。",
+      "applies_to": ["PROPELLER", "PUMPJET"]
+    },
+    {
+      "name": "SOCKET_SHAFT",
+      "display_name": "轴端对接点",
+      "meaning": "轴系对接点，朝向 +X（指向艏部）。螺旋桨与泵喷上与 SOCKET_PROPULSOR 同点，轴类资产上位于靠艇体一端。",
+      "applies_to": ["PROPELLER", "PUMPJET", "SHAFT"]
+    },
+    {
+      "name": "SOCKET_RUDDER",
+      "display_name": "舵联动基准",
+      "meaning": "舵叶或舵机安装基准，位于舵轴与后端面交点。",
+      "applies_to": ["PROPELLER", "PUMPJET", "SHAFT"]
+    },
+    {
+      "name": "SOCKET_THRUSTER",
+      "display_name": "推进槽安装点",
+      "meaning": "侧推或辅助推进器安装法兰面中心。",
+      "applies_to": ["THRUSTER", "PROPELLER"]
+    },
+    {
+      "name": "SOCKET_PUMPJET",
+      "display_name": "泵喷总成安装面",
+      "meaning": "泵喷外壳后端面中心，用于把总成挂到艇体尾段。",
+      "applies_to": ["PUMPJET"]
+    }
+  ],
+  "rules": [
+    "插槽用 Blender Empty 表达，导出 FBX 时保留为命名节点。",
+    "插槽对象不允许带缩放，旋转必须为 0（除 SOCKET_RUDDER 允许绕 Y 轴建模基准旋转）。",
+    "插槽名大小写敏感，必须与上表完全一致。"
+  ]
+}

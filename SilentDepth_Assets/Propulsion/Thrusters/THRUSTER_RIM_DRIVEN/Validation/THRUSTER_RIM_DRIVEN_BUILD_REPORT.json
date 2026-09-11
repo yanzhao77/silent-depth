@@ -1,0 +1,361 @@
+{
+  "asset_id": "THRUSTER_RIM_DRIVEN",
+  "category": "Thrusters",
+  "kind": "THRUSTER",
+  "generated_at": "2026-09-11",
+  "blender_version": "5.2.1 LTS",
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0
+  },
+  "origin_rule": "ORIGIN_AT_ASSEMBLY_CENTER",
+  "origin_m": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "sockets": [
+    {
+      "name": "SOCKET_THRUSTER",
+      "location_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation_euler_rad": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "parent": null
+    }
+  ],
+  "lods": [
+    {
+      "lod": 0,
+      "objects": [
+        "THRUSTER_RIM_DRIVEN_LOD0_Duct",
+        "THRUSTER_RIM_DRIVEN_LOD0_Hub",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_00",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_01",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_02",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_03",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_04",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_05",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_06",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_07",
+        "THRUSTER_RIM_DRIVEN_LOD0_Impeller_08"
+      ],
+      "vertices": 3436,
+      "triangles": 6832,
+      "dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "materials": [
+        "M_Propulsor_Duct",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 1,
+      "objects": [
+        "THRUSTER_RIM_DRIVEN_LOD1_Duct",
+        "THRUSTER_RIM_DRIVEN_LOD1_Hub",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_00",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_01",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_02",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_03",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_04",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_05",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_06",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_07",
+        "THRUSTER_RIM_DRIVEN_LOD1_Impeller_08"
+      ],
+      "vertices": 1740,
+      "triangles": 3440,
+      "dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "materials": [
+        "M_Propulsor_Duct",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 2,
+      "objects": [
+        "THRUSTER_RIM_DRIVEN_LOD2_Duct",
+        "THRUSTER_RIM_DRIVEN_LOD2_Hub",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_00",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_01",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_02",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_03",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_04",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_05",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_06",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_07",
+        "THRUSTER_RIM_DRIVEN_LOD2_Impeller_08"
+      ],
+      "vertices": 828,
+      "triangles": 1616,
+      "dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "materials": [
+        "M_Propulsor_Duct",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    },
+    {
+      "lod": 3,
+      "objects": [
+        "THRUSTER_RIM_DRIVEN_LOD3_Duct",
+        "THRUSTER_RIM_DRIVEN_LOD3_Hub",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_00",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_01",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_02",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_03",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_04",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_05",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_06",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_07",
+        "THRUSTER_RIM_DRIVEN_LOD3_Impeller_08"
+      ],
+      "vertices": 354,
+      "triangles": 668,
+      "dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "materials": [
+        "M_Propulsor_Duct",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Blade"
+      ],
+      "uv_channels": [
+        "UV0"
+      ]
+    }
+  ],
+  "materials": [
+    {
+      "name": "M_Propulsor_Blade",
+      "base_color_linear": [
+        0.25,
+        0.18,
+        0.075
+      ],
+      "roughness": 0.43,
+      "metallic": 0.84,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Hub",
+      "base_color_linear": [
+        0.19,
+        0.23,
+        0.25
+      ],
+      "roughness": 0.4,
+      "metallic": 0.82,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Duct",
+      "base_color_linear": [
+        0.105,
+        0.13,
+        0.145
+      ],
+      "roughness": 0.64,
+      "metallic": 0.35,
+      "texture_files": []
+    },
+    {
+      "name": "M_Propulsor_Rubber",
+      "base_color_linear": [
+        0.018,
+        0.027,
+        0.035
+      ],
+      "roughness": 0.83,
+      "metallic": 0.08,
+      "texture_files": []
+    }
+  ],
+  "collision": {
+    "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\Collision\\THRUSTER_RIM_DRIVEN_COLLISION.fbx",
+    "convex_hull_count": 3,
+    "objects": [
+      "UCX_THRUSTER_RIM_DRIVEN_02",
+      "UCX_THRUSTER_RIM_DRIVEN_00",
+      "UCX_THRUSTER_RIM_DRIVEN_01"
+    ]
+  },
+  "exports": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_LOD0.fbx",
+      "lod": 0,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_LOD1.fbx",
+      "lod": 1,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_LOD2.fbx",
+      "lod": 2,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_LOD3.fbx",
+      "lod": 3,
+      "fbx_binary_version": 7400,
+      "unit_scale_factor_cm": 100.0,
+      "unit_scale_factor_source": "几何按厘米写出（与 Typhoon 母版 FBX 相同约定），并用往返导入核验"
+    }
+  ],
+  "previews": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\Preview\\THRUSTER_RIM_DRIVEN_ThreeQuarter.png",
+      "view": "ThreeQuarter",
+      "non_background_fraction": 0.4496,
+      "mean_luminance": 0.4843,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\Preview\\THRUSTER_RIM_DRIVEN_Side.png",
+      "view": "Side",
+      "non_background_fraction": 0.3186,
+      "mean_luminance": 0.4434,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\Preview\\THRUSTER_RIM_DRIVEN_Rear.png",
+      "view": "Rear",
+      "non_background_fraction": 0.4009,
+      "mean_luminance": 0.3956,
+      "resolution": [
+        800,
+        450
+      ]
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\Preview\\THRUSTER_RIM_DRIVEN_Top.png",
+      "view": "Top",
+      "non_background_fraction": 0.3464,
+      "mean_luminance": 0.4791,
+      "resolution": [
+        800,
+        450
+      ]
+    }
+  ],
+  "roundtrip": [
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_LOD0.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "roundtrip_triangles": 6832,
+      "roundtrip_objects": 11,
+      "lod": 0
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_LOD1.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "roundtrip_triangles": 3440,
+      "roundtrip_objects": 11,
+      "lod": 1
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_LOD2.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "roundtrip_triangles": 1616,
+      "roundtrip_objects": 11,
+      "lod": 2
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_LOD3.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "roundtrip_triangles": 668,
+      "roundtrip_objects": 11,
+      "lod": 3
+    },
+    {
+      "file": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\Collision\\THRUSTER_RIM_DRIVEN_COLLISION.fbx",
+      "fbx_binary_version": 7400,
+      "roundtrip_dimensions_m": [
+        0.55,
+        1.62,
+        1.62
+      ],
+      "roundtrip_triangles": 180,
+      "roundtrip_objects": 3
+    }
+  ],
+  "checks": {
+    "scale_applied": true,
+    "object_transforms_applied": true,
+    "forbidden_names": [],
+    "objects_missing_uv": [],
+    "objects_missing_material": []
+  },
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ],
+  "combined_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_COMBINED.fbx",
+  "hulls_export": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Propulsion\\Thrusters\\THRUSTER_RIM_DRIVEN\\FBX\\THRUSTER_RIM_DRIVEN_HULLS.fbx"
+}

@@ -1,0 +1,89 @@
+{
+  "asset_id": "THRUSTER_RIM_DRIVEN",
+  "display_name": "轮缘驱动环形推进器",
+  "category": "Thrusters",
+  "kind": "THRUSTER",
+  "country": "GENERIC",
+  "tier": 10,
+  "era": "2020s+",
+  "technology_route": "rim-driven thruster",
+  "status": "IMPLEMENTING",
+  "template_version": "v1.0.0",
+  "template_source": "SilentDepth_Assets/Propulsion/Templates/PROPULSION_ASSET_TEMPLATE.md",
+  "params": {
+    "main_diameter_m": 1.4,
+    "blade_count": 9,
+    "skew_deg": 25.0,
+    "hub_diameter_m": 0.22,
+    "pitch_ratio": 0.85,
+    "blade_thickness_ratio": 0.07,
+    "shroud": {
+      "enabled": true,
+      "outer_diameter_m": 1.62,
+      "length_m": 0.55,
+      "thickness_m": 0.11,
+      "mode": "RING"
+    },
+    "coupling": {
+      "enabled": false,
+      "diameter_m": 0.0,
+      "length_m": 0.0
+    },
+    "count_provenance": "GAME_ART_SPEC",
+    "provenance_note": "轮缘驱动是公开的技术方向，用于 T10 世代表达，几何为游戏美术取值。"
+  },
+  "provenance": {
+    "count_provenance": "GAME_ART_SPEC",
+    "note": "轮缘驱动是公开的技术方向，用于 T10 世代表达，几何为游戏美术取值。"
+  },
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0,
+    "dimension_unit": "m"
+  },
+  "lods": {
+    "0": 6832,
+    "1": 3440,
+    "2": 1616,
+    "3": 668
+  },
+  "dimensions_m": [
+    0.55,
+    1.62,
+    1.62
+  ],
+  "sockets": [
+    "SOCKET_THRUSTER"
+  ],
+  "materials": [
+    "M_Propulsor_Blade",
+    "M_Propulsor_Hub",
+    "M_Propulsor_Duct",
+    "M_Propulsor_Rubber"
+  ],
+  "textures": [],
+  "paths": {
+    "blend": "Thrusters/THRUSTER_RIM_DRIVEN/Blend/THRUSTER_RIM_DRIVEN_MASTER.blend",
+    "lod0": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_LOD0.fbx",
+    "lod1": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_LOD1.fbx",
+    "lod2": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_LOD2.fbx",
+    "lod3": "Thrusters/THRUSTER_RIM_DRIVEN/FBX/THRUSTER_RIM_DRIVEN_LOD3.fbx",
+    "collision": "Thrusters/THRUSTER_RIM_DRIVEN/Collision/THRUSTER_RIM_DRIVEN_COLLISION.fbx",
+    "spec": "Thrusters/THRUSTER_RIM_DRIVEN/Documentation/THRUSTER_RIM_DRIVEN_SPEC.json",
+    "readme": "Thrusters/THRUSTER_RIM_DRIVEN/Documentation/THRUSTER_RIM_DRIVEN_README.md",
+    "preview": [
+      "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_ThreeQuarter.png",
+      "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_Side.png",
+      "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_Rear.png",
+      "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_Top.png"
+    ]
+  },
+  "validation": "Thrusters/THRUSTER_RIM_DRIVEN/Validation/THRUSTER_RIM_DRIVEN_VALIDATION.json",
+  "build_report": "Thrusters/THRUSTER_RIM_DRIVEN/Validation/THRUSTER_RIM_DRIVEN_BUILD_REPORT.json",
+  "references": [],
+  "limitations": [
+    "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+    "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+    "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+  ]
+}
