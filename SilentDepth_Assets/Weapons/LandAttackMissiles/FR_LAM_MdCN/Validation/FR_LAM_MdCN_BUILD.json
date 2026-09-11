@@ -1,0 +1,166 @@
+{
+  "weapon_id": "FR_LAM_MdCN",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "cruise_missile",
+  "declared_length_m": 6.5,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 6.5,
+  "built_max_diameter_m": 2.313314,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 2020,
+      "triangles": 3720
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 748,
+      "triangles": 1320
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 324,
+      "triangles": 616
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 222,
+      "triangles": 412
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_FR_LAM_MdCN_SEG_00",
+    "UCX_WPN_FR_LAM_MdCN_SEG_01",
+    "UCX_WPN_FR_LAM_MdCN_SEG_02",
+    "UCX_WPN_FR_LAM_MdCN_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.25,
+      3.25
+    ],
+    "y": [
+      -0.6769413352012634,
+      0.6769413352012634
+    ],
+    "z": [
+      -0.6769413352012634,
+      1.636372685432434
+    ],
+    "dimensions_m": [
+      6.5,
+      1.3538826704025269,
+      2.3133140206336975
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.4797156751155853
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/FR_LAM_MdCN_LOD0.fbx",
+        "mirror": "FBX/FR_LAM_MdCN_LOD0.fbx",
+        "sha256": "bc9ec9119f2c52b7f2d5bea8c05f1ea50351365b36ec696bc7c99f3fa05c7523",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/FR_LAM_MdCN_LOD1.fbx",
+        "mirror": "FBX/FR_LAM_MdCN_LOD1.fbx",
+        "sha256": "d696aa01cbc7103f91b16900f53d26ca16866c1b6cd353eded6be2a0a7ec1086",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/FR_LAM_MdCN_LOD2.fbx",
+        "mirror": "FBX/FR_LAM_MdCN_LOD2.fbx",
+        "sha256": "dc39d064f626bde35b532152d2d6b5fe778232cd875c38137558715b2e9e66f3",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/FR_LAM_MdCN_LOD3.fbx",
+        "mirror": "FBX/FR_LAM_MdCN_LOD3.fbx",
+        "sha256": "ec2714e905fb28402ff74f74908f650db7e7d7d7a3fc3bb30f56e69887973636",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/FR_LAM_MdCN_COLLISION.fbx",
+      "sha256": "cb938cc9b63739041dd7567eab06172e37df240b0f43df7ebfde47eda6e83c38"
+    },
+    "collision_manifest": {
+      "path": "Collision/FR_LAM_MdCN_COLLISION.json",
+      "sha256": "25560b054729241f36e7fda718a11d2b254cb770b552514cce85d26d1d8efcdf"
+    }
+  },
+  "build_seconds": 0.42,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.29,
+    "SIDE": 0.38,
+    "FRONT": 0.31,
+    "TOP": 0.33,
+    "DETAIL": 0.38,
+    "ICON": 0.37
+  },
+  "previews": [
+    "Detail.png",
+    "FR_LAM_MdCN_DETAIL_128.png",
+    "FR_LAM_MdCN_DETAIL_256.png",
+    "FR_LAM_MdCN_DETAIL_512.png",
+    "FR_LAM_MdCN_FRONT_128.png",
+    "FR_LAM_MdCN_FRONT_256.png",
+    "FR_LAM_MdCN_FRONT_512.png",
+    "FR_LAM_MdCN_ICON_128.png",
+    "FR_LAM_MdCN_ICON_256.png",
+    "FR_LAM_MdCN_ICON_512.png",
+    "FR_LAM_MdCN_PERSPECTIVE_128.png",
+    "FR_LAM_MdCN_PERSPECTIVE_256.png",
+    "FR_LAM_MdCN_PERSPECTIVE_512.png",
+    "FR_LAM_MdCN_SIDE_128.png",
+    "FR_LAM_MdCN_SIDE_256.png",
+    "FR_LAM_MdCN_SIDE_512.png",
+    "FR_LAM_MdCN_TOP_128.png",
+    "FR_LAM_MdCN_TOP_256.png",
+    "FR_LAM_MdCN_TOP_512.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/FR_LAM_MdCN_MASTER.blend",
+      "sha256": "bd3ce55d7f63d13c8e3ee1eb712237f940b5b53b8b7396f7e89a1a885f9612ff"
+    },
+    "source": {
+      "path": "Source/FR_LAM_MdCN_SOURCE.json",
+      "sha256": "16e49d2c1e4d82817ccc6e27915a65d8b8e0500245e566d45b3a7937a77cbbe2"
+    },
+    "spec": {
+      "path": "Documentation/FR_LAM_MdCN_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/FR_LAM_MdCN_README.md"
+    }
+  }
+}

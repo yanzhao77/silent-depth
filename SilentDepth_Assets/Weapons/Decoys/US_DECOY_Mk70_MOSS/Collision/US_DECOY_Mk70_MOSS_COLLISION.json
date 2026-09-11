@@ -1,0 +1,35 @@
+{
+  "weapon_id": "US_DECOY_Mk70_MOSS",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_DECOY_Mk70_MOSS_SEG_00",
+      "centre": [
+        -0.22,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.56,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_DECOY_Mk70_MOSS_SEG_01",
+      "centre": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.6,
+        0.15000000000000002,
+        0.15000000000000002
+      ]
+    }
+  ],
+  "collision_fbx": "US_DECOY_Mk70_MOSS_COLLISION.fbx",
+  "collision_sha256": "3b13d99a75f699d6ca0fec69c2e3fe843c9d87217a2ef0057a626c547e32a22f"
+}

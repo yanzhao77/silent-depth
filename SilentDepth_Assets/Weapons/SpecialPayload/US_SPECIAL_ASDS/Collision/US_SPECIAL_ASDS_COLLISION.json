@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_SPECIAL_ASDS",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_SPECIAL_ASDS_SEG_00",
+      "centre": [
+        7.128,
+        0.0,
+        0.0
+      ],
+      "size": [
+        5.5440000000000005,
+        0.735,
+        0.735
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SPECIAL_ASDS_SEG_01",
+      "centre": [
+        1.9800000000000002,
+        0.0,
+        0.0
+      ],
+      "size": [
+        4.752,
+        2.1,
+        2.1
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SPECIAL_ASDS_SEG_02",
+      "centre": [
+        -3.9600000000000004,
+        0.0,
+        0.0
+      ],
+      "size": [
+        7.128,
+        2.1,
+        2.1
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SPECIAL_ASDS_SEG_03",
+      "centre": [
+        -8.316,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.168,
+        2.941976470588236,
+        2.941976470588236
+      ]
+    }
+  ],
+  "collision_fbx": "US_SPECIAL_ASDS_COLLISION.fbx",
+  "collision_sha256": "be0d4fcdbf4cfad1e9443a0b55bc66de35d812ad9d440663adbfe09c037a3fb9"
+}

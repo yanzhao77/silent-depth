@@ -1,0 +1,49 @@
+{
+  "weapon_id": "RU_SLBM_R39",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "nose_shroud",
+      "tail_skirt",
+      "nozzle",
+      "three_stage",
+      "large_diameter"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.4,
+      "shroud_shape": "blunt",
+      "stage_rings": 2,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.2,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.8,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 0,
+      "base_cover": 1,
+      "bands": 3,
+      "windows": 0,
+      "canister": 1
+    }
+  },
+  "dimensions": {
+    "length_m": 16.0,
+    "diameter_m": 2.4,
+    "mass_kg": 84000,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料常见数据，取级别近似值；长度与直径按米级取整。"
+  },
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "tier": 9,
+  "asset_priority": "HIGH",
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料常见数据，取级别近似值；长度与直径按米级取整。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

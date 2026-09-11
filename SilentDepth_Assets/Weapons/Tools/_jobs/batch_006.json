@@ -1,0 +1,318 @@
+{
+  "batch_index": 6,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "RU_ASM_P120",
+      "display_name": "P-120 Malakhit",
+      "short_name": "P-120",
+      "category": "ASM",
+      "family_id": "RU_ASM_P120",
+      "base_geometry": "ru_asm_p120",
+      "country": "Russia",
+      "role": "冷战反舰巡航导弹（潜射型）",
+      "subrole": "Cold_War_Cruise",
+      "era": "Cold War",
+      "service_years": "1970s-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 中段节点：弹体比 P-70 更粗，短粗外形便于与后续型号区分。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.0,
+        "diameter_m": 0.55,
+        "mass_kg": 2900,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.55,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "tube_launched",
+          "folding_wing"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "body_shape": "cylinder",
+          "wing_type": "folding",
+          "wing_pairs": 1,
+          "wing_span_ratio": 3.2,
+          "wing_chord_ratio": 1.1,
+          "wing_position": 0.4,
+          "wing_sweep_deg": 30.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.0,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.24,
+          "booster_fins": 0,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_P5",
+      "display_name": "P-5 Pyatyorka",
+      "short_name": "P-5",
+      "category": "ASM",
+      "family_id": "RU_ASM_P5",
+      "base_geometry": "ru_asm_p5",
+      "country": "Russia",
+      "role": "早期潜射反舰巡航导弹",
+      "subrole": "Early_Cruise",
+      "era": "Cold War",
+      "service_years": "1959-1960s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 潜射巡航导弹起点：需要上浮发射、外形粗短、固定大展弦比弹翼，视觉上与现代导弹差异极大。",
+      "launch_methods": [
+        "SURFACE_LAUNCH",
+        "DECK_MOUNT"
+      ],
+      "dimensions": {
+        "length_m": 10.0,
+        "diameter_m": 1.0,
+        "mass_kg": 4000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 1.0,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "surface_launch",
+          "large_fixed_wing"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 2.0,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 4.6,
+          "wing_chord_ratio": 1.6,
+          "wing_position": 0.45,
+          "wing_sweep_deg": 12.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.4,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.2,
+          "booster_fins": 0,
+          "dorsal": 0,
+          "bands": 1,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_P500",
+      "display_name": "P-500 Bazalt",
+      "short_name": "P-500",
+      "category": "ASM",
+      "family_id": "RU_ASM_P500",
+      "base_geometry": "ru_asm_p500",
+      "country": "Russia",
+      "role": "重型超音速反舰导弹",
+      "subrole": "Supersonic_Anti_Ship",
+      "era": "Cold War",
+      "service_years": "1975-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 超音速反舰主力：固体助推 + 冲压主级，尾翼与进气道结构清晰。",
+      "launch_methods": [
+        "VLS",
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 11.7,
+        "diameter_m": 0.88,
+        "mass_kg": 4800,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 11.7 米。"
+      },
+      "body_diameter_m": 0.88,
+      "geometry": {
+        "kind": "supersonic_missile",
+        "features": [
+          "ramjet",
+          "solid_booster",
+          "large_tail"
+        ],
+        "params": {
+          "nose": "conical",
+          "nose_len_ratio": 3.2,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 2.4,
+          "wing_chord_ratio": 1.5,
+          "wing_position": 0.55,
+          "wing_sweep_deg": 52.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.4,
+          "tail_chord_ratio": 1.0,
+          "intake_type": "four",
+          "intake_position": 0.26,
+          "intake_len_ratio": 1.8,
+          "booster": 1,
+          "booster_len_ratio": 0.24,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_P6",
+      "display_name": "P-6 Progress",
+      "short_name": "P-6",
+      "category": "ASM",
+      "family_id": "RU_ASM_P5",
+      "base_geometry": "ru_asm_p5",
+      "country": "Russia",
+      "role": "冷战早期远程反舰导弹",
+      "subrole": "Early_Cruise",
+      "era": "Cold War",
+      "service_years": "1960s-1970s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 远程分支：与 P-5 共享弹体几何，首部进气道与制导组件不同。",
+      "launch_methods": [
+        "SURFACE_LAUNCH",
+        "DECK_MOUNT"
+      ],
+      "dimensions": {
+        "length_m": 10.6,
+        "diameter_m": 0.9,
+        "mass_kg": 4500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族级别近似。"
+      },
+      "body_diameter_m": 0.9,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "surface_launch",
+          "nose_intake"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.8,
+          "body_shape": "cylinder",
+          "wing_type": "folding",
+          "wing_pairs": 1,
+          "wing_span_ratio": 4.2,
+          "wing_chord_ratio": 1.4,
+          "wing_position": 0.4,
+          "wing_sweep_deg": 20.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.6,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "chin",
+          "intake_position": 0.15,
+          "intake_len_ratio": 1.6,
+          "booster": 1,
+          "booster_len_ratio": 0.22,
+          "booster_fins": 0,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_P70",
+      "display_name": "P-70 Ametist",
+      "short_name": "P-70",
+      "category": "ASM",
+      "family_id": "RU_ASM_P70",
+      "base_geometry": "ru_asm_p70",
+      "country": "Russia",
+      "role": "水下发射反舰导弹",
+      "subrole": "Underwater_Launch_Cruise",
+      "era": "Cold War",
+      "service_years": "1968-1990s",
+      "tier": 4,
+      "tier_reason": "游戏 T4 水下发射分支起点：533 毫米发射管布放、折叠弹翼，与上浮发射的早期型号外形完全不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.55,
+        "mass_kg": 2900,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 7 米，与 533 毫米发射管匹配。"
+      },
+      "body_diameter_m": 0.55,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "folding_wing",
+          "canister"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.4,
+          "body_shape": "cylinder",
+          "wing_type": "folding",
+          "wing_pairs": 1,
+          "wing_span_ratio": 3.8,
+          "wing_chord_ratio": 1.2,
+          "wing_position": 0.38,
+          "wing_sweep_deg": 32.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.2,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.26,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

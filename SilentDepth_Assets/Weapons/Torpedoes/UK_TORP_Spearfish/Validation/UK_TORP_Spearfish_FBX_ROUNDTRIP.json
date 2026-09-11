@@ -1,0 +1,86 @@
+{
+  "weapon_id": "UK_TORP_Spearfish",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 6,
+      "vertices": 2458,
+      "triangles": 4284,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Seeker"
+      ],
+      "dimensions_m": [
+        7.0166,
+        0.7026,
+        0.7867
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 1074,
+      "triangles": 1764,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        7.0166,
+        0.7026,
+        0.7867
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 490,
+      "triangles": 836,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        7.0166,
+        0.7026,
+        0.7867
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 412,
+      "triangles": 680,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        7.0166,
+        0.7026,
+        0.7867
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      7.0,
+      0.808,
+      0.808
+    ]
+  },
+  "result": "PASS"
+}

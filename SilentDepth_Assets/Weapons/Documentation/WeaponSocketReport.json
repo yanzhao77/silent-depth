@@ -1,0 +1,1189 @@
+{
+  "report": "SubmarineWeaponSocketPass",
+  "generated_at": "2026-09-11",
+  "source_audit": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Documentation\\SubmarineWeaponIntegrationAudit.json",
+  "policy": [
+    "插座为增量表现层接口，原始潜艇主文件不被修改。",
+    "只有本地存在 MASTER.blend 的平台才能生成插座；其余标记 WAITING_FOR_MODEL。",
+    "插座位置由公开尺寸与发射器布局推导，不推测内部结构。"
+  ],
+  "summary": {
+    "processed": 3,
+    "pending": 51,
+    "sockets_created": 94
+  },
+  "results": [
+    {
+      "asset_id": "RU_SSN_Akula",
+      "status": "OK",
+      "source_master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Blend\\RU_SSN_Akula_MASTER.blend",
+      "source_master_modified": false,
+      "sockets_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Sockets\\RU_SSN_Akula_SOCKETS.blend",
+      "sockets_fbx": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Sockets\\RU_SSN_Akula_SOCKETS.fbx",
+      "socket_count": 20,
+      "sockets": [
+        {
+          "name": "SOCKET_TORPEDO_01",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            51.243,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_01",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            51.243,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_02",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            49.9206,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_02",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            49.9206,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_03",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            48.5982,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_03",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            48.5982,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_04",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            47.2758,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_04",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            47.2758,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_05",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            45.9534,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_06",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            45.9534,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_07",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            44.631,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_08",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            44.631,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_01",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            51.243,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_02",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            51.243,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_03",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            49.9206,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_04",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            49.9206,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_05",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            48.5982,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_06",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            48.5982,
+            0.0,
+            1.2351
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_07",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            47.2758,
+            0.0,
+            10.9046
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_08",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            47.2758,
+            0.0,
+            1.2351
+          ]
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -55.1,
+          -9.8,
+          -8.15
+        ],
+        "max": [
+          55.1,
+          9.8,
+          20.29
+        ]
+      }
+    },
+    {
+      "asset_id": "RU_SSN_Yasen",
+      "status": "OK",
+      "source_master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\Blend\\RU_SSN_Yasen_MASTER.blend",
+      "source_master_modified": false,
+      "sockets_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\Sockets\\RU_SSN_Yasen_SOCKETS.blend",
+      "sockets_fbx": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\Sockets\\RU_SSN_Yasen_SOCKETS.fbx",
+      "socket_count": 42,
+      "sockets": [
+        {
+          "name": "SOCKET_TORPEDO_01",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            55.8,
+            0.0,
+            7.2632
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_02",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            55.8,
+            0.0,
+            -0.2033
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_03",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            54.36,
+            0.0,
+            7.2632
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_04",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            54.36,
+            0.0,
+            -0.2033
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_05",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            52.92,
+            0.0,
+            7.2632
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_06",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            52.92,
+            0.0,
+            -0.2033
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_07",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            51.4799,
+            0.0,
+            7.2632
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_08",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            51.4799,
+            0.0,
+            -0.2033
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_09",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            50.0399,
+            0.0,
+            7.2632
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_10",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            50.0399,
+            0.0,
+            -0.2033
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_01",
+          "kind": "VLS",
+          "location_m": [
+            23.9998,
+            -4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_02",
+          "kind": "VLS",
+          "location_m": [
+            23.9998,
+            -2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_03",
+          "kind": "VLS",
+          "location_m": [
+            23.9998,
+            -0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_04",
+          "kind": "VLS",
+          "location_m": [
+            23.9998,
+            0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_05",
+          "kind": "VLS",
+          "location_m": [
+            23.9998,
+            2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_06",
+          "kind": "VLS",
+          "location_m": [
+            23.9998,
+            4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_07",
+          "kind": "VLS",
+          "location_m": [
+            17.3997,
+            -4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_08",
+          "kind": "VLS",
+          "location_m": [
+            17.3997,
+            -2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_09",
+          "kind": "VLS",
+          "location_m": [
+            17.3997,
+            -0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_10",
+          "kind": "VLS",
+          "location_m": [
+            17.3997,
+            0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_11",
+          "kind": "VLS",
+          "location_m": [
+            17.3997,
+            2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_12",
+          "kind": "VLS",
+          "location_m": [
+            17.3997,
+            4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_13",
+          "kind": "VLS",
+          "location_m": [
+            10.7997,
+            -4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_14",
+          "kind": "VLS",
+          "location_m": [
+            10.7997,
+            -2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_15",
+          "kind": "VLS",
+          "location_m": [
+            10.7997,
+            -0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_16",
+          "kind": "VLS",
+          "location_m": [
+            10.7997,
+            0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_17",
+          "kind": "VLS",
+          "location_m": [
+            10.7997,
+            2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_18",
+          "kind": "VLS",
+          "location_m": [
+            10.7997,
+            4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_19",
+          "kind": "VLS",
+          "location_m": [
+            4.1996,
+            -4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_20",
+          "kind": "VLS",
+          "location_m": [
+            4.1996,
+            -2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_21",
+          "kind": "VLS",
+          "location_m": [
+            4.1996,
+            -0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_22",
+          "kind": "VLS",
+          "location_m": [
+            4.1996,
+            0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_23",
+          "kind": "VLS",
+          "location_m": [
+            4.1996,
+            2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_24",
+          "kind": "VLS",
+          "location_m": [
+            4.1996,
+            4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_25",
+          "kind": "VLS",
+          "location_m": [
+            -2.4004,
+            -4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_26",
+          "kind": "VLS",
+          "location_m": [
+            -2.4004,
+            -2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_27",
+          "kind": "VLS",
+          "location_m": [
+            -2.4004,
+            -0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_28",
+          "kind": "VLS",
+          "location_m": [
+            -2.4004,
+            0.9633,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_29",
+          "kind": "VLS",
+          "location_m": [
+            -2.4004,
+            2.8898,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_30",
+          "kind": "VLS",
+          "location_m": [
+            -2.4004,
+            4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_31",
+          "kind": "VLS",
+          "location_m": [
+            -9.0004,
+            -4.8163,
+            14.0708
+          ]
+        },
+        {
+          "name": "SOCKET_VLS_32",
+          "kind": "VLS",
+          "location_m": [
+            -9.0004,
+            -2.8898,
+            14.0708
+          ]
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -60.001,
+          -8.601,
+          -7.45
+        ],
+        "max": [
+          60.0,
+          8.601,
+          14.51
+        ]
+      }
+    },
+    {
+      "asset_id": "RU_SSBN_Typhoon",
+      "status": "OK",
+      "source_master": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Blend\\RU_SSBN_Typhoon_MASTER.blend",
+      "source_master_modified": false,
+      "sockets_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Sockets\\RU_SSBN_Typhoon_SOCKETS.blend",
+      "sockets_fbx": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Sockets\\RU_SSBN_Typhoon_SOCKETS.fbx",
+      "socket_count": 32,
+      "sockets": [
+        {
+          "name": "SOCKET_TORPEDO_01",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            930.0,
+            0.0,
+            11.0722
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_02",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            930.0,
+            0.0,
+            1.3278
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_03",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            906.0,
+            0.0,
+            11.0722
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_04",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            906.0,
+            0.0,
+            1.3278
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_05",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            882.0,
+            0.0,
+            11.0722
+          ]
+        },
+        {
+          "name": "SOCKET_TORPEDO_06",
+          "kind": "TORPEDO_TUBE",
+          "location_m": [
+            882.0,
+            0.0,
+            1.3278
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_01",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            400.0,
+            -660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_02",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            400.0,
+            -220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_03",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            400.0,
+            220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_04",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            400.0,
+            660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_05",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            230.0,
+            -660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_06",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            230.0,
+            -220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_07",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            230.0,
+            220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_08",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            230.0,
+            660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_09",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            60.0,
+            -660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_10",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            60.0,
+            -220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_11",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            60.0,
+            220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_12",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            60.0,
+            660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_13",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            -110.0,
+            -660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_14",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            -110.0,
+            -220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_15",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            -110.0,
+            220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_16",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            -110.0,
+            660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_17",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            -280.0,
+            -660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_18",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            -280.0,
+            -220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_19",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            -280.0,
+            220.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_SLBM_20",
+          "kind": "SLBM_TUBE",
+          "location_m": [
+            -280.0,
+            660.0,
+            20.1001
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_01",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            930.0,
+            0.0,
+            11.0722
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_02",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            930.0,
+            0.0,
+            1.3278
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_03",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            906.0,
+            0.0,
+            11.0722
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_04",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            906.0,
+            0.0,
+            1.3278
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_05",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            882.0,
+            0.0,
+            11.0722
+          ]
+        },
+        {
+          "name": "SOCKET_MISSILE_06",
+          "kind": "MISSILE_TUBE",
+          "location_m": [
+            882.0,
+            0.0,
+            1.3278
+          ]
+        }
+      ],
+      "bounds_m": {
+        "min": [
+          -1000.0,
+          -1000.0,
+          -8.13
+        ],
+        "max": [
+          1000.0,
+          1000.0,
+          20.53
+        ]
+      }
+    }
+  ],
+  "pending": [
+    {
+      "asset_id": "US_SSN_Skipjack",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 6
+    },
+    {
+      "asset_id": "US_SSN_Sturgeon",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 8
+    },
+    {
+      "asset_id": "US_SSN_LosAngeles",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 20
+    },
+    {
+      "asset_id": "US_SSN_Seawolf",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 16
+    },
+    {
+      "asset_id": "US_SSN_Virginia",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 16
+    },
+    {
+      "asset_id": "US_SSBN_GeorgeWashington",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 20
+    },
+    {
+      "asset_id": "US_SSBN_EthanAllen",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 20
+    },
+    {
+      "asset_id": "US_SSBN_Lafayette",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 20
+    },
+    {
+      "asset_id": "US_SSBN_JamesMadison",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 20
+    },
+    {
+      "asset_id": "US_SSBN_BenjaminFranklin",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 20
+    },
+    {
+      "asset_id": "US_SSBN_Ohio",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 28
+    },
+    {
+      "asset_id": "US_SSBN_Columbia",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 20
+    },
+    {
+      "asset_id": "RU_SSN_November",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 6
+    },
+    {
+      "asset_id": "RU_SSN_Victor",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 14
+    },
+    {
+      "asset_id": "RU_SSN_Sierra",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 14
+    },
+    {
+      "asset_id": "RU_SSN_YasenM",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 42
+    },
+    {
+      "asset_id": "RU_SSBN_Hotel",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 9
+    },
+    {
+      "asset_id": "RU_SSBN_Yankee",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 22
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaI",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 18
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaII",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 22
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIII",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 28
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIV",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 24
+    },
+    {
+      "asset_id": "RU_SSBN_Borei",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 22
+    },
+    {
+      "asset_id": "RU_SSBN_BoreiA",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 22
+    },
+    {
+      "asset_id": "UK_SSN_Dreadnought",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 6
+    },
+    {
+      "asset_id": "UK_SSN_Valiant",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 12
+    },
+    {
+      "asset_id": "UK_SSN_Swiftsure",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 10
+    },
+    {
+      "asset_id": "UK_SSN_Trafalgar",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 10
+    },
+    {
+      "asset_id": "UK_SSN_Astute",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 12
+    },
+    {
+      "asset_id": "UK_SSN_AUKUS",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 12
+    },
+    {
+      "asset_id": "UK_SSBN_Resolution",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 22
+    },
+    {
+      "asset_id": "UK_SSBN_Vanguard",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 20
+    },
+    {
+      "asset_id": "UK_SSBN_Dreadnought",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 16
+    },
+    {
+      "asset_id": "FR_SSN_Rubis",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 8
+    },
+    {
+      "asset_id": "FR_SSN_Suffren",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 8
+    },
+    {
+      "asset_id": "FR_SSBN_LeRedoutable",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 24
+    },
+    {
+      "asset_id": "FR_SSBN_LeTriomphant",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 24
+    },
+    {
+      "asset_id": "FR_SSBN_SNLE3G",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 24
+    },
+    {
+      "asset_id": "CN_SSN_Type091",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 6
+    },
+    {
+      "asset_id": "CN_SSN_Type093",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 12
+    },
+    {
+      "asset_id": "CN_SSN_Type093A",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 12
+    },
+    {
+      "asset_id": "CN_SSN_Type093B",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 18
+    },
+    {
+      "asset_id": "CN_SSN_Type095",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 18
+    },
+    {
+      "asset_id": "CN_SSBN_Type092",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 18
+    },
+    {
+      "asset_id": "CN_SSBN_Type094",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 18
+    },
+    {
+      "asset_id": "CN_SSBN_Type094A",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 18
+    },
+    {
+      "asset_id": "CN_SSBN_Type096",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 22
+    },
+    {
+      "asset_id": "IN_SSBN_Arihant",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 10
+    },
+    {
+      "asset_id": "IN_SSBN_Arighaat",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 10
+    },
+    {
+      "asset_id": "IN_SSBN_S4",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 10
+    },
+    {
+      "asset_id": "IN_SSBN_S5",
+      "reason": "本地没有 MASTER.blend",
+      "sockets_declared": 10
+    }
+  ]
+}

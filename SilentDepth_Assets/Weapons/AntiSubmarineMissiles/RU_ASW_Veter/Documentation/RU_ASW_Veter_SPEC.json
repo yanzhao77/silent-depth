@@ -1,0 +1,90 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_ASW_Veter",
+  "display_name": "RPK-7 Veter",
+  "short_name": "Veter",
+  "country": "Russia",
+  "category": "ASW",
+  "family": "RU_ASW_Veter",
+  "role": "远程反潜导弹",
+  "subrole": "Rocket_Delivered",
+  "tier": 7,
+  "tier_reason": "游戏 T7 远程反潜节点：与 Vodopad 同族但弹体更长，载荷段比例不同。",
+  "era": "Cold War Late",
+  "service_years": "1980s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "VLS"
+  ],
+  "dimensions": {
+    "length_m": 8.9,
+    "diameter_m": 0.533,
+    "mass_kg": 2600,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "rocket_payload",
+    "features": [
+      "tube_launched",
+      "solid_booster",
+      "long_range"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "booster_len_ratio": 0.38,
+      "booster_fins": 4,
+      "booster_fin_span_ratio": 1.4,
+      "payload_shape": "torpedo",
+      "payload_separation_ring": 1,
+      "fins": 4,
+      "fin_span_ratio": 1.4,
+      "fin_chord_ratio": 1.0,
+      "bands": 3
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/RU_ASW_Veter_MASTER.blend",
+    "lod": [
+      "LOD/RU_ASW_Veter_LOD0.fbx",
+      "LOD/RU_ASW_Veter_LOD1.fbx",
+      "LOD/RU_ASW_Veter_LOD2.fbx",
+      "LOD/RU_ASW_Veter_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_ASW_Veter_LOD0.fbx",
+      "FBX/RU_ASW_Veter_LOD1.fbx",
+      "FBX/RU_ASW_Veter_LOD2.fbx",
+      "FBX/RU_ASW_Veter_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_ASW_Veter_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_ASW_Veter_COLLISION.json",
+    "source": "Source/RU_ASW_Veter_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2748,
+    "LOD1": 1164,
+    "LOD2": 508,
+    "LOD3": 340
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 8.9,
+  "built_max_diameter_m": 0.969517,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

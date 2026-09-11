@@ -1,0 +1,42 @@
+{
+  "weapon_id": "UK_TORP_Tigerfish_Mod1",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wire_dispenser",
+      "electric",
+      "improved_control"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "tail": "conical",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 1,
+      "bands": 3
+    }
+  },
+  "dimensions": {
+    "length_m": 6.5,
+    "diameter_m": 0.533,
+    "mass_kg": 1550,
+    "scale_source": "ESTIMATED",
+    "scale_note": "沿用同族近似。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "tier": 6,
+  "asset_priority": "LOW",
+  "scale_source": "ESTIMATED",
+  "scale_note": "沿用同族近似。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

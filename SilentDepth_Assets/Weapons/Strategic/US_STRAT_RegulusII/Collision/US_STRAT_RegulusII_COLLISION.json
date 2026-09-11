@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_STRAT_RegulusII",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_STRAT_RegulusII_SEG_00",
+      "centre": [
+        6.3,
+        0.0,
+        0.0
+      ],
+      "size": [
+        4.9,
+        0.5249999999999999,
+        0.5249999999999999
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_STRAT_RegulusII_SEG_01",
+      "centre": [
+        1.75,
+        0.0,
+        0.0
+      ],
+      "size": [
+        4.2,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_STRAT_RegulusII_SEG_02",
+      "centre": [
+        -3.5,
+        0.0,
+        0.0
+      ],
+      "size": [
+        6.3,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_STRAT_RegulusII_SEG_03",
+      "centre": [
+        -7.35,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.8000000000000003,
+        6.2441176470588236,
+        6.2441176470588236
+      ]
+    }
+  ],
+  "collision_fbx": "US_STRAT_RegulusII_COLLISION.fbx",
+  "collision_sha256": "7633a241080376f72ecc31a4c69bc4d04c2eb237a72b9c83cf36f4791b653fe9"
+}

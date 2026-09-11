@@ -1,0 +1,105 @@
+# SILENT DEPTH 武器资产并行生产运行日志
+
+运行时间：2026-09-11 00:15:19　总耗时：1491.1 秒
+工作进程：3　成功：95　失败：0
+Job 目录：`Tools\_jobs\run_20260910_235027`
+
+| 工作进程 | 武器 | LOD0 三角面 | 构建耗时(s) |
+| --- | --- | --- | --- |
+| 0 | RU_SLBM_R29RMU2_Sineva | 3168 | 3.13 |
+| 0 | RU_SLBM_R30_Bulava | 2880 | 2.17 |
+| 0 | RU_ASM_P500 | 3432 | 1.05 |
+| 0 | RU_TORP_6576 | 3816 | 1.89 |
+| 0 | RU_TORP_6576A | 3816 | 3.0 |
+| 0 | FR_SLBM_M20 | 3168 | 0.68 |
+| 0 | FR_SLBM_M1 | 2880 | 2.09 |
+| 0 | RU_ASM_P5 | 3144 | 2.39 |
+| 0 | US_SLBM_Polaris_A3 | 2880 | 2.79 |
+| 0 | RU_ASM_Oniks | 3720 | 1.64 |
+| 0 | RU_TORP_Shkval | 3552 | 0.94 |
+| 0 | RU_ASW_Vodopad | 3216 | 3.61 |
+| 0 | RU_SPECIAL_SDV_Sirena | 840 | 1.77 |
+| 0 | IN_TORP_Varunastra | 3528 | 0.93 |
+| 0 | RU_ASM_P70 | 3432 | 1.68 |
+| 0 | UK_TORP_Spearfish_Mod1 | 3942 | 2.3 |
+| 0 | RU_TORP_5365M | 3516 | 0.98 |
+| 0 | US_ASW_SUBROC | 2928 | 1.03 |
+| 0 | UK_TORP_Mk8 | 2832 | 2.27 |
+| 0 | UK_TORP_Tigerfish_Mod1 | 3528 | 0.81 |
+| 0 | RU_TORP_UGST_M | 3816 | 2.4 |
+| 0 | US_LAM_Tomahawk_BlockV | 4008 | 1.52 |
+| 0 | RU_LAM_Kalibr_3M14 | 3720 | 2.37 |
+| 0 | CN_ASW_CY1 | 2928 | 0.77 |
+| 0 | US_TORP_Mk48_Mod6 | 3828 | 0.79 |
+| 0 | US_LAM_Tomahawk | 3432 | 0.69 |
+| 0 | FR_TORP_L5_Mod4 | 3540 | 0.58 |
+| 0 | US_MINE_Mk67_SLMM | 432 | 0.56 |
+| 0 | US_MINE_Mk60_CAPTOR | 432 | 0.42 |
+| 0 | RU_MINE_MDM6 | 432 | 1.08 |
+| 0 | RU_DECOY_MG74 | 996 | 0.49 |
+| 0 | US_DECOY_ADC_Mk5 | 996 | 0.85 |
+| 1 | RU_SLBM_R29RMU2_Liner | 3456 | 3.47 |
+| 1 | FR_SLBM_M51 | 3456 | 3.01 |
+| 1 | RU_ASM_P1000 | 3720 | 1.47 |
+| 1 | FR_SLBM_M4 | 2880 | 3.62 |
+| 1 | CN_SLBM_JL1 | 2880 | 2.65 |
+| 1 | RU_ASM_P6 | 3432 | 2.87 |
+| 1 | US_SLBM_Poseidon_C3 | 3168 | 1.4 |
+| 1 | IN_SLBM_K15 | 2880 | 2.16 |
+| 1 | RU_ASM_Zircon | 504 | 1.07 |
+| 1 | RU_ASW_Veter | 3216 | 2.33 |
+| 1 | CN_ASM_YJ18 | 3720 | 1.4 |
+| 1 | RU_LAM_Granat | 3432 | 1.33 |
+| 1 | RU_TORP_TEST71M | 3540 | 1.76 |
+| 1 | RU_TORP_USET80 | 3528 | 1.13 |
+| 1 | RU_TORP_5365K | 3228 | 1.61 |
+| 1 | RU_TORP_SET53 | 2940 | 2.22 |
+| 1 | CN_TORP_Yu4 | 3240 | 3.94 |
+| 1 | CN_TORP_Yu5 | 3540 | 0.95 |
+| 1 | RU_ASW_Otvet | 3216 | 1.71 |
+| 1 | RU_TORP_Fizik | 3528 | 2.35 |
+| 1 | US_LAM_Tomahawk_BlockIII | 3432 | 2.57 |
+| 1 | US_ASM_Tomahawk_TASM | 3432 | 1.76 |
+| 1 | FR_TORP_F21 | 3942 | 2.21 |
+| 1 | CN_ASM_YJ8 | 3432 | 0.95 |
+| 1 | US_TORP_Mk48_Mod7 | 3828 | 2.75 |
+| 1 | FR_TORP_F17 | 3540 | 0.99 |
+| 1 | RU_ASM_P120 | 3432 | 1.75 |
+| 1 | FR_ASM_Exocet_SM39 | 3432 | 0.99 |
+| 1 | CN_TORP_Yu7 | 2856 | 0.94 |
+| 1 | RU_MINE_PMR2 | 732 | 1.11 |
+| 1 | US_DECOY_Mk70_MOSS | 996 | 1.79 |
+| 1 | UK_DECOY_SSE_Mk3 | 420 | 1.64 |
+| 2 | RU_SLBM_R21 | 2880 | 3.19 |
+| 2 | RU_SLBM_R13 | 2592 | 2.21 |
+| 2 | US_SPECIAL_DDS | 588 | 0.82 |
+| 2 | FR_SLBM_M45 | 3168 | 0.89 |
+| 2 | FR_SLBM_M2 | 2880 | 1.92 |
+| 2 | US_SLBM_Trident_C4 | 2880 | 0.83 |
+| 2 | RU_ASM_P700 | 3432 | 1.74 |
+| 2 | UK_SPECIAL_DDS | 588 | 1.56 |
+| 2 | RU_SLBM_R27 | 3168 | 3.38 |
+| 2 | US_SLBM_Polaris_A1 | 2592 | 0.86 |
+| 2 | RU_ASM_Kalibr_3M54 | 3720 | 1.58 |
+| 2 | RU_TORP_TEST71 | 3528 | 1.53 |
+| 2 | RU_TORP_TEST96 | 3828 | 1.04 |
+| 2 | RU_TORP_USET80K | 3528 | 1.25 |
+| 2 | CN_TORP_Yu6 | 3840 | 2.32 |
+| 2 | RU_TORP_SET65 | 3240 | 3.02 |
+| 2 | RU_TORP_SAET60 | 3228 | 0.99 |
+| 2 | FR_LAM_MdCN | 3432 | 1.61 |
+| 2 | CN_TORP_Yu1 | 2832 | 2.55 |
+| 2 | US_SPECIAL_SDV_Mk8 | 840 | 0.83 |
+| 2 | US_LAM_Tomahawk_BlockIV | 3720 | 1.02 |
+| 2 | US_TORP_Mk16 | 2940 | 2.62 |
+| 2 | RU_ASW_Vyuga | 2928 | 1.54 |
+| 2 | US_TORP_Mk48_ADCAP | 3528 | 0.84 |
+| 2 | US_TORP_Mk45 | 3528 | 0.77 |
+| 2 | FR_TORP_L5_Mod3 | 3528 | 0.67 |
+| 2 | US_TORP_Mk37_Mod2 | 2952 | 0.62 |
+| 2 | US_ASM_Harpoon | 3432 | 0.75 |
+| 2 | UK_TORP_StingRay | 3342 | 0.67 |
+| 2 | UK_MINE_SeaUrchin | 432 | 0.46 |
+| 2 | US_DECOY_ADC_Mk4 | 996 | 0.75 |
+
+失败项已写入 weapon_production_queue.json 的 retry_queue。

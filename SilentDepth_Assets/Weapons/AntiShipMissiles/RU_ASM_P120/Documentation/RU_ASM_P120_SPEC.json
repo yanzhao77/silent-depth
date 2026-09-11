@@ -1,0 +1,100 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_ASM_P120",
+  "display_name": "P-120 Malakhit",
+  "short_name": "P-120",
+  "country": "Russia",
+  "category": "ASM",
+  "family": "RU_ASM_P120",
+  "role": "冷战反舰巡航导弹（潜射型）",
+  "subrole": "Cold_War_Cruise",
+  "tier": 5,
+  "tier_reason": "游戏 T5 中段节点：弹体比 P-70 更粗，短粗外形便于与后续型号区分。",
+  "era": "Cold War",
+  "service_years": "1970s-1990s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 5.0,
+    "diameter_m": 0.55,
+    "mass_kg": 2900,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "cruise_missile",
+    "features": [
+      "tube_launched",
+      "folding_wing"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 2.0,
+      "body_shape": "cylinder",
+      "wing_type": "folding",
+      "wing_pairs": 1,
+      "wing_span_ratio": 3.2,
+      "wing_chord_ratio": 1.1,
+      "wing_position": 0.4,
+      "wing_sweep_deg": 30.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 2.0,
+      "tail_chord_ratio": 0.9,
+      "intake_type": "none",
+      "intake_position": 0.2,
+      "intake_len_ratio": 1.2,
+      "booster": 1,
+      "booster_len_ratio": 0.24,
+      "booster_fins": 0,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 0,
+      "canister": 1
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/RU_ASM_P120_MASTER.blend",
+    "lod": [
+      "LOD/RU_ASM_P120_LOD0.fbx",
+      "LOD/RU_ASM_P120_LOD1.fbx",
+      "LOD/RU_ASM_P120_LOD2.fbx",
+      "LOD/RU_ASM_P120_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_ASM_P120_LOD0.fbx",
+      "FBX/RU_ASM_P120_LOD1.fbx",
+      "FBX/RU_ASM_P120_LOD2.fbx",
+      "FBX/RU_ASM_P120_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_ASM_P120_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_ASM_P120_COLLISION.json",
+    "source": "Source/RU_ASM_P120_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3420,
+    "LOD1": 1164,
+    "LOD2": 604,
+    "LOD3": 400
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 5.0,
+  "built_max_diameter_m": 1.378667,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

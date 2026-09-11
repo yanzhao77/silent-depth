@@ -1,0 +1,81 @@
+{
+  "weapon_id": "RU_TORP_Shkval",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 2070,
+      "triangles": 3840,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        8.1867,
+        0.549,
+        0.549
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 750,
+      "triangles": 1344,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        8.1867,
+        0.549,
+        0.549
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 3,
+      "vertices": 310,
+      "triangles": 608,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        8.1867,
+        0.533,
+        0.533
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 3,
+      "vertices": 196,
+      "triangles": 380,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        8.1867,
+        0.533,
+        0.5069
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      8.2,
+      0.533,
+      0.533
+    ]
+  },
+  "result": "PASS"
+}

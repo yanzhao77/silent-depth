@@ -1,0 +1,166 @@
+{
+  "weapon_id": "FR_TORP_F21",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 6.0,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 6.000617,
+  "built_max_diameter_m": 0.591089,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2286,
+      "triangles": 4026
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 990,
+      "triangles": 1638
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 502,
+      "triangles": 854
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 424,
+      "triangles": 698
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_FR_TORP_F21_SEG_00",
+    "UCX_WPN_FR_TORP_F21_SEG_01",
+    "UCX_WPN_FR_TORP_F21_SEG_02",
+    "UCX_WPN_FR_TORP_F21_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.0006165504455566,
+      3.0
+    ],
+    "y": [
+      -0.2955445647239685,
+      0.2955445647239685
+    ],
+    "z": [
+      -0.27694836258888245,
+      0.31180500984191895
+    ],
+    "dimensions_m": [
+      6.000616550445557,
+      0.591089129447937,
+      0.5887533724308014
+    ],
+    "centre": [
+      -0.0003082752227783203,
+      0.0,
+      0.01742832362651825
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/FR_TORP_F21_LOD0.fbx",
+        "mirror": "FBX/FR_TORP_F21_LOD0.fbx",
+        "sha256": "8f13f330c0bbc6daa5566a62de70fef39e017ef367727a1088d0c4ed63fc4659",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/FR_TORP_F21_LOD1.fbx",
+        "mirror": "FBX/FR_TORP_F21_LOD1.fbx",
+        "sha256": "cf232725059497ead6c0e88c3c8ca26997707743dcf4940bc04b94bd7ff379ff",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/FR_TORP_F21_LOD2.fbx",
+        "mirror": "FBX/FR_TORP_F21_LOD2.fbx",
+        "sha256": "25057a2ae280ebb2aff09fe2d999712462088644fa8bce329134c8c50525409b",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/FR_TORP_F21_LOD3.fbx",
+        "mirror": "FBX/FR_TORP_F21_LOD3.fbx",
+        "sha256": "a6ecd2c219b9dc3b2bc58318cb4fdb507e482eed6e8a4deb16f7f603bf185482",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/FR_TORP_F21_COLLISION.fbx",
+      "sha256": "8b26167a51133321961a781b5521ce685493ec77c866a2034e158da91532e7a4"
+    },
+    "collision_manifest": {
+      "path": "Collision/FR_TORP_F21_COLLISION.json",
+      "sha256": "2925d7e88564d3ee64feb40d210c91f7a31a491ad0afb147cf625ffa26a6979d"
+    }
+  },
+  "build_seconds": 0.84,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.29,
+    "SIDE": 0.33,
+    "FRONT": 0.3,
+    "TOP": 0.34,
+    "DETAIL": 0.29,
+    "ICON": 0.25
+  },
+  "previews": [
+    "Detail.png",
+    "FR_TORP_F21_DETAIL_128.png",
+    "FR_TORP_F21_DETAIL_256.png",
+    "FR_TORP_F21_DETAIL_512.png",
+    "FR_TORP_F21_FRONT_128.png",
+    "FR_TORP_F21_FRONT_256.png",
+    "FR_TORP_F21_FRONT_512.png",
+    "FR_TORP_F21_ICON_128.png",
+    "FR_TORP_F21_ICON_256.png",
+    "FR_TORP_F21_ICON_512.png",
+    "FR_TORP_F21_PERSPECTIVE_128.png",
+    "FR_TORP_F21_PERSPECTIVE_256.png",
+    "FR_TORP_F21_PERSPECTIVE_512.png",
+    "FR_TORP_F21_SIDE_128.png",
+    "FR_TORP_F21_SIDE_256.png",
+    "FR_TORP_F21_SIDE_512.png",
+    "FR_TORP_F21_TOP_128.png",
+    "FR_TORP_F21_TOP_256.png",
+    "FR_TORP_F21_TOP_512.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/FR_TORP_F21_MASTER.blend",
+      "sha256": "d9b2cd76b65bf0506c8d6f3cff57b276844edb2d28194c6b0cddd344cb513315"
+    },
+    "source": {
+      "path": "Source/FR_TORP_F21_SOURCE.json",
+      "sha256": "551f6623371f9f337463801a8fd4f7359e1b26ef2485862e0f068879886f3e46"
+    },
+    "spec": {
+      "path": "Documentation/FR_TORP_F21_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/FR_TORP_F21_README.md"
+    }
+  }
+}

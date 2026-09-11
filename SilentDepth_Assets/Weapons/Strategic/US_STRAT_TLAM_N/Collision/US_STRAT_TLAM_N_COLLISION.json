@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_STRAT_TLAM_N",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_STRAT_TLAM_N_SEG_00",
+      "centre": [
+        2.25,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.7500000000000002,
+        0.182,
+        0.182
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_STRAT_TLAM_N_SEG_01",
+      "centre": [
+        0.625,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.5,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_STRAT_TLAM_N_SEG_02",
+      "centre": [
+        -1.25,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.25,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_STRAT_TLAM_N_SEG_03",
+      "centre": [
+        -2.625,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.0,
+        1.7788486274509807,
+        1.7788486274509807
+      ]
+    }
+  ],
+  "collision_fbx": "US_STRAT_TLAM_N_COLLISION.fbx",
+  "collision_sha256": "e86b673327fb40272447ab95412b34ccca53c0a8f731d0a8b815c20921b2aa32"
+}

@@ -1,0 +1,102 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_ASM_P500",
+  "display_name": "P-500 Bazalt",
+  "short_name": "P-500",
+  "country": "Russia",
+  "category": "ASM",
+  "family": "RU_ASM_P500",
+  "role": "重型超音速反舰导弹",
+  "subrole": "Supersonic_Anti_Ship",
+  "tier": 6,
+  "tier_reason": "游戏 T6 超音速反舰主力：固体助推 + 冲压主级，尾翼与进气道结构清晰。",
+  "era": "Cold War",
+  "service_years": "1975-present",
+  "launch_methods": [
+    "VLS",
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 11.7,
+    "diameter_m": 0.88,
+    "mass_kg": 4800,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料长度约 11.7 米。"
+  },
+  "geometry": {
+    "kind": "supersonic_missile",
+    "features": [
+      "ramjet",
+      "solid_booster",
+      "large_tail"
+    ],
+    "params": {
+      "nose": "conical",
+      "nose_len_ratio": 3.2,
+      "body_shape": "cylinder",
+      "wing_type": "fixed",
+      "wing_pairs": 1,
+      "wing_span_ratio": 2.4,
+      "wing_chord_ratio": 1.5,
+      "wing_position": 0.55,
+      "wing_sweep_deg": 52.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 2.4,
+      "tail_chord_ratio": 1.0,
+      "intake_type": "four",
+      "intake_position": 0.26,
+      "intake_len_ratio": 1.8,
+      "booster": 1,
+      "booster_len_ratio": 0.24,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/RU_ASM_P500_MASTER.blend",
+    "lod": [
+      "LOD/RU_ASM_P500_LOD0.fbx",
+      "LOD/RU_ASM_P500_LOD1.fbx",
+      "LOD/RU_ASM_P500_LOD2.fbx",
+      "LOD/RU_ASM_P500_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_ASM_P500_LOD0.fbx",
+      "FBX/RU_ASM_P500_LOD1.fbx",
+      "FBX/RU_ASM_P500_LOD2.fbx",
+      "FBX/RU_ASM_P500_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_ASM_P500_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_ASM_P500_COLLISION.json",
+    "source": "Source/RU_ASM_P500_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3840,
+    "LOD1": 1392,
+    "LOD2": 688,
+    "LOD3": 484
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 11.7,
+  "built_max_diameter_m": 2.115624,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料长度约 11.7 米。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

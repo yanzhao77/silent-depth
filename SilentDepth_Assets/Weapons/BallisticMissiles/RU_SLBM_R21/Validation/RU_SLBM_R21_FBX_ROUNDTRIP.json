@@ -1,0 +1,82 @@
+{
+  "weapon_id": "RU_SLBM_R21",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 6,
+      "vertices": 1640,
+      "triangles": 2976,
+      "materials": [
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Nose",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        13.0,
+        1.47,
+        1.47
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 606,
+      "triangles": 1056,
+      "materials": [
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        13.0,
+        1.47,
+        1.47
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 278,
+      "triangles": 512,
+      "materials": [
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        13.0,
+        1.47,
+        1.47
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 176,
+      "triangles": 320,
+      "materials": [
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        13.0,
+        1.47,
+        1.3981
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      13.0,
+      1.4,
+      1.4
+    ]
+  },
+  "result": "PASS"
+}

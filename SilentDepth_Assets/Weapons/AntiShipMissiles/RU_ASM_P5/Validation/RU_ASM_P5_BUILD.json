@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_ASM_P5",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "cruise_missile",
+  "declared_length_m": 10.0,
+  "declared_diameter_m": 1.0,
+  "built_length_m": 10.0,
+  "built_max_diameter_m": 3.637843,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 1636,
+      "triangles": 3144
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 556,
+      "triangles": 1032
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 324,
+      "triangles": 616
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 222,
+      "triangles": 412
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_ASM_P5_SEG_00",
+    "UCX_WPN_RU_ASM_P5_SEG_01",
+    "UCX_WPN_RU_ASM_P5_SEG_02",
+    "UCX_WPN_RU_ASM_P5_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -5.0,
+      5.0
+    ],
+    "y": [
+      -1.0661176443099976,
+      1.0661176443099976
+    ],
+    "z": [
+      -1.0661176443099976,
+      2.571725606918335
+    ],
+    "dimensions_m": [
+      10.0,
+      2.132235288619995,
+      3.6378432512283325
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.7528039813041687
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_ASM_P5_LOD0.fbx",
+        "mirror": "FBX/RU_ASM_P5_LOD0.fbx",
+        "sha256": "f75d3a569a86b245ccd76547b5e39ec5713c57dde27386c1c04db09316d14969",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_ASM_P5_LOD1.fbx",
+        "mirror": "FBX/RU_ASM_P5_LOD1.fbx",
+        "sha256": "dbb6329737cdad95771ff335a64eb65474dfde70a1953cc3f0ec689ae4972ceb",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_ASM_P5_LOD2.fbx",
+        "mirror": "FBX/RU_ASM_P5_LOD2.fbx",
+        "sha256": "15da797138788a2c26b722b1384c5de5e5f8a47338e8eee8d821ee76ba0a2e27",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_ASM_P5_LOD3.fbx",
+        "mirror": "FBX/RU_ASM_P5_LOD3.fbx",
+        "sha256": "50240fd4e1bd62c8b213e9dad04875ae2a81ef4db23100ed3a5ba8ff7cd335e5",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_ASM_P5_COLLISION.fbx",
+      "sha256": "4c3468a0bf7843884586bd24bb776ca671f70548a62d88f96767b83c2ad0246d"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_ASM_P5_COLLISION.json",
+      "sha256": "9b2de5464f62a2030f7ba5743e9d12224b8d7c0003593c5d9d5c2e67c56753e0"
+    }
+  },
+  "build_seconds": 0.52,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.37,
+    "SIDE": 0.33,
+    "FRONT": 0.33,
+    "TOP": 0.31,
+    "DETAIL": 0.41,
+    "ICON": 0.3
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_ASM_P5_DETAIL_128.png",
+    "RU_ASM_P5_DETAIL_256.png",
+    "RU_ASM_P5_DETAIL_512.png",
+    "RU_ASM_P5_FRONT_128.png",
+    "RU_ASM_P5_FRONT_256.png",
+    "RU_ASM_P5_FRONT_512.png",
+    "RU_ASM_P5_ICON_128.png",
+    "RU_ASM_P5_ICON_256.png",
+    "RU_ASM_P5_ICON_512.png",
+    "RU_ASM_P5_PERSPECTIVE_128.png",
+    "RU_ASM_P5_PERSPECTIVE_256.png",
+    "RU_ASM_P5_PERSPECTIVE_512.png",
+    "RU_ASM_P5_SIDE_128.png",
+    "RU_ASM_P5_SIDE_256.png",
+    "RU_ASM_P5_SIDE_512.png",
+    "RU_ASM_P5_TOP_128.png",
+    "RU_ASM_P5_TOP_256.png",
+    "RU_ASM_P5_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_ASM_P5_MASTER.blend",
+      "sha256": "2ad4b6e5f0befe7a8f4b3ec9b1eb396ea9cb828310e7ef9142d9981bbf7413b0"
+    },
+    "source": {
+      "path": "Source/RU_ASM_P5_SOURCE.json",
+      "sha256": "95977362d86d80945fde05adbbf4d2823c3f678bce7d5905609e20e87ddbc5ed"
+    },
+    "spec": {
+      "path": "Documentation/RU_ASM_P5_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_ASM_P5_README.md"
+    }
+  }
+}

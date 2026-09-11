@@ -1,0 +1,90 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "CN_SLBM_JL2A",
+  "display_name": "JL-2A",
+  "short_name": "JL-2A",
+  "country": "China",
+  "category": "SLBM",
+  "family": "CN_SLBM_JL2",
+  "role": "远程潜射弹道导弹改进型",
+  "subrole": "Modern_SLBM",
+  "tier": 8,
+  "tier_reason": "游戏 T8 改进型：与 JL-2 共享弹体几何，仅在数据层区分批次与弹头配置。",
+  "era": "Modern",
+  "service_years": "2010s-present",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 13.0,
+    "diameter_m": 2.0,
+    "mass_kg": 42000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "沿用同族近似。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "three_stage",
+      "wide_body",
+      "improved_bus"
+    ],
+    "params": {
+      "nose": "shroud_dome",
+      "nose_len_ratio": 1.5,
+      "stage_count": 3,
+      "stage_bands": 3,
+      "tail": "tail_skirt",
+      "tail_len_ratio": 1.6,
+      "skirt_fin_count": 4,
+      "skirt_fin_span_ratio": 1.25,
+      "nozzle_count": 1,
+      "cable_tray": 1,
+      "canister_fit": true,
+      "fin_count": 0
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/CN_SLBM_JL2A_MASTER.blend",
+    "lod": [
+      "LOD/CN_SLBM_JL2A_LOD0.fbx",
+      "LOD/CN_SLBM_JL2A_LOD1.fbx",
+      "LOD/CN_SLBM_JL2A_LOD2.fbx",
+      "LOD/CN_SLBM_JL2A_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/CN_SLBM_JL2A_LOD0.fbx",
+      "FBX/CN_SLBM_JL2A_LOD1.fbx",
+      "FBX/CN_SLBM_JL2A_LOD2.fbx",
+      "FBX/CN_SLBM_JL2A_LOD3.fbx"
+    ],
+    "collision": "Collision/CN_SLBM_JL2A_COLLISION.fbx",
+    "collision_manifest": "Collision/CN_SLBM_JL2A_COLLISION.json",
+    "source": "Source/CN_SLBM_JL2A_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2304,
+    "LOD1": 672,
+    "LOD2": 448,
+    "LOD3": 280
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 13.0,
+  "built_max_diameter_m": 2.0,
+  "scale_source": "ESTIMATED",
+  "scale_note": "沿用同族近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

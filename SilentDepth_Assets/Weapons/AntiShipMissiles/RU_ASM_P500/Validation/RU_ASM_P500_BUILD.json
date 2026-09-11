@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_ASM_P500",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "supersonic_missile",
+  "declared_length_m": 11.7,
+  "declared_diameter_m": 0.88,
+  "built_length_m": 11.7,
+  "built_max_diameter_m": 2.115624,
+  "lod": {
+    "LOD0": {
+      "objects": 7,
+      "vertices": 2100,
+      "triangles": 3840
+    },
+    "LOD1": {
+      "objects": 6,
+      "vertices": 796,
+      "triangles": 1392
+    },
+    "LOD2": {
+      "objects": 5,
+      "vertices": 372,
+      "triangles": 688
+    },
+    "LOD3": {
+      "objects": 5,
+      "vertices": 270,
+      "triangles": 484
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_ASM_P500_SEG_00",
+    "UCX_WPN_RU_ASM_P500_SEG_01",
+    "UCX_WPN_RU_ASM_P500_SEG_02",
+    "UCX_WPN_RU_ASM_P500_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -5.849999904632568,
+      5.849999904632568
+    ],
+    "y": [
+      -0.7371557354927063,
+      0.7371557354927063
+    ],
+    "z": [
+      -0.8334117531776428,
+      1.2822117805480957
+    ],
+    "dimensions_m": [
+      11.699999809265137,
+      1.4743114709854126,
+      2.1156235337257385
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.22440001368522644
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_ASM_P500_LOD0.fbx",
+        "mirror": "FBX/RU_ASM_P500_LOD0.fbx",
+        "sha256": "864bd510d0614d30259c4f1ae7e1ee38d64e47fdfb4cefb97b4b2af393983980",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_ASM_P500_LOD1.fbx",
+        "mirror": "FBX/RU_ASM_P500_LOD1.fbx",
+        "sha256": "f88f66c7b857aa464b0c9b392375a93b881cd0a026fec1006242dacac3ff6aff",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_ASM_P500_LOD2.fbx",
+        "mirror": "FBX/RU_ASM_P500_LOD2.fbx",
+        "sha256": "d49c19fb1a016c810c1f5f7096b4b26ed9f53539926a541f686a8e2444a893c5",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_ASM_P500_LOD3.fbx",
+        "mirror": "FBX/RU_ASM_P500_LOD3.fbx",
+        "sha256": "cc5942f157f1918b96e568a3036262b4b36a6c823859d6344e95e4a24de8d9e0",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_ASM_P500_COLLISION.fbx",
+      "sha256": "3ca9ed0e54a9b5cea1583564497a0e4e2145c59df120f37f5ce5ed4200e8b43f"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_ASM_P500_COLLISION.json",
+      "sha256": "58b3989b97d2791aecc74a975fe5a6febab023ec4eb8da894eee94e5f8b55ab4"
+    }
+  },
+  "build_seconds": 0.35,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.3,
+    "SIDE": 0.31,
+    "FRONT": 0.3,
+    "TOP": 0.33,
+    "DETAIL": 0.31,
+    "ICON": 0.33
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_ASM_P500_DETAIL_128.png",
+    "RU_ASM_P500_DETAIL_256.png",
+    "RU_ASM_P500_DETAIL_512.png",
+    "RU_ASM_P500_FRONT_128.png",
+    "RU_ASM_P500_FRONT_256.png",
+    "RU_ASM_P500_FRONT_512.png",
+    "RU_ASM_P500_ICON_128.png",
+    "RU_ASM_P500_ICON_256.png",
+    "RU_ASM_P500_ICON_512.png",
+    "RU_ASM_P500_PERSPECTIVE_128.png",
+    "RU_ASM_P500_PERSPECTIVE_256.png",
+    "RU_ASM_P500_PERSPECTIVE_512.png",
+    "RU_ASM_P500_SIDE_128.png",
+    "RU_ASM_P500_SIDE_256.png",
+    "RU_ASM_P500_SIDE_512.png",
+    "RU_ASM_P500_TOP_128.png",
+    "RU_ASM_P500_TOP_256.png",
+    "RU_ASM_P500_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_ASM_P500_MASTER.blend",
+      "sha256": "d37e931362f5b2eb9739b2d01b9e275e9cc08b9d70f65f7a116e9fe85f17d0bc"
+    },
+    "source": {
+      "path": "Source/RU_ASM_P500_SOURCE.json",
+      "sha256": "8ccad64effe5a325929a5fb24c8e4f2bb4c508890bec824b6097b54586160328"
+    },
+    "spec": {
+      "path": "Documentation/RU_ASM_P500_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_ASM_P500_README.md"
+    }
+  }
+}

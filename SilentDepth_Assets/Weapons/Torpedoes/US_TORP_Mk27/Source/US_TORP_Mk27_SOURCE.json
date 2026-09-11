@@ -1,0 +1,41 @@
+{
+  "weapon_id": "US_TORP_Mk27",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "acoustic_homing",
+      "short_body"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.0,
+      "tail": "conical",
+      "tail_len_ratio": 0.6,
+      "fin_count": 4,
+      "fin_span_ratio": 1.8,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "propeller",
+      "wire_dispenser": 0,
+      "sonar_windows": 1,
+      "bands": 1
+    }
+  },
+  "dimensions": {
+    "length_m": 3.24,
+    "diameter_m": 0.533,
+    "mass_kg": 1170,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "短弹体，公开资料长度约 3.2 米。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "tier": 2,
+  "asset_priority": "LOW",
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "短弹体，公开资料长度约 3.2 米。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

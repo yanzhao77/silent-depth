@@ -1,0 +1,22 @@
+{
+  "weapon_id": "UK_SPECIAL_DDS",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_UK_SPECIAL_DDS_SEG_00",
+      "centre": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        10.0,
+        2.5,
+        2.3000000000000003
+      ]
+    }
+  ],
+  "collision_fbx": "UK_SPECIAL_DDS_COLLISION.fbx",
+  "collision_sha256": "547f570f14b1022ac6f5f1598e2f99a60be98b773143390591ffcebeb2f50011"
+}

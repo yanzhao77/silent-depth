@@ -1,0 +1,86 @@
+{
+  "weapon_id": "US_SLBM_Trident_C4",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 6,
+      "vertices": 2280,
+      "triangles": 4152,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Nose",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        10.4,
+        1.974,
+        2.6132
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 814,
+      "triangles": 1416,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        10.4,
+        1.974,
+        2.6132
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 422,
+      "triangles": 760,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        10.4,
+        1.974,
+        2.6132
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 272,
+      "triangles": 484,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        10.4,
+        1.974,
+        2.6132
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      10.4,
+      1.88,
+      1.88
+    ]
+  },
+  "result": "PASS"
+}

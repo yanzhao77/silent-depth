@@ -1,0 +1,89 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_TORP_Fizik",
+  "display_name": "Fizik torpedo",
+  "short_name": "Fizik",
+  "country": "Russia",
+  "category": "TORP",
+  "family": "RU_TORP_Fizik",
+  "role": "新一代深水高速鱼雷",
+  "subrole": "Future",
+  "tier": 9,
+  "tier_reason": "游戏 T9 新一代节点：公开资料有限，几何按可确认外形特征建模。",
+  "era": "Modern",
+  "service_years": "2010s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 6.5,
+    "diameter_m": 0.533,
+    "mass_kg": 2000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料不足，尺寸为级别估计。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "deep_water",
+      "high_speed",
+      "wire_dispenser"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 2.2,
+      "tail": "conical",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 1,
+      "bands": 3
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/RU_TORP_Fizik_MASTER.blend",
+    "lod": [
+      "LOD/RU_TORP_Fizik_LOD0.fbx",
+      "LOD/RU_TORP_Fizik_LOD1.fbx",
+      "LOD/RU_TORP_Fizik_LOD2.fbx",
+      "LOD/RU_TORP_Fizik_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_TORP_Fizik_LOD0.fbx",
+      "FBX/RU_TORP_Fizik_LOD1.fbx",
+      "FBX/RU_TORP_Fizik_LOD2.fbx",
+      "FBX/RU_TORP_Fizik_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_TORP_Fizik_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_TORP_Fizik_COLLISION.json",
+    "source": "Source/RU_TORP_Fizik_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3624,
+    "LOD1": 1404,
+    "LOD2": 764,
+    "LOD3": 608
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 6.486269,
+  "built_max_diameter_m": 0.844878,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料不足，尺寸为级别估计。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

@@ -1,0 +1,166 @@
+{
+  "weapon_id": "CN_ASW_CY1",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "rocket_payload",
+  "declared_length_m": 6.0,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 6.0,
+  "built_max_diameter_m": 0.639501,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 1758,
+      "triangles": 3300
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 654,
+      "triangles": 1188
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 318,
+      "triangles": 612
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 210,
+      "triangles": 396
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_CN_ASW_CY1_SEG_00",
+    "UCX_WPN_CN_ASW_CY1_SEG_01",
+    "UCX_WPN_CN_ASW_CY1_SEG_02",
+    "UCX_WPN_CN_ASW_CY1_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.0,
+      3.0
+    ],
+    "y": [
+      -0.29848000407218933,
+      0.34102070331573486
+    ],
+    "z": [
+      -0.30532634258270264,
+      0.30532634258270264
+    ],
+    "dimensions_m": [
+      6.0,
+      0.6395007073879242,
+      0.6106526851654053
+    ],
+    "centre": [
+      0.0,
+      0.021270349621772766,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/CN_ASW_CY1_LOD0.fbx",
+        "mirror": "FBX/CN_ASW_CY1_LOD0.fbx",
+        "sha256": "079da92ff027afbccfabcce7af2ecc3ab721ee91f762234537d6c1cdd71fb7b5",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/CN_ASW_CY1_LOD1.fbx",
+        "mirror": "FBX/CN_ASW_CY1_LOD1.fbx",
+        "sha256": "85b428d85b34fe0ceafa5cb0cf80ed24cac99e4ce0d3b9c6f7148a71ead81413",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/CN_ASW_CY1_LOD2.fbx",
+        "mirror": "FBX/CN_ASW_CY1_LOD2.fbx",
+        "sha256": "a820005a068c6548d5dcbfd7185c05dd8611d3f4df3ea06bf91757b636bf9260",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/CN_ASW_CY1_LOD3.fbx",
+        "mirror": "FBX/CN_ASW_CY1_LOD3.fbx",
+        "sha256": "e9185e4df055c0981d1341001950f0d18f8d93921fddac27d6fd2711aff67c85",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/CN_ASW_CY1_COLLISION.fbx",
+      "sha256": "870a5681ef57b5023419fa116748a2dcde8ff6bcd1938a26d95a3e8765ab7cc7"
+    },
+    "collision_manifest": {
+      "path": "Collision/CN_ASW_CY1_COLLISION.json",
+      "sha256": "a79f99a7f5da4c0c8e24ee64459b61dbdf98515d57e23d631760a25465571648"
+    }
+  },
+  "build_seconds": 0.49,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.37,
+    "SIDE": 0.35,
+    "FRONT": 0.38,
+    "TOP": 0.33,
+    "DETAIL": 0.41,
+    "ICON": 0.29
+  },
+  "previews": [
+    "CN_ASW_CY1_DETAIL_128.png",
+    "CN_ASW_CY1_DETAIL_256.png",
+    "CN_ASW_CY1_DETAIL_512.png",
+    "CN_ASW_CY1_FRONT_128.png",
+    "CN_ASW_CY1_FRONT_256.png",
+    "CN_ASW_CY1_FRONT_512.png",
+    "CN_ASW_CY1_ICON_128.png",
+    "CN_ASW_CY1_ICON_256.png",
+    "CN_ASW_CY1_ICON_512.png",
+    "CN_ASW_CY1_PERSPECTIVE_128.png",
+    "CN_ASW_CY1_PERSPECTIVE_256.png",
+    "CN_ASW_CY1_PERSPECTIVE_512.png",
+    "CN_ASW_CY1_SIDE_128.png",
+    "CN_ASW_CY1_SIDE_256.png",
+    "CN_ASW_CY1_SIDE_512.png",
+    "CN_ASW_CY1_TOP_128.png",
+    "CN_ASW_CY1_TOP_256.png",
+    "CN_ASW_CY1_TOP_512.png",
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/CN_ASW_CY1_MASTER.blend",
+      "sha256": "5586d53ca20946ac21170b0ad58d8ffd8515710370615a281759994ea3c6c74f"
+    },
+    "source": {
+      "path": "Source/CN_ASW_CY1_SOURCE.json",
+      "sha256": "722269af6f5162dacf7c6969f6ff74cfc661ead58402fa1f67ee09b2c824003b"
+    },
+    "spec": {
+      "path": "Documentation/CN_ASW_CY1_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/CN_ASW_CY1_README.md"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_STRAT_Poseidon",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_STRAT_Poseidon_SEG_00",
+      "centre": [
+        7.199999999999999,
+        0.0,
+        0.0
+      ],
+      "size": [
+        5.6000000000000005,
+        0.63,
+        0.63
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_STRAT_Poseidon_SEG_01",
+      "centre": [
+        2.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        4.8,
+        1.8,
+        1.8
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_STRAT_Poseidon_SEG_02",
+      "centre": [
+        -4.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        7.199999999999999,
+        1.8,
+        1.8
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_STRAT_Poseidon_SEG_03",
+      "centre": [
+        -8.4,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.2,
+        2.52,
+        2.52
+      ]
+    }
+  ],
+  "collision_fbx": "RU_STRAT_Poseidon_COLLISION.fbx",
+  "collision_sha256": "9da435f6e6183514c6289e7745d831d91a3203fda54ea639616e4fe3d47ddc7e"
+}

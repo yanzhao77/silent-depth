@@ -1,0 +1,79 @@
+{
+  "weapon_id": "RU_ASM_Zircon",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 3,
+      "vertices": 274,
+      "triangles": 528,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        9.0,
+        0.588,
+        1.6097
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 2,
+      "vertices": 138,
+      "triangles": 264,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        9.0,
+        0.588,
+        0.834
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 2,
+      "vertices": 98,
+      "triangles": 184,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        9.0,
+        0.588,
+        0.834
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 2,
+      "vertices": 68,
+      "triangles": 124,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        9.0,
+        0.588,
+        0.834
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      9.0,
+      1.0697,
+      1.0697
+    ]
+  },
+  "result": "PASS"
+}

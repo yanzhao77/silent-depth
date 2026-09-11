@@ -1,0 +1,61 @@
+{
+  "weapon_id": "UK_TORP_Spearfish",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_UK_TORP_Spearfish_SEG_00",
+      "centre": [
+        2.52,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.9600000000000002,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_Spearfish_SEG_01",
+      "centre": [
+        0.7000000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.68,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_Spearfish_SEG_02",
+      "centre": [
+        -1.4000000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.52,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_Spearfish_SEG_03",
+      "centre": [
+        -2.94,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.12,
+        0.8080123235294119,
+        0.8080123235294119
+      ]
+    }
+  ],
+  "collision_fbx": "UK_TORP_Spearfish_COLLISION.fbx",
+  "collision_sha256": "55695be9d13e926119e5eabed6adc4c878b15d0dcc06ca4f595d34c8a6a5933f"
+}

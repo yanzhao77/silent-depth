@@ -1,0 +1,166 @@
+{
+  "weapon_id": "FR_TORP_L5_Mod4",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 5.2,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 5.176155,
+  "built_max_diameter_m": 0.69796,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2050,
+      "triangles": 3672
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 858,
+      "triangles": 1440
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 466,
+      "triangles": 800
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 388,
+      "triangles": 644
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_FR_TORP_L5_Mod4_SEG_00",
+    "UCX_WPN_FR_TORP_L5_Mod4_SEG_01",
+    "UCX_WPN_FR_TORP_L5_Mod4_SEG_02",
+    "UCX_WPN_FR_TORP_L5_Mod4_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -2.5761547088623047,
+      2.5999999046325684
+    ],
+    "y": [
+      -0.402415007352829,
+      0.2955445647239685
+    ],
+    "z": [
+      -0.2932519018650055,
+      0.31180500984191895
+    ],
+    "dimensions_m": [
+      5.176154613494873,
+      0.6979595720767975,
+      0.6050569117069244
+    ],
+    "centre": [
+      0.011922597885131836,
+      -0.05343522131443024,
+      0.009276553988456726
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/FR_TORP_L5_Mod4_LOD0.fbx",
+        "mirror": "FBX/FR_TORP_L5_Mod4_LOD0.fbx",
+        "sha256": "8c5a89dc48beb9bc059620b21c80977a20a0306965bcb88a0612f07966ef2aa5",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/FR_TORP_L5_Mod4_LOD1.fbx",
+        "mirror": "FBX/FR_TORP_L5_Mod4_LOD1.fbx",
+        "sha256": "850c52c22f8ba76e9828b1821c9de114f2ab6a454a0a7cf047142fade029924a",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/FR_TORP_L5_Mod4_LOD2.fbx",
+        "mirror": "FBX/FR_TORP_L5_Mod4_LOD2.fbx",
+        "sha256": "6f36e5cd8fd15f7b7b12118bef7bc9394838f15736fd1d4c813717767ee444b1",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/FR_TORP_L5_Mod4_LOD3.fbx",
+        "mirror": "FBX/FR_TORP_L5_Mod4_LOD3.fbx",
+        "sha256": "12c30306f513cee00a7aa9daa50d582a99895cb8a6d306507ce98267fae68ddb",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/FR_TORP_L5_Mod4_COLLISION.fbx",
+      "sha256": "439149e01428dd649d9b0d3593702bb25d58ffa7c87b826ad4e1f7b92c7d12f4"
+    },
+    "collision_manifest": {
+      "path": "Collision/FR_TORP_L5_Mod4_COLLISION.json",
+      "sha256": "cc2ccd1a06e7d911a48c276f59b874d5b8cdc46c7ddc3454940e953d4207debd"
+    }
+  },
+  "build_seconds": 0.36,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.29,
+    "SIDE": 0.35,
+    "FRONT": 0.29,
+    "TOP": 0.28,
+    "DETAIL": 0.29,
+    "ICON": 0.32
+  },
+  "previews": [
+    "Detail.png",
+    "FR_TORP_L5_Mod4_DETAIL_128.png",
+    "FR_TORP_L5_Mod4_DETAIL_256.png",
+    "FR_TORP_L5_Mod4_DETAIL_512.png",
+    "FR_TORP_L5_Mod4_FRONT_128.png",
+    "FR_TORP_L5_Mod4_FRONT_256.png",
+    "FR_TORP_L5_Mod4_FRONT_512.png",
+    "FR_TORP_L5_Mod4_ICON_128.png",
+    "FR_TORP_L5_Mod4_ICON_256.png",
+    "FR_TORP_L5_Mod4_ICON_512.png",
+    "FR_TORP_L5_Mod4_PERSPECTIVE_128.png",
+    "FR_TORP_L5_Mod4_PERSPECTIVE_256.png",
+    "FR_TORP_L5_Mod4_PERSPECTIVE_512.png",
+    "FR_TORP_L5_Mod4_SIDE_128.png",
+    "FR_TORP_L5_Mod4_SIDE_256.png",
+    "FR_TORP_L5_Mod4_SIDE_512.png",
+    "FR_TORP_L5_Mod4_TOP_128.png",
+    "FR_TORP_L5_Mod4_TOP_256.png",
+    "FR_TORP_L5_Mod4_TOP_512.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/FR_TORP_L5_Mod4_MASTER.blend",
+      "sha256": "9104eff6ddc1df1346a2fc310f874e39b584ab58e3b9a86a18837092664d06d8"
+    },
+    "source": {
+      "path": "Source/FR_TORP_L5_Mod4_SOURCE.json",
+      "sha256": "8895ce3291c3a363498a372a3c115185f6ab2504968809b12d4aa933dae81368"
+    },
+    "spec": {
+      "path": "Documentation/FR_TORP_L5_Mod4_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/FR_TORP_L5_Mod4_README.md"
+    }
+  }
+}

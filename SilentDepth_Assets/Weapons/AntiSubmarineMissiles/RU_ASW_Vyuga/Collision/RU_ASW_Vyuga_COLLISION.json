@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_ASW_Vyuga",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_ASW_Vyuga_SEG_00",
+      "centre": [
+        2.16,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.6800000000000002,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Vyuga_SEG_01",
+      "centre": [
+        0.6000000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.44,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Vyuga_SEG_02",
+      "centre": [
+        -1.2000000000000002,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.16,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Vyuga_SEG_03",
+      "centre": [
+        -2.52,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.96,
+        0.6973834705882355,
+        0.6973834705882355
+      ]
+    }
+  ],
+  "collision_fbx": "RU_ASW_Vyuga_COLLISION.fbx",
+  "collision_sha256": "73e8002123b2f6807510bcf3868d0c1f566476d9213c42bb9ef8e1a4b76405c0"
+}

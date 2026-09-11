@@ -1,0 +1,94 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "IN_SLBM_K4",
+  "display_name": "K-4",
+  "short_name": "K-4",
+  "country": "India",
+  "category": "SLBM",
+  "family": "IN_SLBM_K4",
+  "role": "中程潜射弹道导弹",
+  "subrole": "Modern_SLBM",
+  "tier": 8,
+  "tier_reason": "游戏 T8 印度主力节点：两级弹体，长度明显大于 K-15。",
+  "era": "Modern",
+  "service_years": "2020s-present",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 12.0,
+    "diameter_m": 1.3,
+    "mass_kg": 17000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "two_stage",
+      "long_body",
+      "dome_shroud"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.5,
+      "shroud_shape": "hemispherical",
+      "stage_rings": 2,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.22,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.55,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 0,
+      "base_cover": 1,
+      "bands": 2,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/IN_SLBM_K4_MASTER.blend",
+    "lod": [
+      "LOD/IN_SLBM_K4_LOD0.fbx",
+      "LOD/IN_SLBM_K4_LOD1.fbx",
+      "LOD/IN_SLBM_K4_LOD2.fbx",
+      "LOD/IN_SLBM_K4_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/IN_SLBM_K4_LOD0.fbx",
+      "FBX/IN_SLBM_K4_LOD1.fbx",
+      "FBX/IN_SLBM_K4_LOD2.fbx",
+      "FBX/IN_SLBM_K4_LOD3.fbx"
+    ],
+    "collision": "Collision/IN_SLBM_K4_COLLISION.fbx",
+    "collision_manifest": "Collision/IN_SLBM_K4_COLLISION.json",
+    "source": "Source/IN_SLBM_K4_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3264,
+    "LOD1": 1200,
+    "LOD2": 608,
+    "LOD3": 380
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 12.0,
+  "built_max_diameter_m": 1.365,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

@@ -1,0 +1,86 @@
+{
+  "weapon_id": "FR_TORP_L5_Mod3",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 6,
+      "vertices": 2042,
+      "triangles": 3660,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Seeker"
+      ],
+      "dimensions_m": [
+        5.1762,
+        0.6716,
+        0.6051
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 858,
+      "triangles": 1440,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        5.1762,
+        0.6716,
+        0.6051
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 466,
+      "triangles": 800,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        5.1762,
+        0.6689,
+        0.6051
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 388,
+      "triangles": 644,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        5.1762,
+        0.6689,
+        0.6051
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      5.2,
+      0.6078,
+      0.6078
+    ]
+  },
+  "result": "PASS"
+}

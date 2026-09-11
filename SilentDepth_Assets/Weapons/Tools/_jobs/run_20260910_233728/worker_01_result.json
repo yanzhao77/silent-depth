@@ -1,0 +1,32 @@
+[
+  {
+    "weapon_id": "UK_TORP_Tigerfish",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 1954,
+          "triangles": 3528
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 770,
+          "triangles": 1308
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 378,
+          "triangles": 668
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 300,
+          "triangles": 512
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 4.17
+    }
+  }
+]

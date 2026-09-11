@@ -1,0 +1,87 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_STRAT_Poseidon",
+  "display_name": "Poseidon (2M39)",
+  "short_name": "Poseidon",
+  "country": "Russia",
+  "category": "STRAT",
+  "family": "RU_STRAT_Poseidon",
+  "role": "大型战略无人潜航器",
+  "subrole": "Strategic_Underwater_Payload",
+  "tier": 10,
+  "tier_reason": "游戏 T10 战略特种载荷节点：与弹道导弹分类不同，作为战略级水下载荷单独记录。",
+  "era": "Modern",
+  "service_years": "2020s-present",
+  "launch_methods": [
+    "DECK_MOUNT",
+    "SWIM_OUT"
+  ],
+  "dimensions": {
+    "length_m": 20.0,
+    "diameter_m": 1.8,
+    "mass_kg": 100000,
+    "scale_source": "GAMEPLAY_SCALE",
+    "scale_note": "公开资料存在多个版本，采用游戏尺度近似值。"
+  },
+  "geometry": {
+    "kind": "sdv",
+    "features": [
+      "very_long_body",
+      "shrouded_prop",
+      "spindle_hull"
+    ],
+    "params": {
+      "shape": "spindle",
+      "nose": "blunt",
+      "nose_len_ratio": 1.2,
+      "tail": "conical",
+      "tail_len_ratio": 0.9,
+      "fin_count": 4,
+      "fin_span_ratio": 1.4,
+      "shrouds": 2
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/RU_STRAT_Poseidon_MASTER.blend",
+    "lod": [
+      "LOD/RU_STRAT_Poseidon_LOD0.fbx",
+      "LOD/RU_STRAT_Poseidon_LOD1.fbx",
+      "LOD/RU_STRAT_Poseidon_LOD2.fbx",
+      "LOD/RU_STRAT_Poseidon_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_STRAT_Poseidon_LOD0.fbx",
+      "FBX/RU_STRAT_Poseidon_LOD1.fbx",
+      "FBX/RU_STRAT_Poseidon_LOD2.fbx",
+      "FBX/RU_STRAT_Poseidon_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_STRAT_Poseidon_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_STRAT_Poseidon_COLLISION.json",
+    "source": "Source/RU_STRAT_Poseidon_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 732,
+    "LOD1": 300,
+    "LOD2": 204,
+    "LOD3": 132
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 20.0,
+  "built_max_diameter_m": 1.953,
+  "scale_source": "GAMEPLAY_SCALE",
+  "scale_note": "公开资料存在多个版本，采用游戏尺度近似值。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

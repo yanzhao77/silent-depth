@@ -1,0 +1,164 @@
+{
+  "weapon_id": "UK_MINE_SeaUrchin",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "mine",
+  "declared_length_m": 1.6,
+  "declared_diameter_m": 0.53,
+  "built_length_m": 1.6,
+  "built_max_diameter_m": 0.7367,
+  "lod": {
+    "LOD0": {
+      "objects": 3,
+      "vertices": 354,
+      "triangles": 648
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 202,
+      "triangles": 360
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 162,
+      "triangles": 280
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 132,
+      "triangles": 220
+    }
+  },
+  "collision": {
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24
+  },
+  "collision_boxes": 2,
+  "collision_segments": [
+    "UCX_WPN_UK_MINE_SeaUrchin_SEG_00",
+    "UCX_WPN_UK_MINE_SeaUrchin_SEG_01"
+  ],
+  "bounds": {
+    "x": [
+      -0.800000011920929,
+      0.800000011920929
+    ],
+    "y": [
+      -0.2941499948501587,
+      0.2941499948501587
+    ],
+    "z": [
+      -0.36834999918937683,
+      0.36834999918937683
+    ],
+    "dimensions_m": [
+      1.600000023841858,
+      0.5882999897003174,
+      0.7366999983787537
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/UK_MINE_SeaUrchin_LOD0.fbx",
+        "mirror": "FBX/UK_MINE_SeaUrchin_LOD0.fbx",
+        "sha256": "5e536d84040866c3c2ef01c7d24229eb8c83ce7a9448e91bc5aa6b050187a54f",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/UK_MINE_SeaUrchin_LOD1.fbx",
+        "mirror": "FBX/UK_MINE_SeaUrchin_LOD1.fbx",
+        "sha256": "704b537e34351c46fffd488d64cde768049d1b5e1a60909e1ea9e2892103834e",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/UK_MINE_SeaUrchin_LOD2.fbx",
+        "mirror": "FBX/UK_MINE_SeaUrchin_LOD2.fbx",
+        "sha256": "01723e4d309facfcc97d873f119385d4bb9edd25b8e069751aaa26ceb493dee0",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/UK_MINE_SeaUrchin_LOD3.fbx",
+        "mirror": "FBX/UK_MINE_SeaUrchin_LOD3.fbx",
+        "sha256": "c8f09dd59c4df9565e4ae2570dec10ef1185310ebe0c61ddbb951807f78c7d40",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/UK_MINE_SeaUrchin_COLLISION.fbx",
+      "sha256": "d44767bcf1f09dd9cb263818481a5d841ee063e7b3d825585a89aa8af78a19a5"
+    },
+    "collision_manifest": {
+      "path": "Collision/UK_MINE_SeaUrchin_COLLISION.json",
+      "sha256": "7e76c86d7d70c688fdc6c79fbbaa44ee41a74743534b2f9bf802ffa94173f143"
+    }
+  },
+  "build_seconds": 0.46,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.28,
+    "SIDE": 0.28,
+    "FRONT": 0.29,
+    "TOP": 0.31,
+    "DETAIL": 0.34,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "UK_MINE_SeaUrchin_DETAIL_128.png",
+    "UK_MINE_SeaUrchin_DETAIL_256.png",
+    "UK_MINE_SeaUrchin_DETAIL_512.png",
+    "UK_MINE_SeaUrchin_FRONT_128.png",
+    "UK_MINE_SeaUrchin_FRONT_256.png",
+    "UK_MINE_SeaUrchin_FRONT_512.png",
+    "UK_MINE_SeaUrchin_ICON_128.png",
+    "UK_MINE_SeaUrchin_ICON_256.png",
+    "UK_MINE_SeaUrchin_ICON_512.png",
+    "UK_MINE_SeaUrchin_PERSPECTIVE_128.png",
+    "UK_MINE_SeaUrchin_PERSPECTIVE_256.png",
+    "UK_MINE_SeaUrchin_PERSPECTIVE_512.png",
+    "UK_MINE_SeaUrchin_SIDE_128.png",
+    "UK_MINE_SeaUrchin_SIDE_256.png",
+    "UK_MINE_SeaUrchin_SIDE_512.png",
+    "UK_MINE_SeaUrchin_TOP_128.png",
+    "UK_MINE_SeaUrchin_TOP_256.png",
+    "UK_MINE_SeaUrchin_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/UK_MINE_SeaUrchin_MASTER.blend",
+      "sha256": "22c5395a81f4ff1d049456e664ebe9e324f93685e2ffd7f4013a7c9c5996fd5d"
+    },
+    "source": {
+      "path": "Source/UK_MINE_SeaUrchin_SOURCE.json",
+      "sha256": "97c1fe53a6b17b12edc46a01aed31e8f1cae7cd9c0ecc1335a1fa22876268351"
+    },
+    "spec": {
+      "path": "Documentation/UK_MINE_SeaUrchin_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/UK_MINE_SeaUrchin_README.md"
+    }
+  }
+}

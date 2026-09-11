@@ -1,0 +1,166 @@
+{
+  "weapon_id": "UK_TORP_StingRay",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 2.6,
+  "declared_diameter_m": 0.324,
+  "built_length_m": 2.6,
+  "built_max_diameter_m": 0.547928,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1338,
+      "triangles": 2340
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 650,
+      "triangles": 1068
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 394,
+      "triangles": 652
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 346,
+      "triangles": 556
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_UK_TORP_StingRay_SEG_00",
+    "UCX_WPN_UK_TORP_StingRay_SEG_01",
+    "UCX_WPN_UK_TORP_StingRay_SEG_02",
+    "UCX_WPN_UK_TORP_StingRay_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -1.2999999523162842,
+      1.2999999523162842
+    ],
+    "y": [
+      -0.2739642262458801,
+      0.2739642262458801
+    ],
+    "z": [
+      -0.2739642262458801,
+      0.2739642262458801
+    ],
+    "dimensions_m": [
+      2.5999999046325684,
+      0.5479284524917603,
+      0.5479284524917603
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/UK_TORP_StingRay_LOD0.fbx",
+        "mirror": "FBX/UK_TORP_StingRay_LOD0.fbx",
+        "sha256": "cacba0739b8b7ea067077ab02e11e75af943dac96c7616472978251899c9368c",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/UK_TORP_StingRay_LOD1.fbx",
+        "mirror": "FBX/UK_TORP_StingRay_LOD1.fbx",
+        "sha256": "2975f3330a45b0fb439f00809d25a33c9afcd90560da2f46f8b83427ec79058d",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/UK_TORP_StingRay_LOD2.fbx",
+        "mirror": "FBX/UK_TORP_StingRay_LOD2.fbx",
+        "sha256": "44ae63e822ee991ede18a5887098ccb68b0254ec7afc029c556723be7635483b",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/UK_TORP_StingRay_LOD3.fbx",
+        "mirror": "FBX/UK_TORP_StingRay_LOD3.fbx",
+        "sha256": "fa1d752fc01ee6e8f0c453ed4b186d382c69351b180799f3f006d3164818d722",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/UK_TORP_StingRay_COLLISION.fbx",
+      "sha256": "87313a21224e1f4833eaa138715338ad4a6011fc11ed1e9a3a94d78d5eafde01"
+    },
+    "collision_manifest": {
+      "path": "Collision/UK_TORP_StingRay_COLLISION.json",
+      "sha256": "d886486e2058a6529a1cf3f3060794d5cc152ce3c13a5ff8cdbe2df67fff0fe8"
+    }
+  },
+  "build_seconds": 0.38,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.32,
+    "SIDE": 0.32,
+    "FRONT": 0.32,
+    "TOP": 0.32,
+    "DETAIL": 0.3,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "UK_TORP_StingRay_DETAIL_128.png",
+    "UK_TORP_StingRay_DETAIL_256.png",
+    "UK_TORP_StingRay_DETAIL_512.png",
+    "UK_TORP_StingRay_FRONT_128.png",
+    "UK_TORP_StingRay_FRONT_256.png",
+    "UK_TORP_StingRay_FRONT_512.png",
+    "UK_TORP_StingRay_ICON_128.png",
+    "UK_TORP_StingRay_ICON_256.png",
+    "UK_TORP_StingRay_ICON_512.png",
+    "UK_TORP_StingRay_PERSPECTIVE_128.png",
+    "UK_TORP_StingRay_PERSPECTIVE_256.png",
+    "UK_TORP_StingRay_PERSPECTIVE_512.png",
+    "UK_TORP_StingRay_SIDE_128.png",
+    "UK_TORP_StingRay_SIDE_256.png",
+    "UK_TORP_StingRay_SIDE_512.png",
+    "UK_TORP_StingRay_TOP_128.png",
+    "UK_TORP_StingRay_TOP_256.png",
+    "UK_TORP_StingRay_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/UK_TORP_StingRay_MASTER.blend",
+      "sha256": "eb744b27c30a68957cab5f19d4a52e7525b0e0a52d57d66082785b7047819309"
+    },
+    "source": {
+      "path": "Source/UK_TORP_StingRay_SOURCE.json",
+      "sha256": "c247217267654d689aa2d4a102d6f04e8670f6a9ecfb2aeb001646e3b9aea3c6"
+    },
+    "spec": {
+      "path": "Documentation/UK_TORP_StingRay_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/UK_TORP_StingRay_README.md"
+    }
+  }
+}

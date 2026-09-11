@@ -1,0 +1,42 @@
+{
+  "weapon_id": "US_ASW_SUBROC",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "rocket_payload",
+    "features": [
+      "tube_launched",
+      "solid_booster",
+      "aft_payload"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.6,
+      "booster_len_ratio": 0.35,
+      "booster_fins": 4,
+      "booster_fin_span_ratio": 1.4,
+      "payload_shape": "torpedo",
+      "payload_separation_ring": 1,
+      "fins": 4,
+      "fin_span_ratio": 1.3,
+      "fin_chord_ratio": 0.9,
+      "bands": 2
+    }
+  },
+  "dimensions": {
+    "length_m": 6.7,
+    "diameter_m": 0.533,
+    "mass_kg": 1800,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料长度约 6.7 米。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "tier": 5,
+  "asset_priority": "MEDIUM",
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料长度约 6.7 米。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

@@ -1,0 +1,42 @@
+{
+  "weapon_id": "UK_DECOY_SSE_Mk3",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "decoy",
+    "features": [
+      "short_cylinder",
+      "simple_body"
+    ],
+    "params": {
+      "body": "cylinder",
+      "capsule_ratio": 2.2,
+      "nose": "hemispherical",
+      "nose_len_ratio": 0.5,
+      "rings": 1,
+      "dispenser": 0,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.6,
+      "tail": "none",
+      "tail_len_ratio": 0.5,
+      "bands": 1
+    }
+  },
+  "dimensions": {
+    "length_m": 0.6,
+    "diameter_m": 0.2,
+    "mass_kg": 25,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "tier": 3,
+  "asset_priority": "LOW",
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料仅有量级信息，按近似尺寸建模。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

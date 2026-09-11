@@ -1,0 +1,1253 @@
+{
+  "batch_index": 2,
+  "generated_at": "2026-09-10",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "RU_SLBM_R29RM",
+      "display_name": "R-29RM Sineva",
+      "short_name": "R-29RM",
+      "category": "SLBM",
+      "family_id": "RU_SLBM_R29",
+      "country": "Russia",
+      "role": "现代潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "1986-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 现代化节点：三级弹体、尾部结构复杂，是 Delta IV 的主力武器。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 14.8,
+        "diameter_m": 1.9,
+        "mass_kg": 40300,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 14.8 米。"
+      },
+      "body_diameter_m": 1.9,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "mirv_bus",
+          "tail_skirt"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.6,
+          "stage_count": 3,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.7,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "UK_SLBM_Trident_D5",
+      "display_name": "Trident II D5 (UK)",
+      "short_name": "Trident D5",
+      "category": "SLBM",
+      "family_id": "UK_SLBM_Trident",
+      "country": "UK",
+      "role": "英国现役潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "1994-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 英国战略核心：与美制 D5 共享基础几何，数据层区分国家与批次。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 13.6,
+        "diameter_m": 2.11,
+        "mass_kg": 58500,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与美制 D5 同级尺寸。"
+      },
+      "body_diameter_m": 2.11,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "wide_body",
+          "uk_marking"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.6,
+          "stage_count": 3,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.7,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_SLBM_R29",
+      "display_name": "R-29 (SS-N-8)",
+      "short_name": "R-29",
+      "category": "SLBM",
+      "family_id": "RU_SLBM_R29",
+      "country": "Russia",
+      "role": "远程潜射弹道导弹",
+      "subrole": "Late_Cold_War_SLBM",
+      "era": "Cold War",
+      "service_years": "1970s-1980s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 远程分支：明显加长弹体，是 Delta 级弹道导弹潜艇的主力武器。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 13.0,
+        "diameter_m": 1.8,
+        "mass_kg": 33300,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 13 米。"
+      },
+      "body_diameter_m": 1.8,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "long_body",
+          "tail_skirt"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.5,
+          "stage_count": 2,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.6,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_SLBM_Bulava",
+      "display_name": "R-30 Bulava",
+      "short_name": "Bulava",
+      "category": "SLBM",
+      "family_id": "RU_SLBM_Bulava",
+      "country": "Russia",
+      "role": "现役潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "2018-present",
+      "tier": 9,
+      "tier_reason": "游戏 T9 俄罗斯现役主力：Borei 级的核心武器，弹体粗短、整流罩圆钝。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 12.1,
+        "diameter_m": 2.0,
+        "mass_kg": 36800,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 12 米级。"
+      },
+      "body_diameter_m": 2.0,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "wide_body",
+          "dome_shroud"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.4,
+          "stage_count": 3,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.6,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.3,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_SLBM_R13",
+      "display_name": "R-13 (SS-N-4)",
+      "short_name": "R-13",
+      "category": "SLBM",
+      "family_id": "RU_SLBM_R13",
+      "country": "Russia",
+      "role": "第一代潜射弹道导弹",
+      "subrole": "Early_SLBM",
+      "era": "Cold War",
+      "service_years": "1961-1970s",
+      "tier": 2,
+      "tier_reason": "游戏 T2 苏联战略分支起点：需要在浮航状态发射，弹体短、整流罩钝。",
+      "launch_methods": [
+        "SLBM_TUBE",
+        "SURFACE_LAUNCH"
+      ],
+      "dimensions": {
+        "length_m": 11.8,
+        "diameter_m": 1.3,
+        "mass_kg": 13700,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料存在多个版本，取级别近似值。"
+      },
+      "body_diameter_m": 1.3,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "early_generation",
+          "surface_launch",
+          "blunt_shroud"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.1,
+          "stage_count": 1,
+          "stage_bands": 0,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.2,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.2,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_SLBM_M4",
+      "display_name": "M4",
+      "short_name": "M4",
+      "category": "SLBM",
+      "family_id": "FR_SLBM_M4",
+      "country": "France",
+      "role": "多弹头潜射弹道导弹",
+      "subrole": "Late_Cold_War_SLBM",
+      "era": "Cold War Late",
+      "service_years": "1985-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 法国战略起点：细长三级弹体，整流罩较尖。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 11.0,
+        "diameter_m": 1.93,
+        "mass_kg": 35000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 1.93,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "slim_shroud"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.9,
+          "stage_count": 3,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.5,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_P6",
+      "display_name": "P-6 Progress",
+      "short_name": "P-6",
+      "category": "ASM",
+      "family_id": "RU_ASM_P6",
+      "country": "Russia",
+      "role": "冷战早期远程反舰导弹",
+      "subrole": "Early_Cruise",
+      "era": "Cold War",
+      "service_years": "1960s-1970s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 远程分支：弹翼可折叠、首部有明显进气道，与 P-5 外形区分明显。",
+      "launch_methods": [
+        "SURFACE_LAUNCH",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 10.6,
+        "diameter_m": 0.9,
+        "mass_kg": 4500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.9,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "surface_launch",
+          "folded_wing",
+          "nose_intake"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.3,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "folding",
+          "wing_count": 2,
+          "wing_span_ratio": 4.2,
+          "wing_position": 0.35,
+          "fin_count": 4,
+          "fin_span_ratio": 2.6,
+          "booster": "solid",
+          "booster_len_ratio": 0.22,
+          "canister_fit": false,
+          "intakes": 1,
+          "antenna_bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_P5",
+      "display_name": "P-5 Pyatyorka",
+      "short_name": "P-5",
+      "category": "ASM",
+      "family_id": "RU_ASM_P5",
+      "country": "Russia",
+      "role": "早期潜射巡航导弹",
+      "subrole": "Early_Cruise",
+      "era": "Cold War",
+      "service_years": "1959-1960s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 潜射巡航导弹起点：需要潜艇上浮发射，弹体短、翼展大，视觉特征原始。",
+      "launch_methods": [
+        "SURFACE_LAUNCH",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 10.0,
+        "diameter_m": 1.0,
+        "mass_kg": 4000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 10 米级。"
+      },
+      "body_diameter_m": 1.0,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "surface_launch",
+          "large_straight_wing"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.6,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "fixed",
+          "wing_count": 2,
+          "wing_span_ratio": 4.6,
+          "wing_position": 0.45,
+          "fin_count": 4,
+          "fin_span_ratio": 2.4,
+          "booster": "solid",
+          "booster_len_ratio": 0.2,
+          "canister_fit": false,
+          "intakes": 0,
+          "antenna_bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_SLBM_Polaris_A3",
+      "display_name": "Polaris A3",
+      "short_name": "Polaris A3",
+      "category": "SLBM",
+      "family_id": "US_SLBM_Polaris",
+      "country": "USA",
+      "role": "潜射弹道导弹改进型",
+      "subrole": "Early_SLBM",
+      "era": "Cold War",
+      "service_years": "1964-1980s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 改进型：与 A1 共享几何级别，弹体加长、整流罩形状更新。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 9.9,
+        "diameter_m": 1.37,
+        "mass_kg": 16000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 9.9 米。"
+      },
+      "body_diameter_m": 1.37,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "dome_shroud",
+          "extended_body"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.8,
+          "stage_count": 2,
+          "stage_bands": 1,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.4,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_SLBM_Polaris_A1",
+      "display_name": "Polaris A1",
+      "short_name": "Polaris A1",
+      "category": "SLBM",
+      "family_id": "US_SLBM_Polaris",
+      "country": "USA",
+      "role": "第一代潜射弹道导弹",
+      "subrole": "Early_SLBM",
+      "era": "Cold War",
+      "service_years": "1960-1965",
+      "tier": 2,
+      "tier_reason": "游戏 T2 潜射弹道导弹起点：短钝弹体、单一喷管，代表 SSBN 科技树的开端。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 8.5,
+        "diameter_m": 1.37,
+        "mass_kg": 12800,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 8.5 米。"
+      },
+      "body_diameter_m": 1.37,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "early_generation",
+          "dome_shroud"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.6,
+          "stage_count": 2,
+          "stage_bands": 1,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.4,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_TEST71",
+      "display_name": "TEST-71 torpedo",
+      "short_name": "TEST-71",
+      "category": "TORP",
+      "family_id": "RU_TORP_TEST71",
+      "country": "Russia",
+      "role": "线导反潜鱼雷",
+      "subrole": "Wire_Guided",
+      "era": "Cold War",
+      "service_years": "1970s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 苏联线导代表型号：细长弹体 + 明显导线整流罩。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 8.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1820,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似，长度约 8 米级。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "long_body"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.4,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "IN_TORP_Varunastra",
+      "display_name": "Varunastra torpedo",
+      "short_name": "Varunastra",
+      "category": "TORP",
+      "family_id": "IN_TORP_Varunastra",
+      "country": "India",
+      "role": "重型线导鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2016-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 印度主力鱼雷：与俄罗斯族外形接近但尾段与标记不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.6,
+        "diameter_m": 0.533,
+        "mass_kg": 1500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料长度口径存在多个版本，取中间值并标记估计。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "electric",
+          "long_body"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_5365K",
+      "display_name": "53-65K torpedo",
+      "short_name": "53-65K",
+      "category": "TORP",
+      "family_id": "RU_TORP_5365",
+      "country": "Russia",
+      "role": "尾流自导反舰鱼雷",
+      "subrole": "Heavyweight",
+      "era": "Cold War",
+      "service_years": "1960s-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 反舰专用节点：尾流自导、弹体修长、无导线整流罩。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 2000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 7 米。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wake_homing",
+          "long_body"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.3,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_SET65",
+      "display_name": "SET-65 torpedo",
+      "short_name": "SET-65",
+      "category": "TORP",
+      "family_id": "RU_TORP_SET53",
+      "country": "Russia",
+      "role": "电动声自导鱼雷",
+      "subrole": "Acoustic_Homing",
+      "era": "Cold War",
+      "service_years": "1960s-1980s",
+      "tier": 4,
+      "tier_reason": "游戏 T4 成熟电动鱼雷：与 SET-53 共享弹体，声学窗口增加。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1400,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族尺寸近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "electric",
+          "active_homing"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.15,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 2,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_TORP_Yu4",
+      "display_name": "Yu-4 torpedo",
+      "short_name": "Yu-4",
+      "category": "TORP",
+      "family_id": "CN_TORP_Yu3",
+      "country": "China",
+      "role": "热动力鱼雷",
+      "subrole": "Heavyweight",
+      "era": "Cold War",
+      "service_years": "1970s-1990s",
+      "tier": 4,
+      "tier_reason": "游戏 T4 热动力分支：与电动族同代但推进段不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1900,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "thermal",
+          "contra_propeller"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.7,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_TORP_Yu1",
+      "display_name": "Yu-1 torpedo",
+      "short_name": "Yu-1",
+      "category": "TORP",
+      "family_id": "CN_TORP_Yu1",
+      "country": "China",
+      "role": "早期蒸汽鱼雷",
+      "subrole": "Early_Heavyweight",
+      "era": "Cold War",
+      "service_years": "1970s-1990s",
+      "tier": 2,
+      "tier_reason": "游戏 T2 中国鱼雷树起点：早期仿制蒸汽鱼雷。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.5,
+        "diameter_m": 0.533,
+        "mass_kg": 1600,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wwii_blunt_tail",
+          "straight_running"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.4,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 0,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_SPECIAL_SDV_Mk8",
+      "display_name": "Mk 8 SEAL Delivery Vehicle",
+      "short_name": "SDV-Mk8",
+      "category": "SPECIAL",
+      "family_id": "US_SPECIAL_SDV_Mk8",
+      "country": "USA",
+      "role": "水下输送载具",
+      "subrole": "SDV",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 特种输送载具：短而宽的开式载具，与 ASDS 外形区分明显。",
+      "launch_methods": [
+        "SWIM_OUT_DOCK"
+      ],
+      "dimensions": {
+        "length_m": 6.4,
+        "diameter_m": 1.5,
+        "mass_kg": 3500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 1.5,
+      "geometry": {
+        "kind": "sdv",
+        "features": [
+          "short_body",
+          "open_frame",
+          "shrouded_propulsor"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.0,
+          "canopy": 0,
+          "propulsor": "shrouded",
+          "propulsor_shroud": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.3,
+          "fin_chord_ratio": 0.8,
+          "docking_collar": 1,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk_BlockIV",
+      "display_name": "Tomahawk Block IV",
+      "short_name": "TACTOM IV",
+      "category": "LAM",
+      "family_id": "US_LAM_Tomahawk",
+      "country": "USA",
+      "role": "现代对陆攻击巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Modern",
+      "service_years": "2004-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 现役主力：与 Block III 共享弹体几何，增加数据链天线环带。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.52,
+        "mass_kg": 1600,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与 Block III 同级尺寸。"
+      },
+      "body_diameter_m": 0.52,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "pop_out_wing",
+          "datalink_antenna"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "pop_out",
+          "wing_count": 2,
+          "wing_span_ratio": 3.4,
+          "wing_position": 0.35,
+          "fin_count": 4,
+          "fin_span_ratio": 1.9,
+          "booster": "solid",
+          "booster_len_ratio": 0.28,
+          "canister_fit": true,
+          "intakes": 0,
+          "antenna_bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk23",
+      "display_name": "Mk 23 torpedo",
+      "short_name": "Mk23",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk14",
+      "country": "USA",
+      "role": "早期无航迹鱼雷",
+      "subrole": "Early_Heavyweight",
+      "era": "Early",
+      "service_years": "1944-1946",
+      "tier": 1,
+      "tier_reason": "游戏 T1 末段型号：与 Mk 14 共享弹体，尾段与装订标记不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.533,
+        "mass_kg": 1360,
+        "scale_source": "ESTIMATED",
+        "scale_note": "Mk 14 弹体的改型，尺寸沿用公开近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wakeless",
+          "straight_running"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 0,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk18",
+      "display_name": "Mk 18 torpedo",
+      "short_name": "Mk18",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk14",
+      "country": "USA",
+      "role": "早期电动鱼雷",
+      "subrole": "Early_Heavyweight",
+      "era": "Early",
+      "service_years": "1943-1950s",
+      "tier": 1,
+      "tier_reason": "游戏 T1 电动鱼雷分支：与 Mk 14 同代但尾段更短、无蒸汽痕迹。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1350,
+        "scale_source": "ESTIMATED",
+        "scale_note": "电动型尺寸与 Mk 14 同级别，取公开近似值。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "electric",
+          "straight_running"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.15,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 0,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_ADCAP",
+      "display_name": "Mk 48 Mod 4 ADCAP",
+      "short_name": "Mk48-ADCAP",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk48",
+      "country": "USA",
+      "role": "远程重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Cold War Late",
+      "service_years": "1988-2000s",
+      "tier": 7,
+      "tier_reason": "游戏 T7 成熟现代鱼雷：增加推进段与更长的尾段控制面。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.79,
+        "diameter_m": 0.533,
+        "mass_kg": 1676,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "ADCAP 公开质量约 1.6 吨级。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "contra_propeller",
+          "extended_propulsion"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.1,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_TORP_F17",
+      "display_name": "F17 Mod 2 torpedo",
+      "short_name": "F17-2",
+      "category": "TORP",
+      "family_id": "FR_TORP_F17",
+      "country": "France",
+      "role": "热动力重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 法国主力鱼雷：热动力推进，外形与 L5 明显不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.4,
+        "diameter_m": 0.533,
+        "mass_kg": 1410,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "thermal",
+          "contra_propeller"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_MINE_Mk67_SLMM",
+      "display_name": "Mk 67 SLMM",
+      "short_name": "Mk67-SLMM",
+      "category": "MINE",
+      "family_id": "US_MINE_Mk67_SLMM",
+      "country": "USA",
+      "role": "潜艇布放机动水雷",
+      "subrole": "Submarine_Deployable_Mine",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 现代水雷节点：由鱼雷管布放，外形沿用鱼雷弹体便于识别。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 4.83,
+        "diameter_m": 0.483,
+        "mass_kg": 700,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料沿用 Mk 37 鱼雷弹体量级。"
+      },
+      "body_diameter_m": 0.483,
+      "geometry": {
+        "kind": "mine",
+        "features": [
+          "torpedo_shaped_body",
+          "launch_canister"
+        ],
+        "params": {
+          "body": "torpedo_shaped",
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.6,
+          "mooring": 0,
+          "mooring_len_ratio": 1.5,
+          "canister": 0,
+          "horns": 0,
+          "rails": 2,
+          "fins": 4,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.7,
+          "tail_len_ratio": 0.4,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_MINE_Mk60_CAPTOR",
+      "display_name": "Mk 60 CAPTOR",
+      "short_name": "Mk60",
+      "category": "MINE",
+      "family_id": "US_MINE_Mk60_CAPTOR",
+      "country": "USA",
+      "role": "封装式反潜水雷",
+      "subrole": "Submarine_Deployable_Mine",
+      "era": "Cold War Late",
+      "service_years": "1979-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 冷战后期反潜水雷：外部为封闭运载筒，视觉上与普通水雷区分明显。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 4.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1100,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "mine",
+        "features": [
+          "canister_body",
+          "cylindrical"
+        ],
+        "params": {
+          "body": "cylindrical",
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.6,
+          "mooring": 0,
+          "mooring_len_ratio": 1.5,
+          "canister": 1,
+          "horns": 0,
+          "rails": 2,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.7,
+          "tail_len_ratio": 0.4,
+          "bands": 2
+        }
+      },
+      "notes": "外部运载筒为可见特征，内部载荷不作建模。"
+    },
+    {
+      "weapon_id": "RU_MINE_MDM6",
+      "display_name": "MDM-6",
+      "short_name": "MDM-6",
+      "category": "MINE",
+      "family_id": "RU_MINE_MDM6",
+      "country": "Russia",
+      "role": "潜艇布放沉底水雷",
+      "subrole": "Submarine_Deployable_Mine",
+      "era": "Cold War Late",
+      "service_years": "1970s-present",
+      "tier": 5,
+      "tier_reason": "游戏 T5 沉底雷节点：体量更大、外形更宽，与系留雷区分。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 2.4,
+        "diameter_m": 0.7,
+        "mass_kg": 1100,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 0.7,
+      "geometry": {
+        "kind": "mine",
+        "features": [
+          "wide_body",
+          "cylindrical"
+        ],
+        "params": {
+          "body": "cylindrical",
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.6,
+          "mooring": 0,
+          "mooring_len_ratio": 1.5,
+          "canister": 0,
+          "horns": 12,
+          "rails": 2,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.7,
+          "tail_len_ratio": 0.4,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_DECOY_Mk70_MOSS",
+      "display_name": "Mk 70 MOSS",
+      "short_name": "MOSS",
+      "category": "DECOY",
+      "family_id": "US_DECOY_Mk70_MOSS",
+      "country": "USA",
+      "role": "潜艇模拟器",
+      "subrole": "Acoustic_Decoy",
+      "era": "Cold War Late",
+      "service_years": "1976-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 现代诱饵节点：细长胶囊外形，可由鱼雷管投放。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 1.0,
+        "diameter_m": 0.2,
+        "mass_kg": 40,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 0.2,
+      "geometry": {
+        "kind": "decoy",
+        "features": [
+          "capsule_body",
+          "dispenser_rings"
+        ],
+        "params": {
+          "body": "capsule",
+          "capsule_ratio": 3.0,
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.5,
+          "rings": 3,
+          "dispenser": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.6,
+          "tail": "conical",
+          "tail_len_ratio": 0.5,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "weapon_id": "FR_SLBM_M2",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_FR_SLBM_M2_SEG_00",
+      "centre": [
+        3.8519999999999994,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.996,
+        0.5249999999999999,
+        0.5249999999999999
+      ]
+    },
+    {
+      "name": "UCX_WPN_FR_SLBM_M2_SEG_01",
+      "centre": [
+        1.07,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.5679999999999996,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "UCX_WPN_FR_SLBM_M2_SEG_02",
+      "centre": [
+        -2.14,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.8519999999999994,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "UCX_WPN_FR_SLBM_M2_SEG_03",
+      "centre": [
+        -4.494,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.712,
+        1.5,
+        1.5
+      ]
+    }
+  ],
+  "collision_fbx": "FR_SLBM_M2_COLLISION.fbx",
+  "collision_sha256": "421f31390fd137c3620766d7e893d1585f7bc4abe445e13da85e51af631c5a3a"
+}

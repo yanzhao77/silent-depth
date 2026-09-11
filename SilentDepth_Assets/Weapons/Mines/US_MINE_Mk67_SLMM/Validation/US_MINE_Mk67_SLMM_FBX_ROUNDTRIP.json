@@ -1,0 +1,85 @@
+{
+  "weapon_id": "US_MINE_Mk67_SLMM",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 506,
+      "triangles": 876,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        4.83,
+        0.5626,
+        0.5361
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 258,
+      "triangles": 444,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        4.83,
+        0.5433,
+        0.5246
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 3,
+      "vertices": 122,
+      "triangles": 220,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        4.83,
+        0.536,
+        0.5246
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 3,
+      "vertices": 92,
+      "triangles": 160,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        4.83,
+        0.536,
+        0.5246
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24,
+    "materials": [],
+    "dimensions_m": [
+      4.83,
+      0.483,
+      0.483
+    ]
+  },
+  "result": "PASS"
+}

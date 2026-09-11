@@ -1,0 +1,85 @@
+{
+  "weapon_id": "RU_ASM_P70",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 1492,
+      "triangles": 2664,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        7.0,
+        1.1593,
+        1.8694
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 628,
+      "triangles": 1080,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        7.0,
+        1.1593,
+        1.8694
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 244,
+      "triangles": 456,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        7.0,
+        1.1593,
+        1.8694
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 172,
+      "triangles": 312,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        7.0,
+        1.1593,
+        1.8694
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      7.0,
+      2.0404,
+      2.0404
+    ]
+  },
+  "result": "PASS"
+}

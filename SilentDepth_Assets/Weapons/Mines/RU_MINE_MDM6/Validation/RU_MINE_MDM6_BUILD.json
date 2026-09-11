@@ -1,0 +1,164 @@
+{
+  "weapon_id": "RU_MINE_MDM6",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "mine",
+  "declared_length_m": 2.4,
+  "declared_diameter_m": 0.7,
+  "built_length_m": 2.4,
+  "built_max_diameter_m": 0.973,
+  "lod": {
+    "LOD0": {
+      "objects": 3,
+      "vertices": 402,
+      "triangles": 720
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 250,
+      "triangles": 432
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 210,
+      "triangles": 352
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 180,
+      "triangles": 292
+    }
+  },
+  "collision": {
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24
+  },
+  "collision_boxes": 2,
+  "collision_segments": [
+    "UCX_WPN_RU_MINE_MDM6_SEG_00",
+    "UCX_WPN_RU_MINE_MDM6_SEG_01"
+  ],
+  "bounds": {
+    "x": [
+      -1.2000000476837158,
+      1.2000000476837158
+    ],
+    "y": [
+      -0.38850000500679016,
+      0.38850000500679016
+    ],
+    "z": [
+      -0.48649999499320984,
+      0.48649999499320984
+    ],
+    "dimensions_m": [
+      2.4000000953674316,
+      0.7770000100135803,
+      0.9729999899864197
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_MINE_MDM6_LOD0.fbx",
+        "mirror": "FBX/RU_MINE_MDM6_LOD0.fbx",
+        "sha256": "bfa89f6f0bfed61100fc36e378e6522d81043f825ced268c6879b7ff9e85f4bc",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_MINE_MDM6_LOD1.fbx",
+        "mirror": "FBX/RU_MINE_MDM6_LOD1.fbx",
+        "sha256": "9d8e88f66417587941bc89456d9576a97591731c21ea86d2cff84829e4f64c18",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_MINE_MDM6_LOD2.fbx",
+        "mirror": "FBX/RU_MINE_MDM6_LOD2.fbx",
+        "sha256": "b0cdd99e00711bf433114dd6025c3f5c1efa765e02e5659018e8c8f896b8830c",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_MINE_MDM6_LOD3.fbx",
+        "mirror": "FBX/RU_MINE_MDM6_LOD3.fbx",
+        "sha256": "17b30a755b36ec7e1c1413f434ed064e21f99d0ef3741b6c8931f9cd46361517",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_MINE_MDM6_COLLISION.fbx",
+      "sha256": "76cccc4aab47fd21f3deb7f479cf2fddaf4e2bde80718c683e51895b48ac3cfb"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_MINE_MDM6_COLLISION.json",
+      "sha256": "5852123bf5569baa51e68c16d5f3121de6c44dbaa3cf8b46a107482767eee383"
+    }
+  },
+  "build_seconds": 0.3,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.32,
+    "SIDE": 0.33,
+    "FRONT": 0.32,
+    "TOP": 0.3,
+    "DETAIL": 0.34,
+    "ICON": 0.31
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_MINE_MDM6_DETAIL_128.png",
+    "RU_MINE_MDM6_DETAIL_256.png",
+    "RU_MINE_MDM6_DETAIL_512.png",
+    "RU_MINE_MDM6_FRONT_128.png",
+    "RU_MINE_MDM6_FRONT_256.png",
+    "RU_MINE_MDM6_FRONT_512.png",
+    "RU_MINE_MDM6_ICON_128.png",
+    "RU_MINE_MDM6_ICON_256.png",
+    "RU_MINE_MDM6_ICON_512.png",
+    "RU_MINE_MDM6_PERSPECTIVE_128.png",
+    "RU_MINE_MDM6_PERSPECTIVE_256.png",
+    "RU_MINE_MDM6_PERSPECTIVE_512.png",
+    "RU_MINE_MDM6_SIDE_128.png",
+    "RU_MINE_MDM6_SIDE_256.png",
+    "RU_MINE_MDM6_SIDE_512.png",
+    "RU_MINE_MDM6_TOP_128.png",
+    "RU_MINE_MDM6_TOP_256.png",
+    "RU_MINE_MDM6_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_MINE_MDM6_MASTER.blend",
+      "sha256": "9742ae3f2f0fbd7bbe0b5d8ec9b26ea8a409647747bcc499a7af0aafc229777e"
+    },
+    "source": {
+      "path": "Source/RU_MINE_MDM6_SOURCE.json",
+      "sha256": "b98e19d41c6e11c58ccf9cf14a356fa14767b00221964da4240685c7b724e79f"
+    },
+    "spec": {
+      "path": "Documentation/RU_MINE_MDM6_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_MINE_MDM6_README.md"
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "weapon_id": "US_MINE_Mk60_CAPTOR",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "mine",
+  "declared_length_m": 4.0,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 4.0,
+  "built_max_diameter_m": 0.74087,
+  "lod": {
+    "LOD0": {
+      "objects": 3,
+      "vertices": 322,
+      "triangles": 600
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 170,
+      "triangles": 312
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 130,
+      "triangles": 232
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 100,
+      "triangles": 172
+    }
+  },
+  "collision": {
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24
+  },
+  "collision_boxes": 2,
+  "collision_segments": [
+    "UCX_WPN_US_MINE_Mk60_CAPTOR_SEG_00",
+    "UCX_WPN_US_MINE_Mk60_CAPTOR_SEG_01"
+  ],
+  "bounds": {
+    "x": [
+      -2.0,
+      2.0
+    ],
+    "y": [
+      -0.29581499099731445,
+      0.29581499099731445
+    ],
+    "z": [
+      -0.3704349994659424,
+      0.3704349994659424
+    ],
+    "dimensions_m": [
+      4.0,
+      0.5916299819946289,
+      0.7408699989318848
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_MINE_Mk60_CAPTOR_LOD0.fbx",
+        "mirror": "FBX/US_MINE_Mk60_CAPTOR_LOD0.fbx",
+        "sha256": "37144ec9b4531cfb664bb314a38099a1d6c7686dd3085523aab09d54b8a2b5e1",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_MINE_Mk60_CAPTOR_LOD1.fbx",
+        "mirror": "FBX/US_MINE_Mk60_CAPTOR_LOD1.fbx",
+        "sha256": "beb8951d1f772b5686d2de8ff1ad4ba768cc48635b4d01fc53e2b664672bf8ff",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_MINE_Mk60_CAPTOR_LOD2.fbx",
+        "mirror": "FBX/US_MINE_Mk60_CAPTOR_LOD2.fbx",
+        "sha256": "1002e9bf60ed914052795b2bb94e2d38f85731f77c8b4275066c973e857ed712",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_MINE_Mk60_CAPTOR_LOD3.fbx",
+        "mirror": "FBX/US_MINE_Mk60_CAPTOR_LOD3.fbx",
+        "sha256": "77768cb79ed2f6aa643984890fa4a571f101aadd80fc531aecc6f74cee852d73",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_MINE_Mk60_CAPTOR_COLLISION.fbx",
+      "sha256": "7a5d9e4463de30925bcba810239a9e12645533190a76e32cf7ce257b54a9d8d1"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_MINE_Mk60_CAPTOR_COLLISION.json",
+      "sha256": "ac93de6fa2f96733965aca45ae7be2dfd07fa1d3f8f8a99ab115d4d27e2662f9"
+    }
+  },
+  "build_seconds": 0.61,
+  "preview_seconds": {
+    "PERSPECTIVE": 2.18,
+    "SIDE": 0.41,
+    "FRONT": 0.33,
+    "TOP": 0.33,
+    "DETAIL": 0.42,
+    "ICON": 0.33
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_MINE_Mk60_CAPTOR_DETAIL_128.png",
+    "US_MINE_Mk60_CAPTOR_DETAIL_256.png",
+    "US_MINE_Mk60_CAPTOR_DETAIL_512.png",
+    "US_MINE_Mk60_CAPTOR_FRONT_128.png",
+    "US_MINE_Mk60_CAPTOR_FRONT_256.png",
+    "US_MINE_Mk60_CAPTOR_FRONT_512.png",
+    "US_MINE_Mk60_CAPTOR_ICON_128.png",
+    "US_MINE_Mk60_CAPTOR_ICON_256.png",
+    "US_MINE_Mk60_CAPTOR_ICON_512.png",
+    "US_MINE_Mk60_CAPTOR_PERSPECTIVE_128.png",
+    "US_MINE_Mk60_CAPTOR_PERSPECTIVE_256.png",
+    "US_MINE_Mk60_CAPTOR_PERSPECTIVE_512.png",
+    "US_MINE_Mk60_CAPTOR_SIDE_128.png",
+    "US_MINE_Mk60_CAPTOR_SIDE_256.png",
+    "US_MINE_Mk60_CAPTOR_SIDE_512.png",
+    "US_MINE_Mk60_CAPTOR_TOP_128.png",
+    "US_MINE_Mk60_CAPTOR_TOP_256.png",
+    "US_MINE_Mk60_CAPTOR_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_MINE_Mk60_CAPTOR_MASTER.blend",
+      "sha256": "75474f9476851b8ceca9bd589708a7d675132f5ca9bfd734f0bf06426dc41c1a"
+    },
+    "source": {
+      "path": "Source/US_MINE_Mk60_CAPTOR_SOURCE.json",
+      "sha256": "5e85717c7bfdc9f3a5a14b4ccf60ab83e2908df194934fb0e094e1315d1c4dc5"
+    },
+    "spec": {
+      "path": "Documentation/US_MINE_Mk60_CAPTOR_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_MINE_Mk60_CAPTOR_README.md"
+    }
+  }
+}

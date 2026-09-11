@@ -1,0 +1,61 @@
+{
+  "weapon_id": "UK_TORP_StingRay",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_UK_TORP_StingRay_SEG_00",
+      "centre": [
+        0.9359999999999999,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.7280000000000001,
+        0.1134,
+        0.1134
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_StingRay_SEG_01",
+      "centre": [
+        0.26,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.624,
+        0.324,
+        0.324
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_StingRay_SEG_02",
+      "centre": [
+        -0.52,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.9359999999999999,
+        0.324,
+        0.324
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_StingRay_SEG_03",
+      "centre": [
+        -1.092,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.41600000000000004,
+        0.5608884705882354,
+        0.5608884705882354
+      ]
+    }
+  ],
+  "collision_fbx": "UK_TORP_StingRay_COLLISION.fbx",
+  "collision_sha256": "87313a21224e1f4833eaa138715338ad4a6011fc11ed1e9a3a94d78d5eafde01"
+}

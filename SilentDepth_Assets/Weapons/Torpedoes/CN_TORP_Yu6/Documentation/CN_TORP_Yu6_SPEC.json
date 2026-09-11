@@ -1,0 +1,90 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "CN_TORP_Yu6",
+  "display_name": "Yu-6 torpedo",
+  "short_name": "Yu-6",
+  "country": "China",
+  "category": "TORP",
+  "family": "CN_TORP_Yu6",
+  "role": "现代重型鱼雷",
+  "subrole": "Modern_Heavyweight",
+  "tier": 8,
+  "tier_reason": "游戏 T8 中国现役主力鱼雷：大直径推进段，与 Yu-5 外形不同。",
+  "era": "Modern",
+  "service_years": "2000s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 7.0,
+    "diameter_m": 0.533,
+    "mass_kg": 2000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wire_dispenser",
+      "thermal",
+      "contra_propeller",
+      "extended_propulsion"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 2.1,
+      "tail": "conical",
+      "tail_len_ratio": 1.3,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 2,
+      "bands": 4
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/CN_TORP_Yu6_MASTER.blend",
+    "lod": [
+      "LOD/CN_TORP_Yu6_LOD0.fbx",
+      "LOD/CN_TORP_Yu6_LOD1.fbx",
+      "LOD/CN_TORP_Yu6_LOD2.fbx",
+      "LOD/CN_TORP_Yu6_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/CN_TORP_Yu6_LOD0.fbx",
+      "FBX/CN_TORP_Yu6_LOD1.fbx",
+      "FBX/CN_TORP_Yu6_LOD2.fbx",
+      "FBX/CN_TORP_Yu6_LOD3.fbx"
+    ],
+    "collision": "Collision/CN_TORP_Yu6_COLLISION.fbx",
+    "collision_manifest": "Collision/CN_TORP_Yu6_COLLISION.json",
+    "source": "Source/CN_TORP_Yu6_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3204,
+    "LOD1": 1488,
+    "LOD2": 640,
+    "LOD3": 544
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 7.008143,
+  "built_max_diameter_m": 0.63297,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

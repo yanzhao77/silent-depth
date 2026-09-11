@@ -1,0 +1,93 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "FR_SLBM_M45",
+  "display_name": "M45",
+  "short_name": "M45",
+  "country": "France",
+  "category": "SLBM",
+  "family": "FR_SLBM_M4",
+  "role": "改进型潜射弹道导弹",
+  "subrole": "Modern_SLBM",
+  "tier": 7,
+  "tier_reason": "游戏 T7 改进型：与 M4 共享弹体几何，数据层区分制导与弹头配置。",
+  "era": "Modern",
+  "service_years": "1996-2010s",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 11.0,
+    "diameter_m": 1.93,
+    "mass_kg": 35000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "沿用同族近似。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "three_stage",
+      "improved_bus"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.8,
+      "shroud_shape": "blunt",
+      "stage_rings": 2,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.26,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.6,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 1,
+      "base_cover": 1,
+      "bands": 3,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/FR_SLBM_M45_MASTER.blend",
+    "lod": [
+      "LOD/FR_SLBM_M45_LOD0.fbx",
+      "LOD/FR_SLBM_M45_LOD1.fbx",
+      "LOD/FR_SLBM_M45_LOD2.fbx",
+      "LOD/FR_SLBM_M45_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/FR_SLBM_M45_LOD0.fbx",
+      "FBX/FR_SLBM_M45_LOD1.fbx",
+      "FBX/FR_SLBM_M45_LOD2.fbx",
+      "FBX/FR_SLBM_M45_LOD3.fbx"
+    ],
+    "collision": "Collision/FR_SLBM_M45_COLLISION.fbx",
+    "collision_manifest": "Collision/FR_SLBM_M45_COLLISION.json",
+    "source": "Source/FR_SLBM_M45_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 4452,
+    "LOD1": 1572,
+    "LOD2": 772,
+    "LOD3": 496
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 11.0,
+  "built_max_diameter_m": 2.6827,
+  "scale_source": "ESTIMATED",
+  "scale_note": "沿用同族近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

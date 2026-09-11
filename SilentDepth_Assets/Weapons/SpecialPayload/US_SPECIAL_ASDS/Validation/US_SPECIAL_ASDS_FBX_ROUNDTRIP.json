@@ -1,0 +1,87 @@
+{
+  "weapon_id": "US_SPECIAL_ASDS",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 506,
+      "triangles": 900,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        19.8,
+        2.8144,
+        2.4579
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 362,
+      "triangles": 612,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        19.8,
+        2.8144,
+        2.4579
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 314,
+      "triangles": 516,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        19.8,
+        2.8144,
+        2.4579
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 278,
+      "triangles": 444,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        19.8,
+        2.8144,
+        2.4579
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      19.8,
+      2.942,
+      2.942
+    ]
+  },
+  "result": "PASS"
+}

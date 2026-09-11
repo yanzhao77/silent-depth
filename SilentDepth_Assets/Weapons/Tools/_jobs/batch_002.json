@@ -1,0 +1,287 @@
+{
+  "batch_index": 2,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "CN_TORP_Yu6",
+      "display_name": "Yu-6 torpedo",
+      "short_name": "Yu-6",
+      "category": "TORP",
+      "family_id": "CN_TORP_Yu6",
+      "base_geometry": "cn_torp_yu6",
+      "country": "China",
+      "role": "现代重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2000s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 中国现役主力鱼雷：大直径推进段，与 Yu-5 外形不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 2000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "thermal",
+          "contra_propeller",
+          "extended_propulsion"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.1,
+          "tail": "conical",
+          "tail_len_ratio": 1.3,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_TORP_Yu7",
+      "display_name": "Yu-7 torpedo",
+      "short_name": "Yu-7",
+      "category": "TORP",
+      "family_id": "CN_TORP_Yu7",
+      "base_geometry": "cn_torp_yu7",
+      "country": "China",
+      "role": "轻型反潜鱼雷",
+      "subrole": "Lightweight",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 轻型节点：324 毫米级小弹体。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "AIR_LAUNCH",
+        "SURFACE_LAUNCH"
+      ],
+      "dimensions": {
+        "length_m": 2.7,
+        "diameter_m": 0.324,
+        "mass_kg": 235,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.324,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "lightweight"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.0,
+          "tail": "conical",
+          "tail_len_ratio": 0.8,
+          "fin_count": 4,
+          "fin_span_ratio": 1.6,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 2,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_ASM_Exocet_SM39",
+      "display_name": "Exocet SM39",
+      "short_name": "SM39",
+      "category": "ASM",
+      "family_id": "FR_ASM_Exocet_SM39",
+      "base_geometry": "fr_asm_sm39",
+      "country": "France",
+      "role": "潜射反舰巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 法国反舰主力：短粗弹体 + 环形助推段，与美制鱼叉外形可区分。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 4.7,
+        "diameter_m": 0.35,
+        "mass_kg": 655,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 4.7 米。"
+      },
+      "body_diameter_m": 0.35,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "cruciform_wing",
+          "ring_booster"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.4,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 2.3,
+          "wing_chord_ratio": 0.9,
+          "wing_position": 0.38,
+          "wing_sweep_deg": 32.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 1.7,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.24,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 1,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_LAM_MdCN",
+      "display_name": "MdCN / SCALP Naval",
+      "short_name": "MdCN",
+      "category": "LAM",
+      "family_id": "FR_LAM_MdCN",
+      "base_geometry": "fr_lam_mdcn",
+      "country": "France",
+      "role": "对陆攻击巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 法国对陆攻击节点：经发射管布放的长弹体巡航导弹，与反舰型外形差异明显。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.5,
+        "diameter_m": 0.533,
+        "mass_kg": 1400,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "popout_wing",
+          "long_range"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.6,
+          "body_shape": "cylinder",
+          "wing_type": "popout",
+          "wing_pairs": 1,
+          "wing_span_ratio": 4.2,
+          "wing_chord_ratio": 1.1,
+          "wing_position": 0.44,
+          "wing_sweep_deg": 26.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.1,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.3,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_SLBM_M1",
+      "display_name": "M1",
+      "short_name": "M1",
+      "category": "SLBM",
+      "family_id": "FR_SLBM_M1",
+      "base_geometry": "fr_slbm_m1",
+      "country": "France",
+      "role": "第一代潜射弹道导弹",
+      "subrole": "Early_SLBM",
+      "era": "Cold War",
+      "service_years": "1971-1970s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 法国战略分支起点：两级弹体、整流罩较尖，与美苏早期型号比例不同。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 10.4,
+        "diameter_m": 1.5,
+        "mass_kg": 18000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 1.5,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "two_stage",
+          "pointed_shroud"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.8,
+          "shroud_shape": "pointed",
+          "stage_rings": 1,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.2,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.55,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "batch_index": 3,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "FR_SLBM_M2",
+      "display_name": "M2",
+      "short_name": "M2",
+      "category": "SLBM",
+      "family_id": "FR_SLBM_M2",
+      "base_geometry": "fr_slbm_m2",
+      "country": "France",
+      "role": "改进型潜射弹道导弹",
+      "subrole": "Cold_War_SLBM",
+      "era": "Cold War",
+      "service_years": "1974-1980s",
+      "tier": 4,
+      "tier_reason": "游戏 T4 改进型：与 M1 同族级别，弹体加长、制导代次提升。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 10.7,
+        "diameter_m": 1.5,
+        "mass_kg": 20000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 1.5,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "two_stage",
+          "extended_body"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.8,
+          "shroud_shape": "pointed",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.22,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.55,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_SLBM_M20",
+      "display_name": "M20",
+      "short_name": "M20",
+      "category": "SLBM",
+      "family_id": "FR_SLBM_M2",
+      "base_geometry": "fr_slbm_m2",
+      "country": "France",
+      "role": "热核弹头潜射弹道导弹",
+      "subrole": "Cold_War_SLBM",
+      "era": "Cold War",
+      "service_years": "1977-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 节点：与 M2 共享弹体几何，弹头与突防配置不同。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 10.7,
+        "diameter_m": 1.5,
+        "mass_kg": 20000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 1.5,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "two_stage",
+          "mirv_bus"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.7,
+          "shroud_shape": "blunt",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.24,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.55,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 3,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_SLBM_M4",
+      "display_name": "M4",
+      "short_name": "M4",
+      "category": "SLBM",
+      "family_id": "FR_SLBM_M4",
+      "base_geometry": "fr_slbm_m4",
+      "country": "France",
+      "role": "多弹头潜射弹道导弹",
+      "subrole": "Late_Cold_War_SLBM",
+      "era": "Cold War Late",
+      "service_years": "1985-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 法国战略主力：细长三级弹体，与 M2 家族外形差异明显。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 11.0,
+        "diameter_m": 1.93,
+        "mass_kg": 35000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 1.93,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "slim_shroud"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.9,
+          "shroud_shape": "pointed",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.26,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.6,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_SLBM_M45",
+      "display_name": "M45",
+      "short_name": "M45",
+      "category": "SLBM",
+      "family_id": "FR_SLBM_M4",
+      "base_geometry": "fr_slbm_m4",
+      "country": "France",
+      "role": "改进型潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "1996-2010s",
+      "tier": 7,
+      "tier_reason": "游戏 T7 改进型：与 M4 共享弹体几何，数据层区分制导与弹头配置。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 11.0,
+        "diameter_m": 1.93,
+        "mass_kg": 35000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 1.93,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "improved_bus"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.8,
+          "shroud_shape": "blunt",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.26,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.6,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 1,
+          "base_cover": 1,
+          "bands": 3,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_SLBM_M51",
+      "display_name": "M51",
+      "short_name": "M51",
+      "category": "SLBM",
+      "family_id": "FR_SLBM_M51",
+      "base_geometry": "fr_slbm_m51",
+      "country": "France",
+      "role": "现役潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "2010-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 法国现役主力：弹体更粗、三级结构清晰，尾裙比例明显。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 12.0,
+        "diameter_m": 2.3,
+        "mass_kg": 52000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 2.3,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "wide_body",
+          "tail_skirt"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.5,
+          "shroud_shape": "blunt",
+          "stage_rings": 3,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.28,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.65,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 1,
+          "base_cover": 1,
+          "bands": 3,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

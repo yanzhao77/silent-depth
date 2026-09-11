@@ -1,0 +1,166 @@
+{
+  "weapon_id": "US_SPECIAL_SDV_Mk8",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "sdv",
+  "declared_length_m": 6.4,
+  "declared_diameter_m": 1.5,
+  "built_length_m": 6.4065,
+  "built_max_diameter_m": 1.65,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 690,
+      "triangles": 1176
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 450,
+      "triangles": 744
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 306,
+      "triangles": 504
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 270,
+      "triangles": 432
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_US_SPECIAL_SDV_Mk8_SEG_00",
+    "UCX_WPN_US_SPECIAL_SDV_Mk8_SEG_01",
+    "UCX_WPN_US_SPECIAL_SDV_Mk8_SEG_02",
+    "UCX_WPN_US_SPECIAL_SDV_Mk8_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.2065000534057617,
+      3.200000047683716
+    ],
+    "y": [
+      -0.7724999785423279,
+      0.7724999785423279
+    ],
+    "z": [
+      -0.7724999785423279,
+      0.8774999976158142
+    ],
+    "dimensions_m": [
+      6.4065001010894775,
+      1.5449999570846558,
+      1.649999976158142
+    ],
+    "centre": [
+      -0.0032500028610229492,
+      0.0,
+      0.052500009536743164
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_SPECIAL_SDV_Mk8_LOD0.fbx",
+        "mirror": "FBX/US_SPECIAL_SDV_Mk8_LOD0.fbx",
+        "sha256": "0fbb8a771b1a8c5dc1ec9e2399bd4a374ade9fcf48a0b699af8acc963dfbbac1",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_SPECIAL_SDV_Mk8_LOD1.fbx",
+        "mirror": "FBX/US_SPECIAL_SDV_Mk8_LOD1.fbx",
+        "sha256": "47a542b3623cc37be2a15d6e13e5ffa3f113a83b932afe33c77f246738b22f14",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_SPECIAL_SDV_Mk8_LOD2.fbx",
+        "mirror": "FBX/US_SPECIAL_SDV_Mk8_LOD2.fbx",
+        "sha256": "2bd3b5e44520bf3e26e045c16b69a17f29d4e60872e2856d11b327f6a49ea752",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_SPECIAL_SDV_Mk8_LOD3.fbx",
+        "mirror": "FBX/US_SPECIAL_SDV_Mk8_LOD3.fbx",
+        "sha256": "5928053aff9f2c90b075708380667e47865a388c2e7c82aea2e89d7de2491869",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_SPECIAL_SDV_Mk8_COLLISION.fbx",
+      "sha256": "7edb25eda1892c2f978fabc6cd9450961ba6dd979a43395959cd4c253be8d135"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_SPECIAL_SDV_Mk8_COLLISION.json",
+      "sha256": "5c93746f5ae2cbec4ffc33ffaedc1bd119093a77e846d58dd3727243062075da"
+    }
+  },
+  "build_seconds": 0.63,
+  "preview_seconds": {
+    "PERSPECTIVE": 2.13,
+    "SIDE": 0.34,
+    "FRONT": 0.37,
+    "TOP": 0.34,
+    "DETAIL": 0.34,
+    "ICON": 0.34
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_SPECIAL_SDV_Mk8_DETAIL_128.png",
+    "US_SPECIAL_SDV_Mk8_DETAIL_256.png",
+    "US_SPECIAL_SDV_Mk8_DETAIL_512.png",
+    "US_SPECIAL_SDV_Mk8_FRONT_128.png",
+    "US_SPECIAL_SDV_Mk8_FRONT_256.png",
+    "US_SPECIAL_SDV_Mk8_FRONT_512.png",
+    "US_SPECIAL_SDV_Mk8_ICON_128.png",
+    "US_SPECIAL_SDV_Mk8_ICON_256.png",
+    "US_SPECIAL_SDV_Mk8_ICON_512.png",
+    "US_SPECIAL_SDV_Mk8_PERSPECTIVE_128.png",
+    "US_SPECIAL_SDV_Mk8_PERSPECTIVE_256.png",
+    "US_SPECIAL_SDV_Mk8_PERSPECTIVE_512.png",
+    "US_SPECIAL_SDV_Mk8_SIDE_128.png",
+    "US_SPECIAL_SDV_Mk8_SIDE_256.png",
+    "US_SPECIAL_SDV_Mk8_SIDE_512.png",
+    "US_SPECIAL_SDV_Mk8_TOP_128.png",
+    "US_SPECIAL_SDV_Mk8_TOP_256.png",
+    "US_SPECIAL_SDV_Mk8_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_SPECIAL_SDV_Mk8_MASTER.blend",
+      "sha256": "83f3883c95d1962a7c9c94882f75179182e0f93adb3fbaa1d2c1bccf3f210110"
+    },
+    "source": {
+      "path": "Source/US_SPECIAL_SDV_Mk8_SOURCE.json",
+      "sha256": "f1c6c5cf500201d0f8b1185c7874cff7da6086e2d02bba6e850347123ecb6ba6"
+    },
+    "spec": {
+      "path": "Documentation/US_SPECIAL_SDV_Mk8_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_SPECIAL_SDV_Mk8_README.md"
+    }
+  }
+}

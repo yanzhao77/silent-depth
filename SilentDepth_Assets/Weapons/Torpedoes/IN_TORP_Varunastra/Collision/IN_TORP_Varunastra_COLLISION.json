@@ -1,0 +1,61 @@
+{
+  "weapon_id": "IN_TORP_Varunastra",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_IN_TORP_Varunastra_SEG_00",
+      "centre": [
+        2.7359999999999998,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.128,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_IN_TORP_Varunastra_SEG_01",
+      "centre": [
+        0.76,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.8239999999999998,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_IN_TORP_Varunastra_SEG_02",
+      "centre": [
+        -1.52,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.7359999999999998,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_IN_TORP_Varunastra_SEG_03",
+      "centre": [
+        -3.1919999999999997,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.216,
+        0.9678809705882354,
+        0.9678809705882354
+      ]
+    }
+  ],
+  "collision_fbx": "IN_TORP_Varunastra_COLLISION.fbx",
+  "collision_sha256": "d5bcfc6a6379ae17d183a99926e04f744f3a53d7af2dc7408618af0fabe75965"
+}

@@ -1,0 +1,166 @@
+{
+  "weapon_id": "US_ASM_Harpoon",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "cruise_missile",
+  "declared_length_m": 4.6,
+  "declared_diameter_m": 0.34,
+  "built_length_m": 4.6,
+  "built_max_diameter_m": 0.83068,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1836,
+      "triangles": 3444
+    },
+    "LOD1": {
+      "objects": 6,
+      "vertices": 660,
+      "triangles": 1188
+    },
+    "LOD2": {
+      "objects": 5,
+      "vertices": 332,
+      "triangles": 628
+    },
+    "LOD3": {
+      "objects": 5,
+      "vertices": 230,
+      "triangles": 424
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_US_ASM_Harpoon_SEG_00",
+    "UCX_WPN_US_ASM_Harpoon_SEG_01",
+    "UCX_WPN_US_ASM_Harpoon_SEG_02",
+    "UCX_WPN_US_ASM_Harpoon_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -2.299999952316284,
+      2.299999952316284
+    ],
+    "y": [
+      -0.2807199954986572,
+      0.2807199954986572
+    ],
+    "z": [
+      -0.2807199954986572,
+      0.5499600172042847
+    ],
+    "dimensions_m": [
+      4.599999904632568,
+      0.5614399909973145,
+      0.8306800127029419
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.13462001085281372
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_ASM_Harpoon_LOD0.fbx",
+        "mirror": "FBX/US_ASM_Harpoon_LOD0.fbx",
+        "sha256": "f4cc66ce5c6a5cb0c17b766a5f054af8cd400afabffe90ab3f882fabe6a04438",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_ASM_Harpoon_LOD1.fbx",
+        "mirror": "FBX/US_ASM_Harpoon_LOD1.fbx",
+        "sha256": "ba2d33b75679e863a9038dc6d6f98a829677ca6412b00da29739fc35f72b87b0",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_ASM_Harpoon_LOD2.fbx",
+        "mirror": "FBX/US_ASM_Harpoon_LOD2.fbx",
+        "sha256": "1502afc329e8b5b2cd7d8d41511b07c435a2a8a041d9b6bcb64db66a79e598ef",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_ASM_Harpoon_LOD3.fbx",
+        "mirror": "FBX/US_ASM_Harpoon_LOD3.fbx",
+        "sha256": "74deb461421df8a8e8372c22b4ac8102b6dce4ebbceee662ddf0495312a6be92",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_ASM_Harpoon_COLLISION.fbx",
+      "sha256": "22d693f9313d8655df1555c26a49d3ea711bf5cfe164d033fe99973407a20547"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_ASM_Harpoon_COLLISION.json",
+      "sha256": "8f5ad140f9b1509b0c7731d97e15849ac9e3001856e31e742a01c3c4a0ce7144"
+    }
+  },
+  "build_seconds": 0.68,
+  "preview_seconds": {
+    "PERSPECTIVE": 2.13,
+    "SIDE": 0.39,
+    "FRONT": 0.32,
+    "TOP": 0.32,
+    "DETAIL": 0.37,
+    "ICON": 0.31
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_ASM_Harpoon_DETAIL_128.png",
+    "US_ASM_Harpoon_DETAIL_256.png",
+    "US_ASM_Harpoon_DETAIL_512.png",
+    "US_ASM_Harpoon_FRONT_128.png",
+    "US_ASM_Harpoon_FRONT_256.png",
+    "US_ASM_Harpoon_FRONT_512.png",
+    "US_ASM_Harpoon_ICON_128.png",
+    "US_ASM_Harpoon_ICON_256.png",
+    "US_ASM_Harpoon_ICON_512.png",
+    "US_ASM_Harpoon_PERSPECTIVE_128.png",
+    "US_ASM_Harpoon_PERSPECTIVE_256.png",
+    "US_ASM_Harpoon_PERSPECTIVE_512.png",
+    "US_ASM_Harpoon_SIDE_128.png",
+    "US_ASM_Harpoon_SIDE_256.png",
+    "US_ASM_Harpoon_SIDE_512.png",
+    "US_ASM_Harpoon_TOP_128.png",
+    "US_ASM_Harpoon_TOP_256.png",
+    "US_ASM_Harpoon_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_ASM_Harpoon_MASTER.blend",
+      "sha256": "c35a8a7f6237d240b58a1cbc01a4f3e4be3511398623817101341219e157cef2"
+    },
+    "source": {
+      "path": "Source/US_ASM_Harpoon_SOURCE.json",
+      "sha256": "b265b66575ff2ed254e6f64eb04c9949cb56a12584feeac47b8006efc26d5f14"
+    },
+    "spec": {
+      "path": "Documentation/US_ASM_Harpoon_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_ASM_Harpoon_README.md"
+    }
+  }
+}

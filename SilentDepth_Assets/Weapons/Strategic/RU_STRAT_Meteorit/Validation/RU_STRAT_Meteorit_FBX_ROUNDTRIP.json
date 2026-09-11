@@ -1,0 +1,85 @@
+{
+  "weapon_id": "RU_STRAT_Meteorit",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 1300,
+      "triangles": 2376,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        12.0,
+        1.6878,
+        2.7736
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 532,
+      "triangles": 936,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        12.0,
+        1.6878,
+        2.7736
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 244,
+      "triangles": 456,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        12.0,
+        1.6878,
+        2.7736
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 4,
+      "vertices": 172,
+      "triangles": 312,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        12.0,
+        1.6878,
+        2.7736
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      12.0,
+      2.9774,
+      2.9774
+    ]
+  },
+  "result": "PASS"
+}

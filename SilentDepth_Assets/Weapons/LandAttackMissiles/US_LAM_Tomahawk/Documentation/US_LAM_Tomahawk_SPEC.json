@@ -1,0 +1,101 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_LAM_Tomahawk",
+  "display_name": "BGM-109 Tomahawk",
+  "short_name": "Tomahawk",
+  "country": "USA",
+  "category": "LAM",
+  "family": "US_LAM_Tomahawk",
+  "role": "早期对陆攻击巡航导弹",
+  "subrole": "Modern_Cruise",
+  "tier": 6,
+  "tier_reason": "游戏 T6 对陆攻击起点：发射管布放、弹翼弹出，是巡航导弹的基础几何。",
+  "era": "Cold War Late",
+  "service_years": "1980s-1990s",
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "VLS"
+  ],
+  "dimensions": {
+    "length_m": 5.56,
+    "diameter_m": 0.52,
+    "mass_kg": 1200,
+    "scale_source": "ESTIMATED",
+    "scale_note": "Block II 级尺寸按公开资料近似。"
+  },
+  "geometry": {
+    "kind": "cruise_missile",
+    "features": [
+      "underwater_launch",
+      "popout_wing"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 2.2,
+      "body_shape": "cylinder",
+      "wing_type": "popout",
+      "wing_pairs": 1,
+      "wing_span_ratio": 3.2,
+      "wing_chord_ratio": 1.0,
+      "wing_position": 0.42,
+      "wing_sweep_deg": 30.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 1.9,
+      "tail_chord_ratio": 0.9,
+      "intake_type": "none",
+      "intake_position": 0.2,
+      "intake_len_ratio": 1.2,
+      "booster": 1,
+      "booster_len_ratio": 0.3,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 0,
+      "canister": 1
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/US_LAM_Tomahawk_MASTER.blend",
+    "lod": [
+      "LOD/US_LAM_Tomahawk_LOD0.fbx",
+      "LOD/US_LAM_Tomahawk_LOD1.fbx",
+      "LOD/US_LAM_Tomahawk_LOD2.fbx",
+      "LOD/US_LAM_Tomahawk_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_LAM_Tomahawk_LOD0.fbx",
+      "FBX/US_LAM_Tomahawk_LOD1.fbx",
+      "FBX/US_LAM_Tomahawk_LOD2.fbx",
+      "FBX/US_LAM_Tomahawk_LOD3.fbx"
+    ],
+    "collision": "Collision/US_LAM_Tomahawk_COLLISION.fbx",
+    "collision_manifest": "Collision/US_LAM_Tomahawk_COLLISION.json",
+    "source": "Source/US_LAM_Tomahawk_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3444,
+    "LOD1": 1188,
+    "LOD2": 628,
+    "LOD3": 424
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 5.56,
+  "built_max_diameter_m": 1.408737,
+  "scale_source": "ESTIMATED",
+  "scale_note": "Block II 级尺寸按公开资料近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

@@ -1,0 +1,35 @@
+{
+  "weapon_id": "US_MINE_Mk67_SLMM",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_MINE_Mk67_SLMM_SEG_00",
+      "centre": [
+        -1.0626,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.7048,
+        0.483,
+        0.483
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_MINE_Mk67_SLMM_SEG_01",
+      "centre": [
+        0.9660000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.898,
+        0.36224999999999996,
+        0.36224999999999996
+      ]
+    }
+  ],
+  "collision_fbx": "US_MINE_Mk67_SLMM_COLLISION.fbx",
+  "collision_sha256": "ec714f2d2125ed285c06f0f9f061247f4cf3d8219a96e9f7ad2b2a763c2f8940"
+}

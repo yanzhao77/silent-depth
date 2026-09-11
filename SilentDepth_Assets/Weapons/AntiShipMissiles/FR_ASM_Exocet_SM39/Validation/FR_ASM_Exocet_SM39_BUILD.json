@@ -1,0 +1,166 @@
+{
+  "weapon_id": "FR_ASM_Exocet_SM39",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "cruise_missile",
+  "declared_length_m": 4.7,
+  "declared_diameter_m": 0.35,
+  "built_length_m": 4.7,
+  "built_max_diameter_m": 1.041147,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1836,
+      "triangles": 3444
+    },
+    "LOD1": {
+      "objects": 6,
+      "vertices": 660,
+      "triangles": 1188
+    },
+    "LOD2": {
+      "objects": 5,
+      "vertices": 332,
+      "triangles": 628
+    },
+    "LOD3": {
+      "objects": 5,
+      "vertices": 230,
+      "triangles": 424
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_FR_ASM_Exocet_SM39_SEG_00",
+    "UCX_WPN_FR_ASM_Exocet_SM39_SEG_01",
+    "UCX_WPN_FR_ASM_Exocet_SM39_SEG_02",
+    "UCX_WPN_FR_ASM_Exocet_SM39_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -2.3499999046325684,
+      2.3499999046325684
+    ],
+    "y": [
+      -0.36557498574256897,
+      0.36557498574256897
+    ],
+    "z": [
+      -0.36557498574256897,
+      0.6755720376968384
+    ],
+    "dimensions_m": [
+      4.699999809265137,
+      0.7311499714851379,
+      1.0411470234394073
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.1549985259771347
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/FR_ASM_Exocet_SM39_LOD0.fbx",
+        "mirror": "FBX/FR_ASM_Exocet_SM39_LOD0.fbx",
+        "sha256": "7115c3fd87bfb6411fd805a9d00fd6e32af20f77169f07f4ffba50af7c9f5307",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/FR_ASM_Exocet_SM39_LOD1.fbx",
+        "mirror": "FBX/FR_ASM_Exocet_SM39_LOD1.fbx",
+        "sha256": "a890e6b0cebd9af01fe6dae90837e63b3ddfa87ce232a5efab972d9954564970",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/FR_ASM_Exocet_SM39_LOD2.fbx",
+        "mirror": "FBX/FR_ASM_Exocet_SM39_LOD2.fbx",
+        "sha256": "bb6c74f1b9ce0589557da03c75d51a99086c963f831c0e8e369d171e44be74a1",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/FR_ASM_Exocet_SM39_LOD3.fbx",
+        "mirror": "FBX/FR_ASM_Exocet_SM39_LOD3.fbx",
+        "sha256": "32b8020e67e14da187d6a301b2e8f17e67768661b49be16d109dff71f2670b92",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/FR_ASM_Exocet_SM39_COLLISION.fbx",
+      "sha256": "ea5ac15a2f0fb5dd59c1cac04c31f59d126fb0a69e54f4e9fa61ad7c0ef541c3"
+    },
+    "collision_manifest": {
+      "path": "Collision/FR_ASM_Exocet_SM39_COLLISION.json",
+      "sha256": "a76636469afcc919be51064bbdbe80dd3c9862ae5de3d12a6e6a3320f49245d8"
+    }
+  },
+  "build_seconds": 0.38,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.34,
+    "SIDE": 0.38,
+    "FRONT": 0.33,
+    "TOP": 0.33,
+    "DETAIL": 0.41,
+    "ICON": 0.33
+  },
+  "previews": [
+    "Detail.png",
+    "FR_ASM_Exocet_SM39_DETAIL_128.png",
+    "FR_ASM_Exocet_SM39_DETAIL_256.png",
+    "FR_ASM_Exocet_SM39_DETAIL_512.png",
+    "FR_ASM_Exocet_SM39_FRONT_128.png",
+    "FR_ASM_Exocet_SM39_FRONT_256.png",
+    "FR_ASM_Exocet_SM39_FRONT_512.png",
+    "FR_ASM_Exocet_SM39_ICON_128.png",
+    "FR_ASM_Exocet_SM39_ICON_256.png",
+    "FR_ASM_Exocet_SM39_ICON_512.png",
+    "FR_ASM_Exocet_SM39_PERSPECTIVE_128.png",
+    "FR_ASM_Exocet_SM39_PERSPECTIVE_256.png",
+    "FR_ASM_Exocet_SM39_PERSPECTIVE_512.png",
+    "FR_ASM_Exocet_SM39_SIDE_128.png",
+    "FR_ASM_Exocet_SM39_SIDE_256.png",
+    "FR_ASM_Exocet_SM39_SIDE_512.png",
+    "FR_ASM_Exocet_SM39_TOP_128.png",
+    "FR_ASM_Exocet_SM39_TOP_256.png",
+    "FR_ASM_Exocet_SM39_TOP_512.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/FR_ASM_Exocet_SM39_MASTER.blend",
+      "sha256": "7d133170d2b2ce63aa596bd2eba79a67dcf58c6b399c83d42a33ee96677b9ee6"
+    },
+    "source": {
+      "path": "Source/FR_ASM_Exocet_SM39_SOURCE.json",
+      "sha256": "5437ee93b9d4c89cd83904e65e8790350dec461b7036a750e3345d004436a8e5"
+    },
+    "spec": {
+      "path": "Documentation/FR_ASM_Exocet_SM39_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/FR_ASM_Exocet_SM39_README.md"
+    }
+  }
+}

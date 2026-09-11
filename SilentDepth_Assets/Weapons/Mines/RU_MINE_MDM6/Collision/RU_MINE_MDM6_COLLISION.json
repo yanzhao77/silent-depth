@@ -1,0 +1,35 @@
+{
+  "weapon_id": "RU_MINE_MDM6",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_MINE_MDM6_SEG_00",
+      "centre": [
+        -0.528,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.344,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_MINE_MDM6_SEG_01",
+      "centre": [
+        0.48,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.44,
+        0.5249999999999999,
+        0.5249999999999999
+      ]
+    }
+  ],
+  "collision_fbx": "RU_MINE_MDM6_COLLISION.fbx",
+  "collision_sha256": "76cccc4aab47fd21f3deb7f479cf2fddaf4e2bde80718c683e51895b48ac3cfb"
+}

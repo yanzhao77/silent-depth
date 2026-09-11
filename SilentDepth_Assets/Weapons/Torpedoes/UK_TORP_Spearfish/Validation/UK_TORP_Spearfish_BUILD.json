@@ -1,0 +1,166 @@
+{
+  "weapon_id": "UK_TORP_Spearfish",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 7.0,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 7.016611,
+  "built_max_diameter_m": 0.786692,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2458,
+      "triangles": 4284
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 1074,
+      "triangles": 1764
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 490,
+      "triangles": 836
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 412,
+      "triangles": 680
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_UK_TORP_Spearfish_SEG_00",
+    "UCX_WPN_UK_TORP_Spearfish_SEG_01",
+    "UCX_WPN_UK_TORP_Spearfish_SEG_02",
+    "UCX_WPN_UK_TORP_Spearfish_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.516610622406006,
+      3.5
+    ],
+    "y": [
+      -0.35130777955055237,
+      0.35130777955055237
+    ],
+    "z": [
+      -0.3933461606502533,
+      0.3933461606502533
+    ],
+    "dimensions_m": [
+      7.016610622406006,
+      0.7026155591011047,
+      0.7866923213005066
+    ],
+    "centre": [
+      -0.00830531120300293,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/UK_TORP_Spearfish_LOD0.fbx",
+        "mirror": "FBX/UK_TORP_Spearfish_LOD0.fbx",
+        "sha256": "e93943daac08de5ed396a248189a33ca1f94e3eb438081bde545a0bbbbf00740",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/UK_TORP_Spearfish_LOD1.fbx",
+        "mirror": "FBX/UK_TORP_Spearfish_LOD1.fbx",
+        "sha256": "a6e91f875981d939edaa8e3596ae976ab1fe2e5ca940571d3ce8d182f42787e8",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/UK_TORP_Spearfish_LOD2.fbx",
+        "mirror": "FBX/UK_TORP_Spearfish_LOD2.fbx",
+        "sha256": "e84ddf41619b8f37ae0288a7c0c4fed68c0346dbf8edd5d8dd5e9d4669b929b3",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/UK_TORP_Spearfish_LOD3.fbx",
+        "mirror": "FBX/UK_TORP_Spearfish_LOD3.fbx",
+        "sha256": "b4e6a2a3cea8f9148a4ea70702915928ee5af432d17ed1937d2e19dc93255c85",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/UK_TORP_Spearfish_COLLISION.fbx",
+      "sha256": "55695be9d13e926119e5eabed6adc4c878b15d0dcc06ca4f595d34c8a6a5933f"
+    },
+    "collision_manifest": {
+      "path": "Collision/UK_TORP_Spearfish_COLLISION.json",
+      "sha256": "61406e8e30da2676553063f7b11a4116eb7ad6318e032d1c9c517a37b8e61934"
+    }
+  },
+  "build_seconds": 0.96,
+  "preview_seconds": {
+    "PERSPECTIVE": 2.43,
+    "SIDE": 0.32,
+    "FRONT": 0.36,
+    "TOP": 0.29,
+    "DETAIL": 0.35,
+    "ICON": 0.39
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "UK_TORP_Spearfish_DETAIL_128.png",
+    "UK_TORP_Spearfish_DETAIL_256.png",
+    "UK_TORP_Spearfish_DETAIL_512.png",
+    "UK_TORP_Spearfish_FRONT_128.png",
+    "UK_TORP_Spearfish_FRONT_256.png",
+    "UK_TORP_Spearfish_FRONT_512.png",
+    "UK_TORP_Spearfish_ICON_128.png",
+    "UK_TORP_Spearfish_ICON_256.png",
+    "UK_TORP_Spearfish_ICON_512.png",
+    "UK_TORP_Spearfish_PERSPECTIVE_128.png",
+    "UK_TORP_Spearfish_PERSPECTIVE_256.png",
+    "UK_TORP_Spearfish_PERSPECTIVE_512.png",
+    "UK_TORP_Spearfish_SIDE_128.png",
+    "UK_TORP_Spearfish_SIDE_256.png",
+    "UK_TORP_Spearfish_SIDE_512.png",
+    "UK_TORP_Spearfish_TOP_128.png",
+    "UK_TORP_Spearfish_TOP_256.png",
+    "UK_TORP_Spearfish_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/UK_TORP_Spearfish_MASTER.blend",
+      "sha256": "d5072db7811f9c486ba5a3674bbaf468128f384fd2e4c725556f27f469bb6021"
+    },
+    "source": {
+      "path": "Source/UK_TORP_Spearfish_SOURCE.json",
+      "sha256": "c016e3986403fbaf6858f070e66682ac63ea1fd832607012b9c47a8d608540ef"
+    },
+    "spec": {
+      "path": "Documentation/UK_TORP_Spearfish_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/UK_TORP_Spearfish_README.md"
+    }
+  }
+}

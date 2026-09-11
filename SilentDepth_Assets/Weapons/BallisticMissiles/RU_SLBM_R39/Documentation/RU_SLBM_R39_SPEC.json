@@ -1,0 +1,96 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_SLBM_R39",
+  "display_name": "R-39 (SS-N-20 Sturgeon)",
+  "short_name": "R-39",
+  "country": "Russia",
+  "category": "SLBM",
+  "family": "RU_SLBM_R39",
+  "role": "潜射弹道导弹（固体燃料）",
+  "subrole": "Late_Cold_War_SLBM",
+  "tier": 9,
+  "tier_reason": "游戏 T9 末期冷战 SLBM：Project 941（Typhoon）专用大型固体燃料导弹，弹体尺寸显著大于前代，是 Typhoon 资产的核心配套武器节点。",
+  "era": "Cold War Late",
+  "service_years": "1983-2004",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 16.0,
+    "diameter_m": 2.4,
+    "mass_kg": 84000,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料常见数据，取级别近似值；长度与直径按米级取整。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "nose_shroud",
+      "tail_skirt",
+      "nozzle",
+      "three_stage",
+      "large_diameter"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.4,
+      "shroud_shape": "blunt",
+      "stage_rings": 2,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.2,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.8,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 0,
+      "base_cover": 1,
+      "bands": 3,
+      "windows": 0,
+      "canister": 1
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/RU_SLBM_R39_MASTER.blend",
+    "lod": [
+      "LOD/RU_SLBM_R39_LOD0.fbx",
+      "LOD/RU_SLBM_R39_LOD1.fbx",
+      "LOD/RU_SLBM_R39_LOD2.fbx",
+      "LOD/RU_SLBM_R39_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_SLBM_R39_LOD0.fbx",
+      "FBX/RU_SLBM_R39_LOD1.fbx",
+      "FBX/RU_SLBM_R39_LOD2.fbx",
+      "FBX/RU_SLBM_R39_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_SLBM_R39_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_SLBM_R39_COLLISION.json",
+    "source": "Source/RU_SLBM_R39_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3552,
+    "LOD1": 1344,
+    "LOD2": 608,
+    "LOD3": 380
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 16.0,
+  "built_max_diameter_m": 2.52,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料常见数据，取级别近似值；长度与直径按米级取整。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

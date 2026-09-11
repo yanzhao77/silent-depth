@@ -1,0 +1,49 @@
+{
+  "project": "SILENT DEPTH GLOBAL SUBMARINE WEAPON ASSET FACTORY",
+  "created_at": "2026-09-10",
+  "asset_root": "C:/workspace/ue4/silent-depth/SilentDepth_Assets/Weapons",
+  "platform_tree_source": "C:/workspace/ue4/silent-depth/SilentDepth_Assets/Manifest/submarine_manifest.json",
+  "runtime_rule": "所有武器资源必须离线可用，不得引入 CDN、远程贴图或运行时下载。",
+  "content_boundary": [
+    "只使用公开资料中的型号身份、类别、时代、外形尺寸级别与发射方式。",
+    "不生成任何武器内部结构、工程细节、制造方法或装药信息。",
+    "资料不足的型号标记 ESTIMATED / GAMEPLAY 或 DATABASE_ONLY。"
+  ],
+  "protected_gameplay_paths": [
+    "src/core",
+    "src/ai",
+    "src/sonar",
+    "src/combat",
+    "src/gameplay",
+    "src/missions",
+    "src/world"
+  ],
+  "ue_target": {
+    "engine": "Unreal Engine",
+    "version": "4.27",
+    "fbx_binary_version": 7400,
+    "fbx_label": "FBX 2018 compatible",
+    "axis_forward": "-Y",
+    "axis_up": "Z",
+    "global_scale": 1.0,
+    "apply_unit_scale": true,
+    "embed_textures": false
+  },
+  "tooling": {
+    "blender": "C:/tools/Blender Foundation/Blender 5.2/blender.exe",
+    "builders": [
+      "Tools/build_weapon_manifest.py",
+      "Tools/build_technology_tree.py",
+      "Tools/build_compatibility.py",
+      "Tools/build_loadout.py",
+      "Tools/build_production_queue.py",
+      "Tools/build_weapon_assets.py",
+      "Tools/weapon_validator.py",
+      "Tools/build_reports.py"
+    ],
+    "blender_scripts": [
+      "Tools/weapon_geometry_kit.py",
+      "Tools/weapon_factory_blender.py"
+    ]
+  }
+}

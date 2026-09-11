@@ -1,0 +1,48 @@
+{
+  "weapon_id": "UK_SLBM_Polaris_A3TK",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "nose_shroud",
+      "tail_skirt",
+      "nozzle",
+      "penetration_aids"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.8,
+      "shroud_shape": "pointed",
+      "stage_rings": 1,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.25,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.6,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 0,
+      "base_cover": 1,
+      "bands": 3,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "dimensions": {
+    "length_m": 9.8,
+    "diameter_m": 1.37,
+    "mass_kg": 16000,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料常见 Polaris A3 级别尺寸。"
+  },
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "tier": 7,
+  "asset_priority": "HIGH",
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料常见 Polaris A3 级别尺寸。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

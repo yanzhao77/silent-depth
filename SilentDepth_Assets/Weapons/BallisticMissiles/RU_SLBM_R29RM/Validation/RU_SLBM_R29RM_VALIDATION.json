@@ -1,0 +1,172 @@
+{
+  "weapon_id": "RU_SLBM_R29RM",
+  "category": "SLBM",
+  "tier": 7,
+  "asset_priority": "HIGH",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RM",
+  "result": "PASS",
+  "label": "TESTED",
+  "issues": [],
+  "checks": {
+    "files": {
+      "Blend/{id}_MASTER.blend": true,
+      "FBX/{id}_LOD0.fbx": true,
+      "FBX/{id}_LOD1.fbx": true,
+      "FBX/{id}_LOD2.fbx": true,
+      "FBX/{id}_LOD3.fbx": true,
+      "Collision/{id}_COLLISION.fbx": true,
+      "Documentation/{id}_SPEC.json": true,
+      "Documentation/{id}_README.md": true
+    },
+    "fbx_binary_versions": {
+      "RU_SLBM_R29RM_LOD0.fbx": 7400,
+      "RU_SLBM_R29RM_LOD1.fbx": 7400,
+      "RU_SLBM_R29RM_LOD2.fbx": 7400,
+      "RU_SLBM_R29RM_LOD3.fbx": 7400,
+      "RU_SLBM_R29RM_COLLISION.fbx": 7400
+    },
+    "geometry": {
+      "LOD0": {
+        "expected_vertices": 2840,
+        "expected_triangles": 4992,
+        "expected_length_m": 14.8
+      },
+      "LOD1": {
+        "expected_vertices": 1086,
+        "expected_triangles": 1824,
+        "expected_length_m": 14.8
+      },
+      "LOD2": {
+        "expected_vertices": 470,
+        "expected_triangles": 832,
+        "expected_length_m": 14.8
+      },
+      "LOD3": {
+        "expected_vertices": 296,
+        "expected_triangles": 520,
+        "expected_length_m": 14.8
+      }
+    },
+    "build": {
+      "blender": "5.2.1 LTS",
+      "build_seconds": 0.69,
+      "collision_boxes": 4,
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 2840,
+          "triangles": 4992
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 1086,
+          "triangles": 1824
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 470,
+          "triangles": 832
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 296,
+          "triangles": 520
+        }
+      }
+    },
+    "fbx_roundtrip": {
+      "result": "PASS",
+      "lod_triangles": {
+        "LOD0": 4992,
+        "LOD1": 1824,
+        "LOD2": 832,
+        "LOD3": 520
+      },
+      "collision_objects": 4
+    },
+    "previews": {
+      "Preview/Hero.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 71.71,
+        "min_luminance": 22,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Profile.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 70.72,
+        "min_luminance": 22,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Top.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 71.23,
+        "min_luminance": 23,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Detail.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 90.73,
+        "min_luminance": 22,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Icon_128.png": {
+        "status": "OK",
+        "resolution": [
+          128,
+          128
+        ],
+        "mean_luminance": 20.26,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.0936
+      },
+      "Preview/Icon_256.png": {
+        "status": "OK",
+        "resolution": [
+          256,
+          256
+        ],
+        "mean_luminance": 20.33,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.0909
+      },
+      "Preview/Icon_512.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 20.33,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.0896
+      }
+    }
+  },
+  "sha256": {
+    "master": "ea7b0ca38fc73740daa9183fcfbe62aa28db2d802432eb2b799597815f618f1d",
+    "lod0": "d65e22bb47083164d96c6ea0017cdfdb61259a3ca9ba60ce8e20105afa98995b"
+  },
+  "validated_at": "2026-09-11"
+}

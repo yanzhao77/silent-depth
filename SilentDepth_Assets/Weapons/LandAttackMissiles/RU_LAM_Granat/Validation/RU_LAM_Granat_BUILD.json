@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_LAM_Granat",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "cruise_missile",
+  "declared_length_m": 8.1,
+  "declared_diameter_m": 0.53,
+  "built_length_m": 8.1,
+  "built_max_diameter_m": 2.073603,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1836,
+      "triangles": 3444
+    },
+    "LOD1": {
+      "objects": 6,
+      "vertices": 660,
+      "triangles": 1188
+    },
+    "LOD2": {
+      "objects": 5,
+      "vertices": 332,
+      "triangles": 628
+    },
+    "LOD3": {
+      "objects": 5,
+      "vertices": 230,
+      "triangles": 424
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_LAM_Granat_SEG_00",
+    "UCX_WPN_RU_LAM_Granat_SEG_01",
+    "UCX_WPN_RU_LAM_Granat_SEG_02",
+    "UCX_WPN_RU_LAM_Granat_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -4.050000190734863,
+      4.050000190734863
+    ],
+    "y": [
+      -0.37630000710487366,
+      0.6451451182365417
+    ],
+    "z": [
+      -0.5679870247840881,
+      1.5056157112121582
+    ],
+    "dimensions_m": [
+      8.100000381469727,
+      1.0214451253414154,
+      2.0736027359962463
+    ],
+    "centre": [
+      0.0,
+      0.13442255556583405,
+      0.46881434321403503
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_LAM_Granat_LOD0.fbx",
+        "mirror": "FBX/RU_LAM_Granat_LOD0.fbx",
+        "sha256": "dde3853ff2cc973cc88ff5b18029f0d100cfca65ef03765c33e65201b807c551",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_LAM_Granat_LOD1.fbx",
+        "mirror": "FBX/RU_LAM_Granat_LOD1.fbx",
+        "sha256": "c9be0bf70fb329ea0ef7a0fc835f92da23515072acc119bfffa404cbaae7c3f0",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_LAM_Granat_LOD2.fbx",
+        "mirror": "FBX/RU_LAM_Granat_LOD2.fbx",
+        "sha256": "c687067bcf13d16c9f15cea23a64373a803449ef5835731f3fa44a04e8b1301a",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_LAM_Granat_LOD3.fbx",
+        "mirror": "FBX/RU_LAM_Granat_LOD3.fbx",
+        "sha256": "579453b0345e084022cd12c042defbc0a641a7c86c20a9534771f12437de51b9",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_LAM_Granat_COLLISION.fbx",
+      "sha256": "48f5479967bc0d6c2c72be0124fcb59c5343a3f31473049632b37d4c1fa9f95a"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_LAM_Granat_COLLISION.json",
+      "sha256": "10e72450c9450d3ec6855a603ec20d3475105d2a019e1c9a9ad6a60d10b48b11"
+    }
+  },
+  "build_seconds": 0.34,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.3,
+    "SIDE": 0.31,
+    "FRONT": 0.35,
+    "TOP": 0.29,
+    "DETAIL": 0.31,
+    "ICON": 0.33
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_LAM_Granat_DETAIL_128.png",
+    "RU_LAM_Granat_DETAIL_256.png",
+    "RU_LAM_Granat_DETAIL_512.png",
+    "RU_LAM_Granat_FRONT_128.png",
+    "RU_LAM_Granat_FRONT_256.png",
+    "RU_LAM_Granat_FRONT_512.png",
+    "RU_LAM_Granat_ICON_128.png",
+    "RU_LAM_Granat_ICON_256.png",
+    "RU_LAM_Granat_ICON_512.png",
+    "RU_LAM_Granat_PERSPECTIVE_128.png",
+    "RU_LAM_Granat_PERSPECTIVE_256.png",
+    "RU_LAM_Granat_PERSPECTIVE_512.png",
+    "RU_LAM_Granat_SIDE_128.png",
+    "RU_LAM_Granat_SIDE_256.png",
+    "RU_LAM_Granat_SIDE_512.png",
+    "RU_LAM_Granat_TOP_128.png",
+    "RU_LAM_Granat_TOP_256.png",
+    "RU_LAM_Granat_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_LAM_Granat_MASTER.blend",
+      "sha256": "4c0366f036ddc4d38cdcb9978db47796e6123618303ed133d3b1e101e4240015"
+    },
+    "source": {
+      "path": "Source/RU_LAM_Granat_SOURCE.json",
+      "sha256": "8ea5f792535df874738665b5727956fd5f9088266f26ed18277df97a485cf249"
+    },
+    "spec": {
+      "path": "Documentation/RU_LAM_Granat_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_LAM_Granat_README.md"
+    }
+  }
+}

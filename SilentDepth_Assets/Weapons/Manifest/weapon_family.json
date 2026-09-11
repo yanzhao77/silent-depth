@@ -1,0 +1,2258 @@
+{
+  "database": "weapon_family",
+  "generated_at": "2026-09-10",
+  "total_families": 87,
+  "total_variants": 124,
+  "families": {
+    "US_TORP_Mk14": {
+      "family": "US_TORP_Mk14",
+      "country": "USA",
+      "family_name": "Mk 14 / Mk 18 / Mk 23",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "us_torp_mk14",
+      "notes": "美国二战潜艇主力鱼雷家族，作为鱼雷树 T1 起点。",
+      "variants": [
+        {
+          "weapon_id": "US_TORP_Mk14",
+          "display_name": "Mk 14 torpedo",
+          "category": "TORP",
+          "tier": 1,
+          "status": "HISTORICAL",
+          "variant_of": "US_TORP_Mk14",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_TORP_Mk18",
+          "display_name": "Mk 18 torpedo",
+          "category": "TORP",
+          "tier": 1,
+          "status": "HISTORICAL",
+          "variant_of": "US_TORP_Mk18",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_TORP_Mk23",
+          "display_name": "Mk 23 torpedo",
+          "category": "TORP",
+          "tier": 1,
+          "status": "HISTORICAL",
+          "variant_of": "US_TORP_Mk23",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_TORP_Mk16": {
+      "family": "US_TORP_Mk16",
+      "country": "USA",
+      "family_name": "Mk 16",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "us_torp_mk16",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_TORP_Mk16",
+          "display_name": "Mk 16 torpedo",
+          "category": "TORP",
+          "tier": 2,
+          "status": "RETIRED",
+          "variant_of": "US_TORP_Mk16",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_TORP_Mk27": {
+      "family": "US_TORP_Mk27",
+      "country": "USA",
+      "family_name": "Mk 27",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "us_torp_mk27",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_TORP_Mk27",
+          "display_name": "Mk 27 Mod 4 torpedo",
+          "category": "TORP",
+          "tier": 2,
+          "status": "RETIRED",
+          "variant_of": "US_TORP_Mk27",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_TORP_Mk37": {
+      "family": "US_TORP_Mk37",
+      "country": "USA",
+      "family_name": "Mk 37",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "us_torp_mk37",
+      "notes": "Mk 37 是冷战早期美国核潜艇最典型的电动反潜鱼雷。",
+      "variants": [
+        {
+          "weapon_id": "US_TORP_Mk37",
+          "display_name": "Mk 37 Mod 0 torpedo",
+          "category": "TORP",
+          "tier": 3,
+          "status": "RETIRED",
+          "variant_of": "US_TORP_Mk37",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_TORP_Mk37_Mod2",
+          "display_name": "Mk 37 Mod 2 torpedo",
+          "category": "TORP",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "US_TORP_Mk37_Mod2",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_TORP_Mk45": {
+      "family": "US_TORP_Mk45",
+      "country": "USA",
+      "family_name": "Mk 45 ASTOR",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "us_torp_mk45",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_TORP_Mk45",
+          "display_name": "Mk 45 ASTOR torpedo",
+          "category": "TORP",
+          "tier": 5,
+          "status": "RETIRED",
+          "variant_of": "US_TORP_Mk45",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_TORP_Mk48": {
+      "family": "US_TORP_Mk48",
+      "country": "USA",
+      "family_name": "Mk 48",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "us_torp_mk48",
+      "notes": "Mk 48 家族是游戏中最主要的美国潜艇鱼雷分支，多个 Block/Mod 共享基础几何。",
+      "variants": [
+        {
+          "weapon_id": "US_TORP_Mk48",
+          "display_name": "Mk 48 Mod 1 torpedo",
+          "category": "TORP",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "US_TORP_Mk48",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_TORP_Mk48_ADCAP",
+          "display_name": "Mk 48 Mod 4 ADCAP",
+          "category": "TORP",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "US_TORP_Mk48_ADCAP",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_TORP_Mk48_Mod6",
+          "display_name": "Mk 48 Mod 6 CBASS",
+          "category": "TORP",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "US_TORP_Mk48_Mod6",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_TORP_Mk48_Mod7",
+          "display_name": "Mk 48 Mod 7 CBASS",
+          "category": "TORP",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "US_TORP_Mk48_Mod7",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_TORP_SET53": {
+      "family": "RU_TORP_SET53",
+      "country": "Russia",
+      "family_name": "SET-53 / SET-65 / SAET-60",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "ru_torp_set53",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_TORP_SET53",
+          "display_name": "SET-53 torpedo",
+          "category": "TORP",
+          "tier": 3,
+          "status": "RETIRED",
+          "variant_of": "RU_TORP_SET53",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_TORP_SET65",
+          "display_name": "SET-65 torpedo",
+          "category": "TORP",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "RU_TORP_SET65",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_TORP_SAET60",
+          "display_name": "SAET-60 torpedo",
+          "category": "TORP",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "RU_TORP_SAET60",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_TORP_USET80": {
+      "family": "RU_TORP_USET80",
+      "country": "Russia",
+      "family_name": "USET-80",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "ru_torp_uset80",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_TORP_USET80",
+          "display_name": "USET-80 torpedo",
+          "category": "TORP",
+          "tier": 6,
+          "status": "ACTIVE",
+          "variant_of": "RU_TORP_USET80",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_TORP_USET80K",
+          "display_name": "USET-80K torpedo",
+          "category": "TORP",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "RU_TORP_USET80K",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_TORP_TEST71": {
+      "family": "RU_TORP_TEST71",
+      "country": "Russia",
+      "family_name": "TEST-71 / TEST-96",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "ru_torp_test71",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_TORP_TEST71",
+          "display_name": "TEST-71 torpedo",
+          "category": "TORP",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "RU_TORP_TEST71",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_TORP_TEST71M",
+          "display_name": "TEST-71M torpedo",
+          "category": "TORP",
+          "tier": 7,
+          "status": "RETIRED",
+          "variant_of": "RU_TORP_TEST71M",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_TORP_TEST96",
+          "display_name": "TEST-96 torpedo",
+          "category": "TORP",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "RU_TORP_TEST96",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_TORP_UGST": {
+      "family": "RU_TORP_UGST",
+      "country": "Russia",
+      "family_name": "UGST",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "ru_torp_ugst",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_TORP_UGST",
+          "display_name": "UGST torpedo",
+          "category": "TORP",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "RU_TORP_UGST",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_TORP_UGST_M",
+          "display_name": "UGST-M torpedo",
+          "category": "TORP",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "RU_TORP_UGST_M",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_TORP_5365": {
+      "family": "RU_TORP_5365",
+      "country": "Russia",
+      "family_name": "53-65",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "ru_torp_5365",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_TORP_5365K",
+          "display_name": "53-65K torpedo",
+          "category": "TORP",
+          "tier": 5,
+          "status": "ACTIVE",
+          "variant_of": "RU_TORP_5365K",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_TORP_5365M",
+          "display_name": "53-65M torpedo",
+          "category": "TORP",
+          "tier": 6,
+          "status": "ACTIVE",
+          "variant_of": "RU_TORP_5365M",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_TORP_6576": {
+      "family": "RU_TORP_6576",
+      "country": "Russia",
+      "family_name": "65-76 Kit",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "ru_torp_6576",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_TORP_6576",
+          "display_name": "65-76 Kit torpedo",
+          "category": "TORP",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "RU_TORP_6576",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_TORP_6576A",
+          "display_name": "65-76A torpedo",
+          "category": "TORP",
+          "tier": 7,
+          "status": "RETIRED",
+          "variant_of": "RU_TORP_6576A",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_TORP_Shkval": {
+      "family": "RU_TORP_Shkval",
+      "country": "Russia",
+      "family_name": "VA-111 Shkval",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "ru_torp_shkval",
+      "notes": "视觉上最独特的俄罗斯鱼雷，用于游戏科技树的高速分支。",
+      "variants": [
+        {
+          "weapon_id": "RU_TORP_Shkval",
+          "display_name": "VA-111 Shkval",
+          "category": "TORP",
+          "tier": 7,
+          "status": "RETIRED",
+          "variant_of": "RU_TORP_Shkval",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_TORP_Fizik": {
+      "family": "RU_TORP_Fizik",
+      "country": "Russia",
+      "family_name": "Fizik",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "ru_torp_fizik",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_TORP_Fizik",
+          "display_name": "Fizik torpedo",
+          "category": "TORP",
+          "tier": 9,
+          "status": "ACTIVE",
+          "variant_of": "RU_TORP_Fizik",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "UK_TORP_Mk8": {
+      "family": "UK_TORP_Mk8",
+      "country": "UK",
+      "family_name": "Mk 8",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "uk_torp_mk8",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "UK_TORP_Mk8",
+          "display_name": "Mk 8 Mod 4 torpedo",
+          "category": "TORP",
+          "tier": 2,
+          "status": "HISTORICAL",
+          "variant_of": "UK_TORP_Mk8",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "UK_TORP_Tigerfish": {
+      "family": "UK_TORP_Tigerfish",
+      "country": "UK",
+      "family_name": "Tigerfish",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "uk_torp_tigerfish",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "UK_TORP_Tigerfish",
+          "display_name": "Tigerfish Mod 0",
+          "category": "TORP",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "UK_TORP_Tigerfish",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "UK_TORP_Tigerfish_Mod1",
+          "display_name": "Tigerfish Mod 1",
+          "category": "TORP",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "UK_TORP_Tigerfish_Mod1",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "UK_TORP_Spearfish": {
+      "family": "UK_TORP_Spearfish",
+      "country": "UK",
+      "family_name": "Spearfish",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "uk_torp_spearfish",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "UK_TORP_Spearfish",
+          "display_name": "Spearfish Mod 0",
+          "category": "TORP",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "UK_TORP_Spearfish",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "UK_TORP_Spearfish_Mod1",
+          "display_name": "Spearfish Mod 1",
+          "category": "TORP",
+          "tier": 9,
+          "status": "ACTIVE",
+          "variant_of": "UK_TORP_Spearfish_Mod1",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "UK_TORP_StingRay": {
+      "family": "UK_TORP_StingRay",
+      "country": "UK",
+      "family_name": "Sting Ray",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "uk_torp_stingray",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "UK_TORP_StingRay",
+          "display_name": "Sting Ray Mod 1",
+          "category": "TORP",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "UK_TORP_StingRay",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_TORP_L5": {
+      "family": "FR_TORP_L5",
+      "country": "France",
+      "family_name": "L5",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "fr_torp_l5",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "FR_TORP_L5_Mod3",
+          "display_name": "L5 Mod 3 torpedo",
+          "category": "TORP",
+          "tier": 5,
+          "status": "RETIRED",
+          "variant_of": "FR_TORP_L5_Mod3",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "FR_TORP_L5_Mod4",
+          "display_name": "L5 Mod 4 torpedo",
+          "category": "TORP",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "FR_TORP_L5_Mod4",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_TORP_F17": {
+      "family": "FR_TORP_F17",
+      "country": "France",
+      "family_name": "F17",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "fr_torp_f17",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "FR_TORP_F17",
+          "display_name": "F17 Mod 2 torpedo",
+          "category": "TORP",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "FR_TORP_F17",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_TORP_F21": {
+      "family": "FR_TORP_F21",
+      "country": "France",
+      "family_name": "F21",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "fr_torp_f21",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "FR_TORP_F21",
+          "display_name": "F21 Artemis torpedo",
+          "category": "TORP",
+          "tier": 9,
+          "status": "ACTIVE",
+          "variant_of": "FR_TORP_F21",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_TORP_Yu1": {
+      "family": "CN_TORP_Yu1",
+      "country": "China",
+      "family_name": "Yu-1",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "cn_torp_yu1",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_TORP_Yu1",
+          "display_name": "Yu-1 torpedo",
+          "category": "TORP",
+          "tier": 2,
+          "status": "RETIRED",
+          "variant_of": "CN_TORP_Yu1",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_TORP_Yu3": {
+      "family": "CN_TORP_Yu3",
+      "country": "China",
+      "family_name": "Yu-3 / Yu-4",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "cn_torp_yu3",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_TORP_Yu3",
+          "display_name": "Yu-3 torpedo",
+          "category": "TORP",
+          "tier": 5,
+          "status": "RETIRED",
+          "variant_of": "CN_TORP_Yu3",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "CN_TORP_Yu4",
+          "display_name": "Yu-4 torpedo",
+          "category": "TORP",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "CN_TORP_Yu4",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_TORP_Yu5": {
+      "family": "CN_TORP_Yu5",
+      "country": "China",
+      "family_name": "Yu-5",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "cn_torp_yu5",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_TORP_Yu5",
+          "display_name": "Yu-5 torpedo",
+          "category": "TORP",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "CN_TORP_Yu5",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_TORP_Yu6": {
+      "family": "CN_TORP_Yu6",
+      "country": "China",
+      "family_name": "Yu-6",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "cn_torp_yu6",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_TORP_Yu6",
+          "display_name": "Yu-6 torpedo",
+          "category": "TORP",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "CN_TORP_Yu6",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_TORP_Yu7": {
+      "family": "CN_TORP_Yu7",
+      "country": "China",
+      "family_name": "Yu-7",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "cn_torp_yu7",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_TORP_Yu7",
+          "display_name": "Yu-7 torpedo",
+          "category": "TORP",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "CN_TORP_Yu7",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "IN_TORP_Varunastra": {
+      "family": "IN_TORP_Varunastra",
+      "country": "India",
+      "family_name": "Varunastra",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "in_torp_varunastra",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "IN_TORP_Varunastra",
+          "display_name": "Varunastra torpedo",
+          "category": "TORP",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "IN_TORP_Varunastra",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "IN_TORP_TAL": {
+      "family": "IN_TORP_TAL",
+      "country": "India",
+      "family_name": "TAL / Shyena",
+      "primary_category": "TORP",
+      "categories": [
+        "TORP"
+      ],
+      "base_geometry": "in_torp_tal",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "IN_TORP_TAL",
+          "display_name": "TAL Shyena lightweight torpedo",
+          "category": "TORP",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "IN_TORP_TAL",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASM_P5": {
+      "family": "RU_ASM_P5",
+      "country": "Russia",
+      "family_name": "P-5 Pyatyorka",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "ru_asm_p5",
+      "notes": "P-6 是 P-5 家族的后续型号，共享基础几何，仅在数据层区分。",
+      "variants": [
+        {
+          "weapon_id": "RU_ASM_P5",
+          "display_name": "P-5 Pyatyorka",
+          "category": "ASM",
+          "tier": 3,
+          "status": "HISTORICAL",
+          "variant_of": "RU_ASM_P5",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_ASM_P6",
+          "display_name": "P-6 Progress",
+          "category": "ASM",
+          "tier": 3,
+          "status": "HISTORICAL",
+          "variant_of": "RU_ASM_P6",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASM_P70": {
+      "family": "RU_ASM_P70",
+      "country": "Russia",
+      "family_name": "P-70 Ametist",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "ru_asm_p70",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASM_P70",
+          "display_name": "P-70 Ametist",
+          "category": "ASM",
+          "tier": 4,
+          "status": "HISTORICAL",
+          "variant_of": "RU_ASM_P70",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASM_P120": {
+      "family": "RU_ASM_P120",
+      "country": "Russia",
+      "family_name": "P-120 Malakhit",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "ru_asm_p120",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASM_P120",
+          "display_name": "P-120 Malakhit",
+          "category": "ASM",
+          "tier": 5,
+          "status": "HISTORICAL",
+          "variant_of": "RU_ASM_P120",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASM_P500": {
+      "family": "RU_ASM_P500",
+      "country": "Russia",
+      "family_name": "P-500 Bazalt",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "ru_asm_p500",
+      "notes": "Vulkan 是 Bazalt 家族的远程改进型，共享基础几何。",
+      "variants": [
+        {
+          "weapon_id": "RU_ASM_P500",
+          "display_name": "P-500 Bazalt",
+          "category": "ASM",
+          "tier": 6,
+          "status": "HISTORICAL",
+          "variant_of": "RU_ASM_P500",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_ASM_P1000",
+          "display_name": "P-1000 Vulkan",
+          "category": "ASM",
+          "tier": 7,
+          "status": "HISTORICAL",
+          "variant_of": "RU_ASM_P1000",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASM_P700": {
+      "family": "RU_ASM_P700",
+      "country": "Russia",
+      "family_name": "P-700 Granit",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "ru_asm_p700",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASM_P700",
+          "display_name": "P-700 Granit",
+          "category": "ASM",
+          "tier": 7,
+          "status": "RETIRED",
+          "variant_of": "RU_ASM_P700",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASM_Oniks": {
+      "family": "RU_ASM_Oniks",
+      "country": "Russia",
+      "family_name": "P-800 Oniks",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "ru_asm_oniks",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASM_Oniks",
+          "display_name": "P-800 Oniks",
+          "category": "ASM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "RU_ASM_Oniks",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASM_Zircon": {
+      "family": "RU_ASM_Zircon",
+      "country": "Russia",
+      "family_name": "3M22 Tsirkon",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "ru_asm_zircon",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASM_Zircon",
+          "display_name": "3M22 Tsirkon",
+          "category": "ASM",
+          "tier": 10,
+          "status": "ACTIVE",
+          "variant_of": "RU_ASM_Zircon",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_MISSILE_Kalibr": {
+      "family": "RU_MISSILE_Kalibr",
+      "country": "Russia",
+      "family_name": "Kalibr family",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM",
+        "LAM"
+      ],
+      "base_geometry": "ru_missile_kalibr",
+      "notes": "Kalibr 是家族而非单一型号：反舰型与对陆型共享发射系统但角色不同，必须分开记录。",
+      "variants": [
+        {
+          "weapon_id": "RU_ASM_Kalibr_3M54",
+          "display_name": "Kalibr 3M54",
+          "category": "ASM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "RU_ASM_Kalibr_3M54",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_LAM_Kalibr_3M14",
+          "display_name": "Kalibr 3M14",
+          "category": "LAM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "RU_LAM_Kalibr_3M14",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_ASM_Harpoon": {
+      "family": "US_ASM_Harpoon",
+      "country": "USA",
+      "family_name": "Harpoon (UGM-84)",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "us_asm_harpoon",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_ASM_Harpoon",
+          "display_name": "UGM-84 Sub-Harpoon",
+          "category": "ASM",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "US_ASM_Harpoon",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_LAM_Tomahawk": {
+      "family": "US_LAM_Tomahawk",
+      "country": "USA",
+      "family_name": "Tomahawk",
+      "primary_category": "LAM",
+      "categories": [
+        "LAM",
+        "ASM"
+      ],
+      "base_geometry": "us_lam_tomahawk",
+      "notes": "Tomahawk 是武器家族：不同批次与反舰型共享基础几何，只在数据层区分。",
+      "variants": [
+        {
+          "weapon_id": "US_LAM_Tomahawk",
+          "display_name": "BGM-109 Tomahawk",
+          "category": "LAM",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "US_LAM_Tomahawk",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_LAM_Tomahawk_BlockIII",
+          "display_name": "Tomahawk Block III",
+          "category": "LAM",
+          "tier": 7,
+          "status": "RETIRED",
+          "variant_of": "US_LAM_Tomahawk_BlockIII",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_LAM_Tomahawk_BlockIV",
+          "display_name": "Tomahawk Block IV",
+          "category": "LAM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "US_LAM_Tomahawk_BlockIV",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_LAM_Tomahawk_BlockV",
+          "display_name": "Tomahawk Block V",
+          "category": "LAM",
+          "tier": 9,
+          "status": "ACTIVE",
+          "variant_of": "US_LAM_Tomahawk_BlockV",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_ASM_Tomahawk_TASM",
+          "display_name": "BGM-109B TASM",
+          "category": "ASM",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "US_ASM_Tomahawk_TASM",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_ASM_Exocet_SM39": {
+      "family": "FR_ASM_Exocet_SM39",
+      "country": "France",
+      "family_name": "Exocet SM39",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "fr_asm_sm39",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "FR_ASM_Exocet_SM39",
+          "display_name": "Exocet SM39",
+          "category": "ASM",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "FR_ASM_Exocet_SM39",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_LAM_MdCN": {
+      "family": "FR_LAM_MdCN",
+      "country": "France",
+      "family_name": "MdCN",
+      "primary_category": "LAM",
+      "categories": [
+        "LAM"
+      ],
+      "base_geometry": "fr_lam_mdcn",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "FR_LAM_MdCN",
+          "display_name": "MdCN / SCALP Naval",
+          "category": "LAM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "FR_LAM_MdCN",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_ASM_YJ8": {
+      "family": "CN_ASM_YJ8",
+      "country": "China",
+      "family_name": "YJ-8 / YJ-82",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM"
+      ],
+      "base_geometry": "cn_asm_yj8",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_ASM_YJ8",
+          "display_name": "YJ-8 / YJ-82",
+          "category": "ASM",
+          "tier": 6,
+          "status": "HISTORICAL",
+          "variant_of": "CN_ASM_YJ8",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_ASM_YJ18": {
+      "family": "CN_ASM_YJ18",
+      "country": "China",
+      "family_name": "YJ-18 family",
+      "primary_category": "ASM",
+      "categories": [
+        "ASM",
+        "LAM"
+      ],
+      "base_geometry": "cn_asm_yj18",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_ASM_YJ18",
+          "display_name": "YJ-18",
+          "category": "ASM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "CN_ASM_YJ18",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "CN_LAM_YJ18_LandAttack",
+          "display_name": "YJ-18 对陆攻击型",
+          "category": "LAM",
+          "tier": 8,
+          "status": "UNKNOWN",
+          "variant_of": "CN_LAM_YJ18_LandAttack",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_LAM_Granat": {
+      "family": "RU_LAM_Granat",
+      "country": "Russia",
+      "family_name": "RK-55 Granat",
+      "primary_category": "LAM",
+      "categories": [
+        "LAM"
+      ],
+      "base_geometry": "ru_lam_granat",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_LAM_Granat",
+          "display_name": "RK-55 Granat",
+          "category": "LAM",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "RU_LAM_Granat",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_ASW_SUBROC": {
+      "family": "US_ASW_SUBROC",
+      "country": "USA",
+      "family_name": "UUM-44 SUBROC",
+      "primary_category": "ASW",
+      "categories": [
+        "ASW"
+      ],
+      "base_geometry": "us_asw_subroc",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_ASW_SUBROC",
+          "display_name": "UUM-44 SUBROC",
+          "category": "ASW",
+          "tier": 5,
+          "status": "RETIRED",
+          "variant_of": "US_ASW_SUBROC",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_ASW_SeaLance": {
+      "family": "US_ASW_SeaLance",
+      "country": "USA",
+      "family_name": "UUM-125 Sea Lance",
+      "primary_category": "ASW",
+      "categories": [
+        "ASW"
+      ],
+      "base_geometry": "us_asw_sealance",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_ASW_SeaLance",
+          "display_name": "UUM-125 Sea Lance",
+          "category": "ASW",
+          "tier": 6,
+          "status": "PLANNED",
+          "variant_of": "US_ASW_SeaLance",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASW_Vyuga": {
+      "family": "RU_ASW_Vyuga",
+      "country": "Russia",
+      "family_name": "RPK-2 Vyuga",
+      "primary_category": "ASW",
+      "categories": [
+        "ASW"
+      ],
+      "base_geometry": "ru_asw_vyuga",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASW_Vyuga",
+          "display_name": "RPK-2 Vyuga",
+          "category": "ASW",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "RU_ASW_Vyuga",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASW_Vodopad": {
+      "family": "RU_ASW_Vodopad",
+      "country": "Russia",
+      "family_name": "RPK-6 Vodopad",
+      "primary_category": "ASW",
+      "categories": [
+        "ASW"
+      ],
+      "base_geometry": "ru_asw_vodopad",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASW_Vodopad",
+          "display_name": "RPK-6 Vodopad",
+          "category": "ASW",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "RU_ASW_Vodopad",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASW_Veter": {
+      "family": "RU_ASW_Veter",
+      "country": "Russia",
+      "family_name": "RPK-7 Veter",
+      "primary_category": "ASW",
+      "categories": [
+        "ASW"
+      ],
+      "base_geometry": "ru_asw_veter",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASW_Veter",
+          "display_name": "RPK-7 Veter",
+          "category": "ASW",
+          "tier": 7,
+          "status": "RETIRED",
+          "variant_of": "RU_ASW_Veter",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_ASW_Otvet": {
+      "family": "RU_ASW_Otvet",
+      "country": "Russia",
+      "family_name": "91R Otvet",
+      "primary_category": "ASW",
+      "categories": [
+        "ASW"
+      ],
+      "base_geometry": "ru_asw_otvet",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_ASW_Otvet",
+          "display_name": "91R Otvet",
+          "category": "ASW",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "RU_ASW_Otvet",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_ASW_CY1": {
+      "family": "CN_ASW_CY1",
+      "country": "China",
+      "family_name": "CY-1",
+      "primary_category": "ASW",
+      "categories": [
+        "ASW"
+      ],
+      "base_geometry": "cn_asw_cy1",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_ASW_CY1",
+          "display_name": "CY-1 anti-submarine missile",
+          "category": "ASW",
+          "tier": 6,
+          "status": "UNKNOWN",
+          "variant_of": "CN_ASW_CY1",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_SLBM_Polaris": {
+      "family": "US_SLBM_Polaris",
+      "country": "USA",
+      "family_name": "Polaris",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "us_slbm_polaris",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_SLBM_Polaris_A1",
+          "display_name": "Polaris A1",
+          "category": "SLBM",
+          "tier": 2,
+          "status": "HISTORICAL",
+          "variant_of": "US_SLBM_Polaris_A1",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_SLBM_Polaris_A3",
+          "display_name": "Polaris A3",
+          "category": "SLBM",
+          "tier": 3,
+          "status": "HISTORICAL",
+          "variant_of": "US_SLBM_Polaris_A3",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_SLBM_Poseidon": {
+      "family": "US_SLBM_Poseidon",
+      "country": "USA",
+      "family_name": "Poseidon",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "us_slbm_poseidon",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_SLBM_Poseidon_C3",
+          "display_name": "Poseidon C3",
+          "category": "SLBM",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "US_SLBM_Poseidon_C3",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_SLBM_Trident": {
+      "family": "US_SLBM_Trident",
+      "country": "USA",
+      "family_name": "Trident",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "us_slbm_trident",
+      "notes": "三叉戟是家族：C4/D5/D5LE 共享弹体级别，仅数据层区分批次。",
+      "variants": [
+        {
+          "weapon_id": "US_SLBM_Trident_C4",
+          "display_name": "Trident I C4",
+          "category": "SLBM",
+          "tier": 5,
+          "status": "RETIRED",
+          "variant_of": "US_SLBM_Trident_C4",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_SLBM_Trident_D5",
+          "display_name": "Trident II D5",
+          "category": "SLBM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "US_SLBM_Trident_D5",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_SLBM_Trident_D5LE",
+          "display_name": "Trident II D5LE",
+          "category": "SLBM",
+          "tier": 9,
+          "status": "ACTIVE",
+          "variant_of": "US_SLBM_Trident_D5LE",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_SLBM_R13": {
+      "family": "RU_SLBM_R13",
+      "country": "Russia",
+      "family_name": "R-13",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "ru_slbm_r13",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_SLBM_R13",
+          "display_name": "R-13 (SS-N-4)",
+          "category": "SLBM",
+          "tier": 2,
+          "status": "RETIRED",
+          "variant_of": "RU_SLBM_R13",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_SLBM_R21": {
+      "family": "RU_SLBM_R21",
+      "country": "Russia",
+      "family_name": "R-21",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "ru_slbm_r21",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_SLBM_R21",
+          "display_name": "R-21 (SS-N-5)",
+          "category": "SLBM",
+          "tier": 3,
+          "status": "RETIRED",
+          "variant_of": "RU_SLBM_R21",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_SLBM_R27": {
+      "family": "RU_SLBM_R27",
+      "country": "Russia",
+      "family_name": "R-27",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "ru_slbm_r27",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_SLBM_R27",
+          "display_name": "R-27 (SS-N-6)",
+          "category": "SLBM",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "RU_SLBM_R27",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_SLBM_R29": {
+      "family": "RU_SLBM_R29",
+      "country": "Russia",
+      "family_name": "R-29 family",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "ru_slbm_r29",
+      "notes": "R-29 系列是游戏里俄罗斯 SSBN 树的主干：同族共享弹体级别，仅数据层区分。",
+      "variants": [
+        {
+          "weapon_id": "RU_SLBM_R29",
+          "display_name": "R-29 (SS-N-8)",
+          "category": "SLBM",
+          "tier": 5,
+          "status": "RETIRED",
+          "variant_of": "RU_SLBM_R29",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_SLBM_R29R",
+          "display_name": "R-29R (SS-N-18)",
+          "category": "SLBM",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "RU_SLBM_R29R",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_SLBM_R29RM",
+          "display_name": "R-29RM",
+          "category": "SLBM",
+          "tier": 7,
+          "status": "RETIRED",
+          "variant_of": "RU_SLBM_R29RM",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_SLBM_R29RMU2_Sineva",
+          "display_name": "R-29RMU2 Sineva",
+          "category": "SLBM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "RU_SLBM_R29RMU2_Sineva",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_SLBM_R29RMU2_Liner",
+          "display_name": "R-29RMU2.1 Liner",
+          "category": "SLBM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "RU_SLBM_R29RMU2_Liner",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_SLBM_R30": {
+      "family": "RU_SLBM_R30",
+      "country": "Russia",
+      "family_name": "R-30 Bulava",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "ru_slbm_r30",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_SLBM_R30_Bulava",
+          "display_name": "R-30 Bulava",
+          "category": "SLBM",
+          "tier": 9,
+          "status": "ACTIVE",
+          "variant_of": "RU_SLBM_R30_Bulava",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_SLBM_M1": {
+      "family": "FR_SLBM_M1",
+      "country": "France",
+      "family_name": "M1",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "fr_slbm_m1",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "FR_SLBM_M1",
+          "display_name": "M1",
+          "category": "SLBM",
+          "tier": 3,
+          "status": "RETIRED",
+          "variant_of": "FR_SLBM_M1",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_SLBM_M2": {
+      "family": "FR_SLBM_M2",
+      "country": "France",
+      "family_name": "M2 / M20",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "fr_slbm_m2",
+      "notes": "M20 属于 M2 家族，共享基础几何。",
+      "variants": [
+        {
+          "weapon_id": "FR_SLBM_M2",
+          "display_name": "M2",
+          "category": "SLBM",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "FR_SLBM_M2",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "FR_SLBM_M20",
+          "display_name": "M20",
+          "category": "SLBM",
+          "tier": 5,
+          "status": "RETIRED",
+          "variant_of": "FR_SLBM_M20",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_SLBM_M4": {
+      "family": "FR_SLBM_M4",
+      "country": "France",
+      "family_name": "M4 / M45",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "fr_slbm_m4",
+      "notes": "M45 属于 M4 家族，共享基础几何。",
+      "variants": [
+        {
+          "weapon_id": "FR_SLBM_M4",
+          "display_name": "M4",
+          "category": "SLBM",
+          "tier": 6,
+          "status": "RETIRED",
+          "variant_of": "FR_SLBM_M4",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "FR_SLBM_M45",
+          "display_name": "M45",
+          "category": "SLBM",
+          "tier": 7,
+          "status": "RETIRED",
+          "variant_of": "FR_SLBM_M45",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "FR_SLBM_M51": {
+      "family": "FR_SLBM_M51",
+      "country": "France",
+      "family_name": "M51",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "fr_slbm_m51",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "FR_SLBM_M51",
+          "display_name": "M51",
+          "category": "SLBM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "FR_SLBM_M51",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_SLBM_JL1": {
+      "family": "CN_SLBM_JL1",
+      "country": "China",
+      "family_name": "JL-1",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "cn_slbm_jl1",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_SLBM_JL1",
+          "display_name": "JL-1",
+          "category": "SLBM",
+          "tier": 4,
+          "status": "RETIRED",
+          "variant_of": "CN_SLBM_JL1",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_SLBM_JL2": {
+      "family": "CN_SLBM_JL2",
+      "country": "China",
+      "family_name": "JL-2",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "cn_slbm_jl2",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_SLBM_JL2",
+          "display_name": "JL-2",
+          "category": "SLBM",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "CN_SLBM_JL2",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "CN_SLBM_JL3": {
+      "family": "CN_SLBM_JL3",
+      "country": "China",
+      "family_name": "JL-3",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "cn_slbm_jl3",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "CN_SLBM_JL3",
+          "display_name": "JL-3",
+          "category": "SLBM",
+          "tier": 9,
+          "status": "ACTIVE",
+          "variant_of": "CN_SLBM_JL3",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "IN_SLBM_K15": {
+      "family": "IN_SLBM_K15",
+      "country": "India",
+      "family_name": "K-15 Sagarika",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "in_slbm_k15",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "IN_SLBM_K15",
+          "display_name": "K-15 Sagarika",
+          "category": "SLBM",
+          "tier": 6,
+          "status": "ACTIVE",
+          "variant_of": "IN_SLBM_K15",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "IN_SLBM_K4": {
+      "family": "IN_SLBM_K4",
+      "country": "India",
+      "family_name": "K-4",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "in_slbm_k4",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "IN_SLBM_K4",
+          "display_name": "K-4",
+          "category": "SLBM",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "IN_SLBM_K4",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "IN_SLBM_K5": {
+      "family": "IN_SLBM_K5",
+      "country": "India",
+      "family_name": "K-5",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "in_slbm_k5",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "IN_SLBM_K5",
+          "display_name": "K-5",
+          "category": "SLBM",
+          "tier": 10,
+          "status": "PLANNED",
+          "variant_of": "IN_SLBM_K5",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_SLBM_R39": {
+      "family": "RU_SLBM_R39",
+      "country": "Russia",
+      "family_name": "R-39 (SS-N-20)",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "ru_slbm_r39",
+      "notes": "Project 941（Typhoon）的核心战略武器家族。",
+      "variants": [
+        {
+          "weapon_id": "RU_SLBM_R39",
+          "display_name": "R-39 (SS-N-20 Sturgeon)",
+          "category": "SLBM",
+          "tier": 9,
+          "status": "HISTORICAL",
+          "variant_of": "RU_SLBM_R39",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "RU_SLBM_R39M",
+          "display_name": "R-39M (Bark)",
+          "category": "SLBM",
+          "tier": 9,
+          "status": "PLANNED",
+          "variant_of": "RU_SLBM_R39M",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "UK_SLBM_Polaris_A3TK": {
+      "family": "UK_SLBM_Polaris_A3TK",
+      "country": "UK",
+      "family_name": "Polaris A3TK (Chevaline)",
+      "primary_category": "SLBM",
+      "categories": [
+        "SLBM"
+      ],
+      "base_geometry": "uk_slbm_polaris_a3tk",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "UK_SLBM_Polaris_A3TK",
+          "display_name": "Polaris A3TK (Chevaline)",
+          "category": "SLBM",
+          "tier": 7,
+          "status": "HISTORICAL",
+          "variant_of": "UK_SLBM_Polaris_A3TK",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_STRAT_RegulusII": {
+      "family": "US_STRAT_RegulusII",
+      "country": "USA",
+      "family_name": "SSM-N-8B Regulus II",
+      "primary_category": "STRAT",
+      "categories": [
+        "STRAT"
+      ],
+      "base_geometry": "us_strat_regulus2",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_STRAT_RegulusII",
+          "display_name": "SSM-N-8B Regulus II",
+          "category": "STRAT",
+          "tier": 4,
+          "status": "PLANNED",
+          "variant_of": "US_STRAT_RegulusII",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_STRAT_TLAM_N": {
+      "family": "US_STRAT_TLAM_N",
+      "country": "USA",
+      "family_name": "BGM-109A TLAM-N",
+      "primary_category": "STRAT",
+      "categories": [
+        "STRAT"
+      ],
+      "base_geometry": "us_strat_tlam_n",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_STRAT_TLAM_N",
+          "display_name": "BGM-109A Tomahawk TLAM-N",
+          "category": "STRAT",
+          "tier": 8,
+          "status": "HISTORICAL",
+          "variant_of": "US_STRAT_TLAM_N",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_STRAT_Meteorit": {
+      "family": "RU_STRAT_Meteorit",
+      "country": "Russia",
+      "family_name": "P-750 Meteorit",
+      "primary_category": "STRAT",
+      "categories": [
+        "STRAT"
+      ],
+      "base_geometry": "ru_strat_meteorit",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_STRAT_Meteorit",
+          "display_name": "P-750 Meteorit (SS-N-24)",
+          "category": "STRAT",
+          "tier": 8,
+          "status": "HISTORICAL",
+          "variant_of": "RU_STRAT_Meteorit",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_MINE_Mk67_SLMM": {
+      "family": "US_MINE_Mk67_SLMM",
+      "country": "USA",
+      "family_name": "Mk 67 SLMM",
+      "primary_category": "MINE",
+      "categories": [
+        "MINE"
+      ],
+      "base_geometry": "us_mine_mk67_slmm",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_MINE_Mk67_SLMM",
+          "display_name": "Mk 67 SLMM",
+          "category": "MINE",
+          "tier": 6,
+          "status": "ACTIVE",
+          "variant_of": "US_MINE_Mk67_SLMM",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_MINE_Mk60_CAPTOR": {
+      "family": "US_MINE_Mk60_CAPTOR",
+      "country": "USA",
+      "family_name": "Mk 60 CAPTOR",
+      "primary_category": "MINE",
+      "categories": [
+        "MINE"
+      ],
+      "base_geometry": "us_mine_mk60_captor",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_MINE_Mk60_CAPTOR",
+          "display_name": "Mk 60 CAPTOR",
+          "category": "MINE",
+          "tier": 5,
+          "status": "RETIRED",
+          "variant_of": "US_MINE_Mk60_CAPTOR",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "UK_MINE_SeaUrchin": {
+      "family": "UK_MINE_SeaUrchin",
+      "country": "UK",
+      "family_name": "Sea Urchin",
+      "primary_category": "MINE",
+      "categories": [
+        "MINE"
+      ],
+      "base_geometry": "uk_mine_sea_urchin",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "UK_MINE_SeaUrchin",
+          "display_name": "Sea Urchin",
+          "category": "MINE",
+          "tier": 3,
+          "status": "RETIRED",
+          "variant_of": "UK_MINE_SeaUrchin",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_MINE_PMR2": {
+      "family": "RU_MINE_PMR2",
+      "country": "Russia",
+      "family_name": "PMR-2",
+      "primary_category": "MINE",
+      "categories": [
+        "MINE"
+      ],
+      "base_geometry": "ru_mine_pmr2",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_MINE_PMR2",
+          "display_name": "PMR-2",
+          "category": "MINE",
+          "tier": 5,
+          "status": "ACTIVE",
+          "variant_of": "RU_MINE_PMR2",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_MINE_MDM6": {
+      "family": "RU_MINE_MDM6",
+      "country": "Russia",
+      "family_name": "MDM-6",
+      "primary_category": "MINE",
+      "categories": [
+        "MINE"
+      ],
+      "base_geometry": "ru_mine_mdm6",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_MINE_MDM6",
+          "display_name": "MDM-6",
+          "category": "MINE",
+          "tier": 5,
+          "status": "ACTIVE",
+          "variant_of": "RU_MINE_MDM6",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_DECOY_Mk70_MOSS": {
+      "family": "US_DECOY_Mk70_MOSS",
+      "country": "USA",
+      "family_name": "Mk 70 MOSS",
+      "primary_category": "DECOY",
+      "categories": [
+        "DECOY"
+      ],
+      "base_geometry": "us_decoy_mk70_moss",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_DECOY_Mk70_MOSS",
+          "display_name": "Mk 70 MOSS",
+          "category": "DECOY",
+          "tier": 6,
+          "status": "ACTIVE",
+          "variant_of": "US_DECOY_Mk70_MOSS",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_DECOY_ADC": {
+      "family": "US_DECOY_ADC",
+      "country": "USA",
+      "family_name": "ADC Mk 4 / Mk 5",
+      "primary_category": "DECOY",
+      "categories": [
+        "DECOY"
+      ],
+      "base_geometry": "us_decoy_adc",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_DECOY_ADC_Mk4",
+          "display_name": "ADC Mk 4",
+          "category": "DECOY",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "US_DECOY_ADC_Mk4",
+          "same_geometry_as_base": false
+        },
+        {
+          "weapon_id": "US_DECOY_ADC_Mk5",
+          "display_name": "ADC Mk 5",
+          "category": "DECOY",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "US_DECOY_ADC_Mk4",
+          "same_geometry_as_base": true
+        }
+      ]
+    },
+    "RU_DECOY_MG74": {
+      "family": "RU_DECOY_MG74",
+      "country": "Russia",
+      "family_name": "MG-74",
+      "primary_category": "DECOY",
+      "categories": [
+        "DECOY"
+      ],
+      "base_geometry": "ru_decoy_mg74",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_DECOY_MG74",
+          "display_name": "MG-74",
+          "category": "DECOY",
+          "tier": 6,
+          "status": "ACTIVE",
+          "variant_of": "RU_DECOY_MG74",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "UK_DECOY_SSE_Mk3": {
+      "family": "UK_DECOY_SSE_Mk3",
+      "country": "UK",
+      "family_name": "SSE Mk 3",
+      "primary_category": "DECOY",
+      "categories": [
+        "DECOY"
+      ],
+      "base_geometry": "uk_decoy_sse_mk3",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "UK_DECOY_SSE_Mk3",
+          "display_name": "SSE Mk 3",
+          "category": "DECOY",
+          "tier": 3,
+          "status": "RETIRED",
+          "variant_of": "UK_DECOY_SSE_Mk3",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_SPECIAL_DDS": {
+      "family": "US_SPECIAL_DDS",
+      "country": "USA",
+      "family_name": "Dry Deck Shelter",
+      "primary_category": "SPECIAL",
+      "categories": [
+        "SPECIAL"
+      ],
+      "base_geometry": "us_special_dds",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_SPECIAL_DDS",
+          "display_name": "Dry Deck Shelter",
+          "category": "SPECIAL",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "US_SPECIAL_DDS",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_SPECIAL_ASDS": {
+      "family": "US_SPECIAL_ASDS",
+      "country": "USA",
+      "family_name": "Advanced SEAL Delivery System",
+      "primary_category": "SPECIAL",
+      "categories": [
+        "SPECIAL"
+      ],
+      "base_geometry": "us_special_asds",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_SPECIAL_ASDS",
+          "display_name": "Advanced SEAL Delivery System",
+          "category": "SPECIAL",
+          "tier": 8,
+          "status": "RETIRED",
+          "variant_of": "US_SPECIAL_ASDS",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "US_SPECIAL_SDV_Mk8": {
+      "family": "US_SPECIAL_SDV_Mk8",
+      "country": "USA",
+      "family_name": "Mk 8 SEAL Delivery Vehicle",
+      "primary_category": "SPECIAL",
+      "categories": [
+        "SPECIAL"
+      ],
+      "base_geometry": "us_special_sdv_mk8",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "US_SPECIAL_SDV_Mk8",
+          "display_name": "Mk 8 SEAL Delivery Vehicle",
+          "category": "SPECIAL",
+          "tier": 7,
+          "status": "ACTIVE",
+          "variant_of": "US_SPECIAL_SDV_Mk8",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "RU_SPECIAL_SDV_Sirena": {
+      "family": "RU_SPECIAL_SDV_Sirena",
+      "country": "Russia",
+      "family_name": "Sirena",
+      "primary_category": "SPECIAL",
+      "categories": [
+        "SPECIAL"
+      ],
+      "base_geometry": "ru_special_sdv_sirena",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "RU_SPECIAL_SDV_Sirena",
+          "display_name": "Sirena",
+          "category": "SPECIAL",
+          "tier": 6,
+          "status": "ACTIVE",
+          "variant_of": "RU_SPECIAL_SDV_Sirena",
+          "same_geometry_as_base": false
+        }
+      ]
+    },
+    "UK_SPECIAL_DDS": {
+      "family": "UK_SPECIAL_DDS",
+      "country": "UK",
+      "family_name": "Dry Deck Shelter",
+      "primary_category": "SPECIAL",
+      "categories": [
+        "SPECIAL"
+      ],
+      "base_geometry": "uk_special_dds",
+      "notes": "",
+      "variants": [
+        {
+          "weapon_id": "UK_SPECIAL_DDS",
+          "display_name": "UK Dry Deck Shelter",
+          "category": "SPECIAL",
+          "tier": 8,
+          "status": "ACTIVE",
+          "variant_of": "UK_SPECIAL_DDS",
+          "same_geometry_as_base": false
+        }
+      ]
+    }
+  }
+}

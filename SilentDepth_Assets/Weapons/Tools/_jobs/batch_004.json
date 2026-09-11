@@ -1,0 +1,262 @@
+{
+  "batch_index": 4,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "FR_TORP_F17",
+      "display_name": "F17 Mod 2 torpedo",
+      "short_name": "F17-2",
+      "category": "TORP",
+      "family_id": "FR_TORP_F17",
+      "base_geometry": "fr_torp_f17",
+      "country": "France",
+      "role": "热动力重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 法国主力鱼雷：热动力推进，外形与 L5 明显不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.4,
+        "diameter_m": 0.533,
+        "mass_kg": 1410,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "thermal",
+          "contra_propeller"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_TORP_F21",
+      "display_name": "F21 Artemis torpedo",
+      "short_name": "F21",
+      "category": "TORP",
+      "family_id": "FR_TORP_F21",
+      "base_geometry": "fr_torp_f21",
+      "country": "France",
+      "role": "现代重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2019-present",
+      "tier": 9,
+      "tier_reason": "游戏 T9 法国顶级鱼雷：泵喷 + 光纤线导，尾部结构独特。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1550,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "pumpjet",
+          "fiber_optic_guidance",
+          "wire_dispenser",
+          "deep_water"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.0,
+          "fin_count": 4,
+          "fin_span_ratio": 1.35,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "pumpjet",
+          "wire_dispenser": 1,
+          "sonar_windows": 3,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_TORP_L5_Mod3",
+      "display_name": "L5 Mod 3 torpedo",
+      "short_name": "L5-3",
+      "category": "TORP",
+      "family_id": "FR_TORP_L5",
+      "base_geometry": "fr_torp_l5",
+      "country": "France",
+      "role": "电动线导鱼雷",
+      "subrole": "Wire_Guided",
+      "era": "Cold War",
+      "service_years": "1970s-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 法国早期线导节点：细长电动鱼雷。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1150,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "electric"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "FR_TORP_L5_Mod4",
+      "display_name": "L5 Mod 4 torpedo",
+      "short_name": "L5-4",
+      "category": "TORP",
+      "family_id": "FR_TORP_L5",
+      "base_geometry": "fr_torp_l5",
+      "country": "France",
+      "role": "电动线导鱼雷改进型",
+      "subrole": "Wire_Guided",
+      "era": "Cold War Late",
+      "service_years": "1980s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 改进型：同族几何，控制与声学组件不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1150,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "electric",
+          "improved_control"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "IN_SLBM_K15",
+      "display_name": "K-15 Sagarika",
+      "short_name": "K-15",
+      "category": "SLBM",
+      "family_id": "IN_SLBM_K15",
+      "base_geometry": "in_slbm_k15",
+      "country": "India",
+      "role": "近程潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 印度战略分支起点：短粗两级弹体，与同代美俄型号外形差异明显。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 10.0,
+        "diameter_m": 0.74,
+        "mass_kg": 7000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.74,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "two_stage",
+          "compact_body",
+          "slim_shroud"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.7,
+          "shroud_shape": "pointed",
+          "stage_rings": 1,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.15,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.5,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

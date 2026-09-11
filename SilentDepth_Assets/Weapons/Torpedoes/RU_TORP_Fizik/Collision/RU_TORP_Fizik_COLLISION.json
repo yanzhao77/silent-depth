@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_TORP_Fizik",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_TORP_Fizik_SEG_00",
+      "centre": [
+        2.34,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.8200000000000003,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_Fizik_SEG_01",
+      "centre": [
+        0.65,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.56,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_Fizik_SEG_02",
+      "centre": [
+        -1.3,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.34,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_Fizik_SEG_03",
+      "centre": [
+        -2.73,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.04,
+        0.8661981568627453,
+        0.8661981568627453
+      ]
+    }
+  ],
+  "collision_fbx": "RU_TORP_Fizik_COLLISION.fbx",
+  "collision_sha256": "eab7d723046535e5c1af8fda41123836f21dcdeccbf6f6a84d235786693057b3"
+}

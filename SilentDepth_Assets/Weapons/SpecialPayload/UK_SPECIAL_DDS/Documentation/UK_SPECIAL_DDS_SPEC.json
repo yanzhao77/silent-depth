@@ -1,0 +1,82 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "UK_SPECIAL_DDS",
+  "display_name": "UK Dry Deck Shelter",
+  "short_name": "DDS-UK",
+  "country": "UK",
+  "category": "SPECIAL",
+  "family": "UK_SPECIAL_DDS",
+  "role": "干式甲板掩体",
+  "subrole": "Dry_Deck_Shelter",
+  "tier": 8,
+  "tier_reason": "游戏 T8 英国特种载荷节点：与美制 DDS 同类的箱形外挂结构。",
+  "era": "Cold War Late",
+  "service_years": "1990s-present",
+  "launch_methods": [
+    "SWIM_OUT_DOCK"
+  ],
+  "dimensions": {
+    "length_m": 10.0,
+    "diameter_m": 2.5,
+    "mass_kg": 25000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+  },
+  "geometry": {
+    "kind": "shelter",
+    "features": [
+      "boxy_hull",
+      "hatch_rings"
+    ],
+    "params": {
+      "shape": "boxy",
+      "hatch_rings": 2,
+      "corner_radius_ratio": 0.08,
+      "runner_rails": 1,
+      "bands": 1
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/UK_SPECIAL_DDS_MASTER.blend",
+    "lod": [
+      "LOD/UK_SPECIAL_DDS_LOD0.fbx",
+      "LOD/UK_SPECIAL_DDS_LOD1.fbx",
+      "LOD/UK_SPECIAL_DDS_LOD2.fbx",
+      "LOD/UK_SPECIAL_DDS_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/UK_SPECIAL_DDS_LOD0.fbx",
+      "FBX/UK_SPECIAL_DDS_LOD1.fbx",
+      "FBX/UK_SPECIAL_DDS_LOD2.fbx",
+      "FBX/UK_SPECIAL_DDS_LOD3.fbx"
+    ],
+    "collision": "Collision/UK_SPECIAL_DDS_COLLISION.fbx",
+    "collision_manifest": "Collision/UK_SPECIAL_DDS_COLLISION.json",
+    "source": "Source/UK_SPECIAL_DDS_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 792,
+    "LOD1": 468,
+    "LOD2": 300,
+    "LOD3": 204
+  },
+  "collision_boxes": 1,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 10.0,
+  "built_max_diameter_m": 3.475,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料仅有量级信息，按近似尺寸建模。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

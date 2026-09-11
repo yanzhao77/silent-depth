@@ -1,0 +1,46 @@
+{
+  "weapon_id": "US_SLBM_Polaris_A1",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "early_generation",
+      "dome_shroud"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.6,
+      "shroud_shape": "blunt",
+      "stage_rings": 1,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.2,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.5,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 0,
+      "base_cover": 1,
+      "bands": 1,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "dimensions": {
+    "length_m": 8.5,
+    "diameter_m": 1.37,
+    "mass_kg": 12800,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料长度约 8.5 米。"
+  },
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "tier": 2,
+  "asset_priority": "MEDIUM",
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料长度约 8.5 米。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_STRAT_Meteorit",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "cruise_missile",
+  "declared_length_m": 12.0,
+  "declared_diameter_m": 0.9,
+  "built_length_m": 12.0,
+  "built_max_diameter_m": 2.773588,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 1300,
+      "triangles": 2376
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 532,
+      "triangles": 936
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 244,
+      "triangles": 456
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 172,
+      "triangles": 312
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_STRAT_Meteorit_SEG_00",
+    "UCX_WPN_RU_STRAT_Meteorit_SEG_01",
+    "UCX_WPN_RU_STRAT_Meteorit_SEG_02",
+    "UCX_WPN_RU_STRAT_Meteorit_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -6.0,
+      6.0
+    ],
+    "y": [
+      -0.8438823819160461,
+      0.8438823819160461
+    ],
+    "z": [
+      -0.8438823819160461,
+      1.9297058582305908
+    ],
+    "dimensions_m": [
+      12.0,
+      1.6877647638320923,
+      2.773588240146637
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.5429117381572723
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_STRAT_Meteorit_LOD0.fbx",
+        "mirror": "FBX/RU_STRAT_Meteorit_LOD0.fbx",
+        "sha256": "3e2aba389f8e9b64f39978ac66dbd2ad3f56ae9c5824a5e60ab453baba61f2e7",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_STRAT_Meteorit_LOD1.fbx",
+        "mirror": "FBX/RU_STRAT_Meteorit_LOD1.fbx",
+        "sha256": "75a414be0ce53887680d905e519bf38fc5d5807e7fd7f061cb4d6b771acc4e1d",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_STRAT_Meteorit_LOD2.fbx",
+        "mirror": "FBX/RU_STRAT_Meteorit_LOD2.fbx",
+        "sha256": "e38db6e68b55e432952cbd5bfcc931a14bdd64e47216afc114e90aaab5bcedcb",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_STRAT_Meteorit_LOD3.fbx",
+        "mirror": "FBX/RU_STRAT_Meteorit_LOD3.fbx",
+        "sha256": "522ba8d35113057a4626f1a9cbda4d5f759bf542a37158c787a0aa6dab775175",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_STRAT_Meteorit_COLLISION.fbx",
+      "sha256": "f86652f798ef6f1d8ba3f5d005fedb4116fdc3e9da9016c9c56433d84f1c962a"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_STRAT_Meteorit_COLLISION.json",
+      "sha256": "0861318e5f0a67d253e9af32f2c940d8f8ca7a074c1c3c9be1efb6e5aca9639f"
+    }
+  },
+  "build_seconds": 0.55,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.31,
+    "SIDE": 0.31,
+    "FRONT": 0.34,
+    "TOP": 0.36,
+    "DETAIL": 0.35,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_STRAT_Meteorit_DETAIL_128.png",
+    "RU_STRAT_Meteorit_DETAIL_256.png",
+    "RU_STRAT_Meteorit_DETAIL_512.png",
+    "RU_STRAT_Meteorit_FRONT_128.png",
+    "RU_STRAT_Meteorit_FRONT_256.png",
+    "RU_STRAT_Meteorit_FRONT_512.png",
+    "RU_STRAT_Meteorit_ICON_128.png",
+    "RU_STRAT_Meteorit_ICON_256.png",
+    "RU_STRAT_Meteorit_ICON_512.png",
+    "RU_STRAT_Meteorit_PERSPECTIVE_128.png",
+    "RU_STRAT_Meteorit_PERSPECTIVE_256.png",
+    "RU_STRAT_Meteorit_PERSPECTIVE_512.png",
+    "RU_STRAT_Meteorit_SIDE_128.png",
+    "RU_STRAT_Meteorit_SIDE_256.png",
+    "RU_STRAT_Meteorit_SIDE_512.png",
+    "RU_STRAT_Meteorit_TOP_128.png",
+    "RU_STRAT_Meteorit_TOP_256.png",
+    "RU_STRAT_Meteorit_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_STRAT_Meteorit_MASTER.blend",
+      "sha256": "3c7234bc1e8b790cb0d2e843977a485f5e62eb98d14236d2f929842d928ec407"
+    },
+    "source": {
+      "path": "Source/RU_STRAT_Meteorit_SOURCE.json",
+      "sha256": "d9000da8ab7da3c7f9fa81effd67541765003ad0e550e3e9e73062824dba5116"
+    },
+    "spec": {
+      "path": "Documentation/RU_STRAT_Meteorit_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_STRAT_Meteorit_README.md"
+    }
+  }
+}

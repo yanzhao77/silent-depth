@@ -1,0 +1,85 @@
+{
+  "weapon_id": "US_STRAT_TLAM_N",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 6,
+      "vertices": 1324,
+      "triangles": 2412,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        6.25,
+        1.1556,
+        1.8009
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 6,
+      "vertices": 556,
+      "triangles": 972,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        6.25,
+        1.1556,
+        1.8009
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 268,
+      "triangles": 492,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        6.25,
+        1.1556,
+        1.8009
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 196,
+      "triangles": 348,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal"
+      ],
+      "dimensions_m": [
+        6.25,
+        1.1556,
+        1.8009
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      6.25,
+      1.7788,
+      1.7788
+    ]
+  },
+  "result": "PASS"
+}

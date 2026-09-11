@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_SLBM_R29R",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_SLBM_R29R_SEG_00",
+      "centre": [
+        5.076,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.9480000000000004,
+        0.63,
+        0.63
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SLBM_R29R_SEG_01",
+      "centre": [
+        1.4100000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.384,
+        1.8,
+        1.8
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SLBM_R29R_SEG_02",
+      "centre": [
+        -2.8200000000000003,
+        0.0,
+        0.0
+      ],
+      "size": [
+        5.076,
+        1.8,
+        1.8
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SLBM_R29R_SEG_03",
+      "centre": [
+        -5.922,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.256,
+        1.8,
+        1.8
+      ]
+    }
+  ],
+  "collision_fbx": "RU_SLBM_R29R_COLLISION.fbx",
+  "collision_sha256": "f24b03705e0f031573bd2e7738b5ca9c374a7c0558a83906c0b28ba2bdf7d619"
+}

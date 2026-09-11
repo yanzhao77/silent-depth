@@ -1,0 +1,962 @@
+[
+  {
+    "weapon_id": "RU_SLBM_R29RMU2_Sineva",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 3,
+          "vertices": 1732,
+          "triangles": 3168
+        },
+        "LOD1": {
+          "objects": 3,
+          "vertices": 628,
+          "triangles": 1104
+        },
+        "LOD2": {
+          "objects": 2,
+          "vertices": 228,
+          "triangles": 448
+        },
+        "LOD3": {
+          "objects": 2,
+          "vertices": 144,
+          "triangles": 280
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 3.13
+    }
+  },
+  {
+    "weapon_id": "RU_SLBM_R30_Bulava",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 3,
+          "vertices": 1540,
+          "triangles": 2880
+        },
+        "LOD1": {
+          "objects": 3,
+          "vertices": 532,
+          "triangles": 960
+        },
+        "LOD2": {
+          "objects": 2,
+          "vertices": 228,
+          "triangles": 448
+        },
+        "LOD3": {
+          "objects": 2,
+          "vertices": 144,
+          "triangles": 280
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.17
+    }
+  },
+  {
+    "weapon_id": "RU_ASM_P500",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 1828,
+          "triangles": 3432
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 652,
+          "triangles": 1176
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 324,
+          "triangles": 616
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 222,
+          "triangles": 412
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 1.05
+    }
+  },
+  {
+    "weapon_id": "RU_TORP_6576",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 2146,
+          "triangles": 3816
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 866,
+          "triangles": 1452
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 378,
+          "triangles": 668
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 300,
+          "triangles": 512
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 1.89
+    }
+  },
+  {
+    "weapon_id": "RU_TORP_6576A",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 2146,
+          "triangles": 3816
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 866,
+          "triangles": 1452
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 378,
+          "triangles": 668
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 300,
+          "triangles": 512
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 3.0
+    }
+  },
+  {
+    "weapon_id": "FR_SLBM_M20",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 3,
+          "vertices": 1732,
+          "triangles": 3168
+        },
+        "LOD1": {
+          "objects": 3,
+          "vertices": 628,
+          "triangles": 1104
+        },
+        "LOD2": {
+          "objects": 2,
+          "vertices": 228,
+          "triangles": 448
+        },
+        "LOD3": {
+          "objects": 2,
+          "vertices": 144,
+          "triangles": 280
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.68
+    }
+  },
+  {
+    "weapon_id": "FR_SLBM_M1",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 3,
+          "vertices": 1540,
+          "triangles": 2880
+        },
+        "LOD1": {
+          "objects": 3,
+          "vertices": 532,
+          "triangles": 960
+        },
+        "LOD2": {
+          "objects": 2,
+          "vertices": 228,
+          "triangles": 448
+        },
+        "LOD3": {
+          "objects": 2,
+          "vertices": 144,
+          "triangles": 280
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.09
+    }
+  },
+  {
+    "weapon_id": "RU_ASM_P5",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 1636,
+          "triangles": 3144
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 556,
+          "triangles": 1032
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 324,
+          "triangles": 616
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 222,
+          "triangles": 412
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.39
+    }
+  },
+  {
+    "weapon_id": "US_SLBM_Polaris_A3",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 3,
+          "vertices": 1540,
+          "triangles": 2880
+        },
+        "LOD1": {
+          "objects": 3,
+          "vertices": 532,
+          "triangles": 960
+        },
+        "LOD2": {
+          "objects": 2,
+          "vertices": 228,
+          "triangles": 448
+        },
+        "LOD3": {
+          "objects": 2,
+          "vertices": 144,
+          "triangles": 280
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.79
+    }
+  },
+  {
+    "weapon_id": "RU_ASM_Oniks",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 2020,
+          "triangles": 3720
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 748,
+          "triangles": 1320
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 324,
+          "triangles": 616
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 222,
+          "triangles": 412
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 1.64
+    }
+  },
+  {
+    "weapon_id": "RU_TORP_Shkval",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 4,
+          "vertices": 1878,
+          "triangles": 3552
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 654,
+          "triangles": 1200
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 310,
+          "triangles": 608
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 196,
+          "triangles": 380
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.94
+    }
+  },
+  {
+    "weapon_id": "RU_ASW_Vodopad",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 4,
+          "vertices": 1764,
+          "triangles": 3216
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 660,
+          "triangles": 1152
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 260,
+          "triangles": 496
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 176,
+          "triangles": 328
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 3.61
+    }
+  },
+  {
+    "weapon_id": "RU_SPECIAL_SDV_Sirena",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 3,
+          "vertices": 466,
+          "triangles": 840
+        },
+        "LOD1": {
+          "objects": 3,
+          "vertices": 322,
+          "triangles": 552
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 274,
+          "triangles": 456
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 238,
+          "triangles": 384
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 1.77
+    }
+  },
+  {
+    "weapon_id": "IN_TORP_Varunastra",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 1954,
+          "triangles": 3528
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 770,
+          "triangles": 1308
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 378,
+          "triangles": 668
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 300,
+          "triangles": 512
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.93
+    }
+  },
+  {
+    "weapon_id": "RU_ASM_P70",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 1828,
+          "triangles": 3432
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 652,
+          "triangles": 1176
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 324,
+          "triangles": 616
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 222,
+          "triangles": 412
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 1.68
+    }
+  },
+  {
+    "weapon_id": "UK_TORP_Spearfish_Mod1",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 2230,
+          "triangles": 3942
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 934,
+          "triangles": 1554
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 446,
+          "triangles": 770
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 368,
+          "triangles": 614
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.3
+    }
+  },
+  {
+    "weapon_id": "RU_TORP_5365M",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 1946,
+          "triangles": 3516
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 762,
+          "triangles": 1296
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 370,
+          "triangles": 656
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 292,
+          "triangles": 500
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.98
+    }
+  },
+  {
+    "weapon_id": "US_ASW_SUBROC",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 4,
+          "vertices": 1572,
+          "triangles": 2928
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 564,
+          "triangles": 1008
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 260,
+          "triangles": 496
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 176,
+          "triangles": 328
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 1.03
+    }
+  },
+  {
+    "weapon_id": "UK_TORP_Mk8",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 4,
+          "vertices": 1490,
+          "triangles": 2832
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 506,
+          "triangles": 912
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 306,
+          "triangles": 560
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 228,
+          "triangles": 404
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.27
+    }
+  },
+  {
+    "weapon_id": "UK_TORP_Tigerfish_Mod1",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 1954,
+          "triangles": 3528
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 770,
+          "triangles": 1308
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 378,
+          "triangles": 668
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 300,
+          "triangles": 512
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.81
+    }
+  },
+  {
+    "weapon_id": "RU_TORP_UGST_M",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 2146,
+          "triangles": 3816
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 866,
+          "triangles": 1452
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 378,
+          "triangles": 668
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 300,
+          "triangles": 512
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.4
+    }
+  },
+  {
+    "weapon_id": "US_LAM_Tomahawk_BlockV",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 2212,
+          "triangles": 4008
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 844,
+          "triangles": 1464
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 324,
+          "triangles": 616
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 222,
+          "triangles": 412
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 1.52
+    }
+  },
+  {
+    "weapon_id": "RU_LAM_Kalibr_3M14",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 2020,
+          "triangles": 3720
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 748,
+          "triangles": 1320
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 324,
+          "triangles": 616
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 222,
+          "triangles": 412
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.37
+    }
+  },
+  {
+    "weapon_id": "CN_ASW_CY1",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 4,
+          "vertices": 1572,
+          "triangles": 2928
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 564,
+          "triangles": 1008
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 260,
+          "triangles": 496
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 176,
+          "triangles": 328
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.77
+    }
+  },
+  {
+    "weapon_id": "US_TORP_Mk48_Mod6",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 2154,
+          "triangles": 3828
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 866,
+          "triangles": 1452
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 378,
+          "triangles": 668
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 300,
+          "triangles": 512
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.79
+    }
+  },
+  {
+    "weapon_id": "US_LAM_Tomahawk",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 1828,
+          "triangles": 3432
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 652,
+          "triangles": 1176
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 324,
+          "triangles": 616
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 222,
+          "triangles": 412
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.69
+    }
+  },
+  {
+    "weapon_id": "FR_TORP_L5_Mod4",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 1962,
+          "triangles": 3540
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 770,
+          "triangles": 1308
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 378,
+          "triangles": 668
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 300,
+          "triangles": 512
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 0.58
+    }
+  },
+  {
+    "weapon_id": "US_MINE_Mk67_SLMM",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 2,
+          "vertices": 226,
+          "triangles": 432
+        },
+        "LOD1": {
+          "objects": 1,
+          "vertices": 98,
+          "triangles": 192
+        },
+        "LOD2": {
+          "objects": 1,
+          "vertices": 66,
+          "triangles": 128
+        },
+        "LOD3": {
+          "objects": 1,
+          "vertices": 42,
+          "triangles": 80
+        }
+      },
+      "collision_boxes": 2,
+      "build_seconds": 0.56
+    }
+  },
+  {
+    "weapon_id": "US_MINE_Mk60_CAPTOR",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 2,
+          "vertices": 226,
+          "triangles": 432
+        },
+        "LOD1": {
+          "objects": 1,
+          "vertices": 98,
+          "triangles": 192
+        },
+        "LOD2": {
+          "objects": 1,
+          "vertices": 66,
+          "triangles": 128
+        },
+        "LOD3": {
+          "objects": 1,
+          "vertices": 42,
+          "triangles": 80
+        }
+      },
+      "collision_boxes": 2,
+      "build_seconds": 0.42
+    }
+  },
+  {
+    "weapon_id": "RU_MINE_MDM6",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 2,
+          "vertices": 226,
+          "triangles": 432
+        },
+        "LOD1": {
+          "objects": 1,
+          "vertices": 98,
+          "triangles": 192
+        },
+        "LOD2": {
+          "objects": 1,
+          "vertices": 66,
+          "triangles": 128
+        },
+        "LOD3": {
+          "objects": 1,
+          "vertices": 42,
+          "triangles": 80
+        }
+      },
+      "collision_boxes": 2,
+      "build_seconds": 1.08
+    }
+  },
+  {
+    "weapon_id": "RU_DECOY_MG74",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 3,
+          "vertices": 602,
+          "triangles": 996
+        },
+        "LOD1": {
+          "objects": 2,
+          "vertices": 290,
+          "triangles": 480
+        },
+        "LOD2": {
+          "objects": 2,
+          "vertices": 194,
+          "triangles": 320
+        },
+        "LOD3": {
+          "objects": 2,
+          "vertices": 122,
+          "triangles": 200
+        }
+      },
+      "collision_boxes": 2,
+      "build_seconds": 0.49
+    }
+  },
+  {
+    "weapon_id": "US_DECOY_ADC_Mk5",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 3,
+          "vertices": 602,
+          "triangles": 996
+        },
+        "LOD1": {
+          "objects": 2,
+          "vertices": 290,
+          "triangles": 480
+        },
+        "LOD2": {
+          "objects": 2,
+          "vertices": 194,
+          "triangles": 320
+        },
+        "LOD3": {
+          "objects": 2,
+          "vertices": 122,
+          "triangles": 200
+        }
+      },
+      "collision_boxes": 2,
+      "build_seconds": 0.85
+    }
+  }
+]

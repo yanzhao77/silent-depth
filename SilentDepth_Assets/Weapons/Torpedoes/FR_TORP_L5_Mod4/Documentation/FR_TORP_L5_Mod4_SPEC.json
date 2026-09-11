@@ -1,0 +1,89 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "FR_TORP_L5_Mod4",
+  "display_name": "L5 Mod 4 torpedo",
+  "short_name": "L5-4",
+  "country": "France",
+  "category": "TORP",
+  "family": "FR_TORP_L5",
+  "role": "电动线导鱼雷改进型",
+  "subrole": "Wire_Guided",
+  "tier": 6,
+  "tier_reason": "游戏 T6 改进型：同族几何，控制与声学组件不同。",
+  "era": "Cold War Late",
+  "service_years": "1980s-1990s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 5.2,
+    "diameter_m": 0.533,
+    "mass_kg": 1150,
+    "scale_source": "ESTIMATED",
+    "scale_note": "沿用同族近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wire_dispenser",
+      "electric",
+      "improved_control"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "tail": "conical",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 2,
+      "bands": 3
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/FR_TORP_L5_Mod4_MASTER.blend",
+    "lod": [
+      "LOD/FR_TORP_L5_Mod4_LOD0.fbx",
+      "LOD/FR_TORP_L5_Mod4_LOD1.fbx",
+      "LOD/FR_TORP_L5_Mod4_LOD2.fbx",
+      "LOD/FR_TORP_L5_Mod4_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/FR_TORP_L5_Mod4_LOD0.fbx",
+      "FBX/FR_TORP_L5_Mod4_LOD1.fbx",
+      "FBX/FR_TORP_L5_Mod4_LOD2.fbx",
+      "FBX/FR_TORP_L5_Mod4_LOD3.fbx"
+    ],
+    "collision": "Collision/FR_TORP_L5_Mod4_COLLISION.fbx",
+    "collision_manifest": "Collision/FR_TORP_L5_Mod4_COLLISION.json",
+    "source": "Source/FR_TORP_L5_Mod4_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3672,
+    "LOD1": 1440,
+    "LOD2": 800,
+    "LOD3": 644
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 5.176155,
+  "built_max_diameter_m": 0.69796,
+  "scale_source": "ESTIMATED",
+  "scale_note": "沿用同族近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

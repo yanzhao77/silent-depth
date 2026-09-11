@@ -1,0 +1,166 @@
+{
+  "weapon_id": "US_SLBM_Poseidon_C3",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 10.4,
+  "declared_diameter_m": 1.88,
+  "built_length_m": 10.4,
+  "built_max_diameter_m": 1.974,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2264,
+      "triangles": 4128
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 798,
+      "triangles": 1392
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 406,
+      "triangles": 736
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 256,
+      "triangles": 460
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_US_SLBM_Poseidon_C3_SEG_00",
+    "UCX_WPN_US_SLBM_Poseidon_C3_SEG_01",
+    "UCX_WPN_US_SLBM_Poseidon_C3_SEG_02",
+    "UCX_WPN_US_SLBM_Poseidon_C3_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -5.199999809265137,
+      5.199999809265137
+    ],
+    "y": [
+      -0.9869999885559082,
+      0.9869999885559082
+    ],
+    "z": [
+      -0.9869999885559082,
+      0.9869999885559082
+    ],
+    "dimensions_m": [
+      10.399999618530273,
+      1.9739999771118164,
+      1.9739999771118164
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_SLBM_Poseidon_C3_LOD0.fbx",
+        "mirror": "FBX/US_SLBM_Poseidon_C3_LOD0.fbx",
+        "sha256": "77c2eb8f3fef111e86b51ec4f767b0aa4c182da58715dc334e851b2622952840",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_SLBM_Poseidon_C3_LOD1.fbx",
+        "mirror": "FBX/US_SLBM_Poseidon_C3_LOD1.fbx",
+        "sha256": "c4e6d02742801d1b89484917e5181f3293bfcd53718fa7d42604e02720ab7060",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_SLBM_Poseidon_C3_LOD2.fbx",
+        "mirror": "FBX/US_SLBM_Poseidon_C3_LOD2.fbx",
+        "sha256": "95c7bc2a96784a9211782e7afbeba3e363d9d32a9c84e914cc67a47b6329dc5c",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_SLBM_Poseidon_C3_LOD3.fbx",
+        "mirror": "FBX/US_SLBM_Poseidon_C3_LOD3.fbx",
+        "sha256": "241278ba3ddfa4d598ee820c9f7962b0657516609c6a6a2a37a8b6b85b85ae6d",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_SLBM_Poseidon_C3_COLLISION.fbx",
+      "sha256": "365864677ea2fef219cde14035e34cfb4125eed5fecf5ca86a32c12812bb1988"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_SLBM_Poseidon_C3_COLLISION.json",
+      "sha256": "601c16e6b79a9df859e0760b07e6a2368cb68c3611705482d9f1380b3f1c8054"
+    }
+  },
+  "build_seconds": 0.46,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.31,
+    "SIDE": 0.58,
+    "FRONT": 0.31,
+    "TOP": 0.36,
+    "DETAIL": 0.34,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_SLBM_Poseidon_C3_DETAIL_128.png",
+    "US_SLBM_Poseidon_C3_DETAIL_256.png",
+    "US_SLBM_Poseidon_C3_DETAIL_512.png",
+    "US_SLBM_Poseidon_C3_FRONT_128.png",
+    "US_SLBM_Poseidon_C3_FRONT_256.png",
+    "US_SLBM_Poseidon_C3_FRONT_512.png",
+    "US_SLBM_Poseidon_C3_ICON_128.png",
+    "US_SLBM_Poseidon_C3_ICON_256.png",
+    "US_SLBM_Poseidon_C3_ICON_512.png",
+    "US_SLBM_Poseidon_C3_PERSPECTIVE_128.png",
+    "US_SLBM_Poseidon_C3_PERSPECTIVE_256.png",
+    "US_SLBM_Poseidon_C3_PERSPECTIVE_512.png",
+    "US_SLBM_Poseidon_C3_SIDE_128.png",
+    "US_SLBM_Poseidon_C3_SIDE_256.png",
+    "US_SLBM_Poseidon_C3_SIDE_512.png",
+    "US_SLBM_Poseidon_C3_TOP_128.png",
+    "US_SLBM_Poseidon_C3_TOP_256.png",
+    "US_SLBM_Poseidon_C3_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_SLBM_Poseidon_C3_MASTER.blend",
+      "sha256": "9f96648f691e0a8c9651811fa3a0f67013ca3b4c97eb1b531176522a072e01f5"
+    },
+    "source": {
+      "path": "Source/US_SLBM_Poseidon_C3_SOURCE.json",
+      "sha256": "073cd86cdbae1b4eefc12d4036db328d5b99809f2f4a99adc5fdfbe89a58d6f2"
+    },
+    "spec": {
+      "path": "Documentation/US_SLBM_Poseidon_C3_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_SLBM_Poseidon_C3_README.md"
+    }
+  }
+}

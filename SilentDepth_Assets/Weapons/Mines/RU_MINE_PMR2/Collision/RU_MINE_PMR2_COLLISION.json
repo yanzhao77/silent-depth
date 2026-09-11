@@ -1,0 +1,35 @@
+{
+  "weapon_id": "RU_MINE_PMR2",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_MINE_PMR2_SEG_00",
+      "centre": [
+        -0.396,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.0080000000000002,
+        0.53,
+        0.53
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_MINE_PMR2_SEG_01",
+      "centre": [
+        0.36000000000000004,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.08,
+        0.3975,
+        0.3975
+      ]
+    }
+  ],
+  "collision_fbx": "RU_MINE_PMR2_COLLISION.fbx",
+  "collision_sha256": "938d98c1a674b152a6a4330812456ddb082d98158d6cd68a72b44a8b58abde94"
+}

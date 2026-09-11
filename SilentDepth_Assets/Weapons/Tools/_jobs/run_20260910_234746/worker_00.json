@@ -1,0 +1,155 @@
+{
+  "batch_index": 0,
+  "generated_at": "2026-09-10",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "US_TORP_Mk23",
+      "display_name": "Mk 23 torpedo",
+      "short_name": "Mk23",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk14",
+      "country": "USA",
+      "role": "早期无航迹鱼雷",
+      "subrole": "Early_Heavyweight",
+      "era": "Early",
+      "service_years": "1944-1946",
+      "tier": 1,
+      "tier_reason": "游戏 T1 末段型号：与 Mk 14 共享弹体，尾段与装订标记不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.533,
+        "mass_kg": 1360,
+        "scale_source": "ESTIMATED",
+        "scale_note": "Mk 14 弹体的改型，尺寸沿用公开近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wakeless",
+          "straight_running"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 0,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk18",
+      "display_name": "Mk 18 torpedo",
+      "short_name": "Mk18",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk14",
+      "country": "USA",
+      "role": "早期电动鱼雷",
+      "subrole": "Early_Heavyweight",
+      "era": "Early",
+      "service_years": "1943-1950s",
+      "tier": 1,
+      "tier_reason": "游戏 T1 电动鱼雷分支：与 Mk 14 同代但尾段更短、无蒸汽痕迹。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1350,
+        "scale_source": "ESTIMATED",
+        "scale_note": "电动型尺寸与 Mk 14 同级别，取公开近似值。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "electric",
+          "straight_running"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.15,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 0,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk27",
+      "display_name": "Mk 27 Mod 4 torpedo",
+      "short_name": "Mk27",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk27",
+      "country": "USA",
+      "role": "早期声自导鱼雷",
+      "subrole": "Acoustic_Homing",
+      "era": "Early",
+      "service_years": "1944-1945",
+      "tier": 2,
+      "tier_reason": "游戏 T2 首个声自导节点：小批量应急型号，外形短粗、尾鳍布局独特。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 3.24,
+        "diameter_m": 0.533,
+        "mass_kg": 1170,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "短弹体，公开资料长度约 3.2 米。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "acoustic_homing",
+          "short_body"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.0,
+          "tail": "conical",
+          "tail_len_ratio": 0.6,
+          "fin_count": 4,
+          "fin_span_ratio": 1.8,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

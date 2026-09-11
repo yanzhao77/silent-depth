@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_ASW_Veter",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "rocket_payload",
+  "declared_length_m": 8.9,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 8.9,
+  "built_max_diameter_m": 0.969517,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1534,
+      "triangles": 2748
+    },
+    "LOD1": {
+      "objects": 6,
+      "vertices": 670,
+      "triangles": 1164
+    },
+    "LOD2": {
+      "objects": 5,
+      "vertices": 270,
+      "triangles": 508
+    },
+    "LOD3": {
+      "objects": 5,
+      "vertices": 186,
+      "triangles": 340
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_ASW_Veter_SEG_00",
+    "UCX_WPN_RU_ASW_Veter_SEG_01",
+    "UCX_WPN_RU_ASW_Veter_SEG_02",
+    "UCX_WPN_RU_ASW_Veter_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -4.449999809265137,
+      4.449999809265137
+    ],
+    "y": [
+      -0.48475828766822815,
+      0.48475828766822815
+    ],
+    "z": [
+      -0.48475828766822815,
+      0.48475828766822815
+    ],
+    "dimensions_m": [
+      8.899999618530273,
+      0.9695165753364563,
+      0.9695165753364563
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_ASW_Veter_LOD0.fbx",
+        "mirror": "FBX/RU_ASW_Veter_LOD0.fbx",
+        "sha256": "4b6508527615b414282ad9635e84bf20dc7e5d24081c14bd90a8e803e22abe88",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_ASW_Veter_LOD1.fbx",
+        "mirror": "FBX/RU_ASW_Veter_LOD1.fbx",
+        "sha256": "048e2d7fd6208603a6e750744d75ef06bdfdcdb983246046117fb426fe9a1e4b",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_ASW_Veter_LOD2.fbx",
+        "mirror": "FBX/RU_ASW_Veter_LOD2.fbx",
+        "sha256": "30edac7d9e3a545c7994e664f95c39b7b149b1b1c86095ddb21d794d9052f872",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_ASW_Veter_LOD3.fbx",
+        "mirror": "FBX/RU_ASW_Veter_LOD3.fbx",
+        "sha256": "8e788069796442a08f1d46c7ac2d31c04b601ea6251b3e2e24255fc84199282b",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_ASW_Veter_COLLISION.fbx",
+      "sha256": "bba9de04dd04df2d2d1297003af4c4b0f80556a59e4b1b3fd3c7f48dad962df5"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_ASW_Veter_COLLISION.json",
+      "sha256": "3e0cac80da2de712ed11568d242bf5246efc345f7bb2b94713f9a04ae20c44c4"
+    }
+  },
+  "build_seconds": 0.33,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.32,
+    "SIDE": 0.38,
+    "FRONT": 0.33,
+    "TOP": 0.3,
+    "DETAIL": 0.3,
+    "ICON": 0.36
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_ASW_Veter_DETAIL_128.png",
+    "RU_ASW_Veter_DETAIL_256.png",
+    "RU_ASW_Veter_DETAIL_512.png",
+    "RU_ASW_Veter_FRONT_128.png",
+    "RU_ASW_Veter_FRONT_256.png",
+    "RU_ASW_Veter_FRONT_512.png",
+    "RU_ASW_Veter_ICON_128.png",
+    "RU_ASW_Veter_ICON_256.png",
+    "RU_ASW_Veter_ICON_512.png",
+    "RU_ASW_Veter_PERSPECTIVE_128.png",
+    "RU_ASW_Veter_PERSPECTIVE_256.png",
+    "RU_ASW_Veter_PERSPECTIVE_512.png",
+    "RU_ASW_Veter_SIDE_128.png",
+    "RU_ASW_Veter_SIDE_256.png",
+    "RU_ASW_Veter_SIDE_512.png",
+    "RU_ASW_Veter_TOP_128.png",
+    "RU_ASW_Veter_TOP_256.png",
+    "RU_ASW_Veter_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_ASW_Veter_MASTER.blend",
+      "sha256": "1894f873c48b2cf3644fd3fd1341fa9b40a30e135b840f7c1bf53f4c6b03d467"
+    },
+    "source": {
+      "path": "Source/RU_ASW_Veter_SOURCE.json",
+      "sha256": "24bc2b7bdcff6952e5752c4847348bcf376dd4e04cece629e9ac08f9e4521662"
+    },
+    "spec": {
+      "path": "Documentation/RU_ASW_Veter_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_ASW_Veter_README.md"
+    }
+  }
+}

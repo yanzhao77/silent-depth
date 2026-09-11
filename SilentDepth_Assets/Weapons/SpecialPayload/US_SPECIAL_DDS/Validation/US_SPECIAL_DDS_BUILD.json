@@ -1,0 +1,163 @@
+{
+  "weapon_id": "US_SPECIAL_DDS",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "shelter",
+  "declared_length_m": 11.6,
+  "declared_diameter_m": 2.7,
+  "built_length_m": 11.6,
+  "built_max_diameter_m": 3.402,
+  "lod": {
+    "LOD0": {
+      "objects": 2,
+      "vertices": 512,
+      "triangles": 768
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 296,
+      "triangles": 444
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 184,
+      "triangles": 276
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 120,
+      "triangles": 180
+    }
+  },
+  "collision": {
+    "objects": 1,
+    "vertices": 8,
+    "triangles": 12
+  },
+  "collision_boxes": 1,
+  "collision_segments": [
+    "UCX_WPN_US_SPECIAL_DDS_SEG_00"
+  ],
+  "bounds": {
+    "x": [
+      -5.800000190734863,
+      5.800000190734863
+    ],
+    "y": [
+      -1.7009999752044678,
+      1.7009999752044678
+    ],
+    "z": [
+      -1.6200000047683716,
+      1.350000023841858
+    ],
+    "dimensions_m": [
+      11.600000381469727,
+      3.4019999504089355,
+      2.9700000286102295
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      -0.13499999046325684
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_SPECIAL_DDS_LOD0.fbx",
+        "mirror": "FBX/US_SPECIAL_DDS_LOD0.fbx",
+        "sha256": "fa609428ff723e39f26d98f53d856d7e0d02501566aadec10383450d573d64f6",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_SPECIAL_DDS_LOD1.fbx",
+        "mirror": "FBX/US_SPECIAL_DDS_LOD1.fbx",
+        "sha256": "0619e96007cb60e0f0919bbc215fe58d225050114d0f873069c1fadbd62207e4",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_SPECIAL_DDS_LOD2.fbx",
+        "mirror": "FBX/US_SPECIAL_DDS_LOD2.fbx",
+        "sha256": "bfdb527f92062c08dfa2202cecbc86d47649bff59a09ae369b751d16c4676054",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_SPECIAL_DDS_LOD3.fbx",
+        "mirror": "FBX/US_SPECIAL_DDS_LOD3.fbx",
+        "sha256": "1d3c790b67893b4c254442f18d10fde5c0f9f9f60bf546944bcdb6745407c101",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_SPECIAL_DDS_COLLISION.fbx",
+      "sha256": "7062e7daaa2f05c27838c7904ba5ddb3f506f2df165707225670aa91c57d0b33"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_SPECIAL_DDS_COLLISION.json",
+      "sha256": "4c4023af20868479669be323e4cf2f3c897df02c169e0cc55c109a929f290c81"
+    }
+  },
+  "build_seconds": 0.25,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.32,
+    "SIDE": 0.34,
+    "FRONT": 0.35,
+    "TOP": 0.3,
+    "DETAIL": 0.33,
+    "ICON": 0.28
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_SPECIAL_DDS_DETAIL_128.png",
+    "US_SPECIAL_DDS_DETAIL_256.png",
+    "US_SPECIAL_DDS_DETAIL_512.png",
+    "US_SPECIAL_DDS_FRONT_128.png",
+    "US_SPECIAL_DDS_FRONT_256.png",
+    "US_SPECIAL_DDS_FRONT_512.png",
+    "US_SPECIAL_DDS_ICON_128.png",
+    "US_SPECIAL_DDS_ICON_256.png",
+    "US_SPECIAL_DDS_ICON_512.png",
+    "US_SPECIAL_DDS_PERSPECTIVE_128.png",
+    "US_SPECIAL_DDS_PERSPECTIVE_256.png",
+    "US_SPECIAL_DDS_PERSPECTIVE_512.png",
+    "US_SPECIAL_DDS_SIDE_128.png",
+    "US_SPECIAL_DDS_SIDE_256.png",
+    "US_SPECIAL_DDS_SIDE_512.png",
+    "US_SPECIAL_DDS_TOP_128.png",
+    "US_SPECIAL_DDS_TOP_256.png",
+    "US_SPECIAL_DDS_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_SPECIAL_DDS_MASTER.blend",
+      "sha256": "51f49bdd038ac9a2a644855b6cf7b0c1213567c7886dc13290a7b4135db64917"
+    },
+    "source": {
+      "path": "Source/US_SPECIAL_DDS_SOURCE.json",
+      "sha256": "54e00553118340f179f94822d9afac830093bb1cdb6d435f889a897145129bc8"
+    },
+    "spec": {
+      "path": "Documentation/US_SPECIAL_DDS_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_SPECIAL_DDS_README.md"
+    }
+  }
+}

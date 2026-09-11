@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_TORP_UGST",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 6.0,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 6.021315,
+  "built_max_diameter_m": 0.732795,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2242,
+      "triangles": 3960
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 954,
+      "triangles": 1584
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 466,
+      "triangles": 800
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 388,
+      "triangles": 644
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_TORP_UGST_SEG_00",
+    "UCX_WPN_RU_TORP_UGST_SEG_01",
+    "UCX_WPN_RU_TORP_UGST_SEG_02",
+    "UCX_WPN_RU_TORP_UGST_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.021314859390259,
+      3.0
+    ],
+    "y": [
+      -0.274495005607605,
+      0.41077056527137756
+    ],
+    "z": [
+      -0.3663977384567261,
+      0.3663977384567261
+    ],
+    "dimensions_m": [
+      6.021314859390259,
+      0.6852655708789825,
+      0.7327954769134521
+    ],
+    "centre": [
+      -0.010657429695129395,
+      0.06813777983188629,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_TORP_UGST_LOD0.fbx",
+        "mirror": "FBX/RU_TORP_UGST_LOD0.fbx",
+        "sha256": "51cebd39a5c307d94abdf66c3c866449367af89bccf2f83e83d64982cca30a97",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_TORP_UGST_LOD1.fbx",
+        "mirror": "FBX/RU_TORP_UGST_LOD1.fbx",
+        "sha256": "6509b87667e302b1dd55f861ae6a05cab95af2e1e2187ecd8246ba40e97f262e",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_TORP_UGST_LOD2.fbx",
+        "mirror": "FBX/RU_TORP_UGST_LOD2.fbx",
+        "sha256": "51dd5081ee6bd5ab014cf7339067d7ddc72b23952cf524a1bf9a4399c306198b",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_TORP_UGST_LOD3.fbx",
+        "mirror": "FBX/RU_TORP_UGST_LOD3.fbx",
+        "sha256": "56329516240ac83b3829d4435a5cc23ee259e37473bdc858b21e41bfd562834e",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_TORP_UGST_COLLISION.fbx",
+      "sha256": "0de0bae8ffbe17ce05b2dc0df5dc351131ffebfde61b63e198c1a8d02030a5c7"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_TORP_UGST_COLLISION.json",
+      "sha256": "1c86c03c5c0ff41718b02ccd825b88b2719fd45f8225db26ddd7b7cfd3ddd6c2"
+    }
+  },
+  "build_seconds": 0.57,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.29,
+    "SIDE": 0.36,
+    "FRONT": 0.32,
+    "TOP": 0.3,
+    "DETAIL": 0.32,
+    "ICON": 0.28
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_TORP_UGST_DETAIL_128.png",
+    "RU_TORP_UGST_DETAIL_256.png",
+    "RU_TORP_UGST_DETAIL_512.png",
+    "RU_TORP_UGST_FRONT_128.png",
+    "RU_TORP_UGST_FRONT_256.png",
+    "RU_TORP_UGST_FRONT_512.png",
+    "RU_TORP_UGST_ICON_128.png",
+    "RU_TORP_UGST_ICON_256.png",
+    "RU_TORP_UGST_ICON_512.png",
+    "RU_TORP_UGST_PERSPECTIVE_128.png",
+    "RU_TORP_UGST_PERSPECTIVE_256.png",
+    "RU_TORP_UGST_PERSPECTIVE_512.png",
+    "RU_TORP_UGST_SIDE_128.png",
+    "RU_TORP_UGST_SIDE_256.png",
+    "RU_TORP_UGST_SIDE_512.png",
+    "RU_TORP_UGST_TOP_128.png",
+    "RU_TORP_UGST_TOP_256.png",
+    "RU_TORP_UGST_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_TORP_UGST_MASTER.blend",
+      "sha256": "427f8a643e99b8dca1602fe589f7db7625e33bed0eddad15d67bb8a5407f80d3"
+    },
+    "source": {
+      "path": "Source/RU_TORP_UGST_SOURCE.json",
+      "sha256": "139492834d5119d3a1e454faf1d9e463eb3c8982ca38ea2c8392e4737343be2b"
+    },
+    "spec": {
+      "path": "Documentation/RU_TORP_UGST_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_TORP_UGST_README.md"
+    }
+  }
+}

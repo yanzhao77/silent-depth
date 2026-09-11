@@ -1,0 +1,8 @@
+SELECTED=95
+WORKERS=3 ���ι�ģ=[32, 32, 31]
+  worker 0: OK=32/32 1490.9s
+  worker 1: OK=32/32 1389.6s
+  worker 2: OK=31/31 1481.2s
+BUILT=95 FAILED=0 ELAPSED=1491.1s
+RETRY_QUEUE=[]
+LOG=C:\workspace\ue4\silent-depth\SilentDepth_Assets\Weapons\Documentation\WEAPON_ASSET_PRODUCTION_RUN.md

@@ -1,0 +1,95 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "CN_SLBM_JL3",
+  "display_name": "JL-3",
+  "short_name": "JL-3",
+  "country": "China",
+  "category": "SLBM",
+  "family": "CN_SLBM_JL3",
+  "role": "新一代远程潜射弹道导弹",
+  "subrole": "Modern_SLBM",
+  "tier": 9,
+  "tier_reason": "游戏 T9 新一代节点：更长更粗的三级弹体，对应 Type 096 科技树。",
+  "era": "Modern",
+  "service_years": "2020s-present",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 14.0,
+    "diameter_m": 2.2,
+    "mass_kg": 55000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料有限，取公开报道的级别近似值。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "three_stage",
+      "wide_body",
+      "long_body",
+      "tail_skirt"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.5,
+      "shroud_shape": "blunt",
+      "stage_rings": 3,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.3,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.65,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 1,
+      "base_cover": 1,
+      "bands": 3,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/CN_SLBM_JL3_MASTER.blend",
+    "lod": [
+      "LOD/CN_SLBM_JL3_LOD0.fbx",
+      "LOD/CN_SLBM_JL3_LOD1.fbx",
+      "LOD/CN_SLBM_JL3_LOD2.fbx",
+      "LOD/CN_SLBM_JL3_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/CN_SLBM_JL3_LOD0.fbx",
+      "FBX/CN_SLBM_JL3_LOD1.fbx",
+      "FBX/CN_SLBM_JL3_LOD2.fbx",
+      "FBX/CN_SLBM_JL3_LOD3.fbx"
+    ],
+    "collision": "Collision/CN_SLBM_JL3_COLLISION.fbx",
+    "collision_manifest": "Collision/CN_SLBM_JL3_COLLISION.json",
+    "source": "Source/CN_SLBM_JL3_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3876,
+    "LOD1": 1524,
+    "LOD2": 740,
+    "LOD3": 476
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 14.0,
+  "built_max_diameter_m": 3.058,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料有限，取公开报道的级别近似值。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

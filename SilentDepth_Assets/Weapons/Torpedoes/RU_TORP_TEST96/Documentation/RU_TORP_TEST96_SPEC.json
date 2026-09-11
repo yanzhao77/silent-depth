@@ -1,0 +1,89 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_TORP_TEST96",
+  "display_name": "TEST-96 torpedo",
+  "short_name": "TEST-96",
+  "country": "Russia",
+  "category": "TORP",
+  "family": "RU_TORP_TEST71",
+  "role": "深水线导鱼雷",
+  "subrole": "Modern_Heavyweight",
+  "tier": 8,
+  "tier_reason": "游戏 T8 现代俄罗斯鱼雷：TEST 系列的现代化终点。",
+  "era": "Modern",
+  "service_years": "1990s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 8.0,
+    "diameter_m": 0.533,
+    "mass_kg": 1900,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wire_dispenser",
+      "long_body",
+      "deep_water"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "tail": "conical",
+      "tail_len_ratio": 1.4,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 2,
+      "bands": 4
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/RU_TORP_TEST96_MASTER.blend",
+    "lod": [
+      "LOD/RU_TORP_TEST96_LOD0.fbx",
+      "LOD/RU_TORP_TEST96_LOD1.fbx",
+      "LOD/RU_TORP_TEST96_LOD2.fbx",
+      "LOD/RU_TORP_TEST96_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_TORP_TEST96_LOD0.fbx",
+      "FBX/RU_TORP_TEST96_LOD1.fbx",
+      "FBX/RU_TORP_TEST96_LOD2.fbx",
+      "FBX/RU_TORP_TEST96_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_TORP_TEST96_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_TORP_TEST96_COLLISION.json",
+    "source": "Source/RU_TORP_TEST96_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 4044,
+    "LOD1": 1668,
+    "LOD2": 884,
+    "LOD3": 728
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 7.977331,
+  "built_max_diameter_m": 0.771533,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

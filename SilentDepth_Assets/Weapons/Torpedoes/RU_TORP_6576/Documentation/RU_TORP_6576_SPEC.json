@@ -1,0 +1,89 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_TORP_6576",
+  "display_name": "65-76 Kit torpedo",
+  "short_name": "65-76",
+  "country": "Russia",
+  "category": "TORP",
+  "family": "RU_TORP_6576",
+  "role": "650 毫米重型远程鱼雷",
+  "subrole": "Heavyweight",
+  "tier": 6,
+  "tier_reason": "游戏 T6 大口径分支：650 毫米口径，仅适配具大口径发射管的平台。",
+  "era": "Cold War",
+  "service_years": "1970s-1990s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 11.0,
+    "diameter_m": 0.65,
+    "mass_kg": 4500,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料 650 毫米口径重型鱼雷。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "large_diameter",
+      "very_long_body",
+      "wire_dispenser"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 2.0,
+      "tail": "conical",
+      "tail_len_ratio": 1.6,
+      "fin_count": 4,
+      "fin_span_ratio": 1.35,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 1,
+      "bands": 4
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/RU_TORP_6576_MASTER.blend",
+    "lod": [
+      "LOD/RU_TORP_6576_LOD0.fbx",
+      "LOD/RU_TORP_6576_LOD1.fbx",
+      "LOD/RU_TORP_6576_LOD2.fbx",
+      "LOD/RU_TORP_6576_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_TORP_6576_LOD0.fbx",
+      "FBX/RU_TORP_6576_LOD1.fbx",
+      "FBX/RU_TORP_6576_LOD2.fbx",
+      "FBX/RU_TORP_6576_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_TORP_6576_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_TORP_6576_COLLISION.json",
+    "source": "Source/RU_TORP_6576_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 4032,
+    "LOD1": 1668,
+    "LOD2": 884,
+    "LOD3": 728
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 11.021404,
+  "built_max_diameter_m": 1.131612,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料 650 毫米口径重型鱼雷。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

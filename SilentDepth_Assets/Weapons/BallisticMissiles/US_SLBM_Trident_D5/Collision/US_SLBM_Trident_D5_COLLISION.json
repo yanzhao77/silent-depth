@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_SLBM_Trident_D5",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_SLBM_Trident_D5_SEG_00",
+      "centre": [
+        4.896,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.8080000000000003,
+        0.7384999999999999,
+        0.7384999999999999
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Trident_D5_SEG_01",
+      "centre": [
+        1.36,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.264,
+        2.11,
+        2.11
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Trident_D5_SEG_02",
+      "centre": [
+        -2.72,
+        0.0,
+        0.0
+      ],
+      "size": [
+        4.896,
+        2.11,
+        2.11
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Trident_D5_SEG_03",
+      "centre": [
+        -5.712,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.176,
+        2.11,
+        2.11
+      ]
+    }
+  ],
+  "collision_fbx": "US_SLBM_Trident_D5_COLLISION.fbx",
+  "collision_sha256": "af6e8934800fc26650ee2318faee3bc028e0bdd2b3c95a6e92ae338925e1fd14"
+}

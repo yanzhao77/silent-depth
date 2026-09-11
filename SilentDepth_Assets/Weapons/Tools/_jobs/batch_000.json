@@ -1,0 +1,290 @@
+{
+  "batch_index": 0,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "CN_ASM_YJ18",
+      "display_name": "YJ-18",
+      "short_name": "YJ-18",
+      "category": "ASM",
+      "family_id": "CN_ASM_YJ18",
+      "base_geometry": "cn_asm_yj18",
+      "country": "China",
+      "role": "现代远程反舰巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 中国现代反舰主力：发射管布放、弹翼折叠，末段为独立超音速级。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 8.2,
+        "diameter_m": 0.533,
+        "mass_kg": 2300,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料存在多个版本，取与发射管匹配的级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "folding_wing",
+          "terminal_stage"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.4,
+          "body_shape": "cylinder",
+          "wing_type": "folding",
+          "wing_pairs": 1,
+          "wing_span_ratio": 3.2,
+          "wing_chord_ratio": 1.0,
+          "wing_position": 0.44,
+          "wing_sweep_deg": 40.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.4,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.34,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_ASM_YJ8",
+      "display_name": "YJ-8 / YJ-82",
+      "short_name": "YJ-8",
+      "category": "ASM",
+      "family_id": "CN_ASM_YJ8",
+      "base_geometry": "cn_asm_yj8",
+      "country": "China",
+      "role": "潜射反舰巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 中国反舰起点：发射管布放、弹体较短，固定弹翼比例明显。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 5.8,
+        "diameter_m": 0.36,
+        "mass_kg": 815,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.36,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "fixed_wing"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.5,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 2.6,
+          "wing_chord_ratio": 1.0,
+          "wing_position": 0.4,
+          "wing_sweep_deg": 28.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 1.8,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.22,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_ASW_CY1",
+      "display_name": "CY-1 anti-submarine missile",
+      "short_name": "CY-1",
+      "category": "ASW",
+      "family_id": "CN_ASW_CY1",
+      "base_geometry": "cn_asw_cy1",
+      "country": "China",
+      "role": "潜射反潜导弹",
+      "subrole": "Rocket_Delivered",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 中国反潜导弹节点：公开资料有限，按可见外形（弹体 + 助推段）建模。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1800,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "rocket_payload",
+        "features": [
+          "tube_launched",
+          "solid_booster"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.7,
+          "booster_len_ratio": 0.32,
+          "booster_fins": 4,
+          "booster_fin_span_ratio": 1.3,
+          "payload_shape": "torpedo",
+          "payload_separation_ring": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.3,
+          "fin_chord_ratio": 0.9,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_SLBM_JL1",
+      "display_name": "JL-1",
+      "short_name": "JL-1",
+      "category": "SLBM",
+      "family_id": "CN_SLBM_JL1",
+      "base_geometry": "cn_slbm_jl1",
+      "country": "China",
+      "role": "第一代潜射弹道导弹",
+      "subrole": "Early_SLBM",
+      "era": "Cold War",
+      "service_years": "1980s-1990s",
+      "tier": 4,
+      "tier_reason": "游戏 T4 中国战略分支起点：两级弹体、整体比例比同期美苏型号更短。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 10.7,
+        "diameter_m": 1.4,
+        "mass_kg": 14200,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 1.4,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "two_stage",
+          "dome_shroud"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.4,
+          "shroud_shape": "hemispherical",
+          "stage_rings": 1,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.2,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.55,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_SLBM_JL2",
+      "display_name": "JL-2",
+      "short_name": "JL-2",
+      "category": "SLBM",
+      "family_id": "CN_SLBM_JL2",
+      "base_geometry": "cn_slbm_jl2",
+      "country": "China",
+      "role": "远程潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 中国现役主力：三级远程弹体，是 Type 094 的核心武器。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 13.0,
+        "diameter_m": 2.0,
+        "mass_kg": 42000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 2.0,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "wide_body",
+          "tail_skirt"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.5,
+          "shroud_shape": "blunt",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.28,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.62,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

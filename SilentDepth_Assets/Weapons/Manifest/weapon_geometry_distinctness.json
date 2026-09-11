@@ -1,0 +1,1529 @@
+{
+  "audit": "WeaponGeometryDistinctness",
+  "generated_at": "2026-09-11",
+  "method": "生产同路径复算 LOD0；沿轴向 96 个站位统计含弹翼/尾鳍的最大半径得到侧影剖面，同声明尺寸、不同 Weapon Family 的武器对比较剖面 RMS 与最大差异（占声明长度百分比）。",
+  "thresholds": {
+    "silhouette_max_diff_percent_min": 3.0,
+    "stations": 96
+  },
+  "summary": {
+    "weapons_audited": 124,
+    "same_size_cross_family_pairs": 88,
+    "violations": 0,
+    "worst_pair": {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "CN_TORP_Yu3",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.235,
+      "max_percent": 3.807
+    }
+  },
+  "violations": [],
+  "pairs": [
+    {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "CN_TORP_Yu3",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.235,
+      "max_percent": 3.807
+    },
+    {
+      "weapon_a": "RU_TORP_SAET60",
+      "weapon_b": "CN_TORP_Yu3",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.22,
+      "max_percent": 3.807
+    },
+    {
+      "weapon_a": "RU_TORP_SET53",
+      "weapon_b": "CN_TORP_Yu3",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.338,
+      "max_percent": 3.845
+    },
+    {
+      "weapon_a": "RU_TORP_SET53",
+      "weapon_b": "CN_TORP_Yu4",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.415,
+      "max_percent": 4.48
+    },
+    {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "CN_TORP_Yu4",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.319,
+      "max_percent": 4.48
+    },
+    {
+      "weapon_a": "RU_TORP_SAET60",
+      "weapon_b": "CN_TORP_Yu4",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.304,
+      "max_percent": 4.48
+    },
+    {
+      "weapon_a": "UK_TORP_Spearfish",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "UK_TORP_Spearfish",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.412,
+      "max_percent": 4.48
+    },
+    {
+      "weapon_a": "UK_TORP_Spearfish_Mod1",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "UK_TORP_Spearfish",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.41,
+      "max_percent": 4.48
+    },
+    {
+      "weapon_a": "RU_TORP_SET53",
+      "weapon_b": "UK_TORP_Spearfish",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.91,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "RU_TORP_SET53",
+      "weapon_b": "UK_TORP_Spearfish_Mod1",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.878,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "RU_TORP_SET53",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.792,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "UK_TORP_Spearfish",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.814,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "UK_TORP_Spearfish_Mod1",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.78,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.689,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "RU_TORP_SAET60",
+      "weapon_b": "UK_TORP_Spearfish",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.826,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "RU_TORP_SAET60",
+      "weapon_b": "UK_TORP_Spearfish_Mod1",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.795,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "RU_TORP_SAET60",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.697,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "UK_TORP_Spearfish",
+      "weapon_b": "CN_TORP_Yu3",
+      "family_a": "UK_TORP_Spearfish",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.651,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "UK_TORP_Spearfish",
+      "weapon_b": "CN_TORP_Yu4",
+      "family_a": "UK_TORP_Spearfish",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.715,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "UK_TORP_Spearfish_Mod1",
+      "weapon_b": "CN_TORP_Yu3",
+      "family_a": "UK_TORP_Spearfish",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.611,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "UK_TORP_Spearfish_Mod1",
+      "weapon_b": "CN_TORP_Yu4",
+      "family_a": "UK_TORP_Spearfish",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.675,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "CN_TORP_Yu3",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "CN_TORP_Yu3",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.578,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "CN_TORP_Yu4",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "CN_TORP_Yu3",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.509,
+      "max_percent": 4.555
+    },
+    {
+      "weapon_a": "US_TORP_Mk14",
+      "weapon_b": "US_TORP_Mk16",
+      "family_a": "US_TORP_Mk14",
+      "family_b": "US_TORP_Mk16",
+      "declared_length_m": 6.25,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.022,
+      "max_percent": 4.913
+    },
+    {
+      "weapon_a": "US_TORP_Mk23",
+      "weapon_b": "US_TORP_Mk16",
+      "family_a": "US_TORP_Mk14",
+      "family_b": "US_TORP_Mk16",
+      "declared_length_m": 6.25,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.022,
+      "max_percent": 4.913
+    },
+    {
+      "weapon_a": "RU_TORP_Shkval",
+      "weapon_b": "RU_ASW_Vodopad",
+      "family_a": "RU_TORP_Shkval",
+      "family_b": "RU_ASW_Vodopad",
+      "declared_length_m": 8.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.981,
+      "max_percent": 4.946
+    },
+    {
+      "weapon_a": "RU_TORP_SET53",
+      "weapon_b": "RU_TORP_5365K",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "RU_TORP_5365",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.6,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_SET53",
+      "weapon_b": "RU_TORP_5365M",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "RU_TORP_5365",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.692,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "RU_TORP_5365K",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "RU_TORP_5365",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.523,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "RU_TORP_5365M",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "RU_TORP_5365",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.62,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_SAET60",
+      "weapon_b": "RU_TORP_5365K",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "RU_TORP_5365",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.493,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_SAET60",
+      "weapon_b": "RU_TORP_5365M",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "RU_TORP_5365",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.591,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365K",
+      "weapon_b": "UK_TORP_Spearfish",
+      "family_a": "RU_TORP_5365",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.101,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365K",
+      "weapon_b": "UK_TORP_Spearfish_Mod1",
+      "family_a": "RU_TORP_5365",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.149,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365K",
+      "weapon_b": "CN_TORP_Yu3",
+      "family_a": "RU_TORP_5365",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.85,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365K",
+      "weapon_b": "CN_TORP_Yu4",
+      "family_a": "RU_TORP_5365",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.907,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365K",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "RU_TORP_5365",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.077,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365M",
+      "weapon_b": "UK_TORP_Spearfish",
+      "family_a": "RU_TORP_5365",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.04,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365M",
+      "weapon_b": "UK_TORP_Spearfish_Mod1",
+      "family_a": "RU_TORP_5365",
+      "family_b": "UK_TORP_Spearfish",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.088,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365M",
+      "weapon_b": "CN_TORP_Yu3",
+      "family_a": "RU_TORP_5365",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.93,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365M",
+      "weapon_b": "CN_TORP_Yu4",
+      "family_a": "RU_TORP_5365",
+      "family_b": "CN_TORP_Yu3",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.985,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "RU_TORP_5365M",
+      "weapon_b": "CN_TORP_Yu6",
+      "family_a": "RU_TORP_5365",
+      "family_b": "CN_TORP_Yu6",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.015,
+      "max_percent": 5.293
+    },
+    {
+      "weapon_a": "FR_TORP_F21",
+      "weapon_b": "RU_ASW_Vyuga",
+      "family_a": "FR_TORP_F21",
+      "family_b": "RU_ASW_Vyuga",
+      "declared_length_m": 6.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.69,
+      "max_percent": 5.314
+    },
+    {
+      "weapon_a": "RU_TORP_UGST",
+      "weapon_b": "RU_ASW_Vyuga",
+      "family_a": "RU_TORP_UGST",
+      "family_b": "RU_ASW_Vyuga",
+      "declared_length_m": 6.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.828,
+      "max_percent": 5.644
+    },
+    {
+      "weapon_a": "RU_ASW_Vyuga",
+      "weapon_b": "CN_ASW_CY1",
+      "family_a": "RU_ASW_Vyuga",
+      "family_b": "CN_ASW_CY1",
+      "declared_length_m": 6.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.01,
+      "max_percent": 5.644
+    },
+    {
+      "weapon_a": "RU_TORP_UGST",
+      "weapon_b": "CN_ASW_CY1",
+      "family_a": "RU_TORP_UGST",
+      "family_b": "CN_ASW_CY1",
+      "declared_length_m": 6.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.691,
+      "max_percent": 5.693
+    },
+    {
+      "weapon_a": "FR_TORP_F21",
+      "weapon_b": "CN_ASW_CY1",
+      "family_a": "FR_TORP_F21",
+      "family_b": "CN_ASW_CY1",
+      "declared_length_m": 6.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.431,
+      "max_percent": 5.693
+    },
+    {
+      "weapon_a": "RU_TORP_Fizik",
+      "weapon_b": "UK_TORP_Mk8",
+      "family_a": "RU_TORP_Fizik",
+      "family_b": "UK_TORP_Mk8",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.008,
+      "max_percent": 5.7
+    },
+    {
+      "weapon_a": "UK_TORP_Mk8",
+      "weapon_b": "UK_TORP_Tigerfish",
+      "family_a": "UK_TORP_Mk8",
+      "family_b": "UK_TORP_Tigerfish",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.194,
+      "max_percent": 5.7
+    },
+    {
+      "weapon_a": "UK_TORP_Mk8",
+      "weapon_b": "UK_TORP_Tigerfish_Mod1",
+      "family_a": "UK_TORP_Mk8",
+      "family_b": "UK_TORP_Tigerfish",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.194,
+      "max_percent": 5.7
+    },
+    {
+      "weapon_a": "UK_TORP_Tigerfish",
+      "weapon_b": "RU_ASW_Otvet",
+      "family_a": "UK_TORP_Tigerfish",
+      "family_b": "RU_ASW_Otvet",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.745,
+      "max_percent": 5.783
+    },
+    {
+      "weapon_a": "UK_TORP_Tigerfish_Mod1",
+      "weapon_b": "RU_ASW_Otvet",
+      "family_a": "UK_TORP_Tigerfish",
+      "family_b": "RU_ASW_Otvet",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.745,
+      "max_percent": 5.783
+    },
+    {
+      "weapon_a": "CN_TORP_Yu7",
+      "weapon_b": "IN_TORP_TAL",
+      "family_a": "CN_TORP_Yu7",
+      "family_b": "IN_TORP_TAL",
+      "declared_length_m": 2.7,
+      "declared_diameter_m": 0.32,
+      "rms_percent": 2.824,
+      "max_percent": 6.0
+    },
+    {
+      "weapon_a": "RU_TORP_Fizik",
+      "weapon_b": "RU_ASW_Otvet",
+      "family_a": "RU_TORP_Fizik",
+      "family_b": "RU_ASW_Otvet",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.421,
+      "max_percent": 6.193
+    },
+    {
+      "weapon_a": "UK_TORP_Mk8",
+      "weapon_b": "RU_ASW_Otvet",
+      "family_a": "UK_TORP_Mk8",
+      "family_b": "RU_ASW_Otvet",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.151,
+      "max_percent": 6.193
+    },
+    {
+      "weapon_a": "US_TORP_Mk18",
+      "weapon_b": "US_ASW_SeaLance",
+      "family_a": "US_TORP_Mk14",
+      "family_b": "US_ASW_SeaLance",
+      "declared_length_m": 6.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.272,
+      "max_percent": 6.492
+    },
+    {
+      "weapon_a": "RU_TORP_Fizik",
+      "weapon_b": "UK_TORP_Tigerfish",
+      "family_a": "RU_TORP_Fizik",
+      "family_b": "UK_TORP_Tigerfish",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.825,
+      "max_percent": 6.507
+    },
+    {
+      "weapon_a": "RU_TORP_Fizik",
+      "weapon_b": "UK_TORP_Tigerfish_Mod1",
+      "family_a": "RU_TORP_Fizik",
+      "family_b": "UK_TORP_Tigerfish",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 1.825,
+      "max_percent": 6.507
+    },
+    {
+      "weapon_a": "RU_TORP_UGST",
+      "weapon_b": "FR_TORP_F21",
+      "family_a": "RU_TORP_UGST",
+      "family_b": "FR_TORP_F21",
+      "declared_length_m": 6.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.275,
+      "max_percent": 6.855
+    },
+    {
+      "weapon_a": "US_TORP_Mk37",
+      "weapon_b": "US_MINE_Mk67_SLMM",
+      "family_a": "US_TORP_Mk37",
+      "family_b": "US_MINE_Mk67_SLMM",
+      "declared_length_m": 4.83,
+      "declared_diameter_m": 0.48,
+      "rms_percent": 3.189,
+      "max_percent": 9.921
+    },
+    {
+      "weapon_a": "US_TORP_Mk37_Mod2",
+      "weapon_b": "US_MINE_Mk67_SLMM",
+      "family_a": "US_TORP_Mk37",
+      "family_b": "US_MINE_Mk67_SLMM",
+      "declared_length_m": 4.83,
+      "declared_diameter_m": 0.48,
+      "rms_percent": 3.142,
+      "max_percent": 9.921
+    },
+    {
+      "weapon_a": "RU_TORP_Shkval",
+      "weapon_b": "CN_ASM_YJ18",
+      "family_a": "RU_TORP_Shkval",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 8.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.602,
+      "max_percent": 11.25
+    },
+    {
+      "weapon_a": "US_SLBM_Poseidon_C3",
+      "weapon_b": "US_SLBM_Trident_C4",
+      "family_a": "US_SLBM_Poseidon",
+      "family_b": "US_SLBM_Trident",
+      "declared_length_m": 10.4,
+      "declared_diameter_m": 1.88,
+      "rms_percent": 3.918,
+      "max_percent": 12.566
+    },
+    {
+      "weapon_a": "CN_ASM_YJ18",
+      "weapon_b": "RU_ASW_Vodopad",
+      "family_a": "CN_ASM_YJ18",
+      "family_b": "RU_ASW_Vodopad",
+      "declared_length_m": 8.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 2.642,
+      "max_percent": 12.712
+    },
+    {
+      "weapon_a": "RU_TORP_Shkval",
+      "weapon_b": "RU_ASM_Kalibr_3M54",
+      "family_a": "RU_TORP_Shkval",
+      "family_b": "RU_MISSILE_Kalibr",
+      "declared_length_m": 8.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.155,
+      "max_percent": 16.931
+    },
+    {
+      "weapon_a": "RU_ASM_Kalibr_3M54",
+      "weapon_b": "CN_ASM_YJ18",
+      "family_a": "RU_MISSILE_Kalibr",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 8.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.194,
+      "max_percent": 16.931
+    },
+    {
+      "weapon_a": "RU_ASM_Kalibr_3M54",
+      "weapon_b": "RU_ASW_Vodopad",
+      "family_a": "RU_MISSILE_Kalibr",
+      "family_b": "RU_ASW_Vodopad",
+      "declared_length_m": 8.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.062,
+      "max_percent": 16.931
+    },
+    {
+      "weapon_a": "RU_TORP_SET53",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.311,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "RU_TORP_SET65",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.381,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "RU_TORP_SAET60",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "RU_TORP_SET53",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.348,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "RU_TORP_5365K",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "RU_TORP_5365",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.047,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "RU_TORP_5365M",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "RU_TORP_5365",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.097,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "UK_TORP_Spearfish",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "UK_TORP_Spearfish",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.538,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "UK_TORP_Spearfish_Mod1",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "UK_TORP_Spearfish",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.566,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "CN_TORP_Yu3",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "CN_TORP_Yu3",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.378,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "CN_TORP_Yu4",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "CN_TORP_Yu3",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.417,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "CN_TORP_Yu6",
+      "weapon_b": "CN_LAM_YJ18_LandAttack",
+      "family_a": "CN_TORP_Yu6",
+      "family_b": "CN_ASM_YJ18",
+      "declared_length_m": 7.0,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 3.567,
+      "max_percent": 16.983
+    },
+    {
+      "weapon_a": "US_LAM_Tomahawk_BlockIII",
+      "weapon_b": "US_STRAT_TLAM_N",
+      "family_a": "US_LAM_Tomahawk",
+      "family_b": "US_STRAT_TLAM_N",
+      "declared_length_m": 6.25,
+      "declared_diameter_m": 0.52,
+      "rms_percent": 3.861,
+      "max_percent": 18.31
+    },
+    {
+      "weapon_a": "US_LAM_Tomahawk_BlockIV",
+      "weapon_b": "US_STRAT_TLAM_N",
+      "family_a": "US_LAM_Tomahawk",
+      "family_b": "US_STRAT_TLAM_N",
+      "declared_length_m": 6.25,
+      "declared_diameter_m": 0.52,
+      "rms_percent": 3.885,
+      "max_percent": 18.31
+    },
+    {
+      "weapon_a": "US_LAM_Tomahawk_BlockV",
+      "weapon_b": "US_STRAT_TLAM_N",
+      "family_a": "US_LAM_Tomahawk",
+      "family_b": "US_STRAT_TLAM_N",
+      "declared_length_m": 6.25,
+      "declared_diameter_m": 0.52,
+      "rms_percent": 3.933,
+      "max_percent": 18.31
+    },
+    {
+      "weapon_a": "US_ASM_Tomahawk_TASM",
+      "weapon_b": "US_STRAT_TLAM_N",
+      "family_a": "US_LAM_Tomahawk",
+      "family_b": "US_STRAT_TLAM_N",
+      "declared_length_m": 6.25,
+      "declared_diameter_m": 0.52,
+      "rms_percent": 3.861,
+      "max_percent": 18.31
+    },
+    {
+      "weapon_a": "US_TORP_Mk18",
+      "weapon_b": "RU_LAM_Kalibr_3M14",
+      "family_a": "US_TORP_Mk14",
+      "family_b": "RU_MISSILE_Kalibr",
+      "declared_length_m": 6.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 4.273,
+      "max_percent": 24.412
+    },
+    {
+      "weapon_a": "RU_LAM_Kalibr_3M14",
+      "weapon_b": "US_ASW_SeaLance",
+      "family_a": "RU_MISSILE_Kalibr",
+      "family_b": "US_ASW_SeaLance",
+      "declared_length_m": 6.2,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 4.542,
+      "max_percent": 24.412
+    },
+    {
+      "weapon_a": "RU_TORP_Fizik",
+      "weapon_b": "FR_LAM_MdCN",
+      "family_a": "RU_TORP_Fizik",
+      "family_b": "FR_LAM_MdCN",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 4.707,
+      "max_percent": 25.177
+    },
+    {
+      "weapon_a": "UK_TORP_Mk8",
+      "weapon_b": "FR_LAM_MdCN",
+      "family_a": "UK_TORP_Mk8",
+      "family_b": "FR_LAM_MdCN",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 4.472,
+      "max_percent": 25.177
+    },
+    {
+      "weapon_a": "UK_TORP_Tigerfish",
+      "weapon_b": "FR_LAM_MdCN",
+      "family_a": "UK_TORP_Tigerfish",
+      "family_b": "FR_LAM_MdCN",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 4.767,
+      "max_percent": 25.177
+    },
+    {
+      "weapon_a": "UK_TORP_Tigerfish_Mod1",
+      "weapon_b": "FR_LAM_MdCN",
+      "family_a": "UK_TORP_Tigerfish",
+      "family_b": "FR_LAM_MdCN",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 4.767,
+      "max_percent": 25.177
+    },
+    {
+      "weapon_a": "FR_LAM_MdCN",
+      "weapon_b": "RU_ASW_Otvet",
+      "family_a": "FR_LAM_MdCN",
+      "family_b": "RU_ASW_Otvet",
+      "declared_length_m": 6.5,
+      "declared_diameter_m": 0.53,
+      "rms_percent": 4.513,
+      "max_percent": 25.177
+    }
+  ],
+  "per_weapon": {
+    "US_TORP_Mk14": {
+      "vertices": 1738,
+      "faces": 1650,
+      "triangles": 3204
+    },
+    "US_TORP_Mk18": {
+      "vertices": 1738,
+      "faces": 1650,
+      "triangles": 3204
+    },
+    "US_TORP_Mk23": {
+      "vertices": 1738,
+      "faces": 1650,
+      "triangles": 3204
+    },
+    "US_TORP_Mk16": {
+      "vertices": 1786,
+      "faces": 1686,
+      "triangles": 3276
+    },
+    "US_TORP_Mk27": {
+      "vertices": 1538,
+      "faces": 1500,
+      "triangles": 2904
+    },
+    "US_TORP_Mk37": {
+      "vertices": 1818,
+      "faces": 1710,
+      "triangles": 3324
+    },
+    "US_TORP_Mk37_Mod2": {
+      "vertices": 1826,
+      "faces": 1716,
+      "triangles": 3336
+    },
+    "US_TORP_Mk45": {
+      "vertices": 1482,
+      "faces": 1326,
+      "triangles": 2556
+    },
+    "US_TORP_Mk48": {
+      "vertices": 1458,
+      "faces": 1308,
+      "triangles": 2520
+    },
+    "US_TORP_Mk48_ADCAP": {
+      "vertices": 1458,
+      "faces": 1308,
+      "triangles": 2520
+    },
+    "US_TORP_Mk48_Mod6": {
+      "vertices": 1658,
+      "faces": 1458,
+      "triangles": 2820
+    },
+    "US_TORP_Mk48_Mod7": {
+      "vertices": 1658,
+      "faces": 1458,
+      "triangles": 2820
+    },
+    "RU_TORP_SET53": {
+      "vertices": 1338,
+      "faces": 1218,
+      "triangles": 2340
+    },
+    "RU_TORP_SET65": {
+      "vertices": 1538,
+      "faces": 1368,
+      "triangles": 2640
+    },
+    "RU_TORP_SAET60": {
+      "vertices": 1530,
+      "faces": 1362,
+      "triangles": 2628
+    },
+    "RU_TORP_USET80": {
+      "vertices": 2290,
+      "faces": 2064,
+      "triangles": 4032
+    },
+    "RU_TORP_USET80K": {
+      "vertices": 2290,
+      "faces": 2064,
+      "triangles": 4032
+    },
+    "RU_TORP_TEST71": {
+      "vertices": 2098,
+      "faces": 1920,
+      "triangles": 3744
+    },
+    "RU_TORP_TEST71M": {
+      "vertices": 2106,
+      "faces": 1926,
+      "triangles": 3756
+    },
+    "RU_TORP_TEST96": {
+      "vertices": 2298,
+      "faces": 2070,
+      "triangles": 4044
+    },
+    "RU_TORP_UGST": {
+      "vertices": 2242,
+      "faces": 2028,
+      "triangles": 3960
+    },
+    "RU_TORP_UGST_M": {
+      "vertices": 2426,
+      "faces": 2166,
+      "triangles": 4236
+    },
+    "RU_TORP_5365K": {
+      "vertices": 1898,
+      "faces": 1770,
+      "triangles": 3444
+    },
+    "RU_TORP_5365M": {
+      "vertices": 2090,
+      "faces": 1914,
+      "triangles": 3732
+    },
+    "RU_TORP_6576": {
+      "vertices": 2290,
+      "faces": 2064,
+      "triangles": 4032
+    },
+    "RU_TORP_6576A": {
+      "vertices": 2290,
+      "faces": 2064,
+      "triangles": 4032
+    },
+    "RU_TORP_Shkval": {
+      "vertices": 2070,
+      "faces": 2064,
+      "triangles": 3840
+    },
+    "RU_TORP_Fizik": {
+      "vertices": 2018,
+      "faces": 1860,
+      "triangles": 3624
+    },
+    "UK_TORP_Mk8": {
+      "vertices": 1554,
+      "faces": 1512,
+      "triangles": 2928
+    },
+    "UK_TORP_Tigerfish": {
+      "vertices": 2098,
+      "faces": 1920,
+      "triangles": 3744
+    },
+    "UK_TORP_Tigerfish_Mod1": {
+      "vertices": 2098,
+      "faces": 1920,
+      "triangles": 3744
+    },
+    "UK_TORP_Spearfish": {
+      "vertices": 2458,
+      "faces": 2190,
+      "triangles": 4284
+    },
+    "UK_TORP_Spearfish_Mod1": {
+      "vertices": 2466,
+      "faces": 2196,
+      "triangles": 4296
+    },
+    "UK_TORP_StingRay": {
+      "vertices": 1338,
+      "faces": 1218,
+      "triangles": 2340
+    },
+    "FR_TORP_L5_Mod3": {
+      "vertices": 2042,
+      "faces": 1878,
+      "triangles": 3660
+    },
+    "FR_TORP_L5_Mod4": {
+      "vertices": 2050,
+      "faces": 1884,
+      "triangles": 3672
+    },
+    "FR_TORP_F17": {
+      "vertices": 2122,
+      "faces": 1938,
+      "triangles": 3780
+    },
+    "FR_TORP_F21": {
+      "vertices": 2286,
+      "faces": 2061,
+      "triangles": 4026
+    },
+    "CN_TORP_Yu1": {
+      "vertices": 1330,
+      "faces": 1212,
+      "triangles": 2328
+    },
+    "CN_TORP_Yu3": {
+      "vertices": 2010,
+      "faces": 1854,
+      "triangles": 3612
+    },
+    "CN_TORP_Yu4": {
+      "vertices": 2018,
+      "faces": 1860,
+      "triangles": 3624
+    },
+    "CN_TORP_Yu5": {
+      "vertices": 2066,
+      "faces": 1896,
+      "triangles": 3696
+    },
+    "CN_TORP_Yu6": {
+      "vertices": 1914,
+      "faces": 1650,
+      "triangles": 3204
+    },
+    "CN_TORP_Yu7": {
+      "vertices": 1554,
+      "faces": 1512,
+      "triangles": 2928
+    },
+    "IN_TORP_Varunastra": {
+      "vertices": 2170,
+      "faces": 1974,
+      "triangles": 3852
+    },
+    "IN_TORP_TAL": {
+      "vertices": 1538,
+      "faces": 1500,
+      "triangles": 2904
+    },
+    "RU_ASM_P5": {
+      "vertices": 1636,
+      "faces": 1668,
+      "triangles": 3144
+    },
+    "RU_ASM_P6": {
+      "vertices": 1844,
+      "faces": 1824,
+      "triangles": 3456
+    },
+    "RU_ASM_P70": {
+      "vertices": 1492,
+      "faces": 1428,
+      "triangles": 2664
+    },
+    "RU_ASM_P120": {
+      "vertices": 1820,
+      "faces": 1806,
+      "triangles": 3420
+    },
+    "RU_ASM_P500": {
+      "vertices": 2100,
+      "faces": 2016,
+      "triangles": 3840
+    },
+    "RU_ASM_P1000": {
+      "vertices": 2292,
+      "faces": 2160,
+      "triangles": 4128
+    },
+    "RU_ASM_P700": {
+      "vertices": 1516,
+      "faces": 1446,
+      "triangles": 2700
+    },
+    "RU_ASM_Oniks": {
+      "vertices": 1556,
+      "faces": 1476,
+      "triangles": 2760
+    },
+    "RU_ASM_Zircon": {
+      "vertices": 274,
+      "faces": 312,
+      "triangles": 528
+    },
+    "RU_ASM_Kalibr_3M54": {
+      "vertices": 2212,
+      "faces": 2100,
+      "triangles": 4008
+    },
+    "RU_LAM_Kalibr_3M14": {
+      "vertices": 2212,
+      "faces": 2100,
+      "triangles": 4008
+    },
+    "US_ASM_Harpoon": {
+      "vertices": 1836,
+      "faces": 1818,
+      "triangles": 3444
+    },
+    "US_LAM_Tomahawk": {
+      "vertices": 1836,
+      "faces": 1818,
+      "triangles": 3444
+    },
+    "US_LAM_Tomahawk_BlockIII": {
+      "vertices": 1836,
+      "faces": 1818,
+      "triangles": 3444
+    },
+    "US_LAM_Tomahawk_BlockIV": {
+      "vertices": 2028,
+      "faces": 1962,
+      "triangles": 3732
+    },
+    "US_LAM_Tomahawk_BlockV": {
+      "vertices": 2220,
+      "faces": 2106,
+      "triangles": 4020
+    },
+    "US_ASM_Tomahawk_TASM": {
+      "vertices": 1836,
+      "faces": 1818,
+      "triangles": 3444
+    },
+    "FR_ASM_Exocet_SM39": {
+      "vertices": 1836,
+      "faces": 1818,
+      "triangles": 3444
+    },
+    "FR_LAM_MdCN": {
+      "vertices": 2020,
+      "faces": 1956,
+      "triangles": 3720
+    },
+    "CN_ASM_YJ8": {
+      "vertices": 1316,
+      "faces": 1296,
+      "triangles": 2400
+    },
+    "CN_ASM_YJ18": {
+      "vertices": 1316,
+      "faces": 1296,
+      "triangles": 2400
+    },
+    "CN_LAM_YJ18_LandAttack": {
+      "vertices": 1316,
+      "faces": 1296,
+      "triangles": 2400
+    },
+    "RU_LAM_Granat": {
+      "vertices": 1836,
+      "faces": 1818,
+      "triangles": 3444
+    },
+    "US_ASW_SUBROC": {
+      "vertices": 1350,
+      "faces": 1380,
+      "triangles": 2472
+    },
+    "US_ASW_SeaLance": {
+      "vertices": 1774,
+      "faces": 1806,
+      "triangles": 3324
+    },
+    "RU_ASW_Vyuga": {
+      "vertices": 1526,
+      "faces": 1512,
+      "triangles": 2736
+    },
+    "RU_ASW_Vodopad": {
+      "vertices": 1974,
+      "faces": 1956,
+      "triangles": 3624
+    },
+    "RU_ASW_Veter": {
+      "vertices": 1534,
+      "faces": 1518,
+      "triangles": 2748
+    },
+    "RU_ASW_Otvet": {
+      "vertices": 1966,
+      "faces": 1950,
+      "triangles": 3612
+    },
+    "CN_ASW_CY1": {
+      "vertices": 1758,
+      "faces": 1794,
+      "triangles": 3300
+    },
+    "US_SLBM_Polaris_A1": {
+      "vertices": 1880,
+      "faces": 1968,
+      "triangles": 3552
+    },
+    "US_SLBM_Polaris_A3": {
+      "vertices": 2072,
+      "faces": 2112,
+      "triangles": 3840
+    },
+    "US_SLBM_Poseidon_C3": {
+      "vertices": 2264,
+      "faces": 2256,
+      "triangles": 4128
+    },
+    "US_SLBM_Trident_C4": {
+      "vertices": 2280,
+      "faces": 2268,
+      "triangles": 4152
+    },
+    "US_SLBM_Trident_D5": {
+      "vertices": 2280,
+      "faces": 2268,
+      "triangles": 4152
+    },
+    "US_SLBM_Trident_D5LE": {
+      "vertices": 2672,
+      "faces": 2562,
+      "triangles": 4740
+    },
+    "RU_SLBM_R13": {
+      "vertices": 1688,
+      "faces": 1824,
+      "triangles": 3264
+    },
+    "RU_SLBM_R21": {
+      "vertices": 1640,
+      "faces": 1680,
+      "triangles": 2976
+    },
+    "RU_SLBM_R27": {
+      "vertices": 1832,
+      "faces": 1824,
+      "triangles": 3264
+    },
+    "RU_SLBM_R29": {
+      "vertices": 2456,
+      "faces": 2400,
+      "triangles": 4416
+    },
+    "RU_SLBM_R29R": {
+      "vertices": 2648,
+      "faces": 2544,
+      "triangles": 4704
+    },
+    "RU_SLBM_R29RM": {
+      "vertices": 2840,
+      "faces": 2688,
+      "triangles": 4992
+    },
+    "RU_SLBM_R29RMU2_Sineva": {
+      "vertices": 2848,
+      "faces": 2694,
+      "triangles": 5004
+    },
+    "RU_SLBM_R29RMU2_Liner": {
+      "vertices": 3040,
+      "faces": 2838,
+      "triangles": 5292
+    },
+    "RU_SLBM_R30_Bulava": {
+      "vertices": 2280,
+      "faces": 2268,
+      "triangles": 4152
+    },
+    "FR_SLBM_M1": {
+      "vertices": 2264,
+      "faces": 2256,
+      "triangles": 4128
+    },
+    "FR_SLBM_M2": {
+      "vertices": 2264,
+      "faces": 2256,
+      "triangles": 4128
+    },
+    "FR_SLBM_M20": {
+      "vertices": 2456,
+      "faces": 2400,
+      "triangles": 4416
+    },
+    "FR_SLBM_M4": {
+      "vertices": 2280,
+      "faces": 2268,
+      "triangles": 4152
+    },
+    "FR_SLBM_M45": {
+      "vertices": 2480,
+      "faces": 2418,
+      "triangles": 4452
+    },
+    "FR_SLBM_M51": {
+      "vertices": 2232,
+      "faces": 2124,
+      "triangles": 3864
+    },
+    "CN_SLBM_JL1": {
+      "vertices": 2264,
+      "faces": 2256,
+      "triangles": 4128
+    },
+    "CN_SLBM_JL2": {
+      "vertices": 2264,
+      "faces": 2256,
+      "triangles": 4128
+    },
+    "CN_SLBM_JL3": {
+      "vertices": 2240,
+      "faces": 2130,
+      "triangles": 3876
+    },
+    "IN_SLBM_K15": {
+      "vertices": 2072,
+      "faces": 2112,
+      "triangles": 3840
+    },
+    "IN_SLBM_K4": {
+      "vertices": 1832,
+      "faces": 1824,
+      "triangles": 3264
+    },
+    "IN_SLBM_K5": {
+      "vertices": 2232,
+      "faces": 2124,
+      "triangles": 3864
+    },
+    "RU_SLBM_R39": {
+      "vertices": 2024,
+      "faces": 1968,
+      "triangles": 3552
+    },
+    "RU_SLBM_R39M": {
+      "vertices": 2024,
+      "faces": 1968,
+      "triangles": 3552
+    },
+    "UK_SLBM_Polaris_A3TK": {
+      "vertices": 1848,
+      "faces": 1836,
+      "triangles": 3288
+    },
+    "US_STRAT_RegulusII": {
+      "vertices": 1844,
+      "faces": 1824,
+      "triangles": 3456
+    },
+    "US_STRAT_TLAM_N": {
+      "vertices": 1324,
+      "faces": 1302,
+      "triangles": 2412
+    },
+    "RU_STRAT_Meteorit": {
+      "vertices": 1300,
+      "faces": 1284,
+      "triangles": 2376
+    },
+    "US_MINE_Mk67_SLMM": {
+      "vertices": 506,
+      "faces": 486,
+      "triangles": 876
+    },
+    "US_MINE_Mk60_CAPTOR": {
+      "vertices": 322,
+      "faces": 348,
+      "triangles": 600
+    },
+    "UK_MINE_SeaUrchin": {
+      "vertices": 354,
+      "faces": 372,
+      "triangles": 648
+    },
+    "RU_MINE_PMR2": {
+      "vertices": 554,
+      "faces": 522,
+      "triangles": 948
+    },
+    "RU_MINE_MDM6": {
+      "vertices": 402,
+      "faces": 408,
+      "triangles": 720
+    },
+    "US_DECOY_Mk70_MOSS": {
+      "vertices": 842,
+      "faces": 726,
+      "triangles": 1356
+    },
+    "US_DECOY_ADC_Mk4": {
+      "vertices": 602,
+      "faces": 546,
+      "triangles": 996
+    },
+    "US_DECOY_ADC_Mk5": {
+      "vertices": 602,
+      "faces": 546,
+      "triangles": 996
+    },
+    "RU_DECOY_MG74": {
+      "vertices": 810,
+      "faces": 702,
+      "triangles": 1308
+    },
+    "UK_DECOY_SSE_Mk3": {
+      "vertices": 602,
+      "faces": 546,
+      "triangles": 996
+    },
+    "US_SPECIAL_DDS": {
+      "vertices": 512,
+      "faces": 384,
+      "triangles": 768
+    },
+    "US_SPECIAL_ASDS": {
+      "vertices": 506,
+      "faces": 498,
+      "triangles": 900
+    },
+    "US_SPECIAL_SDV_Mk8": {
+      "vertices": 690,
+      "faces": 636,
+      "triangles": 1176
+    },
+    "RU_SPECIAL_SDV_Sirena": {
+      "vertices": 682,
+      "faces": 630,
+      "triangles": 1164
+    },
+    "UK_SPECIAL_DDS": {
+      "vertices": 528,
+      "faces": 396,
+      "triangles": 792
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "weapon_id": "CN_TORP_Yu7",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "lightweight"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.0,
+      "tail": "conical",
+      "tail_len_ratio": 0.8,
+      "fin_count": 4,
+      "fin_span_ratio": 1.6,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "propeller",
+      "wire_dispenser": 0,
+      "sonar_windows": 2,
+      "bands": 1
+    }
+  },
+  "dimensions": {
+    "length_m": 2.7,
+    "diameter_m": 0.324,
+    "mass_kg": 235,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "AIR_LAUNCH",
+    "SURFACE_LAUNCH"
+  ],
+  "tier": 7,
+  "asset_priority": "LOW",
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

@@ -1,0 +1,95 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "UK_SLBM_Polaris_A3TK",
+  "display_name": "Polaris A3TK (Chevaline)",
+  "short_name": "A3TK",
+  "country": "UK",
+  "category": "SLBM",
+  "family": "UK_SLBM_Polaris_A3TK",
+  "role": "潜射弹道导弹（英国改进型）",
+  "subrole": "Late_Cold_War_SLBM",
+  "tier": 7,
+  "tier_reason": "游戏 T7 英国 SSBN 节点：在英国 Polaris A3 基础上改进，服役至 Trident 换装。",
+  "era": "Cold War Late",
+  "service_years": "1982-1996",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 9.8,
+    "diameter_m": 1.37,
+    "mass_kg": 16000,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料常见 Polaris A3 级别尺寸。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "nose_shroud",
+      "tail_skirt",
+      "nozzle",
+      "penetration_aids"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.8,
+      "shroud_shape": "pointed",
+      "stage_rings": 1,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.25,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.6,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 0,
+      "base_cover": 1,
+      "bands": 3,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/UK_SLBM_Polaris_A3TK_MASTER.blend",
+    "lod": [
+      "LOD/UK_SLBM_Polaris_A3TK_LOD0.fbx",
+      "LOD/UK_SLBM_Polaris_A3TK_LOD1.fbx",
+      "LOD/UK_SLBM_Polaris_A3TK_LOD2.fbx",
+      "LOD/UK_SLBM_Polaris_A3TK_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/UK_SLBM_Polaris_A3TK_LOD0.fbx",
+      "FBX/UK_SLBM_Polaris_A3TK_LOD1.fbx",
+      "FBX/UK_SLBM_Polaris_A3TK_LOD2.fbx",
+      "FBX/UK_SLBM_Polaris_A3TK_LOD3.fbx"
+    ],
+    "collision": "Collision/UK_SLBM_Polaris_A3TK_COLLISION.fbx",
+    "collision_manifest": "Collision/UK_SLBM_Polaris_A3TK_COLLISION.json",
+    "source": "Source/UK_SLBM_Polaris_A3TK_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3288,
+    "LOD1": 1224,
+    "LOD2": 536,
+    "LOD3": 344
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 9.8,
+  "built_max_diameter_m": 1.9043,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料常见 Polaris A3 级别尺寸。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "weapon_id": "CN_TORP_Yu3",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 1754,
+          "triangles": 3228
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 666,
+          "triangles": 1152
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 370,
+          "triangles": 656
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 292,
+          "triangles": 500
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 4.04
+    }
+  }
+]

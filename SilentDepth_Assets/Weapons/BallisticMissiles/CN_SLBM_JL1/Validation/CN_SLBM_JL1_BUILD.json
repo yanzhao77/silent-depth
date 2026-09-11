@@ -1,0 +1,166 @@
+{
+  "weapon_id": "CN_SLBM_JL1",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 10.7,
+  "declared_diameter_m": 1.4,
+  "built_length_m": 10.7,
+  "built_max_diameter_m": 1.47,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2264,
+      "triangles": 4128
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 798,
+      "triangles": 1392
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 342,
+      "triangles": 640
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 216,
+      "triangles": 400
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_CN_SLBM_JL1_SEG_00",
+    "UCX_WPN_CN_SLBM_JL1_SEG_01",
+    "UCX_WPN_CN_SLBM_JL1_SEG_02",
+    "UCX_WPN_CN_SLBM_JL1_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -5.349999904632568,
+      5.349999904632568
+    ],
+    "y": [
+      -0.7350000143051147,
+      0.7350000143051147
+    ],
+    "z": [
+      -0.7350000143051147,
+      0.7350000143051147
+    ],
+    "dimensions_m": [
+      10.699999809265137,
+      1.4700000286102295,
+      1.4700000286102295
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/CN_SLBM_JL1_LOD0.fbx",
+        "mirror": "FBX/CN_SLBM_JL1_LOD0.fbx",
+        "sha256": "e239399d41c6f2d52d3bf81fb940b61d3686b2d929dac2c105b32b3ac31b6c93",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/CN_SLBM_JL1_LOD1.fbx",
+        "mirror": "FBX/CN_SLBM_JL1_LOD1.fbx",
+        "sha256": "6352b190589a2c4f89e5b84437345f8dfdb68262ae5de28c7d32d32efb1041d4",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/CN_SLBM_JL1_LOD2.fbx",
+        "mirror": "FBX/CN_SLBM_JL1_LOD2.fbx",
+        "sha256": "12f754a09aeca6942594203a43845685a1502b24c291bde4f16e8e353c6a1bd3",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/CN_SLBM_JL1_LOD3.fbx",
+        "mirror": "FBX/CN_SLBM_JL1_LOD3.fbx",
+        "sha256": "6052eaa45b5a6b1ccedd46f6cee761c3609a8c194ee26e278b90db02e1f531e0",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/CN_SLBM_JL1_COLLISION.fbx",
+      "sha256": "31e922e8866eb7cd4c488a8afb56e5ee1bbd4f2123b3eb3a8da976cd9fc96568"
+    },
+    "collision_manifest": {
+      "path": "Collision/CN_SLBM_JL1_COLLISION.json",
+      "sha256": "8ed3f0f8da56c523c7cc83341e198dac3cd9b46f3516d4593f422defc15ec226"
+    }
+  },
+  "build_seconds": 0.37,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.35,
+    "SIDE": 0.37,
+    "FRONT": 0.33,
+    "TOP": 0.3,
+    "DETAIL": 0.31,
+    "ICON": 0.33
+  },
+  "previews": [
+    "CN_SLBM_JL1_DETAIL_128.png",
+    "CN_SLBM_JL1_DETAIL_256.png",
+    "CN_SLBM_JL1_DETAIL_512.png",
+    "CN_SLBM_JL1_FRONT_128.png",
+    "CN_SLBM_JL1_FRONT_256.png",
+    "CN_SLBM_JL1_FRONT_512.png",
+    "CN_SLBM_JL1_ICON_128.png",
+    "CN_SLBM_JL1_ICON_256.png",
+    "CN_SLBM_JL1_ICON_512.png",
+    "CN_SLBM_JL1_PERSPECTIVE_128.png",
+    "CN_SLBM_JL1_PERSPECTIVE_256.png",
+    "CN_SLBM_JL1_PERSPECTIVE_512.png",
+    "CN_SLBM_JL1_SIDE_128.png",
+    "CN_SLBM_JL1_SIDE_256.png",
+    "CN_SLBM_JL1_SIDE_512.png",
+    "CN_SLBM_JL1_TOP_128.png",
+    "CN_SLBM_JL1_TOP_256.png",
+    "CN_SLBM_JL1_TOP_512.png",
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/CN_SLBM_JL1_MASTER.blend",
+      "sha256": "c663c62f11a39163fbf87579734156da828e74bed400ebc9408642dd115bcd7d"
+    },
+    "source": {
+      "path": "Source/CN_SLBM_JL1_SOURCE.json",
+      "sha256": "7fdef69c09d8507f3231eebda98301bbcd28d26ec22986a94c50e14420b840eb"
+    },
+    "spec": {
+      "path": "Documentation/CN_SLBM_JL1_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/CN_SLBM_JL1_README.md"
+    }
+  }
+}

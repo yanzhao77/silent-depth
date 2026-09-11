@@ -1,0 +1,90 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "UK_TORP_Spearfish_Mod1",
+  "display_name": "Spearfish Mod 1",
+  "short_name": "Spearfish-1",
+  "country": "UK",
+  "category": "TORP",
+  "family": "UK_TORP_Spearfish",
+  "role": "深水重型鱼雷升级型",
+  "subrole": "Modern_Heavyweight",
+  "tier": 9,
+  "tier_reason": "游戏 T9 升级型：与 Mod 0 共享弹体，尾部与声学组件重做。",
+  "era": "Modern",
+  "service_years": "2020s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 7.0,
+    "diameter_m": 0.533,
+    "mass_kg": 1850,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "与 Mod 0 同级尺寸。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "pumpjet",
+      "wire_dispenser",
+      "deep_water",
+      "modern_sonar"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "tail": "conical",
+      "tail_len_ratio": 1.0,
+      "fin_count": 4,
+      "fin_span_ratio": 1.35,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "pumpjet",
+      "wire_dispenser": 1,
+      "sonar_windows": 3,
+      "bands": 4
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/UK_TORP_Spearfish_Mod1_MASTER.blend",
+    "lod": [
+      "LOD/UK_TORP_Spearfish_Mod1_LOD0.fbx",
+      "LOD/UK_TORP_Spearfish_Mod1_LOD1.fbx",
+      "LOD/UK_TORP_Spearfish_Mod1_LOD2.fbx",
+      "LOD/UK_TORP_Spearfish_Mod1_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/UK_TORP_Spearfish_Mod1_LOD0.fbx",
+      "FBX/UK_TORP_Spearfish_Mod1_LOD1.fbx",
+      "FBX/UK_TORP_Spearfish_Mod1_LOD2.fbx",
+      "FBX/UK_TORP_Spearfish_Mod1_LOD3.fbx"
+    ],
+    "collision": "Collision/UK_TORP_Spearfish_Mod1_COLLISION.fbx",
+    "collision_manifest": "Collision/UK_TORP_Spearfish_Mod1_COLLISION.json",
+    "source": "Source/UK_TORP_Spearfish_Mod1_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 4296,
+    "LOD1": 1764,
+    "LOD2": 836,
+    "LOD3": 680
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 7.016611,
+  "built_max_diameter_m": 0.786692,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "与 Mod 0 同级尺寸。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

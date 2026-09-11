@@ -1,0 +1,271 @@
+{
+  "batch_index": 7,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "RU_ASM_P700",
+      "display_name": "P-700 Granit",
+      "short_name": "P-700",
+      "category": "ASM",
+      "family_id": "RU_ASM_P700",
+      "base_geometry": "ru_asm_p700",
+      "country": "Russia",
+      "role": "冷战后期重型超音速反舰导弹",
+      "subrole": "Supersonic_Anti_Ship",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 俄罗斯标志性远程反舰导弹：长弹体、双进气口与大型尾控制面，镜头分辨度高。",
+      "launch_methods": [
+        "VLS",
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 10.0,
+        "diameter_m": 0.85,
+        "mass_kg": 7000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 10 米。"
+      },
+      "body_diameter_m": 0.85,
+      "geometry": {
+        "kind": "supersonic_missile",
+        "features": [
+          "ramjet",
+          "solid_booster",
+          "twin_intakes"
+        ],
+        "params": {
+          "nose": "conical",
+          "nose_len_ratio": 3.0,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 2.3,
+          "wing_chord_ratio": 1.4,
+          "wing_position": 0.5,
+          "wing_sweep_deg": 55.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.3,
+          "tail_chord_ratio": 1.0,
+          "intake_type": "side",
+          "intake_position": 0.24,
+          "intake_len_ratio": 2.0,
+          "booster": 1,
+          "booster_len_ratio": 0.22,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 1,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_Zircon",
+      "display_name": "3M22 Tsirkon",
+      "short_name": "Zircon",
+      "category": "ASM",
+      "family_id": "RU_ASM_Zircon",
+      "base_geometry": "ru_asm_zircon",
+      "country": "Russia",
+      "role": "新一代高超音速反舰导弹",
+      "subrole": "Hypersonic_Anti_Ship",
+      "era": "Modern",
+      "service_years": "2020s-present",
+      "tier": 10,
+      "tier_reason": "游戏 T10 顶级反舰节点：与常规冲压导弹外形明显不同，弹体短粗、控制面小。",
+      "launch_methods": [
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 9.0,
+        "diameter_m": 0.6,
+        "mass_kg": 3000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.6,
+      "geometry": {
+        "kind": "glide_body",
+        "features": [
+          "hypersonic",
+          "small_control_surfaces"
+        ],
+        "params": {
+          "body_shape": "wedge",
+          "nose": "blunt",
+          "nose_len_ratio": 1.6,
+          "fin_count": 2,
+          "fin_span_ratio": 1.6,
+          "fin_chord_ratio": 1.2,
+          "tail_type": "flaps",
+          "bands": 2,
+          "windows": 0,
+          "booster": 1,
+          "booster_len_ratio": 0.35
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASW_Otvet",
+      "display_name": "91R Otvet",
+      "short_name": "Otvet",
+      "category": "ASW",
+      "family_id": "RU_ASW_Otvet",
+      "base_geometry": "ru_asw_otvet",
+      "country": "Russia",
+      "role": "现代反潜导弹",
+      "subrole": "Rocket_Delivered",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 现代反潜节点：与 Yasen 级配套，弹体短而粗，适合垂直发射。",
+      "launch_methods": [
+        "VLS",
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.5,
+        "diameter_m": 0.533,
+        "mass_kg": 2000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "rocket_payload",
+        "features": [
+          "vls_launched",
+          "solid_booster",
+          "modern"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.7,
+          "booster_len_ratio": 0.34,
+          "booster_fins": 4,
+          "booster_fin_span_ratio": 1.3,
+          "payload_shape": "torpedo",
+          "payload_separation_ring": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.3,
+          "fin_chord_ratio": 0.9,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASW_Veter",
+      "display_name": "RPK-7 Veter",
+      "short_name": "Veter",
+      "category": "ASW",
+      "family_id": "RU_ASW_Veter",
+      "base_geometry": "ru_asw_veter",
+      "country": "Russia",
+      "role": "远程反潜导弹",
+      "subrole": "Rocket_Delivered",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 远程反潜节点：与 Vodopad 同族但弹体更长，载荷段比例不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 8.9,
+        "diameter_m": 0.533,
+        "mass_kg": 2600,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "rocket_payload",
+        "features": [
+          "tube_launched",
+          "solid_booster",
+          "long_range"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "booster_len_ratio": 0.38,
+          "booster_fins": 4,
+          "booster_fin_span_ratio": 1.4,
+          "payload_shape": "torpedo",
+          "payload_separation_ring": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.4,
+          "fin_chord_ratio": 1.0,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASW_Vodopad",
+      "display_name": "RPK-6 Vodopad",
+      "short_name": "Vodopad",
+      "category": "ASW",
+      "family_id": "RU_ASW_Vodopad",
+      "base_geometry": "ru_asw_vodopad",
+      "country": "Russia",
+      "role": "潜射反潜导弹",
+      "subrole": "Rocket_Delivered",
+      "era": "Cold War Late",
+      "service_years": "1981-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 苏联反潜导弹主力：8 米级弹体、助推段与载荷段分界清晰。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 8.2,
+        "diameter_m": 0.533,
+        "mass_kg": 2400,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 8 米级。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "rocket_payload",
+        "features": [
+          "tube_launched",
+          "solid_booster",
+          "payload_torpedo"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.8,
+          "booster_len_ratio": 0.36,
+          "booster_fins": 4,
+          "booster_fin_span_ratio": 1.4,
+          "payload_shape": "torpedo",
+          "payload_separation_ring": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.4,
+          "fin_chord_ratio": 0.9,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

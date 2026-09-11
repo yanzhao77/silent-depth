@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_TORP_Mk45",
+  "display_name": "Mk 45 ASTOR torpedo",
+  "short_name": "Mk45",
+  "country": "USA",
+  "category": "TORP",
+  "family": "US_TORP_Mk45",
+  "role": "核装药反潜鱼雷",
+  "subrole": "Heavyweight",
+  "tier": 5,
+  "tier_reason": "游戏 T5 特种反潜节点：与常规重型鱼雷外形接近，弹体更长、尾部更方。",
+  "era": "Cold War",
+  "service_years": "1963-1976",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 5.8,
+    "diameter_m": 0.483,
+    "mass_kg": 1050,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "Mk 45 ASTOR 公开资料为 19 英寸（483 毫米）弹径，长度约 5.8 米。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wire_dispenser",
+      "square_stern"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 2.1,
+      "tail": "square",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 0,
+      "bands": 2
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/US_TORP_Mk45_MASTER.blend",
+    "lod": [
+      "LOD/US_TORP_Mk45_LOD0.fbx",
+      "LOD/US_TORP_Mk45_LOD1.fbx",
+      "LOD/US_TORP_Mk45_LOD2.fbx",
+      "LOD/US_TORP_Mk45_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_TORP_Mk45_LOD0.fbx",
+      "FBX/US_TORP_Mk45_LOD1.fbx",
+      "FBX/US_TORP_Mk45_LOD2.fbx",
+      "FBX/US_TORP_Mk45_LOD3.fbx"
+    ],
+    "collision": "Collision/US_TORP_Mk45_COLLISION.fbx",
+    "collision_manifest": "Collision/US_TORP_Mk45_COLLISION.json",
+    "source": "Source/US_TORP_Mk45_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2556,
+    "LOD1": 1164,
+    "LOD2": 604,
+    "LOD3": 508
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 5.824644,
+  "built_max_diameter_m": 0.779216,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "Mk 45 ASTOR 公开资料为 19 英寸（483 毫米）弹径，长度约 5.8 米。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

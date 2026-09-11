@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_ASM_Tomahawk_TASM",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_ASM_Tomahawk_TASM_SEG_00",
+      "centre": [
+        2.25,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.7500000000000002,
+        0.182,
+        0.182
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASM_Tomahawk_TASM_SEG_01",
+      "centre": [
+        0.625,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.5,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASM_Tomahawk_TASM_SEG_02",
+      "centre": [
+        -1.25,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.25,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASM_Tomahawk_TASM_SEG_03",
+      "centre": [
+        -2.625,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.0,
+        1.61928,
+        1.61928
+      ]
+    }
+  ],
+  "collision_fbx": "US_ASM_Tomahawk_TASM_COLLISION.fbx",
+  "collision_sha256": "613f8adb65557df3f36360406bf945c4949466de24a3ccec106221b640ad27ca"
+}

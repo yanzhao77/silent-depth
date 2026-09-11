@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_TORP_TEST71",
+  "display_name": "TEST-71 torpedo",
+  "short_name": "TEST-71",
+  "country": "Russia",
+  "category": "TORP",
+  "family": "RU_TORP_TEST71",
+  "role": "线导反潜鱼雷",
+  "subrole": "Wire_Guided",
+  "tier": 6,
+  "tier_reason": "游戏 T6 苏联线导代表型号：细长弹体 + 明显导线整流罩。",
+  "era": "Cold War",
+  "service_years": "1970s-1990s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 8.0,
+    "diameter_m": 0.533,
+    "mass_kg": 1820,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似，长度约 8 米级。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wire_dispenser",
+      "long_body"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "tail": "conical",
+      "tail_len_ratio": 1.4,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 1,
+      "bands": 3
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/RU_TORP_TEST71_MASTER.blend",
+    "lod": [
+      "LOD/RU_TORP_TEST71_LOD0.fbx",
+      "LOD/RU_TORP_TEST71_LOD1.fbx",
+      "LOD/RU_TORP_TEST71_LOD2.fbx",
+      "LOD/RU_TORP_TEST71_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_TORP_TEST71_LOD0.fbx",
+      "FBX/RU_TORP_TEST71_LOD1.fbx",
+      "FBX/RU_TORP_TEST71_LOD2.fbx",
+      "FBX/RU_TORP_TEST71_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_TORP_TEST71_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_TORP_TEST71_COLLISION.json",
+    "source": "Source/RU_TORP_TEST71_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3744,
+    "LOD1": 1524,
+    "LOD2": 884,
+    "LOD3": 728
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 7.977331,
+  "built_max_diameter_m": 0.771533,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似，长度约 8 米级。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

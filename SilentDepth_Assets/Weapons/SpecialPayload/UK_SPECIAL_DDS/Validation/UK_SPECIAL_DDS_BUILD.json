@@ -1,0 +1,163 @@
+{
+  "weapon_id": "UK_SPECIAL_DDS",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "shelter",
+  "declared_length_m": 10.0,
+  "declared_diameter_m": 2.5,
+  "built_length_m": 10.0,
+  "built_max_diameter_m": 3.475,
+  "lod": {
+    "LOD0": {
+      "objects": 2,
+      "vertices": 528,
+      "triangles": 792
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 312,
+      "triangles": 468
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 200,
+      "triangles": 300
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 136,
+      "triangles": 204
+    }
+  },
+  "collision": {
+    "objects": 1,
+    "vertices": 8,
+    "triangles": 12
+  },
+  "collision_boxes": 1,
+  "collision_segments": [
+    "UCX_WPN_UK_SPECIAL_DDS_SEG_00"
+  ],
+  "bounds": {
+    "x": [
+      -5.0,
+      5.0
+    ],
+    "y": [
+      -1.5750000476837158,
+      1.5750000476837158
+    ],
+    "z": [
+      -1.7374999523162842,
+      1.7374999523162842
+    ],
+    "dimensions_m": [
+      10.0,
+      3.1500000953674316,
+      3.4749999046325684
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/UK_SPECIAL_DDS_LOD0.fbx",
+        "mirror": "FBX/UK_SPECIAL_DDS_LOD0.fbx",
+        "sha256": "455d4b03afaa833cf47e66d43e41d809bed73cb960c389870b7f1f50ed3757ab",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/UK_SPECIAL_DDS_LOD1.fbx",
+        "mirror": "FBX/UK_SPECIAL_DDS_LOD1.fbx",
+        "sha256": "ba6a4931cb25b98fa0e02d6e81e3565a55100f54767688a9d5d75096d2c32715",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/UK_SPECIAL_DDS_LOD2.fbx",
+        "mirror": "FBX/UK_SPECIAL_DDS_LOD2.fbx",
+        "sha256": "9267c410fc6d7d4decac6835c953f29065a63c806d77de49ced6b31e524de5d3",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/UK_SPECIAL_DDS_LOD3.fbx",
+        "mirror": "FBX/UK_SPECIAL_DDS_LOD3.fbx",
+        "sha256": "aed865fd67fa9b37b96b60e8d2b9c32002110f610377ccf7286293d2235627eb",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/UK_SPECIAL_DDS_COLLISION.fbx",
+      "sha256": "547f570f14b1022ac6f5f1598e2f99a60be98b773143390591ffcebeb2f50011"
+    },
+    "collision_manifest": {
+      "path": "Collision/UK_SPECIAL_DDS_COLLISION.json",
+      "sha256": "574a884854f2ef80014f1e4cded6493b99b0dcf34cf1093cb126977c0b1cd2a1"
+    }
+  },
+  "build_seconds": 0.27,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.31,
+    "SIDE": 0.32,
+    "FRONT": 0.28,
+    "TOP": 0.28,
+    "DETAIL": 0.32,
+    "ICON": 0.35
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "UK_SPECIAL_DDS_DETAIL_128.png",
+    "UK_SPECIAL_DDS_DETAIL_256.png",
+    "UK_SPECIAL_DDS_DETAIL_512.png",
+    "UK_SPECIAL_DDS_FRONT_128.png",
+    "UK_SPECIAL_DDS_FRONT_256.png",
+    "UK_SPECIAL_DDS_FRONT_512.png",
+    "UK_SPECIAL_DDS_ICON_128.png",
+    "UK_SPECIAL_DDS_ICON_256.png",
+    "UK_SPECIAL_DDS_ICON_512.png",
+    "UK_SPECIAL_DDS_PERSPECTIVE_128.png",
+    "UK_SPECIAL_DDS_PERSPECTIVE_256.png",
+    "UK_SPECIAL_DDS_PERSPECTIVE_512.png",
+    "UK_SPECIAL_DDS_SIDE_128.png",
+    "UK_SPECIAL_DDS_SIDE_256.png",
+    "UK_SPECIAL_DDS_SIDE_512.png",
+    "UK_SPECIAL_DDS_TOP_128.png",
+    "UK_SPECIAL_DDS_TOP_256.png",
+    "UK_SPECIAL_DDS_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/UK_SPECIAL_DDS_MASTER.blend",
+      "sha256": "c78cf9970ac7611c4194602e4d66da2c1989d5517e8fb2d10319862e46f07d7c"
+    },
+    "source": {
+      "path": "Source/UK_SPECIAL_DDS_SOURCE.json",
+      "sha256": "ed49e5f4972eb374b7843db09c044cf20c3bd4707c12e8e5f42615556c599b49"
+    },
+    "spec": {
+      "path": "Documentation/UK_SPECIAL_DDS_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/UK_SPECIAL_DDS_README.md"
+    }
+  }
+}

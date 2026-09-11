@@ -1,0 +1,101 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_ASM_P6",
+  "display_name": "P-6 Progress",
+  "short_name": "P-6",
+  "country": "Russia",
+  "category": "ASM",
+  "family": "RU_ASM_P5",
+  "role": "冷战早期远程反舰导弹",
+  "subrole": "Early_Cruise",
+  "tier": 3,
+  "tier_reason": "游戏 T3 远程分支：与 P-5 共享弹体几何，首部进气道与制导组件不同。",
+  "era": "Cold War",
+  "service_years": "1960s-1970s",
+  "launch_methods": [
+    "SURFACE_LAUNCH",
+    "DECK_MOUNT"
+  ],
+  "dimensions": {
+    "length_m": 10.6,
+    "diameter_m": 0.9,
+    "mass_kg": 4500,
+    "scale_source": "ESTIMATED",
+    "scale_note": "沿用同族级别近似。"
+  },
+  "geometry": {
+    "kind": "cruise_missile",
+    "features": [
+      "surface_launch",
+      "nose_intake"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.8,
+      "body_shape": "cylinder",
+      "wing_type": "folding",
+      "wing_pairs": 1,
+      "wing_span_ratio": 4.2,
+      "wing_chord_ratio": 1.4,
+      "wing_position": 0.4,
+      "wing_sweep_deg": 20.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 2.6,
+      "tail_chord_ratio": 0.9,
+      "intake_type": "chin",
+      "intake_position": 0.15,
+      "intake_len_ratio": 1.6,
+      "booster": 1,
+      "booster_len_ratio": 0.22,
+      "booster_fins": 0,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/RU_ASM_P6_MASTER.blend",
+    "lod": [
+      "LOD/RU_ASM_P6_LOD0.fbx",
+      "LOD/RU_ASM_P6_LOD1.fbx",
+      "LOD/RU_ASM_P6_LOD2.fbx",
+      "LOD/RU_ASM_P6_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_ASM_P6_LOD0.fbx",
+      "FBX/RU_ASM_P6_LOD1.fbx",
+      "FBX/RU_ASM_P6_LOD2.fbx",
+      "FBX/RU_ASM_P6_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_ASM_P6_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_ASM_P6_COLLISION.json",
+    "source": "Source/RU_ASM_P6_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3456,
+    "LOD1": 1176,
+    "LOD2": 616,
+    "LOD3": 412
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 10.6,
+  "built_max_diameter_m": 3.1926,
+  "scale_source": "ESTIMATED",
+  "scale_note": "沿用同族级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

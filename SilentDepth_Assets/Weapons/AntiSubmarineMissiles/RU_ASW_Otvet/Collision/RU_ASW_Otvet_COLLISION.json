@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_ASW_Otvet",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_ASW_Otvet_SEG_00",
+      "centre": [
+        2.34,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.8200000000000003,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Otvet_SEG_01",
+      "centre": [
+        0.65,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.56,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Otvet_SEG_02",
+      "centre": [
+        -1.3,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.34,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Otvet_SEG_03",
+      "centre": [
+        -2.73,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.04,
+        0.5897801764705883,
+        0.5897801764705883
+      ]
+    }
+  ],
+  "collision_fbx": "RU_ASW_Otvet_COLLISION.fbx",
+  "collision_sha256": "bf15375f01a35d8c1b67f7624d4f41b335c88d24d5a1c171fc3c804abb284da6"
+}

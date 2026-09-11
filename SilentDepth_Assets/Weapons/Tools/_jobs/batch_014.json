@@ -1,0 +1,256 @@
+{
+  "batch_index": 14,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "RU_TORP_TEST96",
+      "display_name": "TEST-96 torpedo",
+      "short_name": "TEST-96",
+      "category": "TORP",
+      "family_id": "RU_TORP_TEST71",
+      "base_geometry": "ru_torp_test71",
+      "country": "Russia",
+      "role": "深水线导鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 现代俄罗斯鱼雷：TEST 系列的现代化终点。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 8.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1900,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "long_body",
+          "deep_water"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.4,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_UGST",
+      "display_name": "UGST torpedo",
+      "short_name": "UGST",
+      "category": "TORP",
+      "family_id": "RU_TORP_UGST",
+      "base_geometry": "ru_torp_ugst",
+      "country": "Russia",
+      "role": "现代热动力重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 俄罗斯现代重型鱼雷：热动力推进、外形与电动族明显不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1800,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似，长度约 6 米级。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "contra_propeller",
+          "thermal"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_UGST_M",
+      "display_name": "UGST-M torpedo",
+      "short_name": "UGST-M",
+      "category": "TORP",
+      "family_id": "RU_TORP_UGST",
+      "base_geometry": "ru_torp_ugst",
+      "country": "Russia",
+      "role": "现代热动力重型鱼雷改进型",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2000s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 改进型：延长推进段，尾控制面重新设计。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.3,
+        "diameter_m": 0.533,
+        "mass_kg": 1900,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "contra_propeller",
+          "extended_propulsion"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_USET80",
+      "display_name": "USET-80 torpedo",
+      "short_name": "USET-80",
+      "category": "TORP",
+      "family_id": "RU_TORP_USET80",
+      "base_geometry": "ru_torp_uset80",
+      "country": "Russia",
+      "role": "通用电动鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 通用鱼雷：兼顾反潜与反舰的电动重型鱼雷。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1800,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "electric",
+          "wire_dispenser"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_USET80K",
+      "display_name": "USET-80K torpedo",
+      "short_name": "USET-80K",
+      "category": "TORP",
+      "family_id": "RU_TORP_USET80",
+      "base_geometry": "ru_torp_uset80",
+      "country": "Russia",
+      "role": "通用电动鱼雷改进型",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 改进型：与基础型共享几何，控制段与标记不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1800,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "electric",
+          "wire_dispenser",
+          "improved_control"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

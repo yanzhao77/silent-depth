@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_TORP_SET53",
+  "display_name": "SET-53 torpedo",
+  "short_name": "SET-53",
+  "country": "Russia",
+  "category": "TORP",
+  "family": "RU_TORP_SET53",
+  "role": "早期电动反潜鱼雷",
+  "subrole": "Acoustic_Homing",
+  "tier": 3,
+  "tier_reason": "游戏 T3 苏联早期电动鱼雷：噪声低、外形圆钝。",
+  "era": "Cold War",
+  "service_years": "1950s-1960s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 7.0,
+    "diameter_m": 0.533,
+    "mass_kg": 1400,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料只给出级别尺寸，取近似值。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "electric",
+      "round_nose"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.1,
+      "tail": "conical",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 0,
+      "sonar_windows": 1,
+      "bands": 1
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/RU_TORP_SET53_MASTER.blend",
+    "lod": [
+      "LOD/RU_TORP_SET53_LOD0.fbx",
+      "LOD/RU_TORP_SET53_LOD1.fbx",
+      "LOD/RU_TORP_SET53_LOD2.fbx",
+      "LOD/RU_TORP_SET53_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_TORP_SET53_LOD0.fbx",
+      "FBX/RU_TORP_SET53_LOD1.fbx",
+      "FBX/RU_TORP_SET53_LOD2.fbx",
+      "FBX/RU_TORP_SET53_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_TORP_SET53_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_TORP_SET53_COLLISION.json",
+    "source": "Source/RU_TORP_SET53_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2340,
+    "LOD1": 1080,
+    "LOD2": 664,
+    "LOD3": 568
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 7.029312,
+  "built_max_diameter_m": 0.719858,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料只给出级别尺寸，取近似值。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

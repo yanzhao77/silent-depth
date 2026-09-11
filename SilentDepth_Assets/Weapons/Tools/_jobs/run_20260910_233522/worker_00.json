@@ -1,0 +1,64 @@
+{
+  "batch_index": 0,
+  "generated_at": "2026-09-10",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "UK_TORP_Spearfish",
+      "display_name": "Spearfish Mod 0",
+      "short_name": "Spearfish",
+      "category": "TORP",
+      "family_id": "UK_TORP_Spearfish",
+      "country": "UK",
+      "role": "深水重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "1994-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 英国顶级鱼雷：泵喷推进、钝圆尾部，与 Mk 48 外形明显不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1850,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 7 米。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "pumpjet",
+          "wire_dispenser",
+          "deep_water"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.0,
+          "fin_count": 4,
+          "fin_span_ratio": 1.35,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "pumpjet",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

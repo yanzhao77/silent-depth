@@ -1,0 +1,166 @@
+{
+  "weapon_id": "UK_SLBM_Trident_D5",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 13.6,
+  "declared_diameter_m": 2.11,
+  "built_length_m": 13.6,
+  "built_max_diameter_m": 2.11,
+  "lod": {
+    "LOD0": {
+      "objects": 2,
+      "vertices": 1156,
+      "triangles": 2304
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 340,
+      "triangles": 672
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 228,
+      "triangles": 448
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 144,
+      "triangles": 280
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_UK_SLBM_Trident_D5_SEG_00",
+    "UCX_WPN_UK_SLBM_Trident_D5_SEG_01",
+    "UCX_WPN_UK_SLBM_Trident_D5_SEG_02",
+    "UCX_WPN_UK_SLBM_Trident_D5_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -6.800000190734863,
+      6.800000190734863
+    ],
+    "y": [
+      -1.0549999475479126,
+      1.0549999475479126
+    ],
+    "z": [
+      -1.0549999475479126,
+      1.0549999475479126
+    ],
+    "dimensions_m": [
+      13.600000381469727,
+      2.109999895095825,
+      2.109999895095825
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/UK_SLBM_Trident_D5_LOD0.fbx",
+        "mirror": "FBX/UK_SLBM_Trident_D5_LOD0.fbx",
+        "sha256": "468b112f34e52177d22ec1ad3dc70564570823a7125350270cb5f31ae44378ce",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/UK_SLBM_Trident_D5_LOD1.fbx",
+        "mirror": "FBX/UK_SLBM_Trident_D5_LOD1.fbx",
+        "sha256": "30abe1151a698e4d1e1a46f02d6ae171ca09189d80e234e18f12db8f84c16ef8",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/UK_SLBM_Trident_D5_LOD2.fbx",
+        "mirror": "FBX/UK_SLBM_Trident_D5_LOD2.fbx",
+        "sha256": "fc258c4de5b8b6fd38113dafb0028538f886760f408d88b5e2362a8aa7965736",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/UK_SLBM_Trident_D5_LOD3.fbx",
+        "mirror": "FBX/UK_SLBM_Trident_D5_LOD3.fbx",
+        "sha256": "88ac31caea551eda831b405238d7741cca32d60bf60f46d5c1b93dd0458c9863",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/UK_SLBM_Trident_D5_COLLISION.fbx",
+      "sha256": "cd55a847e4eab62f6d85396e99997ac8efabc7ff6c83cd72e79a1b999fcae98a"
+    },
+    "collision_manifest": {
+      "path": "Collision/UK_SLBM_Trident_D5_COLLISION.json",
+      "sha256": "89b4d187ab2f9270eb66b25de614441b70334422cc116f097aff151c84dee3b2"
+    }
+  },
+  "build_seconds": 9.78,
+  "preview_seconds": {
+    "PERSPECTIVE": 53.23,
+    "SIDE": 30.91,
+    "FRONT": 32.21,
+    "TOP": 18.68,
+    "DETAIL": 21.91,
+    "ICON": 11.51
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "UK_SLBM_Trident_D5_DETAIL_128.png",
+    "UK_SLBM_Trident_D5_DETAIL_256.png",
+    "UK_SLBM_Trident_D5_DETAIL_512.png",
+    "UK_SLBM_Trident_D5_FRONT_128.png",
+    "UK_SLBM_Trident_D5_FRONT_256.png",
+    "UK_SLBM_Trident_D5_FRONT_512.png",
+    "UK_SLBM_Trident_D5_ICON_128.png",
+    "UK_SLBM_Trident_D5_ICON_256.png",
+    "UK_SLBM_Trident_D5_ICON_512.png",
+    "UK_SLBM_Trident_D5_PERSPECTIVE_128.png",
+    "UK_SLBM_Trident_D5_PERSPECTIVE_256.png",
+    "UK_SLBM_Trident_D5_PERSPECTIVE_512.png",
+    "UK_SLBM_Trident_D5_SIDE_128.png",
+    "UK_SLBM_Trident_D5_SIDE_256.png",
+    "UK_SLBM_Trident_D5_SIDE_512.png",
+    "UK_SLBM_Trident_D5_TOP_128.png",
+    "UK_SLBM_Trident_D5_TOP_256.png",
+    "UK_SLBM_Trident_D5_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/UK_SLBM_Trident_D5_MASTER.blend",
+      "sha256": "62c93cbf37a10f2dc18bc7061c355ebe9723c2ce6cf951e6d51aca7a15c1e03f"
+    },
+    "source": {
+      "path": "Source/UK_SLBM_Trident_D5_SOURCE.json",
+      "sha256": "38f620059f2b2ffa1a76aca3314e4b8e54fc91a9d0c835c8da6bbbf1ede07617"
+    },
+    "spec": {
+      "path": "Documentation/UK_SLBM_Trident_D5_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/UK_SLBM_Trident_D5_README.md"
+    }
+  }
+}

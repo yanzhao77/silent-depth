@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_STRAT_Poseidon",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "sdv",
+  "declared_length_m": 20.0,
+  "declared_diameter_m": 1.8,
+  "built_length_m": 20.0,
+  "built_max_diameter_m": 1.953,
+  "lod": {
+    "LOD0": {
+      "objects": 3,
+      "vertices": 394,
+      "triangles": 732
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 154,
+      "triangles": 300
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 106,
+      "triangles": 204
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 70,
+      "triangles": 132
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_STRAT_Poseidon_SEG_00",
+    "UCX_WPN_RU_STRAT_Poseidon_SEG_01",
+    "UCX_WPN_RU_STRAT_Poseidon_SEG_02",
+    "UCX_WPN_RU_STRAT_Poseidon_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -10.0,
+      10.0
+    ],
+    "y": [
+      -0.8999999761581421,
+      0.8999999761581421
+    ],
+    "z": [
+      -0.8999999761581421,
+      1.0529999732971191
+    ],
+    "dimensions_m": [
+      20.0,
+      1.7999999523162842,
+      1.9529999494552612
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.07649999856948853
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_STRAT_Poseidon_LOD0.fbx",
+        "mirror": "FBX/RU_STRAT_Poseidon_LOD0.fbx",
+        "sha256": "43f18a45aa0ebc236c34acd83bc82859f01406be1985f71b734e5550e2491d87",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_STRAT_Poseidon_LOD1.fbx",
+        "mirror": "FBX/RU_STRAT_Poseidon_LOD1.fbx",
+        "sha256": "facc4468012e4c258387a802664b29baadcdea00cfdaebccd87a03c4db057b43",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_STRAT_Poseidon_LOD2.fbx",
+        "mirror": "FBX/RU_STRAT_Poseidon_LOD2.fbx",
+        "sha256": "f12f520e3c40e8b167ce6b543a2572e8883a0ee86ef56d64cf1ba994bade859d",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_STRAT_Poseidon_LOD3.fbx",
+        "mirror": "FBX/RU_STRAT_Poseidon_LOD3.fbx",
+        "sha256": "394cdac3dd50705651ab924e2caaa9d36cebbf93a847577bd724060d1b43eeba",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_STRAT_Poseidon_COLLISION.fbx",
+      "sha256": "9da435f6e6183514c6289e7745d831d91a3203fda54ea639616e4fe3d47ddc7e"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_STRAT_Poseidon_COLLISION.json",
+      "sha256": "ea00be594629a552d89468be7476fcb962b1005395820d5911c86bc71c2f8345"
+    }
+  },
+  "build_seconds": 5.57,
+  "preview_seconds": {
+    "PERSPECTIVE": 12.99,
+    "SIDE": 3.05,
+    "FRONT": 8.59,
+    "TOP": 6.28,
+    "DETAIL": 3.57,
+    "ICON": 5.66
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_STRAT_Poseidon_DETAIL_128.png",
+    "RU_STRAT_Poseidon_DETAIL_256.png",
+    "RU_STRAT_Poseidon_DETAIL_512.png",
+    "RU_STRAT_Poseidon_FRONT_128.png",
+    "RU_STRAT_Poseidon_FRONT_256.png",
+    "RU_STRAT_Poseidon_FRONT_512.png",
+    "RU_STRAT_Poseidon_ICON_128.png",
+    "RU_STRAT_Poseidon_ICON_256.png",
+    "RU_STRAT_Poseidon_ICON_512.png",
+    "RU_STRAT_Poseidon_PERSPECTIVE_128.png",
+    "RU_STRAT_Poseidon_PERSPECTIVE_256.png",
+    "RU_STRAT_Poseidon_PERSPECTIVE_512.png",
+    "RU_STRAT_Poseidon_SIDE_128.png",
+    "RU_STRAT_Poseidon_SIDE_256.png",
+    "RU_STRAT_Poseidon_SIDE_512.png",
+    "RU_STRAT_Poseidon_TOP_128.png",
+    "RU_STRAT_Poseidon_TOP_256.png",
+    "RU_STRAT_Poseidon_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_STRAT_Poseidon_MASTER.blend",
+      "sha256": "52c4b453fbd4d46f97e61cde0b0d54d188e1434ff2f34d4d594a259918983d4e"
+    },
+    "source": {
+      "path": "Source/RU_STRAT_Poseidon_SOURCE.json",
+      "sha256": "685c57148a7dc8b9af60e964e5d880b49b5c7045569392e331e491ca7f879782"
+    },
+    "spec": {
+      "path": "Documentation/RU_STRAT_Poseidon_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_STRAT_Poseidon_README.md"
+    }
+  }
+}

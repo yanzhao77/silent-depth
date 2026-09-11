@@ -1,0 +1,89 @@
+{
+  "weapon_id": "US_ASW_SUBROC",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 6,
+      "vertices": 1350,
+      "triangles": 2472,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        6.7,
+        0.6581,
+        0.7409
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 6,
+      "vertices": 582,
+      "triangles": 1032,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        6.7,
+        0.6581,
+        0.7409
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 278,
+      "triangles": 520,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        6.7,
+        0.6581,
+        0.7409
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 5,
+      "vertices": 194,
+      "triangles": 352,
+      "materials": [
+        "WPN_MAT_Body",
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        6.7,
+        0.6581,
+        0.7409
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48,
+    "materials": [],
+    "dimensions_m": [
+      6.7,
+      0.6794,
+      0.6794
+    ]
+  },
+  "result": "PASS"
+}

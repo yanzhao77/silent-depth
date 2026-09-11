@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_LAM_Tomahawk_BlockIV",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_LAM_Tomahawk_BlockIV_SEG_00",
+      "centre": [
+        2.25,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.7500000000000002,
+        0.182,
+        0.182
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_LAM_Tomahawk_BlockIV_SEG_01",
+      "centre": [
+        0.625,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.5,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_LAM_Tomahawk_BlockIV_SEG_02",
+      "centre": [
+        -1.25,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.25,
+        0.52,
+        0.52
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_LAM_Tomahawk_BlockIV_SEG_03",
+      "centre": [
+        -2.625,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.0,
+        1.61928,
+        1.61928
+      ]
+    }
+  ],
+  "collision_fbx": "US_LAM_Tomahawk_BlockIV_COLLISION.fbx",
+  "collision_sha256": "b2792ac7e09f85049f4b9a99087012999a128b8b9a4b2ebaef482e3831465f71"
+}

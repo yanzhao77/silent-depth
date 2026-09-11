@@ -1,0 +1,172 @@
+{
+  "weapon_id": "US_ASM_Tomahawk_TASM",
+  "category": "ASM",
+  "tier": 6,
+  "asset_priority": "MEDIUM",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\US_ASM_Tomahawk_TASM",
+  "result": "PASS",
+  "label": "TESTED",
+  "issues": [],
+  "checks": {
+    "files": {
+      "Blend/{id}_MASTER.blend": true,
+      "FBX/{id}_LOD0.fbx": true,
+      "FBX/{id}_LOD1.fbx": true,
+      "FBX/{id}_LOD2.fbx": true,
+      "FBX/{id}_LOD3.fbx": true,
+      "Collision/{id}_COLLISION.fbx": true,
+      "Documentation/{id}_SPEC.json": true,
+      "Documentation/{id}_README.md": true
+    },
+    "fbx_binary_versions": {
+      "US_ASM_Tomahawk_TASM_LOD0.fbx": 7400,
+      "US_ASM_Tomahawk_TASM_LOD1.fbx": 7400,
+      "US_ASM_Tomahawk_TASM_LOD2.fbx": 7400,
+      "US_ASM_Tomahawk_TASM_LOD3.fbx": 7400,
+      "US_ASM_Tomahawk_TASM_COLLISION.fbx": 7400
+    },
+    "geometry": {
+      "LOD0": {
+        "expected_vertices": 1836,
+        "expected_triangles": 3444,
+        "expected_length_m": 6.25
+      },
+      "LOD1": {
+        "expected_vertices": 660,
+        "expected_triangles": 1188,
+        "expected_length_m": 6.25
+      },
+      "LOD2": {
+        "expected_vertices": 332,
+        "expected_triangles": 628,
+        "expected_length_m": 6.25
+      },
+      "LOD3": {
+        "expected_vertices": 230,
+        "expected_triangles": 424,
+        "expected_length_m": 6.25
+      }
+    },
+    "build": {
+      "blender": "5.2.1 LTS",
+      "build_seconds": 0.51,
+      "collision_boxes": 4,
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 1836,
+          "triangles": 3444
+        },
+        "LOD1": {
+          "objects": 6,
+          "vertices": 660,
+          "triangles": 1188
+        },
+        "LOD2": {
+          "objects": 5,
+          "vertices": 332,
+          "triangles": 628
+        },
+        "LOD3": {
+          "objects": 5,
+          "vertices": 230,
+          "triangles": 424
+        }
+      }
+    },
+    "fbx_roundtrip": {
+      "result": "PASS",
+      "lod_triangles": {
+        "LOD0": 3444,
+        "LOD1": 1188,
+        "LOD2": 628,
+        "LOD3": 424
+      },
+      "collision_objects": 4
+    },
+    "previews": {
+      "Preview/Hero.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 76.14,
+        "min_luminance": 43,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Profile.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 72.93,
+        "min_luminance": 28,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Top.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 71.88,
+        "min_luminance": 48,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Detail.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 82.83,
+        "min_luminance": 31,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Icon_128.png": {
+        "status": "OK",
+        "resolution": [
+          128,
+          128
+        ],
+        "mean_luminance": 26.1,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1085
+      },
+      "Preview/Icon_256.png": {
+        "status": "OK",
+        "resolution": [
+          256,
+          256
+        ],
+        "mean_luminance": 26.17,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1045
+      },
+      "Preview/Icon_512.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 26.17,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1027
+      }
+    }
+  },
+  "sha256": {
+    "master": "bd3b66ad374b6a9c8dfe9b40f0ae58b20d7eea799c9e020452ca44afca4beb43",
+    "lod0": "7181549251962149de8ab91a711637085127f77d628163fb9e14c27e29399617"
+  },
+  "validated_at": "2026-09-11"
+}

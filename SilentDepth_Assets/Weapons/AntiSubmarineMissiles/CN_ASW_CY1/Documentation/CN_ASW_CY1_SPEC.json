@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "CN_ASW_CY1",
+  "display_name": "CY-1 anti-submarine missile",
+  "short_name": "CY-1",
+  "country": "China",
+  "category": "ASW",
+  "family": "CN_ASW_CY1",
+  "role": "潜射反潜导弹",
+  "subrole": "Rocket_Delivered",
+  "tier": 6,
+  "tier_reason": "游戏 T6 中国反潜导弹节点：公开资料有限，按可见外形（弹体 + 助推段）建模。",
+  "era": "Modern",
+  "service_years": "1990s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 6.0,
+    "diameter_m": 0.533,
+    "mass_kg": 1800,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "rocket_payload",
+    "features": [
+      "tube_launched",
+      "solid_booster"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.7,
+      "booster_len_ratio": 0.32,
+      "booster_fins": 4,
+      "booster_fin_span_ratio": 1.3,
+      "payload_shape": "torpedo",
+      "payload_separation_ring": 1,
+      "fins": 4,
+      "fin_span_ratio": 1.3,
+      "fin_chord_ratio": 0.9,
+      "bands": 2
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/CN_ASW_CY1_MASTER.blend",
+    "lod": [
+      "LOD/CN_ASW_CY1_LOD0.fbx",
+      "LOD/CN_ASW_CY1_LOD1.fbx",
+      "LOD/CN_ASW_CY1_LOD2.fbx",
+      "LOD/CN_ASW_CY1_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/CN_ASW_CY1_LOD0.fbx",
+      "FBX/CN_ASW_CY1_LOD1.fbx",
+      "FBX/CN_ASW_CY1_LOD2.fbx",
+      "FBX/CN_ASW_CY1_LOD3.fbx"
+    ],
+    "collision": "Collision/CN_ASW_CY1_COLLISION.fbx",
+    "collision_manifest": "Collision/CN_ASW_CY1_COLLISION.json",
+    "source": "Source/CN_ASW_CY1_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3300,
+    "LOD1": 1188,
+    "LOD2": 612,
+    "LOD3": 396
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 6.0,
+  "built_max_diameter_m": 0.639501,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

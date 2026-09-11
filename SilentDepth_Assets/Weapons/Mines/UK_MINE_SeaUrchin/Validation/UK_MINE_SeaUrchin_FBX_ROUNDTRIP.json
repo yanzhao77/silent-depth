@@ -1,0 +1,84 @@
+{
+  "weapon_id": "UK_MINE_SeaUrchin",
+  "lod": {
+    "LOD0": {
+      "imported": true,
+      "objects": 3,
+      "vertices": 354,
+      "triangles": 648,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Marking",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        1.6,
+        0.5883,
+        0.7367
+      ]
+    },
+    "LOD1": {
+      "imported": true,
+      "objects": 2,
+      "vertices": 202,
+      "triangles": 360,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        1.6,
+        0.5671,
+        0.7367
+      ]
+    },
+    "LOD2": {
+      "imported": true,
+      "objects": 2,
+      "vertices": 162,
+      "triangles": 280,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        1.6,
+        0.5671,
+        0.7367
+      ]
+    },
+    "LOD3": {
+      "imported": true,
+      "objects": 2,
+      "vertices": 132,
+      "triangles": 220,
+      "materials": [
+        "WPN_MAT_Fin",
+        "WPN_MAT_Metal",
+        "WPN_MAT_Shell"
+      ],
+      "dimensions_m": [
+        1.6,
+        0.5671,
+        0.7367
+      ]
+    }
+  },
+  "errors": [],
+  "collision": {
+    "imported": true,
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24,
+    "materials": [],
+    "dimensions_m": [
+      1.6,
+      0.53,
+      0.53
+    ]
+  },
+  "result": "PASS"
+}

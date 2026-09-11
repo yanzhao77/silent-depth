@@ -1,0 +1,63 @@
+{
+  "batch_index": 1,
+  "generated_at": "2026-09-10",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "US_TORP_Mk14",
+      "display_name": "Mk 14 torpedo",
+      "short_name": "Mk14",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk14",
+      "country": "USA",
+      "role": "早期重型蒸汽鱼雷",
+      "subrole": "Early_Heavyweight",
+      "era": "Early",
+      "service_years": "1940-1960s",
+      "tier": 1,
+      "tier_reason": "游戏 T1 早期基础鱼雷：无制导、外形简单，作为鱼雷科技树的起点节点。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.533,
+        "mass_kg": 1360,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料常见数据，保留为整数级近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wwii_blunt_tail",
+          "straight_running"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 0,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

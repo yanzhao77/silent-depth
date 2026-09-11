@@ -1,0 +1,43 @@
+{
+  "weapon_id": "RU_ASW_Veter",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "rocket_payload",
+    "features": [
+      "tube_launched",
+      "solid_booster",
+      "long_range"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "booster_len_ratio": 0.38,
+      "booster_fins": 4,
+      "booster_fin_span_ratio": 1.4,
+      "payload_shape": "torpedo",
+      "payload_separation_ring": 1,
+      "fins": 4,
+      "fin_span_ratio": 1.4,
+      "fin_chord_ratio": 1.0,
+      "bands": 3
+    }
+  },
+  "dimensions": {
+    "length_m": 8.9,
+    "diameter_m": 0.533,
+    "mass_kg": 2600,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "VLS"
+  ],
+  "tier": 7,
+  "asset_priority": "MEDIUM",
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

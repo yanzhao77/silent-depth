@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_ASM_Oniks",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "supersonic_missile",
+  "declared_length_m": 8.9,
+  "declared_diameter_m": 0.67,
+  "built_length_m": 8.9,
+  "built_max_diameter_m": 1.500229,
+  "lod": {
+    "LOD0": {
+      "objects": 7,
+      "vertices": 1556,
+      "triangles": 2760
+    },
+    "LOD1": {
+      "objects": 6,
+      "vertices": 660,
+      "triangles": 1128
+    },
+    "LOD2": {
+      "objects": 5,
+      "vertices": 276,
+      "triangles": 504
+    },
+    "LOD3": {
+      "objects": 5,
+      "vertices": 204,
+      "triangles": 360
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_ASM_Oniks_SEG_00",
+    "UCX_WPN_RU_ASM_Oniks_SEG_01",
+    "UCX_WPN_RU_ASM_Oniks_SEG_02",
+    "UCX_WPN_RU_ASM_Oniks_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -4.449999809265137,
+      4.449999809265137
+    ],
+    "y": [
+      -0.5944607853889465,
+      0.5944607853889465
+    ],
+    "z": [
+      -0.5944607853889465,
+      0.9057677388191223
+    ],
+    "dimensions_m": [
+      8.899999618530273,
+      1.188921570777893,
+      1.5002285242080688
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.1556534767150879
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_ASM_Oniks_LOD0.fbx",
+        "mirror": "FBX/RU_ASM_Oniks_LOD0.fbx",
+        "sha256": "87e71a3afbad832c1532af1fcdfb082dd941a768f6ec45c7eebcb0ebc71ee51f",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_ASM_Oniks_LOD1.fbx",
+        "mirror": "FBX/RU_ASM_Oniks_LOD1.fbx",
+        "sha256": "af9cd72aa076972ffe5efe5bd070a2116fca24f2ace6d344cf85d8b1335a0a87",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_ASM_Oniks_LOD2.fbx",
+        "mirror": "FBX/RU_ASM_Oniks_LOD2.fbx",
+        "sha256": "df0a738dfaebae111a68fa0124dfb3364671f8821aab69ea400bafea6edca4cd",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_ASM_Oniks_LOD3.fbx",
+        "mirror": "FBX/RU_ASM_Oniks_LOD3.fbx",
+        "sha256": "58366b06fb7815b645ebf08c3916897e3f29a30f0ebc5d21731824b1a3221eb3",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_ASM_Oniks_COLLISION.fbx",
+      "sha256": "61e435406556383927a6a80becd10af4e80d51f2cfb70196962816e638f40eac"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_ASM_Oniks_COLLISION.json",
+      "sha256": "633481a730f8a2a001327e39c854030cb400318682aeba8de0875489bb881ab6"
+    }
+  },
+  "build_seconds": 0.36,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.28,
+    "SIDE": 0.31,
+    "FRONT": 0.31,
+    "TOP": 0.28,
+    "DETAIL": 0.29,
+    "ICON": 0.32
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_ASM_Oniks_DETAIL_128.png",
+    "RU_ASM_Oniks_DETAIL_256.png",
+    "RU_ASM_Oniks_DETAIL_512.png",
+    "RU_ASM_Oniks_FRONT_128.png",
+    "RU_ASM_Oniks_FRONT_256.png",
+    "RU_ASM_Oniks_FRONT_512.png",
+    "RU_ASM_Oniks_ICON_128.png",
+    "RU_ASM_Oniks_ICON_256.png",
+    "RU_ASM_Oniks_ICON_512.png",
+    "RU_ASM_Oniks_PERSPECTIVE_128.png",
+    "RU_ASM_Oniks_PERSPECTIVE_256.png",
+    "RU_ASM_Oniks_PERSPECTIVE_512.png",
+    "RU_ASM_Oniks_SIDE_128.png",
+    "RU_ASM_Oniks_SIDE_256.png",
+    "RU_ASM_Oniks_SIDE_512.png",
+    "RU_ASM_Oniks_TOP_128.png",
+    "RU_ASM_Oniks_TOP_256.png",
+    "RU_ASM_Oniks_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_ASM_Oniks_MASTER.blend",
+      "sha256": "03bdad50949e5d2be568932e27a9470006500c9dd1dc6e650ea1a9e5fa1bb080"
+    },
+    "source": {
+      "path": "Source/RU_ASM_Oniks_SOURCE.json",
+      "sha256": "2bcc7c673449f42377f964dddd9630a7accb038e20e951a2b8f6250d1ace0f31"
+    },
+    "spec": {
+      "path": "Documentation/RU_ASM_Oniks_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_ASM_Oniks_README.md"
+    }
+  }
+}

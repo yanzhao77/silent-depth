@@ -1,0 +1,255 @@
+{
+  "batch_index": 23,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "US_TORP_Mk45",
+      "display_name": "Mk 45 ASTOR torpedo",
+      "short_name": "Mk45",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk45",
+      "base_geometry": "us_torp_mk45",
+      "country": "USA",
+      "role": "核装药反潜鱼雷",
+      "subrole": "Heavyweight",
+      "era": "Cold War",
+      "service_years": "1963-1976",
+      "tier": 5,
+      "tier_reason": "游戏 T5 特种反潜节点：与常规重型鱼雷外形接近，弹体更长、尾部更方。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.8,
+        "diameter_m": 0.483,
+        "mass_kg": 1050,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "Mk 45 ASTOR 公开资料为 19 英寸（483 毫米）弹径，长度约 5.8 米。"
+      },
+      "body_diameter_m": 0.483,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "square_stern"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.1,
+          "tail": "square",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 0,
+          "bands": 2
+        }
+      },
+      "notes": "仅作为游戏科技树中的历史反潜节点，不涉及任何载荷工程细节。"
+    },
+    {
+      "weapon_id": "US_TORP_Mk48",
+      "display_name": "Mk 48 Mod 1 torpedo",
+      "short_name": "Mk48-1",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk48",
+      "base_geometry": "us_torp_mk48",
+      "country": "USA",
+      "role": "重型线导鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Cold War Late",
+      "service_years": "1972-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 现代重型鱼雷起点：取代 Mk 37 的深潜高速型号。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.79,
+        "diameter_m": 0.533,
+        "mass_kg": 1582,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料 533 毫米口径标准重型鱼雷尺寸。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "contra_propeller"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.1,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.5,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_ADCAP",
+      "display_name": "Mk 48 Mod 4 ADCAP",
+      "short_name": "Mk48-ADCAP",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk48",
+      "base_geometry": "us_torp_mk48",
+      "country": "USA",
+      "role": "远程重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Cold War Late",
+      "service_years": "1988-2000s",
+      "tier": 7,
+      "tier_reason": "游戏 T7 成熟现代鱼雷：增加推进段与更长的尾段控制面。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.79,
+        "diameter_m": 0.533,
+        "mass_kg": 1676,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "ADCAP 公开质量约 1.6 吨级。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "contra_propeller",
+          "extended_propulsion"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.1,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_Mod6",
+      "display_name": "Mk 48 Mod 6 CBASS",
+      "short_name": "Mk48-6",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk48",
+      "base_geometry": "us_torp_mk48",
+      "country": "USA",
+      "role": "现代重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2000s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 现代先进鱼雷：与 Mod 4 共享弹体，弹带与声学窗口数据不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.79,
+        "diameter_m": 0.533,
+        "mass_kg": 1676,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与 ADCAP 同级尺寸。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "contra_propeller",
+          "wide_band_sonar"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.1,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_Mod7",
+      "display_name": "Mk 48 Mod 7 CBASS",
+      "short_name": "Mk48-7",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk48",
+      "base_geometry": "us_torp_mk48",
+      "country": "USA",
+      "role": "现代先进重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 顶级重型鱼雷：Mod 6 的继续改进型，可见特征一致。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.79,
+        "diameter_m": 0.533,
+        "mass_kg": 1676,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与 Mod 6 同级尺寸。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "contra_propeller",
+          "wide_band_sonar"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.1,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 4
+        }
+      },
+      "notes": "与 Mod 6 共享基础几何，仅数据与标记层不同。"
+    }
+  ]
+}

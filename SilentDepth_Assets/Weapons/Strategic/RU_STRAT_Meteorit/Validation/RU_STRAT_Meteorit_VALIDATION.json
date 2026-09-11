@@ -1,0 +1,172 @@
+{
+  "weapon_id": "RU_STRAT_Meteorit",
+  "category": "STRAT",
+  "tier": 8,
+  "asset_priority": "MEDIUM",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\RU_STRAT_Meteorit",
+  "result": "PASS",
+  "label": "TESTED",
+  "issues": [],
+  "checks": {
+    "files": {
+      "Blend/{id}_MASTER.blend": true,
+      "FBX/{id}_LOD0.fbx": true,
+      "FBX/{id}_LOD1.fbx": true,
+      "FBX/{id}_LOD2.fbx": true,
+      "FBX/{id}_LOD3.fbx": true,
+      "Collision/{id}_COLLISION.fbx": true,
+      "Documentation/{id}_SPEC.json": true,
+      "Documentation/{id}_README.md": true
+    },
+    "fbx_binary_versions": {
+      "RU_STRAT_Meteorit_LOD0.fbx": 7400,
+      "RU_STRAT_Meteorit_LOD1.fbx": 7400,
+      "RU_STRAT_Meteorit_LOD2.fbx": 7400,
+      "RU_STRAT_Meteorit_LOD3.fbx": 7400,
+      "RU_STRAT_Meteorit_COLLISION.fbx": 7400
+    },
+    "geometry": {
+      "LOD0": {
+        "expected_vertices": 1300,
+        "expected_triangles": 2376,
+        "expected_length_m": 12.0
+      },
+      "LOD1": {
+        "expected_vertices": 532,
+        "expected_triangles": 936,
+        "expected_length_m": 12.0
+      },
+      "LOD2": {
+        "expected_vertices": 244,
+        "expected_triangles": 456,
+        "expected_length_m": 12.0
+      },
+      "LOD3": {
+        "expected_vertices": 172,
+        "expected_triangles": 312,
+        "expected_length_m": 12.0
+      }
+    },
+    "build": {
+      "blender": "5.2.1 LTS",
+      "build_seconds": 0.55,
+      "collision_boxes": 4,
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 1300,
+          "triangles": 2376
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 532,
+          "triangles": 936
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 244,
+          "triangles": 456
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 172,
+          "triangles": 312
+        }
+      }
+    },
+    "fbx_roundtrip": {
+      "result": "PASS",
+      "lod_triangles": {
+        "LOD0": 2376,
+        "LOD1": 936,
+        "LOD2": 456,
+        "LOD3": 312
+      },
+      "collision_objects": 4
+    },
+    "previews": {
+      "Preview/Hero.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 72.65,
+        "min_luminance": 28,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Profile.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 69.78,
+        "min_luminance": 25,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Top.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 68.21,
+        "min_luminance": 43,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Detail.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 79.97,
+        "min_luminance": 25,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Icon_128.png": {
+        "status": "OK",
+        "resolution": [
+          128,
+          128
+        ],
+        "mean_luminance": 21.77,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.101
+      },
+      "Preview/Icon_256.png": {
+        "status": "OK",
+        "resolution": [
+          256,
+          256
+        ],
+        "mean_luminance": 21.84,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.0969
+      },
+      "Preview/Icon_512.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 21.84,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.0954
+      }
+    }
+  },
+  "sha256": {
+    "master": "3c7234bc1e8b790cb0d2e843977a485f5e62eb98d14236d2f929842d928ec407",
+    "lod0": "3e2aba389f8e9b64f39978ac66dbd2ad3f56ae9c5824a5e60ab453baba61f2e7"
+  },
+  "validated_at": "2026-09-11"
+}

@@ -1,0 +1,255 @@
+{
+  "batch_index": 12,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "RU_TORP_5365M",
+      "display_name": "53-65M torpedo",
+      "short_name": "53-65M",
+      "category": "TORP",
+      "family_id": "RU_TORP_5365",
+      "base_geometry": "ru_torp_5365",
+      "country": "Russia",
+      "role": "尾流自导反舰鱼雷改进型",
+      "subrole": "Heavyweight",
+      "era": "Cold War Late",
+      "service_years": "1970s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 改进型：同族几何，尾段与识别标记不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 2000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wake_homing",
+          "long_body"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.35,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_6576",
+      "display_name": "65-76 Kit torpedo",
+      "short_name": "65-76",
+      "category": "TORP",
+      "family_id": "RU_TORP_6576",
+      "base_geometry": "ru_torp_6576",
+      "country": "Russia",
+      "role": "650 毫米重型远程鱼雷",
+      "subrole": "Heavyweight",
+      "era": "Cold War",
+      "service_years": "1970s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 大口径分支：650 毫米口径，仅适配具大口径发射管的平台。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 11.0,
+        "diameter_m": 0.65,
+        "mass_kg": 4500,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料 650 毫米口径重型鱼雷。"
+      },
+      "body_diameter_m": 0.65,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "large_diameter",
+          "very_long_body",
+          "wire_dispenser"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.6,
+          "fin_count": 4,
+          "fin_span_ratio": 1.35,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_6576A",
+      "display_name": "65-76A torpedo",
+      "short_name": "65-76A",
+      "category": "TORP",
+      "family_id": "RU_TORP_6576",
+      "base_geometry": "ru_torp_6576",
+      "country": "Russia",
+      "role": "650 毫米重型鱼雷改进型",
+      "subrole": "Heavyweight",
+      "era": "Modern",
+      "service_years": "1990s-2000s",
+      "tier": 7,
+      "tier_reason": "游戏 T7 改进型：同族几何，尾部与导线系统不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 11.0,
+        "diameter_m": 0.65,
+        "mass_kg": 4500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.65,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "large_diameter",
+          "very_long_body",
+          "wire_dispenser"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.6,
+          "fin_count": 4,
+          "fin_span_ratio": 1.35,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_Fizik",
+      "display_name": "Fizik torpedo",
+      "short_name": "Fizik",
+      "category": "TORP",
+      "family_id": "RU_TORP_Fizik",
+      "base_geometry": "ru_torp_fizik",
+      "country": "Russia",
+      "role": "新一代深水高速鱼雷",
+      "subrole": "Future",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 9,
+      "tier_reason": "游戏 T9 新一代节点：公开资料有限，几何按可确认外形特征建模。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.5,
+        "diameter_m": 0.533,
+        "mass_kg": 2000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料不足，尺寸为级别估计。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "deep_water",
+          "high_speed",
+          "wire_dispenser"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": "公开资料有限，标记为 ESTIMATED，建模前需补充参考。"
+    },
+    {
+      "weapon_id": "RU_TORP_SAET60",
+      "display_name": "SAET-60 torpedo",
+      "short_name": "SAET-60",
+      "category": "TORP",
+      "family_id": "RU_TORP_SET53",
+      "base_geometry": "ru_torp_set53",
+      "country": "Russia",
+      "role": "高速电动鱼雷",
+      "subrole": "Acoustic_Homing",
+      "era": "Cold War",
+      "service_years": "1960s-1970s",
+      "tier": 4,
+      "tier_reason": "游戏 T4 高速分支：更长的尾段与推进整流罩。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "electric",
+          "high_speed"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.5,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

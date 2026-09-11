@@ -1,0 +1,44 @@
+{
+  "weapon_id": "UK_SLBM_Trident_D5LE",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "three_stage",
+      "wide_body",
+      "life_extended",
+      "uk_marking"
+    ],
+    "params": {
+      "nose": "shroud_dome",
+      "nose_len_ratio": 1.6,
+      "stage_count": 3,
+      "stage_bands": 2,
+      "tail": "tail_skirt",
+      "tail_len_ratio": 1.7,
+      "skirt_fin_count": 4,
+      "skirt_fin_span_ratio": 1.25,
+      "nozzle_count": 1,
+      "cable_tray": 1,
+      "canister_fit": true,
+      "fin_count": 0
+    }
+  },
+  "dimensions": {
+    "length_m": 13.6,
+    "diameter_m": 2.11,
+    "mass_kg": 58500,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "与 D5 同级尺寸。"
+  },
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "tier": 9,
+  "asset_priority": "HIGH",
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "与 D5 同级尺寸。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

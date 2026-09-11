@@ -1,0 +1,94 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_SLBM_R29RMU2_Liner",
+  "display_name": "R-29RMU2.1 Liner",
+  "short_name": "Liner",
+  "country": "Russia",
+  "category": "SLBM",
+  "family": "RU_SLBM_R29",
+  "role": "改进型潜射弹道导弹",
+  "subrole": "Modern_SLBM",
+  "tier": 8,
+  "tier_reason": "游戏 T8 改进批次：与 Sineva 共享几何，仅数据层区分布置与批次。",
+  "era": "Modern",
+  "service_years": "2010s-present",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 14.8,
+    "diameter_m": 1.9,
+    "mass_kg": 40300,
+    "scale_source": "ESTIMATED",
+    "scale_note": "沿用同族近似。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "three_stage",
+      "improved_bus",
+      "life_extended"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.6,
+      "shroud_shape": "blunt",
+      "stage_rings": 3,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.3,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.64,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 1,
+      "base_cover": 1,
+      "bands": 4,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/RU_SLBM_R29RMU2_Liner_MASTER.blend",
+    "lod": [
+      "LOD/RU_SLBM_R29RMU2_Liner_LOD0.fbx",
+      "LOD/RU_SLBM_R29RMU2_Liner_LOD1.fbx",
+      "LOD/RU_SLBM_R29RMU2_Liner_LOD2.fbx",
+      "LOD/RU_SLBM_R29RMU2_Liner_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_SLBM_R29RMU2_Liner_LOD0.fbx",
+      "FBX/RU_SLBM_R29RMU2_Liner_LOD1.fbx",
+      "FBX/RU_SLBM_R29RMU2_Liner_LOD2.fbx",
+      "FBX/RU_SLBM_R29RMU2_Liner_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_SLBM_R29RMU2_Liner_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_SLBM_R29RMU2_Liner_COLLISION.json",
+    "source": "Source/RU_SLBM_R29RMU2_Liner_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 5292,
+    "LOD1": 1980,
+    "LOD2": 844,
+    "LOD3": 532
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 14.8,
+  "built_max_diameter_m": 2.0425,
+  "scale_source": "ESTIMATED",
+  "scale_note": "沿用同族近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

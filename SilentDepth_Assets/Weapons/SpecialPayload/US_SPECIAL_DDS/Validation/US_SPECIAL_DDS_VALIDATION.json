@@ -1,0 +1,172 @@
+{
+  "weapon_id": "US_SPECIAL_DDS",
+  "category": "SPECIAL",
+  "tier": 8,
+  "asset_priority": "HIGH",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_DDS",
+  "result": "PASS",
+  "label": "TESTED",
+  "issues": [],
+  "checks": {
+    "files": {
+      "Blend/{id}_MASTER.blend": true,
+      "FBX/{id}_LOD0.fbx": true,
+      "FBX/{id}_LOD1.fbx": true,
+      "FBX/{id}_LOD2.fbx": true,
+      "FBX/{id}_LOD3.fbx": true,
+      "Collision/{id}_COLLISION.fbx": true,
+      "Documentation/{id}_SPEC.json": true,
+      "Documentation/{id}_README.md": true
+    },
+    "fbx_binary_versions": {
+      "US_SPECIAL_DDS_LOD0.fbx": 7400,
+      "US_SPECIAL_DDS_LOD1.fbx": 7400,
+      "US_SPECIAL_DDS_LOD2.fbx": 7400,
+      "US_SPECIAL_DDS_LOD3.fbx": 7400,
+      "US_SPECIAL_DDS_COLLISION.fbx": 7400
+    },
+    "geometry": {
+      "LOD0": {
+        "expected_vertices": 512,
+        "expected_triangles": 768,
+        "expected_length_m": 11.6
+      },
+      "LOD1": {
+        "expected_vertices": 296,
+        "expected_triangles": 444,
+        "expected_length_m": 11.6
+      },
+      "LOD2": {
+        "expected_vertices": 184,
+        "expected_triangles": 276,
+        "expected_length_m": 11.6
+      },
+      "LOD3": {
+        "expected_vertices": 120,
+        "expected_triangles": 180,
+        "expected_length_m": 11.6
+      }
+    },
+    "build": {
+      "blender": "5.2.1 LTS",
+      "build_seconds": 0.25,
+      "collision_boxes": 1,
+      "lod": {
+        "LOD0": {
+          "objects": 2,
+          "vertices": 512,
+          "triangles": 768
+        },
+        "LOD1": {
+          "objects": 2,
+          "vertices": 296,
+          "triangles": 444
+        },
+        "LOD2": {
+          "objects": 2,
+          "vertices": 184,
+          "triangles": 276
+        },
+        "LOD3": {
+          "objects": 2,
+          "vertices": 120,
+          "triangles": 180
+        }
+      }
+    },
+    "fbx_roundtrip": {
+      "result": "PASS",
+      "lod_triangles": {
+        "LOD0": 768,
+        "LOD1": 444,
+        "LOD2": 276,
+        "LOD3": 180
+      },
+      "collision_objects": 1
+    },
+    "previews": {
+      "Preview/Hero.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 86.68,
+        "min_luminance": 34,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Profile.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 84.34,
+        "min_luminance": 35,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Top.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 88.61,
+        "min_luminance": 34,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Detail.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 133.3,
+        "min_luminance": 34,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Icon_128.png": {
+        "status": "OK",
+        "resolution": [
+          128,
+          128
+        ],
+        "mean_luminance": 43.3,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.2061
+      },
+      "Preview/Icon_256.png": {
+        "status": "OK",
+        "resolution": [
+          256,
+          256
+        ],
+        "mean_luminance": 43.36,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.2033
+      },
+      "Preview/Icon_512.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 43.37,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.2019
+      }
+    }
+  },
+  "sha256": {
+    "master": "51f49bdd038ac9a2a644855b6cf7b0c1213567c7886dc13290a7b4135db64917",
+    "lod0": "fa609428ff723e39f26d98f53d856d7e0d02501566aadec10383450d573d64f6"
+  },
+  "validated_at": "2026-09-11"
+}

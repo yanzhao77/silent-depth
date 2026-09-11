@@ -1,0 +1,166 @@
+{
+  "weapon_id": "CN_SLBM_JL2A",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 13.0,
+  "declared_diameter_m": 2.0,
+  "built_length_m": 13.0,
+  "built_max_diameter_m": 2.0,
+  "lod": {
+    "LOD0": {
+      "objects": 2,
+      "vertices": 1156,
+      "triangles": 2304
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 340,
+      "triangles": 672
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 228,
+      "triangles": 448
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 144,
+      "triangles": 280
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_CN_SLBM_JL2A_SEG_00",
+    "UCX_WPN_CN_SLBM_JL2A_SEG_01",
+    "UCX_WPN_CN_SLBM_JL2A_SEG_02",
+    "UCX_WPN_CN_SLBM_JL2A_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -6.5,
+      6.5
+    ],
+    "y": [
+      -1.0,
+      1.0
+    ],
+    "z": [
+      -1.0,
+      1.0
+    ],
+    "dimensions_m": [
+      13.0,
+      2.0,
+      2.0
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/CN_SLBM_JL2A_LOD0.fbx",
+        "mirror": "FBX/CN_SLBM_JL2A_LOD0.fbx",
+        "sha256": "e73e0561c2df65d3db684b9144a9466b0189c0db0a427bc91d05b673ba5d6be2",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/CN_SLBM_JL2A_LOD1.fbx",
+        "mirror": "FBX/CN_SLBM_JL2A_LOD1.fbx",
+        "sha256": "02178228dd7b50f09b8db972a28bfe601e93909fb45112a8751ef0582ae1d426",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/CN_SLBM_JL2A_LOD2.fbx",
+        "mirror": "FBX/CN_SLBM_JL2A_LOD2.fbx",
+        "sha256": "03363b400bdacc2b3282a18f252861cd684f32701b21c4b5daed4409795f9aff",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/CN_SLBM_JL2A_LOD3.fbx",
+        "mirror": "FBX/CN_SLBM_JL2A_LOD3.fbx",
+        "sha256": "374061e10b7e00396838228717979264d9c068bd011e3ace53ecd69278f4de31",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/CN_SLBM_JL2A_COLLISION.fbx",
+      "sha256": "9eb74a6a06f9c38a4a0d08245900abd2de40f0a5a8c5944de1b005242e234e27"
+    },
+    "collision_manifest": {
+      "path": "Collision/CN_SLBM_JL2A_COLLISION.json",
+      "sha256": "cc4703ec2431221b2fff6055eb2b75141d94781a930e9bfd079d7e07488b53cf"
+    }
+  },
+  "build_seconds": 3.55,
+  "preview_seconds": {
+    "PERSPECTIVE": 13.7,
+    "SIDE": 24.11,
+    "FRONT": 8.87,
+    "TOP": 14.42,
+    "DETAIL": 16.4,
+    "ICON": 9.18
+  },
+  "previews": [
+    "CN_SLBM_JL2A_DETAIL_128.png",
+    "CN_SLBM_JL2A_DETAIL_256.png",
+    "CN_SLBM_JL2A_DETAIL_512.png",
+    "CN_SLBM_JL2A_FRONT_128.png",
+    "CN_SLBM_JL2A_FRONT_256.png",
+    "CN_SLBM_JL2A_FRONT_512.png",
+    "CN_SLBM_JL2A_ICON_128.png",
+    "CN_SLBM_JL2A_ICON_256.png",
+    "CN_SLBM_JL2A_ICON_512.png",
+    "CN_SLBM_JL2A_PERSPECTIVE_128.png",
+    "CN_SLBM_JL2A_PERSPECTIVE_256.png",
+    "CN_SLBM_JL2A_PERSPECTIVE_512.png",
+    "CN_SLBM_JL2A_SIDE_128.png",
+    "CN_SLBM_JL2A_SIDE_256.png",
+    "CN_SLBM_JL2A_SIDE_512.png",
+    "CN_SLBM_JL2A_TOP_128.png",
+    "CN_SLBM_JL2A_TOP_256.png",
+    "CN_SLBM_JL2A_TOP_512.png",
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/CN_SLBM_JL2A_MASTER.blend",
+      "sha256": "9483247a0fd26f0bc356eb1b94a2b6a4e824d2d16bdff61b504e9b3c6aadda24"
+    },
+    "source": {
+      "path": "Source/CN_SLBM_JL2A_SOURCE.json",
+      "sha256": "a8594c2696edba53a210b9a4de877e6d0994700ea74467bc1356d739895b2a2a"
+    },
+    "spec": {
+      "path": "Documentation/CN_SLBM_JL2A_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/CN_SLBM_JL2A_README.md"
+    }
+  }
+}

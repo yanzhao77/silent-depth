@@ -1,0 +1,102 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_ASM_P700",
+  "display_name": "P-700 Granit",
+  "short_name": "P-700",
+  "country": "Russia",
+  "category": "ASM",
+  "family": "RU_ASM_P700",
+  "role": "冷战后期重型超音速反舰导弹",
+  "subrole": "Supersonic_Anti_Ship",
+  "tier": 7,
+  "tier_reason": "游戏 T7 俄罗斯标志性远程反舰导弹：长弹体、双进气口与大型尾控制面，镜头分辨度高。",
+  "era": "Cold War Late",
+  "service_years": "1980s-present",
+  "launch_methods": [
+    "VLS",
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 10.0,
+    "diameter_m": 0.85,
+    "mass_kg": 7000,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料长度约 10 米。"
+  },
+  "geometry": {
+    "kind": "supersonic_missile",
+    "features": [
+      "ramjet",
+      "solid_booster",
+      "twin_intakes"
+    ],
+    "params": {
+      "nose": "conical",
+      "nose_len_ratio": 3.0,
+      "body_shape": "cylinder",
+      "wing_type": "fixed",
+      "wing_pairs": 1,
+      "wing_span_ratio": 2.3,
+      "wing_chord_ratio": 1.4,
+      "wing_position": 0.5,
+      "wing_sweep_deg": 55.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 2.3,
+      "tail_chord_ratio": 1.0,
+      "intake_type": "side",
+      "intake_position": 0.24,
+      "intake_len_ratio": 2.0,
+      "booster": 1,
+      "booster_len_ratio": 0.22,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 1,
+      "canister": 0
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/RU_ASM_P700_MASTER.blend",
+    "lod": [
+      "LOD/RU_ASM_P700_LOD0.fbx",
+      "LOD/RU_ASM_P700_LOD1.fbx",
+      "LOD/RU_ASM_P700_LOD2.fbx",
+      "LOD/RU_ASM_P700_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_ASM_P700_LOD0.fbx",
+      "FBX/RU_ASM_P700_LOD1.fbx",
+      "FBX/RU_ASM_P700_LOD2.fbx",
+      "FBX/RU_ASM_P700_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_ASM_P700_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_ASM_P700_COLLISION.json",
+    "source": "Source/RU_ASM_P700_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2700,
+    "LOD1": 1092,
+    "LOD2": 468,
+    "LOD3": 324
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 10.0,
+  "built_max_diameter_m": 2.815086,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料长度约 10 米。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

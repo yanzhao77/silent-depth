@@ -1,0 +1,172 @@
+{
+  "weapon_id": "US_LAM_Tomahawk_BlockV",
+  "category": "LAM",
+  "tier": 9,
+  "asset_priority": "HIGH",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockV",
+  "result": "PASS",
+  "label": "TESTED",
+  "issues": [],
+  "checks": {
+    "files": {
+      "Blend/{id}_MASTER.blend": true,
+      "FBX/{id}_LOD0.fbx": true,
+      "FBX/{id}_LOD1.fbx": true,
+      "FBX/{id}_LOD2.fbx": true,
+      "FBX/{id}_LOD3.fbx": true,
+      "Collision/{id}_COLLISION.fbx": true,
+      "Documentation/{id}_SPEC.json": true,
+      "Documentation/{id}_README.md": true
+    },
+    "fbx_binary_versions": {
+      "US_LAM_Tomahawk_BlockV_LOD0.fbx": 7400,
+      "US_LAM_Tomahawk_BlockV_LOD1.fbx": 7400,
+      "US_LAM_Tomahawk_BlockV_LOD2.fbx": 7400,
+      "US_LAM_Tomahawk_BlockV_LOD3.fbx": 7400,
+      "US_LAM_Tomahawk_BlockV_COLLISION.fbx": 7400
+    },
+    "geometry": {
+      "LOD0": {
+        "expected_vertices": 2220,
+        "expected_triangles": 4020,
+        "expected_length_m": 6.25
+      },
+      "LOD1": {
+        "expected_vertices": 852,
+        "expected_triangles": 1476,
+        "expected_length_m": 6.25
+      },
+      "LOD2": {
+        "expected_vertices": 332,
+        "expected_triangles": 628,
+        "expected_length_m": 6.25
+      },
+      "LOD3": {
+        "expected_vertices": 230,
+        "expected_triangles": 424,
+        "expected_length_m": 6.25
+      }
+    },
+    "build": {
+      "blender": "5.2.1 LTS",
+      "build_seconds": 0.37,
+      "collision_boxes": 4,
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 2220,
+          "triangles": 4020
+        },
+        "LOD1": {
+          "objects": 6,
+          "vertices": 852,
+          "triangles": 1476
+        },
+        "LOD2": {
+          "objects": 5,
+          "vertices": 332,
+          "triangles": 628
+        },
+        "LOD3": {
+          "objects": 5,
+          "vertices": 230,
+          "triangles": 424
+        }
+      }
+    },
+    "fbx_roundtrip": {
+      "result": "PASS",
+      "lod_triangles": {
+        "LOD0": 4020,
+        "LOD1": 1476,
+        "LOD2": 628,
+        "LOD3": 424
+      },
+      "collision_objects": 4
+    },
+    "previews": {
+      "Preview/Hero.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 76.14,
+        "min_luminance": 43,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Profile.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 72.93,
+        "min_luminance": 28,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Top.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 71.88,
+        "min_luminance": 48,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Detail.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 82.83,
+        "min_luminance": 31,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Icon_128.png": {
+        "status": "OK",
+        "resolution": [
+          128,
+          128
+        ],
+        "mean_luminance": 26.1,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1085
+      },
+      "Preview/Icon_256.png": {
+        "status": "OK",
+        "resolution": [
+          256,
+          256
+        ],
+        "mean_luminance": 26.17,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1045
+      },
+      "Preview/Icon_512.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 26.17,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1027
+      }
+    }
+  },
+  "sha256": {
+    "master": "bcd459e9173ed0e3694c420a4e47268c3674c576956b60d12099759931851dd6",
+    "lod0": "d98716911cc40b88b6cfaff33f3b768becc9452dd63e42a1e7a865e9bd60a0ec"
+  },
+  "validated_at": "2026-09-11"
+}

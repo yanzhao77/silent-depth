@@ -1,0 +1,43 @@
+{
+  "version": "v1.0.0",
+  "required_asset_dirs": [
+    "Source",
+    "Blend",
+    "FBX",
+    "LOD",
+    "Collision",
+    "Textures",
+    "Preview",
+    "Documentation",
+    "Validation"
+  ],
+  "required_complete_files": [
+    "Blend/[WEAPON_ID]_MASTER.blend",
+    "LOD/[WEAPON_ID]_LOD0.fbx",
+    "LOD/[WEAPON_ID]_LOD1.fbx",
+    "LOD/[WEAPON_ID]_LOD2.fbx",
+    "LOD/[WEAPON_ID]_LOD3.fbx",
+    "Collision/[WEAPON_ID]_COLLISION.fbx",
+    "Collision/[WEAPON_ID]_COLLISION.json",
+    "Documentation/[WEAPON_ID]_SPEC.json",
+    "Documentation/[WEAPON_ID]_README.md",
+    "Validation/[WEAPON_ID]_VALIDATION.json"
+  ],
+  "quality_gate": [
+    "recognizable_weapon_class_silhouette",
+    "correct_public_proportions",
+    "category_specific_features_present",
+    "shared_material_set_present",
+    "lod_triangle_count_descending",
+    "lod_silhouette_preserved",
+    "collision_convex_and_named",
+    "fbx_binary_version_7400",
+    "preview_and_icon_rendered",
+    "no_placeholder_geometry"
+  ],
+  "honesty_rules": [
+    "未执行的检查必须记为 NOT VERIFIED。",
+    "预览图为渲染产物；除非人工查看过，不得声称已完成目视确认。",
+    "UE4.27 导入只有在编辑器真实导入成功后才能标记 VERIFIED。"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "weapon_id": "US_SPECIAL_DDS",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "shelter",
+    "features": [
+      "boxy_hull",
+      "hatch_rings",
+      "rails"
+    ],
+    "params": {
+      "shape": "boxy",
+      "hatch_rings": 2,
+      "corner_radius_ratio": 0.08,
+      "runner_rails": 1,
+      "bands": 1
+    }
+  },
+  "dimensions": {
+    "length_m": 11.6,
+    "diameter_m": 2.7,
+    "mass_kg": 30000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+  },
+  "launch_methods": [
+    "SWIM_OUT_DOCK"
+  ],
+  "tier": 8,
+  "asset_priority": "HIGH",
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料仅有量级信息，按近似尺寸建模。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

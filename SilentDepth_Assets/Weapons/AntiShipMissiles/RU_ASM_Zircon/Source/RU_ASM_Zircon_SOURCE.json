@@ -1,0 +1,41 @@
+{
+  "weapon_id": "RU_ASM_Zircon",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "glide_body",
+    "features": [
+      "hypersonic",
+      "small_control_surfaces"
+    ],
+    "params": {
+      "body_shape": "wedge",
+      "nose": "blunt",
+      "nose_len_ratio": 1.6,
+      "fin_count": 2,
+      "fin_span_ratio": 1.6,
+      "fin_chord_ratio": 1.2,
+      "tail_type": "flaps",
+      "bands": 2,
+      "windows": 0,
+      "booster": 1,
+      "booster_len_ratio": 0.35
+    }
+  },
+  "dimensions": {
+    "length_m": 9.0,
+    "diameter_m": 0.6,
+    "mass_kg": 3000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "launch_methods": [
+    "VLS"
+  ],
+  "tier": 10,
+  "asset_priority": "HIGH",
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

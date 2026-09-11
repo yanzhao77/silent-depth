@@ -1,0 +1,1311 @@
+{
+  "batch_index": 0,
+  "generated_at": "2026-09-10",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "RU_STRAT_Poseidon",
+      "display_name": "Poseidon (2M39)",
+      "short_name": "Poseidon",
+      "category": "STRAT",
+      "family_id": "RU_STRAT_Poseidon",
+      "country": "Russia",
+      "role": "大型战略无人潜航器",
+      "subrole": "Strategic_Underwater_Payload",
+      "era": "Modern",
+      "service_years": "2020s-present",
+      "tier": 10,
+      "tier_reason": "游戏 T10 战略特种载荷节点：与弹道导弹分类不同，作为战略级水下载荷单独记录。",
+      "launch_methods": [
+        "DECK_MOUNT",
+        "SWIM_OUT"
+      ],
+      "dimensions": {
+        "length_m": 20.0,
+        "diameter_m": 1.8,
+        "mass_kg": 100000,
+        "scale_source": "GAMEPLAY_SCALE",
+        "scale_note": "公开资料存在多个版本，采用游戏尺度近似值。"
+      },
+      "body_diameter_m": 1.8,
+      "geometry": {
+        "kind": "sdv",
+        "features": [
+          "very_long_body",
+          "shrouded_prop",
+          "spindle_hull"
+        ],
+        "params": {
+          "shape": "spindle",
+          "nose": "blunt",
+          "nose_len_ratio": 1.2,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "fin_count": 4,
+          "fin_span_ratio": 1.4,
+          "shrouds": 2
+        }
+      },
+      "notes": "战略载荷分类只用于数据层，只做外观表现，不涉及任何内部细节。"
+    },
+    {
+      "weapon_id": "RU_SLBM_R29R",
+      "display_name": "R-29R (SS-N-18)",
+      "short_name": "R-29R",
+      "category": "SLBM",
+      "family_id": "RU_SLBM_R29",
+      "country": "Russia",
+      "role": "多弹头远程潜射弹道导弹",
+      "subrole": "Late_Cold_War_SLBM",
+      "era": "Cold War Late",
+      "service_years": "1978-2000s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 分导式分支：与 R-29 同族，整流罩与弹体比例不同。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 14.1,
+        "diameter_m": 1.8,
+        "mass_kg": 34000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 14 米。"
+      },
+      "body_diameter_m": 1.8,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "long_body",
+          "mirv_bus",
+          "tail_skirt"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.7,
+          "stage_count": 2,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.6,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "UK_SLBM_Trident_D5LE",
+      "display_name": "Trident II D5LE (UK)",
+      "short_name": "D5LE",
+      "category": "SLBM",
+      "family_id": "UK_SLBM_Trident",
+      "country": "UK",
+      "role": "英国延寿型潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 9,
+      "tier_reason": "游戏 T9 延寿批次：与 D5 共享几何，仅标注与批次数据不同。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 13.6,
+        "diameter_m": 2.11,
+        "mass_kg": 58500,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与 D5 同级尺寸。"
+      },
+      "body_diameter_m": 2.11,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "wide_body",
+          "life_extended",
+          "uk_marking"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.6,
+          "stage_count": 3,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.7,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 1,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_SLBM_JL2A",
+      "display_name": "JL-2A",
+      "short_name": "JL-2A",
+      "category": "SLBM",
+      "family_id": "CN_SLBM_JL2",
+      "country": "China",
+      "role": "远程潜射弹道导弹改进型",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 改进型：与 JL-2 共享弹体几何，仅在数据层区分批次与弹头配置。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 13.0,
+        "diameter_m": 2.0,
+        "mass_kg": 42000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 2.0,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "three_stage",
+          "wide_body",
+          "improved_bus"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.5,
+          "stage_count": 3,
+          "stage_bands": 3,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.6,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 1,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "IN_SLBM_K4",
+      "display_name": "K-4",
+      "short_name": "K-4",
+      "category": "SLBM",
+      "family_id": "IN_SLBM_K4",
+      "country": "India",
+      "role": "中程潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "2020s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 印度主力节点：两到三级弹体，长度明显大于 K-15。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 12.0,
+        "diameter_m": 1.3,
+        "mass_kg": 17000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 1.3,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "two_stage",
+          "long_body",
+          "dome_shroud"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.5,
+          "stage_count": 2,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.5,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_SPECIAL_DDS",
+      "display_name": "Dry Deck Shelter",
+      "short_name": "DDS",
+      "category": "SPECIAL",
+      "family_id": "US_SPECIAL_DDS",
+      "country": "USA",
+      "role": "干式甲板掩体",
+      "subrole": "Dry_Deck_Shelter",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 特种载荷节点：箱形外挂结构，是潜艇外壳上最显眼的附加体。",
+      "launch_methods": [
+        "SWIM_OUT_DOCK"
+      ],
+      "dimensions": {
+        "length_m": 11.6,
+        "diameter_m": 2.7,
+        "mass_kg": 30000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 2.7,
+      "geometry": {
+        "kind": "shelter",
+        "features": [
+          "boxy_hull",
+          "hatch_rings",
+          "rails"
+        ],
+        "params": {
+          "shape": "boxy",
+          "hatch_rings": 2,
+          "corner_radius_ratio": 0.08,
+          "runner_rails": 1,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_6576A",
+      "display_name": "65-76A torpedo",
+      "short_name": "65-76A",
+      "category": "TORP",
+      "family_id": "RU_TORP_6576",
+      "country": "Russia",
+      "role": "650 毫米重型鱼雷改进型",
+      "subrole": "Heavyweight",
+      "era": "Modern",
+      "service_years": "1990s-2000s",
+      "tier": 7,
+      "tier_reason": "游戏 T7 改进型：同族几何，尾部与导线系统不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 11.0,
+        "diameter_m": 0.65,
+        "mass_kg": 4500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.65,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "large_diameter",
+          "very_long_body",
+          "wire_dispenser"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.6,
+          "fin_count": 4,
+          "fin_span_ratio": 1.35,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_SLBM_Poseidon_C3",
+      "display_name": "Poseidon C3",
+      "short_name": "Poseidon C3",
+      "category": "SLBM",
+      "family_id": "US_SLBM_Poseidon",
+      "country": "USA",
+      "role": "多弹头潜射弹道导弹",
+      "subrole": "Cold_War_SLBM",
+      "era": "Cold War",
+      "service_years": "1971-1990s",
+      "tier": 4,
+      "tier_reason": "游戏 T4 冷战中段节点：比 Polaris 更粗更长的弹体，尾裙结构清晰。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 10.4,
+        "diameter_m": 1.88,
+        "mass_kg": 34000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 10.4 米。"
+      },
+      "body_diameter_m": 1.88,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "wider_body",
+          "tail_skirt"
+        ],
+        "params": {
+          "nose": "shroud_dome",
+          "nose_len_ratio": 1.5,
+          "stage_count": 3,
+          "stage_bands": 2,
+          "tail": "tail_skirt",
+          "tail_len_ratio": 1.5,
+          "skirt_fin_count": 4,
+          "skirt_fin_span_ratio": 1.25,
+          "nozzle_count": 1,
+          "cable_tray": 0,
+          "canister_fit": true,
+          "fin_count": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "UK_SPECIAL_DDS",
+      "display_name": "UK Dry Deck Shelter",
+      "short_name": "DDS-UK",
+      "category": "SPECIAL",
+      "family_id": "UK_SPECIAL_DDS",
+      "country": "UK",
+      "role": "干式甲板掩体",
+      "subrole": "Dry_Deck_Shelter",
+      "era": "Cold War Late",
+      "service_years": "1990s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 英国特种载荷节点：与美制 DDS 同类的箱形外挂结构。",
+      "launch_methods": [
+        "SWIM_OUT_DOCK"
+      ],
+      "dimensions": {
+        "length_m": 10.0,
+        "diameter_m": 2.5,
+        "mass_kg": 25000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 2.5,
+      "geometry": {
+        "kind": "shelter",
+        "features": [
+          "boxy_hull",
+          "hatch_rings"
+        ],
+        "params": {
+          "shape": "boxy",
+          "hatch_rings": 2,
+          "corner_radius_ratio": 0.08,
+          "runner_rails": 1,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_P800",
+      "display_name": "P-800 Oniks",
+      "short_name": "Oniks",
+      "category": "ASM",
+      "family_id": "RU_ASM_P800",
+      "country": "Russia",
+      "role": "现代超音速反舰导弹",
+      "subrole": "Supersonic_Anti_Ship",
+      "era": "Modern",
+      "service_years": "2002-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 现代超音速主力：更细长的弹体与一体式助推段，用于 Yasen 等平台。",
+      "launch_methods": [
+        "VLS",
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 8.9,
+        "diameter_m": 0.67,
+        "mass_kg": 3000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 8.9 米。"
+      },
+      "body_diameter_m": 0.67,
+      "geometry": {
+        "kind": "supersonic_missile",
+        "features": [
+          "ramjet",
+          "solid_booster",
+          "slim_body",
+          "conformal_intakes"
+        ],
+        "params": {
+          "nose": "sharp_ogive",
+          "nose_len_ratio": 2.5,
+          "tail": "boattail",
+          "tail_len_ratio": 1.1,
+          "booster": "solid",
+          "booster_len_ratio": 0.3,
+          "booster_fin_count": 4,
+          "fin_count": 4,
+          "fin_span_ratio": 1.9,
+          "canister_fit": true,
+          "intakes": 4,
+          "seeker_window": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_ASM_YJ18",
+      "display_name": "YJ-18 anti-ship",
+      "short_name": "YJ-18",
+      "category": "ASM",
+      "family_id": "CN_ASM_YJ18",
+      "country": "China",
+      "role": "现代远程反舰巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 现代反舰主力：亚超结合方案，发射管布放，末段为独立超音速段。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 8.2,
+        "diameter_m": 0.533,
+        "mass_kg": 2300,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料存在多个版本，取与 533 毫米发射管匹配的级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "folded_wing",
+          "terminal_stage"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "folding",
+          "wing_count": 2,
+          "wing_span_ratio": 3.6,
+          "wing_position": 0.35,
+          "fin_count": 4,
+          "fin_span_ratio": 2.0,
+          "booster": "solid",
+          "booster_len_ratio": 0.3,
+          "canister_fit": true,
+          "intakes": 0,
+          "antenna_bands": 2,
+          "terminal_body": true,
+          "seeker_window": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_TEST71M",
+      "display_name": "TEST-71M torpedo",
+      "short_name": "TEST-71M",
+      "category": "TORP",
+      "family_id": "RU_TORP_TEST71",
+      "country": "Russia",
+      "role": "线导反潜鱼雷改进型",
+      "subrole": "Wire_Guided",
+      "era": "Cold War Late",
+      "service_years": "1980s-1990s",
+      "tier": 7,
+      "tier_reason": "游戏 T7 改进型：同族几何，控制段与声学窗口不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 8.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1820,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "long_body",
+          "improved_control"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.4,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_USET80K",
+      "display_name": "USET-80K torpedo",
+      "short_name": "USET-80K",
+      "category": "TORP",
+      "family_id": "RU_TORP_USET80",
+      "country": "Russia",
+      "role": "通用电动鱼雷改进型",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 改进型：与基础型共享几何，控制段与标记不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1800,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "electric",
+          "wire_dispenser",
+          "improved_control"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "UK_TORP_Spearfish_Mod1",
+      "display_name": "Spearfish Mod 1",
+      "short_name": "Spearfish-1",
+      "category": "TORP",
+      "family_id": "UK_TORP_Spearfish",
+      "country": "UK",
+      "role": "深水重型鱼雷升级型",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2020s-present",
+      "tier": 9,
+      "tier_reason": "游戏 T9 升级型：与 Mod 0 共享弹体，尾部与声学组件重做。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1850,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与 Mod 0 同级尺寸。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "pumpjet",
+          "wire_dispenser",
+          "deep_water",
+          "modern_sonar"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.0,
+          "fin_count": 4,
+          "fin_span_ratio": 1.35,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "pumpjet",
+          "wire_dispenser": 1,
+          "sonar_windows": 3,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_5365M",
+      "display_name": "53-65M torpedo",
+      "short_name": "53-65M",
+      "category": "TORP",
+      "family_id": "RU_TORP_5365",
+      "country": "Russia",
+      "role": "尾流自导反舰鱼雷改进型",
+      "subrole": "Heavyweight",
+      "era": "Cold War Late",
+      "service_years": "1970s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 改进型：同族几何，尾段与识别标记不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 2000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wake_homing",
+          "long_body"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.35,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_TORP_Yu5",
+      "display_name": "Yu-5 torpedo",
+      "short_name": "Yu-5",
+      "category": "TORP",
+      "family_id": "CN_TORP_Yu5",
+      "country": "China",
+      "role": "线导热动力鱼雷",
+      "subrole": "Wire_Guided",
+      "era": "Modern",
+      "service_years": "1990s-2000s",
+      "tier": 7,
+      "tier_reason": "游戏 T7 中国线导节点：细长弹体 + 导线整流罩。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.6,
+        "diameter_m": 0.533,
+        "mass_kg": 1600,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "thermal"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_TORP_Fizik",
+      "display_name": "Fizik torpedo",
+      "short_name": "Fizik",
+      "category": "TORP",
+      "family_id": "RU_TORP_Fizik",
+      "country": "Russia",
+      "role": "新一代深水高速鱼雷",
+      "subrole": "Future",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 9,
+      "tier_reason": "游戏 T9 新一代节点：公开资料有限，几何按可确认外形特征建模。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.5,
+        "diameter_m": 0.533,
+        "mass_kg": 2000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料不足，尺寸为级别估计。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "deep_water",
+          "high_speed",
+          "wire_dispenser"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": "公开资料有限，标记为 ESTIMATED，建模前需补充参考。"
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk_BlockIII",
+      "display_name": "Tomahawk Block III",
+      "short_name": "TACTOM III",
+      "category": "LAM",
+      "family_id": "US_LAM_Tomahawk",
+      "country": "USA",
+      "role": "对陆攻击巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Cold War Late",
+      "service_years": "1980s-2000s",
+      "tier": 7,
+      "tier_reason": "游戏 T7 对陆攻击主力：发射管布放、弹翼展开后为典型巡航导弹外形。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.52,
+        "mass_kg": 1600,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 6.25 米。"
+      },
+      "body_diameter_m": 0.52,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "pop_out_wing",
+          "long_range"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "pop_out",
+          "wing_count": 2,
+          "wing_span_ratio": 3.4,
+          "wing_position": 0.35,
+          "fin_count": 4,
+          "fin_span_ratio": 1.9,
+          "booster": "solid",
+          "booster_len_ratio": 0.28,
+          "canister_fit": true,
+          "intakes": 0,
+          "antenna_bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_ASM_Tomahawk_TASM",
+      "display_name": "Tomahawk TASM (anti-ship)",
+      "short_name": "TASM",
+      "category": "ASM",
+      "family_id": "US_LAM_Tomahawk",
+      "country": "USA",
+      "role": "反舰巡航导弹（已退役）",
+      "subrole": "Modern_Cruise",
+      "era": "Cold War Late",
+      "service_years": "1980s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 反舰分支：与对陆型共享弹体几何，导引头与标识不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.52,
+        "mass_kg": 1600,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与同族同级尺寸。"
+      },
+      "body_diameter_m": 0.52,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "pop_out_wing",
+          "radar_seeker"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "pop_out",
+          "wing_count": 2,
+          "wing_span_ratio": 3.4,
+          "wing_position": 0.35,
+          "fin_count": 4,
+          "fin_span_ratio": 1.9,
+          "booster": "solid",
+          "booster_len_ratio": 0.28,
+          "canister_fit": true,
+          "intakes": 0,
+          "antenna_bands": 1,
+          "seeker_window": 1
+        }
+      },
+      "notes": "与对陆型同族共享几何，仅在数据层区分角色。"
+    },
+    {
+      "weapon_id": "RU_LAM_Kalibr_3M14",
+      "display_name": "Kalibr 3M14 land attack",
+      "short_name": "3M14",
+      "category": "LAM",
+      "family_id": "RU_MISSILE_Kalibr",
+      "country": "Russia",
+      "role": "现代对陆攻击巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Modern",
+      "service_years": "2000s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 对陆攻击节点：与反舰型共享发射系统，弹翼展开后外形更接近常规巡航导弹。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 6.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1800,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度与发射管匹配。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "pop_out_wing",
+          "long_range"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "pop_out",
+          "wing_count": 2,
+          "wing_span_ratio": 4.0,
+          "wing_position": 0.35,
+          "fin_count": 4,
+          "fin_span_ratio": 2.0,
+          "booster": "solid",
+          "booster_len_ratio": 0.3,
+          "canister_fit": true,
+          "intakes": 0,
+          "antenna_bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_ASM_YJ8",
+      "display_name": "YJ-8",
+      "short_name": "YJ-8",
+      "category": "ASM",
+      "family_id": "CN_ASM_YJ8",
+      "country": "China",
+      "role": "早期反舰巡航导弹",
+      "subrole": "Early_Cruise",
+      "era": "Cold War Late",
+      "service_years": "1980s-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 中国反舰起点：弹体短、固定弹翼，外形与后来的型号明显不同。",
+      "launch_methods": [
+        "SURFACE_LAUNCH",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 5.8,
+        "diameter_m": 0.36,
+        "mass_kg": 815,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.36,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "fixed_wing",
+          "cruciform_tail"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.2,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "fixed",
+          "wing_count": 2,
+          "wing_span_ratio": 2.6,
+          "wing_position": 0.35,
+          "fin_count": 4,
+          "fin_span_ratio": 1.8,
+          "booster": "solid",
+          "booster_len_ratio": 0.22,
+          "canister_fit": true,
+          "intakes": 0,
+          "antenna_bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_Mod7",
+      "display_name": "Mk 48 Mod 7 CBASS",
+      "short_name": "Mk48-7",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk48",
+      "country": "USA",
+      "role": "现代先进重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 顶级重型鱼雷：Mod 6 的继续改进型，可见特征一致。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.79,
+        "diameter_m": 0.533,
+        "mass_kg": 1676,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与 Mod 6 同级尺寸。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "contra_propeller",
+          "wide_band_sonar"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.1,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 4
+        }
+      },
+      "notes": "与 Mod 6 共享基础几何，仅数据与标记层不同。"
+    },
+    {
+      "weapon_id": "FR_TORP_L5_Mod4",
+      "display_name": "L5 Mod 4 torpedo",
+      "short_name": "L5-4",
+      "category": "TORP",
+      "family_id": "FR_TORP_L5",
+      "country": "France",
+      "role": "电动线导鱼雷改进型",
+      "subrole": "Wire_Guided",
+      "era": "Cold War Late",
+      "service_years": "1980s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 改进型：同族几何，控制与声学组件不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 5.2,
+        "diameter_m": 0.533,
+        "mass_kg": 1150,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "electric",
+          "improved_control"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_ASM_Harpoon",
+      "display_name": "UGM-84 Sub-Harpoon",
+      "short_name": "Harpoon",
+      "category": "ASM",
+      "family_id": "US_ASM_Harpoon",
+      "country": "USA",
+      "role": "潜射反舰巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Cold War Late",
+      "service_years": "1980s-2000s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 美国潜射反舰节点：发射管布放、弹体短、十字弹翼结构清楚。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 4.6,
+        "diameter_m": 0.34,
+        "mass_kg": 700,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 4.6 米。"
+      },
+      "body_diameter_m": 0.34,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "cruciform_wing",
+          "canister"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.2,
+          "tail": "conical",
+          "tail_len_ratio": 0.9,
+          "wing_type": "fixed",
+          "wing_count": 2,
+          "wing_span_ratio": 2.4,
+          "wing_position": 0.4,
+          "fin_count": 4,
+          "fin_span_ratio": 1.8,
+          "booster": "solid",
+          "booster_len_ratio": 0.22,
+          "canister_fit": true,
+          "intakes": 0,
+          "antenna_bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "CN_TORP_Yu7",
+      "display_name": "Yu-7 torpedo",
+      "short_name": "Yu-7",
+      "category": "TORP",
+      "family_id": "CN_TORP_Yu7",
+      "country": "China",
+      "role": "轻型反潜鱼雷",
+      "subrole": "Lightweight",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 轻型节点：324 毫米级小弹体。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "AIR_LAUNCH",
+        "SURFACE_LAUNCH"
+      ],
+      "dimensions": {
+        "length_m": 2.7,
+        "diameter_m": 0.324,
+        "mass_kg": 235,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.324,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "lightweight"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.0,
+          "tail": "conical",
+          "tail_len_ratio": 0.8,
+          "fin_count": 4,
+          "fin_span_ratio": 1.6,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 2,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "UK_MINE_SeaUrchin",
+      "display_name": "Sea Urchin",
+      "short_name": "SeaUrchin",
+      "category": "MINE",
+      "family_id": "UK_MINE_SeaUrchin",
+      "country": "UK",
+      "role": "潜艇布放水雷",
+      "subrole": "Historical_Mine",
+      "era": "Cold War",
+      "service_years": "1950s-1970s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 冷战早期英国水雷：圆柱弹体 + 外部触点柱，早期布雷节点。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 1.6,
+        "diameter_m": 0.53,
+        "mass_kg": 500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 0.53,
+      "geometry": {
+        "kind": "mine",
+        "features": [
+          "contact_horns",
+          "cylindrical"
+        ],
+        "params": {
+          "body": "cylindrical",
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.6,
+          "mooring": 0,
+          "mooring_len_ratio": 1.5,
+          "canister": 0,
+          "horns": 8,
+          "rails": 0,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.7,
+          "tail_len_ratio": 0.4,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_DECOY_ADC_Mk5",
+      "display_name": "ADC Mk 5",
+      "short_name": "ADC-Mk5",
+      "category": "DECOY",
+      "family_id": "US_DECOY_ADC",
+      "country": "USA",
+      "role": "声学对抗装置",
+      "subrole": "Acoustic_Decoy",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 先进声学对抗节点：与 Mk 4 同几何，换代数据节点。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 0.7,
+        "diameter_m": 0.15,
+        "mass_kg": 20,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 0.15,
+      "geometry": {
+        "kind": "decoy",
+        "features": [
+          "short_capsule",
+          "dispenser_rings"
+        ],
+        "params": {
+          "body": "capsule",
+          "capsule_ratio": 2.4,
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.5,
+          "rings": 2,
+          "dispenser": 1,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.6,
+          "tail": "none",
+          "tail_len_ratio": 0.5,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

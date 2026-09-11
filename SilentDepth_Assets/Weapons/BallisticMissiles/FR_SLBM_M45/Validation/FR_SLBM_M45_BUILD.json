@@ -1,0 +1,166 @@
+{
+  "weapon_id": "FR_SLBM_M45",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 11.0,
+  "declared_diameter_m": 1.93,
+  "built_length_m": 11.0,
+  "built_max_diameter_m": 2.6827,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2480,
+      "triangles": 4452
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 918,
+      "triangles": 1572
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 430,
+      "triangles": 772
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 280,
+      "triangles": 496
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_FR_SLBM_M45_SEG_00",
+    "UCX_WPN_FR_SLBM_M45_SEG_01",
+    "UCX_WPN_FR_SLBM_M45_SEG_02",
+    "UCX_WPN_FR_SLBM_M45_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -5.5,
+      5.5
+    ],
+    "y": [
+      -1.0132499933242798,
+      1.0614999532699585
+    ],
+    "z": [
+      -1.3413499593734741,
+      1.3413499593734741
+    ],
+    "dimensions_m": [
+      11.0,
+      2.0747499465942383,
+      2.6826999187469482
+    ],
+    "centre": [
+      0.0,
+      0.024124979972839355,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/FR_SLBM_M45_LOD0.fbx",
+        "mirror": "FBX/FR_SLBM_M45_LOD0.fbx",
+        "sha256": "c8ed0fd387cf4694cbe8486df953f827eba80a744e8d1c7f11f8b80e4e0d67ae",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/FR_SLBM_M45_LOD1.fbx",
+        "mirror": "FBX/FR_SLBM_M45_LOD1.fbx",
+        "sha256": "af7431b65e1ad948622b7ea51129053799f0cd89ac7339fe67a39ebd1f32202f",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/FR_SLBM_M45_LOD2.fbx",
+        "mirror": "FBX/FR_SLBM_M45_LOD2.fbx",
+        "sha256": "6d5a3291ca51beb9fae69803e56e4309e311e1915ca8e9d2cc0ab0377a66088e",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/FR_SLBM_M45_LOD3.fbx",
+        "mirror": "FBX/FR_SLBM_M45_LOD3.fbx",
+        "sha256": "cd93534939c1df4b44ecdc26fda1e19fa4289267634aac54464f821df30ad201",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/FR_SLBM_M45_COLLISION.fbx",
+      "sha256": "2bfd52a6bf400713d9e65ff854ee2541e47548e7dd3219cfba065a993535e412"
+    },
+    "collision_manifest": {
+      "path": "Collision/FR_SLBM_M45_COLLISION.json",
+      "sha256": "a7d9ba4d757217256264823fe365895bfd395e7e57fdcfd0c576591819cb6407"
+    }
+  },
+  "build_seconds": 0.45,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.31,
+    "SIDE": 0.35,
+    "FRONT": 0.36,
+    "TOP": 0.3,
+    "DETAIL": 0.34,
+    "ICON": 0.3
+  },
+  "previews": [
+    "Detail.png",
+    "FR_SLBM_M45_DETAIL_128.png",
+    "FR_SLBM_M45_DETAIL_256.png",
+    "FR_SLBM_M45_DETAIL_512.png",
+    "FR_SLBM_M45_FRONT_128.png",
+    "FR_SLBM_M45_FRONT_256.png",
+    "FR_SLBM_M45_FRONT_512.png",
+    "FR_SLBM_M45_ICON_128.png",
+    "FR_SLBM_M45_ICON_256.png",
+    "FR_SLBM_M45_ICON_512.png",
+    "FR_SLBM_M45_PERSPECTIVE_128.png",
+    "FR_SLBM_M45_PERSPECTIVE_256.png",
+    "FR_SLBM_M45_PERSPECTIVE_512.png",
+    "FR_SLBM_M45_SIDE_128.png",
+    "FR_SLBM_M45_SIDE_256.png",
+    "FR_SLBM_M45_SIDE_512.png",
+    "FR_SLBM_M45_TOP_128.png",
+    "FR_SLBM_M45_TOP_256.png",
+    "FR_SLBM_M45_TOP_512.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/FR_SLBM_M45_MASTER.blend",
+      "sha256": "ffe69eda299cbe6f807f87e4d7cf022f3c0ff133704ed0e172801059c74e378c"
+    },
+    "source": {
+      "path": "Source/FR_SLBM_M45_SOURCE.json",
+      "sha256": "9e17f08250998e5e1bba6dfe79ce2da63214fec838e4d339bf96b0a10868c73d"
+    },
+    "spec": {
+      "path": "Documentation/FR_SLBM_M45_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/FR_SLBM_M45_README.md"
+    }
+  }
+}

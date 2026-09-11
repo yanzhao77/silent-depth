@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_ASM_Zircon",
+  "display_name": "3M22 Tsirkon",
+  "short_name": "Zircon",
+  "country": "Russia",
+  "category": "ASM",
+  "family": "RU_ASM_Zircon",
+  "role": "新一代高超音速反舰导弹",
+  "subrole": "Hypersonic_Anti_Ship",
+  "tier": 10,
+  "tier_reason": "游戏 T10 顶级反舰节点：与常规冲压导弹外形明显不同，弹体短粗、控制面小。",
+  "era": "Modern",
+  "service_years": "2020s-present",
+  "launch_methods": [
+    "VLS"
+  ],
+  "dimensions": {
+    "length_m": 9.0,
+    "diameter_m": 0.6,
+    "mass_kg": 3000,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "glide_body",
+    "features": [
+      "hypersonic",
+      "small_control_surfaces"
+    ],
+    "params": {
+      "body_shape": "wedge",
+      "nose": "blunt",
+      "nose_len_ratio": 1.6,
+      "fin_count": 2,
+      "fin_span_ratio": 1.6,
+      "fin_chord_ratio": 1.2,
+      "tail_type": "flaps",
+      "bands": 2,
+      "windows": 0,
+      "booster": 1,
+      "booster_len_ratio": 0.35
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/RU_ASM_Zircon_MASTER.blend",
+    "lod": [
+      "LOD/RU_ASM_Zircon_LOD0.fbx",
+      "LOD/RU_ASM_Zircon_LOD1.fbx",
+      "LOD/RU_ASM_Zircon_LOD2.fbx",
+      "LOD/RU_ASM_Zircon_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_ASM_Zircon_LOD0.fbx",
+      "FBX/RU_ASM_Zircon_LOD1.fbx",
+      "FBX/RU_ASM_Zircon_LOD2.fbx",
+      "FBX/RU_ASM_Zircon_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_ASM_Zircon_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_ASM_Zircon_COLLISION.json",
+    "source": "Source/RU_ASM_Zircon_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 528,
+    "LOD1": 264,
+    "LOD2": 184,
+    "LOD3": 124
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 9.0,
+  "built_max_diameter_m": 1.609741,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

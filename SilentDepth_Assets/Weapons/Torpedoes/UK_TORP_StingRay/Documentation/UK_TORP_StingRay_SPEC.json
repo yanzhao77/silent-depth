@@ -1,0 +1,90 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "UK_TORP_StingRay",
+  "display_name": "Sting Ray Mod 1",
+  "short_name": "StingRay",
+  "country": "UK",
+  "category": "TORP",
+  "family": "UK_TORP_StingRay",
+  "role": "轻型反潜鱼雷",
+  "subrole": "Lightweight",
+  "tier": 7,
+  "tier_reason": "游戏 T7 轻型分支：324 毫米级小弹体，是鱼雷树中的尺寸对照节点。",
+  "era": "Modern",
+  "service_years": "1980s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "AIR_LAUNCH",
+    "SURFACE_LAUNCH"
+  ],
+  "dimensions": {
+    "length_m": 2.6,
+    "diameter_m": 0.324,
+    "mass_kg": 267,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料为 324 毫米轻型鱼雷。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "lightweight",
+      "pumpjet"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.0,
+      "tail": "conical",
+      "tail_len_ratio": 0.8,
+      "fin_count": 4,
+      "fin_span_ratio": 1.6,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "pumpjet",
+      "wire_dispenser": 0,
+      "sonar_windows": 2,
+      "bands": 2
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/UK_TORP_StingRay_MASTER.blend",
+    "lod": [
+      "LOD/UK_TORP_StingRay_LOD0.fbx",
+      "LOD/UK_TORP_StingRay_LOD1.fbx",
+      "LOD/UK_TORP_StingRay_LOD2.fbx",
+      "LOD/UK_TORP_StingRay_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/UK_TORP_StingRay_LOD0.fbx",
+      "FBX/UK_TORP_StingRay_LOD1.fbx",
+      "FBX/UK_TORP_StingRay_LOD2.fbx",
+      "FBX/UK_TORP_StingRay_LOD3.fbx"
+    ],
+    "collision": "Collision/UK_TORP_StingRay_COLLISION.fbx",
+    "collision_manifest": "Collision/UK_TORP_StingRay_COLLISION.json",
+    "source": "Source/UK_TORP_StingRay_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2340,
+    "LOD1": 1068,
+    "LOD2": 652,
+    "LOD3": 556
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 2.6,
+  "built_max_diameter_m": 0.547928,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料为 324 毫米轻型鱼雷。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

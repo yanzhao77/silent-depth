@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_ASW_Vyuga",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "rocket_payload",
+  "declared_length_m": 6.0,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 6.0,
+  "built_max_diameter_m": 0.676063,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 1526,
+      "triangles": 2736
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 662,
+      "triangles": 1152
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 262,
+      "triangles": 496
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 178,
+      "triangles": 328
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_ASW_Vyuga_SEG_00",
+    "UCX_WPN_RU_ASW_Vyuga_SEG_01",
+    "UCX_WPN_RU_ASW_Vyuga_SEG_02",
+    "UCX_WPN_RU_ASW_Vyuga_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.0,
+      3.0
+    ],
+    "y": [
+      -0.33803173899650574,
+      0.33803173899650574
+    ],
+    "z": [
+      -0.33803173899650574,
+      0.33803173899650574
+    ],
+    "dimensions_m": [
+      6.0,
+      0.6760634779930115,
+      0.6760634779930115
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_ASW_Vyuga_LOD0.fbx",
+        "mirror": "FBX/RU_ASW_Vyuga_LOD0.fbx",
+        "sha256": "cd3644836b332f73e0c6c02036509efe7cf0e3ffad62894fdee530e948c030c3",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_ASW_Vyuga_LOD1.fbx",
+        "mirror": "FBX/RU_ASW_Vyuga_LOD1.fbx",
+        "sha256": "21c94efee5be3163906171e0582f93de563669d4302e58d033a67ac9621f8dae",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_ASW_Vyuga_LOD2.fbx",
+        "mirror": "FBX/RU_ASW_Vyuga_LOD2.fbx",
+        "sha256": "f8efeebdd9983a7db860f90e32d791947936867a560f7de6e1173e85fc683662",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_ASW_Vyuga_LOD3.fbx",
+        "mirror": "FBX/RU_ASW_Vyuga_LOD3.fbx",
+        "sha256": "cbe31aaa1c6326be125121a73791bd0aec6bfeb9470c3357202ed34c2a56fec6",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_ASW_Vyuga_COLLISION.fbx",
+      "sha256": "73e8002123b2f6807510bcf3868d0c1f566476d9213c42bb9ef8e1a4b76405c0"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_ASW_Vyuga_COLLISION.json",
+      "sha256": "029454d6e4031a4f5df2cbfa5aeb025eac4f3f79ee624e81e6210a4677649a8f"
+    }
+  },
+  "build_seconds": 0.7,
+  "preview_seconds": {
+    "PERSPECTIVE": 2.09,
+    "SIDE": 0.31,
+    "FRONT": 0.31,
+    "TOP": 0.3,
+    "DETAIL": 0.33,
+    "ICON": 0.28
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_ASW_Vyuga_DETAIL_128.png",
+    "RU_ASW_Vyuga_DETAIL_256.png",
+    "RU_ASW_Vyuga_DETAIL_512.png",
+    "RU_ASW_Vyuga_FRONT_128.png",
+    "RU_ASW_Vyuga_FRONT_256.png",
+    "RU_ASW_Vyuga_FRONT_512.png",
+    "RU_ASW_Vyuga_ICON_128.png",
+    "RU_ASW_Vyuga_ICON_256.png",
+    "RU_ASW_Vyuga_ICON_512.png",
+    "RU_ASW_Vyuga_PERSPECTIVE_128.png",
+    "RU_ASW_Vyuga_PERSPECTIVE_256.png",
+    "RU_ASW_Vyuga_PERSPECTIVE_512.png",
+    "RU_ASW_Vyuga_SIDE_128.png",
+    "RU_ASW_Vyuga_SIDE_256.png",
+    "RU_ASW_Vyuga_SIDE_512.png",
+    "RU_ASW_Vyuga_TOP_128.png",
+    "RU_ASW_Vyuga_TOP_256.png",
+    "RU_ASW_Vyuga_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_ASW_Vyuga_MASTER.blend",
+      "sha256": "1733076a7eb145f118f45d8a0dec291f5a18a9ca446ac05a0cb053b5b37165ef"
+    },
+    "source": {
+      "path": "Source/RU_ASW_Vyuga_SOURCE.json",
+      "sha256": "1820f573719f844eacf4d85bac9b9998fb2dd3aa2e5e46bc6a2c82dee239a958"
+    },
+    "spec": {
+      "path": "Documentation/RU_ASW_Vyuga_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_ASW_Vyuga_README.md"
+    }
+  }
+}

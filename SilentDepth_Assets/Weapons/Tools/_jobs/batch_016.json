@@ -1,0 +1,258 @@
+{
+  "batch_index": 16,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "UK_TORP_Spearfish",
+      "display_name": "Spearfish Mod 0",
+      "short_name": "Spearfish",
+      "category": "TORP",
+      "family_id": "UK_TORP_Spearfish",
+      "base_geometry": "uk_torp_spearfish",
+      "country": "UK",
+      "role": "深水重型鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "1994-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 英国顶级鱼雷：泵喷推进、钝圆尾部，与 Mk 48 外形明显不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1850,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 7 米。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "pumpjet",
+          "wire_dispenser",
+          "deep_water"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.0,
+          "fin_count": 4,
+          "fin_span_ratio": 1.35,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "pumpjet",
+          "wire_dispenser": 1,
+          "sonar_windows": 2,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "UK_TORP_Spearfish_Mod1",
+      "display_name": "Spearfish Mod 1",
+      "short_name": "Spearfish-1",
+      "category": "TORP",
+      "family_id": "UK_TORP_Spearfish",
+      "base_geometry": "uk_torp_spearfish",
+      "country": "UK",
+      "role": "深水重型鱼雷升级型",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2020s-present",
+      "tier": 9,
+      "tier_reason": "游戏 T9 升级型：与 Mod 0 共享弹体，尾部与声学组件重做。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1850,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与 Mod 0 同级尺寸。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "pumpjet",
+          "wire_dispenser",
+          "deep_water",
+          "modern_sonar"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.0,
+          "fin_count": 4,
+          "fin_span_ratio": 1.35,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "pumpjet",
+          "wire_dispenser": 1,
+          "sonar_windows": 3,
+          "bands": 4
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "UK_TORP_StingRay",
+      "display_name": "Sting Ray Mod 1",
+      "short_name": "StingRay",
+      "category": "TORP",
+      "family_id": "UK_TORP_StingRay",
+      "base_geometry": "uk_torp_stingray",
+      "country": "UK",
+      "role": "轻型反潜鱼雷",
+      "subrole": "Lightweight",
+      "era": "Modern",
+      "service_years": "1980s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 轻型分支：324 毫米级小弹体，是鱼雷树中的尺寸对照节点。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "AIR_LAUNCH",
+        "SURFACE_LAUNCH"
+      ],
+      "dimensions": {
+        "length_m": 2.6,
+        "diameter_m": 0.324,
+        "mass_kg": 267,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料为 324 毫米轻型鱼雷。"
+      },
+      "body_diameter_m": 0.324,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "lightweight",
+          "pumpjet"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.0,
+          "tail": "conical",
+          "tail_len_ratio": 0.8,
+          "fin_count": 4,
+          "fin_span_ratio": 1.6,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "pumpjet",
+          "wire_dispenser": 0,
+          "sonar_windows": 2,
+          "bands": 2
+        }
+      },
+      "notes": "公开资料显示主要由反潜机与水面舰使用；潜艇发射兼容性标记为 GAMEPLAY。"
+    },
+    {
+      "weapon_id": "UK_TORP_Tigerfish",
+      "display_name": "Tigerfish Mod 0",
+      "short_name": "Tigerfish",
+      "category": "TORP",
+      "family_id": "UK_TORP_Tigerfish",
+      "base_geometry": "uk_torp_tigerfish",
+      "country": "UK",
+      "role": "线导反潜/反舰鱼雷",
+      "subrole": "Wire_Guided",
+      "era": "Cold War Late",
+      "service_years": "1979-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 英国线导节点：电动推进、外形细长。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.5,
+        "diameter_m": 0.533,
+        "mass_kg": 1550,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "electric"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "UK_TORP_Tigerfish_Mod1",
+      "display_name": "Tigerfish Mod 1",
+      "short_name": "Tigerfish-1",
+      "category": "TORP",
+      "family_id": "UK_TORP_Tigerfish",
+      "base_geometry": "uk_torp_tigerfish",
+      "country": "UK",
+      "role": "线导鱼雷改进型",
+      "subrole": "Wire_Guided",
+      "era": "Cold War Late",
+      "service_years": "1980s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 同族改进型：几何一致，控制段数据不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.5,
+        "diameter_m": 0.533,
+        "mass_kg": 1550,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "electric",
+          "improved_control"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.9,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

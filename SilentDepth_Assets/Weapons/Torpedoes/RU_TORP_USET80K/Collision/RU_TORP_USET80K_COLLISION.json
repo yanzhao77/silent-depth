@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_TORP_USET80K",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_TORP_USET80K_SEG_00",
+      "centre": [
+        2.592,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.0160000000000005,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_USET80K_SEG_01",
+      "centre": [
+        0.7200000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.728,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_USET80K_SEG_02",
+      "centre": [
+        -1.4400000000000002,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.592,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_USET80K_SEG_03",
+      "centre": [
+        -3.024,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.1520000000000001,
+        0.9028706470588237,
+        0.9028706470588237
+      ]
+    }
+  ],
+  "collision_fbx": "RU_TORP_USET80K_COLLISION.fbx",
+  "collision_sha256": "70256c20a7113a169f10686bc5ed606279c4e13e7fb4da157de752e834e8fc3c"
+}

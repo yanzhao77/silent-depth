@@ -1,0 +1,35 @@
+{
+  "weapon_id": "US_DECOY_ADC_Mk5",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_DECOY_ADC_Mk5_SEG_00",
+      "centre": [
+        -0.154,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.392,
+        0.15,
+        0.15
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_DECOY_ADC_Mk5_SEG_01",
+      "centre": [
+        0.13999999999999999,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.42,
+        0.11249999999999999,
+        0.11249999999999999
+      ]
+    }
+  ],
+  "collision_fbx": "US_DECOY_ADC_Mk5_COLLISION.fbx",
+  "collision_sha256": "2b726e02e338a5a670ba25189179f39b8d99d64e178f35dc26c1477df73be196"
+}

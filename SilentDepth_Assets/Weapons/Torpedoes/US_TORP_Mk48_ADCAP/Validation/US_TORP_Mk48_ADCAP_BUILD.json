@@ -1,0 +1,166 @@
+{
+  "weapon_id": "US_TORP_Mk48_ADCAP",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 5.79,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 5.81155,
+  "built_max_diameter_m": 0.804872,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1458,
+      "triangles": 2520
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 682,
+      "triangles": 1116
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 330,
+      "triangles": 556
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 282,
+      "triangles": 460
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_US_TORP_Mk48_ADCAP_SEG_00",
+    "UCX_WPN_US_TORP_Mk48_ADCAP_SEG_01",
+    "UCX_WPN_US_TORP_Mk48_ADCAP_SEG_02",
+    "UCX_WPN_US_TORP_Mk48_ADCAP_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -2.9165501594543457,
+      2.8949999809265137
+    ],
+    "y": [
+      -0.40243589878082275,
+      0.40243589878082275
+    ],
+    "z": [
+      -0.40243589878082275,
+      0.40243589878082275
+    ],
+    "dimensions_m": [
+      5.811550140380859,
+      0.8048717975616455,
+      0.8048717975616455
+    ],
+    "centre": [
+      -0.010775089263916016,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_TORP_Mk48_ADCAP_LOD0.fbx",
+        "mirror": "FBX/US_TORP_Mk48_ADCAP_LOD0.fbx",
+        "sha256": "85cb5475d2f3a54285ab639b14b616345261a830da1053767ee2066fdf9c558d",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_TORP_Mk48_ADCAP_LOD1.fbx",
+        "mirror": "FBX/US_TORP_Mk48_ADCAP_LOD1.fbx",
+        "sha256": "5e3d4364016b16d93cdcee5308c44567a2049729828d5d31dc7757129689b494",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_TORP_Mk48_ADCAP_LOD2.fbx",
+        "mirror": "FBX/US_TORP_Mk48_ADCAP_LOD2.fbx",
+        "sha256": "cd551b187e46bfbd50c0b5ce9b7dd3cb1b4530517901d0c374ff7ba794918ad8",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_TORP_Mk48_ADCAP_LOD3.fbx",
+        "mirror": "FBX/US_TORP_Mk48_ADCAP_LOD3.fbx",
+        "sha256": "fa3a7ce9f6441987e3f50bd2cf5354942fac03e825a8922f4abc6f0d2ac13574",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_TORP_Mk48_ADCAP_COLLISION.fbx",
+      "sha256": "3065c0c8623922d14f1939eda697877e640db24c1c0e408a7da779cdaac524bd"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_TORP_Mk48_ADCAP_COLLISION.json",
+      "sha256": "b6392e0c3f468d3e45e33ef0be2d4b535558757f438ffab9c1d460699762b690"
+    }
+  },
+  "build_seconds": 0.35,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.33,
+    "SIDE": 0.3,
+    "FRONT": 0.3,
+    "TOP": 0.37,
+    "DETAIL": 0.37,
+    "ICON": 0.3
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_TORP_Mk48_ADCAP_DETAIL_128.png",
+    "US_TORP_Mk48_ADCAP_DETAIL_256.png",
+    "US_TORP_Mk48_ADCAP_DETAIL_512.png",
+    "US_TORP_Mk48_ADCAP_FRONT_128.png",
+    "US_TORP_Mk48_ADCAP_FRONT_256.png",
+    "US_TORP_Mk48_ADCAP_FRONT_512.png",
+    "US_TORP_Mk48_ADCAP_ICON_128.png",
+    "US_TORP_Mk48_ADCAP_ICON_256.png",
+    "US_TORP_Mk48_ADCAP_ICON_512.png",
+    "US_TORP_Mk48_ADCAP_PERSPECTIVE_128.png",
+    "US_TORP_Mk48_ADCAP_PERSPECTIVE_256.png",
+    "US_TORP_Mk48_ADCAP_PERSPECTIVE_512.png",
+    "US_TORP_Mk48_ADCAP_SIDE_128.png",
+    "US_TORP_Mk48_ADCAP_SIDE_256.png",
+    "US_TORP_Mk48_ADCAP_SIDE_512.png",
+    "US_TORP_Mk48_ADCAP_TOP_128.png",
+    "US_TORP_Mk48_ADCAP_TOP_256.png",
+    "US_TORP_Mk48_ADCAP_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_TORP_Mk48_ADCAP_MASTER.blend",
+      "sha256": "6f2ae0e3bb1070cf57547ddf738aea002882224576d8b6cc5de5f255f1bf92a2"
+    },
+    "source": {
+      "path": "Source/US_TORP_Mk48_ADCAP_SOURCE.json",
+      "sha256": "ba7b814a8dc1fd06c2eb94d6bd5b24f338814c34ad2eb643078a377c75602698"
+    },
+    "spec": {
+      "path": "Documentation/US_TORP_Mk48_ADCAP_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_TORP_Mk48_ADCAP_README.md"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_ASM_Zircon",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_ASM_Zircon_SEG_00",
+      "centre": [
+        3.2399999999999998,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.5200000000000005,
+        0.21,
+        0.21
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_Zircon_SEG_01",
+      "centre": [
+        0.9,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.16,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_Zircon_SEG_02",
+      "centre": [
+        -1.8,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.2399999999999998,
+        0.6,
+        0.6
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_Zircon_SEG_03",
+      "centre": [
+        -3.78,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.44,
+        1.0697411764705882,
+        1.0697411764705882
+      ]
+    }
+  ],
+  "collision_fbx": "RU_ASM_Zircon_COLLISION.fbx",
+  "collision_sha256": "374dec93613409906a87f409f7c9f828d41b06883edd39f455284162ea3affc4"
+}

@@ -1,0 +1,601 @@
+{
+  "jobs": [
+    {
+      "asset_id": "RU_SSN_Akula",
+      "master_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Blend\\RU_SSN_Akula_MASTER.blend",
+      "output_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Sockets",
+      "dimensions": {
+        "length": 110.3,
+        "beam": 13.6
+      },
+      "sockets": [
+        {
+          "name": "SOCKET_TORPEDO_01",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_02",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_03",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_04",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_05",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_06",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_07",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_08",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_01",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_02",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_03",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_04",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_01",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_02",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_03",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_04",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_05",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_06",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_07",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_08",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSN_Yasen",
+      "master_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\Blend\\RU_SSN_Yasen_MASTER.blend",
+      "output_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\Sockets",
+      "dimensions": {
+        "length": 139.0,
+        "beam": 13.0
+      },
+      "sockets": [
+        {
+          "name": "SOCKET_TORPEDO_01",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_02",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_03",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_04",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_05",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_06",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_07",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_08",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_09",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_10",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_01",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_02",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_03",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_04",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_05",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_06",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_07",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_08",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_09",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_10",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_11",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_12",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_13",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_14",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_15",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_16",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_17",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_18",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_19",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_20",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_21",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_22",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_23",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_24",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_25",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_26",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_27",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_28",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_29",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_30",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_31",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_VLS_32",
+          "kind": "VLS",
+          "location": "hull",
+          "confidence": "PUBLIC"
+        }
+      ]
+    },
+    {
+      "asset_id": "RU_SSBN_Typhoon",
+      "master_blend": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Blend\\RU_SSBN_Typhoon_MASTER.blend",
+      "output_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Sockets",
+      "dimensions": {
+        "length": 175.0,
+        "beam": 23.0
+      },
+      "sockets": [
+        {
+          "name": "SOCKET_TORPEDO_01",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_02",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_03",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_04",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_05",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_TORPEDO_06",
+          "kind": "TORPEDO_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_01",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_02",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_03",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_04",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_05",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_06",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_07",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_08",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_09",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_10",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_11",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_12",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_13",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_14",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_15",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_16",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_17",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_18",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_19",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_SLBM_20",
+          "kind": "SLBM_TUBE",
+          "location": "sail",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_01",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_02",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_03",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_04",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_05",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        },
+        {
+          "name": "SOCKET_MISSILE_06",
+          "kind": "MISSILE_TUBE",
+          "location": "bow",
+          "confidence": "PUBLIC"
+        }
+      ]
+    }
+  ]
+}

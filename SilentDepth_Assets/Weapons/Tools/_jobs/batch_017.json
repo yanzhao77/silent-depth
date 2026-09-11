@@ -1,0 +1,283 @@
+{
+  "batch_index": 17,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "US_ASM_Harpoon",
+      "display_name": "UGM-84 Sub-Harpoon",
+      "short_name": "Harpoon",
+      "category": "ASM",
+      "family_id": "US_ASM_Harpoon",
+      "base_geometry": "us_asm_harpoon",
+      "country": "USA",
+      "role": "潜射反舰巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Cold War Late",
+      "service_years": "1980s-2000s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 美国潜射反舰节点：短弹体、十字弹翼、发射管封装，与其他导弹外形差异明显。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 4.6,
+        "diameter_m": 0.34,
+        "mass_kg": 700,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 4.6 米。"
+      },
+      "body_diameter_m": 0.34,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "cruciform_wing",
+          "canister"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.6,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 2.4,
+          "wing_chord_ratio": 1.0,
+          "wing_position": 0.4,
+          "wing_sweep_deg": 30.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 1.8,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.22,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 1,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_ASM_Tomahawk_TASM",
+      "display_name": "BGM-109B TASM",
+      "short_name": "TASM",
+      "category": "ASM",
+      "family_id": "US_LAM_Tomahawk",
+      "base_geometry": "us_lam_tomahawk",
+      "country": "USA",
+      "role": "反舰型巡航导弹（已退役）",
+      "subrole": "Modern_Cruise",
+      "era": "Cold War Late",
+      "service_years": "1980s-1990s",
+      "tier": 6,
+      "tier_reason": "游戏 T6 反舰分支：与对陆型共享弹体几何，导引头与标识不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.52,
+        "mass_kg": 1600,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "与同族同级尺寸。"
+      },
+      "body_diameter_m": 0.52,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "popout_wing",
+          "radar_seeker"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 2.0,
+          "body_shape": "cylinder",
+          "wing_type": "popout",
+          "wing_pairs": 1,
+          "wing_span_ratio": 3.4,
+          "wing_chord_ratio": 1.0,
+          "wing_position": 0.42,
+          "wing_sweep_deg": 30.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 1.9,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.28,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 1,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_ASW_SUBROC",
+      "display_name": "UUM-44 SUBROC",
+      "short_name": "SUBROC",
+      "category": "ASW",
+      "family_id": "US_ASW_SUBROC",
+      "base_geometry": "us_asw_subroc",
+      "country": "USA",
+      "role": "潜射反潜火箭",
+      "subrole": "Rocket_Delivered",
+      "era": "Cold War",
+      "service_years": "1965-1989",
+      "tier": 5,
+      "tier_reason": "游戏 T5 远程反潜节点：发射管出水后飞行，细长弹体 + 固体助推段，与鱼雷外形明显不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.7,
+        "diameter_m": 0.533,
+        "mass_kg": 1800,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 6.7 米。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "rocket_payload",
+        "features": [
+          "tube_launched",
+          "solid_booster",
+          "aft_payload"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.6,
+          "booster_len_ratio": 0.35,
+          "booster_fins": 4,
+          "booster_fin_span_ratio": 1.4,
+          "payload_shape": "torpedo",
+          "payload_separation_ring": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.3,
+          "fin_chord_ratio": 0.9,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_DECOY_ADC_Mk4",
+      "display_name": "ADC Mk 4",
+      "short_name": "ADC-Mk4",
+      "category": "DECOY",
+      "family_id": "US_DECOY_ADC",
+      "base_geometry": "us_decoy_adc",
+      "country": "USA",
+      "role": "声学对抗装置",
+      "subrole": "Acoustic_Decoy",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 成熟声学对抗节点：短胶囊外形，可多枚连续投放。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 0.7,
+        "diameter_m": 0.15,
+        "mass_kg": 20,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 0.15,
+      "geometry": {
+        "kind": "decoy",
+        "features": [
+          "short_capsule",
+          "dispenser_rings"
+        ],
+        "params": {
+          "body": "capsule",
+          "capsule_ratio": 2.4,
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.5,
+          "rings": 2,
+          "dispenser": 1,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.6,
+          "tail": "none",
+          "tail_len_ratio": 0.5,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_DECOY_ADC_Mk5",
+      "display_name": "ADC Mk 5",
+      "short_name": "ADC-Mk5",
+      "category": "DECOY",
+      "family_id": "US_DECOY_ADC",
+      "base_geometry": "us_decoy_adc",
+      "country": "USA",
+      "role": "声学对抗装置",
+      "subrole": "Acoustic_Decoy",
+      "era": "Modern",
+      "service_years": "2010s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 先进声学对抗节点：与 Mk 4 同几何，换代数据节点。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 0.7,
+        "diameter_m": 0.15,
+        "mass_kg": 20,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 0.15,
+      "geometry": {
+        "kind": "decoy",
+        "features": [
+          "short_capsule",
+          "dispenser_rings"
+        ],
+        "params": {
+          "body": "capsule",
+          "capsule_ratio": 2.4,
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.5,
+          "rings": 2,
+          "dispenser": 1,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.6,
+          "tail": "none",
+          "tail_len_ratio": 0.5,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

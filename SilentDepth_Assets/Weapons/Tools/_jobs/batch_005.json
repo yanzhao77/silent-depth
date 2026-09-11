@@ -1,0 +1,301 @@
+{
+  "batch_index": 5,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "IN_SLBM_K4",
+      "display_name": "K-4",
+      "short_name": "K-4",
+      "category": "SLBM",
+      "family_id": "IN_SLBM_K4",
+      "base_geometry": "in_slbm_k4",
+      "country": "India",
+      "role": "中程潜射弹道导弹",
+      "subrole": "Modern_SLBM",
+      "era": "Modern",
+      "service_years": "2020s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 印度主力节点：两级弹体，长度明显大于 K-15。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 12.0,
+        "diameter_m": 1.3,
+        "mass_kg": 17000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料为级别近似。"
+      },
+      "body_diameter_m": 1.3,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "two_stage",
+          "long_body",
+          "dome_shroud"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.5,
+          "shroud_shape": "hemispherical",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.22,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.55,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "IN_TORP_Varunastra",
+      "display_name": "Varunastra torpedo",
+      "short_name": "Varunastra",
+      "category": "TORP",
+      "family_id": "IN_TORP_Varunastra",
+      "base_geometry": "in_torp_varunastra",
+      "country": "India",
+      "role": "重型线导鱼雷",
+      "subrole": "Modern_Heavyweight",
+      "era": "Modern",
+      "service_years": "2016-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 印度主力鱼雷：与俄罗斯族外形接近但尾段与标记不同。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.6,
+        "diameter_m": 0.533,
+        "mass_kg": 1500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料长度口径存在多个版本，取中间值并标记估计。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wire_dispenser",
+          "electric",
+          "long_body"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.0,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 1,
+          "sonar_windows": 1,
+          "bands": 3
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_Kalibr_3M54",
+      "display_name": "Kalibr 3M54",
+      "short_name": "3M54",
+      "category": "ASM",
+      "family_id": "RU_MISSILE_Kalibr",
+      "base_geometry": "ru_missile_kalibr",
+      "country": "Russia",
+      "role": "现代反舰巡航导弹",
+      "subrole": "Modern_Cruise",
+      "era": "Modern",
+      "service_years": "1990s-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 现代反舰巡航导弹：发射管布放、弹翼折叠，末段自带独立超音速级。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 8.2,
+        "diameter_m": 0.533,
+        "mass_kg": 2300,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料与 533 毫米发射管匹配。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "underwater_launch",
+          "folding_wing",
+          "terminal_stage"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.6,
+          "body_shape": "cylinder",
+          "wing_type": "folding",
+          "wing_pairs": 1,
+          "wing_span_ratio": 3.6,
+          "wing_chord_ratio": 1.1,
+          "wing_position": 0.36,
+          "wing_sweep_deg": 34.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.0,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.3,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 3,
+          "windows": 1,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_Oniks",
+      "display_name": "P-800 Oniks",
+      "short_name": "Oniks",
+      "category": "ASM",
+      "family_id": "RU_ASM_Oniks",
+      "base_geometry": "ru_asm_oniks",
+      "country": "Russia",
+      "role": "现代超音速反舰导弹",
+      "subrole": "Supersonic_Anti_Ship",
+      "era": "Modern",
+      "service_years": "2002-present",
+      "tier": 8,
+      "tier_reason": "游戏 T8 现代超音速主力：细长弹体与一体式助推段，是 Yasen 级的核心反舰载荷。",
+      "launch_methods": [
+        "VLS",
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 8.9,
+        "diameter_m": 0.67,
+        "mass_kg": 3000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 8.9 米。"
+      },
+      "body_diameter_m": 0.67,
+      "geometry": {
+        "kind": "supersonic_missile",
+        "features": [
+          "ramjet",
+          "solid_booster",
+          "slim_body"
+        ],
+        "params": {
+          "nose": "conical",
+          "nose_len_ratio": 3.6,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 1.9,
+          "wing_chord_ratio": 1.2,
+          "wing_position": 0.6,
+          "wing_sweep_deg": 58.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.0,
+          "tail_chord_ratio": 1.0,
+          "intake_type": "four",
+          "intake_position": 0.3,
+          "intake_len_ratio": 1.6,
+          "booster": 1,
+          "booster_len_ratio": 0.3,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 3,
+          "windows": 1,
+          "canister": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_ASM_P1000",
+      "display_name": "P-1000 Vulkan",
+      "short_name": "P-1000",
+      "category": "ASM",
+      "family_id": "RU_ASM_P500",
+      "base_geometry": "ru_asm_p500",
+      "country": "Russia",
+      "role": "超音速反舰导弹改进型",
+      "subrole": "Supersonic_Anti_Ship",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 改进型：与 Bazalt 共享基础几何，数据层区分射程与制导代次。",
+      "launch_methods": [
+        "VLS",
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 11.7,
+        "diameter_m": 0.88,
+        "mass_kg": 4800,
+        "scale_source": "ESTIMATED",
+        "scale_note": "沿用同族级别近似。"
+      },
+      "body_diameter_m": 0.88,
+      "geometry": {
+        "kind": "supersonic_missile",
+        "features": [
+          "ramjet",
+          "solid_booster",
+          "long_range"
+        ],
+        "params": {
+          "nose": "conical",
+          "nose_len_ratio": 3.4,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 2.4,
+          "wing_chord_ratio": 1.5,
+          "wing_position": 0.55,
+          "wing_sweep_deg": 52.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.4,
+          "tail_chord_ratio": 1.0,
+          "intake_type": "four",
+          "intake_position": 0.26,
+          "intake_len_ratio": 1.8,
+          "booster": 1,
+          "booster_len_ratio": 0.24,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 3,
+          "windows": 1,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

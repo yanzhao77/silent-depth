@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_TORP_Mk48",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_TORP_Mk48_SEG_00",
+      "centre": [
+        2.0844,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.6212000000000002,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_TORP_Mk48_SEG_01",
+      "centre": [
+        0.5790000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.3896,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_TORP_Mk48_SEG_02",
+      "centre": [
+        -1.1580000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.0844,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_TORP_Mk48_SEG_03",
+      "centre": [
+        -2.4318,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.9264,
+        0.8546811764705883,
+        0.8546811764705883
+      ]
+    }
+  ],
+  "collision_fbx": "US_TORP_Mk48_COLLISION.fbx",
+  "collision_sha256": "990776f191c20450ac219447038343b69b50e5fd057fc5dbe58700894aae41b0"
+}

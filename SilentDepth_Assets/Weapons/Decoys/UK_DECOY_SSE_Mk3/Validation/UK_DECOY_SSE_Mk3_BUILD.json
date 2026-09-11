@@ -1,0 +1,164 @@
+{
+  "weapon_id": "UK_DECOY_SSE_Mk3",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "decoy",
+  "declared_length_m": 0.6,
+  "declared_diameter_m": 0.2,
+  "built_length_m": 0.6,
+  "built_max_diameter_m": 0.216,
+  "lod": {
+    "LOD0": {
+      "objects": 3,
+      "vertices": 602,
+      "triangles": 996
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 290,
+      "triangles": 480
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 194,
+      "triangles": 320
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 122,
+      "triangles": 200
+    }
+  },
+  "collision": {
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24
+  },
+  "collision_boxes": 2,
+  "collision_segments": [
+    "UCX_WPN_UK_DECOY_SSE_Mk3_SEG_00",
+    "UCX_WPN_UK_DECOY_SSE_Mk3_SEG_01"
+  ],
+  "bounds": {
+    "x": [
+      -0.30000001192092896,
+      0.30000001192092896
+    ],
+    "y": [
+      -0.1080000028014183,
+      0.1080000028014183
+    ],
+    "z": [
+      -0.1080000028014183,
+      0.1080000028014183
+    ],
+    "dimensions_m": [
+      0.6000000238418579,
+      0.2160000056028366,
+      0.2160000056028366
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/UK_DECOY_SSE_Mk3_LOD0.fbx",
+        "mirror": "FBX/UK_DECOY_SSE_Mk3_LOD0.fbx",
+        "sha256": "cb43f7edbb7ac4ed42b4d02103269a9993268d7473b52d414f2448ff9fe45c97",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/UK_DECOY_SSE_Mk3_LOD1.fbx",
+        "mirror": "FBX/UK_DECOY_SSE_Mk3_LOD1.fbx",
+        "sha256": "728f07a21c976f12f096b3e876811b0a6e3c8127d56ce9b29f189e143db799b7",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/UK_DECOY_SSE_Mk3_LOD2.fbx",
+        "mirror": "FBX/UK_DECOY_SSE_Mk3_LOD2.fbx",
+        "sha256": "967e6907cf7e96e025e83c4e136ea82941d9499e4b3d7401256628f082620f5f",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/UK_DECOY_SSE_Mk3_LOD3.fbx",
+        "mirror": "FBX/UK_DECOY_SSE_Mk3_LOD3.fbx",
+        "sha256": "11d6bef90ac895c8e971b018b61286db89ac7ab80183b2f2ceeb3ccf31aa19c8",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/UK_DECOY_SSE_Mk3_COLLISION.fbx",
+      "sha256": "842655a350789523e70386e1e4071dd22c8d040c75feba189ecd39425d8bc660"
+    },
+    "collision_manifest": {
+      "path": "Collision/UK_DECOY_SSE_Mk3_COLLISION.json",
+      "sha256": "5853499b3c1b7b84a991f6a2459fd157eee7cfac2d2aa93af81f1a0ba151578e"
+    }
+  },
+  "build_seconds": 0.65,
+  "preview_seconds": {
+    "PERSPECTIVE": 1.87,
+    "SIDE": 0.32,
+    "FRONT": 0.3,
+    "TOP": 0.3,
+    "DETAIL": 0.32,
+    "ICON": 0.33
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "UK_DECOY_SSE_Mk3_DETAIL_128.png",
+    "UK_DECOY_SSE_Mk3_DETAIL_256.png",
+    "UK_DECOY_SSE_Mk3_DETAIL_512.png",
+    "UK_DECOY_SSE_Mk3_FRONT_128.png",
+    "UK_DECOY_SSE_Mk3_FRONT_256.png",
+    "UK_DECOY_SSE_Mk3_FRONT_512.png",
+    "UK_DECOY_SSE_Mk3_ICON_128.png",
+    "UK_DECOY_SSE_Mk3_ICON_256.png",
+    "UK_DECOY_SSE_Mk3_ICON_512.png",
+    "UK_DECOY_SSE_Mk3_PERSPECTIVE_128.png",
+    "UK_DECOY_SSE_Mk3_PERSPECTIVE_256.png",
+    "UK_DECOY_SSE_Mk3_PERSPECTIVE_512.png",
+    "UK_DECOY_SSE_Mk3_SIDE_128.png",
+    "UK_DECOY_SSE_Mk3_SIDE_256.png",
+    "UK_DECOY_SSE_Mk3_SIDE_512.png",
+    "UK_DECOY_SSE_Mk3_TOP_128.png",
+    "UK_DECOY_SSE_Mk3_TOP_256.png",
+    "UK_DECOY_SSE_Mk3_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/UK_DECOY_SSE_Mk3_MASTER.blend",
+      "sha256": "8f14aff05d0a8dea5c9dd38077e697751751d9b3f43ef3c66e013c9b3d5c429e"
+    },
+    "source": {
+      "path": "Source/UK_DECOY_SSE_Mk3_SOURCE.json",
+      "sha256": "9f1149a0a1942f92fc8438e9dbd66aadbeba01bc97a98dc766e6ae8b2f239f45"
+    },
+    "spec": {
+      "path": "Documentation/UK_DECOY_SSE_Mk3_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/UK_DECOY_SSE_Mk3_README.md"
+    }
+  }
+}

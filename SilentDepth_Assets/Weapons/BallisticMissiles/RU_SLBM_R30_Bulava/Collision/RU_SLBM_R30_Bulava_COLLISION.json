@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_SLBM_R30_Bulava",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_SLBM_R30_Bulava_SEG_00",
+      "centre": [
+        4.356,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.3880000000000003,
+        0.7,
+        0.7
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SLBM_R30_Bulava_SEG_01",
+      "centre": [
+        1.21,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.904,
+        2.0,
+        2.0
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SLBM_R30_Bulava_SEG_02",
+      "centre": [
+        -2.42,
+        0.0,
+        0.0
+      ],
+      "size": [
+        4.356,
+        2.0,
+        2.0
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SLBM_R30_Bulava_SEG_03",
+      "centre": [
+        -5.082,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.936,
+        2.0,
+        2.0
+      ]
+    }
+  ],
+  "collision_fbx": "RU_SLBM_R30_Bulava_COLLISION.fbx",
+  "collision_sha256": "ca0e1614bbdbed5ee7a1103d5c611daa8b8889add6834ee812ea8d38b9d142c4"
+}

@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_TORP_SAET60",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_TORP_SAET60_SEG_00",
+      "centre": [
+        2.52,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.9600000000000002,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_SAET60_SEG_01",
+      "centre": [
+        0.7000000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.68,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_SAET60_SEG_02",
+      "centre": [
+        -1.4000000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.52,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_SAET60_SEG_03",
+      "centre": [
+        -2.94,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.12,
+        0.7411783039215687,
+        0.7411783039215687
+      ]
+    }
+  ],
+  "collision_fbx": "RU_TORP_SAET60_COLLISION.fbx",
+  "collision_sha256": "985b6146a412176398300d9823d9566931c34b9723fdb390fe5705baa46ffba0"
+}

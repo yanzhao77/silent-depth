@@ -1,0 +1,104 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_STRAT_RegulusII",
+  "display_name": "SSM-N-8B Regulus II",
+  "short_name": "Regulus II",
+  "country": "USA",
+  "category": "STRAT",
+  "family": "US_STRAT_RegulusII",
+  "role": "潜射战略巡航导弹（取消项目）",
+  "subrole": "Early_Strategic",
+  "tier": 4,
+  "tier_reason": "游戏 T4 战略巡航节点：取消的历史项目，用于展示早期战略巡航武器分支。",
+  "era": "Cold War",
+  "service_years": "1958（取消）",
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "CANISTER"
+  ],
+  "dimensions": {
+    "length_m": 17.5,
+    "diameter_m": 1.5,
+    "mass_kg": 10400,
+    "scale_source": "ESTIMATED",
+    "scale_note": "取消项目，公开资料尺寸为级别近似值。"
+  },
+  "geometry": {
+    "kind": "cruise_missile",
+    "features": [
+      "large_fixed_wing",
+      "canister_body",
+      "cancelled_project",
+      "solid_booster",
+      "supersonic_body"
+    ],
+    "params": {
+      "nose": "pointed",
+      "nose_len_ratio": 3.4,
+      "body_shape": "cylinder",
+      "wing_type": "fixed",
+      "wing_pairs": 1,
+      "wing_span_ratio": 4.4,
+      "wing_chord_ratio": 1.2,
+      "wing_position": 0.42,
+      "wing_sweep_deg": 45.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 2.0,
+      "tail_chord_ratio": 0.9,
+      "intake_type": "nose",
+      "intake_position": 0.2,
+      "intake_len_ratio": 1.2,
+      "booster": 1,
+      "booster_len_ratio": 0.28,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 0,
+      "canister": 1
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/US_STRAT_RegulusII_MASTER.blend",
+    "lod": [
+      "LOD/US_STRAT_RegulusII_LOD0.fbx",
+      "LOD/US_STRAT_RegulusII_LOD1.fbx",
+      "LOD/US_STRAT_RegulusII_LOD2.fbx",
+      "LOD/US_STRAT_RegulusII_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_STRAT_RegulusII_LOD0.fbx",
+      "FBX/US_STRAT_RegulusII_LOD1.fbx",
+      "FBX/US_STRAT_RegulusII_LOD2.fbx",
+      "FBX/US_STRAT_RegulusII_LOD3.fbx"
+    ],
+    "collision": "Collision/US_STRAT_RegulusII_COLLISION.fbx",
+    "collision_manifest": "Collision/US_STRAT_RegulusII_COLLISION.json",
+    "source": "Source/US_STRAT_RegulusII_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3456,
+    "LOD1": 1188,
+    "LOD2": 628,
+    "LOD3": 424
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 17.5,
+  "built_max_diameter_m": 5.08632,
+  "scale_source": "ESTIMATED",
+  "scale_note": "取消项目，公开资料尺寸为级别近似值。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

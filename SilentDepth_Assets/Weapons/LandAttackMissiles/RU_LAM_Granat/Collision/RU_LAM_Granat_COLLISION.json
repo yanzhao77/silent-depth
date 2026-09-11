@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_LAM_Granat",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_LAM_Granat_SEG_00",
+      "centre": [
+        2.916,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.2680000000000002,
+        0.1855,
+        0.1855
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_LAM_Granat_SEG_01",
+      "centre": [
+        0.81,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.944,
+        0.53,
+        0.53
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_LAM_Granat_SEG_02",
+      "centre": [
+        -1.62,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.916,
+        0.53,
+        0.53
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_LAM_Granat_SEG_03",
+      "centre": [
+        -3.4019999999999997,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.296,
+        2.4918313725490195,
+        2.4918313725490195
+      ]
+    }
+  ],
+  "collision_fbx": "RU_LAM_Granat_COLLISION.fbx",
+  "collision_sha256": "48f5479967bc0d6c2c72be0124fcb59c5343a3f31473049632b37d4c1fa9f95a"
+}

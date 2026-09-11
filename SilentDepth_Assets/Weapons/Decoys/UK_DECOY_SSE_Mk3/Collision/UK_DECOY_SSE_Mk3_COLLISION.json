@@ -1,0 +1,35 @@
+{
+  "weapon_id": "UK_DECOY_SSE_Mk3",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_UK_DECOY_SSE_Mk3_SEG_00",
+      "centre": [
+        -0.132,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.336,
+        0.2,
+        0.2
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_DECOY_SSE_Mk3_SEG_01",
+      "centre": [
+        0.12,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.36,
+        0.15000000000000002,
+        0.15000000000000002
+      ]
+    }
+  ],
+  "collision_fbx": "UK_DECOY_SSE_Mk3_COLLISION.fbx",
+  "collision_sha256": "842655a350789523e70386e1e4071dd22c8d040c75feba189ecd39425d8bc660"
+}

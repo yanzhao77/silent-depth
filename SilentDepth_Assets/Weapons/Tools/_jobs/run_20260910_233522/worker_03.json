@@ -1,0 +1,63 @@
+{
+  "batch_index": 3,
+  "generated_at": "2026-09-10",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "US_TORP_Mk37",
+      "display_name": "Mk 37 Mod 0 torpedo",
+      "short_name": "Mk37",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk37",
+      "country": "USA",
+      "role": "冷战早期反潜鱼雷",
+      "subrole": "Acoustic_Homing",
+      "era": "Cold War",
+      "service_years": "1956-1970s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 早期成熟鱼雷：首个批量装备核潜艇的电动反潜鱼雷。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 4.83,
+        "diameter_m": 0.483,
+        "mass_kg": 635,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料口径 48 厘米级。"
+      },
+      "body_diameter_m": 0.483,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "small_diameter",
+          "acoustic_homing"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.8,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.7,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,172 @@
+{
+  "weapon_id": "US_STRAT_RegulusII",
+  "category": "STRAT",
+  "tier": 4,
+  "asset_priority": "LOW",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\US_STRAT_RegulusII",
+  "result": "PASS",
+  "label": "TESTED",
+  "issues": [],
+  "checks": {
+    "files": {
+      "Blend/{id}_MASTER.blend": true,
+      "FBX/{id}_LOD0.fbx": true,
+      "FBX/{id}_LOD1.fbx": true,
+      "FBX/{id}_LOD2.fbx": true,
+      "FBX/{id}_LOD3.fbx": true,
+      "Collision/{id}_COLLISION.fbx": true,
+      "Documentation/{id}_SPEC.json": true,
+      "Documentation/{id}_README.md": true
+    },
+    "fbx_binary_versions": {
+      "US_STRAT_RegulusII_LOD0.fbx": 7400,
+      "US_STRAT_RegulusII_LOD1.fbx": 7400,
+      "US_STRAT_RegulusII_LOD2.fbx": 7400,
+      "US_STRAT_RegulusII_LOD3.fbx": 7400,
+      "US_STRAT_RegulusII_COLLISION.fbx": 7400
+    },
+    "geometry": {
+      "LOD0": {
+        "expected_vertices": 1844,
+        "expected_triangles": 3456,
+        "expected_length_m": 17.5
+      },
+      "LOD1": {
+        "expected_vertices": 660,
+        "expected_triangles": 1188,
+        "expected_length_m": 17.5
+      },
+      "LOD2": {
+        "expected_vertices": 332,
+        "expected_triangles": 628,
+        "expected_length_m": 17.5
+      },
+      "LOD3": {
+        "expected_vertices": 230,
+        "expected_triangles": 424,
+        "expected_length_m": 17.5
+      }
+    },
+    "build": {
+      "blender": "5.2.1 LTS",
+      "build_seconds": 0.61,
+      "collision_boxes": 4,
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 1844,
+          "triangles": 3456
+        },
+        "LOD1": {
+          "objects": 6,
+          "vertices": 660,
+          "triangles": 1188
+        },
+        "LOD2": {
+          "objects": 5,
+          "vertices": 332,
+          "triangles": 628
+        },
+        "LOD3": {
+          "objects": 5,
+          "vertices": 230,
+          "triangles": 424
+        }
+      }
+    },
+    "fbx_roundtrip": {
+      "result": "PASS",
+      "lod_triangles": {
+        "LOD0": 3456,
+        "LOD1": 1188,
+        "LOD2": 628,
+        "LOD3": 424
+      },
+      "collision_objects": 4
+    },
+    "previews": {
+      "Preview/Hero.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 71.63,
+        "min_luminance": 20,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Profile.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 66.77,
+        "min_luminance": 20,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Top.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 65.97,
+        "min_luminance": 37,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Detail.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 79.48,
+        "min_luminance": 26,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Icon_128.png": {
+        "status": "OK",
+        "resolution": [
+          128,
+          128
+        ],
+        "mean_luminance": 23.07,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1438
+      },
+      "Preview/Icon_256.png": {
+        "status": "OK",
+        "resolution": [
+          256,
+          256
+        ],
+        "mean_luminance": 23.14,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1404
+      },
+      "Preview/Icon_512.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 23.14,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.139
+      }
+    }
+  },
+  "sha256": {
+    "master": "c9a420f808d9ed2773f427a544584c06620d4c7aaeb554be89ca9d13ad862af3",
+    "lod0": "38701746e6e4c7d9f898841319b988e8da7eb462510ed26529ad0bff2ba7b9a1"
+  },
+  "validated_at": "2026-09-11"
+}

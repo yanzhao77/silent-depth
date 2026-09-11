@@ -1,0 +1,4853 @@
+{
+  "audit": "SubmarineWeaponIntegrationAudit",
+  "generated_at": "2026-09-11",
+  "scope": "All SSN/SSBN assets inherited from the GLOBAL SUBMARINE TECHNOLOGY TREE.",
+  "source_of_truth": {
+    "submarine_manifest": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Manifest\\submarine_manifest.json",
+    "submarine_database": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Documentation\\GLOBAL_SUBMARINE_DATABASE.json"
+  },
+  "policy": [
+    "Existing submarine models are inherited; this audit does not modify them.",
+    "Weapon integration uses additive presentation-layer sockets only.",
+    "Missing launch interface data stays null/UNKNOWN rather than being guessed."
+  ],
+  "totals": {
+    "submarines": 54,
+    "with_master_blend": 3,
+    "with_full_lod_set": 3,
+    "with_collision": 3,
+    "with_launch_interface": 54,
+    "tier_coverage": {
+      "T1": 0,
+      "T2": 5,
+      "T3": 2,
+      "T4": 8,
+      "T5": 5,
+      "T6": 5,
+      "T7": 4,
+      "T8": 8,
+      "T9": 8,
+      "T10": 9
+    }
+  },
+  "entries": [
+    {
+      "asset_id": "US_SSN_Skipjack",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Skipjack",
+      "project": null,
+      "tier": 2,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\USA\\Skipjack",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSN_Skipjack_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_FAS",
+          "US_NAVY"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 76.8,
+        "beam": 9.7
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSN_Sturgeon",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Sturgeon",
+      "project": null,
+      "tier": 4,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\USA\\Sturgeon",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSN_Sturgeon_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_FAS",
+          "US_NAVY"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 89.1,
+        "beam": 9.7
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSN_LosAngeles",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Los Angeles",
+      "project": "688/688i",
+      "tier": 6,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\USA\\Los_Angeles",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSN_LosAngeles_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_NAVY",
+          "US_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": 12,
+        "diameter_mm": null,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_NAVY",
+          "US_FAS"
+        ]
+      },
+      "vertical_launch": {
+        "present": true,
+        "cells": 12,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_NAVY",
+          "US_FAS"
+        ]
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 109.7,
+        "beam": 10.1
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSN_Seawolf",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Seawolf",
+      "project": null,
+      "tier": 8,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\USA\\Seawolf",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSN_Seawolf_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 8,
+        "diameter_mm": 660,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_NAVY"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 107.6,
+        "beam": 12.2
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSN_Virginia",
+      "country": "USA",
+      "type": "SSN",
+      "class": "Virginia",
+      "project": "Blocks I-V",
+      "tier": 9,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\USA\\Virginia",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSN_Virginia_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_NAVY",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": 12,
+        "diameter_mm": null,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_NAVY",
+          "GAME_DESIGN"
+        ]
+      },
+      "vertical_launch": {
+        "present": true,
+        "cells": 12,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_NAVY",
+          "GAME_DESIGN"
+        ]
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 114.8,
+        "beam": 10.4
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSBN_GeorgeWashington",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "George Washington",
+      "project": null,
+      "tier": 2,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\USA\\George_Washington",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSBN_GeorgeWashington_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 116.3,
+        "beam": 10.1
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSBN_EthanAllen",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Ethan Allen",
+      "project": null,
+      "tier": 3,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\USA\\Ethan_Allen",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSBN_EthanAllen_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 125.0,
+        "beam": 10.1
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSBN_Lafayette",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Lafayette",
+      "project": null,
+      "tier": 4,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\USA\\Lafayette",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSBN_Lafayette_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_FAS",
+          "US_NAVY"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 129.5,
+        "beam": 10.1
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSBN_JamesMadison",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "James Madison",
+      "project": null,
+      "tier": 4,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\USA\\James_Madison",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSBN_JamesMadison_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 129.5,
+        "beam": 10.1
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSBN_BenjaminFranklin",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Benjamin Franklin",
+      "project": null,
+      "tier": 5,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\USA\\Benjamin_Franklin",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_Benjamin_Franklin_class_submarin.gif",
+          "02_Benjamin_Franklin_Class_SSBN_640.webp",
+          "04_Benjamin_Franklin_Class_SSBN_640.webp",
+          "05_Benjamin_Franklin_Class_SSBN_640.webp",
+          "06_Submarine_Photo_Index.jpg",
+          "PROVENANCE.json",
+          "US_SSBN_BenjaminFranklin_README.md",
+          "US_SSBN_BenjaminFranklin_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 129.5,
+        "beam": 10.1
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSBN_Ohio",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Ohio",
+      "project": null,
+      "tier": 8,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\USA\\Ohio",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "US_SSBN_Ohio_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "US_FAS",
+          "US_NAVY"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 170.7,
+        "beam": 12.8
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "US_SSBN_Columbia",
+      "country": "USA",
+      "type": "SSBN",
+      "class": "Columbia",
+      "project": null,
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\USA\\Columbia",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_Columbia_class_submarine_Wikiped.jpg",
+          "02_Columbia_class_submarine_Wikiped.jpg",
+          "05_New_Submarines_Compared_Columbia.jpg",
+          "07_First_Columbia_class_Sub_Trackin.jpg",
+          "PROVENANCE.json",
+          "US_SSBN_Columbia_README.md",
+          "US_SSBN_Columbia_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "US_NAVY",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 171.0,
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSN_November",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "November",
+      "project": "Project 627",
+      "tier": 2,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\November",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "RU_SSN_November_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 107.0,
+        "beam": 7.9
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSN_Victor",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Victor",
+      "project": "Projects 671/671RT/671RTM",
+      "tier": 4,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Victor",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "RU_SSN_Victor_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 93.0,
+        "beam": 10.6
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSN_Sierra",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Sierra",
+      "project": "Project 945",
+      "tier": 6,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Sierra",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "RU_SSN_Sierra_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 107.0,
+        "beam": 12.2
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSN_Akula",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Akula",
+      "project": "Project 971",
+      "tier": 7,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "VALIDATING",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula",
+      "master_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Blend\\RU_SSN_Akula_MASTER.blend",
+      "master_sha256": "ff3e119c443cd406c7bead7e6069a77aea504bfb17baa825ddee76fc83531d9f",
+      "lod0": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\FBX\\RU_SSN_Akula_LOD0.fbx",
+      "lod1": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\FBX\\RU_SSN_Akula_LOD1.fbx",
+      "lod2": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\FBX\\RU_SSN_Akula_LOD2.fbx",
+      "lod3": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\FBX\\RU_SSN_Akula_LOD3.fbx",
+      "lod_fbx_versions": {
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400
+      },
+      "collision": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Collision\\RU_SSN_Akula_COLLISION.fbx",
+      "collision_sha256": "59d984639778a64cf0b84fa5e1180f9f2651306f51706c41f9a775969e786219",
+      "asset_completeness": {
+        "has_master": true,
+        "has_lod0": true,
+        "has_lod1": true,
+        "has_lod2": true,
+        "has_lod3": true,
+        "has_collision": true,
+        "has_validation": true
+      },
+      "on_disk": {
+        "blend": [
+          "RU_SSN_Akula_MASTER.blend",
+          "RU_SSN_Akula_MASTER.blend1"
+        ],
+        "fbx": [
+          "RU_SSN_Akula_BOWPLANES.fbx",
+          "RU_SSN_Akula_LOD0.fbx",
+          "RU_SSN_Akula_LOD1.fbx",
+          "RU_SSN_Akula_LOD2.fbx",
+          "RU_SSN_Akula_LOD3.fbx",
+          "RU_SSN_Akula_PERISCOPE.fbx",
+          "RU_SSN_Akula_PROP.fbx",
+          "RU_SSN_Akula_RUDDER.fbx",
+          "RU_SSN_Akula_STERNPLANES.fbx"
+        ],
+        "collision": [
+          "RU_SSN_Akula_COLLISION.fbx"
+        ],
+        "lod": [],
+        "preview": [
+          "Deck.png",
+          "Hero.png",
+          "Profile.png",
+          "Rear.png",
+          "Reference_Overlay.png",
+          "Sail.png",
+          "Stern.png",
+          "Tail_QA.png"
+        ],
+        "textures": [
+          "T_Akula_Drawing_bottom.png",
+          "T_Akula_Drawing_hull.png",
+          "T_Akula_Hull_BaseColor.png",
+          "T_Akula_Hull_NormalDX.png",
+          "T_Akula_Hull_NormalGL.png",
+          "T_Akula_Hull_ORM.png",
+          "T_Akula_Reference_Bottom_BaseColor.png",
+          "T_Akula_Reference_Bottom_NormalGL.png",
+          "T_Akula_Reference_Bottom_ORM.png",
+          "T_Akula_Reference_Hull_BaseColor.png",
+          "T_Akula_Reference_Hull_NormalGL.png",
+          "T_Akula_Reference_Hull_ORM.png",
+          "T_Akula_Reference_Rubber_BaseColor.png",
+          "T_Akula_Reference_Rubber_NormalGL.png",
+          "T_Akula_Reference_Rubber_ORM.png",
+          "T_Akula_Rubber_BaseColor.png",
+          "T_Akula_Rubber_NormalDX.png",
+          "T_Akula_Rubber_NormalGL.png",
+          "T_Akula_Rubber_ORM.png"
+        ],
+        "validation": [
+          "DRAWING_CONTOURS.json",
+          "FBX_ROUNDTRIP.json",
+          "PREVIEW_PIXELS.json",
+          "RU_SSN_Akula_FACTORY_VALIDATION.json",
+          "RU_SSN_Akula_VALIDATION.json"
+        ],
+        "documentation": [
+          "01_side_render.png",
+          "02_blueprint.png",
+          "03_line_drawing.png",
+          "04_russian_scheme.png",
+          "RU_SSN_Akula_README.md",
+          "RU_SSN_Akula_REFERENCES.json",
+          "RU_SSN_Akula_SPEC.json"
+        ],
+        "source": [
+          "akula_drawing_geometry.cpython-313.pyc",
+          "akula_drawing_geometry.py",
+          "build_akula_drawing.py",
+          "build_akula_legacy.py",
+          "build_akula_reference.cpython-313.pyc",
+          "build_akula_reference.py",
+          "drawing_overlay.py",
+          "validate_akula_drawing.py"
+        ]
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 8,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 110.3,
+        "beam": 13.6
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSN_Yasen",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Yasen",
+      "project": "Project 885",
+      "tier": 9,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "VALIDATING",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen",
+      "master_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\Blend\\RU_SSN_Yasen_MASTER.blend",
+      "master_sha256": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca",
+      "lod0": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\FBX\\RU_SSN_Yasen_LOD0.fbx",
+      "lod1": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\FBX\\RU_SSN_Yasen_LOD1.fbx",
+      "lod2": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\FBX\\RU_SSN_Yasen_LOD2.fbx",
+      "lod3": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\FBX\\RU_SSN_Yasen_LOD3.fbx",
+      "lod_fbx_versions": {
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400
+      },
+      "collision": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Yasen\\Collision\\RU_SSN_Yasen_COLLISION.fbx",
+      "collision_sha256": "dbcb28e3eb4cbe7bada436377e3c3696b557196a157842059b47697c864a0f63",
+      "asset_completeness": {
+        "has_master": true,
+        "has_lod0": true,
+        "has_lod1": true,
+        "has_lod2": true,
+        "has_lod3": true,
+        "has_collision": true,
+        "has_validation": true
+      },
+      "on_disk": {
+        "blend": [
+          "RU_SSN_Yasen_MASTER.blend",
+          "RU_SSN_Yasen_MASTER.blend1"
+        ],
+        "fbx": [
+          "RU_SSN_Yasen_LOD0.fbx",
+          "RU_SSN_Yasen_LOD1.fbx",
+          "RU_SSN_Yasen_LOD2.fbx",
+          "RU_SSN_Yasen_LOD3.fbx"
+        ],
+        "collision": [
+          "RU_SSN_Yasen_COLLISION.fbx"
+        ],
+        "lod": [],
+        "preview": [
+          "Deck.png",
+          "Gray_Deck.png",
+          "Gray_Hero.png",
+          "Gray_Profile.png",
+          "Hero.png",
+          "Profile.png",
+          "Propeller.png",
+          "Rear.png",
+          "Sail.png",
+          "Stern.png",
+          "back.png",
+          "contact_sheet.png",
+          "evidence.json",
+          "front.png",
+          "left.png",
+          "perspective.png",
+          "right.png",
+          "top.png"
+        ],
+        "textures": [
+          "T_YasenV2_Hull_BaseColor.png"
+        ],
+        "validation": [
+          "BAS_LOD0.json",
+          "FACTORY_V2.json",
+          "GRAYBOX.json",
+          "ROUNDTRIP_V2.json",
+          "RU_SSN_Yasen_VALIDATION.json"
+        ],
+        "documentation": [
+          "RU_SSN_Yasen_README.md",
+          "RU_SSN_Yasen_SPEC.json",
+          "contract.md",
+          "final_report.json",
+          "reference_notes.md"
+        ],
+        "source": [
+          "build_yasen_v2.py",
+          "finalize_yasen_v2.py",
+          "validate_yasen_v2.py",
+          "yasen_geometry.py"
+        ]
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 10,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": 32,
+        "diameter_mm": null,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "vertical_launch": {
+        "present": true,
+        "cells": 32,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 139.0,
+        "beam": 13.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSN_YasenM",
+      "country": "Russia",
+      "type": "SSN",
+      "class": "Yasen-M",
+      "project": "Project 885M",
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": null,
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {},
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 10,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "missile_tubes": {
+        "count": 32,
+        "diameter_mm": null,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "vertical_launch": {
+        "present": true,
+        "cells": 32,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "RU_SHIPS",
+          "RU_FAS"
+        ]
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 130.0,
+        "beam": 13.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_Hotel",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Hotel",
+      "project": "Project 658",
+      "tier": 2,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Hotel",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "RU_SSBN_Hotel_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_FAS",
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 114.0,
+        "beam": 9.2
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_Yankee",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Yankee",
+      "project": "Project 667A",
+      "tier": 4,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Yankee",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "RU_SSBN_Yankee_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_FAS",
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 128.0,
+        "beam": 11.7
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaI",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta I",
+      "project": "Project 667B",
+      "tier": 5,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Delta_I",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_line_drawing.png",
+          "02_naval_technology_profile.jpg",
+          "03_delta1_navalen.png",
+          "04_sevmash_k1.jpg",
+          "05_delta1_silhouette.png",
+          "06_delta1_photo.jpg",
+          "07_delta1_profile.png",
+          "08_delta1_murena_photo.jpg",
+          "09_delta1_blueprint.png",
+          "PROVENANCE.json",
+          "RU_SSBN_DeltaI_README.md",
+          "RU_SSBN_DeltaI_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_FAS",
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 139.0,
+        "beam": 11.7
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaII",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta II",
+      "project": "Project 667BD",
+      "tier": 5,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Delta_II",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_line_drawing.png",
+          "02_photo.jpg",
+          "03_667b_photo.jpg",
+          "04_delta2_silhouette.png",
+          "05_delta2_photo2.jpg",
+          "06_delta2_photo3.jpg",
+          "07_delta2_nuclear.jpg",
+          "PROVENANCE.json",
+          "RU_SSBN_DeltaII_README.md",
+          "RU_SSBN_DeltaII_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_FAS",
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 155.0,
+        "beam": 11.7
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIII",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta III",
+      "project": "Project 667BDR",
+      "tier": 6,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Delta_III",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_delta3.gif",
+          "02_delta3.jpg",
+          "03_delta3.jpg",
+          "04_delta3.png",
+          "05_delta3.jpg",
+          "06_delta3.jpg",
+          "PROVENANCE.json",
+          "RU_SSBN_DeltaIII_README.md",
+          "RU_SSBN_DeltaIII_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_FAS",
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 155.0,
+        "beam": 11.7
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_DeltaIV",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Delta IV",
+      "project": "Project 667BDRM",
+      "tier": 7,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Delta_IV",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_delta4.png",
+          "02_delta4.png",
+          "03_delta4.png",
+          "04_delta4.jpg",
+          "05_delta4.jpg",
+          "06_delta4.jpg",
+          "PROVENANCE.json",
+          "RU_SSBN_DeltaIV_README.md",
+          "RU_SSBN_DeltaIV_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_FAS",
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 167.0,
+        "beam": 11.7
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_Typhoon",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Typhoon",
+      "project": "Project 941",
+      "tier": 8,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "VALIDATING",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941",
+      "master_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Blend\\RU_SSBN_Typhoon_MASTER.blend",
+      "master_sha256": "ea99ac3605d32514a53ce215cff795340d6d3842c6433d90bd429254e9f562f9",
+      "lod0": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\FBX\\RU_SSBN_Typhoon_LOD0.fbx",
+      "lod1": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\FBX\\RU_SSBN_Typhoon_LOD1.fbx",
+      "lod2": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\FBX\\RU_SSBN_Typhoon_LOD2.fbx",
+      "lod3": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\FBX\\RU_SSBN_Typhoon_LOD3.fbx",
+      "lod_fbx_versions": {
+        "lod0": 7400,
+        "lod1": 7400,
+        "lod2": 7400,
+        "lod3": 7400
+      },
+      "collision": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Typhoon_Project941\\Collision\\RU_SSBN_Typhoon_COLLISION.fbx",
+      "collision_sha256": "66894182bec3f126c662ce43fdef843091c5de1663f719a4a6bcf7ce3ab8a679",
+      "asset_completeness": {
+        "has_master": true,
+        "has_lod0": true,
+        "has_lod1": true,
+        "has_lod2": true,
+        "has_lod3": true,
+        "has_collision": true,
+        "has_validation": true
+      },
+      "on_disk": {
+        "blend": [
+          "RU_SSBN_Typhoon_MASTER.blend"
+        ],
+        "fbx": [
+          "RU_SSBN_Typhoon_LOD0.fbx",
+          "RU_SSBN_Typhoon_LOD1.fbx",
+          "RU_SSBN_Typhoon_LOD2.fbx",
+          "RU_SSBN_Typhoon_LOD3.fbx"
+        ],
+        "collision": [
+          "RU_SSBN_Typhoon_COLLISION.fbx"
+        ],
+        "lod": [],
+        "preview": [
+          "Deck.png",
+          "Hero.png",
+          "Profile.png",
+          "Sail.png",
+          "Stern.png"
+        ],
+        "textures": [
+          "T_Typhoon_Hull_BaseColor.png",
+          "T_Typhoon_Hull_NormalDX.png",
+          "T_Typhoon_Hull_NormalGL.png",
+          "T_Typhoon_Hull_ORM.png",
+          "T_Typhoon_Rubber_BaseColor.png",
+          "T_Typhoon_Rubber_NormalDX.png",
+          "T_Typhoon_Rubber_NormalGL.png",
+          "T_Typhoon_Rubber_ORM.png"
+        ],
+        "validation": [
+          "RU_SSBN_Typhoon_FACTORY_VALIDATION.json",
+          "RU_SSBN_Typhoon_VALIDATION.json"
+        ],
+        "documentation": [
+          "RU_SSBN_Typhoon_README.md",
+          "RU_SSBN_Typhoon_SPEC.json"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_FAS",
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 175.0,
+        "beam": 23.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_Borei",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Borei",
+      "project": "Project 955",
+      "tier": 9,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\Russia\\Borei",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "RU_SSBN_Borei_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 170.0,
+        "beam": 13.5
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "RU_SSBN_BoreiA",
+      "country": "Russia",
+      "type": "SSBN",
+      "class": "Borei-A",
+      "project": "Project 955A",
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": null,
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {},
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "RU_SHIPS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 170.0,
+        "beam": 13.5
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSN_Dreadnought",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Dreadnought",
+      "project": "HMS Dreadnought S101",
+      "tier": 2,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\UK\\Dreadnought",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "UK_SSN_Dreadnought_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "UK_RN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 81.0,
+        "beam": 9.8
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSN_Valiant",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Valiant",
+      "project": null,
+      "tier": 3,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\UK\\Valiant",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "UK_SSN_Valiant_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "UK_RN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 86.9,
+        "beam": 10.1
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSN_Swiftsure",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Swiftsure",
+      "project": null,
+      "tier": 5,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\UK\\Swiftsure",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_HMS_Spartan_Faslane_1993.jpg",
+          "02_HMS_Superb.jpg",
+          "03_HMS_Superb_seaforces.jpg",
+          "04_HMS_Sceptre.jpg",
+          "PROVENANCE.json",
+          "UK_SSN_Swiftsure_README.md",
+          "UK_SSN_Swiftsure_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 5,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "UK_RN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 82.9,
+        "beam": 9.8
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSN_Trafalgar",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Trafalgar",
+      "project": null,
+      "tier": 6,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\UK\\Trafalgar",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "UK_SSN_Trafalgar_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 5,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "UK_RN",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 85.4,
+        "beam": 9.8
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSN_Astute",
+      "country": "UK",
+      "type": "SSN",
+      "class": "Astute",
+      "project": null,
+      "tier": 9,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\UK\\Astute",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "UK_SSN_Astute_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "UK_RN",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 97.0,
+        "beam": 11.3
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSN_AUKUS",
+      "country": "UK",
+      "type": "SSN",
+      "class": "SSN-AUKUS",
+      "project": null,
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": null,
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {},
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "UK_RN",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": "UNKNOWN",
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSBN_Resolution",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Resolution",
+      "project": null,
+      "tier": 4,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\UK\\Resolution",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "UK_SSBN_Resolution_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "UK_RN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 129.5,
+        "beam": 10.1
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSBN_Vanguard",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Vanguard",
+      "project": null,
+      "tier": 8,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\UK\\Vanguard",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "UK_SSBN_Vanguard_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "UK_RN",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 149.9,
+        "beam": 12.8
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "UK_SSBN_Dreadnought",
+      "country": "UK",
+      "type": "SSBN",
+      "class": "Dreadnought",
+      "project": null,
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\UK\\Dreadnought",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_Dreadnought_class_submarine_Wiki.webp",
+          "02_First_Submarine_To_Use_New_Steal.jpg",
+          "03_Dreadnought_Class_Nuclear_Powere.jpg",
+          "04_The_Dreadnought_Class_of_Submari.jpg",
+          "PROVENANCE.json",
+          "UK_SSBN_Dreadnought_README.md",
+          "UK_SSBN_Dreadnought_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "UK_RN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 154.0,
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "FR_SSN_Rubis",
+      "country": "France",
+      "type": "SSN",
+      "class": "Rubis",
+      "project": null,
+      "tier": 6,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\France\\Rubis",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "FR_SSN_Rubis_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "FR_DEFENSE"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 73.6,
+        "beam": 7.6
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "FR_SSN_Suffren",
+      "country": "France",
+      "type": "SSN",
+      "class": "Suffren",
+      "project": "Barracuda",
+      "tier": 9,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\France\\Suffren",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "FR_SSN_Suffren_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "FR_DEFENSE"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 99.5,
+        "beam": 8.8
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "FR_SSBN_LeRedoutable",
+      "country": "France",
+      "type": "SSBN",
+      "class": "Le Redoutable",
+      "project": null,
+      "tier": 4,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\France\\Le_Redoutable",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "FR_SSBN_LeRedoutable_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "FR_DEFENSE"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 128.7,
+        "beam": 10.6
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "FR_SSBN_LeTriomphant",
+      "country": "France",
+      "type": "SSBN",
+      "class": "Le Triomphant",
+      "project": null,
+      "tier": 8,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\France\\Le_Triomphant",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "FR_SSBN_LeTriomphant_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "FR_DEFENSE"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 138.0,
+        "beam": 12.5
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "FR_SSBN_SNLE3G",
+      "country": "France",
+      "type": "SSBN",
+      "class": "SNLE 3G",
+      "project": null,
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\France\\SNLE_3G",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_L_Invincible_class_submarine_Wik.png",
+          "02_New_Submarines_Compared_Columbia.jpg",
+          "03_France_s_Third_Generation_M51_3_.jpg",
+          "04_SNLE_3G_Programme_France.jpg",
+          "FR_SSBN_SNLE3G_README.md",
+          "FR_SSBN_SNLE3G_REFERENCE.md",
+          "PROVENANCE.json"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 4,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "FR_DEFENSE"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": "UNKNOWN",
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSN_Type091",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 091",
+      "project": "Han",
+      "tier": 4,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\China\\Type_091",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "CN_SSN_Type091_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 98.0,
+        "beam": 10.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSN_Type093",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093",
+      "project": "Shang",
+      "tier": 7,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\China\\Type_093",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "CN_SSN_Type093_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 107.0,
+        "beam": 11.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSN_Type093A",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093A",
+      "project": "Shang variant",
+      "tier": 8,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\China\\Type_093A",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "CN_SSN_Type093A_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": 107.0,
+        "beam": 11.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSN_Type093B",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 093B",
+      "project": "Shang SSGN-related variant",
+      "tier": 9,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\China\\Type_093B",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "CN_SSN_Type093B_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS"
+        ]
+      },
+      "missile_tubes": {
+        "count": 12,
+        "diameter_mm": null,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS"
+        ]
+      },
+      "vertical_launch": {
+        "present": true,
+        "cells": 12,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS"
+        ]
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": "UNKNOWN",
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSN_Type095",
+      "country": "China",
+      "type": "SSN",
+      "class": "Type 095",
+      "project": null,
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\China\\Type_095",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_China_s_Own_Seawolf_class_Submar.jpg",
+          "02_Chinese_Type_09V_Next_Generation.jpg",
+          "04_Chinese_Navy_Steps_Closer_To_New.jpg",
+          "05_China_s_New_Type_095_Nuclear_Att.jpg",
+          "CN_SSN_Type095_README.md",
+          "CN_SSN_Type095_REFERENCE.md",
+          "PROVENANCE.json"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "CN_GS",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": 12,
+        "diameter_mm": null,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "CN_GS",
+          "GAME_DESIGN"
+        ]
+      },
+      "vertical_launch": {
+        "present": true,
+        "cells": 12,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "CN_GS",
+          "GAME_DESIGN"
+        ]
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "propulsor",
+        "torpedo_tube_door"
+      ],
+      "dimensions_m": {
+        "length": "UNKNOWN",
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSBN_Type092",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 092",
+      "project": "Xia",
+      "tier": 5,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\China\\Type_092",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "02_Type_092_NATO_Xia_class_SSBN_198.jpg",
+          "03_PLAN_Type_092_Xia_Class_SSBN_059.jpg",
+          "05_PLAN_Type_092_Xia_Class_SSBN_059.jpg",
+          "06_Type_92_Xia_China_Nuclear_Forces.jpg",
+          "08_705910_1_144_PLAN_Type_092_Xia_C.jpg",
+          "CN_SSBN_Type092_README.md",
+          "CN_SSBN_Type092_REFERENCE.md",
+          "PROVENANCE.json"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 120.0,
+        "beam": 10.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSBN_Type094",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 094",
+      "project": "Jin",
+      "tier": 8,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\China\\Type_094",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "CN_SSBN_Type094_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 135.0,
+        "beam": 12.5
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSBN_Type094A",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 094A",
+      "project": "Jin variant",
+      "tier": 9,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\China\\Type_094A",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "CN_SSBN_Type094A_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "PUBLIC",
+        "sources": [
+          "CN_GS",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 135.0,
+        "beam": 12.5
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "CN_SSBN_Type096",
+      "country": "China",
+      "type": "SSBN",
+      "class": "Type 096",
+      "project": null,
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\China\\Type_096",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "01_Tang_class_submarine_Wikipedia.jpg",
+          "02_China_s_Type_096_Ballistic_Missi.jpg",
+          "03_Type_096_ballistic_missile_subma.jpg",
+          "04_Type_096_China_s_Advanced_Nuclea.png",
+          "CN_SSBN_Type096_README.md",
+          "CN_SSBN_Type096_REFERENCE.md",
+          "PROVENANCE.json"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "CN_GS",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": "UNKNOWN",
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "IN_SSBN_Arihant",
+      "country": "India",
+      "type": "SSBN",
+      "class": "Arihant",
+      "project": null,
+      "tier": 7,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\India\\Arihant",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "IN_SSBN_Arihant_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "IN_DRDO"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 111.0,
+        "beam": 11.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "IN_SSBN_Arighaat",
+      "country": "India",
+      "type": "SSBN",
+      "class": "Arighaat",
+      "project": null,
+      "tier": 8,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\India\\Arighaat",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "IN_SSBN_Arighaat_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "IN_DRDO"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": 111.0,
+        "beam": 11.0
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "IN_SSBN_S4",
+      "country": "India",
+      "type": "SSBN",
+      "class": "S4",
+      "project": null,
+      "tier": 9,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\India\\S4",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "IN_SSBN_S4_README.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "IN_DRDO",
+          "GAME_DESIGN"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": "UNKNOWN",
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    },
+    {
+      "asset_id": "IN_SSBN_S5",
+      "country": "India",
+      "type": "SSBN",
+      "class": "S5",
+      "project": null,
+      "tier": 10,
+      "variant": null,
+      "variants": [],
+      "manifest_status": "PLANNED",
+      "model_path": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSBN\\India\\S5",
+      "master_path": null,
+      "master_sha256": null,
+      "lod0": null,
+      "lod1": null,
+      "lod2": null,
+      "lod3": null,
+      "lod_fbx_versions": {
+        "lod0": null,
+        "lod1": null,
+        "lod2": null,
+        "lod3": null
+      },
+      "collision": null,
+      "collision_sha256": null,
+      "asset_completeness": {
+        "has_master": false,
+        "has_lod0": false,
+        "has_lod1": false,
+        "has_lod2": false,
+        "has_lod3": false,
+        "has_collision": false,
+        "has_validation": false
+      },
+      "on_disk": {
+        "blend": [],
+        "fbx": [],
+        "collision": [],
+        "lod": [],
+        "preview": [],
+        "textures": [],
+        "validation": [],
+        "documentation": [
+          "IN_SSBN_S5_README.md",
+          "IN_SSBN_S5_REFERENCE.md"
+        ],
+        "source": []
+      },
+      "sockets": [],
+      "socket_scan": {
+        "status": "NOT_RUN"
+      },
+      "torpedo_tubes": {
+        "count": 6,
+        "diameter_mm": 533,
+        "confidence": "ESTIMATED",
+        "sources": [
+          "GAME_DESIGN",
+          "IN_DRDO"
+        ]
+      },
+      "missile_tubes": {
+        "count": null,
+        "diameter_mm": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "vertical_launch": {
+        "present": false,
+        "cells": null,
+        "confidence": "UNKNOWN",
+        "sources": []
+      },
+      "payload_modules": [],
+      "weapon_mount_points": [],
+      "weapon_related_visual_features": [
+        "missile_hatch",
+        "propulsor",
+        "vertical_launch"
+      ],
+      "dimensions_m": {
+        "length": "UNKNOWN",
+        "beam": "UNKNOWN"
+      },
+      "integration_status": "PENDING_WEAPON_SOCKET_PASS",
+      "notes": "Submarine model is inherited from the platform technology tree and must not be redesigned. Only additive presentation-layer weapon sockets are permitted."
+    }
+  ]
+}

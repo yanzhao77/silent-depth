@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_ASW_Vodopad",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_ASW_Vodopad_SEG_00",
+      "centre": [
+        2.9519999999999995,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.296,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Vodopad_SEG_01",
+      "centre": [
+        0.82,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.9679999999999997,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Vodopad_SEG_02",
+      "centre": [
+        -1.64,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.9519999999999995,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Vodopad_SEG_03",
+      "centre": [
+        -3.4439999999999995,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.3119999999999998,
+        0.8315009019607843,
+        0.8315009019607843
+      ]
+    }
+  ],
+  "collision_fbx": "RU_ASW_Vodopad_COLLISION.fbx",
+  "collision_sha256": "62e3000ad94adef44efc93c8203bf703708d221eb6bb02a99cf2267d00aec153"
+}

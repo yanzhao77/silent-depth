@@ -1,0 +1,166 @@
+{
+  "weapon_id": "UK_TORP_Tigerfish",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 6.5,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 6.528371,
+  "built_max_diameter_m": 0.871549,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2098,
+      "triangles": 3744
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 914,
+      "triangles": 1524
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 522,
+      "triangles": 884
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 444,
+      "triangles": 728
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_UK_TORP_Tigerfish_SEG_00",
+    "UCX_WPN_UK_TORP_Tigerfish_SEG_01",
+    "UCX_WPN_UK_TORP_Tigerfish_SEG_02",
+    "UCX_WPN_UK_TORP_Tigerfish_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.2783710956573486,
+      3.25
+    ],
+    "y": [
+      -0.4357745349407196,
+      0.4357745349407196
+    ],
+    "z": [
+      -0.4357745349407196,
+      0.4357745349407196
+    ],
+    "dimensions_m": [
+      6.528371095657349,
+      0.8715490698814392,
+      0.8715490698814392
+    ],
+    "centre": [
+      -0.014185547828674316,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/UK_TORP_Tigerfish_LOD0.fbx",
+        "mirror": "FBX/UK_TORP_Tigerfish_LOD0.fbx",
+        "sha256": "6bc967061b6adbebb7355cde558db6d2378638a7d9f3b8143045c3ce9f0da93c",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/UK_TORP_Tigerfish_LOD1.fbx",
+        "mirror": "FBX/UK_TORP_Tigerfish_LOD1.fbx",
+        "sha256": "3ba047ec8744bb32930448d94df6f13a824fbf2fc17ce6d128394cdf9f7d123e",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/UK_TORP_Tigerfish_LOD2.fbx",
+        "mirror": "FBX/UK_TORP_Tigerfish_LOD2.fbx",
+        "sha256": "2a734485bf2916981ff3b87f9a7068bf50e131a0e35be516776ed5ffc2575210",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/UK_TORP_Tigerfish_LOD3.fbx",
+        "mirror": "FBX/UK_TORP_Tigerfish_LOD3.fbx",
+        "sha256": "3321f4dbd5f28d9863e569fb7566625982f614f8147ffc425a6a993224a1a501",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/UK_TORP_Tigerfish_COLLISION.fbx",
+      "sha256": "b768e4258e604c0a78a6a83130a9776f49e40ce373713084d49f661a53276aa8"
+    },
+    "collision_manifest": {
+      "path": "Collision/UK_TORP_Tigerfish_COLLISION.json",
+      "sha256": "af3bde07049ba362d9dac41720830111a52dd5c8abd2f889cb81f20da1b1842d"
+    }
+  },
+  "build_seconds": 0.33,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.33,
+    "SIDE": 0.3,
+    "FRONT": 0.28,
+    "TOP": 0.34,
+    "DETAIL": 0.37,
+    "ICON": 0.31
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "UK_TORP_Tigerfish_DETAIL_128.png",
+    "UK_TORP_Tigerfish_DETAIL_256.png",
+    "UK_TORP_Tigerfish_DETAIL_512.png",
+    "UK_TORP_Tigerfish_FRONT_128.png",
+    "UK_TORP_Tigerfish_FRONT_256.png",
+    "UK_TORP_Tigerfish_FRONT_512.png",
+    "UK_TORP_Tigerfish_ICON_128.png",
+    "UK_TORP_Tigerfish_ICON_256.png",
+    "UK_TORP_Tigerfish_ICON_512.png",
+    "UK_TORP_Tigerfish_PERSPECTIVE_128.png",
+    "UK_TORP_Tigerfish_PERSPECTIVE_256.png",
+    "UK_TORP_Tigerfish_PERSPECTIVE_512.png",
+    "UK_TORP_Tigerfish_SIDE_128.png",
+    "UK_TORP_Tigerfish_SIDE_256.png",
+    "UK_TORP_Tigerfish_SIDE_512.png",
+    "UK_TORP_Tigerfish_TOP_128.png",
+    "UK_TORP_Tigerfish_TOP_256.png",
+    "UK_TORP_Tigerfish_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/UK_TORP_Tigerfish_MASTER.blend",
+      "sha256": "1ed16b2136321d44db839afd1b0fe00e300154d521a212f28b7ddce650892c1e"
+    },
+    "source": {
+      "path": "Source/UK_TORP_Tigerfish_SOURCE.json",
+      "sha256": "89d9700de881bb5a0f8c5461dd1e233b852d6c1ee8fdfd43f0394425aaad8ede"
+    },
+    "spec": {
+      "path": "Documentation/UK_TORP_Tigerfish_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/UK_TORP_Tigerfish_README.md"
+    }
+  }
+}

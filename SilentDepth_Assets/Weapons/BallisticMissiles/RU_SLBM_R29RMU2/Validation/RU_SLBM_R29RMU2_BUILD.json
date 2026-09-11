@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_SLBM_R29RMU2",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 14.8,
+  "declared_diameter_m": 1.9,
+  "built_length_m": 14.8,
+  "built_max_diameter_m": 1.9,
+  "lod": {
+    "LOD0": {
+      "objects": 2,
+      "vertices": 1156,
+      "triangles": 2304
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 340,
+      "triangles": 672
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 228,
+      "triangles": 448
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 144,
+      "triangles": 280
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_SLBM_R29RMU2_SEG_00",
+    "UCX_WPN_RU_SLBM_R29RMU2_SEG_01",
+    "UCX_WPN_RU_SLBM_R29RMU2_SEG_02",
+    "UCX_WPN_RU_SLBM_R29RMU2_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -7.400000095367432,
+      7.400000095367432
+    ],
+    "y": [
+      -0.949999988079071,
+      0.949999988079071
+    ],
+    "z": [
+      -0.949999988079071,
+      0.949999988079071
+    ],
+    "dimensions_m": [
+      14.800000190734863,
+      1.899999976158142,
+      1.899999976158142
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_SLBM_R29RMU2_LOD0.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_LOD0.fbx",
+        "sha256": "1c8ed451c61bd1feb4ad73e8f6fda6905b0152df710fbf26f158172473255763",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_SLBM_R29RMU2_LOD1.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_LOD1.fbx",
+        "sha256": "bbeca16dd2a0fb8610ed54c3664c63b35d730bab3782f5ec8abaefba8731a1a8",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_SLBM_R29RMU2_LOD2.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_LOD2.fbx",
+        "sha256": "cf363793fdd308f9edec1787e150b6c21cba891fd9030ff2f718e0058b7fc137",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_SLBM_R29RMU2_LOD3.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_LOD3.fbx",
+        "sha256": "f3bc847f72c775df6d310827cbec7c373ba319c86fcd7f26f28f61110a47f3ea",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_SLBM_R29RMU2_COLLISION.fbx",
+      "sha256": "01ef71c95bfe413c1b9cf4343e86242818fa58405dcc22abb140342a29d0a83d"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_SLBM_R29RMU2_COLLISION.json",
+      "sha256": "27dbda20b3cf386f9b347d83fb230cca5e1e93f80d2d8a75ef6ab6ebd486688e"
+    }
+  },
+  "build_seconds": 7.11,
+  "preview_seconds": {
+    "PERSPECTIVE": 39.88,
+    "SIDE": 6.08,
+    "FRONT": 10.75,
+    "TOP": 39.2,
+    "DETAIL": 29.71,
+    "ICON": 37.53
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_SLBM_R29RMU2_DETAIL_128.png",
+    "RU_SLBM_R29RMU2_DETAIL_256.png",
+    "RU_SLBM_R29RMU2_DETAIL_512.png",
+    "RU_SLBM_R29RMU2_FRONT_128.png",
+    "RU_SLBM_R29RMU2_FRONT_256.png",
+    "RU_SLBM_R29RMU2_FRONT_512.png",
+    "RU_SLBM_R29RMU2_ICON_128.png",
+    "RU_SLBM_R29RMU2_ICON_256.png",
+    "RU_SLBM_R29RMU2_ICON_512.png",
+    "RU_SLBM_R29RMU2_PERSPECTIVE_128.png",
+    "RU_SLBM_R29RMU2_PERSPECTIVE_256.png",
+    "RU_SLBM_R29RMU2_PERSPECTIVE_512.png",
+    "RU_SLBM_R29RMU2_SIDE_128.png",
+    "RU_SLBM_R29RMU2_SIDE_256.png",
+    "RU_SLBM_R29RMU2_SIDE_512.png",
+    "RU_SLBM_R29RMU2_TOP_128.png",
+    "RU_SLBM_R29RMU2_TOP_256.png",
+    "RU_SLBM_R29RMU2_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_SLBM_R29RMU2_MASTER.blend",
+      "sha256": "4616a77947ad5776792539b3f5eecb3f626ed1e41aa40d5a01c055d5ae56fc1e"
+    },
+    "source": {
+      "path": "Source/RU_SLBM_R29RMU2_SOURCE.json",
+      "sha256": "838af1f03f38dbb766d8471451ccfe1be5b0654b554d6bb5b47c91642105c8ac"
+    },
+    "spec": {
+      "path": "Documentation/RU_SLBM_R29RMU2_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_SLBM_R29RMU2_README.md"
+    }
+  }
+}

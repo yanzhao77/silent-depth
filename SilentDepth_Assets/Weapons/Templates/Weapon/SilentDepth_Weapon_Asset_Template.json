@@ -1,0 +1,143 @@
+{
+  "template_id": "SilentDepth_Weapon_Asset_Template",
+  "version": "v1.0.0",
+  "created_at": "2026-09-10",
+  "source_of_truth": "Weapons/Tools/weapon_dataset.py",
+  "generator": "Weapons/Tools/weapon_factory_blender.py",
+  "scope": "公开资料可见的武器外部外形与游戏数据；不含任何武器内部工程、装药、引信或制造信息。",
+  "collection_policy": {
+    "root": "WPN_[WEAPON_ID]",
+    "required_collections": [
+      "00_ROOT",
+      "01_BODY",
+      "02_NOSE",
+      "03_TAIL",
+      "04_FINS",
+      "05_WINGS",
+      "06_PROPULSOR",
+      "07_SEEKER",
+      "08_MARKINGS",
+      "09_SHELL",
+      "10_DETAIL",
+      "20_VARIANTS",
+      "90_LOD/LOD0",
+      "90_LOD/LOD1",
+      "90_LOD/LOD2",
+      "90_LOD/LOD3",
+      "95_SOCKETS",
+      "99_COLLISION",
+      "STUDIO_NOT_FOR_EXPORT"
+    ],
+    "export_collections": [
+      "90_LOD/LOD0",
+      "90_LOD/LOD1",
+      "90_LOD/LOD2",
+      "90_LOD/LOD3",
+      "99_COLLISION"
+    ],
+    "rule": "只有 90_LOD 与 99_COLLISION 集合参与 FBX 导出，其余集合仅用于编辑。"
+  },
+  "naming_policy": {
+    "asset_id": "[COUNTRY]_[CATEGORY]_[FAMILY]",
+    "object": "WPN_[WEAPON_ID]_LOD[0-3]_[PART]",
+    "collision": "UCX_WPN_[WEAPON_ID]_SEG_##",
+    "material": "WPN_MAT_[NAME]",
+    "forbidden_prefixes": [
+      "Cube",
+      "Object",
+      "Cylinder",
+      "Cone",
+      "Sphere",
+      "Plane"
+    ]
+  },
+  "transform_rules": {
+    "units": "Metric meters",
+    "unreal_conversion": "1 Blender meter = 100 Unreal Units",
+    "axis": "弹头 +X，Y 左右，Z 上",
+    "final_scale": [
+      1,
+      1,
+      1
+    ],
+    "final_rotation": [
+      0,
+      0,
+      0
+    ],
+    "apply_transform": true,
+    "origin": "弹体纵向中心；需要挂点定位时使用 95_SOCKETS 下的空物体。"
+  },
+  "material_rules": {
+    "shared_materials": [
+      "WPN_MAT_Body",
+      "WPN_MAT_Nose",
+      "WPN_MAT_Fin",
+      "WPN_MAT_Metal",
+      "WPN_MAT_Seeker",
+      "WPN_MAT_Marking",
+      "WPN_MAT_Shell"
+    ],
+    "texture_sets": [],
+    "note": "武器使用共享程序化 PBR 材质，不引用外部贴图，保证运行时完全离线。"
+  },
+  "lod_rules": {
+    "levels": [
+      "LOD0",
+      "LOD1",
+      "LOD2",
+      "LOD3"
+    ],
+    "source": "每一级 LOD 都由同一声明参数重新生成，不做 LOD1→LOD2→LOD3 链式简化。",
+    "silhouette_lock": [
+      "Body",
+      "Nose",
+      "Tail",
+      "Fins",
+      "Wings",
+      "Propulsor"
+    ],
+    "triangle_policy": "三角面数逐级递减；LOD0 与 LOD3 的长度偏差不超过 5%。"
+  },
+  "collision_rules": {
+    "prefix": "UCX_",
+    "shape": "低模凸包（长方体分段），不使用高模渲染网格",
+    "manifest": "Collision/[WEAPON_ID]_COLLISION.json"
+  },
+  "preview_rules": {
+    "views": [
+      "PERSPECTIVE",
+      "SIDE",
+      "FRONT",
+      "TOP",
+      "DETAIL"
+    ],
+    "sizes": [
+      128,
+      256,
+      512
+    ],
+    "icons": [
+      128,
+      256,
+      512
+    ],
+    "camera": "正交相机，统一光照与深色背景，按武器长度自动取景。"
+  },
+  "export_rules": {
+    "engine": "UE4.27",
+    "fbx_binary_version": 7400,
+    "axis_forward": "-Y",
+    "axis_up": "Z",
+    "apply_unit_scale": true,
+    "global_scale": 1.0,
+    "embed_textures": false,
+    "paths": {
+      "master": "Blend/[WEAPON_ID]_MASTER.blend",
+      "lod": "LOD/[WEAPON_ID]_LOD[0-3].fbx",
+      "lod_mirror": "FBX/[WEAPON_ID]_LOD[0-3].fbx",
+      "collision": "Collision/[WEAPON_ID]_COLLISION.fbx"
+    }
+  },
+  "validation_rules_file": "SilentDepth_Weapon_Validation_Rules.json"
+}

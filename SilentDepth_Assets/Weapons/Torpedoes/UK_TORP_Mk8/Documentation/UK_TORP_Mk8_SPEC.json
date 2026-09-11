@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "UK_TORP_Mk8",
+  "display_name": "Mk 8 Mod 4 torpedo",
+  "short_name": "Mk8",
+  "country": "UK",
+  "category": "TORP",
+  "family": "UK_TORP_Mk8",
+  "role": "早期蒸汽鱼雷",
+  "subrole": "Early_Heavyweight",
+  "tier": 2,
+  "tier_reason": "游戏 T2 英国早期节点：服役期极长，覆盖第一代核潜艇。",
+  "era": "Cold War",
+  "service_years": "1950s-1980s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 6.5,
+    "diameter_m": 0.533,
+    "mass_kg": 1600,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wwii_blunt_tail",
+      "straight_running"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.4,
+      "tail": "conical",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "propeller",
+      "wire_dispenser": 0,
+      "sonar_windows": 0,
+      "bands": 1
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/UK_TORP_Mk8_MASTER.blend",
+    "lod": [
+      "LOD/UK_TORP_Mk8_LOD0.fbx",
+      "LOD/UK_TORP_Mk8_LOD1.fbx",
+      "LOD/UK_TORP_Mk8_LOD2.fbx",
+      "LOD/UK_TORP_Mk8_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/UK_TORP_Mk8_LOD0.fbx",
+      "FBX/UK_TORP_Mk8_LOD1.fbx",
+      "FBX/UK_TORP_Mk8_LOD2.fbx",
+      "FBX/UK_TORP_Mk8_LOD3.fbx"
+    ],
+    "collision": "Collision/UK_TORP_Mk8_COLLISION.fbx",
+    "collision_manifest": "Collision/UK_TORP_Mk8_COLLISION.json",
+    "source": "Source/UK_TORP_Mk8_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2928,
+    "LOD1": 1008,
+    "LOD2": 656,
+    "LOD3": 500
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 6.507908,
+  "built_max_diameter_m": 0.608174,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

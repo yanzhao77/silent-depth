@@ -1,0 +1,164 @@
+{
+  "weapon_id": "RU_MINE_PMR2",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "mine",
+  "declared_length_m": 1.8,
+  "declared_diameter_m": 0.53,
+  "built_length_m": 1.8,
+  "built_max_diameter_m": 0.81885,
+  "lod": {
+    "LOD0": {
+      "objects": 3,
+      "vertices": 554,
+      "triangles": 948
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 306,
+      "triangles": 516
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 234,
+      "triangles": 388
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 180,
+      "triangles": 292
+    }
+  },
+  "collision": {
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24
+  },
+  "collision_boxes": 2,
+  "collision_segments": [
+    "UCX_WPN_RU_MINE_PMR2_SEG_00",
+    "UCX_WPN_RU_MINE_PMR2_SEG_01"
+  ],
+  "bounds": {
+    "x": [
+      -0.8999999761581421,
+      0.8999999761581421
+    ],
+    "y": [
+      -0.2941499948501587,
+      0.2941499948501587
+    ],
+    "z": [
+      -0.36834999918937683,
+      0.4505000114440918
+    ],
+    "dimensions_m": [
+      1.7999999523162842,
+      0.5882999897003174,
+      0.8188500106334686
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.04107500612735748
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_MINE_PMR2_LOD0.fbx",
+        "mirror": "FBX/RU_MINE_PMR2_LOD0.fbx",
+        "sha256": "2f66e1a86abc645c8277cc11249115ba2c67f28d39fc8d4c46e55c62e01a5123",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_MINE_PMR2_LOD1.fbx",
+        "mirror": "FBX/RU_MINE_PMR2_LOD1.fbx",
+        "sha256": "07b206c2c8ec912c927576c97c4bbb63208301349dcfab5fa2760a2c58c5369b",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_MINE_PMR2_LOD2.fbx",
+        "mirror": "FBX/RU_MINE_PMR2_LOD2.fbx",
+        "sha256": "2232fe16302788547d6a7dda9e6fa90ae6602325d95795b7b62b36d60e7d0b01",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_MINE_PMR2_LOD3.fbx",
+        "mirror": "FBX/RU_MINE_PMR2_LOD3.fbx",
+        "sha256": "64b7aced5a2ab7e85e751e455b409f8bcccf4e0e566c7c3d805b8b189b7816b9",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_MINE_PMR2_COLLISION.fbx",
+      "sha256": "938d98c1a674b152a6a4330812456ddb082d98158d6cd68a72b44a8b58abde94"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_MINE_PMR2_COLLISION.json",
+      "sha256": "7b6e2cbce431e663666030dbc6eca3774a2bfabec146e6ca75c03ca950d25f54"
+    }
+  },
+  "build_seconds": 0.61,
+  "preview_seconds": {
+    "PERSPECTIVE": 2.19,
+    "SIDE": 0.31,
+    "FRONT": 0.32,
+    "TOP": 0.33,
+    "DETAIL": 0.35,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_MINE_PMR2_DETAIL_128.png",
+    "RU_MINE_PMR2_DETAIL_256.png",
+    "RU_MINE_PMR2_DETAIL_512.png",
+    "RU_MINE_PMR2_FRONT_128.png",
+    "RU_MINE_PMR2_FRONT_256.png",
+    "RU_MINE_PMR2_FRONT_512.png",
+    "RU_MINE_PMR2_ICON_128.png",
+    "RU_MINE_PMR2_ICON_256.png",
+    "RU_MINE_PMR2_ICON_512.png",
+    "RU_MINE_PMR2_PERSPECTIVE_128.png",
+    "RU_MINE_PMR2_PERSPECTIVE_256.png",
+    "RU_MINE_PMR2_PERSPECTIVE_512.png",
+    "RU_MINE_PMR2_SIDE_128.png",
+    "RU_MINE_PMR2_SIDE_256.png",
+    "RU_MINE_PMR2_SIDE_512.png",
+    "RU_MINE_PMR2_TOP_128.png",
+    "RU_MINE_PMR2_TOP_256.png",
+    "RU_MINE_PMR2_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_MINE_PMR2_MASTER.blend",
+      "sha256": "2062c2db2363ba4fce25236057e547aa98ac37580d00931894950d5124ca10aa"
+    },
+    "source": {
+      "path": "Source/RU_MINE_PMR2_SOURCE.json",
+      "sha256": "30790ef08a628b8a843678051f1f1eed24606ab67916550b07e12485e1a4e480"
+    },
+    "spec": {
+      "path": "Documentation/RU_MINE_PMR2_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_MINE_PMR2_README.md"
+    }
+  }
+}

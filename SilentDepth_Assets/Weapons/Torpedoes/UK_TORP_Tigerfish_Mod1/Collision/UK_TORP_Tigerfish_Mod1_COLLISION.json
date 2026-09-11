@@ -1,0 +1,61 @@
+{
+  "weapon_id": "UK_TORP_Tigerfish_Mod1",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_UK_TORP_Tigerfish_Mod1_SEG_00",
+      "centre": [
+        2.34,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.8200000000000003,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_Tigerfish_Mod1_SEG_01",
+      "centre": [
+        0.65,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.56,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_Tigerfish_Mod1_SEG_02",
+      "centre": [
+        -1.3,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.34,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_UK_TORP_Tigerfish_Mod1_SEG_03",
+      "centre": [
+        -2.73,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.04,
+        0.8928690588235294,
+        0.8928690588235294
+      ]
+    }
+  ],
+  "collision_fbx": "UK_TORP_Tigerfish_Mod1_COLLISION.fbx",
+  "collision_sha256": "0ebc4a272712f759b880c2712ccf090169667acccfaa55dc7c3967c8424c9a66"
+}

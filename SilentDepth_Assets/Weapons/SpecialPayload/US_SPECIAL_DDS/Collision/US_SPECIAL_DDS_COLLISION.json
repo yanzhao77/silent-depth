@@ -1,0 +1,22 @@
+{
+  "weapon_id": "US_SPECIAL_DDS",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_SPECIAL_DDS_SEG_00",
+      "centre": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "size": [
+        11.6,
+        2.7,
+        2.4840000000000004
+      ]
+    }
+  ],
+  "collision_fbx": "US_SPECIAL_DDS_COLLISION.fbx",
+  "collision_sha256": "7062e7daaa2f05c27838c7904ba5ddb3f506f2df165707225670aa91c57d0b33"
+}

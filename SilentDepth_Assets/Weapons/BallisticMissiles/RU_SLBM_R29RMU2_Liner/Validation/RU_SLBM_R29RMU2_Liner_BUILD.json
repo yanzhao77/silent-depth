@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_SLBM_R29RMU2_Liner",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 14.8,
+  "declared_diameter_m": 1.9,
+  "built_length_m": 14.8,
+  "built_max_diameter_m": 2.0425,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 3040,
+      "triangles": 5292
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 1190,
+      "triangles": 1980
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 478,
+      "triangles": 844
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 304,
+      "triangles": 532
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_SLBM_R29RMU2_Liner_SEG_00",
+    "UCX_WPN_RU_SLBM_R29RMU2_Liner_SEG_01",
+    "UCX_WPN_RU_SLBM_R29RMU2_Liner_SEG_02",
+    "UCX_WPN_RU_SLBM_R29RMU2_Liner_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -7.400000095367432,
+      7.400000095367432
+    ],
+    "y": [
+      -0.9975000023841858,
+      1.0449999570846558
+    ],
+    "z": [
+      -0.9975000023841858,
+      0.9975000023841858
+    ],
+    "dimensions_m": [
+      14.800000190734863,
+      2.0424999594688416,
+      1.9950000047683716
+    ],
+    "centre": [
+      0.0,
+      0.023749977350234985,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_SLBM_R29RMU2_Liner_LOD0.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_Liner_LOD0.fbx",
+        "sha256": "f44b0529a5396fac93b6f5721d453e9dffac9177866a69ade97000b5d06f325d",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_SLBM_R29RMU2_Liner_LOD1.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_Liner_LOD1.fbx",
+        "sha256": "33958c94429e7061a91d79404f48eaf8e6c2d859be99ae1d26924e8143537d10",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_SLBM_R29RMU2_Liner_LOD2.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_Liner_LOD2.fbx",
+        "sha256": "2f6c30cd1327a1f9d6f84dbd0940dd151f71df396a24faab1141055a29cc368d",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_SLBM_R29RMU2_Liner_LOD3.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_Liner_LOD3.fbx",
+        "sha256": "ca0570dafc1b6a9bd882d3a8288a3d14ddd5c7ab76e2db0df9ad7acb0ab5869a",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_SLBM_R29RMU2_Liner_COLLISION.fbx",
+      "sha256": "d5fe7ec9bbe8b7046804010b715c0de5e11156b2021d74e5ea066417c69d2000"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_SLBM_R29RMU2_Liner_COLLISION.json",
+      "sha256": "7ef8b8181c9fc2f36608bb71369ddd481fd9b2bcdca52fcb5eb8b27899b35a84"
+    }
+  },
+  "build_seconds": 0.42,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.34,
+    "SIDE": 0.31,
+    "FRONT": 0.31,
+    "TOP": 0.3,
+    "DETAIL": 0.34,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_SLBM_R29RMU2_Liner_DETAIL_128.png",
+    "RU_SLBM_R29RMU2_Liner_DETAIL_256.png",
+    "RU_SLBM_R29RMU2_Liner_DETAIL_512.png",
+    "RU_SLBM_R29RMU2_Liner_FRONT_128.png",
+    "RU_SLBM_R29RMU2_Liner_FRONT_256.png",
+    "RU_SLBM_R29RMU2_Liner_FRONT_512.png",
+    "RU_SLBM_R29RMU2_Liner_ICON_128.png",
+    "RU_SLBM_R29RMU2_Liner_ICON_256.png",
+    "RU_SLBM_R29RMU2_Liner_ICON_512.png",
+    "RU_SLBM_R29RMU2_Liner_PERSPECTIVE_128.png",
+    "RU_SLBM_R29RMU2_Liner_PERSPECTIVE_256.png",
+    "RU_SLBM_R29RMU2_Liner_PERSPECTIVE_512.png",
+    "RU_SLBM_R29RMU2_Liner_SIDE_128.png",
+    "RU_SLBM_R29RMU2_Liner_SIDE_256.png",
+    "RU_SLBM_R29RMU2_Liner_SIDE_512.png",
+    "RU_SLBM_R29RMU2_Liner_TOP_128.png",
+    "RU_SLBM_R29RMU2_Liner_TOP_256.png",
+    "RU_SLBM_R29RMU2_Liner_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_SLBM_R29RMU2_Liner_MASTER.blend",
+      "sha256": "d6f814713fea73e15319dc9124e1861e496b489a5a6b95875801c1ee63f6165b"
+    },
+    "source": {
+      "path": "Source/RU_SLBM_R29RMU2_Liner_SOURCE.json",
+      "sha256": "c05e32910567ce2af5a35df4d7481d82589013a1777c21be7db138fd3cecebba"
+    },
+    "spec": {
+      "path": "Documentation/RU_SLBM_R29RMU2_Liner_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_SLBM_R29RMU2_Liner_README.md"
+    }
+  }
+}

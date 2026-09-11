@@ -1,0 +1,90 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_MINE_MDM6",
+  "display_name": "MDM-6",
+  "short_name": "MDM-6",
+  "country": "Russia",
+  "category": "MINE",
+  "family": "RU_MINE_MDM6",
+  "role": "潜艇布放沉底水雷",
+  "subrole": "Submarine_Deployable_Mine",
+  "tier": 5,
+  "tier_reason": "游戏 T5 沉底雷节点：体量更大、外形更宽，与系留雷区分。",
+  "era": "Cold War Late",
+  "service_years": "1970s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 2.4,
+    "diameter_m": 0.7,
+    "mass_kg": 1100,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+  },
+  "geometry": {
+    "kind": "mine",
+    "features": [
+      "wide_body",
+      "cylindrical"
+    ],
+    "params": {
+      "body": "cylindrical",
+      "nose": "hemispherical",
+      "nose_len_ratio": 0.6,
+      "mooring": 0,
+      "mooring_len_ratio": 1.5,
+      "canister": 0,
+      "horns": 12,
+      "rails": 2,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.7,
+      "tail_len_ratio": 0.4,
+      "bands": 2
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/RU_MINE_MDM6_MASTER.blend",
+    "lod": [
+      "LOD/RU_MINE_MDM6_LOD0.fbx",
+      "LOD/RU_MINE_MDM6_LOD1.fbx",
+      "LOD/RU_MINE_MDM6_LOD2.fbx",
+      "LOD/RU_MINE_MDM6_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_MINE_MDM6_LOD0.fbx",
+      "FBX/RU_MINE_MDM6_LOD1.fbx",
+      "FBX/RU_MINE_MDM6_LOD2.fbx",
+      "FBX/RU_MINE_MDM6_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_MINE_MDM6_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_MINE_MDM6_COLLISION.json",
+    "source": "Source/RU_MINE_MDM6_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 720,
+    "LOD1": 432,
+    "LOD2": 352,
+    "LOD3": 292
+  },
+  "collision_boxes": 2,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 2.4,
+  "built_max_diameter_m": 0.973,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料仅有量级信息，按近似尺寸建模。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

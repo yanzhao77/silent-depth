@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_TORP_SAET60",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 7.0,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 7.029312,
+  "built_max_diameter_m": 0.719858,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 1530,
+      "triangles": 2628
+    },
+    "LOD1": {
+      "objects": 4,
+      "vertices": 754,
+      "triangles": 1224
+    },
+    "LOD2": {
+      "objects": 3,
+      "vertices": 402,
+      "triangles": 664
+    },
+    "LOD3": {
+      "objects": 3,
+      "vertices": 354,
+      "triangles": 568
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_TORP_SAET60_SEG_00",
+    "UCX_WPN_RU_TORP_SAET60_SEG_01",
+    "UCX_WPN_RU_TORP_SAET60_SEG_02",
+    "UCX_WPN_RU_TORP_SAET60_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.5293121337890625,
+      3.5
+    ],
+    "y": [
+      -0.322367787361145,
+      0.322367787361145
+    ],
+    "z": [
+      -0.3599291443824768,
+      0.3599291443824768
+    ],
+    "dimensions_m": [
+      7.0293121337890625,
+      0.64473557472229,
+      0.7198582887649536
+    ],
+    "centre": [
+      -0.01465606689453125,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_TORP_SAET60_LOD0.fbx",
+        "mirror": "FBX/RU_TORP_SAET60_LOD0.fbx",
+        "sha256": "45c405cdd6c3e5aa49af3357362cb1b701e5793986f3a49e2291c1d51ab55e61",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_TORP_SAET60_LOD1.fbx",
+        "mirror": "FBX/RU_TORP_SAET60_LOD1.fbx",
+        "sha256": "70377fcb81331f2f478b102434029b443371b65c91c7c15b3dc2b2caadfe2e92",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_TORP_SAET60_LOD2.fbx",
+        "mirror": "FBX/RU_TORP_SAET60_LOD2.fbx",
+        "sha256": "d6db503eb88f1576aeee93a2dfffdbb265da8b03ea2993bbb311f16fd10c0b96",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_TORP_SAET60_LOD3.fbx",
+        "mirror": "FBX/RU_TORP_SAET60_LOD3.fbx",
+        "sha256": "e0b73b5d1f53f4e854dbc55c71064cc0dc55df4f07e7b06f5141ab8e56eda49d",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_TORP_SAET60_COLLISION.fbx",
+      "sha256": "985b6146a412176398300d9823d9566931c34b9723fdb390fe5705baa46ffba0"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_TORP_SAET60_COLLISION.json",
+      "sha256": "42fb84b875f27b0313ccb400f120d5bca8c2bbdc43a3b1652d6365967838fde2"
+    }
+  },
+  "build_seconds": 0.38,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.33,
+    "SIDE": 0.3,
+    "FRONT": 0.3,
+    "TOP": 0.34,
+    "DETAIL": 0.33,
+    "ICON": 0.3
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_TORP_SAET60_DETAIL_128.png",
+    "RU_TORP_SAET60_DETAIL_256.png",
+    "RU_TORP_SAET60_DETAIL_512.png",
+    "RU_TORP_SAET60_FRONT_128.png",
+    "RU_TORP_SAET60_FRONT_256.png",
+    "RU_TORP_SAET60_FRONT_512.png",
+    "RU_TORP_SAET60_ICON_128.png",
+    "RU_TORP_SAET60_ICON_256.png",
+    "RU_TORP_SAET60_ICON_512.png",
+    "RU_TORP_SAET60_PERSPECTIVE_128.png",
+    "RU_TORP_SAET60_PERSPECTIVE_256.png",
+    "RU_TORP_SAET60_PERSPECTIVE_512.png",
+    "RU_TORP_SAET60_SIDE_128.png",
+    "RU_TORP_SAET60_SIDE_256.png",
+    "RU_TORP_SAET60_SIDE_512.png",
+    "RU_TORP_SAET60_TOP_128.png",
+    "RU_TORP_SAET60_TOP_256.png",
+    "RU_TORP_SAET60_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_TORP_SAET60_MASTER.blend",
+      "sha256": "c32d224d19446b249f825bc8e4a4669b90df9c14cb77d4c109b4fe6ed661be33"
+    },
+    "source": {
+      "path": "Source/RU_TORP_SAET60_SOURCE.json",
+      "sha256": "459d5d73dc00615787a78435cf3b5791f1ae463cb8d63ca6ce67812fb519aeaf"
+    },
+    "spec": {
+      "path": "Documentation/RU_TORP_SAET60_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_TORP_SAET60_README.md"
+    }
+  }
+}

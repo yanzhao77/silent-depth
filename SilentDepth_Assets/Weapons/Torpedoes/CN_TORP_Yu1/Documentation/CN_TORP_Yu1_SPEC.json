@@ -1,0 +1,89 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "CN_TORP_Yu1",
+  "display_name": "Yu-1 torpedo",
+  "short_name": "Yu-1",
+  "country": "China",
+  "category": "TORP",
+  "family": "CN_TORP_Yu1",
+  "role": "早期蒸汽鱼雷",
+  "subrole": "Early_Heavyweight",
+  "tier": 2,
+  "tier_reason": "游戏 T2 中国鱼雷树起点：早期仿制蒸汽鱼雷。",
+  "era": "Cold War",
+  "service_years": "1970s-1990s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 7.1,
+    "diameter_m": 0.533,
+    "mass_kg": 1700,
+    "scale_source": "ESTIMATED",
+    "scale_note": "早期仿制型号，公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wwii_blunt_tail",
+      "straight_running",
+      "twin_propeller"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.2,
+      "tail": "square",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.35,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 0,
+      "sonar_windows": 0,
+      "bands": 2
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/CN_TORP_Yu1_MASTER.blend",
+    "lod": [
+      "LOD/CN_TORP_Yu1_LOD0.fbx",
+      "LOD/CN_TORP_Yu1_LOD1.fbx",
+      "LOD/CN_TORP_Yu1_LOD2.fbx",
+      "LOD/CN_TORP_Yu1_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/CN_TORP_Yu1_LOD0.fbx",
+      "FBX/CN_TORP_Yu1_LOD1.fbx",
+      "FBX/CN_TORP_Yu1_LOD2.fbx",
+      "FBX/CN_TORP_Yu1_LOD3.fbx"
+    ],
+    "collision": "Collision/CN_TORP_Yu1_COLLISION.fbx",
+    "collision_manifest": "Collision/CN_TORP_Yu1_COLLISION.json",
+    "source": "Source/CN_TORP_Yu1_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2328,
+    "LOD1": 1080,
+    "LOD2": 664,
+    "LOD3": 568
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 7.074273,
+  "built_max_diameter_m": 0.74087,
+  "scale_source": "ESTIMATED",
+  "scale_note": "早期仿制型号，公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_ASM_Kalibr_3M54",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "cruise_missile",
+  "declared_length_m": 8.2,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 8.2,
+  "built_max_diameter_m": 2.003641,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 2212,
+      "triangles": 4008
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 844,
+      "triangles": 1464
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 324,
+      "triangles": 616
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 222,
+      "triangles": 412
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_ASM_Kalibr_3M54_SEG_00",
+    "UCX_WPN_RU_ASM_Kalibr_3M54_SEG_01",
+    "UCX_WPN_RU_ASM_Kalibr_3M54_SEG_02",
+    "UCX_WPN_RU_ASM_Kalibr_3M54_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -4.099999904632568,
+      4.099999904632568
+    ],
+    "y": [
+      -0.6154582500457764,
+      0.6154582500457764
+    ],
+    "z": [
+      -0.6154582500457764,
+      1.3881828784942627
+    ],
+    "dimensions_m": [
+      8.199999809265137,
+      1.2309165000915527,
+      2.003641128540039
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.38636231422424316
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_ASM_Kalibr_3M54_LOD0.fbx",
+        "mirror": "FBX/RU_ASM_Kalibr_3M54_LOD0.fbx",
+        "sha256": "02b1e1d34ac195856f2b2b6f7e4204b136572eac66e7cb87ed9a735a722f31cb",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_ASM_Kalibr_3M54_LOD1.fbx",
+        "mirror": "FBX/RU_ASM_Kalibr_3M54_LOD1.fbx",
+        "sha256": "648a023f528617e7afd9ffa54e991077c783bc5723cf741b73afd26805a06c8c",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_ASM_Kalibr_3M54_LOD2.fbx",
+        "mirror": "FBX/RU_ASM_Kalibr_3M54_LOD2.fbx",
+        "sha256": "d863bbd82f6dd8379ba62a5c67d4d62cf849c145964898a95e5755e46ee4cb20",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_ASM_Kalibr_3M54_LOD3.fbx",
+        "mirror": "FBX/RU_ASM_Kalibr_3M54_LOD3.fbx",
+        "sha256": "489189135a0e839929336700a13871a99d81f2ec1dcdaa08838b682d1e238491",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_ASM_Kalibr_3M54_COLLISION.fbx",
+      "sha256": "ac4c865e3a20b9a7a4463c7b37df3bd7a311aae9f6ffdd0b5a72ea4ce2b6bcae"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_ASM_Kalibr_3M54_COLLISION.json",
+      "sha256": "bfd826ea5abde7ecddd3159555288469320362e935755490dc863df2e4023ab9"
+    }
+  },
+  "build_seconds": 0.4,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.31,
+    "SIDE": 0.36,
+    "FRONT": 0.32,
+    "TOP": 0.32,
+    "DETAIL": 0.37,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_ASM_Kalibr_3M54_DETAIL_128.png",
+    "RU_ASM_Kalibr_3M54_DETAIL_256.png",
+    "RU_ASM_Kalibr_3M54_DETAIL_512.png",
+    "RU_ASM_Kalibr_3M54_FRONT_128.png",
+    "RU_ASM_Kalibr_3M54_FRONT_256.png",
+    "RU_ASM_Kalibr_3M54_FRONT_512.png",
+    "RU_ASM_Kalibr_3M54_ICON_128.png",
+    "RU_ASM_Kalibr_3M54_ICON_256.png",
+    "RU_ASM_Kalibr_3M54_ICON_512.png",
+    "RU_ASM_Kalibr_3M54_PERSPECTIVE_128.png",
+    "RU_ASM_Kalibr_3M54_PERSPECTIVE_256.png",
+    "RU_ASM_Kalibr_3M54_PERSPECTIVE_512.png",
+    "RU_ASM_Kalibr_3M54_SIDE_128.png",
+    "RU_ASM_Kalibr_3M54_SIDE_256.png",
+    "RU_ASM_Kalibr_3M54_SIDE_512.png",
+    "RU_ASM_Kalibr_3M54_TOP_128.png",
+    "RU_ASM_Kalibr_3M54_TOP_256.png",
+    "RU_ASM_Kalibr_3M54_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_ASM_Kalibr_3M54_MASTER.blend",
+      "sha256": "65be3284389d0124f2bc5aeab3317be3c535203c0a74279bc152358f2cd88965"
+    },
+    "source": {
+      "path": "Source/RU_ASM_Kalibr_3M54_SOURCE.json",
+      "sha256": "ec7633e2df576ccd41dcdade2e00656ae5de8f917770ce05f20bb9ec6521069d"
+    },
+    "spec": {
+      "path": "Documentation/RU_ASM_Kalibr_3M54_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_ASM_Kalibr_3M54_README.md"
+    }
+  }
+}

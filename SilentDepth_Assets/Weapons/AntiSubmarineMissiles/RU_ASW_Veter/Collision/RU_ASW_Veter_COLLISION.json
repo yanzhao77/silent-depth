@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_ASW_Veter",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_ASW_Veter_SEG_00",
+      "centre": [
+        3.204,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.4920000000000004,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Veter_SEG_01",
+      "centre": [
+        0.8900000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.136,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Veter_SEG_02",
+      "centre": [
+        -1.7800000000000002,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.204,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASW_Veter_SEG_03",
+      "centre": [
+        -3.738,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.4240000000000002,
+        0.9908365490196078,
+        0.9908365490196078
+      ]
+    }
+  ],
+  "collision_fbx": "RU_ASW_Veter_COLLISION.fbx",
+  "collision_sha256": "bba9de04dd04df2d2d1297003af4c4b0f80556a59e4b1b3fd3c7f48dad962df5"
+}

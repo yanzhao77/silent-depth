@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_SLBM_Poseidon_C3",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_SLBM_Poseidon_C3_SEG_00",
+      "centre": [
+        3.7439999999999998,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.9120000000000004,
+        0.6579999999999999,
+        0.6579999999999999
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Poseidon_C3_SEG_01",
+      "centre": [
+        1.04,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.496,
+        1.88,
+        1.88
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Poseidon_C3_SEG_02",
+      "centre": [
+        -2.08,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.7439999999999998,
+        1.88,
+        1.88
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Poseidon_C3_SEG_03",
+      "centre": [
+        -4.368,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.6640000000000001,
+        1.88,
+        1.88
+      ]
+    }
+  ],
+  "collision_fbx": "US_SLBM_Poseidon_C3_COLLISION.fbx",
+  "collision_sha256": "365864677ea2fef219cde14035e34cfb4125eed5fecf5ca86a32c12812bb1988"
+}

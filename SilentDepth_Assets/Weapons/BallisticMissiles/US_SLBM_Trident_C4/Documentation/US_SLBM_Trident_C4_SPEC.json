@@ -1,0 +1,93 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_SLBM_Trident_C4",
+  "display_name": "Trident I C4",
+  "short_name": "Trident C4",
+  "country": "USA",
+  "category": "SLBM",
+  "family": "US_SLBM_Trident",
+  "role": "远程潜射弹道导弹",
+  "subrole": "Late_Cold_War_SLBM",
+  "tier": 5,
+  "tier_reason": "游戏 T5 远程节点：细长三级弹体，是 SSBN 科技树从早期转向现代的关键节点。",
+  "era": "Cold War Late",
+  "service_years": "1979-2000s",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 10.4,
+    "diameter_m": 1.88,
+    "mass_kg": 33000,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料长度约 10.4 米。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "three_stage",
+      "slim_shroud"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.7,
+      "shroud_shape": "pointed",
+      "stage_rings": 2,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.25,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.6,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 0,
+      "base_cover": 1,
+      "bands": 2,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/US_SLBM_Trident_C4_MASTER.blend",
+    "lod": [
+      "LOD/US_SLBM_Trident_C4_LOD0.fbx",
+      "LOD/US_SLBM_Trident_C4_LOD1.fbx",
+      "LOD/US_SLBM_Trident_C4_LOD2.fbx",
+      "LOD/US_SLBM_Trident_C4_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_SLBM_Trident_C4_LOD0.fbx",
+      "FBX/US_SLBM_Trident_C4_LOD1.fbx",
+      "FBX/US_SLBM_Trident_C4_LOD2.fbx",
+      "FBX/US_SLBM_Trident_C4_LOD3.fbx"
+    ],
+    "collision": "Collision/US_SLBM_Trident_C4_COLLISION.fbx",
+    "collision_manifest": "Collision/US_SLBM_Trident_C4_COLLISION.json",
+    "source": "Source/US_SLBM_Trident_C4_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 4152,
+    "LOD1": 1416,
+    "LOD2": 760,
+    "LOD3": 484
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 10.4,
+  "built_max_diameter_m": 2.6132,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料长度约 10.4 米。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

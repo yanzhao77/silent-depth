@@ -1,0 +1,164 @@
+{
+  "weapon_id": "US_DECOY_Mk70_MOSS",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "decoy",
+  "declared_length_m": 1.0,
+  "declared_diameter_m": 0.2,
+  "built_length_m": 1.0,
+  "built_max_diameter_m": 0.222165,
+  "lod": {
+    "LOD0": {
+      "objects": 4,
+      "vertices": 842,
+      "triangles": 1356
+    },
+    "LOD1": {
+      "objects": 3,
+      "vertices": 434,
+      "triangles": 696
+    },
+    "LOD2": {
+      "objects": 3,
+      "vertices": 306,
+      "triangles": 488
+    },
+    "LOD3": {
+      "objects": 3,
+      "vertices": 210,
+      "triangles": 332
+    }
+  },
+  "collision": {
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24
+  },
+  "collision_boxes": 2,
+  "collision_segments": [
+    "UCX_WPN_US_DECOY_Mk70_MOSS_SEG_00",
+    "UCX_WPN_US_DECOY_Mk70_MOSS_SEG_01"
+  ],
+  "bounds": {
+    "x": [
+      -0.5,
+      0.5
+    ],
+    "y": [
+      -0.1080000028014183,
+      0.1080000028014183
+    ],
+    "z": [
+      -0.11108235269784927,
+      0.11108235269784927
+    ],
+    "dimensions_m": [
+      1.0,
+      0.2160000056028366,
+      0.22216470539569855
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_DECOY_Mk70_MOSS_LOD0.fbx",
+        "mirror": "FBX/US_DECOY_Mk70_MOSS_LOD0.fbx",
+        "sha256": "4b19d3eb530d24e88f52103dc6d48a1f817e172e2c5331541feb2efb063b96ba",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_DECOY_Mk70_MOSS_LOD1.fbx",
+        "mirror": "FBX/US_DECOY_Mk70_MOSS_LOD1.fbx",
+        "sha256": "0b776ee99a9f2651dcbd5238374d37759f486702f4be4f135dd9cd32d42a9e69",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_DECOY_Mk70_MOSS_LOD2.fbx",
+        "mirror": "FBX/US_DECOY_Mk70_MOSS_LOD2.fbx",
+        "sha256": "aec24b9559051a27c948cd47a1f5387204c92d4adcfa2f168adb594935524e85",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_DECOY_Mk70_MOSS_LOD3.fbx",
+        "mirror": "FBX/US_DECOY_Mk70_MOSS_LOD3.fbx",
+        "sha256": "73a43fa33d723f12be5d8f2e79bec586776d1fd18dab78836aaf84176e50cd31",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_DECOY_Mk70_MOSS_COLLISION.fbx",
+      "sha256": "3b13d99a75f699d6ca0fec69c2e3fe843c9d87217a2ef0057a626c547e32a22f"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_DECOY_Mk70_MOSS_COLLISION.json",
+      "sha256": "8c0f2308dc29b66b1988d047749d1b8f34f3ad7f532e1b71563d924fdea65ecf"
+    }
+  },
+  "build_seconds": 0.77,
+  "preview_seconds": {
+    "PERSPECTIVE": 2.48,
+    "SIDE": 0.4,
+    "FRONT": 0.3,
+    "TOP": 0.31,
+    "DETAIL": 0.35,
+    "ICON": 0.32
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_DECOY_Mk70_MOSS_DETAIL_128.png",
+    "US_DECOY_Mk70_MOSS_DETAIL_256.png",
+    "US_DECOY_Mk70_MOSS_DETAIL_512.png",
+    "US_DECOY_Mk70_MOSS_FRONT_128.png",
+    "US_DECOY_Mk70_MOSS_FRONT_256.png",
+    "US_DECOY_Mk70_MOSS_FRONT_512.png",
+    "US_DECOY_Mk70_MOSS_ICON_128.png",
+    "US_DECOY_Mk70_MOSS_ICON_256.png",
+    "US_DECOY_Mk70_MOSS_ICON_512.png",
+    "US_DECOY_Mk70_MOSS_PERSPECTIVE_128.png",
+    "US_DECOY_Mk70_MOSS_PERSPECTIVE_256.png",
+    "US_DECOY_Mk70_MOSS_PERSPECTIVE_512.png",
+    "US_DECOY_Mk70_MOSS_SIDE_128.png",
+    "US_DECOY_Mk70_MOSS_SIDE_256.png",
+    "US_DECOY_Mk70_MOSS_SIDE_512.png",
+    "US_DECOY_Mk70_MOSS_TOP_128.png",
+    "US_DECOY_Mk70_MOSS_TOP_256.png",
+    "US_DECOY_Mk70_MOSS_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_DECOY_Mk70_MOSS_MASTER.blend",
+      "sha256": "037e719a096ad0903263dd6a647a8132f01e7a985c9beb2f559bcaeb4c9d007b"
+    },
+    "source": {
+      "path": "Source/US_DECOY_Mk70_MOSS_SOURCE.json",
+      "sha256": "c003aac32e252677a91291ca0c5d3cf52a5379df9e0eff8ed708719bc238b922"
+    },
+    "spec": {
+      "path": "Documentation/US_DECOY_Mk70_MOSS_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_DECOY_Mk70_MOSS_README.md"
+    }
+  }
+}

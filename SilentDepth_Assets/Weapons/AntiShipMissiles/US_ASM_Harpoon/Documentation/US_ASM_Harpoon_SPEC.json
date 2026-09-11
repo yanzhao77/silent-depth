@@ -1,0 +1,102 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_ASM_Harpoon",
+  "display_name": "UGM-84 Sub-Harpoon",
+  "short_name": "Harpoon",
+  "country": "USA",
+  "category": "ASM",
+  "family": "US_ASM_Harpoon",
+  "role": "潜射反舰巡航导弹",
+  "subrole": "Modern_Cruise",
+  "tier": 6,
+  "tier_reason": "游戏 T6 美国潜射反舰节点：短弹体、十字弹翼、发射管封装，与其他导弹外形差异明显。",
+  "era": "Cold War Late",
+  "service_years": "1980s-2000s",
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "CANISTER"
+  ],
+  "dimensions": {
+    "length_m": 4.6,
+    "diameter_m": 0.34,
+    "mass_kg": 700,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料长度约 4.6 米。"
+  },
+  "geometry": {
+    "kind": "cruise_missile",
+    "features": [
+      "underwater_launch",
+      "cruciform_wing",
+      "canister"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.6,
+      "body_shape": "cylinder",
+      "wing_type": "fixed",
+      "wing_pairs": 1,
+      "wing_span_ratio": 2.4,
+      "wing_chord_ratio": 1.0,
+      "wing_position": 0.4,
+      "wing_sweep_deg": 30.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 1.8,
+      "tail_chord_ratio": 0.9,
+      "intake_type": "none",
+      "intake_position": 0.2,
+      "intake_len_ratio": 1.2,
+      "booster": 1,
+      "booster_len_ratio": 0.22,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 1,
+      "canister": 1
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/US_ASM_Harpoon_MASTER.blend",
+    "lod": [
+      "LOD/US_ASM_Harpoon_LOD0.fbx",
+      "LOD/US_ASM_Harpoon_LOD1.fbx",
+      "LOD/US_ASM_Harpoon_LOD2.fbx",
+      "LOD/US_ASM_Harpoon_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_ASM_Harpoon_LOD0.fbx",
+      "FBX/US_ASM_Harpoon_LOD1.fbx",
+      "FBX/US_ASM_Harpoon_LOD2.fbx",
+      "FBX/US_ASM_Harpoon_LOD3.fbx"
+    ],
+    "collision": "Collision/US_ASM_Harpoon_COLLISION.fbx",
+    "collision_manifest": "Collision/US_ASM_Harpoon_COLLISION.json",
+    "source": "Source/US_ASM_Harpoon_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3444,
+    "LOD1": 1188,
+    "LOD2": 628,
+    "LOD3": 424
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 4.6,
+  "built_max_diameter_m": 0.83068,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料长度约 4.6 米。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

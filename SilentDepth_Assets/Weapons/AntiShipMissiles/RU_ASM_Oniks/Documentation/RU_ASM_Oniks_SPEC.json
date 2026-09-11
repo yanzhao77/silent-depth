@@ -1,0 +1,102 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_ASM_Oniks",
+  "display_name": "P-800 Oniks",
+  "short_name": "Oniks",
+  "country": "Russia",
+  "category": "ASM",
+  "family": "RU_ASM_Oniks",
+  "role": "现代超音速反舰导弹",
+  "subrole": "Supersonic_Anti_Ship",
+  "tier": 8,
+  "tier_reason": "游戏 T8 现代超音速主力：细长弹体与一体式助推段，是 Yasen 级的核心反舰载荷。",
+  "era": "Modern",
+  "service_years": "2002-present",
+  "launch_methods": [
+    "VLS",
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 8.9,
+    "diameter_m": 0.67,
+    "mass_kg": 3000,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料长度约 8.9 米。"
+  },
+  "geometry": {
+    "kind": "supersonic_missile",
+    "features": [
+      "ramjet",
+      "solid_booster",
+      "slim_body"
+    ],
+    "params": {
+      "nose": "conical",
+      "nose_len_ratio": 3.6,
+      "body_shape": "cylinder",
+      "wing_type": "fixed",
+      "wing_pairs": 1,
+      "wing_span_ratio": 1.9,
+      "wing_chord_ratio": 1.2,
+      "wing_position": 0.6,
+      "wing_sweep_deg": 58.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 2.0,
+      "tail_chord_ratio": 1.0,
+      "intake_type": "four",
+      "intake_position": 0.3,
+      "intake_len_ratio": 1.6,
+      "booster": 1,
+      "booster_len_ratio": 0.3,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 3,
+      "windows": 1,
+      "canister": 1
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/RU_ASM_Oniks_MASTER.blend",
+    "lod": [
+      "LOD/RU_ASM_Oniks_LOD0.fbx",
+      "LOD/RU_ASM_Oniks_LOD1.fbx",
+      "LOD/RU_ASM_Oniks_LOD2.fbx",
+      "LOD/RU_ASM_Oniks_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_ASM_Oniks_LOD0.fbx",
+      "FBX/RU_ASM_Oniks_LOD1.fbx",
+      "FBX/RU_ASM_Oniks_LOD2.fbx",
+      "FBX/RU_ASM_Oniks_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_ASM_Oniks_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_ASM_Oniks_COLLISION.json",
+    "source": "Source/RU_ASM_Oniks_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2760,
+    "LOD1": 1128,
+    "LOD2": 504,
+    "LOD3": 360
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 8.9,
+  "built_max_diameter_m": 1.500229,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料长度约 8.9 米。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

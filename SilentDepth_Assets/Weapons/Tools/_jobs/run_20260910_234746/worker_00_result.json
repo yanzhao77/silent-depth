@@ -1,0 +1,92 @@
+[
+  {
+    "weapon_id": "US_TORP_Mk23",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 4,
+          "vertices": 1490,
+          "triangles": 2832
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 506,
+          "triangles": 912
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 306,
+          "triangles": 560
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 228,
+          "triangles": 404
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 3.51
+    }
+  },
+  {
+    "weapon_id": "US_TORP_Mk18",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 4,
+          "vertices": 1490,
+          "triangles": 2832
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 506,
+          "triangles": 912
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 306,
+          "triangles": 560
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 228,
+          "triangles": 404
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 3.49
+    }
+  },
+  {
+    "weapon_id": "US_TORP_Mk27",
+    "status": "OK",
+    "stats": {
+      "lod": {
+        "LOD0": {
+          "objects": 5,
+          "vertices": 1498,
+          "triangles": 2844
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 506,
+          "triangles": 912
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 306,
+          "triangles": 560
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 228,
+          "triangles": 404
+        }
+      },
+      "collision_boxes": 4,
+      "build_seconds": 2.37
+    }
+  }
+]

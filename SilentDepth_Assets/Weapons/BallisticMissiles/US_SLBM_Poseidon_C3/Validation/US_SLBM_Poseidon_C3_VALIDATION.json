@@ -1,0 +1,172 @@
+{
+  "weapon_id": "US_SLBM_Poseidon_C3",
+  "category": "SLBM",
+  "tier": 4,
+  "asset_priority": "MEDIUM",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Poseidon_C3",
+  "result": "PASS",
+  "label": "TESTED",
+  "issues": [],
+  "checks": {
+    "files": {
+      "Blend/{id}_MASTER.blend": true,
+      "FBX/{id}_LOD0.fbx": true,
+      "FBX/{id}_LOD1.fbx": true,
+      "FBX/{id}_LOD2.fbx": true,
+      "FBX/{id}_LOD3.fbx": true,
+      "Collision/{id}_COLLISION.fbx": true,
+      "Documentation/{id}_SPEC.json": true,
+      "Documentation/{id}_README.md": true
+    },
+    "fbx_binary_versions": {
+      "US_SLBM_Poseidon_C3_LOD0.fbx": 7400,
+      "US_SLBM_Poseidon_C3_LOD1.fbx": 7400,
+      "US_SLBM_Poseidon_C3_LOD2.fbx": 7400,
+      "US_SLBM_Poseidon_C3_LOD3.fbx": 7400,
+      "US_SLBM_Poseidon_C3_COLLISION.fbx": 7400
+    },
+    "geometry": {
+      "LOD0": {
+        "expected_vertices": 2264,
+        "expected_triangles": 4128,
+        "expected_length_m": 10.4
+      },
+      "LOD1": {
+        "expected_vertices": 798,
+        "expected_triangles": 1392,
+        "expected_length_m": 10.4
+      },
+      "LOD2": {
+        "expected_vertices": 406,
+        "expected_triangles": 736,
+        "expected_length_m": 10.4
+      },
+      "LOD3": {
+        "expected_vertices": 256,
+        "expected_triangles": 460,
+        "expected_length_m": 10.4
+      }
+    },
+    "build": {
+      "blender": "5.2.1 LTS",
+      "build_seconds": 0.46,
+      "collision_boxes": 4,
+      "lod": {
+        "LOD0": {
+          "objects": 6,
+          "vertices": 2264,
+          "triangles": 4128
+        },
+        "LOD1": {
+          "objects": 5,
+          "vertices": 798,
+          "triangles": 1392
+        },
+        "LOD2": {
+          "objects": 4,
+          "vertices": 406,
+          "triangles": 736
+        },
+        "LOD3": {
+          "objects": 4,
+          "vertices": 256,
+          "triangles": 460
+        }
+      }
+    },
+    "fbx_roundtrip": {
+      "result": "PASS",
+      "lod_triangles": {
+        "LOD0": 4128,
+        "LOD1": 1392,
+        "LOD2": 736,
+        "LOD3": 460
+      },
+      "collision_objects": 4
+    },
+    "previews": {
+      "Preview/Hero.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 79.45,
+        "min_luminance": 23,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Profile.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 77.4,
+        "min_luminance": 19,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Top.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 78.73,
+        "min_luminance": 31,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Detail.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 107.01,
+        "min_luminance": 23,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Icon_128.png": {
+        "status": "OK",
+        "resolution": [
+          128,
+          128
+        ],
+        "mean_luminance": 31.14,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.133
+      },
+      "Preview/Icon_256.png": {
+        "status": "OK",
+        "resolution": [
+          256,
+          256
+        ],
+        "mean_luminance": 31.21,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1297
+      },
+      "Preview/Icon_512.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 31.21,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.1281
+      }
+    }
+  },
+  "sha256": {
+    "master": "9f96648f691e0a8c9651811fa3a0f67013ca3b4c97eb1b531176522a072e01f5",
+    "lod0": "77c2eb8f3fef111e86b51ec4f767b0aa4c182da58715dc334e851b2622952840"
+  },
+  "validated_at": "2026-09-11"
+}

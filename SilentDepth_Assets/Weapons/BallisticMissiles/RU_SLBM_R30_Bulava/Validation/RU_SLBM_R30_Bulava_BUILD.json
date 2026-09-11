@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_SLBM_R30_Bulava",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 12.1,
+  "declared_diameter_m": 2.0,
+  "built_length_m": 12.1,
+  "built_max_diameter_m": 2.78,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2280,
+      "triangles": 4152
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 814,
+      "triangles": 1416
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 422,
+      "triangles": 760
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 272,
+      "triangles": 484
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_SLBM_R30_Bulava_SEG_00",
+    "UCX_WPN_RU_SLBM_R30_Bulava_SEG_01",
+    "UCX_WPN_RU_SLBM_R30_Bulava_SEG_02",
+    "UCX_WPN_RU_SLBM_R30_Bulava_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -6.050000190734863,
+      6.050000190734863
+    ],
+    "y": [
+      -1.0499999523162842,
+      1.0499999523162842
+    ],
+    "z": [
+      -1.3899999856948853,
+      1.3899999856948853
+    ],
+    "dimensions_m": [
+      12.100000381469727,
+      2.0999999046325684,
+      2.7799999713897705
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_SLBM_R30_Bulava_LOD0.fbx",
+        "mirror": "FBX/RU_SLBM_R30_Bulava_LOD0.fbx",
+        "sha256": "cbea32f0dff1bece205b4b1bf8b025d9d42ef51e95ed547e35425723ab2e1373",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_SLBM_R30_Bulava_LOD1.fbx",
+        "mirror": "FBX/RU_SLBM_R30_Bulava_LOD1.fbx",
+        "sha256": "c91230db3e4e035b593ff9d48af617f6cf9e195e304b12e5bca233c5053b1ee3",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_SLBM_R30_Bulava_LOD2.fbx",
+        "mirror": "FBX/RU_SLBM_R30_Bulava_LOD2.fbx",
+        "sha256": "18d69c7015b79043fac3ddff5f2840714f11bde3291dee48c4ac6ee35468c93b",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_SLBM_R30_Bulava_LOD3.fbx",
+        "mirror": "FBX/RU_SLBM_R30_Bulava_LOD3.fbx",
+        "sha256": "dc9931c83c03931da0a849d601ff903e43dc57c93be4263c9eea3bf27ee33f7a",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_SLBM_R30_Bulava_COLLISION.fbx",
+      "sha256": "ca0e1614bbdbed5ee7a1103d5c611daa8b8889add6834ee812ea8d38b9d142c4"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_SLBM_R30_Bulava_COLLISION.json",
+      "sha256": "199bab97c7e0cc609ec95cd1cf844271983677a2e049b7cde919b34d9694df3b"
+    }
+  },
+  "build_seconds": 0.4,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.3,
+    "SIDE": 0.36,
+    "FRONT": 0.33,
+    "TOP": 0.31,
+    "DETAIL": 0.32,
+    "ICON": 0.3
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_SLBM_R30_Bulava_DETAIL_128.png",
+    "RU_SLBM_R30_Bulava_DETAIL_256.png",
+    "RU_SLBM_R30_Bulava_DETAIL_512.png",
+    "RU_SLBM_R30_Bulava_FRONT_128.png",
+    "RU_SLBM_R30_Bulava_FRONT_256.png",
+    "RU_SLBM_R30_Bulava_FRONT_512.png",
+    "RU_SLBM_R30_Bulava_ICON_128.png",
+    "RU_SLBM_R30_Bulava_ICON_256.png",
+    "RU_SLBM_R30_Bulava_ICON_512.png",
+    "RU_SLBM_R30_Bulava_PERSPECTIVE_128.png",
+    "RU_SLBM_R30_Bulava_PERSPECTIVE_256.png",
+    "RU_SLBM_R30_Bulava_PERSPECTIVE_512.png",
+    "RU_SLBM_R30_Bulava_SIDE_128.png",
+    "RU_SLBM_R30_Bulava_SIDE_256.png",
+    "RU_SLBM_R30_Bulava_SIDE_512.png",
+    "RU_SLBM_R30_Bulava_TOP_128.png",
+    "RU_SLBM_R30_Bulava_TOP_256.png",
+    "RU_SLBM_R30_Bulava_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_SLBM_R30_Bulava_MASTER.blend",
+      "sha256": "3e7a1ddaa9d8963f77ab652330a0f29041d760c0dccebaab3e67d909a877a56c"
+    },
+    "source": {
+      "path": "Source/RU_SLBM_R30_Bulava_SOURCE.json",
+      "sha256": "4dc3333ae073912371bad21e16582d1e12c50dbfe56099094b4d5810f742dfc7"
+    },
+    "spec": {
+      "path": "Documentation/RU_SLBM_R30_Bulava_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_SLBM_R30_Bulava_README.md"
+    }
+  }
+}

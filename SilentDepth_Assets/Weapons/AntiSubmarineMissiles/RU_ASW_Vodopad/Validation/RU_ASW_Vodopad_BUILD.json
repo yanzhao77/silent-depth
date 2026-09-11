@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_ASW_Vodopad",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "rocket_payload",
+  "declared_length_m": 8.2,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 8.2,
+  "built_max_diameter_m": 0.810181,
+  "lod": {
+    "LOD0": {
+      "objects": 5,
+      "vertices": 1974,
+      "triangles": 3624
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 774,
+      "triangles": 1368
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 342,
+      "triangles": 648
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 234,
+      "triangles": 432
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_ASW_Vodopad_SEG_00",
+    "UCX_WPN_RU_ASW_Vodopad_SEG_01",
+    "UCX_WPN_RU_ASW_Vodopad_SEG_02",
+    "UCX_WPN_RU_ASW_Vodopad_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -4.099999904632568,
+      4.099999904632568
+    ],
+    "y": [
+      -0.36081236600875854,
+      0.36081236600875854
+    ],
+    "z": [
+      -0.40509045124053955,
+      0.40509045124053955
+    ],
+    "dimensions_m": [
+      8.199999809265137,
+      0.7216247320175171,
+      0.8101809024810791
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_ASW_Vodopad_LOD0.fbx",
+        "mirror": "FBX/RU_ASW_Vodopad_LOD0.fbx",
+        "sha256": "d361cd19ec85e021393acb94cfb2d84906150f0c68ed47e7dcf471d153dfbe23",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_ASW_Vodopad_LOD1.fbx",
+        "mirror": "FBX/RU_ASW_Vodopad_LOD1.fbx",
+        "sha256": "188b301fae29a9f1d8b0353ac2d6bfab62a3955de5c53bfac44ced449fe84938",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_ASW_Vodopad_LOD2.fbx",
+        "mirror": "FBX/RU_ASW_Vodopad_LOD2.fbx",
+        "sha256": "75bf8c76e03452460fc93b442162b3bdcb46c140adef6483b6b22ab7749f8da9",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_ASW_Vodopad_LOD3.fbx",
+        "mirror": "FBX/RU_ASW_Vodopad_LOD3.fbx",
+        "sha256": "29de142d6269f9bdbb4aa9dc9c558ac5204303a4a7d1d8abd9a27c75cd76447f",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_ASW_Vodopad_COLLISION.fbx",
+      "sha256": "62e3000ad94adef44efc93c8203bf703708d221eb6bb02a99cf2267d00aec153"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_ASW_Vodopad_COLLISION.json",
+      "sha256": "87c07d0cc7f25ee027e5a2cfe08372e3ebbfb174beaa5e072d18d33e87a0550b"
+    }
+  },
+  "build_seconds": 0.35,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.31,
+    "SIDE": 0.34,
+    "FRONT": 0.32,
+    "TOP": 0.32,
+    "DETAIL": 0.31,
+    "ICON": 0.36
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_ASW_Vodopad_DETAIL_128.png",
+    "RU_ASW_Vodopad_DETAIL_256.png",
+    "RU_ASW_Vodopad_DETAIL_512.png",
+    "RU_ASW_Vodopad_FRONT_128.png",
+    "RU_ASW_Vodopad_FRONT_256.png",
+    "RU_ASW_Vodopad_FRONT_512.png",
+    "RU_ASW_Vodopad_ICON_128.png",
+    "RU_ASW_Vodopad_ICON_256.png",
+    "RU_ASW_Vodopad_ICON_512.png",
+    "RU_ASW_Vodopad_PERSPECTIVE_128.png",
+    "RU_ASW_Vodopad_PERSPECTIVE_256.png",
+    "RU_ASW_Vodopad_PERSPECTIVE_512.png",
+    "RU_ASW_Vodopad_SIDE_128.png",
+    "RU_ASW_Vodopad_SIDE_256.png",
+    "RU_ASW_Vodopad_SIDE_512.png",
+    "RU_ASW_Vodopad_TOP_128.png",
+    "RU_ASW_Vodopad_TOP_256.png",
+    "RU_ASW_Vodopad_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_ASW_Vodopad_MASTER.blend",
+      "sha256": "af6807a04d65095411ef12967d9793629a0965f2d76a62725d36ee74ff635e1b"
+    },
+    "source": {
+      "path": "Source/RU_ASW_Vodopad_SOURCE.json",
+      "sha256": "14e1f6b3b7f4dba5df7f8f62f000a06441e99b431e57b4e7bc3073e0d3956515"
+    },
+    "spec": {
+      "path": "Documentation/RU_ASW_Vodopad_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_ASW_Vodopad_README.md"
+    }
+  }
+}

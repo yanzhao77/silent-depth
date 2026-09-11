@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_ASW_SUBROC",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_ASW_SUBROC_SEG_00",
+      "centre": [
+        2.412,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.8760000000000003,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASW_SUBROC_SEG_01",
+      "centre": [
+        0.67,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.6079999999999999,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASW_SUBROC_SEG_02",
+      "centre": [
+        -1.34,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.412,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASW_SUBROC_SEG_03",
+      "centre": [
+        -2.814,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.072,
+        0.6794495882352942,
+        0.6794495882352942
+      ]
+    }
+  ],
+  "collision_fbx": "US_ASW_SUBROC_COLLISION.fbx",
+  "collision_sha256": "fbef24cf04fa2ab33f763407a3425ab0b89757afbdcb63d89612965fd3f88307"
+}

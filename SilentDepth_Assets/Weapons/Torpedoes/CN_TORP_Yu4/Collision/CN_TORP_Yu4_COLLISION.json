@@ -1,0 +1,61 @@
+{
+  "weapon_id": "CN_TORP_Yu4",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_CN_TORP_Yu4_SEG_00",
+      "centre": [
+        2.52,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.9600000000000002,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_CN_TORP_Yu4_SEG_01",
+      "centre": [
+        0.7000000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.68,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_CN_TORP_Yu4_SEG_02",
+      "centre": [
+        -1.4000000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.52,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_CN_TORP_Yu4_SEG_03",
+      "centre": [
+        -2.94,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.12,
+        0.8295256666666666,
+        0.8295256666666666
+      ]
+    }
+  ],
+  "collision_fbx": "CN_TORP_Yu4_COLLISION.fbx",
+  "collision_sha256": "09b9e4414a731938695fd9bb2289d4f331538b2280e4da05ced450182bbec4f4"
+}

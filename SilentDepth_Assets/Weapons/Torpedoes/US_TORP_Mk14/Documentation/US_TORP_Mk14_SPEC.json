@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_TORP_Mk14",
+  "display_name": "Mk 14 torpedo",
+  "short_name": "Mk14",
+  "country": "USA",
+  "category": "TORP",
+  "family": "US_TORP_Mk14",
+  "role": "早期重型蒸汽鱼雷",
+  "subrole": "Early_Heavyweight",
+  "tier": 1,
+  "tier_reason": "游戏 T1 早期基础鱼雷：无制导、外形简单，作为鱼雷科技树的起点节点。",
+  "era": "Early",
+  "service_years": "1940-1960s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 6.25,
+    "diameter_m": 0.533,
+    "mass_kg": 1360,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料常见数据，保留为整数级近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wwii_blunt_tail",
+      "straight_running"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.2,
+      "tail": "conical",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "propeller",
+      "wire_dispenser": 0,
+      "sonar_windows": 0,
+      "bands": 1
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/US_TORP_Mk14_MASTER.blend",
+    "lod": [
+      "LOD/US_TORP_Mk14_LOD0.fbx",
+      "LOD/US_TORP_Mk14_LOD1.fbx",
+      "LOD/US_TORP_Mk14_LOD2.fbx",
+      "LOD/US_TORP_Mk14_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_TORP_Mk14_LOD0.fbx",
+      "FBX/US_TORP_Mk14_LOD1.fbx",
+      "FBX/US_TORP_Mk14_LOD2.fbx",
+      "FBX/US_TORP_Mk14_LOD3.fbx"
+    ],
+    "collision": "Collision/US_TORP_Mk14_COLLISION.fbx",
+    "collision_manifest": "Collision/US_TORP_Mk14_COLLISION.json",
+    "source": "Source/US_TORP_Mk14_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3204,
+    "LOD1": 1140,
+    "LOD2": 644,
+    "LOD3": 488
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 6.223332,
+  "built_max_diameter_m": 0.696705,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料常见数据，保留为整数级近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_SLBM_R29RMU2_Sineva",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 14.8,
+  "declared_diameter_m": 1.9,
+  "built_length_m": 14.8,
+  "built_max_diameter_m": 2.0425,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2848,
+      "triangles": 5004
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 1094,
+      "triangles": 1836
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 478,
+      "triangles": 844
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 304,
+      "triangles": 532
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_SLBM_R29RMU2_Sineva_SEG_00",
+    "UCX_WPN_RU_SLBM_R29RMU2_Sineva_SEG_01",
+    "UCX_WPN_RU_SLBM_R29RMU2_Sineva_SEG_02",
+    "UCX_WPN_RU_SLBM_R29RMU2_Sineva_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -7.400000095367432,
+      7.400000095367432
+    ],
+    "y": [
+      -0.9975000023841858,
+      1.0449999570846558
+    ],
+    "z": [
+      -0.9975000023841858,
+      0.9975000023841858
+    ],
+    "dimensions_m": [
+      14.800000190734863,
+      2.0424999594688416,
+      1.9950000047683716
+    ],
+    "centre": [
+      0.0,
+      0.023749977350234985,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_SLBM_R29RMU2_Sineva_LOD0.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_Sineva_LOD0.fbx",
+        "sha256": "3eb5475b8e7afbb38eb8bbafedc3dbcd2ea0216488a1d5af372df2b1e9133d29",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_SLBM_R29RMU2_Sineva_LOD1.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_Sineva_LOD1.fbx",
+        "sha256": "26b2daf69de6e2939dba4c503d6bc3261112f7d8a1eb454b05ed051eb767b54c",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_SLBM_R29RMU2_Sineva_LOD2.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_Sineva_LOD2.fbx",
+        "sha256": "324e881d9f186a24e7540484c80749356e3a91ad63c30ae068867a54a055a894",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_SLBM_R29RMU2_Sineva_LOD3.fbx",
+        "mirror": "FBX/RU_SLBM_R29RMU2_Sineva_LOD3.fbx",
+        "sha256": "8be6126ebf23893e7afc651f208f8921883704d6601c80b7e0c6ca4338eb54b4",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_SLBM_R29RMU2_Sineva_COLLISION.fbx",
+      "sha256": "e98210d1711d434b78490899c7e935fdd72c6e0d29df39611168c5cfce94de8b"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_SLBM_R29RMU2_Sineva_COLLISION.json",
+      "sha256": "5787f976b002ae31d992cc87b5a2a4c005f4f63cfdf460f355a0f756bbfbba5e"
+    }
+  },
+  "build_seconds": 0.39,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.29,
+    "SIDE": 0.32,
+    "FRONT": 0.28,
+    "TOP": 0.3,
+    "DETAIL": 0.34,
+    "ICON": 0.3
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_SLBM_R29RMU2_Sineva_DETAIL_128.png",
+    "RU_SLBM_R29RMU2_Sineva_DETAIL_256.png",
+    "RU_SLBM_R29RMU2_Sineva_DETAIL_512.png",
+    "RU_SLBM_R29RMU2_Sineva_FRONT_128.png",
+    "RU_SLBM_R29RMU2_Sineva_FRONT_256.png",
+    "RU_SLBM_R29RMU2_Sineva_FRONT_512.png",
+    "RU_SLBM_R29RMU2_Sineva_ICON_128.png",
+    "RU_SLBM_R29RMU2_Sineva_ICON_256.png",
+    "RU_SLBM_R29RMU2_Sineva_ICON_512.png",
+    "RU_SLBM_R29RMU2_Sineva_PERSPECTIVE_128.png",
+    "RU_SLBM_R29RMU2_Sineva_PERSPECTIVE_256.png",
+    "RU_SLBM_R29RMU2_Sineva_PERSPECTIVE_512.png",
+    "RU_SLBM_R29RMU2_Sineva_SIDE_128.png",
+    "RU_SLBM_R29RMU2_Sineva_SIDE_256.png",
+    "RU_SLBM_R29RMU2_Sineva_SIDE_512.png",
+    "RU_SLBM_R29RMU2_Sineva_TOP_128.png",
+    "RU_SLBM_R29RMU2_Sineva_TOP_256.png",
+    "RU_SLBM_R29RMU2_Sineva_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_SLBM_R29RMU2_Sineva_MASTER.blend",
+      "sha256": "6d70ed5c0e861d132608c21adc5978ef6dba824384ecf797e3184d0cb0d1456d"
+    },
+    "source": {
+      "path": "Source/RU_SLBM_R29RMU2_Sineva_SOURCE.json",
+      "sha256": "cfd88a9a666ae94dd3e01f98221e9264232bf10d7294aa541a5bd37e1ad868a0"
+    },
+    "spec": {
+      "path": "Documentation/RU_SLBM_R29RMU2_Sineva_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_SLBM_R29RMU2_Sineva_README.md"
+    }
+  }
+}

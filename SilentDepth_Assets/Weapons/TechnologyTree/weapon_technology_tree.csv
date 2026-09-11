@@ -1,0 +1,125 @@
+Tier,Category,Family,Weapon,Display Name,Country,Era,Service Years,Subrole,Asset Priority,Confidence
+T1,TORP,US_TORP_Mk14,US_TORP_Mk14,Mk 14 torpedo,USA,Early,1940-1960s,Early_Heavyweight,MEDIUM,PUBLIC
+T1,TORP,US_TORP_Mk14,US_TORP_Mk18,Mk 18 torpedo,USA,Early,1943-1950s,Early_Heavyweight,LOW,PUBLIC
+T1,TORP,US_TORP_Mk14,US_TORP_Mk23,Mk 23 torpedo,USA,Early,1944-1946,Early_Heavyweight,LOW,PUBLIC
+T2,SLBM,RU_SLBM_R13,RU_SLBM_R13,R-13 (SS-N-4),Russia,Cold War,1961-1970s,Early_SLBM,MEDIUM,PUBLIC
+T2,SLBM,US_SLBM_Polaris,US_SLBM_Polaris_A1,Polaris A1,USA,Cold War,1960-1965,Early_SLBM,MEDIUM,PUBLIC
+T2,TORP,CN_TORP_Yu1,CN_TORP_Yu1,Yu-1 torpedo,China,Cold War,1970s-1990s,Early_Heavyweight,LOW,PUBLIC
+T2,TORP,UK_TORP_Mk8,UK_TORP_Mk8,Mk 8 Mod 4 torpedo,UK,Cold War,1950s-1980s,Early_Heavyweight,MEDIUM,PUBLIC
+T2,TORP,US_TORP_Mk16,US_TORP_Mk16,Mk 16 torpedo,USA,Cold War,1950s-1970s,Early_Heavyweight,LOW,PUBLIC
+T2,TORP,US_TORP_Mk27,US_TORP_Mk27,Mk 27 Mod 4 torpedo,USA,Early,1944-1945,Acoustic_Homing,LOW,PUBLIC
+T3,ASM,RU_ASM_P5,RU_ASM_P5,P-5 Pyatyorka,Russia,Cold War,1959-1960s,Early_Cruise,MEDIUM,PUBLIC
+T3,ASM,RU_ASM_P5,RU_ASM_P6,P-6 Progress,Russia,Cold War,1960s-1970s,Early_Cruise,LOW,PUBLIC
+T3,DECOY,UK_DECOY_SSE_Mk3,UK_DECOY_SSE_Mk3,SSE Mk 3,UK,Cold War,1960s-1980s,Historical_Decoy,LOW,PUBLIC
+T3,MINE,UK_MINE_SeaUrchin,UK_MINE_SeaUrchin,Sea Urchin,UK,Cold War,1950s-1970s,Historical_Mine,LOW,PUBLIC
+T3,SLBM,FR_SLBM_M1,FR_SLBM_M1,M1,France,Cold War,1971-1970s,Early_SLBM,MEDIUM,PUBLIC
+T3,SLBM,RU_SLBM_R21,RU_SLBM_R21,R-21 (SS-N-5),Russia,Cold War,1963-1970s,Early_SLBM,MEDIUM,PUBLIC
+T3,SLBM,US_SLBM_Polaris,US_SLBM_Polaris_A3,Polaris A3,USA,Cold War,1964-1980s,Early_SLBM,MEDIUM,PUBLIC
+T3,TORP,RU_TORP_SET53,RU_TORP_SET53,SET-53 torpedo,Russia,Cold War,1950s-1960s,Acoustic_Homing,MEDIUM,PUBLIC
+T3,TORP,US_TORP_Mk37,US_TORP_Mk37,Mk 37 Mod 0 torpedo,USA,Cold War,1956-1970s,Acoustic_Homing,HIGH,PUBLIC
+T4,ASM,RU_ASM_P70,RU_ASM_P70,P-70 Ametist,Russia,Cold War,1968-1990s,Underwater_Launch_Cruise,HIGH,PUBLIC
+T4,ASW,RU_ASW_Vyuga,RU_ASW_Vyuga,RPK-2 Vyuga,Russia,Cold War,1969-1990s,Rocket_Delivered,MEDIUM,PUBLIC
+T4,SLBM,CN_SLBM_JL1,CN_SLBM_JL1,JL-1,China,Cold War,1980s-1990s,Early_SLBM,MEDIUM,PUBLIC
+T4,SLBM,FR_SLBM_M2,FR_SLBM_M2,M2,France,Cold War,1974-1980s,Cold_War_SLBM,MEDIUM,PUBLIC
+T4,SLBM,RU_SLBM_R27,RU_SLBM_R27,R-27 (SS-N-6),Russia,Cold War,1968-1980s,Cold_War_SLBM,MEDIUM,PUBLIC
+T4,SLBM,US_SLBM_Poseidon,US_SLBM_Poseidon_C3,Poseidon C3,USA,Cold War,1971-1990s,Cold_War_SLBM,MEDIUM,PUBLIC
+T4,STRAT,US_STRAT_RegulusII,US_STRAT_RegulusII,SSM-N-8B Regulus II,USA,Cold War,1958（取消）,Early_Strategic,LOW,ESTIMATED
+T4,TORP,CN_TORP_Yu3,CN_TORP_Yu4,Yu-4 torpedo,China,Cold War,1970s-1990s,Heavyweight,LOW,PUBLIC
+T4,TORP,RU_TORP_SET53,RU_TORP_SAET60,SAET-60 torpedo,Russia,Cold War,1960s-1970s,Acoustic_Homing,LOW,PUBLIC
+T4,TORP,RU_TORP_SET53,RU_TORP_SET65,SET-65 torpedo,Russia,Cold War,1960s-1980s,Acoustic_Homing,MEDIUM,PUBLIC
+T4,TORP,US_TORP_Mk37,US_TORP_Mk37_Mod2,Mk 37 Mod 2 torpedo,USA,Cold War,1960s-1970s,Wire_Guided,MEDIUM,PUBLIC
+T5,ASM,RU_ASM_P120,RU_ASM_P120,P-120 Malakhit,Russia,Cold War,1970s-1990s,Cold_War_Cruise,MEDIUM,PUBLIC
+T5,ASW,US_ASW_SUBROC,US_ASW_SUBROC,UUM-44 SUBROC,USA,Cold War,1965-1989,Rocket_Delivered,MEDIUM,PUBLIC
+T5,MINE,RU_MINE_MDM6,RU_MINE_MDM6,MDM-6,Russia,Cold War Late,1970s-present,Submarine_Deployable_Mine,LOW,PUBLIC
+T5,MINE,RU_MINE_PMR2,RU_MINE_PMR2,PMR-2,Russia,Cold War Late,1970s-present,Submarine_Deployable_Mine,LOW,PUBLIC
+T5,MINE,US_MINE_Mk60_CAPTOR,US_MINE_Mk60_CAPTOR,Mk 60 CAPTOR,USA,Cold War Late,1979-1990s,Submarine_Deployable_Mine,LOW,PUBLIC
+T5,SLBM,FR_SLBM_M2,FR_SLBM_M20,M20,France,Cold War,1977-1990s,Cold_War_SLBM,MEDIUM,PUBLIC
+T5,SLBM,RU_SLBM_R29,RU_SLBM_R29,R-29 (SS-N-8),Russia,Cold War,1970s-1980s,Late_Cold_War_SLBM,HIGH,PUBLIC
+T5,SLBM,US_SLBM_Trident,US_SLBM_Trident_C4,Trident I C4,USA,Cold War Late,1979-2000s,Late_Cold_War_SLBM,HIGH,PUBLIC
+T5,TORP,CN_TORP_Yu3,CN_TORP_Yu3,Yu-3 torpedo,China,Cold War,1980s-1990s,Acoustic_Homing,MEDIUM,PUBLIC
+T5,TORP,FR_TORP_L5,FR_TORP_L5_Mod3,L5 Mod 3 torpedo,France,Cold War,1970s-1990s,Wire_Guided,MEDIUM,PUBLIC
+T5,TORP,RU_TORP_5365,RU_TORP_5365K,53-65K torpedo,Russia,Cold War,1960s-1990s,Heavyweight,HIGH,PUBLIC
+T5,TORP,US_TORP_Mk45,US_TORP_Mk45,Mk 45 ASTOR torpedo,USA,Cold War,1963-1976,Heavyweight,MEDIUM,PUBLIC
+T6,ASM,CN_ASM_YJ8,CN_ASM_YJ8,YJ-8 / YJ-82,China,Cold War Late,1980s-present,Modern_Cruise,MEDIUM,PUBLIC
+T6,ASM,RU_ASM_P500,RU_ASM_P500,P-500 Bazalt,Russia,Cold War,1975-present,Supersonic_Anti_Ship,HIGH,PUBLIC
+T6,ASM,US_ASM_Harpoon,US_ASM_Harpoon,UGM-84 Sub-Harpoon,USA,Cold War Late,1980s-2000s,Modern_Cruise,HIGH,PUBLIC
+T6,ASM,US_LAM_Tomahawk,US_ASM_Tomahawk_TASM,BGM-109B TASM,USA,Cold War Late,1980s-1990s,Modern_Cruise,MEDIUM,PUBLIC
+T6,ASW,CN_ASW_CY1,CN_ASW_CY1,CY-1 anti-submarine missile,China,Modern,1990s-present,Rocket_Delivered,LOW,PUBLIC
+T6,ASW,RU_ASW_Vodopad,RU_ASW_Vodopad,RPK-6 Vodopad,Russia,Cold War Late,1981-present,Rocket_Delivered,MEDIUM,PUBLIC
+T6,ASW,US_ASW_SeaLance,US_ASW_SeaLance,UUM-125 Sea Lance,USA,Cold War Late,1980s (cancelled),Rocket_Delivered,DATABASE_ONLY,PUBLIC
+T6,DECOY,RU_DECOY_MG74,RU_DECOY_MG74,MG-74,Russia,Cold War Late,1970s-present,Acoustic_Decoy,MEDIUM,PUBLIC
+T6,DECOY,US_DECOY_Mk70_MOSS,US_DECOY_Mk70_MOSS,Mk 70 MOSS,USA,Cold War Late,1976-present,Acoustic_Decoy,MEDIUM,PUBLIC
+T6,LAM,RU_LAM_Granat,RU_LAM_Granat,RK-55 Granat,Russia,Cold War Late,1980s-1990s,Cold_War_Cruise,MEDIUM,PUBLIC
+T6,LAM,US_LAM_Tomahawk,US_LAM_Tomahawk,BGM-109 Tomahawk,USA,Cold War Late,1980s-1990s,Modern_Cruise,MEDIUM,PUBLIC
+T6,MINE,US_MINE_Mk67_SLMM,US_MINE_Mk67_SLMM,Mk 67 SLMM,USA,Cold War Late,1980s-present,Submarine_Deployable_Mine,MEDIUM,PUBLIC
+T6,SLBM,FR_SLBM_M4,FR_SLBM_M4,M4,France,Cold War Late,1985-1990s,Late_Cold_War_SLBM,MEDIUM,PUBLIC
+T6,SLBM,IN_SLBM_K15,IN_SLBM_K15,K-15 Sagarika,India,Modern,2010s-present,Modern_SLBM,MEDIUM,PUBLIC
+T6,SLBM,RU_SLBM_R29,RU_SLBM_R29R,R-29R (SS-N-18),Russia,Cold War Late,1978-2000s,Late_Cold_War_SLBM,HIGH,PUBLIC
+T6,SPECIAL,RU_SPECIAL_SDV_Sirena,RU_SPECIAL_SDV_Sirena,Sirena,Russia,Cold War Late,1980s-present,SDV,MEDIUM,PUBLIC
+T6,TORP,FR_TORP_F17,FR_TORP_F17,F17 Mod 2 torpedo,France,Cold War Late,1980s-present,Modern_Heavyweight,HIGH,PUBLIC
+T6,TORP,FR_TORP_L5,FR_TORP_L5_Mod4,L5 Mod 4 torpedo,France,Cold War Late,1980s-1990s,Wire_Guided,LOW,PUBLIC
+T6,TORP,RU_TORP_5365,RU_TORP_5365M,53-65M torpedo,Russia,Cold War Late,1970s-1990s,Heavyweight,MEDIUM,PUBLIC
+T6,TORP,RU_TORP_6576,RU_TORP_6576,65-76 Kit torpedo,Russia,Cold War,1970s-1990s,Heavyweight,HIGH,PUBLIC
+T6,TORP,RU_TORP_TEST71,RU_TORP_TEST71,TEST-71 torpedo,Russia,Cold War,1970s-1990s,Wire_Guided,HIGH,PUBLIC
+T6,TORP,RU_TORP_USET80,RU_TORP_USET80,USET-80 torpedo,Russia,Cold War Late,1980s-present,Modern_Heavyweight,MEDIUM,PUBLIC
+T6,TORP,UK_TORP_Tigerfish,UK_TORP_Tigerfish,Tigerfish Mod 0,UK,Cold War Late,1979-1990s,Wire_Guided,MEDIUM,PUBLIC
+T6,TORP,UK_TORP_Tigerfish,UK_TORP_Tigerfish_Mod1,Tigerfish Mod 1,UK,Cold War Late,1980s-1990s,Wire_Guided,LOW,PUBLIC
+T6,TORP,US_TORP_Mk48,US_TORP_Mk48,Mk 48 Mod 1 torpedo,USA,Cold War Late,1972-1990s,Modern_Heavyweight,MEDIUM,PUBLIC
+T7,ASM,FR_ASM_Exocet_SM39,FR_ASM_Exocet_SM39,Exocet SM39,France,Cold War Late,1980s-present,Modern_Cruise,HIGH,PUBLIC
+T7,ASM,RU_ASM_P500,RU_ASM_P1000,P-1000 Vulkan,Russia,Cold War Late,1980s-present,Supersonic_Anti_Ship,MEDIUM,PUBLIC
+T7,ASM,RU_ASM_P700,RU_ASM_P700,P-700 Granit,Russia,Cold War Late,1980s-present,Supersonic_Anti_Ship,HIGH,PUBLIC
+T7,ASW,RU_ASW_Veter,RU_ASW_Veter,RPK-7 Veter,Russia,Cold War Late,1980s-present,Rocket_Delivered,MEDIUM,PUBLIC
+T7,DECOY,US_DECOY_ADC,US_DECOY_ADC_Mk4,ADC Mk 4,USA,Modern,1990s-present,Acoustic_Decoy,MEDIUM,PUBLIC
+T7,LAM,US_LAM_Tomahawk,US_LAM_Tomahawk_BlockIII,Tomahawk Block III,USA,Cold War Late,1990s-2000s,Modern_Cruise,HIGH,PUBLIC
+T7,SLBM,CN_SLBM_JL2,CN_SLBM_JL2,JL-2,China,Modern,2010s-present,Modern_SLBM,HIGH,PUBLIC
+T7,SLBM,FR_SLBM_M4,FR_SLBM_M45,M45,France,Modern,1996-2010s,Modern_SLBM,MEDIUM,PUBLIC
+T7,SLBM,RU_SLBM_R29,RU_SLBM_R29RM,R-29RM,Russia,Modern,1986-present,Modern_SLBM,HIGH,PUBLIC
+T7,SLBM,UK_SLBM_Polaris_A3TK,UK_SLBM_Polaris_A3TK,Polaris A3TK (Chevaline),UK,Cold War Late,1982-1996,Late_Cold_War_SLBM,HIGH,PUBLIC
+T7,SPECIAL,US_SPECIAL_SDV_Mk8,US_SPECIAL_SDV_Mk8,Mk 8 SEAL Delivery Vehicle,USA,Cold War Late,1980s-present,SDV,MEDIUM,PUBLIC
+T7,TORP,CN_TORP_Yu5,CN_TORP_Yu5,Yu-5 torpedo,China,Modern,1990s-2000s,Wire_Guided,HIGH,PUBLIC
+T7,TORP,CN_TORP_Yu7,CN_TORP_Yu7,Yu-7 torpedo,China,Modern,1990s-present,Lightweight,LOW,PUBLIC
+T7,TORP,IN_TORP_TAL,IN_TORP_TAL,TAL Shyena lightweight torpedo,India,Modern,2010s-present,Lightweight,DATABASE_ONLY,PUBLIC
+T7,TORP,RU_TORP_6576,RU_TORP_6576A,65-76A torpedo,Russia,Modern,1990s-2000s,Heavyweight,MEDIUM,PUBLIC
+T7,TORP,RU_TORP_Shkval,RU_TORP_Shkval,VA-111 Shkval,Russia,Cold War Late,1970s-present (limited),Future,HIGH,PUBLIC
+T7,TORP,RU_TORP_TEST71,RU_TORP_TEST71M,TEST-71M torpedo,Russia,Cold War Late,1980s-1990s,Wire_Guided,MEDIUM,PUBLIC
+T7,TORP,RU_TORP_UGST,RU_TORP_UGST,UGST torpedo,Russia,Modern,1990s-present,Modern_Heavyweight,HIGH,PUBLIC
+T7,TORP,RU_TORP_USET80,RU_TORP_USET80K,USET-80K torpedo,Russia,Modern,1990s-present,Modern_Heavyweight,MEDIUM,PUBLIC
+T7,TORP,UK_TORP_StingRay,UK_TORP_StingRay,Sting Ray Mod 1,UK,Modern,1980s-present,Lightweight,LOW,PUBLIC
+T7,TORP,US_TORP_Mk48,US_TORP_Mk48_ADCAP,Mk 48 Mod 4 ADCAP,USA,Cold War Late,1988-2000s,Modern_Heavyweight,HIGH,PUBLIC
+T8,ASM,CN_ASM_YJ18,CN_ASM_YJ18,YJ-18,China,Modern,2010s-present,Modern_Cruise,HIGH,PUBLIC
+T8,ASM,RU_MISSILE_Kalibr,RU_ASM_Kalibr_3M54,Kalibr 3M54,Russia,Modern,1990s-present,Modern_Cruise,HIGH,PUBLIC
+T8,ASM,RU_ASM_Oniks,RU_ASM_Oniks,P-800 Oniks,Russia,Modern,2002-present,Supersonic_Anti_Ship,HIGH,PUBLIC
+T8,ASW,RU_ASW_Otvet,RU_ASW_Otvet,91R Otvet,Russia,Modern,2010s-present,Rocket_Delivered,MEDIUM,PUBLIC
+T8,DECOY,US_DECOY_ADC,US_DECOY_ADC_Mk5,ADC Mk 5,USA,Modern,2010s-present,Acoustic_Decoy,LOW,PUBLIC
+T8,LAM,CN_ASM_YJ18,CN_LAM_YJ18_LandAttack,YJ-18 对陆攻击型,China,Modern,2010s-present,Modern_Cruise,DATABASE_ONLY,PUBLIC
+T8,LAM,FR_LAM_MdCN,FR_LAM_MdCN,MdCN / SCALP Naval,France,Modern,2010s-present,Modern_Cruise,HIGH,PUBLIC
+T8,LAM,RU_MISSILE_Kalibr,RU_LAM_Kalibr_3M14,Kalibr 3M14,Russia,Modern,2000s-present,Modern_Cruise,HIGH,PUBLIC
+T8,LAM,US_LAM_Tomahawk,US_LAM_Tomahawk_BlockIV,Tomahawk Block IV,USA,Modern,2004-present,Modern_Cruise,HIGH,PUBLIC
+T8,SLBM,FR_SLBM_M51,FR_SLBM_M51,M51,France,Modern,2010-present,Modern_SLBM,HIGH,PUBLIC
+T8,SLBM,IN_SLBM_K4,IN_SLBM_K4,K-4,India,Modern,2020s-present,Modern_SLBM,HIGH,PUBLIC
+T8,SLBM,RU_SLBM_R29,RU_SLBM_R29RMU2_Liner,R-29RMU2.1 Liner,Russia,Modern,2010s-present,Modern_SLBM,MEDIUM,PUBLIC
+T8,SLBM,RU_SLBM_R29,RU_SLBM_R29RMU2_Sineva,R-29RMU2 Sineva,Russia,Modern,2007-present,Modern_SLBM,HIGH,PUBLIC
+T8,SLBM,US_SLBM_Trident,US_SLBM_Trident_D5,Trident II D5,USA,Modern,1990-present,Modern_SLBM,HIGH,PUBLIC
+T8,SPECIAL,UK_SPECIAL_DDS,UK_SPECIAL_DDS,UK Dry Deck Shelter,UK,Cold War Late,1990s-present,Dry_Deck_Shelter,LOW,PUBLIC
+T8,SPECIAL,US_SPECIAL_ASDS,US_SPECIAL_ASDS,Advanced SEAL Delivery System,USA,Modern,2000s-2009,SDV,MEDIUM,PUBLIC
+T8,SPECIAL,US_SPECIAL_DDS,US_SPECIAL_DDS,Dry Deck Shelter,USA,Cold War Late,1980s-present,Dry_Deck_Shelter,HIGH,PUBLIC
+T8,STRAT,RU_STRAT_Meteorit,RU_STRAT_Meteorit,P-750 Meteorit (SS-N-24),Russia,Cold War Late,1980s-1990s,Late_Cold_War_Strategic,MEDIUM,ESTIMATED
+T8,STRAT,US_STRAT_TLAM_N,US_STRAT_TLAM_N,BGM-109A Tomahawk TLAM-N,USA,Cold War Late,1984-2010s,Modern_Strategic,MEDIUM,PUBLIC
+T8,TORP,CN_TORP_Yu6,CN_TORP_Yu6,Yu-6 torpedo,China,Modern,2000s-present,Modern_Heavyweight,HIGH,PUBLIC
+T8,TORP,IN_TORP_Varunastra,IN_TORP_Varunastra,Varunastra torpedo,India,Modern,2016-present,Modern_Heavyweight,HIGH,PUBLIC
+T8,TORP,RU_TORP_TEST71,RU_TORP_TEST96,TEST-96 torpedo,Russia,Modern,1990s-present,Modern_Heavyweight,MEDIUM,PUBLIC
+T8,TORP,RU_TORP_UGST,RU_TORP_UGST_M,UGST-M torpedo,Russia,Modern,2000s-present,Modern_Heavyweight,HIGH,PUBLIC
+T8,TORP,UK_TORP_Spearfish,UK_TORP_Spearfish,Spearfish Mod 0,UK,Modern,1994-present,Modern_Heavyweight,HIGH,PUBLIC
+T8,TORP,US_TORP_Mk48,US_TORP_Mk48_Mod6,Mk 48 Mod 6 CBASS,USA,Modern,2000s-present,Modern_Heavyweight,HIGH,PUBLIC
+T8,TORP,US_TORP_Mk48,US_TORP_Mk48_Mod7,Mk 48 Mod 7 CBASS,USA,Modern,2010s-present,Modern_Heavyweight,HIGH,PUBLIC
+T9,LAM,US_LAM_Tomahawk,US_LAM_Tomahawk_BlockV,Tomahawk Block V,USA,Modern,2020s-present,Modern_Cruise,HIGH,PUBLIC
+T9,SLBM,CN_SLBM_JL3,CN_SLBM_JL3,JL-3,China,Modern,2020s-present,Modern_SLBM,HIGH,PUBLIC
+T9,SLBM,RU_SLBM_R30,RU_SLBM_R30_Bulava,R-30 Bulava,Russia,Modern,2018-present,Modern_SLBM,HIGH,PUBLIC
+T9,SLBM,RU_SLBM_R39,RU_SLBM_R39,R-39 (SS-N-20 Sturgeon),Russia,Cold War Late,1983-2004,Late_Cold_War_SLBM,HIGH,PUBLIC
+T9,SLBM,RU_SLBM_R39,RU_SLBM_R39M,R-39M (Bark),Russia,Cold War Late,1990s（取消）,Planned_SLBM,LOW,ESTIMATED
+T9,SLBM,US_SLBM_Trident,US_SLBM_Trident_D5LE,Trident II D5LE,USA,Modern,2010s-present,Modern_SLBM,HIGH,PUBLIC
+T9,TORP,FR_TORP_F21,FR_TORP_F21,F21 Artemis torpedo,France,Modern,2019-present,Modern_Heavyweight,HIGH,PUBLIC
+T9,TORP,RU_TORP_Fizik,RU_TORP_Fizik,Fizik torpedo,Russia,Modern,2010s-present,Future,LOW,ESTIMATED
+T9,TORP,UK_TORP_Spearfish,UK_TORP_Spearfish_Mod1,Spearfish Mod 1,UK,Modern,2020s-present,Modern_Heavyweight,HIGH,PUBLIC
+T10,ASM,RU_ASM_Zircon,RU_ASM_Zircon,3M22 Tsirkon,Russia,Modern,2020s-present,Hypersonic_Anti_Ship,HIGH,PUBLIC
+T10,SLBM,IN_SLBM_K5,IN_SLBM_K5,K-5,India,Future,planned,Future_SLBM,DATABASE_ONLY,PUBLIC

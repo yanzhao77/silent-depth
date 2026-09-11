@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_ASM_Harpoon",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_ASM_Harpoon_SEG_00",
+      "centre": [
+        1.656,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.288,
+        0.119,
+        0.119
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASM_Harpoon_SEG_01",
+      "centre": [
+        0.45999999999999996,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.1039999999999999,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASM_Harpoon_SEG_02",
+      "centre": [
+        -0.9199999999999999,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.656,
+        0.34,
+        0.34
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_ASM_Harpoon_SEG_03",
+      "centre": [
+        -1.9319999999999997,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.736,
+        0.7667200000000001,
+        0.7667200000000001
+      ]
+    }
+  ],
+  "collision_fbx": "US_ASM_Harpoon_COLLISION.fbx",
+  "collision_sha256": "22d693f9313d8655df1555c26a49d3ea711bf5cfe164d033fe99973407a20547"
+}

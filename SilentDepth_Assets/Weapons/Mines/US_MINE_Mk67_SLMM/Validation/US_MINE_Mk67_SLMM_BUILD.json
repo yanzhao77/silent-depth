@@ -1,0 +1,164 @@
+{
+  "weapon_id": "US_MINE_Mk67_SLMM",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "mine",
+  "declared_length_m": 4.83,
+  "declared_diameter_m": 0.483,
+  "built_length_m": 4.83,
+  "built_max_diameter_m": 0.562581,
+  "lod": {
+    "LOD0": {
+      "objects": 4,
+      "vertices": 506,
+      "triangles": 876
+    },
+    "LOD1": {
+      "objects": 4,
+      "vertices": 258,
+      "triangles": 444
+    },
+    "LOD2": {
+      "objects": 3,
+      "vertices": 122,
+      "triangles": 220
+    },
+    "LOD3": {
+      "objects": 3,
+      "vertices": 92,
+      "triangles": 160
+    }
+  },
+  "collision": {
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24
+  },
+  "collision_boxes": 2,
+  "collision_segments": [
+    "UCX_WPN_US_MINE_Mk67_SLMM_SEG_00",
+    "UCX_WPN_US_MINE_Mk67_SLMM_SEG_01"
+  ],
+  "bounds": {
+    "x": [
+      -2.4149999618530273,
+      2.4149999618530273
+    ],
+    "y": [
+      -0.2680650055408478,
+      0.29451635479927063
+    ],
+    "z": [
+      -0.2680650055408478,
+      0.2680650055408478
+    ],
+    "dimensions_m": [
+      4.829999923706055,
+      0.5625813603401184,
+      0.5361300110816956
+    ],
+    "centre": [
+      0.0,
+      0.013225674629211426,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_MINE_Mk67_SLMM_LOD0.fbx",
+        "mirror": "FBX/US_MINE_Mk67_SLMM_LOD0.fbx",
+        "sha256": "dab4832f9a298de989de3e79dd88f3421863bce944ee3d6f1efe4b39c5d4432c",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_MINE_Mk67_SLMM_LOD1.fbx",
+        "mirror": "FBX/US_MINE_Mk67_SLMM_LOD1.fbx",
+        "sha256": "5c769ca54215403169489ce6288dada4088c7c02fd895de61d72c2e121759f49",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_MINE_Mk67_SLMM_LOD2.fbx",
+        "mirror": "FBX/US_MINE_Mk67_SLMM_LOD2.fbx",
+        "sha256": "106ee904d32d58b3d9ea4450bc1c493e67d164fc8da134253eb743b37a425a36",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_MINE_Mk67_SLMM_LOD3.fbx",
+        "mirror": "FBX/US_MINE_Mk67_SLMM_LOD3.fbx",
+        "sha256": "a97bb5c48bd28d6bc25e6b2fbc101eaf93baf7cc81f65d55d3c3b21ebc86ddc3",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_MINE_Mk67_SLMM_COLLISION.fbx",
+      "sha256": "ec714f2d2125ed285c06f0f9f061247f4cf3d8219a96e9f7ad2b2a763c2f8940"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_MINE_Mk67_SLMM_COLLISION.json",
+      "sha256": "ecb40a5e2fc9a5ad336b3da63ce8eebdba4e794c906fb05fbb4d9a6c4f02e419"
+    }
+  },
+  "build_seconds": 0.6,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.35,
+    "SIDE": 0.43,
+    "FRONT": 0.38,
+    "TOP": 0.34,
+    "DETAIL": 0.38,
+    "ICON": 0.32
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_MINE_Mk67_SLMM_DETAIL_128.png",
+    "US_MINE_Mk67_SLMM_DETAIL_256.png",
+    "US_MINE_Mk67_SLMM_DETAIL_512.png",
+    "US_MINE_Mk67_SLMM_FRONT_128.png",
+    "US_MINE_Mk67_SLMM_FRONT_256.png",
+    "US_MINE_Mk67_SLMM_FRONT_512.png",
+    "US_MINE_Mk67_SLMM_ICON_128.png",
+    "US_MINE_Mk67_SLMM_ICON_256.png",
+    "US_MINE_Mk67_SLMM_ICON_512.png",
+    "US_MINE_Mk67_SLMM_PERSPECTIVE_128.png",
+    "US_MINE_Mk67_SLMM_PERSPECTIVE_256.png",
+    "US_MINE_Mk67_SLMM_PERSPECTIVE_512.png",
+    "US_MINE_Mk67_SLMM_SIDE_128.png",
+    "US_MINE_Mk67_SLMM_SIDE_256.png",
+    "US_MINE_Mk67_SLMM_SIDE_512.png",
+    "US_MINE_Mk67_SLMM_TOP_128.png",
+    "US_MINE_Mk67_SLMM_TOP_256.png",
+    "US_MINE_Mk67_SLMM_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_MINE_Mk67_SLMM_MASTER.blend",
+      "sha256": "b92ac3c2b29ffdd83e0e92d321c17d0047099419493f5d7e3c4d9e15c6876dc5"
+    },
+    "source": {
+      "path": "Source/US_MINE_Mk67_SLMM_SOURCE.json",
+      "sha256": "b065721d3c5f688e1503ae3cb1d08b9ac65eaf3109eb4b7757005bc64c236bb4"
+    },
+    "spec": {
+      "path": "Documentation/US_MINE_Mk67_SLMM_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_MINE_Mk67_SLMM_README.md"
+    }
+  }
+}

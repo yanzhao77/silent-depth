@@ -1,0 +1,166 @@
+{
+  "weapon_id": "IN_SLBM_K4",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 12.0,
+  "declared_diameter_m": 1.3,
+  "built_length_m": 12.0,
+  "built_max_diameter_m": 1.365,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1832,
+      "triangles": 3264
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 702,
+      "triangles": 1200
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 342,
+      "triangles": 608
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 216,
+      "triangles": 380
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_IN_SLBM_K4_SEG_00",
+    "UCX_WPN_IN_SLBM_K4_SEG_01",
+    "UCX_WPN_IN_SLBM_K4_SEG_02",
+    "UCX_WPN_IN_SLBM_K4_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -6.0,
+      6.0
+    ],
+    "y": [
+      -0.6825000047683716,
+      0.6825000047683716
+    ],
+    "z": [
+      -0.6825000047683716,
+      0.6825000047683716
+    ],
+    "dimensions_m": [
+      12.0,
+      1.3650000095367432,
+      1.3650000095367432
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/IN_SLBM_K4_LOD0.fbx",
+        "mirror": "FBX/IN_SLBM_K4_LOD0.fbx",
+        "sha256": "7eb9c3a4727bbacaf1008bb86ee8dcc281b186897a152126fd35226c67644d3e",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/IN_SLBM_K4_LOD1.fbx",
+        "mirror": "FBX/IN_SLBM_K4_LOD1.fbx",
+        "sha256": "b1585b4934cd75841313df60190a1d43df446570bd79a1163de6d9e41e473a60",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/IN_SLBM_K4_LOD2.fbx",
+        "mirror": "FBX/IN_SLBM_K4_LOD2.fbx",
+        "sha256": "b2062630b1320c92e9604d9872784a46510364127d42ac258160a314b59eb700",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/IN_SLBM_K4_LOD3.fbx",
+        "mirror": "FBX/IN_SLBM_K4_LOD3.fbx",
+        "sha256": "d9fb46ea78cdab4f726ddcd8153b362d6722358d927917954172749d7e13a7a1",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/IN_SLBM_K4_COLLISION.fbx",
+      "sha256": "cdcf7f0ac8735c041b32e5ada14b066f555c3feb4432a7bc8df2d527f3d1dc3b"
+    },
+    "collision_manifest": {
+      "path": "Collision/IN_SLBM_K4_COLLISION.json",
+      "sha256": "f8b950d865ac6852c0b8b3c649518ec7e890e4b33f530f7a85a20a5980cf28c9"
+    }
+  },
+  "build_seconds": 0.78,
+  "preview_seconds": {
+    "PERSPECTIVE": 1.71,
+    "SIDE": 0.31,
+    "FRONT": 0.31,
+    "TOP": 0.27,
+    "DETAIL": 0.3,
+    "ICON": 0.35
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "IN_SLBM_K4_DETAIL_128.png",
+    "IN_SLBM_K4_DETAIL_256.png",
+    "IN_SLBM_K4_DETAIL_512.png",
+    "IN_SLBM_K4_FRONT_128.png",
+    "IN_SLBM_K4_FRONT_256.png",
+    "IN_SLBM_K4_FRONT_512.png",
+    "IN_SLBM_K4_ICON_128.png",
+    "IN_SLBM_K4_ICON_256.png",
+    "IN_SLBM_K4_ICON_512.png",
+    "IN_SLBM_K4_PERSPECTIVE_128.png",
+    "IN_SLBM_K4_PERSPECTIVE_256.png",
+    "IN_SLBM_K4_PERSPECTIVE_512.png",
+    "IN_SLBM_K4_SIDE_128.png",
+    "IN_SLBM_K4_SIDE_256.png",
+    "IN_SLBM_K4_SIDE_512.png",
+    "IN_SLBM_K4_TOP_128.png",
+    "IN_SLBM_K4_TOP_256.png",
+    "IN_SLBM_K4_TOP_512.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/IN_SLBM_K4_MASTER.blend",
+      "sha256": "3b6d6c4d54518a2af95684847c0047f7046eeb6173b17d17945e42a17a4f0850"
+    },
+    "source": {
+      "path": "Source/IN_SLBM_K4_SOURCE.json",
+      "sha256": "17dcc03c7d0b5050e64aeb3605365fd4f898f1c6f7bf8952202f9241934cc610"
+    },
+    "spec": {
+      "path": "Documentation/IN_SLBM_K4_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/IN_SLBM_K4_README.md"
+    }
+  }
+}

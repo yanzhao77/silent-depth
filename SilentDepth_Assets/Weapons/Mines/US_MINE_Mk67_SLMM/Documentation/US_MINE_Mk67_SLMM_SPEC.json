@@ -1,0 +1,90 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_MINE_Mk67_SLMM",
+  "display_name": "Mk 67 SLMM",
+  "short_name": "Mk67-SLMM",
+  "country": "USA",
+  "category": "MINE",
+  "family": "US_MINE_Mk67_SLMM",
+  "role": "潜艇布放机动水雷",
+  "subrole": "Submarine_Deployable_Mine",
+  "tier": 6,
+  "tier_reason": "游戏 T6 现代水雷节点：由鱼雷管布放，外形沿用鱼雷弹体便于识别。",
+  "era": "Cold War Late",
+  "service_years": "1980s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 4.83,
+    "diameter_m": 0.483,
+    "mass_kg": 700,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料沿用 Mk 37 鱼雷弹体量级。"
+  },
+  "geometry": {
+    "kind": "mine",
+    "features": [
+      "torpedo_shaped_body",
+      "launch_canister"
+    ],
+    "params": {
+      "body": "torpedo_shaped",
+      "nose": "hemispherical",
+      "nose_len_ratio": 0.6,
+      "mooring": 0,
+      "mooring_len_ratio": 1.5,
+      "canister": 0,
+      "horns": 0,
+      "rails": 2,
+      "fins": 4,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.7,
+      "tail_len_ratio": 0.4,
+      "bands": 2
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/US_MINE_Mk67_SLMM_MASTER.blend",
+    "lod": [
+      "LOD/US_MINE_Mk67_SLMM_LOD0.fbx",
+      "LOD/US_MINE_Mk67_SLMM_LOD1.fbx",
+      "LOD/US_MINE_Mk67_SLMM_LOD2.fbx",
+      "LOD/US_MINE_Mk67_SLMM_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_MINE_Mk67_SLMM_LOD0.fbx",
+      "FBX/US_MINE_Mk67_SLMM_LOD1.fbx",
+      "FBX/US_MINE_Mk67_SLMM_LOD2.fbx",
+      "FBX/US_MINE_Mk67_SLMM_LOD3.fbx"
+    ],
+    "collision": "Collision/US_MINE_Mk67_SLMM_COLLISION.fbx",
+    "collision_manifest": "Collision/US_MINE_Mk67_SLMM_COLLISION.json",
+    "source": "Source/US_MINE_Mk67_SLMM_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 876,
+    "LOD1": 444,
+    "LOD2": 220,
+    "LOD3": 160
+  },
+  "collision_boxes": 2,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 4.83,
+  "built_max_diameter_m": 0.562581,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料沿用 Mk 37 鱼雷弹体量级。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

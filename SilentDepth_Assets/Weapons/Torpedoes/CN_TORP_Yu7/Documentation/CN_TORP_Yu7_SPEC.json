@@ -1,0 +1,89 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "CN_TORP_Yu7",
+  "display_name": "Yu-7 torpedo",
+  "short_name": "Yu-7",
+  "country": "China",
+  "category": "TORP",
+  "family": "CN_TORP_Yu7",
+  "role": "轻型反潜鱼雷",
+  "subrole": "Lightweight",
+  "tier": 7,
+  "tier_reason": "游戏 T7 轻型节点：324 毫米级小弹体。",
+  "era": "Modern",
+  "service_years": "1990s-present",
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "AIR_LAUNCH",
+    "SURFACE_LAUNCH"
+  ],
+  "dimensions": {
+    "length_m": 2.7,
+    "diameter_m": 0.324,
+    "mass_kg": 235,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "lightweight"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.0,
+      "tail": "conical",
+      "tail_len_ratio": 0.8,
+      "fin_count": 4,
+      "fin_span_ratio": 1.6,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "propeller",
+      "wire_dispenser": 0,
+      "sonar_windows": 2,
+      "bands": 1
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/CN_TORP_Yu7_MASTER.blend",
+    "lod": [
+      "LOD/CN_TORP_Yu7_LOD0.fbx",
+      "LOD/CN_TORP_Yu7_LOD1.fbx",
+      "LOD/CN_TORP_Yu7_LOD2.fbx",
+      "LOD/CN_TORP_Yu7_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/CN_TORP_Yu7_LOD0.fbx",
+      "FBX/CN_TORP_Yu7_LOD1.fbx",
+      "FBX/CN_TORP_Yu7_LOD2.fbx",
+      "FBX/CN_TORP_Yu7_LOD3.fbx"
+    ],
+    "collision": "Collision/CN_TORP_Yu7_COLLISION.fbx",
+    "collision_manifest": "Collision/CN_TORP_Yu7_COLLISION.json",
+    "source": "Source/CN_TORP_Yu7_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2928,
+    "LOD1": 984,
+    "LOD2": 632,
+    "LOD3": 476
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 2.684218,
+  "built_max_diameter_m": 0.673158,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

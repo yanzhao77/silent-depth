@@ -1,0 +1,166 @@
+{
+  "weapon_id": "US_SLBM_Polaris_A3",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 9.9,
+  "declared_diameter_m": 1.37,
+  "built_length_m": 9.9,
+  "built_max_diameter_m": 1.4385,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2072,
+      "triangles": 3840
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 702,
+      "triangles": 1248
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 342,
+      "triangles": 640
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 216,
+      "triangles": 400
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_US_SLBM_Polaris_A3_SEG_00",
+    "UCX_WPN_US_SLBM_Polaris_A3_SEG_01",
+    "UCX_WPN_US_SLBM_Polaris_A3_SEG_02",
+    "UCX_WPN_US_SLBM_Polaris_A3_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -4.949999809265137,
+      4.949999809265137
+    ],
+    "y": [
+      -0.7192500233650208,
+      0.7192500233650208
+    ],
+    "z": [
+      -0.7192500233650208,
+      0.7192500233650208
+    ],
+    "dimensions_m": [
+      9.899999618530273,
+      1.4385000467300415,
+      1.4385000467300415
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_SLBM_Polaris_A3_LOD0.fbx",
+        "mirror": "FBX/US_SLBM_Polaris_A3_LOD0.fbx",
+        "sha256": "ae4ff042b26e1e6c2126433905e3a8e8cf2e6aba317dfa5690a0398c1e75d7a2",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_SLBM_Polaris_A3_LOD1.fbx",
+        "mirror": "FBX/US_SLBM_Polaris_A3_LOD1.fbx",
+        "sha256": "e31149cfd70d934b659d54853f155556a93c4c509c50398af06a1ef3397fc34a",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_SLBM_Polaris_A3_LOD2.fbx",
+        "mirror": "FBX/US_SLBM_Polaris_A3_LOD2.fbx",
+        "sha256": "b636b541e2fd37a8b5c0d8421cef9b81418e5a13c24d602ce42c9302bd2a4c12",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_SLBM_Polaris_A3_LOD3.fbx",
+        "mirror": "FBX/US_SLBM_Polaris_A3_LOD3.fbx",
+        "sha256": "d1541a5c2cfa4ffa46222b9ee0c37249849d718edba811aeabcf4ac1f90a57d1",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_SLBM_Polaris_A3_COLLISION.fbx",
+      "sha256": "24336ed49db76f29bac52041aa5b4f2a280c02c73c5e9a2957f26d8040783376"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_SLBM_Polaris_A3_COLLISION.json",
+      "sha256": "ef3eec21cf492486687b3194522a15219e43787be3d513311c3892fe3dff1095"
+    }
+  },
+  "build_seconds": 0.5,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.3,
+    "SIDE": 0.33,
+    "FRONT": 0.37,
+    "TOP": 0.38,
+    "DETAIL": 0.33,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_SLBM_Polaris_A3_DETAIL_128.png",
+    "US_SLBM_Polaris_A3_DETAIL_256.png",
+    "US_SLBM_Polaris_A3_DETAIL_512.png",
+    "US_SLBM_Polaris_A3_FRONT_128.png",
+    "US_SLBM_Polaris_A3_FRONT_256.png",
+    "US_SLBM_Polaris_A3_FRONT_512.png",
+    "US_SLBM_Polaris_A3_ICON_128.png",
+    "US_SLBM_Polaris_A3_ICON_256.png",
+    "US_SLBM_Polaris_A3_ICON_512.png",
+    "US_SLBM_Polaris_A3_PERSPECTIVE_128.png",
+    "US_SLBM_Polaris_A3_PERSPECTIVE_256.png",
+    "US_SLBM_Polaris_A3_PERSPECTIVE_512.png",
+    "US_SLBM_Polaris_A3_SIDE_128.png",
+    "US_SLBM_Polaris_A3_SIDE_256.png",
+    "US_SLBM_Polaris_A3_SIDE_512.png",
+    "US_SLBM_Polaris_A3_TOP_128.png",
+    "US_SLBM_Polaris_A3_TOP_256.png",
+    "US_SLBM_Polaris_A3_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_SLBM_Polaris_A3_MASTER.blend",
+      "sha256": "a40a389074a418261a6edc941da51baa5d396edcfad8c48486979869b7848674"
+    },
+    "source": {
+      "path": "Source/US_SLBM_Polaris_A3_SOURCE.json",
+      "sha256": "9b6617982726b8884eddb3a0e8b43c17beb86e007662de6d43516fd21c30146c"
+    },
+    "spec": {
+      "path": "Documentation/US_SLBM_Polaris_A3_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_SLBM_Polaris_A3_README.md"
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_SLBM_Polaris_A3",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_SLBM_Polaris_A3_SEG_00",
+      "centre": [
+        3.564,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.7720000000000002,
+        0.4795,
+        0.4795
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Polaris_A3_SEG_01",
+      "centre": [
+        0.9900000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.376,
+        1.37,
+        1.37
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Polaris_A3_SEG_02",
+      "centre": [
+        -1.9800000000000002,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.564,
+        1.37,
+        1.37
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SLBM_Polaris_A3_SEG_03",
+      "centre": [
+        -4.158,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.584,
+        1.37,
+        1.37
+      ]
+    }
+  ],
+  "collision_fbx": "US_SLBM_Polaris_A3_COLLISION.fbx",
+  "collision_sha256": "24336ed49db76f29bac52041aa5b4f2a280c02c73c5e9a2957f26d8040783376"
+}

@@ -1,0 +1,43 @@
+{
+  "weapon_id": "US_MINE_Mk67_SLMM",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "mine",
+    "features": [
+      "torpedo_shaped_body",
+      "launch_canister"
+    ],
+    "params": {
+      "body": "torpedo_shaped",
+      "nose": "hemispherical",
+      "nose_len_ratio": 0.6,
+      "mooring": 0,
+      "mooring_len_ratio": 1.5,
+      "canister": 0,
+      "horns": 0,
+      "rails": 2,
+      "fins": 4,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.7,
+      "tail_len_ratio": 0.4,
+      "bands": 2
+    }
+  },
+  "dimensions": {
+    "length_m": 4.83,
+    "diameter_m": 0.483,
+    "mass_kg": 700,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料沿用 Mk 37 鱼雷弹体量级。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "tier": 6,
+  "asset_priority": "MEDIUM",
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料沿用 Mk 37 鱼雷弹体量级。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

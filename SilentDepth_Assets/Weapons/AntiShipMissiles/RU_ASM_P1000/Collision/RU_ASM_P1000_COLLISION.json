@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_ASM_P1000",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_ASM_P1000_SEG_00",
+      "centre": [
+        4.212,
+        0.0,
+        0.0
+      ],
+      "size": [
+        3.2760000000000002,
+        0.308,
+        0.308
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_P1000_SEG_01",
+      "centre": [
+        1.17,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.808,
+        0.88,
+        0.88
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_P1000_SEG_02",
+      "centre": [
+        -2.34,
+        0.0,
+        0.0
+      ],
+      "size": [
+        4.212,
+        0.88,
+        0.88
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_P1000_SEG_03",
+      "centre": [
+        -4.914,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.8719999999999999,
+        1.702023529411765,
+        1.702023529411765
+      ]
+    }
+  ],
+  "collision_fbx": "RU_ASM_P1000_COLLISION.fbx",
+  "collision_sha256": "85f661d6a962d59d02bc295e6bcacb78923b02f8b73f096a40a1cfb66523253c"
+}

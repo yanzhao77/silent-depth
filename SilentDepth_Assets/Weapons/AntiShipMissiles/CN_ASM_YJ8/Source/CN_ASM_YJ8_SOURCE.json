@@ -1,0 +1,54 @@
+{
+  "weapon_id": "CN_ASM_YJ8",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "cruise_missile",
+    "features": [
+      "underwater_launch",
+      "fixed_wing"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.5,
+      "body_shape": "cylinder",
+      "wing_type": "fixed",
+      "wing_pairs": 1,
+      "wing_span_ratio": 2.6,
+      "wing_chord_ratio": 1.0,
+      "wing_position": 0.4,
+      "wing_sweep_deg": 28.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 1.8,
+      "tail_chord_ratio": 0.9,
+      "intake_type": "none",
+      "intake_position": 0.2,
+      "intake_len_ratio": 1.2,
+      "booster": 1,
+      "booster_len_ratio": 0.22,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 0,
+      "canister": 1
+    }
+  },
+  "dimensions": {
+    "length_m": 5.8,
+    "diameter_m": 0.36,
+    "mass_kg": 815,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "CANISTER"
+  ],
+  "tier": 6,
+  "asset_priority": "MEDIUM",
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

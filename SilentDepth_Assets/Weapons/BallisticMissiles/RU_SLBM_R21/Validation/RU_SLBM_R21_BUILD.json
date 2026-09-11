@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_SLBM_R21",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 13.0,
+  "declared_diameter_m": 1.4,
+  "built_length_m": 13.0,
+  "built_max_diameter_m": 1.47,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1640,
+      "triangles": 2976
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 606,
+      "triangles": 1056
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 278,
+      "triangles": 512
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 176,
+      "triangles": 320
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_SLBM_R21_SEG_00",
+    "UCX_WPN_RU_SLBM_R21_SEG_01",
+    "UCX_WPN_RU_SLBM_R21_SEG_02",
+    "UCX_WPN_RU_SLBM_R21_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -6.5,
+      6.5
+    ],
+    "y": [
+      -0.7350000143051147,
+      0.7350000143051147
+    ],
+    "z": [
+      -0.7350000143051147,
+      0.7350000143051147
+    ],
+    "dimensions_m": [
+      13.0,
+      1.4700000286102295,
+      1.4700000286102295
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_SLBM_R21_LOD0.fbx",
+        "mirror": "FBX/RU_SLBM_R21_LOD0.fbx",
+        "sha256": "310d66b704b33fe3538728ef3479d200d3d5e5a6c7ff9a6b7277175cf85d5ad5",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_SLBM_R21_LOD1.fbx",
+        "mirror": "FBX/RU_SLBM_R21_LOD1.fbx",
+        "sha256": "7699dceadfc956fac01047e005e7912bbb3fd631c32ba01e391f3ecac62f0b2b",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_SLBM_R21_LOD2.fbx",
+        "mirror": "FBX/RU_SLBM_R21_LOD2.fbx",
+        "sha256": "57eb22e076bf9faf326de1982b611519dc89da3f230c2ab9deba5b2d731dc457",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_SLBM_R21_LOD3.fbx",
+        "mirror": "FBX/RU_SLBM_R21_LOD3.fbx",
+        "sha256": "85b24784a8abdc02afbf03d0a48023f4064691348474dae77dd54597da25fe0a",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_SLBM_R21_COLLISION.fbx",
+      "sha256": "ad23cebc414e18ff9f982c42c93c07c151763efa95a855d05d117fc6d36e0441"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_SLBM_R21_COLLISION.json",
+      "sha256": "9fe210d4bb64c9ef45aeeea407bb1000d20be68b8cc5bc0d0e6777196d442478"
+    }
+  },
+  "build_seconds": 0.36,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.33,
+    "SIDE": 0.31,
+    "FRONT": 0.3,
+    "TOP": 0.28,
+    "DETAIL": 0.32,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_SLBM_R21_DETAIL_128.png",
+    "RU_SLBM_R21_DETAIL_256.png",
+    "RU_SLBM_R21_DETAIL_512.png",
+    "RU_SLBM_R21_FRONT_128.png",
+    "RU_SLBM_R21_FRONT_256.png",
+    "RU_SLBM_R21_FRONT_512.png",
+    "RU_SLBM_R21_ICON_128.png",
+    "RU_SLBM_R21_ICON_256.png",
+    "RU_SLBM_R21_ICON_512.png",
+    "RU_SLBM_R21_PERSPECTIVE_128.png",
+    "RU_SLBM_R21_PERSPECTIVE_256.png",
+    "RU_SLBM_R21_PERSPECTIVE_512.png",
+    "RU_SLBM_R21_SIDE_128.png",
+    "RU_SLBM_R21_SIDE_256.png",
+    "RU_SLBM_R21_SIDE_512.png",
+    "RU_SLBM_R21_TOP_128.png",
+    "RU_SLBM_R21_TOP_256.png",
+    "RU_SLBM_R21_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_SLBM_R21_MASTER.blend",
+      "sha256": "656b8465e34e7d038d7c1818970002ec62736529280c191b5648fe8c7ab85fc9"
+    },
+    "source": {
+      "path": "Source/RU_SLBM_R21_SOURCE.json",
+      "sha256": "d0b5ab7d1a37da397f577afb84ac42e26eeac304acd301be9064b0e9aade7c9b"
+    },
+    "spec": {
+      "path": "Documentation/RU_SLBM_R21_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_SLBM_R21_README.md"
+    }
+  }
+}

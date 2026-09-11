@@ -1,0 +1,61 @@
+{
+  "weapon_id": "US_SPECIAL_SDV_Mk8",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_SPECIAL_SDV_Mk8_SEG_00",
+      "centre": [
+        2.304,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.7920000000000003,
+        0.5249999999999999,
+        0.5249999999999999
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SPECIAL_SDV_Mk8_SEG_01",
+      "centre": [
+        0.6400000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.536,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SPECIAL_SDV_Mk8_SEG_02",
+      "centre": [
+        -1.2800000000000002,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.304,
+        1.5,
+        1.5
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_SPECIAL_SDV_Mk8_SEG_03",
+      "centre": [
+        -2.688,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.024,
+        1.8238235294117646,
+        1.8238235294117646
+      ]
+    }
+  ],
+  "collision_fbx": "US_SPECIAL_SDV_Mk8_COLLISION.fbx",
+  "collision_sha256": "7edb25eda1892c2f978fabc6cd9450961ba6dd979a43395959cd4c253be8d135"
+}

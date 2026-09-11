@@ -1,0 +1,42 @@
+{
+  "weapon_id": "RU_TORP_Shkval",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "supercavitating",
+      "rocket_nozzle",
+      "cavitator"
+    ],
+    "params": {
+      "nose": "cavitator",
+      "nose_len_ratio": 0.9,
+      "tail": "conical",
+      "tail_len_ratio": 0.9,
+      "fin_count": 0,
+      "fin_span_ratio": 1.0,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "rocket_nozzle",
+      "wire_dispenser": 0,
+      "sonar_windows": 0,
+      "bands": 2
+    }
+  },
+  "dimensions": {
+    "length_m": 8.2,
+    "diameter_m": 0.533,
+    "mass_kg": 2700,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "公开资料长度约 8 米。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "tier": 7,
+  "asset_priority": "HIGH",
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "公开资料长度约 8 米。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

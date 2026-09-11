@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_SPECIAL_SDV_Mk8",
+  "display_name": "Mk 8 SEAL Delivery Vehicle",
+  "short_name": "SDV-Mk8",
+  "country": "USA",
+  "category": "SPECIAL",
+  "family": "US_SPECIAL_SDV_Mk8",
+  "role": "水下输送载具",
+  "subrole": "SDV",
+  "tier": 7,
+  "tier_reason": "游戏 T7 特种输送载具：短而宽的开式载具，与 ASDS 外形区分明显。",
+  "era": "Cold War Late",
+  "service_years": "1980s-present",
+  "launch_methods": [
+    "SWIM_OUT_DOCK"
+  ],
+  "dimensions": {
+    "length_m": 6.4,
+    "diameter_m": 1.5,
+    "mass_kg": 3500,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+  },
+  "geometry": {
+    "kind": "sdv",
+    "features": [
+      "short_body",
+      "open_frame",
+      "shrouded_propulsor"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 1.0,
+      "canopy": 0,
+      "propulsor": "shrouded",
+      "propulsor_shroud": 1,
+      "fins": 4,
+      "fin_span_ratio": 1.3,
+      "fin_chord_ratio": 0.8,
+      "docking_collar": 1,
+      "bands": 1
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/US_SPECIAL_SDV_Mk8_MASTER.blend",
+    "lod": [
+      "LOD/US_SPECIAL_SDV_Mk8_LOD0.fbx",
+      "LOD/US_SPECIAL_SDV_Mk8_LOD1.fbx",
+      "LOD/US_SPECIAL_SDV_Mk8_LOD2.fbx",
+      "LOD/US_SPECIAL_SDV_Mk8_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_SPECIAL_SDV_Mk8_LOD0.fbx",
+      "FBX/US_SPECIAL_SDV_Mk8_LOD1.fbx",
+      "FBX/US_SPECIAL_SDV_Mk8_LOD2.fbx",
+      "FBX/US_SPECIAL_SDV_Mk8_LOD3.fbx"
+    ],
+    "collision": "Collision/US_SPECIAL_SDV_Mk8_COLLISION.fbx",
+    "collision_manifest": "Collision/US_SPECIAL_SDV_Mk8_COLLISION.json",
+    "source": "Source/US_SPECIAL_SDV_Mk8_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 1176,
+    "LOD1": 744,
+    "LOD2": 504,
+    "LOD3": 432
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 6.4065,
+  "built_max_diameter_m": 1.65,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料仅有量级信息，按近似尺寸建模。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

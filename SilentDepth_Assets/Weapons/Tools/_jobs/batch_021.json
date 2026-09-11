@@ -1,0 +1,282 @@
+{
+  "batch_index": 21,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "US_SPECIAL_SDV_Mk8",
+      "display_name": "Mk 8 SEAL Delivery Vehicle",
+      "short_name": "SDV-Mk8",
+      "category": "SPECIAL",
+      "family_id": "US_SPECIAL_SDV_Mk8",
+      "base_geometry": "us_special_sdv_mk8",
+      "country": "USA",
+      "role": "水下输送载具",
+      "subrole": "SDV",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 7,
+      "tier_reason": "游戏 T7 特种输送载具：短而宽的开式载具，与 ASDS 外形区分明显。",
+      "launch_methods": [
+        "SWIM_OUT_DOCK"
+      ],
+      "dimensions": {
+        "length_m": 6.4,
+        "diameter_m": 1.5,
+        "mass_kg": 3500,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 1.5,
+      "geometry": {
+        "kind": "sdv",
+        "features": [
+          "short_body",
+          "open_frame",
+          "shrouded_propulsor"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.0,
+          "canopy": 0,
+          "propulsor": "shrouded",
+          "propulsor_shroud": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.3,
+          "fin_chord_ratio": 0.8,
+          "docking_collar": 1,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_STRAT_RegulusII",
+      "display_name": "SSM-N-8B Regulus II",
+      "short_name": "Regulus II",
+      "category": "STRAT",
+      "family_id": "US_STRAT_RegulusII",
+      "base_geometry": "us_strat_regulus2",
+      "country": "USA",
+      "role": "潜射战略巡航导弹（取消项目）",
+      "subrole": "Early_Strategic",
+      "era": "Cold War",
+      "service_years": "1958（取消）",
+      "tier": 4,
+      "tier_reason": "游戏 T4 战略巡航节点：取消的历史项目，用于展示早期战略巡航武器分支。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 17.5,
+        "diameter_m": 1.5,
+        "mass_kg": 10400,
+        "scale_source": "ESTIMATED",
+        "scale_note": "取消项目，公开资料尺寸为级别近似值。"
+      },
+      "body_diameter_m": 1.5,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "large_fixed_wing",
+          "canister_body",
+          "cancelled_project",
+          "solid_booster",
+          "supersonic_body"
+        ],
+        "params": {
+          "nose": "pointed",
+          "nose_len_ratio": 3.4,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 4.4,
+          "wing_chord_ratio": 1.2,
+          "wing_position": 0.42,
+          "wing_sweep_deg": 45.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.0,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "nose",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.28,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": "项目取消，仅作为科技树历史节点保留，资料不足处标记 ESTIMATED。"
+    },
+    {
+      "weapon_id": "US_STRAT_TLAM_N",
+      "display_name": "BGM-109A Tomahawk TLAM-N",
+      "short_name": "TLAM-N",
+      "category": "STRAT",
+      "family_id": "US_STRAT_TLAM_N",
+      "base_geometry": "us_strat_tlam_n",
+      "country": "USA",
+      "role": "潜射战略巡航导弹",
+      "subrole": "Modern_Strategic",
+      "era": "Cold War Late",
+      "service_years": "1984-2010s",
+      "tier": 8,
+      "tier_reason": "游戏 T8 战略巡航节点：与 Tomahawk 家族共享基础几何，仅在数据层区分战略角色。",
+      "launch_methods": [
+        "TORPEDO_TUBE",
+        "VLS"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.52,
+        "mass_kg": 1500,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料 Tomahawk 级别尺寸。"
+      },
+      "body_diameter_m": 0.52,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "popout_wing",
+          "solid_booster",
+          "land_attack_kit",
+          "canister"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 3.0,
+          "body_shape": "cylinder",
+          "wing_type": "popout",
+          "wing_pairs": 1,
+          "wing_span_ratio": 3.2,
+          "wing_chord_ratio": 1.1,
+          "wing_position": 0.45,
+          "wing_sweep_deg": 35.0,
+          "tail_type": "x_config",
+          "tail_count": 4,
+          "tail_span_ratio": 2.4,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.24,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": "与 US_LAM_Tomahawk 家族共享几何，数据层通过 weapon_role 区分。"
+    },
+    {
+      "weapon_id": "US_TORP_Mk14",
+      "display_name": "Mk 14 torpedo",
+      "short_name": "Mk14",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk14",
+      "base_geometry": "us_torp_mk14",
+      "country": "USA",
+      "role": "早期重型蒸汽鱼雷",
+      "subrole": "Early_Heavyweight",
+      "era": "Early",
+      "service_years": "1940-1960s",
+      "tier": 1,
+      "tier_reason": "游戏 T1 早期基础鱼雷：无制导、外形简单，作为鱼雷科技树的起点节点。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.533,
+        "mass_kg": 1360,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料常见数据，保留为整数级近似。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wwii_blunt_tail",
+          "straight_running"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 0,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_TORP_Mk16",
+      "display_name": "Mk 16 torpedo",
+      "short_name": "Mk16",
+      "category": "TORP",
+      "family_id": "US_TORP_Mk16",
+      "base_geometry": "us_torp_mk16",
+      "country": "USA",
+      "role": "战后高速蒸汽鱼雷",
+      "subrole": "Early_Heavyweight",
+      "era": "Cold War",
+      "service_years": "1950s-1970s",
+      "tier": 2,
+      "tier_reason": "游戏 T2 过渡型号：从无制导向早期成熟重型鱼雷过渡的节点。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 6.25,
+        "diameter_m": 0.533,
+        "mass_kg": 1600,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料尺寸与 Mk 14 同级，取近似值。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "high_speed_steam"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 1.7,
+          "tail": "conical",
+          "tail_len_ratio": 1.2,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_ASM_Kalibr_3M54",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_ASM_Kalibr_3M54_SEG_00",
+      "centre": [
+        2.9519999999999995,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.296,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_Kalibr_3M54_SEG_01",
+      "centre": [
+        0.82,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.9679999999999997,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_Kalibr_3M54_SEG_02",
+      "centre": [
+        -1.64,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.9519999999999995,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_ASM_Kalibr_3M54_SEG_03",
+      "centre": [
+        -3.4439999999999995,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.3119999999999998,
+        2.254025647058824,
+        2.254025647058824
+      ]
+    }
+  ],
+  "collision_fbx": "RU_ASM_Kalibr_3M54_COLLISION.fbx",
+  "collision_sha256": "ac4c865e3a20b9a7a4463c7b37df3bd7a311aae9f6ffdd0b5a72ea4ce2b6bcae"
+}

@@ -1,0 +1,166 @@
+{
+  "weapon_id": "IN_TORP_Varunastra",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 7.6,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 7.600852,
+  "built_max_diameter_m": 0.841066,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2170,
+      "triangles": 3852
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 890,
+      "triangles": 1488
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 402,
+      "triangles": 704
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 324,
+      "triangles": 548
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_IN_TORP_Varunastra_SEG_00",
+    "UCX_WPN_IN_TORP_Varunastra_SEG_01",
+    "UCX_WPN_IN_TORP_Varunastra_SEG_02",
+    "UCX_WPN_IN_TORP_Varunastra_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.800851583480835,
+      3.799999952316284
+    ],
+    "y": [
+      -0.274495005607605,
+      0.47328048944473267
+    ],
+    "z": [
+      -0.4205329120159149,
+      0.4205329120159149
+    ],
+    "dimensions_m": [
+      7.600851535797119,
+      0.7477754950523376,
+      0.8410658240318298
+    ],
+    "centre": [
+      -0.0004258155822753906,
+      0.09939274191856384,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/IN_TORP_Varunastra_LOD0.fbx",
+        "mirror": "FBX/IN_TORP_Varunastra_LOD0.fbx",
+        "sha256": "de8ad758f3073a9a524324d4efd2b348129a72351f8a0fc234fd598577f07503",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/IN_TORP_Varunastra_LOD1.fbx",
+        "mirror": "FBX/IN_TORP_Varunastra_LOD1.fbx",
+        "sha256": "73150050675d1a7b98c54300d1eaacf69caae955e13491c91c4c824f53fbb759",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/IN_TORP_Varunastra_LOD2.fbx",
+        "mirror": "FBX/IN_TORP_Varunastra_LOD2.fbx",
+        "sha256": "1451d34dba522b45067e607941f37254a42bc0d5f81edd9e5a48b14b442a7c1a",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/IN_TORP_Varunastra_LOD3.fbx",
+        "mirror": "FBX/IN_TORP_Varunastra_LOD3.fbx",
+        "sha256": "b84983c399e4bafbaa44116e99bb908ea9bdd1741c882d2bdc22c3c2b49e5f0e",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/IN_TORP_Varunastra_COLLISION.fbx",
+      "sha256": "d5bcfc6a6379ae17d183a99926e04f744f3a53d7af2dc7408618af0fabe75965"
+    },
+    "collision_manifest": {
+      "path": "Collision/IN_TORP_Varunastra_COLLISION.json",
+      "sha256": "275a16a4494f17e65074c077e587469224c6d6d1a065aec7fa5cb8f487bfa328"
+    }
+  },
+  "build_seconds": 0.6,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.29,
+    "SIDE": 0.3,
+    "FRONT": 0.29,
+    "TOP": 0.38,
+    "DETAIL": 0.3,
+    "ICON": 0.29
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "IN_TORP_Varunastra_DETAIL_128.png",
+    "IN_TORP_Varunastra_DETAIL_256.png",
+    "IN_TORP_Varunastra_DETAIL_512.png",
+    "IN_TORP_Varunastra_FRONT_128.png",
+    "IN_TORP_Varunastra_FRONT_256.png",
+    "IN_TORP_Varunastra_FRONT_512.png",
+    "IN_TORP_Varunastra_ICON_128.png",
+    "IN_TORP_Varunastra_ICON_256.png",
+    "IN_TORP_Varunastra_ICON_512.png",
+    "IN_TORP_Varunastra_PERSPECTIVE_128.png",
+    "IN_TORP_Varunastra_PERSPECTIVE_256.png",
+    "IN_TORP_Varunastra_PERSPECTIVE_512.png",
+    "IN_TORP_Varunastra_SIDE_128.png",
+    "IN_TORP_Varunastra_SIDE_256.png",
+    "IN_TORP_Varunastra_SIDE_512.png",
+    "IN_TORP_Varunastra_TOP_128.png",
+    "IN_TORP_Varunastra_TOP_256.png",
+    "IN_TORP_Varunastra_TOP_512.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/IN_TORP_Varunastra_MASTER.blend",
+      "sha256": "2efd6d3fe2590f0c0244a701932ca56f054592d387c4a6f65d678b963ee7835f"
+    },
+    "source": {
+      "path": "Source/IN_TORP_Varunastra_SOURCE.json",
+      "sha256": "326504e6206e681f33e4564fee19bce311e313e759ded14020a3c52b5cda00a1"
+    },
+    "spec": {
+      "path": "Documentation/IN_TORP_Varunastra_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/IN_TORP_Varunastra_README.md"
+    }
+  }
+}

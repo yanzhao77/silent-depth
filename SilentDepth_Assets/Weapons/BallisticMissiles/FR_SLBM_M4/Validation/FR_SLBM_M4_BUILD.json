@@ -1,0 +1,166 @@
+{
+  "weapon_id": "FR_SLBM_M4",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "slbm",
+  "declared_length_m": 11.0,
+  "declared_diameter_m": 1.93,
+  "built_length_m": 11.0,
+  "built_max_diameter_m": 2.6827,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2280,
+      "triangles": 4152
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 814,
+      "triangles": 1416
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 422,
+      "triangles": 760
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 272,
+      "triangles": 484
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_FR_SLBM_M4_SEG_00",
+    "UCX_WPN_FR_SLBM_M4_SEG_01",
+    "UCX_WPN_FR_SLBM_M4_SEG_02",
+    "UCX_WPN_FR_SLBM_M4_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -5.5,
+      5.5
+    ],
+    "y": [
+      -1.0132499933242798,
+      1.0132499933242798
+    ],
+    "z": [
+      -1.3413499593734741,
+      1.3413499593734741
+    ],
+    "dimensions_m": [
+      11.0,
+      2.0264999866485596,
+      2.6826999187469482
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/FR_SLBM_M4_LOD0.fbx",
+        "mirror": "FBX/FR_SLBM_M4_LOD0.fbx",
+        "sha256": "25c26cf71b3d85fc355a1134ff3b4e6997c6e6a7ee831dc7f97dee9d077d0e04",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/FR_SLBM_M4_LOD1.fbx",
+        "mirror": "FBX/FR_SLBM_M4_LOD1.fbx",
+        "sha256": "75887933ffa76d4bb8752227d2a2240afb9971a9da5b882bc4cc76cf133aa119",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/FR_SLBM_M4_LOD2.fbx",
+        "mirror": "FBX/FR_SLBM_M4_LOD2.fbx",
+        "sha256": "34a65af515dce0adfcdd098cafa2a4500d92717d9aae59190319c0f2a93deedb",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/FR_SLBM_M4_LOD3.fbx",
+        "mirror": "FBX/FR_SLBM_M4_LOD3.fbx",
+        "sha256": "b45718692d13688fc16ece2c1b6432dc69f03b977889939011f7138758022394",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/FR_SLBM_M4_COLLISION.fbx",
+      "sha256": "673c21e45c99df10e993a280f716d6c6d10ed1526fbf77885e08cf9b2479bd35"
+    },
+    "collision_manifest": {
+      "path": "Collision/FR_SLBM_M4_COLLISION.json",
+      "sha256": "1102f50495efd3378aed07909546614c595b9e98e679377a0500e194463c2320"
+    }
+  },
+  "build_seconds": 0.54,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.36,
+    "SIDE": 0.37,
+    "FRONT": 0.36,
+    "TOP": 0.33,
+    "DETAIL": 0.38,
+    "ICON": 0.38
+  },
+  "previews": [
+    "Detail.png",
+    "FR_SLBM_M4_DETAIL_128.png",
+    "FR_SLBM_M4_DETAIL_256.png",
+    "FR_SLBM_M4_DETAIL_512.png",
+    "FR_SLBM_M4_FRONT_128.png",
+    "FR_SLBM_M4_FRONT_256.png",
+    "FR_SLBM_M4_FRONT_512.png",
+    "FR_SLBM_M4_ICON_128.png",
+    "FR_SLBM_M4_ICON_256.png",
+    "FR_SLBM_M4_ICON_512.png",
+    "FR_SLBM_M4_PERSPECTIVE_128.png",
+    "FR_SLBM_M4_PERSPECTIVE_256.png",
+    "FR_SLBM_M4_PERSPECTIVE_512.png",
+    "FR_SLBM_M4_SIDE_128.png",
+    "FR_SLBM_M4_SIDE_256.png",
+    "FR_SLBM_M4_SIDE_512.png",
+    "FR_SLBM_M4_TOP_128.png",
+    "FR_SLBM_M4_TOP_256.png",
+    "FR_SLBM_M4_TOP_512.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/FR_SLBM_M4_MASTER.blend",
+      "sha256": "ee3cb83bbf174fed4d9e9c305c8beecb50376174c5c8dcd2af2e61c7f7261efa"
+    },
+    "source": {
+      "path": "Source/FR_SLBM_M4_SOURCE.json",
+      "sha256": "a07864e58fefd9c306573844df7ad11dc2e4ade52ef86b4c31af67eb8ac21786"
+    },
+    "spec": {
+      "path": "Documentation/FR_SLBM_M4_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/FR_SLBM_M4_README.md"
+    }
+  }
+}

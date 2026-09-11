@@ -1,0 +1,89 @@
+{
+  "library": "SilentDepth_Weapon_Materials",
+  "generated_at": "2026-09-10",
+  "policy": [
+    "所有武器共用同一套程序化 PBR 材质，不引用外部贴图。",
+    "材质名以 WPN_MAT_ 前缀统一命名，便于 UE4 侧复用。"
+  ],
+  "order": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Shell"
+  ],
+  "materials": {
+    "WPN_MAT_Body": {
+      "base_color": [
+        0.32,
+        0.34,
+        0.36,
+        1.0
+      ],
+      "metallic": 0.35,
+      "roughness": 0.55
+    },
+    "WPN_MAT_Fin": {
+      "base_color": [
+        0.24,
+        0.25,
+        0.27,
+        1.0
+      ],
+      "metallic": 0.65,
+      "roughness": 0.35
+    },
+    "WPN_MAT_Marking": {
+      "base_color": [
+        0.78,
+        0.72,
+        0.42,
+        1.0
+      ],
+      "metallic": 0.05,
+      "roughness": 0.6
+    },
+    "WPN_MAT_Metal": {
+      "base_color": [
+        0.55,
+        0.56,
+        0.58,
+        1.0
+      ],
+      "metallic": 0.85,
+      "roughness": 0.28
+    },
+    "WPN_MAT_Nose": {
+      "base_color": [
+        0.18,
+        0.19,
+        0.21,
+        1.0
+      ],
+      "metallic": 0.45,
+      "roughness": 0.42
+    },
+    "WPN_MAT_Seeker": {
+      "base_color": [
+        0.05,
+        0.07,
+        0.09,
+        1.0
+      ],
+      "metallic": 0.1,
+      "roughness": 0.15
+    },
+    "WPN_MAT_Shell": {
+      "base_color": [
+        0.28,
+        0.31,
+        0.3,
+        1.0
+      ],
+      "metallic": 0.25,
+      "roughness": 0.62
+    }
+  }
+}

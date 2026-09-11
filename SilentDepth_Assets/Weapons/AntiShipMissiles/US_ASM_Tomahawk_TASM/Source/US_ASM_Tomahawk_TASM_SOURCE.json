@@ -1,0 +1,55 @@
+{
+  "weapon_id": "US_ASM_Tomahawk_TASM",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "cruise_missile",
+    "features": [
+      "underwater_launch",
+      "popout_wing",
+      "radar_seeker"
+    ],
+    "params": {
+      "nose": "blunt",
+      "nose_len_ratio": 2.0,
+      "body_shape": "cylinder",
+      "wing_type": "popout",
+      "wing_pairs": 1,
+      "wing_span_ratio": 3.4,
+      "wing_chord_ratio": 1.0,
+      "wing_position": 0.42,
+      "wing_sweep_deg": 30.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 1.9,
+      "tail_chord_ratio": 0.9,
+      "intake_type": "none",
+      "intake_position": 0.2,
+      "intake_len_ratio": 1.2,
+      "booster": 1,
+      "booster_len_ratio": 0.28,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 2,
+      "windows": 1,
+      "canister": 1
+    }
+  },
+  "dimensions": {
+    "length_m": 6.25,
+    "diameter_m": 0.52,
+    "mass_kg": 1600,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "与同族同级尺寸。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE",
+    "VLS"
+  ],
+  "tier": 6,
+  "asset_priority": "MEDIUM",
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "与同族同级尺寸。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

@@ -1,0 +1,93 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_SLBM_R21",
+  "display_name": "R-21 (SS-N-5)",
+  "short_name": "R-21",
+  "country": "Russia",
+  "category": "SLBM",
+  "family": "RU_SLBM_R21",
+  "role": "水下发射早期潜射弹道导弹",
+  "subrole": "Early_SLBM",
+  "tier": 3,
+  "tier_reason": "游戏 T3 水下发射节点：首个可在水下发射的苏联型号，弹体加长。",
+  "era": "Cold War",
+  "service_years": "1963-1970s",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 13.0,
+    "diameter_m": 1.4,
+    "mass_kg": 16700,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "underwater_launch",
+      "dome_shroud"
+    ],
+    "params": {
+      "nose": "shroud",
+      "nose_len_ratio": 1.4,
+      "shroud_shape": "hemispherical",
+      "stage_rings": 1,
+      "tail_skirt": 1,
+      "skirt_flare_ratio": 1.2,
+      "nozzle": "single",
+      "nozzle_len_ratio": 0.55,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.8,
+      "cable_trays": 0,
+      "base_cover": 1,
+      "bands": 2,
+      "windows": 0,
+      "canister": 0
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/RU_SLBM_R21_MASTER.blend",
+    "lod": [
+      "LOD/RU_SLBM_R21_LOD0.fbx",
+      "LOD/RU_SLBM_R21_LOD1.fbx",
+      "LOD/RU_SLBM_R21_LOD2.fbx",
+      "LOD/RU_SLBM_R21_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_SLBM_R21_LOD0.fbx",
+      "FBX/RU_SLBM_R21_LOD1.fbx",
+      "FBX/RU_SLBM_R21_LOD2.fbx",
+      "FBX/RU_SLBM_R21_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_SLBM_R21_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_SLBM_R21_COLLISION.json",
+    "source": "Source/RU_SLBM_R21_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2976,
+    "LOD1": 1056,
+    "LOD2": 512,
+    "LOD3": 320
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 13.0,
+  "built_max_diameter_m": 1.47,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

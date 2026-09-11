@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_SPECIAL_SDV_Sirena",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_SPECIAL_SDV_Sirena_SEG_00",
+      "centre": [
+        2.88,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.24,
+        0.5599999999999999,
+        0.5599999999999999
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SPECIAL_SDV_Sirena_SEG_01",
+      "centre": [
+        0.8,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.92,
+        1.6,
+        1.6
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SPECIAL_SDV_Sirena_SEG_02",
+      "centre": [
+        -1.6,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.88,
+        1.6,
+        1.6
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_SPECIAL_SDV_Sirena_SEG_03",
+      "centre": [
+        -3.36,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.28,
+        2.613866666666667,
+        2.613866666666667
+      ]
+    }
+  ],
+  "collision_fbx": "RU_SPECIAL_SDV_Sirena_COLLISION.fbx",
+  "collision_sha256": "1557b1dcb97eb2b107b9601a2feebd246e092e9c5c08ce9d88bfc96f99d63045"
+}

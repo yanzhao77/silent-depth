@@ -1,0 +1,43 @@
+{
+  "weapon_id": "RU_MINE_PMR2",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "coordinate_frame": "弹头 +X，Y 左右，Z 上；单位为米。",
+  "geometry": {
+    "kind": "mine",
+    "features": [
+      "mooring",
+      "cylindrical"
+    ],
+    "params": {
+      "body": "cylindrical",
+      "nose": "hemispherical",
+      "nose_len_ratio": 0.6,
+      "mooring": 1,
+      "mooring_len_ratio": 1.5,
+      "canister": 0,
+      "horns": 8,
+      "rails": 0,
+      "fins": 0,
+      "fin_span_ratio": 1.2,
+      "fin_chord_ratio": 0.7,
+      "tail_len_ratio": 0.4,
+      "bands": 2
+    }
+  },
+  "dimensions": {
+    "length_m": 1.8,
+    "diameter_m": 0.53,
+    "mass_kg": 600,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+  },
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "tier": 5,
+  "asset_priority": "LOW",
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料仅有量级信息，按近似尺寸建模。",
+  "note": "几何由公开外形参数程序化生成；不含任何内部工程或制造信息。"
+}

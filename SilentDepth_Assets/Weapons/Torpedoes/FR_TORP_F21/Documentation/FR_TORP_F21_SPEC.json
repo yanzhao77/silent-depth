@@ -1,0 +1,90 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "FR_TORP_F21",
+  "display_name": "F21 Artemis torpedo",
+  "short_name": "F21",
+  "country": "France",
+  "category": "TORP",
+  "family": "FR_TORP_F21",
+  "role": "现代重型鱼雷",
+  "subrole": "Modern_Heavyweight",
+  "tier": 9,
+  "tier_reason": "游戏 T9 法国顶级鱼雷：泵喷 + 光纤线导，尾部结构独特。",
+  "era": "Modern",
+  "service_years": "2019-present",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 6.0,
+    "diameter_m": 0.533,
+    "mass_kg": 1550,
+    "scale_source": "ESTIMATED",
+    "scale_note": "公开资料为级别近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "pumpjet",
+      "fiber_optic_guidance",
+      "wire_dispenser",
+      "deep_water"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "tail": "conical",
+      "tail_len_ratio": 1.0,
+      "fin_count": 4,
+      "fin_span_ratio": 1.35,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "pumpjet",
+      "wire_dispenser": 1,
+      "sonar_windows": 3,
+      "bands": 4
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/FR_TORP_F21_MASTER.blend",
+    "lod": [
+      "LOD/FR_TORP_F21_LOD0.fbx",
+      "LOD/FR_TORP_F21_LOD1.fbx",
+      "LOD/FR_TORP_F21_LOD2.fbx",
+      "LOD/FR_TORP_F21_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/FR_TORP_F21_LOD0.fbx",
+      "FBX/FR_TORP_F21_LOD1.fbx",
+      "FBX/FR_TORP_F21_LOD2.fbx",
+      "FBX/FR_TORP_F21_LOD3.fbx"
+    ],
+    "collision": "Collision/FR_TORP_F21_COLLISION.fbx",
+    "collision_manifest": "Collision/FR_TORP_F21_COLLISION.json",
+    "source": "Source/FR_TORP_F21_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 4026,
+    "LOD1": 1638,
+    "LOD2": 854,
+    "LOD3": 698
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 6.000617,
+  "built_max_diameter_m": 0.591089,
+  "scale_source": "ESTIMATED",
+  "scale_note": "公开资料为级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

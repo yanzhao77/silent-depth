@@ -1,0 +1,61 @@
+{
+  "weapon_id": "CN_ASW_CY1",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_CN_ASW_CY1_SEG_00",
+      "centre": [
+        2.16,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.6800000000000002,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_CN_ASW_CY1_SEG_01",
+      "centre": [
+        0.6000000000000001,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.44,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_CN_ASW_CY1_SEG_02",
+      "centre": [
+        -1.2000000000000002,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.16,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_CN_ASW_CY1_SEG_03",
+      "centre": [
+        -2.52,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.96,
+        0.7033614313725491,
+        0.7033614313725491
+      ]
+    }
+  ],
+  "collision_fbx": "CN_ASW_CY1_COLLISION.fbx",
+  "collision_sha256": "870a5681ef57b5023419fa116748a2dcde8ff6bcd1938a26d95a3e8765ab7cc7"
+}

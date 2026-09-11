@@ -1,0 +1,164 @@
+{
+  "weapon_id": "US_DECOY_ADC_Mk4",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "decoy",
+  "declared_length_m": 0.7,
+  "declared_diameter_m": 0.15,
+  "built_length_m": 0.7,
+  "built_max_diameter_m": 0.162,
+  "lod": {
+    "LOD0": {
+      "objects": 3,
+      "vertices": 602,
+      "triangles": 996
+    },
+    "LOD1": {
+      "objects": 2,
+      "vertices": 290,
+      "triangles": 480
+    },
+    "LOD2": {
+      "objects": 2,
+      "vertices": 194,
+      "triangles": 320
+    },
+    "LOD3": {
+      "objects": 2,
+      "vertices": 122,
+      "triangles": 200
+    }
+  },
+  "collision": {
+    "objects": 2,
+    "vertices": 16,
+    "triangles": 24
+  },
+  "collision_boxes": 2,
+  "collision_segments": [
+    "UCX_WPN_US_DECOY_ADC_Mk4_SEG_00",
+    "UCX_WPN_US_DECOY_ADC_Mk4_SEG_01"
+  ],
+  "bounds": {
+    "x": [
+      -0.3499999940395355,
+      0.3499999940395355
+    ],
+    "y": [
+      -0.08100000023841858,
+      0.08100000023841858
+    ],
+    "z": [
+      -0.08100000023841858,
+      0.08100000023841858
+    ],
+    "dimensions_m": [
+      0.699999988079071,
+      0.16200000047683716,
+      0.16200000047683716
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/US_DECOY_ADC_Mk4_LOD0.fbx",
+        "mirror": "FBX/US_DECOY_ADC_Mk4_LOD0.fbx",
+        "sha256": "6cc2497c7cc57493efcb7abfa81ae70c8617a71caf1dc9a8fdffa571ac77a399",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/US_DECOY_ADC_Mk4_LOD1.fbx",
+        "mirror": "FBX/US_DECOY_ADC_Mk4_LOD1.fbx",
+        "sha256": "12677e60d88fa5d7c61d840eb739105492ad14a9bc3b01fa287b866912039c4b",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/US_DECOY_ADC_Mk4_LOD2.fbx",
+        "mirror": "FBX/US_DECOY_ADC_Mk4_LOD2.fbx",
+        "sha256": "8220c95bf8986e9a42a622637443dababfde6ca8361b5217f06153fff59c7155",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/US_DECOY_ADC_Mk4_LOD3.fbx",
+        "mirror": "FBX/US_DECOY_ADC_Mk4_LOD3.fbx",
+        "sha256": "33e42719cd082da70ada4a3379fd7cedf1e0c860adf4d75e6a750d5b3abaf2e7",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/US_DECOY_ADC_Mk4_COLLISION.fbx",
+      "sha256": "442033e472bbccfc29546f60526cbca873dbdee0905a46aa6f16a4807770c869"
+    },
+    "collision_manifest": {
+      "path": "Collision/US_DECOY_ADC_Mk4_COLLISION.json",
+      "sha256": "04ef5608b204d40f154e4fd6b3e0e08156f5621ed7edbbf16c71181a88f45ec5"
+    }
+  },
+  "build_seconds": 0.32,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.32,
+    "SIDE": 0.27,
+    "FRONT": 0.29,
+    "TOP": 0.28,
+    "DETAIL": 0.33,
+    "ICON": 0.26
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png",
+    "US_DECOY_ADC_Mk4_DETAIL_128.png",
+    "US_DECOY_ADC_Mk4_DETAIL_256.png",
+    "US_DECOY_ADC_Mk4_DETAIL_512.png",
+    "US_DECOY_ADC_Mk4_FRONT_128.png",
+    "US_DECOY_ADC_Mk4_FRONT_256.png",
+    "US_DECOY_ADC_Mk4_FRONT_512.png",
+    "US_DECOY_ADC_Mk4_ICON_128.png",
+    "US_DECOY_ADC_Mk4_ICON_256.png",
+    "US_DECOY_ADC_Mk4_ICON_512.png",
+    "US_DECOY_ADC_Mk4_PERSPECTIVE_128.png",
+    "US_DECOY_ADC_Mk4_PERSPECTIVE_256.png",
+    "US_DECOY_ADC_Mk4_PERSPECTIVE_512.png",
+    "US_DECOY_ADC_Mk4_SIDE_128.png",
+    "US_DECOY_ADC_Mk4_SIDE_256.png",
+    "US_DECOY_ADC_Mk4_SIDE_512.png",
+    "US_DECOY_ADC_Mk4_TOP_128.png",
+    "US_DECOY_ADC_Mk4_TOP_256.png",
+    "US_DECOY_ADC_Mk4_TOP_512.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/US_DECOY_ADC_Mk4_MASTER.blend",
+      "sha256": "fd955a766f769b44ddc8caef18e382c2aa51f38c504fb1a01c3fc55e40fe83c4"
+    },
+    "source": {
+      "path": "Source/US_DECOY_ADC_Mk4_SOURCE.json",
+      "sha256": "17f4e327b69500e68e6df521da795f3385c0a16a00ee4a224caee8dba7b9eaee"
+    },
+    "spec": {
+      "path": "Documentation/US_DECOY_ADC_Mk4_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/US_DECOY_ADC_Mk4_README.md"
+    }
+  }
+}

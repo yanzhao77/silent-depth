@@ -1,0 +1,172 @@
+{
+  "weapon_id": "US_MINE_Mk67_SLMM",
+  "category": "MINE",
+  "tier": 6,
+  "asset_priority": "MEDIUM",
+  "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\US_MINE_Mk67_SLMM",
+  "result": "PASS",
+  "label": "TESTED",
+  "issues": [],
+  "checks": {
+    "files": {
+      "Blend/{id}_MASTER.blend": true,
+      "FBX/{id}_LOD0.fbx": true,
+      "FBX/{id}_LOD1.fbx": true,
+      "FBX/{id}_LOD2.fbx": true,
+      "FBX/{id}_LOD3.fbx": true,
+      "Collision/{id}_COLLISION.fbx": true,
+      "Documentation/{id}_SPEC.json": true,
+      "Documentation/{id}_README.md": true
+    },
+    "fbx_binary_versions": {
+      "US_MINE_Mk67_SLMM_LOD0.fbx": 7400,
+      "US_MINE_Mk67_SLMM_LOD1.fbx": 7400,
+      "US_MINE_Mk67_SLMM_LOD2.fbx": 7400,
+      "US_MINE_Mk67_SLMM_LOD3.fbx": 7400,
+      "US_MINE_Mk67_SLMM_COLLISION.fbx": 7400
+    },
+    "geometry": {
+      "LOD0": {
+        "expected_vertices": 506,
+        "expected_triangles": 876,
+        "expected_length_m": 4.83
+      },
+      "LOD1": {
+        "expected_vertices": 258,
+        "expected_triangles": 444,
+        "expected_length_m": 4.83
+      },
+      "LOD2": {
+        "expected_vertices": 122,
+        "expected_triangles": 220,
+        "expected_length_m": 4.83
+      },
+      "LOD3": {
+        "expected_vertices": 92,
+        "expected_triangles": 160,
+        "expected_length_m": 4.83
+      }
+    },
+    "build": {
+      "blender": "5.2.1 LTS",
+      "build_seconds": 0.6,
+      "collision_boxes": 2,
+      "lod": {
+        "LOD0": {
+          "objects": 4,
+          "vertices": 506,
+          "triangles": 876
+        },
+        "LOD1": {
+          "objects": 4,
+          "vertices": 258,
+          "triangles": 444
+        },
+        "LOD2": {
+          "objects": 3,
+          "vertices": 122,
+          "triangles": 220
+        },
+        "LOD3": {
+          "objects": 3,
+          "vertices": 92,
+          "triangles": 160
+        }
+      }
+    },
+    "fbx_roundtrip": {
+      "result": "PASS",
+      "lod_triangles": {
+        "LOD0": 876,
+        "LOD1": 444,
+        "LOD2": 220,
+        "LOD3": 160
+      },
+      "collision_objects": 2
+    },
+    "previews": {
+      "Preview/Hero.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 70.81,
+        "min_luminance": 48,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Profile.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 69.94,
+        "min_luminance": 25,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Top.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 70.82,
+        "min_luminance": 48,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Detail.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 88.85,
+        "min_luminance": 36,
+        "max_luminance": 255,
+        "subject_coverage": 1.0
+      },
+      "Preview/Icon_128.png": {
+        "status": "OK",
+        "resolution": [
+          128,
+          128
+        ],
+        "mean_luminance": 18.19,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.0738
+      },
+      "Preview/Icon_256.png": {
+        "status": "OK",
+        "resolution": [
+          256,
+          256
+        ],
+        "mean_luminance": 18.26,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.0712
+      },
+      "Preview/Icon_512.png": {
+        "status": "OK",
+        "resolution": [
+          512,
+          512
+        ],
+        "mean_luminance": 18.27,
+        "min_luminance": 0,
+        "max_luminance": 255,
+        "subject_coverage": 0.0698
+      }
+    }
+  },
+  "sha256": {
+    "master": "b92ac3c2b29ffdd83e0e92d321c17d0047099419493f5d7e3c4d9e15c6876dc5",
+    "lod0": "dab4832f9a298de989de3e79dd88f3421863bce944ee3d6f1efe4b39c5d4432c"
+  },
+  "validated_at": "2026-09-11"
+}

@@ -1,0 +1,91 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "UK_SLBM_Trident_D5LE",
+  "display_name": "Trident II D5LE (UK)",
+  "short_name": "D5LE",
+  "country": "UK",
+  "category": "SLBM",
+  "family": "UK_SLBM_Trident",
+  "role": "英国延寿型潜射弹道导弹",
+  "subrole": "Modern_SLBM",
+  "tier": 9,
+  "tier_reason": "游戏 T9 延寿批次：与 D5 共享几何，仅标注与批次数据不同。",
+  "era": "Modern",
+  "service_years": "2010s-present",
+  "launch_methods": [
+    "SLBM_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 13.6,
+    "diameter_m": 2.11,
+    "mass_kg": 58500,
+    "scale_source": "PUBLIC_REFERENCE",
+    "scale_note": "与 D5 同级尺寸。"
+  },
+  "geometry": {
+    "kind": "slbm",
+    "features": [
+      "three_stage",
+      "wide_body",
+      "life_extended",
+      "uk_marking"
+    ],
+    "params": {
+      "nose": "shroud_dome",
+      "nose_len_ratio": 1.6,
+      "stage_count": 3,
+      "stage_bands": 2,
+      "tail": "tail_skirt",
+      "tail_len_ratio": 1.7,
+      "skirt_fin_count": 4,
+      "skirt_fin_span_ratio": 1.25,
+      "nozzle_count": 1,
+      "cable_tray": 1,
+      "canister_fit": true,
+      "fin_count": 0
+    }
+  },
+  "asset_priority": "HIGH",
+  "asset_paths": {
+    "master": "Blend/UK_SLBM_Trident_D5LE_MASTER.blend",
+    "lod": [
+      "LOD/UK_SLBM_Trident_D5LE_LOD0.fbx",
+      "LOD/UK_SLBM_Trident_D5LE_LOD1.fbx",
+      "LOD/UK_SLBM_Trident_D5LE_LOD2.fbx",
+      "LOD/UK_SLBM_Trident_D5LE_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/UK_SLBM_Trident_D5LE_LOD0.fbx",
+      "FBX/UK_SLBM_Trident_D5LE_LOD1.fbx",
+      "FBX/UK_SLBM_Trident_D5LE_LOD2.fbx",
+      "FBX/UK_SLBM_Trident_D5LE_LOD3.fbx"
+    ],
+    "collision": "Collision/UK_SLBM_Trident_D5LE_COLLISION.fbx",
+    "collision_manifest": "Collision/UK_SLBM_Trident_D5LE_COLLISION.json",
+    "source": "Source/UK_SLBM_Trident_D5LE_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 2304,
+    "LOD1": 672,
+    "LOD2": 448,
+    "LOD3": 280
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 13.6,
+  "built_max_diameter_m": 2.11,
+  "scale_source": "PUBLIC_REFERENCE",
+  "scale_note": "与 D5 同级尺寸。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

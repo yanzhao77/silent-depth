@@ -1,0 +1,485 @@
+{
+  "generated_at": "2026-09-11",
+  "weapons": [
+    {
+      "weapon_id": "CN_ASM_YJ18",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\CN_ASM_YJ18"
+    },
+    {
+      "weapon_id": "CN_ASM_YJ8",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\CN_ASM_YJ8"
+    },
+    {
+      "weapon_id": "CN_ASW_CY1",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\CN_ASW_CY1"
+    },
+    {
+      "weapon_id": "CN_SLBM_JL1",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL1"
+    },
+    {
+      "weapon_id": "CN_SLBM_JL2",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL2"
+    },
+    {
+      "weapon_id": "CN_SLBM_JL3",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\CN_SLBM_JL3"
+    },
+    {
+      "weapon_id": "CN_TORP_Yu1",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu1"
+    },
+    {
+      "weapon_id": "CN_TORP_Yu3",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu3"
+    },
+    {
+      "weapon_id": "CN_TORP_Yu4",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu4"
+    },
+    {
+      "weapon_id": "CN_TORP_Yu5",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu5"
+    },
+    {
+      "weapon_id": "CN_TORP_Yu6",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu6"
+    },
+    {
+      "weapon_id": "CN_TORP_Yu7",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\CN_TORP_Yu7"
+    },
+    {
+      "weapon_id": "FR_ASM_Exocet_SM39",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\FR_ASM_Exocet_SM39"
+    },
+    {
+      "weapon_id": "FR_LAM_MdCN",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\FR_LAM_MdCN"
+    },
+    {
+      "weapon_id": "FR_SLBM_M1",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M1"
+    },
+    {
+      "weapon_id": "FR_SLBM_M2",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M2"
+    },
+    {
+      "weapon_id": "FR_SLBM_M20",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M20"
+    },
+    {
+      "weapon_id": "FR_SLBM_M4",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M4"
+    },
+    {
+      "weapon_id": "FR_SLBM_M45",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M45"
+    },
+    {
+      "weapon_id": "FR_SLBM_M51",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\FR_SLBM_M51"
+    },
+    {
+      "weapon_id": "FR_TORP_F17",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_F17"
+    },
+    {
+      "weapon_id": "FR_TORP_F21",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_F21"
+    },
+    {
+      "weapon_id": "FR_TORP_L5_Mod3",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_L5_Mod3"
+    },
+    {
+      "weapon_id": "FR_TORP_L5_Mod4",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\FR_TORP_L5_Mod4"
+    },
+    {
+      "weapon_id": "IN_SLBM_K15",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K15"
+    },
+    {
+      "weapon_id": "IN_SLBM_K4",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\IN_SLBM_K4"
+    },
+    {
+      "weapon_id": "IN_TORP_Varunastra",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\IN_TORP_Varunastra"
+    },
+    {
+      "weapon_id": "RU_ASM_Kalibr_3M54",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Kalibr_3M54"
+    },
+    {
+      "weapon_id": "RU_ASM_Oniks",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Oniks"
+    },
+    {
+      "weapon_id": "RU_ASM_P1000",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P1000"
+    },
+    {
+      "weapon_id": "RU_ASM_P120",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P120"
+    },
+    {
+      "weapon_id": "RU_ASM_P5",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P5"
+    },
+    {
+      "weapon_id": "RU_ASM_P500",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P500"
+    },
+    {
+      "weapon_id": "RU_ASM_P6",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P6"
+    },
+    {
+      "weapon_id": "RU_ASM_P70",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P70"
+    },
+    {
+      "weapon_id": "RU_ASM_P700",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_P700"
+    },
+    {
+      "weapon_id": "RU_ASM_Zircon",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\RU_ASM_Zircon"
+    },
+    {
+      "weapon_id": "RU_ASW_Otvet",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Otvet"
+    },
+    {
+      "weapon_id": "RU_ASW_Veter",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Veter"
+    },
+    {
+      "weapon_id": "RU_ASW_Vodopad",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Vodopad"
+    },
+    {
+      "weapon_id": "RU_ASW_Vyuga",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\RU_ASW_Vyuga"
+    },
+    {
+      "weapon_id": "RU_DECOY_MG74",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\RU_DECOY_MG74"
+    },
+    {
+      "weapon_id": "RU_LAM_Granat",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\RU_LAM_Granat"
+    },
+    {
+      "weapon_id": "RU_LAM_Kalibr_3M14",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\RU_LAM_Kalibr_3M14"
+    },
+    {
+      "weapon_id": "RU_MINE_MDM6",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\RU_MINE_MDM6"
+    },
+    {
+      "weapon_id": "RU_MINE_PMR2",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\RU_MINE_PMR2"
+    },
+    {
+      "weapon_id": "RU_SLBM_R13",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R13"
+    },
+    {
+      "weapon_id": "RU_SLBM_R21",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R21"
+    },
+    {
+      "weapon_id": "RU_SLBM_R27",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R27"
+    },
+    {
+      "weapon_id": "RU_SLBM_R29",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29"
+    },
+    {
+      "weapon_id": "RU_SLBM_R29R",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29R"
+    },
+    {
+      "weapon_id": "RU_SLBM_R29RM",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RM"
+    },
+    {
+      "weapon_id": "RU_SLBM_R29RMU2_Liner",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RMU2_Liner"
+    },
+    {
+      "weapon_id": "RU_SLBM_R29RMU2_Sineva",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R29RMU2_Sineva"
+    },
+    {
+      "weapon_id": "RU_SLBM_R30_Bulava",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R30_Bulava"
+    },
+    {
+      "weapon_id": "RU_SLBM_R39",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R39"
+    },
+    {
+      "weapon_id": "RU_SLBM_R39M",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\RU_SLBM_R39M"
+    },
+    {
+      "weapon_id": "RU_SPECIAL_SDV_Sirena",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\RU_SPECIAL_SDV_Sirena"
+    },
+    {
+      "weapon_id": "RU_STRAT_Meteorit",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\RU_STRAT_Meteorit"
+    },
+    {
+      "weapon_id": "RU_TORP_5365K",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_5365K"
+    },
+    {
+      "weapon_id": "RU_TORP_5365M",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_5365M"
+    },
+    {
+      "weapon_id": "RU_TORP_6576",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_6576"
+    },
+    {
+      "weapon_id": "RU_TORP_6576A",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_6576A"
+    },
+    {
+      "weapon_id": "RU_TORP_Fizik",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_Fizik"
+    },
+    {
+      "weapon_id": "RU_TORP_SAET60",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SAET60"
+    },
+    {
+      "weapon_id": "RU_TORP_SET53",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SET53"
+    },
+    {
+      "weapon_id": "RU_TORP_SET65",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_SET65"
+    },
+    {
+      "weapon_id": "RU_TORP_Shkval",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_Shkval"
+    },
+    {
+      "weapon_id": "RU_TORP_TEST71",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST71"
+    },
+    {
+      "weapon_id": "RU_TORP_TEST71M",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST71M"
+    },
+    {
+      "weapon_id": "RU_TORP_TEST96",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_TEST96"
+    },
+    {
+      "weapon_id": "RU_TORP_UGST",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_UGST"
+    },
+    {
+      "weapon_id": "RU_TORP_UGST_M",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_UGST_M"
+    },
+    {
+      "weapon_id": "RU_TORP_USET80",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_USET80"
+    },
+    {
+      "weapon_id": "RU_TORP_USET80K",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\RU_TORP_USET80K"
+    },
+    {
+      "weapon_id": "UK_DECOY_SSE_Mk3",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\UK_DECOY_SSE_Mk3"
+    },
+    {
+      "weapon_id": "UK_MINE_SeaUrchin",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\UK_MINE_SeaUrchin"
+    },
+    {
+      "weapon_id": "UK_SLBM_Polaris_A3TK",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\UK_SLBM_Polaris_A3TK"
+    },
+    {
+      "weapon_id": "UK_SPECIAL_DDS",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\UK_SPECIAL_DDS"
+    },
+    {
+      "weapon_id": "UK_TORP_Mk8",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Mk8"
+    },
+    {
+      "weapon_id": "UK_TORP_Spearfish",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Spearfish"
+    },
+    {
+      "weapon_id": "UK_TORP_Spearfish_Mod1",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Spearfish_Mod1"
+    },
+    {
+      "weapon_id": "UK_TORP_StingRay",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_StingRay"
+    },
+    {
+      "weapon_id": "UK_TORP_Tigerfish",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Tigerfish"
+    },
+    {
+      "weapon_id": "UK_TORP_Tigerfish_Mod1",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\UK_TORP_Tigerfish_Mod1"
+    },
+    {
+      "weapon_id": "US_ASM_Harpoon",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\US_ASM_Harpoon"
+    },
+    {
+      "weapon_id": "US_ASM_Tomahawk_TASM",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiShipMissiles\\US_ASM_Tomahawk_TASM"
+    },
+    {
+      "weapon_id": "US_ASW_SUBROC",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\AntiSubmarineMissiles\\US_ASW_SUBROC"
+    },
+    {
+      "weapon_id": "US_DECOY_ADC_Mk4",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_ADC_Mk4"
+    },
+    {
+      "weapon_id": "US_DECOY_ADC_Mk5",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_ADC_Mk5"
+    },
+    {
+      "weapon_id": "US_DECOY_Mk70_MOSS",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Decoys\\US_DECOY_Mk70_MOSS"
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk"
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk_BlockIII",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockIII"
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk_BlockIV",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockIV"
+    },
+    {
+      "weapon_id": "US_LAM_Tomahawk_BlockV",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\LandAttackMissiles\\US_LAM_Tomahawk_BlockV"
+    },
+    {
+      "weapon_id": "US_MINE_Mk60_CAPTOR",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\US_MINE_Mk60_CAPTOR"
+    },
+    {
+      "weapon_id": "US_MINE_Mk67_SLMM",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Mines\\US_MINE_Mk67_SLMM"
+    },
+    {
+      "weapon_id": "US_SLBM_Polaris_A1",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Polaris_A1"
+    },
+    {
+      "weapon_id": "US_SLBM_Polaris_A3",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Polaris_A3"
+    },
+    {
+      "weapon_id": "US_SLBM_Poseidon_C3",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Poseidon_C3"
+    },
+    {
+      "weapon_id": "US_SLBM_Trident_C4",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_C4"
+    },
+    {
+      "weapon_id": "US_SLBM_Trident_D5",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_D5"
+    },
+    {
+      "weapon_id": "US_SLBM_Trident_D5LE",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\BallisticMissiles\\US_SLBM_Trident_D5LE"
+    },
+    {
+      "weapon_id": "US_SPECIAL_ASDS",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_ASDS"
+    },
+    {
+      "weapon_id": "US_SPECIAL_DDS",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_DDS"
+    },
+    {
+      "weapon_id": "US_SPECIAL_SDV_Mk8",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\SpecialPayload\\US_SPECIAL_SDV_Mk8"
+    },
+    {
+      "weapon_id": "US_STRAT_RegulusII",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\US_STRAT_RegulusII"
+    },
+    {
+      "weapon_id": "US_STRAT_TLAM_N",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Strategic\\US_STRAT_TLAM_N"
+    },
+    {
+      "weapon_id": "US_TORP_Mk14",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk14"
+    },
+    {
+      "weapon_id": "US_TORP_Mk16",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk16"
+    },
+    {
+      "weapon_id": "US_TORP_Mk18",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk18"
+    },
+    {
+      "weapon_id": "US_TORP_Mk23",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk23"
+    },
+    {
+      "weapon_id": "US_TORP_Mk27",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk27"
+    },
+    {
+      "weapon_id": "US_TORP_Mk37",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk37"
+    },
+    {
+      "weapon_id": "US_TORP_Mk37_Mod2",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk37_Mod2"
+    },
+    {
+      "weapon_id": "US_TORP_Mk45",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk45"
+    },
+    {
+      "weapon_id": "US_TORP_Mk48",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48"
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_ADCAP",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_ADCAP"
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_Mod6",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_Mod6"
+    },
+    {
+      "weapon_id": "US_TORP_Mk48_Mod7",
+      "asset_dir": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Weapons\\Torpedoes\\US_TORP_Mk48_Mod7"
+    }
+  ]
+}

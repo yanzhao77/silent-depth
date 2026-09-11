@@ -1,0 +1,35 @@
+{
+  "weapon_id": "US_MINE_Mk60_CAPTOR",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_US_MINE_Mk60_CAPTOR_SEG_00",
+      "centre": [
+        -0.88,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.24,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_US_MINE_Mk60_CAPTOR_SEG_01",
+      "centre": [
+        0.8,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.4,
+        0.39975000000000005,
+        0.39975000000000005
+      ]
+    }
+  ],
+  "collision_fbx": "US_MINE_Mk60_CAPTOR_COLLISION.fbx",
+  "collision_sha256": "7a5d9e4463de30925bcba810239a9e12645533190a76e32cf7ce257b54a9d8d1"
+}

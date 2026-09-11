@@ -1,0 +1,166 @@
+{
+  "weapon_id": "CN_ASM_YJ18",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "cruise_missile",
+  "declared_length_m": 8.2,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 8.2,
+  "built_max_diameter_m": 1.617373,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 1316,
+      "triangles": 2400
+    },
+    "LOD1": {
+      "objects": 6,
+      "vertices": 548,
+      "triangles": 960
+    },
+    "LOD2": {
+      "objects": 5,
+      "vertices": 260,
+      "triangles": 480
+    },
+    "LOD3": {
+      "objects": 5,
+      "vertices": 188,
+      "triangles": 336
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_CN_ASM_YJ18_SEG_00",
+    "UCX_WPN_CN_ASM_YJ18_SEG_01",
+    "UCX_WPN_CN_ASM_YJ18_SEG_02",
+    "UCX_WPN_CN_ASM_YJ18_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -4.099999904632568,
+      4.099999904632568
+    ],
+    "y": [
+      -0.5751383304595947,
+      0.5751383304595947
+    ],
+    "z": [
+      -0.5751383304595947,
+      1.0422344207763672
+    ],
+    "dimensions_m": [
+      8.199999809265137,
+      1.1502766609191895,
+      1.617372751235962
+    ],
+    "centre": [
+      0.0,
+      0.0,
+      0.23354804515838623
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/CN_ASM_YJ18_LOD0.fbx",
+        "mirror": "FBX/CN_ASM_YJ18_LOD0.fbx",
+        "sha256": "cc199559eb12d62d1ffa1298eefae06fad5a59e64454b8b7f93ce47df777db9b",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/CN_ASM_YJ18_LOD1.fbx",
+        "mirror": "FBX/CN_ASM_YJ18_LOD1.fbx",
+        "sha256": "9faf6f98cacd60e2eba96cd3265ed5f3ef16978cd5e3b485b7e7a269db1db63d",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/CN_ASM_YJ18_LOD2.fbx",
+        "mirror": "FBX/CN_ASM_YJ18_LOD2.fbx",
+        "sha256": "6a16e74bdd89e675b55a8e906a6580517a0b9ff4c2703bc94ac22222006df525",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/CN_ASM_YJ18_LOD3.fbx",
+        "mirror": "FBX/CN_ASM_YJ18_LOD3.fbx",
+        "sha256": "5ac692fd28ae345f617c9cbff66463bfecbcf34c2050b597434a350d90bb77cd",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/CN_ASM_YJ18_COLLISION.fbx",
+      "sha256": "5c4bc67dc474c65ccb16016b2fe83bb25ebcd366f8979f0b42612e4917b7cfd6"
+    },
+    "collision_manifest": {
+      "path": "Collision/CN_ASM_YJ18_COLLISION.json",
+      "sha256": "856a43338aa3198ffc5af2ff7567385065579435175015cd191dd8b07f3f3b08"
+    }
+  },
+  "build_seconds": 0.91,
+  "preview_seconds": {
+    "PERSPECTIVE": 2.37,
+    "SIDE": 0.37,
+    "FRONT": 0.38,
+    "TOP": 0.31,
+    "DETAIL": 0.36,
+    "ICON": 0.28
+  },
+  "previews": [
+    "CN_ASM_YJ18_DETAIL_128.png",
+    "CN_ASM_YJ18_DETAIL_256.png",
+    "CN_ASM_YJ18_DETAIL_512.png",
+    "CN_ASM_YJ18_FRONT_128.png",
+    "CN_ASM_YJ18_FRONT_256.png",
+    "CN_ASM_YJ18_FRONT_512.png",
+    "CN_ASM_YJ18_ICON_128.png",
+    "CN_ASM_YJ18_ICON_256.png",
+    "CN_ASM_YJ18_ICON_512.png",
+    "CN_ASM_YJ18_PERSPECTIVE_128.png",
+    "CN_ASM_YJ18_PERSPECTIVE_256.png",
+    "CN_ASM_YJ18_PERSPECTIVE_512.png",
+    "CN_ASM_YJ18_SIDE_128.png",
+    "CN_ASM_YJ18_SIDE_256.png",
+    "CN_ASM_YJ18_SIDE_512.png",
+    "CN_ASM_YJ18_TOP_128.png",
+    "CN_ASM_YJ18_TOP_256.png",
+    "CN_ASM_YJ18_TOP_512.png",
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/CN_ASM_YJ18_MASTER.blend",
+      "sha256": "a73424bd1843583ac1632fa829151224d7c8b9336bb85dba6fa311722c8e8f1f"
+    },
+    "source": {
+      "path": "Source/CN_ASM_YJ18_SOURCE.json",
+      "sha256": "044ccc5f411257431bdcf278d9e1573940bde3a2c0e8805945701e9158738af0"
+    },
+    "spec": {
+      "path": "Documentation/CN_ASM_YJ18_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/CN_ASM_YJ18_README.md"
+    }
+  }
+}

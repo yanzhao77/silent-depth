@@ -1,0 +1,166 @@
+{
+  "weapon_id": "RU_TORP_Fizik",
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender": "5.2.1 LTS",
+  "geometry_kind": "torpedo",
+  "declared_length_m": 6.5,
+  "declared_diameter_m": 0.533,
+  "built_length_m": 6.486269,
+  "built_max_diameter_m": 0.844878,
+  "lod": {
+    "LOD0": {
+      "objects": 6,
+      "vertices": 2018,
+      "triangles": 3624
+    },
+    "LOD1": {
+      "objects": 5,
+      "vertices": 834,
+      "triangles": 1404
+    },
+    "LOD2": {
+      "objects": 4,
+      "vertices": 442,
+      "triangles": 764
+    },
+    "LOD3": {
+      "objects": 4,
+      "vertices": 364,
+      "triangles": 608
+    }
+  },
+  "collision": {
+    "objects": 4,
+    "vertices": 32,
+    "triangles": 48
+  },
+  "collision_boxes": 4,
+  "collision_segments": [
+    "UCX_WPN_RU_TORP_Fizik_SEG_00",
+    "UCX_WPN_RU_TORP_Fizik_SEG_01",
+    "UCX_WPN_RU_TORP_Fizik_SEG_02",
+    "UCX_WPN_RU_TORP_Fizik_SEG_03"
+  ],
+  "bounds": {
+    "x": [
+      -3.2362687587738037,
+      3.25
+    ],
+    "y": [
+      -0.37650296092033386,
+      0.37650296092033386
+    ],
+    "z": [
+      -0.4224390685558319,
+      0.4224390685558319
+    ],
+    "dimensions_m": [
+      6.486268758773804,
+      0.7530059218406677,
+      0.8448781371116638
+    ],
+    "centre": [
+      0.0068656206130981445,
+      0.0,
+      0.0
+    ]
+  },
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "exports": {
+    "lod": {
+      "LOD0": {
+        "path": "LOD/RU_TORP_Fizik_LOD0.fbx",
+        "mirror": "FBX/RU_TORP_Fizik_LOD0.fbx",
+        "sha256": "8fa1ee344a8ffab879b83caad3838355757240f15d1cd18b54fe56a95c4c5fa8",
+        "fbx_binary_version": 7400
+      },
+      "LOD1": {
+        "path": "LOD/RU_TORP_Fizik_LOD1.fbx",
+        "mirror": "FBX/RU_TORP_Fizik_LOD1.fbx",
+        "sha256": "1c013e329b24eb0c801a8f24857950461b1e14b81e0dc603d838fea34c4c0457",
+        "fbx_binary_version": 7400
+      },
+      "LOD2": {
+        "path": "LOD/RU_TORP_Fizik_LOD2.fbx",
+        "mirror": "FBX/RU_TORP_Fizik_LOD2.fbx",
+        "sha256": "61dbd76efcdede0f72d1384f7a3fd17358e30ca38c596fd50a2d3a876f582d01",
+        "fbx_binary_version": 7400
+      },
+      "LOD3": {
+        "path": "LOD/RU_TORP_Fizik_LOD3.fbx",
+        "mirror": "FBX/RU_TORP_Fizik_LOD3.fbx",
+        "sha256": "b373b2ce9c40027576580ef2773bc0ab51cdf6f1bdee20da40576bfd89379fe7",
+        "fbx_binary_version": 7400
+      }
+    },
+    "collision": {
+      "path": "Collision/RU_TORP_Fizik_COLLISION.fbx",
+      "sha256": "eab7d723046535e5c1af8fda41123836f21dcdeccbf6f6a84d235786693057b3"
+    },
+    "collision_manifest": {
+      "path": "Collision/RU_TORP_Fizik_COLLISION.json",
+      "sha256": "cd7d02201a3b010710a9fdea9ef4bf87da7bee54f3eb9ce2df3556310add14b1"
+    }
+  },
+  "build_seconds": 0.36,
+  "preview_seconds": {
+    "PERSPECTIVE": 0.3,
+    "SIDE": 0.34,
+    "FRONT": 0.38,
+    "TOP": 0.3,
+    "DETAIL": 0.3,
+    "ICON": 0.3
+  },
+  "previews": [
+    "Detail.png",
+    "Front.png",
+    "Hero.png",
+    "Icon_128.png",
+    "Icon_256.png",
+    "Icon_512.png",
+    "Profile.png",
+    "RU_TORP_Fizik_DETAIL_128.png",
+    "RU_TORP_Fizik_DETAIL_256.png",
+    "RU_TORP_Fizik_DETAIL_512.png",
+    "RU_TORP_Fizik_FRONT_128.png",
+    "RU_TORP_Fizik_FRONT_256.png",
+    "RU_TORP_Fizik_FRONT_512.png",
+    "RU_TORP_Fizik_ICON_128.png",
+    "RU_TORP_Fizik_ICON_256.png",
+    "RU_TORP_Fizik_ICON_512.png",
+    "RU_TORP_Fizik_PERSPECTIVE_128.png",
+    "RU_TORP_Fizik_PERSPECTIVE_256.png",
+    "RU_TORP_Fizik_PERSPECTIVE_512.png",
+    "RU_TORP_Fizik_SIDE_128.png",
+    "RU_TORP_Fizik_SIDE_256.png",
+    "RU_TORP_Fizik_SIDE_512.png",
+    "RU_TORP_Fizik_TOP_128.png",
+    "RU_TORP_Fizik_TOP_256.png",
+    "RU_TORP_Fizik_TOP_512.png",
+    "Top.png"
+  ],
+  "files": {
+    "blend": {
+      "path": "Blend/RU_TORP_Fizik_MASTER.blend",
+      "sha256": "fe36504bfe6ba188d7cce9e496707dbd23867c12c45cf208bb38598cb71f7967"
+    },
+    "source": {
+      "path": "Source/RU_TORP_Fizik_SOURCE.json",
+      "sha256": "0be758415ec4613494d4e8bb5c9df89f6394df1420dc530f762f6bd17bc2cdb4"
+    },
+    "spec": {
+      "path": "Documentation/RU_TORP_Fizik_SPEC.json"
+    },
+    "readme": {
+      "path": "Documentation/RU_TORP_Fizik_README.md"
+    }
+  }
+}

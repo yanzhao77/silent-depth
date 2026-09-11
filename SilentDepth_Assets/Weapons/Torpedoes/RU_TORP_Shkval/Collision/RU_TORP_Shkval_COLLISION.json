@@ -1,0 +1,61 @@
+{
+  "weapon_id": "RU_TORP_Shkval",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_TORP_Shkval_SEG_00",
+      "centre": [
+        2.9519999999999995,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.296,
+        0.18655,
+        0.18655
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_Shkval_SEG_01",
+      "centre": [
+        0.82,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.9679999999999997,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_Shkval_SEG_02",
+      "centre": [
+        -1.64,
+        0.0,
+        0.0
+      ],
+      "size": [
+        2.9519999999999995,
+        0.533,
+        0.533
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_TORP_Shkval_SEG_03",
+      "centre": [
+        -3.4439999999999995,
+        0.0,
+        0.0
+      ],
+      "size": [
+        1.3119999999999998,
+        0.533,
+        0.533
+      ]
+    }
+  ],
+  "collision_fbx": "RU_TORP_Shkval_COLLISION.fbx",
+  "collision_sha256": "16a70406f0b0c35a7b1e0e626cb23e1d5e59f04c7b6e5da69b2d85ea4a42f4a5"
+}

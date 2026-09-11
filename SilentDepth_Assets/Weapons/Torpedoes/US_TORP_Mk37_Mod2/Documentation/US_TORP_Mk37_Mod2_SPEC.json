@@ -1,0 +1,88 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "US_TORP_Mk37_Mod2",
+  "display_name": "Mk 37 Mod 2 torpedo",
+  "short_name": "Mk37-2",
+  "country": "USA",
+  "category": "TORP",
+  "family": "US_TORP_Mk37",
+  "role": "线导反潜鱼雷",
+  "subrole": "Wire_Guided",
+  "tier": 4,
+  "tier_reason": "游戏 T4 线导节点：外形在 Mk 37 基础上增加导线释放整流罩。",
+  "era": "Cold War",
+  "service_years": "1960s-1970s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 4.83,
+    "diameter_m": 0.483,
+    "mass_kg": 660,
+    "scale_source": "ESTIMATED",
+    "scale_note": "Mod 2 尺寸沿用基础型公开近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "small_diameter",
+      "wire_dispenser"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.8,
+      "tail": "conical",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.7,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 1,
+      "bands": 1
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/US_TORP_Mk37_Mod2_MASTER.blend",
+    "lod": [
+      "LOD/US_TORP_Mk37_Mod2_LOD0.fbx",
+      "LOD/US_TORP_Mk37_Mod2_LOD1.fbx",
+      "LOD/US_TORP_Mk37_Mod2_LOD2.fbx",
+      "LOD/US_TORP_Mk37_Mod2_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/US_TORP_Mk37_Mod2_LOD0.fbx",
+      "FBX/US_TORP_Mk37_Mod2_LOD1.fbx",
+      "FBX/US_TORP_Mk37_Mod2_LOD2.fbx",
+      "FBX/US_TORP_Mk37_Mod2_LOD3.fbx"
+    ],
+    "collision": "Collision/US_TORP_Mk37_Mod2_COLLISION.fbx",
+    "collision_manifest": "Collision/US_TORP_Mk37_Mod2_COLLISION.json",
+    "source": "Source/US_TORP_Mk37_Mod2_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3336,
+    "LOD1": 1260,
+    "LOD2": 764,
+    "LOD3": 608
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 4.822459,
+  "built_max_diameter_m": 0.957628,
+  "scale_source": "ESTIMATED",
+  "scale_note": "Mod 2 尺寸沿用基础型公开近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

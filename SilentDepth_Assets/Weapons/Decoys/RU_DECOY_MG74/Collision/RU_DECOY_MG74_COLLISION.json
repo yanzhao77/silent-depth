@@ -1,0 +1,35 @@
+{
+  "weapon_id": "RU_DECOY_MG74",
+  "shape_policy": "低模凸包（长方体分段），不使用高模渲染网格作为碰撞。",
+  "units": "meters",
+  "segments": [
+    {
+      "name": "UCX_WPN_RU_DECOY_MG74_SEG_00",
+      "centre": [
+        -0.308,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.784,
+        0.3,
+        0.3
+      ]
+    },
+    {
+      "name": "UCX_WPN_RU_DECOY_MG74_SEG_01",
+      "centre": [
+        0.27999999999999997,
+        0.0,
+        0.0
+      ],
+      "size": [
+        0.84,
+        0.22499999999999998,
+        0.22499999999999998
+      ]
+    }
+  ],
+  "collision_fbx": "RU_DECOY_MG74_COLLISION.fbx",
+  "collision_sha256": "aeadbf6eaebd0b2c255eff618ed9b178b4b63b1802995afdd74a7ffce230d227"
+}

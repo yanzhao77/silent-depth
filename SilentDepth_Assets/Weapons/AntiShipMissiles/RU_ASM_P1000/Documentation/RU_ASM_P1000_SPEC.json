@@ -1,0 +1,102 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "RU_ASM_P1000",
+  "display_name": "P-1000 Vulkan",
+  "short_name": "P-1000",
+  "country": "Russia",
+  "category": "ASM",
+  "family": "RU_ASM_P500",
+  "role": "超音速反舰导弹改进型",
+  "subrole": "Supersonic_Anti_Ship",
+  "tier": 7,
+  "tier_reason": "游戏 T7 改进型：与 Bazalt 共享基础几何，数据层区分射程与制导代次。",
+  "era": "Cold War Late",
+  "service_years": "1980s-present",
+  "launch_methods": [
+    "VLS",
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 11.7,
+    "diameter_m": 0.88,
+    "mass_kg": 4800,
+    "scale_source": "ESTIMATED",
+    "scale_note": "沿用同族级别近似。"
+  },
+  "geometry": {
+    "kind": "supersonic_missile",
+    "features": [
+      "ramjet",
+      "solid_booster",
+      "long_range"
+    ],
+    "params": {
+      "nose": "conical",
+      "nose_len_ratio": 3.4,
+      "body_shape": "cylinder",
+      "wing_type": "fixed",
+      "wing_pairs": 1,
+      "wing_span_ratio": 2.4,
+      "wing_chord_ratio": 1.5,
+      "wing_position": 0.55,
+      "wing_sweep_deg": 52.0,
+      "tail_type": "cruciform",
+      "tail_count": 4,
+      "tail_span_ratio": 2.4,
+      "tail_chord_ratio": 1.0,
+      "intake_type": "four",
+      "intake_position": 0.26,
+      "intake_len_ratio": 1.8,
+      "booster": 1,
+      "booster_len_ratio": 0.24,
+      "booster_fins": 4,
+      "dorsal": 0,
+      "bands": 3,
+      "windows": 1,
+      "canister": 0
+    }
+  },
+  "asset_priority": "MEDIUM",
+  "asset_paths": {
+    "master": "Blend/RU_ASM_P1000_MASTER.blend",
+    "lod": [
+      "LOD/RU_ASM_P1000_LOD0.fbx",
+      "LOD/RU_ASM_P1000_LOD1.fbx",
+      "LOD/RU_ASM_P1000_LOD2.fbx",
+      "LOD/RU_ASM_P1000_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/RU_ASM_P1000_LOD0.fbx",
+      "FBX/RU_ASM_P1000_LOD1.fbx",
+      "FBX/RU_ASM_P1000_LOD2.fbx",
+      "FBX/RU_ASM_P1000_LOD3.fbx"
+    ],
+    "collision": "Collision/RU_ASM_P1000_COLLISION.fbx",
+    "collision_manifest": "Collision/RU_ASM_P1000_COLLISION.json",
+    "source": "Source/RU_ASM_P1000_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 4128,
+    "LOD1": 1536,
+    "LOD2": 688,
+    "LOD3": 484
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 11.7,
+  "built_max_diameter_m": 2.115624,
+  "scale_source": "ESTIMATED",
+  "scale_note": "沿用同族级别近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

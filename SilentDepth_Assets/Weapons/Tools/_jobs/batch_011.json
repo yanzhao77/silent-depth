@@ -1,0 +1,282 @@
+{
+  "batch_index": 11,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "RU_SLBM_R39",
+      "display_name": "R-39 (SS-N-20 Sturgeon)",
+      "short_name": "R-39",
+      "category": "SLBM",
+      "family_id": "RU_SLBM_R39",
+      "base_geometry": "ru_slbm_r39",
+      "country": "Russia",
+      "role": "潜射弹道导弹（固体燃料）",
+      "subrole": "Late_Cold_War_SLBM",
+      "era": "Cold War Late",
+      "service_years": "1983-2004",
+      "tier": 9,
+      "tier_reason": "游戏 T9 末期冷战 SLBM：Project 941（Typhoon）专用大型固体燃料导弹，弹体尺寸显著大于前代，是 Typhoon 资产的核心配套武器节点。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 16.0,
+        "diameter_m": 2.4,
+        "mass_kg": 84000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料常见数据，取级别近似值；长度与直径按米级取整。"
+      },
+      "body_diameter_m": 2.4,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "nose_shroud",
+          "tail_skirt",
+          "nozzle",
+          "three_stage",
+          "large_diameter"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.4,
+          "shroud_shape": "blunt",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.2,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.8,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 3,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": "Typhoon/Project 941 每艇可搭载 20 枚，是 SSBN 科技树的高端节点。"
+    },
+    {
+      "weapon_id": "RU_SLBM_R39M",
+      "display_name": "R-39M (Bark)",
+      "short_name": "R-39M",
+      "category": "SLBM",
+      "family_id": "RU_SLBM_R39",
+      "base_geometry": "ru_slbm_r39",
+      "country": "Russia",
+      "role": "潜射弹道导弹（取消项目）",
+      "subrole": "Planned_SLBM",
+      "era": "Cold War Late",
+      "service_years": "1990s（取消）",
+      "tier": 9,
+      "tier_reason": "游戏 T9 规划节点：项目取消的历史分支，与 R-39 共享基础几何。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 16.0,
+        "diameter_m": 2.4,
+        "mass_kg": 84000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "同一发射筒体系下的改进方案，尺寸沿用近似值。"
+      },
+      "body_diameter_m": 2.4,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "nose_shroud",
+          "tail_skirt",
+          "nozzle",
+          "planned_project"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.5,
+          "shroud_shape": "pointed",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.25,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.6,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 3,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": "公开资料有限，标记为 ESTIMATED。"
+    },
+    {
+      "weapon_id": "RU_SPECIAL_SDV_Sirena",
+      "display_name": "Sirena",
+      "short_name": "Sirena",
+      "category": "SPECIAL",
+      "family_id": "RU_SPECIAL_SDV_Sirena",
+      "base_geometry": "ru_special_sdv_sirena",
+      "country": "Russia",
+      "role": "水下输送载具",
+      "subrole": "SDV",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 苏联/俄罗斯特种输送载具节点：外形与美制 SDV 明显不同。",
+      "launch_methods": [
+        "SWIM_OUT_DOCK"
+      ],
+      "dimensions": {
+        "length_m": 8.0,
+        "diameter_m": 1.6,
+        "mass_kg": 6000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 1.6,
+      "geometry": {
+        "kind": "sdv",
+        "features": [
+          "long_body",
+          "shrouded_propulsor"
+        ],
+        "params": {
+          "nose": "blunt",
+          "nose_len_ratio": 1.1,
+          "canopy": 1,
+          "propulsor": "shrouded",
+          "propulsor_shroud": 1,
+          "fins": 4,
+          "fin_span_ratio": 1.3,
+          "fin_chord_ratio": 0.8,
+          "docking_collar": 1,
+          "bands": 1
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "RU_STRAT_Meteorit",
+      "display_name": "P-750 Meteorit (SS-N-24)",
+      "short_name": "Meteorit",
+      "category": "STRAT",
+      "family_id": "RU_STRAT_Meteorit",
+      "base_geometry": "ru_strat_meteorit",
+      "country": "Russia",
+      "role": "潜射战略巡航导弹",
+      "subrole": "Late_Cold_War_Strategic",
+      "era": "Cold War Late",
+      "service_years": "1980s-1990s",
+      "tier": 8,
+      "tier_reason": "游戏 T8 苏联战略巡航节点：由改进型 SSBN 发射筒搭载，外形为大型巡航导弹。",
+      "launch_methods": [
+        "SLBM_TUBE",
+        "CANISTER"
+      ],
+      "dimensions": {
+        "length_m": 12.0,
+        "diameter_m": 0.9,
+        "mass_kg": 6000,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料不足，尺寸为级别估计。"
+      },
+      "body_diameter_m": 0.9,
+      "geometry": {
+        "kind": "cruise_missile",
+        "features": [
+          "large_fixed_wing",
+          "canister_body",
+          "solid_booster",
+          "long_range",
+          "underwater_launch"
+        ],
+        "params": {
+          "nose": "pointed",
+          "nose_len_ratio": 3.6,
+          "body_shape": "cylinder",
+          "wing_type": "fixed",
+          "wing_pairs": 1,
+          "wing_span_ratio": 3.8,
+          "wing_chord_ratio": 1.3,
+          "wing_position": 0.4,
+          "wing_sweep_deg": 52.0,
+          "tail_type": "cruciform",
+          "tail_count": 4,
+          "tail_span_ratio": 2.2,
+          "tail_chord_ratio": 0.9,
+          "intake_type": "none",
+          "intake_position": 0.2,
+          "intake_len_ratio": 1.2,
+          "booster": 1,
+          "booster_len_ratio": 0.3,
+          "booster_fins": 4,
+          "dorsal": 0,
+          "bands": 2,
+          "windows": 0,
+          "canister": 1
+        }
+      },
+      "notes": "公开资料有限，几何按可确认的巡航导弹外形特征建模。"
+    },
+    {
+      "weapon_id": "RU_TORP_5365K",
+      "display_name": "53-65K torpedo",
+      "short_name": "53-65K",
+      "category": "TORP",
+      "family_id": "RU_TORP_5365",
+      "base_geometry": "ru_torp_5365",
+      "country": "Russia",
+      "role": "尾流自导反舰鱼雷",
+      "subrole": "Heavyweight",
+      "era": "Cold War",
+      "service_years": "1960s-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 反舰专用节点：尾流自导、弹体修长、无导线整流罩。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 7.0,
+        "diameter_m": 0.533,
+        "mass_kg": 2000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 7 米。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "torpedo",
+        "features": [
+          "wake_homing",
+          "long_body"
+        ],
+        "params": {
+          "nose": "ogive",
+          "nose_len_ratio": 2.2,
+          "tail": "conical",
+          "tail_len_ratio": 1.3,
+          "fin_count": 4,
+          "fin_span_ratio": 1.45,
+          "fin_chord_ratio": 1.1,
+          "propulsor": "contra_propeller",
+          "wire_dispenser": 0,
+          "sonar_windows": 1,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "spec": "SilentDepth_Weapon_Asset_Spec",
+  "weapon_id": "UK_TORP_Tigerfish_Mod1",
+  "display_name": "Tigerfish Mod 1",
+  "short_name": "Tigerfish-1",
+  "country": "UK",
+  "category": "TORP",
+  "family": "UK_TORP_Tigerfish",
+  "role": "线导鱼雷改进型",
+  "subrole": "Wire_Guided",
+  "tier": 6,
+  "tier_reason": "游戏 T6 同族改进型：几何一致，控制段数据不同。",
+  "era": "Cold War Late",
+  "service_years": "1980s-1990s",
+  "launch_methods": [
+    "TORPEDO_TUBE"
+  ],
+  "dimensions": {
+    "length_m": 6.5,
+    "diameter_m": 0.533,
+    "mass_kg": 1550,
+    "scale_source": "ESTIMATED",
+    "scale_note": "沿用同族近似。"
+  },
+  "geometry": {
+    "kind": "torpedo",
+    "features": [
+      "wire_dispenser",
+      "electric",
+      "improved_control"
+    ],
+    "params": {
+      "nose": "ogive",
+      "nose_len_ratio": 1.9,
+      "tail": "conical",
+      "tail_len_ratio": 1.2,
+      "fin_count": 4,
+      "fin_span_ratio": 1.45,
+      "fin_chord_ratio": 1.1,
+      "propulsor": "contra_propeller",
+      "wire_dispenser": 1,
+      "sonar_windows": 1,
+      "bands": 3
+    }
+  },
+  "asset_priority": "LOW",
+  "asset_paths": {
+    "master": "Blend/UK_TORP_Tigerfish_Mod1_MASTER.blend",
+    "lod": [
+      "LOD/UK_TORP_Tigerfish_Mod1_LOD0.fbx",
+      "LOD/UK_TORP_Tigerfish_Mod1_LOD1.fbx",
+      "LOD/UK_TORP_Tigerfish_Mod1_LOD2.fbx",
+      "LOD/UK_TORP_Tigerfish_Mod1_LOD3.fbx"
+    ],
+    "lod_fbx_mirror": [
+      "FBX/UK_TORP_Tigerfish_Mod1_LOD0.fbx",
+      "FBX/UK_TORP_Tigerfish_Mod1_LOD1.fbx",
+      "FBX/UK_TORP_Tigerfish_Mod1_LOD2.fbx",
+      "FBX/UK_TORP_Tigerfish_Mod1_LOD3.fbx"
+    ],
+    "collision": "Collision/UK_TORP_Tigerfish_Mod1_COLLISION.fbx",
+    "collision_manifest": "Collision/UK_TORP_Tigerfish_Mod1_COLLISION.json",
+    "source": "Source/UK_TORP_Tigerfish_Mod1_SOURCE.json",
+    "preview_dir": "Preview"
+  },
+  "lod_triangles": {
+    "LOD0": 3744,
+    "LOD1": 1524,
+    "LOD2": 884,
+    "LOD3": 728
+  },
+  "collision_boxes": 4,
+  "materials": [
+    "WPN_MAT_Body",
+    "WPN_MAT_Fin",
+    "WPN_MAT_Marking",
+    "WPN_MAT_Metal",
+    "WPN_MAT_Nose",
+    "WPN_MAT_Seeker",
+    "WPN_MAT_Shell"
+  ],
+  "generator": "weapon_factory_blender v1.1.0",
+  "blender_version": "5.2.1 LTS",
+  "built_length_m": 6.528371,
+  "built_max_diameter_m": 0.871549,
+  "scale_source": "ESTIMATED",
+  "scale_note": "沿用同族近似。",
+  "note": "资产由公开外形参数程序化生成，仅用于游戏展示与科技树；不含任何工程细节。"
+}

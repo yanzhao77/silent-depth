@@ -1,0 +1,271 @@
+{
+  "batch_index": 19,
+  "generated_at": "2026-09-11",
+  "category_dirs": {
+    "TORP": "Torpedoes",
+    "ASM": "AntiShipMissiles",
+    "LAM": "LandAttackMissiles",
+    "ASW": "AntiSubmarineMissiles",
+    "SLBM": "BallisticMissiles",
+    "STRAT": "Strategic",
+    "MINE": "Mines",
+    "DECOY": "Decoys",
+    "SPECIAL": "SpecialPayload"
+  },
+  "weapons": [
+    {
+      "weapon_id": "US_MINE_Mk60_CAPTOR",
+      "display_name": "Mk 60 CAPTOR",
+      "short_name": "Mk60",
+      "category": "MINE",
+      "family_id": "US_MINE_Mk60_CAPTOR",
+      "base_geometry": "us_mine_mk60_captor",
+      "country": "USA",
+      "role": "封装式反潜水雷",
+      "subrole": "Submarine_Deployable_Mine",
+      "era": "Cold War Late",
+      "service_years": "1979-1990s",
+      "tier": 5,
+      "tier_reason": "游戏 T5 冷战后期反潜水雷：外部为封闭运载筒，视觉上与普通水雷区分明显。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 4.0,
+        "diameter_m": 0.533,
+        "mass_kg": 1100,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料仅有量级信息，按近似尺寸建模。"
+      },
+      "body_diameter_m": 0.533,
+      "geometry": {
+        "kind": "mine",
+        "features": [
+          "canister_body",
+          "cylindrical"
+        ],
+        "params": {
+          "body": "cylindrical",
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.6,
+          "mooring": 0,
+          "mooring_len_ratio": 1.5,
+          "canister": 1,
+          "horns": 0,
+          "rails": 2,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.7,
+          "tail_len_ratio": 0.4,
+          "bands": 2
+        }
+      },
+      "notes": "外部运载筒为可见特征，内部载荷不作建模。"
+    },
+    {
+      "weapon_id": "US_MINE_Mk67_SLMM",
+      "display_name": "Mk 67 SLMM",
+      "short_name": "Mk67-SLMM",
+      "category": "MINE",
+      "family_id": "US_MINE_Mk67_SLMM",
+      "base_geometry": "us_mine_mk67_slmm",
+      "country": "USA",
+      "role": "潜艇布放机动水雷",
+      "subrole": "Submarine_Deployable_Mine",
+      "era": "Cold War Late",
+      "service_years": "1980s-present",
+      "tier": 6,
+      "tier_reason": "游戏 T6 现代水雷节点：由鱼雷管布放，外形沿用鱼雷弹体便于识别。",
+      "launch_methods": [
+        "TORPEDO_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 4.83,
+        "diameter_m": 0.483,
+        "mass_kg": 700,
+        "scale_source": "ESTIMATED",
+        "scale_note": "公开资料沿用 Mk 37 鱼雷弹体量级。"
+      },
+      "body_diameter_m": 0.483,
+      "geometry": {
+        "kind": "mine",
+        "features": [
+          "torpedo_shaped_body",
+          "launch_canister"
+        ],
+        "params": {
+          "body": "torpedo_shaped",
+          "nose": "hemispherical",
+          "nose_len_ratio": 0.6,
+          "mooring": 0,
+          "mooring_len_ratio": 1.5,
+          "canister": 0,
+          "horns": 0,
+          "rails": 2,
+          "fins": 4,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.7,
+          "tail_len_ratio": 0.4,
+          "bands": 2
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_SLBM_Polaris_A1",
+      "display_name": "Polaris A1",
+      "short_name": "Polaris A1",
+      "category": "SLBM",
+      "family_id": "US_SLBM_Polaris",
+      "base_geometry": "us_slbm_polaris",
+      "country": "USA",
+      "role": "第一代潜射弹道导弹",
+      "subrole": "Early_SLBM",
+      "era": "Cold War",
+      "service_years": "1960-1965",
+      "tier": 2,
+      "tier_reason": "游戏 T2 潜射弹道导弹起点：短钝整流罩、单喷管，是 SSBN 科技树的开端节点。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 8.5,
+        "diameter_m": 1.37,
+        "mass_kg": 12800,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 8.5 米。"
+      },
+      "body_diameter_m": 1.37,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "early_generation",
+          "dome_shroud"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.6,
+          "shroud_shape": "blunt",
+          "stage_rings": 1,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.2,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.5,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 1,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_SLBM_Polaris_A3",
+      "display_name": "Polaris A3",
+      "short_name": "Polaris A3",
+      "category": "SLBM",
+      "family_id": "US_SLBM_Polaris",
+      "base_geometry": "us_slbm_polaris",
+      "country": "USA",
+      "role": "潜射弹道导弹改进型",
+      "subrole": "Early_SLBM",
+      "era": "Cold War",
+      "service_years": "1964-1980s",
+      "tier": 3,
+      "tier_reason": "游戏 T3 改进型：与 A1 共享弹体级别，弹体加长、整流罩形状更新。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 9.9,
+        "diameter_m": 1.37,
+        "mass_kg": 16000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 9.9 米。"
+      },
+      "body_diameter_m": 1.37,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "dome_shroud",
+          "extended_body"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.8,
+          "shroud_shape": "hemispherical",
+          "stage_rings": 1,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.22,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.55,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    },
+    {
+      "weapon_id": "US_SLBM_Poseidon_C3",
+      "display_name": "Poseidon C3",
+      "short_name": "Poseidon C3",
+      "category": "SLBM",
+      "family_id": "US_SLBM_Poseidon",
+      "base_geometry": "us_slbm_poseidon",
+      "country": "USA",
+      "role": "多弹头潜射弹道导弹",
+      "subrole": "Cold_War_SLBM",
+      "era": "Cold War",
+      "service_years": "1971-1990s",
+      "tier": 4,
+      "tier_reason": "游戏 T4 冷战中段节点：弹体明显加粗加长，尾裙结构清晰，与北极星外形差异大。",
+      "launch_methods": [
+        "SLBM_TUBE"
+      ],
+      "dimensions": {
+        "length_m": 10.4,
+        "diameter_m": 1.88,
+        "mass_kg": 34000,
+        "scale_source": "PUBLIC_REFERENCE",
+        "scale_note": "公开资料长度约 10.4 米。"
+      },
+      "body_diameter_m": 1.88,
+      "geometry": {
+        "kind": "slbm",
+        "features": [
+          "wider_body",
+          "tail_skirt"
+        ],
+        "params": {
+          "nose": "shroud",
+          "nose_len_ratio": 1.5,
+          "shroud_shape": "blunt",
+          "stage_rings": 2,
+          "tail_skirt": 1,
+          "skirt_flare_ratio": 1.28,
+          "nozzle": "single",
+          "nozzle_len_ratio": 0.6,
+          "fins": 0,
+          "fin_span_ratio": 1.2,
+          "fin_chord_ratio": 0.8,
+          "cable_trays": 0,
+          "base_cover": 1,
+          "bands": 2,
+          "windows": 0,
+          "canister": 0
+        }
+      },
+      "notes": ""
+    }
+  ]
+}
