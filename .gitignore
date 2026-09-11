@@ -11,3 +11,7 @@ __pycache__/
 
 # Firecrawl CLI cache
 .firecrawl/
+
+# 资产工厂的批次归档目录（_archive）：每次批量生成时留下的本地历史产物，
+# 只用于本地回滚与排查，不入版本库（此前仓库中也没有任何 _archive 路径被跟踪）。
+_archive/
