@@ -12,6 +12,12 @@ __pycache__/
 # Firecrawl CLI cache
 .firecrawl/
 
+# Codex/本地代理的续跑状态，只用于本机恢复任务
+.omo/
+
+# Playwright、Blender 审计等本地测试输出，由正式验收流程另行归档
+test-results/
+
 # 资产工厂的批次归档目录（_archive）：每次批量生成时留下的本地历史产物，
 # 只用于本地回滚与排查，不入版本库（此前仓库中也没有任何 _archive 路径被跟踪）。
 _archive/

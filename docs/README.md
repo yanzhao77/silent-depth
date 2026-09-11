@@ -94,6 +94,8 @@ Total 1000 points — Objectives 40 % (400) + Damage 20 % (200) + Detection 15 %
 
 | Doc | What it covers |
 |---|---|
+| `docs/UE4_TECH_TREE_EXECUTION_PLAN.md` | Five-tree execution backlog: data governance, UE runtime, unlock/save/UI, equipment integration, asset verification and owner decisions |
+| `docs/SUBMARINE_MODULAR_ASSET_PIPELINE_PLAN.md` | Blender master organization, movable-part export, UE4 data-driven assembly, migration stages and Codex task prompts |
 | `docs/UE4_27_MIGRATION_MASTER_PLAN.md` | UE4.27 unified migration architecture, vertical slices, parity gates, GTX 1050 target |
 | `docs/UE4_27_TARGET_ARCHITECTURE.md` | Detailed UE4.27 target modules, contracts, visibility and determinism boundaries |
 | `docs/UE4_27_MIGRATION_PLAN.md` | Detailed UE4.27 execution phases, validation, risk and release checklist |
