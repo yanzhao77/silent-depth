@@ -1,0 +1,1685 @@
+{
+  "assembly": {
+    "assetId": "RU_SSN_Yasen",
+    "path": "/Users/sjw/Documents/GitHub/silent-depth/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Documentation/RU_SSN_Yasen_ASSEMBLY.json",
+    "repositoryRelativePath": "SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Documentation/RU_SSN_Yasen_ASSEMBLY.json"
+  },
+  "blenderIntegrity": {
+    "after": {
+      "mtimeMs": 1788943518907.4785,
+      "path": "/Users/sjw/Documents/GitHub/silent-depth/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+      "sha256": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca",
+      "sizeBytes": 7938661
+    },
+    "before": {
+      "mtimeMs": 1788943518907.4785,
+      "path": "/Users/sjw/Documents/GitHub/silent-depth/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+      "sha256": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca",
+      "sizeBytes": 7938661
+    },
+    "unchanged": true
+  },
+  "bvh": {
+    "SUB_Yasen_BowDoor_-1_0": {
+      "sourceTriangleCounts": {
+        "SUB_Yasen_BowDoor_-1_1": 716,
+        "SUB_Yasen_BowDoor_-1_2": 716,
+        "SUB_Yasen_BowDoor_1_0": 716,
+        "SUB_Yasen_BowDoor_1_1": 716,
+        "SUB_Yasen_BowDoor_1_2": 716,
+        "SUB_Yasen_DeckHatch_-31": 716,
+        "SUB_Yasen_DeckHatch_36": 716,
+        "SUB_Yasen_DeckHatch_43": 716,
+        "SUB_Yasen_DeckHatch_8": 716,
+        "SUB_Yasen_FlankArray_-1": 716,
+        "SUB_Yasen_FlankArray_1": 716,
+        "SUB_Yasen_FloodSlot_-1_0": 716,
+        "SUB_Yasen_FloodSlot_-1_1": 716,
+        "SUB_Yasen_FloodSlot_-1_2": 716,
+        "SUB_Yasen_FloodSlot_-1_3": 716,
+        "SUB_Yasen_FloodSlot_-1_4": 716,
+        "SUB_Yasen_FloodSlot_-1_5": 716,
+        "SUB_Yasen_FloodSlot_1_0": 716,
+        "SUB_Yasen_FloodSlot_1_1": 716,
+        "SUB_Yasen_FloodSlot_1_2": 716,
+        "SUB_Yasen_FloodSlot_1_3": 716,
+        "SUB_Yasen_FloodSlot_1_4": 716,
+        "SUB_Yasen_FloodSlot_1_5": 716,
+        "SUB_Yasen_Hull": 49152,
+        "SUB_Yasen_Mast_0": 124,
+        "SUB_Yasen_Mast_1": 124,
+        "SUB_Yasen_Mast_3": 124,
+        "SUB_Yasen_MastHead_0": 124,
+        "SUB_Yasen_MastHead_1": 124,
+        "SUB_Yasen_MastHead_3": 124,
+        "SUB_Yasen_MastSocket_0": 124,
+        "SUB_Yasen_MastSocket_1": 124,
+        "SUB_Yasen_MastSocket_2": 124,
+        "SUB_Yasen_MastSocket_3": 124,
+        "SUB_Yasen_Sail": 956,
+        "SUB_Yasen_SailHatch": 124,
+        "SUB_Yasen_ShaftFairing": 380,
+        "SUB_Yasen_VLS_Lid_0_0": 716,
+        "SUB_Yasen_VLS_Lid_0_1": 716,
+        "SUB_Yasen_VLS_Lid_0_2": 716,
+        "SUB_Yasen_VLS_Lid_0_3": 716,
+        "SUB_Yasen_VLS_Lid_1_0": 716,
+        "SUB_Yasen_VLS_Lid_1_1": 716,
+        "SUB_Yasen_VLS_Lid_1_2": 716,
+        "SUB_Yasen_VLS_Lid_1_3": 716,
+        "SUB_Yasen_VLS_Rim_0_0": 716,
+        "SUB_Yasen_VLS_Rim_0_1": 716,
+        "SUB_Yasen_VLS_Rim_0_2": 716,
+        "SUB_Yasen_VLS_Rim_0_3": 716,
+        "SUB_Yasen_VLS_Rim_1_0": 716,
+        "SUB_Yasen_VLS_Rim_1_1": 716,
+        "SUB_Yasen_VLS_Rim_1_2": 716,
+        "SUB_Yasen_VLS_Rim_1_3": 716,
+        "UCX_RU_SSN_Yasen_LOD0_00": 76,
+        "UCX_RU_SSN_Yasen_LOD0_01": 76,
+        "UCX_RU_SSN_Yasen_LOD0_02": 236,
+        "UCX_RU_SSN_Yasen_LOD0_03": 204,
+        "UCX_RU_SSN_Yasen_LOD0_04": 76,
+        "UCX_RU_SSN_Yasen_LOD0_05": 212,
+        "UCX_RU_SSN_Yasen_LOD0_06": 236,
+        "UCX_RU_SSN_Yasen_LOD0_07": 198,
+        "UCX_RU_SSN_Yasen_LOD0_08": 760
+      },
+      "triangleCount": 81850,
+      "vertexCount": 41049
+    },
+    "SUB_Yasen_BowDoor_-1_1": {
+      "sourceTriangleCounts": {
+        "SUB_Yasen_BowDoor_-1_0": 716,
+        "SUB_Yasen_BowDoor_-1_2": 716,
+        "SUB_Yasen_BowDoor_1_0": 716,
+        "SUB_Yasen_BowDoor_1_1": 716,
+        "SUB_Yasen_BowDoor_1_2": 716,
+        "SUB_Yasen_DeckHatch_-31": 716,
+        "SUB_Yasen_DeckHatch_36": 716,
+        "SUB_Yasen_DeckHatch_43": 716,
+        "SUB_Yasen_DeckHatch_8": 716,
+        "SUB_Yasen_FlankArray_-1": 716,
+        "SUB_Yasen_FlankArray_1": 716,
+        "SUB_Yasen_FloodSlot_-1_0": 716,
+        "SUB_Yasen_FloodSlot_-1_1": 716,
+        "SUB_Yasen_FloodSlot_-1_2": 716,
+        "SUB_Yasen_FloodSlot_-1_3": 716,
+        "SUB_Yasen_FloodSlot_-1_4": 716,
+        "SUB_Yasen_FloodSlot_-1_5": 716,
+        "SUB_Yasen_FloodSlot_1_0": 716,
+        "SUB_Yasen_FloodSlot_1_1": 716,
+        "SUB_Yasen_FloodSlot_1_2": 716,
+        "SUB_Yasen_FloodSlot_1_3": 716,
+        "SUB_Yasen_FloodSlot_1_4": 716,
+        "SUB_Yasen_FloodSlot_1_5": 716,
+        "SUB_Yasen_Hull": 49152,
+        "SUB_Yasen_Mast_0": 124,
+        "SUB_Yasen_Mast_1": 124,
+        "SUB_Yasen_Mast_3": 124,
+        "SUB_Yasen_MastHead_0": 124,
+        "SUB_Yasen_MastHead_1": 124,
+        "SUB_Yasen_MastHead_3": 124,
+        "SUB_Yasen_MastSocket_0": 124,
+        "SUB_Yasen_MastSocket_1": 124,
+        "SUB_Yasen_MastSocket_2": 124,
+        "SUB_Yasen_MastSocket_3": 124,
+        "SUB_Yasen_Sail": 956,
+        "SUB_Yasen_SailHatch": 124,
+        "SUB_Yasen_ShaftFairing": 380,
+        "SUB_Yasen_VLS_Lid_0_0": 716,
+        "SUB_Yasen_VLS_Lid_0_1": 716,
+        "SUB_Yasen_VLS_Lid_0_2": 716,
+        "SUB_Yasen_VLS_Lid_0_3": 716,
+        "SUB_Yasen_VLS_Lid_1_0": 716,
+        "SUB_Yasen_VLS_Lid_1_1": 716,
+        "SUB_Yasen_VLS_Lid_1_2": 716,
+        "SUB_Yasen_VLS_Lid_1_3": 716,
+        "SUB_Yasen_VLS_Rim_0_0": 716,
+        "SUB_Yasen_VLS_Rim_0_1": 716,
+        "SUB_Yasen_VLS_Rim_0_2": 716,
+        "SUB_Yasen_VLS_Rim_0_3": 716,
+        "SUB_Yasen_VLS_Rim_1_0": 716,
+        "SUB_Yasen_VLS_Rim_1_1": 716,
+        "SUB_Yasen_VLS_Rim_1_2": 716,
+        "SUB_Yasen_VLS_Rim_1_3": 716,
+        "UCX_RU_SSN_Yasen_LOD0_00": 76,
+        "UCX_RU_SSN_Yasen_LOD0_01": 76,
+        "UCX_RU_SSN_Yasen_LOD0_02": 236,
+        "UCX_RU_SSN_Yasen_LOD0_03": 204,
+        "UCX_RU_SSN_Yasen_LOD0_04": 76,
+        "UCX_RU_SSN_Yasen_LOD0_05": 212,
+        "UCX_RU_SSN_Yasen_LOD0_06": 236,
+        "UCX_RU_SSN_Yasen_LOD0_07": 198,
+        "UCX_RU_SSN_Yasen_LOD0_08": 760
+      },
+      "triangleCount": 81850,
+      "vertexCount": 41049
+    },
+    "SUB_Yasen_BowDoor_-1_2": {
+      "sourceTriangleCounts": {
+        "SUB_Yasen_BowDoor_-1_0": 716,
+        "SUB_Yasen_BowDoor_-1_1": 716,
+        "SUB_Yasen_BowDoor_1_0": 716,
+        "SUB_Yasen_BowDoor_1_1": 716,
+        "SUB_Yasen_BowDoor_1_2": 716,
+        "SUB_Yasen_DeckHatch_-31": 716,
+        "SUB_Yasen_DeckHatch_36": 716,
+        "SUB_Yasen_DeckHatch_43": 716,
+        "SUB_Yasen_DeckHatch_8": 716,
+        "SUB_Yasen_FlankArray_-1": 716,
+        "SUB_Yasen_FlankArray_1": 716,
+        "SUB_Yasen_FloodSlot_-1_0": 716,
+        "SUB_Yasen_FloodSlot_-1_1": 716,
+        "SUB_Yasen_FloodSlot_-1_2": 716,
+        "SUB_Yasen_FloodSlot_-1_3": 716,
+        "SUB_Yasen_FloodSlot_-1_4": 716,
+        "SUB_Yasen_FloodSlot_-1_5": 716,
+        "SUB_Yasen_FloodSlot_1_0": 716,
+        "SUB_Yasen_FloodSlot_1_1": 716,
+        "SUB_Yasen_FloodSlot_1_2": 716,
+        "SUB_Yasen_FloodSlot_1_3": 716,
+        "SUB_Yasen_FloodSlot_1_4": 716,
+        "SUB_Yasen_FloodSlot_1_5": 716,
+        "SUB_Yasen_Hull": 49152,
+        "SUB_Yasen_Mast_0": 124,
+        "SUB_Yasen_Mast_1": 124,
+        "SUB_Yasen_Mast_3": 124,
+        "SUB_Yasen_MastHead_0": 124,
+        "SUB_Yasen_MastHead_1": 124,
+        "SUB_Yasen_MastHead_3": 124,
+        "SUB_Yasen_MastSocket_0": 124,
+        "SUB_Yasen_MastSocket_1": 124,
+        "SUB_Yasen_MastSocket_2": 124,
+        "SUB_Yasen_MastSocket_3": 124,
+        "SUB_Yasen_Sail": 956,
+        "SUB_Yasen_SailHatch": 124,
+        "SUB_Yasen_ShaftFairing": 380,
+        "SUB_Yasen_VLS_Lid_0_0": 716,
+        "SUB_Yasen_VLS_Lid_0_1": 716,
+        "SUB_Yasen_VLS_Lid_0_2": 716,
+        "SUB_Yasen_VLS_Lid_0_3": 716,
+        "SUB_Yasen_VLS_Lid_1_0": 716,
+        "SUB_Yasen_VLS_Lid_1_1": 716,
+        "SUB_Yasen_VLS_Lid_1_2": 716,
+        "SUB_Yasen_VLS_Lid_1_3": 716,
+        "SUB_Yasen_VLS_Rim_0_0": 716,
+        "SUB_Yasen_VLS_Rim_0_1": 716,
+        "SUB_Yasen_VLS_Rim_0_2": 716,
+        "SUB_Yasen_VLS_Rim_0_3": 716,
+        "SUB_Yasen_VLS_Rim_1_0": 716,
+        "SUB_Yasen_VLS_Rim_1_1": 716,
+        "SUB_Yasen_VLS_Rim_1_2": 716,
+        "SUB_Yasen_VLS_Rim_1_3": 716,
+        "UCX_RU_SSN_Yasen_LOD0_00": 76,
+        "UCX_RU_SSN_Yasen_LOD0_01": 76,
+        "UCX_RU_SSN_Yasen_LOD0_02": 236,
+        "UCX_RU_SSN_Yasen_LOD0_03": 204,
+        "UCX_RU_SSN_Yasen_LOD0_04": 76,
+        "UCX_RU_SSN_Yasen_LOD0_05": 212,
+        "UCX_RU_SSN_Yasen_LOD0_06": 236,
+        "UCX_RU_SSN_Yasen_LOD0_07": 198,
+        "UCX_RU_SSN_Yasen_LOD0_08": 760
+      },
+      "triangleCount": 81850,
+      "vertexCount": 41049
+    },
+    "SUB_Yasen_BowDoor_1_0": {
+      "sourceTriangleCounts": {
+        "SUB_Yasen_BowDoor_-1_0": 716,
+        "SUB_Yasen_BowDoor_-1_1": 716,
+        "SUB_Yasen_BowDoor_-1_2": 716,
+        "SUB_Yasen_BowDoor_1_1": 716,
+        "SUB_Yasen_BowDoor_1_2": 716,
+        "SUB_Yasen_DeckHatch_-31": 716,
+        "SUB_Yasen_DeckHatch_36": 716,
+        "SUB_Yasen_DeckHatch_43": 716,
+        "SUB_Yasen_DeckHatch_8": 716,
+        "SUB_Yasen_FlankArray_-1": 716,
+        "SUB_Yasen_FlankArray_1": 716,
+        "SUB_Yasen_FloodSlot_-1_0": 716,
+        "SUB_Yasen_FloodSlot_-1_1": 716,
+        "SUB_Yasen_FloodSlot_-1_2": 716,
+        "SUB_Yasen_FloodSlot_-1_3": 716,
+        "SUB_Yasen_FloodSlot_-1_4": 716,
+        "SUB_Yasen_FloodSlot_-1_5": 716,
+        "SUB_Yasen_FloodSlot_1_0": 716,
+        "SUB_Yasen_FloodSlot_1_1": 716,
+        "SUB_Yasen_FloodSlot_1_2": 716,
+        "SUB_Yasen_FloodSlot_1_3": 716,
+        "SUB_Yasen_FloodSlot_1_4": 716,
+        "SUB_Yasen_FloodSlot_1_5": 716,
+        "SUB_Yasen_Hull": 49152,
+        "SUB_Yasen_Mast_0": 124,
+        "SUB_Yasen_Mast_1": 124,
+        "SUB_Yasen_Mast_3": 124,
+        "SUB_Yasen_MastHead_0": 124,
+        "SUB_Yasen_MastHead_1": 124,
+        "SUB_Yasen_MastHead_3": 124,
+        "SUB_Yasen_MastSocket_0": 124,
+        "SUB_Yasen_MastSocket_1": 124,
+        "SUB_Yasen_MastSocket_2": 124,
+        "SUB_Yasen_MastSocket_3": 124,
+        "SUB_Yasen_Sail": 956,
+        "SUB_Yasen_SailHatch": 124,
+        "SUB_Yasen_ShaftFairing": 380,
+        "SUB_Yasen_VLS_Lid_0_0": 716,
+        "SUB_Yasen_VLS_Lid_0_1": 716,
+        "SUB_Yasen_VLS_Lid_0_2": 716,
+        "SUB_Yasen_VLS_Lid_0_3": 716,
+        "SUB_Yasen_VLS_Lid_1_0": 716,
+        "SUB_Yasen_VLS_Lid_1_1": 716,
+        "SUB_Yasen_VLS_Lid_1_2": 716,
+        "SUB_Yasen_VLS_Lid_1_3": 716,
+        "SUB_Yasen_VLS_Rim_0_0": 716,
+        "SUB_Yasen_VLS_Rim_0_1": 716,
+        "SUB_Yasen_VLS_Rim_0_2": 716,
+        "SUB_Yasen_VLS_Rim_0_3": 716,
+        "SUB_Yasen_VLS_Rim_1_0": 716,
+        "SUB_Yasen_VLS_Rim_1_1": 716,
+        "SUB_Yasen_VLS_Rim_1_2": 716,
+        "SUB_Yasen_VLS_Rim_1_3": 716,
+        "UCX_RU_SSN_Yasen_LOD0_00": 76,
+        "UCX_RU_SSN_Yasen_LOD0_01": 76,
+        "UCX_RU_SSN_Yasen_LOD0_02": 236,
+        "UCX_RU_SSN_Yasen_LOD0_03": 204,
+        "UCX_RU_SSN_Yasen_LOD0_04": 76,
+        "UCX_RU_SSN_Yasen_LOD0_05": 212,
+        "UCX_RU_SSN_Yasen_LOD0_06": 236,
+        "UCX_RU_SSN_Yasen_LOD0_07": 198,
+        "UCX_RU_SSN_Yasen_LOD0_08": 760
+      },
+      "triangleCount": 81850,
+      "vertexCount": 41049
+    },
+    "SUB_Yasen_BowDoor_1_1": {
+      "sourceTriangleCounts": {
+        "SUB_Yasen_BowDoor_-1_0": 716,
+        "SUB_Yasen_BowDoor_-1_1": 716,
+        "SUB_Yasen_BowDoor_-1_2": 716,
+        "SUB_Yasen_BowDoor_1_0": 716,
+        "SUB_Yasen_BowDoor_1_2": 716,
+        "SUB_Yasen_DeckHatch_-31": 716,
+        "SUB_Yasen_DeckHatch_36": 716,
+        "SUB_Yasen_DeckHatch_43": 716,
+        "SUB_Yasen_DeckHatch_8": 716,
+        "SUB_Yasen_FlankArray_-1": 716,
+        "SUB_Yasen_FlankArray_1": 716,
+        "SUB_Yasen_FloodSlot_-1_0": 716,
+        "SUB_Yasen_FloodSlot_-1_1": 716,
+        "SUB_Yasen_FloodSlot_-1_2": 716,
+        "SUB_Yasen_FloodSlot_-1_3": 716,
+        "SUB_Yasen_FloodSlot_-1_4": 716,
+        "SUB_Yasen_FloodSlot_-1_5": 716,
+        "SUB_Yasen_FloodSlot_1_0": 716,
+        "SUB_Yasen_FloodSlot_1_1": 716,
+        "SUB_Yasen_FloodSlot_1_2": 716,
+        "SUB_Yasen_FloodSlot_1_3": 716,
+        "SUB_Yasen_FloodSlot_1_4": 716,
+        "SUB_Yasen_FloodSlot_1_5": 716,
+        "SUB_Yasen_Hull": 49152,
+        "SUB_Yasen_Mast_0": 124,
+        "SUB_Yasen_Mast_1": 124,
+        "SUB_Yasen_Mast_3": 124,
+        "SUB_Yasen_MastHead_0": 124,
+        "SUB_Yasen_MastHead_1": 124,
+        "SUB_Yasen_MastHead_3": 124,
+        "SUB_Yasen_MastSocket_0": 124,
+        "SUB_Yasen_MastSocket_1": 124,
+        "SUB_Yasen_MastSocket_2": 124,
+        "SUB_Yasen_MastSocket_3": 124,
+        "SUB_Yasen_Sail": 956,
+        "SUB_Yasen_SailHatch": 124,
+        "SUB_Yasen_ShaftFairing": 380,
+        "SUB_Yasen_VLS_Lid_0_0": 716,
+        "SUB_Yasen_VLS_Lid_0_1": 716,
+        "SUB_Yasen_VLS_Lid_0_2": 716,
+        "SUB_Yasen_VLS_Lid_0_3": 716,
+        "SUB_Yasen_VLS_Lid_1_0": 716,
+        "SUB_Yasen_VLS_Lid_1_1": 716,
+        "SUB_Yasen_VLS_Lid_1_2": 716,
+        "SUB_Yasen_VLS_Lid_1_3": 716,
+        "SUB_Yasen_VLS_Rim_0_0": 716,
+        "SUB_Yasen_VLS_Rim_0_1": 716,
+        "SUB_Yasen_VLS_Rim_0_2": 716,
+        "SUB_Yasen_VLS_Rim_0_3": 716,
+        "SUB_Yasen_VLS_Rim_1_0": 716,
+        "SUB_Yasen_VLS_Rim_1_1": 716,
+        "SUB_Yasen_VLS_Rim_1_2": 716,
+        "SUB_Yasen_VLS_Rim_1_3": 716,
+        "UCX_RU_SSN_Yasen_LOD0_00": 76,
+        "UCX_RU_SSN_Yasen_LOD0_01": 76,
+        "UCX_RU_SSN_Yasen_LOD0_02": 236,
+        "UCX_RU_SSN_Yasen_LOD0_03": 204,
+        "UCX_RU_SSN_Yasen_LOD0_04": 76,
+        "UCX_RU_SSN_Yasen_LOD0_05": 212,
+        "UCX_RU_SSN_Yasen_LOD0_06": 236,
+        "UCX_RU_SSN_Yasen_LOD0_07": 198,
+        "UCX_RU_SSN_Yasen_LOD0_08": 760
+      },
+      "triangleCount": 81850,
+      "vertexCount": 41049
+    },
+    "SUB_Yasen_BowDoor_1_2": {
+      "sourceTriangleCounts": {
+        "SUB_Yasen_BowDoor_-1_0": 716,
+        "SUB_Yasen_BowDoor_-1_1": 716,
+        "SUB_Yasen_BowDoor_-1_2": 716,
+        "SUB_Yasen_BowDoor_1_0": 716,
+        "SUB_Yasen_BowDoor_1_1": 716,
+        "SUB_Yasen_DeckHatch_-31": 716,
+        "SUB_Yasen_DeckHatch_36": 716,
+        "SUB_Yasen_DeckHatch_43": 716,
+        "SUB_Yasen_DeckHatch_8": 716,
+        "SUB_Yasen_FlankArray_-1": 716,
+        "SUB_Yasen_FlankArray_1": 716,
+        "SUB_Yasen_FloodSlot_-1_0": 716,
+        "SUB_Yasen_FloodSlot_-1_1": 716,
+        "SUB_Yasen_FloodSlot_-1_2": 716,
+        "SUB_Yasen_FloodSlot_-1_3": 716,
+        "SUB_Yasen_FloodSlot_-1_4": 716,
+        "SUB_Yasen_FloodSlot_-1_5": 716,
+        "SUB_Yasen_FloodSlot_1_0": 716,
+        "SUB_Yasen_FloodSlot_1_1": 716,
+        "SUB_Yasen_FloodSlot_1_2": 716,
+        "SUB_Yasen_FloodSlot_1_3": 716,
+        "SUB_Yasen_FloodSlot_1_4": 716,
+        "SUB_Yasen_FloodSlot_1_5": 716,
+        "SUB_Yasen_Hull": 49152,
+        "SUB_Yasen_Mast_0": 124,
+        "SUB_Yasen_Mast_1": 124,
+        "SUB_Yasen_Mast_3": 124,
+        "SUB_Yasen_MastHead_0": 124,
+        "SUB_Yasen_MastHead_1": 124,
+        "SUB_Yasen_MastHead_3": 124,
+        "SUB_Yasen_MastSocket_0": 124,
+        "SUB_Yasen_MastSocket_1": 124,
+        "SUB_Yasen_MastSocket_2": 124,
+        "SUB_Yasen_MastSocket_3": 124,
+        "SUB_Yasen_Sail": 956,
+        "SUB_Yasen_SailHatch": 124,
+        "SUB_Yasen_ShaftFairing": 380,
+        "SUB_Yasen_VLS_Lid_0_0": 716,
+        "SUB_Yasen_VLS_Lid_0_1": 716,
+        "SUB_Yasen_VLS_Lid_0_2": 716,
+        "SUB_Yasen_VLS_Lid_0_3": 716,
+        "SUB_Yasen_VLS_Lid_1_0": 716,
+        "SUB_Yasen_VLS_Lid_1_1": 716,
+        "SUB_Yasen_VLS_Lid_1_2": 716,
+        "SUB_Yasen_VLS_Lid_1_3": 716,
+        "SUB_Yasen_VLS_Rim_0_0": 716,
+        "SUB_Yasen_VLS_Rim_0_1": 716,
+        "SUB_Yasen_VLS_Rim_0_2": 716,
+        "SUB_Yasen_VLS_Rim_0_3": 716,
+        "SUB_Yasen_VLS_Rim_1_0": 716,
+        "SUB_Yasen_VLS_Rim_1_1": 716,
+        "SUB_Yasen_VLS_Rim_1_2": 716,
+        "SUB_Yasen_VLS_Rim_1_3": 716,
+        "UCX_RU_SSN_Yasen_LOD0_00": 76,
+        "UCX_RU_SSN_Yasen_LOD0_01": 76,
+        "UCX_RU_SSN_Yasen_LOD0_02": 236,
+        "UCX_RU_SSN_Yasen_LOD0_03": 204,
+        "UCX_RU_SSN_Yasen_LOD0_04": 76,
+        "UCX_RU_SSN_Yasen_LOD0_05": 212,
+        "UCX_RU_SSN_Yasen_LOD0_06": 236,
+        "UCX_RU_SSN_Yasen_LOD0_07": 198,
+        "UCX_RU_SSN_Yasen_LOD0_08": 760
+      },
+      "triangleCount": 81850,
+      "vertexCount": 41049
+    }
+  },
+  "candidates": [
+    {
+      "areaWeightedNormal": [
+        0.002051271,
+        -0.963801444,
+        -0.266612947
+      ],
+      "boundsWorld": {
+        "max": [
+          34.099998474,
+          6.352287292,
+          1.879052997
+        ],
+        "min": [
+          31.899999619,
+          6.129492283,
+          1.338148355
+        ]
+      },
+      "determinant": 1,
+      "exampleFaceCenters": [
+        [
+          34.097621918,
+          6.228755951,
+          1.676768899
+        ],
+        [
+          34.088043213,
+          6.203594208,
+          1.762713909
+        ],
+        [
+          34.068653107,
+          6.194180489,
+          1.793195486
+        ],
+        [
+          34.038906097,
+          6.187376976,
+          1.814757586
+        ],
+        [
+          33.997852325,
+          6.182112217,
+          1.831129551
+        ],
+        [
+          33.943828583,
+          6.177973747,
+          1.843744516
+        ],
+        [
+          33.873840332,
+          6.174755096,
+          1.853309155
+        ],
+        [
+          33.78181839,
+          6.172333717,
+          1.86021173
+        ],
+        [
+          33.65196228,
+          6.170616627,
+          1.864669919
+        ],
+        [
+          33.287330627,
+          6.169182777,
+          1.866693735
+        ],
+        [
+          32.712673187,
+          6.16805172,
+          1.866351604
+        ],
+        [
+          32.34803772,
+          6.168050766,
+          1.863894582
+        ]
+      ],
+      "exampleFaceNormals": [
+        [
+          0.999432385,
+          -0.009053281,
+          0.032449845
+        ],
+        [
+          0.935104668,
+          -0.100106098,
+          0.339938521
+        ],
+        [
+          0.726895809,
+          -0.197353929,
+          0.657779574
+        ],
+        [
+          0.48369807,
+          -0.254546374,
+          0.837402105
+        ],
+        [
+          0.303899854,
+          -0.279579312,
+          0.910758078
+        ],
+        [
+          0.185972333,
+          -0.290330917,
+          0.938681126
+        ],
+        [
+          0.108613186,
+          -0.295268416,
+          0.949220538
+        ],
+        [
+          0.056953944,
+          -0.297655821,
+          0.952972889
+        ],
+        [
+          0.022886237,
+          -0.298787683,
+          0.954045117
+        ],
+        [
+          0.002054785,
+          -0.299224854,
+          0.954180419
+        ],
+        [
+          -0.002013289,
+          -0.299224854,
+          0.954180479
+        ],
+        [
+          -0.022834696,
+          -0.298788875,
+          0.954045951
+        ]
+      ],
+      "geometryCenter": [
+        33.000061035,
+        6.243159771,
+        1.607676506
+      ],
+      "mirrored": false,
+      "objectName": "SUB_Yasen_BowDoor_-1_0",
+      "objectWorldMatrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "totalArea": 2.68644935,
+      "triangleCount": 716,
+      "vertexCount": 360
+    },
+    {
+      "areaWeightedNormal": [
+        0.001772168,
+        -0.963872612,
+        -0.266357601
+      ],
+      "boundsWorld": {
+        "max": [
+          36.900001526,
+          6.357350826,
+          1.880399466
+        ],
+        "min": [
+          34.700000763,
+          6.134870529,
+          1.339493036
+        ]
+      },
+      "determinant": 1,
+      "exampleFaceCenters": [
+        [
+          36.897621155,
+          6.233656406,
+          1.678027511
+        ],
+        [
+          36.88804245,
+          6.208500385,
+          1.763969421
+        ],
+        [
+          36.868652344,
+          6.199093819,
+          1.794451475
+        ],
+        [
+          36.838905334,
+          6.19230032,
+          1.816015363
+        ],
+        [
+          36.797851562,
+          6.187049866,
+          1.832390547
+        ],
+        [
+          36.74382782,
+          6.182928562,
+          1.845010042
+        ],
+        [
+          36.673839569,
+          6.179731369,
+          1.854580879
+        ],
+        [
+          36.581817627,
+          6.1773386,
+          1.861491799
+        ],
+        [
+          36.451961517,
+          6.175661087,
+          1.865961552
+        ],
+        [
+          36.087329865,
+          6.174331188,
+          1.86801672
+        ],
+        [
+          35.512672424,
+          6.173356056,
+          1.867721915
+        ],
+        [
+          35.148036957,
+          6.173448086,
+          1.865292907
+        ]
+      ],
+      "exampleFaceNormals": [
+        [
+          0.999431372,
+          -0.009060672,
+          0.032477524
+        ],
+        [
+          0.935098469,
+          -0.100103237,
+          0.339956135
+        ],
+        [
+          0.726933241,
+          -0.197325259,
+          0.657746732
+        ],
+        [
+          0.483637154,
+          -0.254533201,
+          0.837441266
+        ],
+        [
+          0.303883165,
+          -0.279554129,
+          0.91077137
+        ],
+        [
+          0.185962319,
+          -0.29030028,
+          0.938692629
+        ],
+        [
+          0.108606622,
+          -0.295235753,
+          0.949231505
+        ],
+        [
+          0.056949329,
+          -0.297623724,
+          0.952983201
+        ],
+        [
+          0.02288083,
+          -0.298755527,
+          0.954055369
+        ],
+        [
+          0.002052029,
+          -0.299191743,
+          0.954190791
+        ],
+        [
+          -0.002016098,
+          -0.299190909,
+          0.954191148
+        ],
+        [
+          -0.022837672,
+          -0.298754275,
+          0.954056799
+        ]
+      ],
+      "geometryCenter": [
+        35.800056458,
+        6.248375893,
+        1.609019041
+      ],
+      "mirrored": false,
+      "objectName": "SUB_Yasen_BowDoor_-1_1",
+      "objectWorldMatrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "totalArea": 2.686449989,
+      "triangleCount": 716,
+      "vertexCount": 360
+    },
+    {
+      "areaWeightedNormal": [
+        0.001388852,
+        -0.963718712,
+        -0.266916394
+      ],
+      "boundsWorld": {
+        "max": [
+          39.700000763,
+          6.361427307,
+          1.881507516
+        ],
+        "min": [
+          37.5,
+          6.1393857,
+          1.340599775
+        ]
+      },
+      "determinant": 1,
+      "exampleFaceCenters": [
+        [
+          39.697620392,
+          6.237518787,
+          1.679017305
+        ],
+        [
+          39.688041687,
+          6.212368965,
+          1.764954567
+        ],
+        [
+          39.668651581,
+          6.202972412,
+          1.795437098
+        ],
+        [
+          39.638904572,
+          6.196191788,
+          1.817003369
+        ],
+        [
+          39.5978508,
+          6.190958023,
+          1.833382607
+        ],
+        [
+          39.543830872,
+          6.186860085,
+          1.846008062
+        ],
+        [
+          39.473842621,
+          6.183691978,
+          1.855586886
+        ],
+        [
+          39.381820679,
+          6.181337357,
+          1.862508655
+        ],
+        [
+          39.251960754,
+          6.179711342,
+          1.866994023
+        ],
+        [
+          38.887329102,
+          6.178524494,
+          1.869092345
+        ],
+        [
+          38.312671661,
+          6.177765846,
+          1.868863106
+        ],
+        [
+          37.948036194,
+          6.177990913,
+          1.866474271
+        ]
+      ],
+      "exampleFaceNormals": [
+        [
+          0.999431372,
+          -0.009061066,
+          0.032479823
+        ],
+        [
+          0.935090363,
+          -0.100103378,
+          0.339978307
+        ],
+        [
+          0.726907849,
+          -0.197319746,
+          0.657776475
+        ],
+        [
+          0.483611107,
+          -0.254518032,
+          0.837460935
+        ],
+        [
+          0.303863227,
+          -0.279532164,
+          0.910784781
+        ],
+        [
+          0.185957894,
+          -0.29027617,
+          0.938700914
+        ],
+        [
+          0.108597219,
+          -0.295209736,
+          0.949240625
+        ],
+        [
+          0.056939211,
+          -0.297596097,
+          0.95299238
+        ],
+        [
+          0.022876216,
+          -0.298727214,
+          0.954064369
+        ],
+        [
+          0.002047984,
+          -0.299161881,
+          0.954200149
+        ],
+        [
+          -0.002019925,
+          -0.299161077,
+          0.954200447
+        ],
+        [
+          -0.022842521,
+          -0.298725754,
+          0.954065621
+        ]
+      ],
+      "geometryCenter": [
+        38.600040436,
+        6.252665997,
+        1.610125899
+      ],
+      "mirrored": false,
+      "objectName": "SUB_Yasen_BowDoor_-1_2",
+      "objectWorldMatrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "totalArea": 2.686448141,
+      "triangleCount": 716,
+      "vertexCount": 360
+    },
+    {
+      "areaWeightedNormal": [
+        0.002046885,
+        0.964046478,
+        -0.265725553
+      ],
+      "boundsWorld": {
+        "max": [
+          34.099998474,
+          -6.129492283,
+          1.879052997
+        ],
+        "min": [
+          31.899999619,
+          -6.352287292,
+          1.338148355
+        ]
+      },
+      "determinant": 1,
+      "exampleFaceCenters": [
+        [
+          34.097621918,
+          -6.266366482,
+          1.540786386
+        ],
+        [
+          34.088043213,
+          -6.288931847,
+          1.45417285
+        ],
+        [
+          34.068653107,
+          -6.29651022,
+          1.423218727
+        ],
+        [
+          34.038906097,
+          -6.301746368,
+          1.401252866
+        ],
+        [
+          33.997852325,
+          -6.305635452,
+          1.384526849
+        ],
+        [
+          33.943828583,
+          -6.308561802,
+          1.371599555
+        ],
+        [
+          33.873840332,
+          -6.310709953,
+          1.361759424
+        ],
+        [
+          33.78181839,
+          -6.312175274,
+          1.354610562
+        ],
+        [
+          33.65196228,
+          -6.312988758,
+          1.349919796
+        ],
+        [
+          33.287330627,
+          -6.312790871,
+          1.347475529
+        ],
+        [
+          32.712673187,
+          -6.31163311,
+          1.347228408
+        ],
+        [
+          32.34803772,
+          -6.31036377,
+          1.34935832
+        ]
+      ],
+      "exampleFaceNormals": [
+        [
+          0.999431908,
+          -0.008322481,
+          -0.032659106
+        ],
+        [
+          0.934994102,
+          -0.082651913,
+          -0.344898075
+        ],
+        [
+          0.726505101,
+          -0.156729326,
+          -0.669048667
+        ],
+        [
+          0.48321569,
+          -0.196605876,
+          -0.853140593
+        ],
+        [
+          0.303499609,
+          -0.211421162,
+          -0.929079771
+        ],
+        [
+          0.185686558,
+          -0.215996116,
+          -0.95857507
+        ],
+        [
+          0.108422212,
+          -0.216959938,
+          -0.970140696
+        ],
+        [
+          0.05683269,
+          -0.216755942,
+          -0.974570096
+        ],
+        [
+          0.022815758,
+          -0.216307193,
+          -0.976058662
+        ],
+        [
+          0.002016243,
+          -0.215995952,
+          -0.97639215
+        ],
+        [
+          -0.002046328,
+          -0.215995237,
+          -0.976392329
+        ],
+        [
+          -0.022836095,
+          -0.216305673,
+          -0.976058602
+        ]
+      ],
+      "geometryCenter": [
+        33.000061035,
+        -6.243160725,
+        1.607676387
+      ],
+      "mirrored": false,
+      "objectName": "SUB_Yasen_BowDoor_1_0",
+      "objectWorldMatrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "totalArea": 2.686449321,
+      "triangleCount": 716,
+      "vertexCount": 360
+    },
+    {
+      "areaWeightedNormal": [
+        0.001755162,
+        0.963956058,
+        -0.266055644
+      ],
+      "boundsWorld": {
+        "max": [
+          36.900001526,
+          -6.134870529,
+          1.880399466
+        ],
+        "min": [
+          34.700000763,
+          -6.357350826,
+          1.339493036
+        ]
+      },
+      "determinant": 1,
+      "exampleFaceCenters": [
+        [
+          36.897621155,
+          -6.271265507,
+          1.542051673
+        ],
+        [
+          36.88804245,
+          -6.293833733,
+          1.455443382
+        ],
+        [
+          36.868652344,
+          -6.301418781,
+          1.424492359
+        ],
+        [
+          36.838905334,
+          -6.306664467,
+          1.402529836
+        ],
+        [
+          36.797851562,
+          -6.310567856,
+          1.385807633
+        ],
+        [
+          36.74382782,
+          -6.313510895,
+          1.37288475
+        ],
+        [
+          36.673839569,
+          -6.315681458,
+          1.363049746
+        ],
+        [
+          36.581817627,
+          -6.317175865,
+          1.35590744
+        ],
+        [
+          36.451961517,
+          -6.318028927,
+          1.351225376
+        ],
+        [
+          36.087329865,
+          -6.317937851,
+          1.348803997
+        ],
+        [
+          35.512672424,
+          -6.316939831,
+          1.348590851
+        ],
+        [
+          35.148036957,
+          -6.315765381,
+          1.35074091
+        ]
+      ],
+      "exampleFaceNormals": [
+        [
+          0.999430835,
+          -0.008329844,
+          -0.032686818
+        ],
+        [
+          0.934988439,
+          -0.082662173,
+          -0.344911098
+        ],
+        [
+          0.726543307,
+          -0.156736553,
+          -0.669005632
+        ],
+        [
+          0.483160108,
+          -0.196637407,
+          -0.853164732
+        ],
+        [
+          0.303489178,
+          -0.211450115,
+          -0.929076493
+        ],
+        [
+          0.185681939,
+          -0.216026247,
+          -0.958569109
+        ],
+        [
+          0.108420685,
+          -0.216991648,
+          -0.970133781
+        ],
+        [
+          0.056833141,
+          -0.216789737,
+          -0.974562585
+        ],
+        [
+          0.022816692,
+          -0.216341749,
+          -0.976051033
+        ],
+        [
+          0.002018654,
+          -0.216030598,
+          -0.976384521
+        ],
+        [
+          -0.002044415,
+          -0.216031283,
+          -0.976384282
+        ],
+        [
+          -0.022835111,
+          -0.216341749,
+          -0.976050615
+        ]
+      ],
+      "geometryCenter": [
+        35.800056458,
+        -6.248375893,
+        1.609019041
+      ],
+      "mirrored": false,
+      "objectName": "SUB_Yasen_BowDoor_1_1",
+      "objectWorldMatrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "totalArea": 2.68644993,
+      "triangleCount": 716,
+      "vertexCount": 360
+    },
+    {
+      "areaWeightedNormal": [
+        0.0013753,
+        0.963551283,
+        -0.267520338
+      ],
+      "boundsWorld": {
+        "max": [
+          39.700000763,
+          -6.1393857,
+          1.881507516
+        ],
+        "min": [
+          37.5,
+          -6.361427307,
+          1.340599775
+        ]
+      },
+      "determinant": 1,
+      "exampleFaceCenters": [
+        [
+          39.697620392,
+          -6.275125504,
+          1.543050647
+        ],
+        [
+          39.688041687,
+          -6.297697067,
+          1.456449389
+        ],
+        [
+          39.668651581,
+          -6.305290222,
+          1.425502419
+        ],
+        [
+          39.638904572,
+          -6.310548782,
+          1.403544188
+        ],
+        [
+          39.5978508,
+          -6.314468861,
+          1.386826992
+        ],
+        [
+          39.543830872,
+          -6.317435265,
+          1.37390995
+        ],
+        [
+          39.473842621,
+          -6.319634914,
+          1.36408186
+        ],
+        [
+          39.381820679,
+          -6.321167469,
+          1.356948137
+        ],
+        [
+          39.251960754,
+          -6.322073936,
+          1.352277517
+        ],
+        [
+          38.887329102,
+          -6.322128296,
+          1.349887609
+        ],
+        [
+          38.312671661,
+          -6.321352482,
+          1.349721789
+        ],
+        [
+          37.948036194,
+          -6.320314407,
+          1.351901054
+        ]
+      ],
+      "exampleFaceNormals": [
+        [
+          0.999430895,
+          -0.008330672,
+          -0.032688983
+        ],
+        [
+          0.934981048,
+          -0.082673162,
+          -0.344928473
+        ],
+        [
+          0.726520419,
+          -0.156757072,
+          -0.66902566
+        ],
+        [
+          0.483139127,
+          -0.196659759,
+          -0.853171468
+        ],
+        [
+          0.303475767,
+          -0.211474553,
+          -0.929075301
+        ],
+        [
+          0.185685441,
+          -0.216052383,
+          -0.958562672
+        ],
+        [
+          0.108417407,
+          -0.217018396,
+          -0.970128179
+        ],
+        [
+          0.056832068,
+          -0.216816619,
+          -0.974556684
+        ],
+        [
+          0.022818901,
+          -0.216370076,
+          -0.976044774
+        ],
+        [
+          0.002021559,
+          -0.216059551,
+          -0.976378083
+        ],
+        [
+          -0.002041739,
+          -0.216058835,
+          -0.976378262
+        ],
+        [
+          -0.022832809,
+          -0.216369271,
+          -0.976044595
+        ]
+      ],
+      "geometryCenter": [
+        38.600040436,
+        -6.252666473,
+        1.610125303
+      ],
+      "mirrored": false,
+      "objectName": "SUB_Yasen_BowDoor_1_2",
+      "objectWorldMatrix": [
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "totalArea": 2.686447968,
+      "triangleCount": 716,
+      "vertexCount": 360
+    }
+  ],
+  "deterministicParameters": {
+    "candidateObjects": [
+      "SUB_Yasen_BowDoor_-1_0",
+      "SUB_Yasen_BowDoor_-1_1",
+      "SUB_Yasen_BowDoor_-1_2",
+      "SUB_Yasen_BowDoor_1_0",
+      "SUB_Yasen_BowDoor_1_1",
+      "SUB_Yasen_BowDoor_1_2"
+    ],
+    "clearanceMarginMeters": 0.18,
+    "envelopeLengthMeters": 7,
+    "envelopeRadiusMeters": 0.35,
+    "rayDistanceMeters": 8,
+    "sweepDistanceMeters": 3.2,
+    "sweepSampleCount": 7
+  },
+  "legacySocketRejection": {
+    "directionAccepted": true,
+    "oldAnchorName": "SOCKET_TORPEDO_01",
+    "oldTranslation": [
+      55.799972534,
+      0,
+      7.26317358
+    ],
+    "reasons": [
+      "旧位置位于 y=0 中线",
+      "旧位置高于当前 Hull 本体顶部",
+      "旧位置与当前 BowDoor evaluated geometry 没有充分对应关系",
+      "旧位置不得作为正式 gameplay muzzle transform"
+    ]
+  },
+  "master": {
+    "path": "/Users/sjw/Documents/GitHub/silent-depth/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+    "repositoryRelativePath": "SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+    "sha256": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca"
+  },
+  "notRealWorldMeasurement": true,
+  "reportFormatVersion": 1,
+  "selected": {
+    "correctedNormal": [
+      -0.0013753,
+      -0.963551283,
+      0.267520338
+    ],
+    "direction": {
+      "direction": [
+        0.786318362,
+        -0.617821515,
+        0
+      ],
+      "forwardComponent": 0.786318362,
+      "outwardComponent": 0.617821515,
+      "weights": [
+        0.56,
+        0.44
+      ]
+    },
+    "flippedNormal": true,
+    "muzzleOrigin": [
+      38.599311829,
+      -6.763348579,
+      1.751911044
+    ],
+    "normalCorrectionReason": "面积加权法线指向艇体中心线，按门面所在舷侧翻转",
+    "objectName": "SUB_Yasen_BowDoor_1_2",
+    "outwardVector": [
+      0,
+      -1,
+      0
+    ],
+    "raycast": {
+      "distance": null,
+      "faceIndex": null,
+      "hit": false,
+      "location": null
+    },
+    "rejectionReasons": [],
+    "score": 2.424222878,
+    "status": "ACCEPTED",
+    "sweep": {
+      "hit": false,
+      "minimum": {
+        "distance": 0.508504152,
+        "faceIndex": 50632,
+        "location": [
+          38.600025177,
+          -6.2745471,
+          1.61173594
+        ],
+        "normal": [
+          -0.001399219,
+          -0.961253703,
+          0.275661528
+        ],
+        "point": [
+          38.599311829,
+          -6.763348579,
+          1.751911044
+        ],
+        "travelMeters": 0
+      },
+      "samples": [
+        {
+          "clearance": 0.508504152,
+          "point": [
+            38.599311829,
+            -6.763348579,
+            1.751911044
+          ],
+          "travelMeters": 0
+        },
+        {
+          "clearance": 0.824676692,
+          "point": [
+            39.018680573,
+            -7.092853546,
+            1.751911044
+          ],
+          "travelMeters": 0.533333333
+        },
+        {
+          "clearance": 1.0499999999999998,
+          "point": [
+            39.438053131,
+            -7.422358036,
+            1.751911044
+          ],
+          "travelMeters": 1.066666667
+        },
+        {
+          "clearance": 1.0499999999999998,
+          "point": [
+            39.857421875,
+            -7.751863003,
+            1.751911044
+          ],
+          "travelMeters": 1.6
+        },
+        {
+          "clearance": 1.0499999999999998,
+          "point": [
+            40.276790619,
+            -8.081367493,
+            1.751911044
+          ],
+          "travelMeters": 2.133333333
+        },
+        {
+          "clearance": 1.0499999999999998,
+          "point": [
+            40.696159363,
+            -8.410872459,
+            1.751911044
+          ],
+          "travelMeters": 2.666666667
+        },
+        {
+          "clearance": 1.0499999999999998,
+          "point": [
+            41.115531921,
+            -8.740377426,
+            1.751911044
+          ],
+          "travelMeters": 3.2
+        }
+      ]
+    },
+    "xRank": 1
+  },
+  "semanticStatus": "GAMEPLAY_DERIVED_FROM_MASTER_GEOMETRY",
+  "workerVersion": "1.0.0"
+}
