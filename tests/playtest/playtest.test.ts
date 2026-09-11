@@ -3,8 +3,8 @@
  *
  * t-014 playtest agent acceptance: calls runPlaytests() (src/sim/playtest.ts),
  * which drives ≥ 10 recorded scripted-AI sessions through the REAL engine
- * (createGame/step via src/sim/runner.ts) and writes the evidence reports
- * (reports/playtest/playtest-NN.md + SUMMARY.md). Asserts:
+ * (createGame/step via src/sim/runner.ts) and renders the evidence reports
+ * (playtest-NN.md + SUMMARY.md). Asserts:
  *
  *   - ≥ 10 sessions recorded;
  *   - ≥ 1 VICTORY, and every victory is on a PROVEN strategy mission
@@ -15,19 +15,47 @@
  *   - every session wrote its report file and the aggregate SUMMARY.md exists;
  *   - the sim sources contain no Math.random (engine determinism contract).
  *
+ * Where the reports land: report writing is opt-in (runPlaytests' writeReports).
+ * `npm run playtest` is the explicit entry point that refreshes the tracked
+ * copies in reports/playtest/. Every other run — npm test, watch mode, a bare
+ * vitest invocation — keeps its reports in a temp dir that is deleted on exit,
+ * so running the suite never dirties tracked evidence.
+ *
  * Honesty contract: all numbers in the reports come from real runs; a
  * scripted loss on M03+ is recorded as the finding, never masked.
  *
  * Environment: vitest node. Deterministic — no Math.random anywhere.
  */
 
-import { describe, expect, it } from 'vitest';
-import { existsSync, readFileSync } from 'node:fs';
-import { resolve } from 'node:path';
+import { afterAll, describe, expect, it } from 'vitest';
+import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join, resolve } from 'node:path';
 import { DEFAULT_OUT_DIR, runPlaytests } from '../../src/sim/playtest';
 
-/** Run the battery once per file — reports are (re)written here. */
-const results = runPlaytests();
+/** `npm run playtest` is the only path that rewrites the tracked reports. */
+const refreshTrackedReports = process.env.npm_lifecycle_event === 'playtest';
+
+/** Scratch dir for the harness copy of the reports; removed on exit. */
+const scratchDir = mkdtempSync(join(tmpdir(), 'silent-depth-playtest-'));
+const reportDir = refreshTrackedReports ? DEFAULT_OUT_DIR : scratchDir;
+
+/** Run the battery once per file — this run renders reports into reportDir. */
+const results = runPlaytests({ outDir: reportDir, writeReports: true });
+
+afterAll(() => {
+  if (!refreshTrackedReports) rmSync(scratchDir, { recursive: true, force: true });
+});
+
+/** Smallest possible budget per strategy — used to probe the default config. */
+const ONE_TICK_PER_STRATEGY = {
+  'ping-until-track': 1,
+  'stationary-ambush': 1,
+  'convoy-attack': 1,
+  'generic-hunter': 1,
+  'sink-and-escape': 1,
+  'determinism-check': 1,
+} as const;
 
 function pad2(n: number): string {
   return String(n).padStart(2, '0');
@@ -66,7 +94,7 @@ describe('t-014 playtest gate — recorded AI playtests', () => {
 
   it('every session wrote its report file, and the aggregate SUMMARY.md exists', () => {
     for (const r of results) {
-      const file = resolve(DEFAULT_OUT_DIR, `playtest-${pad2(r.session)}.md`);
+      const file = resolve(reportDir, `playtest-${pad2(r.session)}.md`);
       expect(existsSync(file), `missing report ${file}`).toBe(true);
       const content = readFileSync(file, 'utf8');
       // Every report carries the §55 evidence fields.
@@ -80,7 +108,15 @@ describe('t-014 playtest gate — recorded AI playtests', () => {
       expect(content).toContain('## Recommendations');
       expect(content).toContain('## Evidence');
     }
-    expect(existsSync(resolve(DEFAULT_OUT_DIR, 'SUMMARY.md'))).toBe(true);
+    expect(existsSync(resolve(reportDir, 'SUMMARY.md'))).toBe(true);
+  });
+
+  it('writes nothing unless writeReports is explicitly enabled', () => {
+    const probeDir = mkdtempSync(join(tmpdir(), 'silent-depth-playtest-probe-'));
+    rmSync(probeDir, { recursive: true, force: true });
+    const quick = runPlaytests({ outDir: probeDir, maxTicks: ONE_TICK_PER_STRATEGY });
+    expect(quick.length).toBeGreaterThanOrEqual(10);
+    expect(existsSync(probeDir)).toBe(false);
   });
 
   it('every session has a valid outcome, an audit trail, and errors only on ERROR', () => {

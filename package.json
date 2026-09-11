@@ -13,7 +13,7 @@
     "test:coverage": "vitest run --coverage",
     "test:submarine-audit:blender": "node tools/submarine-audit-blender-integration.mjs",
     "sim": "node --experimental-strip-types src/sim/runner.ts",
-    "playtest": "node --experimental-strip-types src/sim/playtest.ts",
+    "playtest": "vitest run tests/playtest",
     "typecheck": "tsc --noEmit",
     "eslint": "eslint .",
     "eslint:fix": "eslint . --fix",

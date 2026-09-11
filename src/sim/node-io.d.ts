@@ -49,5 +49,7 @@ declare module 'node:child_process' {
 /** Node's process global — only the surface the playtest tooling touches. */
 declare const process: {
   execPath: string;
+  /** Used to detect the explicit `npm run playtest` entry point. */
+  env: Record<string, string | undefined>;
   cwd(): string;
 };
