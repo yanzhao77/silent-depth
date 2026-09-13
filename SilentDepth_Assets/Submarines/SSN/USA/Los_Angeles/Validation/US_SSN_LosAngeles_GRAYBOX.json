@@ -1,0 +1,139 @@
+{
+  "topology": {
+    "SUB_Hull": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Sail": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_SailCap": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Mast_0": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_MastHead_0": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Mast_1": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_MastHead_1": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_BowPlane_P": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_BowPlane_S": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_SternPlane_P": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_SternPlane_S": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Rudder_T": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Rudder_B": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Shaft": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_Hub": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_PropellerBlade_0": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_PropellerBlade_1": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_PropellerBlade_2": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_PropellerBlade_3": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_PropellerBlade_4": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_PropellerBlade_5": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_PropellerBlade_6": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    },
+    "SUB_PropellerSpinner": {
+      "boundary_edges": 0,
+      "non_manifold_edges": 0,
+      "degenerate_faces": 0
+    }
+  },
+  "contacts": {
+    "sail_hull": true,
+    "shaft_hull": true,
+    "planes_missing": [],
+    "propulsor_missing": []
+  },
+  "length_m": 110.0,
+  "beam_m": 10.0,
+  "dimensions": {
+    "hull_length_m": 110.0,
+    "hull_beam_m": 9.997,
+    "sail_top_m": 8.6,
+    "hull_top_m": 4.998,
+    "propulsor_max_x_m": -55.978,
+    "bounds_with_appendages_m": [
+      113.178,
+      16.171,
+      17.356
+    ]
+  }
+}

@@ -6,7 +6,7 @@
 | 基线日期 | 2026-09-11 |
 | 目标分支 | `ue4` |
 | 上游计划 | `docs/UE4_TECH_TREE_EXECUTION_PLAN.md` §11 |
-| 本记录范围 | `DEC-001`、`DEC-002`、`DEC-004`、`DEC-007`、`DEC-008`、`DEC-009` 已决定；`DEC-003`、`DEC-005`、`DEC-006` 仍为 OPEN |
+| 本记录范围 | `DEC-001`、`DEC-002`、`DEC-003`、`DEC-004`、`DEC-007`、`DEC-008`、`DEC-009`、`DEC-010` 已决定；`DEC-005`、`DEC-006` 仍为 OPEN |
 
 本记录只固定决策与边界，不替代数据、资产或运行时的实施任务。决策落地时若发现
 与本文冲突的事实，先修本文，再改代码。
@@ -19,7 +19,7 @@
 |---|---|---|---|---|
 | DEC-001 | `DATABASE_ONLY` 条目不制作内部工程模型 | **DECIDED** | 接受，并按"现实型号资料不足 / 游戏通用占位"两类分别定边界 | DATA-006、五类科技树验收 |
 | DEC-002 | 授权修改潜艇母版以增加装备 socket | **DECIDED** | 授权，但限定为 Akula 垂直切片，且只改工作副本、母版保持只读 | SOCKET-001、SNS-002、DEF-002 |
-| DEC-003 | 首批潜艇生产顺序 | OPEN | 未决定，沿用计划推荐的 Batch A 作为待批方案 | P5 内容扩产 |
+| DEC-003 | 首批潜艇生产顺序 | **DECIDED** | 取 Batch A：Los Angeles、Virginia、Seawolf、Astute、Suffren | P5 内容扩产 |
 | DEC-004 | 科技树研究资源来源 | **DECIDED** | 任务结算唯一产出；初版成本曲线按 Tier 递进 | TECH-004、SAVE-001、UI-001 |
 | DEC-005 | 是否允许 `GAMEPLAY` 标记的推测配发 | OPEN | 未决定 | TECH-005、各类 loadout |
 | DEC-006 | Windows UE4.27 验收环境与目标硬件 | OPEN | 未决定 | 全部 `EDITOR VERIFIED` 与性能任务 |
@@ -181,6 +181,31 @@ Akula 本切片必需的 Socket 最小集（`类别名 → Assembly 逻辑 id`�
 
 ---
 
+## 4A. DEC-003：首批潜艇生产顺序（2026-09-13 决定）
+
+### 4A.1 决定
+
+**取 Batch A：Los Angeles、Virginia、Seawolf、Astute、Suffren。**
+
+理由与执行细则见 `docs/UE4_BATCH_A_WORK_ORDER.md`，要点：
+
+1. 五艘在科技树里已经是节点（`PLANNED`），四类兼容行与发射接口数据都已存在，
+   参考材料（`REFERENCE.md`、参考图、`PROVENANCE.json`）也已就位——缺口只有几何与下游产物。
+2. 每艘的"批次歧义"（Virginia Block、Seawolf SSN-23、Los Angeles Flight）
+   **由项目自己的武器数据锁定**，不再单独拍板：洛杉矶＝Flight II/688i（12 具垂发）、
+   弗吉尼亚＝Block I–II（12 具垂发、115 m）、海狼＝SSN-21/22（108 m、8 具 660 mm 管）。
+3. 流水线规定每波最多三艘并行：第一波 Virginia / Los Angeles / Astute，
+   第二波 Seawolf / Suffren。
+4. 几何与锚点需要在装有 Blender 的机器上完成；本机只能准备数据、参考与验收项。
+   因此本决定的落地状态是 `DECIDED` + 工单就绪，几何为 `NOT STARTED`。
+
+### 4A.2 一处待确认的数据冲突
+
+Seawolf 的参考文档写发射管 26.5 英寸（673 mm），武器清单写 660 mm。管口尺寸影响外形，
+建模前需确认以哪一份为准（工单 §2 建议：口径按清单，参考文档记为资料近似）。
+
+---
+
 ## 5. 仍未决策
 
 ### 5.1 DEC-007：层阶门槛（2026-09-12 决定）
@@ -224,7 +249,6 @@ fingerprint 16219625101362846001
 
 | 决策 ID | 主题 | 影响 | 建议 |
 |---|---|---|---|
-| DEC-003 | 首批潜艇生产顺序 | P5 内容扩产无法启动 | 采用 Batch A（Los Angeles / Virginia / Seawolf / Astute / Suffren） |
 | DEC-005 | 是否允许 `GAMEPLAY` 标记的推测配发 | `TECH-005`、各类 loadout 的可填范围 | 允许，但 UI 与数据中必须与现实资料明确区分 |
 | DEC-006 | Windows UE4.27 验收环境与目标硬件 | 所有 `EDITOR VERIFIED` 与性能结论 | UE4.27.2 + Windows 10/11 + GTX 1050 基线 |
 
@@ -366,3 +390,4 @@ fingerprint 16219625101362846001
 | 2026-09-12 | 决定 `DEC-007`（层阶门槛取 1）；机制先行交付，随后按决定启用 |
 | 2026-09-12 | 决定 `DEC-008`（互斥只在装位级，socket 容量 1 即替代）与 `DEC-009`（270 行 family-only 记为能力层；`CN_PJ_Type093B` 保留为待产出声明） |
 | 2026-09-12 | 决定 `DEC-010`（装备效果取初版可玩值，集中在 `equipment_effects.json`；只有噪声/加速度/航速/电池四项进仿真） |
+| 2026-09-13 | 决定 `DEC-003`（首批生产顺序取 Batch A）；工单 `docs/UE4_BATCH_A_WORK_ORDER.md` 就绪，批次歧义由武器数据锁定 |

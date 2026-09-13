@@ -291,11 +291,18 @@ void ASubmarinePawn::ApplyHullLayout(const FVector& HullExtent)
     }
 }
 
-void ASubmarinePawn::ApplyPart(UStaticMeshComponent* Component, const FString& AssetPath)
+void ASubmarinePawn::ApplyPart(
+    UStaticMeshComponent* Component,
+    const FString& AssetPath,
+    const FSDVec3* OffsetCm)
 {
     if (Component == nullptr)
     {
         return;
+    }
+    if (OffsetCm != nullptr)
+    {
+        Component->SetRelativeLocation(FVector(OffsetCm->X, OffsetCm->Y, OffsetCm->Z));
     }
     if (AssetPath.IsEmpty())
     {
@@ -455,11 +462,18 @@ void ASubmarinePawn::ResolveAndApplyPlatformAssets(const FString& RequestedPlatf
     {
         ApplyHullLayout(MeshComp->GetStaticMesh()->GetBounds().BoxExtent);
     }
-    ApplyPart(Propeller, Resolved.Assets.Propulsor);
-    ApplyPart(Rudder, Resolved.Assets.Rudder);
-    ApplyPart(SternPlanes, Resolved.Assets.SternPlanes);
-    ApplyPart(BowPlanes, Resolved.Assets.BowPlanes);
-    ApplyPart(Periscope, Resolved.Assets.Periscope);
+    ApplyPart(Propeller, Resolved.Assets.Propulsor,
+              Resolved.Assets.PartOffsetsCm.Find(TEXT("propulsor")));
+    // The pivot comes from the platform table when the hull declares one; the
+    // three hand-built boats predate that field and keep their constructor
+    // offsets, which is why the pointer is optional rather than defaulted.
+    ApplyPart(Rudder, Resolved.Assets.Rudder, Resolved.Assets.PartOffsetsCm.Find(TEXT("rudder")));
+    ApplyPart(SternPlanes, Resolved.Assets.SternPlanes,
+              Resolved.Assets.PartOffsetsCm.Find(TEXT("sternPlanes")));
+    ApplyPart(BowPlanes, Resolved.Assets.BowPlanes,
+              Resolved.Assets.PartOffsetsCm.Find(TEXT("bowPlanes")));
+    ApplyPart(Periscope, Resolved.Assets.Periscope,
+              Resolved.Assets.PartOffsetsCm.Find(TEXT("periscope")));
 }
 
 void ASubmarinePawn::Tick(float DeltaSeconds)

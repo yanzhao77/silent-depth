@@ -360,17 +360,20 @@ P1 与 P2 越早完成，P3 的配装界面越不容易返工：互斥规则未�
 
 每条任务交付前至少执行：
 
-```bash
-npm test
-npm run typecheck
-npm run build
-npm run lint
+```powershell
+& "C:\game\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat" SilentDepthUEEditor Win64 Development `
+  -Project="C:\workspace\ue4\silent-depth\ue4\SilentDepthUE\SilentDepthUE.uproject" -WaitMutex
+
+& "C:\game\Epic Games\UE_4.27\Engine\Binaries\Win64\UE4Editor-Cmd.exe" `
+  "C:\workspace\ue4\silent-depth\ue4\SilentDepthUE\SilentDepthUE.uproject" `
+  -ExecCmds="Automation RunTests SilentDepth;Quit" -unattended -nopause -nosplash -nullrhi -stdout
 ```
 
-数据副本相关改动额外执行：
+数据副本与资产管线相关改动额外执行：
 
 ```bash
 npm run check:runtime-data
+npm run check:asset-pipeline
 ```
 
 UE C++ 与资产任务必须在 UE4.27 环境执行：UBT 编译、UE Automation Tests、
@@ -389,6 +392,7 @@ UE C++ 与资产任务必须在 UE4.27 环境执行：UBT 编译、UE Automation
 | ~~UMG 脚本化生成可行性~~ | 已验证并否决：Python 能建资产、不能填控件树，见 §4.3 |
 | `DEC-007 = 1` 的真人手感 | `NOT VERIFIED`：headless 门禁已交付（§4.6），仍无试玩记录 |
 | Akula 装备 socket 几何 | 未制作，缺 Blender 环境（Windows 侧的加载与校验已交付） |
+| Batch A 五艘的几何 | 已构建并导入（§8.4）；仅剩人工视觉验收 |
 | ~~`DATA-005` 270 行处置规则~~ | 已定：`DEC-009`，P1 已交付 |
 | ~~`DEC-008` 互斥规则~~ | 已定：`DEC-008`，P2 已交付 |
 | 武器侧容量（鱼雷管数量与载荷分配） | 未建模，槽位暂无 socket 绑定，等 `WPN-001` |
@@ -449,6 +453,25 @@ UE C++ 与资产任务必须在 UE4.27 环境执行：UBT 编译、UE Automation
 
 本段没有取得：`EDITOR VERIFIED`（未在编辑器里看过导入结果）、`TARGET HARDWARE VERIFIED`、
 Blender 几何、真人试玩。
+
+### 8.4 2026-09-13 · Batch A 生产工单
+
+`DEC-003` 已决定取 Batch A（Los Angeles、Virginia、Seawolf、Astute、Suffren），
+工单见 `docs/UE4_BATCH_A_WORK_ORDER.md`。核对结果：
+
+| 项 | 状态 |
+|---|---|
+| 五艘的科技树节点 | 已存在（`PLANNED`，T6/T9/T8/T9/T9） |
+| 武器 / 防御 / 传感器 / 推进兼容行 | 已齐（每艘 2–3 武器槽、9 防御槽、13 传感器行、1 推进行） |
+| 参考材料（REFERENCE / 参考图 / provenance） | 已齐 |
+| 每艘的批次歧义 | **由武器数据锁定**，不需再拍板：洛杉矶＝Flight II/688i、弗吉尼亚＝Block I-II（115 m）、海狼＝SSN-21/22（108 m） |
+| 几何母版与下游产物（母版/LOD/碰撞/锚点/规格/校验/清单） | **已完成**（Blender 5.2.1）：五艘各 11 项产物齐全 |
+| 清单 / UE 导入 / 平台资产登记 | **已完成**：`PLANNED 46 / VALIDATING 8`；每艘 4 级 LOD + 5 部件 + 6 材质实例；`platform_assets.json` 3 → 8 条并带部件枢轴 |
+| 待确认的数据冲突 | Seawolf 管径：参考文档 673 mm vs 武器清单 660 mm（当前按清单） |
+| 视觉与编辑器验收 | **NOT VERIFIED**：预览图已渲染，尚未有人查看 |
+
+状态：几何、登记、导入全部完成并 `TESTED`（UE Automation 70/70、实机启动正常）；
+`EDITOR VERIFIED` 待人工看预览与编辑器。
 
 ---
 

@@ -22,6 +22,13 @@ struct SILENTDEPTHUE_API FSDPlatformAssetSet
     FString SternPlanes;
     FString BowPlanes;
     FString Periscope;
+    /**
+     * Where each movable part's pivot sits on the hull, in centimetres and
+     * relative to the hull origin (because UE places the component there and
+     * rotates it). Taken from the hull's own ASSEMBLY.json, never assumed: the
+     * hand-built Akula values would put a Virginia's rudder 13 m out of place.
+     */
+    TMap<FString, FSDVec3> PartOffsetsCm;
 
     bool HasHull() const { return !Hull.IsEmpty(); }
 };

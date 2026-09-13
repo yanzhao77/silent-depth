@@ -144,6 +144,39 @@ bool LoadPlatformAssets(
         {
             return false;
         }
+
+        // Optional per-part pivots. A hull without them keeps the pawn's
+        // documented legacy offsets, which is what the three hand-built boats
+        // rely on; a hull with them is placed exactly where its ASSEMBLY says.
+        const TSharedPtr<FJsonObject>* Offsets = nullptr;
+        if (Entry->TryGetObjectField(TEXT("partOffsetsCm"), Offsets) && Offsets != nullptr)
+        {
+            for (const TPair<FString, TSharedPtr<FJsonValue>>& OffsetPair : (*Offsets)->Values)
+            {
+                if (!OffsetPair.Value.IsValid() || OffsetPair.Value->Type != EJson::Array)
+                {
+                    Report.AddError(
+                        TEXT("INVALID_FIELD_TYPE"),
+                        FString::Printf(TEXT("%s / partOffsetsCm.%s"), *Pair.Key, *OffsetPair.Key),
+                        TEXT("a part offset must be three numbers"));
+                    return false;
+                }
+                const TArray<TSharedPtr<FJsonValue>>& Components = OffsetPair.Value->AsArray();
+                if (Components.Num() != 3)
+                {
+                    Report.AddError(
+                        TEXT("INVALID_FIELD_TYPE"),
+                        FString::Printf(TEXT("%s / partOffsetsCm.%s"), *Pair.Key, *OffsetPair.Key),
+                        TEXT("a part offset must be exactly three numbers"));
+                    return false;
+                }
+                FSDVec3 Offset;
+                Offset.X = Components[0]->AsNumber();
+                Offset.Y = Components[1]->AsNumber();
+                Offset.Z = Components[2]->AsNumber();
+                AssetSet.PartOffsetsCm.Add(OffsetPair.Key, Offset);
+            }
+        }
         Table.ByPlatform.Add(Pair.Key, MoveTemp(AssetSet));
     }
 

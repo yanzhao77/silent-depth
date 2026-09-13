@@ -131,6 +131,53 @@ ASSETS = [
     },
 ]
 
+# --------------------------------------------------------------------------
+# Batch A (DEC-003): Los Angeles, Virginia, Seawolf, Astute, Suffren.
+#
+# All five came out of the shared parametric pipeline
+# (SilentDepth_Assets/Submarines/Tools/sd_hull_pipeline.py), so they share one
+# material set and one texture naming rule, and each ships five movable part
+# FBX with the same suffixes. The per-hull differences that matter for import
+# are only the source folder and the destination path.
+# --------------------------------------------------------------------------
+BATCH_A_SLOTS = {
+    "hull": ("Hull", dict(basecolor="{texture}", roughness=0.76, metallic=0.04)),
+    "coating": ("Coating", dict(color=(0.026, 0.031, 0.035), roughness=0.76, metallic=0.04)),
+    "panel": ("Panel", dict(color=(0.020, 0.025, 0.028), roughness=0.69, metallic=0.07)),
+    "array": ("Array", dict(color=(0.032, 0.037, 0.039), roughness=0.82, metallic=0.00)),
+    "recess": ("Recess", dict(color=(0.006, 0.008, 0.009), roughness=0.88, metallic=0.00)),
+    "metal": ("Metal", dict(color=(0.12, 0.14, 0.15), roughness=0.40, metallic=0.70)),
+    "bronze": ("Bronze", dict(color=(0.34, 0.22, 0.092), roughness=0.34, metallic=0.78)),
+}
+
+BATCH_A_PARTS = ("PROPULSOR_01", "RUDDER_01", "STERN_PLANES_01", "BOW_PLANES_01", "PERISCOPE_01")
+
+BATCH_A_HULLS = (
+    ("US_SSN_LosAngeles", "SSN/USA/Los_Angeles", "SSN/USA/Los_Angeles"),
+    ("US_SSN_Virginia", "SSN/USA/Virginia", "SSN/USA/Virginia"),
+    ("US_SSN_Seawolf", "SSN/USA/Seawolf", "SSN/USA/Seawolf"),
+    ("UK_SSN_Astute", "SSN/UK/Astute", "SSN/UK/Astute"),
+    ("FR_SSN_Suffren", "SSN/France/Suffren", "SSN/France/Suffren"),
+)
+
+for _asset_id, _src, _dest in BATCH_A_HULLS:
+    _texture = "T_{}_Hull_BaseColor".format(_asset_id)
+    ASSETS.append({
+        "id": _asset_id,
+        "src": "Submarines/" + _src,
+        "dest": "/Game/SilentDepth/Art/Submarines/" + _dest,
+        "lod_indices": (1, 2, 3),
+        "parts": BATCH_A_PARTS,
+        "textures": [
+            ("Textures/{}.png".format(_texture), _texture, True, "TC_DEFAULT"),
+        ],
+        "slots": {
+            key: (value[0], {**value[1],
+                             **({"basecolor": _texture} if value[1].get("basecolor") == "{texture}" else {})})
+            for key, value in BATCH_A_SLOTS.items()
+        },
+    })
+
 
 def log(message):
     unreal.log("[sub] " + str(message))

@@ -55,11 +55,12 @@ bool FSD_PlatformAssetsLoadRealTable::RunTest(const FString& Parameters)
 
     TestEqual(TEXT("the documented fallback is Akula"),
         Table.FallbackPlatformId, FString(TEXT("RU_SSN_Akula")));
-    TestEqual(TEXT("three hulls have imported assets"), Table.ByPlatform.Num(), 3);
+    // Three hand-built hulls plus the five Batch A hulls (DEC-003).
+    TestEqual(TEXT("eight hulls have imported assets"), Table.ByPlatform.Num(), 8);
 
     TArray<FString> Ids;
     Table.SortedIds(Ids);
-    TestTrue(TEXT("ids come back sorted"), Ids.Num() > 0 && Ids[0].Equals(TEXT("RU_SSBN_Typhoon")));
+    TestTrue(TEXT("ids come back sorted"), Ids.Num() > 0 && Ids[0].Equals(TEXT("FR_SSN_Suffren")));
 
     const FSDPlatformAssetSet* Akula = Table.ByPlatform.Find(TEXT("RU_SSN_Akula"));
     TestNotNull(TEXT("Akula is listed"), Akula);
@@ -84,6 +85,28 @@ bool FSD_PlatformAssetsLoadRealTable::RunTest(const FString& Parameters)
         // there instead of pointing at another boat's parts.
         TestTrue(TEXT("Yasen has no separate propulsor"), Yasen->Propulsor.IsEmpty());
         TestTrue(TEXT("Yasen has no separate rudder"), Yasen->Rudder.IsEmpty());
+    }
+
+    // A Batch A hull is a full entry: hull, five parts and the pivots the
+    // assembly document declares. Without those pivots UE would place the
+    // rudder where the hand-built Akula's hinge is.
+    const FSDPlatformAssetSet* Virginia = Table.ByPlatform.Find(TEXT("US_SSN_Virginia"));
+    TestNotNull(TEXT("Virginia is listed"), Virginia);
+    if (Virginia != nullptr)
+    {
+        TestTrue(TEXT("Virginia has a hull"), Virginia->HasHull());
+        TestTrue(TEXT("Virginia has a propulsor"), !Virginia->Propulsor.IsEmpty());
+        TestTrue(TEXT("Virginia has a periscope"), !Virginia->Periscope.IsEmpty());
+        TestEqual(TEXT("Virginia declares five part pivots"), Virginia->PartOffsetsCm.Num(), 5);
+        if (const FSDVec3* Rudder = Virginia->PartOffsetsCm.Find(TEXT("rudder")))
+        {
+            // 115 m boat: the stern hinge is further aft than the Akula's.
+            TestTrue(TEXT("the rudder pivot is aft of -50 m"), Rudder->X < -5000.0);
+        }
+        else
+        {
+            AddError(TEXT("Virginia has no rudder pivot"));
+        }
     }
 
     return true;
@@ -128,14 +151,16 @@ bool FSD_PlatformAssetsResolve::RunTest(const FString& Parameters)
 
     // An unlisted platform resolves to the documented fallback and says so.
     {
+        // US_SSN_Skipjack is in the tree but has no imported assets, which is
+        // exactly the case the fallback exists for.
         const FSDResolvedPlatformAssets Resolved =
-            SDPlatform::ResolvePlatformAssets(Table, TEXT("US_SSN_Virginia"));
+            SDPlatform::ResolvePlatformAssets(Table, TEXT("US_SSN_Skipjack"));
         TestFalse(TEXT("no exact match"), Resolved.bExactMatch);
         TestTrue(TEXT("fallback reported"), Resolved.bUsedFallback);
         TestEqual(TEXT("the fallback platform is used"),
             Resolved.Assets.PlatformId, FString(TEXT("RU_SSN_Akula")));
         TestEqual(TEXT("the request is remembered for logging"),
-            Resolved.RequestedPlatformId, FString(TEXT("US_SSN_Virginia")));
+            Resolved.RequestedPlatformId, FString(TEXT("US_SSN_Skipjack")));
     }
 
     // An empty request is the same case: the caller has not chosen yet.

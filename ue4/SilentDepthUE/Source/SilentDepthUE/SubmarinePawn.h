@@ -71,8 +71,13 @@ protected:
     /** Recomputes camera arm, wake anchors and zoom limits from hull bounds. */
     void ApplyHullLayout(const FVector& HullExtent);
 
-    /** Assigns one part asset, or hides the component when there is none. */
-    void ApplyPart(UStaticMeshComponent* Component, const FString& AssetPath);
+    /**
+     * Assigns one part asset, or hides the component when there is none. When
+     * the platform table gives a pivot for this part the component is placed
+     * there; otherwise its constructor offset stands.
+     */
+    void ApplyPart(UStaticMeshComponent* Component, const FString& AssetPath,
+                   const FSDVec3* OffsetCm = nullptr);
 
     void ThrottleAxis(float Val);
     void RudderAxis(float Val);
