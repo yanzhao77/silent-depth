@@ -1075,7 +1075,7 @@
         "FBX/RU_SSN_Akula_LOD2.fbx": "55cf0a1c7724da57fe545596b74e35dc24cf4a048586e0f5790cc0fd6aee21b8",
         "FBX/RU_SSN_Akula_LOD3.fbx": "aa4ffe46f9dd264b8c8a48de12ac376f5af3a4f4dbb1844652e588f807b31987",
         "Collision/RU_SSN_Akula_COLLISION.fbx": "59d984639778a64cf0b84fa5e1180f9f2651306f51706c41f9a775969e786219",
-        "Validation/RU_SSN_Akula_VALIDATION.json": "ba7b870a3e6d2aeda3c9b9cb24011ff5bd5c86796ab9566e44aba9c14ab0a3f8",
+        "Validation/RU_SSN_Akula_VALIDATION.json": "c012b4897580ce2fb7d7a3c25cbea7d5541b4d72eff88e35c7a4ba69e171b8cd",
         "Source/akula_drawing_geometry.py": "8ebe2c32d4dbf53f65587ab59006405767b2712a2e2c9c900dc0bd772ae5be5b",
         "Source/build_akula_drawing.py": "5db9238606108c1db646efa472955d270d014a38fbe6044ba9c9461f14eb0f67",
         "Source/build_akula_reference.py": "3397dc9f9654cb8bc9d40ce51c2093f8a51ec1bbab624caa7a5db264b2401d45",

@@ -5,7 +5,7 @@
     {
       "path": "TechTree/submarine_catalogue.json",
       "source": "Manifest/submarine_manifest.json",
-      "sha256": "42e2e845b8a0db1c1035763d224ab24bb6f7923a4890b2e76f04b0b6c601d362"
+      "sha256": "927dd048680a02f8b1ca76e569093d8f5aadc6d2c0245b31cea6c345e98a099b"
     },
     {
       "path": "TechTree/submarine_tree.json",
@@ -95,7 +95,7 @@
     {
       "path": "submarine_manifest.json",
       "source": "Manifest/submarine_manifest.json",
-      "sha256": "42e2e845b8a0db1c1035763d224ab24bb6f7923a4890b2e76f04b0b6c601d362"
+      "sha256": "927dd048680a02f8b1ca76e569093d8f5aadc6d2c0245b31cea6c345e98a099b"
     },
     {
       "path": "technology_tree.json",
