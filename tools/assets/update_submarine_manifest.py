@@ -51,12 +51,18 @@ def build_entry(asset_id: str, existing: dict) -> tuple[dict, list[str]]:
     spec = json.loads(spec_path.read_text(encoding='utf-8'))
     relative_root = root.relative_to(ASSETS).as_posix()
 
-    # Only hulls the shared pipeline produced may be re-registered. Akula,
-    # Yasen and Typhoon came from hand-built Blender masters: their SPECs carry
-    # no material list, and rewriting their paths and hashes from a parametric
-    # build would quietly claim those files are something they are not.
+    # Akula, Yasen and Typhoon came from hand-built Blender masters: their SPECs
+    # carry no material list. Their curated fields (paths, status, materials)
+    # stay untouched, but the hash list still has to describe the files on disk
+    # or the asset-pipeline gate fails on a record it cannot trust.
     if existing.get('master') and not spec.get('materials'):
-        return existing, ['hand-built asset, not registered from the pipeline']
+        refreshed = dict(existing)
+        recorded = existing.get('sha256') or {}
+        refreshed['sha256'] = {relative: sha256(root / relative)
+                               for relative in recorded
+                               if (root / relative).is_file()}
+        missing = [relative for relative in recorded if not (root / relative).is_file()]
+        return refreshed, ([] if not missing else [f'{name} is missing' for name in missing])
 
     artifacts = {
         'master': f'Blend/{asset_id}_MASTER.blend',
