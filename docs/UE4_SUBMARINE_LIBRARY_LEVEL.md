@@ -16,6 +16,12 @@
   0.9 m，龙骨贴地而不是沉进地板；
 - 场景另有地板、可移动主光/补光、天光、曝光体积和每艘一块文字标签。
 
+曝光体积用**手动曝光**锁死亮度，避免镜头扫过一排深色艇体时画面忽明忽暗；同时必须把
+**物理相机曝光关掉**（`AutoExposureApplyPhysicalCameraExposure = false`）。UE4 默认
+`FPostProcessSettings` 是开着物理相机曝光的，手动曝光会按 ISO 100 / f4 / 1/60 s 折成
+EV100 9.9，比本关卡的无单位灯光强度暗约 10 档——只推翻测模式、不改这一项，整个视口就是
+**纯黑**（2026-09-13 实际发生过的"打开工程一片黑"）。
+
 当前布局：4 列 × 12 行（48 = 4 × 12），单元 220.4 m × 38 m，整块约 771 m × 456 m。
 
 ## 打开项目就能看到
@@ -57,3 +63,7 @@ LogPython: [showcase] SHOWCASE_DONE hulls=48 parts=230 level=/Game/Maps/Submarin
 - 自动截图链路在本机不可靠：启动期调用 `AutomationLibrary.take_high_res_screenshot` 会让
   编辑器崩溃，`SceneCapture2D` 在重建后的首个会话里偶发返回全黑图。脚本因此刻意不做
   截图；需要留档时请人工截图。
+- 曝光回归可以用无头命令复测：`-game -ExecCmds="Shot"` 会在 `Saved/Screenshots` 落一张
+  当前视角的图。修好前后同一机位的平均亮度是 1.52 → 38.25（全黑 → 地板与艇体可见，
+  峰值 194/255 未过曝）；把 `r.EyeAdaptation.MethodOverride 3` 用来强制手动曝光，可以让
+  任何一个正常关卡（例如 `Ocean_Main`）复现同样的纯黑帧。

@@ -202,14 +202,20 @@ def build_environment(min_x, max_x, min_y, max_y) -> None:
                 log(f'sky recapture skipped: {error}')
 
     # Manual exposure keeps a row of dark hulls from swinging the whole view
-    # around as the camera moves. These property names moved between engine
-    # versions, so a failure here is cosmetic only.
+    # around as the camera moves. It only works with the *physical* camera
+    # exposure switched off: manual exposure is scored as EV100 from
+    # ISO/shutter/aperture, and the engine defaults (ISO 100, f/4, 1/60 s) put
+    # it at EV100 9.9 -- about ten stops below what this level's unitless light
+    # intensities put out, which renders every viewport black. These property
+    # names moved between engine versions, so a failure here is cosmetic only.
     try:
         volume = unreal.EditorLevelLibrary.spawn_actor_from_class(
             unreal.PostProcessVolume, unreal.Vector(0.0, 0.0, 0.0), unreal.Rotator(0.0, 0.0, 0.0))
         volume.set_actor_label('ShowcaseExposure', mark_dirty=True)
         volume.set_editor_property('unbound', True)
         settings = volume.get_editor_property('settings')
+        settings.set_editor_property('override_auto_exposure_apply_physical_camera_exposure', True)
+        settings.set_editor_property('auto_exposure_apply_physical_camera_exposure', False)
         settings.set_editor_property('override_auto_exposure_method', True)
         settings.set_editor_property('auto_exposure_method', unreal.AutoExposureMethod.AEM_MANUAL)
         volume.set_editor_property('settings', settings)
