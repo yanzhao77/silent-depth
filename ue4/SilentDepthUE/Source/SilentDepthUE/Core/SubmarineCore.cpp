@@ -116,9 +116,27 @@ void SubmarineStep(
     ESDWeatherKind Weather
 )
 {
+    // Neutral effects: the historical behaviour, unchanged.
+    SubmarineStep(S, In, B, FSDPropulsionEffects(), Dt, Weather);
+}
+
+void SubmarineStep(
+    FSDSubmarineState& S,
+    const FSDPlayerInputs& In,
+    const FSDBalance& B,
+    const FSDPropulsionEffects& Propulsion,
+    double Dt,
+    ESDWeatherKind Weather
+)
+{
+    // PROP-001: the fitted propulsor scales the ordered speed, the acceleration
+    // cap and the battery drain, and shifts the radiated noise. A neutral
+    // effect (1.0 / 0.0) reproduces the balance exactly.
+    const double OrderedThrottle = In.Throttle * FMath::Max(Propulsion.SpeedScale, 0.0);
+
     // 1. speed intent: band + in-band target; LOW BATTERY caps at SILENT.
-    ESDSpeedBand Band = BandForTargetSpeed(In.Throttle, B);
-    double Target = ClampSpeedToBand(Band, In.Throttle, B);
+    ESDSpeedBand Band = BandForTargetSpeed(OrderedThrottle, B);
+    double Target = ClampSpeedToBand(Band, OrderedThrottle, B);
     if (S.bLowBattery && Target > B.SpeedBands[static_cast<int>(ESDSpeedBand::Silent)].SpeedMaxKt)
     {
         Band = ESDSpeedBand::Silent;
@@ -128,7 +146,7 @@ void SubmarineStep(
     S.TargetSpeedKt = Target;
 
     // 2. integrate speed toward target (continuous in-band acceleration).
-    const double MaxStep = B.SubmarineAccelKtPerS * Dt;
+    const double MaxStep = B.SubmarineAccelKtPerS * FMath::Max(Propulsion.AccelScale, 0.0) * Dt;
     const double Delta = Target - S.SpeedKt;
     const double Step = Delta > 0 ? FMath::Min(Delta, MaxStep) : FMath::Max(Delta, -MaxStep);
     S.SpeedKt = ClampD(S.SpeedKt + Step, 0.0, B.SpeedBands[static_cast<int>(ESDSpeedBand::Full)].SpeedMaxKt);
@@ -203,7 +221,7 @@ void SubmarineStep(
 
     // 6. battery: band drain + silent extra + surface/deep charge.
     const FSDSpeedBand& BandCfg = B.SpeedBands[static_cast<int>(S.SpeedBand)];
-    double BatteryDelta = -BandCfg.BatteryDrainPerSec * Dt;
+    double BatteryDelta = -BandCfg.BatteryDrainPerSec * FMath::Max(Propulsion.BatteryDrainScale, 0.0) * Dt;
     if (S.bSilentRunning)
     {
         BatteryDelta -= B.SilentRunningExtraPerSec * Dt;
@@ -241,6 +259,8 @@ void SubmarineStep(
         Weather,
         B
     );
+    // A quiet propulsor lowers the radiated figure; noise never goes negative.
+    S.Noise = FMath::Max(S.Noise + Propulsion.NoiseOffset, 0.0);
 
     // 8. out-of-bounds timer (defeat decided elsewhere, 60 s data only).
     const bool Inside = S.PosXKm >= 0.0 && S.PosXKm <= B.MapSizeKm &&

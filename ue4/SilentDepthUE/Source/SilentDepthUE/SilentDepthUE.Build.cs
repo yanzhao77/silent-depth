@@ -19,7 +19,11 @@ public class SilentDepthUE : ModuleRules
             "InputCore",
             "Json",
             "JsonUtilities",
-            "Niagara"
+            "Niagara",
+            // UI-001..UI-004: the technology-tree screens are UMG widgets.
+            "Slate",
+            "SlateCore",
+            "UMG"
         });
     }
 }

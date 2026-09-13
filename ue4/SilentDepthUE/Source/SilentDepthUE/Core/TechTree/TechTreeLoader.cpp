@@ -336,6 +336,12 @@ bool LoadTechTree(
         }
     }
 
+    // Blender assembly documents live next to the tree documents. The folder is
+    // optional (a hull may have no sockets yet), but a document inside it is
+    // not: a malformed one fails the whole load.
+    Internal::LoadSocketDirectory(
+        FPaths::Combine(Paths.Directory, TEXT("Sockets")), Tree, Report);
+
     Tree.SortDeterministically();
     ValidateTreeInvariants(Tree, Report);
 

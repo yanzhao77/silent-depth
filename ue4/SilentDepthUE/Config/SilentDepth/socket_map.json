@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "note_zh": [
+    "手写配置：把 Blender 装配文档里的逻辑挂点（或 purpose）映射到资产库的注册表令牌。",
+    "DEC-002 §3.3.1：类别名与 purpose 的对照表是装备兼容判定的唯一入口，本文件就是这张表。",
+    "只登记有依据的映射；没有把握的一律留空，程序会给该挂点一条 MISSING_SOCKET_REGISTRY_CATEGORY 通告，",
+    "不会用锚点名字拼接出一个令牌（DEF-002 / SNS-002）。",
+    "byLogicalId 优先于 byPurpose：同一个 purpose 下不同挂点可以指向不同令牌。"
+  ],
+  "byPurpose": {
+    "propulsion_mount": "SOCKET_PROPULSOR"
+  },
+  "byLogicalId": {
+    "torpedo_tube_01_muzzle": "SOCKET_TUBE_01",
+    "torpedo_tube_02_muzzle": "SOCKET_TUBE_02",
+    "torpedo_tube_03_muzzle": "SOCKET_TUBE_03",
+    "torpedo_tube_04_muzzle": "SOCKET_TUBE_04",
+    "torpedo_tube_05_muzzle": "SOCKET_TUBE_05",
+    "torpedo_tube_06_muzzle": "SOCKET_TUBE_06",
+    "sonar_bow": "SOCKET_SONAR_BOW",
+    "towed_array": "SOCKET_SONAR_TOWED",
+    "ew_antenna": "SOCKET_EW_ANTENNA",
+    "decoy_launcher_01": "SOCKET_DECOY_LAUNCHER_01",
+    "decoy_launcher_02": "SOCKET_DECOY_LAUNCHER_02",
+    "periscope": ""
+  }
+}

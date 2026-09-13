@@ -3,13 +3,19 @@
 #include "Camera/CameraComponent.h"
 #include "Components/InputComponent.h"
 #include "Components/StaticMeshComponent.h"
+#include "Core/Platform/SDPlatformAssets.h"
+#include "Engine/GameInstance.h"
 #include "Engine/StaticMesh.h"
 #include "GameFramework/PlayerController.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "Misc/Paths.h"
 #include "NiagaraComponent.h"
 #include "NiagaraSystem.h"
+#include "SilentDepthSaveSubsystem.h"
+#include "TechTreeSubsystem.h"
 #include "UObject/ConstructorHelpers.h"
+
+DEFINE_LOG_CATEGORY_STATIC(LogSilentDepthPawn, Log, All);
 
 namespace
 {
@@ -21,27 +27,11 @@ constexpr float SD_WAKE_MAX_SCALE = 1.3f;            // size at full speed
 constexpr float SD_WAKE_SURFACE_FULL_M = 10.0f;      // wake fully visible at/above periscope depth
 constexpr float SD_WAKE_SURFACE_HIDE_M = 20.0f;      // wake fully hidden below this (shallow and deeper)
 
-// Starting submarine: Akula, Project 971. Imported from the asset library at
-// 1:1 scale (110.2 m) with the bow along +X and Z up, which is also the pawn's
-// forward, so the mesh needs no relative rotation. See docs/UE427_IMPORT_PLAN.md.
-const TCHAR* SD_PLAYER_HULL_MESH =
-    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula.SM_RU_SSN_Akula");
-
-// Separate propeller, exported by tools/ue4/export_sub_split.py with its origin
-// on the shaft axis so it can spin about the hull's local X.
-const TCHAR* SD_PLAYER_PROP_MESH =
-    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PROP.SM_RU_SSN_Akula_PROP");
-
-// Movable control surfaces. The factory exports each with its pivot on the
-// hinge axis, so a component only has to sit on that hinge.
-const TCHAR* SD_PLAYER_RUDDER_MESH =
-    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_RUDDER.SM_RU_SSN_Akula_RUDDER");
-const TCHAR* SD_PLAYER_STERN_PLANE_MESH =
-    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_STERNPLANES.SM_RU_SSN_Akula_STERNPLANES");
-const TCHAR* SD_PLAYER_BOW_PLANE_MESH =
-    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_BOWPLANES.SM_RU_SSN_Akula_BOWPLANES");
-const TCHAR* SD_PLAYER_PERISCOPE_MESH =
-    TEXT("/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PERISCOPE.SM_RU_SSN_Akula_PERISCOPE");
+// The hull and its movable parts are resolved at BeginPlay from the platform
+// table (Config/SilentDepth/platform_assets.json) plus the saved platform id.
+// Nothing here builds an asset path by string concatenation: an unlisted
+// platform resolves to the table's documented fallback and reports that it did
+// (SUB-001).
 
 // Shaft position along the hull, in centimetres; the Blender master puts the
 // propeller hub at x = -54.4 m. Only meaningful for a separately exported prop.
@@ -131,28 +121,13 @@ ASubmarinePawn::ASubmarinePawn()
 
     MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Hull"));
     MeshComp->SetupAttachment(SceneRoot);
-    static ConstructorHelpers::FObjectFinder<UStaticMesh> MeshObj(SD_PLAYER_HULL_MESH);
-    if (MeshObj.Succeeded())
-    {
-        MeshComp->SetStaticMesh(MeshObj.Object);
-        // The submarine assets keep the bow on +X with Z up and are imported at
-        // 1:1 scale, so the hull needs no scale change.
-        MeshComp->SetRelativeRotation(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
-        MeshComp->SetRelativeScale3D(FVector(1.0f));
-        MeshComp->SetRelativeLocation(FVector::ZeroVector);
-
-        const FVector Extent = MeshObj.Object->GetBounds().BoxExtent;
-        HullHalfLengthCm = FMath::Max(Extent.X, 100.0f);
-        SurfaceOffsetZCm = FMath::Max(Extent.Z, 100.0f) * SD_SURFACE_OFFSET_RATIO;
-    }
-    else
-    {
-        HullHalfLengthCm = SD_FALLBACK_HALF_LENGTH_CM;
-        SurfaceOffsetZCm = SD_FALLBACK_HALF_HEIGHT_CM * SD_SURFACE_OFFSET_RATIO;
-    }
-    ZoomMinCm = HullHalfLengthCm * SD_ZOOM_MIN_RATIO;
-    ZoomMaxCm = HullHalfLengthCm * SD_ZOOM_MAX_RATIO;
-    ZoomStepCm = HullHalfLengthCm * SD_ZOOM_STEP_RATIO;
+    // Every submarine asset keeps the bow on +X with Z up at 1:1 scale, so the
+    // hull needs no rotation; the mesh itself is resolved in BeginPlay.
+    MeshComp->SetRelativeRotation(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
+    MeshComp->SetRelativeScale3D(FVector(1.0f));
+    MeshComp->SetRelativeLocation(FVector::ZeroVector);
+    // Layout until the hull resolves: the documented fallback half extents.
+    ApplyHullLayout(FVector(SD_FALLBACK_HALF_LENGTH_CM, 0.0f, SD_FALLBACK_HALF_HEIGHT_CM));
 
     SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm"));
     SpringArm->SetupAttachment(SceneRoot);
@@ -171,11 +146,6 @@ ASubmarinePawn::ASubmarinePawn()
     Propeller = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Propeller"));
     Propeller->SetupAttachment(SceneRoot);
     {
-        static ConstructorHelpers::FObjectFinder<UStaticMesh> PropMeshObj(SD_PLAYER_PROP_MESH);
-        if (PropMeshObj.Succeeded())
-        {
-            Propeller->SetStaticMesh(PropMeshObj.Object);
-        }
         Propeller->SetRelativeLocation(FVector(SD_PLAYER_PROP_SHAFT_CM, 0.0f, 0.0f));
         Propeller->SetRelativeScale3D(FVector(1.0f));
         Propeller->SetRelativeRotation(FRotator(0.0f, SD_PLAYER_HULL_YAW_DEG, 0.0f));
@@ -185,11 +155,6 @@ ASubmarinePawn::ASubmarinePawn()
     Rudder = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Rudder"));
     Rudder->SetupAttachment(SceneRoot);
     {
-        static ConstructorHelpers::FObjectFinder<UStaticMesh> RudderMeshObj(SD_PLAYER_RUDDER_MESH);
-        if (RudderMeshObj.Succeeded())
-        {
-            Rudder->SetStaticMesh(RudderMeshObj.Object);
-        }
         Rudder->SetRelativeLocation(FVector(SD_PLAYER_RUDDER_HINGE_CM, 0.0f, 0.0f));
     }
 
@@ -197,11 +162,6 @@ ASubmarinePawn::ASubmarinePawn()
     SternPlanes = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("SternPlanes"));
     SternPlanes->SetupAttachment(SceneRoot);
     {
-        static ConstructorHelpers::FObjectFinder<UStaticMesh> SternMeshObj(SD_PLAYER_STERN_PLANE_MESH);
-        if (SternMeshObj.Succeeded())
-        {
-            SternPlanes->SetStaticMesh(SternMeshObj.Object);
-        }
         SternPlanes->SetRelativeLocation(FVector(SD_PLAYER_STERN_PLANE_HINGE_CM, 0.0f, 0.0f));
     }
 
@@ -209,11 +169,6 @@ ASubmarinePawn::ASubmarinePawn()
     BowPlanes = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("BowPlanes"));
     BowPlanes->SetupAttachment(SceneRoot);
     {
-        static ConstructorHelpers::FObjectFinder<UStaticMesh> BowMeshObj(SD_PLAYER_BOW_PLANE_MESH);
-        if (BowMeshObj.Succeeded())
-        {
-            BowPlanes->SetStaticMesh(BowMeshObj.Object);
-        }
         BowPlanes->SetRelativeLocation(FVector(SD_PLAYER_BOW_PLANE_HINGE_CM, 0.0f, 0.0f));
     }
 
@@ -222,11 +177,6 @@ ASubmarinePawn::ASubmarinePawn()
     Periscope = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Periscope"));
     Periscope->SetupAttachment(SceneRoot);
     {
-        static ConstructorHelpers::FObjectFinder<UStaticMesh> PeriscopeMeshObj(SD_PLAYER_PERISCOPE_MESH);
-        if (PeriscopeMeshObj.Succeeded())
-        {
-            Periscope->SetStaticMesh(PeriscopeMeshObj.Object);
-        }
         Periscope->SetRelativeLocation(FVector(
             SD_PLAYER_PERISCOPE_X_CM,
             SD_PLAYER_PERISCOPE_Y_CM,
@@ -239,12 +189,10 @@ ASubmarinePawn::ASubmarinePawn()
     // activated/measured by speed in Tick.
     BowFoam = CreateDefaultSubobject<UNiagaraComponent>(TEXT("BowFoam"));
     BowFoam->SetupAttachment(SceneRoot);
-    BowFoam->SetRelativeLocation(FVector(HullHalfLengthCm * SD_BOW_FOAM_RATIO, 0.0f, 0.0f));
     BowFoam->SetAutoActivate(false);
 
     SternFoam = CreateDefaultSubobject<UNiagaraComponent>(TEXT("SternFoam"));
     SternFoam->SetupAttachment(SceneRoot);
-    SternFoam->SetRelativeLocation(FVector(HullHalfLengthCm * SD_STERN_FOAM_RATIO, 0.0f, 0.0f));
     SternFoam->SetAutoActivate(false);
 
     static ConstructorHelpers::FObjectFinder<UNiagaraSystem> FoamSysObj(
@@ -272,12 +220,246 @@ void ASubmarinePawn::BeginPlay()
     SimState.SpeedBand = ESDSpeedBand::Stopped;
     SimInputs.DepthLayerTarget = ESDDepthLayer::Surface;
 
+    // SUB-001 / PROP-001 / DEF-001 / SNS-001: the save decides which boat is
+    // sailed and what is fitted to it. Nothing chosen yet is an explicit state,
+    // not an error, and the asset table's fallback covers it by name.
+    SDTechTree::FSDTechTreeSaveData SaveData;
+    const bool bHasSave = ReadSaveData(SaveData);
+    ResolveAndApplyPlatformAssets(bHasSave ? SaveData.SelectedPlatformId : FString());
+    ResolveEquipmentCapabilities(
+        bHasSave ? SaveData.Loadouts : TArray<SDTechTree::FSDLoadoutAssignment>());
+
+    // SUB-002: the platform's declared launch interface seeds the authoritative
+    // state. Zero means the data states no tube count, so nothing is invented.
+    if (!EquippedPlatformId.IsEmpty())
+    {
+        if (const UGameInstance* GameInstance = GetGameInstance())
+        {
+            if (const USilentDepthTechTreeSubsystem* TechTree =
+                GameInstance->GetSubsystem<USilentDepthTechTreeSubsystem>())
+            {
+                if (TechTree->IsLoaded())
+                {
+                    const SDTechTree::FSDEquipmentService& Equipment =
+                        TechTree->GetEquipmentService();
+                    SimState.TorpedoCount = Equipment.GetPayloadCapacity(
+                        EquippedPlatformId, TEXT("TORPEDO"));
+                    if (const FSDLaunchInterface* Launch =
+                        Equipment.FindLaunchInterface(EquippedPlatformId))
+                    {
+                        UE_LOG(LogSilentDepthPawn, Log,
+                            TEXT("platform '%s': %d torpedo tube(s), %d VLS cell(s), %d payload module(s)"),
+                            *EquippedPlatformId, Launch->TorpedoTubes,
+                            Launch->VlsCells, Launch->PayloadModules);
+                    }
+                }
+            }
+        }
+    }
+
+    // DEF-001: fitted countermeasures add to the mission's decoy allowance.
+    SimState.DecoyCount = Balance.DecoyPerMission + Capabilities.Defensive.DecoyCountBonus;
+
     // Game input mode: capture the mouse so it directly orbits the camera.
     if (APlayerController* PC = Cast<APlayerController>(GetController()))
     {
         PC->bShowMouseCursor = false;
         PC->SetInputMode(FInputModeGameOnly());
     }
+}
+
+void ASubmarinePawn::ApplyHullLayout(const FVector& HullExtent)
+{
+    HullHalfLengthCm = FMath::Max(HullExtent.X, 100.0f);
+    SurfaceOffsetZCm = FMath::Max(HullExtent.Z, 100.0f) * SD_SURFACE_OFFSET_RATIO;
+    ZoomMinCm = HullHalfLengthCm * SD_ZOOM_MIN_RATIO;
+    ZoomMaxCm = HullHalfLengthCm * SD_ZOOM_MAX_RATIO;
+    ZoomStepCm = HullHalfLengthCm * SD_ZOOM_STEP_RATIO;
+
+    if (SpringArm != nullptr)
+    {
+        SpringArm->TargetArmLength = HullHalfLengthCm * SD_CAMERA_ARM_RATIO;
+        SpringArm->SetRelativeLocation(FVector(0.0f, 0.0f, HullHalfLengthCm * SD_CAMERA_HEIGHT_RATIO));
+    }
+    if (BowFoam != nullptr)
+    {
+        BowFoam->SetRelativeLocation(FVector(HullHalfLengthCm * SD_BOW_FOAM_RATIO, 0.0f, 0.0f));
+    }
+    if (SternFoam != nullptr)
+    {
+        SternFoam->SetRelativeLocation(FVector(HullHalfLengthCm * SD_STERN_FOAM_RATIO, 0.0f, 0.0f));
+    }
+}
+
+void ASubmarinePawn::ApplyPart(UStaticMeshComponent* Component, const FString& AssetPath)
+{
+    if (Component == nullptr)
+    {
+        return;
+    }
+    if (AssetPath.IsEmpty())
+    {
+        // This hull was imported without that part. Hiding the component is the
+        // honest option: borrowing another boat's part would be a fabrication.
+        Component->SetStaticMesh(nullptr);
+        Component->SetVisibility(false);
+        Component->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+        return;
+    }
+
+    UStaticMesh* Mesh = LoadObject<UStaticMesh>(nullptr, *AssetPath);
+    if (Mesh == nullptr)
+    {
+        UE_LOG(LogSilentDepthPawn, Error,
+            TEXT("part asset '%s' could not be loaded; the component stays hidden"), *AssetPath);
+        Component->SetStaticMesh(nullptr);
+        Component->SetVisibility(false);
+        Component->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+        return;
+    }
+    Component->SetStaticMesh(Mesh);
+    Component->SetVisibility(true);
+}
+
+bool ASubmarinePawn::ReadSaveData(SDTechTree::FSDTechTreeSaveData& OutData) const
+{
+    const UGameInstance* GameInstance = GetGameInstance();
+    if (GameInstance == nullptr)
+    {
+        return false;
+    }
+    USilentDepthSaveSubsystem* SaveSubsystem =
+        GameInstance->GetSubsystem<USilentDepthSaveSubsystem>();
+    if (SaveSubsystem == nullptr)
+    {
+        return false;
+    }
+    const FString SlotName = USilentDepthSaveSubsystem::DefaultSlotName();
+    if (!SaveSubsystem->DoesSlotExist(SlotName))
+    {
+        return false;
+    }
+    FSDTechTreeLoadReport Report;
+    if (SaveSubsystem->LoadFromSlot(SlotName, OutData, Report))
+    {
+        return true;
+    }
+    // A bad save does not license a guess: the caller keeps the defaults and
+    // the asset table's documented fallback covers the hull.
+    UE_LOG(LogSilentDepthPawn, Warning,
+        TEXT("the save in slot '%s' could not be read (%d error(s)); nothing is assumed from it"),
+        *SlotName, Report.Errors.Num());
+    return false;
+}
+
+void ASubmarinePawn::ResolveEquipmentCapabilities(
+    const TArray<SDTechTree::FSDLoadoutAssignment>& Loadouts)
+{
+    PropulsionEffects = FSDPropulsionEffects();
+    Capabilities = FSDEffectiveCapabilities();
+    if (EquippedPlatformId.IsEmpty())
+    {
+        return;
+    }
+    const UGameInstance* GameInstance = GetGameInstance();
+    if (GameInstance == nullptr)
+    {
+        return;
+    }
+    const USilentDepthTechTreeSubsystem* TechTree =
+        GameInstance->GetSubsystem<USilentDepthTechTreeSubsystem>();
+    if (TechTree == nullptr || !TechTree->IsLoaded())
+    {
+        return;
+    }
+
+    FSDEquipmentEffectsTable Table;
+    FSDTechTreeLoadReport Report;
+    if (!SDPlatform::LoadEquipmentEffects(
+        SDPlatform::DefaultEquipmentEffectsPath(), Table, Report))
+    {
+        // Fail closed to neutral: the balance values stand, and the reason is
+        // in the log rather than silently absorbed.
+        for (const FSDDataError& Error : Report.Errors)
+        {
+            UE_LOG(LogSilentDepthPawn, Error, TEXT("[%s] %s :: %s"),
+                *Error.Code, *Error.Subject, *Error.Detail);
+        }
+        return;
+    }
+
+    Capabilities = SDPlatform::ComputeEffectiveCapabilities(
+        TechTree->GetEquipmentService(), Loadouts, EquippedPlatformId, Table);
+    PropulsionEffects = Capabilities.Propulsion;
+
+    UE_LOG(LogSilentDepthPawn, Log,
+        TEXT("equipment effects for '%s' from %d node(s): noise %+.2f, accel x%.2f, speed x%.2f, "
+             "battery x%.2f, decoys +%d, esm %s, warning %s, passive %.1f km"),
+        *EquippedPlatformId,
+        Capabilities.SourceNodeIds.Num(),
+        PropulsionEffects.NoiseOffset,
+        PropulsionEffects.AccelScale,
+        PropulsionEffects.SpeedScale,
+        PropulsionEffects.BatteryDrainScale,
+        Capabilities.Defensive.DecoyCountBonus,
+        Capabilities.Defensive.bEsm ? TEXT("yes") : TEXT("no"),
+        Capabilities.Defensive.bThreatWarning ? TEXT("yes") : TEXT("no"),
+        Capabilities.Sensors.PassiveRangeKm);
+}
+
+void ASubmarinePawn::ResolveAndApplyPlatformAssets(const FString& RequestedPlatform)
+{
+    FSDPlatformAssetsTable Table;
+    FSDTechTreeLoadReport TableReport;
+    if (!SDPlatform::LoadPlatformAssets(SDPlatform::DefaultPlatformAssetsPath(), Table, TableReport))
+    {
+        for (const FSDDataError& Error : TableReport.Errors)
+        {
+            UE_LOG(LogSilentDepthPawn, Error, TEXT("[%s] %s :: %s"),
+                *Error.Code, *Error.Subject, *Error.Detail);
+        }
+        // Fail closed: no hull is shown rather than a guessed one.
+        EquippedPlatformId.Reset();
+        bUsedFallbackAssets = false;
+        ApplyPart(MeshComp, FString());
+        ApplyPart(Propeller, FString());
+        ApplyPart(Rudder, FString());
+        ApplyPart(SternPlanes, FString());
+        ApplyPart(BowPlanes, FString());
+        ApplyPart(Periscope, FString());
+        return;
+    }
+
+    const FSDResolvedPlatformAssets Resolved =
+        SDPlatform::ResolvePlatformAssets(Table, RequestedPlatform);
+    EquippedPlatformId = Resolved.Assets.PlatformId;
+    bUsedFallbackAssets = Resolved.bUsedFallback;
+
+    if (Resolved.bUsedFallback)
+    {
+        UE_LOG(LogSilentDepthPawn, Warning,
+            TEXT("platform '%s' has no imported assets; using the documented fallback '%s'"),
+            Resolved.RequestedPlatformId.IsEmpty() ? TEXT("<none chosen>") : *Resolved.RequestedPlatformId,
+            *Resolved.Assets.PlatformId);
+    }
+    if (Resolved.Assets.Hull.IsEmpty())
+    {
+        UE_LOG(LogSilentDepthPawn, Error,
+            TEXT("the platform table resolved no hull; nothing is shown"));
+        ApplyPart(MeshComp, FString());
+        return;
+    }
+
+    ApplyPart(MeshComp, Resolved.Assets.Hull);
+    if (MeshComp->GetStaticMesh() != nullptr)
+    {
+        ApplyHullLayout(MeshComp->GetStaticMesh()->GetBounds().BoxExtent);
+    }
+    ApplyPart(Propeller, Resolved.Assets.Propulsor);
+    ApplyPart(Rudder, Resolved.Assets.Rudder);
+    ApplyPart(SternPlanes, Resolved.Assets.SternPlanes);
+    ApplyPart(BowPlanes, Resolved.Assets.BowPlanes);
+    ApplyPart(Periscope, Resolved.Assets.Periscope);
 }
 
 void ASubmarinePawn::Tick(float DeltaSeconds)
@@ -312,7 +494,10 @@ void ASubmarinePawn::Tick(float DeltaSeconds)
     StepAccumulator += FMath::Min(DeltaSeconds, 0.25f);
     while (StepAccumulator >= SD_FIXED_DT)
     {
-        SubmarineStep(SimState, SimInputs, Balance, SD_FIXED_DT, ESDWeatherKind::Clear);
+        // PROP-001: the fitted propulsor scales top speed, acceleration,
+        // battery drain and radiated noise inside the authoritative step.
+        SubmarineStep(
+            SimState, SimInputs, Balance, PropulsionEffects, SD_FIXED_DT, ESDWeatherKind::Clear);
         StepAccumulator -= SD_FIXED_DT;
     }
 

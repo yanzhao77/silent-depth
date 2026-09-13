@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "note_zh": [
+    "手写配置，不是生成物：它把科技树里的潜艇节点 ID 映射到已经导入 UE 的表现资产。",
+    "只登记真实导入过的资产；路径一律是 /Game/...，不允许出现磁盘路径。",
+    "某个平台没有条目、或条目里没有 hull 时，按 fallbackPlatform 明确回退，并置 bUsedFallback；",
+    "程序不会用字符串拼接去猜另一艘艇的路径（SUB-001）。",
+    "可动部件（propulsor/rudder/sternPlanes/bowPlanes/periscope）缺失时对应组件会被隐藏，不借用别的艇的部件。"
+  ],
+  "fallbackPlatform": "RU_SSN_Akula",
+  "platforms": {
+    "RU_SSN_Akula": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula.SM_RU_SSN_Akula",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PROP.SM_RU_SSN_Akula_PROP",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_RUDDER.SM_RU_SSN_Akula_RUDDER",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_STERNPLANES.SM_RU_SSN_Akula_STERNPLANES",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_BOWPLANES.SM_RU_SSN_Akula_BOWPLANES",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PERISCOPE.SM_RU_SSN_Akula_PERISCOPE"
+    },
+    "RU_SSN_Yasen": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Yasen/SM_RU_SSN_Yasen.SM_RU_SSN_Yasen"
+    },
+    "RU_SSBN_Typhoon": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Typhoon/SM_RU_SSBN_Typhoon.SM_RU_SSBN_Typhoon"
+    }
+  }
+}

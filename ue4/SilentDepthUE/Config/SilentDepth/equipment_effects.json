@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "note_zh": [
+    "手写配置，不是生成物，也不是实测数据：这些是装备对仿真的『初版可玩值』。",
+    "沿用 DEC-004 的做法——数值只出现在本文件，代码只负责读取与套用；试玩后调整也只改这里。",
+    "推进器与传感器的公开资料里没有噪声、航速、探测距离这类可用于仿真的数字，",
+    "因此本文件不声称任何一项是实测值；UI 与文档不得把它当作现实数据引用。",
+    "每个装备按『类别 kind × 层级带 tierBand』取用；缺项按 0 / 1（无修正）处理，不猜中间值。"
+  ],
+  "tierBands": [
+    { "maxTier": 3, "label": "T1-T3" },
+    { "maxTier": 6, "label": "T4-T6" },
+    { "maxTier": 10, "label": "T7-T10" }
+  ],
+  "propulsion": {
+    "kindEffects": {
+      "PROPELLER": { "noiseOffsetPerBand": [-2.0, -4.0, -6.0], "accelScale": 1.0, "speedScale": 1.0, "batteryDrainScale": 1.0 },
+      "PUMPJET": { "noiseOffsetPerBand": [-4.0, -7.0, -10.0], "accelScale": 1.05, "speedScale": 1.0, "batteryDrainScale": 1.08 },
+      "SHAFT": { "noiseOffsetPerBand": [0.0, -1.0, -2.0], "accelScale": 1.0, "speedScale": 1.0, "batteryDrainScale": 1.0 },
+      "THRUSTER": { "noiseOffsetPerBand": [2.0, 1.0, 0.0], "accelScale": 1.15, "speedScale": 0.95, "batteryDrainScale": 1.2 }
+    },
+    "defaultKind": "PROPELLER"
+  },
+  "defensive": {
+    "branchEffects": {
+      "ESM": { "esm": true },
+      "THREAT_WARNING": { "threatWarning": true },
+      "TORPEDO_DEFENSE": { "torpedoDefense": true, "decoyCountBonus": 1 },
+      "ACOUSTIC_COUNTERMEASURE": { "acousticCountermeasure": true, "decoyCountBonus": 2 },
+      "DECOY": { "decoyCountBonus": 2 },
+      "NOISE_MAKER": { "decoyCountBonus": 1 }
+    }
+  },
+  "sensors": {
+    "branchEffects": {
+      "PASSIVE": { "passiveRangeKm": 12.0, "passiveAccuracy": 0.85 },
+      "ACTIVE": { "activeRangeKm": 10.0, "activeCooldownSeconds": 20.0 },
+      "PROCESSING": { "classificationScale": 1.15 }
+    }
+  }
+}

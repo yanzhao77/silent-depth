@@ -2,6 +2,7 @@
 
 #include "CoreMinimal.h"
 #include "Core/Balance.h"
+#include "Core/Platform/SDEquipmentEffects.h"
 
 enum class ESDWeatherKind : uint8 { Clear, Cloudy, Storm, Night };
 
@@ -36,6 +37,12 @@ struct SILENTDEPTHUE_API FSDSubmarineState
     double Detection = 0.0;
     double OutOfBoundsTimer = 0.0;
     int32 DecoyCount = 2;
+    /**
+     * Loaded weapons (SUB-002). Seeded from the platform's declared launch
+     * interface at spawn; the simulation owns the value afterwards. Zero means
+     * the platform declares no tube count, not that it carries nothing.
+     */
+    int32 TorpedoCount = 0;
 };
 
 // Pure rules (deterministic, no RNG) — port of src/gameplay/submarine.ts.
@@ -64,6 +71,22 @@ SILENTDEPTHUE_API void SubmarineStep(
     FSDSubmarineState& S,
     const FSDPlayerInputs& In,
     const FSDBalance& B,
+    double Dt,
+    ESDWeatherKind Weather
+);
+
+/**
+ * PROP-001: the same step with the fitted propulsion effects applied. The
+ * modifiers only scale numbers the balance already owns — top speed, the
+ * acceleration cap, battery drain and the noise figure — so the step stays a
+ * pure function of its inputs and the determinism tests keep their meaning.
+ * The five-argument overload is exactly this call with neutral effects.
+ */
+SILENTDEPTHUE_API void SubmarineStep(
+    FSDSubmarineState& S,
+    const FSDPlayerInputs& In,
+    const FSDBalance& B,
+    const FSDPropulsionEffects& Propulsion,
     double Dt,
     ESDWeatherKind Weather
 );

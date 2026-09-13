@@ -2,6 +2,8 @@
 
 #include "CoreMinimal.h"
 
+#include "Core/Save/SDGameSettings.h"
+#include "Core/Save/SDMissionStats.h"
 #include "Core/TechTree/TechTreeResearchAccount.h"
 #include "Core/TechTree/TechTreeEquipmentService.h"
 #include "Core/TechTree/TechTreeTypes.h"
@@ -11,8 +13,11 @@
  * Tech-tree save document (SAVE-001) and its strict reader (SAVE-002).
  *
  * The document is a plain, versioned payload serialised to JSON, so it can be
- * read, diffed, migrated and tamper-checked without a live game world. It holds
- * the research account and the per-platform equipment assignments.
+ * read, diffed, migrated and tamper-checked without a live game world. It is the
+ * whole session save: the research account, the per-platform equipment
+ * assignments, the mission records with their statistics roll-up, and the
+ * player settings including the language. The type keeps its original name
+ * because the slot subsystem and every migration path already carry it.
  *
  * Hard rules:
  *  - Reading never partially applies. A payload that fails validation leaves
@@ -27,13 +32,15 @@
  * edits and corrupted files, and anyone who can edit the file can also
  * recompute it.
  *
- * Still to come: the USaveGame slot wrapper and the settings/statistics/language
- * sections of the full save. This file is the tech-tree section only.
+ * Version 2 added the progression, statistics and settings sections. A version 1
+ * document still loads: its account and loadouts are kept and the new sections
+ * take their defaults, because inventing a score the old build never recorded
+ * would be worse than showing none.
  */
 namespace SDTechTree
 {
-    constexpr int32 SaveSchemaVersion = 1;
-    constexpr const TCHAR* SaveSchemaId = TEXT("silent-depth-tech-tree-save-v1");
+    constexpr int32 SaveSchemaVersion = 2;
+    constexpr const TCHAR* SaveSchemaId = TEXT("silent-depth-save-v2");
 
     /** One equipped item in one slot of one platform. */
     struct FSDLoadoutAssignment
@@ -44,6 +51,12 @@ namespace SDTechTree
         FString SlotName;
         /** Equipped node id. */
         FString CandidateId;
+        /**
+         * How many rounds of this candidate are loaded (WPN-001). One slot is
+         * filled once, so the count is what the payload capacity constrains:
+         * four tubes filled with four Mk 48 is one assignment with count 4.
+         */
+        int32 Count = 1;
     };
 
     /** The whole tech-tree save section. */
@@ -53,6 +66,17 @@ namespace SDTechTree
         FSDResearchAccount Account;
         /** Sorted by (PlatformId, SlotName) whenever it is committed. */
         TArray<FSDLoadoutAssignment> Loadouts;
+        /** Sorted by mission id whenever it is committed. */
+        TArray<FSDMissionRecord> Missions;
+        /** Roll-up that must agree with Missions (checked on read and write). */
+        FSDStatistics Statistics;
+        FSDSettings Settings;
+        /**
+         * Submarine the player sails (SUB-001). Empty means "not chosen yet";
+         * a non-empty id must be an unlocked submarine node, because the pawn
+         * resolves its assets from this and must never invent a hull.
+         */
+        FString SelectedPlatformId;
     };
 
     /** Sorts the loadout list into its canonical order. */

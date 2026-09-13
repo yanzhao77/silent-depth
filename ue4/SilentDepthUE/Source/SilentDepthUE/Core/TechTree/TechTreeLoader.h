@@ -114,4 +114,16 @@ namespace SDTechTree
         const FString& SlotsJson,
         FSDTechTree& OutTree,
         FSDTechTreeLoadReport& Report);
+
+    /**
+     * Reads one Blender assembly document (SOCKET-001) and appends its logical
+     * mount points to OutTree->Sockets. The document's assetId must name a
+     * submarine node, every purpose token must be one the assembly schema
+     * declares, and a socket the document calls required must be defined.
+     * Bindings are never marked editor-verified here: only a UE check may.
+     */
+    bool LoadSocketBindings(
+        const FString& Path,
+        FSDTechTree& OutTree,
+        FSDTechTreeLoadReport& Report);
 }

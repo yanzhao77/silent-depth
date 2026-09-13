@@ -58,6 +58,9 @@ private:
 
     int32 CountPrerequisiteEdges() const;
 
+    /** Logs the DEC-007 progression probe; only called with -sd-techtree-probe. */
+    void RunStartupProbe();
+
     FSDTechTree Tree;
     SDTechTree::FSDNodeRegistry Registry;
     SDTechTree::FSDUnlockService UnlockService;

@@ -370,8 +370,28 @@ struct FSDCompatibilityRecord
 };
 
 /**
- * A mount point on a platform. Capacity rules are expressed as the allowed
- * candidate set derived from the compatibility matrix, never duplicated here.
+ * A platform's relation to a defensive family that has no produced asset
+ * variant (DEC-009). The relation is real data - the platform may have the
+ * capability - but there is no candidate to fit, so these entries form a
+ * capability layer: the UI can show "this capability has no equipment", and
+ * fitting stays closed because no candidate id is involved.
+ */
+struct FSDFamilyCapability
+{
+    FString PlatformId;
+    FString Branch;
+    FString FamilyId;
+    FString FamilyLabel;
+    FString SystemName;
+    FString SocketName;
+    ESDTechTier TierMin = ESDTechTier::T1;
+    ESDCompatibility Compatibility = ESDCompatibility::Unknown;
+};
+
+/**
+ * A mount point on a platform. Which candidates fit is derived from the
+ * compatibility matrix and is never duplicated here; how many slots sharing a
+ * socket may be filled at once is SocketCapacity (DEC-008).
  */
 struct FSDEquipmentSlot
 {
@@ -382,6 +402,48 @@ struct FSDEquipmentSlot
     ESDTechTier TierMin = ESDTechTier::T1;
     ESDTechTier TierMax = ESDTechTier::T1;
     bool bRequired = false;
+    /**
+     * How many of the slots bound to SocketName may be filled at once (DEC-008).
+     * 1 means the slots sharing that socket are alternatives; 0 means the slot
+     * has no external socket (internal equipment) and never competes.
+     */
+    int32 SocketCapacity = 0;
+};
+
+/**
+ * How many weapons a platform can carry, and where (SUB-002 / WPN-001).
+ *
+ * The numbers come from the weapon loadout manifest's launch interface, which
+ * is public-source data; a field the manifest leaves unknown stays 0 and is
+ * never filled in with a plausible-looking value. Zero therefore means "not
+ * declared", and the capacity rules treat it as "no limit stated" rather than
+ * "cannot carry anything".
+ */
+struct FSDLaunchInterface
+{
+    FString PlatformId;
+    int32 TorpedoTubes = 0;
+    double TorpedoTubeDiameterMm = 0.0;
+    int32 MissileTubes = 0;
+    int32 VlsCells = 0;
+    int32 SlbmTubes = 0;
+    /** Payload modules (dry deck shelter class), as listed by the manifest. */
+    int32 PayloadModules = 0;
+    /** Documented weapon mount points, in manifest order. */
+    TArray<FString> WeaponSocketNames;
+    /** Socket kinds parallel to WeaponSocketNames (TORPEDO_TUBE / VLS / ...). */
+    TArray<FString> WeaponSocketKinds;
+
+    /** Sockets of one kind, e.g. how many VLS cells are really mounted. */
+    int32 CountSocketsOfKind(const FString& Kind) const
+    {
+        int32 Count = 0;
+        for (const FString& SocketKind : WeaponSocketKinds)
+        {
+            Count += SocketKind.Equals(Kind, ESearchCase::CaseSensitive) ? 1 : 0;
+        }
+        return Count;
+    }
 };
 
 /**
@@ -478,6 +540,8 @@ struct FSDTechTree
     FString GeneratedAt;
     TArray<FSDTechNode> Nodes;
     TArray<FSDCompatibilityRecord> Compatibility;
+    TArray<FSDFamilyCapability> FamilyCapabilities;
+    TArray<FSDLaunchInterface> LaunchInterfaces;
     TArray<FSDEquipmentSlot> Slots;
     TArray<FSDSocketBinding> Sockets;
     TArray<FSDTierDefinition> Tiers;
@@ -501,11 +565,23 @@ struct FSDTechTree
             if (ByCandidate != 0) { return ByCandidate < 0; }
             return A.SlotName.Compare(B.SlotName, ESearchCase::CaseSensitive) < 0;
         });
+        FamilyCapabilities.Sort([](const FSDFamilyCapability& A, const FSDFamilyCapability& B)
+        {
+            const int32 ByPlatform = A.PlatformId.Compare(B.PlatformId, ESearchCase::CaseSensitive);
+            if (ByPlatform != 0) { return ByPlatform < 0; }
+            const int32 ByFamily = A.FamilyId.Compare(B.FamilyId, ESearchCase::CaseSensitive);
+            if (ByFamily != 0) { return ByFamily < 0; }
+            return A.Branch.Compare(B.Branch, ESearchCase::CaseSensitive) < 0;
+        });
         Slots.Sort([](const FSDEquipmentSlot& A, const FSDEquipmentSlot& B)
         {
             const int32 ByPlatform = A.PlatformId.Compare(B.PlatformId, ESearchCase::CaseSensitive);
             if (ByPlatform != 0) { return ByPlatform < 0; }
             return A.SlotName.Compare(B.SlotName, ESearchCase::CaseSensitive) < 0;
+        });
+        LaunchInterfaces.Sort([](const FSDLaunchInterface& A, const FSDLaunchInterface& B)
+        {
+            return A.PlatformId.Compare(B.PlatformId, ESearchCase::CaseSensitive) < 0;
         });
         Sockets.Sort([](const FSDSocketBinding& A, const FSDSocketBinding& B)
         {

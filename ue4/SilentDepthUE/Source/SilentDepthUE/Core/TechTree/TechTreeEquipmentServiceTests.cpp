@@ -86,8 +86,11 @@ bool FSD_EquipmentLoadsRealMatrices::RunTest(const FString& Parameters)
         CountNotices(LoadReport, TEXT("PENDING_COMPATIBILITY_ASSET")), 1);
     TestEqual(TEXT("no dangling platform notice"),
         CountNotices(LoadReport, TEXT("MISSING_COMPATIBILITY_PLATFORM")), 0);
-    TestEqual(TEXT("family-only rows are counted"),
-        CountNotices(LoadReport, TEXT("FAMILY_ONLY_COMPATIBILITY_ROWS")), 1);
+    // DEC-009: rows whose family has no produced asset are capability data, so
+    // they are recorded instead of being reported as a data defect.
+    TestEqual(TEXT("family-only rows are no longer a data notice"),
+        CountNotices(LoadReport, TEXT("FAMILY_ONLY_COMPATIBILITY_ROWS")), 0);
+    TestEqual(TEXT("defensive capability rows"), Equipment.NumFamilyCapabilities(), 270);
     for (const FSDDataNotice& Notice : LoadReport.Notices)
     {
         if (Notice.Code.Equals(TEXT("PENDING_COMPATIBILITY_ASSET"), ESearchCase::CaseSensitive))
@@ -244,6 +247,29 @@ bool FSD_EquipmentSlotQueries::RunTest(const FString& Parameters)
     }
     TestTrue(TEXT("defensive slots carry socket names"), bSawSocket);
 
+    // DEC-008: only SOCKET_COUNTERMEASURE_02 is shared, so DECOY and
+    // NOISE_MAKER are alternatives while the other slots stand alone.
+    TestEqual(TEXT("the countermeasure socket fits one slot"),
+        Equipment.GetSlotSocketCapacity(TEXT("RU_SSN_Akula"), TEXT("DECOY")), 1);
+    TArray<FString> DecoyPeers;
+    Equipment.CollectSocketPeers(TEXT("RU_SSN_Akula"), TEXT("DECOY"), DecoyPeers);
+    TestEqual(TEXT("one slot competes with the decoy"), DecoyPeers.Num(), 1);
+    if (DecoyPeers.Num() == 1)
+    {
+        TestEqual(TEXT("the competitor is the noise maker"), DecoyPeers[0],
+            FString(TEXT("NOISE_MAKER")));
+    }
+    TestFalse(TEXT("decoy and noise maker cannot both be fitted"),
+        Equipment.CanMountTogether(TEXT("RU_SSN_Akula"), TEXT("DECOY"), TEXT("NOISE_MAKER")));
+    TestTrue(TEXT("decoy and torpedo defence do not compete"),
+        Equipment.CanMountTogether(TEXT("RU_SSN_Akula"), TEXT("DECOY"), TEXT("TORPEDO_DEFENSE")));
+    TestEqual(TEXT("internal equipment has no socket capacity"),
+        Equipment.GetSlotSocketCapacity(TEXT("RU_SSN_Akula"), TEXT("DEFENSIVE_CONTROL")), 0);
+    TestFalse(TEXT("an unknown slot fails closed"),
+        Equipment.CanMountTogether(TEXT("RU_SSN_Akula"), TEXT("DECOY"), TEXT("NO_SUCH_SLOT")));
+    TestNull(TEXT("an unknown slot has no definition"),
+        Equipment.FindSlot(TEXT("RU_SSN_Akula"), TEXT("NO_SUCH_SLOT")));
+
     // An unknown platform has nothing, rather than everything.
     TArray<FString> NoCandidates;
     Equipment.CollectCandidates(TEXT("NO_SUCH_PLATFORM"), TEXT("TORPEDO"), ESDEquipPolicy::AllowGameplay, NoCandidates);
@@ -329,6 +355,97 @@ bool FSD_EquipmentGuardsAndSaveIntegration::RunTest(const FString& Parameters)
         FSDTechTreeLoadReport GameplayReport;
         TestTrue(TEXT("gameplay loadout accepted when explicitly allowed"),
             ValidateSaveCompatibility(Data, Equipment, ESDEquipPolicy::AllowGameplay, GameplayReport));
+    }
+
+    return true;
+}
+
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(
+    FSD_EquipmentCapabilitiesAndOccupancy,
+    "SilentDepth.TechTree.Equipment.CapabilitiesAndOccupancy",
+    EAutomationTestFlags::ApplicationContextMask | EAutomationTestFlags::ProductFilter
+)
+bool FSD_EquipmentCapabilitiesAndOccupancy::RunTest(const FString& Parameters)
+{
+    FSDTechTree Tree;
+    FSDEquipmentService Equipment;
+    FSDTechTreeLoadReport LoadReport;
+    if (!BuildEquipment(*this, Tree, Equipment, LoadReport))
+    {
+        return false;
+    }
+
+    // DEC-009: the five families without a produced asset are recorded per
+    // platform as capabilities, and they are never equipment candidates.
+    TArray<const FSDFamilyCapability*> AkulaCapabilities;
+    Equipment.CollectFamilyCapabilities(TEXT("RU_SSN_Akula"), AkulaCapabilities);
+    TestEqual(TEXT("Akula has five capability rows"), AkulaCapabilities.Num(), 5);
+    for (const FSDFamilyCapability* Capability : AkulaCapabilities)
+    {
+        TestTrue(TEXT("a capability names a family"), !Capability->FamilyId.IsEmpty());
+        TestTrue(TEXT("a capability names a branch"), !Capability->Branch.IsEmpty());
+        // The family id is not a candidate id, so nothing can be fitted from it.
+        TestFalse(*FString::Printf(TEXT("%s is not fittable"), *Capability->FamilyId),
+            Equipment.IsEquippable(TEXT("RU_SSN_Akula"), Capability->FamilyId, ESDEquipPolicy::AllowGameplay));
+    }
+    TArray<FString> AkulaCandidates;
+    Equipment.CollectCandidates(
+        TEXT("RU_SSN_Akula"), TEXT(""), ESDEquipPolicy::AllowGameplay, AkulaCandidates);
+    for (const FSDFamilyCapability* Capability : AkulaCapabilities)
+    {
+        TestFalse(*FString::Printf(TEXT("%s is not offered as a candidate"), *Capability->FamilyId),
+            AkulaCandidates.Contains(Capability->FamilyId));
+    }
+
+    // The capability index is empty for a platform that has none, and the
+    // service fails closed before initialisation.
+    TArray<const FSDFamilyCapability*> UnknownCapabilities;
+    Equipment.CollectFamilyCapabilities(TEXT("NO_SUCH_PLATFORM"), UnknownCapabilities);
+    TestEqual(TEXT("an unknown platform has no capabilities"), UnknownCapabilities.Num(), 0);
+    {
+        FSDEquipmentService Cold;
+        TestEqual(TEXT("a cold service reports no capabilities"), Cold.NumFamilyCapabilities(), 0);
+        TestEqual(TEXT("a cold service reports no socket capacity"),
+            Cold.GetSlotSocketCapacity(TEXT("RU_SSN_Akula"), TEXT("DECOY")), 0);
+        TestNull(TEXT("a cold service has no slots"),
+            Cold.FindSlot(TEXT("RU_SSN_Akula"), TEXT("DECOY")));
+    }
+
+    // DEC-008 at loadout level: each alternative is legal alone, both together
+    // are not, and the failure names the socket.
+    TArray<FString> DecoyCandidates;
+    Equipment.CollectCandidates(
+        TEXT("RU_SSN_Akula"), TEXT("DECOY"), ESDEquipPolicy::AllowGameplay, DecoyCandidates);
+    TArray<FString> NoiseMakerCandidates;
+    Equipment.CollectCandidates(
+        TEXT("RU_SSN_Akula"), TEXT("NOISE_MAKER"), ESDEquipPolicy::AllowGameplay, NoiseMakerCandidates);
+    TestTrue(TEXT("the decoy slot has candidates"), DecoyCandidates.Num() > 0);
+    TestTrue(TEXT("the noise maker slot has candidates"), NoiseMakerCandidates.Num() > 0);
+
+    if (DecoyCandidates.Num() > 0 && NoiseMakerCandidates.Num() > 0)
+    {
+        FSDTechTreeSaveData DecoyOnly;
+        FSDLoadoutAssignment Decoy;
+        Decoy.PlatformId = TEXT("RU_SSN_Akula");
+        Decoy.SlotName = TEXT("DECOY");
+        Decoy.CandidateId = DecoyCandidates[0];
+        DecoyOnly.Loadouts.Add(Decoy);
+        FSDTechTreeLoadReport DecoyReport;
+        TestTrue(TEXT("the decoy alone is accepted"),
+            ValidateSaveCompatibility(DecoyOnly, Equipment, ESDEquipPolicy::AllowGameplay, DecoyReport));
+
+        FSDTechTreeSaveData Both;
+        FSDLoadoutAssignment NoiseMaker;
+        NoiseMaker.PlatformId = TEXT("RU_SSN_Akula");
+        NoiseMaker.SlotName = TEXT("NOISE_MAKER");
+        NoiseMaker.CandidateId = NoiseMakerCandidates[0];
+        Both.Loadouts.Add(Decoy);
+        Both.Loadouts.Add(NoiseMaker);
+        FSDTechTreeLoadReport BothReport;
+        TestFalse(TEXT("both alternatives are refused"),
+            ValidateSaveCompatibility(Both, Equipment, ESDEquipPolicy::AllowGameplay, BothReport));
+        TestTrue(TEXT("the refusal is a socket capacity error"),
+            HasErrorCode(BothReport, TEXT("SOCKET_CAPACITY_EXCEEDED")));
     }
 
     return true;

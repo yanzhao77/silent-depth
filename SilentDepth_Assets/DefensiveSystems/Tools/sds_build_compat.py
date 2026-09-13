@@ -169,9 +169,29 @@ def best_family_for_branch(branch: str, platform_tier: int) -> dict:
     return max(candidates, key=lambda f: (f['tier_min'], f['tier_max']))
 
 
+def validate_socket_capacities(slots: list[dict]) -> None:
+    """DEC-008: slots bound to one socket must agree on that socket's capacity."""
+    by_socket: dict[str, set[int]] = {}
+    for slot in slots:
+        socket = slot['socket']
+        if not socket:
+            continue
+        capacity = slot.get('socket_capacity')
+        if not isinstance(capacity, int) or capacity < 1:
+            raise ValueError(
+                f"slot {slot['slot']} declares socket {socket} without a capacity >= 1 (DEC-008)")
+        by_socket.setdefault(socket, set()).add(capacity)
+    for socket, capacities in by_socket.items():
+        if len(capacities) > 1:
+            raise ValueError(
+                f"socket {socket} is declared with conflicting capacities "
+                f"{sorted(capacities)} (DEC-008)")
+
+
 def build_loadout(compat: dict) -> dict:
     variants = variant_index()
     index = {(row['submarine'], row['family']): row for row in compat['entries']}
+    validate_socket_capacities(dataset.LOADOUT_SLOTS)
     loadouts = []
     for submarine in load_submarines():
         tier = submarine['tier']
@@ -186,6 +206,7 @@ def build_loadout(compat: dict) -> dict:
                 'branch': slot['branch'],
                 'required': slot['required'],
                 'socket': slot['socket'],
+                'socket_capacity': slot.get('socket_capacity'),
                 'family_id': family['family_id'],
                 'variant_id': variant.get('variant_id'),
                 'variant_anchor': variant.get('anchor'),
@@ -211,6 +232,8 @@ def build_loadout(compat: dict) -> dict:
         'note_zh': [
             '每个平台的装载方案由兼容性矩阵决定，不是硬编码的型号清单。',
             'socket 为空字符串的槽位（控制类）为艇内设备，不需要外部挂点。',
+            'socket_capacity 是该挂点上可同时被填的槽位数；容量 1 且被多个槽位共用时，'
+            '这些槽位互为替代（DEC-008）。',
         ],
         'totals': {'platforms': len(loadouts), 'slots_per_platform': len(dataset.LOADOUT_SLOTS)},
         'loadouts': loadouts,

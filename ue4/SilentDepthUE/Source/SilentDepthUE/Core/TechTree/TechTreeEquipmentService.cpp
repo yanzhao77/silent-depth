@@ -29,11 +29,17 @@ int32 FSDEquipmentService::NumSlots() const
     return Tree != nullptr ? Tree->Slots.Num() : 0;
 }
 
+int32 FSDEquipmentService::NumFamilyCapabilities() const
+{
+    return Tree != nullptr ? Tree->FamilyCapabilities.Num() : 0;
+}
+
 bool FSDEquipmentService::Initialize(const FSDTechTree& InTree, FSDTechTreeLoadReport& Report)
 {
     const int32 ErrorsAtEntry = Report.Errors.Num();
     Tree = nullptr;
     RecordsByPlatform.Reset();
+    CapabilitiesByPlatform.Reset();
     SlotsByPlatform.Reset();
     bInitialized = false;
 
@@ -55,8 +61,13 @@ bool FSDEquipmentService::Initialize(const FSDTechTree& InTree, FSDTechTreeLoadR
     {
         SlotsByPlatform.FindOrAdd(InTree.Slots[Index].PlatformId).Add(Index);
     }
+    for (int32 Index = 0; Index < InTree.FamilyCapabilities.Num(); ++Index)
+    {
+        CapabilitiesByPlatform.FindOrAdd(InTree.FamilyCapabilities[Index].PlatformId).Add(Index);
+    }
 
-    // Deterministic iteration: candidate then slot for records, slot for slots.
+    // Deterministic iteration: candidate then slot for records, slot for slots,
+    // family then branch for capabilities.
     for (TPair<FString, TArray<int32>>& Pair : RecordsByPlatform)
     {
         const TArray<FSDCompatibilityRecord>& All = InTree.Compatibility;
@@ -75,11 +86,22 @@ bool FSDEquipmentService::Initialize(const FSDTechTree& InTree, FSDTechTreeLoadR
             return All[A].SlotName.Compare(All[B].SlotName, ESearchCase::CaseSensitive) < 0;
         });
     }
+    for (TPair<FString, TArray<int32>>& Pair : CapabilitiesByPlatform)
+    {
+        const TArray<FSDFamilyCapability>& All = InTree.FamilyCapabilities;
+        Pair.Value.Sort([&All](const int32 A, const int32 B)
+        {
+            const int32 ByFamily = All[A].FamilyId.Compare(All[B].FamilyId, ESearchCase::CaseSensitive);
+            if (ByFamily != 0) { return ByFamily < 0; }
+            return All[A].Branch.Compare(All[B].Branch, ESearchCase::CaseSensitive) < 0;
+        });
+    }
 
     if (Report.Errors.Num() != ErrorsAtEntry)
     {
         Tree = nullptr;
         RecordsByPlatform.Reset();
+        CapabilitiesByPlatform.Reset();
         SlotsByPlatform.Reset();
         return false;
     }
@@ -103,6 +125,17 @@ const FSDCompatibilityRecord* FSDEquipmentService::FindRecord(
         return nullptr;
     }
 
+    // A slot either names its mount point directly (weapons) or declares the
+    // socket that the matrix rows are keyed by (sensors, defensive systems).
+    FString SocketName;
+    if (!SlotName.IsEmpty())
+    {
+        if (const FSDEquipmentSlot* Slot = FindSlot(PlatformId, SlotName))
+        {
+            SocketName = Slot->SocketName;
+        }
+    }
+
     const FSDCompatibilityRecord* Wildcard = nullptr;
     for (const int32 Index : *Indices)
     {
@@ -121,6 +154,10 @@ const FSDCompatibilityRecord* FSDEquipmentService::FindRecord(
             return &Record;
         }
         if (Record.SlotName.Equals(SlotName, ESearchCase::CaseSensitive))
+        {
+            return &Record;
+        }
+        if (!SocketName.IsEmpty() && Record.SlotName.Equals(SocketName, ESearchCase::CaseSensitive))
         {
             return &Record;
         }
@@ -260,6 +297,17 @@ void FSDEquipmentService::CollectCandidates(
         return;
     }
 
+    // Same slot-to-matrix key resolution as FindRecord: weapons name the slot,
+    // sensors and defensive systems name the socket the rows are keyed by.
+    FString SocketName;
+    if (!SlotName.IsEmpty())
+    {
+        if (const FSDEquipmentSlot* Slot = FindSlot(PlatformId, SlotName))
+        {
+            SocketName = Slot->SocketName;
+        }
+    }
+
     // Records are already sorted by candidate id, so first-seen wins and the
     // result is id-ordered without a second sort.
     for (const int32 Index : *Indices)
@@ -271,7 +319,9 @@ void FSDEquipmentService::CollectCandidates(
         {
             continue;
         }
-        if (!SlotName.IsEmpty() && !Record.SlotName.Equals(SlotName, ESearchCase::CaseSensitive))
+        if (!SlotName.IsEmpty()
+            && !Record.SlotName.Equals(SlotName, ESearchCase::CaseSensitive)
+            && (SocketName.IsEmpty() || !Record.SlotName.Equals(SocketName, ESearchCase::CaseSensitive)))
         {
             continue;
         }
@@ -286,5 +336,216 @@ void FSDEquipmentService::CollectCandidates(
         }
         OutCandidateIds.Add(Record.CandidateId);
     }
+}
+
+void FSDEquipmentService::CollectFamilyCapabilities(
+    const FString& PlatformId,
+    TArray<const FSDFamilyCapability*>& OutCapabilities) const
+{
+    OutCapabilities.Reset();
+    const TArray<int32>* Indices = CapabilitiesByPlatform.Find(PlatformId);
+    if (Tree == nullptr || Indices == nullptr)
+    {
+        return;
+    }
+    OutCapabilities.Reserve(Indices->Num());
+    for (const int32 Index : *Indices)
+    {
+        OutCapabilities.Add(&Tree->FamilyCapabilities[Index]);
+    }
+}
+
+void FSDEquipmentService::CollectPendingCandidates(
+    const FString& PlatformId,
+    TArray<FString>& OutCandidateIds) const
+{
+    OutCandidateIds.Reset();
+    const TArray<int32>* Indices = RecordsByPlatform.Find(PlatformId);
+    if (Tree == nullptr || Indices == nullptr)
+    {
+        return;
+    }
+    // Records are sorted by candidate id, so the result is id-ordered.
+    for (const int32 Index : *Indices)
+    {
+        const FSDCompatibilityRecord& Record = Tree->Compatibility[Index];
+        if (!Record.bAssetPending)
+        {
+            continue;
+        }
+        if (OutCandidateIds.Num() == 0
+            || !OutCandidateIds.Last().Equals(Record.CandidateId, ESearchCase::CaseSensitive))
+        {
+            OutCandidateIds.Add(Record.CandidateId);
+        }
+    }
+}
+
+const TArray<int32>* FSDEquipmentService::FindPlatformSlots(const FString& PlatformId) const
+{
+    return Tree != nullptr ? SlotsByPlatform.Find(PlatformId) : nullptr;
+}
+
+int32 FSDEquipmentService::FindSlotIndex(const FString& PlatformId, const FString& SlotName) const
+{
+    const TArray<int32>* Indices = FindPlatformSlots(PlatformId);
+    if (Indices == nullptr)
+    {
+        return INDEX_NONE;
+    }
+    // SlotsByPlatform is sorted by slot name, so this is a binary search.
+    int32 Lo = 0;
+    int32 Hi = Indices->Num() - 1;
+    while (Lo <= Hi)
+    {
+        const int32 Mid = Lo + (Hi - Lo) / 2;
+        const int32 Index = (*Indices)[Mid];
+        const int32 Compare = Tree->Slots[Index].SlotName.Compare(SlotName, ESearchCase::CaseSensitive);
+        if (Compare == 0)
+        {
+            return Index;
+        }
+        if (Compare < 0) { Lo = Mid + 1; } else { Hi = Mid - 1; }
+    }
+    return INDEX_NONE;
+}
+
+int32 FSDEquipmentService::GetSlotSocketCapacity(
+    const FString& PlatformId,
+    const FString& SlotName) const
+{
+    const FSDEquipmentSlot* Slot = FindSlot(PlatformId, SlotName);
+    if (Slot == nullptr)
+    {
+        return 0;
+    }
+    // Internal equipment has no socket, so nothing competes for space.
+    return Slot->SocketName.IsEmpty() ? 0 : Slot->SocketCapacity;
+}
+
+const FSDEquipmentSlot* FSDEquipmentService::FindSlot(
+    const FString& PlatformId,
+    const FString& SlotName) const
+{
+    const int32 Index = FindSlotIndex(PlatformId, SlotName);
+    return Index == INDEX_NONE ? nullptr : &Tree->Slots[Index];
+}
+
+const FSDLaunchInterface* FSDEquipmentService::FindLaunchInterface(const FString& PlatformId) const
+{
+    if (Tree == nullptr)
+    {
+        return nullptr;
+    }
+    // LaunchInterfaces is sorted by platform id (SortDeterministically).
+    int32 Lo = 0;
+    int32 Hi = Tree->LaunchInterfaces.Num() - 1;
+    while (Lo <= Hi)
+    {
+        const int32 Mid = Lo + (Hi - Lo) / 2;
+        const int32 Compare = Tree->LaunchInterfaces[Mid].PlatformId.Compare(PlatformId, ESearchCase::CaseSensitive);
+        if (Compare == 0)
+        {
+            return &Tree->LaunchInterfaces[Mid];
+        }
+        if (Compare < 0) { Lo = Mid + 1; } else { Hi = Mid - 1; }
+    }
+    return nullptr;
+}
+
+int32 FSDEquipmentService::GetPayloadCapacity(
+    const FString& PlatformId,
+    const FString& SlotName) const
+{
+    const FSDLaunchInterface* Launch = FindLaunchInterface(PlatformId);
+    if (Launch == nullptr)
+    {
+        return 0;
+    }
+
+    // Slot names are the loadout template's; the socket kinds are the
+    // manifest's. Either source may be the one that is filled in.
+    if (SlotName.Equals(TEXT("TORPEDO"), ESearchCase::CaseSensitive))
+    {
+        return Launch->TorpedoTubes > 0
+            ? Launch->TorpedoTubes
+            : Launch->CountSocketsOfKind(TEXT("TORPEDO_TUBE"));
+    }
+    if (SlotName.Equals(TEXT("MISSILE"), ESearchCase::CaseSensitive))
+    {
+        // A missile fired from a tube uses a tube; a VLS missile uses a cell.
+        if (Launch->MissileTubes > 0)
+        {
+            return Launch->MissileTubes;
+        }
+        return Launch->CountSocketsOfKind(TEXT("TORPEDO_TUBE"));
+    }
+    if (SlotName.Equals(TEXT("VLS"), ESearchCase::CaseSensitive))
+    {
+        return Launch->VlsCells > 0
+            ? Launch->VlsCells
+            : Launch->CountSocketsOfKind(TEXT("VLS"));
+    }
+    if (SlotName.Equals(TEXT("SLBM"), ESearchCase::CaseSensitive))
+    {
+        return Launch->SlbmTubes > 0
+            ? Launch->SlbmTubes
+            : Launch->CountSocketsOfKind(TEXT("SLBM_TUBE"));
+    }
+    if (SlotName.Equals(TEXT("SPECIAL"), ESearchCase::CaseSensitive))
+    {
+        return Launch->PayloadModules;
+    }
+    return 0;
+}
+
+void FSDEquipmentService::CollectSocketPeers(
+    const FString& PlatformId,
+    const FString& SlotName,
+    TArray<FString>& OutSlotNames) const
+{
+    OutSlotNames.Reset();
+    const int32 SelfIndex = FindSlotIndex(PlatformId, SlotName);
+    if (SelfIndex == INDEX_NONE)
+    {
+        return;
+    }
+    const FString& Socket = Tree->Slots[SelfIndex].SocketName;
+    if (Socket.IsEmpty())
+    {
+        return;
+    }
+    const TArray<int32>* Indices = FindPlatformSlots(PlatformId);
+    for (const int32 Index : *Indices)
+    {
+        const FSDEquipmentSlot& Slot = Tree->Slots[Index];
+        if (Slot.SocketName.Equals(Socket, ESearchCase::CaseSensitive)
+            && !Slot.SlotName.Equals(SlotName, ESearchCase::CaseSensitive))
+        {
+            OutSlotNames.Add(Slot.SlotName);
+        }
+    }
+}
+
+bool FSDEquipmentService::CanMountTogether(
+    const FString& PlatformId,
+    const FString& SlotA,
+    const FString& SlotB) const
+{
+    const int32 IndexA = FindSlotIndex(PlatformId, SlotA);
+    const int32 IndexB = FindSlotIndex(PlatformId, SlotB);
+    if (IndexA == INDEX_NONE || IndexB == INDEX_NONE)
+    {
+        // Fail closed: an unknown slot is not something to fit into.
+        return false;
+    }
+    const FSDEquipmentSlot& A = Tree->Slots[IndexA];
+    const FSDEquipmentSlot& B = Tree->Slots[IndexB];
+    if (A.SocketName.IsEmpty() || !A.SocketName.Equals(B.SocketName, ESearchCase::CaseSensitive))
+    {
+        return true;
+    }
+    // Same socket: they only fit together when the socket has room for two.
+    return A.SocketCapacity >= 2;
 }
 }

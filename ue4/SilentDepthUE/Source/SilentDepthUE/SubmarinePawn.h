@@ -40,11 +40,40 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "SilentDepth")
     float CurrentNoise = 0.0f;
 
+    // SUB-001: which hull the pawn resolved, and whether it had to substitute
+    // the documented fallback because the requested platform has no imported
+    // assets. Read-only presentation facts; the simulation never reads them.
+    UPROPERTY(BlueprintReadOnly, Category = "SilentDepth")
+    FString EquippedPlatformId;
+
+    UPROPERTY(BlueprintReadOnly, Category = "SilentDepth")
+    bool bUsedFallbackAssets = false;
+
+    // PROP-001 / DEF-001 / SNS-001: what the fitted equipment contributes. The
+    // simulation reads PropulsionEffects; the rest is read-only presentation.
+    FSDPropulsionEffects PropulsionEffects;
+    FSDEffectiveCapabilities Capabilities;
+
     // Authoritative state (deterministic core), driven by SubmarineStep.
     FSDSubmarineState SimState;
     FSDBalance Balance;
 
 protected:
+    /** Reads the save slot once; empty result means nothing has been saved. */
+    bool ReadSaveData(SDTechTree::FSDTechTreeSaveData& OutData) const;
+
+    /** Applies the imported assets of a platform id. */
+    void ResolveAndApplyPlatformAssets(const FString& RequestedPlatform);
+
+    /** Turns the fitted equipment into typed effects (PROP/DEF/SNS-001). */
+    void ResolveEquipmentCapabilities(const TArray<SDTechTree::FSDLoadoutAssignment>& Loadouts);
+
+    /** Recomputes camera arm, wake anchors and zoom limits from hull bounds. */
+    void ApplyHullLayout(const FVector& HullExtent);
+
+    /** Assigns one part asset, or hides the component when there is none. */
+    void ApplyPart(UStaticMeshComponent* Component, const FString& AssetPath);
+
     void ThrottleAxis(float Val);
     void RudderAxis(float Val);
     void DepthAxisInput(float Val);

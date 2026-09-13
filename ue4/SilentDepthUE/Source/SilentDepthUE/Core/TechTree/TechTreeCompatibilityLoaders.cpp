@@ -49,7 +49,8 @@ void AddSlot(
     const FString& SlotKind,
     ESDTechTier TierMin,
     ESDTechTier TierMax,
-    bool bRequired)
+    bool bRequired,
+    int32 SocketCapacity)
 {
     FSDEquipmentSlot& Slot = Tree.Slots.AddDefaulted_GetRef();
     Slot.PlatformId = PlatformId;
@@ -59,6 +60,35 @@ void AddSlot(
     Slot.TierMin = TierMin;
     Slot.TierMax = TierMax;
     Slot.bRequired = bRequired;
+    Slot.SocketCapacity = SocketCapacity;
+}
+
+/**
+ * DEC-009: a defensive row that names a family whose variant has no produced
+ * asset is a capability statement, not an equipment candidate. It is recorded
+ * so the UI can show "this capability has no equipment", and it can never be
+ * fitted because no candidate id is involved.
+ */
+void AddFamilyCapability(
+    FSDTechTree& Tree,
+    const FString& PlatformId,
+    const FString& Branch,
+    const FString& FamilyId,
+    const FString& FamilyLabel,
+    const FString& SystemName,
+    const FString& SocketName,
+    ESDTechTier TierMin,
+    ESDCompatibility Compatibility)
+{
+    FSDFamilyCapability& Capability = Tree.FamilyCapabilities.AddDefaulted_GetRef();
+    Capability.PlatformId = PlatformId;
+    Capability.Branch = Branch;
+    Capability.FamilyId = FamilyId;
+    Capability.FamilyLabel = FamilyLabel;
+    Capability.SystemName = SystemName;
+    Capability.SocketName = SocketName;
+    Capability.TierMin = TierMin;
+    Capability.Compatibility = Compatibility;
 }
 
 /**
@@ -132,6 +162,33 @@ FString ValueAsToken(const TSharedPtr<FJsonValue>& Value)
         return FString::Printf(TEXT("%g"), Value->AsNumber());
     }
     return FString();
+}
+
+/**
+ * A launch-interface count. The manifest is not self-consistent here: most
+ * blocks are objects with "count", but "slbm_tubes" is a bare number and any
+ * block may be null. Both shapes are read; anything else stays 0 ("not stated").
+ */
+void ReadCountField(const TSharedPtr<FJsonObject>& Interface, const TCHAR* Field, int32& OutCount)
+{
+    const TSharedPtr<FJsonValue> Value = Interface->TryGetField(Field);
+    if (!Value.IsValid())
+    {
+        return;
+    }
+    if (Value->Type == EJson::Number)
+    {
+        OutCount = static_cast<int32>(Value->AsNumber());
+        return;
+    }
+    if (Value->Type == EJson::Object)
+    {
+        double Number = 0.0;
+        if (Value->AsObject()->TryGetNumberField(TEXT("count"), Number))
+        {
+            OutCount = static_cast<int32>(Number);
+        }
+    }
 }
 
 void ReadTierRange(
@@ -275,6 +332,65 @@ bool LoadWeaponSlots(
         {
             continue;
         }
+
+        // SUB-002 / WPN-001: the launch interface is the only source of payload
+        // capacity. Fields the manifest leaves unknown stay zero, which the
+        // capacity rule reads as "no limit stated" rather than "carries none".
+        const TSharedPtr<FJsonObject>* Interface = nullptr;
+        if (Submarine->TryGetObjectField(TEXT("launch_interface"), Interface) && Interface != nullptr)
+        {
+            FSDLaunchInterface Launch;
+            Launch.PlatformId = PlatformId;
+            double Number = 0.0;
+            const TSharedPtr<FJsonObject>* Block = nullptr;
+            if ((*Interface)->TryGetObjectField(TEXT("torpedo_tubes"), Block) && Block != nullptr)
+            {
+                if ((*Block)->TryGetNumberField(TEXT("diameter_mm"), Number))
+                {
+                    Launch.TorpedoTubeDiameterMm = Number;
+                }
+            }
+            ReadCountField(*Interface, TEXT("torpedo_tubes"), Launch.TorpedoTubes);
+            ReadCountField(*Interface, TEXT("missile_tubes"), Launch.MissileTubes);
+            ReadCountField(*Interface, TEXT("slbm_tubes"), Launch.SlbmTubes);
+            // Vertical launch publishes "cells" rather than "count".
+            if ((*Interface)->TryGetObjectField(TEXT("vertical_launch"), Block) && Block != nullptr)
+            {
+                if ((*Block)->TryGetNumberField(TEXT("cells"), Number))
+                {
+                    Launch.VlsCells = static_cast<int32>(Number);
+                }
+            }
+            if (Launch.VlsCells == 0)
+            {
+                ReadCountField(*Interface, TEXT("vertical_launch"), Launch.VlsCells);
+            }
+            if (const TArray<TSharedPtr<FJsonValue>>* Modules = FindArray(*Interface, TEXT("payload_modules")))
+            {
+                Launch.PayloadModules = Modules->Num();
+            }
+            if (const TArray<TSharedPtr<FJsonValue>>* Sockets = FindArray(*Interface, TEXT("weapon_sockets")))
+            {
+                for (const TSharedPtr<FJsonValue>& SocketValue : *Sockets)
+                {
+                    // Check the type explicitly: AsObject() on a non-object
+                    // yields an empty object, which would look like a socket.
+                    if (!SocketValue.IsValid() || SocketValue->Type != EJson::Object)
+                    {
+                        continue;
+                    }
+                    const TSharedPtr<FJsonObject> Socket = SocketValue->AsObject();
+                    FString SocketName;
+                    FString SocketKind;
+                    Socket->TryGetStringField(TEXT("socket"), SocketName);
+                    Socket->TryGetStringField(TEXT("kind"), SocketKind);
+                    Launch.WeaponSocketNames.Add(SocketName);
+                    Launch.WeaponSocketKinds.Add(SocketKind);
+                }
+            }
+            Tree.LaunchInterfaces.Add(MoveTemp(Launch));
+        }
+
         for (const TSharedPtr<FJsonValue>& SlotValue : *Slots)
         {
             const TSharedPtr<FJsonObject> Slot = SlotValue->AsObject();
@@ -291,7 +407,8 @@ bool LoadWeaponSlots(
             ESDTechTier TierMax = ESDTechTier::T1;
             ReadTierRange(Slot, TierMin, TierMax);
             AddSlot(Tree, PlatformId, SlotName, FString(),
-                TEXT("WEAPON"), TierMin, TierMax, /*bRequired*/ false);
+                TEXT("WEAPON"), TierMin, TierMax, /*bRequired*/ false,
+                /*SocketCapacity*/ 0);
         }
     }
     return true;
@@ -361,7 +478,6 @@ bool LoadDefensiveCompatibility(
         return false;
     }
     const TSet<FString> KnownIds = CollectKnownIds(Tree);
-    int32 FamilyOnlyRows = 0;
     for (const TSharedPtr<FJsonValue>& RowValue : *Entries)
     {
         const TSharedPtr<FJsonObject> Row = RowValue->AsObject();
@@ -380,9 +496,35 @@ bool LoadDefensiveCompatibility(
         Row->TryGetStringField(TEXT("asset_id"), CandidateId);
         if (CandidateId.IsEmpty())
         {
-            // These rows only name a family; mapping them to a node would be a
-            // guess, so they are counted and skipped.
-            ++FamilyOnlyRows;
+            // DEC-009: this family's variant has no produced asset, so the row
+            // states a capability rather than naming something to fit.
+            const FString CapabilityWhere =
+                PlatformId + TEXT(" / ") + FieldAsToken(Row, TEXT("family"));
+            ESDCompatibility CapabilityRelation = ESDCompatibility::Unknown;
+            if (!ReadCompatibility(Row, CapabilityWhere, Report, CapabilityRelation))
+            {
+                continue;
+            }
+            if (!KnownIds.Contains(PlatformId))
+            {
+                Report.AddNotice(
+                    TEXT("MISSING_COMPATIBILITY_PLATFORM"),
+                    CapabilityWhere,
+                    FString::Printf(TEXT("platform '%s' is not in the tree"), *PlatformId));
+                continue;
+            }
+            ESDTechTier CapabilityTier = ESDTechTier::T1;
+            ParseTier(FieldAsToken(Row, TEXT("tier_min")), CapabilityTier);
+            AddFamilyCapability(
+                Tree,
+                PlatformId,
+                FieldAsToken(Row, TEXT("branch")),
+                FieldAsToken(Row, TEXT("family")),
+                FieldAsToken(Row, TEXT("family_label")),
+                FieldAsToken(Row, TEXT("system")),
+                FieldAsToken(Row, TEXT("socket")),
+                CapabilityTier,
+                CapabilityRelation);
             continue;
         }
         FString Family;
@@ -405,13 +547,6 @@ bool LoadDefensiveCompatibility(
             continue;
         }
         AddRecord(Tree, PlatformId, CandidateId, Family, Socket, Branch, Compatibility, Reason);
-    }
-    if (FamilyOnlyRows > 0)
-    {
-        Report.AddNotice(
-            TEXT("FAMILY_ONLY_COMPATIBILITY_ROWS"),
-            TEXT("defensive compatibility"),
-            FString::Printf(TEXT("%d row(s) name a family without a concrete asset and were skipped"), FamilyOnlyRows));
     }
     return true;
 }
@@ -462,8 +597,26 @@ bool LoadDefensiveSlots(
             Slot->TryGetStringField(TEXT("socket"), Socket);
             Slot->TryGetStringField(TEXT("branch"), Branch);
             Slot->TryGetBoolField(TEXT("required"), bRequired);
+            // DEC-008: a slot that names a socket must say how many slots may
+            // share it. A missing or nonsensical value is a data error, not a
+            // default: the occupancy rule decides whether a loadout is legal.
+            int32 SocketCapacity = 0;
+            if (!Socket.IsEmpty())
+            {
+                double CapacityNumber = 0.0;
+                if (!Slot->TryGetNumberField(TEXT("socket_capacity"), CapacityNumber)
+                    || CapacityNumber < 1.0)
+                {
+                    Report.AddError(
+                        TEXT("INVALID_SOCKET_CAPACITY"),
+                        PlatformId + TEXT(" / ") + SlotName,
+                        TEXT("a slot that declares a socket needs socket_capacity >= 1"));
+                    continue;
+                }
+                SocketCapacity = static_cast<int32>(CapacityNumber);
+            }
             AddSlot(Tree, PlatformId, SlotName, Socket, Branch,
-                ESDTechTier::T1, ESDTechTier::T1, bRequired);
+                ESDTechTier::T1, ESDTechTier::T1, bRequired, SocketCapacity);
         }
     }
     return true;

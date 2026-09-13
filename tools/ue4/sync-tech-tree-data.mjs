@@ -80,6 +80,13 @@ const sources = [
     path: 'TechTree/propulsion_compatibility.json',
     source: 'Propulsion/Manifest/submarine_propulsion_compatibility.json',
   },
+  // Blender assembly documents (SOCKET-001): the logical mount points, the
+  // anchor they come from and their transforms. Read at load time by
+  // TechTreeSocketLoaders.cpp; a hull with none is simply absent here.
+  {
+    path: 'TechTree/Sockets/RU_SSN_Yasen_ASSEMBLY.json',
+    source: 'Submarines/SSN/Russia/Yasen/Documentation/RU_SSN_Yasen_ASSEMBLY.json',
+  },
   // Copies that predate the TechTree directory. They are still staged so that
   // nothing under Config/SilentDepth escapes the drift check.
   { path: 'submarine_manifest.json', source: 'Manifest/submarine_manifest.json' },

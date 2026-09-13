@@ -30,6 +30,23 @@ bool ParseDocument(
 const TArray<TSharedPtr<FJsonValue>>* FindArray(const TSharedPtr<FJsonObject>& Object, const TCHAR* Field);
 const TSharedPtr<FJsonObject> FindObjectField(const TSharedPtr<FJsonObject>& Object, const TCHAR* Field);
 
+/**
+ * Reads one Blender assembly document into the tree's socket bindings. Errors
+ * on a missing assetId, an unknown purpose token, a duplicate logical id, a
+ * malformed transform or a required socket the document never defines.
+ */
+bool LoadSocketBindingsFromDocument(
+    const TSharedPtr<FJsonObject>& Document,
+    const FString& Where,
+    FSDTechTree& Tree,
+    FSDTechTreeLoadReport& Report);
+
+/** Reads every *.json assembly document in a directory, in name order. */
+void LoadSocketDirectory(
+    const FString& Directory,
+    FSDTechTree& Tree,
+    FSDTechTreeLoadReport& Report);
+
 /** Reads a field as a token, accepting JSON strings and numbers alike. */
 FString FieldAsToken(const TSharedPtr<FJsonObject>& Object, const TCHAR* Field);
 

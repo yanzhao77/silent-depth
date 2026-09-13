@@ -519,23 +519,26 @@ COMPATIBILITY_SEED = [
 
 # --------------------------------------------------------------------------
 # 7. Loadout template. Declarative: the compatibility matrix decides whether a
-#    platform may actually mount a slot.
+#    platform may actually mount a slot. socket_capacity is the number of the
+#    slots bound to that socket that may be filled at once (DEC-008); slots with
+#    no external socket omit it.
 # --------------------------------------------------------------------------
 LOADOUT_SLOTS = [
     {'slot': 'ESM', 'branch': 'ESM', 'socket': 'SOCKET_EW_MAST', 'required': True,
-     'label_zh': '电子支援桅杆与阵面'},
+     'socket_capacity': 1, 'label_zh': '电子支援桅杆与阵面'},
     {'slot': 'THREAT_WARNING', 'branch': 'THREAT_WARNING', 'socket': 'SOCKET_EW_ANTENNA',
-     'required': False, 'label_zh': '威胁告警传感器'},
+     'required': False, 'socket_capacity': 1, 'label_zh': '威胁告警传感器'},
     {'slot': 'ACOUSTIC_COUNTERMEASURE', 'branch': 'ACOUSTIC_COUNTERMEASURE',
-     'socket': 'SOCKET_COUNTERMEASURE_01', 'required': True, 'label_zh': '声学对抗器材'},
+     'socket': 'SOCKET_COUNTERMEASURE_01', 'required': True, 'socket_capacity': 1,
+     'label_zh': '声学对抗器材'},
     {'slot': 'DECOY', 'branch': 'DECOY', 'socket': 'SOCKET_COUNTERMEASURE_02', 'required': False,
-     'label_zh': '诱饵'},
+     'socket_capacity': 1, 'label_zh': '诱饵'},
     {'slot': 'NOISE_MAKER', 'branch': 'NOISE_MAKER', 'socket': 'SOCKET_COUNTERMEASURE_02',
-     'required': False, 'label_zh': '噪声弹'},
+     'required': False, 'socket_capacity': 1, 'label_zh': '噪声弹'},
     {'slot': 'TORPEDO_DEFENSE', 'branch': 'TORPEDO_DEFENSE', 'socket': 'SOCKET_DECOY_LAUNCHER_02',
-     'required': False, 'label_zh': '鱼雷防御器材'},
+     'required': False, 'socket_capacity': 1, 'label_zh': '鱼雷防御器材'},
     {'slot': 'LAUNCHER', 'branch': 'LAUNCHER', 'socket': 'SOCKET_DECOY_LAUNCHER_01',
-     'required': True, 'label_zh': '对抗发射装置'},
+     'required': True, 'socket_capacity': 1, 'label_zh': '对抗发射装置'},
     {'slot': 'DEFENSIVE_CONTROL', 'branch': 'DEFENSIVE_CONTROL', 'socket': '',
      'required': True, 'label_zh': '防御控制'},
     {'slot': 'INTEGRATED_DEFENSE', 'branch': 'INTEGRATED_DEFENSE', 'socket': '',

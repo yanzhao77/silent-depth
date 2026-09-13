@@ -1,5 +1,7 @@
 #include "TechTreeSubsystem.h"
 
+#include "Core/TechTree/TechTreeProbe.h"
+
 DEFINE_LOG_CATEGORY_STATIC(LogSilentDepthTechTree, Log, All);
 
 void USilentDepthTechTreeSubsystem::Initialize(FSubsystemCollectionBase& Collection)
@@ -12,7 +14,38 @@ void USilentDepthTechTreeSubsystem::Initialize(FSubsystemCollectionBase& Collect
         UE_LOG(LogSilentDepthTechTree, Error,
             TEXT("technology trees failed to load from %s; gameplay must not assume tech-tree data exists"),
             *Paths.Directory);
+        return;
     }
+
+    // The DEC-007 gate: a repeatable measurement of what the shipped rules open
+    // and what a fixed mission set buys. Only runs when asked for, so a normal
+    // session pays nothing for it.
+    if (FParse::Param(FCommandLine::Get(), TEXT("sd-techtree-probe")))
+    {
+        RunStartupProbe();
+    }
+}
+
+void USilentDepthTechTreeSubsystem::RunStartupProbe()
+{
+    const SDTechTree::FSDProbeReport Probe = SDTechTree::RunProgressionProbe(
+        Registry, UnlockService, ResearchAccounts, SDTechTree::DefaultProbeMissions());
+
+    const auto PerCategory = [&Probe](const int32 Index)
+    {
+        return Probe.OpeningPerCategory.IsValidIndex(Index) ? Probe.OpeningPerCategory[Index] : 0;
+    };
+    UE_LOG(LogSilentDepthTechTree, Log,
+        TEXT("probe: %d opening node(s) [submarine %d, weapon %d, sensor %d, defensive %d, propulsion %d]; "
+             "missions awarded %d point(s), purchases %d spent %d, %d left, %d unlocked, fingerprint %llu"),
+        Probe.OpeningNodes,
+        PerCategory(0), PerCategory(1), PerCategory(2), PerCategory(3), PerCategory(4),
+        Probe.ResearchPointsAwarded,
+        Probe.PurchasedNodeIds.Num(),
+        Probe.ResearchPointsSpent,
+        Probe.ResearchPointsLeft,
+        Probe.UnlockedNodes,
+        Probe.AccountFingerprint);
 }
 
 bool USilentDepthTechTreeSubsystem::LoadFrom(const SDTechTree::FSDTechTreePaths& Paths)

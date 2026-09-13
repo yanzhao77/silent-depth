@@ -261,12 +261,25 @@ void USilentDepthSaveSubsystem::RunStartupSelfTest()
     SDTechTree::FSDTechTreeSaveData Data;
     Data.Account.ResearchPoints = 150;
     Data.Account.Progress.UnlockedNodeIds.Add(TEXT("US_TORP_Mk14"));
+    // SUB-001: the chosen platform has to be researched, and the pawn reads it.
+    Data.Account.Progress.UnlockedNodeIds.Add(TEXT("RU_SSN_Akula"));
     Data.Account.FirstClearMissionIds.Add(TEXT("M02"));
+    Data.SelectedPlatformId = TEXT("RU_SSN_Akula");
     SDTechTree::FSDLoadoutAssignment Assignment;
     Assignment.PlatformId = TEXT("RU_SSN_Akula");
     Assignment.SlotName = TEXT("TORPEDO");
     Assignment.CandidateId = TEXT("RU_TORP_UGST");
     Data.Loadouts.Add(Assignment);
+
+    // The progression producer fills the statistics section, so the round trip
+    // covers every section of the document rather than the account alone.
+    SDTechTree::FSDMissionStatsService::ApplyResult(
+        SDTechTree::FSDMissionResult{ TEXT("M02"), 860, true },
+        Data.Missions,
+        Data.Statistics);
+    Data.Settings.MasterVolume = 0.8f;
+    Data.Settings.QualityPreset = 3;
+    Data.Settings.Language = SDTechTree::ESDLanguage::En;
 
     FSDTechTreeLoadReport WriteReport;
     if (!SaveToSlot(SlotName, Data, WriteReport))
@@ -302,8 +315,12 @@ void USilentDepthSaveSubsystem::RunStartupSelfTest()
     }
 
     UE_LOG(LogSilentDepthSave, Log,
-        TEXT("save self-test PASSED: slot round trip kept %d point(s), %d node(s), %d loadout(s)"),
+        TEXT("save self-test PASSED: slot round trip kept %d point(s), %d node(s), %d loadout(s), ")
+        TEXT("%d mission(s), best %d, language %s"),
         Reloaded.Account.ResearchPoints,
         Reloaded.Account.Progress.UnlockedNodeIds.Num(),
-        Reloaded.Loadouts.Num());
+        Reloaded.Loadouts.Num(),
+        Reloaded.Missions.Num(),
+        Reloaded.Statistics.BestScore,
+        SDTechTree::ToString(Reloaded.Settings.Language));
 }

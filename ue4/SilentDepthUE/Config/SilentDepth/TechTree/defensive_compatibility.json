@@ -1,6 +1,6 @@
 {
   "schema": "silent-depth-submarine-defensive-compatibility-v1",
-  "generated_at": "2026-09-11",
+  "generated_at": "2026-09-12",
   "fields_zh": {
     "submarine": "平台资产 ID（继承自潜艇技术树 manifest）",
     "system": "锚定的公开系统名，或家族标签（游戏设定）",

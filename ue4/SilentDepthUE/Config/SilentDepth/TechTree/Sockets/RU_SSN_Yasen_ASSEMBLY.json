@@ -1,0 +1,423 @@
+{
+  "assetId": "RU_SSN_Yasen",
+  "coordinateSystem": {
+    "forward": "+X",
+    "right": "+Y",
+    "unrealConversion": "1 Blender meter = 100 Unreal Units",
+    "up": "+Z"
+  },
+  "hull": {
+    "collision": {
+      "owner": "hull",
+      "path": "Collision/RU_SSN_Yasen_COLLISION.fbx",
+      "sourceObjects": [
+        "UCX_RU_SSN_Yasen_LOD0_00",
+        "UCX_RU_SSN_Yasen_LOD0_01",
+        "UCX_RU_SSN_Yasen_LOD0_02",
+        "UCX_RU_SSN_Yasen_LOD0_03",
+        "UCX_RU_SSN_Yasen_LOD0_04",
+        "UCX_RU_SSN_Yasen_LOD0_05",
+        "UCX_RU_SSN_Yasen_LOD0_06",
+        "UCX_RU_SSN_Yasen_LOD0_07",
+        "UCX_RU_SSN_Yasen_LOD0_08"
+      ],
+      "strategy": "separate_fbx"
+    },
+    "lods": {
+      "LOD0": "FBX/RU_SSN_Yasen_LOD0.fbx",
+      "LOD1": "FBX/RU_SSN_Yasen_LOD1.fbx",
+      "LOD2": "FBX/RU_SSN_Yasen_LOD2.fbx",
+      "LOD3": "FBX/RU_SSN_Yasen_LOD3.fbx"
+    },
+    "sourceObjects": [
+      "SUB_Yasen_BowDoor_-1_0",
+      "SUB_Yasen_BowDoor_-1_1",
+      "SUB_Yasen_BowDoor_-1_2",
+      "SUB_Yasen_BowDoor_1_0",
+      "SUB_Yasen_BowDoor_1_1",
+      "SUB_Yasen_BowDoor_1_2",
+      "SUB_Yasen_DeckHatch_-31",
+      "SUB_Yasen_DeckHatch_36",
+      "SUB_Yasen_DeckHatch_43",
+      "SUB_Yasen_DeckHatch_8",
+      "SUB_Yasen_FlankArray_-1",
+      "SUB_Yasen_FlankArray_1",
+      "SUB_Yasen_FloodSlot_-1_0",
+      "SUB_Yasen_FloodSlot_-1_1",
+      "SUB_Yasen_FloodSlot_-1_2",
+      "SUB_Yasen_FloodSlot_-1_3",
+      "SUB_Yasen_FloodSlot_-1_4",
+      "SUB_Yasen_FloodSlot_-1_5",
+      "SUB_Yasen_FloodSlot_1_0",
+      "SUB_Yasen_FloodSlot_1_1",
+      "SUB_Yasen_FloodSlot_1_2",
+      "SUB_Yasen_FloodSlot_1_3",
+      "SUB_Yasen_FloodSlot_1_4",
+      "SUB_Yasen_FloodSlot_1_5",
+      "SUB_Yasen_Hull",
+      "SUB_Yasen_MastHead_0",
+      "SUB_Yasen_MastHead_1",
+      "SUB_Yasen_MastHead_3",
+      "SUB_Yasen_MastSocket_0",
+      "SUB_Yasen_MastSocket_1",
+      "SUB_Yasen_MastSocket_2",
+      "SUB_Yasen_MastSocket_3",
+      "SUB_Yasen_Mast_0",
+      "SUB_Yasen_Mast_1",
+      "SUB_Yasen_Mast_3",
+      "SUB_Yasen_Sail",
+      "SUB_Yasen_SailHatch",
+      "SUB_Yasen_ShaftFairing",
+      "SUB_Yasen_VLS_Lid_0_0",
+      "SUB_Yasen_VLS_Lid_0_1",
+      "SUB_Yasen_VLS_Lid_0_2",
+      "SUB_Yasen_VLS_Lid_0_3",
+      "SUB_Yasen_VLS_Lid_1_0",
+      "SUB_Yasen_VLS_Lid_1_1",
+      "SUB_Yasen_VLS_Lid_1_2",
+      "SUB_Yasen_VLS_Lid_1_3",
+      "SUB_Yasen_VLS_Rim_0_0",
+      "SUB_Yasen_VLS_Rim_0_1",
+      "SUB_Yasen_VLS_Rim_0_2",
+      "SUB_Yasen_VLS_Rim_0_3",
+      "SUB_Yasen_VLS_Rim_1_0",
+      "SUB_Yasen_VLS_Rim_1_1",
+      "SUB_Yasen_VLS_Rim_1_2",
+      "SUB_Yasen_VLS_Rim_1_3"
+    ]
+  },
+  "parts": [
+    {
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      },
+      "exportName": "RU_SSN_Yasen_PROPULSOR_01",
+      "id": "propulsor_01",
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 2200,
+        "levels": [
+          "LOD0",
+          "LOD1",
+          "LOD2"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          2200
+        ]
+      },
+      "motion": {
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "continuousRotation": true,
+        "stateSource": "propulsor_rpm",
+        "type": "rotate"
+      },
+      "mountTransform": {
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "translation": [
+          -58.83,
+          0,
+          0
+        ]
+      },
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_RU_YASEN_PROPULSOR_01",
+      "semanticGroup": "20_MOVABLE/PROPULSOR",
+      "sourceObjects": [
+        "SUB_Yasen_PropellerBlade_00",
+        "SUB_Yasen_PropellerBlade_01",
+        "SUB_Yasen_PropellerBlade_02",
+        "SUB_Yasen_PropellerBlade_03",
+        "SUB_Yasen_PropellerBlade_04",
+        "SUB_Yasen_PropellerBlade_05",
+        "SUB_Yasen_PropellerBlade_06",
+        "SUB_Yasen_PropellerHub"
+      ]
+    },
+    {
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      },
+      "exportName": "RU_SSN_Yasen_RUDDER_01",
+      "id": "rudder_01",
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 1700,
+        "levels": [
+          "LOD0",
+          "LOD1",
+          "LOD2"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          1700
+        ]
+      },
+      "motion": {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "rotationRangeDegrees": {
+          "max": 32,
+          "min": -32
+        },
+        "stateSource": "rudder_angle",
+        "type": "rotate"
+      },
+      "mountTransform": {
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "translation": [
+          -48.85,
+          0,
+          0
+        ]
+      },
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_RU_YASEN_RUDDER_01",
+      "semanticGroup": "20_MOVABLE/RUDDER",
+      "sourceObjects": [
+        "SUB_Yasen_Tail_01",
+        "SUB_Yasen_Tail_03"
+      ]
+    },
+    {
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      },
+      "exportName": "RU_SSN_Yasen_STERN_PLANES_01",
+      "id": "stern_planes_01",
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 1650,
+        "levels": [
+          "LOD0",
+          "LOD1",
+          "LOD2"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          1650
+        ]
+      },
+      "motion": {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "rotationRangeDegrees": {
+          "max": 26,
+          "min": -26
+        },
+        "stateSource": "stern_planes_angle",
+        "type": "rotate"
+      },
+      "mountTransform": {
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "translation": [
+          -48.85,
+          0,
+          0
+        ]
+      },
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_RU_YASEN_STERN_PLANES_01",
+      "semanticGroup": "20_MOVABLE/STERN_PLANES",
+      "sourceObjects": [
+        "SUB_Yasen_Tail_00",
+        "SUB_Yasen_Tail_02"
+      ]
+    },
+    {
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      },
+      "exportName": "RU_SSN_Yasen_BOW_PLANES_01",
+      "id": "bow_planes_01",
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 1650,
+        "levels": [
+          "LOD0",
+          "LOD1",
+          "LOD2"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          1650
+        ]
+      },
+      "motion": {
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "rotationRangeDegrees": {
+          "max": 25,
+          "min": -25
+        },
+        "stateSource": "bow_planes_angle",
+        "type": "rotate"
+      },
+      "mountTransform": {
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "translation": [
+          33.8,
+          0,
+          0
+        ]
+      },
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_RU_YASEN_BOW_PLANES_01",
+      "semanticGroup": "20_MOVABLE/BOW_PLANES",
+      "sourceObjects": [
+        "SUB_Yasen_ForwardPlane_00",
+        "SUB_Yasen_ForwardPlane_01"
+      ]
+    },
+    {
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      },
+      "exportName": "RU_SSN_Yasen_PERISCOPE_01",
+      "id": "periscope_01",
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 850,
+        "levels": [
+          "LOD0",
+          "LOD1"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          850
+        ]
+      },
+      "motion": {
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "stateSource": "periscope_extension",
+        "translationRangeMeters": {
+          "max": 2.62,
+          "min": 0
+        },
+        "type": "translate"
+      },
+      "mountTransform": {
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "translation": [
+          23,
+          -0.42,
+          11.8
+        ]
+      },
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_RU_YASEN_PERISCOPE_01",
+      "semanticGroup": "20_MOVABLE/PERISCOPES",
+      "sourceObjects": [
+        "SUB_Yasen_Mast_2",
+        "SUB_Yasen_MastHead_2"
+      ]
+    }
+  ],
+  "schemaVersion": 1,
+  "sockets": [
+    {
+      "id": "torpedo_tube_01_muzzle",
+      "parent": "root",
+      "purpose": "torpedo_muzzle",
+      "sourceAnchor": "SOCKET_SUB_RU_YASEN_TORPEDO_TUBE_01_MUZZLE",
+      "transform": {
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ],
+        "translation": [
+          38.599311829,
+          -6.763348579,
+          1.751911044
+        ]
+      }
+    }
+  ],
+  "templateNotice": "SUBMOD-030 Yasen Assembly v1. This file uses exact source objects from the current MASTER and planned Anchor names for SUBMOD-031. Motion ranges are gameplay configuration values derived for SilentDepth validation, not real submarine engineering measurements.",
+  "units": "meters",
+  "validation": {
+    "requiredParts": [
+      "propulsor_01",
+      "rudder_01",
+      "stern_planes_01",
+      "bow_planes_01",
+      "periscope_01"
+    ],
+    "requiredSockets": [
+      "torpedo_tube_01_muzzle"
+    ]
+  }
+}

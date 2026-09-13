@@ -70,17 +70,22 @@
     {
       "path": "TechTree/defensive_compatibility.json",
       "source": "DefensiveSystems/Manifest/submarine_defensive_compatibility.json",
-      "sha256": "54053546b7165f9739fb0ef105c709c0f9b6285df86ee7f1b970360f5b7b07dc"
+      "sha256": "fd974a3379875094c56b6d48cf24411b836aa59320a3932995f0891d54803ace"
     },
     {
       "path": "TechTree/defensive_slots.json",
       "source": "DefensiveSystems/Manifest/defensive_loadout_manifest.json",
-      "sha256": "18be174d0363a76cbce22ef5556f65970218a7dd1cbd9a028f5f23dcc7ef7d36"
+      "sha256": "5d966c83d9dd0d5b9e80ff8fdfaee381c8c46c175e186192bca76be2ea6278e4"
     },
     {
       "path": "TechTree/propulsion_compatibility.json",
       "source": "Propulsion/Manifest/submarine_propulsion_compatibility.json",
       "sha256": "1cf9e7dbcfd08d3e09604016a8737455d7df7ce6c44607e99c80b13aad481afe"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSN_Yasen_ASSEMBLY.json",
+      "source": "Submarines/SSN/Russia/Yasen/Documentation/RU_SSN_Yasen_ASSEMBLY.json",
+      "sha256": "0782b3475a0cabe6febe569f036402cbd0073d380d1964dd81376285fb2a5aa3"
     },
     {
       "path": "submarine_manifest.json",
