@@ -92,10 +92,10 @@ bool FSD_SocketsLoadRealAssembly::RunTest(const FString& Parameters)
         return false;
     }
 
-    // Yasen's one muzzle plus the nine SOCKET-001 anchors added to Akula.
-    // The count moves with each hull that gains an assembly document, so the
-    // per-binding assertions below carry the meaning.
-    TestEqual(TEXT("every staged assembly document contributed bindings"), Tree.Sockets.Num(), 10);
+    // 46 hulls carry the standard nine-anchor set (SOCKET-001, DEC-002) and two
+    // keep a curated single-muzzle assembly: 46 * 9 + 2. The count moves with
+    // the library, so the per-binding assertions below carry the meaning.
+    TestEqual(TEXT("every staged assembly document contributed bindings"), Tree.Sockets.Num(), 416);
     const FSDSocketBinding* AkulaMuzzle = FindBinding(
         Tree, TEXT("RU_SSN_Akula"), TEXT("torpedo_tube_01_muzzle"));
     TestNotNull(TEXT("SOCKET-001 added the Akula muzzle"), AkulaMuzzle);
@@ -106,6 +106,16 @@ bool FSD_SocketsLoadRealAssembly::RunTest(const FString& Parameters)
         TestEqual(TEXT("and maps to the weapon registry token"),
             AkulaMuzzle->RegistryCategory, FString(TEXT("SOCKET_TUBE_01")));
     }
+
+    // The standard anchor set exists so the equipment layer never special-cases
+    // a boat; that only works if every anchor resolves to a real registry token,
+    // which is also why the load now reports zero data notices.
+    int32 Unmapped = 0;
+    for (const FSDSocketBinding& Binding : Tree.Sockets)
+    {
+        Unmapped += Binding.RegistryCategory.IsEmpty() ? 1 : 0;
+    }
+    TestEqual(TEXT("every anchor resolves to a registry token"), Unmapped, 0);
     const FSDSocketBinding* Binding = FindBinding(
         Tree, TEXT("RU_SSN_Yasen"), TEXT("torpedo_tube_01_muzzle"));
     if (Binding == nullptr)

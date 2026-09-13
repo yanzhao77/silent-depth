@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/IN_SSBN_Arihant_MASTER.blend": "5f9b5fd485ec32c724cc62b26a0e3ce0ff1a6f0493ad6bf1d35d5f270cd0f972",
-    "GLB/IN_SSBN_Arihant.glb": "fd55289f1cdbdd2cfebb9a85f5061d2fd41c58ecfc20f8fdef3bbbc52dc642ed",
-    "Collision/IN_SSBN_Arihant_COLLISION.fbx": "9c4e1d9d9e31e71b12ba019b934b8b069925ffb9c5e0f4bd2f1ded3912dd01c4",
-    "FBX/IN_SSBN_Arihant_LOD0.fbx": "ae315dbba7863173d0f8b511adca9bddd87bb9f89c1edfcbcedad710ff124c7a",
-    "FBX/IN_SSBN_Arihant_LOD1.fbx": "af00e1b939cd7b65f5e7f0ca435de56a9ab770d2abc6e205cf37880aba30ced0",
-    "FBX/IN_SSBN_Arihant_LOD2.fbx": "2e2bf96db9f0f21ac6e0d4aa17e1f25590f6d304eb72a34b7024910d700ac020",
-    "FBX/IN_SSBN_Arihant_LOD3.fbx": "ffec03f236a31cfa6f9903f999282a9c3fbf32d7c543eb23b43a31a8174eee9c",
-    "FBX/IN_SSBN_Arihant_PROPULSOR_01.fbx": "4a43a919eab337f18ac98ad0fd63a294ec71b04babebf3a443805fb3ecae7a8e",
-    "FBX/IN_SSBN_Arihant_RUDDER_01.fbx": "9c8b0658d497309b6dca59bbecbd3249d3c6a694d201eaa4e6572b69c3d86b51",
-    "FBX/IN_SSBN_Arihant_STERN_PLANES_01.fbx": "983f26ed59b25de2fd9d7d8786dba92c3da5af2b8d12f4d87ba020cfd94c7c0b",
-    "FBX/IN_SSBN_Arihant_BOW_PLANES_01.fbx": "0eb6246a8e199f05bc4b78d0900f3f8d2b2f836f7b6fcc50f67796754038d551",
-    "FBX/IN_SSBN_Arihant_PERISCOPE_01.fbx": "801006206f938c7e004964ff2fed6ef1a0275a97633623db1f3ffc58ae20c68c",
-    "Textures/T_IN_SSBN_Arihant_Hull_BaseColor.png": "548db041fd68c30d9f2f3b743aa006656a03441eeab4a9e9cbe831c49c71be3c"
+    "Blend/IN_SSBN_Arihant_MASTER.blend": "2d91165a95b8b4ce54e8468b9b5261c9c22da89838e1e3452630624c661810b6",
+    "GLB/IN_SSBN_Arihant.glb": "fcb15c72b26ad157f28e6dc983ea027990b9a70c98e47beb8d07067974009615",
+    "Collision/IN_SSBN_Arihant_COLLISION.fbx": "aa1307f0cce2fd92df34c73550998a5467c1d3b8cac822ca8a2010c09980bdfe",
+    "FBX/IN_SSBN_Arihant_LOD0.fbx": "a5d01cc30269499a318329c1441099fe5a026ea7bfb3bd71eb3c640f9edc4200",
+    "FBX/IN_SSBN_Arihant_LOD1.fbx": "50d43c9f2b10c20c1fd2ce2be3e75c0a491ea6fd4f729b642be986ebb3dcd36a",
+    "FBX/IN_SSBN_Arihant_LOD2.fbx": "a8df228d10991cebd612ab9a677e37503dad17722a2c10f3f7ee48aa35c56d1e",
+    "FBX/IN_SSBN_Arihant_LOD3.fbx": "cfe61f98d311c0c139154b72c432596d6a2f9d7080cd168f4b77212e3eca360c",
+    "FBX/IN_SSBN_Arihant_PROPULSOR_01.fbx": "c7b98ac574685eaf96611ed2e1580fcfe9667fb38995a03e1ba468d6c5a248d5",
+    "FBX/IN_SSBN_Arihant_RUDDER_01.fbx": "38cd67d78ebfb3d4d37fb0296abe263872c2a5cd9e86a7d757d9ca276b164592",
+    "FBX/IN_SSBN_Arihant_STERN_PLANES_01.fbx": "60b709ac2b4edf287ba0e8e3299193ca72f6a637b414200fc2ae169191754df8",
+    "FBX/IN_SSBN_Arihant_BOW_PLANES_01.fbx": "bea6bff30da20c92f0eb4b68b8c21673874607037cb77784393348827bf57ad1",
+    "FBX/IN_SSBN_Arihant_PERISCOPE_01.fbx": "cc6c9ebc0ef85d6e12ff599e5c457f5fd64a3490dc056129202723811f9e6a02",
+    "Textures/T_IN_SSBN_Arihant_Hull_BaseColor.png": "26eefca87b4331f71453a9d40f63403ffcb0939a8dbd21e4ed36bd54ee326b71"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -271,6 +271,116 @@
         18.574,
         18.996
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          52.17,
+          -0.66,
+          -0.88
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          52.17,
+          0.66,
+          -0.88
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          51.282,
+          0.0,
+          -0.22
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -50.505,
+          0.0,
+          0.66
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          18.87,
+          0.0,
+          4.62
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          13.32,
+          1.1,
+          -0.55
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          13.32,
+          -1.1,
+          -0.55
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -54.834,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Arihant_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.442,
+          0.033,
+          5.8652
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

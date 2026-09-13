@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSN_Virginia_MASTER.blend": "e23dc8db324509e83541e62b21ad1e0751c0846498cfe395dbd55f0b6782b127",
-    "GLB/US_SSN_Virginia.glb": "41d453efc177aed471b625d0179e0b62ac191a142eaff230876f924034733000",
-    "Collision/US_SSN_Virginia_COLLISION.fbx": "adc4b13bb9d588e1d385f15ab400a376da3552d23cdaf09a2072338d3938a5b3",
-    "FBX/US_SSN_Virginia_LOD0.fbx": "6cf6de9e82e53deecd1081e0938c313ba1ac51607c71f174444efee28d79dbb6",
-    "FBX/US_SSN_Virginia_LOD1.fbx": "2d294224a40a0e3e5bc845473c4668f77792ed08b91ee48f0aadbfd1505328d4",
-    "FBX/US_SSN_Virginia_LOD2.fbx": "71bd4c6f1c763fdf69119618c8d8d1467a06ac87717c724eae1a0ad76a1bb2fc",
-    "FBX/US_SSN_Virginia_LOD3.fbx": "6214aad6d9cdad706dced7d8f9c58a13d7d9f0a79a594c59cd13e6358c6bef49",
-    "FBX/US_SSN_Virginia_PROPULSOR_01.fbx": "610e83d8a02567f0c6c1b7b77fb6fb41f2a811e4577acc20184ef20a4e1e4155",
-    "FBX/US_SSN_Virginia_RUDDER_01.fbx": "f8f76a3d7e1463288543856be4315800061579ec7543625bf8dcdd8c1618e3a5",
-    "FBX/US_SSN_Virginia_STERN_PLANES_01.fbx": "236d75121e54464cf6b878aea2490d50219da21446b9b6cd1b95e3bdeb8d67f3",
-    "FBX/US_SSN_Virginia_BOW_PLANES_01.fbx": "186e6687faab0c7f7555fc301688c6443e65d63c3aa6bd86521caae78c23a027",
-    "FBX/US_SSN_Virginia_PERISCOPE_01.fbx": "af5efaeb37a1e65ace603b669bc8a641fb1545dffc8ce4622f07fc0cbf1b4c34",
-    "Textures/T_US_SSN_Virginia_Hull_BaseColor.png": "858a6ab7b9ba1d000039bf190bd0ed58b8bc46be97561c885315f52a85f9c450"
+    "Blend/US_SSN_Virginia_MASTER.blend": "0e5a00b5015d7a8c99d074115a885828a7051175b6d8c8dd8f9c0de1bb777bda",
+    "GLB/US_SSN_Virginia.glb": "c1b5ae68c16f055409be2c9d9525a6d4a986a9389d5f6981c2485ea0e130a1bb",
+    "Collision/US_SSN_Virginia_COLLISION.fbx": "c7b0a60d601dda5c4619610bd27aa2c1399005bfaafb7d809b096569b98eaff1",
+    "FBX/US_SSN_Virginia_LOD0.fbx": "7c5cc1effba25072f4e6a9976bdd102448e1f995f520ec9510e4034c4dce12e7",
+    "FBX/US_SSN_Virginia_LOD1.fbx": "03ebd1420da9fb5ad2b335d02ac54d6efbe0c73b550c3dea34c675322419e999",
+    "FBX/US_SSN_Virginia_LOD2.fbx": "615032d11d58f3ab432d6c318c87386bf6394170b9e46cf70e1ffd447846f892",
+    "FBX/US_SSN_Virginia_LOD3.fbx": "c7924b2a077795023050b3ce77e54a0498df9560c7c4bee3355204ca4ed03082",
+    "FBX/US_SSN_Virginia_PROPULSOR_01.fbx": "73a57fc165740ff359d732a6e19d9bfdfbe91c4792576aba6d8789a00f826b46",
+    "FBX/US_SSN_Virginia_RUDDER_01.fbx": "276bc76c03abad8bab45938f1fbdcb5b3e453b813aef5e40b90a0a022e61245d",
+    "FBX/US_SSN_Virginia_STERN_PLANES_01.fbx": "0703853b92c96d89a0c6c2ee18241ddfa9f6ae046652e0363f50decbf837750d",
+    "FBX/US_SSN_Virginia_BOW_PLANES_01.fbx": "56861a9d6523a9799864fa5aa6d5d4fd700ef939407925be78b0d632cc8e71c9",
+    "FBX/US_SSN_Virginia_PERISCOPE_01.fbx": "8344f9c421ef252dfb2234214aba9b5af7137092b069b7bddc1a9dc58c1c6660",
+    "Textures/T_US_SSN_Virginia_Hull_BaseColor.png": "b4a76517cabdb7d92dcd618aa9f9f25f22c85efe5508a25df831751118f1abe2"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -315,6 +315,116 @@
         16.656,
         17.356
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          54.05,
+          -0.59981,
+          -0.799746
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          54.05,
+          0.59981,
+          -0.799746
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          53.13,
+          0.0,
+          -0.199937
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -52.325,
+          0.0,
+          0.59981
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          19.55,
+          0.0,
+          4.198667
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          13.8,
+          0.999683,
+          -0.499841
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          13.8,
+          -0.999683,
+          -0.499841
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -56.81,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Virginia_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.53,
+          0.02999,
+          5.332
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

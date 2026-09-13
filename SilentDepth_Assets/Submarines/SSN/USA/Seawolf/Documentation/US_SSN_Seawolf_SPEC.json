@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSN_Seawolf_MASTER.blend": "bd9efa2c210b426a53aa317debd4ef57ccddd2d0b713b941a67f1d4fd9714039",
-    "GLB/US_SSN_Seawolf.glb": "f9b41e5ef51a7fd73ca11a2d3ef5c6d71c8153d9c40ac0b95883965159fb3bf4",
-    "Collision/US_SSN_Seawolf_COLLISION.fbx": "9b271699723dc34e1d55a7eb326c417c918106b9df76d738f5e06a54f8db32b8",
-    "FBX/US_SSN_Seawolf_LOD0.fbx": "e531689fd3c645540b3fba7ddc03f6407b25725477f031a0c5796614fb0d6b18",
-    "FBX/US_SSN_Seawolf_LOD1.fbx": "f02ae3a69fcca573688a9d1dccfd119b67ddac33302f8b227ee0f66a875f6631",
-    "FBX/US_SSN_Seawolf_LOD2.fbx": "36de185a2fdf500a5edeb52f8062338016bb962eef5a2b4b1ac0d4bbfba5139d",
-    "FBX/US_SSN_Seawolf_LOD3.fbx": "34057b4c478ac76e8097c15bfdc48c7e7ad8a0a01e94de8d0cb22fab2ebab2a2",
-    "FBX/US_SSN_Seawolf_PROPULSOR_01.fbx": "6762ddd2573fad24594fdf788fa7d03717f39b1b20450d94b5b271def9411f51",
-    "FBX/US_SSN_Seawolf_RUDDER_01.fbx": "7dbcb828804755341094d5bf2cb53edbe6ca7c2c7462ab93ce6afb207193caa7",
-    "FBX/US_SSN_Seawolf_STERN_PLANES_01.fbx": "f64ba688faa3639b207e524e202a88220543c49934b58ebacadb2f19d213feb0",
-    "FBX/US_SSN_Seawolf_BOW_PLANES_01.fbx": "183410a6cc943537933463634dc379ac71a9f91b5d7e05f177d35208358c8f28",
-    "FBX/US_SSN_Seawolf_PERISCOPE_01.fbx": "5ffd586bd079081dd077883b76b9ef382368aedd42eae62bba4369ea577a0017",
-    "Textures/T_US_SSN_Seawolf_Hull_BaseColor.png": "178f72da9d26951e3ea9c5b8343f5925f92ff044af4ac96e4c9bad89cff13ea3"
+    "Blend/US_SSN_Seawolf_MASTER.blend": "210b84c6c37cceed8d512937ebbe53cc5bf35e968fd5a5baf448226b7a26d6ef",
+    "GLB/US_SSN_Seawolf.glb": "ad485b39d52c521a1352119dbb835fc161cda982482ebc195e348f32437b4fdd",
+    "Collision/US_SSN_Seawolf_COLLISION.fbx": "1bc9cad41e064f953fc943417aea7e765eaf1ea6b7ed87c3693a19d3fe222c06",
+    "FBX/US_SSN_Seawolf_LOD0.fbx": "71ede0f36460c65bb0c94fe905d56e0f02734781bdc925d701da20ef1f856e46",
+    "FBX/US_SSN_Seawolf_LOD1.fbx": "3cf97ff53bfbabd54be0912228742b3f88e2b0d72c9a113c747888d59ab5174f",
+    "FBX/US_SSN_Seawolf_LOD2.fbx": "0b48b8ef2130f12ce0122a5477ff50e3606e2f8db2ece3ec441653dffe372695",
+    "FBX/US_SSN_Seawolf_LOD3.fbx": "5f613d134525a2cecbbdce9d10224960e0b9a541d06322c19563454c608d286d",
+    "FBX/US_SSN_Seawolf_PROPULSOR_01.fbx": "f287d413886f6d1c490c032018b372aa35eaf69fcf4cdfc35e709eebe996aeae",
+    "FBX/US_SSN_Seawolf_RUDDER_01.fbx": "312c87a66a3ff4bb9eef375ece411b7a8b81d524886720b1b813080f05f7db8d",
+    "FBX/US_SSN_Seawolf_STERN_PLANES_01.fbx": "3331f5c1f50a07dc699d7e654ff969bd838fb66c8331a900f49a7dc0c8bfd5ea",
+    "FBX/US_SSN_Seawolf_BOW_PLANES_01.fbx": "2e4c8be68d0eb8cc57f5f9056809f2da73c6f14342b114d785aea69ca3d89c48",
+    "FBX/US_SSN_Seawolf_PERISCOPE_01.fbx": "ca1d9314d995724a1cf1dad6921c8d45bc0b5429f591a825cac98f0e6fee864b",
+    "Textures/T_US_SSN_Seawolf_Hull_BaseColor.png": "b81dbfd203ff3fa9d338ca0998b5ec18a91c49093c19d937393d82cfe165613a"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -275,6 +275,116 @@
         19.987,
         20.258
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          50.76,
+          -0.719771,
+          -0.959695
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          50.76,
+          0.719771,
+          -0.959695
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          49.896,
+          0.0,
+          -0.239924
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -49.14,
+          0.0,
+          0.719771
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          18.36,
+          0.0,
+          5.0384
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          12.96,
+          1.199619,
+          -0.59981
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          12.96,
+          -1.199619,
+          -0.59981
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -53.352,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Seawolf_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.376,
+          0.035989,
+          6.3984
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

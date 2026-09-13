@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/RU_SSBN_DeltaI_MASTER.blend": "5934759c9d2086b23da1ff24d044ef025db5d426a4d1ad5222c2c206a0b4de7a",
-    "GLB/RU_SSBN_DeltaI.glb": "1abc2c6bc8702a45c005ab12f5b0af0761288d7b081eeb8217041d4191a7e766",
-    "Collision/RU_SSBN_DeltaI_COLLISION.fbx": "103b63b759a1bd87a1953e409f584f493f706a9aa5a005433ae497e2c9f3ccd3",
-    "FBX/RU_SSBN_DeltaI_LOD0.fbx": "226a14e14e8d6e25eeb5e4efb1bfe4636f49fafc734056c5f7270f3c0f62f9a4",
-    "FBX/RU_SSBN_DeltaI_LOD1.fbx": "d182c1535a3720662b17c9ad5c18acdcccf9a707806bf8125e00d3a6277be130",
-    "FBX/RU_SSBN_DeltaI_LOD2.fbx": "0756b3d3fcbf1290229be7b320db061353428c440630e4d0b21bd75e14b7dfaa",
-    "FBX/RU_SSBN_DeltaI_LOD3.fbx": "99b0d8e4bf2067d559a49bdbb692dd4fc7ac3c47c43a494e454b35fd92c2c43b",
-    "FBX/RU_SSBN_DeltaI_PROPULSOR_01.fbx": "6108ba381bb089c8509e7c644e161f6fb8de5cdc130a09b4f0253e18055aeb7c",
-    "FBX/RU_SSBN_DeltaI_RUDDER_01.fbx": "d8cc73b92730242e223e0a26583a39af8c48acac3581bc1221d4508a707f77a6",
-    "FBX/RU_SSBN_DeltaI_STERN_PLANES_01.fbx": "4602d59cc98554537857500b71dd016660af6fd1a20b547bc88922fcb71212bd",
-    "FBX/RU_SSBN_DeltaI_BOW_PLANES_01.fbx": "cbbf76bda8020c5e8c163def65a9b7657d067d9fa1304ffb753fa94796dfc08a",
-    "FBX/RU_SSBN_DeltaI_PERISCOPE_01.fbx": "8e59aa42c38fcf3cba2ae673c9048b019103cf851baffae7152e7955b25ca4ca",
-    "Textures/T_RU_SSBN_DeltaI_Hull_BaseColor.png": "36b6356918eb29d83021732feff30eeb2343aab2cf6351cce60d808d34abe4c8"
+    "Blend/RU_SSBN_DeltaI_MASTER.blend": "3c86503f7906fa86ab005bef1ea18ddc685c959ada29d97488e023c8992f611a",
+    "GLB/RU_SSBN_DeltaI.glb": "afe9a793ec6d2c3c493616dd11f9110139e59c3a307e2baed60fd6c623e937f3",
+    "Collision/RU_SSBN_DeltaI_COLLISION.fbx": "ae78f416ec5019b500ac1974a1fdb00b8fe0722b3b1e691d72d9299c28869300",
+    "FBX/RU_SSBN_DeltaI_LOD0.fbx": "e14f44d475a74287d5b11a28315da4167eb3b73ea0131acb34cac959121022d4",
+    "FBX/RU_SSBN_DeltaI_LOD1.fbx": "ef8401c89656e51bf9fd84b364b7d7d8ed460b170322ea184c1424bcdf66a6e3",
+    "FBX/RU_SSBN_DeltaI_LOD2.fbx": "a95cfebebc88e4b7a0fec54f72f7601aef876fe08527724c0382251e347b15fc",
+    "FBX/RU_SSBN_DeltaI_LOD3.fbx": "cec03713c87bfb38004b223b1beafac56805295123a61502483703357cbe536b",
+    "FBX/RU_SSBN_DeltaI_PROPULSOR_01.fbx": "76e4edae2ea1ce60f454b49c42f12d993b13dbf12914c3b023e3a104147e77f3",
+    "FBX/RU_SSBN_DeltaI_RUDDER_01.fbx": "f1aa56c9dac0343f14805e7195aa8a7c3241d616e01f77a363304a347dcfd356",
+    "FBX/RU_SSBN_DeltaI_STERN_PLANES_01.fbx": "dab70121d225b3c34eaac50bc684ca78f231bbe7343aba423018fbc6b448950e",
+    "FBX/RU_SSBN_DeltaI_BOW_PLANES_01.fbx": "a2c84955bc625ffb572ba475d174e137fff400cf3662ab2d5edb2bf71f0d4e84",
+    "FBX/RU_SSBN_DeltaI_PERISCOPE_01.fbx": "8b569d890236e280ef2971b3467fdf12586a24c7bae8ff7de111cfd6e9f23519",
+    "Textures/T_RU_SSBN_DeltaI_Hull_BaseColor.png": "47898945eeacbef1a78703ecb612d08db63b07a9f2f113577165e543f5c192c6"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -271,6 +271,116 @@
         20.056,
         20.464
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          65.33,
+          -0.72,
+          -0.96
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          65.33,
+          0.72,
+          -0.96
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          64.218,
+          0.0,
+          -0.24
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -63.245,
+          0.0,
+          0.72
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          23.63,
+          0.0,
+          5.04
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          16.68,
+          1.2,
+          -0.6
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          16.68,
+          -1.2,
+          -0.6
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -68.666,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_DeltaI_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          3.058,
+          0.036,
+          6.3984
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

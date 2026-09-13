@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSBN_Ohio_MASTER.blend": "8c83997c7549702f9e382601bb4c78fd9f9d170788567147306462acd62e90f8",
-    "GLB/US_SSBN_Ohio.glb": "c73d135e497d1a3fdde26fcce60192b526b57eaa9f84701abc81375537049b7d",
-    "Collision/US_SSBN_Ohio_COLLISION.fbx": "e2e72daf8fef171e9094d2b4dab927eaa076d7f44a53fd90adc43e86cd2f70e9",
-    "FBX/US_SSBN_Ohio_LOD0.fbx": "af56b0e021529c040bbfb1bd804d68022f82f782a1b660d75a5ec6a2483e574b",
-    "FBX/US_SSBN_Ohio_LOD1.fbx": "cd2f364efe43b3b8c2f5476a07930be793b19df25f8ccbca64ea5beef4805233",
-    "FBX/US_SSBN_Ohio_LOD2.fbx": "05d89e571eed18b628155ad4eac8e00f2fe7bde1292be93c95833313088c4247",
-    "FBX/US_SSBN_Ohio_LOD3.fbx": "a3aad9a61967369f8d55ef6e7fe434e4625f11da6512c8b69458dceb11080c68",
-    "FBX/US_SSBN_Ohio_PROPULSOR_01.fbx": "19b86e8ff6768b1c6032f7dd239bd69d6cb41c9e6be0632688e464a302578841",
-    "FBX/US_SSBN_Ohio_RUDDER_01.fbx": "c5bfc8ac0e64373760f6761caa4a02b0e1ed237243bcaa067c0635c7f9f746a0",
-    "FBX/US_SSBN_Ohio_STERN_PLANES_01.fbx": "fdfd4583c7df281ac8ef2720638aec14cec10abdcae6af8b0655852380bb7855",
-    "FBX/US_SSBN_Ohio_BOW_PLANES_01.fbx": "7669daa161dcc37810e139220d8c40abd84004c4683df98f213b81d4df7960fa",
-    "FBX/US_SSBN_Ohio_PERISCOPE_01.fbx": "db3734f6cc13009419054558aa8494edabff4168a2595e9824b39211dea39a68",
-    "Textures/T_US_SSBN_Ohio_Hull_BaseColor.png": "5472ab227f8532363e222ab4c926747fd302ffdad8f227fd6e0c41276c1ccfa4"
+    "Blend/US_SSBN_Ohio_MASTER.blend": "51637d71455afedb4884fde3dfcf2bbc65dccb9fb3bb7ee9807e7bddab297a19",
+    "GLB/US_SSBN_Ohio.glb": "4cd5c02ab522a7facd69b79862f929b9556c68da548a6adc8a17fcd0f727bf1c",
+    "Collision/US_SSBN_Ohio_COLLISION.fbx": "7fdb6614f7260a335af6741a149fda2ab712f485a8067166ffb7cd454d75d8ee",
+    "FBX/US_SSBN_Ohio_LOD0.fbx": "25e41758760318411070864f673e76f10f0d166ff365d0e906820d8a8e350b99",
+    "FBX/US_SSBN_Ohio_LOD1.fbx": "02b4269304b1a0e6aee90f7cdb2a0f20222a5a5420fe125f34f385013f1499d4",
+    "FBX/US_SSBN_Ohio_LOD2.fbx": "0e32709eca47938a56caac35589e1f98ed6d05513881096712b3ebf778915de7",
+    "FBX/US_SSBN_Ohio_LOD3.fbx": "bc30c8aecbb1d7eba4e46953577b082c01e5969793fa88029b39416786b6e6a0",
+    "FBX/US_SSBN_Ohio_PROPULSOR_01.fbx": "225c32fbb8c51cf5ad837f2e0f8914a9c868176e0da455a0123b588383922ee6",
+    "FBX/US_SSBN_Ohio_RUDDER_01.fbx": "bac4f11827b517aaac4417c381cbbe0480c5e0c971e8db3b61e787fcf811116c",
+    "FBX/US_SSBN_Ohio_STERN_PLANES_01.fbx": "35451e920bf452e8dce04af91fd64fabb9b830c2dcb6e43798a6bd398d036723",
+    "FBX/US_SSBN_Ohio_BOW_PLANES_01.fbx": "9ea4a465024cb462c286daee3ade7aa426463275d5a7b267b97ae74c1f050061",
+    "FBX/US_SSBN_Ohio_PERISCOPE_01.fbx": "24404d9c869b30b6b1320cb3b41ec029c6cb300fcda2093ad0d7293069b3991e",
+    "Textures/T_US_SSBN_Ohio_Hull_BaseColor.png": "97cba5409f78cc60767bf95d5a7b857d49f2de4968c2fc99a25167cfe3e334df"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -261,6 +261,116 @@
         21.951,
         21.932
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          79.9,
+          -0.78,
+          -1.04
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          79.9,
+          0.78,
+          -1.04
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          78.54,
+          0.0,
+          -0.26
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -77.35,
+          0.0,
+          0.78
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          28.9,
+          0.0,
+          5.46
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          20.4,
+          1.3,
+          -0.65
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          20.4,
+          -1.3,
+          -0.65
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -83.98,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Ohio_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          3.74,
+          0.039,
+          6.9316
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

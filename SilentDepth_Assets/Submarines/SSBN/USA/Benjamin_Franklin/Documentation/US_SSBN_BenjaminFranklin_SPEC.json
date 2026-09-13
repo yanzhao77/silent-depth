@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSBN_BenjaminFranklin_MASTER.blend": "70245eaa5a036649d1ea2e4bd1e755db566a1335380f6fdd0a48257d99ec0a80",
-    "GLB/US_SSBN_BenjaminFranklin.glb": "b1d14e9c6272e60735d9eb7b16c92d7a423513c9135d5b93e40b1046e14f1365",
-    "Collision/US_SSBN_BenjaminFranklin_COLLISION.fbx": "92166660c1f162012d0a5764bbd070e563cdc91c8c6e13f44aebde3f2bda311f",
-    "FBX/US_SSBN_BenjaminFranklin_LOD0.fbx": "208a838a24bc7c6108d18a41cbbdd4c14b0efad21f274126e3dacfa91e8664ef",
-    "FBX/US_SSBN_BenjaminFranklin_LOD1.fbx": "84bcc108b45623b28b4d276da7f3a79be053a3da5c914dfae3ea415c0173dced",
-    "FBX/US_SSBN_BenjaminFranklin_LOD2.fbx": "db1a5b430e2d8afdb19aa3606e23cf96df714c70da586b7b57b3b76420deab8b",
-    "FBX/US_SSBN_BenjaminFranklin_LOD3.fbx": "d0b31b221e6737f20cb8beea9ab7b008ff785ef7ce88f918277c7c5c8c476027",
-    "FBX/US_SSBN_BenjaminFranklin_PROPULSOR_01.fbx": "42846cd532b80fa20b4035d450d8a67389395ef72708fcf61d27f24f711b33d3",
-    "FBX/US_SSBN_BenjaminFranklin_RUDDER_01.fbx": "5cd1a570729829af9ac81c15cd2472e85a667de69b240024a321d08aa1e199da",
-    "FBX/US_SSBN_BenjaminFranklin_STERN_PLANES_01.fbx": "b7a236fffdbb7f373619717aa2d60aa3c2cdcc23c88f507c27913a8d18755d4e",
-    "FBX/US_SSBN_BenjaminFranklin_BOW_PLANES_01.fbx": "adb562721eadb172de1bb8e5c70bda6b962297a5b415cee1f5d343570d9988e6",
-    "FBX/US_SSBN_BenjaminFranklin_PERISCOPE_01.fbx": "ff60567775073396f5fb46f890144e1e83c0f119af56eefcb13b7ad4c11897a0",
-    "Textures/T_US_SSBN_BenjaminFranklin_Hull_BaseColor.png": "4809682d1ad5be53f66caf04701149c61219c46573fd73bf0452176e238def69"
+    "Blend/US_SSBN_BenjaminFranklin_MASTER.blend": "d7bca2018bd1e323ad524c0c6b1fa9c204ca610dc5784d9e3bb2e5e54f0026b5",
+    "GLB/US_SSBN_BenjaminFranklin.glb": "c5ee09a823687cdae41ebcbfe98c73ff948639324546d8fee720db8008d8111a",
+    "Collision/US_SSBN_BenjaminFranklin_COLLISION.fbx": "2f76451d51c507f0e3c4c7db914848be050e53312be4b3d7f16ba2bdc78b0a9d",
+    "FBX/US_SSBN_BenjaminFranklin_LOD0.fbx": "2b88c1e4a88f15c73407ae9426e301022c3f844d4d70685365915cb513e9cdc3",
+    "FBX/US_SSBN_BenjaminFranklin_LOD1.fbx": "efb5a09ed4f1dcbe311fd8ce2f1f05ed67d75b5bcdeddb3c57646fc6265a923f",
+    "FBX/US_SSBN_BenjaminFranklin_LOD2.fbx": "0580bbdf90976bae174873dac58922e8f396ffb4b343adc87f1ad4a7a847600a",
+    "FBX/US_SSBN_BenjaminFranklin_LOD3.fbx": "76ea302a650cf64a8930be272437663e90c80b661417a4c5c900fce9d4743e51",
+    "FBX/US_SSBN_BenjaminFranklin_PROPULSOR_01.fbx": "539ea46b9c51cad3ece8fb5e3e079cd33e9e7cc4ed4203c7cbf04cf700e2c47c",
+    "FBX/US_SSBN_BenjaminFranklin_RUDDER_01.fbx": "da9a5ec776538ba0ec1e9c84e3f66dbccbed6ac143b66925ba5f0e5b61706e75",
+    "FBX/US_SSBN_BenjaminFranklin_STERN_PLANES_01.fbx": "a6aa6f15514c428f113af0b12471b498808c0762ba26da610654a6c1ff096a49",
+    "FBX/US_SSBN_BenjaminFranklin_BOW_PLANES_01.fbx": "5d3583b7c1adf67fb8f34b3f9464a9d78eca61f39133bfcfdc3505f14be6a741",
+    "FBX/US_SSBN_BenjaminFranklin_PERISCOPE_01.fbx": "909c12cdc621f6b9447e377cc872cc7e48dab5d3bf31e879721301adcdc1e906",
+    "Textures/T_US_SSBN_BenjaminFranklin_Hull_BaseColor.png": "3c057da8afc28f5cda3a482ccb834ca2518f2e5b3857f36420a9115a21384dab"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -261,6 +261,116 @@
         16.713,
         17.528
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          61.1,
+          -0.6,
+          -0.8
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          61.1,
+          0.6,
+          -0.8
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          60.06,
+          0.0,
+          -0.2
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -59.15,
+          0.0,
+          0.6
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          22.1,
+          0.0,
+          4.2
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.6,
+          1.0,
+          -0.5
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.6,
+          -1.0,
+          -0.5
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -64.22,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_BenjaminFranklin_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.86,
+          0.03,
+          5.332
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSBN_Lafayette_MASTER.blend": "56de7e42d0f5b1afb46e95e4cbf36f6ae41c86aeaabaa4c8ab5808ac89a997ec",
-    "GLB/US_SSBN_Lafayette.glb": "15299f3503793ed8cb04713797d131ae25143cdb9367a4e73fbf51fc2071319a",
-    "Collision/US_SSBN_Lafayette_COLLISION.fbx": "1268855976060d6c6dd6595d13522e9e03bb8befe1075dc0c3f54dbd74abf833",
-    "FBX/US_SSBN_Lafayette_LOD0.fbx": "c61e399c477610a43ad4c7b820222ab71a6a635a9899b98ccf7c302c5f82daa0",
-    "FBX/US_SSBN_Lafayette_LOD1.fbx": "7461ff8d739a62755201cc6082c3a9ccada892cb96377ea7646c2965e78698ae",
-    "FBX/US_SSBN_Lafayette_LOD2.fbx": "ef8108ffbeba7749edb87321ed2e6cb3a999e462d44035f9c23f46050f1ee544",
-    "FBX/US_SSBN_Lafayette_LOD3.fbx": "cc3778cc572716b1b5534c6cdd90fde68b0a55d74982fccb54d89c89e23f2be2",
-    "FBX/US_SSBN_Lafayette_PROPULSOR_01.fbx": "0f4b57df36510f89c24c37ea65590a0da22e6ff13906d377c3ac178f9856ec1f",
-    "FBX/US_SSBN_Lafayette_RUDDER_01.fbx": "c9c496bc99fdeb184f4078ec0d74b7edbb32097c79150e7d9fe2c091db620ff0",
-    "FBX/US_SSBN_Lafayette_STERN_PLANES_01.fbx": "105df9efe9f1f7c755e0954fcaa2e3a885da18f577042294885c0bb9347ec0b2",
-    "FBX/US_SSBN_Lafayette_BOW_PLANES_01.fbx": "7777089d5ac5335dd5dd96c801da336a7ec26b33787561afc384e657aedf3129",
-    "FBX/US_SSBN_Lafayette_PERISCOPE_01.fbx": "b2c046fdd3cc5c5ff512de9d432930a87c25d06fb0bfd8f1adad7a966442d9c1",
-    "Textures/T_US_SSBN_Lafayette_Hull_BaseColor.png": "5c5bda32892a0399d6419c95ecc32d95442decc836209d62ce24d0ca2462752d"
+    "Blend/US_SSBN_Lafayette_MASTER.blend": "389527da3e4c5e5413388d227ae37b0ab6191a4acfa71335d314cc166d3cc771",
+    "GLB/US_SSBN_Lafayette.glb": "c04834c9ff7679cdd84a089da4cb07c689d0e71b774787cc35b2df7710bf33b0",
+    "Collision/US_SSBN_Lafayette_COLLISION.fbx": "8777418471e0dc78079ae4e040dfef591ef46988ab804f3233726ec35348038f",
+    "FBX/US_SSBN_Lafayette_LOD0.fbx": "d0c19be6cc7b3e83b966345f586783e50e6bd0b807f5aa1994337a3de6788a02",
+    "FBX/US_SSBN_Lafayette_LOD1.fbx": "7b639447c9de76201b12a6103ab8a16e5692479470e395a624ef5b610974adbd",
+    "FBX/US_SSBN_Lafayette_LOD2.fbx": "52606ccb248b9bd96606a16e9e324a4449df714d60259a6f8953eaca3f79e3ce",
+    "FBX/US_SSBN_Lafayette_LOD3.fbx": "b8a47d33929bfb391793bff4055be2045abe300d3884a7dd2301209a44252e03",
+    "FBX/US_SSBN_Lafayette_PROPULSOR_01.fbx": "6a9698f6fcc9cf61d1899118bab425fd519c472ec5614b58019e3fd01b5894de",
+    "FBX/US_SSBN_Lafayette_RUDDER_01.fbx": "926b853c773c945ce41e8be3fde96f221b72f5d3b9dca081bda14cf8a0eb6765",
+    "FBX/US_SSBN_Lafayette_STERN_PLANES_01.fbx": "d44d56a2a58a8f3316c89f8183e6347b9852a5d8f119acef577badd660a7ff45",
+    "FBX/US_SSBN_Lafayette_BOW_PLANES_01.fbx": "dfd4fcfc4965fcea983da5c7bfaaa4cfcaa5d83944e2b9d0d5ef2449e057cd45",
+    "FBX/US_SSBN_Lafayette_PERISCOPE_01.fbx": "71adb02b0b12dbce69f53b376c6c1b2ad2936f403d7dffd07538f8666a93afe5",
+    "Textures/T_US_SSBN_Lafayette_Hull_BaseColor.png": "f3f35a535018e8c70acdef72da24e6a8e9b34372bfcfd1c75603cf44d25ab8f4"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -261,6 +261,116 @@
         16.713,
         17.528
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          61.1,
+          -0.6,
+          -0.8
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          61.1,
+          0.6,
+          -0.8
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          60.06,
+          0.0,
+          -0.2
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -59.15,
+          0.0,
+          0.6
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          22.1,
+          0.0,
+          4.2
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.6,
+          1.0,
+          -0.5
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.6,
+          -1.0,
+          -0.5
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -64.22,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Lafayette_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.86,
+          0.03,
+          5.332
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

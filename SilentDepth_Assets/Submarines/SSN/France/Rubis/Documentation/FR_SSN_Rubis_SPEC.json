@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/FR_SSN_Rubis_MASTER.blend": "3ad7bd4112cf5d8d7920458e65ca56ddaeec097e294dc3c1fa3684615aeef011",
-    "GLB/FR_SSN_Rubis.glb": "a3cf6346b653f507742f07784ff75865616c649e358c7cc46bdfebe6e5a94e67",
-    "Collision/FR_SSN_Rubis_COLLISION.fbx": "d267f749cabd5849cae6d14ec1d81d0609d99c49a7d2821850604cc188273d20",
-    "FBX/FR_SSN_Rubis_LOD0.fbx": "c881d54cae1714a6f22e22bd7128b84268453e1a977d84d6e1b1250e19fc747e",
-    "FBX/FR_SSN_Rubis_LOD1.fbx": "b6b86f13a975fbcc2fd1baef086193fe87c1db4d44ba82949efc69353618b57b",
-    "FBX/FR_SSN_Rubis_LOD2.fbx": "3be5212bd09db80ef0e7b1d7ce4a80eb4e8b9438aa6fcdc1aed3d22f0fe7d346",
-    "FBX/FR_SSN_Rubis_LOD3.fbx": "b206a655408d0e704e376f8cc6a0ea72d5a03712c2b4779cbb682ca21946342b",
-    "FBX/FR_SSN_Rubis_PROPULSOR_01.fbx": "a335f8f7cdbe8878c2ed79b684304e17f11f8d6978604cd712a4c69cd4182586",
-    "FBX/FR_SSN_Rubis_RUDDER_01.fbx": "551342a1f88a64b0c98d4cc3914600e2924c694a6e23309a568a08ebe50d51f7",
-    "FBX/FR_SSN_Rubis_STERN_PLANES_01.fbx": "9d95aa1a5d1a2a822e0bd9452e395fa61a2dba30cb5de2562905a2562b682be2",
-    "FBX/FR_SSN_Rubis_BOW_PLANES_01.fbx": "4d3f13d9692fb4f048a470b8104bd19b4cbc454630ba737c7291cd22fa877031",
-    "FBX/FR_SSN_Rubis_PERISCOPE_01.fbx": "b04c3d7f333f148f3606ef3fd052eaf60321cf220c595d32c50b60f6dda5c9e4",
-    "Textures/T_FR_SSN_Rubis_Hull_BaseColor.png": "fabbd7ac77a9fa66817697ad56274fa0798d7049e293672420483ce506417301"
+    "Blend/FR_SSN_Rubis_MASTER.blend": "253cd132b6d17c096b7601d8679f8b41c62080f429a6240f611d274b7488769c",
+    "GLB/FR_SSN_Rubis.glb": "652325d0ec2e41fd055256de50263baaf575f6d28fd2ae81712972c4e0865154",
+    "Collision/FR_SSN_Rubis_COLLISION.fbx": "3c584b48406c215ec90feab200eee31fccde7704fa0a8f84fed9b4986392571a",
+    "FBX/FR_SSN_Rubis_LOD0.fbx": "8b0a8dd4ce85fd61a8c64eff99daa8d9d7ed04bd19417e5d3d06dab69dd92ee2",
+    "FBX/FR_SSN_Rubis_LOD1.fbx": "aeeb7a6dbd7673d1495c9217322203c1aed9203688ac4467eb5f5846dde0d31f",
+    "FBX/FR_SSN_Rubis_LOD2.fbx": "85453656f6e094edb71bfe2ff3223ad51bbae35b76e10259a9f6ffe2fd3e6fd0",
+    "FBX/FR_SSN_Rubis_LOD3.fbx": "db0b518490846420d8d43ef3ac857ba2236609cf46585e80818c92ae5ded7555",
+    "FBX/FR_SSN_Rubis_PROPULSOR_01.fbx": "811a115bac50ec67663f4b0d3123a37cc008ef2b295337ddea7461837fc6d0ee",
+    "FBX/FR_SSN_Rubis_RUDDER_01.fbx": "87e906bc4750cf6652052fe9f591e5d3deeb19577e7497588865396fdce8140d",
+    "FBX/FR_SSN_Rubis_STERN_PLANES_01.fbx": "0aa5890322631442e0ccde51dd31904c026f3ca25c9c2af9e0d7c5ed06d13d38",
+    "FBX/FR_SSN_Rubis_BOW_PLANES_01.fbx": "7fed14a49c1a1c43edae011fc722ed430ca8a7676ef7380b6d53f6f559df843b",
+    "FBX/FR_SSN_Rubis_PERISCOPE_01.fbx": "0614bc1bca4531cef6e278699b6d306d9b42693ce51136109bf26f24cf9a1ff7",
+    "Textures/T_FR_SSN_Rubis_Hull_BaseColor.png": "b7b754cf84a8b62dfc5c5f1d4e455ce581694079c03fff5036eab31fff13d465"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -255,6 +255,116 @@
         12.528,
         14.339
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          34.591999,
+          -0.455855,
+          -0.607807
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          34.591999,
+          0.455855,
+          -0.607807
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          34.003199,
+          0.0,
+          -0.151952
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -33.487999,
+          0.0,
+          0.455855
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          12.512,
+          0.0,
+          3.190987
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          8.832,
+          0.759759,
+          -0.379879
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          8.832,
+          -0.759759,
+          -0.379879
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -36.358399,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Rubis_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          1.6192,
+          0.022793,
+          4.34
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/FR_SSN_Suffren_MASTER.blend": "a66fd5e2c9795a16eaaac6e0ebef1492dd0c7019b7fb9f9067f1da2cd1fdc3f4",
-    "GLB/FR_SSN_Suffren.glb": "0bec1cf910dc139ac9782df2ec3cba212e27a5578be15fb06410fbc689c3d6fd",
-    "Collision/FR_SSN_Suffren_COLLISION.fbx": "feaba34c462735b9d4062ff7a0bb92c555b9b405034239382c29b4dcf2e9ce35",
-    "FBX/FR_SSN_Suffren_LOD0.fbx": "5669106a7a47f56ccc7ab8c65f0231c2270f6416f06bcd64e74a37230afd3a07",
-    "FBX/FR_SSN_Suffren_LOD1.fbx": "74433d0f88362cd713277ba79997e7163c6847e0657aae96e2480ab251d37c90",
-    "FBX/FR_SSN_Suffren_LOD2.fbx": "e9e504da9588219ee003c44c051a1b1837206469355a8fee9eda32ed97ad1bdd",
-    "FBX/FR_SSN_Suffren_LOD3.fbx": "845b069876278847c25bb20d4b9fe42b1ec99e77325420793789eebce954c8ba",
-    "FBX/FR_SSN_Suffren_PROPULSOR_01.fbx": "2d6d32a8620d276fd0de8f14f42e88d2c0e2f5af1a9e8dadf012683b83dd0123",
-    "FBX/FR_SSN_Suffren_RUDDER_01.fbx": "eb213e9c665022800ea3b3903bd424046b068976a31475604933f13f8cf99b21",
-    "FBX/FR_SSN_Suffren_STERN_PLANES_01.fbx": "e2f55a44c7640a8851d9b2a780e0b67f2bea7166524f7b0e07e36609e80e908f",
-    "FBX/FR_SSN_Suffren_BOW_PLANES_01.fbx": "563d9d9e08b6aeeeefe9e722e8f6b04644a8cb78034180563ce24c1a2355de27",
-    "FBX/FR_SSN_Suffren_PERISCOPE_01.fbx": "eb2757e811d5d0c71a509af35e94024883d0cecfe3ad4f19077c3a55138a982c",
-    "Textures/T_FR_SSN_Suffren_Hull_BaseColor.png": "cfba84b96d4bc6523f0355b4010b2b6b19022f8fc1ee1487c06b285bb7bc33f2"
+    "Blend/FR_SSN_Suffren_MASTER.blend": "d5adfad871527800ee5b35a7ddd7fdd066bd8c6724d1ede917ba29bb7a4bc06f",
+    "GLB/FR_SSN_Suffren.glb": "9e64cf67f2ee82a9652f2cc2f25b8013ccd2040939e3476a6fb35af1f4e1fd99",
+    "Collision/FR_SSN_Suffren_COLLISION.fbx": "629ec8bf73e965aef7fbe6789b23480c756225ffe24ecc7375b4b6e7ac150e3e",
+    "FBX/FR_SSN_Suffren_LOD0.fbx": "dc715a4388c0cd8655dff6b548b9f0bbf26935a45b41781025e2df99efb33483",
+    "FBX/FR_SSN_Suffren_LOD1.fbx": "0448af44a717bf657c5b3717e7035cd038c7221b63e149abad3188f4f527e56e",
+    "FBX/FR_SSN_Suffren_LOD2.fbx": "cf55228a1e6bd5ccfdccd0225116ab35028063f9ffe99469cac607e031832239",
+    "FBX/FR_SSN_Suffren_LOD3.fbx": "d92b8eb51d80c0e2b6bfc5c7c3639c247af8da81755e533fd382f384e328d274",
+    "FBX/FR_SSN_Suffren_PROPULSOR_01.fbx": "4674ee5791723043e93091504f188b080825734dfac2f9448b87f69af886e9fb",
+    "FBX/FR_SSN_Suffren_RUDDER_01.fbx": "6dbb50b372d49ace59b74cd5ad3636896c5c3e80ce807c60e2864d1c7589b48e",
+    "FBX/FR_SSN_Suffren_STERN_PLANES_01.fbx": "62d782c79d5eb0946bbe91a7c7b8874587ee5e2e920b448e7d95f1b4dd6d635c",
+    "FBX/FR_SSN_Suffren_BOW_PLANES_01.fbx": "07a767d84437de3f0bce4a0fd38475dc7289f85749fb884d7f6afe5f30afba2b",
+    "FBX/FR_SSN_Suffren_PERISCOPE_01.fbx": "e5433c2c53863bc00b20a4db958ef4f5bb27649cb46a71f8635443467671b78f",
+    "Textures/T_FR_SSN_Suffren_Hull_BaseColor.png": "2ca510949bd7680596a53ee1671bb9ff1ac8550b50f2fb7dd3c8a5fd15ac30fb"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -255,6 +255,116 @@
         14.657,
         15.616
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          46.765,
+          -0.527832,
+          -0.703776
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          46.765,
+          0.527832,
+          -0.703776
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          45.969,
+          0.0,
+          -0.175944
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -45.2725,
+          0.0,
+          0.527832
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          16.915,
+          0.0,
+          3.694826
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          11.94,
+          0.879721,
+          -0.43986
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          11.94,
+          -0.879721,
+          -0.43986
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -49.153,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Suffren_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.189,
+          0.026392,
+          4.69216
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

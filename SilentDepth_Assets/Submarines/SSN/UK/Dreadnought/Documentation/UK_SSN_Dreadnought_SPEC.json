@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/UK_SSN_Dreadnought_MASTER.blend": "9c485bf69e2e2acc470486eda4f3efa952ee47105348e1aee8d146c6d9f40526",
-    "GLB/UK_SSN_Dreadnought.glb": "37d76911a236916a6e578361960f79703a7a0615ee7f9e87139669d97490ea70",
-    "Collision/UK_SSN_Dreadnought_COLLISION.fbx": "286ecbfbc732301b953c337ce732fc3d5343c483b6fb97b9a4d130cf7e4a36a8",
-    "FBX/UK_SSN_Dreadnought_LOD0.fbx": "2c561b244d52dee191dbf328abaa2d21806dbf836940f9990af8eb0be88cf6a0",
-    "FBX/UK_SSN_Dreadnought_LOD1.fbx": "0504295d763cafdef4cba7895387c4f62639d1f378e2fb9300c4d6ea3b17cfb1",
-    "FBX/UK_SSN_Dreadnought_LOD2.fbx": "e14db5b22b60a69af7edfe623efee29f3ce873732c59c06134bdedd47e99c291",
-    "FBX/UK_SSN_Dreadnought_LOD3.fbx": "c11532a1696fe3ab8c5816f1572a145cb3680711dc2a38c2cc143ab25ef1c8e6",
-    "FBX/UK_SSN_Dreadnought_PROPULSOR_01.fbx": "3c51e6ea038d857895d57579ffa08865b957003a895cc299ff6ec58729a49c40",
-    "FBX/UK_SSN_Dreadnought_RUDDER_01.fbx": "e721de6544868c76c825c2dc48d0691c44ed09af03f51b7bce433129603dc2d6",
-    "FBX/UK_SSN_Dreadnought_STERN_PLANES_01.fbx": "f3676f8fb5a6d133331bdaebfab1a11a423da340fbc1e565bb08f5c17f5f9388",
-    "FBX/UK_SSN_Dreadnought_BOW_PLANES_01.fbx": "bbf7ff6894bfa0b084c88d08e58ab9c2e15bfc852310f59d02775652a495fd0a",
-    "FBX/UK_SSN_Dreadnought_PERISCOPE_01.fbx": "652dc2d74b5f3cfdaaa51398bb9cea23acb759b3bf833142561b5e47c0aedc34",
-    "Textures/T_UK_SSN_Dreadnought_Hull_BaseColor.png": "7d1c0137aa3009c0d296f22461e8ed04421bfff692be84a3fbc144c19d7f3cce"
+    "Blend/UK_SSN_Dreadnought_MASTER.blend": "3279a679f2ce1fa111427362c807b6092571ae6e1c3091ae1917b689ed9d8218",
+    "GLB/UK_SSN_Dreadnought.glb": "e1e94a13c89aec83c9fb267051c5c579b90bd2e5db3c957ea6c643b3eb9f453a",
+    "Collision/UK_SSN_Dreadnought_COLLISION.fbx": "ee65e33f6ab7b282a4bd5d34446c2069f6fd1513e01c1b4db715c2c173f459e3",
+    "FBX/UK_SSN_Dreadnought_LOD0.fbx": "591bc9d8bfcdebea7406041719e5494945d70de1d04f130099248440ea72ebe8",
+    "FBX/UK_SSN_Dreadnought_LOD1.fbx": "e699cb3a917d94e3e4a333e1d51ac3b19307da47c2d645d0f1afb355321863d1",
+    "FBX/UK_SSN_Dreadnought_LOD2.fbx": "4f4bfb1079157709cc370e5a6f1d71c893562fa0b3a8c7349d6e1eee194dffe9",
+    "FBX/UK_SSN_Dreadnought_LOD3.fbx": "48bb01acb9ab81a708cd136c5bc6777d52592296290e431fc415bdc3c1a099a1",
+    "FBX/UK_SSN_Dreadnought_PROPULSOR_01.fbx": "55a03c393a747a639fca50ae39bdf57bfdd8f01c4f62fa78e035a8aa20c5c3e6",
+    "FBX/UK_SSN_Dreadnought_RUDDER_01.fbx": "56e729d94cfbb6b14161c5c26938ac0e7340d7901977eb6f7e10965898b36aa9",
+    "FBX/UK_SSN_Dreadnought_STERN_PLANES_01.fbx": "2b88f98504608e0e2bb18b1aa7595c95b2b3fe78feeee87aa1dee65b384a8e5f",
+    "FBX/UK_SSN_Dreadnought_BOW_PLANES_01.fbx": "eceeb667117f783ba00f20887d96b3a432fdd229f11b9dd891d71b948ef3e8f0",
+    "FBX/UK_SSN_Dreadnought_PERISCOPE_01.fbx": "fd69352ca12696c70c294c4ae0612369dcdaa7e36810d17500ee0da188bac222",
+    "Textures/T_UK_SSN_Dreadnought_Hull_BaseColor.png": "6c83e8fbd76ce161950d6893415577bfad593a47fbbed57856aecc4c7e3f8889"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -265,6 +265,116 @@
         15.66,
         16.631
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          38.07,
+          -0.569819,
+          -0.759759
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          38.07,
+          0.569819,
+          -0.759759
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          37.422,
+          0.0,
+          -0.18994
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -36.855,
+          0.0,
+          0.569819
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          13.77,
+          0.0,
+          3.988733
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          9.72,
+          0.949698,
+          -0.474849
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          9.72,
+          -0.949698,
+          -0.474849
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -40.014,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Dreadnought_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          1.782,
+          0.028491,
+          5.0654
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSN_Sturgeon_MASTER.blend": "093ed4004613dcdd2875fcc89c8e1dd28571472a00ee46fe1871a5951119674d",
-    "GLB/US_SSN_Sturgeon.glb": "0a804beff7279f47490273c99f9e23b877e3720482bd49e46d5593d761c8047f",
-    "Collision/US_SSN_Sturgeon_COLLISION.fbx": "3c575f769470aa347258f3628837107f85c5dc150a786d41ba927e78b7a8d500",
-    "FBX/US_SSN_Sturgeon_LOD0.fbx": "cb6d6b2786663a8c87dc5eb7d837ee28cd65438b99e09a2ca5bfa63865164771",
-    "FBX/US_SSN_Sturgeon_LOD1.fbx": "e2048bedcb13f484d4f4f9a392eca954e08b5b43e04403932cb429ccf7689e56",
-    "FBX/US_SSN_Sturgeon_LOD2.fbx": "c4f454560a3215115d40fd6c1c6948d8d14463339b859b255c4a28b34e146a5b",
-    "FBX/US_SSN_Sturgeon_LOD3.fbx": "e66eb7c5e41c3fdfdb30b84879c676c133a57989b916f9daff3f95c260bc0c28",
-    "FBX/US_SSN_Sturgeon_PROPULSOR_01.fbx": "4baf6dafbc74d3060ef5873bbbc8c82dcd2f518638028bb82259fef6935f1c7e",
-    "FBX/US_SSN_Sturgeon_RUDDER_01.fbx": "6a9e27117ee4b0b9b06dd32331698ccae244940f9c8b75844baf9c276f1c8e69",
-    "FBX/US_SSN_Sturgeon_STERN_PLANES_01.fbx": "a9224d96aa8d7ab10558397bbbf02a3971b1c864cd9270aa2a5dbac05ac7326c",
-    "FBX/US_SSN_Sturgeon_BOW_PLANES_01.fbx": "5c0e394a60a650ad0c248526c93da1e24ce63989fd1e81cbbbcfacea9dc260a6",
-    "FBX/US_SSN_Sturgeon_PERISCOPE_01.fbx": "2a90a18a44f9b00604e279ca628ae9065bde408f978864953fae5ce5d3b70c1a",
-    "Textures/T_US_SSN_Sturgeon_Hull_BaseColor.png": "ed8c0db4b3d6b60346d51be4d5227ffa6bc24177695add2575e50f33f8fb92ec"
+    "Blend/US_SSN_Sturgeon_MASTER.blend": "879e506cfeb49006372f2fd629066690eff5982808154fe0c557c5941f9eb33c",
+    "GLB/US_SSN_Sturgeon.glb": "c9a9a791c07119d4c9a91c208e2b70508d03f63348d1d178bd1d244755093632",
+    "Collision/US_SSN_Sturgeon_COLLISION.fbx": "3c54b13ff9b4c4857ceedf1bcc2016c7645c44b27b765434988509339c4b7473",
+    "FBX/US_SSN_Sturgeon_LOD0.fbx": "a1b8ee2e7121bb791303008d83249cf4048b685414974ff321982fc9b252d461",
+    "FBX/US_SSN_Sturgeon_LOD1.fbx": "fd8ca9e060755a747a0564ee0855fdff1d52d3902882a6d6962e0bf018556a16",
+    "FBX/US_SSN_Sturgeon_LOD2.fbx": "e371ff54fcddb04ffd29b3847364edf0a20739e90070a885e0514426f9519ee4",
+    "FBX/US_SSN_Sturgeon_LOD3.fbx": "0ac3a78e7f0f228498fbaa568e21717d6613d18c968f26066f9d755691d17284",
+    "FBX/US_SSN_Sturgeon_PROPULSOR_01.fbx": "5bed40023918d7e7afe97feee2c3b3048fb1870115ae079dbe4aabe9e3fa2375",
+    "FBX/US_SSN_Sturgeon_RUDDER_01.fbx": "2c81e00b542a0621036ec06d7a30a549f45eea3d1d1ffa8068ad2cbe6005f0c3",
+    "FBX/US_SSN_Sturgeon_STERN_PLANES_01.fbx": "1931aa72e08e8d3b73c08db0e6949c118fc1619278dbf1ef7e3868510813197f",
+    "FBX/US_SSN_Sturgeon_BOW_PLANES_01.fbx": "e94c8256be7094ea7064d771b4c7cff3b9dd5fefcabdc49d1c9d540dd95dd844",
+    "FBX/US_SSN_Sturgeon_PERISCOPE_01.fbx": "9bd7777f81650c5090d7de348dc1c5971dc2930de80b0f4f154d21e0da8c4d8f",
+    "Textures/T_US_SSN_Sturgeon_Hull_BaseColor.png": "e3b62bb3e80d74ab350262b2a4febd7a2e154c0ecdac6cc8a726435f24724acc"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -255,6 +255,116 @@
         15.907,
         16.849
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          43.301099,
+          -0.578816,
+          -0.771755
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          43.301099,
+          0.578816,
+          -0.771755
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          42.564059,
+          0.0,
+          -0.192939
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -41.919149,
+          0.0,
+          0.578816
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          15.6621,
+          0.0,
+          4.051713
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          11.0556,
+          0.964694,
+          -0.482347
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          11.0556,
+          -0.964694,
+          -0.482347
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -45.512219,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sturgeon_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.02686,
+          0.028941,
+          5.14538
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

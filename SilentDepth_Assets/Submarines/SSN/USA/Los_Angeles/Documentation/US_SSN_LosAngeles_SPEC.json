@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSN_LosAngeles_MASTER.blend": "bcbffab3c26605fe8578e2fa63e31ecbd4b772095306f718dcf5511bbc16e658",
-    "GLB/US_SSN_LosAngeles.glb": "e7dbead95f4a5adc99f15e7bc7fddd027d928d3b41fe717593f5eac83e8c2cce",
-    "Collision/US_SSN_LosAngeles_COLLISION.fbx": "d0c27e25e1aa596c0bff27b2324d6376531498906b286a9da42daf9659da6f6d",
-    "FBX/US_SSN_LosAngeles_LOD0.fbx": "1ec14c9af369401e343fff3583ce1fe0950edd173d1029b590268684b42b509c",
-    "FBX/US_SSN_LosAngeles_LOD1.fbx": "edc9d87441db5feae00015e312b9f355895fadf05082cf1daa7506ccb07729b2",
-    "FBX/US_SSN_LosAngeles_LOD2.fbx": "313711f2137afbe2958c3724b23ce8f4476c81614c657a188db131c77600f3a4",
-    "FBX/US_SSN_LosAngeles_LOD3.fbx": "e28ff328c0f21f80ffc35fe990e24e93c86fc1f4f4e1f6ceac4fc9f9d5dd7cf2",
-    "FBX/US_SSN_LosAngeles_PROPULSOR_01.fbx": "de5533f7ad842e5cf803522e9bf07cfebe330c94069a6a295cccbe2184f09b29",
-    "FBX/US_SSN_LosAngeles_RUDDER_01.fbx": "f60d0f21abf324f43ba7ef3f4314b943df119a96525ea31b6c66cf9263db76ee",
-    "FBX/US_SSN_LosAngeles_STERN_PLANES_01.fbx": "827a58af1e1d3d07a8c337ed587258b00d6fe18a1106f7217cbc9405dbc68942",
-    "FBX/US_SSN_LosAngeles_BOW_PLANES_01.fbx": "f85f5c50da80524b15f93aeacebc987522ed03cc4de087a43294934dd94eb21b",
-    "FBX/US_SSN_LosAngeles_PERISCOPE_01.fbx": "b56c14965b7b9457b49dbc82c236f586c8d134828832e1036d56580dba8f0559",
-    "Textures/T_US_SSN_LosAngeles_Hull_BaseColor.png": "50a2663cbade10fbc3459c1ad705041f8c5f1fa8a5c6da31077ae6bf42e202db"
+    "Blend/US_SSN_LosAngeles_MASTER.blend": "29663a96276d1d31111b68f95da53ee670611e9c41e6131878a3263d78f15afd",
+    "GLB/US_SSN_LosAngeles.glb": "1307a538b7c60726f270a02221325d4680aa6483f1ec1d1ed02af54d1a58b076",
+    "Collision/US_SSN_LosAngeles_COLLISION.fbx": "48ef9c4fa69d3c451fe81e77bbd8158424926dc6815acc1230fc67e797731763",
+    "FBX/US_SSN_LosAngeles_LOD0.fbx": "3249daaf5efd0ee19e92316c3a41e13a54b68196b121b0f7eae9fd3845be36a6",
+    "FBX/US_SSN_LosAngeles_LOD1.fbx": "f2e47f74a8ce3f705e69eb28ae248b95144d4812605ceff58b9f9d7437d15110",
+    "FBX/US_SSN_LosAngeles_LOD2.fbx": "71b8eb3d0f340cf736ef8675482cc4168cddc265a0a379e6a599d80d73ca59f4",
+    "FBX/US_SSN_LosAngeles_LOD3.fbx": "05a3124fe1170f348cd9ae269cb4b893876adfccdd0fa504d48b11ede7acc953",
+    "FBX/US_SSN_LosAngeles_PROPULSOR_01.fbx": "25006deceaa07f6abd1257d1a33bc59b0ad4fd75c14ca6b7341d819579459229",
+    "FBX/US_SSN_LosAngeles_RUDDER_01.fbx": "960c8e3a546d2a367e10508a0cc29ff72f6d11ddd92ad14b92f647ac1ef6c457",
+    "FBX/US_SSN_LosAngeles_STERN_PLANES_01.fbx": "e723cab01ea854b2f4cda443b8db314918ad2510333326c8a53423266488176f",
+    "FBX/US_SSN_LosAngeles_BOW_PLANES_01.fbx": "5a4f38406bcf7201978e2ec243d3e803200e716e0a15f494f6b37f18475d04e2",
+    "FBX/US_SSN_LosAngeles_PERISCOPE_01.fbx": "c63b82da04b4f4754348eafc6022fe520417a6a81fd9eec889b28212f6137341",
+    "Textures/T_US_SSN_LosAngeles_Hull_BaseColor.png": "f9788aef4029caf5988e7233fe63a19c95b058e581f16bcd4d8e2527527e51a9"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -315,6 +315,116 @@
         16.484,
         17.356
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          51.7,
+          -0.59981,
+          -0.799746
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          51.7,
+          0.59981,
+          -0.799746
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          50.82,
+          0.0,
+          -0.199937
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -50.05,
+          0.0,
+          0.59981
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          18.7,
+          0.0,
+          4.198667
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          13.2,
+          0.999683,
+          -0.499841
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          13.2,
+          -0.999683,
+          -0.499841
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -54.34,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_LosAngeles_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.42,
+          0.02999,
+          5.332
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

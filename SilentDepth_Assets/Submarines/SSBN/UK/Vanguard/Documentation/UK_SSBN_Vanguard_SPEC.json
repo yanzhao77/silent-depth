@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/UK_SSBN_Vanguard_MASTER.blend": "9484df74187ea44eaf75af55c6cf60e1284adaa2a81eb2256ad46748186c3aa5",
-    "GLB/UK_SSBN_Vanguard.glb": "0b6a7c9c174c3d09ad729b2083360b5a9f707ab9bd1e5472e98aab644e8dd888",
-    "Collision/UK_SSBN_Vanguard_COLLISION.fbx": "fcad8b0d81ab352d5f3d851ed2a9c1efa6a4cae8ef5dcadc66b40ba52393f028",
-    "FBX/UK_SSBN_Vanguard_LOD0.fbx": "9279f0b1a838561545ccbe6585b4a842281015f8988187ffa1c420aae1f55abb",
-    "FBX/UK_SSBN_Vanguard_LOD1.fbx": "6e676477324e2f7d2267eb0697221c301dd0449feed176c6a67c876510684788",
-    "FBX/UK_SSBN_Vanguard_LOD2.fbx": "8eb4ecd8512e9c0b7bdeb3e0e10a1c3238e0f132ad93d95344074226510ed5dc",
-    "FBX/UK_SSBN_Vanguard_LOD3.fbx": "5f02766188cf743d766e00e30a65ef96a0e1a10d0d8c124fddc65df2c9df7f4d",
-    "FBX/UK_SSBN_Vanguard_PROPULSOR_01.fbx": "03ee3f90b95ff553e1fbee5440d0d98dfeb4c918f8f2bce4eaa1546b06aad609",
-    "FBX/UK_SSBN_Vanguard_RUDDER_01.fbx": "4a447c4a81b2cf4b8b10afb64ad35e2e3f8b0606b32739fc681afd829c60ff85",
-    "FBX/UK_SSBN_Vanguard_STERN_PLANES_01.fbx": "1af431375a6b6bad42fdb9e2657e830a2ac2de30f13845fe71b90d7ade721561",
-    "FBX/UK_SSBN_Vanguard_BOW_PLANES_01.fbx": "b5378399afdc54a63fd9c1499d975a899139eb1d8b30f628d0dbfaa3b630f55f",
-    "FBX/UK_SSBN_Vanguard_PERISCOPE_01.fbx": "d819e225eb55a27667bf985404c0402822d51a64d5ccd92d89ca8592c06309d8",
-    "Textures/T_UK_SSBN_Vanguard_Hull_BaseColor.png": "712f0378fa64cbcaf9f92ff60d45b3ace71b87363870965b6abe50de50f8ee82"
+    "Blend/UK_SSBN_Vanguard_MASTER.blend": "19ac1b48e9d3e4a4d20f470ce8b9b836cdace95bb174106bc1959bda58198011",
+    "GLB/UK_SSBN_Vanguard.glb": "a7fa1bd5d0cdf80b562727f1da6f589739ca495d30bd27eb5859b60307e1eec5",
+    "Collision/UK_SSBN_Vanguard_COLLISION.fbx": "0ea358d9d9200228fe1902dc5af2d38f221afcd3de41b3557a125a7b6d889ecc",
+    "FBX/UK_SSBN_Vanguard_LOD0.fbx": "afc4fb6668a640d0ea5d32953c87732efd63d060686d9c458d4c43eb574cc4dd",
+    "FBX/UK_SSBN_Vanguard_LOD1.fbx": "080e3ad2733dded0e7f82bc9d4a634cd42a6fdde22225d41d70283ecec27dba2",
+    "FBX/UK_SSBN_Vanguard_LOD2.fbx": "38c2f4ab3fc48eb503ebf20b31bcf6f2fe0844481bca9c9887616f8468a7e35c",
+    "FBX/UK_SSBN_Vanguard_LOD3.fbx": "a3d290b5401e4b7deafccf9bd875c2ddd12f72e37e6955d8e23186cc7d7b717e",
+    "FBX/UK_SSBN_Vanguard_PROPULSOR_01.fbx": "35a9168e698ba7f072880663e2f177fc8b151f506ea2a8ec7c8798f31670c767",
+    "FBX/UK_SSBN_Vanguard_RUDDER_01.fbx": "d4abac10e2452a9a7b41d314deb2a9b7f90a054c055273eb6168a8c0d4904ca4",
+    "FBX/UK_SSBN_Vanguard_STERN_PLANES_01.fbx": "48d2a6cc980e2c6870084bd135f0494163f249f8a619b02dc1cbd86f9597c833",
+    "FBX/UK_SSBN_Vanguard_BOW_PLANES_01.fbx": "4048a140b58d1b9c067c70742cdbe10eb5761ec02709ce0557dcdc576fd144cc",
+    "FBX/UK_SSBN_Vanguard_PERISCOPE_01.fbx": "5d4d46b633b4336452d565f21ab2c781e85297a0ae9e468a3208d2fb97f38b9c",
+    "Textures/T_UK_SSBN_Vanguard_Hull_BaseColor.png": "20c3123670516fa1e549311e9c3038e2291f4ee69245135696095c5e9eab0a94"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -261,6 +261,116 @@
         21.613,
         21.638
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          70.452997,
+          -0.768,
+          -1.024
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          70.452997,
+          0.768,
+          -1.024
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          69.253797,
+          0.0,
+          -0.256
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -68.204497,
+          0.0,
+          0.768
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          25.482999,
+          0.0,
+          5.376
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          17.987999,
+          1.28,
+          -0.64
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          17.987999,
+          -1.28,
+          -0.64
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -74.050597,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Vanguard_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          3.2978,
+          0.0384,
+          6.82496
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

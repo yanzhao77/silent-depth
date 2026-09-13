@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/UK_SSN_Swiftsure_MASTER.blend": "9eb8060181c1045a6026f19787f36dbe652a22aba536377ee57b3ec36ee8a575",
-    "GLB/UK_SSN_Swiftsure.glb": "7394eebad992f1e91ad7bd8bbd4e6c1472e120e04150337b2594117915db980b",
-    "Collision/UK_SSN_Swiftsure_COLLISION.fbx": "23308cd4cc4c71a24d385c7893515b6158e561ae8ffc86905a0a32fe7ad044da",
-    "FBX/UK_SSN_Swiftsure_LOD0.fbx": "b3fee845b5a40b0f29bc62c175462bade059795646c9b132b34d16491d0733de",
-    "FBX/UK_SSN_Swiftsure_LOD1.fbx": "480bf7b1b7fffdcbf0ed9d72bf1284f375683e9f4ea72dd10fa6e9e70dab7525",
-    "FBX/UK_SSN_Swiftsure_LOD2.fbx": "aa40c426ee88bba6859c3bca809f336ad506de4683ec4d8aa906f02ec9cb1b6a",
-    "FBX/UK_SSN_Swiftsure_LOD3.fbx": "f1da59d0f47941c4e6da6041b3fcd7e003ef5dbcedcfc692088bce54db5f0835",
-    "FBX/UK_SSN_Swiftsure_PROPULSOR_01.fbx": "4bb88493859de3b5a79fd4356ac7178875864cf5120ad9bfe92268f954cf5c41",
-    "FBX/UK_SSN_Swiftsure_RUDDER_01.fbx": "cb7cb30aefb1ea2e6bf372af4cb6502104fdb6f5803e8b79c8c85c2cdbc6c7b5",
-    "FBX/UK_SSN_Swiftsure_STERN_PLANES_01.fbx": "1673d2fb71534297a61b49ae5ddddd39915aec468180993cf3c2041190a3565a",
-    "FBX/UK_SSN_Swiftsure_BOW_PLANES_01.fbx": "f1f353c923a2cdecefed77441cf19983a36db62538ee02e81975e4ed85b099e1",
-    "FBX/UK_SSN_Swiftsure_PERISCOPE_01.fbx": "a330c25a2b16a12ee75b899828fd9b76df94aa8fad20720632ff31171646bd2b",
-    "Textures/T_UK_SSN_Swiftsure_Hull_BaseColor.png": "2dbfcf66d3b2d03d82e03c962d2b4dd8e25c4de4d9c62191024c9a0834b2d113"
+    "Blend/UK_SSN_Swiftsure_MASTER.blend": "a6dadaaa5e121d5fc1dfb340a84e0757c9bd50116b40c722a10d6608d37477ac",
+    "GLB/UK_SSN_Swiftsure.glb": "dc9129ab84fc0af0bed002c75075cfbc634d575c83cc26d66dde31dbf326dd4a",
+    "Collision/UK_SSN_Swiftsure_COLLISION.fbx": "c95d974c8dd6f68ab7f594c1a6c7b9133afaaec020d66475f51de6f816ba3bb5",
+    "FBX/UK_SSN_Swiftsure_LOD0.fbx": "6a955a3e391bdc32c852620ba60debe130fd422f7623cb5be1615a22e829977d",
+    "FBX/UK_SSN_Swiftsure_LOD1.fbx": "802d9a85080b7090334f80e3222ee84bcd38ef8c69b367eb9a992f74ad40a6c9",
+    "FBX/UK_SSN_Swiftsure_LOD2.fbx": "7bd5f3b32e6594d7f1e07051f2509220008119e8cf51f815160d635df587d7b8",
+    "FBX/UK_SSN_Swiftsure_LOD3.fbx": "9fc27f777a190df1927aca8baa1e42141240ea74a66f70899fa9440f6b7a5997",
+    "FBX/UK_SSN_Swiftsure_PROPULSOR_01.fbx": "7ff0947bccb4381dfe2a24ae72b4787fba448ea292428d4a36b78fb2a386eb60",
+    "FBX/UK_SSN_Swiftsure_RUDDER_01.fbx": "043a216075671254ba2783dff8db096f73a6a2e0e330f74251490a127202a93b",
+    "FBX/UK_SSN_Swiftsure_STERN_PLANES_01.fbx": "a66891e08b47448453f303f05ccfeecb97c932acc8c343c0d79ce3ff4d773821",
+    "FBX/UK_SSN_Swiftsure_BOW_PLANES_01.fbx": "4e9a4c73958d0866a14a4d9d42bf979a7c90e057ec20e617f9ef4562c4a19b24",
+    "FBX/UK_SSN_Swiftsure_PERISCOPE_01.fbx": "0b5ccf7d8cee6f9b06783d55c67b8c516cd1f5b3106c587aeab48fa5c679ddb7",
+    "Textures/T_UK_SSN_Swiftsure_Hull_BaseColor.png": "c79c38c2bfc6255db91b270b3fb8f3c8be66a44ed3d3fe57841ff72efe0c573a"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -260,6 +260,116 @@
         16.154,
         17.066
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          38.963001,
+          -0.587813,
+          -0.783751
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          38.963001,
+          0.587813,
+          -0.783751
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          38.299801,
+          0.0,
+          -0.195938
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -37.719501,
+          0.0,
+          0.587813
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          14.093,
+          0.0,
+          4.114694
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          9.948,
+          0.979689,
+          -0.489844
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          9.948,
+          -0.979689,
+          -0.489844
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -40.952601,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Swiftsure_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          1.8238,
+          0.029391,
+          5.22536
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

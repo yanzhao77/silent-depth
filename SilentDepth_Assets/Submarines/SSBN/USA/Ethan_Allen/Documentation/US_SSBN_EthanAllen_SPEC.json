@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSBN_EthanAllen_MASTER.blend": "172c3a3b602583ac7028d4e7be7a1c2a8c71daeafc1d556e86704157b153311f",
-    "GLB/US_SSBN_EthanAllen.glb": "7bc800adc3e4de184475d95b261ab221bc8dec8c518a7484c0d41942664134c3",
-    "Collision/US_SSBN_EthanAllen_COLLISION.fbx": "7e153358101265f10deaf9ef0d4323a05df195a08560061e9a98544e43bf291b",
-    "FBX/US_SSBN_EthanAllen_LOD0.fbx": "18c80122c38ce2c503b7c34a849caeb64af7dee7d054e06440d38054171ee949",
-    "FBX/US_SSBN_EthanAllen_LOD1.fbx": "8617e645a47f911b3adecca775c86992d23347a514b3ce89c90a6df37283822e",
-    "FBX/US_SSBN_EthanAllen_LOD2.fbx": "514a8cbd01e50ee1b56cbf48def44c7b4952fc999f19fe21c97c39be24bd096a",
-    "FBX/US_SSBN_EthanAllen_LOD3.fbx": "545b641d70649b3aebed647147bbfdeb80a615c8258044a26ecdf4515f1cbb71",
-    "FBX/US_SSBN_EthanAllen_PROPULSOR_01.fbx": "97fdfe432f19a5a944bd54c3ea0dd820d1aec7e423bb25783bde537fa8c56f21",
-    "FBX/US_SSBN_EthanAllen_RUDDER_01.fbx": "5809065f667e119582ac25180c3f1ef014b658657c10b3adf3bf02b84d637cc0",
-    "FBX/US_SSBN_EthanAllen_STERN_PLANES_01.fbx": "0fdf63552894da1962b31a71d63ba8dd2fc883257f796c7cd85ba56e2646649c",
-    "FBX/US_SSBN_EthanAllen_BOW_PLANES_01.fbx": "d73233ca2a3428e9b6c82b4abc4b374168e1a7488cf485cb1ab86b36d939dfdc",
-    "FBX/US_SSBN_EthanAllen_PERISCOPE_01.fbx": "f7f95a2606f798ce965332b03dfa5789de66cc9c1308c0c9b1fbdcf7aef3019b",
-    "Textures/T_US_SSBN_EthanAllen_Hull_BaseColor.png": "b1f6fdaaf0036cd9a7c454be762283e5f33cd97e47877fad5e7f7e6267ff0e2f"
+    "Blend/US_SSBN_EthanAllen_MASTER.blend": "148e526d2cd87c361d119fac718a140ff2677fb09f0083453e22d6095b1961c8",
+    "GLB/US_SSBN_EthanAllen.glb": "adeb6888a3eee43a7995a97a2c96cd11280ef27ec6d9ee1959ae90df43d0334f",
+    "Collision/US_SSBN_EthanAllen_COLLISION.fbx": "c6a88fd53e9a7e1a4350b2929a1ebc7595ec99ebf0f4aa50b46c16be12b739d5",
+    "FBX/US_SSBN_EthanAllen_LOD0.fbx": "e0431c3b1d4f3806edbeec626c7d2b91f94fccc5c991945716afb739e38dcb24",
+    "FBX/US_SSBN_EthanAllen_LOD1.fbx": "a24145be71b961b19a0c8a3d81a4a259f08f6098192ab6aff0371a682ac8f147",
+    "FBX/US_SSBN_EthanAllen_LOD2.fbx": "f030ffb9f6f93d29e935ea868e22f8df3aef3c2f587c68338c0ccac963e3c727",
+    "FBX/US_SSBN_EthanAllen_LOD3.fbx": "d68070c4840e06f6c7acb6314e8fa6c390e6c4f20404954e2df5fa5538ba977d",
+    "FBX/US_SSBN_EthanAllen_PROPULSOR_01.fbx": "54b0e5fc50a122723e352a7f05453d98b07a0d6902293df3cb1e48dccadd8f6b",
+    "FBX/US_SSBN_EthanAllen_RUDDER_01.fbx": "732ea46aaab20f4c60d42a58afa1fdbf5e445d6b8c8303d213871432b26fd29f",
+    "FBX/US_SSBN_EthanAllen_STERN_PLANES_01.fbx": "592677b8cb337883dfc4781f3b0c34cd1f620fa03e16f82e21d27c555be9a5db",
+    "FBX/US_SSBN_EthanAllen_BOW_PLANES_01.fbx": "30035fc8ce2852bb30ee8a5913e365431d1fd0422496ce852efa11935525e86e",
+    "FBX/US_SSBN_EthanAllen_PERISCOPE_01.fbx": "1d62fb296bd7cf88bac6ee6fe32bd45e4e1a7ff6239198de540e80c2cfa06b64",
+    "Textures/T_US_SSBN_EthanAllen_Hull_BaseColor.png": "7fe689f66cd416fc1f4a79804e42c7d090bd0b5523a636a0d845004725886cf9"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -261,6 +261,116 @@
         16.88,
         17.675
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          58.7829,
+          -0.606,
+          -0.808
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          58.7829,
+          0.606,
+          -0.808
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          57.78234,
+          0.0,
+          -0.202
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -56.90685,
+          0.0,
+          0.606
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          21.2619,
+          0.0,
+          4.242
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.0084,
+          1.01,
+          -0.505
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.0084,
+          -1.01,
+          -0.505
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -61.78458,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_EthanAllen_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.75154,
+          0.0303,
+          5.38532
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

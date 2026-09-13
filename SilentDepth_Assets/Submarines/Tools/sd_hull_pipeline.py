@@ -33,6 +33,7 @@ from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
 import sd_hull_library as geo
+import sd_anchors
 
 GRAY = '--gray' in sys.argv
 #: Skips the renders while still writing every other artifact. Used when the
@@ -253,6 +254,14 @@ def dimension_checks(parts, params) -> dict:
     # Appendages may widen the silhouette, but not by an absurd factor.
     assert result['bounds_with_appendages_m'][1] < params['beam'] * 2.2, result
     return result
+
+
+def hull_bounds(parts):
+    """World-space bounding box of the hull mesh, for anchor placement."""
+    coords = [parts['hull'].matrix_world @ v.co for v in parts['hull'].data.vertices]
+    low = Vector((min(p.x for p in coords), min(p.y for p in coords), min(p.z for p in coords)))
+    high = Vector((max(p.x for p in coords), max(p.y for p in coords), max(p.z for p in coords)))
+    return low, high
 
 
 # --------------------------------------------------------------------------
@@ -534,7 +543,7 @@ def previews(scene, collection, params, colliders) -> None:
 # --------------------------------------------------------------------------
 # assembly / spec
 # --------------------------------------------------------------------------
-def assembly_document(params, parts, part_metrics) -> dict:
+def assembly_document(params, parts, part_metrics, sockets) -> dict:
     stern = round(geo.stern_x() + params.get('stern_plane_inset', 5.0), 3)
     prop_x = round(geo.stern_x() - params.get('shaft_inset', 3.4) * 0.35 - 1.0, 3)
     mast_x = params['masts'][0] if params.get('masts') else params['sail_x']
@@ -633,18 +642,11 @@ def assembly_document(params, parts, part_metrics) -> dict:
                 'collision': {'owner': 'none', 'strategy': 'none'},
             },
         ],
-        'sockets': [{
-            'id': 'torpedo_tube_01_muzzle',
-            'parent': 'root',
-            'purpose': 'torpedo_muzzle',
-            'sourceAnchor': f'SOCKET_SUB_{params["id"].split("_", 1)[1]}_TORPEDO_TUBE_01_MUZZLE',
-            'transform': {'translation': [round(hull_x, 6), 0.0, 0.0],
-                          'rotationDegrees': [0, 0, 0], 'scale': [1, 1, 1]},
-        }],
+        'sockets': sockets,
         'validation': {
             'requiredParts': ['propulsor_01', 'rudder_01', 'stern_planes_01',
                               'bow_planes_01', 'periscope_01'],
-            'requiredSockets': ['torpedo_tube_01_muzzle'],
+            'requiredSockets': sd_anchors.REQUIRED_SOCKETS,
         },
         'templateNotice': (
             'Batch A procedural hull. Source objects come from this MASTER; anchor names follow '
@@ -722,6 +724,16 @@ def run(params: dict) -> None:
     checks = geometry_checks(parts, params)
     checks['dimensions'] = dimension_checks(parts, params)
 
+    # The standard equipment anchors (DEC-002). They are built for every hull so
+    # the equipment layer never has to special-case one boat, and the audit goes
+    # into the validation document like every other check.
+    low, high = hull_bounds(parts)
+    anchor_rows, socket_entries = sd_anchors.build(
+        collections['EDITABLE'], params['id'], low, high, params['sail_height'])
+    outside = [row['anchor'] for row in anchor_rows if not row['inside_hull_envelope']]
+    assert not outside, f'anchors outside the hull envelope: {outside}'
+    checks['anchors'] = anchor_rows
+
     colliders = collision(collections['COLLISION'], materials, params)
     metrics, part_metrics = ([], {})
     if not GRAY:
@@ -743,7 +755,7 @@ def run(params: dict) -> None:
     bpy.ops.wm.save_as_mainfile(filepath=str(root / 'Blend' / f'{params["id"]}_MASTER.blend'))
 
     write(root / 'Documentation' / f'{params["id"]}_ASSEMBLY.json',
-          assembly_document(params, parts, part_metrics))
+          assembly_document(params, parts, part_metrics, socket_entries))
     spec = spec_document(params, metrics, root, checks)
     write(root / 'Documentation' / f'{params["id"]}_SPEC.json', spec)
     write(root / 'Validation' / f'{params["id"]}_VALIDATION.json', {
@@ -751,6 +763,7 @@ def run(params: dict) -> None:
         'geometry': checks,
         'exports': metrics,
         'part_exports': part_metrics,
+        'anchor_count': len(anchor_rows),
         'preview_engine': 'none' if NO_PREVIEW else preview_engine(),
         'ue427_executed': False,
         'reference_fidelity': spec['reference_fidelity'],

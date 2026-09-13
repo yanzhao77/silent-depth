@@ -5,7 +5,7 @@
     {
       "path": "TechTree/submarine_catalogue.json",
       "source": "Manifest/submarine_manifest.json",
-      "sha256": "9210569184871afb2182f563e3154577b7ac457f6282a4c2cc8717db32fd4f53"
+      "sha256": "42e2e845b8a0db1c1035763d224ab24bb6f7923a4890b2e76f04b0b6c601d362"
     },
     {
       "path": "TechTree/submarine_tree.json",
@@ -95,7 +95,7 @@
     {
       "path": "submarine_manifest.json",
       "source": "Manifest/submarine_manifest.json",
-      "sha256": "9210569184871afb2182f563e3154577b7ac457f6282a4c2cc8717db32fd4f53"
+      "sha256": "42e2e845b8a0db1c1035763d224ab24bb6f7923a4890b2e76f04b0b6c601d362"
     },
     {
       "path": "technology_tree.json",
@@ -106,6 +106,236 @@
       "path": "tier_manifest.json",
       "source": "TechnologyTree/tier_manifest.json",
       "sha256": "ecb70105553111a6ee6fa20e706b5610b12e6809297a78c28091a1dca1a83b2c"
+    },
+    {
+      "path": "TechTree/Sockets/CN_SSBN_Type092_ASSEMBLY.json",
+      "source": "Submarines/SSBN/China/Type_092/Documentation/CN_SSBN_Type092_ASSEMBLY.json",
+      "sha256": "4b3406ae70249b854ab394a7669a5c4f334478cfa90ded61926c5354d622f979"
+    },
+    {
+      "path": "TechTree/Sockets/CN_SSBN_Type094_ASSEMBLY.json",
+      "source": "Submarines/SSBN/China/Type_094/Documentation/CN_SSBN_Type094_ASSEMBLY.json",
+      "sha256": "3a058d01fba11a6e21ac5db01238dbbd07573b4aae8d456a6ac023fc4d54adb5"
+    },
+    {
+      "path": "TechTree/Sockets/CN_SSBN_Type094A_ASSEMBLY.json",
+      "source": "Submarines/SSBN/China/Type_094A/Documentation/CN_SSBN_Type094A_ASSEMBLY.json",
+      "sha256": "989363c549609165bd11f8415b103fd1edf36133959a2e24a78e8fa559a06e15"
+    },
+    {
+      "path": "TechTree/Sockets/CN_SSN_Type091_ASSEMBLY.json",
+      "source": "Submarines/SSN/China/Type_091/Documentation/CN_SSN_Type091_ASSEMBLY.json",
+      "sha256": "acd63d1ca9c2dff4b2ad47eb94bf1c5d82c2374a778710b866f6ef9c9f276b37"
+    },
+    {
+      "path": "TechTree/Sockets/CN_SSN_Type093_ASSEMBLY.json",
+      "source": "Submarines/SSN/China/Type_093/Documentation/CN_SSN_Type093_ASSEMBLY.json",
+      "sha256": "bcc88177fc9ccafb260f7a058a1cc87476218199039e38735560f6a75783997e"
+    },
+    {
+      "path": "TechTree/Sockets/CN_SSN_Type093A_ASSEMBLY.json",
+      "source": "Submarines/SSN/China/Type_093A/Documentation/CN_SSN_Type093A_ASSEMBLY.json",
+      "sha256": "704dab50e2e789cbe4ed903a7943a51f5b518a7af11b909f183f3d85adbe66aa"
+    },
+    {
+      "path": "TechTree/Sockets/CN_SSN_Type093B_ASSEMBLY.json",
+      "source": "Submarines/SSN/China/Type_093B/Documentation/CN_SSN_Type093B_ASSEMBLY.json",
+      "sha256": "783af85c84eb85c8d49da978c9f1a37c218733a49b04540fc39749c426095864"
+    },
+    {
+      "path": "TechTree/Sockets/CN_SSN_Type095_ASSEMBLY.json",
+      "source": "Submarines/SSN/China/Type_095/Documentation/CN_SSN_Type095_ASSEMBLY.json",
+      "sha256": "65fe86619273f1a1538a306dcd4716404bfa8f6b566f42ef26a8aec9323b5ad8"
+    },
+    {
+      "path": "TechTree/Sockets/FR_SSBN_LeRedoutable_ASSEMBLY.json",
+      "source": "Submarines/SSBN/France/Le_Redoutable/Documentation/FR_SSBN_LeRedoutable_ASSEMBLY.json",
+      "sha256": "c95af1b686045d679da2da736b97559d24f312e0c1d703f166ab5f2f58c08afd"
+    },
+    {
+      "path": "TechTree/Sockets/FR_SSBN_LeTriomphant_ASSEMBLY.json",
+      "source": "Submarines/SSBN/France/Le_Triomphant/Documentation/FR_SSBN_LeTriomphant_ASSEMBLY.json",
+      "sha256": "d3a6047e3bd645bf4bf6e8ef20d719b0c696408705848eebfa3d738f2019e182"
+    },
+    {
+      "path": "TechTree/Sockets/FR_SSN_Rubis_ASSEMBLY.json",
+      "source": "Submarines/SSN/France/Rubis/Documentation/FR_SSN_Rubis_ASSEMBLY.json",
+      "sha256": "517fc02ab96fd609d8c272979154cd617e4998b5572cd2593655ca6c5ed6bfd9"
+    },
+    {
+      "path": "TechTree/Sockets/FR_SSN_Suffren_ASSEMBLY.json",
+      "source": "Submarines/SSN/France/Suffren/Documentation/FR_SSN_Suffren_ASSEMBLY.json",
+      "sha256": "fd82919b8b6066e3d4739af0a3ee230232f1fb3c297858d5c7d9e562388ffeff"
+    },
+    {
+      "path": "TechTree/Sockets/IN_SSBN_Arighaat_ASSEMBLY.json",
+      "source": "Submarines/SSBN/India/Arighaat/Documentation/IN_SSBN_Arighaat_ASSEMBLY.json",
+      "sha256": "3a9589bafba82f4bcb120c26337751261a494962b1a363c9305768bfb1d3dccd"
+    },
+    {
+      "path": "TechTree/Sockets/IN_SSBN_Arihant_ASSEMBLY.json",
+      "source": "Submarines/SSBN/India/Arihant/Documentation/IN_SSBN_Arihant_ASSEMBLY.json",
+      "sha256": "903a3fa65456df008e149d3659d7b022dd92ea41f2f9b9bcf2a6c1f718b1528a"
+    },
+    {
+      "path": "TechTree/Sockets/IN_SSBN_S4_ASSEMBLY.json",
+      "source": "Submarines/SSBN/India/S4/Documentation/IN_SSBN_S4_ASSEMBLY.json",
+      "sha256": "97ad8bf3f0ade393a7f2b009ed20ebb7524b8ad656ffe9a54ddf977b6f1a7c28"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_Borei_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/Borei/Documentation/RU_SSBN_Borei_ASSEMBLY.json",
+      "sha256": "0c277645359920d2918a921289b3226c9773b3c61c0473a41a68a5a254f1b9fb"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_BoreiA_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/BoreiA/Documentation/RU_SSBN_BoreiA_ASSEMBLY.json",
+      "sha256": "240115c78bb55eef1ebdea1fbf73881e879ef5b95e41387dd27115b4024115a9"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_DeltaI_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/Delta_I/Documentation/RU_SSBN_DeltaI_ASSEMBLY.json",
+      "sha256": "da024ec4c255d49029e1c09d7b26cc2b99536e90ade45df3853cc2d824a17e81"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_DeltaII_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/Delta_II/Documentation/RU_SSBN_DeltaII_ASSEMBLY.json",
+      "sha256": "c7746e05bd9dc15d7ef9f9f46212951f6ed90f36403e8111e9b8ba92132a8d6d"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_DeltaIII_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/Delta_III/Documentation/RU_SSBN_DeltaIII_ASSEMBLY.json",
+      "sha256": "6ecdcb8af4d728065ae6178ab82e8128133221e6b6db2bc0b6ebea6831213c20"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_DeltaIV_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/Delta_IV/Documentation/RU_SSBN_DeltaIV_ASSEMBLY.json",
+      "sha256": "99123f70cdebcd2cd4a3d77c21f67a38ad135990f82de2e29df15c5a82704014"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_Hotel_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/Hotel/Documentation/RU_SSBN_Hotel_ASSEMBLY.json",
+      "sha256": "ca2d8f3bdb3d6b7828f80db838b432bdac1c84439dc2ff8409bb8306f5be3176"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_Typhoon_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/Typhoon_Project941/Documentation/RU_SSBN_Typhoon_ASSEMBLY.json",
+      "sha256": "f14e57de399cc573325d0b733941c9cab14388e65380e9224b706167b87f5934"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSBN_Yankee_ASSEMBLY.json",
+      "source": "Submarines/SSBN/Russia/Yankee/Documentation/RU_SSBN_Yankee_ASSEMBLY.json",
+      "sha256": "cbabc0ba731972a1ed97cdb341033e025e44956ac163321431ba5542bf4fb476"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSN_Sierra_ASSEMBLY.json",
+      "source": "Submarines/SSN/Russia/Sierra/Documentation/RU_SSN_Sierra_ASSEMBLY.json",
+      "sha256": "48762f62c5554d155862ffbe43e3730533e58bc4e641a67d28548956b424b64d"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSN_Victor_ASSEMBLY.json",
+      "source": "Submarines/SSN/Russia/Victor/Documentation/RU_SSN_Victor_ASSEMBLY.json",
+      "sha256": "a1f6f3a417510db70477644e5f7e254cfa29b19a59d2954604ab44922e114a76"
+    },
+    {
+      "path": "TechTree/Sockets/RU_SSN_YasenM_ASSEMBLY.json",
+      "source": "Submarines/SSN/Russia/YasenM/Documentation/RU_SSN_YasenM_ASSEMBLY.json",
+      "sha256": "d25b51665e3c156d4e8974d7b67a6b3dc20a138fa242529e833568b03ff05e69"
+    },
+    {
+      "path": "TechTree/Sockets/UK_SSBN_Resolution_ASSEMBLY.json",
+      "source": "Submarines/SSBN/UK/Resolution/Documentation/UK_SSBN_Resolution_ASSEMBLY.json",
+      "sha256": "0ad6785fb7b46643d45e74994bcc5fa3dc5fb198c8e241f53a0d8d6710e2e170"
+    },
+    {
+      "path": "TechTree/Sockets/UK_SSBN_Vanguard_ASSEMBLY.json",
+      "source": "Submarines/SSBN/UK/Vanguard/Documentation/UK_SSBN_Vanguard_ASSEMBLY.json",
+      "sha256": "f1cf7af5ca34f6aae31b621b8db4b99c4ddd6f4d3de4267e63e16344b31e4af4"
+    },
+    {
+      "path": "TechTree/Sockets/UK_SSN_Astute_ASSEMBLY.json",
+      "source": "Submarines/SSN/UK/Astute/Documentation/UK_SSN_Astute_ASSEMBLY.json",
+      "sha256": "e2d457f2df5304bbcdf301b69569b18fb0e418faf0c965ca8012fd2f23ba834e"
+    },
+    {
+      "path": "TechTree/Sockets/UK_SSN_Dreadnought_ASSEMBLY.json",
+      "source": "Submarines/SSN/UK/Dreadnought/Documentation/UK_SSN_Dreadnought_ASSEMBLY.json",
+      "sha256": "f6e90db7b67c98a48ac1d5ceab79067f070f6e6f5694d2edacf1e0ce56e70648"
+    },
+    {
+      "path": "TechTree/Sockets/UK_SSN_Swiftsure_ASSEMBLY.json",
+      "source": "Submarines/SSN/UK/Swiftsure/Documentation/UK_SSN_Swiftsure_ASSEMBLY.json",
+      "sha256": "159f8bc0c871fa321f48b678bf9e099c7b4160f398b2e5c3193bcef0471d156c"
+    },
+    {
+      "path": "TechTree/Sockets/UK_SSN_Trafalgar_ASSEMBLY.json",
+      "source": "Submarines/SSN/UK/Trafalgar/Documentation/UK_SSN_Trafalgar_ASSEMBLY.json",
+      "sha256": "5f14a0e4e0cea1aab94cb3afde1ddb8717831b9c1f33aa17914bcb9fa421dea4"
+    },
+    {
+      "path": "TechTree/Sockets/UK_SSN_Valiant_ASSEMBLY.json",
+      "source": "Submarines/SSN/UK/Valiant/Documentation/UK_SSN_Valiant_ASSEMBLY.json",
+      "sha256": "45945ff187070b13cfafe98614b75b8cc2830d2fc63f7a3fc89eb1cf58fa1ec5"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSBN_BenjaminFranklin_ASSEMBLY.json",
+      "source": "Submarines/SSBN/USA/Benjamin_Franklin/Documentation/US_SSBN_BenjaminFranklin_ASSEMBLY.json",
+      "sha256": "2c1e03c9f3d0c3b52567429967fc19ecdbb699f10cb8d196a32983550265a93e"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSBN_Columbia_ASSEMBLY.json",
+      "source": "Submarines/SSBN/USA/Columbia/Documentation/US_SSBN_Columbia_ASSEMBLY.json",
+      "sha256": "ce16953a65821466b90c9819e2b3f13529a65983fc7712baac2eede5545964cd"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSBN_EthanAllen_ASSEMBLY.json",
+      "source": "Submarines/SSBN/USA/Ethan_Allen/Documentation/US_SSBN_EthanAllen_ASSEMBLY.json",
+      "sha256": "61646e0c5189b624ea8d1a09cdb9facac5532c99a3c679258d92ac4cc8ba118b"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSBN_GeorgeWashington_ASSEMBLY.json",
+      "source": "Submarines/SSBN/USA/George_Washington/Documentation/US_SSBN_GeorgeWashington_ASSEMBLY.json",
+      "sha256": "033bb7a3bd52790829e980c82f4ce6c174be85b33638dea5175e597b90fb938d"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSBN_JamesMadison_ASSEMBLY.json",
+      "source": "Submarines/SSBN/USA/James_Madison/Documentation/US_SSBN_JamesMadison_ASSEMBLY.json",
+      "sha256": "93f4db52487bc3abe778b455f121779b8ee3450338a8ccd9d415c533ef3be4da"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSBN_Lafayette_ASSEMBLY.json",
+      "source": "Submarines/SSBN/USA/Lafayette/Documentation/US_SSBN_Lafayette_ASSEMBLY.json",
+      "sha256": "52e3343a09514e72c989d4c26bb92659dab510981f9a27ac18be8c440d4ce303"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSBN_Ohio_ASSEMBLY.json",
+      "source": "Submarines/SSBN/USA/Ohio/Documentation/US_SSBN_Ohio_ASSEMBLY.json",
+      "sha256": "bebbfbf816b3626a3de6ec0265676db8acccd175efba2c87ed67f7096653e48e"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSN_LosAngeles_ASSEMBLY.json",
+      "source": "Submarines/SSN/USA/Los_Angeles/Documentation/US_SSN_LosAngeles_ASSEMBLY.json",
+      "sha256": "7fd254f9ebec61752c9578ea7c4dbc385a764bc3209a4b424621d70514b3c3a3"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSN_Seawolf_ASSEMBLY.json",
+      "source": "Submarines/SSN/USA/Seawolf/Documentation/US_SSN_Seawolf_ASSEMBLY.json",
+      "sha256": "0776a753b8ffcac9d5e2644683d01fb0b8498a4756310f00fa0f1e39af86efcf"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSN_Skipjack_ASSEMBLY.json",
+      "source": "Submarines/SSN/USA/Skipjack/Documentation/US_SSN_Skipjack_ASSEMBLY.json",
+      "sha256": "0d36ea6c1524559fdd826382dfb897e0c5635a3ae20af81992b6b371475673cf"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSN_Sturgeon_ASSEMBLY.json",
+      "source": "Submarines/SSN/USA/Sturgeon/Documentation/US_SSN_Sturgeon_ASSEMBLY.json",
+      "sha256": "556cd61856dd721be93701219e125ab8004d757b57056d42e0936e1b3f81b82c"
+    },
+    {
+      "path": "TechTree/Sockets/US_SSN_Virginia_ASSEMBLY.json",
+      "source": "Submarines/SSN/USA/Virginia/Documentation/US_SSN_Virginia_ASSEMBLY.json",
+      "sha256": "95dbdbdaebf1703e367b65f279f1bbcb4a8af0702d9a0168759c8034a3ae4c8d"
     }
   ]
 }

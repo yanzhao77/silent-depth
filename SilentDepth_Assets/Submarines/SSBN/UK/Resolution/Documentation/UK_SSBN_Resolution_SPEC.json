@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/UK_SSBN_Resolution_MASTER.blend": "db47b75dafd21fd38002ae64fb8a191b02969740932fe58fe52484cc239234cd",
-    "GLB/UK_SSBN_Resolution.glb": "65816794ec611e28dddb86e283628dabb2c3cbb2e3f9d47d93fbb1920369b655",
-    "Collision/UK_SSBN_Resolution_COLLISION.fbx": "0c40eaed2b60b56f06e747724955c0546cb02d4eaa5b1d143b2e77b706cfa5ad",
-    "FBX/UK_SSBN_Resolution_LOD0.fbx": "35b562bfef92c0944027cb64fb919c08f6062096b211fc5369668b55af839187",
-    "FBX/UK_SSBN_Resolution_LOD1.fbx": "70b5ed882eef02a253c56d03076cbd882b8537a6c427c87bb85931e20a2ed065",
-    "FBX/UK_SSBN_Resolution_LOD2.fbx": "2a70e260fbc276f81614eb4bf8c3a2bd5618a541272b9028678de7905a796383",
-    "FBX/UK_SSBN_Resolution_LOD3.fbx": "9fadc22fac68ccd6cc6b154175d10706b16427c515ce2373a9c1ebcd86c0cff1",
-    "FBX/UK_SSBN_Resolution_PROPULSOR_01.fbx": "703e23cfe3ca53cfcdb67a2719c591a646a1a4b1d8867d9a8172868bac4ff35b",
-    "FBX/UK_SSBN_Resolution_RUDDER_01.fbx": "919f64220dbddd05c936e960970ba3eeeb742105bbf84c08f63c749ec870a7c2",
-    "FBX/UK_SSBN_Resolution_STERN_PLANES_01.fbx": "322f6bb1335c857455ea5b5b879cbd3802e70ce98f78f6b1eb597d90ca53121e",
-    "FBX/UK_SSBN_Resolution_BOW_PLANES_01.fbx": "6a918b7c8c6503147ff411ee82586bfbccc00d34005babcc57b142c745bed7b8",
-    "FBX/UK_SSBN_Resolution_PERISCOPE_01.fbx": "947c2ae304c46225649bb0f8a2faa568322b6b129b06546ec5eaa120d82b4e8b",
-    "Textures/T_UK_SSBN_Resolution_Hull_BaseColor.png": "68caa16111a13a17c9814dcec09b3685f202b688bb93a2c9f9648f1226d51194"
+    "Blend/UK_SSBN_Resolution_MASTER.blend": "ad31994824c0e33f927a49860c1f89b1b3dedb81cf701b76a0c40e78f86df3c7",
+    "GLB/UK_SSBN_Resolution.glb": "83444d9ca55d5a43c8e37a7904127b1e59de2b4db3c38fe2091d288ff0b69d8a",
+    "Collision/UK_SSBN_Resolution_COLLISION.fbx": "ed4da375f4be3dc5e5b6c37d93cea3958aabee241ce6635607bc739810bf5160",
+    "FBX/UK_SSBN_Resolution_LOD0.fbx": "670a56ad408057b6e883fede26f3a1d06b15458480e4b78a2a90d1cc5f348748",
+    "FBX/UK_SSBN_Resolution_LOD1.fbx": "454c0779eec8a2fe3306ed75f14b02c26c5774d5028b63dcb27aed6e8f9db358",
+    "FBX/UK_SSBN_Resolution_LOD2.fbx": "f06f5c4fab1459a7da4d51b2a7cd5c7aad1e9e1c7d7ee0eef50a7863275d45de",
+    "FBX/UK_SSBN_Resolution_LOD3.fbx": "0f074538cb2529313b1d5819c89a82a7b6caeefa209899fa11e6e62d71b7e1ae",
+    "FBX/UK_SSBN_Resolution_PROPULSOR_01.fbx": "ae96c0b286af920f0ebea7595c9eac317f6fd2a59e945c40171e99be16a93ec6",
+    "FBX/UK_SSBN_Resolution_RUDDER_01.fbx": "a42cf4ca57fb7389a58560e8635af9208f4fd1a58add772aa7a8abe27c012993",
+    "FBX/UK_SSBN_Resolution_STERN_PLANES_01.fbx": "dcced4e5f07fc3272dfc686e3de5ace2e5b682e1e20f7b1410f6388981035407",
+    "FBX/UK_SSBN_Resolution_BOW_PLANES_01.fbx": "877a3dc94c8cae90192a7050f5c93c632b05b79b682ea2537a530e712e0be5f5",
+    "FBX/UK_SSBN_Resolution_PERISCOPE_01.fbx": "8599e742466f6025bcb5a62b9446ff038aa8e89fa6c9ef8ce25076c77541be5d",
+    "Textures/T_UK_SSBN_Resolution_Hull_BaseColor.png": "c03f5a4c39ad71cd85374bfd4155df2b5f983668928bc5cb860efcce9705e357"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -271,6 +271,116 @@
         16.713,
         17.528
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          61.1,
+          -0.6,
+          -0.8
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          61.1,
+          0.6,
+          -0.8
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          60.06,
+          0.0,
+          -0.2
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -59.15,
+          0.0,
+          0.6
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          22.1,
+          0.0,
+          4.2
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.6,
+          1.0,
+          -0.5
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.6,
+          -1.0,
+          -0.5
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -64.22,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Resolution_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.86,
+          0.03,
+          5.332
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

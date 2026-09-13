@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSN_Skipjack_MASTER.blend": "0a8c9bec9540b35c0eb474fb06f98cdcbe638f72302f942d8677210a1fc64568",
-    "GLB/US_SSN_Skipjack.glb": "35c40eac1e43b9fc65e63a960139c3124b05f8a0f8eef64a30f5832f5647999f",
-    "Collision/US_SSN_Skipjack_COLLISION.fbx": "8a8a410040c719ff6c71fa9ab0290ba45b3397f42791540f3f61dfa5b33172e4",
-    "FBX/US_SSN_Skipjack_LOD0.fbx": "aa8d3ca76e1eabc6e046f0fd64949cde3ff3b00b0e5580390806a368dce6aaed",
-    "FBX/US_SSN_Skipjack_LOD1.fbx": "aa3601da604b2150b78c228d5bc5d13870731c8b4a50bac299125df470735e56",
-    "FBX/US_SSN_Skipjack_LOD2.fbx": "569365804e76dcc8e27524dc19cde23587d440aeaa072acb50cf18a1a4f39b1e",
-    "FBX/US_SSN_Skipjack_LOD3.fbx": "b3820ead450678cf33f09819e7749f35c3d0f7d309e54980d5cff705e88f43d1",
-    "FBX/US_SSN_Skipjack_PROPULSOR_01.fbx": "6dfa718f1623adab5d425af3eb01c7439c1f2f53dac6a57ce81d0a7f6f2c3bf5",
-    "FBX/US_SSN_Skipjack_RUDDER_01.fbx": "cdd341922ff9c65741c70d6aa8ca62fc2f03f8140b6b27d549ea5fcfd43af1fb",
-    "FBX/US_SSN_Skipjack_STERN_PLANES_01.fbx": "e6cfd936db2cf122e7f13791e8004969e88069d4956a8453be4afa9ecf1cea02",
-    "FBX/US_SSN_Skipjack_BOW_PLANES_01.fbx": "2468e5a85ae9b36512f41c4236849fb1c4187190fd1b19b3169f550d3f2e5c5a",
-    "FBX/US_SSN_Skipjack_PERISCOPE_01.fbx": "5009159ccc923f1b1763809a04c8c49c916817f531b71f85b0c8411cf02b8ea7",
-    "Textures/T_US_SSN_Skipjack_Hull_BaseColor.png": "d266a52b66b4b691e392411df6dba2651932112384e79a8ee0fe76f929e3b13a"
+    "Blend/US_SSN_Skipjack_MASTER.blend": "0ff51fd4b107197cb0b8103356f84a3182c544cf727265f53e2a8ec7ffd662ca",
+    "GLB/US_SSN_Skipjack.glb": "8cbc63826d9e0c0f6d191b36191c44425e85240b1b9a4c41f9cca0d1eb1c8dd6",
+    "Collision/US_SSN_Skipjack_COLLISION.fbx": "e1b273b60cc6fec4d1d2a5d6af34a38b32961827a5c25b50c2fd4e412bd23d50",
+    "FBX/US_SSN_Skipjack_LOD0.fbx": "9bef38b99ea370e7fbfcad9b7a267acfbbddef50a1bf8e2887ee718dd56e4356",
+    "FBX/US_SSN_Skipjack_LOD1.fbx": "c2cbc0fdd6161e8cc0c0a6720acaed684f8a89737b7b37ad7674abe13f1b6feb",
+    "FBX/US_SSN_Skipjack_LOD2.fbx": "489a1085531f0af822383a6b2da23402444c96b72d2d382301314013380191e9",
+    "FBX/US_SSN_Skipjack_LOD3.fbx": "34aaa93122403ad0de6a33ff60df7da66d0af8a7a71195b2e2d2ca326ccda356",
+    "FBX/US_SSN_Skipjack_PROPULSOR_01.fbx": "c23e0fac8c4d89cda6b4dc7c3fad0d57319bc6fa6c9c8f7cb67a889bc9ebf8c5",
+    "FBX/US_SSN_Skipjack_RUDDER_01.fbx": "5cc09eddd7b12199994a3400223c24f37c6f6e3a8e621a353ce2a7841c14d215",
+    "FBX/US_SSN_Skipjack_STERN_PLANES_01.fbx": "064af27bab59f09ab3438abffd5178f50f1fbcd536524bc9d5161e6b2e887092",
+    "FBX/US_SSN_Skipjack_BOW_PLANES_01.fbx": "e208b22fcc7ac14d1f18950f8c9114a3e304c38a72b7197872a56a04b3678010",
+    "FBX/US_SSN_Skipjack_PERISCOPE_01.fbx": "8655c482d4f72b0383aaa280a609cc16c05a952071443880e90636173b409ed7",
+    "Textures/T_US_SSN_Skipjack_Hull_BaseColor.png": "8dea3cccac8f2ad63095881b41ed86a2de5a8896a72c8f6917638bedcbb84e48"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -265,6 +265,116 @@
         15.9,
         16.842
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          36.0537,
+          -0.578576,
+          -0.771435
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          36.0537,
+          0.578576,
+          -0.771435
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          35.44002,
+          0.0,
+          -0.192859
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -34.90305,
+          0.0,
+          0.578576
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          13.0407,
+          0.0,
+          4.050034
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          9.2052,
+          0.964294,
+          -0.482147
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          9.2052,
+          -0.964294,
+          -0.482147
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -37.89474,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Skipjack_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          1.68762,
+          0.028929,
+          5.1429
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

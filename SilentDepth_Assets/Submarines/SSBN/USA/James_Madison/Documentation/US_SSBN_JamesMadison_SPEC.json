@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSBN_JamesMadison_MASTER.blend": "43f8b6f42ebf8fdb1c3810952320e4bd7d7b47d817a9d2771f71eb348a0cf6f9",
-    "GLB/US_SSBN_JamesMadison.glb": "bc63ce110e066da62809778da5f144f9adb1891c5426eeda06b22cdac4b89c9b",
-    "Collision/US_SSBN_JamesMadison_COLLISION.fbx": "0c5df1b9e814060843f6ec5c76958dda1d8ac769052cd6382f0291bd028a5dc4",
-    "FBX/US_SSBN_JamesMadison_LOD0.fbx": "02048b231d8b86962c64aee65dca27aa1c25dab7e6a2bc60ec7367fccea1cbc9",
-    "FBX/US_SSBN_JamesMadison_LOD1.fbx": "1c122a02aada9f2acdbae5121b7051fef32da0f2346c281ac2c2a671da388b6d",
-    "FBX/US_SSBN_JamesMadison_LOD2.fbx": "e211288e2ec03cb7fa1a0e94d626619f21b6f3c90df1d65ee1be484fc8bf5947",
-    "FBX/US_SSBN_JamesMadison_LOD3.fbx": "c4af8100a0fb389fe29b0dd97a9add12bb83a8f1075efa830247341167a7a93f",
-    "FBX/US_SSBN_JamesMadison_PROPULSOR_01.fbx": "2d38f9e3fbf2098822740a9a810976d27d76ad61aba7d0c57edaa973d536bc9e",
-    "FBX/US_SSBN_JamesMadison_RUDDER_01.fbx": "71e9ec38ce2857a417fe945ff522a0fbf3dd6b4d3a3bad8235a2916530f7452f",
-    "FBX/US_SSBN_JamesMadison_STERN_PLANES_01.fbx": "72a706a341e6822e6ed3b1657f02c34ac4179edb2dcffa6ffef2fbab80badd52",
-    "FBX/US_SSBN_JamesMadison_BOW_PLANES_01.fbx": "93e3b23180129f8a36a5faf8a545f77b041922e0faa22aa86334234a5e896e73",
-    "FBX/US_SSBN_JamesMadison_PERISCOPE_01.fbx": "716a646127201dcd452e5777dc166c3250d4776008486740337a0c27dc9dbe8d",
-    "Textures/T_US_SSBN_JamesMadison_Hull_BaseColor.png": "135583d53c5c3929580535ad6071422bac6927790bf2edd08f90cbacf3e5c597"
+    "Blend/US_SSBN_JamesMadison_MASTER.blend": "d9cdd1458506f9a2057d64dbf811f4e7b12d33f3d6fc199431acc872873aa7be",
+    "GLB/US_SSBN_JamesMadison.glb": "848211957db37366d6aba0a0a047bbaea388ee6d6b78a7a6b8de1907a575e12f",
+    "Collision/US_SSBN_JamesMadison_COLLISION.fbx": "500493d3cf969e7256ce4e156f9e0eed23a80f6369d79ec4fd372d0a8d2ab70d",
+    "FBX/US_SSBN_JamesMadison_LOD0.fbx": "3ef049a8921b365f5b4038e0fbabc883ec3d2027ab25c56f3c26461b3ca66058",
+    "FBX/US_SSBN_JamesMadison_LOD1.fbx": "94584b9f043146c16cdd458d3f9dc97aff953fab73c2b4387b933977dc49c60d",
+    "FBX/US_SSBN_JamesMadison_LOD2.fbx": "4ad402d300c4924952831c633db04737831a25e58e60de3f43fe26e5400a1843",
+    "FBX/US_SSBN_JamesMadison_LOD3.fbx": "9d104ccac9819277ad19ddf52b6e8f736c5fcc95720fdbf246f231c446d226d9",
+    "FBX/US_SSBN_JamesMadison_PROPULSOR_01.fbx": "fc580596995b8a2756b534de57c8079f21b455acb98d67c4cb33c6f30262fcfb",
+    "FBX/US_SSBN_JamesMadison_RUDDER_01.fbx": "e2667f372ad619c231715a8ccfc2a76dc211730ac39b92f74eaa8ab46c18273b",
+    "FBX/US_SSBN_JamesMadison_STERN_PLANES_01.fbx": "072aece63f876ab8d79691fc4224ad319b75035092fd0be766e5029d1f1cf50d",
+    "FBX/US_SSBN_JamesMadison_BOW_PLANES_01.fbx": "5e40686ca38120d7d2e4c9c7793ab9a6a5d0c5e1697d22f72510c4999fc9ba05",
+    "FBX/US_SSBN_JamesMadison_PERISCOPE_01.fbx": "5b8c671eb7d7c5b71e773865adec250154c691446573836299310915740d871a",
+    "Textures/T_US_SSBN_JamesMadison_Hull_BaseColor.png": "43b67e27c2b6717e08b99afc113e60ef712353b3069f70c16888d73fc272ece4"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -261,6 +261,116 @@
         16.713,
         17.528
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          61.1,
+          -0.6,
+          -0.8
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          61.1,
+          0.6,
+          -0.8
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          60.06,
+          0.0,
+          -0.2
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -59.15,
+          0.0,
+          0.6
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          22.1,
+          0.0,
+          4.2
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.6,
+          1.0,
+          -0.5
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          15.6,
+          -1.0,
+          -0.5
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -64.22,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_JamesMadison_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.86,
+          0.03,
+          5.332
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

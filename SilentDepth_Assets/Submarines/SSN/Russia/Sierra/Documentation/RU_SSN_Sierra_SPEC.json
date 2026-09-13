@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/RU_SSN_Sierra_MASTER.blend": "07430ca2c4d18441e675c9f5eacb76831fd283c7eef270230b3e24d9d4cc11a8",
-    "GLB/RU_SSN_Sierra.glb": "53de683edf04494e72e0694f821f70d9c9d73e05827acae0d58d2e00fb4fc823",
-    "Collision/RU_SSN_Sierra_COLLISION.fbx": "ed876c11b4cd343999c6cd3d1037accc84ed9c866cba1d62386bd0cb72ebac3d",
-    "FBX/RU_SSN_Sierra_LOD0.fbx": "fd201c8b0a9d6b4a2414617147211d50f28b40cb868966648b1a2e92c24cdb23",
-    "FBX/RU_SSN_Sierra_LOD1.fbx": "d871f13a977d4df2189413af51e97af7d532a54904b3f38bfc6093b1daddfc3b",
-    "FBX/RU_SSN_Sierra_LOD2.fbx": "689438d77ab6d13b82b5b35a62d8dc5abcd9e340648ea3b30f776018cf0fbb3c",
-    "FBX/RU_SSN_Sierra_LOD3.fbx": "c912fce367641a3bf5ff253e7fe515a545a4de4d78cadb3d1731b93a29669666",
-    "FBX/RU_SSN_Sierra_PROPULSOR_01.fbx": "5496a5a5ba7fc57e4b5a010729dc3b194825c09295b95131bcf873af9a224406",
-    "FBX/RU_SSN_Sierra_RUDDER_01.fbx": "f290d1742e9f388b42aadb4744b17b8d249b878bbd8b97c935945d5f0e0bc83b",
-    "FBX/RU_SSN_Sierra_STERN_PLANES_01.fbx": "93b7c75ecc334c9714093dd7ba02108cfede8d06df126fb363d850c6a5479298",
-    "FBX/RU_SSN_Sierra_BOW_PLANES_01.fbx": "6544998adafab35815b2f000d3905a90f3d6c7f735eec3f6e46f522240bb3982",
-    "FBX/RU_SSN_Sierra_PERISCOPE_01.fbx": "e49bf29356fbc6e60503dbfcdbee83a0a77253baeb51fae42380c6e40921a3ba",
-    "Textures/T_RU_SSN_Sierra_Hull_BaseColor.png": "65879e5e4efefa0413ffa6a48d4c53a85c2bae45b13722bba81be75113395c24"
+    "Blend/RU_SSN_Sierra_MASTER.blend": "6c6efe8352918b53df9a99d78fa7f7a3c5b2bfd93f9d4cde46abfd2a8999a2ea",
+    "GLB/RU_SSN_Sierra.glb": "d150d7b02fc09efba05f804a45c5fb6ba7dd8d90fde37c522d2761157cf32b02",
+    "Collision/RU_SSN_Sierra_COLLISION.fbx": "28e2f0024c68f8d918a16f9d713b189774ff11964f955dfb9d93e1f38719f603",
+    "FBX/RU_SSN_Sierra_LOD0.fbx": "770ac927bd4455db1a50c22c3f12ee0f17347a180c2e4f84169fa2b938db765c",
+    "FBX/RU_SSN_Sierra_LOD1.fbx": "a0805a5a9915800889741a16a70fc00b13e18cf13f729912934a8b665950eca0",
+    "FBX/RU_SSN_Sierra_LOD2.fbx": "c95ed58789034eec5f02d97c4ee3b3be1cef2b192e18414db18b243ca16cd288",
+    "FBX/RU_SSN_Sierra_LOD3.fbx": "2209a7d54953fd82990efe61d35b296e2848b36a33362ce9339a1208e38ab9c5",
+    "FBX/RU_SSN_Sierra_PROPULSOR_01.fbx": "0064796c2ec8b95fa6d6a89159537bd897c78566f3decf54d43ef9e4d007b4d6",
+    "FBX/RU_SSN_Sierra_RUDDER_01.fbx": "68ce3ddfa5e1bccbccf22886e3bb8ee75852ce0ab147a3ee56ddafde4fa942ad",
+    "FBX/RU_SSN_Sierra_STERN_PLANES_01.fbx": "4dd6a97b7cd11fef21f3f8f13328af2d39684d968ba3c3a92c969fda2333ea53",
+    "FBX/RU_SSN_Sierra_BOW_PLANES_01.fbx": "c2354bafc1cd1164f3d893768fbd53a77ca56b807a322e40eacb8ca3bca8e0aa",
+    "FBX/RU_SSN_Sierra_PERISCOPE_01.fbx": "d55f5342a64165c6d92eba66796456569ad628fcc83511c5f8dc5a1fa5ed8c05",
+    "Textures/T_RU_SSN_Sierra_Hull_BaseColor.png": "6e2398abf84cefaefa24453a0511675926e4d11940c1b7799af59de828a2c13c"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -265,6 +265,116 @@
         20.243,
         20.664
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          50.365202,
+          -0.736566,
+          -0.982088
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          50.365202,
+          0.736566,
+          -0.982088
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          49.507922,
+          0.0,
+          -0.245522
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -48.757802,
+          0.0,
+          0.736566
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          18.217201,
+          0.0,
+          5.155962
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          12.8592,
+          1.22761,
+          -0.613805
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          12.8592,
+          -1.22761,
+          -0.613805
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -52.937042,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Sierra_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.35752,
+          0.036828,
+          6.54782
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

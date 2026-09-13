@@ -13,7 +13,7 @@
  *   node tools/ue4/sync-tech-tree-data.mjs --check   # fail on any drift
  */
 import { createHash } from 'node:crypto';
-import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, readdir, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -23,6 +23,39 @@ const assetRoot = path.join(repoRoot, 'SilentDepth_Assets');
 const configRoot = path.join(repoRoot, 'ue4', 'SilentDepthUE', 'Config', 'SilentDepth');
 const manifestPath = path.join(configRoot, '_sync_manifest.json');
 const manifestSchema = 'silent-depth-runtime-data-sync-v1';
+
+/**
+ * Every assembly document under Submarines/, discovered rather than listed.
+ *
+ * SOCKET-001 gave the whole library its anchor set, and one hand-written line
+ * per hull would be forty chances to forget one. The loader keys bindings by
+ * platform id, so the file name carries the id and the folder carries nothing.
+ */
+async function discoverAssemblyDocuments(root) {
+  const found = [];
+  const walk = async (directory) => {
+    let entries;
+    try {
+      entries = await readdir(directory, { withFileTypes: true });
+    } catch {
+      return;
+    }
+    for (const entry of entries) {
+      const full = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        await walk(full);
+      } else if (entry.name.endsWith('_ASSEMBLY.json')) {
+        found.push({
+          path: `TechTree/Sockets/${entry.name}`,
+          source: path.relative(assetRoot, full).split(path.sep).join('/'),
+        });
+      }
+    }
+  };
+  await walk(root);
+  found.sort((a, b) => a.path.localeCompare(b.path));
+  return found;
+}
 
 /**
  * path: destination relative to Config/SilentDepth.
@@ -99,6 +132,15 @@ const sources = [
   { path: 'technology_tree.json', source: 'TechnologyTree/technology_tree.json' },
   { path: 'tier_manifest.json', source: 'TechnologyTree/tier_manifest.json' },
 ];
+
+// SOCKET-001: one assembly document per hull that has anchors. Discovered so a
+// new hull does not need a sync-script edit, and staged like every other
+// runtime document so the drift check covers them too.
+for (const entry of await discoverAssemblyDocuments(path.join(assetRoot, 'Submarines'))) {
+  if (!sources.some((existing) => existing.path === entry.path)) {
+    sources.push(entry);
+  }
+}
 
 const sha256 = (buffer) => createHash('sha256').update(buffer).digest('hex').toLowerCase();
 

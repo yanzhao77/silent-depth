@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/RU_SSBN_Hotel_MASTER.blend": "fb68ecae822bbf1550273628625662d975e619e67269497a307e505542328651",
-    "GLB/RU_SSBN_Hotel.glb": "e3791a385d501df87ec674b6cdc87cca511e8ba5111ce7b2322b0d97e9c88f73",
-    "Collision/RU_SSBN_Hotel_COLLISION.fbx": "e0c5126221acf843036e3b0b5166c1b8c23c53c151210e0ea3bb36351881049a",
-    "FBX/RU_SSBN_Hotel_LOD0.fbx": "301f67b800d95f314d355cd0f81acb30fd571c1c695c938644093f284171a5c9",
-    "FBX/RU_SSBN_Hotel_LOD1.fbx": "501376a41f6f74c1eaf504641a3683e74096ac6aaa7ed53199d1ca8b7fc9ba05",
-    "FBX/RU_SSBN_Hotel_LOD2.fbx": "92a511345e79c5aa4743f48072e2c87b0c9cb89073d14c5e12b81b131b18f01a",
-    "FBX/RU_SSBN_Hotel_LOD3.fbx": "e5e8fbd787b020699e01a4f33010b8e2d5d461b14cec0f55f2a81ed09340320b",
-    "FBX/RU_SSBN_Hotel_PROPULSOR_01.fbx": "b19f96d610a4e74af608ab7eacfd1f7caf56f65dbd1a1af7dbcf93732ab88da3",
-    "FBX/RU_SSBN_Hotel_RUDDER_01.fbx": "8f1241966bf83e6747da3642b3cc44dae085e01d4b4d1f02623c83cc37cc47ad",
-    "FBX/RU_SSBN_Hotel_STERN_PLANES_01.fbx": "64ff8ef5df39781cf7e52f678a02128cc8d429d7d50c249785e90641425d3368",
-    "FBX/RU_SSBN_Hotel_BOW_PLANES_01.fbx": "229d917ee1175d0735dcb74d3345952afe37dd562963f3a1e07a7a3c34e038f3",
-    "FBX/RU_SSBN_Hotel_PERISCOPE_01.fbx": "53f77087b926707119382bab40c16bf373d1a0bb3f0ae7a08cdee6d8bd52d6bf",
-    "Textures/T_RU_SSBN_Hotel_Hull_BaseColor.png": "0782891519e6bdafafbc11493402ceff0ff8262ec98a1ffa73477b0e772346f8"
+    "Blend/RU_SSBN_Hotel_MASTER.blend": "9918af2744b38d429bc699e003fc0a2649c4ef822bc2204f10cda6e70b43915d",
+    "GLB/RU_SSBN_Hotel.glb": "41d76e2cda8b465cf46a3ee5b83c20a2f7a69ea62fff6352da44727d529379dd",
+    "Collision/RU_SSBN_Hotel_COLLISION.fbx": "4eb77800d3f743673c4baf988fe2be00dbeab07afa1f46527138e1064df69714",
+    "FBX/RU_SSBN_Hotel_LOD0.fbx": "525c869a8e6aa27197ec4b4bca9997ae5cd46858a5d384f04f9ec666df83fbe6",
+    "FBX/RU_SSBN_Hotel_LOD1.fbx": "469ebaa18fa84ea4772c4ac8fa85b9d5802a508be0683cc7ef3d27b74c838d52",
+    "FBX/RU_SSBN_Hotel_LOD2.fbx": "a0c2a64a382266dfa3e006d82172e6b74842e14347d965f247e315d15582ca76",
+    "FBX/RU_SSBN_Hotel_LOD3.fbx": "8684689d44fb99ca506e16b36b27eb1a2c84ca60d48f09ab1e9faea7c302eeb4",
+    "FBX/RU_SSBN_Hotel_PROPULSOR_01.fbx": "e5f4b92fa5d23eecda72e5289fffc5d17701940aee44ae5ea913e1033d2d9b38",
+    "FBX/RU_SSBN_Hotel_RUDDER_01.fbx": "24365044ea87a0dd4e212ef73bc434046d8a4ea55f501e023416847d393f9cb6",
+    "FBX/RU_SSBN_Hotel_STERN_PLANES_01.fbx": "14b38dc5ee86fb589125c0d87f303e9b58ac78f79fd594a7c39c15ea039e6e0e",
+    "FBX/RU_SSBN_Hotel_BOW_PLANES_01.fbx": "af5c6f8c4f6dbcdcbdc02f62770bf2997efdc160b70045c33782c7fa0e5aa2fb",
+    "FBX/RU_SSBN_Hotel_PERISCOPE_01.fbx": "1430273d26754d6d284db017fdf5336aac312ddfbe6b732103c60948141e5683",
+    "Textures/T_RU_SSBN_Hotel_Hull_BaseColor.png": "a0c645ed0f937e48db5caca45455b032556222799f5553dcea5e9c29fecd616a"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -271,6 +271,116 @@
         15.376,
         16.354
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          53.58,
+          -0.552,
+          -0.736
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          53.58,
+          0.552,
+          -0.736
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          52.668,
+          0.0,
+          -0.184
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -51.87,
+          0.0,
+          0.552
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          19.38,
+          0.0,
+          3.864
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          13.68,
+          0.92,
+          -0.46
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          13.68,
+          -0.92,
+          -0.46
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -56.316,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Hotel_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.508,
+          0.0276,
+          4.90544
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

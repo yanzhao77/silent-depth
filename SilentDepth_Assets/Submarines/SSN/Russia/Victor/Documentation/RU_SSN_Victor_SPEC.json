@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/RU_SSN_Victor_MASTER.blend": "52327d3e8c4d3d451e37d20161cc66a125f44261905ca2a6ad52b38f6732b939",
-    "GLB/RU_SSN_Victor.glb": "b49aa9d0786e021e666aa20214bf790637478dd9d2d63e61a551997218c68653",
-    "Collision/RU_SSN_Victor_COLLISION.fbx": "c4d0277d8140182727224da73d5028e41f54b1f6eb741207e914abdb882490ae",
-    "FBX/RU_SSN_Victor_LOD0.fbx": "eb0e477faac5ae2d89b2829b5bd3cc1f55d3f44d3d85cc59ea91425de91a43b6",
-    "FBX/RU_SSN_Victor_LOD1.fbx": "39783f9934f86f06188c6b56e3681d8d6e1f374cb2ed76ebac6247d6a2f32c4d",
-    "FBX/RU_SSN_Victor_LOD2.fbx": "51e42bf406606af0e091092392394f7fa727991fc53f1f2054449a4d79f34115",
-    "FBX/RU_SSN_Victor_LOD3.fbx": "4029f16b2beedb0ee3afa5ae9305e2f3e78798e8410dff3ec8ddd2baa013d6ee",
-    "FBX/RU_SSN_Victor_PROPULSOR_01.fbx": "4ee546b0ea5abafa34dd0887ea57aebe4863695e2f3061bee882b9ee0aae241c",
-    "FBX/RU_SSN_Victor_RUDDER_01.fbx": "37a003f64cda87f8700e6c6a0833abe7d7de805e058876cb9750619a0a6fd5eb",
-    "FBX/RU_SSN_Victor_STERN_PLANES_01.fbx": "d3974064f3b5d732a8492849724fd412362f4a9e99b622b3c12467425954e3d9",
-    "FBX/RU_SSN_Victor_BOW_PLANES_01.fbx": "cf44da7a61d40a427050b8f07741594ac4f203d8af754078f9c1eb36852ad97c",
-    "FBX/RU_SSN_Victor_PERISCOPE_01.fbx": "095ab6ae9e1dbb52c1698a5ee2e67a0601374a8f31f0be9128f1885d00a10791",
-    "Textures/T_RU_SSN_Victor_Hull_BaseColor.png": "97f1d0b993cd5439d405c98f8f3683b3103f68caa923e008bfee93dd33178047"
+    "Blend/RU_SSN_Victor_MASTER.blend": "0a3cc1adfd6d42ad3b2ce43bb8c05cb6af7cb6b07a483fe3526c0e716568d1a9",
+    "GLB/RU_SSN_Victor.glb": "e434fe6f92ef31e5dd01e436257aa6a3b5ba1b512bbf5e7989f92ffcf40f3bbf",
+    "Collision/RU_SSN_Victor_COLLISION.fbx": "82fbefa00f79b0c21282ec5ccc83ad68ef98efc4046ed6b3f8ec9572ba80a542",
+    "FBX/RU_SSN_Victor_LOD0.fbx": "30698598cd860bdf9fb657b8476b14816cd7c181dc9712afd2c3afaece1fa9cc",
+    "FBX/RU_SSN_Victor_LOD1.fbx": "2a571bbb0307262a2d2319531c5c31634051d76199b7ceb45c92b6c458d5202e",
+    "FBX/RU_SSN_Victor_LOD2.fbx": "66acc91c00d582247e18da915fbd4ded4bc587564cc07cb1cab8b8329923d2d6",
+    "FBX/RU_SSN_Victor_LOD3.fbx": "fe87cd6b274a940c83cdcb1338d14de3abecae0b696dd58ee0e3f956538feedc",
+    "FBX/RU_SSN_Victor_PROPULSOR_01.fbx": "5ccef3742485ab3ac6d3f4b462e200a7039c195cef791e9b77696e5b6e4ded90",
+    "FBX/RU_SSN_Victor_RUDDER_01.fbx": "43b1073ff27e7b78a06df967d9c01058071760983fbf1c0635dc25de7ff18c89",
+    "FBX/RU_SSN_Victor_STERN_PLANES_01.fbx": "237de178b2cb18e98f326ea727e1f6ca4fab188dedc52908e33fe3c6fab01844",
+    "FBX/RU_SSN_Victor_BOW_PLANES_01.fbx": "5da38f5933e10a4ab6dde40184fa73c7741c6d75bd015822a056e5a15e4fb014",
+    "FBX/RU_SSN_Victor_PERISCOPE_01.fbx": "04a4fd8dbeec17dee4e0bddb94326a94fcea483df8fbf235d3e8f4ab1e17aa92",
+    "Textures/T_RU_SSN_Victor_Hull_BaseColor.png": "2197bc81be6d0352eb7a83d925d4ced5cafcb71a1dcc05c9dfb4cf402bf53c35"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -265,6 +265,116 @@
         16.484,
         17.356
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          43.475,
+          -0.59981,
+          -0.799746
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          43.475,
+          0.59981,
+          -0.799746
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          42.735,
+          0.0,
+          -0.199937
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -42.0875,
+          0.0,
+          0.59981
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          15.725,
+          0.0,
+          4.198667
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          11.1,
+          0.999683,
+          -0.499841
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          11.1,
+          -0.999683,
+          -0.499841
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -45.695,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Victor_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          2.035,
+          0.02999,
+          5.332
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

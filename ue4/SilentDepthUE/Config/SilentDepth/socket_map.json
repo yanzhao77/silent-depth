@@ -18,10 +18,10 @@
     "torpedo_tube_05_muzzle": "SOCKET_TUBE_05",
     "torpedo_tube_06_muzzle": "SOCKET_TUBE_06",
     "sonar_bow": "SOCKET_SONAR_BOW",
-    "towed_array": "SOCKET_SONAR_TOWED",
+    "towed_array": "SOCKET_TOWED_ARRAY",
     "ew_antenna": "SOCKET_EW_ANTENNA",
     "decoy_launcher_01": "SOCKET_DECOY_LAUNCHER_01",
     "decoy_launcher_02": "SOCKET_DECOY_LAUNCHER_02",
-    "periscope": ""
+    "periscope": "SOCKET_PERISCOPE"
   }
 }

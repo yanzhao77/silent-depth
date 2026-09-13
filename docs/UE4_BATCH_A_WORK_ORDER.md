@@ -171,11 +171,17 @@ UE4Editor-Cmd.exe <uproject> -run=pythonscript -script=tools/ue4/import_submarin
 
 ### 7.3 SOCKET-001（完成）
 
-`Source/build_akula_anchors.py` 在**工作副本**上加了 DEC-002 的最小挂点集：
-9 个 `SOCKET_SUB_SSN_Akula_*` 锚点（鱼雷发射口、艏声呐、拖曳阵、EW 天线、
-诱饵发射器 ×2、推进器、潜望镜），并写出 `Documentation/RU_SSN_Akula_ASSEMBLY.json`
-与 `Validation/RU_SSN_Akula_SOCKET_AUDIT.json`。母版哈希校验未变（只读）。
-运行时通过同步脚本加载，UE 侧断言锚点命名与注册表令牌映射。
+锚点集已从 Akula 推广到**整库**：`Tools/sd_anchors.py` 定义标准 9 锚点
+（鱼雷发射口 ×2、艏声呐、拖曳阵、EW 天线、诱饵发射器 ×2、推进器、潜望镜），
+每个由参数化管线构建的艇都会得到同一套，位置按各自艇体包围盒换算。
+
+| 项 | 结果 |
+|---|---|
+| 覆盖 | 46 艘带标准 9 锚点（416 条绑定）；Yasen、Typhoon 保留各自手工装配（各 1 个鱼雷口），按 DEC-002 排在 Akula 切片验收之后 |
+| Akula 执行方式 | 母版只读：`Source/build_akula_anchors.py` 在工作副本上建锚点，写 ASSEMBLY 与 `Validation/RU_SSN_Akula_SOCKET_AUDIT.json`，母版哈希未变 |
+| 同步 | 同步脚本改为**扫描** `Submarines/**/*_ASSEMBLY.json`（当前 48 份），不再逐艇登记 |
+| 映射表修正 | `socket_map.json` 原先把 `towed_array` 写成不存在的 `SOCKET_SONAR_TOWED`、把 `periscope` 留空；注册表实际是 `SOCKET_TOWED_ARRAY` 与 `SOCKET_PERISCOPE`。修正后加载报告 **0 条通告** |
+| 断言 | UE 侧断言锚点命名、注册表令牌映射，以及"每个锚点都解析出令牌" |
 
 ### 7.4 UEASSET-004（完成）
 

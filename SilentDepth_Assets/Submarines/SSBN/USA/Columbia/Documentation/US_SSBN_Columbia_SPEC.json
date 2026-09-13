@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/US_SSBN_Columbia_MASTER.blend": "66b9a18ffa3868f0cb3b58a90d9e1de43a7e27c1defaa1f28080548925e143c4",
-    "GLB/US_SSBN_Columbia.glb": "5d81cc32a5e604122569798e4ff4dc8a3b29735de813ef37f164c66e6f02782a",
-    "Collision/US_SSBN_Columbia_COLLISION.fbx": "3c4bc1fe610b2f633757452ae8f190c8d90e8decb932ed90daf0f2f74e67f15e",
-    "FBX/US_SSBN_Columbia_LOD0.fbx": "64548c11d28018828d04bb20f61aaa18f29eefc2f200c535005a4cbfb09d4aaf",
-    "FBX/US_SSBN_Columbia_LOD1.fbx": "57a634e1ec92c6dfa7ee1e1dde3001875203c468223218fb9f536bd02f887b9a",
-    "FBX/US_SSBN_Columbia_LOD2.fbx": "fd941f52ccf9b2d5bcb542bdd0e6438634fc82e6d4d4edb522b4003afde3afbd",
-    "FBX/US_SSBN_Columbia_LOD3.fbx": "3ecaac85cb62325a5bf31a049bb7e1773239748689484a931238ab8f000318be",
-    "FBX/US_SSBN_Columbia_PROPULSOR_01.fbx": "9194ecde808e276f4a2087a6e4b30c7313749c872c0b22d8f2c24b7bdabb5271",
-    "FBX/US_SSBN_Columbia_RUDDER_01.fbx": "5e2321ae5f9485636221bfb62fb1a9aac54e9b5de43e92f9d83799a752d2583e",
-    "FBX/US_SSBN_Columbia_STERN_PLANES_01.fbx": "4d9e8be70ebbea31098af4112ec3ec2e8533d084c5f73e992c737a22aede0a8c",
-    "FBX/US_SSBN_Columbia_BOW_PLANES_01.fbx": "49def785af562a92147103b43a5481e5f7e6ef465c62b0367868377c78a4254e",
-    "FBX/US_SSBN_Columbia_PERISCOPE_01.fbx": "abe20e9d3706b77c049b87e2b30cc757c401005f6df2737da2d244971dd89f6b",
-    "Textures/T_US_SSBN_Columbia_Hull_BaseColor.png": "fb767734067171a8e4fa7b30ea5db667533ae45fc3d4e9626bb65d14ceb91cc5"
+    "Blend/US_SSBN_Columbia_MASTER.blend": "342f9ee588a99b514ca18aaac2ae155d0ef995ddc4894929af1b1d8065e5c470",
+    "GLB/US_SSBN_Columbia.glb": "dfdb6300ef21b34ab04d5873d57253908262d3d61ac14bd80f998c99110bbb5c",
+    "Collision/US_SSBN_Columbia_COLLISION.fbx": "b4f8bb9eafdfcc5a71fb2389ecd23a98e85cabf961254759672c52a38ce0dfd0",
+    "FBX/US_SSBN_Columbia_LOD0.fbx": "576b5495be6c7c2c02fa917772cadd319c106bbf78a710b93436c9f096a5d6d1",
+    "FBX/US_SSBN_Columbia_LOD1.fbx": "e5221cd9690c07b3ad96343e71753e43f265f14500e79b63c757827e4232b80b",
+    "FBX/US_SSBN_Columbia_LOD2.fbx": "55752ea93ca3bd005fda0237341fe44a4fb051f6a19bf99b964e9289ce2a7a44",
+    "FBX/US_SSBN_Columbia_LOD3.fbx": "7cecc1c600725120447874b5dac4b19fbc5b78a55f818406fb34de7ce97aebbf",
+    "FBX/US_SSBN_Columbia_PROPULSOR_01.fbx": "dd44b75add252288b65b715de4c31b548971d402a815dbebcaad5198b9e3f2e4",
+    "FBX/US_SSBN_Columbia_RUDDER_01.fbx": "865a7d10bcf70f13793773bf36393852a57b55aeab496611b17ac87d4698b7fd",
+    "FBX/US_SSBN_Columbia_STERN_PLANES_01.fbx": "4fe44deb10c1dba287438a26ef406a93b3669d419736c2f7e965baa1f4f688f7",
+    "FBX/US_SSBN_Columbia_BOW_PLANES_01.fbx": "6b407cd310ceea4297988148b35a6b605234e1b4ae8bb3dc934883b25c4c0ced",
+    "FBX/US_SSBN_Columbia_PERISCOPE_01.fbx": "ddc5badbfd67f82da46002470c577879851b525aad4dad8f59f9c3742b1a0ecf",
+    "Textures/T_US_SSBN_Columbia_Hull_BaseColor.png": "d71f4b308ae0313b4c5d009009b61eae1503ea8222d914fa933621d23a8f36a2"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -261,6 +261,116 @@
         21.951,
         21.932
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          80.37,
+          -0.78,
+          -1.04
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          80.37,
+          0.78,
+          -1.04
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          79.002,
+          0.0,
+          -0.26
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -77.805,
+          0.0,
+          0.78
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          29.07,
+          0.0,
+          5.46
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          20.52,
+          1.3,
+          -0.65
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          20.52,
+          -1.3,
+          -0.65
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -84.474,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_Columbia_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          3.762,
+          0.039,
+          6.9316
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/FR_SSBN_LeTriomphant_MASTER.blend": "6a0e84cf767bac72855711b9e6ecd7be6e0c645d31515a8efec11b131ad7bbdd",
-    "GLB/FR_SSBN_LeTriomphant.glb": "05f511b5538e430722d160a312ad70fb7fe07cc60d2fa7c68e04663120676dc9",
-    "Collision/FR_SSBN_LeTriomphant_COLLISION.fbx": "163855c9d868f32a71ffce5df461234365913a0ef4c4cd80af76c7e6b6839800",
-    "FBX/FR_SSBN_LeTriomphant_LOD0.fbx": "ef3258feb6fd0671b4902ec55ab168247533716d2b9d5cb6f473945a3b104ba2",
-    "FBX/FR_SSBN_LeTriomphant_LOD1.fbx": "b93d5ee15f45cff10c1a0c8c3adbd431c30416765a7df6d5a7afef6dbfd9174b",
-    "FBX/FR_SSBN_LeTriomphant_LOD2.fbx": "998b93fd7b518157ada8102b2786d67a11152f24690ffb74ee8753a5afae709b",
-    "FBX/FR_SSBN_LeTriomphant_LOD3.fbx": "aedb356d34de703f702b9957deb9b3400ff421cc8a104cc1003cbd33c586d700",
-    "FBX/FR_SSBN_LeTriomphant_PROPULSOR_01.fbx": "9f44a6771aa4113c16378a583ca96f6b4f024f2754135b68df73e880db0b46b4",
-    "FBX/FR_SSBN_LeTriomphant_RUDDER_01.fbx": "cfcddd195fa9a5cdfb7f9a0e73e452512d97df0accbcb43cb3efca3ebe51e219",
-    "FBX/FR_SSBN_LeTriomphant_STERN_PLANES_01.fbx": "9055737fa1f0f8f7e732778811704ab1cb6c03fa3eb8e970ef7927b37e4f506a",
-    "FBX/FR_SSBN_LeTriomphant_BOW_PLANES_01.fbx": "dd1539e8cec8a4cca6a366f2513655fe4b604a052b4ab98e1ed70a76c75866a4",
-    "FBX/FR_SSBN_LeTriomphant_PERISCOPE_01.fbx": "4da00efa72389c98a4039c60db5c1a918f78be36f1a39c8ec2769a119c0553fa",
-    "Textures/T_FR_SSBN_LeTriomphant_Hull_BaseColor.png": "7059c13df5027c28f8d870c9dd4e656b195659c982cbf52a0cdc7b20c76ddf11"
+    "Blend/FR_SSBN_LeTriomphant_MASTER.blend": "9c70a665176204dba61e781a3fe37ea3c2a504c5b47a8b27b29c2758d7ba6802",
+    "GLB/FR_SSBN_LeTriomphant.glb": "e8a209350f0f71f00a3988e671c0690aaa7b60c24122b15f073ecf6f61e042ec",
+    "Collision/FR_SSBN_LeTriomphant_COLLISION.fbx": "3b950f6bdd8acabeab4c2dbbc4617cf69f41f553a5cbf3b8cfdc3e7ad0882f92",
+    "FBX/FR_SSBN_LeTriomphant_LOD0.fbx": "567bc347c2f911795670c0cf0bddc69aed4dcbac4b319b0262e213051a2e5e0c",
+    "FBX/FR_SSBN_LeTriomphant_LOD1.fbx": "d0a6f1e2ae5761b7a45b2317f9f2b104841dab4b2e93a0a565e4ed9e32acdb7e",
+    "FBX/FR_SSBN_LeTriomphant_LOD2.fbx": "aef5a01574c0c05eb018ec09039834cfd7df40237c1da4ef161da31c07d851d2",
+    "FBX/FR_SSBN_LeTriomphant_LOD3.fbx": "0061e0b607ea63aa2975f9bafbfa3de1264a94cb72a226b97a216cd6e47b2b26",
+    "FBX/FR_SSBN_LeTriomphant_PROPULSOR_01.fbx": "82abf820dddb619ef3b9fa385df7a084517ada240ef0ac8961e731ca30cdacc8",
+    "FBX/FR_SSBN_LeTriomphant_RUDDER_01.fbx": "cad271bc872915576b2efd25f4cd5bb4b045115ee9dfe9d59d01ed526f637266",
+    "FBX/FR_SSBN_LeTriomphant_STERN_PLANES_01.fbx": "8770d89d45e7cd6eef24a724739ddedf74ab29666bf26cb0b45fcd3ad89825ed",
+    "FBX/FR_SSBN_LeTriomphant_BOW_PLANES_01.fbx": "5f9b126602bc419114f405c343dbdb47d1183ad34a68b724dcf8606d84411b8c",
+    "FBX/FR_SSBN_LeTriomphant_PERISCOPE_01.fbx": "f19382910172c8bfd6a3f037c7e1e60fc551d8a89b8577b02df70e180cfec6c8",
+    "Textures/T_FR_SSBN_LeTriomphant_Hull_BaseColor.png": "05d30fee1531c7dcbd48f6f0c00d773a906c9cdca0dcf6ee1c98db4510c537e2"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -261,6 +261,116 @@
         21.107,
         21.198
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          64.86,
+          -0.75,
+          -1.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          64.86,
+          0.75,
+          -1.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          63.756,
+          0.0,
+          -0.25
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -62.79,
+          0.0,
+          0.75
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          23.46,
+          0.0,
+          5.25
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          16.56,
+          1.25,
+          -0.625
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          16.56,
+          -1.25,
+          -0.625
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -68.172,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSBN_LeTriomphant_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          3.036,
+          0.0375,
+          6.665
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }

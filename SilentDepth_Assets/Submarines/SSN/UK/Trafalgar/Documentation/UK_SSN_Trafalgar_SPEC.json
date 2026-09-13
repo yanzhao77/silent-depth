@@ -77,19 +77,19 @@
     }
   ],
   "sha256": {
-    "Blend/UK_SSN_Trafalgar_MASTER.blend": "79e479610f36a16ed5d7f13fba2e1edd24a7a3463e3e053130fa949dacfd7d3b",
-    "GLB/UK_SSN_Trafalgar.glb": "b52a1cca8fea456026f35f7cb1899036ed75a25303a034f7045f3a4a5370c7ca",
-    "Collision/UK_SSN_Trafalgar_COLLISION.fbx": "b3f77ba8b7c8edf2bc63bc5a5bb6f96c9d408f2baa63946585b8217603687e0a",
-    "FBX/UK_SSN_Trafalgar_LOD0.fbx": "bb1775bade50ca5c0c103f446f5293da62ba8fc8981db3e89c2ef1ba8570fbd5",
-    "FBX/UK_SSN_Trafalgar_LOD1.fbx": "5459f4367f8dc2a50c85a6e7a042b98b3ba1ac6bc56a07b8bb7258ce4d4e0432",
-    "FBX/UK_SSN_Trafalgar_LOD2.fbx": "6da3d27a9af3af6bd6bab93c2624ef2e1905c9b410e2c46097616b4b6a4b79b5",
-    "FBX/UK_SSN_Trafalgar_LOD3.fbx": "e51ff788361f57ba87742a912c2d55867262ecf412019eab9e22fb269b82e0f2",
-    "FBX/UK_SSN_Trafalgar_PROPULSOR_01.fbx": "8eb6a9ac76c31b1536a1347c735a473d4476fd3dd6756892a9ec228332ad06ec",
-    "FBX/UK_SSN_Trafalgar_RUDDER_01.fbx": "3bcc3fa6e514805f07ecc646c4f82489fb42c6b66c7697dfdb18595207f8da57",
-    "FBX/UK_SSN_Trafalgar_STERN_PLANES_01.fbx": "178ce698887b019453cf90e4005345e3a03ab568a66e4d680f9c686def71971a",
-    "FBX/UK_SSN_Trafalgar_BOW_PLANES_01.fbx": "2ba0c6ca5536952fa955fcfdbfd4cdac26f75414d64f46d2c8c7f689e8e9db4b",
-    "FBX/UK_SSN_Trafalgar_PERISCOPE_01.fbx": "8841f1ebcb1dc8f2e829d5aa3ccf73471eae1a3c9a517a1f5e848147fc177767",
-    "Textures/T_UK_SSN_Trafalgar_Hull_BaseColor.png": "c6079f91416922299a7b39ae858d23d38b9c54b241d529aa0c31ce5a74212bea"
+    "Blend/UK_SSN_Trafalgar_MASTER.blend": "2ec384acf3a9ac8a9da626c058914fae5454f3fc3a39da3d66f8d0355ec0577b",
+    "GLB/UK_SSN_Trafalgar.glb": "d6bb5579e35dd9f0999ab3929826de6bb6ce3a8ffe0fd2fde3440323e1eb6ec3",
+    "Collision/UK_SSN_Trafalgar_COLLISION.fbx": "0b5938824fdd5fd779cf346b9144ee1a7866957e745eb86cbe9b2454eeec96af",
+    "FBX/UK_SSN_Trafalgar_LOD0.fbx": "404127e4fbcc9a568032afcb05cb74626acdcb3c1abc749bea88c68b53c63c2e",
+    "FBX/UK_SSN_Trafalgar_LOD1.fbx": "37db9e54d623278fd18ac4c197f6cd192b58662248f7b894a5a52ccaf4a6f165",
+    "FBX/UK_SSN_Trafalgar_LOD2.fbx": "de3ac7edd48e07de61a98a67fcfab89d788a08909fb5cdf743aade9bfa3d060e",
+    "FBX/UK_SSN_Trafalgar_LOD3.fbx": "fc0bfe8c62543ec3f131ec03a5029979cc6029823b525339b991cd46e1577736",
+    "FBX/UK_SSN_Trafalgar_PROPULSOR_01.fbx": "d3d40759da26539b5415612685d9e0bd35885769e8a6720608edd846e4dfe84b",
+    "FBX/UK_SSN_Trafalgar_RUDDER_01.fbx": "c2257bcec033b159922f47825bf6b1b05a3cf7cd6f4983d63c05a355756af352",
+    "FBX/UK_SSN_Trafalgar_STERN_PLANES_01.fbx": "ddef7088ebf4f2b623d5e8279f5b55b870327b64ebe7baa71c9a0919a953fd73",
+    "FBX/UK_SSN_Trafalgar_BOW_PLANES_01.fbx": "3800c64ad35bb0cffeeb29c97e1ffb6debea2499cf36298a7c05737b0da00d8a",
+    "FBX/UK_SSN_Trafalgar_PERISCOPE_01.fbx": "37c1f00e5b758618dbb7aeec8d617a9346548992d22ba956d18dbf529654ef24",
+    "Textures/T_UK_SSN_Trafalgar_Hull_BaseColor.png": "c3e5e52eb48c22fed14b0f84147867e3c33e54fce74906852e4132771a759b55"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -260,6 +260,116 @@
         16.154,
         17.066
       ]
-    }
+    },
+    "anchors": [
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_TORPEDO_TUBE_01_MUZZLE",
+        "logical_id": "torpedo_tube_01_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          40.138001,
+          -0.587813,
+          -0.783751
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_TORPEDO_TUBE_02_MUZZLE",
+        "logical_id": "torpedo_tube_02_muzzle",
+        "purpose": "torpedo_muzzle",
+        "location_m": [
+          40.138001,
+          0.587813,
+          -0.783751
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_SONAR_BOW",
+        "logical_id": "sonar_bow",
+        "purpose": "sensor_mount",
+        "location_m": [
+          39.454801,
+          0.0,
+          -0.195938
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_TOWED_ARRAY",
+        "logical_id": "towed_array",
+        "purpose": "sensor_mount",
+        "location_m": [
+          -38.857001,
+          0.0,
+          0.587813
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_EW_ANTENNA",
+        "logical_id": "ew_antenna",
+        "purpose": "defense_mount",
+        "location_m": [
+          14.518,
+          0.0,
+          4.114694
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_DECOY_LAUNCHER_01",
+        "logical_id": "decoy_launcher_01",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          10.248,
+          0.979689,
+          -0.489844
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_DECOY_LAUNCHER_02",
+        "logical_id": "decoy_launcher_02",
+        "purpose": "decoy_launcher",
+        "location_m": [
+          10.248,
+          -0.979689,
+          -0.489844
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_PROPULSOR_01",
+        "logical_id": "propulsor_01",
+        "purpose": "propulsion_mount",
+        "location_m": [
+          -42.187601,
+          0.0,
+          0.0
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": true
+      },
+      {
+        "anchor": "SOCKET_SUB_SSN_Trafalgar_PERISCOPE",
+        "logical_id": "periscope",
+        "purpose": "sensor_mount",
+        "location_m": [
+          1.8788,
+          0.029391,
+          5.22536
+        ],
+        "inside_hull_envelope": true,
+        "aft_of_hull_by_design": false
+      }
+    ]
   }
 }
