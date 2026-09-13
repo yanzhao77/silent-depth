@@ -50,8 +50,8 @@ Input/Replay
 | 优先级 | 来源 | 权威范围 |
 |---|---|---|
 | 1 | 当前代码和新执行的测试 | 已实现行为、字段、测试数量 |
-| 2 | `config/balance.json` | 运行时平衡数值 |
-| 3 | `config/missions.json` | 五个固定任务输入数据 |
+| 2 | `ue4/SilentDepthUE/Config/balance.json` | 运行时平衡数值 |
+| 3 | `ue4/SilentDepthUE/Config/missions.json` | 五个固定任务输入数据 |
 | 4 | `docs/GAME_DESIGN.md` | 玩法意图、公式、任务与评分 |
 | 5 | `docs/GAME_ARCHITECTURE.md` | 仿真边界、顺序、事件和确定性 |
 | 6 | 本文 | UE4 目标决策、迁移顺序和门禁 |
@@ -410,7 +410,8 @@ Heading 90 east   -> UE Yaw 90
 
 - 工具链锁定 UE4.27.2、Visual Studio 2019、MSVC v142、Windows 10 SDK 和
   C++17；构建机保存可复现的安装清单。
-- `config/balance.json` 与 `config/missions.json` 在迁移期仍为唯一数据源。
+- `ue4/SilentDepthUE/Config/balance.json` 与 `ue4/SilentDepthUE/Config/missions.json`
+  是运行时数据源（原仓库根 `config/` 是 Web 版遗留，已随 Web 版清理删除）。
 - 构建期生成 UE 强类型数据，Blueprint/Data Asset 不复制数值权威。
 - 缺字段、非法枚举、NaN 和越界值使构建或加载失败。
 - GLB 经 Blender 校验单位、朝向、原点、法线和材质后导出 FBX。
@@ -526,7 +527,9 @@ Insights 测量。性能结论只能来自目标硬件打包版，不能由编�
 
 每日/合并前：
 
-- 现有 `npm test`、`npm run typecheck`、`npm run build`。
+- UBT 编译 `SilentDepthUEEditor Win64 Development`，0 错误。
+- UE Automation `Automation RunTests SilentDepth`，0 失败、EXIT CODE 0。
+- `npm run check:runtime-data` 与 `npm run check:asset-pipeline` 通过。
 - UE 全部 Core 测试和 M01-M05 双跑轨迹。
 - Development 包烟雾测试和资产哈希校验。
 

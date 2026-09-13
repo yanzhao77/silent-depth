@@ -454,7 +454,7 @@ UE 输入只写入 `FInputBuffer`：
 
 ## 13. 配置与内容数据
 
-迁移初期保留 `config/balance.json` 与 `config/missions.json` 为权威输入，
+迁移初期保留 `ue4/SilentDepthUE/Config/balance.json` 与 `Config/missions.json` 为权威输入，
 通过构建期导入或启动期本地读取生成强类型结构。
 
 规则：

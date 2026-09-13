@@ -12,7 +12,7 @@ import {
   parseSubmarineAuditArgs,
   summarizeStatuses,
   validateSubmarineAuditInputs,
-} from '../../../../src/assets/submarineBlenderAudit.ts';
+} from './lib/submarineBlenderAudit.ts';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_BLENDER = '/Applications/Blender.app/Contents/MacOS/Blender';

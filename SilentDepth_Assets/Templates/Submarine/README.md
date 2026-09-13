@@ -47,7 +47,7 @@ node --experimental-strip-types SilentDepth_Assets/Templates/Submarine/Scripts/s
   --output /abs/path/RU_SSN_Yasen_MASTER_AUDIT.json
 ```
 
-`inventory-only` 与完整 Assembly 审计的区别：`inventory-only` 不需要真实 Assembly，只输出 MASTER 库存、通用 Mesh 问题、Empty 和潜在 Anchor 候选项，并把 Assembly 相关检查标记为 `SKIPPED_MISSING_ASSEMBLY`。它不能验证活动件归属、Hull 排他关系、正式 Pivot/Socket 父子关系或运动轴语义。完整 Assembly 审计必须先通过 `src/assets/submarineAssembly.ts` 的正式 Schema 与跨字段校验，然后才启动 Blender worker。
+`inventory-only` 与完整 Assembly 审计的区别：`inventory-only` 不需要真实 Assembly，只输出 MASTER 库存、通用 Mesh 问题、Empty 和潜在 Anchor 候选项，并把 Assembly 相关检查标记为 `SKIPPED_MISSING_ASSEMBLY`。它不能验证活动件归属、Hull 排他关系、正式 Pivot/Socket 父子关系或运动轴语义。完整 Assembly 审计必须先通过 `Scripts/lib/submarineAssembly.ts` 的正式 Schema 与跨字段校验，然后才启动 Blender worker。
 
 JSON 报告结构包含：`reportFormatVersion`、`auditMode`、`master`、`environment`、`scene`、`externalDependencies`、`meshQuality`、`assemblyAudit`、`fileIntegrity`、`issues` 和 `summary`。`issues` 中每条问题包含 `ruleId`、`status`、对象或 Collection、中文说明、结构化 `context` 和 `blocksExport`。数组和对象稳定排序；报告不写入运行时间、临时目录名或随机 ID。
 

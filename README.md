@@ -1,146 +1,71 @@
-# SILENT DEPTH V2.0 《深海猎手》
+# SILENT DEPTH — Unreal Engine 4.27
 
-**CINEMATIC TACTICAL SUBMARINE** — 核心体验是**在信息不完整的情况下做决策**:听 → 判 → 追 → 算 → 伏 → 攻 → 藏 → 逃。你不是"看到敌人再开火",而是通过声呐听见、判断、跟踪、预测,在敌方搜索与反击中完成伏击。
+本分支是 SILENT DEPTH 的 **UE4.27 版本**：纯 C++ 权威仿真 + UE4 表现层。
+早期 Web 版（TypeScript + Three.js）**只保留在 `master` 分支**，本分支已不再包含
+`src/`、`tests/`、`public/`、Web 构建配置与 Web 测试工具链。
 
-纯 TypeScript 确定性引擎(headless-first)+ **Three.js 3D WebGL** + WebAudio 程序化音效 + 全程序化素材。**完全离线运行,零运行时CDN,零第三方素材,零外部网络请求**。
+## 仓库结构
 
-### V2.0 升级亮点
-
-- 🌊 **3D 程序化海洋** — Gerstner 波浪着色器,天气驱动浪高/泡沫/反射
-- 🚢 **3D 舰船模型** — 每种舰级独特外观(商船/货船/油轮/驱逐舰/护卫舰)
-- 🔭 **电影级潜望镜** — 3D 光学视角,平滑镜头切换,目标锁定
-- 🌤️ **动态天气系统** — 晴/多云/风暴/浓雾/夜间,各有独特光照/大气效果
-- 💥 **战斗特效** — 鱼雷尾迹/爆炸水柱/声呐扩散环/深水炸弹水花
-- 🎯 **战术叠加层** — 接触不确定性椭圆/航迹线/声呐范围环/鱼雷预测线
-- 🎮 **保留全部核心玩法** — 489项测试全部通过,确定性仿真引擎零修改
-
----
-
-## 📸 游戏画面
-
-> 以下为**程序化预览渲染**(真实引擎 + 真实渲染器在无头环境下绘制,非浏览器实拍)。
-> 游戏内按 **F12** 可随时截取真实画面(PNG 自动下载)。
-
- | | |
-|---|---|
-| ![游戏实拍](assets/screenshots/gameplay.png) | ![首次伏击](assets/screenshots/m02-ambush.png) |
-| **游戏实拍** — 完整 UI 布局:深度/速度/航向 HUD + 声呐接触列表 + 火控解算面板 + 小地图运动轨迹 + 潜艇俯视图 | **M02 首次伏击** — 环境渲染预览:油轮接触(不确定性椭圆)+ 声呐 ping 扩散环 |
-| ![袭击护航队](assets/screenshots/m03-convoy.png) | ![鱼雷出管](assets/screenshots/m02-torpedo.png) |
-| **M03 袭击护航队** — 货船编队 + 驱逐舰护航,接触以椭圆而非红点呈现 | **鱼雷航行** — 无自动锁定,直航 + 尾迹气泡,命中靠提前量 |
-| ![声呐训练](assets/screenshots/m01-sonar.png) | ![重装护航](assets/screenshots/m04-heavy-escort.png) |
-| **M01 声呐训练** — 目标跟踪与分类:ping 环 + 接触椭圆收敛 | **M04 重装护航** — 风暴 + 双驱逐舰护航,低能见度下的接触管理 |
-| ![静默猎手(夜间)](assets/screenshots/m05-night-fog.png) | |
-| **M05 静默猎手** — 夜间 + 浓雾叠层,低能见度下的伏击 | |
-
----
-
-## ✨ 特性
-
-- **声呐是信息层(P0)**:主动 ping(信息↑ 暴露↑)vs 被动监听(信息↓ 暴露↓);接触从不精确——首次仅方位角,随跟踪收敛(射程 ±10%→±2%,航向 ±20%→±5%)
-- **渐进分类**:Unknown → Large Surface → Merchant 72% → Confirmed,基于速度/噪声/深度特征投票
-- **敌方 AI 状态机**:NORMAL → SUSPICIOUS → ALERT → SEARCHING → HUNTING → LOST_CONTACT;以"最后已知位置(LKP)"为中心执行圆形/之字/扩张搜索
-- **护航编队**:2×2 商船队形 + figure-8 巡逻护航舰,鱼雷/爆炸/噪声触发不同响应优先级
-- **无自动锁定鱼雷**:火控解算(提前角 + 命中概率)只做辅助,出管后直航,命中率 = 你的跟踪质量
-- **探测计与逃脱**:噪声↑ → 探测↑;静默、下潜、变向、诱饵(decoy)主动压低探测;F9 逃脱判定
-- **5 个任务 + 种子任务生成器**:同一种子可复现同一任务(可重放、可调试)
-- **程序化世界**:5 种天气(晴/多云/风暴/浓雾/夜间)影响能见度、声呐与探测
-- **存档**:任务解锁链、最高分、统计(localStorage,无账号)
-
-## 🚀 快速开始
-
-```bash
-npm install
-npm run dev        # 开发 (http://localhost:5173)
-npm run build      # 生成离线静态构建 → dist/
-npm run preview    # 预览生产构建
-npm test           # 489 项测试 (vitest, 28 文件)
+```text
+silent-depth/
+├── docs/                          设计文档 + UE 迁移规划（UE 版的需求来源）
+├── SilentDepth_Assets/            潜艇源资产库（Blender/FBX/贴图/科技树/工厂工具）
+├── tools/ue4/                     UE 编辑器自动化脚本（导入、探针、数据同步）
+├── config/                        Web 版遗留运行时数据（待迁移，见下）
+└── ue4/SilentDepthUE/             UE4.27 工程
+    ├── SilentDepthUE.uproject
+    ├── Config/                    含 balance.json 与 SilentDepth/*.json 运行时数据
+    ├── Content/                   .uasset / .umap
+    ├── Source/                    C++ 模块
+    ├── ArtSource/                 源资产位置说明（源文件在仓库根）
+    └── docs/                      导入清单
 ```
 
-> 直接玩:构建后打开 `dist/index.html` 即可,无需服务器。
+工程细节、启动流程与可动部件接线见 [`ue4/README.md`](ue4/README.md)。
 
-## 🎮 操作
+## 构建
 
-| 键 | 动作 | 键 | 动作 |
-|---|---|---|---|
-| **W / S** | 加速 / 减速 | **G** | 释放假目标 Decoy |
-| **A / D** | 左转 / 右转 | **P** | 升起 / 降下潜望镜 |
-| **Q / E** | 深度层切换 | **L** | 锁定潜望镜目标 |
-| **Space** | 主动声呐 Ping | **X** | 紧急下潜 |
-| **F** | 发射鱼雷(选中接触) | **Esc** | 暂停菜单(暂停/继续 · 重开 · 中止) |
-| **R** | 静默运行 | **F12** | 截图(PNG 下载) |
+1. 需要 Unreal Engine 4.27 与 Visual Studio（含 C++ 桌面工作负载）。
+2. 右键 `ue4/SilentDepthUE/SilentDepthUE.uproject` → Generate Visual Studio project files。
+3. 打开 `SilentDepthUE.sln` 或直接双击 `.uproject` 编译启动。
 
-> 潜望镜机制(观察 / 锁定 / 紧急下潜)见 docs/README.md「Periscope (t-026)」。暂停已移至 Esc 菜单。
+`Binaries/`、`Intermediate/`、`DerivedDataCache/`、`Saved/`、`.vs/`、`*.sln` 都是生成物，
+已由工程 `.gitignore` 排除，不要提交。
 
-## 🗺️ 任务
+## 验证入口
 
-| ID | 任务 | 目标 | 敌情 | 天气 | 难度 |
-|---|---|---|---|---|---|
-| M01 | 声呐训练 | 找到→分类→跟踪商船 | 1 × Merchant | 晴 | 简单 |
-| M02 | 首次伏击 | 击沉运输船 | 1 × Tanker | 晴→多云 | 简单-中等 |
-| M03 | 袭击护航队 | 击沉 ≥2 货船 | 4 × Cargo + 1 × Destroyer | 多云→风暴 | 中等 |
-| M04 | 重装护航 | 击沉 ≥2 且存活 | 4 × Cargo + 2 × Destroyer | 风暴→浓雾 | 困难 |
-| M05 | 静默猎手 | 击沉 ≥1 且成功逃脱 | 4 × Cargo + 2 × Destroyer + 1 × Frigate | 夜间 + 浓雾 | 极难 |
+```powershell
+# C++ 编译 + Automation（UE 4.27.2）
+& "C:\game\Epic Games\UE_4.27\Engine\Binaries\Win64\UE4Editor-Cmd.exe" `
+  "C:\workspace\ue4\silent-depth\ue4\SilentDepthUE\SilentDepthUE.uproject" `
+  -ExecCmds="Automation RunTests SilentDepth;Quit" -unattended -nopause -nosplash -nullrhi -stdout
 
-## 🏆 评分
+# 存档自检 / 科技树探针（显式传参才执行，不进正常流程）
+... -game -nullrhi -sd-save-selftest -ExecCmds=Quit
+... -game -nullrhi -sd-techtree-probe -ExecCmds=Quit
 
-| 等级 | 分数 |
-|---|---|
-| Perfect | 1000 |
-| Excellent | 800–999 |
-| Good | 600–799 |
-| Poor | 400–599 |
-| Failed | <400 |
+# 工具脚本依赖（ajv，供资产库的 Assembly schema 校验使用；只需执行一次）
+npm install
 
-权重:目标 40% · 伤害 20% · 隐匿 15% · 鱼雷效率 10% · 时间 10% · 存活/逃脱 5%(基于真实数据计算)。
+# 运行时数据副本与资产库是否同步
+npm run check:runtime-data
 
-## 📚 文档
+# 资产管线轻量校验：CLI 契约 + 潜艇清单/哈希 + UE 平台资产表交叉引用
+npm run check:asset-pipeline
+```
 
-| 文档 | 内容 |
-|---|---|
-| [docs/README.md](docs/README.md) | 完整说明(控制/任务/评分) |
-| [docs/GAME_DESIGN.md](docs/GAME_DESIGN.md) | 游戏设计 + 平衡目标(B1–B10)+ 平衡公式(F1–F10) |
-| [docs/GAME_ARCHITECTURE.md](docs/GAME_ARCHITECTURE.md) | 引擎架构、模块图、事件目录、确定性策略 |
-| [docs/VISUAL_STYLE.md](docs/VISUAL_STYLE.md) | 视觉风格圣经(调色板/分辨率/图标/动效) |
-| [docs/AUDIO_DESIGN.md](docs/AUDIO_DESIGN.md) | 14 个 WebAudio 程序化音效合成规格 |
-| [docs/ASSET_PIPELINE.md](docs/ASSET_PIPELINE.md) | 素材管线 + 许可证闸门 |
-| [RELEASE_NOTES.md](RELEASE_NOTES.md) | v1.0.0 发布说明 |
-| `reports/` | 生产证据:TEST / PLAYTEST / BALANCE / SECURITY / BUILD 报告 |
-| `factory/` | **工厂生产记录**:审计/需求修订/角色契约/ADR/失败账本/任务DAG/验收矩阵 |
+完成标签只用 `IMPLEMENTED` / `TESTED` / `EDITOR VERIFIED` / `TARGET HARDWARE VERIFIED`，
+不得互相顶替；未在编辑器或目标硬件上观测过的结论一律标 `NOT VERIFIED`。
 
-## 🏭 生产背景
+## 运行时数据
 
-本项目由 **DeepSeek Software Factory** 全自主生产(需求 → 设计 → 架构 → 实现 → 测试 → AI Playtest → 平衡 → 构建 → 交付),作为 **GAME PRODUCTION BENCHMARK**。要点:
+`SilentDepth_Assets/` 是资产库唯一权威，`ue4/SilentDepthUE/Config/SilentDepth/` 是运行
+时副本，由 `tools/ue4/sync-tech-tree-data.mjs` 生成并逐文件记录 SHA-256，漂移会被
+`npm run check:runtime-data` 判为失败。
 
-- **确定性**:全系统种子化 RNG,同种子同操作 → 完全可复现(测试证明 3000-tick 快照 byte-identical)
-- **AI Playtest**:12 次无头试玩、5 次胜利(M01/M02/生成任务),失败均带证据
-- **诚实记录**:所有素材程序化生成(CC0)、零第三方版权素材、零运行时网络;平衡调整全部证据驱动
-- **质量门槛**:16 道 Gate 全部通过,**489/489 测试**(28 文件,发布后补入 screenshots 测试套件),离线构建验证通过
+## 待处置
 
-## 🏭 工厂生产证据（DeepSeek Software Factory V0.3）
-
-本游戏由 **DeepSeek Software Factory V0.3（Documentation & Evidence Factory）** 全自主生产，
-完整生产证据链已归档于 `factory/` 目录与交付包：
-
-| 证据 | 数据 |
-|---|---|
-| 需求追踪 | **28/28 需求 VERIFIED**（FR-01..22 功能 + FR-1..6 非功能，覆盖 100%） |
-| 测试 | **489/489 通过**（28 文件，真实运行）· 验收矩阵 28 项全 PASS |
-| 证据链 | **36 条证据全部 AUDITED**（VERIFIED → 审计复核，rawReference 可逐条核对） |
-| 审计 | **FINAL AUDIT: RELEASE**（8 次审计记录，初始 BLOCK_RELEASE → 补齐证据 → 0 失败） |
-| 文档 | **31 份 game-profile 文档**，Documentation Gate **PASSED** · 一致性 0 FLAG · health **GOOD** |
-| 交付包 | **158 文件** + MANIFEST(sha256) + FINAL_DELIVERY_REPORT（RELEASE） |
-
-- `factory/reports/acceptance-matrix.md` — 真实验收矩阵（28 项逐项证据）
-- `factory/memory/evidence.jsonl` — 36 条证据（DECLARED→AUDITED 级别纪律）
-- `factory/memory/audits/` — 8 次审计记录（含初始 BLOCK_RELEASE 的诚实缺口暴露）
-- `factory/requirements/reqs.json` — 28 个结构化需求（追踪矩阵）
-- `factory/plans/` — Plan v1/v2（含需求变更重规划）
-- `factory/artifacts/` — 版本化产物（sha256 快照 + 依赖图）
-
-> 完整审计报告：`factory/reports/FINAL_DELIVERY_REPORT.md`（Audit 决策 RELEASE）。
-> 工厂侧交付记录：`deepseek_software/reports/review/FINAL_AUDIT_REPORT_p004.md`。
-
-## 已知限制
-
-- M03+ 的**脚本化** AI 胜利尚未达成(护航压迫 + 商船散开 + 电池上限),人工玩家采用"静默伏击"战术可通关;详见 `reports/balance/BALANCE_REPORT.md`
-- 视觉表现已有**无头软件画布**渲染测试覆盖(`renderer.test.ts` 分支 + `screenshots.test.ts` 预览图),但未在**真实浏览器**执行;建议 `npm run preview` 手动验收
+- `Config/SilentDepth/platform_assets.json`、`socket_map.json`、`equipment_effects.json`
+  是手写配置，但没有纳入 `sync-tech-tree-data.mjs` 的哈希清单，漂移检查覆盖不到它们。
+- `docs/` 里仍有描述 Web 版实现的文档（`GAME_ARCHITECTURE.md`、`V2_*` 等）；它们是
+  UE4 迁移的需求来源，暂时保留，改动时不要按它们去仓库里找 `src/`。

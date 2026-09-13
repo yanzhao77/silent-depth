@@ -50,7 +50,8 @@
 
 ### 2.2 平衡数值
 
-所有数值权威来源是 GAME_DESIGN §12/§15 与 Web 版 `config/balance.json`。
+所有数值权威来源是 GAME_DESIGN §12/§15 与 `ue4/SilentDepthUE/Config/balance.json`
+（该文件自 Web 版逐字节拷贝而来，Web 版在 `master` 分支）。
 UE 工程内部可以转存为 JSON/DataTable，但**禁止脱离来源另立数值**；
 任何平衡调整都回到 Web 版配置并双端同步。
 

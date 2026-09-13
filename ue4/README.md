@@ -1,10 +1,11 @@
 # ue4 — Silent Depth 的 Unreal Engine 4.27 版本
 
-本分支是 SILENT DEPTH 的 3D 实现，与 `master` 上的 Web（TypeScript + Three.js）版本**并存于同一仓库**。
+本分支是 SILENT DEPTH 的 UE4.27 实现。Web（TypeScript + Three.js）版本只存在于
+`master` 分支，本分支已不再包含它。
 
 ```text
 silent-depth/                        仓库根
-├── src/ public/ tests/ config/      Web 版本（master 与 ue4 分支共用）
+├── config/                          Web 版遗留运行时数据（迁移中）
 ├── docs/                            设计文档；UE 迁移规划也在这里
 ├── SilentDepth_Assets/              潜艇源资产库（Blender/FBX/贴图/科技树/工厂工具）
 └── ue4/
@@ -19,17 +20,14 @@ silent-depth/                        仓库根
 
 ## 分支策略
 
-- `master`：Web 版本，保持可发布。
-- `ue4`：本分支。从 `master` 的 `3b21934` 分出，在 `ue4/` 目录下新增 UE 工程。
-- Web 与 UE 共用的内容（`docs/`、`SilentDepth_Assets/`）放在仓库根，**两边都能看见**。
-- UE 专属改动只落在 `ue4/` 内，避免与 Web 版本互相冲突。
+- `ue4`：本分支，当前唯一在维护的版本。
+- `master`：Web 版历史归档，仅供查阅迁走之前的实现；不要再合并 Web 代码进来。
+- `docs/`、`SilentDepth_Assets/`、`tools/ue4/` 属于 UE 版本，留在仓库根，改动照常提交。
+- UE 专属改动只落在 `ue4/` 内。
 
-同步 Web 侧更新：
-
-```bash
-git fetch local master && git merge local/master     # local 远程指向本地 E: 仓库
-git fetch origin master && git merge origin/master   # 或从 GitHub 拉取
-```
+仓库根的 `config/` 是 Web 版遗留数据：`balance.json` 已拷贝为
+`ue4/SilentDepthUE/Config/balance.json`（逐字节相同），`missions.json` 尚未迁移，
+处置见根 `README.md` 的"待处置"。
 
 ## 构建
 

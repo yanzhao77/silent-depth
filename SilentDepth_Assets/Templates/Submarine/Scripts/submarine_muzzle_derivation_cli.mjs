@@ -8,7 +8,7 @@ import {
   MUZZLE_DERIVATION_CONSTANTS,
   assertAssemblyForMuzzleDerivation,
   updateTorpedoMuzzleTransform,
-} from '../../../../src/assets/submarineMuzzleDerivation.ts';
+} from './lib/submarineMuzzleDerivation.ts';
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const DEFAULT_BLENDER = '/Applications/Blender.app/Contents/MacOS/Blender';
