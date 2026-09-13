@@ -6,7 +6,7 @@
 | 基线日期 | 2026-09-11 |
 | 目标分支 | `ue4` |
 | 上游计划 | `docs/UE4_TECH_TREE_EXECUTION_PLAN.md` §11 |
-| 本记录范围 | `DEC-001`、`DEC-002`、`DEC-004` 已决定；`DEC-003`、`DEC-005`、`DEC-006` 仍为 OPEN |
+| 本记录范围 | `DEC-001`、`DEC-002`、`DEC-004`、`DEC-007`、`DEC-008`、`DEC-009` 已决定；`DEC-003`、`DEC-005`、`DEC-006` 仍为 OPEN |
 
 本记录只固定决策与边界，不替代数据、资产或运行时的实施任务。决策落地时若发现
 与本文冲突的事实，先修本文，再改代码。
@@ -24,6 +24,8 @@
 | DEC-005 | 是否允许 `GAMEPLAY` 标记的推测配发 | OPEN | 未决定 | TECH-005、各类 loadout |
 | DEC-006 | Windows UE4.27 验收环境与目标硬件 | OPEN | 未决定 | 全部 `EDITOR VERIFIED` 与性能任务 |
 | DEC-007 | 层阶门槛：Tier N 需要同类别下方最近非空层阶里已解锁几个节点 | **DECIDED** | 取 1：逐层解锁 | UI-001 的科技树体验 |
+| DEC-008 | 候选互斥的来源与判定层 | **DECIDED** | 只在装位级实现：socket 容量 1 时共享该 socket 的槽位互为替代；节点级互斥组保持为空 | `TECH-005` 装配校验、`UI-003`、`SAVE-001` 载入校验 |
+| DEC-009 | 防御矩阵 270 行只有 family、没有资产的处置 | **DECIDED** | 记为能力层数据，不产出装备候选；`CN_PJ_Type093B` 保留为待产出声明 | `DATA-005`、`UI-002` 的"无对应装备"状态 |
 
 ---
 
@@ -207,6 +209,19 @@ Akula 本切片必需的 Socket 最小集（`类别名 → Assembly 逻辑 id`�
 **锁定方式**：`TierGate.ShippedConfigMatchesDecision` 断言出厂值为 1，改动会让测试失败；
 调整数值应先改本记录。
 
+**后续证据（2026-09-12）**：新增可重复门禁 `TechTreeProbe`（固定五任务序列
+700/750/800/600/650 → 按 DEC-004 结算 → 每轮研究"最便宜且规则允许"的节点）。
+实机 `-game -nullrhi -sd-techtree-probe` 输出：
+
+```text
+probe: 22 opening node(s) [submarine 5, weapon 1, sensor 13, defensive 2, propulsion 1];
+missions awarded 600 point(s), purchases 6 spent 600, 0 left, 6 unlocked,
+fingerprint 16219625101362846001
+```
+
+这证明 22 这个数字与规则自洽、可重复，**不证明它好玩**：真人试玩仍未安排，
+`DEC-007` 的手感结论保持 `NOT VERIFIED`。
+
 | 决策 ID | 主题 | 影响 | 建议 |
 |---|---|---|---|
 | DEC-003 | 首批潜艇生产顺序 | P5 内容扩产无法启动 | 采用 Batch A（Los Angeles / Virginia / Seawolf / Astute / Suffren） |
@@ -215,9 +230,139 @@ Akula 本切片必需的 Socket 最小集（`类别名 → Assembly 逻辑 id`�
 
 ---
 
-## 6. 变更记录
+## 6. DEC-008：候选互斥（2026-09-12 决定）
+
+### 6.1 事实依据
+
+| 证据 | 内容 |
+|---|---|
+| 机制现状 | `FSDNodeRegistry::ExclusionGroups` 已实现并有合成数据测试，但五棵树声明 **0 组**；节点级互斥没有数据来源 |
+| 装位现状 | `FSDEquipmentSlot` 没有容量字段，加载器把槽位与 socket 一一记下，但无法表达两个槽位争用同一个 socket |
+| 真实冲突 | 防御 loadout 中 `SOCKET_COUNTERMEASURE_02` 被 `DECOY` 与 `NOISE_MAKER` 两个槽位共用，覆盖全部 54 个平台（108 行） |
+| 无冲突的 socket | `SOCKET_EW_MAST`、`SOCKET_EW_ANTENNA`、`SOCKET_COUNTERMEASURE_01`、`SOCKET_DECOY_LAUNCHER_01`、`SOCKET_DECOY_LAUNCHER_02` 每个平台只被一个槽位占用（各 54 行） |
+| 无挂点槽位 | `DEFENSIVE_CONTROL`、`INTEGRATED_DEFENSE` 的 socket 是空字符串，属于艇内设备 |
+
+### 6.2 决定
+
+**互斥只在装位级实现，判定量是 socket 容量；节点级互斥组保持为空。**
+
+规则：
+
+1. 每个带 socket 的槽位声明 `socket_capacity`：该 socket 上可同时被填的槽位数。
+2. 同一平台、同一 socket 的所有槽位必须声明相同的容量；生成器校验，不一致即构建失败。
+3. 容量 1 且共享该 socket 的槽位 ≥ 2 时，这些槽位互为替代，只能填一个。
+4. socket 为空字符串的槽位不参与占用判定（`socket_capacity` 缺省，容量记为 0 = 无挂点约束）。
+5. 证据等级（`CONFIRMED`/`PROBABLE`/`GAMEPLAY`）与互斥正交：`DEC-005` 决定的是"能不能装"，本决策决定的是"装不装得下"。
+
+首批数据取值：
+
+| socket | 槽位 | 容量 | 结果 |
+|---|---|---|---|
+| `SOCKET_COUNTERMEASURE_02` | `DECOY`、`NOISE_MAKER` | 1 | 二者互斥，同一平台只能填一个 |
+| 其余 5 个 socket | 各 1 个槽位 | 1 | 无冲突（共享该 socket 的槽位不足 2 个） |
+
+### 6.3 明确不做
+
+- 不启用节点级互斥：解锁层面的"二选一"没有数据来源，凭感觉造规则等于把设计伪装成资料。机制保留，声明留空。
+- 不在 C++ 里推断容量：容量是数据字段，不是从"共享槽位数量"算出来的。
+- 不把武器槽位纳入本次范围：`weapon_slots.json` 的槽位不带 socket，鱼雷管数量与载荷分配是另一个模型，等 `WPN-001` 时另立决策。
+
+### 6.4 后果
+
+- `TECH-005` 的装备服务需要暴露 socket 容量与竞争槽位查询。
+- `SAVE-001` 的载入校验必须拒绝超过 socket 容量的组合（新错误码 `SOCKET_CAPACITY_EXCEEDED`）。
+- `UI-003` 可以显示"该槽位与 X 互斥"的具体原因，而不是笼统的"不兼容"。
+
+---
+
+## 7. DEC-009：防御矩阵 270 行 family-only 的处置（2026-09-12 决定）
+
+### 7.1 事实依据
+
+| 证据 | 内容 |
+|---|---|
+| 行数 | 防御兼容矩阵 2430 行中 **270 行** `asset_id` 为空 |
+| 构成 | 5 个 family × 54 个平台：`TW-RADAR-WARNING`、`TW-ELECTRONIC-WARNING`、`TW-ACTIVE-SONAR-WARNING`、`TW-ACOUSTIC-CLASSIFICATION`、`DEC-PASSIVE` |
+| 原因 | 这 5 个 family 的 6 国变体都存在，但变体本身的 `asset_id` 为空——是"有能力判定、没有产出资产"，不是"缺变体" |
+| 兼容级别 | 270 行中 `GAMEPLAY` 250、`UNKNOWN` 15、`INCOMPATIBLE` 5 |
+| 加载器现状 | 计数后跳过，并产生 1 条 `FAMILY_ONLY_COMPATIBILITY_ROWS` 通告 |
+
+### 7.2 决定
+
+**这 270 行是能力层数据，不是装备候选：记入独立的 `FamilyCapabilities` 集合，不再计入数据通告。**
+
+| 选项 | 判定 | 理由 |
+|---|---|---|
+| A（采用） | 记为能力层：平台、分支、family、系统名、socket、`tier_min`、关系等级 | 数据真实存在（平台确实可能具备该能力判定），且界面需要显示"该能力无对应装备" |
+| B（否决） | 继承所属分支的默认 `asset_id`，变成可装备项 | 会造出现实中不存在的装备，违反 `DEC-001` 的 A/B 类边界 |
+| C（否决） | 保持跳过，仅保留计数 | 界面无法表达这 270 行，等于把数据丢掉 |
+
+边界：
+
+1. 能力层条目**永远不是装备候选**：没有候选 ID，装配查询失败关闭，`CollectCandidates` 不会返回它们。
+2. 它们不改变 `FSDTechTree::Compatibility` 的记录数，装备服务的候选索引不受影响。
+3. 与 `DEC-001` 一致：不建 3D、不伪造数值、界面必须能显示该状态。
+
+### 7.3 附带清理：`CN_PJ_Type093B`
+
+**决定：保留为待产出资产声明，不删除矩阵行，也不补资产条目。**
+
+| 选项 | 判定 | 理由 |
+|---|---|---|
+| 保留为 pending（采用） | 矩阵继续声明"公开条目明确 093B 采用泵喷"，加载器记为 `bAssetPending` 关系 | 真实的公开声明 + 本库明确的缺口，两者都保留；装配失败关闭 |
+| 补齐资产条目（否决） | 未采纳 | 给一个没有产出资产、没有几何的型号建目录条目，属于把缺口写成资产 |
+| 删除矩阵行（否决） | 未采纳 | 会丢掉一条有公开依据的声明，只剩游戏配发方案（`CN_PROP_Type093`） |
+
+因此通告 `PENDING_COMPATIBILITY_ASSET` **保留 1 条**，并由测试锁定"必须指名 `CN_PJ_Type093B`"。
+待 `CN_PJ_Type093B` 泵喷资产实际产出（P5 内容扩产 Batch B）后，这条通告自然消失。
+
+### 7.4 后果
+
+- `DATA-005` 的剩余项收口：数据通告从 2 条降到 1 条（只保留有真实依据的待产出声明）。
+- `UI-002` 需要区分"该能力无对应装备"（能力层）与"资产未产出"（pending 关系）两种状态。
+- 3D 生产队列不受影响：270 行从未进入生产计划。
+
+---
+
+## 8. DEC-010：装备效果数值来源（2026-09-12 决定）
+
+### 8.1 事实依据
+
+| 证据 | 内容 |
+|---|---|
+| 推进目录 | `propulsion_catalogue.json` 提供几何、`kind`（PROPELLER / PUMPJET / SHAFT / THRUSTER）、`tier`、材质；**没有噪声、航速、能耗数字** |
+| 传感器目录 | `sensor_catalogue.json` 的条目多为 `GAMEPLAY` 占位，字段是分支、层级、挂点；**没有探测距离、误差、冷却** |
+| 防御目录 | 提供分支、家族、挂点与代表资产；**没有诱饵数量或告警能力数值** |
+| 已知先例 | `DEC-004` 的研究经济同样是"初版可玩值"，写在配置里并声明会被试玩调整 |
+
+### 8.2 决定
+
+**装备对仿真的影响取"初版可玩值"，全部集中在
+`Config/SilentDepth/equipment_effects.json`，并按类别 kind / 分支 × 层级带取用。**
+
+1. 文件头明确声明：不是实测数据，不得在 UI 或文档里当作现实数据引用。
+2. 代码只负责读取与套用：`Core/Platform/SDEquipmentEffects.*`，缺失的 kind / 分支
+   贡献为零（中性），不插值、不推断。
+3. 进入权威仿真的只有仿真本就有量纲的四项：噪声偏移、加速度倍率、航速倍率、电池
+   消耗倍率（`SubmarineStep` 的 PROP-001 重载）。传感器能力（距离 / 误差 / 冷却）
+   与防御标志目前只作为只读能力输出，等检测模型与敌方 AI 移植后消费。
+4. 试玩后调整只改这一个文件，不改代码。
+
+### 8.3 后果
+
+- `PROP-001` 有可测的落点：同一装备组合，仿真结果可重复；中性效果严格等于旧行为
+  （`SilentDepth.Platform.Effects.PropulsionEntersTheAuthoritativeStep` 锁定）。
+- `SNS-001` / `DEF-001` 目前只到"能力输出"层，UI 可以显示，仿真尚未消费——这是
+  范围事实，不是遗漏。
+- 一旦公开资料给出可用的真实数值，替换发生在配置文件，历史决定不回溯改写。
+
+---
+
+## 9. 变更记录
 
 | 日期 | 变更 |
 |---|---|
 | 2026-09-11 | 建立本记录；决定 `DEC-001`、`DEC-002`、`DEC-004` |
 | 2026-09-12 | 决定 `DEC-007`（层阶门槛取 1）；机制先行交付，随后按决定启用 |
+| 2026-09-12 | 决定 `DEC-008`（互斥只在装位级，socket 容量 1 即替代）与 `DEC-009`（270 行 family-only 记为能力层；`CN_PJ_Type093B` 保留为待产出声明） |
+| 2026-09-12 | 决定 `DEC-010`（装备效果取初版可玩值，集中在 `equipment_effects.json`；只有噪声/加速度/航速/电池四项进仿真） |

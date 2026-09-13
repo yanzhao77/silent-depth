@@ -282,6 +282,16 @@ Kahn 拓扑序（按 ID 排序的就绪队列）、DEC-004 成本、显示元数
   1 条 `MISSING_COMPATIBILITY_CANDIDATE` 通告，对应查询失败关闭。
 - 防御矩阵 2430 行中有 270 行只有 family 没有具体资产 → 无法映射到节点，跳过并计数。
 
+**处置结果（2026-09-12，`DEC-008` / `DEC-009`）**
+
+- 270 行改为能力层数据（`FSDTechTree::FamilyCapabilities`），不再产生通告，也不进入
+  候选索引；界面可显示"该能力无对应装备"。
+- `CN_PJ_Type093B` 保留为待产出声明（通告码由实现定为 `PENDING_COMPATIBILITY_ASSET`），
+  由测试锁定必须指名该资产；删除会丢掉公开声明，补条目会把缺口写成资产。
+- 通告总数 2 → 1。同一轮加入 `socket_capacity`（容量 1 且共用 socket 时槽位互为替代）
+  与存档校验 `SOCKET_CAPACITY_EXCEEDED`。细节见
+  `docs/UE4_TECH_TREE_DECISION_RECORD.md` §6、§7 与 `docs/UE4_TECH_TREE_SCHEMA.md` §4。
+
 **完成标签**
 
 - UBT 编译：**BUILD VERIFIED**。
@@ -406,6 +416,23 @@ LogSilentDepthSave: save self-test PASSED: slot round trip kept 150 point(s), 1 
 - 自动化测试：**TESTED**（全量 44/44，EXIT CODE 0）。
 - 实机启动：日志确认加载链（含视图模型）全部通过。
 
+### 7.4 控件层、存档外壳与挂点交付记录（2026-09-12）
+
+本节由 `docs/UE4_TECH_TREE_NEXT_PLAN.md` 的 P3–P5 执行；计划与交付细节以该文件为准，
+这里只登记结果与标签。
+
+| 项 | 结果 |
+|---|---|
+| `UI-001`~`UI-003` 控件层 | 用 C++ 构建 UMG 树交付（`UI/SDCodeWidgetBase`、`UI/TechTree/*`）；headless 编辑器实测无法用 Python 填充控件树，`.umg` 皮肤仍属编辑器工作 |
+| `UI-004` | 只完成结构层（换行、可聚焦、滚动）；1080p / 窄屏实测 `NOT VERIFIED` |
+| 完整存档三段 | 存档 schema v2（任务记录、统计、设置与语言）+ v1 迁移 + 统计自洽校验；设置界面 `UI/Settings/*`；实机 `-sd-save-selftest` 覆盖新段 |
+| `SOCKET-001`（Windows 侧） | Assembly 文档 → `FSDTechTree::Sockets`；Akula 几何仍需 Blender |
+
+- UBT 编译：**BUILD VERIFIED**。
+- 自动化测试：**TESTED**（全量 62/62，EXIT CODE 0）。
+- 实机（`-game -nullrhi`）：科技树加载、`-sd-techtree-probe` 探针、`-sd-save-selftest` 自检三条日志。
+- 未取得：`EDITOR VERIFIED`、`TARGET HARDWARE VERIFIED`、Blender 几何、真人试玩。
+
 ## 8. P3 五类系统接入
 
 ### 8.1 首个垂直切片
@@ -480,6 +507,9 @@ LogSilentDepthSave: save self-test PASSED: slot round trip kept 150 point(s), 1 
 制造商或可靠历史资料后才更新；否则保持 `UNKNOWN`。
 
 ## 12. 近期执行清单
+
+本节的六项已展开为 `docs/UE4_TECH_TREE_NEXT_PLAN.md`（P1–P6，含新增的 `DEC-008`）。
+两处冲突时以本节的验收标准为准，任务状态以该文件的实测记录为准。
 
 下一轮建议只执行以下任务，完成后再进入大规模资产导入：
 

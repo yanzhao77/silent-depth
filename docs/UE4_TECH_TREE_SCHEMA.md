@@ -256,14 +256,27 @@ FSDTechTree
 
 ```json
 {
-  "schema": "silent-depth-tech-tree-save-v1",
-  "version": 1,
+  "schema": "silent-depth-save-v2",
+  "version": 2,
   "researchPoints": 150,
   "unlockedNodeIds": ["US_TORP_Mk14"],
   "firstClearMissionIds": ["M02"],
   "loadouts": [
     { "platform": "RU_SSN_Akula", "slot": "TORPEDO", "candidate": "RU_TORP_UGST" }
   ],
+  "missions": [
+    { "mission": "M02", "bestScore": 860, "cleared": true }
+  ],
+  "statistics": {
+    "missionsPlayed": 1, "missionsCleared": 1, "missionsFailed": 0,
+    "totalScore": 860, "bestScore": 860, "lastMissionId": "M02"
+  },
+  "settings": {
+    "audio": { "master": 1.0, "music": 0.7, "effects": 1.0 },
+    "video": { "qualityPreset": 2, "resolutionScale": 1.0 },
+    "input": { "invertRudder": false },
+    "app": { "language": "zh" }
+  },
   "signature": "12345678901234567890"
 }
 ```
@@ -273,22 +286,37 @@ FSDTechTree
 | 序列化 | `WriteSaveToJson` / `SaveTechTreeToFile`（数组按规范序，字节稳定） |
 | 严格读入 | `ReadSaveFromJson` / `LoadTechTreeFromFile` |
 | 校验 | `ValidateSaveData` |
-| 指纹 | `ComputeSaveSignature`（账户 + 配装） |
-| 规范化 | `NormalizeSaveData`（排序、去重） |
+| 指纹 | `ComputeSaveSignature`（账户 + 配装 + 任务记录 + 统计 + 设置） |
+| 规范化 | `NormalizeSaveData`（排序、去重；任务按 ID 排序） |
+| 统计生产者 | `Core/Save/SDMissionStats.h/.cpp`（唯一入口是"一个已结束的任务结果"） |
+| 设置规则 | `Core/Save/SDGameSettings.h/.cpp`（区间与语言令牌的唯一定义处） |
+
+文档是**整个会话存档**：账户、配装、任务记录与统计汇总、设置与语言。类型名保留
+`FSDTechTreeSaveData`，因为槽位子系统与既有迁移路径都在用它。
 
 版本策略：
 
 | 情况 | 行为 |
 |---|---|
-| `version == 1` | 正常读入并逐项校验 |
+| `version == 2` | 正常读入并逐项校验（含统计与设置） |
+| `version == 1` | **迁移**：账户与配装保留，任务/统计/设置取默认值（旧版本从未记录它们，补一个分数比留空更假） |
 | `version` 缺失或 `< 1` | **重建为空账号**，不猜测旧字段；结果版本为当前版本 |
-| `version > 1` | 拒绝（`SAVE_VERSION_UNSUPPORTED`）——本构建无法解释未来字段 |
+| `version > 2` | 拒绝（`SAVE_VERSION_UNSUPPORTED`）——本构建无法解释未来字段 |
 
 拒绝清单（SAVE-002 的"不会进入运行时"）：`SAVE_VERSION_UNSUPPORTED`、
 `SAVE_SIGNATURE_MISMATCH`、`NEGATIVE_BALANCE`、`UNKNOWN_NODE_IN_PROGRESS`、
 `DUPLICATE_NODE_IN_PROGRESS`、`UNKNOWN_PLATFORM`、`PLATFORM_NOT_SUBMARINE`、
 `UNKNOWN_CANDIDATE`、`DUPLICATE_LOADOUT_SLOT`、`EMPTY_LOADOUT_FIELD`、
+`EMPTY_MISSION_ID`、`DUPLICATE_MISSION_RECORD`、`STATISTICS_MISMATCH`、
+`INVALID_SAVE_VALUE`、`INVALID_SETTINGS_VALUE`、`UNKNOWN_TOKEN`（语言）、
 `MISSING_FIELD`、`INVALID_FIELD_TYPE`、`INVALID_JSON`、`MISSING_FILE`。
+
+**统计与记录必须自洽**：`statistics.missionsCleared` 必须等于记录里 `cleared` 的数量，
+`statistics.bestScore` 必须等于记录里的最高分，失败数不得超过游玩数。这条规则在
+重算签名后依然生效——它是规则违例，不是"文件过期"。
+
+**设置区间**：音量 0–1、画质预设 0–3、渲染缩放 0.5–1.0、语言 `zh|en|fr|ru`。
+校验只报错不修复：非法值不会被悄悄夹到边界。
 
 `signature` 是**篡改检测**而非安全边界：它能发现手工改动与文件损坏，
 但能改文件的人同样能重算签名。校验顺序是「结构校验 → 签名比对」，
@@ -336,7 +364,7 @@ LogSilentDepthSave: save self-test PASSED: slot round trip kept 150 point(s), 1 
 |---|---|
 | 武器兼容 | 250 |
 | 传感器兼容 | 702 |
-| 防御兼容 | 2160（原始 2430，其中 270 行只有 family 没有具体资产） |
+| 防御兼容 | 2160 条装备关系 + 270 条能力层记录（原始 2430 行，其中 270 行只有 family 没有具体资产，见 `DEC-009`） |
 | 推进兼容 | 65（11 条"已验证"声明 + 54 条游戏配发；其中 1 条声明指向未产出的资产，标记为 pending） |
 | 安装位 | 604（武器 118 + 防御 486） |
 
@@ -350,7 +378,25 @@ LogSilentDepthSave: save self-test PASSED: slot round trip kept 150 point(s), 1 
 | `Incompatible` | 拒绝 | 拒绝 | 任何策略下都不放行 |
 
 其余接口：`GetCompatibility`（按对，取最强证据）、`GetCompatibilityInSlot`（按槽）、
-`CollectSlots`、`CollectCandidates`（按策略过滤、按 ID 序）、`FindRecord`。
+`CollectSlots`、`CollectCandidates`（按策略过滤、按 ID 序）、`FindRecord`、
+`CollectFamilyCapabilities`、`FindSlot`、`GetSlotSocketCapacity`、
+`CollectSocketPeers`、`CanMountTogether`。
+
+**槽位到矩阵的键**：矩阵记录里的 `SlotName` 对武器是槽位名（`TORPEDO`），对传感器
+与防御是挂点名（`SOCKET_COUNTERMEASURE_02`）。装备服务在解析槽位查询时先直接匹配，
+再按该槽位声明的 `SocketName` 匹配，最后才落到通配记录——否则防御配装永远匹配不上
+任何一行（此前 `ValidateSaveCompatibility` 对防御配装必然失败）。
+
+**能力层（DEC-009）**：防御矩阵 270 行只有 family、没有产出资产（5 个 family × 54 个
+平台，其中 `GAMEPLAY` 250 / `UNKNOWN` 15 / `INCOMPATIBLE` 5）。这些行记录的
+是"平台具备该能力判定"，不是可装备项：它们进 `FSDTechTree::FamilyCapabilities`，
+不参与候选索引，界面可显示"该能力无对应装备"，装配照旧失败关闭。
+
+**socket 容量（DEC-008）**：带 socket 的槽位声明 `socket_capacity`——该挂点上可同时
+被填的槽位数，同一平台同一 socket 的槽位必须声明相同值（生成器校验，加载器对缺失或
+非法值报 `INVALID_SOCKET_CAPACITY`）。容量 1 且被多个槽位共用时，这些槽位互为替代：
+当前只有 `SOCKET_COUNTERMEASURE_02`（`DECOY` + `NOISE_MAKER`）属于这种情况。
+socket 为空的槽位是艇内设备，容量记为 0，不参与占用判定。节点级互斥组仍然为空。
 
 **待产出资产（pending）**：推进矩阵的 `CN_SSN_Type093B` 声明"公开条目明确 093B 采用
 泵喷"，但同时说明本库尚无对应 3D 资产——数据自己把这条记成了缺口。因此这类引用
@@ -360,12 +406,13 @@ LogSilentDepthSave: save self-test PASSED: slot round trip kept 150 point(s), 1 
 它描述玩家实际能装什么，因此指向不存在的资产仍然按缺陷处理。
 
 **数据通告（Notices）**：加载报告区分 `Errors` 与 `Notices`。Notices 是必须可见
-但不该让整棵树加载失败的数据状况，当前 2 条：1 条 `PENDING_COMPATIBILITY_ASSET`
-（上述 `CN_PJ_Type093B`）、1 条 `FAMILY_ONLY_COMPATIBILITY_ROWS`（防御矩阵 270 行只有 family
-没有具体资产，跳过并计数）。
+但不该让整棵树加载失败的数据状况，当前 **1 条**：`PENDING_COMPATIBILITY_ASSET`
+（上述 `CN_PJ_Type093B`，由 `DEC-009` 保留并锁定）。防御矩阵 270 行不再产生通告——
+它们已成能力层数据。
 
 **存档联动**：`ValidateSaveCompatibility(Data, Equipment, Policy, Report)` 在结构校验
-之后追加"这个槽位允不允许这件装备"的判定，不允许则报 `INCOMPATIBLE_LOADOUT`。
+之后追加"这个槽位允不允许这件装备"的判定，不允许则报 `INCOMPATIBLE_LOADOUT`；
+再按平台 + socket 统计已填槽位，超过容量则报 `SOCKET_CAPACITY_EXCEEDED`（DEC-008）。
 
 ---
 
@@ -596,19 +643,23 @@ widget、不需要世界、不需要一帧。
 | "资产未验证"徽标 | 潜艇 54（`PLANNED`/`VALIDATING`）、武器 0（`DATA-003` 后全部 `COMPLETE`） |
 | 传感器 `DATABASE_ONLY` 徽标 | 111 |
 
-**未完成**：UMG widget 本身。`.umg` 资产只能在编辑器里创作，本环境没有可用的
-编辑器交互路径，因此没有伪造一个。控件层要做的只是把上述行渲染出来。
+**控件层已交付（2026-09-12）**：`UI/SDCodeWidgetBase` + `UI/TechTree/*` 用 C++
+构建真正的 UMG 树，`UI-001`/`UI-002`/`UI-003` 三个屏幕各有 Automation 测试。
+headless 编辑器实测只能创建 `WidgetBlueprint` 资产、不能填充控件树，`.umg` 皮肤
+仍需编辑器（`EDITOR REQUIRED`），但屏幕本身不再依赖它。
 
 ## 9. 已知未决与后续
 
 | 事项 | 归属 |
 |---|---|
-| `FSDTechTree::Sockets`（逻辑挂点绑定）的加载 | `SOCKET-001` 之后的资产任务 |
-| 互斥关系的真实来源（同一平台同一安装位的候选互为替代） | 未实现；矩阵已在手，规则需先定 |
+| ~~`FSDTechTree::Sockets`（逻辑挂点绑定）的加载~~ | 已交付：`TechTreeSocketLoaders.cpp`（Windows 侧）；Akula 几何仍待 Blender |
+| ~~互斥关系的真实来源~~ | 已定：`DEC-008`（socket 容量），见 §4 |
 | 防御树的 family 层节点模型（当前节点取 13 个资产，45 个 family 只作为分层信息） | 待定 |
-| 防御矩阵 270 行只有 family、没有具体资产 | `DATA-005`（已计数，尚未映射到节点） |
-| UMG widget（科技树总览、节点详情、配装界面） | `UI-001` 至 `UI-003` 的控件层；数据层已就绪 |
-| 完整存档的设置/统计/语言段（Web schema 已知，缺生产者与消费者） | 外壳任务（设置界面、统计结算） |
+| ~~防御矩阵 270 行只有 family、没有具体资产~~ | 已定：`DEC-009`（记为能力层），见 §4 |
+| 武器槽位没有 socket 绑定，鱼雷管数量与载荷分配未建模 | `WPN-001` |
+| ~~UMG 控件层~~ | 已交付（C++ 构建 UMG）；`.umg` 皮肤与 `UI-004` 的窄屏/键鼠实测仍待编辑器 |
+| ~~完整存档的设置/统计/语言段~~ | 已交付：存档 schema v2 + 统计生产者 + 设置界面（`UI/Settings`） |
+| socket 的 purpose → 注册表令牌对照表 | `DEF-002` / `SNS-002`（DEC-002 §3.3.1）；在此之前 `RegistryCategory` 保持空 |
 
 ---
 
@@ -632,3 +683,9 @@ widget、不需要世界、不需要一帧。
 | 2026-09-12 | 存档收口：`USilentDepthSaveGame` + `USilentDepthSaveSubsystem`（临时槽 → 读回验证 → 正式槽），文档级 JSON 导入导出接口；`-sd-save-selftest` 实机验证通过 |
 | 2026-09-12 | 层阶门槛机制（`FSDTierGateRule`，跳过空层阶 + 需求钳位，避免潜艇树死锁），出厂默认关闭并有断言锁住；新增 `TechTreeTierGateTests` 6 项 |
 | 2026-09-12 | `DEC-007` 决定取 1：出厂门槛开启，开局可研究节点 246 → 22；测试栈改为加载出厂规则（此前一直跑在门槛关闭路径上），相关断言同步更新 |
+| 2026-09-12 | `UI-001`~`UI-003` 控件层：C++ 构建 UMG 树（`UI/SDCodeWidgetBase`、`UI/TechTree/*`）；headless 编辑器只能建资产、不能填树，`.umg` 皮肤留待编辑器 |
+| 2026-09-12 | 存档 schema v2：任务记录、统计汇总、设置与语言三段 + v1 迁移 + 指纹扩展 + 统计自洽校验；设置界面 `UI/Settings/SDGameSettingsWidget`；实机 `-sd-save-selftest` 覆盖新段 |
+| 2026-09-12 | `SOCKET-001` Windows 侧：Assembly 文档 → `FSDTechTree::Sockets`，purpose 词表校验、失败关闭、`bEditorVerified` 恒假；Yasen Assembly 纳入同步（20 个运行时文档） |
+| 2026-09-12 | `DEC-007` 门禁：`TechTreeProbe` 固定任务序列 + 贪心研究策略，实机输出 22 开局节点 / 600 点结算 / 6 次研究；真人试玩仍待安排 |
+| 2026-09-12 | `DEC-009`：防御矩阵 270 行改为能力层（`FSDTechTree::FamilyCapabilities`），不再产生数据通告；通告数 2 → 1，仅保留有公开依据的 `CN_PJ_Type093B` 待产出声明 |
+| 2026-09-12 | `DEC-008`：槽位 `socket_capacity` + 装备服务容量/竞争查询 + 存档校验 `SOCKET_CAPACITY_EXCEEDED`；同时修好"矩阵按 socket 存、槽位按名字查"的键不一致，防御配装的按槽查询与存档校验从此可用 |

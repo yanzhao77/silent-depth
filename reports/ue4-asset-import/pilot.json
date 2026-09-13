@@ -1,0 +1,34 @@
+{
+  "categories": {
+    "weapons": {
+      "planned": 3,
+      "imported": 3,
+      "failed": [],
+      "assets": [
+        {
+          "asset_id": "CN_ASM_YJ18",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_CN_ASM_YJ18",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_ASM_YJ8",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_CN_ASM_YJ8",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_ASW_CY1",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiSubmarineMissiles/SM_CN_ASW_CY1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        }
+      ]
+    }
+  },
+  "lods_imported": true,
+  "seconds": 2.6
+}

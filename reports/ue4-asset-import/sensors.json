@@ -1,0 +1,286 @@
+{
+  "categories": {
+    "sensors": {
+      "planned": 39,
+      "imported": 39,
+      "failed": [],
+      "assets": [
+        {
+          "asset_id": "GEN_EOIR_T5",
+          "destination": "/Game/SilentDepth/Art/Sensors/EOIR/SM_GEN_EOIR_T5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_EOIR_T6",
+          "destination": "/Game/SilentDepth/Art/Sensors/EOIR/SM_GEN_EOIR_T6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_ESM_T6",
+          "destination": "/Game/SilentDepth/Art/Sensors/ESM/SM_GEN_ESM_T6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_MAST_PHO_T1",
+          "destination": "/Game/SilentDepth/Art/Sensors/Photonics/SM_GEN_MAST_PHO_T1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_MAST_PHO_T3",
+          "destination": "/Game/SilentDepth/Art/Sensors/Photonics/SM_GEN_MAST_PHO_T3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_MAST_PHO_T4",
+          "destination": "/Game/SilentDepth/Art/Sensors/Photonics/SM_GEN_MAST_PHO_T4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_PROC_T3",
+          "destination": "/Game/SilentDepth/Art/Sensors/Processing/SM_GEN_PROC_T3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_PROC_T7",
+          "destination": "/Game/SilentDepth/Art/Sensors/Processing/SM_GEN_PROC_T7",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_PROC_T9",
+          "destination": "/Game/SilentDepth/Art/Sensors/Processing/SM_GEN_PROC_T9",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_RADAR_T3",
+          "destination": "/Game/SilentDepth/Art/Sensors/Radar/SM_GEN_RADAR_T3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_ACT_T3",
+          "destination": "/Game/SilentDepth/Art/Sensors/Active/SM_GEN_SONAR_ACT_T3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_ACT_T5",
+          "destination": "/Game/SilentDepth/Art/Sensors/Active/SM_GEN_SONAR_ACT_T5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_BOW_T4",
+          "destination": "/Game/SilentDepth/Art/Sensors/Bow/SM_GEN_SONAR_BOW_T4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_FLK_T2",
+          "destination": "/Game/SilentDepth/Art/Sensors/Flank/SM_GEN_SONAR_FLK_T2",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_FLK_T4",
+          "destination": "/Game/SilentDepth/Art/Sensors/Flank/SM_GEN_SONAR_FLK_T4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_FLK_T6",
+          "destination": "/Game/SilentDepth/Art/Sensors/Flank/SM_GEN_SONAR_FLK_T6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_HF_T3",
+          "destination": "/Game/SilentDepth/Art/Sensors/HighFrequency/SM_GEN_SONAR_HF_T3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_HF_T4",
+          "destination": "/Game/SilentDepth/Art/Sensors/HighFrequency/SM_GEN_SONAR_HF_T4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_MINE_T4",
+          "destination": "/Game/SilentDepth/Art/Sensors/MineDetection/SM_GEN_SONAR_MINE_T4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_NAV_T4",
+          "destination": "/Game/SilentDepth/Art/Sensors/Navigation/SM_GEN_SONAR_NAV_T4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_NAV_T5",
+          "destination": "/Game/SilentDepth/Art/Sensors/Navigation/SM_GEN_SONAR_NAV_T5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_PSV_T1",
+          "destination": "/Game/SilentDepth/Art/Sensors/Passive/SM_GEN_SONAR_PSV_T1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_PSV_T3",
+          "destination": "/Game/SilentDepth/Art/Sensors/Passive/SM_GEN_SONAR_PSV_T3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_PSV_T5",
+          "destination": "/Game/SilentDepth/Art/Sensors/Passive/SM_GEN_SONAR_PSV_T5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_PSV_T6",
+          "destination": "/Game/SilentDepth/Art/Sensors/Passive/SM_GEN_SONAR_PSV_T6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_PSV_T7",
+          "destination": "/Game/SilentDepth/Art/Sensors/Passive/SM_GEN_SONAR_PSV_T7",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_PSV_T8",
+          "destination": "/Game/SilentDepth/Art/Sensors/Passive/SM_GEN_SONAR_PSV_T8",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_SONAR_TWD_T6",
+          "destination": "/Game/SilentDepth/Art/Sensors/Towed/SM_GEN_SONAR_TWD_T6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_PHO_CM010",
+          "destination": "/Game/SilentDepth/Art/Sensors/Photonics/SM_UK_PHO_CM010",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_ESM_BLQ10",
+          "destination": "/Game/SilentDepth/Art/Sensors/ESM/SM_US_ESM_BLQ10",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_PHO_Virginia",
+          "destination": "/Game/SilentDepth/Art/Sensors/Photonics/SM_US_PHO_Virginia",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_RADAR_BPS16",
+          "destination": "/Game/SilentDepth/Art/Sensors/Radar/SM_US_RADAR_BPS16",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SONAR_BQQ10",
+          "destination": "/Game/SilentDepth/Art/Sensors/Bow/SM_US_SONAR_BQQ10",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SONAR_BQQ5",
+          "destination": "/Game/SilentDepth/Art/Sensors/Bow/SM_US_SONAR_BQQ5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SONAR_BQQ6",
+          "destination": "/Game/SilentDepth/Art/Sensors/Bow/SM_US_SONAR_BQQ6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SONAR_BQS15",
+          "destination": "/Game/SilentDepth/Art/Sensors/HighFrequency/SM_US_SONAR_BQS15",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SONAR_LAB",
+          "destination": "/Game/SilentDepth/Art/Sensors/Bow/SM_US_SONAR_LAB",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SONAR_TB16",
+          "destination": "/Game/SilentDepth/Art/Sensors/Towed/SM_US_SONAR_TB16",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SONAR_TB29",
+          "destination": "/Game/SilentDepth/Art/Sensors/Towed/SM_US_SONAR_TB29",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        }
+      ]
+    }
+  },
+  "lods_imported": true,
+  "seconds": 24.5
+}

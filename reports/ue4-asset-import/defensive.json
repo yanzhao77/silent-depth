@@ -1,0 +1,104 @@
+{
+  "categories": {
+    "defensive": {
+      "planned": 13,
+      "imported": 13,
+      "failed": [],
+      "assets": [
+        {
+          "asset_id": "CN_EW_TYPE093",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/ESM/SM_CN_EW_TYPE093",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_ACM_NOISE_MAKER",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/NoiseMakers/SM_GEN_ACM_NOISE_MAKER",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_CML_TUBE",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/Launchers/SM_GEN_CML_TUBE",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_EW_ANTENNA_ARRAY",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/Antennas/SM_GEN_EW_ANTENNA_ARRAY",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "GEN_TW_TORPEDO_WARNING_SENSOR",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/TorpedoDefense/SM_GEN_TW_TORPEDO_WARNING_SENSOR",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_EW_AKULA",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/ESM/SM_RU_EW_AKULA",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_EW_ASTUTE",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/ESM/SM_UK_EW_ASTUTE",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_ACM_MOBILE_DECOY",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/Decoys/SM_US_ACM_MOBILE_DECOY",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_ACM_TORPEDO_DECOY",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/AcousticCountermeasure/SM_US_ACM_TORPEDO_DECOY",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_CML_DECOY_LAUNCHER",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/Launchers/SM_US_CML_DECOY_LAUNCHER",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_DCM_CONSOLE",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/Control/SM_US_DCM_CONSOLE",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_EW_BLQ10",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/ESM/SM_US_EW_BLQ10",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_EW_ESM_GENERIC",
+          "destination": "/Game/SilentDepth/Art/DefensiveSystems/ESM/SM_US_EW_ESM_GENERIC",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        }
+      ]
+    }
+  },
+  "lods_imported": true,
+  "seconds": 18.3
+}

@@ -1,0 +1,853 @@
+{
+  "categories": {
+    "weapons": {
+      "planned": 120,
+      "imported": 120,
+      "failed": [],
+      "assets": [
+        {
+          "asset_id": "CN_ASM_YJ18",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_CN_ASM_YJ18",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_ASM_YJ8",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_CN_ASM_YJ8",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_ASW_CY1",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiSubmarineMissiles/SM_CN_ASW_CY1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_SLBM_JL1",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_CN_SLBM_JL1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_SLBM_JL2",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_CN_SLBM_JL2",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_SLBM_JL3",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_CN_SLBM_JL3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_TORP_Yu1",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_CN_TORP_Yu1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_TORP_Yu3",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_CN_TORP_Yu3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_TORP_Yu4",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_CN_TORP_Yu4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_TORP_Yu5",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_CN_TORP_Yu5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_TORP_Yu6",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_CN_TORP_Yu6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "CN_TORP_Yu7",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_CN_TORP_Yu7",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_ASM_Exocet_SM39",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_FR_ASM_Exocet_SM39",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_LAM_MdCN",
+          "destination": "/Game/SilentDepth/Art/Weapons/LandAttackMissiles/SM_FR_LAM_MdCN",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_SLBM_M1",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_FR_SLBM_M1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_SLBM_M2",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_FR_SLBM_M2",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_SLBM_M20",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_FR_SLBM_M20",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_SLBM_M4",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_FR_SLBM_M4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_SLBM_M45",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_FR_SLBM_M45",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_SLBM_M51",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_FR_SLBM_M51",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_TORP_F17",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_FR_TORP_F17",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_TORP_F21",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_FR_TORP_F21",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_TORP_L5_Mod3",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_FR_TORP_L5_Mod3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "FR_TORP_L5_Mod4",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_FR_TORP_L5_Mod4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "IN_SLBM_K15",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_IN_SLBM_K15",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "IN_SLBM_K4",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_IN_SLBM_K4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "IN_TORP_Varunastra",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_IN_TORP_Varunastra",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_Kalibr_3M54",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_Kalibr_3M54",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_Oniks",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_Oniks",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_P1000",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_P1000",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_P120",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_P120",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_P5",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_P5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_P500",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_P500",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_P6",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_P6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_P70",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_P70",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_P700",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_P700",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASM_Zircon",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_RU_ASM_Zircon",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASW_Otvet",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiSubmarineMissiles/SM_RU_ASW_Otvet",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASW_Veter",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiSubmarineMissiles/SM_RU_ASW_Veter",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASW_Vodopad",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiSubmarineMissiles/SM_RU_ASW_Vodopad",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_ASW_Vyuga",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiSubmarineMissiles/SM_RU_ASW_Vyuga",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_DECOY_MG74",
+          "destination": "/Game/SilentDepth/Art/Weapons/Decoys/SM_RU_DECOY_MG74",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_LAM_Granat",
+          "destination": "/Game/SilentDepth/Art/Weapons/LandAttackMissiles/SM_RU_LAM_Granat",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_LAM_Kalibr_3M14",
+          "destination": "/Game/SilentDepth/Art/Weapons/LandAttackMissiles/SM_RU_LAM_Kalibr_3M14",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_MINE_MDM6",
+          "destination": "/Game/SilentDepth/Art/Weapons/Mines/SM_RU_MINE_MDM6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_MINE_PMR2",
+          "destination": "/Game/SilentDepth/Art/Weapons/Mines/SM_RU_MINE_PMR2",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R13",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R13",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R21",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R21",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R27",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R27",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R29",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R29",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R29R",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R29R",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R29RM",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R29RM",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R29RMU2_Liner",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R29RMU2_Liner",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R29RMU2_Sineva",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R29RMU2_Sineva",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R30_Bulava",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R30_Bulava",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R39",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R39",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SLBM_R39M",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_RU_SLBM_R39M",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_SPECIAL_SDV_Sirena",
+          "destination": "/Game/SilentDepth/Art/Weapons/SpecialPayload/SM_RU_SPECIAL_SDV_Sirena",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_STRAT_Meteorit",
+          "destination": "/Game/SilentDepth/Art/Weapons/Strategic/SM_RU_STRAT_Meteorit",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_5365K",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_5365K",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_5365M",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_5365M",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_6576",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_6576",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_6576A",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_6576A",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_Fizik",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_Fizik",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_SAET60",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_SAET60",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_SET53",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_SET53",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_SET65",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_SET65",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_Shkval",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_Shkval",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_TEST71",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_TEST71",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_TEST71M",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_TEST71M",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_TEST96",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_TEST96",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_UGST",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_UGST",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_UGST_M",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_UGST_M",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_USET80",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_USET80",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "RU_TORP_USET80K",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_RU_TORP_USET80K",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_DECOY_SSE_Mk3",
+          "destination": "/Game/SilentDepth/Art/Weapons/Decoys/SM_UK_DECOY_SSE_Mk3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_MINE_SeaUrchin",
+          "destination": "/Game/SilentDepth/Art/Weapons/Mines/SM_UK_MINE_SeaUrchin",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_SLBM_Polaris_A3TK",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_UK_SLBM_Polaris_A3TK",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_SPECIAL_DDS",
+          "destination": "/Game/SilentDepth/Art/Weapons/SpecialPayload/SM_UK_SPECIAL_DDS",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_TORP_Mk8",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_UK_TORP_Mk8",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_TORP_Spearfish",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_UK_TORP_Spearfish",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_TORP_Spearfish_Mod1",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_UK_TORP_Spearfish_Mod1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_TORP_StingRay",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_UK_TORP_StingRay",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_TORP_Tigerfish",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_UK_TORP_Tigerfish",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "UK_TORP_Tigerfish_Mod1",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_UK_TORP_Tigerfish_Mod1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_ASM_Harpoon",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_US_ASM_Harpoon",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_ASM_Tomahawk_TASM",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiShipMissiles/SM_US_ASM_Tomahawk_TASM",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_ASW_SUBROC",
+          "destination": "/Game/SilentDepth/Art/Weapons/AntiSubmarineMissiles/SM_US_ASW_SUBROC",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_DECOY_ADC_Mk4",
+          "destination": "/Game/SilentDepth/Art/Weapons/Decoys/SM_US_DECOY_ADC_Mk4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_DECOY_ADC_Mk5",
+          "destination": "/Game/SilentDepth/Art/Weapons/Decoys/SM_US_DECOY_ADC_Mk5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_DECOY_Mk70_MOSS",
+          "destination": "/Game/SilentDepth/Art/Weapons/Decoys/SM_US_DECOY_Mk70_MOSS",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_LAM_Tomahawk",
+          "destination": "/Game/SilentDepth/Art/Weapons/LandAttackMissiles/SM_US_LAM_Tomahawk",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_LAM_Tomahawk_BlockIII",
+          "destination": "/Game/SilentDepth/Art/Weapons/LandAttackMissiles/SM_US_LAM_Tomahawk_BlockIII",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_LAM_Tomahawk_BlockIV",
+          "destination": "/Game/SilentDepth/Art/Weapons/LandAttackMissiles/SM_US_LAM_Tomahawk_BlockIV",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_LAM_Tomahawk_BlockV",
+          "destination": "/Game/SilentDepth/Art/Weapons/LandAttackMissiles/SM_US_LAM_Tomahawk_BlockV",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_MINE_Mk60_CAPTOR",
+          "destination": "/Game/SilentDepth/Art/Weapons/Mines/SM_US_MINE_Mk60_CAPTOR",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_MINE_Mk67_SLMM",
+          "destination": "/Game/SilentDepth/Art/Weapons/Mines/SM_US_MINE_Mk67_SLMM",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SLBM_Polaris_A1",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_US_SLBM_Polaris_A1",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SLBM_Polaris_A3",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_US_SLBM_Polaris_A3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SLBM_Poseidon_C3",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_US_SLBM_Poseidon_C3",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SLBM_Trident_C4",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_US_SLBM_Trident_C4",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SLBM_Trident_D5",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_US_SLBM_Trident_D5",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SLBM_Trident_D5LE",
+          "destination": "/Game/SilentDepth/Art/Weapons/BallisticMissiles/SM_US_SLBM_Trident_D5LE",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SPECIAL_ASDS",
+          "destination": "/Game/SilentDepth/Art/Weapons/SpecialPayload/SM_US_SPECIAL_ASDS",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SPECIAL_DDS",
+          "destination": "/Game/SilentDepth/Art/Weapons/SpecialPayload/SM_US_SPECIAL_DDS",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_SPECIAL_SDV_Mk8",
+          "destination": "/Game/SilentDepth/Art/Weapons/SpecialPayload/SM_US_SPECIAL_SDV_Mk8",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_STRAT_RegulusII",
+          "destination": "/Game/SilentDepth/Art/Weapons/Strategic/SM_US_STRAT_RegulusII",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_STRAT_TLAM_N",
+          "destination": "/Game/SilentDepth/Art/Weapons/Strategic/SM_US_STRAT_TLAM_N",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk14",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk14",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk16",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk16",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk18",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk18",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk23",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk23",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk27",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk27",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk37",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk37",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk37_Mod2",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk37_Mod2",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk45",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk45",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk48",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk48",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk48_ADCAP",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk48_ADCAP",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk48_Mod6",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk48_Mod6",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        },
+        {
+          "asset_id": "US_TORP_Mk48_Mod7",
+          "destination": "/Game/SilentDepth/Art/Weapons/Torpedoes/SM_US_TORP_Mk48_Mod7",
+          "lods_imported": 4,
+          "collision": true,
+          "status": "IMPORTED"
+        }
+      ]
+    }
+  },
+  "lods_imported": true,
+  "seconds": 141.0
+}
