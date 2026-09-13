@@ -1,14 +1,76 @@
 {
-  "generated_at": "2026-09-11",
+  "generated_at": "2026-09-13",
   "schema": "silent-depth-propulsion-manifest-v1",
   "root": "SilentDepth_Assets/Propulsion",
   "template": "Templates/PROPULSION_ASSET_TEMPLATE.md",
   "note": "推进系统资产清单。只描述技术、资产与外形身份，不含功率/航速/噪声等游戏平衡数据。",
   "counts": {
-    "assets": 20,
-    "complete_3d": 20
+    "assets": 21,
+    "complete_3d": 21
   },
   "assets": [
+    {
+      "asset_id": "CN_PJ_Type093B",
+      "display_name": "Type 093B 泵喷推进器",
+      "category": "PumpJets",
+      "kind": "PUMPJET",
+      "family_id": "FAM_UNASSIGNED",
+      "country": "China",
+      "tier": 9,
+      "era": "2020s",
+      "technology_route": "pump-jet propulsor",
+      "coverage": "3D_ASSET",
+      "status": "VALIDATING",
+      "lods": {
+        "0": 12576,
+        "1": 6448,
+        "2": 3088,
+        "3": 1344
+      },
+      "sockets": [
+        "SOCKET_PROPULSOR",
+        "SOCKET_SHAFT",
+        "SOCKET_PUMPJET"
+      ],
+      "materials": [
+        "M_Propulsor_Blade",
+        "M_Propulsor_Hub",
+        "M_Propulsor_Duct",
+        "M_Propulsor_Rubber"
+      ],
+      "dimensions_m": [
+        5.635,
+        5.4,
+        5.4
+      ],
+      "paths": {
+        "blend": "PumpJets/CN_PJ_Type093B/Blend/CN_PJ_Type093B_MASTER.blend",
+        "lod0": "PumpJets/CN_PJ_Type093B/FBX/CN_PJ_Type093B_LOD0.fbx",
+        "lod1": "PumpJets/CN_PJ_Type093B/FBX/CN_PJ_Type093B_LOD1.fbx",
+        "lod2": "PumpJets/CN_PJ_Type093B/FBX/CN_PJ_Type093B_LOD2.fbx",
+        "lod3": "PumpJets/CN_PJ_Type093B/FBX/CN_PJ_Type093B_LOD3.fbx",
+        "combined": "PumpJets/CN_PJ_Type093B/FBX/CN_PJ_Type093B_COMBINED.fbx",
+        "collision": "PumpJets/CN_PJ_Type093B/Collision/CN_PJ_Type093B_COLLISION.fbx",
+        "spec": "PumpJets/CN_PJ_Type093B/Documentation/CN_PJ_Type093B_SPEC.json",
+        "readme": "PumpJets/CN_PJ_Type093B/Documentation/CN_PJ_Type093B_README.md",
+        "build_report": "PumpJets/CN_PJ_Type093B/Validation/CN_PJ_Type093B_BUILD_REPORT.json",
+        "validation": "PumpJets/CN_PJ_Type093B/Validation/CN_PJ_Type093B_VALIDATION.json",
+        "preview": [
+          "PumpJets/CN_PJ_Type093B/Preview/CN_PJ_Type093B_Rear.png",
+          "PumpJets/CN_PJ_Type093B/Preview/CN_PJ_Type093B_Side.png",
+          "PumpJets/CN_PJ_Type093B/Preview/CN_PJ_Type093B_ThreeQuarter.png",
+          "PumpJets/CN_PJ_Type093B/Preview/CN_PJ_Type093B_Top.png"
+        ]
+      },
+      "validation": "",
+      "ue427_import": null,
+      "references": [],
+      "limitations": [
+        "程序化生成的推进器外形成像，不是任何具体艇号的实测复制。",
+        "未在 UE4.27 编辑器内实际导入验证，状态保持 VALIDATING。",
+        "叶片数量与几何参数的游戏取值不属于公开事实声明。"
+      ]
+    },
     {
       "asset_id": "PROP_T01_EARLY",
       "display_name": "T1 早期双叶螺旋桨（通用科技树件）",
@@ -61,7 +123,7 @@
           "Propellers/PROP_T01_EARLY/Preview/PROP_T01_EARLY_Top.png"
         ]
       },
-      "validation": "Propellers/PROP_T01_EARLY/Validation/PROP_T01_EARLY_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -133,7 +195,7 @@
           "Propellers/PROP_T02_IMPROVED/Preview/PROP_T02_IMPROVED_Top.png"
         ]
       },
-      "validation": "Propellers/PROP_T02_IMPROVED/Validation/PROP_T02_IMPROVED_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -205,7 +267,7 @@
           "Propellers/PROP_T03_MULTIBLADE/Preview/PROP_T03_MULTIBLADE_Top.png"
         ]
       },
-      "validation": "Propellers/PROP_T03_MULTIBLADE/Validation/PROP_T03_MULTIBLADE_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -277,7 +339,7 @@
           "Propellers/PROP_T04_SKEWED/Preview/PROP_T04_SKEWED_Top.png"
         ]
       },
-      "validation": "Propellers/PROP_T04_SKEWED/Validation/PROP_T04_SKEWED_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -349,7 +411,7 @@
           "Propellers/PROP_T05_QUIET/Preview/PROP_T05_QUIET_Top.png"
         ]
       },
-      "validation": "Propellers/PROP_T05_QUIET/Validation/PROP_T05_QUIET_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -421,7 +483,7 @@
           "Propellers/RU_PROP_Typhoon/Preview/RU_PROP_Typhoon_Top.png"
         ]
       },
-      "validation": "Propellers/RU_PROP_Typhoon/Validation/RU_PROP_Typhoon_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -493,7 +555,7 @@
           "Propellers/RU_PROP_Akula/Preview/RU_PROP_Akula_Top.png"
         ]
       },
-      "validation": "Propellers/RU_PROP_Akula/Validation/RU_PROP_Akula_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -565,7 +627,7 @@
           "Propellers/US_PROP_LosAngeles/Preview/US_PROP_LosAngeles_Top.png"
         ]
       },
-      "validation": "Propellers/US_PROP_LosAngeles/Validation/US_PROP_LosAngeles_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -637,7 +699,7 @@
           "Propellers/CN_PROP_Type093/Preview/CN_PROP_Type093_Top.png"
         ]
       },
-      "validation": "Propellers/CN_PROP_Type093/Validation/CN_PROP_Type093_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -710,7 +772,7 @@
           "PumpJets/US_PJ_Seawolf/Preview/US_PJ_Seawolf_Top.png"
         ]
       },
-      "validation": "PumpJets/US_PJ_Seawolf/Validation/US_PJ_Seawolf_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -783,7 +845,7 @@
           "PumpJets/US_PJ_Virginia/Preview/US_PJ_Virginia_Top.png"
         ]
       },
-      "validation": "PumpJets/US_PJ_Virginia/Validation/US_PJ_Virginia_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -856,7 +918,7 @@
           "PumpJets/UK_PJ_Astute/Preview/UK_PJ_Astute_Top.png"
         ]
       },
-      "validation": "PumpJets/UK_PJ_Astute/Validation/UK_PJ_Astute_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -929,7 +991,7 @@
           "PumpJets/RU_PJ_Yasen/Preview/RU_PJ_Yasen_Top.png"
         ]
       },
-      "validation": "PumpJets/RU_PJ_Yasen/Validation/RU_PJ_Yasen_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -1002,7 +1064,7 @@
           "PumpJets/FR_PJ_Suffren/Preview/FR_PJ_Suffren_Top.png"
         ]
       },
-      "validation": "PumpJets/FR_PJ_Suffren/Validation/FR_PJ_Suffren_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -1073,7 +1135,7 @@
           "Shafts/SHAFT_PLAIN/Preview/SHAFT_PLAIN_Top.png"
         ]
       },
-      "validation": "Shafts/SHAFT_PLAIN/Validation/SHAFT_PLAIN_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -1144,7 +1206,7 @@
           "Shafts/SHAFT_GEARED/Preview/SHAFT_GEARED_Top.png"
         ]
       },
-      "validation": "Shafts/SHAFT_GEARED/Validation/SHAFT_GEARED_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -1215,7 +1277,7 @@
           "Shafts/SHAFT_FAIRING_LONG/Preview/SHAFT_FAIRING_LONG_Top.png"
         ]
       },
-      "validation": "Shafts/SHAFT_FAIRING_LONG/Validation/SHAFT_FAIRING_LONG_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -1286,7 +1348,7 @@
           "Thrusters/THRUSTER_TUNNEL/Preview/THRUSTER_TUNNEL_Top.png"
         ]
       },
-      "validation": "Thrusters/THRUSTER_TUNNEL/Validation/THRUSTER_TUNNEL_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -1357,7 +1419,7 @@
           "Thrusters/THRUSTER_RIM_DRIVEN/Preview/THRUSTER_RIM_DRIVEN_Top.png"
         ]
       },
-      "validation": "Thrusters/THRUSTER_RIM_DRIVEN/Validation/THRUSTER_RIM_DRIVEN_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -1430,7 +1492,7 @@
           "PumpJets/PJ_T10_NEXTGEN/Preview/PJ_T10_NEXTGEN_Top.png"
         ]
       },
-      "validation": "PumpJets/PJ_T10_NEXTGEN/Validation/PJ_T10_NEXTGEN_VALIDATION.json",
+      "validation": "",
       "ue427_import": {
         "imported": true,
         "lod_count": 4,
@@ -1450,6 +1512,5 @@
         "叶片数量与几何参数的游戏取值不属于公开事实声明。"
       ]
     }
-  ],
-  "validated_at": "2026-09-11"
+  ]
 }

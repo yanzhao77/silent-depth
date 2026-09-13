@@ -5,7 +5,7 @@
   "country": "USA",
   "type": "SSN",
   "class": "Virginia",
-  "project": "SSN-774",
+  "project": "Blocks I-V",
   "tier": 9,
   "provenance": "本地程序化生成网格与程序化贴图，无第三方模型或图片进入运行时包",
   "license": "本项目可商业使用的原创生成资产",
@@ -25,7 +25,7 @@
     "length_overall": 115.0,
     "hull_beam": 10.0,
     "bounds_with_appendages": [
-      118.427,
+      119.7,
       16.656,
       17.35633
     ]
@@ -37,7 +37,7 @@
       "vertices": 5160,
       "uv_channels": 2,
       "dimensions_m": [
-        118.427,
+        119.7,
         16.656,
         17.35633
       ]
@@ -48,7 +48,7 @@
       "vertices": 2619,
       "uv_channels": 2,
       "dimensions_m": [
-        118.427,
+        119.7,
         16.656,
         17.35633
       ]
@@ -59,7 +59,7 @@
       "vertices": 1196,
       "uv_channels": 2,
       "dimensions_m": [
-        118.42803,
+        119.70103,
         16.656,
         17.35633
       ]
@@ -70,26 +70,26 @@
       "vertices": 484,
       "uv_channels": 2,
       "dimensions_m": [
-        118.43531,
+        119.70832,
         16.6664,
         17.36245
       ]
     }
   ],
   "sha256": {
-    "Blend/US_SSN_Virginia_MASTER.blend": "6ceb011b28e743f3ae85138b6abb1e831dc689dff3b0ff9f256d7ad7cc490412",
-    "GLB/US_SSN_Virginia.glb": "a550a175aa54f47cf4d824da282eeda7080ca14bbbfa8e55037490485e1cbfd6",
-    "Collision/US_SSN_Virginia_COLLISION.fbx": "27522cc486892de302eeb1b3c3dbf8e2f949ff716c772534ffd741704318f97f",
-    "FBX/US_SSN_Virginia_LOD0.fbx": "3ccadacc766310892ef09d1213e60c0c9cf711d7876542934af60ed3642aef03",
-    "FBX/US_SSN_Virginia_LOD1.fbx": "3486738fe7def6c488bd87fa33b8067802e299b02c25adc68fe433a110ece9f4",
-    "FBX/US_SSN_Virginia_LOD2.fbx": "852a3a16962e437ae0496b9f0aec910a7c9f7696c225c832854b116617cbcbc5",
-    "FBX/US_SSN_Virginia_LOD3.fbx": "507ea6c062d8e06412cf88a328456d2e17d28afbfa0d87e6b422b857e7ad2f57",
-    "FBX/US_SSN_Virginia_PROPULSOR_01.fbx": "9ed6329937d4a90f76cac6f20456df11a07db4181f4524b7a5ebb1a3b11df78b",
-    "FBX/US_SSN_Virginia_RUDDER_01.fbx": "25afc9f7a60bfd0685bf7e309ce5f3ba117a378685ce6f41b792db1915fb60af",
-    "FBX/US_SSN_Virginia_STERN_PLANES_01.fbx": "8fccf1eb0e12edb3c17382ec497626bb1bc8d3af5bc994da191bd835e7170b58",
-    "FBX/US_SSN_Virginia_BOW_PLANES_01.fbx": "f25aa72767002eca40a83b90bf2a1cce18e8e06de8d980a2faebd24fcbf573b2",
-    "FBX/US_SSN_Virginia_PERISCOPE_01.fbx": "c7ec765afee1dee4aeeae186d57b5e7b361a03765266c65f7fcd1ae3c99225b6",
-    "Textures/T_US_SSN_Virginia_Hull_BaseColor.png": "e5295fe77b8f8cb9868c37470bc95bd5effe3522c1d1d5903c92cd05c1f6b2c8"
+    "Blend/US_SSN_Virginia_MASTER.blend": "e23dc8db324509e83541e62b21ad1e0751c0846498cfe395dbd55f0b6782b127",
+    "GLB/US_SSN_Virginia.glb": "41d453efc177aed471b625d0179e0b62ac191a142eaff230876f924034733000",
+    "Collision/US_SSN_Virginia_COLLISION.fbx": "adc4b13bb9d588e1d385f15ab400a376da3552d23cdaf09a2072338d3938a5b3",
+    "FBX/US_SSN_Virginia_LOD0.fbx": "6cf6de9e82e53deecd1081e0938c313ba1ac51607c71f174444efee28d79dbb6",
+    "FBX/US_SSN_Virginia_LOD1.fbx": "2d294224a40a0e3e5bc845473c4668f77792ed08b91ee48f0aadbfd1505328d4",
+    "FBX/US_SSN_Virginia_LOD2.fbx": "71bd4c6f1c763fdf69119618c8d8d1467a06ac87717c724eae1a0ad76a1bb2fc",
+    "FBX/US_SSN_Virginia_LOD3.fbx": "6214aad6d9cdad706dced7d8f9c58a13d7d9f0a79a594c59cd13e6358c6bef49",
+    "FBX/US_SSN_Virginia_PROPULSOR_01.fbx": "610e83d8a02567f0c6c1b7b77fb6fb41f2a811e4577acc20184ef20a4e1e4155",
+    "FBX/US_SSN_Virginia_RUDDER_01.fbx": "f8f76a3d7e1463288543856be4315800061579ec7543625bf8dcdd8c1618e3a5",
+    "FBX/US_SSN_Virginia_STERN_PLANES_01.fbx": "236d75121e54464cf6b878aea2490d50219da21446b9b6cd1b95e3bdeb8d67f3",
+    "FBX/US_SSN_Virginia_BOW_PLANES_01.fbx": "186e6687faab0c7f7555fc301688c6443e65d63c3aa6bd86521caae78c23a027",
+    "FBX/US_SSN_Virginia_PERISCOPE_01.fbx": "af5efaeb37a1e65ace603b669bc8a641fb1545dffc8ce4622f07fc0cbf1b4c34",
+    "Textures/T_US_SSN_Virginia_Hull_BaseColor.png": "858a6ab7b9ba1d000039bf190bd0ed58b8bc46be97561c885315f52a85f9c450"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -309,9 +309,9 @@
       "hull_beam_m": 9.997,
       "sail_top_m": 8.6,
       "hull_top_m": 4.998,
-      "propulsor_max_x_m": -57.927,
+      "propulsor_max_x_m": -59.2,
       "bounds_with_appendages_m": [
-        118.427,
+        119.7,
         16.656,
         17.356
       ]

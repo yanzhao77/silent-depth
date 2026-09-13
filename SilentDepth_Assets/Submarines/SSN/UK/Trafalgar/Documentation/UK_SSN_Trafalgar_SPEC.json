@@ -1,0 +1,265 @@
+{
+  "asset_id": "UK_SSN_Trafalgar",
+  "status": "VALIDATING",
+  "revision": "batch_a_procedural_v1",
+  "country": "UK",
+  "type": "SSN",
+  "class": "Trafalgar",
+  "project": null,
+  "tier": 6,
+  "provenance": "本地程序化生成网格与程序化贴图，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "materials": [
+    "SD_hull",
+    "SD_coating",
+    "SD_panel",
+    "SD_array",
+    "SD_recess",
+    "SD_metal",
+    "SD_bronze"
+  ],
+  "textures": [
+    "Textures/T_UK_SSN_Trafalgar_Hull_BaseColor.png"
+  ],
+  "dimensions_m": {
+    "length_overall": 85.4,
+    "hull_beam": 9.8,
+    "bounds_with_appendages": [
+      89.15,
+      16.15432,
+      17.06621
+    ]
+  },
+  "exports": [
+    {
+      "name": "UK_SSN_Trafalgar_LOD0",
+      "triangles": 9672,
+      "vertices": 4892,
+      "uv_channels": 2,
+      "dimensions_m": [
+        89.15,
+        16.15432,
+        17.06621
+      ]
+    },
+    {
+      "name": "UK_SSN_Trafalgar_LOD1",
+      "triangles": 4836,
+      "vertices": 2474,
+      "uv_channels": 2,
+      "dimensions_m": [
+        89.15,
+        16.15432,
+        17.06621
+      ]
+    },
+    {
+      "name": "UK_SSN_Trafalgar_LOD2",
+      "triangles": 2126,
+      "vertices": 1119,
+      "uv_channels": 2,
+      "dimensions_m": [
+        89.15017,
+        16.15432,
+        17.06621
+      ]
+    },
+    {
+      "name": "UK_SSN_Trafalgar_LOD3",
+      "triangles": 772,
+      "vertices": 442,
+      "uv_channels": 2,
+      "dimensions_m": [
+        89.15496,
+        16.16259,
+        17.07245
+      ]
+    }
+  ],
+  "sha256": {
+    "Blend/UK_SSN_Trafalgar_MASTER.blend": "79e479610f36a16ed5d7f13fba2e1edd24a7a3463e3e053130fa949dacfd7d3b",
+    "GLB/UK_SSN_Trafalgar.glb": "b52a1cca8fea456026f35f7cb1899036ed75a25303a034f7045f3a4a5370c7ca",
+    "Collision/UK_SSN_Trafalgar_COLLISION.fbx": "b3f77ba8b7c8edf2bc63bc5a5bb6f96c9d408f2baa63946585b8217603687e0a",
+    "FBX/UK_SSN_Trafalgar_LOD0.fbx": "bb1775bade50ca5c0c103f446f5293da62ba8fc8981db3e89c2ef1ba8570fbd5",
+    "FBX/UK_SSN_Trafalgar_LOD1.fbx": "5459f4367f8dc2a50c85a6e7a042b98b3ba1ac6bc56a07b8bb7258ce4d4e0432",
+    "FBX/UK_SSN_Trafalgar_LOD2.fbx": "6da3d27a9af3af6bd6bab93c2624ef2e1905c9b410e2c46097616b4b6a4b79b5",
+    "FBX/UK_SSN_Trafalgar_LOD3.fbx": "e51ff788361f57ba87742a912c2d55867262ecf412019eab9e22fb269b82e0f2",
+    "FBX/UK_SSN_Trafalgar_PROPULSOR_01.fbx": "8eb6a9ac76c31b1536a1347c735a473d4476fd3dd6756892a9ec228332ad06ec",
+    "FBX/UK_SSN_Trafalgar_RUDDER_01.fbx": "3bcc3fa6e514805f07ecc646c4f82489fb42c6b66c7697dfdb18595207f8da57",
+    "FBX/UK_SSN_Trafalgar_STERN_PLANES_01.fbx": "178ce698887b019453cf90e4005345e3a03ab568a66e4d680f9c686def71971a",
+    "FBX/UK_SSN_Trafalgar_BOW_PLANES_01.fbx": "2ba0c6ca5536952fa955fcfdbfd4cdac26f75414d64f46d2c8c7f689e8e9db4b",
+    "FBX/UK_SSN_Trafalgar_PERISCOPE_01.fbx": "8841f1ebcb1dc8f2e829d5aa3ccf73471eae1a3c9a517a1f5e848147fc177767",
+    "Textures/T_UK_SSN_Trafalgar_Hull_BaseColor.png": "c6079f91416922299a7b39ae858d23d38b9c54b241d529aa0c31ce5a74212bea"
+  },
+  "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
+  "ue427_executed": false,
+  "limitations": [
+    "程序化外形，未与实物或照片逐点比对",
+    "舱盖、阵列与推进器为外观近似",
+    "UE4.27 尚未实际导入与人工验收"
+  ],
+  "geometry": {
+    "topology": {
+      "SUB_Hull": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Sail": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_SailCap": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Mast_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_MastHead_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Mast_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_MastHead_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_BowPlane_P": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_BowPlane_S": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_SternPlane_P": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_SternPlane_S": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Rudder_T": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Rudder_B": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Shaft": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Hub": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_4": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_5": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_6": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerSpinner": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_4": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      }
+    },
+    "contacts": {
+      "sail_hull": true,
+      "shaft_hull": true,
+      "planes_missing": [],
+      "propulsor_missing": []
+    },
+    "length_m": 85.4,
+    "beam_m": 9.8,
+    "dimensions": {
+      "hull_length_m": 85.4,
+      "hull_beam_m": 9.797,
+      "sail_top_m": 8.428,
+      "hull_top_m": 4.898,
+      "propulsor_max_x_m": -44.25,
+      "bounds_with_appendages_m": [
+        89.15,
+        16.154,
+        17.066
+      ]
+    }
+  }
+}

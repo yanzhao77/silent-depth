@@ -5,7 +5,7 @@
   "country": "USA",
   "type": "SSN",
   "class": "Los Angeles",
-  "project": "SSN-688",
+  "project": "688/688i",
   "tier": 6,
   "provenance": "本地程序化生成网格与程序化贴图，无第三方模型或图片进入运行时包",
   "license": "本项目可商业使用的原创生成资产",
@@ -25,8 +25,8 @@
     "length_overall": 110.0,
     "hull_beam": 10.0,
     "bounds_with_appendages": [
-      113.178,
-      16.17127,
+      113.75,
+      16.484,
       17.35633
     ]
   },
@@ -37,8 +37,8 @@
       "vertices": 5160,
       "uv_channels": 2,
       "dimensions_m": [
-        113.178,
-        16.17127,
+        113.75,
+        16.484,
         17.35633
       ]
     },
@@ -48,8 +48,8 @@
       "vertices": 2619,
       "uv_channels": 2,
       "dimensions_m": [
-        113.178,
-        16.17127,
+        113.75,
+        16.484,
         17.35633
       ]
     },
@@ -59,8 +59,8 @@
       "vertices": 1196,
       "uv_channels": 2,
       "dimensions_m": [
-        113.17927,
-        16.17127,
+        113.75108,
+        16.484,
         17.35633
       ]
     },
@@ -70,26 +70,26 @@
       "vertices": 484,
       "uv_channels": 2,
       "dimensions_m": [
-        113.18659,
-        16.18125,
+        113.7583,
+        16.49397,
         17.36245
       ]
     }
   ],
   "sha256": {
-    "Blend/US_SSN_LosAngeles_MASTER.blend": "0af36a09f1507c5ff0e7f22a4a698dcaf13418484e9bb0b61514cfae9304a845",
-    "GLB/US_SSN_LosAngeles.glb": "5e8a6c2ebc3b8e3794360aeac0c79cf177fcf44e46babcab80b4327df27df819",
-    "Collision/US_SSN_LosAngeles_COLLISION.fbx": "e80cf831b94d21da70b3aae53980121f82447bb43898ddfe90a37d14120ee794",
-    "FBX/US_SSN_LosAngeles_LOD0.fbx": "5fefdfc8ce132fd425583a562938dc3245275fc492cb46bd21e3a8f919df5888",
-    "FBX/US_SSN_LosAngeles_LOD1.fbx": "63180387c8c0fc6529c67133389318ee0b2753987e0a474d713464bb990f80d5",
-    "FBX/US_SSN_LosAngeles_LOD2.fbx": "fa8ddf8a8402b300a3626cfeeb74b4741ab88a21da6238f20deb701f508d801f",
-    "FBX/US_SSN_LosAngeles_LOD3.fbx": "29f2b8e2285e5f900ce0c0f741cf969f3ad384d10f86229f8359bc4a44f5ed38",
-    "FBX/US_SSN_LosAngeles_PROPULSOR_01.fbx": "0e7d8cd521905133be31e19477bf25009dba836adacf4f75d8bbd9ea1e6a2ac6",
-    "FBX/US_SSN_LosAngeles_RUDDER_01.fbx": "8b46ccb5f738f7f7ba056e5be97415f0d55f60b900ac86e7c3aa92e172fc2ef2",
-    "FBX/US_SSN_LosAngeles_STERN_PLANES_01.fbx": "d5341ecf7915c518a8d676db99b20f1ac915e370655d9cece8ec13cc31e6869c",
-    "FBX/US_SSN_LosAngeles_BOW_PLANES_01.fbx": "f705bb974e96aa414709e1c32de0f62b901a1a82761df0de402d0cd3d420f864",
-    "FBX/US_SSN_LosAngeles_PERISCOPE_01.fbx": "dd18cca628325d217592d73a493dbb28b71d9d3ef5257e40c956b8ab45585aa5",
-    "Textures/T_US_SSN_LosAngeles_Hull_BaseColor.png": "19bb63cbad26f5c1d57a9d99dfc17393e2f725a4ca8eb347a0a049aabb18835d"
+    "Blend/US_SSN_LosAngeles_MASTER.blend": "bcbffab3c26605fe8578e2fa63e31ecbd4b772095306f718dcf5511bbc16e658",
+    "GLB/US_SSN_LosAngeles.glb": "e7dbead95f4a5adc99f15e7bc7fddd027d928d3b41fe717593f5eac83e8c2cce",
+    "Collision/US_SSN_LosAngeles_COLLISION.fbx": "d0c27e25e1aa596c0bff27b2324d6376531498906b286a9da42daf9659da6f6d",
+    "FBX/US_SSN_LosAngeles_LOD0.fbx": "1ec14c9af369401e343fff3583ce1fe0950edd173d1029b590268684b42b509c",
+    "FBX/US_SSN_LosAngeles_LOD1.fbx": "edc9d87441db5feae00015e312b9f355895fadf05082cf1daa7506ccb07729b2",
+    "FBX/US_SSN_LosAngeles_LOD2.fbx": "313711f2137afbe2958c3724b23ce8f4476c81614c657a188db131c77600f3a4",
+    "FBX/US_SSN_LosAngeles_LOD3.fbx": "e28ff328c0f21f80ffc35fe990e24e93c86fc1f4f4e1f6ceac4fc9f9d5dd7cf2",
+    "FBX/US_SSN_LosAngeles_PROPULSOR_01.fbx": "de5533f7ad842e5cf803522e9bf07cfebe330c94069a6a295cccbe2184f09b29",
+    "FBX/US_SSN_LosAngeles_RUDDER_01.fbx": "f60d0f21abf324f43ba7ef3f4314b943df119a96525ea31b6c66cf9263db76ee",
+    "FBX/US_SSN_LosAngeles_STERN_PLANES_01.fbx": "827a58af1e1d3d07a8c337ed587258b00d6fe18a1106f7217cbc9405dbc68942",
+    "FBX/US_SSN_LosAngeles_BOW_PLANES_01.fbx": "f85f5c50da80524b15f93aeacebc987522ed03cc4de087a43294934dd94eb21b",
+    "FBX/US_SSN_LosAngeles_PERISCOPE_01.fbx": "b56c14965b7b9457b49dbc82c236f586c8d134828832e1036d56580dba8f0559",
+    "Textures/T_US_SSN_LosAngeles_Hull_BaseColor.png": "50a2663cbade10fbc3459c1ad705041f8c5f1fa8a5c6da31077ae6bf42e202db"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -309,10 +309,10 @@
       "hull_beam_m": 9.997,
       "sail_top_m": 8.6,
       "hull_top_m": 4.998,
-      "propulsor_max_x_m": -55.978,
+      "propulsor_max_x_m": -56.55,
       "bounds_with_appendages_m": [
-        113.178,
-        16.171,
+        113.75,
+        16.484,
         17.356
       ]
     }

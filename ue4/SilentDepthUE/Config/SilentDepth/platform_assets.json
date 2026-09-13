@@ -9,78 +9,389 @@
   ],
   "fallbackPlatform": "RU_SSN_Akula",
   "platforms": {
-    "RU_SSN_Akula": {
-      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula.SM_RU_SSN_Akula",
-      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PROP.SM_RU_SSN_Akula_PROP",
-      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_RUDDER.SM_RU_SSN_Akula_RUDDER",
-      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_STERNPLANES.SM_RU_SSN_Akula_STERNPLANES",
-      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_BOWPLANES.SM_RU_SSN_Akula_BOWPLANES",
-      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PERISCOPE.SM_RU_SSN_Akula_PERISCOPE"
-    },
-    "RU_SSN_Yasen": {
-      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Yasen/SM_RU_SSN_Yasen.SM_RU_SSN_Yasen"
-    },
-    "RU_SSBN_Typhoon": {
-      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Typhoon/SM_RU_SSBN_Typhoon.SM_RU_SSBN_Typhoon"
-    },
-    "US_SSN_LosAngeles": {
-      "hull": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles.SM_US_SSN_LosAngeles",
-      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_PROPULSOR_01.SM_US_SSN_LosAngeles_PROPULSOR_01",
-      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_RUDDER_01.SM_US_SSN_LosAngeles_RUDDER_01",
-      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_STERN_PLANES_01.SM_US_SSN_LosAngeles_STERN_PLANES_01",
-      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_BOW_PLANES_01.SM_US_SSN_LosAngeles_BOW_PLANES_01",
-      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_PERISCOPE_01.SM_US_SSN_LosAngeles_PERISCOPE_01",
+    "CN_SSBN_Type092": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_092/SM_CN_SSBN_Type092.SM_CN_SSBN_Type092",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_092/SM_CN_SSBN_Type092_PROPULSOR_01.SM_CN_SSBN_Type092_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_092/SM_CN_SSBN_Type092_RUDDER_01.SM_CN_SSBN_Type092_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_092/SM_CN_SSBN_Type092_STERN_PLANES_01.SM_CN_SSBN_Type092_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_092/SM_CN_SSBN_Type092_BOW_PLANES_01.SM_CN_SSBN_Type092_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_092/SM_CN_SSBN_Type092_PERISCOPE_01.SM_CN_SSBN_Type092_PERISCOPE_01",
       "partOffsetsCm": {
-        "propulsor": [-5707.8, 0, 0],
-        "rudder": [-5005.0, 0, 0],
-        "sternPlanes": [-5005.0, 0, 0],
-        "bowPlanes": [2800.0, 0, 0],
-        "periscope": [1100.0, 0, 920.0]
+        "propulsor": [
+          -6217.6,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5460.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5460.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2400.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1200.0,
+          0.0,
+          920.0
+        ]
       }
     },
-    "US_SSN_Virginia": {
-      "hull": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia.SM_US_SSN_Virginia",
-      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_PROPULSOR_01.SM_US_SSN_Virginia_PROPULSOR_01",
-      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_RUDDER_01.SM_US_SSN_Virginia_RUDDER_01",
-      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_STERN_PLANES_01.SM_US_SSN_Virginia_STERN_PLANES_01",
-      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_BOW_PLANES_01.SM_US_SSN_Virginia_BOW_PLANES_01",
-      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_PERISCOPE_01.SM_US_SSN_Virginia_PERISCOPE_01",
+    "CN_SSBN_Type094": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094/SM_CN_SSBN_Type094.SM_CN_SSBN_Type094",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094/SM_CN_SSBN_Type094_PROPULSOR_01.SM_CN_SSBN_Type094_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094/SM_CN_SSBN_Type094_RUDDER_01.SM_CN_SSBN_Type094_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094/SM_CN_SSBN_Type094_STERN_PLANES_01.SM_CN_SSBN_Type094_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094/SM_CN_SSBN_Type094_BOW_PLANES_01.SM_CN_SSBN_Type094_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094/SM_CN_SSBN_Type094_PERISCOPE_01.SM_CN_SSBN_Type094_PERISCOPE_01",
       "partOffsetsCm": {
-        "propulsor": [-5962.7, 0, 0],
-        "rudder": [-5232.5, 0, 0],
-        "sternPlanes": [-5232.5, 0, 0],
-        "bowPlanes": [2300.0, 0, 0],
-        "periscope": [1150.0, 0, 920.0]
+        "propulsor": [
+          -7084.3,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -6233.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -6233.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2740.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1370.0,
+          0.0,
+          1178.0
+        ]
       }
     },
-    "US_SSN_Seawolf": {
-      "hull": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf.SM_US_SSN_Seawolf",
-      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_PROPULSOR_01.SM_US_SSN_Seawolf_PROPULSOR_01",
-      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_RUDDER_01.SM_US_SSN_Seawolf_RUDDER_01",
-      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_STERN_PLANES_01.SM_US_SSN_Seawolf_STERN_PLANES_01",
-      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_BOW_PLANES_01.SM_US_SSN_Seawolf_BOW_PLANES_01",
-      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_PERISCOPE_01.SM_US_SSN_Seawolf_PERISCOPE_01",
+    "CN_SSBN_Type094A": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094A/SM_CN_SSBN_Type094A.SM_CN_SSBN_Type094A",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094A/SM_CN_SSBN_Type094A_PROPULSOR_01.SM_CN_SSBN_Type094A_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094A/SM_CN_SSBN_Type094A_RUDDER_01.SM_CN_SSBN_Type094A_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094A/SM_CN_SSBN_Type094A_STERN_PLANES_01.SM_CN_SSBN_Type094A_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094A/SM_CN_SSBN_Type094A_BOW_PLANES_01.SM_CN_SSBN_Type094A_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/China/Type_094A/SM_CN_SSBN_Type094A_PERISCOPE_01.SM_CN_SSBN_Type094A_PERISCOPE_01",
       "partOffsetsCm": {
-        "propulsor": [-5605.8, 0, 0],
-        "rudder": [-4914.0, 0, 0],
-        "sternPlanes": [-4914.0, 0, 0],
-        "bowPlanes": [2160.0, 0, 0],
-        "periscope": [1080.0, 0, 920.0]
+        "propulsor": [
+          -7084.3,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -6233.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -6233.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2740.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1370.0,
+          0.0,
+          1178.0
+        ]
       }
     },
-    "UK_SSN_Astute": {
-      "hull": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute.SM_UK_SSN_Astute",
-      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_PROPULSOR_01.SM_UK_SSN_Astute_PROPULSOR_01",
-      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_RUDDER_01.SM_UK_SSN_Astute_RUDDER_01",
-      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_STERN_PLANES_01.SM_UK_SSN_Astute_STERN_PLANES_01",
-      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_BOW_PLANES_01.SM_UK_SSN_Astute_BOW_PLANES_01",
-      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_PERISCOPE_01.SM_UK_SSN_Astute_PERISCOPE_01",
+    "CN_SSN_Type091": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_091/SM_CN_SSN_Type091.SM_CN_SSN_Type091",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_091/SM_CN_SSN_Type091_PROPULSOR_01.SM_CN_SSN_Type091_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_091/SM_CN_SSN_Type091_RUDDER_01.SM_CN_SSN_Type091_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_091/SM_CN_SSN_Type091_STERN_PLANES_01.SM_CN_SSN_Type091_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_091/SM_CN_SSN_Type091_BOW_PLANES_01.SM_CN_SSN_Type091_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_091/SM_CN_SSN_Type091_PERISCOPE_01.SM_CN_SSN_Type091_PERISCOPE_01",
       "partOffsetsCm": {
-        "propulsor": [-5045.1, 0, 0],
-        "rudder": [-4413.5, 0, 0],
-        "sternPlanes": [-4413.5, 0, 0],
-        "bowPlanes": [1940.0, 0, 0],
-        "periscope": [970.0, 0, 920.0]
+        "propulsor": [
+          -5096.0,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4459.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4459.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1960.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          980.0,
+          0.0,
+          971.6
+        ]
+      }
+    },
+    "CN_SSN_Type093": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093/SM_CN_SSN_Type093.SM_CN_SSN_Type093",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093/SM_CN_SSN_Type093_PROPULSOR_01.SM_CN_SSN_Type093_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093/SM_CN_SSN_Type093_RUDDER_01.SM_CN_SSN_Type093_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093/SM_CN_SSN_Type093_STERN_PLANES_01.SM_CN_SSN_Type093_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093/SM_CN_SSN_Type093_BOW_PLANES_01.SM_CN_SSN_Type093_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093/SM_CN_SSN_Type093_PERISCOPE_01.SM_CN_SSN_Type093_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5631.3,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4936.8,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4936.8,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2170.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1085.0,
+          0.0,
+          1006.0
+        ]
+      }
+    },
+    "CN_SSN_Type093A": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093A/SM_CN_SSN_Type093A.SM_CN_SSN_Type093A",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093A/SM_CN_SSN_Type093A_PROPULSOR_01.SM_CN_SSN_Type093A_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093A/SM_CN_SSN_Type093A_RUDDER_01.SM_CN_SSN_Type093A_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093A/SM_CN_SSN_Type093A_STERN_PLANES_01.SM_CN_SSN_Type093A_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093A/SM_CN_SSN_Type093A_BOW_PLANES_01.SM_CN_SSN_Type093A_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093A/SM_CN_SSN_Type093A_PERISCOPE_01.SM_CN_SSN_Type093A_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5631.3,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4936.8,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4936.8,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2170.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1085.0,
+          0.0,
+          1006.0
+        ]
+      }
+    },
+    "CN_SSN_Type093B": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093B/SM_CN_SSN_Type093B.SM_CN_SSN_Type093B",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093B/SM_CN_SSN_Type093B_PROPULSOR_01.SM_CN_SSN_Type093B_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093B/SM_CN_SSN_Type093B_RUDDER_01.SM_CN_SSN_Type093B_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093B/SM_CN_SSN_Type093B_STERN_PLANES_01.SM_CN_SSN_Type093B_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093B/SM_CN_SSN_Type093B_BOW_PLANES_01.SM_CN_SSN_Type093B_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_093B/SM_CN_SSN_Type093B_PERISCOPE_01.SM_CN_SSN_Type093B_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5707.8,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5005.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5005.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2200.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1100.0,
+          0.0,
+          1006.0
+        ]
+      }
+    },
+    "CN_SSN_Type095": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_095/SM_CN_SSN_Type095.SM_CN_SSN_Type095",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_095/SM_CN_SSN_Type095_PROPULSOR_01.SM_CN_SSN_Type095_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_095/SM_CN_SSN_Type095_RUDDER_01.SM_CN_SSN_Type095_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_095/SM_CN_SSN_Type095_STERN_PLANES_01.SM_CN_SSN_Type095_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_095/SM_CN_SSN_Type095_BOW_PLANES_01.SM_CN_SSN_Type095_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/China/Type_095/SM_CN_SSN_Type095_PERISCOPE_01.SM_CN_SSN_Type095_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5707.8,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5005.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5005.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2200.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1100.0,
+          0.0,
+          1178.0
+        ]
+      }
+    },
+    "FR_SSBN_LeRedoutable": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Redoutable/SM_FR_SSBN_LeRedoutable.SM_FR_SSBN_LeRedoutable",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Redoutable/SM_FR_SSBN_LeRedoutable_PROPULSOR_01.SM_FR_SSBN_LeRedoutable_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Redoutable/SM_FR_SSBN_LeRedoutable_RUDDER_01.SM_FR_SSBN_LeRedoutable_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Redoutable/SM_FR_SSBN_LeRedoutable_STERN_PLANES_01.SM_FR_SSBN_LeRedoutable_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Redoutable/SM_FR_SSBN_LeRedoutable_BOW_PLANES_01.SM_FR_SSBN_LeRedoutable_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Redoutable/SM_FR_SSBN_LeRedoutable_PERISCOPE_01.SM_FR_SSBN_LeRedoutable_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6625.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5824.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5824.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2560.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1280.0,
+          0.0,
+          971.6
+        ]
+      }
+    },
+    "FR_SSBN_LeTriomphant": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Triomphant/SM_FR_SSBN_LeTriomphant.SM_FR_SSBN_LeTriomphant",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Triomphant/SM_FR_SSBN_LeTriomphant_PROPULSOR_01.SM_FR_SSBN_LeTriomphant_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Triomphant/SM_FR_SSBN_LeTriomphant_RUDDER_01.SM_FR_SSBN_LeTriomphant_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Triomphant/SM_FR_SSBN_LeTriomphant_STERN_PLANES_01.SM_FR_SSBN_LeTriomphant_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Triomphant/SM_FR_SSBN_LeTriomphant_BOW_PLANES_01.SM_FR_SSBN_LeTriomphant_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/France/Le_Triomphant/SM_FR_SSBN_LeTriomphant_PERISCOPE_01.SM_FR_SSBN_LeTriomphant_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -7135.2,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -6279.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -6279.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2760.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1380.0,
+          0.0,
+          1135.0
+        ]
+      }
+    },
+    "FR_SSN_Rubis": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/France/Rubis/SM_FR_SSN_Rubis.SM_FR_SSN_Rubis",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/France/Rubis/SM_FR_SSN_Rubis_PROPULSOR_01.SM_FR_SSN_Rubis_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/France/Rubis/SM_FR_SSN_Rubis_RUDDER_01.SM_FR_SSN_Rubis_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/France/Rubis/SM_FR_SSN_Rubis_STERN_PLANES_01.SM_FR_SSN_Rubis_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/France/Rubis/SM_FR_SSN_Rubis_BOW_PLANES_01.SM_FR_SSN_Rubis_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/France/Rubis/SM_FR_SSN_Rubis_PERISCOPE_01.SM_FR_SSN_Rubis_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -3852.1,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -3348.8,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -3348.8,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1472.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          736.0,
+          0.0,
+          760.0
+        ]
       }
     },
     "FR_SSN_Suffren": {
@@ -91,11 +402,1200 @@
       "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/France/Suffren/SM_FR_SSN_Suffren_BOW_PLANES_01.SM_FR_SSN_Suffren_BOW_PLANES_01",
       "periscope": "/Game/SilentDepth/Art/Submarines/SSN/France/Suffren/SM_FR_SSN_Suffren_PERISCOPE_01.SM_FR_SSN_Suffren_PERISCOPE_01",
       "partOffsetsCm": {
-        "propulsor": [-5172.5, 0, 0],
-        "rudder": [-4527.2, 0, 0],
-        "sternPlanes": [-4527.2, 0, 0],
-        "bowPlanes": [1990.0, 0, 0],
-        "periscope": [995.0, 0, 920.0]
+        "propulsor": [
+          -5172.5,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4527.2,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4527.2,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1990.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          995.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "IN_SSBN_Arighaat": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arighaat/SM_IN_SSBN_Arighaat.SM_IN_SSBN_Arighaat",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arighaat/SM_IN_SSBN_Arighaat_PROPULSOR_01.SM_IN_SSBN_Arighaat_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arighaat/SM_IN_SSBN_Arighaat_RUDDER_01.SM_IN_SSBN_Arighaat_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arighaat/SM_IN_SSBN_Arighaat_STERN_PLANES_01.SM_IN_SSBN_Arighaat_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arighaat/SM_IN_SSBN_Arighaat_BOW_PLANES_01.SM_IN_SSBN_Arighaat_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arighaat/SM_IN_SSBN_Arighaat_PERISCOPE_01.SM_IN_SSBN_Arighaat_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5758.8,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5050.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5050.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2220.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1110.0,
+          0.0,
+          1006.0
+        ]
+      }
+    },
+    "IN_SSBN_Arihant": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arihant/SM_IN_SSBN_Arihant.SM_IN_SSBN_Arihant",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arihant/SM_IN_SSBN_Arihant_PROPULSOR_01.SM_IN_SSBN_Arihant_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arihant/SM_IN_SSBN_Arihant_RUDDER_01.SM_IN_SSBN_Arihant_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arihant/SM_IN_SSBN_Arihant_STERN_PLANES_01.SM_IN_SSBN_Arihant_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arihant/SM_IN_SSBN_Arihant_BOW_PLANES_01.SM_IN_SSBN_Arihant_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/India/Arihant/SM_IN_SSBN_Arihant_PERISCOPE_01.SM_IN_SSBN_Arihant_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5758.8,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5050.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5050.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2220.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1110.0,
+          0.0,
+          1006.0
+        ]
+      }
+    },
+    "IN_SSBN_S4": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/India/S4/SM_IN_SSBN_S4.SM_IN_SSBN_S4",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/India/S4/SM_IN_SSBN_S4_PROPULSOR_01.SM_IN_SSBN_S4_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/India/S4/SM_IN_SSBN_S4_RUDDER_01.SM_IN_SSBN_S4_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/India/S4/SM_IN_SSBN_S4_STERN_PLANES_01.SM_IN_SSBN_S4_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/India/S4/SM_IN_SSBN_S4_BOW_PLANES_01.SM_IN_SSBN_S4_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/India/S4/SM_IN_SSBN_S4_PERISCOPE_01.SM_IN_SSBN_S4_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6727.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2600.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1300.0,
+          0.0,
+          1006.0
+        ]
+      }
+    },
+    "RU_SSBN_Borei": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Borei/SM_RU_SSBN_Borei.SM_RU_SSBN_Borei",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Borei/SM_RU_SSBN_Borei_PROPULSOR_01.SM_RU_SSBN_Borei_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Borei/SM_RU_SSBN_Borei_RUDDER_01.SM_RU_SSBN_Borei_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Borei/SM_RU_SSBN_Borei_STERN_PLANES_01.SM_RU_SSBN_Borei_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Borei/SM_RU_SSBN_Borei_BOW_PLANES_01.SM_RU_SSBN_Borei_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Borei/SM_RU_SSBN_Borei_PERISCOPE_01.SM_RU_SSBN_Borei_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -8766.6,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -7735.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -7735.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          3400.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1700.0,
+          0.0,
+          1221.0
+        ]
+      }
+    },
+    "RU_SSBN_BoreiA": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/BoreiA/SM_RU_SSBN_BoreiA.SM_RU_SSBN_BoreiA",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/BoreiA/SM_RU_SSBN_BoreiA_PROPULSOR_01.SM_RU_SSBN_BoreiA_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/BoreiA/SM_RU_SSBN_BoreiA_RUDDER_01.SM_RU_SSBN_BoreiA_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/BoreiA/SM_RU_SSBN_BoreiA_STERN_PLANES_01.SM_RU_SSBN_BoreiA_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/BoreiA/SM_RU_SSBN_BoreiA_BOW_PLANES_01.SM_RU_SSBN_BoreiA_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/BoreiA/SM_RU_SSBN_BoreiA_PERISCOPE_01.SM_RU_SSBN_BoreiA_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -8766.6,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -7735.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -7735.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          3400.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1700.0,
+          0.0,
+          1221.0
+        ]
+      }
+    },
+    "RU_SSBN_DeltaI": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_I/SM_RU_SSBN_DeltaI.SM_RU_SSBN_DeltaI",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_I/SM_RU_SSBN_DeltaI_PROPULSOR_01.SM_RU_SSBN_DeltaI_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_I/SM_RU_SSBN_DeltaI_RUDDER_01.SM_RU_SSBN_DeltaI_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_I/SM_RU_SSBN_DeltaI_STERN_PLANES_01.SM_RU_SSBN_DeltaI_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_I/SM_RU_SSBN_DeltaI_BOW_PLANES_01.SM_RU_SSBN_DeltaI_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_I/SM_RU_SSBN_DeltaI_PERISCOPE_01.SM_RU_SSBN_DeltaI_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -7186.2,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -6324.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -6324.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2780.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1390.0,
+          0.0,
+          1092.0
+        ]
+      }
+    },
+    "RU_SSBN_DeltaII": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_II/SM_RU_SSBN_DeltaII.SM_RU_SSBN_DeltaII",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_II/SM_RU_SSBN_DeltaII_PROPULSOR_01.SM_RU_SSBN_DeltaII_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_II/SM_RU_SSBN_DeltaII_RUDDER_01.SM_RU_SSBN_DeltaII_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_II/SM_RU_SSBN_DeltaII_STERN_PLANES_01.SM_RU_SSBN_DeltaII_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_II/SM_RU_SSBN_DeltaII_BOW_PLANES_01.SM_RU_SSBN_DeltaII_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_II/SM_RU_SSBN_DeltaII_PERISCOPE_01.SM_RU_SSBN_DeltaII_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -8001.9,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -7052.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -7052.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          3100.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1550.0,
+          0.0,
+          1092.0
+        ]
+      }
+    },
+    "RU_SSBN_DeltaIII": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_III/SM_RU_SSBN_DeltaIII.SM_RU_SSBN_DeltaIII",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_III/SM_RU_SSBN_DeltaIII_PROPULSOR_01.SM_RU_SSBN_DeltaIII_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_III/SM_RU_SSBN_DeltaIII_RUDDER_01.SM_RU_SSBN_DeltaIII_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_III/SM_RU_SSBN_DeltaIII_STERN_PLANES_01.SM_RU_SSBN_DeltaIII_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_III/SM_RU_SSBN_DeltaIII_BOW_PLANES_01.SM_RU_SSBN_DeltaIII_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_III/SM_RU_SSBN_DeltaIII_PERISCOPE_01.SM_RU_SSBN_DeltaIII_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -8562.7,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -7553.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -7553.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          3320.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1660.0,
+          0.0,
+          1117.8
+        ]
+      }
+    },
+    "RU_SSBN_DeltaIV": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_IV/SM_RU_SSBN_DeltaIV.SM_RU_SSBN_DeltaIV",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_IV/SM_RU_SSBN_DeltaIV_PROPULSOR_01.SM_RU_SSBN_DeltaIV_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_IV/SM_RU_SSBN_DeltaIV_RUDDER_01.SM_RU_SSBN_DeltaIV_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_IV/SM_RU_SSBN_DeltaIV_STERN_PLANES_01.SM_RU_SSBN_DeltaIV_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_IV/SM_RU_SSBN_DeltaIV_BOW_PLANES_01.SM_RU_SSBN_DeltaIV_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Delta_IV/SM_RU_SSBN_DeltaIV_PERISCOPE_01.SM_RU_SSBN_DeltaIV_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -8613.7,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -7598.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -7598.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          3340.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1670.0,
+          0.0,
+          1117.8
+        ]
+      }
+    },
+    "RU_SSBN_Hotel": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Hotel/SM_RU_SSBN_Hotel.SM_RU_SSBN_Hotel",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Hotel/SM_RU_SSBN_Hotel_PROPULSOR_01.SM_RU_SSBN_Hotel_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Hotel/SM_RU_SSBN_Hotel_RUDDER_01.SM_RU_SSBN_Hotel_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Hotel/SM_RU_SSBN_Hotel_STERN_PLANES_01.SM_RU_SSBN_Hotel_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Hotel/SM_RU_SSBN_Hotel_BOW_PLANES_01.SM_RU_SSBN_Hotel_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Hotel/SM_RU_SSBN_Hotel_PERISCOPE_01.SM_RU_SSBN_Hotel_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5911.7,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5187.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5187.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2280.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1140.0,
+          0.0,
+          851.2
+        ]
+      }
+    },
+    "RU_SSBN_Typhoon": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Typhoon/SM_RU_SSBN_Typhoon.SM_RU_SSBN_Typhoon"
+    },
+    "RU_SSBN_Yankee": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Yankee/SM_RU_SSBN_Yankee.SM_RU_SSBN_Yankee",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Yankee/SM_RU_SSBN_Yankee_PROPULSOR_01.SM_RU_SSBN_Yankee_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Yankee/SM_RU_SSBN_Yankee_RUDDER_01.SM_RU_SSBN_Yankee_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Yankee/SM_RU_SSBN_Yankee_STERN_PLANES_01.SM_RU_SSBN_Yankee_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Yankee/SM_RU_SSBN_Yankee_BOW_PLANES_01.SM_RU_SSBN_Yankee_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/Russia/Yankee/SM_RU_SSBN_Yankee_PERISCOPE_01.SM_RU_SSBN_Yankee_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6829.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -6006.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -6006.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2640.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1320.0,
+          0.0,
+          1066.2
+        ]
+      }
+    },
+    "RU_SSN_Akula": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula.SM_RU_SSN_Akula",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PROP.SM_RU_SSN_Akula_PROP",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_RUDDER.SM_RU_SSN_Akula_RUDDER",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_STERNPLANES.SM_RU_SSN_Akula_STERNPLANES",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_BOWPLANES.SM_RU_SSN_Akula_BOWPLANES",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Akula/SM_RU_SSN_Akula_PERISCOPE.SM_RU_SSN_Akula_PERISCOPE"
+    },
+    "RU_SSN_Sierra": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Sierra/SM_RU_SSN_Sierra.SM_RU_SSN_Sierra",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Sierra/SM_RU_SSN_Sierra_PROPULSOR_01.SM_RU_SSN_Sierra_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Sierra/SM_RU_SSN_Sierra_RUDDER_01.SM_RU_SSN_Sierra_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Sierra/SM_RU_SSN_Sierra_STERN_PLANES_01.SM_RU_SSN_Sierra_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Sierra/SM_RU_SSN_Sierra_BOW_PLANES_01.SM_RU_SSN_Sierra_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Sierra/SM_RU_SSN_Sierra_PERISCOPE_01.SM_RU_SSN_Sierra_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5563.0,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4875.8,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4875.8,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2143.2,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1071.6,
+          0.0,
+          1116.1
+        ]
+      }
+    },
+    "RU_SSN_Victor": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Victor/SM_RU_SSN_Victor.SM_RU_SSN_Victor",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Victor/SM_RU_SSN_Victor_PROPULSOR_01.SM_RU_SSN_Victor_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Victor/SM_RU_SSN_Victor_RUDDER_01.SM_RU_SSN_Victor_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Victor/SM_RU_SSN_Victor_STERN_PLANES_01.SM_RU_SSN_Victor_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Victor/SM_RU_SSN_Victor_BOW_PLANES_01.SM_RU_SSN_Victor_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Victor/SM_RU_SSN_Victor_PERISCOPE_01.SM_RU_SSN_Victor_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -4815.7,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4208.8,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4208.8,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1850.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          925.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "RU_SSN_Yasen": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/Yasen/SM_RU_SSN_Yasen.SM_RU_SSN_Yasen"
+    },
+    "RU_SSN_YasenM": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/Russia/YasenM/SM_RU_SSN_YasenM.SM_RU_SSN_YasenM",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/Russia/YasenM/SM_RU_SSN_YasenM_PROPULSOR_01.SM_RU_SSN_YasenM_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/Russia/YasenM/SM_RU_SSN_YasenM_RUDDER_01.SM_RU_SSN_YasenM_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/YasenM/SM_RU_SSN_YasenM_STERN_PLANES_01.SM_RU_SSN_YasenM_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/Russia/YasenM/SM_RU_SSN_YasenM_BOW_PLANES_01.SM_RU_SSN_YasenM_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/Russia/YasenM/SM_RU_SSN_YasenM_PERISCOPE_01.SM_RU_SSN_YasenM_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -7196.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -6333.6,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -6333.6,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2784.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1392.0,
+          0.0,
+          1178.0
+        ]
+      }
+    },
+    "UK_SSBN_Resolution": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Resolution/SM_UK_SSBN_Resolution.SM_UK_SSBN_Resolution",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Resolution/SM_UK_SSBN_Resolution_PROPULSOR_01.SM_UK_SSBN_Resolution_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Resolution/SM_UK_SSBN_Resolution_RUDDER_01.SM_UK_SSBN_Resolution_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Resolution/SM_UK_SSBN_Resolution_STERN_PLANES_01.SM_UK_SSBN_Resolution_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Resolution/SM_UK_SSBN_Resolution_BOW_PLANES_01.SM_UK_SSBN_Resolution_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Resolution/SM_UK_SSBN_Resolution_PERISCOPE_01.SM_UK_SSBN_Resolution_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6727.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2600.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1300.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "UK_SSBN_Vanguard": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Vanguard/SM_UK_SSBN_Vanguard.SM_UK_SSBN_Vanguard",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Vanguard/SM_UK_SSBN_Vanguard_PROPULSOR_01.SM_UK_SSBN_Vanguard_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Vanguard/SM_UK_SSBN_Vanguard_RUDDER_01.SM_UK_SSBN_Vanguard_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Vanguard/SM_UK_SSBN_Vanguard_STERN_PLANES_01.SM_UK_SSBN_Vanguard_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Vanguard/SM_UK_SSBN_Vanguard_BOW_PLANES_01.SM_UK_SSBN_Vanguard_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/UK/Vanguard/SM_UK_SSBN_Vanguard_PERISCOPE_01.SM_UK_SSBN_Vanguard_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -7741.9,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -6820.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -6820.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2998.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1499.0,
+          0.0,
+          1160.8
+        ]
+      }
+    },
+    "UK_SSN_Astute": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute.SM_UK_SSN_Astute",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_PROPULSOR_01.SM_UK_SSN_Astute_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_RUDDER_01.SM_UK_SSN_Astute_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_STERN_PLANES_01.SM_UK_SSN_Astute_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_BOW_PLANES_01.SM_UK_SSN_Astute_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/UK/Astute/SM_UK_SSN_Astute_PERISCOPE_01.SM_UK_SSN_Astute_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5045.1,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4413.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4413.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1940.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          970.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "UK_SSN_Dreadnought": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/UK/Dreadnought/SM_UK_SSN_Dreadnought.SM_UK_SSN_Dreadnought",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/UK/Dreadnought/SM_UK_SSN_Dreadnought_PROPULSOR_01.SM_UK_SSN_Dreadnought_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/UK/Dreadnought/SM_UK_SSN_Dreadnought_RUDDER_01.SM_UK_SSN_Dreadnought_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Dreadnought/SM_UK_SSN_Dreadnought_STERN_PLANES_01.SM_UK_SSN_Dreadnought_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Dreadnought/SM_UK_SSN_Dreadnought_BOW_PLANES_01.SM_UK_SSN_Dreadnought_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/UK/Dreadnought/SM_UK_SSN_Dreadnought_PERISCOPE_01.SM_UK_SSN_Dreadnought_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -4229.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -3685.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -3685.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1620.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          810.0,
+          0.0,
+          877.0
+        ]
+      }
+    },
+    "UK_SSN_Swiftsure": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/UK/Swiftsure/SM_UK_SSN_Swiftsure.SM_UK_SSN_Swiftsure",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/UK/Swiftsure/SM_UK_SSN_Swiftsure_PROPULSOR_01.SM_UK_SSN_Swiftsure_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/UK/Swiftsure/SM_UK_SSN_Swiftsure_RUDDER_01.SM_UK_SSN_Swiftsure_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Swiftsure/SM_UK_SSN_Swiftsure_STERN_PLANES_01.SM_UK_SSN_Swiftsure_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Swiftsure/SM_UK_SSN_Swiftsure_BOW_PLANES_01.SM_UK_SSN_Swiftsure_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/UK/Swiftsure/SM_UK_SSN_Swiftsure_PERISCOPE_01.SM_UK_SSN_Swiftsure_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -4326.2,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -3771.9,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -3771.9,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1658.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          829.0,
+          0.0,
+          902.8
+        ]
+      }
+    },
+    "UK_SSN_Trafalgar": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/UK/Trafalgar/SM_UK_SSN_Trafalgar.SM_UK_SSN_Trafalgar",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/UK/Trafalgar/SM_UK_SSN_Trafalgar_PROPULSOR_01.SM_UK_SSN_Trafalgar_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/UK/Trafalgar/SM_UK_SSN_Trafalgar_RUDDER_01.SM_UK_SSN_Trafalgar_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Trafalgar/SM_UK_SSN_Trafalgar_STERN_PLANES_01.SM_UK_SSN_Trafalgar_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Trafalgar/SM_UK_SSN_Trafalgar_BOW_PLANES_01.SM_UK_SSN_Trafalgar_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/UK/Trafalgar/SM_UK_SSN_Trafalgar_PERISCOPE_01.SM_UK_SSN_Trafalgar_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -4453.7,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -3885.7,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -3885.7,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1708.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          854.0,
+          0.0,
+          902.8
+        ]
+      }
+    },
+    "UK_SSN_Valiant": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/UK/Valiant/SM_UK_SSN_Valiant.SM_UK_SSN_Valiant",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/UK/Valiant/SM_UK_SSN_Valiant_PROPULSOR_01.SM_UK_SSN_Valiant_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/UK/Valiant/SM_UK_SSN_Valiant_RUDDER_01.SM_UK_SSN_Valiant_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Valiant/SM_UK_SSN_Valiant_STERN_PLANES_01.SM_UK_SSN_Valiant_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/UK/Valiant/SM_UK_SSN_Valiant_BOW_PLANES_01.SM_UK_SSN_Valiant_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/UK/Valiant/SM_UK_SSN_Valiant_PERISCOPE_01.SM_UK_SSN_Valiant_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -4535.3,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -3958.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -3958.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1740.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          870.0,
+          0.0,
+          931.2
+        ]
+      }
+    },
+    "US_SSBN_BenjaminFranklin": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Benjamin_Franklin/SM_US_SSBN_BenjaminFranklin.SM_US_SSBN_BenjaminFranklin",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Benjamin_Franklin/SM_US_SSBN_BenjaminFranklin_PROPULSOR_01.SM_US_SSBN_BenjaminFranklin_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Benjamin_Franklin/SM_US_SSBN_BenjaminFranklin_RUDDER_01.SM_US_SSBN_BenjaminFranklin_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Benjamin_Franklin/SM_US_SSBN_BenjaminFranklin_STERN_PLANES_01.SM_US_SSBN_BenjaminFranklin_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Benjamin_Franklin/SM_US_SSBN_BenjaminFranklin_BOW_PLANES_01.SM_US_SSBN_BenjaminFranklin_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Benjamin_Franklin/SM_US_SSBN_BenjaminFranklin_PERISCOPE_01.SM_US_SSBN_BenjaminFranklin_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6727.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2600.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1300.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "US_SSBN_Columbia": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Columbia/SM_US_SSBN_Columbia.SM_US_SSBN_Columbia",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Columbia/SM_US_SSBN_Columbia_PROPULSOR_01.SM_US_SSBN_Columbia_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Columbia/SM_US_SSBN_Columbia_RUDDER_01.SM_US_SSBN_Columbia_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Columbia/SM_US_SSBN_Columbia_STERN_PLANES_01.SM_US_SSBN_Columbia_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Columbia/SM_US_SSBN_Columbia_BOW_PLANES_01.SM_US_SSBN_Columbia_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Columbia/SM_US_SSBN_Columbia_PERISCOPE_01.SM_US_SSBN_Columbia_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -8817.6,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -7780.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -7780.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          3420.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1710.0,
+          0.0,
+          1178.0
+        ]
+      }
+    },
+    "US_SSBN_EthanAllen": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ethan_Allen/SM_US_SSBN_EthanAllen.SM_US_SSBN_EthanAllen",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ethan_Allen/SM_US_SSBN_EthanAllen_PROPULSOR_01.SM_US_SSBN_EthanAllen_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ethan_Allen/SM_US_SSBN_EthanAllen_RUDDER_01.SM_US_SSBN_EthanAllen_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ethan_Allen/SM_US_SSBN_EthanAllen_STERN_PLANES_01.SM_US_SSBN_EthanAllen_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ethan_Allen/SM_US_SSBN_EthanAllen_BOW_PLANES_01.SM_US_SSBN_EthanAllen_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ethan_Allen/SM_US_SSBN_EthanAllen_PERISCOPE_01.SM_US_SSBN_EthanAllen_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6476.1,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5690.7,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5690.7,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2501.4,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1250.7,
+          0.0,
+          928.6
+        ]
+      }
+    },
+    "US_SSBN_GeorgeWashington": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/USA/George_Washington/SM_US_SSBN_GeorgeWashington.SM_US_SSBN_GeorgeWashington",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/USA/George_Washington/SM_US_SSBN_GeorgeWashington_PROPULSOR_01.SM_US_SSBN_GeorgeWashington_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/USA/George_Washington/SM_US_SSBN_GeorgeWashington_RUDDER_01.SM_US_SSBN_GeorgeWashington_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/George_Washington/SM_US_SSBN_GeorgeWashington_STERN_PLANES_01.SM_US_SSBN_GeorgeWashington_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/George_Washington/SM_US_SSBN_GeorgeWashington_BOW_PLANES_01.SM_US_SSBN_GeorgeWashington_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/USA/George_Washington/SM_US_SSBN_GeorgeWashington_PERISCOPE_01.SM_US_SSBN_GeorgeWashington_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6029.0,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5291.7,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5291.7,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2326.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1163.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "US_SSBN_JamesMadison": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/USA/James_Madison/SM_US_SSBN_JamesMadison.SM_US_SSBN_JamesMadison",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/USA/James_Madison/SM_US_SSBN_JamesMadison_PROPULSOR_01.SM_US_SSBN_JamesMadison_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/USA/James_Madison/SM_US_SSBN_JamesMadison_RUDDER_01.SM_US_SSBN_JamesMadison_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/James_Madison/SM_US_SSBN_JamesMadison_STERN_PLANES_01.SM_US_SSBN_JamesMadison_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/James_Madison/SM_US_SSBN_JamesMadison_BOW_PLANES_01.SM_US_SSBN_JamesMadison_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/USA/James_Madison/SM_US_SSBN_JamesMadison_PERISCOPE_01.SM_US_SSBN_JamesMadison_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6727.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2600.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1300.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "US_SSBN_Lafayette": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Lafayette/SM_US_SSBN_Lafayette.SM_US_SSBN_Lafayette",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Lafayette/SM_US_SSBN_Lafayette_PROPULSOR_01.SM_US_SSBN_Lafayette_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Lafayette/SM_US_SSBN_Lafayette_RUDDER_01.SM_US_SSBN_Lafayette_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Lafayette/SM_US_SSBN_Lafayette_STERN_PLANES_01.SM_US_SSBN_Lafayette_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Lafayette/SM_US_SSBN_Lafayette_BOW_PLANES_01.SM_US_SSBN_Lafayette_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Lafayette/SM_US_SSBN_Lafayette_PERISCOPE_01.SM_US_SSBN_Lafayette_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -6727.4,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5915.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2600.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1300.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "US_SSBN_Ohio": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ohio/SM_US_SSBN_Ohio.SM_US_SSBN_Ohio",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ohio/SM_US_SSBN_Ohio_PROPULSOR_01.SM_US_SSBN_Ohio_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ohio/SM_US_SSBN_Ohio_RUDDER_01.SM_US_SSBN_Ohio_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ohio/SM_US_SSBN_Ohio_STERN_PLANES_01.SM_US_SSBN_Ohio_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ohio/SM_US_SSBN_Ohio_BOW_PLANES_01.SM_US_SSBN_Ohio_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSBN/USA/Ohio/SM_US_SSBN_Ohio_PERISCOPE_01.SM_US_SSBN_Ohio_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -8766.6,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -7735.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -7735.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          3400.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1700.0,
+          0.0,
+          1178.0
+        ]
+      }
+    },
+    "US_SSN_LosAngeles": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles.SM_US_SSN_LosAngeles",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_PROPULSOR_01.SM_US_SSN_LosAngeles_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_RUDDER_01.SM_US_SSN_LosAngeles_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_STERN_PLANES_01.SM_US_SSN_LosAngeles_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_BOW_PLANES_01.SM_US_SSN_LosAngeles_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/USA/Los_Angeles/SM_US_SSN_LosAngeles_PERISCOPE_01.SM_US_SSN_LosAngeles_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5707.8,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5005.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5005.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2800.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1100.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "US_SSN_Seawolf": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf.SM_US_SSN_Seawolf",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_PROPULSOR_01.SM_US_SSN_Seawolf_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_RUDDER_01.SM_US_SSN_Seawolf_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_STERN_PLANES_01.SM_US_SSN_Seawolf_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_BOW_PLANES_01.SM_US_SSN_Seawolf_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/USA/Seawolf/SM_US_SSN_Seawolf_PERISCOPE_01.SM_US_SSN_Seawolf_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5605.8,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4914.0,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4914.0,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2160.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1080.0,
+          0.0,
+          920.0
+        ]
+      }
+    },
+    "US_SSN_Skipjack": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/USA/Skipjack/SM_US_SSN_Skipjack.SM_US_SSN_Skipjack",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/USA/Skipjack/SM_US_SSN_Skipjack_PROPULSOR_01.SM_US_SSN_Skipjack_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/USA/Skipjack/SM_US_SSN_Skipjack_RUDDER_01.SM_US_SSN_Skipjack_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Skipjack/SM_US_SSN_Skipjack_STERN_PLANES_01.SM_US_SSN_Skipjack_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Skipjack/SM_US_SSN_Skipjack_BOW_PLANES_01.SM_US_SSN_Skipjack_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/USA/Skipjack/SM_US_SSN_Skipjack_PERISCOPE_01.SM_US_SSN_Skipjack_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -4010.7,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -3490.3,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -3490.3,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1534.2,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          767.1,
+          0.0,
+          889.5
+        ]
+      }
+    },
+    "US_SSN_Sturgeon": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/USA/Sturgeon/SM_US_SSN_Sturgeon.SM_US_SSN_Sturgeon",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/USA/Sturgeon/SM_US_SSN_Sturgeon_PROPULSOR_01.SM_US_SSN_Sturgeon_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/USA/Sturgeon/SM_US_SSN_Sturgeon_RUDDER_01.SM_US_SSN_Sturgeon_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Sturgeon/SM_US_SSN_Sturgeon_STERN_PLANES_01.SM_US_SSN_Sturgeon_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Sturgeon/SM_US_SSN_Sturgeon_BOW_PLANES_01.SM_US_SSN_Sturgeon_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/USA/Sturgeon/SM_US_SSN_Sturgeon_PERISCOPE_01.SM_US_SSN_Sturgeon_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -4796.8,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -4191.9,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -4191.9,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          1842.6,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          921.3,
+          0.0,
+          889.9
+        ]
+      }
+    },
+    "US_SSN_Virginia": {
+      "hull": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia.SM_US_SSN_Virginia",
+      "propulsor": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_PROPULSOR_01.SM_US_SSN_Virginia_PROPULSOR_01",
+      "rudder": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_RUDDER_01.SM_US_SSN_Virginia_RUDDER_01",
+      "sternPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_STERN_PLANES_01.SM_US_SSN_Virginia_STERN_PLANES_01",
+      "bowPlanes": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_BOW_PLANES_01.SM_US_SSN_Virginia_BOW_PLANES_01",
+      "periscope": "/Game/SilentDepth/Art/Submarines/SSN/USA/Virginia/SM_US_SSN_Virginia_PERISCOPE_01.SM_US_SSN_Virginia_PERISCOPE_01",
+      "partOffsetsCm": {
+        "propulsor": [
+          -5962.7,
+          0.0,
+          0.0
+        ],
+        "rudder": [
+          -5232.5,
+          0.0,
+          0.0
+        ],
+        "sternPlanes": [
+          -5232.5,
+          0.0,
+          0.0
+        ],
+        "bowPlanes": [
+          2300.0,
+          0.0,
+          0.0
+        ],
+        "periscope": [
+          1150.0,
+          0.0,
+          920.0
+        ]
       }
     }
   }

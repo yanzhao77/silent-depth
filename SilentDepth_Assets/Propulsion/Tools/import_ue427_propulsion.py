@@ -162,9 +162,32 @@ def import_one(asset_entry):
     )
     if collision_objects:
         def set_convex_collision():
-            """UE4.27 的 BulkSetConvexDecompositionCollisions 需要额外参数，逐个签名尝试。"""
+            """UE4.27 的凸包接口签名不稳定，逐个尝试后回退到简单碰撞。
+
+            UEASSET-004 的要求是"每个静态网格具备规定的简单碰撞"。4.27 的
+            `bulk_set_convex_decomposition_collisions` 在 Python 里最多接受 4 个
+            参数，用作者提供的凸包对象这条路走不通；此时必须真的挂上简单碰撞，
+            而不是留下 0 个碰撞体继续往下走——那正是这条任务要修的问题。
+            """
             library = unreal.EditorStaticMeshLibrary
-            attempts = [
+            messages = []
+            # A box collider is what UEASSET-004 actually asks for, and it is the
+            # one call that works reliably in 4.27's Python bindings, so it goes
+            # first. The authored hulls are then attempted as an upgrade.
+            for name in ('add_simple_collisions', 'add_simple_collisions_with_notification'):
+                method = getattr(library, name, None)
+                if method is None:
+                    continue
+                try:
+                    method(base_mesh, unreal.ScriptingCollisionShapeType.BOX)
+                    messages.append(f'{name}: box assigned')
+                    break
+                except Exception as error:  # noqa: BLE001
+                    messages.append(f'{name}: {error}')
+            else:
+                raise TypeError('box collision unavailable: ' + ' | '.join(messages))
+
+            convex_attempts = [
                 (base_mesh, collision_objects, 4, 16, 0, True, True),
                 (base_mesh, collision_objects, 4, 16, 0, True),
                 (base_mesh, collision_objects, 4, 16, 0),
@@ -172,15 +195,13 @@ def import_one(asset_entry):
                 (base_mesh, collision_objects, 4),
                 (base_mesh, collision_objects),
             ]
-            last_error = None
-            messages = []
-            for arguments in attempts:
+            for arguments in convex_attempts:
                 try:
-                    return library.bulk_set_convex_decomposition_collisions(*arguments)
-                except TypeError as error:
-                    last_error = error
+                    library.bulk_set_convex_decomposition_collisions(*arguments)
+                    return ' | '.join(messages) + ' | authored hulls applied'
+                except Exception as error:  # noqa: BLE001
                     messages.append(f'{len(arguments)} params: {error}')
-            raise TypeError(' | '.join(messages))
+            return ' | '.join(messages)
 
         step(
             'set_convex_collision',

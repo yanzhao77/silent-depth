@@ -51,6 +51,13 @@ def build_entry(asset_id: str, existing: dict) -> tuple[dict, list[str]]:
     spec = json.loads(spec_path.read_text(encoding='utf-8'))
     relative_root = root.relative_to(ASSETS).as_posix()
 
+    # Only hulls the shared pipeline produced may be re-registered. Akula,
+    # Yasen and Typhoon came from hand-built Blender masters: their SPECs carry
+    # no material list, and rewriting their paths and hashes from a parametric
+    # build would quietly claim those files are something they are not.
+    if existing.get('master') and not spec.get('materials'):
+        return existing, ['hand-built asset, not registered from the pipeline']
+
     artifacts = {
         'master': f'Blend/{asset_id}_MASTER.blend',
         'lod0': f'FBX/{asset_id}_LOD0.fbx',

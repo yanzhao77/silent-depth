@@ -339,16 +339,22 @@ def build_stern(params: dict):
 
 def build_propulsor(params: dict):
     """Single shaft with either a screw or a pump-jet duct."""
-    # The propulsor sits behind the stern tip, where the shaft leaves the hull.
-    tail = stern_x() - params.get('shaft_inset', 3.4) * 0.35
+    # Everything aft is placed from the shaft's own endpoints rather than from
+    # fixed offsets: a hand-tuned gap of a few centimetres is invisible in a
+    # render and still means the rotor does not touch the shaft.
+    shaft_center = stern_x() - 0.6
+    shaft_length = 4.0
+    shaft_aft = shaft_center - shaft_length * 0.5
+    overlap = 0.35
+    tail = shaft_aft + overlap
     kind = params.get('propulsor', 'pumpjet')
     # The shaft reaches back into the hull so the parts really connect.
-    shaft = cylinder('Shaft', (stern_x() - 0.6, 0.0, 0.0), 0.34, 4.0, axis='X', material='metal')
-    hub = cylinder('Hub', (tail - 1.0, 0.0, 0.0), 0.42, 1.5,
+    shaft = cylinder('Shaft', (shaft_center, 0.0, 0.0), 0.34, shaft_length, axis='X', material='metal')
+    hub = cylinder('Hub', (shaft_aft - 0.4, 0.0, 0.0), 0.42, 1.5,
                    axis='X', material='bronze', radius_end=0.30)
     blades, duct = [], None
     if kind == 'pumpjet':
-        duct = cylinder('PumpJetDuct', (tail - 0.8, 0.0, 0.0),
+        duct = cylinder('PumpJetDuct', (shaft_aft - 0.6, 0.0, 0.0),
                         max(radius(stern_x() + 4.0) * 0.78, 1.5), 3.0, axis='X', material='metal')
         # A duct is a shell: cut an inner ring so the nozzle reads as a tube.
         bm = bmesh.new()
@@ -359,7 +365,7 @@ def build_propulsor(params: dict):
         bm.free()
         for i in range(7):
             theta = TAU * i / 7
-            blades.append(fin(f'RotorBlade_{i}', tail - 0.8, theta,
+            blades.append(fin(f'RotorBlade_{i}', tail, theta,
                               span=inner * 0.92, chord_root=0.7, chord_tip=0.5,
                               sweep=0.0, thickness=0.12, material='bronze',
                               root_offset=0.12))
@@ -367,12 +373,14 @@ def build_propulsor(params: dict):
         blade_count = params.get('blade_count', 7)
         for i in range(blade_count):
             theta = TAU * i / blade_count
-            blades.append(fin(f'PropellerBlade_{i}', tail - 0.6, theta,
+            blades.append(fin(f'PropellerBlade_{i}', tail, theta,
                               span=max(radius(stern_x() + 3.0), 1.6) * 0.92,
                               chord_root=1.1, chord_tip=0.7,
                               sweep=0.35, thickness=0.16, material='bronze', cant=0.35,
                               root_offset=0.12))
-        duct = cylinder('PropellerSpinner', (tail - 1.7, 0.0, 0.0), 0.34, 0.8,
+        # The spinner caps the shaft: it overlaps the end instead of sitting
+        # behind it, so the assembly has no floating cone.
+        duct = cylinder('PropellerSpinner', (shaft_aft, 0.0, 0.0), 0.34, 0.8,
                         axis='X', material='bronze', radius_end=0.16)
     return {'shaft': shaft, 'hub': hub, 'blades': blades, 'duct': duct}
 
@@ -406,6 +414,38 @@ def build_openings(params: dict):
     return out
 
 
+def build_missile_deck(params: dict):
+    """The raised missile casing an SSBN carries behind its sail.
+
+    Without it a ballistic-missile boat and an attack boat of the same length
+    look alike, which is the one silhouette difference the references keep
+    repeating (Delta's hump, Ohio's flat deck, Borei's rounded casing).
+    """
+    if not params.get('missile_deck'):
+        return None
+    length = params['length']
+    sail = params['sail_x']
+    aft = sail - params['sail_length'] * 0.5
+    deck_length = length * params.get('missile_deck_fraction', 0.42)
+    fore = aft + 1.0
+    stern_end = max(fore - deck_length, stern_x() + length * 0.12)
+    width = params['beam'] * 0.55
+    height = params['beam'] * 0.17
+
+    rings = []
+    steps = 8
+    for i in range(steps + 1):
+        t = i / steps
+        x = fore + (stern_end - fore) * t
+        # The hump tapers into the hull at both ends.
+        taper = math.sin(math.pi * min(max(t, 0.0), 1.0)) ** 0.55
+        top = radius(x) * params.get('vertical_scale', 1.0) + height * (0.35 + 0.65 * taper)
+        w = width * (0.55 + 0.45 * taper)
+        rings.append([(x, w * 0.5, top), (x, -w * 0.5, top),
+                      (x, -w * 0.5, top - height * 0.9), (x, w * 0.5, top - height * 0.9)])
+    return loft('MissileDeck', rings, material='panel')
+
+
 def build(collection, materials, detail=True, params: dict | None = None):
     """Build every part of one hull; returns the parts the tools expect."""
     global COL, MAT
@@ -422,9 +462,11 @@ def build(collection, materials, detail=True, params: dict | None = None):
     stern = build_stern(params)
     propulsor = build_propulsor(params)
     openings = build_openings(params) if detail else []
+    missile_deck = build_missile_deck(params)
     parts = {
         'hull': body,
         'sail': sail['sail'],
+        'missile_deck': missile_deck,
         'masts': sail['masts'],
         # Movable groups the UE side drives independently.
         'propulsor': propulsor['blades'] + [propulsor['hub']] + ([propulsor['duct']] if propulsor['duct'] else []),

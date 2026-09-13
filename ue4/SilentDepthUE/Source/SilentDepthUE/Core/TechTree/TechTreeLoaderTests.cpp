@@ -86,7 +86,9 @@ bool FSD_TechTreeLoaderProjectData::RunTest(const FString& Parameters)
     TestEqual(TEXT("weapon nodes"), CountNodesInCategory(Tree, ESDTechCategory::Weapon), 124);
     TestEqual(TEXT("sensor nodes"), CountNodesInCategory(Tree, ESDTechCategory::Sensor), 150);
     TestEqual(TEXT("defensive nodes"), CountNodesInCategory(Tree, ESDTechCategory::Defensive), 13);
-    TestEqual(TEXT("propulsion nodes"), CountNodesInCategory(Tree, ESDTechCategory::Propulsion), 20);
+    // 21 since CN_PJ_Type093B was produced (DEC-003 Batch B): the pump-jet the
+    // propulsion matrix had recorded as a gap is now a real node.
+    TestEqual(TEXT("propulsion nodes"), CountNodesInCategory(Tree, ESDTechCategory::Propulsion), 21);
     TestEqual(TEXT("every category publishes ten tiers"), Tree.Tiers.Num(), 5 * SDTechTree::TierCount);
 
     // Tier labels come from the tree documents, where the source has them.

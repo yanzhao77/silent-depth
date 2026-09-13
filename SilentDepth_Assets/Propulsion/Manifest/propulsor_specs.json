@@ -4,6 +4,53 @@
   "note": "参数化的推进器几何规格。尺寸单位一律为米。count_provenance 说明叶片数量的来源：MEASURED 表示从 Typhoon 母版实测，PUBLIC_REPORTED 表示公开资料报道，GAME_ART_SPEC 表示游戏美术取值、不作为事实声明。本文件只描述几何与技术路线，不定义功率、航速、噪声或水动力性能。",
   "specs": [
     {
+      "asset_id": "CN_PJ_Type093B",
+      "display_name": "Type 093B 泵喷推进器",
+      "category": "PumpJets",
+      "kind": "PUMPJET",
+      "country": "China",
+      "tier": 9,
+      "era": "2020s",
+      "status": "IMPLEMENTING",
+      "technology_route": "pump-jet propulsor",
+      "params": {
+        "main_diameter_m": 4.9,
+        "hub_diameter_m": 1.3,
+        "hub_length_m": 2.3,
+        "blade_count": 7,
+        "stator_count": 9,
+        "skew_deg": 26.0,
+        "rake_m": 0.18,
+        "pitch_ratio": 1.08,
+        "blade_thickness_ratio": 0.06,
+        "shroud": {
+          "enabled": true,
+          "outer_diameter_m": 5.4,
+          "length_m": 3.2,
+          "thickness_m": 0.29,
+          "mode": "HOUSING"
+        },
+        "shaft": {
+          "enabled": true,
+          "length_m": 2.0,
+          "diameter_m": 0.6,
+          "tail_cone": false
+        },
+        "fairing": {
+          "enabled": false,
+          "length_m": 0.0,
+          "diameter_m": 0.0
+        },
+        "nozzle": {
+          "enabled": true,
+          "length_m": 1.0,
+          "exit_diameter_m": 4.0
+        },
+        "count_provenance": "GAME_ART_SPEC",
+        "provenance_note": "公开报道明确 093B 采用泵喷；几何尺寸为游戏美术取值，只按同级泵喷缩放，不作为事实声明。"
+      }
+    },
+    {
       "asset_id": "PROP_T01_EARLY",
       "display_name": "T1 早期双叶螺旋桨（通用科技树件）",
       "category": "Propellers",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-11",
+  "generated_at": "2026-09-13",
   "schema": "silent-depth-propulsion-technology-tree-v1",
   "note": "所有 Tier 均为游戏科技层级，不等于历史事实或工程事实。",
   "history_vs_game_tier": "历史服役年份与技术世代只作为 Tier 划分的参考；Tier 是游戏数值与内容组织的层级标签。",
@@ -92,7 +92,8 @@
             "US_PJ_Virginia",
             "UK_PJ_Astute",
             "RU_PJ_Yasen",
-            "FR_PJ_Suffren"
+            "FR_PJ_Suffren",
+            "CN_PJ_Type093B"
           ]
         },
         {

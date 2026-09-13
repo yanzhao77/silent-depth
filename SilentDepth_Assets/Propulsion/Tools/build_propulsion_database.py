@@ -269,7 +269,10 @@ PROPULSOR_ASSETS_BY_TIER = {
     6: ['US_PROP_LosAngeles'],
     7: ['RU_PROP_Akula', 'CN_PROP_Type093'],
     8: ['RU_PROP_Typhoon', 'US_PJ_Seawolf'],
-    9: ['US_PJ_Virginia', 'UK_PJ_Astute', 'RU_PJ_Yasen', 'FR_PJ_Suffren'],
+    # CN_PJ_Type093B closes the gap the compatibility matrix recorded: public
+    # reporting says 093B uses a pump-jet, so the produced asset now backs that
+    # claim instead of leaving it as a pending one.
+    9: ['US_PJ_Virginia', 'UK_PJ_Astute', 'RU_PJ_Yasen', 'FR_PJ_Suffren', 'CN_PJ_Type093B'],
     10: ['PJ_T10_NEXTGEN', 'THRUSTER_RIM_DRIVEN'],
 }
 

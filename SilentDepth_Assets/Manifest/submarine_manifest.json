@@ -9,24 +9,65 @@
       "project": null,
       "tier": 2,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/USA/Skipjack/Blend/US_SSN_Skipjack_MASTER.blend",
+      "lod0": "Submarines/SSN/USA/Skipjack/FBX/US_SSN_Skipjack_LOD0.fbx",
+      "lod1": "Submarines/SSN/USA/Skipjack/FBX/US_SSN_Skipjack_LOD1.fbx",
+      "lod2": "Submarines/SSN/USA/Skipjack/FBX/US_SSN_Skipjack_LOD2.fbx",
+      "lod3": "Submarines/SSN/USA/Skipjack/FBX/US_SSN_Skipjack_LOD3.fbx",
+      "collision": "Submarines/SSN/USA/Skipjack/Collision/US_SSN_Skipjack_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/USA/Skipjack/Textures/T_US_SSN_Skipjack_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/USA/Skipjack/Validation/US_SSN_Skipjack_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/USA/Skipjack/Preview/Deck.png",
+        "Submarines/SSN/USA/Skipjack/Preview/Hero.png",
+        "Submarines/SSN/USA/Skipjack/Preview/Profile.png",
+        "Submarines/SSN/USA/Skipjack/Preview/Propeller.png",
+        "Submarines/SSN/USA/Skipjack/Preview/Rear.png",
+        "Submarines/SSN/USA/Skipjack/Preview/Sail.png",
+        "Submarines/SSN/USA/Skipjack/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSN_Skipjack_MASTER.blend": "0a8c9bec9540b35c0eb474fb06f98cdcbe638f72302f942d8677210a1fc64568",
+        "FBX/US_SSN_Skipjack_LOD0.fbx": "aa8d3ca76e1eabc6e046f0fd64949cde3ff3b00b0e5580390806a368dce6aaed",
+        "FBX/US_SSN_Skipjack_LOD1.fbx": "aa3601da604b2150b78c228d5bc5d13870731c8b4a50bac299125df470735e56",
+        "FBX/US_SSN_Skipjack_LOD2.fbx": "569365804e76dcc8e27524dc19cde23587d440aeaa072acb50cf18a1a4f39b1e",
+        "FBX/US_SSN_Skipjack_LOD3.fbx": "b3820ead450678cf33f09819e7749f35c3d0f7d309e54980d5cff705e88f43d1",
+        "Collision/US_SSN_Skipjack_COLLISION.fbx": "8a8a410040c719ff6c71fa9ab0290ba45b3397f42791540f3f61dfa5b33172e4",
+        "Validation/US_SSN_Skipjack_VALIDATION.json": "6aab25d1eabc724058611578a040b108e83bdfa5546d10b05485571d89b01815",
+        "Preview/Deck.png": "2946a721363164bba6a1a8aa7fb85f315f40c81ba90fb199ef7f849a1fbc7de6",
+        "Preview/Hero.png": "6de02cb27e39022549e18c79dcdcfa937b8ced20da048a17ba15ef4ffc5c538f",
+        "Preview/Profile.png": "42661805d90de2ca71d56a2244e626bff92ea5912dc185bd8546bd330d49b6b4",
+        "Preview/Propeller.png": "84d00e589d14abd00ef954aa412e33d1336176a77399c3734a016bc7e97b09da",
+        "Preview/Rear.png": "d273412b33b1840f565d63f682758822e17694acc52e62031f05c37afe658ca9",
+        "Preview/Sail.png": "60bd8107b499103c48f17d10b582bf98317d4b05749b58517e3f43fa7894b9e5",
+        "Preview/Stern.png": "d705d03de992e72e6b5b9516ef06580be02b50b6bfe6edef9635d6273ec5bb72"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -37,24 +78,65 @@
       "project": null,
       "tier": 4,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/USA/Sturgeon/Blend/US_SSN_Sturgeon_MASTER.blend",
+      "lod0": "Submarines/SSN/USA/Sturgeon/FBX/US_SSN_Sturgeon_LOD0.fbx",
+      "lod1": "Submarines/SSN/USA/Sturgeon/FBX/US_SSN_Sturgeon_LOD1.fbx",
+      "lod2": "Submarines/SSN/USA/Sturgeon/FBX/US_SSN_Sturgeon_LOD2.fbx",
+      "lod3": "Submarines/SSN/USA/Sturgeon/FBX/US_SSN_Sturgeon_LOD3.fbx",
+      "collision": "Submarines/SSN/USA/Sturgeon/Collision/US_SSN_Sturgeon_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/USA/Sturgeon/Textures/T_US_SSN_Sturgeon_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/USA/Sturgeon/Validation/US_SSN_Sturgeon_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/fact-files/display/display-factfiles/article/Article/2169558/attack-submarines-ssn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/USA/Sturgeon/Preview/Deck.png",
+        "Submarines/SSN/USA/Sturgeon/Preview/Hero.png",
+        "Submarines/SSN/USA/Sturgeon/Preview/Profile.png",
+        "Submarines/SSN/USA/Sturgeon/Preview/Propeller.png",
+        "Submarines/SSN/USA/Sturgeon/Preview/Rear.png",
+        "Submarines/SSN/USA/Sturgeon/Preview/Sail.png",
+        "Submarines/SSN/USA/Sturgeon/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSN_Sturgeon_MASTER.blend": "093ed4004613dcdd2875fcc89c8e1dd28571472a00ee46fe1871a5951119674d",
+        "FBX/US_SSN_Sturgeon_LOD0.fbx": "cb6d6b2786663a8c87dc5eb7d837ee28cd65438b99e09a2ca5bfa63865164771",
+        "FBX/US_SSN_Sturgeon_LOD1.fbx": "e2048bedcb13f484d4f4f9a392eca954e08b5b43e04403932cb429ccf7689e56",
+        "FBX/US_SSN_Sturgeon_LOD2.fbx": "c4f454560a3215115d40fd6c1c6948d8d14463339b859b255c4a28b34e146a5b",
+        "FBX/US_SSN_Sturgeon_LOD3.fbx": "e66eb7c5e41c3fdfdb30b84879c676c133a57989b916f9daff3f95c260bc0c28",
+        "Collision/US_SSN_Sturgeon_COLLISION.fbx": "3c575f769470aa347258f3628837107f85c5dc150a786d41ba927e78b7a8d500",
+        "Validation/US_SSN_Sturgeon_VALIDATION.json": "10e445f4bfb1619d0ff91e36ea09825f5678f3be75df3dd980610a44e9c57759",
+        "Preview/Deck.png": "11b628ad1b89787100af867416e5fd753ed5e83896c0575bc87fdc9dce9a62bd",
+        "Preview/Hero.png": "172212075b1953a582a27bded1ec9b475bc47401db07d9d5ebe8d756a725ba5e",
+        "Preview/Profile.png": "f3315bfb977406cc6df0b621fd51ae5f48732a4286ee0be59904eee014aafc93",
+        "Preview/Propeller.png": "ad08999b58b4dc9fa27e620756f6525ac416b8e81bf1ce2b67e4bab154f4eebf",
+        "Preview/Rear.png": "ec9e00fca82174e6d440609bb06a21e984ad9bd047e1cc5eebe841c573716180",
+        "Preview/Sail.png": "bf7e074f10128c31aae51b8f61c7864fa38151ae1e18f628bc58b81cf9400ef4",
+        "Preview/Stern.png": "d4cbe97eb07b87f472db2f8a6a85a83a0d07deb831c94b8a8fa0aa40363a4fcc"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -108,24 +190,24 @@
         "Submarines/SSN/USA/Los_Angeles/Preview/Stern.png"
       ],
       "sha256": {
-        "Blend/US_SSN_LosAngeles_MASTER.blend": "0af36a09f1507c5ff0e7f22a4a698dcaf13418484e9bb0b61514cfae9304a845",
-        "FBX/US_SSN_LosAngeles_LOD0.fbx": "5fefdfc8ce132fd425583a562938dc3245275fc492cb46bd21e3a8f919df5888",
-        "FBX/US_SSN_LosAngeles_LOD1.fbx": "63180387c8c0fc6529c67133389318ee0b2753987e0a474d713464bb990f80d5",
-        "FBX/US_SSN_LosAngeles_LOD2.fbx": "fa8ddf8a8402b300a3626cfeeb74b4741ab88a21da6238f20deb701f508d801f",
-        "FBX/US_SSN_LosAngeles_LOD3.fbx": "29f2b8e2285e5f900ce0c0f741cf969f3ad384d10f86229f8359bc4a44f5ed38",
-        "Collision/US_SSN_LosAngeles_COLLISION.fbx": "e80cf831b94d21da70b3aae53980121f82447bb43898ddfe90a37d14120ee794",
-        "Validation/US_SSN_LosAngeles_VALIDATION.json": "86d3fc397e399938363bd7347e69478ef6fefdd44f121ce3c2a8480af82fdb2c",
+        "Blend/US_SSN_LosAngeles_MASTER.blend": "bcbffab3c26605fe8578e2fa63e31ecbd4b772095306f718dcf5511bbc16e658",
+        "FBX/US_SSN_LosAngeles_LOD0.fbx": "1ec14c9af369401e343fff3583ce1fe0950edd173d1029b590268684b42b509c",
+        "FBX/US_SSN_LosAngeles_LOD1.fbx": "edc9d87441db5feae00015e312b9f355895fadf05082cf1daa7506ccb07729b2",
+        "FBX/US_SSN_LosAngeles_LOD2.fbx": "313711f2137afbe2958c3724b23ce8f4476c81614c657a188db131c77600f3a4",
+        "FBX/US_SSN_LosAngeles_LOD3.fbx": "e28ff328c0f21f80ffc35fe990e24e93c86fc1f4f4e1f6ceac4fc9f9d5dd7cf2",
+        "Collision/US_SSN_LosAngeles_COLLISION.fbx": "d0c27e25e1aa596c0bff27b2324d6376531498906b286a9da42daf9659da6f6d",
+        "Validation/US_SSN_LosAngeles_VALIDATION.json": "9ebe72b7bc9ce1a3a4852ff111ed0eeef470ba5b8163ddd057e13c47708312d5",
         "Source/build_los_angeles.py": "71cd1c51ab17ed658867098fc39276b0536eb6441daada5e4cd3d507a3d8a52a",
-        "Preview/Deck.png": "0d6cd257ba07adebdca4008b9deff7343e6c24c0a00884c2be5c685ace5f8867",
+        "Preview/Deck.png": "774378375e9562d7ded3d044f9066a9c97fc0d27dab1f5bd9c64b4a4d9e2b2aa",
         "Preview/Gray_Deck.png": "7695a3b08f1422f7d7f577f1080aa9fe36e20e22adbfd71a2929613856490182",
         "Preview/Gray_Hero.png": "9f6228697df0159d23109a702a0f6e628edce35745b5c727993c429f349f277c",
         "Preview/Gray_Profile.png": "9f13f3c963186c279b710012db435e9ebc529cbc0ddecf919671da6a935dcbf6",
-        "Preview/Hero.png": "1b0be235f063dcb5a0cf5fbbe67153157d7058d520bfe39f211ff73e1c9de324",
-        "Preview/Profile.png": "4a0c2edab817d8587652893deeed14828d26d8b7abb0c1d714f2563ad64c118f",
-        "Preview/Propeller.png": "4579359957686c73e76a03b0d77dc327b1aecf917a1f9d0257d1d6cea528a5ca",
-        "Preview/Rear.png": "89e5dffb64d517b1e1d1bff841da29c051368eb2d6aac9761d052cca3bf88a05",
-        "Preview/Sail.png": "224b9d6b5ffce7a629581e6e2742aec060aa902765ad72a505fb2246098814c3",
-        "Preview/Stern.png": "784339a6958fd130d36047777158be94e23f07019b447d9fec9839652955a9d4"
+        "Preview/Hero.png": "31ea8b154588970a305ff17eba0ee78107e165f961756a65aa1ec6aa999de8f1",
+        "Preview/Profile.png": "842c5f0adc4b6388f31156e2c8740e114d529da621d2cae32ca963b01d485753",
+        "Preview/Propeller.png": "9c4fb03951522482741abed60960d5ae176e1d80eddf591c0d8e3c610cc3bdb8",
+        "Preview/Rear.png": "77392c236bc013fd8c8c9bc1941d31addadfc7ff3b388b01846b6e184aea7160",
+        "Preview/Sail.png": "3f27743bba8e1c7b87067333bcbe59b06e0483a9ebdd114263204fc1e1f4f270",
+        "Preview/Stern.png": "15a90bae36df77d459c4747f5fba96abbbb6b697c32614a588c198580629e0c6"
       },
       "limitations": [
         "程序化外形，未与实物或照片逐点比对",
@@ -184,24 +266,24 @@
         "Submarines/SSN/USA/Seawolf/Preview/Stern.png"
       ],
       "sha256": {
-        "Blend/US_SSN_Seawolf_MASTER.blend": "35b517f43d81fcfdd4626a473c8a945cba7f7fb072b94aa9ac6d8a74c6d631dc",
-        "FBX/US_SSN_Seawolf_LOD0.fbx": "ffe6e1ff012d01bff7ee2c7979ee94232a231e7f6d380d80e88f78a60cd36c5c",
-        "FBX/US_SSN_Seawolf_LOD1.fbx": "01b382a4a348b3ce367e484349946b1c23d4808971d3b7b4ea0a44a1dcf965c9",
-        "FBX/US_SSN_Seawolf_LOD2.fbx": "3bdadcf35309a49d836d8f8fdfea57e5e3e8e4b6cc25dc30746c3c43e552fea7",
-        "FBX/US_SSN_Seawolf_LOD3.fbx": "661ba957d2274728e1a2ddcb79c750f98ca0e63e5bb5268c14643e4f71a2f886",
-        "Collision/US_SSN_Seawolf_COLLISION.fbx": "4276b8bbc7cc6e7d438b8a9a66f40eb4ed184ca916d2077f57acbc1fea656724",
-        "Validation/US_SSN_Seawolf_VALIDATION.json": "66cc228cc440a3b3a2f6051afcb0fe4e3fdead5bd37c279bf1f0193d3758778f",
+        "Blend/US_SSN_Seawolf_MASTER.blend": "bd9efa2c210b426a53aa317debd4ef57ccddd2d0b713b941a67f1d4fd9714039",
+        "FBX/US_SSN_Seawolf_LOD0.fbx": "e531689fd3c645540b3fba7ddc03f6407b25725477f031a0c5796614fb0d6b18",
+        "FBX/US_SSN_Seawolf_LOD1.fbx": "f02ae3a69fcca573688a9d1dccfd119b67ddac33302f8b227ee0f66a875f6631",
+        "FBX/US_SSN_Seawolf_LOD2.fbx": "36de185a2fdf500a5edeb52f8062338016bb962eef5a2b4b1ac0d4bbfba5139d",
+        "FBX/US_SSN_Seawolf_LOD3.fbx": "34057b4c478ac76e8097c15bfdc48c7e7ad8a0a01e94de8d0cb22fab2ebab2a2",
+        "Collision/US_SSN_Seawolf_COLLISION.fbx": "9b271699723dc34e1d55a7eb326c417c918106b9df76d738f5e06a54f8db32b8",
+        "Validation/US_SSN_Seawolf_VALIDATION.json": "6184709afe66715b30808633194f01c1a69237e03d2bf7ec5474678baddd7513",
         "Source/build_seawolf.py": "2bea6c33c239ab499819e925ed41c9282648e5d83752234f3dbb831000113b3c",
-        "Preview/Deck.png": "0cbed26f7be652633eeda445365ce0c486f3294c6b19e8c1df683fb1b335a001",
+        "Preview/Deck.png": "23f0dd15069b8be8763b307c16025ef459ab249886ce147164ec0bf12842d9d2",
         "Preview/Gray_Deck.png": "d4bf6e3f5c82462d356ad121ccf69d99dc02f90fcc392f61b718695f9e1ec1e0",
         "Preview/Gray_Hero.png": "a44f583099a39251a3cd8151912b8089da75871b5d7cb8d3843eba59e1e57fdd",
         "Preview/Gray_Profile.png": "45d6d7f71e2d8980067c045fe74d5058334699045319c52b264863c8a3851403",
-        "Preview/Hero.png": "67f378715f2358e4e777981dba3149b8e15501803cc9a55b2c8b7efdf2d05c70",
-        "Preview/Profile.png": "2ff7016fbfad41ee7678890dcfc89f8fdcb248bf7f84d482cba3bb3443c31b60",
-        "Preview/Propeller.png": "a5ea75c9cf23f4ba4a80c799d7f761f2fb8e9d8ee2b9a42d0105588dc0629841",
-        "Preview/Rear.png": "7d9a798fff9f182cf785ffdeacae3af1b2f614d33c9d27b7452a26a39f07a787",
-        "Preview/Sail.png": "fea3d7f090d6a03218d36462aa2a6d78de64d6001201ce74608601de60a68337",
-        "Preview/Stern.png": "15be10fff31ff91fd4ecbca019879453ca1e056eceb10ee9cf01a97faf43496d"
+        "Preview/Hero.png": "c2b495e01e39b25478eb12a89f0a3d9dd491df0a73f2900783844c233b9ccbb5",
+        "Preview/Profile.png": "e4f14d2d8252923ab6d88646adcf368c96bd4bb26737d5cb850a2eb8e1f82fe1",
+        "Preview/Propeller.png": "3b670c5f15917b54d1f7b16060d6b52b84eb380cb3c6e7689db7785867c75bcd",
+        "Preview/Rear.png": "693064075bf91d7433790682a72b739718ebdc2194c9fc73b9011cf6bd01e402",
+        "Preview/Sail.png": "e7d9ea1765700fabd712f73c3915c96f0c3f618096260f82f6fd181af24e4f6a",
+        "Preview/Stern.png": "51933a0e02efc6bf2565d9c13c6283ee7e549265d568f595dcd0f3b107908f26"
       },
       "limitations": [
         "程序化外形，未与实物或照片逐点比对",
@@ -260,24 +342,24 @@
         "Submarines/SSN/USA/Virginia/Preview/Stern.png"
       ],
       "sha256": {
-        "Blend/US_SSN_Virginia_MASTER.blend": "6ceb011b28e743f3ae85138b6abb1e831dc689dff3b0ff9f256d7ad7cc490412",
-        "FBX/US_SSN_Virginia_LOD0.fbx": "3ccadacc766310892ef09d1213e60c0c9cf711d7876542934af60ed3642aef03",
-        "FBX/US_SSN_Virginia_LOD1.fbx": "3486738fe7def6c488bd87fa33b8067802e299b02c25adc68fe433a110ece9f4",
-        "FBX/US_SSN_Virginia_LOD2.fbx": "852a3a16962e437ae0496b9f0aec910a7c9f7696c225c832854b116617cbcbc5",
-        "FBX/US_SSN_Virginia_LOD3.fbx": "507ea6c062d8e06412cf88a328456d2e17d28afbfa0d87e6b422b857e7ad2f57",
-        "Collision/US_SSN_Virginia_COLLISION.fbx": "27522cc486892de302eeb1b3c3dbf8e2f949ff716c772534ffd741704318f97f",
-        "Validation/US_SSN_Virginia_VALIDATION.json": "d3ba9802097d96e50960afeaab6fecdfb215c8fe44dab4cf9f317287d59001a3",
+        "Blend/US_SSN_Virginia_MASTER.blend": "99c120572ad310f8b1ffd96573dba9ff85f205147d3c83807b0c56c1329dcee1",
+        "FBX/US_SSN_Virginia_LOD0.fbx": "e3c8e0f14c9d35ad3760731e40b9ead1a9f8c28972754dc36496d8a41deab19e",
+        "FBX/US_SSN_Virginia_LOD1.fbx": "7e9de6b68c77e2e72f51978fbbe39053e63938895796e54f140102e1ddd7e758",
+        "FBX/US_SSN_Virginia_LOD2.fbx": "8af57a1f212958bbf2568016a157dc896ca30cbd50f3574f7191a42052816630",
+        "FBX/US_SSN_Virginia_LOD3.fbx": "d6f8687cdaa543dfdad15fc1f14914aca5fcb9c823bfe342c1749463bb31036a",
+        "Collision/US_SSN_Virginia_COLLISION.fbx": "77ccb70e74fb80ab6719fd2d2435a6d694bb9a3832d473713727f699b1bdbf05",
+        "Validation/US_SSN_Virginia_VALIDATION.json": "3d8717c2b12c9fc13c4493e26073092eb43be47d8f6b01703b23d05ed72cee43",
         "Source/build_virginia.py": "9ef3ce1b9693be262d1ba7d53381590bf74b92462f848e9271a941f2d2734c1f",
-        "Preview/Deck.png": "d625d4ccb91c367af420588353e1ce4ffb2c94def7b99d376cf40a3ff841974e",
+        "Preview/Deck.png": "6abc657fb9cd7ccadf740a45bb6be23f0b80fec00c2bc95723caabfe969baf9e",
         "Preview/Gray_Deck.png": "4aa60b74125ac541c51c19ea72a4b29650f5e1374e7321a9db9267949916bddd",
         "Preview/Gray_Hero.png": "19c20114160dfc03975a3b7a984b673c96a0690e8cf2797da5b9d80e47e386b3",
         "Preview/Gray_Profile.png": "ea8df047d2b98330ca09bca8b68bd60eb2247bcdfd587eafabe59e5e262e76ea",
-        "Preview/Hero.png": "6f2c58242db7c1c86dcb0ff106faf9e7befa420ba5aea443e1aa004f242d5b56",
-        "Preview/Profile.png": "bba2a303830c270394e0bd6d7335ed9166874f07fb5f684186f4f45c5e07bb2e",
-        "Preview/Propeller.png": "b3f69cf114ba9bd72a014fcde2194299c61a55c8d18ed34df2a0ab7d8d297db2",
-        "Preview/Rear.png": "f1603f1b4b448154fadbaa925e633642c70f114432097a9a535dc2b890abf17d",
-        "Preview/Sail.png": "989bd53d7a6a758fd5617b1404e54614596975c94b139ae63bdff27c42000b03",
-        "Preview/Stern.png": "1b0e6cefa4046b4aa3f2c21d29fb765acdd1f17c5a0247771bb2be1b148f1032"
+        "Preview/Hero.png": "b1a4b09353cd6b3d7d64fc5ef1664a3596f63b8d4f7a11ddc60312a0fa397506",
+        "Preview/Profile.png": "f30f122ed688b7c7b11b8c0032cc1d9c2fd7b632e3fc691f1c570b60ecbb4f40",
+        "Preview/Propeller.png": "5e81957c2b6bb182df0a6440d3c58a7d844361542aef039a75f6b1aa20bf0d34",
+        "Preview/Rear.png": "10e2d61262eaf6bda8bda6818fb12c2438c8bd4b458a933cbd659e722af1f368",
+        "Preview/Sail.png": "75751620616715fbf2ac8fe8b126f1916a0d659fa48fbae8e7ccf77431e1a300",
+        "Preview/Stern.png": "e2497e962655f26bc1dabf1bc647846c00e2f182c0852bd798e775f98b5bcdc1"
       },
       "limitations": [
         "程序化外形，未与实物或照片逐点比对",
@@ -293,24 +375,65 @@
       "project": null,
       "tier": 2,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/USA/George_Washington/Blend/US_SSBN_GeorgeWashington_MASTER.blend",
+      "lod0": "Submarines/SSBN/USA/George_Washington/FBX/US_SSBN_GeorgeWashington_LOD0.fbx",
+      "lod1": "Submarines/SSBN/USA/George_Washington/FBX/US_SSBN_GeorgeWashington_LOD1.fbx",
+      "lod2": "Submarines/SSBN/USA/George_Washington/FBX/US_SSBN_GeorgeWashington_LOD2.fbx",
+      "lod3": "Submarines/SSBN/USA/George_Washington/FBX/US_SSBN_GeorgeWashington_LOD3.fbx",
+      "collision": "Submarines/SSBN/USA/George_Washington/Collision/US_SSBN_GeorgeWashington_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/USA/George_Washington/Textures/T_US_SSBN_GeorgeWashington_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/USA/George_Washington/Validation/US_SSBN_GeorgeWashington_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/USA/George_Washington/Preview/Deck.png",
+        "Submarines/SSBN/USA/George_Washington/Preview/Hero.png",
+        "Submarines/SSBN/USA/George_Washington/Preview/Profile.png",
+        "Submarines/SSBN/USA/George_Washington/Preview/Propeller.png",
+        "Submarines/SSBN/USA/George_Washington/Preview/Rear.png",
+        "Submarines/SSBN/USA/George_Washington/Preview/Sail.png",
+        "Submarines/SSBN/USA/George_Washington/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSBN_GeorgeWashington_MASTER.blend": "50e2164855935ac387dab416d004a1a6e2e4069340be46cdf39f0c7ac5c589c0",
+        "FBX/US_SSBN_GeorgeWashington_LOD0.fbx": "92b1b891c7fd639933909ba7693c1a5051dbb3ce11058c1eef8a7242f131564c",
+        "FBX/US_SSBN_GeorgeWashington_LOD1.fbx": "0730d70d331f73e71cc8c911754e71af2e1860c2e892876585f422b1421ba3c0",
+        "FBX/US_SSBN_GeorgeWashington_LOD2.fbx": "665141e0afb90597cec32004c394e8b5d59b030c699c73a73c3da92d436841ea",
+        "FBX/US_SSBN_GeorgeWashington_LOD3.fbx": "81d5c743ae22724737930aa3da004ec807d4709417841c1d8c59baee1b23879a",
+        "Collision/US_SSBN_GeorgeWashington_COLLISION.fbx": "577bf658d39cfc32b01a661d1a956270701243adc71ffce86a2f90a47a9acb94",
+        "Validation/US_SSBN_GeorgeWashington_VALIDATION.json": "5f0baed29b26338c89e833b02697d1aec5430acf7ecb4a3cef1d1ccb7a7fa8a1",
+        "Preview/Deck.png": "afe40cd88ffad35e0ed2a51abcb54d3b1026a71d34763b82cc97958fd9b7307b",
+        "Preview/Hero.png": "00b32c3808e48c16e91f6df9e59fcf5f165c3234bf76555b3c64d22b35cf4f47",
+        "Preview/Profile.png": "f2b7fc017e5b7c255c91fdd7e732e071ad5b422820c7c19a59e976e7715b5288",
+        "Preview/Propeller.png": "04d115f62001785926f294719302515c523a6872876e0f7e1e4db6ff60a9b546",
+        "Preview/Rear.png": "510a660e6be4344524d92a468655ee510867b4e2d6fad4b5256592261b117d2f",
+        "Preview/Sail.png": "037663e5c92a54b4801a355ea3d2a15222005eef74809d198c4a54f79c388293",
+        "Preview/Stern.png": "d4dbbcb58dd061e7af7c1b89b09fdc92eac1e4a4d3be79f1f69b9f042c1d37cc"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -321,24 +444,65 @@
       "project": null,
       "tier": 3,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/USA/Ethan_Allen/Blend/US_SSBN_EthanAllen_MASTER.blend",
+      "lod0": "Submarines/SSBN/USA/Ethan_Allen/FBX/US_SSBN_EthanAllen_LOD0.fbx",
+      "lod1": "Submarines/SSBN/USA/Ethan_Allen/FBX/US_SSBN_EthanAllen_LOD1.fbx",
+      "lod2": "Submarines/SSBN/USA/Ethan_Allen/FBX/US_SSBN_EthanAllen_LOD2.fbx",
+      "lod3": "Submarines/SSBN/USA/Ethan_Allen/FBX/US_SSBN_EthanAllen_LOD3.fbx",
+      "collision": "Submarines/SSBN/USA/Ethan_Allen/Collision/US_SSBN_EthanAllen_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/USA/Ethan_Allen/Textures/T_US_SSBN_EthanAllen_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/USA/Ethan_Allen/Validation/US_SSBN_EthanAllen_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/USA/Ethan_Allen/Preview/Deck.png",
+        "Submarines/SSBN/USA/Ethan_Allen/Preview/Hero.png",
+        "Submarines/SSBN/USA/Ethan_Allen/Preview/Profile.png",
+        "Submarines/SSBN/USA/Ethan_Allen/Preview/Propeller.png",
+        "Submarines/SSBN/USA/Ethan_Allen/Preview/Rear.png",
+        "Submarines/SSBN/USA/Ethan_Allen/Preview/Sail.png",
+        "Submarines/SSBN/USA/Ethan_Allen/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSBN_EthanAllen_MASTER.blend": "172c3a3b602583ac7028d4e7be7a1c2a8c71daeafc1d556e86704157b153311f",
+        "FBX/US_SSBN_EthanAllen_LOD0.fbx": "18c80122c38ce2c503b7c34a849caeb64af7dee7d054e06440d38054171ee949",
+        "FBX/US_SSBN_EthanAllen_LOD1.fbx": "8617e645a47f911b3adecca775c86992d23347a514b3ce89c90a6df37283822e",
+        "FBX/US_SSBN_EthanAllen_LOD2.fbx": "514a8cbd01e50ee1b56cbf48def44c7b4952fc999f19fe21c97c39be24bd096a",
+        "FBX/US_SSBN_EthanAllen_LOD3.fbx": "545b641d70649b3aebed647147bbfdeb80a615c8258044a26ecdf4515f1cbb71",
+        "Collision/US_SSBN_EthanAllen_COLLISION.fbx": "7e153358101265f10deaf9ef0d4323a05df195a08560061e9a98544e43bf291b",
+        "Validation/US_SSBN_EthanAllen_VALIDATION.json": "184a3ba6ff4a588b5fb0d561b464078d9acfa35d9cda03f94be043eb0aa19c33",
+        "Preview/Deck.png": "2695a7295ec5ed40ef899f80365bd4b180fd4787eec5b879491ac3059c8871b9",
+        "Preview/Hero.png": "e60e6d5281be8dc77b655b02c4473ba666d07fb6846c6b806a9a2ef3fbfe7ccf",
+        "Preview/Profile.png": "5000475a2af8e46b5dc19128dce0373f21c7205174f1430091c38aed08a0ad85",
+        "Preview/Propeller.png": "d337a26256db9cc0f5540ca122b19e97626e7f5b777d17eeb4372b0efff53219",
+        "Preview/Rear.png": "3c55e9f21e5febfe822c3dc8f42f744767c711202a04380cac70c0fdbbbe4981",
+        "Preview/Sail.png": "195157b36a5770fe21a3a2589324651a6d7055d10a8e7ad012ed6445feff83f4",
+        "Preview/Stern.png": "9f7b094a028300d8d6c7671f2cbfe80448f951f1b47670204ba4c1287cc08577"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -349,24 +513,65 @@
       "project": null,
       "tier": 4,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/USA/Lafayette/Blend/US_SSBN_Lafayette_MASTER.blend",
+      "lod0": "Submarines/SSBN/USA/Lafayette/FBX/US_SSBN_Lafayette_LOD0.fbx",
+      "lod1": "Submarines/SSBN/USA/Lafayette/FBX/US_SSBN_Lafayette_LOD1.fbx",
+      "lod2": "Submarines/SSBN/USA/Lafayette/FBX/US_SSBN_Lafayette_LOD2.fbx",
+      "lod3": "Submarines/SSBN/USA/Lafayette/FBX/US_SSBN_Lafayette_LOD3.fbx",
+      "collision": "Submarines/SSBN/USA/Lafayette/Collision/US_SSBN_Lafayette_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/USA/Lafayette/Textures/T_US_SSBN_Lafayette_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/USA/Lafayette/Validation/US_SSBN_Lafayette_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/USA/Lafayette/Preview/Deck.png",
+        "Submarines/SSBN/USA/Lafayette/Preview/Hero.png",
+        "Submarines/SSBN/USA/Lafayette/Preview/Profile.png",
+        "Submarines/SSBN/USA/Lafayette/Preview/Propeller.png",
+        "Submarines/SSBN/USA/Lafayette/Preview/Rear.png",
+        "Submarines/SSBN/USA/Lafayette/Preview/Sail.png",
+        "Submarines/SSBN/USA/Lafayette/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSBN_Lafayette_MASTER.blend": "56de7e42d0f5b1afb46e95e4cbf36f6ae41c86aeaabaa4c8ab5808ac89a997ec",
+        "FBX/US_SSBN_Lafayette_LOD0.fbx": "c61e399c477610a43ad4c7b820222ab71a6a635a9899b98ccf7c302c5f82daa0",
+        "FBX/US_SSBN_Lafayette_LOD1.fbx": "7461ff8d739a62755201cc6082c3a9ccada892cb96377ea7646c2965e78698ae",
+        "FBX/US_SSBN_Lafayette_LOD2.fbx": "ef8108ffbeba7749edb87321ed2e6cb3a999e462d44035f9c23f46050f1ee544",
+        "FBX/US_SSBN_Lafayette_LOD3.fbx": "cc3778cc572716b1b5534c6cdd90fde68b0a55d74982fccb54d89c89e23f2be2",
+        "Collision/US_SSBN_Lafayette_COLLISION.fbx": "1268855976060d6c6dd6595d13522e9e03bb8befe1075dc0c3f54dbd74abf833",
+        "Validation/US_SSBN_Lafayette_VALIDATION.json": "65a5ad79dd479b9761a85adb8335d6cd7fae14c67a91b4809111a930563b0ce3",
+        "Preview/Deck.png": "e3373f67142acf2f281b8e3286013508cd08518f5b005c31aceec2fc2e74fbbb",
+        "Preview/Hero.png": "f6af0179cf9af10a855bbec6713b3f8124a295a16f9947d448a0ec640d6abfcc",
+        "Preview/Profile.png": "e323c74638048e166708d55f2dd95af8098d536a8006fe61df45fe83a66fcde3",
+        "Preview/Propeller.png": "9eedaf16435011b5f1553406d7ef44eba36909131ca02d93643ebeb6d7b2f201",
+        "Preview/Rear.png": "d8d60f747b079d9b9f6e32402ed5b32c5935b25355658366c21c18d8e624bd3f",
+        "Preview/Sail.png": "855ba9926afe387a802d89f2f2084068118e6ef5932f053a36a6ef2f295fab39",
+        "Preview/Stern.png": "dac4552fd9ea567db1ee7ed16b7023d99f6bb59508b9ad8fd0ff196a1e76d7e7"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -377,24 +582,65 @@
       "project": null,
       "tier": 4,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/USA/James_Madison/Blend/US_SSBN_JamesMadison_MASTER.blend",
+      "lod0": "Submarines/SSBN/USA/James_Madison/FBX/US_SSBN_JamesMadison_LOD0.fbx",
+      "lod1": "Submarines/SSBN/USA/James_Madison/FBX/US_SSBN_JamesMadison_LOD1.fbx",
+      "lod2": "Submarines/SSBN/USA/James_Madison/FBX/US_SSBN_JamesMadison_LOD2.fbx",
+      "lod3": "Submarines/SSBN/USA/James_Madison/FBX/US_SSBN_JamesMadison_LOD3.fbx",
+      "collision": "Submarines/SSBN/USA/James_Madison/Collision/US_SSBN_JamesMadison_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/USA/James_Madison/Textures/T_US_SSBN_JamesMadison_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/USA/James_Madison/Validation/US_SSBN_JamesMadison_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/USA/James_Madison/Preview/Deck.png",
+        "Submarines/SSBN/USA/James_Madison/Preview/Hero.png",
+        "Submarines/SSBN/USA/James_Madison/Preview/Profile.png",
+        "Submarines/SSBN/USA/James_Madison/Preview/Propeller.png",
+        "Submarines/SSBN/USA/James_Madison/Preview/Rear.png",
+        "Submarines/SSBN/USA/James_Madison/Preview/Sail.png",
+        "Submarines/SSBN/USA/James_Madison/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSBN_JamesMadison_MASTER.blend": "43f8b6f42ebf8fdb1c3810952320e4bd7d7b47d817a9d2771f71eb348a0cf6f9",
+        "FBX/US_SSBN_JamesMadison_LOD0.fbx": "02048b231d8b86962c64aee65dca27aa1c25dab7e6a2bc60ec7367fccea1cbc9",
+        "FBX/US_SSBN_JamesMadison_LOD1.fbx": "1c122a02aada9f2acdbae5121b7051fef32da0f2346c281ac2c2a671da388b6d",
+        "FBX/US_SSBN_JamesMadison_LOD2.fbx": "e211288e2ec03cb7fa1a0e94d626619f21b6f3c90df1d65ee1be484fc8bf5947",
+        "FBX/US_SSBN_JamesMadison_LOD3.fbx": "c4af8100a0fb389fe29b0dd97a9add12bb83a8f1075efa830247341167a7a93f",
+        "Collision/US_SSBN_JamesMadison_COLLISION.fbx": "0c5df1b9e814060843f6ec5c76958dda1d8ac769052cd6382f0291bd028a5dc4",
+        "Validation/US_SSBN_JamesMadison_VALIDATION.json": "ac80b2646b438a4de12c1127b48964d654424e6ca4b6776c3a55d1aa3ed1c6db",
+        "Preview/Deck.png": "dafc31aae24e22f122e3dbf1e69fc4c862cc262649cb66f4b0adad7955bba86e",
+        "Preview/Hero.png": "6f7dceab9584e0bdfc1538b9b6628994c52055dd0938b18e36987545ad65a2bc",
+        "Preview/Profile.png": "1f690848092fe9c045b6d5e723848467541aa6d2aff11989ec15d522bac2d9a1",
+        "Preview/Propeller.png": "89ebfd27adbee9dfd4bf39cdfdb34d04f163d38c01719b298c0d1ce5e1baeff5",
+        "Preview/Rear.png": "c34186f6601a996f291a4f9a74cb1ed385263e10808a1a40a3f54404e61b50b2",
+        "Preview/Sail.png": "376df4595ba2392149d65e98911acdfe131212291a7e0bc6a02e345d02e606a3",
+        "Preview/Stern.png": "a605c8d593d7581cb59ce3bd0d34f8525bc8c9732f28c505efb30a8126924218"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -405,24 +651,65 @@
       "project": null,
       "tier": 5,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/USA/Benjamin_Franklin/Blend/US_SSBN_BenjaminFranklin_MASTER.blend",
+      "lod0": "Submarines/SSBN/USA/Benjamin_Franklin/FBX/US_SSBN_BenjaminFranklin_LOD0.fbx",
+      "lod1": "Submarines/SSBN/USA/Benjamin_Franklin/FBX/US_SSBN_BenjaminFranklin_LOD1.fbx",
+      "lod2": "Submarines/SSBN/USA/Benjamin_Franklin/FBX/US_SSBN_BenjaminFranklin_LOD2.fbx",
+      "lod3": "Submarines/SSBN/USA/Benjamin_Franklin/FBX/US_SSBN_BenjaminFranklin_LOD3.fbx",
+      "collision": "Submarines/SSBN/USA/Benjamin_Franklin/Collision/US_SSBN_BenjaminFranklin_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/USA/Benjamin_Franklin/Textures/T_US_SSBN_BenjaminFranklin_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/USA/Benjamin_Franklin/Validation/US_SSBN_BenjaminFranklin_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/USA/Benjamin_Franklin/Preview/Deck.png",
+        "Submarines/SSBN/USA/Benjamin_Franklin/Preview/Hero.png",
+        "Submarines/SSBN/USA/Benjamin_Franklin/Preview/Profile.png",
+        "Submarines/SSBN/USA/Benjamin_Franklin/Preview/Propeller.png",
+        "Submarines/SSBN/USA/Benjamin_Franklin/Preview/Rear.png",
+        "Submarines/SSBN/USA/Benjamin_Franklin/Preview/Sail.png",
+        "Submarines/SSBN/USA/Benjamin_Franklin/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSBN_BenjaminFranklin_MASTER.blend": "70245eaa5a036649d1ea2e4bd1e755db566a1335380f6fdd0a48257d99ec0a80",
+        "FBX/US_SSBN_BenjaminFranklin_LOD0.fbx": "208a838a24bc7c6108d18a41cbbdd4c14b0efad21f274126e3dacfa91e8664ef",
+        "FBX/US_SSBN_BenjaminFranklin_LOD1.fbx": "84bcc108b45623b28b4d276da7f3a79be053a3da5c914dfae3ea415c0173dced",
+        "FBX/US_SSBN_BenjaminFranklin_LOD2.fbx": "db1a5b430e2d8afdb19aa3606e23cf96df714c70da586b7b57b3b76420deab8b",
+        "FBX/US_SSBN_BenjaminFranklin_LOD3.fbx": "d0b31b221e6737f20cb8beea9ab7b008ff785ef7ce88f918277c7c5c8c476027",
+        "Collision/US_SSBN_BenjaminFranklin_COLLISION.fbx": "92166660c1f162012d0a5764bbd070e563cdc91c8c6e13f44aebde3f2bda311f",
+        "Validation/US_SSBN_BenjaminFranklin_VALIDATION.json": "2ec21c4d2c6a5cc2f7187ed28d454599d438487a76d7c92a2a071c050bef9a5e",
+        "Preview/Deck.png": "7706a55bb410bf9e8e3150a37db42518edd0006c0040fb8a2f747c3bcc0ffedc",
+        "Preview/Hero.png": "79bfbe6baf3e517f963b0e303b884ef5a13f464839b300fbe5fb6e57abf55e90",
+        "Preview/Profile.png": "e3265f8551d23ce5cb1efd849466fce09db107087eee258939cc86f442a49be4",
+        "Preview/Propeller.png": "bfe2acce4b8fd755b6ee51641908b353f232258d5c4691934486ee5b341fee82",
+        "Preview/Rear.png": "c61712fe7d99a98b46014d3abedff4d83d2c96985cca3de598f94f0e9348e2ca",
+        "Preview/Sail.png": "23b2935ef1f8396ea1ec76271a3151e6e9d8f71e7ef0cf15da0f4278fbeb3aec",
+        "Preview/Stern.png": "599116e820ae5963ad1268e55ba58ab49c040ff2ec6ff19a9a0b690e5c9a5c6b"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -433,24 +720,65 @@
       "project": null,
       "tier": 8,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/USA/Ohio/Blend/US_SSBN_Ohio_MASTER.blend",
+      "lod0": "Submarines/SSBN/USA/Ohio/FBX/US_SSBN_Ohio_LOD0.fbx",
+      "lod1": "Submarines/SSBN/USA/Ohio/FBX/US_SSBN_Ohio_LOD1.fbx",
+      "lod2": "Submarines/SSBN/USA/Ohio/FBX/US_SSBN_Ohio_LOD2.fbx",
+      "lod3": "Submarines/SSBN/USA/Ohio/FBX/US_SSBN_Ohio_LOD3.fbx",
+      "collision": "Submarines/SSBN/USA/Ohio/Collision/US_SSBN_Ohio_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/USA/Ohio/Textures/T_US_SSBN_Ohio_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/USA/Ohio/Validation/US_SSBN_Ohio_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/USA/Ohio/Preview/Deck.png",
+        "Submarines/SSBN/USA/Ohio/Preview/Hero.png",
+        "Submarines/SSBN/USA/Ohio/Preview/Profile.png",
+        "Submarines/SSBN/USA/Ohio/Preview/Propeller.png",
+        "Submarines/SSBN/USA/Ohio/Preview/Rear.png",
+        "Submarines/SSBN/USA/Ohio/Preview/Sail.png",
+        "Submarines/SSBN/USA/Ohio/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSBN_Ohio_MASTER.blend": "8c83997c7549702f9e382601bb4c78fd9f9d170788567147306462acd62e90f8",
+        "FBX/US_SSBN_Ohio_LOD0.fbx": "af56b0e021529c040bbfb1bd804d68022f82f782a1b660d75a5ec6a2483e574b",
+        "FBX/US_SSBN_Ohio_LOD1.fbx": "cd2f364efe43b3b8c2f5476a07930be793b19df25f8ccbca64ea5beef4805233",
+        "FBX/US_SSBN_Ohio_LOD2.fbx": "05d89e571eed18b628155ad4eac8e00f2fe7bde1292be93c95833313088c4247",
+        "FBX/US_SSBN_Ohio_LOD3.fbx": "a3aad9a61967369f8d55ef6e7fe434e4625f11da6512c8b69458dceb11080c68",
+        "Collision/US_SSBN_Ohio_COLLISION.fbx": "e2e72daf8fef171e9094d2b4dab927eaa076d7f44a53fd90adc43e86cd2f70e9",
+        "Validation/US_SSBN_Ohio_VALIDATION.json": "0083d463673ff96643899f155a12fcd2a7291f7912503f646f1aae9ff5019ebb",
+        "Preview/Deck.png": "3a1d5fa31e1d80a8e165c8a5457d8c735e94e2c3d970f69a42f6f4c8e93da3b4",
+        "Preview/Hero.png": "87539e12719bab24402b480aacfdc7c8fa6d445ca5380e0d99268e395cb99589",
+        "Preview/Profile.png": "7667ac3c24c097d0ffc57ad15a2b0497b7a93ac5004ecc39361ba6c8aa869b9a",
+        "Preview/Propeller.png": "d90da4f784f9b24437ff270353426ad9a7b9abb44b50ccecc43a7e30fb4e0ddc",
+        "Preview/Rear.png": "9c35c8026d74c70d9f2c70daf3d360ab9e3f3359e0818103be58961ad825508d",
+        "Preview/Sail.png": "6ad9e2d941f5c7897e8efd432ac7a677ee8d942f3c537ef9c1135d78973b5c1a",
+        "Preview/Stern.png": "53b509d6c1b7fef4c5f3ec048a6b4cfc9868f21e449060b5871c977eeb8d5e7e"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -461,24 +789,65 @@
       "project": null,
       "tier": 10,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/USA/Columbia/Blend/US_SSBN_Columbia_MASTER.blend",
+      "lod0": "Submarines/SSBN/USA/Columbia/FBX/US_SSBN_Columbia_LOD0.fbx",
+      "lod1": "Submarines/SSBN/USA/Columbia/FBX/US_SSBN_Columbia_LOD1.fbx",
+      "lod2": "Submarines/SSBN/USA/Columbia/FBX/US_SSBN_Columbia_LOD2.fbx",
+      "lod3": "Submarines/SSBN/USA/Columbia/FBX/US_SSBN_Columbia_LOD3.fbx",
+      "collision": "Submarines/SSBN/USA/Columbia/Collision/US_SSBN_Columbia_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/USA/Columbia/Textures/T_US_SSBN_Columbia_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/USA/Columbia/Validation/US_SSBN_Columbia_VALIDATION.json",
       "references": [
         {
           "url": "https://www.navy.mil/Resources/Fact-Files/Display-FactFiles/Article/2169580/fleet-ballistic-missile-submarines-ssbn/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/USA/Columbia/Preview/Deck.png",
+        "Submarines/SSBN/USA/Columbia/Preview/Hero.png",
+        "Submarines/SSBN/USA/Columbia/Preview/Profile.png",
+        "Submarines/SSBN/USA/Columbia/Preview/Propeller.png",
+        "Submarines/SSBN/USA/Columbia/Preview/Rear.png",
+        "Submarines/SSBN/USA/Columbia/Preview/Sail.png",
+        "Submarines/SSBN/USA/Columbia/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/US_SSBN_Columbia_MASTER.blend": "66b9a18ffa3868f0cb3b58a90d9e1de43a7e27c1defaa1f28080548925e143c4",
+        "FBX/US_SSBN_Columbia_LOD0.fbx": "64548c11d28018828d04bb20f61aaa18f29eefc2f200c535005a4cbfb09d4aaf",
+        "FBX/US_SSBN_Columbia_LOD1.fbx": "57a634e1ec92c6dfa7ee1e1dde3001875203c468223218fb9f536bd02f887b9a",
+        "FBX/US_SSBN_Columbia_LOD2.fbx": "fd941f52ccf9b2d5bcb542bdd0e6438634fc82e6d4d4edb522b4003afde3afbd",
+        "FBX/US_SSBN_Columbia_LOD3.fbx": "3ecaac85cb62325a5bf31a049bb7e1773239748689484a931238ab8f000318be",
+        "Collision/US_SSBN_Columbia_COLLISION.fbx": "3c4bc1fe610b2f633757452ae8f190c8d90e8decb932ed90daf0f2f74e67f15e",
+        "Validation/US_SSBN_Columbia_VALIDATION.json": "ab7362457bb958d0bd36eb997235f5334f751160ba6d3f096573f43ba9ebf52d",
+        "Preview/Deck.png": "890e7c75fd40205217d8f24826cc08d6ccf9c60fdbe5847d3f59ebbc81871be9",
+        "Preview/Hero.png": "79627881e4aef594a071b69f865a6008d3f7c9a0b1a7131f7c811dc64d4cdb50",
+        "Preview/Profile.png": "508ab2b1a63eb89cd0f305de18e1a4043b3ca4686b2f55214ac24c52d6ab2660",
+        "Preview/Propeller.png": "d9a017315eabda77f5e362f515491d8d501f465ecd471ded17f6d622ed91c478",
+        "Preview/Rear.png": "da6f17b1a4bbb407f3e7d29b37707f6e16170ee56411bcfe361ded2363119007",
+        "Preview/Sail.png": "e45be1fcfaf7e25f751b788d2ce3f88b3db6c29d5877da81ed1d4e12ad48ca82",
+        "Preview/Stern.png": "d067a212576994577d08412b711c55e9a5939f9949cee54f8222e28bf608c023"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -517,24 +886,65 @@
       "project": "Projects 671/671RT/671RTM",
       "tier": 4,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/Russia/Victor/Blend/RU_SSN_Victor_MASTER.blend",
+      "lod0": "Submarines/SSN/Russia/Victor/FBX/RU_SSN_Victor_LOD0.fbx",
+      "lod1": "Submarines/SSN/Russia/Victor/FBX/RU_SSN_Victor_LOD1.fbx",
+      "lod2": "Submarines/SSN/Russia/Victor/FBX/RU_SSN_Victor_LOD2.fbx",
+      "lod3": "Submarines/SSN/Russia/Victor/FBX/RU_SSN_Victor_LOD3.fbx",
+      "collision": "Submarines/SSN/Russia/Victor/Collision/RU_SSN_Victor_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/Russia/Victor/Textures/T_RU_SSN_Victor_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/Russia/Victor/Validation/RU_SSN_Victor_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/Russia/Victor/Preview/Deck.png",
+        "Submarines/SSN/Russia/Victor/Preview/Hero.png",
+        "Submarines/SSN/Russia/Victor/Preview/Profile.png",
+        "Submarines/SSN/Russia/Victor/Preview/Propeller.png",
+        "Submarines/SSN/Russia/Victor/Preview/Rear.png",
+        "Submarines/SSN/Russia/Victor/Preview/Sail.png",
+        "Submarines/SSN/Russia/Victor/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSN_Victor_MASTER.blend": "52327d3e8c4d3d451e37d20161cc66a125f44261905ca2a6ad52b38f6732b939",
+        "FBX/RU_SSN_Victor_LOD0.fbx": "eb0e477faac5ae2d89b2829b5bd3cc1f55d3f44d3d85cc59ea91425de91a43b6",
+        "FBX/RU_SSN_Victor_LOD1.fbx": "39783f9934f86f06188c6b56e3681d8d6e1f374cb2ed76ebac6247d6a2f32c4d",
+        "FBX/RU_SSN_Victor_LOD2.fbx": "51e42bf406606af0e091092392394f7fa727991fc53f1f2054449a4d79f34115",
+        "FBX/RU_SSN_Victor_LOD3.fbx": "4029f16b2beedb0ee3afa5ae9305e2f3e78798e8410dff3ec8ddd2baa013d6ee",
+        "Collision/RU_SSN_Victor_COLLISION.fbx": "c4d0277d8140182727224da73d5028e41f54b1f6eb741207e914abdb882490ae",
+        "Validation/RU_SSN_Victor_VALIDATION.json": "397c4d079b516db34150c8812f000fbf197116f70c91b201ae2305830e2a8d3c",
+        "Preview/Deck.png": "2d87d0236b6f36ea011f2cec69ff36504d883960c43cf8e9e5dc7f0f85500fac",
+        "Preview/Hero.png": "df537673cdaaf4d197e9106ea21f45b50a6806d8ad1ee5666d1898d34bd6c4ac",
+        "Preview/Profile.png": "28694a19d59d1f00abed626e8fbabf22c0ab8db9f7efe920dd736e866b06e915",
+        "Preview/Propeller.png": "c56acf82ffeab7553bf5ba5c4cda9852665c57af942e8f95c3b6f197715005d4",
+        "Preview/Rear.png": "467d43e9c76ccb5caa0ac0420a3bfad9c7ea8ec6d361d5bf516527102d713af9",
+        "Preview/Sail.png": "be24c1d2ba2c839f3b24d4f7cc7baa48a75cabba6094eb4a2c00228a27ec6940",
+        "Preview/Stern.png": "864de0b3284af2e995bc6336c4aa67ddc2980ae25c4874ecd57d7abe2aa80e67"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -545,24 +955,65 @@
       "project": "Project 945",
       "tier": 6,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/Russia/Sierra/Blend/RU_SSN_Sierra_MASTER.blend",
+      "lod0": "Submarines/SSN/Russia/Sierra/FBX/RU_SSN_Sierra_LOD0.fbx",
+      "lod1": "Submarines/SSN/Russia/Sierra/FBX/RU_SSN_Sierra_LOD1.fbx",
+      "lod2": "Submarines/SSN/Russia/Sierra/FBX/RU_SSN_Sierra_LOD2.fbx",
+      "lod3": "Submarines/SSN/Russia/Sierra/FBX/RU_SSN_Sierra_LOD3.fbx",
+      "collision": "Submarines/SSN/Russia/Sierra/Collision/RU_SSN_Sierra_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/Russia/Sierra/Textures/T_RU_SSN_Sierra_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/Russia/Sierra/Validation/RU_SSN_Sierra_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/Russia/Sierra/Preview/Deck.png",
+        "Submarines/SSN/Russia/Sierra/Preview/Hero.png",
+        "Submarines/SSN/Russia/Sierra/Preview/Profile.png",
+        "Submarines/SSN/Russia/Sierra/Preview/Propeller.png",
+        "Submarines/SSN/Russia/Sierra/Preview/Rear.png",
+        "Submarines/SSN/Russia/Sierra/Preview/Sail.png",
+        "Submarines/SSN/Russia/Sierra/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSN_Sierra_MASTER.blend": "07430ca2c4d18441e675c9f5eacb76831fd283c7eef270230b3e24d9d4cc11a8",
+        "FBX/RU_SSN_Sierra_LOD0.fbx": "fd201c8b0a9d6b4a2414617147211d50f28b40cb868966648b1a2e92c24cdb23",
+        "FBX/RU_SSN_Sierra_LOD1.fbx": "d871f13a977d4df2189413af51e97af7d532a54904b3f38bfc6093b1daddfc3b",
+        "FBX/RU_SSN_Sierra_LOD2.fbx": "689438d77ab6d13b82b5b35a62d8dc5abcd9e340648ea3b30f776018cf0fbb3c",
+        "FBX/RU_SSN_Sierra_LOD3.fbx": "c912fce367641a3bf5ff253e7fe515a545a4de4d78cadb3d1731b93a29669666",
+        "Collision/RU_SSN_Sierra_COLLISION.fbx": "ed876c11b4cd343999c6cd3d1037accc84ed9c866cba1d62386bd0cb72ebac3d",
+        "Validation/RU_SSN_Sierra_VALIDATION.json": "74760e38277f3091f361f99b081b7c03ff0a54aa777d6b9c1b1b9a9b4237d32e",
+        "Preview/Deck.png": "cbe00db5a46a300f941ff742ba671943a79fc04ca439c366136db727f826a5df",
+        "Preview/Hero.png": "81a818ccf7b316b7a51323556b400fc75ae33d9846eb49f66479031face1571f",
+        "Preview/Profile.png": "1620b0ff103bc9c3459dd0593a76092d2daf1c3bacd58be9833d6052f686b2e7",
+        "Preview/Propeller.png": "cbf03edabcab18c015cd572a97c435ac86a76edae2ce8b74efd598a7e702409b",
+        "Preview/Rear.png": "20a6099601239b5bee08ef6e54c4a8de8b5c680fa1edb0051b16c8586ae7283e",
+        "Preview/Sail.png": "ac73dc61ace96531a6a76eda63e161431392e298dd5eb5895a81929eac68e722",
+        "Preview/Stern.png": "2bf82fcbbf7a9bb6285e36c8583c313d6f07eab94f9f0c87921a36f5530b9037"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -572,13 +1023,13 @@
       "class": "Akula",
       "project": "Project 971",
       "tier": 7,
-      "source": "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Source\\build_akula_drawing.py",
-      "master": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Blend/RU_SSN_Akula_MASTER.blend",
-      "lod0": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD0.fbx",
-      "lod1": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD1.fbx",
-      "lod2": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD2.fbx",
-      "lod3": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD3.fbx",
-      "collision": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Collision/RU_SSN_Akula_COLLISION.fbx",
+      "source": "Submarines/SSN/Russia/Akula/Source/akula_drawing_geometry.py",
+      "master": "Submarines/SSN/Russia/Akula/Blend/RU_SSN_Akula_MASTER.blend",
+      "lod0": "Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD0.fbx",
+      "lod1": "Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD1.fbx",
+      "lod2": "Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD2.fbx",
+      "lod3": "Submarines/SSN/Russia/Akula/FBX/RU_SSN_Akula_LOD3.fbx",
+      "collision": "Submarines/SSN/Russia/Akula/Collision/RU_SSN_Akula_COLLISION.fbx",
       "materials": [
         "SUB_MAT_Drawing_Antifouling",
         "SUB_MAT_Drawing_Bronze",
@@ -594,7 +1045,7 @@
       "variants": [],
       "variant_of": null,
       "status": "VALIDATING",
-      "validation": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Akula/Validation/RU_SSN_Akula_VALIDATION.json",
+      "validation": "Submarines/SSN/Russia/Akula/Validation/RU_SSN_Akula_VALIDATION.json",
       "references": [
         {
           "url": "https://russianships.info/eng/submarines/project_971.htm",
@@ -608,43 +1059,43 @@
         }
       ],
       "previews": [
-        "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Preview\\Deck.png",
-        "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Preview\\Hero.png",
-        "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Preview\\Profile.png",
-        "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Preview\\Rear.png",
-        "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Preview\\Reference_Overlay.png",
-        "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Preview\\Sail.png",
-        "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Preview\\Stern.png",
-        "C:\\workspace\\ue4\\silent-depth\\SilentDepth_Assets\\Submarines\\SSN\\Russia\\Akula\\Preview\\Tail_QA.png"
+        "Submarines/SSN/Russia/Akula/Preview/Deck.png",
+        "Submarines/SSN/Russia/Akula/Preview/Hero.png",
+        "Submarines/SSN/Russia/Akula/Preview/Profile.png",
+        "Submarines/SSN/Russia/Akula/Preview/Rear.png",
+        "Submarines/SSN/Russia/Akula/Preview/Reference_Overlay.png",
+        "Submarines/SSN/Russia/Akula/Preview/Sail.png",
+        "Submarines/SSN/Russia/Akula/Preview/Stern.png",
+        "Submarines/SSN/Russia/Akula/Preview/Tail_QA.png"
       ],
       "sha256": {
-        "Blend\\RU_SSN_Akula_MASTER.blend": "ff3e119c443cd406c7bead7e6069a77aea504bfb17baa825ddee76fc83531d9f",
-        "FBX\\RU_SSN_Akula_BOWPLANES.fbx": "7f41e735bde610d31fb82ed739e5a2b0c1722d6892e4d035ce33a329975b1248",
-        "FBX\\RU_SSN_Akula_LOD0.fbx": "d9f0983c0f5a22e09b536661afd2a6f516d2118b894b0dd2585307d8d5dd2ba8",
-        "FBX\\RU_SSN_Akula_LOD1.fbx": "703c6305eb8df8fc4c380f8eb909ce65182a961f809eb582a9929a585c62ca01",
-        "FBX\\RU_SSN_Akula_LOD2.fbx": "55cf0a1c7724da57fe545596b74e35dc24cf4a048586e0f5790cc0fd6aee21b8",
-        "FBX\\RU_SSN_Akula_LOD3.fbx": "aa4ffe46f9dd264b8c8a48de12ac376f5af3a4f4dbb1844652e588f807b31987",
-        "FBX\\RU_SSN_Akula_PERISCOPE.fbx": "48af317bf4f97ce42fd52cd5393d639e264f2a9d63a8c1f1d726676d7945e98a",
-        "FBX\\RU_SSN_Akula_PROP.fbx": "065a02202de04bde6cb954825bd27b02fc66f821b1140482007ec9991e3a4d8e",
-        "FBX\\RU_SSN_Akula_RUDDER.fbx": "483a1f5234a8b584bb9062ed5dbd4dc3ab3fa322bdcd883e1ce190107ae794b2",
-        "FBX\\RU_SSN_Akula_STERNPLANES.fbx": "11cbc83bbd6005b62ffca0b7c50bc0886e360cd75e76045f245a8438adfa283f",
-        "Collision\\RU_SSN_Akula_COLLISION.fbx": "59d984639778a64cf0b84fa5e1180f9f2651306f51706c41f9a775969e786219",
-        "Source\\akula_drawing_geometry.py": "8ebe2c32d4dbf53f65587ab59006405767b2712a2e2c9c900dc0bd772ae5be5b",
-        "Source\\build_akula_drawing.py": "5db9238606108c1db646efa472955d270d014a38fbe6044ba9c9461f14eb0f67",
-        "Source\\build_akula_reference.py": "3397dc9f9654cb8bc9d40ce51c2093f8a51ec1bbab624caa7a5db264b2401d45",
-        "Source\\drawing_overlay.py": "af51ecb16d01ea3eb0ca548a181b4e779eca9743d76d9ad430d507d52067f3df",
-        "Source\\validate_akula_drawing.py": "e1ef586aee9bbe494519dffda23230519d4dd2185f7f0096ceffab8c4b34b766",
-        "Preview\\Deck.png": "7ebf93134635820c7c0b9d5a66fe0e4793bee02a8014ac9e689f516f777c4c8e",
-        "Preview\\Hero.png": "92347c786581f6e714cdd806702b3f194096ef27f6aff37fe0d410104a22247b",
-        "Preview\\Profile.png": "e9f9bec7bd6085b4cc804e4319fabac49cfc984cc0e4955fc24ee99c2a3734d0",
-        "Preview\\Rear.png": "d82b16baefa68db26f7e546d4650be08e62f87e2c89c4592b95186597fc882a3",
-        "Preview\\Reference_Overlay.png": "554dde6879b58c7d1bc4ccb08f31a1659c49ec32b66321eb7cd1ae6a70eae64b",
-        "Preview\\Sail.png": "1068fc37061d3e92ea7039a74c5a846230ed26cb0ae9bb88d5ac7a9b4226f50e",
-        "Preview\\Stern.png": "381a985f86a833b537b9e8e0cc58896ddc1caabcbe232a0de5590eaa23e56766",
-        "Preview\\Tail_QA.png": "5c3f8624bf0f4617d3de1e875f02e2023956747c763272840b020267dff11529",
-        "Textures\\BaseColor\\T_Akula_Drawing_bottom.png": "bb730f831f9392d378ff92e531f48fe7980734619de65de4d8a87d1fd61bc5f4",
-        "Textures\\BaseColor\\T_Akula_Drawing_hull.png": "b215896b641c3ff843258d2e9b04dba979a700c0dd7840f7c65473c44776d1a2"
-      }
+        "Blend/RU_SSN_Akula_MASTER.blend": "ff3e119c443cd406c7bead7e6069a77aea504bfb17baa825ddee76fc83531d9f",
+        "FBX/RU_SSN_Akula_LOD0.fbx": "d9f0983c0f5a22e09b536661afd2a6f516d2118b894b0dd2585307d8d5dd2ba8",
+        "FBX/RU_SSN_Akula_LOD1.fbx": "703c6305eb8df8fc4c380f8eb909ce65182a961f809eb582a9929a585c62ca01",
+        "FBX/RU_SSN_Akula_LOD2.fbx": "55cf0a1c7724da57fe545596b74e35dc24cf4a048586e0f5790cc0fd6aee21b8",
+        "FBX/RU_SSN_Akula_LOD3.fbx": "aa4ffe46f9dd264b8c8a48de12ac376f5af3a4f4dbb1844652e588f807b31987",
+        "Collision/RU_SSN_Akula_COLLISION.fbx": "59d984639778a64cf0b84fa5e1180f9f2651306f51706c41f9a775969e786219",
+        "Validation/RU_SSN_Akula_VALIDATION.json": "ba7b870a3e6d2aeda3c9b9cb24011ff5bd5c86796ab9566e44aba9c14ab0a3f8",
+        "Source/akula_drawing_geometry.py": "8ebe2c32d4dbf53f65587ab59006405767b2712a2e2c9c900dc0bd772ae5be5b",
+        "Source/build_akula_drawing.py": "5db9238606108c1db646efa472955d270d014a38fbe6044ba9c9461f14eb0f67",
+        "Source/build_akula_reference.py": "3397dc9f9654cb8bc9d40ce51c2093f8a51ec1bbab624caa7a5db264b2401d45",
+        "Source/drawing_overlay.py": "af51ecb16d01ea3eb0ca548a181b4e779eca9743d76d9ad430d507d52067f3df",
+        "Source/validate_akula_drawing.py": "e1ef586aee9bbe494519dffda23230519d4dd2185f7f0096ceffab8c4b34b766",
+        "Preview/Deck.png": "7ebf93134635820c7c0b9d5a66fe0e4793bee02a8014ac9e689f516f777c4c8e",
+        "Preview/Hero.png": "92347c786581f6e714cdd806702b3f194096ef27f6aff37fe0d410104a22247b",
+        "Preview/Profile.png": "e9f9bec7bd6085b4cc804e4319fabac49cfc984cc0e4955fc24ee99c2a3734d0",
+        "Preview/Rear.png": "d82b16baefa68db26f7e546d4650be08e62f87e2c89c4592b95186597fc882a3",
+        "Preview/Reference_Overlay.png": "554dde6879b58c7d1bc4ccb08f31a1659c49ec32b66321eb7cd1ae6a70eae64b",
+        "Preview/Sail.png": "1068fc37061d3e92ea7039a74c5a846230ed26cb0ae9bb88d5ac7a9b4226f50e",
+        "Preview/Stern.png": "381a985f86a833b537b9e8e0cc58896ddc1caabcbe232a0de5590eaa23e56766",
+        "Preview/Tail_QA.png": "5c3f8624bf0f4617d3de1e875f02e2023956747c763272840b020267dff11529"
+      },
+      "path_base": "SilentDepth_Assets",
+      "limitations": [
+        "外观美术模型，并非工程复原或特定批次的精确测绘",
+        "桨叶曲面为视觉近似，不代表真实推进器设计",
+        "UE4.27实际导入未验证"
+      ]
     },
     {
       "asset_id": "RU_SSN_Yasen",
@@ -653,13 +1104,13 @@
       "class": "Yasen",
       "project": "Project 885",
       "tier": 9,
-      "source": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Source/build_yasen_v2.py",
-      "master": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
-      "lod0": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD0.fbx",
-      "lod1": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD1.fbx",
-      "lod2": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD2.fbx",
-      "lod3": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD3.fbx",
-      "collision": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Collision/RU_SSN_Yasen_COLLISION.fbx",
+      "source": "Submarines/SSN/Russia/Yasen/Source/build_yasen_v2.py",
+      "master": "Submarines/SSN/Russia/Yasen/Blend/RU_SSN_Yasen_MASTER.blend",
+      "lod0": "Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD0.fbx",
+      "lod1": "Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD1.fbx",
+      "lod2": "Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD2.fbx",
+      "lod3": "Submarines/SSN/Russia/Yasen/FBX/RU_SSN_Yasen_LOD3.fbx",
+      "collision": "Submarines/SSN/Russia/Yasen/Collision/RU_SSN_Yasen_COLLISION.fbx",
       "materials": [
         "SUB_MAT_YasenV2_hull",
         "SUB_MAT_YasenV2_coating",
@@ -670,46 +1121,37 @@
         "SUB_MAT_YasenV2_bronze"
       ],
       "textures": [
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Textures/T_YasenV2_Hull_BaseColor.png"
+        "Submarines/SSN/Russia/Yasen/Textures/T_YasenV2_Hull_BaseColor.png"
       ],
       "variants": [],
       "variant_of": null,
       "status": "VALIDATING",
-      "validation": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Validation/ROUNDTRIP_V2.json",
+      "validation": "Submarines/SSN/Russia/Yasen/Validation/RU_SSN_Yasen_VALIDATION.json",
       "references": [],
       "previews": [
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Gray_Hero.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Hero.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Gray_Profile.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Stern.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Propeller.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Sail.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Deck.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Rear.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Gray_Deck.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/Preview/Profile.png"
+        "Submarines/SSN/Russia/Yasen/Preview/Deck.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Gray_Deck.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Gray_Hero.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Gray_Profile.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Hero.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Profile.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Propeller.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Rear.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Sail.png",
+        "Submarines/SSN/Russia/Yasen/Preview/Stern.png"
       ],
       "sha256": {
         "Blend/RU_SSN_Yasen_MASTER.blend": "af4125271fef60c46cd3500a4a9178d3d8e48be6bb7a903104cc5e349c2e79ca",
-        "GLB/RU_SSN_Yasen.glb": "a8d8f0c5b3c5ce8152e4e1be50fbbb73ff9ad0911786dea58129641932ad0f27",
         "FBX/RU_SSN_Yasen_LOD0.fbx": "104d1c316c343103d7a513079b3b17716a4d6cac94f7a35f730ec0fbb4fbb8c5",
         "FBX/RU_SSN_Yasen_LOD1.fbx": "8cc44910269d318cf8bcbb5c382237cc8b8a5b6bcb3ebb64d0ed67c515b3b070",
         "FBX/RU_SSN_Yasen_LOD2.fbx": "fb89e21af1ea5201293ee8f64a6899aa7123976634db3cfa81fd8e467b147938",
         "FBX/RU_SSN_Yasen_LOD3.fbx": "d34580345bd5235652d40e6729bdf87c2b66f58d5fcf1fa845d52ccce819e7ea",
         "Collision/RU_SSN_Yasen_COLLISION.fbx": "dbcb28e3eb4cbe7bada436377e3c3696b557196a157842059b47697c864a0f63",
+        "Validation/RU_SSN_Yasen_VALIDATION.json": "ec4cabf293a97d807f8bd8fb2d90863f4f82c3310d20b788ecf79559a3e5f969",
         "Source/build_yasen_v2.py": "eebc9ff1abb8a9b01991ca7786c44103fe75d79bbc82eacfd0efaf1ecbcd3ac2",
         "Source/finalize_yasen_v2.py": "16bf4fa2b2f33cecb681380078da3116fd437aa3d6fd45a037ad7d1d3439b5cb",
         "Source/validate_yasen_v2.py": "5db34701b38d97f95a09fed7016bbe6aa1617b363b116f9c80585d474f31ce20",
         "Source/yasen_geometry.py": "87a0e0e3218beef94848aa4b5b912d3ee5c29eece4468451457987b56e5832ca",
-        "Textures/T_YasenV2_Hull_BaseColor.png": "b795163b719077e783d509cb9698b5674f0b6b04790926ecde109443d7d1a54c",
-        "Preview/BAS_GLB/back.png": "c9e19e6428683406893b754a04f113940eb7a898cdcc50ef3169106862be8c9a",
-        "Preview/BAS_GLB/contact_sheet.png": "a581d407db824de2fbc2416b35c30b27674b3a4f4ee693ffcbfc2a6dbbeff166",
-        "Preview/BAS_GLB/evidence.json": "98f095d1f1c2892d9501d6a7de8cbf5546f1eede8887b78f00c0ef4d6e5a7928",
-        "Preview/BAS_GLB/front.png": "e715c1a60395fb506afc2e1b0629077c4747bffb96d588aa41701d1e996c9c8a",
-        "Preview/BAS_GLB/left.png": "4086defd2355a4c9862de1ff7b19bc0764e9b8b40cc96910628b2726659d0c1f",
-        "Preview/BAS_GLB/perspective.png": "068d83ba98b7bb885166eebd6103633207b2aecfaf821cb009d3fed3fda81bba",
-        "Preview/BAS_GLB/right.png": "4737028f61c366a7f41c6953fdfded0029464012c01c1a49673d2b1040456fa3",
-        "Preview/BAS_GLB/top.png": "3610b2ca7d766f5d3ac9a2cb92ad603708f3bf8656ca4101eb82e52c86a50f92",
         "Preview/Deck.png": "192be8c8f25a58a5d0def86120c0e30374b82cd2bb5c25b8aad2969c63efafc1",
         "Preview/Gray_Deck.png": "610d4e3aa5481b0d7781f1be87f0a7c557be071555d3a9d99ba5bc343abc43e1",
         "Preview/Gray_Hero.png": "b6b0328b0a5562121398caad374155ef7516dae55cde51015d7cc63be8ab1845",
@@ -719,19 +1161,16 @@
         "Preview/Propeller.png": "0be1a69c91a2ecba02a7b48a907a310e5751345cfb88fefe3ebc0bbf86e72f76",
         "Preview/Rear.png": "89f73eea1e987d9ecaa340c13d78300441c8aa61dde70df820bb4d3b782169b6",
         "Preview/Sail.png": "137aca2d9f9cb47946f0a85540dbe464bb58af4647b4bb25db71e50ad76a80a1",
-        "Preview/Stern.png": "12c32e23686b29e7348df0c62ade5673ea62498669965ec0dc8eac965dc1f53a",
-        "Validation/BAS_LOD0.json": "15a90db01b054aee96e486fa466acdafce43a254e23a9352cc6a9dd99a4aa5d3",
-        "Validation/FACTORY_V2.json": "a8977465a0ad4c8025406a7ec1c5454b061de721b463e94ea8068388c78c8e19",
-        "Validation/GRAYBOX.json": "0eb7fb1d08f03e72426f5c37d399b9436d0b66fd32d5e7fcfb558c42afb95598",
-        "Validation/ROUNDTRIP_V2.json": "02cfcdc7cbc1e19ccc173a9e2147d509757ef1b10c01034284c1cfdfad26bc7d",
-        "Validation/RU_SSN_Yasen_VALIDATION.json": "ec4cabf293a97d807f8bd8fb2d90863f4f82c3310d20b788ecf79559a3e5f969",
-        "Documentation/RU_SSN_Yasen_README.md": "5eef87be74a41b0edefd027d4d81466b7ea7feecda2c89b54169e0fc155b5241",
-        "Documentation/contract.md": "cdf93970b393452f358b88e432963406e3aac6f9bafa63545cf563b4c2905494",
-        "Documentation/final_report.json": "e0a359ef99b823e54066153e44223a3d6530aae6b71a60833c238a778e1afc07",
-        "Documentation/reference_notes.md": "d3e28312b7d0eacd5e38eadbb7fa194d6bef4e3c05afea80a15260c0d2437a62"
+        "Preview/Stern.png": "12c32e23686b29e7348df0c62ade5673ea62498669965ec0dc8eac965dc1f53a"
       },
       "glb": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSN/Russia/Yasen/GLB/RU_SSN_Yasen.glb",
-      "reference_fidelity": "NOT VERIFIED"
+      "reference_fidelity": "NOT VERIFIED",
+      "path_base": "SilentDepth_Assets",
+      "limitations": [
+        "尚未成功取得Project 885实物参考进行比对",
+        "舱盖和推进器为外观近似",
+        "UE4.27未实际导入"
+      ]
     },
     {
       "asset_id": "RU_SSN_YasenM",
@@ -741,24 +1180,65 @@
       "project": "Project 885M",
       "tier": 10,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/Russia/YasenM/Blend/RU_SSN_YasenM_MASTER.blend",
+      "lod0": "Submarines/SSN/Russia/YasenM/FBX/RU_SSN_YasenM_LOD0.fbx",
+      "lod1": "Submarines/SSN/Russia/YasenM/FBX/RU_SSN_YasenM_LOD1.fbx",
+      "lod2": "Submarines/SSN/Russia/YasenM/FBX/RU_SSN_YasenM_LOD2.fbx",
+      "lod3": "Submarines/SSN/Russia/YasenM/FBX/RU_SSN_YasenM_LOD3.fbx",
+      "collision": "Submarines/SSN/Russia/YasenM/Collision/RU_SSN_YasenM_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/Russia/YasenM/Textures/T_RU_SSN_YasenM_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/Russia/YasenM/Validation/RU_SSN_YasenM_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/Russia/YasenM/Preview/Deck.png",
+        "Submarines/SSN/Russia/YasenM/Preview/Hero.png",
+        "Submarines/SSN/Russia/YasenM/Preview/Profile.png",
+        "Submarines/SSN/Russia/YasenM/Preview/Propeller.png",
+        "Submarines/SSN/Russia/YasenM/Preview/Rear.png",
+        "Submarines/SSN/Russia/YasenM/Preview/Sail.png",
+        "Submarines/SSN/Russia/YasenM/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSN_YasenM_MASTER.blend": "6c44b48616a4c63b8c97cab5cb091765bebf69232bb8fb2c20aae954000684ba",
+        "FBX/RU_SSN_YasenM_LOD0.fbx": "4b4daf9590d68d37a1235da8d643d77ef821d5ca87fefc94805d866440f41508",
+        "FBX/RU_SSN_YasenM_LOD1.fbx": "9613e77ed0596c8ef0255ac1c196ee491b33c3140e310153c67501b9c2241f09",
+        "FBX/RU_SSN_YasenM_LOD2.fbx": "7b2e56767f42319edee82b1501a503044914daf29beb489c60981bec2b6840fb",
+        "FBX/RU_SSN_YasenM_LOD3.fbx": "4bc99cc4cc3526d515ca22fba7c10963045374d1b0ab349dd5a61927d7ad817b",
+        "Collision/RU_SSN_YasenM_COLLISION.fbx": "29e5d2e60202dd647ab179bf9b9b05265f1246865aabe3c757e2fdf09b148704",
+        "Validation/RU_SSN_YasenM_VALIDATION.json": "8f18ab334cf814d8d5d673d6bf37d96cf9ecc0e5749518460b3555b19780f648",
+        "Preview/Deck.png": "abed7b9b573ac64e44ffb5fe1bbea282007effcd5e491feaf24b01aeb4a4aa62",
+        "Preview/Hero.png": "6b654f859c464ff18833a14ac6b909e0ec50b7d8de71489c986f406dc7852ac0",
+        "Preview/Profile.png": "37f2c4ab86ba391d8c232eb24e30cd9a80b654826b523588ef3492d16290eb85",
+        "Preview/Propeller.png": "3d51a10f0fd2ad3d320d64d64da81ef1369612b35b338e14498f4c7cf4179d34",
+        "Preview/Rear.png": "f6899babf52c6cb43c2cf737e371fe3f70731ddbb94c33f937ee13b4edb61604",
+        "Preview/Sail.png": "5002573ff13c24dceedab6965a40ae5a746f99e328e5a4c9b2f272692d52dfcc",
+        "Preview/Stern.png": "26d04fb6e6e473681ac264a5ca4986e1dbfceaf023a4e62697700437cf385e7a"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -769,24 +1249,65 @@
       "project": "Project 658",
       "tier": 2,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/Russia/Hotel/Blend/RU_SSBN_Hotel_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/Hotel/FBX/RU_SSBN_Hotel_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/Hotel/FBX/RU_SSBN_Hotel_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/Hotel/FBX/RU_SSBN_Hotel_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/Hotel/FBX/RU_SSBN_Hotel_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/Hotel/Collision/RU_SSBN_Hotel_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/Russia/Hotel/Textures/T_RU_SSBN_Hotel_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/Russia/Hotel/Validation/RU_SSBN_Hotel_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/Hotel/Preview/Deck.png",
+        "Submarines/SSBN/Russia/Hotel/Preview/Hero.png",
+        "Submarines/SSBN/Russia/Hotel/Preview/Profile.png",
+        "Submarines/SSBN/Russia/Hotel/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/Hotel/Preview/Rear.png",
+        "Submarines/SSBN/Russia/Hotel/Preview/Sail.png",
+        "Submarines/SSBN/Russia/Hotel/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_Hotel_MASTER.blend": "fb68ecae822bbf1550273628625662d975e619e67269497a307e505542328651",
+        "FBX/RU_SSBN_Hotel_LOD0.fbx": "301f67b800d95f314d355cd0f81acb30fd571c1c695c938644093f284171a5c9",
+        "FBX/RU_SSBN_Hotel_LOD1.fbx": "501376a41f6f74c1eaf504641a3683e74096ac6aaa7ed53199d1ca8b7fc9ba05",
+        "FBX/RU_SSBN_Hotel_LOD2.fbx": "92a511345e79c5aa4743f48072e2c87b0c9cb89073d14c5e12b81b131b18f01a",
+        "FBX/RU_SSBN_Hotel_LOD3.fbx": "e5e8fbd787b020699e01a4f33010b8e2d5d461b14cec0f55f2a81ed09340320b",
+        "Collision/RU_SSBN_Hotel_COLLISION.fbx": "e0c5126221acf843036e3b0b5166c1b8c23c53c151210e0ea3bb36351881049a",
+        "Validation/RU_SSBN_Hotel_VALIDATION.json": "af106eaa2c55a6b0248cd7e8ac51fea71a77056f9774736394ba2cd35b922da3",
+        "Preview/Deck.png": "7f957c0875c31a5543568621ac694fc4bd18e9971354a158bacc3cbbde8bb5af",
+        "Preview/Hero.png": "b5d2408fdb81ab44e45e9185ffb93e18b9c923f5431dc64468913f6b1fda03dd",
+        "Preview/Profile.png": "208c44d923a2d2ef6556de0ece402ee709c83ede3adfa8030a5e0d07a22ddceb",
+        "Preview/Propeller.png": "4ec2805810a490537d0ce5ad605f224aafc8ef01e556f142137f66e5fcd9a9cf",
+        "Preview/Rear.png": "d413b8859908bb92caadeca052f4eb52560d88692db89bbde02d585dd40c37e3",
+        "Preview/Sail.png": "81f1dc4139c92769e29815e91c2fdbe69e7ab737c8f4906799dbcded12772ee6",
+        "Preview/Stern.png": "7df9b4a59555f5163e99a1d40e82363dbe4ee7d91ee0412415adc6fcf5afd439"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -797,24 +1318,65 @@
       "project": "Project 667A",
       "tier": 4,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/Russia/Yankee/Blend/RU_SSBN_Yankee_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/Yankee/FBX/RU_SSBN_Yankee_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/Yankee/FBX/RU_SSBN_Yankee_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/Yankee/FBX/RU_SSBN_Yankee_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/Yankee/FBX/RU_SSBN_Yankee_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/Yankee/Collision/RU_SSBN_Yankee_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/Russia/Yankee/Textures/T_RU_SSBN_Yankee_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/Russia/Yankee/Validation/RU_SSBN_Yankee_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/Yankee/Preview/Deck.png",
+        "Submarines/SSBN/Russia/Yankee/Preview/Hero.png",
+        "Submarines/SSBN/Russia/Yankee/Preview/Profile.png",
+        "Submarines/SSBN/Russia/Yankee/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/Yankee/Preview/Rear.png",
+        "Submarines/SSBN/Russia/Yankee/Preview/Sail.png",
+        "Submarines/SSBN/Russia/Yankee/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_Yankee_MASTER.blend": "1b909c1f82162ff4e82ffe1197851a41fd5e738a3f2c9ac6bfbfe77667f6296a",
+        "FBX/RU_SSBN_Yankee_LOD0.fbx": "421aa2c7260081b21bcd4e1b18d14bea0e5a17f184317fac922e1413d81d3d30",
+        "FBX/RU_SSBN_Yankee_LOD1.fbx": "70acf32a8ad3b2db49ed1debe6ad5ddd60a821c1e80b9cd435f3d3e1efefad26",
+        "FBX/RU_SSBN_Yankee_LOD2.fbx": "2818e374c0688cf1088d74f5374f353d983cebd2d664ca914c5abbc90e0314d8",
+        "FBX/RU_SSBN_Yankee_LOD3.fbx": "a7570a53f6c202f066dc13b9eeced35fef92806526f2699a9fc3b4583746e6ce",
+        "Collision/RU_SSBN_Yankee_COLLISION.fbx": "16bdcb6078da16ec279dd89b85a0bf4e0b32868e5f0baffc113ccd290081dcd5",
+        "Validation/RU_SSBN_Yankee_VALIDATION.json": "377f7beec3b17f43724dde7d015a87f23c56e05c8a50780dcdb0a117fa4c1f43",
+        "Preview/Deck.png": "b2ea62ff0420c4fd5c0370af873e0890ed8356818a691229073d21a3a84adb54",
+        "Preview/Hero.png": "a963941c037f8068d075a4c5c26aeb1c39404cac9d8a79470155f61510fb2f9c",
+        "Preview/Profile.png": "68d9e81f30dbabb114f84692e3337781210124c2302617ef416d4037ceeaec39",
+        "Preview/Propeller.png": "ac41a71b0f63baaa7a58f4e75bf23bb4b1575ed213f5ffca2e7291ab8d25bdbd",
+        "Preview/Rear.png": "caabf28cfcdd3f0841dc1cda553e08960e488264d0ff1f665c56494b5310d48c",
+        "Preview/Sail.png": "f87c704f6755a0cf97361ed8a70caf241a9546214bddec69e66cf0c3ddd98b41",
+        "Preview/Stern.png": "2e1f8367e3a2f9038999c1482e7964d069bceef1fa20bd0c44d824ecc3b2cffa"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -825,24 +1387,65 @@
       "project": "Project 667B",
       "tier": 5,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/Russia/Delta_I/Blend/RU_SSBN_DeltaI_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/Delta_I/FBX/RU_SSBN_DeltaI_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/Delta_I/FBX/RU_SSBN_DeltaI_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/Delta_I/FBX/RU_SSBN_DeltaI_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/Delta_I/FBX/RU_SSBN_DeltaI_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/Delta_I/Collision/RU_SSBN_DeltaI_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/Russia/Delta_I/Textures/T_RU_SSBN_DeltaI_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/Russia/Delta_I/Validation/RU_SSBN_DeltaI_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/Delta_I/Preview/Deck.png",
+        "Submarines/SSBN/Russia/Delta_I/Preview/Hero.png",
+        "Submarines/SSBN/Russia/Delta_I/Preview/Profile.png",
+        "Submarines/SSBN/Russia/Delta_I/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/Delta_I/Preview/Rear.png",
+        "Submarines/SSBN/Russia/Delta_I/Preview/Sail.png",
+        "Submarines/SSBN/Russia/Delta_I/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_DeltaI_MASTER.blend": "5934759c9d2086b23da1ff24d044ef025db5d426a4d1ad5222c2c206a0b4de7a",
+        "FBX/RU_SSBN_DeltaI_LOD0.fbx": "226a14e14e8d6e25eeb5e4efb1bfe4636f49fafc734056c5f7270f3c0f62f9a4",
+        "FBX/RU_SSBN_DeltaI_LOD1.fbx": "d182c1535a3720662b17c9ad5c18acdcccf9a707806bf8125e00d3a6277be130",
+        "FBX/RU_SSBN_DeltaI_LOD2.fbx": "0756b3d3fcbf1290229be7b320db061353428c440630e4d0b21bd75e14b7dfaa",
+        "FBX/RU_SSBN_DeltaI_LOD3.fbx": "99b0d8e4bf2067d559a49bdbb692dd4fc7ac3c47c43a494e454b35fd92c2c43b",
+        "Collision/RU_SSBN_DeltaI_COLLISION.fbx": "103b63b759a1bd87a1953e409f584f493f706a9aa5a005433ae497e2c9f3ccd3",
+        "Validation/RU_SSBN_DeltaI_VALIDATION.json": "9c91e029f7854c774ac5502671ecfc0cae1c6ffd0c873981ae74d882c19f1cc6",
+        "Preview/Deck.png": "a5213dcdf79c09168b281e6818fe6999e696de20ade282ac43e946b0a3b34593",
+        "Preview/Hero.png": "3a4ae59f7cac51af66d6edc7b9e64a9d97acd3bdaec4d643c2db847e9c02b627",
+        "Preview/Profile.png": "95c71be24f389d51023b8622823314edc40809766a34de610640ee887039d12d",
+        "Preview/Propeller.png": "af3a71fcd87e5042e725e5ce9388bd86a18360188c3595f8371f3a752342e6d6",
+        "Preview/Rear.png": "974d6730cb629f325e7ad51f9782e0ecabc7f2bd143babd112203ce2c2372182",
+        "Preview/Sail.png": "9ad90f4698bcdfb8959397a6a93cdc833110af994f8902106a354b5cc5b521ab",
+        "Preview/Stern.png": "90b522a22988fb110f7a3b615b9e04649d27d0bad6f08e61c51e214c284198df"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -853,24 +1456,65 @@
       "project": "Project 667BD",
       "tier": 5,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/Russia/Delta_II/Blend/RU_SSBN_DeltaII_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/Delta_II/FBX/RU_SSBN_DeltaII_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/Delta_II/FBX/RU_SSBN_DeltaII_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/Delta_II/FBX/RU_SSBN_DeltaII_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/Delta_II/FBX/RU_SSBN_DeltaII_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/Delta_II/Collision/RU_SSBN_DeltaII_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/Russia/Delta_II/Textures/T_RU_SSBN_DeltaII_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/Russia/Delta_II/Validation/RU_SSBN_DeltaII_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/Delta_II/Preview/Deck.png",
+        "Submarines/SSBN/Russia/Delta_II/Preview/Hero.png",
+        "Submarines/SSBN/Russia/Delta_II/Preview/Profile.png",
+        "Submarines/SSBN/Russia/Delta_II/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/Delta_II/Preview/Rear.png",
+        "Submarines/SSBN/Russia/Delta_II/Preview/Sail.png",
+        "Submarines/SSBN/Russia/Delta_II/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_DeltaII_MASTER.blend": "b629565835cda9b167d3ac3bc535afce6f9862369d338984fb3f849b2a798091",
+        "FBX/RU_SSBN_DeltaII_LOD0.fbx": "70b78ec1a4033592da41bebdcaf0ee2696ff7ce949e47ee31f0a7b7a2e5281dd",
+        "FBX/RU_SSBN_DeltaII_LOD1.fbx": "edadf89b313346526ec754a04440603ff9deeb7e33eca94ebc4ddc8e00650ad9",
+        "FBX/RU_SSBN_DeltaII_LOD2.fbx": "34f8d18f4668f7e2cb73280cb5581eebd0bde84345097e732af73f551b289f1b",
+        "FBX/RU_SSBN_DeltaII_LOD3.fbx": "b113a6ae85ed3b3f6f8bccd18f3b912affefd537bc4849190d4d87befc88413b",
+        "Collision/RU_SSBN_DeltaII_COLLISION.fbx": "2cb5382b8e439d9cb0b294f378e1c66847f40e9b0d13679440af04725e0e07f9",
+        "Validation/RU_SSBN_DeltaII_VALIDATION.json": "1545c521c4a8b4dd5cdfb03dff3c2aa96c3128a1a863820e9ebfa2ae434d42b1",
+        "Preview/Deck.png": "46e7d0bb2b3b7fe13acaeb73e7999892c984b8047ed75db27081e5370dc5e191",
+        "Preview/Hero.png": "52c62f8b4a8b384254f5b759b8e70cf97ff6dc1636e5a5981460000b1c98b178",
+        "Preview/Profile.png": "9aa3e2e50543176d8312f97010d51c283f6681a3bb010270201974a5b2cb398a",
+        "Preview/Propeller.png": "e926a91fa41b32e5be1f520004e2f87ef26f734810cb8dae0a862b307697e2e3",
+        "Preview/Rear.png": "031d8b948b3fef1e487ff94946cdbb20b3fe859b36d04b65331b93bf741145bd",
+        "Preview/Sail.png": "7b86477d1c6ce31a1f1ab779042c2dfd14080adc23a4896b5855b0139e61d814",
+        "Preview/Stern.png": "923b3774a49f5ef15b7b9646c44a1d779b39ee565b997ca71bac9965f1db83e7"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -881,24 +1525,65 @@
       "project": "Project 667BDR",
       "tier": 6,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/Russia/Delta_III/Blend/RU_SSBN_DeltaIII_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/Delta_III/FBX/RU_SSBN_DeltaIII_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/Delta_III/FBX/RU_SSBN_DeltaIII_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/Delta_III/FBX/RU_SSBN_DeltaIII_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/Delta_III/FBX/RU_SSBN_DeltaIII_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/Delta_III/Collision/RU_SSBN_DeltaIII_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/Russia/Delta_III/Textures/T_RU_SSBN_DeltaIII_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/Russia/Delta_III/Validation/RU_SSBN_DeltaIII_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/Delta_III/Preview/Deck.png",
+        "Submarines/SSBN/Russia/Delta_III/Preview/Hero.png",
+        "Submarines/SSBN/Russia/Delta_III/Preview/Profile.png",
+        "Submarines/SSBN/Russia/Delta_III/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/Delta_III/Preview/Rear.png",
+        "Submarines/SSBN/Russia/Delta_III/Preview/Sail.png",
+        "Submarines/SSBN/Russia/Delta_III/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_DeltaIII_MASTER.blend": "123ef3d9d86ce23ba8ac98ba17c772b1dc878bc77f55e916ad5ba968a28e3868",
+        "FBX/RU_SSBN_DeltaIII_LOD0.fbx": "68a996e4e07187df6b01f3fba017c8a49a7ee563358fbb3f3c28ce3b63fa8728",
+        "FBX/RU_SSBN_DeltaIII_LOD1.fbx": "9fc86680f4a6fb75877472c83d15932f17dd4d380924498995215e1b00d2c1ca",
+        "FBX/RU_SSBN_DeltaIII_LOD2.fbx": "450a89ef5831e48222bb7595b31c62a6929a339699507c5cb5c0ecce934980d7",
+        "FBX/RU_SSBN_DeltaIII_LOD3.fbx": "46cc9e20fbc07a4ac0b9bc53a33b5d2a1cc5f69e89bf2aaca634a4d0fc39b5b8",
+        "Collision/RU_SSBN_DeltaIII_COLLISION.fbx": "a54cc2c942fb5b67c15b88a1fd2b9adb945fb93e1a4f96dd63a4277a05d8af1b",
+        "Validation/RU_SSBN_DeltaIII_VALIDATION.json": "61e6c7c34fee4c6340caeb5490b050ba1d86c2c77d876f2dde882fb9377f47f6",
+        "Preview/Deck.png": "8b5e28599a908b2a2622adb8340f9339ff337b71fc208bb21fc46014c709a32d",
+        "Preview/Hero.png": "d639354694dba4327f7c74b7fb23fcc0c2b461d7a51746cd516aef9f53e03dac",
+        "Preview/Profile.png": "2e109d59fc62a0cd31750143cab2daf06a4a1286e9356f0a001b951ec57df1d8",
+        "Preview/Propeller.png": "a7ecd0efc02ff1be4635d4e01803fc3c7602b133eb839c7de8ccc10d822a2dc2",
+        "Preview/Rear.png": "96c597fac8e6bbc0a0c7c32a7934369bc6197748774e1f228533f1d9c451c2d0",
+        "Preview/Sail.png": "e7929e71f7fc35f5ae88a47e07143f3f56644b2a9ac1b4b95d04a2f48ec79868",
+        "Preview/Stern.png": "6f04479de3cd24c61e8f0861224b49faad5340185531af9f46075b30a3f2ebe1"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -909,24 +1594,65 @@
       "project": "Project 667BDRM",
       "tier": 7,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/Russia/Delta_IV/Blend/RU_SSBN_DeltaIV_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/Delta_IV/FBX/RU_SSBN_DeltaIV_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/Delta_IV/FBX/RU_SSBN_DeltaIV_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/Delta_IV/FBX/RU_SSBN_DeltaIV_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/Delta_IV/FBX/RU_SSBN_DeltaIV_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/Delta_IV/Collision/RU_SSBN_DeltaIV_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/Russia/Delta_IV/Textures/T_RU_SSBN_DeltaIV_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/Russia/Delta_IV/Validation/RU_SSBN_DeltaIV_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/index.html",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/Delta_IV/Preview/Deck.png",
+        "Submarines/SSBN/Russia/Delta_IV/Preview/Hero.png",
+        "Submarines/SSBN/Russia/Delta_IV/Preview/Profile.png",
+        "Submarines/SSBN/Russia/Delta_IV/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/Delta_IV/Preview/Rear.png",
+        "Submarines/SSBN/Russia/Delta_IV/Preview/Sail.png",
+        "Submarines/SSBN/Russia/Delta_IV/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_DeltaIV_MASTER.blend": "2e53299835e935d69d5e512effe7fd1c65295eb687ab66bfd43724efb780da92",
+        "FBX/RU_SSBN_DeltaIV_LOD0.fbx": "8b95ea9bab89b44ffa9d5686cf4a9bdb942310134443a13ef55beb6c917cdfd0",
+        "FBX/RU_SSBN_DeltaIV_LOD1.fbx": "4da7d0d245682dce1b341370758e502ef432450e7bd63d35228a83fc21a63f51",
+        "FBX/RU_SSBN_DeltaIV_LOD2.fbx": "f6d68abe2e1837c9ef22e0265819cff73dc52a1d519b4c39e425f75157dda944",
+        "FBX/RU_SSBN_DeltaIV_LOD3.fbx": "4186f196d2bb5c939a276190ee31ffa8cef27fa0eaed4081785d09628fc8961d",
+        "Collision/RU_SSBN_DeltaIV_COLLISION.fbx": "35e66a6cf95f0af2ff1acf997375e1f22de10257badbb55e120161ecaa143e1a",
+        "Validation/RU_SSBN_DeltaIV_VALIDATION.json": "e30f9a7d104cf5e6928d7c39cbe56cfd715ebabe8e9fea22a58aa2664a324f7e",
+        "Preview/Deck.png": "858718b7793c0be974adb9bbe9af25496ec9603205256277feee42f7a9292919",
+        "Preview/Hero.png": "6a42696fb8fb6d0b724942578e5f54bb4fa5d613651f5dba9e8d590ff0d2f30e",
+        "Preview/Profile.png": "3202114b3773d475eee9c20a0f08377b86ee7fe175bf81a275d1b889009ec080",
+        "Preview/Propeller.png": "01cd20fd6bb001559680bd70fee1f5b5fbabe81ff18e9778b2ab7de991cb1ab6",
+        "Preview/Rear.png": "f51ca55d7282f59914d7a23611419c47932d842914afdd2d88ca06909ada794e",
+        "Preview/Sail.png": "babbce0b6c925af9be3218ab509ebf77ecc5bd574c4cc1133c95a1b9d26e7aa0",
+        "Preview/Stern.png": "dcafc59d45c0b677b6f5482cc9572fd464c5b0e05f95c5457f797b226d5435e6"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -936,13 +1662,13 @@
       "class": "Typhoon",
       "project": "Project 941",
       "tier": 8,
-      "source": "/Users/sjw/Documents/BlenderProjects/Typhoon_UE427_20260908/Typhoon_UE427.blend",
-      "master": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Blend/RU_SSBN_Typhoon_MASTER.blend",
-      "lod0": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD0.fbx",
-      "lod1": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD1.fbx",
-      "lod2": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD2.fbx",
-      "lod3": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD3.fbx",
-      "collision": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Collision/RU_SSBN_Typhoon_COLLISION.fbx",
+      "source": "",
+      "master": "Submarines/SSBN/Russia/Typhoon_Project941/Blend/RU_SSBN_Typhoon_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/Typhoon_Project941/FBX/RU_SSBN_Typhoon_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/Typhoon_Project941/Collision/RU_SSBN_Typhoon_COLLISION.fbx",
       "materials": [
         "Hull",
         "Rubber",
@@ -954,26 +1680,46 @@
         "OpticalGlass"
       ],
       "textures": [
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/BaseColor/T_Typhoon_Hull_BaseColor.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/BaseColor/T_Typhoon_Rubber_BaseColor.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/AO/T_Typhoon_Hull_ORM.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/AO/T_Typhoon_Rubber_ORM.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/Normal/T_Typhoon_Rubber_NormalGL.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/Normal/T_Typhoon_Hull_NormalDX.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/Normal/T_Typhoon_Hull_NormalGL.png",
-        "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Textures/Normal/T_Typhoon_Rubber_NormalDX.png"
+        "Submarines/SSBN/Russia/Typhoon_Project941/Textures/T_RU_SSBN_Typhoon_Hull_BaseColor.png"
       ],
       "variants": [],
       "variant_of": null,
       "status": "VALIDATING",
-      "validation": "/Users/sjw/Documents/BlenderProjects/SilentDepth_Assets/Submarines/SSBN/Russia/Typhoon_Project941/Validation/RU_SSBN_Typhoon_VALIDATION.json",
+      "validation": "Submarines/SSBN/Russia/Typhoon_Project941/Validation/RU_SSBN_Typhoon_VALIDATION.json",
       "references": [
         {
           "url": "https://nuke.fas.org/guide/russia/slbm/941.htm",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
-      ]
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/Typhoon_Project941/Preview/Deck.png",
+        "Submarines/SSBN/Russia/Typhoon_Project941/Preview/Hero.png",
+        "Submarines/SSBN/Russia/Typhoon_Project941/Preview/Profile.png",
+        "Submarines/SSBN/Russia/Typhoon_Project941/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/Typhoon_Project941/Preview/Rear.png",
+        "Submarines/SSBN/Russia/Typhoon_Project941/Preview/Sail.png",
+        "Submarines/SSBN/Russia/Typhoon_Project941/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_Typhoon_MASTER.blend": "ea99ac3605d32514a53ce215cff795340d6d3842c6433d90bd429254e9f562f9",
+        "FBX/RU_SSBN_Typhoon_LOD0.fbx": "66894182bec3f126c662ce43fdef843091c5de1663f719a4a6bcf7ce3ab8a679",
+        "FBX/RU_SSBN_Typhoon_LOD1.fbx": "8fd716c82de4ae7de4f134b7f3258b4849d19ba4dc900bb09089297d20524f5e",
+        "FBX/RU_SSBN_Typhoon_LOD2.fbx": "e7a35b436bbec7c36500b163ea672444e5ca0d4a8df5e8192df0fd01d5553684",
+        "FBX/RU_SSBN_Typhoon_LOD3.fbx": "5944e68895861b563cf93d155c430f3cc13205fc5fb469cc0babc1cca907b676",
+        "Collision/RU_SSBN_Typhoon_COLLISION.fbx": "66894182bec3f126c662ce43fdef843091c5de1663f719a4a6bcf7ce3ab8a679",
+        "Validation/RU_SSBN_Typhoon_VALIDATION.json": "815fe834b91482b59637887423f9a2c4005206998b6fc8f9e3e6680db5341370",
+        "Preview/Deck.png": "86bba8b00f52eef91992adad0e14dbc7e35f762190690b4901686d1fa4bb25f5",
+        "Preview/Hero.png": "b15ba3891a637b1832ca188f072973673e79d1888288e465390a4c403bd576b3",
+        "Preview/Profile.png": "14db800a4736325f47add06a1e96128f7b437762230363bbd230f7350c70447c",
+        "Preview/Propeller.png": "ac0ba3338789c652fc30142406ead5a535ea68120e94d6146a9d57e2032ba758",
+        "Preview/Rear.png": "503662d95093cfe08fa78f157ab0da5f1f9d9cd86e14cd0b2f9342e48f6dffff",
+        "Preview/Sail.png": "d028567822bcbdc96f055e307348c92a2981daaf10800b0c25097c0eead8261b",
+        "Preview/Stern.png": "10b6889c502819b6395d459f78f1060ba20324240d183d1e3cd22a3183b0f164"
+      },
+      "limitations": []
     },
     {
       "asset_id": "RU_SSBN_Borei",
@@ -983,24 +1729,65 @@
       "project": "Project 955",
       "tier": 9,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/Russia/Borei/Blend/RU_SSBN_Borei_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/Borei/FBX/RU_SSBN_Borei_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/Borei/FBX/RU_SSBN_Borei_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/Borei/FBX/RU_SSBN_Borei_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/Borei/FBX/RU_SSBN_Borei_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/Borei/Collision/RU_SSBN_Borei_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/Russia/Borei/Textures/T_RU_SSBN_Borei_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/Russia/Borei/Validation/RU_SSBN_Borei_VALIDATION.json",
       "references": [
         {
           "url": "https://russianships.info/eng/submarines/project_955.htm",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/Borei/Preview/Deck.png",
+        "Submarines/SSBN/Russia/Borei/Preview/Hero.png",
+        "Submarines/SSBN/Russia/Borei/Preview/Profile.png",
+        "Submarines/SSBN/Russia/Borei/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/Borei/Preview/Rear.png",
+        "Submarines/SSBN/Russia/Borei/Preview/Sail.png",
+        "Submarines/SSBN/Russia/Borei/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_Borei_MASTER.blend": "8b3c608cc0ec62caaf37ad92fcbbcfc7a9c0857a60fa9df30e4112096dd4605f",
+        "FBX/RU_SSBN_Borei_LOD0.fbx": "253041dc03354547ccf6b21270e3f44036d15929e6cbaa7a0908d62fa4b18848",
+        "FBX/RU_SSBN_Borei_LOD1.fbx": "011009206b51a00f462c250ea07a80373f72add9a76769ed75949c842cf595d4",
+        "FBX/RU_SSBN_Borei_LOD2.fbx": "01f07a3bd530227cfc538a4cebb97ec2d8e10d34dd755939120f08043cbd8b88",
+        "FBX/RU_SSBN_Borei_LOD3.fbx": "01aa680711eebb52336ed4d74b78a5da74e7931cce5303124c66fff22b7e14b3",
+        "Collision/RU_SSBN_Borei_COLLISION.fbx": "7ca0abceebcec41d0b79191f12959f41821a11c5e76b6df46f4389d52d0f94c4",
+        "Validation/RU_SSBN_Borei_VALIDATION.json": "ab038c7ea6a63ddff0cb58eaa19eb0e57116bc257302b3468bca8f13e5911fb6",
+        "Preview/Deck.png": "bb00d5d3d5fe88c096d9dfcadccc0d8b030f348d4cfdebbc9fef75da9881ae95",
+        "Preview/Hero.png": "0d0a3df8ef3353cdef19e30f8ebcda88fe0a2db5c6ce01a79678f9fef82bbd91",
+        "Preview/Profile.png": "b38120660822e6c21e584e88b24acf3b6cb07bcb1a0f72c7f610bac3e2a5fdd9",
+        "Preview/Propeller.png": "86d5407d9d171a1979aa185a1a11df48a44deca2d93c7d41c8ef1cf570a8ceda",
+        "Preview/Rear.png": "10a706dbf774902ca570dbc96e927406f0d14e0ea18360f5325f690e4353b9e3",
+        "Preview/Sail.png": "2bee9bb0a9c7cf3536fdcf45588aebf9995e31fa7dd8170d69c5ef08dc9b759c",
+        "Preview/Stern.png": "425a24492ca55f59c34b3006653ae68987c0b792655a93f089fc92d066f2932e"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1011,24 +1798,65 @@
       "project": "Project 955A",
       "tier": 10,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/Russia/BoreiA/Blend/RU_SSBN_BoreiA_MASTER.blend",
+      "lod0": "Submarines/SSBN/Russia/BoreiA/FBX/RU_SSBN_BoreiA_LOD0.fbx",
+      "lod1": "Submarines/SSBN/Russia/BoreiA/FBX/RU_SSBN_BoreiA_LOD1.fbx",
+      "lod2": "Submarines/SSBN/Russia/BoreiA/FBX/RU_SSBN_BoreiA_LOD2.fbx",
+      "lod3": "Submarines/SSBN/Russia/BoreiA/FBX/RU_SSBN_BoreiA_LOD3.fbx",
+      "collision": "Submarines/SSBN/Russia/BoreiA/Collision/RU_SSBN_BoreiA_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/Russia/BoreiA/Textures/T_RU_SSBN_BoreiA_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/Russia/BoreiA/Validation/RU_SSBN_BoreiA_VALIDATION.json",
       "references": [
         {
           "url": "https://russianships.info/eng/submarines/project_955.htm",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/Russia/BoreiA/Preview/Deck.png",
+        "Submarines/SSBN/Russia/BoreiA/Preview/Hero.png",
+        "Submarines/SSBN/Russia/BoreiA/Preview/Profile.png",
+        "Submarines/SSBN/Russia/BoreiA/Preview/Propeller.png",
+        "Submarines/SSBN/Russia/BoreiA/Preview/Rear.png",
+        "Submarines/SSBN/Russia/BoreiA/Preview/Sail.png",
+        "Submarines/SSBN/Russia/BoreiA/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/RU_SSBN_BoreiA_MASTER.blend": "4109cc3d9184995f4ecca135eee917d46071aaf7777635284087028401115463",
+        "FBX/RU_SSBN_BoreiA_LOD0.fbx": "25033710281169adeee978e8e7dcfa426c4a89e3ee8947aedb306b504a384004",
+        "FBX/RU_SSBN_BoreiA_LOD1.fbx": "215ba76caf42c6b96a8439328984534f164a74e833d39268631378b1ad5310b6",
+        "FBX/RU_SSBN_BoreiA_LOD2.fbx": "70aaa21d49f245fd35ce90b1797fd1fb3e90ef6b2bc77a08ac1056815f6bbc46",
+        "FBX/RU_SSBN_BoreiA_LOD3.fbx": "1f489445ad1ad2eea7288e3be3cfaaad75a96dd2214e3ae7db62b291d9476d56",
+        "Collision/RU_SSBN_BoreiA_COLLISION.fbx": "e3a6402527a67fa777275780697ec63221fbb3de424f56e0194fd3b443627302",
+        "Validation/RU_SSBN_BoreiA_VALIDATION.json": "b5e0646489fc4467df73043ab5e411fe12568eb2cdd98cc17a9296bc28886df3",
+        "Preview/Deck.png": "a11731a0c7b9b124961ebac79f7d1aca2bdb13d2ed08e4df19c57e1009ef285d",
+        "Preview/Hero.png": "f9438b13aeeb38638efd356991ba1e60a29e70147f1c45af91c086ad15cb558e",
+        "Preview/Profile.png": "ed5aebcac963b45cb1b8f32a0ab60307595a982b3ff46e400d80ee0a294cf6d7",
+        "Preview/Propeller.png": "e8ba0a4df6ba4d2ecdaadf8f2ee61f44ea7699e878a08add8a45fff89c7a4b36",
+        "Preview/Rear.png": "40f94e5faf124c7abb4fdf81f3da11777ff79a60abb9cc1d3209457c03c67eac",
+        "Preview/Sail.png": "ff7d1ea1ae11d9a63c0a75d3acab7619116adb35e6666e9c739dd847d665cef0",
+        "Preview/Stern.png": "597ccdab9f9dddd9395620950273aee554f2a2437d06efe4629ee6ccd56adbcc"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1039,24 +1867,65 @@
       "project": "HMS Dreadnought S101",
       "tier": 2,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/UK/Dreadnought/Blend/UK_SSN_Dreadnought_MASTER.blend",
+      "lod0": "Submarines/SSN/UK/Dreadnought/FBX/UK_SSN_Dreadnought_LOD0.fbx",
+      "lod1": "Submarines/SSN/UK/Dreadnought/FBX/UK_SSN_Dreadnought_LOD1.fbx",
+      "lod2": "Submarines/SSN/UK/Dreadnought/FBX/UK_SSN_Dreadnought_LOD2.fbx",
+      "lod3": "Submarines/SSN/UK/Dreadnought/FBX/UK_SSN_Dreadnought_LOD3.fbx",
+      "collision": "Submarines/SSN/UK/Dreadnought/Collision/UK_SSN_Dreadnought_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/UK/Dreadnought/Textures/T_UK_SSN_Dreadnought_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/UK/Dreadnought/Validation/UK_SSN_Dreadnought_VALIDATION.json",
       "references": [
         {
           "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/UK/Dreadnought/Preview/Deck.png",
+        "Submarines/SSN/UK/Dreadnought/Preview/Hero.png",
+        "Submarines/SSN/UK/Dreadnought/Preview/Profile.png",
+        "Submarines/SSN/UK/Dreadnought/Preview/Propeller.png",
+        "Submarines/SSN/UK/Dreadnought/Preview/Rear.png",
+        "Submarines/SSN/UK/Dreadnought/Preview/Sail.png",
+        "Submarines/SSN/UK/Dreadnought/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/UK_SSN_Dreadnought_MASTER.blend": "9c485bf69e2e2acc470486eda4f3efa952ee47105348e1aee8d146c6d9f40526",
+        "FBX/UK_SSN_Dreadnought_LOD0.fbx": "2c561b244d52dee191dbf328abaa2d21806dbf836940f9990af8eb0be88cf6a0",
+        "FBX/UK_SSN_Dreadnought_LOD1.fbx": "0504295d763cafdef4cba7895387c4f62639d1f378e2fb9300c4d6ea3b17cfb1",
+        "FBX/UK_SSN_Dreadnought_LOD2.fbx": "e14db5b22b60a69af7edfe623efee29f3ce873732c59c06134bdedd47e99c291",
+        "FBX/UK_SSN_Dreadnought_LOD3.fbx": "c11532a1696fe3ab8c5816f1572a145cb3680711dc2a38c2cc143ab25ef1c8e6",
+        "Collision/UK_SSN_Dreadnought_COLLISION.fbx": "286ecbfbc732301b953c337ce732fc3d5343c483b6fb97b9a4d130cf7e4a36a8",
+        "Validation/UK_SSN_Dreadnought_VALIDATION.json": "071908630305d37c45225a2bc5f58b6cc78774f23dba450b7c23c150b0b9c264",
+        "Preview/Deck.png": "3627086680eda8e2e8e4ce6d9d678bb02e13f10596ffe345f765d99252b3e626",
+        "Preview/Hero.png": "56c698eb09f51f52553cb26f8bb12d6ffb3d88caedf95bb2599cf5e6cdd525ec",
+        "Preview/Profile.png": "aeaa54f7eea670062517e3422538d6639d64bd1563526cf691bdf29aebc09d9f",
+        "Preview/Propeller.png": "3c4615f6884da2fdd533779943464a5dfddbb0172d86d8bbcf6a9cb2a96e7406",
+        "Preview/Rear.png": "9a56731f5239b799ec9eb95a513fc9adad0be01b7cefa6f4d3ce698a2aee8cbd",
+        "Preview/Sail.png": "7cb7c52930bb23543fb0a14ffefdc7dba3c6a1cf1249f1010c851622698db2a4",
+        "Preview/Stern.png": "c3d18da44ed431c2a83a0e22e48c00aec61734b4c4873e8059bf0366ea7eb84e"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1067,24 +1936,65 @@
       "project": null,
       "tier": 3,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/UK/Valiant/Blend/UK_SSN_Valiant_MASTER.blend",
+      "lod0": "Submarines/SSN/UK/Valiant/FBX/UK_SSN_Valiant_LOD0.fbx",
+      "lod1": "Submarines/SSN/UK/Valiant/FBX/UK_SSN_Valiant_LOD1.fbx",
+      "lod2": "Submarines/SSN/UK/Valiant/FBX/UK_SSN_Valiant_LOD2.fbx",
+      "lod3": "Submarines/SSN/UK/Valiant/FBX/UK_SSN_Valiant_LOD3.fbx",
+      "collision": "Submarines/SSN/UK/Valiant/Collision/UK_SSN_Valiant_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/UK/Valiant/Textures/T_UK_SSN_Valiant_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/UK/Valiant/Validation/UK_SSN_Valiant_VALIDATION.json",
       "references": [
         {
           "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/UK/Valiant/Preview/Deck.png",
+        "Submarines/SSN/UK/Valiant/Preview/Hero.png",
+        "Submarines/SSN/UK/Valiant/Preview/Profile.png",
+        "Submarines/SSN/UK/Valiant/Preview/Propeller.png",
+        "Submarines/SSN/UK/Valiant/Preview/Rear.png",
+        "Submarines/SSN/UK/Valiant/Preview/Sail.png",
+        "Submarines/SSN/UK/Valiant/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/UK_SSN_Valiant_MASTER.blend": "123b3d75c1918197ce5e1b99d603c096dad358c558a02b0b63821765efe043a6",
+        "FBX/UK_SSN_Valiant_LOD0.fbx": "3b8915c9f756754ca40fc1e7e1c680cf82b3fdf08ca126809fdae4f6982209a2",
+        "FBX/UK_SSN_Valiant_LOD1.fbx": "d203f8d5e58d1bad1a6cfa3cf93b1e0939f85a60f018780bf455e5ff629c66d5",
+        "FBX/UK_SSN_Valiant_LOD2.fbx": "f1b9519824a15c996a1e5f9c5064cfcc02d9e180428dc843bc6d6abcc28632e8",
+        "FBX/UK_SSN_Valiant_LOD3.fbx": "0daa1582fba615ed5fd47fae1a778801e3d80da0e23b26376b1857d4d3364449",
+        "Collision/UK_SSN_Valiant_COLLISION.fbx": "64cef55e0df53db1e1f5fbda8d976745fe1586d25e4631a04ee05f129f7c0fa1",
+        "Validation/UK_SSN_Valiant_VALIDATION.json": "13bd2b4624c6f8a2048c6b9139eea0a002b51cb0e7cd8ff251352dc6053f5724",
+        "Preview/Deck.png": "f44347c82a16a16fb4f7f6e6d582751df4c4b33ffe7b199c52b2c3cc3ec7160f",
+        "Preview/Hero.png": "570380bfc9dbacca46869702d8a15a7cdd6746a8a888b805e9e41e8bc5c49044",
+        "Preview/Profile.png": "1c47f21a64bf8ca72c79d4fb60ee4c721f7160fa210781713afa4ee3fe266bd5",
+        "Preview/Propeller.png": "5816d1e0ce2c5db900041830bd35d8209641247a50a57129a5e3953f7ddd537d",
+        "Preview/Rear.png": "01459160385e1e3dd3ca78fa6a6923302efd6d9e98d077a7760ac4a91f779e48",
+        "Preview/Sail.png": "168982ddaeb9c21598adb5b0353b57fad3bfcdf0e517056fcb5d23424c89b436",
+        "Preview/Stern.png": "3926084ad54ce9116b70d3ddf7e1da820cd3cc988117df598692b64a0d2c88f3"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1095,24 +2005,65 @@
       "project": null,
       "tier": 5,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/UK/Swiftsure/Blend/UK_SSN_Swiftsure_MASTER.blend",
+      "lod0": "Submarines/SSN/UK/Swiftsure/FBX/UK_SSN_Swiftsure_LOD0.fbx",
+      "lod1": "Submarines/SSN/UK/Swiftsure/FBX/UK_SSN_Swiftsure_LOD1.fbx",
+      "lod2": "Submarines/SSN/UK/Swiftsure/FBX/UK_SSN_Swiftsure_LOD2.fbx",
+      "lod3": "Submarines/SSN/UK/Swiftsure/FBX/UK_SSN_Swiftsure_LOD3.fbx",
+      "collision": "Submarines/SSN/UK/Swiftsure/Collision/UK_SSN_Swiftsure_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/UK/Swiftsure/Textures/T_UK_SSN_Swiftsure_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/UK/Swiftsure/Validation/UK_SSN_Swiftsure_VALIDATION.json",
       "references": [
         {
           "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/UK/Swiftsure/Preview/Deck.png",
+        "Submarines/SSN/UK/Swiftsure/Preview/Hero.png",
+        "Submarines/SSN/UK/Swiftsure/Preview/Profile.png",
+        "Submarines/SSN/UK/Swiftsure/Preview/Propeller.png",
+        "Submarines/SSN/UK/Swiftsure/Preview/Rear.png",
+        "Submarines/SSN/UK/Swiftsure/Preview/Sail.png",
+        "Submarines/SSN/UK/Swiftsure/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/UK_SSN_Swiftsure_MASTER.blend": "9eb8060181c1045a6026f19787f36dbe652a22aba536377ee57b3ec36ee8a575",
+        "FBX/UK_SSN_Swiftsure_LOD0.fbx": "b3fee845b5a40b0f29bc62c175462bade059795646c9b132b34d16491d0733de",
+        "FBX/UK_SSN_Swiftsure_LOD1.fbx": "480bf7b1b7fffdcbf0ed9d72bf1284f375683e9f4ea72dd10fa6e9e70dab7525",
+        "FBX/UK_SSN_Swiftsure_LOD2.fbx": "aa40c426ee88bba6859c3bca809f336ad506de4683ec4d8aa906f02ec9cb1b6a",
+        "FBX/UK_SSN_Swiftsure_LOD3.fbx": "f1da59d0f47941c4e6da6041b3fcd7e003ef5dbcedcfc692088bce54db5f0835",
+        "Collision/UK_SSN_Swiftsure_COLLISION.fbx": "23308cd4cc4c71a24d385c7893515b6158e561ae8ffc86905a0a32fe7ad044da",
+        "Validation/UK_SSN_Swiftsure_VALIDATION.json": "c14a31bcdc15e7d159ead5d606516b5a15aea56280cb33e649d7a91e9ce4787c",
+        "Preview/Deck.png": "27b069853eec0d406507b66a8939e38e03a842ef11dce8e47b401f303b633b22",
+        "Preview/Hero.png": "9899556fec96ac7f67a1f81b76538759c688d371ad67a876fcdf29e4d5401a18",
+        "Preview/Profile.png": "4d2290aad2c9e73d38c5d68758fe3f09027bbaf2ee78f34abfbe4657913eaae4",
+        "Preview/Propeller.png": "ef97ff7e0031a8fe84bbce6c9492deb3a9c1bba7f8ef1ba8c1c30c6916b1c09b",
+        "Preview/Rear.png": "c48b0a5e41acc445a34d2de0d8710475719acdc33083e3dfe783de7240f81488",
+        "Preview/Sail.png": "f01e5f10dfcb0d941222adcedb38fadcaaccb289087a332b8663e501043f92fb",
+        "Preview/Stern.png": "5c85b068771d1442f739e494d038573c49be4c34904afc919188e3977f15d831"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1123,24 +2074,65 @@
       "project": null,
       "tier": 6,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/UK/Trafalgar/Blend/UK_SSN_Trafalgar_MASTER.blend",
+      "lod0": "Submarines/SSN/UK/Trafalgar/FBX/UK_SSN_Trafalgar_LOD0.fbx",
+      "lod1": "Submarines/SSN/UK/Trafalgar/FBX/UK_SSN_Trafalgar_LOD1.fbx",
+      "lod2": "Submarines/SSN/UK/Trafalgar/FBX/UK_SSN_Trafalgar_LOD2.fbx",
+      "lod3": "Submarines/SSN/UK/Trafalgar/FBX/UK_SSN_Trafalgar_LOD3.fbx",
+      "collision": "Submarines/SSN/UK/Trafalgar/Collision/UK_SSN_Trafalgar_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/UK/Trafalgar/Textures/T_UK_SSN_Trafalgar_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/UK/Trafalgar/Validation/UK_SSN_Trafalgar_VALIDATION.json",
       "references": [
         {
           "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/UK/Trafalgar/Preview/Deck.png",
+        "Submarines/SSN/UK/Trafalgar/Preview/Hero.png",
+        "Submarines/SSN/UK/Trafalgar/Preview/Profile.png",
+        "Submarines/SSN/UK/Trafalgar/Preview/Propeller.png",
+        "Submarines/SSN/UK/Trafalgar/Preview/Rear.png",
+        "Submarines/SSN/UK/Trafalgar/Preview/Sail.png",
+        "Submarines/SSN/UK/Trafalgar/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/UK_SSN_Trafalgar_MASTER.blend": "79e479610f36a16ed5d7f13fba2e1edd24a7a3463e3e053130fa949dacfd7d3b",
+        "FBX/UK_SSN_Trafalgar_LOD0.fbx": "bb1775bade50ca5c0c103f446f5293da62ba8fc8981db3e89c2ef1ba8570fbd5",
+        "FBX/UK_SSN_Trafalgar_LOD1.fbx": "5459f4367f8dc2a50c85a6e7a042b98b3ba1ac6bc56a07b8bb7258ce4d4e0432",
+        "FBX/UK_SSN_Trafalgar_LOD2.fbx": "6da3d27a9af3af6bd6bab93c2624ef2e1905c9b410e2c46097616b4b6a4b79b5",
+        "FBX/UK_SSN_Trafalgar_LOD3.fbx": "e51ff788361f57ba87742a912c2d55867262ecf412019eab9e22fb269b82e0f2",
+        "Collision/UK_SSN_Trafalgar_COLLISION.fbx": "b3f77ba8b7c8edf2bc63bc5a5bb6f96c9d408f2baa63946585b8217603687e0a",
+        "Validation/UK_SSN_Trafalgar_VALIDATION.json": "4ffa5d0895c19b7aa21b0d5fc72331700467d1fd7c461917add9653d58039a0e",
+        "Preview/Deck.png": "8897007fbf17adf8364337887790816eee9e6f1c9dc58a3452fad7d64795e5f3",
+        "Preview/Hero.png": "b1b40407a84de2a7b42d8a364f810720ee5516503a7fa51ecca1820bec2651f6",
+        "Preview/Profile.png": "449bd833ca8e4097c96756cfb3c167c793dbbd48e43d79b0c3a0c6c196e7d55d",
+        "Preview/Propeller.png": "d9e1e95bc2198b5eef409e02b19898278b49de7e921189f4e6b346aea071b481",
+        "Preview/Rear.png": "f30d2dcc5505cf0beac402f990bb3efb741e1af70da895317a7ca08d0f81885b",
+        "Preview/Sail.png": "316703d98cb8792361f9c9629022ad67e72fec7a87edce6b62b92f92eb48a5f5",
+        "Preview/Stern.png": "86bf9047ec33e35feec53b8dfd9e4bdfaeca4f5c3fba4d2b77a3f1adc76adf3b"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1194,24 +2186,24 @@
         "Submarines/SSN/UK/Astute/Preview/Stern.png"
       ],
       "sha256": {
-        "Blend/UK_SSN_Astute_MASTER.blend": "ec7999a1dc922c53c1443877ac7dabef457f548a136c9cd320f267ae2903bbab",
-        "FBX/UK_SSN_Astute_LOD0.fbx": "595f19102d58e8638d4928bb047d590299b0bf7dad73125c08d423f32c4c8a8d",
-        "FBX/UK_SSN_Astute_LOD1.fbx": "b28a3c5fc1caf0cb1990684cb95609c9d7ac274186eb5968d0030360db6e99b1",
-        "FBX/UK_SSN_Astute_LOD2.fbx": "756ef538a5f1d8df8ff66d874e6f2d2405166a1d306a7edaf760fb43ba8d23fd",
-        "FBX/UK_SSN_Astute_LOD3.fbx": "757b32b9a0a14c6d599d63313e3c966dd51aac6096a8fae1442ebaacaec61b6c",
-        "Collision/UK_SSN_Astute_COLLISION.fbx": "fe9ab132983c480c8c30c9db68fca11a0f7cb948282596960518caece93a6c60",
-        "Validation/UK_SSN_Astute_VALIDATION.json": "3eb105f4f7f1893daf418c136618c575aee118c1b31f2f994c5bbddfacad29db",
+        "Blend/UK_SSN_Astute_MASTER.blend": "b36af88ec2d3bd12f4b07cd92afe624c01b4875fd55316533d9bc8dcd5146572",
+        "FBX/UK_SSN_Astute_LOD0.fbx": "2a44260889f999553a9b10716fc20972c02462e41de33d9905c9c4ca42ceae4d",
+        "FBX/UK_SSN_Astute_LOD1.fbx": "3119644df60477e758b99fa24c611b81782921bd7544a9885489b5b291ff49b1",
+        "FBX/UK_SSN_Astute_LOD2.fbx": "1ee8f004527c05611b645fce5553b800f3cb64414706c6ff2f794c2bd14def16",
+        "FBX/UK_SSN_Astute_LOD3.fbx": "350060499c4f04816c443a955e34118b9f8c0e9bc524f2c5c8d9d14c27be7f4f",
+        "Collision/UK_SSN_Astute_COLLISION.fbx": "c78b9a0ad3cd489db12c6831d6ce3f704744022591833643c5b2658580d87e88",
+        "Validation/UK_SSN_Astute_VALIDATION.json": "069193486a629aa5fd2e8eb089d951432a747e31a5b537005ac0b02c5896e65d",
         "Source/build_astute.py": "348e14df48f37db3c1c29f5d15bcabf74dd59433bdd16671cd973c58a1e092e1",
-        "Preview/Deck.png": "55c03d7e1727fa00d1f7d5e9923c50578ef876dbede693fac5e47f7d06d3ced2",
+        "Preview/Deck.png": "d3fc50c763092acc0accbc98d5e7ac012040b5d0f05f0d06e29444c3f0b77452",
         "Preview/Gray_Deck.png": "749aa3c70ab8a73a70e345420324c5fc5f6b71fc95d4359c399304afad4b3de3",
         "Preview/Gray_Hero.png": "920210c9f2f74f907cc2f3ea7c2d8476d6f698bd221d06cad04883f9845175c6",
         "Preview/Gray_Profile.png": "347aa8deb87f41e5fb71fafc21af56c41e2150fe4a95527cc8d822e99f75b6c4",
-        "Preview/Hero.png": "a7c36c19d4ade37af7596c693b8dbcc130a5b2558a79040508e59c82ec73abbc",
-        "Preview/Profile.png": "05d96ce5e26f08534407c684a9c36c58aceb21d1020effad082f92fbbe799e75",
-        "Preview/Propeller.png": "50899778e3ba140a95ceec6fdbd4e10de96095d035f33439a499ae26f19cf7ac",
-        "Preview/Rear.png": "c72f4e37fbecb86125c1b665acb1e98d3a4eb96b308a7e2124b496efb67044ea",
-        "Preview/Sail.png": "0b81d0ce5c712aec57274d6bd6a997569b2b2f826ae4e59b57078cd9ee0882f0",
-        "Preview/Stern.png": "a53227d4e136e0d2dd49026492597b08c60791eb570436341face0b47aac37d4"
+        "Preview/Hero.png": "44558c3ddd82dd5c765726535040bdfad010f06725654203c7ff3523a98dcb60",
+        "Preview/Profile.png": "1934e6a77ce0319889e6cf1bcc38a59b30f7bd23da702d9d7ed6fd04f1454440",
+        "Preview/Propeller.png": "ec0daa0a001989f6dbaea55a845eb94d146d5ed340602b427b2f6ccfd2f26018",
+        "Preview/Rear.png": "ee511dd7cac84d100ee0c9ce234bf5f3c0b73fa33a9137815ad5c52df13e4f39",
+        "Preview/Sail.png": "ff479c861ee63107d85b66a2e07f412e0656e10fe4f9b6d54d4d57ffec4a3f30",
+        "Preview/Stern.png": "b9cbbfb479181026df1bf837947eeecd08989abe9a248198c5a8e1759720f074"
       },
       "limitations": [
         "程序化外形，未与实物或照片逐点比对",
@@ -1255,24 +2247,65 @@
       "project": null,
       "tier": 4,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/UK/Resolution/Blend/UK_SSBN_Resolution_MASTER.blend",
+      "lod0": "Submarines/SSBN/UK/Resolution/FBX/UK_SSBN_Resolution_LOD0.fbx",
+      "lod1": "Submarines/SSBN/UK/Resolution/FBX/UK_SSBN_Resolution_LOD1.fbx",
+      "lod2": "Submarines/SSBN/UK/Resolution/FBX/UK_SSBN_Resolution_LOD2.fbx",
+      "lod3": "Submarines/SSBN/UK/Resolution/FBX/UK_SSBN_Resolution_LOD3.fbx",
+      "collision": "Submarines/SSBN/UK/Resolution/Collision/UK_SSBN_Resolution_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/UK/Resolution/Textures/T_UK_SSBN_Resolution_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/UK/Resolution/Validation/UK_SSBN_Resolution_VALIDATION.json",
       "references": [
         {
           "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/UK/Resolution/Preview/Deck.png",
+        "Submarines/SSBN/UK/Resolution/Preview/Hero.png",
+        "Submarines/SSBN/UK/Resolution/Preview/Profile.png",
+        "Submarines/SSBN/UK/Resolution/Preview/Propeller.png",
+        "Submarines/SSBN/UK/Resolution/Preview/Rear.png",
+        "Submarines/SSBN/UK/Resolution/Preview/Sail.png",
+        "Submarines/SSBN/UK/Resolution/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/UK_SSBN_Resolution_MASTER.blend": "db47b75dafd21fd38002ae64fb8a191b02969740932fe58fe52484cc239234cd",
+        "FBX/UK_SSBN_Resolution_LOD0.fbx": "35b562bfef92c0944027cb64fb919c08f6062096b211fc5369668b55af839187",
+        "FBX/UK_SSBN_Resolution_LOD1.fbx": "70b5ed882eef02a253c56d03076cbd882b8537a6c427c87bb85931e20a2ed065",
+        "FBX/UK_SSBN_Resolution_LOD2.fbx": "2a70e260fbc276f81614eb4bf8c3a2bd5618a541272b9028678de7905a796383",
+        "FBX/UK_SSBN_Resolution_LOD3.fbx": "9fadc22fac68ccd6cc6b154175d10706b16427c515ce2373a9c1ebcd86c0cff1",
+        "Collision/UK_SSBN_Resolution_COLLISION.fbx": "0c40eaed2b60b56f06e747724955c0546cb02d4eaa5b1d143b2e77b706cfa5ad",
+        "Validation/UK_SSBN_Resolution_VALIDATION.json": "f1669e0801d14d8a82d0926b3d9b27ef906163c77b21df8d170f77abe2c3320f",
+        "Preview/Deck.png": "4253e8a740eae2f8a3e0751582b6854ec13b0d8da23c0d49a09a5700f6bd25c4",
+        "Preview/Hero.png": "99493e984ce05c8b8ce3982bb2c099caf8a0f434ba9c178edf6f6dc4e682858e",
+        "Preview/Profile.png": "88c1b12a2d54f7a838d1d3324b9d4373f1cb6ef552e684b83bab2dd9017c5e86",
+        "Preview/Propeller.png": "a144eb49a40cc42864a6dc0f0ead532d9a531b693868afb1ecf2bde9f78379c9",
+        "Preview/Rear.png": "e5efd2d280996c022a3240017ec5360a0eaca45735c16759f3f234acf33e28d9",
+        "Preview/Sail.png": "4800b96af31fcb3f6e5d77b43b7b896db558595fec388c6e81ca5708a1db4a6c",
+        "Preview/Stern.png": "d74b2e3d569e21fdf63200e3bce49271e1152e4f33fc63731fbd93453f8527fa"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1283,24 +2316,65 @@
       "project": null,
       "tier": 8,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/UK/Vanguard/Blend/UK_SSBN_Vanguard_MASTER.blend",
+      "lod0": "Submarines/SSBN/UK/Vanguard/FBX/UK_SSBN_Vanguard_LOD0.fbx",
+      "lod1": "Submarines/SSBN/UK/Vanguard/FBX/UK_SSBN_Vanguard_LOD1.fbx",
+      "lod2": "Submarines/SSBN/UK/Vanguard/FBX/UK_SSBN_Vanguard_LOD2.fbx",
+      "lod3": "Submarines/SSBN/UK/Vanguard/FBX/UK_SSBN_Vanguard_LOD3.fbx",
+      "collision": "Submarines/SSBN/UK/Vanguard/Collision/UK_SSBN_Vanguard_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/UK/Vanguard/Textures/T_UK_SSBN_Vanguard_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/UK/Vanguard/Validation/UK_SSBN_Vanguard_VALIDATION.json",
       "references": [
         {
           "url": "https://www.royalnavy.mod.uk/equipment/submarine/astute-class",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/UK/Vanguard/Preview/Deck.png",
+        "Submarines/SSBN/UK/Vanguard/Preview/Hero.png",
+        "Submarines/SSBN/UK/Vanguard/Preview/Profile.png",
+        "Submarines/SSBN/UK/Vanguard/Preview/Propeller.png",
+        "Submarines/SSBN/UK/Vanguard/Preview/Rear.png",
+        "Submarines/SSBN/UK/Vanguard/Preview/Sail.png",
+        "Submarines/SSBN/UK/Vanguard/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/UK_SSBN_Vanguard_MASTER.blend": "9484df74187ea44eaf75af55c6cf60e1284adaa2a81eb2256ad46748186c3aa5",
+        "FBX/UK_SSBN_Vanguard_LOD0.fbx": "9279f0b1a838561545ccbe6585b4a842281015f8988187ffa1c420aae1f55abb",
+        "FBX/UK_SSBN_Vanguard_LOD1.fbx": "6e676477324e2f7d2267eb0697221c301dd0449feed176c6a67c876510684788",
+        "FBX/UK_SSBN_Vanguard_LOD2.fbx": "8eb4ecd8512e9c0b7bdeb3e0e10a1c3238e0f132ad93d95344074226510ed5dc",
+        "FBX/UK_SSBN_Vanguard_LOD3.fbx": "5f02766188cf743d766e00e30a65ef96a0e1a10d0d8c124fddc65df2c9df7f4d",
+        "Collision/UK_SSBN_Vanguard_COLLISION.fbx": "fcad8b0d81ab352d5f3d851ed2a9c1efa6a4cae8ef5dcadc66b40ba52393f028",
+        "Validation/UK_SSBN_Vanguard_VALIDATION.json": "320a01bb143cabcd1f6dc505f938ff5cdaba92b58f97230a68dc8dfeb1f210db",
+        "Preview/Deck.png": "b39f98603cbc000548203f9f1407b12b7ac6ea6ec6b6f5346c0a62e7af6aa618",
+        "Preview/Hero.png": "e3f9919de7adc3a246d23663b7a34864ebcb313ad32e6f9c3d6a1fcfab34dee1",
+        "Preview/Profile.png": "3bfd88f1d20a4530befb4f26c42872da6110a25653fdb6982b7f3c984070d1f9",
+        "Preview/Propeller.png": "3cb705300aeeb7f78c34f464f4b9966f4073a4874de02ed2716b80073ef1ffff",
+        "Preview/Rear.png": "61f5cd57f75c8a818299732a6d87f6f96b62d3378bc9d0ab0e9db1ebb176b2e9",
+        "Preview/Sail.png": "fdf09cad8aeb800e86668df48181628dd5fb27b014c334119548be896016b6a1",
+        "Preview/Stern.png": "b74e14fd012d1f0005e184a63259d9546170dfc9de68c8d5d9a77ff5fc61a7fb"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1339,24 +2413,65 @@
       "project": null,
       "tier": 6,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/France/Rubis/Blend/FR_SSN_Rubis_MASTER.blend",
+      "lod0": "Submarines/SSN/France/Rubis/FBX/FR_SSN_Rubis_LOD0.fbx",
+      "lod1": "Submarines/SSN/France/Rubis/FBX/FR_SSN_Rubis_LOD1.fbx",
+      "lod2": "Submarines/SSN/France/Rubis/FBX/FR_SSN_Rubis_LOD2.fbx",
+      "lod3": "Submarines/SSN/France/Rubis/FBX/FR_SSN_Rubis_LOD3.fbx",
+      "collision": "Submarines/SSN/France/Rubis/Collision/FR_SSN_Rubis_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/France/Rubis/Textures/T_FR_SSN_Rubis_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/France/Rubis/Validation/FR_SSN_Rubis_VALIDATION.json",
       "references": [
         {
           "url": "https://www.defense.gouv.fr/marine/marins/marins-nucleaires-dattaque-sna-type-rubis",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/France/Rubis/Preview/Deck.png",
+        "Submarines/SSN/France/Rubis/Preview/Hero.png",
+        "Submarines/SSN/France/Rubis/Preview/Profile.png",
+        "Submarines/SSN/France/Rubis/Preview/Propeller.png",
+        "Submarines/SSN/France/Rubis/Preview/Rear.png",
+        "Submarines/SSN/France/Rubis/Preview/Sail.png",
+        "Submarines/SSN/France/Rubis/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/FR_SSN_Rubis_MASTER.blend": "3ad7bd4112cf5d8d7920458e65ca56ddaeec097e294dc3c1fa3684615aeef011",
+        "FBX/FR_SSN_Rubis_LOD0.fbx": "c881d54cae1714a6f22e22bd7128b84268453e1a977d84d6e1b1250e19fc747e",
+        "FBX/FR_SSN_Rubis_LOD1.fbx": "b6b86f13a975fbcc2fd1baef086193fe87c1db4d44ba82949efc69353618b57b",
+        "FBX/FR_SSN_Rubis_LOD2.fbx": "3be5212bd09db80ef0e7b1d7ce4a80eb4e8b9438aa6fcdc1aed3d22f0fe7d346",
+        "FBX/FR_SSN_Rubis_LOD3.fbx": "b206a655408d0e704e376f8cc6a0ea72d5a03712c2b4779cbb682ca21946342b",
+        "Collision/FR_SSN_Rubis_COLLISION.fbx": "d267f749cabd5849cae6d14ec1d81d0609d99c49a7d2821850604cc188273d20",
+        "Validation/FR_SSN_Rubis_VALIDATION.json": "e138fb1845e537c90e21fafb4a8e40a3caff288bceb47b128575ba30bce392ab",
+        "Preview/Deck.png": "b0dff436c4d13ee01bff48d6b786751db3e0506d63c3dd63d284e6b5e50187b6",
+        "Preview/Hero.png": "171de7a3ab81c22dbdbda1d21420903293d6197ff58b05c0fc432d221c07b455",
+        "Preview/Profile.png": "12ecd35192893c248267db5a957dcd7ca47ff5d73b242c111485c2521ed03312",
+        "Preview/Propeller.png": "a5c21455c202bad095ddba9b3cee1844430df111b6fae0d93c34d788e65c1000",
+        "Preview/Rear.png": "77b53288c7b67eae4dd5c55bc5d02faa8541e96afc1ba2d4784befff380ca49f",
+        "Preview/Sail.png": "1971bb2735b13eb41bf8662df747cfe590af8b0b0a682942d33751321e092fe5",
+        "Preview/Stern.png": "0da223f293c00f9dc4f0c966a902b0a16b6d8dcf4f6344b410cf4a9290ee93ff"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1410,24 +2525,24 @@
         "Submarines/SSN/France/Suffren/Preview/Stern.png"
       ],
       "sha256": {
-        "Blend/FR_SSN_Suffren_MASTER.blend": "629a34558981a34ffa934b62b840fb19e8efc10b12ed85055de4948184ab5270",
-        "FBX/FR_SSN_Suffren_LOD0.fbx": "7e36ac6b756e96793566bbc6215bd97d76e05c3181e5252af29717640a470644",
-        "FBX/FR_SSN_Suffren_LOD1.fbx": "42a9e51c992288fe8c31e078dcb6fbcb72fe4c8cc8c00fc0254d67cb453040a4",
-        "FBX/FR_SSN_Suffren_LOD2.fbx": "764bdc8a9d82a5bc99c4ef7dc3533e5f13b6cd5ae97801bcb197d27d3cbd0328",
-        "FBX/FR_SSN_Suffren_LOD3.fbx": "67a96192e469322d3a20ad5a8619a391bdac87f0a75a6665b246c8f7615a4f1a",
-        "Collision/FR_SSN_Suffren_COLLISION.fbx": "7517acf2be68fc366b53be97834f6fe8530809f34ae9d62f06de73204f400c59",
-        "Validation/FR_SSN_Suffren_VALIDATION.json": "77bee2a5a290c0db225dea42e7070e3b5ab39827abc205d69c9fe761e1c84c6c",
+        "Blend/FR_SSN_Suffren_MASTER.blend": "a66fd5e2c9795a16eaaac6e0ebef1492dd0c7019b7fb9f9067f1da2cd1fdc3f4",
+        "FBX/FR_SSN_Suffren_LOD0.fbx": "5669106a7a47f56ccc7ab8c65f0231c2270f6416f06bcd64e74a37230afd3a07",
+        "FBX/FR_SSN_Suffren_LOD1.fbx": "74433d0f88362cd713277ba79997e7163c6847e0657aae96e2480ab251d37c90",
+        "FBX/FR_SSN_Suffren_LOD2.fbx": "e9e504da9588219ee003c44c051a1b1837206469355a8fee9eda32ed97ad1bdd",
+        "FBX/FR_SSN_Suffren_LOD3.fbx": "845b069876278847c25bb20d4b9fe42b1ec99e77325420793789eebce954c8ba",
+        "Collision/FR_SSN_Suffren_COLLISION.fbx": "feaba34c462735b9d4062ff7a0bb92c555b9b405034239382c29b4dcf2e9ce35",
+        "Validation/FR_SSN_Suffren_VALIDATION.json": "51e72ec674f9fcabf36c27d643992a24d532384dcc8b83b489aef1143a7bab50",
         "Source/build_suffren.py": "c211813f3165ac25426e7e1208a506a7bcb02952d0b857c0e4b0d312edff482b",
-        "Preview/Deck.png": "0241fccb094b207ea81948dbf1adf4ec71b713e02d58b609da3ef2fc4279e48a",
+        "Preview/Deck.png": "cac0686921bc6934d007f9ac7b225cc4b9a576a389ed98707f6e3ff4240f7610",
         "Preview/Gray_Deck.png": "f9128035035a6713af062721b63c0c59908bae6f84813aa3d2755c5717ed1e7e",
         "Preview/Gray_Hero.png": "8b766379d9aa9e2750d604a238cf4c2e68b58d38bff81a95712f2b446b620953",
         "Preview/Gray_Profile.png": "a6c161f4ce466a081cab93cf1cf04e08183a71bc20b17fb37255938fd0e69aab",
-        "Preview/Hero.png": "399e6d21ffda9ed7f07aec9d26586502cc76228586ea44bf79696ae725768d7d",
-        "Preview/Profile.png": "009b320d8ff92657b85a5bd1b89ffbd0a10a3ac91edb1b05b546835e2a04d98f",
-        "Preview/Propeller.png": "cf1d36c87bc3e5565721dd6ea92042dfefa13b0dc4d51cd59e43a1ebcaae74cb",
-        "Preview/Rear.png": "90fcef638aed1e5c8e6ad6238bfb45ef588b6362aa14ca1c116d069f260e2417",
-        "Preview/Sail.png": "bd377c39c10068f2f1b6bb8a69f5bc26bdf01fab37b9d862aa59dffdd9a680de",
-        "Preview/Stern.png": "f635f7fdd45ac2e4a3b5fa2e015ac8d83452f1d65130a8d08cb9b27436e1f6cf"
+        "Preview/Hero.png": "a4e4ad2bd748680e670a5092f5a7f5b8d8e5e876bbb406d8e881210e0c56415e",
+        "Preview/Profile.png": "ca24efc8d9aa330f6079c0e224cd92fed9bc0822eac873b4f9ae92783a1fc386",
+        "Preview/Propeller.png": "7ea3a84b8555359d3f87ff617d9fda6f0345b1dc8a27045482d23472500dc4f8",
+        "Preview/Rear.png": "55cf3ad87a778c76dc7d0aa977f6530e70280548b46f399513c6659de6bfaea9",
+        "Preview/Sail.png": "b8ff4b6bad61d01b6896807e956aabc0bd34cd488f2f0f9d8fff36ec3905cbfd",
+        "Preview/Stern.png": "5a03e0788d7c1b533d68086ab4c0b010a974df1348dceb1dfac14fb9557f91a5"
       },
       "limitations": [
         "程序化外形，未与实物或照片逐点比对",
@@ -1443,24 +2558,65 @@
       "project": null,
       "tier": 4,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/France/Le_Redoutable/Blend/FR_SSBN_LeRedoutable_MASTER.blend",
+      "lod0": "Submarines/SSBN/France/Le_Redoutable/FBX/FR_SSBN_LeRedoutable_LOD0.fbx",
+      "lod1": "Submarines/SSBN/France/Le_Redoutable/FBX/FR_SSBN_LeRedoutable_LOD1.fbx",
+      "lod2": "Submarines/SSBN/France/Le_Redoutable/FBX/FR_SSBN_LeRedoutable_LOD2.fbx",
+      "lod3": "Submarines/SSBN/France/Le_Redoutable/FBX/FR_SSBN_LeRedoutable_LOD3.fbx",
+      "collision": "Submarines/SSBN/France/Le_Redoutable/Collision/FR_SSBN_LeRedoutable_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/France/Le_Redoutable/Textures/T_FR_SSBN_LeRedoutable_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/France/Le_Redoutable/Validation/FR_SSBN_LeRedoutable_VALIDATION.json",
       "references": [
         {
           "url": "https://www.defense.gouv.fr/marine",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/France/Le_Redoutable/Preview/Deck.png",
+        "Submarines/SSBN/France/Le_Redoutable/Preview/Hero.png",
+        "Submarines/SSBN/France/Le_Redoutable/Preview/Profile.png",
+        "Submarines/SSBN/France/Le_Redoutable/Preview/Propeller.png",
+        "Submarines/SSBN/France/Le_Redoutable/Preview/Rear.png",
+        "Submarines/SSBN/France/Le_Redoutable/Preview/Sail.png",
+        "Submarines/SSBN/France/Le_Redoutable/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/FR_SSBN_LeRedoutable_MASTER.blend": "6e3ccb923536d36744d1054c2678feff52133349680d0fadb1ffdf6cf51284d9",
+        "FBX/FR_SSBN_LeRedoutable_LOD0.fbx": "840f79edb37740449985236d56e2a8da9fb33ba025d8a2e901069d2505df8593",
+        "FBX/FR_SSBN_LeRedoutable_LOD1.fbx": "d39f5a66e7e3ded9bdc0b27d5d4f5c71047caf680f6305d2382b9efcbb4f5144",
+        "FBX/FR_SSBN_LeRedoutable_LOD2.fbx": "e477f29b27383a5b0643d8e0a7c3763278d518261f4ea7be8b4aa94838c386a8",
+        "FBX/FR_SSBN_LeRedoutable_LOD3.fbx": "bfd8e03146ee55064183f12322b2afa74b93bf7c0c364dc5f54bf8f1c3d22d61",
+        "Collision/FR_SSBN_LeRedoutable_COLLISION.fbx": "c04f479064a1d047271bfe1baa312adfe14a37b22b9f2b89da064029eacfe3be",
+        "Validation/FR_SSBN_LeRedoutable_VALIDATION.json": "8ff98afd8fdf3318a3957afe497dedbcd092251ecf5eb9831a6d2686173f1f8d",
+        "Preview/Deck.png": "7d19bfced861d226319e17706a0accc6245c6fba81f3abf0cd423325ce6e48fe",
+        "Preview/Hero.png": "8d30056f38d301ffb552c3c839bfd6385941663179191f9fbbd600d71f213735",
+        "Preview/Profile.png": "a7fe64e8ea643b56bd70fd72431d27cdc59f3d850894eb2b18b93f58d179cdd6",
+        "Preview/Propeller.png": "b76b67c16a912df0001e36305b6851c0a004dbb1c2df446dacf1fa1f260d5d63",
+        "Preview/Rear.png": "a1213a7c6daa961aa809edeb352dbe8d26b5ee192faf35ca486852786a4e68de",
+        "Preview/Sail.png": "e3c8bd1fcd995c480153c28fe6cb4481742c79a18fb199976941736078031044",
+        "Preview/Stern.png": "41a7194aa323612089b292180f653a407afcb5c728a27e74469985fd62fa562e"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1471,24 +2627,65 @@
       "project": null,
       "tier": 8,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/France/Le_Triomphant/Blend/FR_SSBN_LeTriomphant_MASTER.blend",
+      "lod0": "Submarines/SSBN/France/Le_Triomphant/FBX/FR_SSBN_LeTriomphant_LOD0.fbx",
+      "lod1": "Submarines/SSBN/France/Le_Triomphant/FBX/FR_SSBN_LeTriomphant_LOD1.fbx",
+      "lod2": "Submarines/SSBN/France/Le_Triomphant/FBX/FR_SSBN_LeTriomphant_LOD2.fbx",
+      "lod3": "Submarines/SSBN/France/Le_Triomphant/FBX/FR_SSBN_LeTriomphant_LOD3.fbx",
+      "collision": "Submarines/SSBN/France/Le_Triomphant/Collision/FR_SSBN_LeTriomphant_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/France/Le_Triomphant/Textures/T_FR_SSBN_LeTriomphant_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/France/Le_Triomphant/Validation/FR_SSBN_LeTriomphant_VALIDATION.json",
       "references": [
         {
           "url": "https://www.defense.gouv.fr/marine",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/France/Le_Triomphant/Preview/Deck.png",
+        "Submarines/SSBN/France/Le_Triomphant/Preview/Hero.png",
+        "Submarines/SSBN/France/Le_Triomphant/Preview/Profile.png",
+        "Submarines/SSBN/France/Le_Triomphant/Preview/Propeller.png",
+        "Submarines/SSBN/France/Le_Triomphant/Preview/Rear.png",
+        "Submarines/SSBN/France/Le_Triomphant/Preview/Sail.png",
+        "Submarines/SSBN/France/Le_Triomphant/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/FR_SSBN_LeTriomphant_MASTER.blend": "6a0e84cf767bac72855711b9e6ecd7be6e0c645d31515a8efec11b131ad7bbdd",
+        "FBX/FR_SSBN_LeTriomphant_LOD0.fbx": "ef3258feb6fd0671b4902ec55ab168247533716d2b9d5cb6f473945a3b104ba2",
+        "FBX/FR_SSBN_LeTriomphant_LOD1.fbx": "b93d5ee15f45cff10c1a0c8c3adbd431c30416765a7df6d5a7afef6dbfd9174b",
+        "FBX/FR_SSBN_LeTriomphant_LOD2.fbx": "998b93fd7b518157ada8102b2786d67a11152f24690ffb74ee8753a5afae709b",
+        "FBX/FR_SSBN_LeTriomphant_LOD3.fbx": "aedb356d34de703f702b9957deb9b3400ff421cc8a104cc1003cbd33c586d700",
+        "Collision/FR_SSBN_LeTriomphant_COLLISION.fbx": "163855c9d868f32a71ffce5df461234365913a0ef4c4cd80af76c7e6b6839800",
+        "Validation/FR_SSBN_LeTriomphant_VALIDATION.json": "e50788b2bef8cf021faf864d18bff95b037395ca4c7fb54233a62a0e411c82ae",
+        "Preview/Deck.png": "0f13c6bcfbc2c6005d4cf4243b943b7cf289af71745988821f903b56da58fa7b",
+        "Preview/Hero.png": "7c8f6e30071731f8547a3ea127d0632550fa17d23ba8b4ded09b7bdedc08695e",
+        "Preview/Profile.png": "f03cdf301ae895e3ecf98de3b388d4fd96a781a14d00fe78e45813610bdff6ad",
+        "Preview/Propeller.png": "a7106eb3b32cfaf2c17236f216654537dc55df3e92f218a9db08d5a190f1bddd",
+        "Preview/Rear.png": "5ed8f648980f64c4cc322f5954585d5e6a5dd249623886bb3aa67fdcee388372",
+        "Preview/Sail.png": "21940c1634d6e73292c5b81c3af80224bd962d6dcb1155c989f6deae54714ced",
+        "Preview/Stern.png": "5c2dbd7558838cffb5a729fac15806d5904b4897e891bca3c8d5a77fbdc78971"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1527,24 +2724,65 @@
       "project": "Han",
       "tier": 4,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/China/Type_091/Blend/CN_SSN_Type091_MASTER.blend",
+      "lod0": "Submarines/SSN/China/Type_091/FBX/CN_SSN_Type091_LOD0.fbx",
+      "lod1": "Submarines/SSN/China/Type_091/FBX/CN_SSN_Type091_LOD1.fbx",
+      "lod2": "Submarines/SSN/China/Type_091/FBX/CN_SSN_Type091_LOD2.fbx",
+      "lod3": "Submarines/SSN/China/Type_091/FBX/CN_SSN_Type091_LOD3.fbx",
+      "collision": "Submarines/SSN/China/Type_091/Collision/CN_SSN_Type091_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/China/Type_091/Textures/T_CN_SSN_Type091_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/China/Type_091/Validation/CN_SSN_Type091_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/China/Type_091/Preview/Deck.png",
+        "Submarines/SSN/China/Type_091/Preview/Hero.png",
+        "Submarines/SSN/China/Type_091/Preview/Profile.png",
+        "Submarines/SSN/China/Type_091/Preview/Propeller.png",
+        "Submarines/SSN/China/Type_091/Preview/Rear.png",
+        "Submarines/SSN/China/Type_091/Preview/Sail.png",
+        "Submarines/SSN/China/Type_091/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/CN_SSN_Type091_MASTER.blend": "c021a301021c599e60b657ca8ad86644709ae7b1b989fd4054aa7cdc7443ce1d",
+        "FBX/CN_SSN_Type091_LOD0.fbx": "63efffdd4ca87b258120049be97535699945bf36e0f86a586b34d534dd3b2fbd",
+        "FBX/CN_SSN_Type091_LOD1.fbx": "1be918dde3039baca42cda69841ed6217200d84c36caef060b13a028b7390058",
+        "FBX/CN_SSN_Type091_LOD2.fbx": "00cc14f2e6f39d8e1cf7f53f0479c8273648902772d938f99549d33f7255ad8b",
+        "FBX/CN_SSN_Type091_LOD3.fbx": "cfe6ef3fff8e27c408958615311646e0103bf661dcf31f6f4477ae0e4ca0241e",
+        "Collision/CN_SSN_Type091_COLLISION.fbx": "c8ce51e887800af956ec0ab704f51f4ff1cedadcded87a4ade68478abba0d727",
+        "Validation/CN_SSN_Type091_VALIDATION.json": "fde0e73efd9b019c906181ad9f6ed07cacda901884acde2f0c0d883e30f29744",
+        "Preview/Deck.png": "f24e620604b4bd8e284cbc5b5177e1da4780cb95093343903f94266d144c2db9",
+        "Preview/Hero.png": "45be99c35d2030ccbbc4afcdcf2f91d6adc426de1d50d735457f6b33b623e0c4",
+        "Preview/Profile.png": "5ec2a417aa61ba98fedc519effce74d1085524f6269fd4e299a23e8b362da55b",
+        "Preview/Propeller.png": "23ba448db87d0a12226c5529ca1e63ce233d4db1463f98c355b2a3ba54e10193",
+        "Preview/Rear.png": "8f93788b1ae8b8e3b8277c09e13dc5ef6a05667f50b0d69731975338bd30a778",
+        "Preview/Sail.png": "8f9338fb39114703d00ca882bf3108c501e41e89e56ccce2142f7a9c6ff15d5a",
+        "Preview/Stern.png": "1c3e3d29946685aa9417ad6275a5b281bb4d7ee0195e803702f211d6ca68a6e1"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1555,24 +2793,65 @@
       "project": "Shang",
       "tier": 7,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/China/Type_093/Blend/CN_SSN_Type093_MASTER.blend",
+      "lod0": "Submarines/SSN/China/Type_093/FBX/CN_SSN_Type093_LOD0.fbx",
+      "lod1": "Submarines/SSN/China/Type_093/FBX/CN_SSN_Type093_LOD1.fbx",
+      "lod2": "Submarines/SSN/China/Type_093/FBX/CN_SSN_Type093_LOD2.fbx",
+      "lod3": "Submarines/SSN/China/Type_093/FBX/CN_SSN_Type093_LOD3.fbx",
+      "collision": "Submarines/SSN/China/Type_093/Collision/CN_SSN_Type093_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/China/Type_093/Textures/T_CN_SSN_Type093_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/China/Type_093/Validation/CN_SSN_Type093_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/China/Type_093/Preview/Deck.png",
+        "Submarines/SSN/China/Type_093/Preview/Hero.png",
+        "Submarines/SSN/China/Type_093/Preview/Profile.png",
+        "Submarines/SSN/China/Type_093/Preview/Propeller.png",
+        "Submarines/SSN/China/Type_093/Preview/Rear.png",
+        "Submarines/SSN/China/Type_093/Preview/Sail.png",
+        "Submarines/SSN/China/Type_093/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/CN_SSN_Type093_MASTER.blend": "e1f96127b4231963b7ff960422f6950c0fe1dd2010e2e5720c373e2d6fe689f8",
+        "FBX/CN_SSN_Type093_LOD0.fbx": "186cbbad9e028b9923022f6dcaa1193d63de7939cbf3d6f537386abe4550a4a7",
+        "FBX/CN_SSN_Type093_LOD1.fbx": "bf688404d615a2896c9f1467e35d0631ef40d96bafdbe74056674ea07f64b6a8",
+        "FBX/CN_SSN_Type093_LOD2.fbx": "81a11c6994c4605fafc51c332b0bdd9241849ac4920b3f929592ae72000f0ff7",
+        "FBX/CN_SSN_Type093_LOD3.fbx": "c22a1956d172d77f90835c12813b4cf4202591398202227dae8469cbb04af08e",
+        "Collision/CN_SSN_Type093_COLLISION.fbx": "584628d5643ce86d592400936639bb9922722353946dfd894c79c7b739ae2e60",
+        "Validation/CN_SSN_Type093_VALIDATION.json": "5b5cd419a9385f6b4493af9a031cb37ec5b707389678294706bf5bdb1b051560",
+        "Preview/Deck.png": "868a201508c18459817833888c0e9c93513daedae2f7b369b2decb566a02a4f5",
+        "Preview/Hero.png": "bbe54c169389629aea0d574de43ef5826ce1a790a1d3755ec44edbce531427f5",
+        "Preview/Profile.png": "b21c06db3f4c741f9e35d228c389bc08bbe751ed5df3742eac8ff9caf3ed3d96",
+        "Preview/Propeller.png": "c137c8073916423dd5b59c30680ff6e2fc9239b42765bc27b4e3ba99fdc7ac17",
+        "Preview/Rear.png": "2b0c0f408cf465936627befafdc0a7159e7bef082435b123838d903d914ed8c2",
+        "Preview/Sail.png": "cef9b17d543d04b2d9ee8693b9269166951917076ff66039a8a910146a008ffc",
+        "Preview/Stern.png": "c6c4fd8d7bf5a9f1e7ce25a87f1f1a33a8c6a116c68640650850152506dddf4b"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1583,24 +2862,65 @@
       "project": "Shang variant",
       "tier": 8,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/China/Type_093A/Blend/CN_SSN_Type093A_MASTER.blend",
+      "lod0": "Submarines/SSN/China/Type_093A/FBX/CN_SSN_Type093A_LOD0.fbx",
+      "lod1": "Submarines/SSN/China/Type_093A/FBX/CN_SSN_Type093A_LOD1.fbx",
+      "lod2": "Submarines/SSN/China/Type_093A/FBX/CN_SSN_Type093A_LOD2.fbx",
+      "lod3": "Submarines/SSN/China/Type_093A/FBX/CN_SSN_Type093A_LOD3.fbx",
+      "collision": "Submarines/SSN/China/Type_093A/Collision/CN_SSN_Type093A_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/China/Type_093A/Textures/T_CN_SSN_Type093A_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/China/Type_093A/Validation/CN_SSN_Type093A_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/China/Type_093A/Preview/Deck.png",
+        "Submarines/SSN/China/Type_093A/Preview/Hero.png",
+        "Submarines/SSN/China/Type_093A/Preview/Profile.png",
+        "Submarines/SSN/China/Type_093A/Preview/Propeller.png",
+        "Submarines/SSN/China/Type_093A/Preview/Rear.png",
+        "Submarines/SSN/China/Type_093A/Preview/Sail.png",
+        "Submarines/SSN/China/Type_093A/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/CN_SSN_Type093A_MASTER.blend": "95edc543c3fca9d01116a710ffbc783eeadd7e9ef39a99f9bff39b2c087b7409",
+        "FBX/CN_SSN_Type093A_LOD0.fbx": "ca5d86097a674d9bab0ae515d720dbcfc4eb9dfa061267693eb31fdfd73eefa0",
+        "FBX/CN_SSN_Type093A_LOD1.fbx": "56d95a89aa3fdeb5c4021d92f7e89128ef6e10423974e14415997e56a895ae50",
+        "FBX/CN_SSN_Type093A_LOD2.fbx": "6b57c3058015d30da3fad1afc80f5e93caafb15eae3adaa87b6dc9e47adceda4",
+        "FBX/CN_SSN_Type093A_LOD3.fbx": "8f08a32495f659f324bf5e2f3c010b0650ae5f48eb40acc107afb9f18f6fb825",
+        "Collision/CN_SSN_Type093A_COLLISION.fbx": "fb850870c06612c947d7067a1201cfbf94035be41929faa8ad48a559a28d3e48",
+        "Validation/CN_SSN_Type093A_VALIDATION.json": "4ab3eb8ac66ffbadff1b2d4cb21889553ac8929a0733faf55a293a1a1a169088",
+        "Preview/Deck.png": "5587752624902af3de639cd64c4891a078d2435f4646ea56f2c31b81a4c1ba5c",
+        "Preview/Hero.png": "d0864c075db525375958b11427df35c5e06cace4eec0dd537025e88afe4d736e",
+        "Preview/Profile.png": "095ec5e13d024ff83fd9b3cd07164af2e1527969ee8004394e1cf58c44d8d017",
+        "Preview/Propeller.png": "3ed17101d472951ef20cfcbf911f62aaf688b03e72dcdbd1a61778a6ef442fbf",
+        "Preview/Rear.png": "9244cffb861b4fc7c81ba4e1deafbd810ae15530311d9b2a6bff9e085b71073c",
+        "Preview/Sail.png": "a47141b1a6a51c7bf8b316647fed8fc40ade52d81e6e5ccf79e0de8bd2414f6c",
+        "Preview/Stern.png": "08f0c4fd65a664edc90037de339f62bf9149a4303de52e693af70d6882f95de0"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1611,24 +2931,65 @@
       "project": "Shang SSGN-related variant",
       "tier": 9,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/China/Type_093B/Blend/CN_SSN_Type093B_MASTER.blend",
+      "lod0": "Submarines/SSN/China/Type_093B/FBX/CN_SSN_Type093B_LOD0.fbx",
+      "lod1": "Submarines/SSN/China/Type_093B/FBX/CN_SSN_Type093B_LOD1.fbx",
+      "lod2": "Submarines/SSN/China/Type_093B/FBX/CN_SSN_Type093B_LOD2.fbx",
+      "lod3": "Submarines/SSN/China/Type_093B/FBX/CN_SSN_Type093B_LOD3.fbx",
+      "collision": "Submarines/SSN/China/Type_093B/Collision/CN_SSN_Type093B_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/China/Type_093B/Textures/T_CN_SSN_Type093B_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/China/Type_093B/Validation/CN_SSN_Type093B_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/China/Type_093B/Preview/Deck.png",
+        "Submarines/SSN/China/Type_093B/Preview/Hero.png",
+        "Submarines/SSN/China/Type_093B/Preview/Profile.png",
+        "Submarines/SSN/China/Type_093B/Preview/Propeller.png",
+        "Submarines/SSN/China/Type_093B/Preview/Rear.png",
+        "Submarines/SSN/China/Type_093B/Preview/Sail.png",
+        "Submarines/SSN/China/Type_093B/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/CN_SSN_Type093B_MASTER.blend": "4935e523e910e1dce5e39f55caf237e252c4368a9a839c4769c2245d281b862c",
+        "FBX/CN_SSN_Type093B_LOD0.fbx": "24f83b9716736fc82ccebb89f81fad06cc9415ce7ef0739f55b8735dcd4a13e5",
+        "FBX/CN_SSN_Type093B_LOD1.fbx": "52dbdd0163c474bf7bfc98a95479635092014f808169470a061dd8dba27d114b",
+        "FBX/CN_SSN_Type093B_LOD2.fbx": "78e64fd1619e4ed9a16653be5885910c5ede92371a652fae31b3802dbc67f605",
+        "FBX/CN_SSN_Type093B_LOD3.fbx": "42dfee1c92a4bfb14f7c65221d9a3a2952ca74c1fb0e9ac3ad7f71968dffef53",
+        "Collision/CN_SSN_Type093B_COLLISION.fbx": "df9531cf8bd9cb7061b584db33a5355bb1833a559ba921556dd9d73ffa09b784",
+        "Validation/CN_SSN_Type093B_VALIDATION.json": "6f5ea29c18a468088d624f75208ac430be4310e1cad1b816160c2d6ff5232cf6",
+        "Preview/Deck.png": "150a3985f38f5f99c88805ef153f9fc06cb06e6fdd7fa95bfc8db70544e307ea",
+        "Preview/Hero.png": "3e07ae0494b18e528145e2757c832651f9255e15238a1c2a4f3c58ae8707ea8a",
+        "Preview/Profile.png": "5fbc99ec4230d6e79860e200096d7e8ee5e7c93038c7eecc104e3206f40cfeea",
+        "Preview/Propeller.png": "00b30674e1ff70c09b838a3d47d7dc5a6e89fdf7fac48c1108b4f5ce1ee436f8",
+        "Preview/Rear.png": "a758344a62f88907cdaa4e18d23aff780f37b254579f285b909e06f130445706",
+        "Preview/Sail.png": "44afcd8bd7785b44bd4e09a9ab4ff55cbf3526323f4a8191000338b744ccf345",
+        "Preview/Stern.png": "9918945e6f9e7b52edb40f68761c32f564c0c32fbf3825a53a533df3f4bfe6d2"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1639,24 +3000,65 @@
       "project": null,
       "tier": 10,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSN/China/Type_095/Blend/CN_SSN_Type095_MASTER.blend",
+      "lod0": "Submarines/SSN/China/Type_095/FBX/CN_SSN_Type095_LOD0.fbx",
+      "lod1": "Submarines/SSN/China/Type_095/FBX/CN_SSN_Type095_LOD1.fbx",
+      "lod2": "Submarines/SSN/China/Type_095/FBX/CN_SSN_Type095_LOD2.fbx",
+      "lod3": "Submarines/SSN/China/Type_095/FBX/CN_SSN_Type095_LOD3.fbx",
+      "collision": "Submarines/SSN/China/Type_095/Collision/CN_SSN_Type095_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSN/China/Type_095/Textures/T_CN_SSN_Type095_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSN/China/Type_095/Validation/CN_SSN_Type095_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSN/China/Type_095/Preview/Deck.png",
+        "Submarines/SSN/China/Type_095/Preview/Hero.png",
+        "Submarines/SSN/China/Type_095/Preview/Profile.png",
+        "Submarines/SSN/China/Type_095/Preview/Propeller.png",
+        "Submarines/SSN/China/Type_095/Preview/Rear.png",
+        "Submarines/SSN/China/Type_095/Preview/Sail.png",
+        "Submarines/SSN/China/Type_095/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/CN_SSN_Type095_MASTER.blend": "ffe5dd31d7d50fe5c50c60dd2ec4ea78284f905f99038eefa56e92fcf267d169",
+        "FBX/CN_SSN_Type095_LOD0.fbx": "0bfef2fbd918a474e18e8699880dad81f9bef3b1f39e969ce6322304bf12675a",
+        "FBX/CN_SSN_Type095_LOD1.fbx": "8b251d8595286d30654d724a6f488f829fd7ad1a82b0d0f02af248233cebf8a7",
+        "FBX/CN_SSN_Type095_LOD2.fbx": "af35de8356aaa3f5aca75ec14270b7cb491b8a22ae7ecc48af19ee8b8d94fb81",
+        "FBX/CN_SSN_Type095_LOD3.fbx": "a560d8c33bed0fb4fb1250258da29385f83758ea584cca0f78bae5eed26683c7",
+        "Collision/CN_SSN_Type095_COLLISION.fbx": "ae671c8b62878338f485d275ca7511c7c3401adf2e6d7e14748d9db1bb56e058",
+        "Validation/CN_SSN_Type095_VALIDATION.json": "6e139a732fcf769fa53ef2fec8ac07e3140724ebe682ee1069fc88e1759c12fa",
+        "Preview/Deck.png": "f6f4e41ced07827ccbbc2b2e7aa66b4ed249a62b1475a3a38adaf8d5a1cdf7c0",
+        "Preview/Hero.png": "83da82b2b755e0d2088552cf0d1088b46829ea4c2e2937e8e1f358bb269ce6ee",
+        "Preview/Profile.png": "0df9d26d0b5f3b5adbee21197ec0833d9b5cc20727eecca2f5ed1d56dea4dc99",
+        "Preview/Propeller.png": "2103de0980248b540c5119265f5e93f8dcbbbe8aad6a04b6cbb779944164e767",
+        "Preview/Rear.png": "e6948f286223ff6c7a65d151c3799861e8f2b35dac17cb8c01e5bb5ef343f292",
+        "Preview/Sail.png": "a7173c7c54b735baaffd161bf49b3baccf4e5ccce47a8a65eba73b06961cd45e",
+        "Preview/Stern.png": "80eb321a837de5141f57c354e165943af365130f2a0464dd3cb9b7cdba920917"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1667,24 +3069,65 @@
       "project": "Xia",
       "tier": 5,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/China/Type_092/Blend/CN_SSBN_Type092_MASTER.blend",
+      "lod0": "Submarines/SSBN/China/Type_092/FBX/CN_SSBN_Type092_LOD0.fbx",
+      "lod1": "Submarines/SSBN/China/Type_092/FBX/CN_SSBN_Type092_LOD1.fbx",
+      "lod2": "Submarines/SSBN/China/Type_092/FBX/CN_SSBN_Type092_LOD2.fbx",
+      "lod3": "Submarines/SSBN/China/Type_092/FBX/CN_SSBN_Type092_LOD3.fbx",
+      "collision": "Submarines/SSBN/China/Type_092/Collision/CN_SSBN_Type092_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/China/Type_092/Textures/T_CN_SSBN_Type092_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/China/Type_092/Validation/CN_SSBN_Type092_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/China/Type_092/Preview/Deck.png",
+        "Submarines/SSBN/China/Type_092/Preview/Hero.png",
+        "Submarines/SSBN/China/Type_092/Preview/Profile.png",
+        "Submarines/SSBN/China/Type_092/Preview/Propeller.png",
+        "Submarines/SSBN/China/Type_092/Preview/Rear.png",
+        "Submarines/SSBN/China/Type_092/Preview/Sail.png",
+        "Submarines/SSBN/China/Type_092/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/CN_SSBN_Type092_MASTER.blend": "5b46e4933ea1a4dd45c6f7a5368ade844d2afdf705d49fe96a84e0b57ef7bf3d",
+        "FBX/CN_SSBN_Type092_LOD0.fbx": "5844c59252429e461f4df4c632397c36b7a6f837d7b9f199647e7ad8685a528a",
+        "FBX/CN_SSBN_Type092_LOD1.fbx": "3c72b0cd5cf45ec9c1960d9258f7aea657f92a30a762212cb49275d3d6147c93",
+        "FBX/CN_SSBN_Type092_LOD2.fbx": "2ddcdc6a6d6180590cd4d6de42f61a14c850bbc9727fb5eb384794b72fe1c09a",
+        "FBX/CN_SSBN_Type092_LOD3.fbx": "b2b2a3e338a468f783000524be42789c57350679310a47c531501c92d6fe102d",
+        "Collision/CN_SSBN_Type092_COLLISION.fbx": "072cb7d7407682691601a2df40fb68f8d4d5eefa40d80afa395a5070e7c078f5",
+        "Validation/CN_SSBN_Type092_VALIDATION.json": "1b98c60a889dcd7032bcc51f92a79d4b3cfca283e1a4c9d054d3c3a7ee8aba63",
+        "Preview/Deck.png": "4d7f125476839244f1d4a59b98407ca3aec4b49150bf23edad1c73559c5bede0",
+        "Preview/Hero.png": "c01ef9e078734a250b05ff40122a3250aa2a99621e7544846c1443e38e17e1bc",
+        "Preview/Profile.png": "33a876a7fcedc6863174bfbd4f82dc869e2341e68146d0405df6764e284f1c81",
+        "Preview/Propeller.png": "7bcbde6590688c663d0e7f0f311eae15847ae7ce3994b6461026868604da7b5b",
+        "Preview/Rear.png": "1bd1089fbd84937fdb9816712f38f86610df98e3cb1f6e7c0d6965d1fc9debcf",
+        "Preview/Sail.png": "25cc7e4e510b15045120647546df377b22a8a75f7f7f9c129da0436bf4e5d6c3",
+        "Preview/Stern.png": "a0452436276ae527635a0bc6a4ac8e15e623543d71b39559e020774d9a714fc2"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1695,24 +3138,65 @@
       "project": "Jin",
       "tier": 8,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/China/Type_094/Blend/CN_SSBN_Type094_MASTER.blend",
+      "lod0": "Submarines/SSBN/China/Type_094/FBX/CN_SSBN_Type094_LOD0.fbx",
+      "lod1": "Submarines/SSBN/China/Type_094/FBX/CN_SSBN_Type094_LOD1.fbx",
+      "lod2": "Submarines/SSBN/China/Type_094/FBX/CN_SSBN_Type094_LOD2.fbx",
+      "lod3": "Submarines/SSBN/China/Type_094/FBX/CN_SSBN_Type094_LOD3.fbx",
+      "collision": "Submarines/SSBN/China/Type_094/Collision/CN_SSBN_Type094_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/China/Type_094/Textures/T_CN_SSBN_Type094_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/China/Type_094/Validation/CN_SSBN_Type094_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/China/Type_094/Preview/Deck.png",
+        "Submarines/SSBN/China/Type_094/Preview/Hero.png",
+        "Submarines/SSBN/China/Type_094/Preview/Profile.png",
+        "Submarines/SSBN/China/Type_094/Preview/Propeller.png",
+        "Submarines/SSBN/China/Type_094/Preview/Rear.png",
+        "Submarines/SSBN/China/Type_094/Preview/Sail.png",
+        "Submarines/SSBN/China/Type_094/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/CN_SSBN_Type094_MASTER.blend": "0c123a485245af4317234fd363e2fcd3087a01b4ac8c6bc90982059e1aa1df76",
+        "FBX/CN_SSBN_Type094_LOD0.fbx": "b9981331028a025cbb09ca91dc8ca053df6334ee903e06fba2aa910f5d83b8f8",
+        "FBX/CN_SSBN_Type094_LOD1.fbx": "3704f54c4e299a6522ba6bd90b5ba9c215cf616ff1a1dc9163a87c3a49f7dc90",
+        "FBX/CN_SSBN_Type094_LOD2.fbx": "d660fbb3e97613fa248870ed1613c782042d00be38038e285fd9126ae23eb118",
+        "FBX/CN_SSBN_Type094_LOD3.fbx": "b27b787d71054f0cf7ace886261e244c5ea354accaa146094f6b47b0298d21ac",
+        "Collision/CN_SSBN_Type094_COLLISION.fbx": "fcbc3ea0bdc9ebd911164f3d25d2b9f3c2eef64c1b65b3e865b6a96e0559cc5c",
+        "Validation/CN_SSBN_Type094_VALIDATION.json": "c22d95f7b75e175f2d2bb95d4f944c3b73a9385be6eb8bfbab01b50a9dc46c0f",
+        "Preview/Deck.png": "4a804eb6f300e2a6d3239df5d41bf42d7f9a5a29d91083098e22a2e9f7e1e6af",
+        "Preview/Hero.png": "94b6504b26bc7494b33ef02b557822cf2b912c79ff3903f3b1a8efafca4f51f6",
+        "Preview/Profile.png": "2787c4b79d20d9d8e2a412d436670adac8b583ef3e8aabfccae1a80a44289cc6",
+        "Preview/Propeller.png": "5b5cdc567ed14ebc44d71c56e17635c28419d3818759784ebbb48fccb1b58c07",
+        "Preview/Rear.png": "6d22f030b940eb9c1b6510259432f389bf7898b10490355113bb9b8357036cfa",
+        "Preview/Sail.png": "015579242e80ff1c1a38e185196320142d356c7c020121b070b570319fa6b58d",
+        "Preview/Stern.png": "d2d41b658fbfdef02ef861849fa4a5e1feffd19720a13fdd05631f51692d6259"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1723,24 +3207,65 @@
       "project": "Jin variant",
       "tier": 9,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/China/Type_094A/Blend/CN_SSBN_Type094A_MASTER.blend",
+      "lod0": "Submarines/SSBN/China/Type_094A/FBX/CN_SSBN_Type094A_LOD0.fbx",
+      "lod1": "Submarines/SSBN/China/Type_094A/FBX/CN_SSBN_Type094A_LOD1.fbx",
+      "lod2": "Submarines/SSBN/China/Type_094A/FBX/CN_SSBN_Type094A_LOD2.fbx",
+      "lod3": "Submarines/SSBN/China/Type_094A/FBX/CN_SSBN_Type094A_LOD3.fbx",
+      "collision": "Submarines/SSBN/China/Type_094A/Collision/CN_SSBN_Type094A_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/China/Type_094A/Textures/T_CN_SSBN_Type094A_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/China/Type_094A/Validation/CN_SSBN_Type094A_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/china-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/China/Type_094A/Preview/Deck.png",
+        "Submarines/SSBN/China/Type_094A/Preview/Hero.png",
+        "Submarines/SSBN/China/Type_094A/Preview/Profile.png",
+        "Submarines/SSBN/China/Type_094A/Preview/Propeller.png",
+        "Submarines/SSBN/China/Type_094A/Preview/Rear.png",
+        "Submarines/SSBN/China/Type_094A/Preview/Sail.png",
+        "Submarines/SSBN/China/Type_094A/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/CN_SSBN_Type094A_MASTER.blend": "a9a56403cb2fa7584e3939cc3279e820b227d31f3a0d142754a19bee8fedd79c",
+        "FBX/CN_SSBN_Type094A_LOD0.fbx": "f8bf43d4bd86a968163e0fff580c9858053dcfe55e6e8521720f5c3a3e021395",
+        "FBX/CN_SSBN_Type094A_LOD1.fbx": "8b53f1c06c87df23ffa5626f27253cb77f75eead217f3694ae4188c0423ccdec",
+        "FBX/CN_SSBN_Type094A_LOD2.fbx": "12656f36a36769bfde0880e2bf8155cc38d7b4e844116dcb61f0437600efc0e8",
+        "FBX/CN_SSBN_Type094A_LOD3.fbx": "2fae0d4f6794b81074bb5c11239e7d9e7e40bd7def3933dc9e4f59a731fb493e",
+        "Collision/CN_SSBN_Type094A_COLLISION.fbx": "e09baa61b5bea5f5877645687644d87663198c8a2063526086d169d889ab7e19",
+        "Validation/CN_SSBN_Type094A_VALIDATION.json": "a596fcf724e1969681bf3c1610166448b9b7cc0d54bdff2e657de23385f01461",
+        "Preview/Deck.png": "8c80adcf9c61182d9bc53cc1c23fdf4a4759240ae1f66c459c7fd6ed134a47e5",
+        "Preview/Hero.png": "3b742ffb5fe24287558e3de4a99721ec162e7918994f5575b28f07a889758e8a",
+        "Preview/Profile.png": "b67fe52da181933813bcf35e39b0c0494c5c34df448516740bd55c47e8f0a7e0",
+        "Preview/Propeller.png": "1091fea2d1c8b7a7bd77db4a56b7c3135942627facd4f690533fa31e1d516cd7",
+        "Preview/Rear.png": "f76c6770642d183196226e8ef82793f04c46581fb0b8d68d90a6594dd1d3da73",
+        "Preview/Sail.png": "0e26ad49c1665d49e745b5481218a2ad19214faa2dae7a1d2648cacc78f4ac3d",
+        "Preview/Stern.png": "991eb3fa88bd89c6aa6e7e94983354f8c6523cbf4488db6c4bc3be54fa08586d"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1779,24 +3304,65 @@
       "project": null,
       "tier": 7,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/India/Arihant/Blend/IN_SSBN_Arihant_MASTER.blend",
+      "lod0": "Submarines/SSBN/India/Arihant/FBX/IN_SSBN_Arihant_LOD0.fbx",
+      "lod1": "Submarines/SSBN/India/Arihant/FBX/IN_SSBN_Arihant_LOD1.fbx",
+      "lod2": "Submarines/SSBN/India/Arihant/FBX/IN_SSBN_Arihant_LOD2.fbx",
+      "lod3": "Submarines/SSBN/India/Arihant/FBX/IN_SSBN_Arihant_LOD3.fbx",
+      "collision": "Submarines/SSBN/India/Arihant/Collision/IN_SSBN_Arihant_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/India/Arihant/Textures/T_IN_SSBN_Arihant_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/India/Arihant/Validation/IN_SSBN_Arihant_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/India/Arihant/Preview/Deck.png",
+        "Submarines/SSBN/India/Arihant/Preview/Hero.png",
+        "Submarines/SSBN/India/Arihant/Preview/Profile.png",
+        "Submarines/SSBN/India/Arihant/Preview/Propeller.png",
+        "Submarines/SSBN/India/Arihant/Preview/Rear.png",
+        "Submarines/SSBN/India/Arihant/Preview/Sail.png",
+        "Submarines/SSBN/India/Arihant/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/IN_SSBN_Arihant_MASTER.blend": "5f9b5fd485ec32c724cc62b26a0e3ce0ff1a6f0493ad6bf1d35d5f270cd0f972",
+        "FBX/IN_SSBN_Arihant_LOD0.fbx": "ae315dbba7863173d0f8b511adca9bddd87bb9f89c1edfcbcedad710ff124c7a",
+        "FBX/IN_SSBN_Arihant_LOD1.fbx": "af00e1b939cd7b65f5e7f0ca435de56a9ab770d2abc6e205cf37880aba30ced0",
+        "FBX/IN_SSBN_Arihant_LOD2.fbx": "2e2bf96db9f0f21ac6e0d4aa17e1f25590f6d304eb72a34b7024910d700ac020",
+        "FBX/IN_SSBN_Arihant_LOD3.fbx": "ffec03f236a31cfa6f9903f999282a9c3fbf32d7c543eb23b43a31a8174eee9c",
+        "Collision/IN_SSBN_Arihant_COLLISION.fbx": "9c4e1d9d9e31e71b12ba019b934b8b069925ffb9c5e0f4bd2f1ded3912dd01c4",
+        "Validation/IN_SSBN_Arihant_VALIDATION.json": "35446555e20ba53344750e8dc904568c6ac2965e0f629010345750c2003050f8",
+        "Preview/Deck.png": "1df62ee9d9a0d4deef34af024d0faa28c9c75579d55129694fa7edaabb9df84a",
+        "Preview/Hero.png": "41f55777369605c92aef355ccb4e4aace16f93d3868de5a5239bc5eeed2f7dcb",
+        "Preview/Profile.png": "2766195eca53ced4681dbe910fbfc5048fc17e69fd9264cfdf7afed96d4818df",
+        "Preview/Propeller.png": "a2dd227c2ed57c3f68472772cdc436ce8aa9079fbda17852a54169aa3efb9c54",
+        "Preview/Rear.png": "c5eda90df83ecb68044063cdc98ac83c3596ddfa210a4461bfb1a592da09cd4a",
+        "Preview/Sail.png": "2c00e9915a91c06320347983b754b134d353825919a017725d4dc2f4eeef66df",
+        "Preview/Stern.png": "0083dc7502c4408fda90e1bda222e7f67aa85ac7a908b622136a9ca8534b780f"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1807,24 +3373,65 @@
       "project": null,
       "tier": 8,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/India/Arighaat/Blend/IN_SSBN_Arighaat_MASTER.blend",
+      "lod0": "Submarines/SSBN/India/Arighaat/FBX/IN_SSBN_Arighaat_LOD0.fbx",
+      "lod1": "Submarines/SSBN/India/Arighaat/FBX/IN_SSBN_Arighaat_LOD1.fbx",
+      "lod2": "Submarines/SSBN/India/Arighaat/FBX/IN_SSBN_Arighaat_LOD2.fbx",
+      "lod3": "Submarines/SSBN/India/Arighaat/FBX/IN_SSBN_Arighaat_LOD3.fbx",
+      "collision": "Submarines/SSBN/India/Arighaat/Collision/IN_SSBN_Arighaat_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/India/Arighaat/Textures/T_IN_SSBN_Arighaat_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/India/Arighaat/Validation/IN_SSBN_Arighaat_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/India/Arighaat/Preview/Deck.png",
+        "Submarines/SSBN/India/Arighaat/Preview/Hero.png",
+        "Submarines/SSBN/India/Arighaat/Preview/Profile.png",
+        "Submarines/SSBN/India/Arighaat/Preview/Propeller.png",
+        "Submarines/SSBN/India/Arighaat/Preview/Rear.png",
+        "Submarines/SSBN/India/Arighaat/Preview/Sail.png",
+        "Submarines/SSBN/India/Arighaat/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/IN_SSBN_Arighaat_MASTER.blend": "9cc030165cb1625428a5c1d42f2bfd67dfe82c7546d1da8ece340711b2025e80",
+        "FBX/IN_SSBN_Arighaat_LOD0.fbx": "db4cbd8ab5d0c991647c684c022e21200d50ddcd57e41f50ffbf52d68dc28b1f",
+        "FBX/IN_SSBN_Arighaat_LOD1.fbx": "6f395205bd92b8fb8a394509b2d77c2ad015cab124532d24a6ad7752e6a04eea",
+        "FBX/IN_SSBN_Arighaat_LOD2.fbx": "923de62f99384e9d20741b3eba19419852ae7d4132d3ff7ca7d67199fbf0b0e7",
+        "FBX/IN_SSBN_Arighaat_LOD3.fbx": "512d94e824df74b8288034ead25d30001d0fa04b8e158d23b04c788cfbd85236",
+        "Collision/IN_SSBN_Arighaat_COLLISION.fbx": "715caff622b3e54fc2c37de92a7e8b186e1f1a58e62501f06f3edf0a23023b4f",
+        "Validation/IN_SSBN_Arighaat_VALIDATION.json": "1c1af45db29de1e11a404e1b8214c242a60c2a718db63646b51599f6c7ef4c65",
+        "Preview/Deck.png": "16ad7b5d817f9fb02c27d80b8d51f064f146290cab0c5880bfe042095631c48c",
+        "Preview/Hero.png": "aa1c23ef4781be3ce01f96408b58ef0a01ecb268992ca28e271223876f100400",
+        "Preview/Profile.png": "41f7601f107e2f1b2d2e55d224517b19221d133a20716982d2eea2c2b6303536",
+        "Preview/Propeller.png": "f117c7d3d8304e443ababf08efea261315c39c04f468e38f6bf016611b443bcf",
+        "Preview/Rear.png": "c0b3d791db9866dd23b659f03868364763b82292b0758347a8d98a22a650fe06",
+        "Preview/Sail.png": "f736013e0755d73036f6546f806aa185a813802af31ea257ab797346cb752d8d",
+        "Preview/Stern.png": "1e37d3da2167ac8396ff565b375ab68de5aedaec7c101e483a627782af9f12a6"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {
@@ -1835,24 +3442,65 @@
       "project": null,
       "tier": 9,
       "source": "",
-      "master": "",
-      "lod0": "",
-      "lod1": "",
-      "lod2": "",
-      "lod3": "",
-      "collision": "",
-      "materials": [],
-      "textures": [],
+      "master": "Submarines/SSBN/India/S4/Blend/IN_SSBN_S4_MASTER.blend",
+      "lod0": "Submarines/SSBN/India/S4/FBX/IN_SSBN_S4_LOD0.fbx",
+      "lod1": "Submarines/SSBN/India/S4/FBX/IN_SSBN_S4_LOD1.fbx",
+      "lod2": "Submarines/SSBN/India/S4/FBX/IN_SSBN_S4_LOD2.fbx",
+      "lod3": "Submarines/SSBN/India/S4/FBX/IN_SSBN_S4_LOD3.fbx",
+      "collision": "Submarines/SSBN/India/S4/Collision/IN_SSBN_S4_COLLISION.fbx",
+      "materials": [
+        "SD_hull",
+        "SD_coating",
+        "SD_panel",
+        "SD_array",
+        "SD_recess",
+        "SD_metal",
+        "SD_bronze"
+      ],
+      "textures": [
+        "Submarines/SSBN/India/S4/Textures/T_IN_SSBN_S4_Hull_BaseColor.png"
+      ],
       "variants": [],
       "variant_of": null,
-      "status": "PLANNED",
-      "validation": "",
+      "status": "VALIDATING",
+      "validation": "Submarines/SSBN/India/S4/Validation/IN_SSBN_S4_VALIDATION.json",
       "references": [
         {
           "url": "https://www.nti.org/analysis/articles/india-submarine-capabilities/",
           "accessed": "2026-09-08",
           "source_type": "public/open"
         }
+      ],
+      "path_base": "SilentDepth_Assets",
+      "previews": [
+        "Submarines/SSBN/India/S4/Preview/Deck.png",
+        "Submarines/SSBN/India/S4/Preview/Hero.png",
+        "Submarines/SSBN/India/S4/Preview/Profile.png",
+        "Submarines/SSBN/India/S4/Preview/Propeller.png",
+        "Submarines/SSBN/India/S4/Preview/Rear.png",
+        "Submarines/SSBN/India/S4/Preview/Sail.png",
+        "Submarines/SSBN/India/S4/Preview/Stern.png"
+      ],
+      "sha256": {
+        "Blend/IN_SSBN_S4_MASTER.blend": "7caa7dd6110375b055ecfdebf254cf12548f4cdf7d8a8758f480dc7e55ce495d",
+        "FBX/IN_SSBN_S4_LOD0.fbx": "9b9733c30ac6734a520d9221581a2b9d47101113ef3331d3f8c33a7a250309db",
+        "FBX/IN_SSBN_S4_LOD1.fbx": "6158e1fae73c2f4abde1a1ee063989502a0fab832a52631c5d09d4b84fc79781",
+        "FBX/IN_SSBN_S4_LOD2.fbx": "3c22d642fa861bd29712d7243df6635ad97e4375bc8d24926ef89f592a029e7a",
+        "FBX/IN_SSBN_S4_LOD3.fbx": "690a91555ec0c4e2cdee11da71fb433d6ffc182ecccbfaf08bcb3578eac66bd6",
+        "Collision/IN_SSBN_S4_COLLISION.fbx": "7bc83b126bfca3b213acb82a9112ce436cf60a1e0d91a611c974ff570c89d21d",
+        "Validation/IN_SSBN_S4_VALIDATION.json": "c7ffabe4bf17bf60008e1bb9ea75ed741aad1573d334067f392af95391e30213",
+        "Preview/Deck.png": "3b7240f6f86e6a6db1f16c1e3ef12ce13cd06655842f6f1edfd6590277614594",
+        "Preview/Hero.png": "d4d0670b8cda5a9d776e16a1abdb4a40acd4418fe8eb91d146d4a2737e4311c6",
+        "Preview/Profile.png": "d084e4cc10daeceaf0179113851e195bc01356f6f8790517bf7f0300d545219e",
+        "Preview/Propeller.png": "884d7df6a4ed328669bd03aab51bf2d54a8174df16cb0a98ffbe35c477bdbf22",
+        "Preview/Rear.png": "8113b0a9468104876d4b8aaebb27c9c66e4740b3b677c558e3b7a3a3a9717c13",
+        "Preview/Sail.png": "67f1b18bef35bb09e57997da7af255433be94c1fc781417fafe5b7c9b41440b2",
+        "Preview/Stern.png": "825a4203e00a50a5a0cb6ff6d28506a3be32f449cf4361388b446cccdf15eae8"
+      },
+      "limitations": [
+        "程序化外形，未与实物或照片逐点比对",
+        "舱盖、阵列与推进器为外观近似",
+        "UE4.27 尚未实际导入与人工验收"
       ]
     },
     {

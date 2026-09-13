@@ -159,13 +159,13 @@
     "dimensions": {
       "hull_length_m": 97.0,
       "hull_beam_m": 11.296,
-      "sail_top_m": 8.6,
+      "sail_top_m": 9.718,
       "hull_top_m": 5.648,
-      "propulsor_max_x_m": -48.751,
+      "propulsor_max_x_m": -50.2,
       "bounds_with_appendages_m": [
-        100.251,
+        101.7,
         18.821,
-        18.124
+        19.242
       ]
     }
   },
@@ -176,9 +176,9 @@
       "vertices": 4912,
       "uv_channels": 2,
       "dimensions_m": [
-        100.2506,
+        101.7,
         18.82128,
-        18.12416
+        19.24216
       ]
     },
     {
@@ -187,9 +187,9 @@
       "vertices": 2485,
       "uv_channels": 2,
       "dimensions_m": [
-        100.2506,
+        101.7,
         18.82128,
-        18.12416
+        19.24216
       ]
     },
     {
@@ -198,9 +198,9 @@
       "vertices": 1125,
       "uv_channels": 2,
       "dimensions_m": [
-        100.25115,
+        101.70009,
         18.82128,
-        18.12416
+        19.24216
       ]
     },
     {
@@ -209,9 +209,9 @@
       "vertices": 446,
       "uv_channels": 2,
       "dimensions_m": [
-        100.25493,
+        101.70433,
         18.83066,
-        18.12958
+        19.24758
       ]
     }
   ],
@@ -272,6 +272,7 @@
       ]
     }
   },
+  "preview_engine": "eevee",
   "ue427_executed": false,
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制"
 }

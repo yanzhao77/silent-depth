@@ -1,0 +1,127 @@
+{
+  "result": "PASS",
+  "anchorCount": 9,
+  "anchors": [
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_TORPEDO_TUBE_01_MUZZLE",
+      "logical_id": "torpedo_tube_01_muzzle",
+      "purpose": "torpedo_muzzle",
+      "location_m": [
+        51.279533,
+        -0.816,
+        -1.083541
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": false
+    },
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_TORPEDO_TUBE_02_MUZZLE",
+      "logical_id": "torpedo_tube_02_muzzle",
+      "purpose": "torpedo_muzzle",
+      "location_m": [
+        51.279533,
+        0.816,
+        -1.083541
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": false
+    },
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_SONAR_BOW",
+      "logical_id": "sonar_bow",
+      "purpose": "sensor_mount",
+      "location_m": [
+        50.406693,
+        0.0,
+        -0.270885
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": false
+    },
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_TOWED_ARRAY",
+      "logical_id": "towed_array",
+      "purpose": "sensor_mount",
+      "location_m": [
+        -49.642952,
+        0.0,
+        0.812656
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": false
+    },
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_EW_ANTENNA",
+      "logical_id": "ew_antenna",
+      "purpose": "defense_mount",
+      "location_m": [
+        18.547916,
+        0.0,
+        5.68859
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": false
+    },
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_DECOY_LAUNCHER_01",
+      "logical_id": "decoy_launcher_01",
+      "purpose": "decoy_launcher",
+      "location_m": [
+        13.092648,
+        1.36,
+        -0.677213
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": false
+    },
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_DECOY_LAUNCHER_02",
+      "logical_id": "decoy_launcher_02",
+      "purpose": "decoy_launcher",
+      "location_m": [
+        13.092648,
+        -1.36,
+        -0.677213
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": false
+    },
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_PROPULSOR_01",
+      "logical_id": "propulsor_01",
+      "purpose": "propulsion_mount",
+      "location_m": [
+        -53.898064,
+        0.0,
+        0.0
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": true
+    },
+    {
+      "anchor": "SOCKET_SUB_SSN_Akula_PERISCOPE",
+      "logical_id": "periscope",
+      "purpose": "sensor_mount",
+      "location_m": [
+        2.400319,
+        0.0408,
+        4.063279
+      ],
+      "inside_hull_envelope": true,
+      "aft_of_hull_by_design": false
+    }
+  ],
+  "hullEnvelopeM": {
+    "min": [
+      -54.005489,
+      -6.8,
+      -6.688525
+    ],
+    "max": [
+      55.099899,
+      6.8,
+      6.855738
+    ]
+  },
+  "masterUntouched": true
+}

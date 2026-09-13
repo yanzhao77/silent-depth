@@ -79,11 +79,13 @@ bool FSD_EquipmentLoadsRealMatrices::RunTest(const FString& Parameters)
     // weapon 118 + defensive 486
     TestEqual(TEXT("slot definitions"), Equipment.NumSlots(), 604);
 
-    // The propulsion matrix references a propulsor that was never produced and
-    // says so itself. The claim is kept and marked as pending, so the UI can
-    // show it while fitting fails closed.
-    TestEqual(TEXT("one pending-asset notice"),
-        CountNotices(LoadReport, TEXT("PENDING_COMPATIBILITY_ASSET")), 1);
+    // DEC-009 recorded the 093B pump-jet as a pending claim: public reporting
+    // says the boat uses one, and the library had not produced the asset. Batch B
+    // produced it, so the notice is gone and the relation behaves like any other
+    // reported one. This is the outcome that decision predicted, asserted rather
+    // than assumed.
+    TestEqual(TEXT("no pending-asset notice remains"),
+        CountNotices(LoadReport, TEXT("PENDING_COMPATIBILITY_ASSET")), 0);
     TestEqual(TEXT("no dangling platform notice"),
         CountNotices(LoadReport, TEXT("MISSING_COMPATIBILITY_PLATFORM")), 0);
     // DEC-009: rows whose family has no produced asset are capability data, so
@@ -91,25 +93,17 @@ bool FSD_EquipmentLoadsRealMatrices::RunTest(const FString& Parameters)
     TestEqual(TEXT("family-only rows are no longer a data notice"),
         CountNotices(LoadReport, TEXT("FAMILY_ONLY_COMPATIBILITY_ROWS")), 0);
     TestEqual(TEXT("defensive capability rows"), Equipment.NumFamilyCapabilities(), 270);
-    for (const FSDDataNotice& Notice : LoadReport.Notices)
-    {
-        if (Notice.Code.Equals(TEXT("PENDING_COMPATIBILITY_ASSET"), ESearchCase::CaseSensitive))
-        {
-            TestTrue(TEXT("the pending reference is the known Type 093B propulsor"),
-                Notice.Subject.Contains(TEXT("CN_PJ_Type093B")));
-        }
-    }
     TestEqual(TEXT("the claim survives as a reported relation"),
         static_cast<int32>(Equipment.GetCompatibility(TEXT("CN_SSN_Type093B"), TEXT("CN_PJ_Type093B"))),
         static_cast<int32>(ESDCompatibility::Probable));
-    TestTrue(TEXT("the relation is flagged as pending"),
+    TestFalse(TEXT("the relation is no longer pending"),
         Equipment.IsAssetPending(TEXT("CN_SSN_Type093B"), TEXT("CN_PJ_Type093B")));
-    TestFalse(TEXT("a pending relation cannot be fitted"),
+    TestTrue(TEXT("a reported relation can be fitted again"),
         Equipment.IsEquippable(TEXT("CN_SSN_Type093B"), TEXT("CN_PJ_Type093B"), ESDEquipPolicy::AllowGameplay));
     TArray<FString> PendingPlatformCandidates;
     Equipment.CollectCandidates(
         TEXT("CN_SSN_Type093B"), TEXT(""), ESDEquipPolicy::AllowGameplay, PendingPlatformCandidates);
-    TestFalse(TEXT("a pending candidate is never offered"),
+    TestTrue(TEXT("the produced candidate is offered"),
         PendingPlatformCandidates.Contains(FString(TEXT("CN_PJ_Type093B"))));
 
     return true;

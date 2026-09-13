@@ -5,7 +5,7 @@
     {
       "path": "TechTree/submarine_catalogue.json",
       "source": "Manifest/submarine_manifest.json",
-      "sha256": "615b0b31057b8cd4e4b1eb660823521f6f695d0eee11c83b08b95b7ae5019d9a"
+      "sha256": "9210569184871afb2182f563e3154577b7ac457f6282a4c2cc8717db32fd4f53"
     },
     {
       "path": "TechTree/submarine_tree.json",
@@ -45,12 +45,12 @@
     {
       "path": "TechTree/propulsion_catalogue.json",
       "source": "Propulsion/Manifest/propulsion_manifest.json",
-      "sha256": "d162a64640e7d8f4c405c5446d1b781456945912e6022682211f8cf60e08a765"
+      "sha256": "4194c475a312c2729ee6601a65c99e60573f37b5ab29850924a050d673ca0d42"
     },
     {
       "path": "TechTree/propulsion_tree.json",
       "source": "Propulsion/TechnologyTree/propulsion_technology_tree.json",
-      "sha256": "f716ce00f483a8dec5508df505aa7d40d8c307a21cfe83570e66c6fd708488fb"
+      "sha256": "12ca9f40967f126f54d6ac95386bc19fb5530b18e1a7252e763c77f3bec684f2"
     },
     {
       "path": "TechTree/weapon_compatibility.json",
@@ -80,7 +80,7 @@
     {
       "path": "TechTree/propulsion_compatibility.json",
       "source": "Propulsion/Manifest/submarine_propulsion_compatibility.json",
-      "sha256": "1cf9e7dbcfd08d3e09604016a8737455d7df7ce6c44607e99c80b13aad481afe"
+      "sha256": "414c7e91a54a0b70170989101948c2de071dcf40d15f39db279a9ec7e6444ee4"
     },
     {
       "path": "TechTree/Sockets/RU_SSN_Yasen_ASSEMBLY.json",
@@ -88,9 +88,14 @@
       "sha256": "0782b3475a0cabe6febe569f036402cbd0073d380d1964dd81376285fb2a5aa3"
     },
     {
+      "path": "TechTree/Sockets/RU_SSN_Akula_ASSEMBLY.json",
+      "source": "Submarines/SSN/Russia/Akula/Documentation/RU_SSN_Akula_ASSEMBLY.json",
+      "sha256": "cffd14f3d8744ea5aafe71a523e8c163a7305e18dd77bf02478b6e0f3570e63b"
+    },
+    {
       "path": "submarine_manifest.json",
       "source": "Manifest/submarine_manifest.json",
-      "sha256": "615b0b31057b8cd4e4b1eb660823521f6f695d0eee11c83b08b95b7ae5019d9a"
+      "sha256": "9210569184871afb2182f563e3154577b7ac457f6282a4c2cc8717db32fd4f53"
     },
     {
       "path": "technology_tree.json",

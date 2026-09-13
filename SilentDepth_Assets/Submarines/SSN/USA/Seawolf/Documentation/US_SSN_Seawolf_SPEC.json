@@ -5,7 +5,7 @@
   "country": "USA",
   "type": "SSN",
   "class": "Seawolf",
-  "project": "SSN-21",
+  "project": null,
   "tier": 8,
   "provenance": "本地程序化生成网格与程序化贴图，无第三方模型或图片进入运行时包",
   "license": "本项目可商业使用的原创生成资产",
@@ -25,9 +25,9 @@
     "length_overall": 108.0,
     "hull_beam": 12.0,
     "bounds_with_appendages": [
-      111.3584,
-      20.9824,
-      19.144
+      112.7,
+      19.9872,
+      20.2576
     ]
   },
   "exports": [
@@ -37,9 +37,9 @@
       "vertices": 4952,
       "uv_channels": 2,
       "dimensions_m": [
-        111.3584,
-        20.9824,
-        19.144
+        112.7,
+        19.9872,
+        20.2576
       ]
     },
     {
@@ -48,9 +48,9 @@
       "vertices": 2507,
       "uv_channels": 2,
       "dimensions_m": [
-        111.3584,
-        20.9824,
-        19.144
+        112.7,
+        19.9872,
+        20.2576
       ]
     },
     {
@@ -59,9 +59,9 @@
       "vertices": 1137,
       "uv_channels": 2,
       "dimensions_m": [
-        111.3595,
-        20.9824,
-        19.144
+        112.70109,
+        19.9872,
+        20.2576
       ]
     },
     {
@@ -70,26 +70,26 @@
       "vertices": 453,
       "uv_channels": 2,
       "dimensions_m": [
-        111.36271,
-        20.99065,
-        19.1488
+        112.70436,
+        19.99604,
+        20.26169
       ]
     }
   ],
   "sha256": {
-    "Blend/US_SSN_Seawolf_MASTER.blend": "35b517f43d81fcfdd4626a473c8a945cba7f7fb072b94aa9ac6d8a74c6d631dc",
-    "GLB/US_SSN_Seawolf.glb": "aa47e54c2ebc63779e7109c55d1ed7d4c443b37f6b31f63b876ae0820268843c",
-    "Collision/US_SSN_Seawolf_COLLISION.fbx": "4276b8bbc7cc6e7d438b8a9a66f40eb4ed184ca916d2077f57acbc1fea656724",
-    "FBX/US_SSN_Seawolf_LOD0.fbx": "ffe6e1ff012d01bff7ee2c7979ee94232a231e7f6d380d80e88f78a60cd36c5c",
-    "FBX/US_SSN_Seawolf_LOD1.fbx": "01b382a4a348b3ce367e484349946b1c23d4808971d3b7b4ea0a44a1dcf965c9",
-    "FBX/US_SSN_Seawolf_LOD2.fbx": "3bdadcf35309a49d836d8f8fdfea57e5e3e8e4b6cc25dc30746c3c43e552fea7",
-    "FBX/US_SSN_Seawolf_LOD3.fbx": "661ba957d2274728e1a2ddcb79c750f98ca0e63e5bb5268c14643e4f71a2f886",
-    "FBX/US_SSN_Seawolf_PROPULSOR_01.fbx": "d115c17d17a5976acdb521f74e08f5929f0dd3d9329813dfe045597a50cba436",
-    "FBX/US_SSN_Seawolf_RUDDER_01.fbx": "05f7a45fdfec141d7fef32fd665de6ab1accd91e486210eaba4a79878efe4dbb",
-    "FBX/US_SSN_Seawolf_STERN_PLANES_01.fbx": "3264b940aff392cc11143d5ede88f3bd65cc01eb12f925ebe9ee656ad2c681bf",
-    "FBX/US_SSN_Seawolf_BOW_PLANES_01.fbx": "05d4ed459fc34e9f31b0a9f2d9998d3bcdee708f1a2594cc3bdfcd037800a8a4",
-    "FBX/US_SSN_Seawolf_PERISCOPE_01.fbx": "5f726a1a3bec6ae83e6dc1d01130887d9af45c6a3969a768d4f86dbacf95e38e",
-    "Textures/T_US_SSN_Seawolf_Hull_BaseColor.png": "6aae6ab6e3eec9fa676a315003e3db02a036b5e979ef14c2270963e7c1a5d89b"
+    "Blend/US_SSN_Seawolf_MASTER.blend": "bd9efa2c210b426a53aa317debd4ef57ccddd2d0b713b941a67f1d4fd9714039",
+    "GLB/US_SSN_Seawolf.glb": "f9b41e5ef51a7fd73ca11a2d3ef5c6d71c8153d9c40ac0b95883965159fb3bf4",
+    "Collision/US_SSN_Seawolf_COLLISION.fbx": "9b271699723dc34e1d55a7eb326c417c918106b9df76d738f5e06a54f8db32b8",
+    "FBX/US_SSN_Seawolf_LOD0.fbx": "e531689fd3c645540b3fba7ddc03f6407b25725477f031a0c5796614fb0d6b18",
+    "FBX/US_SSN_Seawolf_LOD1.fbx": "f02ae3a69fcca573688a9d1dccfd119b67ddac33302f8b227ee0f66a875f6631",
+    "FBX/US_SSN_Seawolf_LOD2.fbx": "36de185a2fdf500a5edeb52f8062338016bb962eef5a2b4b1ac0d4bbfba5139d",
+    "FBX/US_SSN_Seawolf_LOD3.fbx": "34057b4c478ac76e8097c15bfdc48c7e7ad8a0a01e94de8d0cb22fab2ebab2a2",
+    "FBX/US_SSN_Seawolf_PROPULSOR_01.fbx": "6762ddd2573fad24594fdf788fa7d03717f39b1b20450d94b5b271def9411f51",
+    "FBX/US_SSN_Seawolf_RUDDER_01.fbx": "7dbcb828804755341094d5bf2cb53edbe6ca7c2c7462ab93ce6afb207193caa7",
+    "FBX/US_SSN_Seawolf_STERN_PLANES_01.fbx": "f64ba688faa3639b207e524e202a88220543c49934b58ebacadb2f19d213feb0",
+    "FBX/US_SSN_Seawolf_BOW_PLANES_01.fbx": "183410a6cc943537933463634dc379ac71a9f91b5d7e05f177d35208358c8f28",
+    "FBX/US_SSN_Seawolf_PERISCOPE_01.fbx": "5ffd586bd079081dd077883b76b9ef382368aedd42eae62bba4369ea577a0017",
+    "Textures/T_US_SSN_Seawolf_Hull_BaseColor.png": "178f72da9d26951e3ea9c5b8343f5925f92ff044af4ac96e4c9bad89cff13ea3"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -266,14 +266,14 @@
     "beam_m": 12.0,
     "dimensions": {
       "hull_length_m": 108.0,
-      "hull_beam_m": 12.0,
-      "sail_top_m": 8.6,
-      "hull_top_m": 6.0,
-      "propulsor_max_x_m": -54.358,
+      "hull_beam_m": 11.996,
+      "sail_top_m": 10.32,
+      "hull_top_m": 5.998,
+      "propulsor_max_x_m": -55.7,
       "bounds_with_appendages_m": [
-        111.358,
-        20.982,
-        19.144
+        112.7,
+        19.987,
+        20.258
       ]
     }
   }

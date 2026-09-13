@@ -1,0 +1,454 @@
+{
+  "schemaVersion": 1,
+  "assetId": "FR_SSN_Rubis",
+  "units": "meters",
+  "coordinateSystem": {
+    "forward": "+X",
+    "right": "+Y",
+    "up": "+Z",
+    "unrealConversion": "1 Blender meter = 100 Unreal Units"
+  },
+  "hull": {
+    "lods": {
+      "LOD0": "FBX/FR_SSN_Rubis_LOD0.fbx",
+      "LOD1": "FBX/FR_SSN_Rubis_LOD1.fbx",
+      "LOD2": "FBX/FR_SSN_Rubis_LOD2.fbx",
+      "LOD3": "FBX/FR_SSN_Rubis_LOD3.fbx"
+    },
+    "collision": {
+      "owner": "hull",
+      "path": "Collision/FR_SSN_Rubis_COLLISION.fbx",
+      "strategy": "separate_fbx",
+      "sourceObjects": [
+        "UCX_FR_SSN_Rubis_LOD0_00",
+        "UCX_FR_SSN_Rubis_LOD0_01",
+        "UCX_FR_SSN_Rubis_LOD0_02",
+        "UCX_FR_SSN_Rubis_LOD0_03",
+        "UCX_FR_SSN_Rubis_LOD0_04",
+        "UCX_FR_SSN_Rubis_LOD0_05",
+        "UCX_FR_SSN_Rubis_LOD0_06",
+        "UCX_FR_SSN_Rubis_LOD0_07",
+        "UCX_FR_SSN_Rubis_LOD0_08"
+      ]
+    },
+    "sourceObjects": [
+      "SUB_Hull",
+      "SUB_Sail",
+      "SUB_SailCap",
+      "SUB_Mast_0",
+      "SUB_MastHead_0",
+      "SUB_Mast_1",
+      "SUB_MastHead_1",
+      "SUB_BowPlane_P",
+      "SUB_BowPlane_S",
+      "SUB_SternPlane_P",
+      "SUB_SternPlane_S",
+      "SUB_Rudder_T",
+      "SUB_Rudder_B",
+      "SUB_Shaft",
+      "SUB_Hub",
+      "SUB_PropellerBlade_0",
+      "SUB_PropellerBlade_1",
+      "SUB_PropellerBlade_2",
+      "SUB_PropellerBlade_3",
+      "SUB_PropellerBlade_4",
+      "SUB_PropellerBlade_5",
+      "SUB_PropellerBlade_6",
+      "SUB_PropellerSpinner",
+      "SUB_TubeRim_0",
+      "SUB_TubeRim_1",
+      "SUB_TubeRim_2",
+      "SUB_TubeRim_3"
+    ]
+  },
+  "parts": [
+    {
+      "id": "propulsor_01",
+      "exportName": "FR_SSN_Rubis_PROPULSOR_01",
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_SSN_Rubis_PROPULSOR_01",
+      "semanticGroup": "20_MOVABLE/PROPULSOR",
+      "sourceObjects": [
+        "SUB_PropellerBlade_0",
+        "SUB_PropellerBlade_1",
+        "SUB_PropellerBlade_2",
+        "SUB_PropellerBlade_3",
+        "SUB_PropellerBlade_4",
+        "SUB_PropellerBlade_5",
+        "SUB_PropellerBlade_6",
+        "SUB_Hub",
+        "SUB_PropellerSpinner"
+      ],
+      "mountTransform": {
+        "translation": [
+          -38.521,
+          0,
+          0
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "motion": {
+        "type": "rotate",
+        "axis": [
+          1,
+          0,
+          0
+        ],
+        "continuousRotation": true,
+        "stateSource": "propulsor_rpm"
+      },
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 2200,
+        "levels": [
+          "LOD0",
+          "LOD1",
+          "LOD2"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          2200
+        ]
+      },
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      }
+    },
+    {
+      "id": "rudder_01",
+      "exportName": "FR_SSN_Rubis_RUDDER_01",
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_SSN_Rubis_RUDDER_01",
+      "semanticGroup": "20_MOVABLE/RUDDER",
+      "sourceObjects": [
+        "SUB_Rudder_T",
+        "SUB_Rudder_B"
+      ],
+      "mountTransform": {
+        "translation": [
+          -33.488,
+          0,
+          0
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "motion": {
+        "type": "rotate",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "rotationRangeDegrees": {
+          "min": -32,
+          "max": 32
+        },
+        "stateSource": "rudder_angle"
+      },
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 1700,
+        "levels": [
+          "LOD0",
+          "LOD1",
+          "LOD2"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          1700
+        ]
+      },
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      }
+    },
+    {
+      "id": "stern_planes_01",
+      "exportName": "FR_SSN_Rubis_STERN_PLANES_01",
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_SSN_Rubis_STERN_PLANES_01",
+      "semanticGroup": "20_MOVABLE/STERN_PLANES",
+      "sourceObjects": [
+        "SUB_SternPlane_P",
+        "SUB_SternPlane_S"
+      ],
+      "mountTransform": {
+        "translation": [
+          -33.488,
+          0,
+          0
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "motion": {
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "rotationRangeDegrees": {
+          "min": -26,
+          "max": 26
+        },
+        "stateSource": "stern_planes_angle"
+      },
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 1650,
+        "levels": [
+          "LOD0",
+          "LOD1",
+          "LOD2"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          1650
+        ]
+      },
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      }
+    },
+    {
+      "id": "bow_planes_01",
+      "exportName": "FR_SSN_Rubis_BOW_PLANES_01",
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_SSN_Rubis_BOW_PLANES_01",
+      "semanticGroup": "20_MOVABLE/BOW_PLANES",
+      "sourceObjects": [
+        "SUB_BowPlane_P",
+        "SUB_BowPlane_S"
+      ],
+      "mountTransform": {
+        "translation": [
+          14.72,
+          0,
+          0
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "motion": {
+        "type": "rotate",
+        "axis": [
+          0,
+          1,
+          0
+        ],
+        "rotationRangeDegrees": {
+          "min": -25,
+          "max": 25
+        },
+        "stateSource": "bow_planes_angle"
+      },
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 1650,
+        "levels": [
+          "LOD0",
+          "LOD1",
+          "LOD2"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          1650
+        ]
+      },
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      }
+    },
+    {
+      "id": "periscope_01",
+      "exportName": "FR_SSN_Rubis_PERISCOPE_01",
+      "parent": "root",
+      "pivotAnchor": "PIVOT_SUB_SSN_Rubis_PERISCOPE_01",
+      "semanticGroup": "20_MOVABLE/PERISCOPES",
+      "sourceObjects": [
+        "SUB_Mast_0",
+        "SUB_MastHead_0"
+      ],
+      "mountTransform": {
+        "translation": [
+          7.36,
+          0,
+          7.6
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      },
+      "motion": {
+        "type": "translate",
+        "axis": [
+          0,
+          0,
+          1
+        ],
+        "translationRangeMeters": {
+          "min": 0,
+          "max": 2.6
+        },
+        "stateSource": "periscope_extension"
+      },
+      "lodPolicy": {
+        "fallback": "hide",
+        "hideBeyondMeters": 850,
+        "levels": [
+          "LOD0",
+          "LOD1"
+        ],
+        "visibleDistanceMeters": [
+          0,
+          850
+        ]
+      },
+      "collision": {
+        "owner": "none",
+        "strategy": "none"
+      }
+    }
+  ],
+  "sockets": [
+    {
+      "id": "torpedo_tube_01_muzzle",
+      "parent": "root",
+      "purpose": "torpedo_muzzle",
+      "sourceAnchor": "SOCKET_SUB_SSN_Rubis_TORPEDO_TUBE_01_MUZZLE",
+      "transform": {
+        "translation": [
+          33.8,
+          0.0,
+          0.0
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "validation": {
+    "requiredParts": [
+      "propulsor_01",
+      "rudder_01",
+      "stern_planes_01",
+      "bow_planes_01",
+      "periscope_01"
+    ],
+    "requiredSockets": [
+      "torpedo_tube_01_muzzle"
+    ]
+  },
+  "templateNotice": "Batch A procedural hull. Source objects come from this MASTER; anchor names follow DEC-002. Motion ranges are gameplay configuration values, not submarine engineering measurements.",
+  "partMetrics": {
+    "PROPULSOR_01": {
+      "name": "FR_SSN_Rubis_PROPULSOR_01",
+      "triangles": 444,
+      "vertices": 240,
+      "uv_channels": 1,
+      "dimensions_m": [
+        2.2,
+        3.1817,
+        2.87566
+      ]
+    },
+    "RUDDER_01": {
+      "name": "FR_SSN_Rubis_RUDDER_01",
+      "triangles": 56,
+      "vertices": 32,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.2,
+        0.36,
+        8.97763
+      ]
+    },
+    "STERN_PLANES_01": {
+      "name": "FR_SSN_Rubis_STERN_PLANES_01",
+      "triangles": 56,
+      "vertices": 32,
+      "uv_channels": 1,
+      "dimensions_m": [
+        3.7,
+        9.58563,
+        0.34
+      ]
+    },
+    "BOW_PLANES_01": {
+      "name": "FR_SSN_Rubis_BOW_PLANES_01",
+      "triangles": 56,
+      "vertices": 32,
+      "uv_channels": 1,
+      "dimensions_m": [
+        2.85,
+        12.52784,
+        0.3
+      ]
+    },
+    "PERISCOPE_01": {
+      "name": "FR_SSN_Rubis_PERISCOPE_01",
+      "triangles": 248,
+      "vertices": 128,
+      "uv_channels": 1,
+      "dimensions_m": [
+        0.56,
+        0.56,
+        2.95
+      ]
+    }
+  }
+}

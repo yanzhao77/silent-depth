@@ -149,13 +149,13 @@
     "dimensions": {
       "hull_length_m": 99.5,
       "hull_beam_m": 8.797,
-      "sail_top_m": 8.6,
+      "sail_top_m": 7.568,
       "hull_top_m": 4.399,
-      "propulsor_max_x_m": -50.025,
+      "propulsor_max_x_m": -51.45,
       "bounds_with_appendages_m": [
-        102.775,
-        14.865,
-        16.928
+        104.2,
+        14.657,
+        15.616
       ]
     }
   },
@@ -166,9 +166,9 @@
       "vertices": 4872,
       "uv_channels": 2,
       "dimensions_m": [
-        102.7751,
-        14.86528,
-        16.92766
+        104.2,
+        14.65728,
+        15.61566
       ]
     },
     {
@@ -177,9 +177,9 @@
       "vertices": 2463,
       "uv_channels": 2,
       "dimensions_m": [
-        102.7751,
-        14.86528,
-        16.92766
+        104.2,
+        14.65728,
+        15.61566
       ]
     },
     {
@@ -188,9 +188,9 @@
       "vertices": 1113,
       "uv_channels": 2,
       "dimensions_m": [
-        102.77523,
-        14.86528,
-        16.92766
+        104.20013,
+        14.65728,
+        15.61566
       ]
     },
     {
@@ -199,9 +199,9 @@
       "vertices": 439,
       "uv_channels": 2,
       "dimensions_m": [
-        102.77943,
-        14.87448,
-        16.9341
+        104.20433,
+        14.66674,
+        15.62261
       ]
     }
   ],
@@ -225,7 +225,7 @@
       "dimensions_m": [
         3.2,
         0.36,
-        10.95532
+        10.39532
       ]
     },
     "STERN_PLANES_01": {
@@ -235,7 +235,7 @@
       "uv_channels": 1,
       "dimensions_m": [
         3.7,
-        11.35532,
+        11.09932,
         0.34
       ]
     },
@@ -246,7 +246,7 @@
       "uv_channels": 1,
       "dimensions_m": [
         3.25,
-        14.86528,
+        14.65728,
         0.34
       ]
     },
@@ -262,6 +262,7 @@
       ]
     }
   },
+  "preview_engine": "eevee",
   "ue427_executed": false,
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制"
 }

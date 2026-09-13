@@ -39,6 +39,19 @@ GRAY = '--gray' in sys.argv
 #: previews already exist and only the documents need refreshing.
 NO_PREVIEW = '--no-preview' in sys.argv
 
+
+def preview_engine() -> str:
+    """Cycles for hero shots, EEVEE for the bulk silhouette pass.
+
+    Both write the same views; EEVEE is two orders of magnitude faster, which is
+    what makes previews for forty-odd hulls practical. Which one produced a file
+    is recorded in the validation document, so nobody has to guess later.
+    """
+    for value in sys.argv:
+        if value.startswith('--preview-engine='):
+            return value.split('=', 1)[1].lower()
+    return 'cycles'
+
 #: Material slots the pump-jet / screw pipeline creates, in slot order.
 PIPELINE_MATERIALS = ['SD_hull', 'SD_coating', 'SD_panel', 'SD_array',
                       'SD_recess', 'SD_metal', 'SD_bronze']
@@ -187,10 +200,14 @@ def geometry_checks(parts, params) -> dict:
         # hull, otherwise the rotor floats free of the boat.
         'propulsor_missing': sorted(name for name, hit in propulsor_hits.items() if not hit),
     }
+    if parts.get('missile_deck') is not None:
+        contacts['deck_hull'] = bool(body.overlap(tree(parts['missile_deck'])))
     assert contacts['sail_hull'], 'the sail does not touch the hull'
     assert contacts['shaft_hull'], 'the shaft does not reach the hull'
     assert not contacts['planes_missing'], contacts['planes_missing']
     assert not contacts['propulsor_missing'], contacts['propulsor_missing']
+    if 'deck_hull' in contacts:
+        assert contacts['deck_hull'], 'the missile deck does not touch the hull'
     return {'topology': checks, 'contacts': contacts,
             'length_m': params['length'], 'beam_m': params['beam']}
 
@@ -295,6 +312,32 @@ def collision(collection, materials, params):
     collection.objects.link(obj)
     obj.data.materials.append(materials['recess'])
     pieces.append(obj)
+
+    # An SSBN's missile casing needs its own collider piece, otherwise rounds
+    # would pass straight through the hump.
+    deck = bpy.data.objects.get('SUB_MissileDeck')
+    if deck is not None:
+        coords = [deck.matrix_world @ v.co for v in deck.data.vertices]
+        low = [min(p[i] for p in coords) for i in range(3)]
+        high = [max(p[i] for p in coords) for i in range(3)]
+        bm = bmesh.new()
+        bmesh.ops.create_cube(bm, size=1.0)
+        for vertex in bm.verts:
+            vertex.co = Vector((
+                low[0] + (vertex.co.x + 0.5) * (high[0] - low[0]),
+                low[1] + (vertex.co.y + 0.5) * (high[1] - low[1]),
+                low[2] + (vertex.co.z + 0.5) * (high[2] - low[2]),
+            ))
+        bmesh.ops.recalc_face_normals(bm, faces=list(bm.faces))
+        bmesh.ops.triangulate(bm, faces=list(bm.faces))
+        data = bpy.data.meshes.new(f'UCX_{params["id"]}_Deck')
+        bm.to_mesh(data)
+        bm.free()
+        deck_collider = bpy.data.objects.new(f'UCX_{params["id"]}_LOD0_{len(pieces):02d}', data)
+        deck_collider.data.materials.append(materials['recess'])
+        deck_collider.display_type = 'WIRE'
+        collection.objects.link(deck_collider)
+        pieces.append(deck_collider)
     broken = {o.name: topology(o) for o in pieces if any(topology(o).values())}
     assert not broken, broken
     return pieces
@@ -442,9 +485,19 @@ def previews(scene, collection, params, colliders) -> None:
         aim(obj, (0, 0, 0))
         collection.objects.link(obj)
 
-    scene.render.engine = 'CYCLES'
-    scene.cycles.samples = 24 if GRAY else 32
-    scene.cycles.use_denoising = True
+    engine = preview_engine()
+    if engine == 'eevee':
+        # Blender 5.2 names the rasteriser BLENDER_EEVEE (the "next" suffix of
+        # 4.2 was dropped again); read the enum instead of hard-coding a name.
+        available = [item.identifier for item in
+                     scene.render.bl_rna.properties['engine'].enum_items]
+        scene.render.engine = ('BLENDER_EEVEE_NEXT' if 'BLENDER_EEVEE_NEXT' in available
+                               else 'BLENDER_EEVEE')
+        scene.eevee.taa_render_samples = 16
+    else:
+        scene.render.engine = 'CYCLES'
+        scene.cycles.samples = 24 if GRAY else 32
+        scene.cycles.use_denoising = True
     scene.view_settings.view_transform = 'AgX'
     scene.render.resolution_x = 1600
     scene.render.resolution_y = 850
@@ -698,6 +751,7 @@ def run(params: dict) -> None:
         'geometry': checks,
         'exports': metrics,
         'part_exports': part_metrics,
+        'preview_engine': 'none' if NO_PREVIEW else preview_engine(),
         'ue427_executed': False,
         'reference_fidelity': spec['reference_fidelity'],
     })

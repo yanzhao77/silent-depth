@@ -134,8 +134,9 @@ bool FSD_TechTreeUnlockRealTree::RunTest(const FString& Parameters)
     TestEqual(TEXT("available nodes"), CountInState(Statuses, ESDUnlockState::Available), 22);
     TestEqual(TEXT("nodes waiting on a prerequisite"),
         CountInState(Statuses, ESDUnlockState::PrerequisiteLocked), 115);
+    // 225 since CN_PJ_Type093B joined the propulsion tree at T9 (Batch B).
     TestEqual(TEXT("nodes waiting on the tier gate"),
-        CountInState(Statuses, ESDUnlockState::TierLocked), 224);
+        CountInState(Statuses, ESDUnlockState::TierLocked), 225);
     TestEqual(TEXT("every node is accounted for"),
         CountInState(Statuses, ESDUnlockState::Available)
             + CountInState(Statuses, ESDUnlockState::PrerequisiteLocked)

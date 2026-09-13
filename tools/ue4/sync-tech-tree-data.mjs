@@ -87,6 +87,12 @@ const sources = [
     path: 'TechTree/Sockets/RU_SSN_Yasen_ASSEMBLY.json',
     source: 'Submarines/SSN/Russia/Yasen/Documentation/RU_SSN_Yasen_ASSEMBLY.json',
   },
+  // SOCKET-001: the Akula equipment anchors live on a working copy of the
+  // master (DEC-002); the master itself is never modified.
+  {
+    path: 'TechTree/Sockets/RU_SSN_Akula_ASSEMBLY.json',
+    source: 'Submarines/SSN/Russia/Akula/Documentation/RU_SSN_Akula_ASSEMBLY.json',
+  },
   // Copies that predate the TechTree directory. They are still staged so that
   // nothing under Config/SilentDepth escapes the drift check.
   { path: 'submarine_manifest.json', source: 'Manifest/submarine_manifest.json' },

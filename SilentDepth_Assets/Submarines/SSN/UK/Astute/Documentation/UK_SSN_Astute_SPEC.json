@@ -5,7 +5,7 @@
   "country": "UK",
   "type": "SSN",
   "class": "Astute",
-  "project": "SSN-A",
+  "project": null,
   "tier": 9,
   "provenance": "本地程序化生成网格与程序化贴图，无第三方模型或图片进入运行时包",
   "license": "本项目可商业使用的原创生成资产",
@@ -25,9 +25,9 @@
     "length_overall": 97.0,
     "hull_beam": 11.3,
     "bounds_with_appendages": [
-      100.2506,
+      101.7,
       18.82128,
-      18.12416
+      19.24216
     ]
   },
   "exports": [
@@ -37,9 +37,9 @@
       "vertices": 4912,
       "uv_channels": 2,
       "dimensions_m": [
-        100.2506,
+        101.7,
         18.82128,
-        18.12416
+        19.24216
       ]
     },
     {
@@ -48,9 +48,9 @@
       "vertices": 2485,
       "uv_channels": 2,
       "dimensions_m": [
-        100.2506,
+        101.7,
         18.82128,
-        18.12416
+        19.24216
       ]
     },
     {
@@ -59,9 +59,9 @@
       "vertices": 1125,
       "uv_channels": 2,
       "dimensions_m": [
-        100.25115,
+        101.70009,
         18.82128,
-        18.12416
+        19.24216
       ]
     },
     {
@@ -70,26 +70,26 @@
       "vertices": 446,
       "uv_channels": 2,
       "dimensions_m": [
-        100.25493,
+        101.70433,
         18.83066,
-        18.12958
+        19.24758
       ]
     }
   ],
   "sha256": {
-    "Blend/UK_SSN_Astute_MASTER.blend": "ec7999a1dc922c53c1443877ac7dabef457f548a136c9cd320f267ae2903bbab",
-    "GLB/UK_SSN_Astute.glb": "42b6fe206c0de0aaf2c877b31064cb08f8cf8b333e8bf2f4c74437bda48ed858",
-    "Collision/UK_SSN_Astute_COLLISION.fbx": "fe9ab132983c480c8c30c9db68fca11a0f7cb948282596960518caece93a6c60",
-    "FBX/UK_SSN_Astute_LOD0.fbx": "595f19102d58e8638d4928bb047d590299b0bf7dad73125c08d423f32c4c8a8d",
-    "FBX/UK_SSN_Astute_LOD1.fbx": "b28a3c5fc1caf0cb1990684cb95609c9d7ac274186eb5968d0030360db6e99b1",
-    "FBX/UK_SSN_Astute_LOD2.fbx": "756ef538a5f1d8df8ff66d874e6f2d2405166a1d306a7edaf760fb43ba8d23fd",
-    "FBX/UK_SSN_Astute_LOD3.fbx": "757b32b9a0a14c6d599d63313e3c966dd51aac6096a8fae1442ebaacaec61b6c",
-    "FBX/UK_SSN_Astute_PROPULSOR_01.fbx": "a005505af728e553ee45ea62b8061190e27ca9214fc81136137d0ac0b4a481cc",
-    "FBX/UK_SSN_Astute_RUDDER_01.fbx": "7606a04b6ac6db5b6aa6c4543ed3169f3a544191c58756245d4f852672891795",
-    "FBX/UK_SSN_Astute_STERN_PLANES_01.fbx": "3af15aaed6a3b6a067c98a6520367f6e57e88e4504c1341c4e608e5e70624de9",
-    "FBX/UK_SSN_Astute_BOW_PLANES_01.fbx": "587756607f4aee94722b31e1ef98494e5ae7d87a45239c977a28f55390a7c64a",
-    "FBX/UK_SSN_Astute_PERISCOPE_01.fbx": "9e0e06c97d42370b6de2d757175c90d7ef2bffbd7e7114c1182f0fab8d2dd907",
-    "Textures/T_UK_SSN_Astute_Hull_BaseColor.png": "1c162d6609007b9efdc4cfb7231d93797ef4ad86f058906034697815eb3b5901"
+    "Blend/UK_SSN_Astute_MASTER.blend": "b36af88ec2d3bd12f4b07cd92afe624c01b4875fd55316533d9bc8dcd5146572",
+    "GLB/UK_SSN_Astute.glb": "5eb7ad6d80b9373891364c0755fd9f105d3f93769525567ec8bed16939b730b4",
+    "Collision/UK_SSN_Astute_COLLISION.fbx": "c78b9a0ad3cd489db12c6831d6ce3f704744022591833643c5b2658580d87e88",
+    "FBX/UK_SSN_Astute_LOD0.fbx": "2a44260889f999553a9b10716fc20972c02462e41de33d9905c9c4ca42ceae4d",
+    "FBX/UK_SSN_Astute_LOD1.fbx": "3119644df60477e758b99fa24c611b81782921bd7544a9885489b5b291ff49b1",
+    "FBX/UK_SSN_Astute_LOD2.fbx": "1ee8f004527c05611b645fce5553b800f3cb64414706c6ff2f794c2bd14def16",
+    "FBX/UK_SSN_Astute_LOD3.fbx": "350060499c4f04816c443a955e34118b9f8c0e9bc524f2c5c8d9d14c27be7f4f",
+    "FBX/UK_SSN_Astute_PROPULSOR_01.fbx": "25fbec478e95110dfd8f7754965dc4d77401071dba44581b5dab1a6073a6d0e5",
+    "FBX/UK_SSN_Astute_RUDDER_01.fbx": "2d522445fac6576127db2c158a4f83b195bcb260cf3f4b1db2eaa8c82ba6bc05",
+    "FBX/UK_SSN_Astute_STERN_PLANES_01.fbx": "82c9398b9d977a6692af94d2d99fece2a53623d5e28e07f9bd585f9d25870dec",
+    "FBX/UK_SSN_Astute_BOW_PLANES_01.fbx": "0a45f115d626326d5bb59dcd368bae5efc50e95d532a1ed3c4a4ec9d458144cb",
+    "FBX/UK_SSN_Astute_PERISCOPE_01.fbx": "b3457ba6f213eb31a116033180933c772ef8696c1fc1018fd9cde6abf4a70295",
+    "Textures/T_UK_SSN_Astute_Hull_BaseColor.png": "805f5633d2521fb3e9d6ccb6c026c7b22fb29857a991007ae1560075ece773de"
   },
   "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
   "ue427_executed": false,
@@ -257,13 +257,13 @@
     "dimensions": {
       "hull_length_m": 97.0,
       "hull_beam_m": 11.296,
-      "sail_top_m": 8.6,
+      "sail_top_m": 9.718,
       "hull_top_m": 5.648,
-      "propulsor_max_x_m": -48.751,
+      "propulsor_max_x_m": -50.2,
       "bounds_with_appendages_m": [
-        100.251,
+        101.7,
         18.821,
-        18.124
+        19.242
       ]
     }
   }

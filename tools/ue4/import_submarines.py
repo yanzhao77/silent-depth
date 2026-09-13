@@ -41,6 +41,7 @@ import shutil
 import struct
 import tempfile
 import zlib
+import json
 
 import unreal
 
@@ -152,15 +153,36 @@ BATCH_A_SLOTS = {
 
 BATCH_A_PARTS = ("PROPULSOR_01", "RUDDER_01", "STERN_PLANES_01", "BOW_PLANES_01", "PERISCOPE_01")
 
-BATCH_A_HULLS = (
-    ("US_SSN_LosAngeles", "SSN/USA/Los_Angeles", "SSN/USA/Los_Angeles"),
-    ("US_SSN_Virginia", "SSN/USA/Virginia", "SSN/USA/Virginia"),
-    ("US_SSN_Seawolf", "SSN/USA/Seawolf", "SSN/USA/Seawolf"),
-    ("UK_SSN_Astute", "SSN/UK/Astute", "SSN/UK/Astute"),
-    ("FR_SSN_Suffren", "SSN/France/Suffren", "SSN/France/Suffren"),
-)
+def pipeline_hulls():
+    """Every hull the parametric pipeline built, taken from the manifest.
 
-for _asset_id, _src, _dest in BATCH_A_HULLS:
+    The manifest is the source of truth: a hull appears here once its build has
+    registered it, so adding a batch does not mean editing this script again.
+    Hand-built hulls are listed explicitly above and are skipped here.
+    """
+    manifest_path = os.path.join(SOURCE_ROOT, "Manifest", "submarine_manifest.json")
+    with open(manifest_path, encoding="utf-8") as handle:
+        manifest = json.load(handle)
+    known = {entry["id"] for entry in ASSETS}
+    hulls = []
+    for entry in manifest["assets"]:
+        asset_id = entry["asset_id"]
+        master = entry.get("master") or ""
+        if asset_id in known or not master:
+            continue
+        if "SD_hull" not in (entry.get("materials") or []):
+            continue
+        # Submarines/SSN/USA/Virginia/Blend/... -> SSN/USA/Virginia
+        parts = master.split("/")
+        if len(parts) < 4 or parts[0] != "Submarines":
+            warn("{} has an unexpected master path {}".format(asset_id, master))
+            continue
+        relative = "/".join(parts[1:-2])
+        hulls.append((asset_id, relative, relative))
+    return hulls
+
+
+for _asset_id, _src, _dest in pipeline_hulls():
     _texture = "T_{}_Hull_BaseColor".format(_asset_id)
     ASSETS.append({
         "id": _asset_id,

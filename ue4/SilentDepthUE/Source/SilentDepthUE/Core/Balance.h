@@ -2,7 +2,7 @@
 
 #include "CoreMinimal.h"
 
-/** Order matches config/balance.json speedBands / depthLayers keys. */
+/** Order matches Config/balance.json speedBands / depthLayers keys. */
 enum class ESDSpeedBand : uint8 { Stopped, Silent, Cruise, Full };
 enum class ESDDepthLayer : uint8 { Surface, Periscope, Shallow, Medium, Deep };
 
@@ -23,7 +23,7 @@ struct SILENTDEPTHUE_API FSDDepthLayer
 };
 
 /**
- * Typed read of config/balance.json (ADR-002 / NFR-5). Mirrors the gameplay
+ * Typed read of Config/balance.json (ADR-002 / NFR-5). Mirrors the gameplay
  * values used by the simulation core; every number lives in the config.
  */
 struct SILENTDEPTHUE_API FSDBalance

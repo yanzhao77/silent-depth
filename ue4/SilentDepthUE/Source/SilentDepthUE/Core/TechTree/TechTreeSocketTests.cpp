@@ -92,8 +92,20 @@ bool FSD_SocketsLoadRealAssembly::RunTest(const FString& Parameters)
         return false;
     }
 
-    // Yasen is the one hull whose assembly document is staged today.
-    TestEqual(TEXT("one assembly document is loaded"), Tree.Sockets.Num(), 1);
+    // Yasen's one muzzle plus the nine SOCKET-001 anchors added to Akula.
+    // The count moves with each hull that gains an assembly document, so the
+    // per-binding assertions below carry the meaning.
+    TestEqual(TEXT("every staged assembly document contributed bindings"), Tree.Sockets.Num(), 10);
+    const FSDSocketBinding* AkulaMuzzle = FindBinding(
+        Tree, TEXT("RU_SSN_Akula"), TEXT("torpedo_tube_01_muzzle"));
+    TestNotNull(TEXT("SOCKET-001 added the Akula muzzle"), AkulaMuzzle);
+    if (AkulaMuzzle != nullptr)
+    {
+        TestEqual(TEXT("its anchor follows the DEC-002 naming"),
+            AkulaMuzzle->BlenderAnchor, FString(TEXT("SOCKET_SUB_SSN_Akula_TORPEDO_TUBE_01_MUZZLE")));
+        TestEqual(TEXT("and maps to the weapon registry token"),
+            AkulaMuzzle->RegistryCategory, FString(TEXT("SOCKET_TUBE_01")));
+    }
     const FSDSocketBinding* Binding = FindBinding(
         Tree, TEXT("RU_SSN_Yasen"), TEXT("torpedo_tube_01_muzzle"));
     if (Binding == nullptr)

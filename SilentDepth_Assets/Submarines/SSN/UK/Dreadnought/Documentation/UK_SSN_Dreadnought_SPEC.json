@@ -1,0 +1,270 @@
+{
+  "asset_id": "UK_SSN_Dreadnought",
+  "status": "VALIDATING",
+  "revision": "batch_a_procedural_v1",
+  "country": "UK",
+  "type": "SSN",
+  "class": "Dreadnought",
+  "project": "HMS Dreadnought S101",
+  "tier": 2,
+  "provenance": "本地程序化生成网格与程序化贴图，无第三方模型或图片进入运行时包",
+  "license": "本项目可商业使用的原创生成资产",
+  "materials": [
+    "SD_hull",
+    "SD_coating",
+    "SD_panel",
+    "SD_array",
+    "SD_recess",
+    "SD_metal",
+    "SD_bronze"
+  ],
+  "textures": [
+    "Textures/T_UK_SSN_Dreadnought_Hull_BaseColor.png"
+  ],
+  "dimensions_m": {
+    "length_overall": 81.0,
+    "hull_beam": 9.5,
+    "bounds_with_appendages": [
+      84.75,
+      15.6598,
+      16.63102
+    ]
+  },
+  "exports": [
+    {
+      "name": "UK_SSN_Dreadnought_LOD0",
+      "triangles": 9708,
+      "vertices": 4912,
+      "uv_channels": 2,
+      "dimensions_m": [
+        84.75,
+        15.6598,
+        16.63102
+      ]
+    },
+    {
+      "name": "UK_SSN_Dreadnought_LOD1",
+      "triangles": 4854,
+      "vertices": 2485,
+      "uv_channels": 2,
+      "dimensions_m": [
+        84.75,
+        15.6598,
+        16.63102
+      ]
+    },
+    {
+      "name": "UK_SSN_Dreadnought_LOD2",
+      "triangles": 2134,
+      "vertices": 1125,
+      "uv_channels": 2,
+      "dimensions_m": [
+        84.75011,
+        15.6598,
+        16.63102
+      ]
+    },
+    {
+      "name": "UK_SSN_Dreadnought_LOD3",
+      "triangles": 776,
+      "vertices": 446,
+      "uv_channels": 2,
+      "dimensions_m": [
+        84.75494,
+        15.66833,
+        16.63746
+      ]
+    }
+  ],
+  "sha256": {
+    "Blend/UK_SSN_Dreadnought_MASTER.blend": "9c485bf69e2e2acc470486eda4f3efa952ee47105348e1aee8d146c6d9f40526",
+    "GLB/UK_SSN_Dreadnought.glb": "37d76911a236916a6e578361960f79703a7a0615ee7f9e87139669d97490ea70",
+    "Collision/UK_SSN_Dreadnought_COLLISION.fbx": "286ecbfbc732301b953c337ce732fc3d5343c483b6fb97b9a4d130cf7e4a36a8",
+    "FBX/UK_SSN_Dreadnought_LOD0.fbx": "2c561b244d52dee191dbf328abaa2d21806dbf836940f9990af8eb0be88cf6a0",
+    "FBX/UK_SSN_Dreadnought_LOD1.fbx": "0504295d763cafdef4cba7895387c4f62639d1f378e2fb9300c4d6ea3b17cfb1",
+    "FBX/UK_SSN_Dreadnought_LOD2.fbx": "e14db5b22b60a69af7edfe623efee29f3ce873732c59c06134bdedd47e99c291",
+    "FBX/UK_SSN_Dreadnought_LOD3.fbx": "c11532a1696fe3ab8c5816f1572a145cb3680711dc2a38c2cc143ab25ef1c8e6",
+    "FBX/UK_SSN_Dreadnought_PROPULSOR_01.fbx": "3c51e6ea038d857895d57579ffa08865b957003a895cc299ff6ec58729a49c40",
+    "FBX/UK_SSN_Dreadnought_RUDDER_01.fbx": "e721de6544868c76c825c2dc48d0691c44ed09af03f51b7bce433129603dc2d6",
+    "FBX/UK_SSN_Dreadnought_STERN_PLANES_01.fbx": "f3676f8fb5a6d133331bdaebfab1a11a423da340fbc1e565bb08f5c17f5f9388",
+    "FBX/UK_SSN_Dreadnought_BOW_PLANES_01.fbx": "bbf7ff6894bfa0b084c88d08e58ab9c2e15bfc852310f59d02775652a495fd0a",
+    "FBX/UK_SSN_Dreadnought_PERISCOPE_01.fbx": "652dc2d74b5f3cfdaaa51398bb9cea23acb759b3bf833142561b5e47c0aedc34",
+    "Textures/T_UK_SSN_Dreadnought_Hull_BaseColor.png": "7d1c0137aa3009c0d296f22461e8ed04421bfff692be84a3fbc144c19d7f3cce"
+  },
+  "reference_fidelity": "PROCEDURAL: 比例来自 REFERENCE.md，外形不是任何具体艇的实测复制",
+  "ue427_executed": false,
+  "limitations": [
+    "程序化外形，未与实物或照片逐点比对",
+    "舱盖、阵列与推进器为外观近似",
+    "UE4.27 尚未实际导入与人工验收"
+  ],
+  "geometry": {
+    "topology": {
+      "SUB_Hull": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Sail": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_SailCap": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Mast_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_MastHead_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Mast_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_MastHead_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_BowPlane_P": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_BowPlane_S": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_SternPlane_P": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_SternPlane_S": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Rudder_T": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Rudder_B": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Shaft": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_Hub": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_4": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_5": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerBlade_6": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_PropellerSpinner": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_0": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_1": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_2": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_3": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_4": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      },
+      "SUB_TubeRim_5": {
+        "boundary_edges": 0,
+        "non_manifold_edges": 0,
+        "degenerate_faces": 0
+      }
+    },
+    "contacts": {
+      "sail_hull": true,
+      "shaft_hull": true,
+      "planes_missing": [],
+      "propulsor_missing": []
+    },
+    "length_m": 81.0,
+    "beam_m": 9.5,
+    "dimensions": {
+      "hull_length_m": 81.0,
+      "hull_beam_m": 9.497,
+      "sail_top_m": 8.17,
+      "hull_top_m": 4.748,
+      "propulsor_max_x_m": -42.05,
+      "bounds_with_appendages_m": [
+        84.75,
+        15.66,
+        16.631
+      ]
+    }
+  }
+}

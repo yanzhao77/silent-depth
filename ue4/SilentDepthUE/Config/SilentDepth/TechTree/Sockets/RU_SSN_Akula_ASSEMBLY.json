@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "assetId": "RU_SSN_Akula",
+  "units": "meters",
+  "coordinateSystem": {
+    "forward": "+X",
+    "right": "+Y",
+    "up": "+Z",
+    "unrealConversion": "1 Blender meter = 100 Unreal Units"
+  },
+  "templateNotice": "SOCKET-001 Akula equipment anchors, added to a working copy of the master (DEC-002). Positions are gameplay-derived from the master bounding box, not measured equipment stations.",
+  "sockets": [
+    {
+      "id": "torpedo_tube_01_muzzle",
+      "parent": "root",
+      "purpose": "torpedo_muzzle",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_TORPEDO_TUBE_01_MUZZLE",
+      "transform": {
+        "translation": [
+          51.279533,
+          -0.816,
+          -1.083541
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "torpedo_tube_02_muzzle",
+      "parent": "root",
+      "purpose": "torpedo_muzzle",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_TORPEDO_TUBE_02_MUZZLE",
+      "transform": {
+        "translation": [
+          51.279533,
+          0.816,
+          -1.083541
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "sonar_bow",
+      "parent": "root",
+      "purpose": "sensor_mount",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_SONAR_BOW",
+      "transform": {
+        "translation": [
+          50.406693,
+          0.0,
+          -0.270885
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "towed_array",
+      "parent": "root",
+      "purpose": "sensor_mount",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_TOWED_ARRAY",
+      "transform": {
+        "translation": [
+          -49.642952,
+          0.0,
+          0.812656
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "ew_antenna",
+      "parent": "root",
+      "purpose": "defense_mount",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_EW_ANTENNA",
+      "transform": {
+        "translation": [
+          18.547916,
+          0.0,
+          5.68859
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "decoy_launcher_01",
+      "parent": "root",
+      "purpose": "decoy_launcher",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_DECOY_LAUNCHER_01",
+      "transform": {
+        "translation": [
+          13.092648,
+          1.36,
+          -0.677213
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "decoy_launcher_02",
+      "parent": "root",
+      "purpose": "decoy_launcher",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_DECOY_LAUNCHER_02",
+      "transform": {
+        "translation": [
+          13.092648,
+          -1.36,
+          -0.677213
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "propulsor_01",
+      "parent": "root",
+      "purpose": "propulsion_mount",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_PROPULSOR_01",
+      "transform": {
+        "translation": [
+          -53.898064,
+          0.0,
+          0.0
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    },
+    {
+      "id": "periscope",
+      "parent": "root",
+      "purpose": "sensor_mount",
+      "sourceAnchor": "SOCKET_SUB_SSN_Akula_PERISCOPE",
+      "transform": {
+        "translation": [
+          2.400319,
+          0.0408,
+          4.063279
+        ],
+        "rotationDegrees": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1,
+          1,
+          1
+        ]
+      }
+    }
+  ],
+  "validation": {
+    "requiredSockets": [
+      "torpedo_tube_01_muzzle"
+    ]
+  },
+  "source": {
+    "master": "Blend/RU_SSN_Akula_MASTER.blend",
+    "workCopy": "Work/RU_SSN_Akula_WORK_ANCHORS.blend",
+    "anchorDerivation": "GAMEPLAY_DERIVED_FROM_MASTER_GEOMETRY"
+  },
+  "hullEnvelopeM": {
+    "min": [
+      -54.005489,
+      -6.8,
+      -6.688525
+    ],
+    "max": [
+      55.099899,
+      6.8,
+      6.855738
+    ]
+  }
+}

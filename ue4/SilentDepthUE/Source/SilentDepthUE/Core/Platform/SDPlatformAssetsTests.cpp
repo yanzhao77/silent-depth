@@ -55,12 +55,16 @@ bool FSD_PlatformAssetsLoadRealTable::RunTest(const FString& Parameters)
 
     TestEqual(TEXT("the documented fallback is Akula"),
         Table.FallbackPlatformId, FString(TEXT("RU_SSN_Akula")));
-    // Three hand-built hulls plus the five Batch A hulls (DEC-003).
-    TestEqual(TEXT("eight hulls have imported assets"), Table.ByPlatform.Num(), 8);
+    // The hand-built three plus every hull the parametric pipeline has built.
+    // The exact count moves with each batch, so the assertions below name the
+    // hulls that must be there instead of freezing a number that churns.
+    TestTrue(TEXT("the hand-built and Batch A hulls are all present"),
+        Table.ByPlatform.Num() >= 8);
 
     TArray<FString> Ids;
     Table.SortedIds(Ids);
-    TestTrue(TEXT("ids come back sorted"), Ids.Num() > 0 && Ids[0].Equals(TEXT("FR_SSN_Suffren")));
+    TestTrue(TEXT("ids come back sorted"),
+        Ids.Num() > 1 && Ids[0].Compare(Ids[1], ESearchCase::CaseSensitive) < 0);
 
     const FSDPlatformAssetSet* Akula = Table.ByPlatform.Find(TEXT("RU_SSN_Akula"));
     TestNotNull(TEXT("Akula is listed"), Akula);
@@ -151,16 +155,17 @@ bool FSD_PlatformAssetsResolve::RunTest(const FString& Parameters)
 
     // An unlisted platform resolves to the documented fallback and says so.
     {
-        // US_SSN_Skipjack is in the tree but has no imported assets, which is
-        // exactly the case the fallback exists for.
+        // A hull that is not in the table at all: the case the fallback exists
+        // for. The id is deliberately synthetic so a future batch cannot turn
+        // this assertion into a false failure the way a real hull id did.
         const FSDResolvedPlatformAssets Resolved =
-            SDPlatform::ResolvePlatformAssets(Table, TEXT("US_SSN_Skipjack"));
+            SDPlatform::ResolvePlatformAssets(Table, TEXT("NO_SUCH_PLATFORM"));
         TestFalse(TEXT("no exact match"), Resolved.bExactMatch);
         TestTrue(TEXT("fallback reported"), Resolved.bUsedFallback);
         TestEqual(TEXT("the fallback platform is used"),
             Resolved.Assets.PlatformId, FString(TEXT("RU_SSN_Akula")));
         TestEqual(TEXT("the request is remembered for logging"),
-            Resolved.RequestedPlatformId, FString(TEXT("US_SSN_Skipjack")));
+            Resolved.RequestedPlatformId, FString(TEXT("NO_SUCH_PLATFORM")));
     }
 
     // An empty request is the same case: the caller has not chosen yet.

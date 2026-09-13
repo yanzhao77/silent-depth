@@ -130,7 +130,77 @@ UE4Editor-Cmd.exe <uproject> -run=pythonscript -script=tools/ue4/import_submarin
    与实物照片逐点比对、细节（舱盖、阵列、桅杆形状）属人工美术迭代，本批次未做。
 2. **海狼管径冲突未决**：参考文档 673 mm vs 武器清单 660 mm，当前按清单建模。
 3. **预览未被人工确认**：我只能保证它被渲染出来了，不能替你判断"像不像"。
-4. **前五艘之外的 46 艘**仍是 `PLANNED`，无几何（Batch B–D 未启动）。
+4. **前五艘之外的 46 艘**：其中 40 艘已按 `DEC-003` 的 B/C/D 批次产出（见 §7），
+   剩余 6 艘停在资料缺口上。
+
+---
+
+## 7. 批次 B/C/D 与后续任务（2026-09-13）
+
+### 7.1 已产出：40 艘
+
+参数不再手写，而是由 `Tools/sd_reference_params.py` 从两处权威数据推导：
+各艇的 `REFERENCE.md`（全长、艇宽）与武器 loadout 清单的 `launch_interface`
+（管数、垂发、SLBM、口径）。无法解析的艇会被跳过并报明理由，不猜数值。
+
+| 批次 | 平台 |
+|---|---|
+| B | `CN_SSN_Type093`、`CN_SSN_Type093B`、`RU_SSN_YasenM` |
+| C | `US_SSBN_Ohio`、`RU_SSBN_Borei`、`UK_SSBN_Vanguard`、`FR_SSBN_LeTriomphant`、`CN_SSBN_Type094` |
+| D | 其余 32 艘 SSN/SSBN（含 Skipjack、Sturgeon、Victor、Sierra、Swiftsure、Trafalgar、Rubis、Delta 系列、Resolution、Type 091/093A/095/092/094A、Arihant 级等） |
+
+SSBN 增加了参考文档反复强调的外形特征：围壳后的**导弹甲板**（Delta 的龟背、
+Ohio 的平甲板、Borei 的圆背），并有独立碰撞体与接触断言。
+
+批量入口：
+
+```bash
+blender --background --python Tools/build_batch.py -- [--no-preview]
+    [--preview-engine=cycles|eevee] [--only=ID,ID] [--include-built]
+python tools/assets/update_submarine_manifest.py      # 清单登记（跳过手工资产）
+python tools/assets/update_platform_assets.py         # 平台表（含部件枢轴）
+node tools/ue4/sync-tech-tree-data.mjs
+UE4Editor-Cmd.exe <uproject> -run=pythonscript -script=tools/ue4/import_submarines.py -unattended
+```
+
+### 7.2 停在资料缺口上的 6 艘
+
+`RU_SSN_November`、`UK_SSN_AUKUS`、`UK_SSBN_Dreadnought`、`FR_SSBN_SNLE3G`、
+`CN_SSBN_Type096`、`IN_SSBN_S5`：`REFERENCE.md` 没有可用的全长/艇宽行
+（未来型号或资料不足）。它们保持 `PLANNED`，不按"差不多的数字"建模。
+
+### 7.3 SOCKET-001（完成）
+
+`Source/build_akula_anchors.py` 在**工作副本**上加了 DEC-002 的最小挂点集：
+9 个 `SOCKET_SUB_SSN_Akula_*` 锚点（鱼雷发射口、艏声呐、拖曳阵、EW 天线、
+诱饵发射器 ×2、推进器、潜望镜），并写出 `Documentation/RU_SSN_Akula_ASSEMBLY.json`
+与 `Validation/RU_SSN_Akula_SOCKET_AUDIT.json`。母版哈希校验未变（只读）。
+运行时通过同步脚本加载，UE 侧断言锚点命名与注册表令牌映射。
+
+### 7.4 UEASSET-004（完成）
+
+推进导入器原先的凸包接口在 UE4.27 的 Python 签名不匹配，21 个推进资产
+**实际都没有碰撞**（报告里 `simple_collision_count = 0`）。已改为先用可靠的
+`add_simple_collisions(BOX)`，再尝试用作者凸包升级；重跑后 21/21 都有简单碰撞。
+
+### 7.5 预览图（已补，未人工确认）
+
+45 艘的预览用 EEVEE 批量渲染（Cycles 太慢，46 艘要数小时）。各艇
+`Preview/Hero|Profile|Deck|Stern|Propeller|Sail|Rear.png`，引擎记录在
+`Validation/<ID>_VALIDATION.json` 的 `preview_engine`。**仍然没有人看过这些图**，
+`EDITOR VERIFIED` 依旧未取得。
+
+### 7.6 两个必须记住的事实
+
+1. **FBX 容器字节不可复现**：同样的参数、同样的代码，两次导出的 `.fbx`
+   SHA-256 不同（Blender 导出器写入时间戳/文件 ID）。几何本身一致（三角形数、
+   尺寸、LOD 比例可复现），但清单里的哈希会随每次重建变化——它不是几何指纹。
+2. **`--include-built` 曾覆盖手工资产**：一次批量重跑把 Akula/Yasen/Typhoon 的
+   母版换成了参数化重建结果。三个目录已从 git 完整恢复（哈希与清单记录一致），
+   并在构建器与清单登记器两处加了"非本管线产出的资产不得重建/重登记"的守卫：
+   `sd_reference_params` 只重建 `materials` 含 `SD_hull` 的艇，
+   `update_submarine_manifest.py` 不再重登记手工条目。
+   教训写在代码注释里：判据必须是"谁产出的"，而不是"有没有产物"。
 
 ## 7. 完成后需要同步的登记项
 
