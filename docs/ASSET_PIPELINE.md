@@ -1,5 +1,9 @@
 # SILENT DEPTH 《深海猎手》 — Asset Pipeline (docs/ASSET_PIPELINE.md)
 
+> 历史 Web 资产管线，已于 2026-09-14 退役。正文精灵尺寸、旧清单和浏览器工具不再约束
+> UE4 产品。当前接入规范见 [视听与资产](plan/08_PRESENTATION_AND_ASSETS.md)，
+> 母版与装配治理继续见 [潜艇模块化管线](SUBMARINE_MODULAR_ASSET_PIPELINE_PLAN.md)。
+
 Version: v1 · Owner: Asset Engineer (t-011) · Status: ACCEPTED (asset-gate input)
 Upstream: `artifacts/requirements.md` §3 (FR-21) · `docs/VISUAL_STYLE.md` v1 ·
 `docs/GAME_ARCHITECTURE.md` §3 / §8 / §12 · ADR-003 (procedural assets)

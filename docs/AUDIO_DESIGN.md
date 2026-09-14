@@ -1,5 +1,8 @@
 # SILENT DEPTH 《深海猎手》 — Audio Design
 
+> 历史 Web 音频规范，已于 2026-09-14 退役。正文 WebAudio 实现和旧事件映射不再约束
+> UE4 产品；当前方向见 [视听与资产](plan/08_PRESENTATION_AND_ASSETS.md)。
+
 Version: v1.1 (t-025 periscope SFX appended; v1 = 14 core SFX) · Owner: Factory Manager (escalated) · Status: ACCEPTED
 
 ## 1. Style

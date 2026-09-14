@@ -1,5 +1,9 @@
 # SILENT DEPTH 《深海猎手》 — Visual Style Bible
 
+> 历史 Web 视觉规范，已于 2026-09-14 退役。旧 CSS、精灵、尺寸和视角约束不再适用。
+> 新产品见 [视听与资产](plan/08_PRESENTATION_AND_ASSETS.md)和
+> [UE4 界面规格](plan/06_UI_UX.md)。正文保留用于追溯。
+
 Version: v1 · Owner: Factory Manager (escalated from designer delegation) · Status: ACCEPTED
 
 ## 1. Perspective

@@ -1,17 +1,19 @@
-# SILENT DEPTH — Unreal Engine 4.27
+# SILENT DEPTH：UE4 独立游戏
 
-本分支是 SILENT DEPTH 的 **UE4.27 版本**：纯 C++ 权威仿真 + UE4 表现层。
-早期 Web 版（TypeScript + Three.js）**只保留在 `master` 分支**，本分支已不再包含
-`src/`、`tests/`、`public/`、Web 构建配置与 Web 测试工具链。
+SILENT DEPTH 是使用 **Unreal Engine 4.27** 开发、以 **Steam 发售**为目标的独立潜艇游戏。
+当前方向是本地离线单人战术任务、港口配装与科技树成长，采用纯 C++ 权威仿真和 UE4 表现层。
+UE4 是唯一开发主线，不再开发 Web 产品，不要求与历史版本保持玩法或数值一致。
+
+从 [游戏规划目录](docs/plan/README.md) 开始阅读；首发范围和具体规则仍是待评审的设计初稿，
+不是已实现功能或发售承诺。历史文档只保留用于追溯。
 
 ## 仓库结构
 
 ```text
 silent-depth/
-├── docs/                          设计文档 + UE 迁移规划（UE 版的需求来源）
+├── docs/                          新产品设计、实施路线与历史归档说明
 ├── SilentDepth_Assets/            潜艇源资产库（Blender/FBX/贴图/科技树/工厂工具）
 ├── tools/ue4/                     UE 编辑器自动化脚本（导入、探针、数据同步）
-├── config/                        Web 版遗留运行时数据（待迁移，见下）
 └── ue4/SilentDepthUE/             UE4.27 工程
     ├── SilentDepthUE.uproject
     ├── Config/                    含 balance.json 与 SilentDepth/*.json 运行时数据
@@ -35,10 +37,15 @@ silent-depth/
 ## 验证入口
 
 ```powershell
-# C++ 编译 + Automation（UE 4.27.2）
+# C++ 编译（UE 4.27.2；本地安装与工程路径需按工作站调整）
+& "C:\game\Epic Games\UE_4.27\Engine\Build\BatchFiles\Build.bat" SilentDepthUEEditor Win64 Development `
+  -Project="C:\workspace\ue4\silent-depth\ue4\SilentDepthUE\SilentDepthUE.uproject" -WaitMutex
+
+# Automation（不替代上面的编译）
 & "C:\game\Epic Games\UE_4.27\Engine\Binaries\Win64\UE4Editor-Cmd.exe" `
   "C:\workspace\ue4\silent-depth\ue4\SilentDepthUE\SilentDepthUE.uproject" `
-  -ExecCmds="Automation RunTests SilentDepth;Quit" -unattended -nopause -nosplash -nullrhi -stdout
+  -ExecCmds="Automation RunTests SilentDepth;Quit" -unattended -nopause -nosplash -nullrhi -stdout `
+  -testexit="Automation Test Queue Empty"
 
 # 存档自检 / 科技树探针（显式传参才执行，不进正常流程）
 ... -game -nullrhi -sd-save-selftest -ExecCmds=Quit
@@ -59,13 +66,13 @@ npm run check:asset-pipeline
 
 ## 运行时数据
 
-`SilentDepth_Assets/` 是资产库唯一权威，`ue4/SilentDepthUE/Config/SilentDepth/` 是运行
-时副本，由 `tools/ue4/sync-tech-tree-data.mjs` 生成并逐文件记录 SHA-256，漂移会被
-`npm run check:runtime-data` 判为失败。
+`SilentDepth_Assets/` 是资产库唯一权威；`ue4/SilentDepthUE/Config/SilentDepth/` 中的
+生成副本由 `tools/ue4/sync-tech-tree-data.mjs` 管理并记录 SHA-256，漂移会被
+`npm run check:runtime-data` 判为失败。该目录同时含手写配置，不能整目录视为生成物。
 
 ## 待处置
 
-- `Config/SilentDepth/platform_assets.json`、`socket_map.json`、`equipment_effects.json`
-  是手写配置，但没有纳入 `sync-tech-tree-data.mjs` 的哈希清单，漂移检查覆盖不到它们。
-- `docs/` 里仍有描述 Web 版实现的文档（`GAME_ARCHITECTURE.md`、`V2_*` 等）；它们是
-  UE4 迁移的需求来源，暂时保留，改动时不要按它们去仓库里找 `src/`。
+- `platform_assets.json`、`socket_map.json`、`equipment_effects.json`、`research_cost.json`
+  是手写配置，须分别接受契约与集成测试，不得用同步脚本覆盖。
+- 当前实现差距与已执行检查见 [代码基线](docs/plan/01_CURRENT_BASELINE.md)。
+- 旧迁移方案和 Web 设计不再是需求来源；本轮未删除任何历史资产或修改玩法代码。

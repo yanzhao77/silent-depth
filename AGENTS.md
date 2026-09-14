@@ -22,23 +22,31 @@
 
 ## 项目概述
 
-SILENT DEPTH 是一款离线、确定性的战术潜艇游戏，**本分支是 Unreal Engine 4.27 版本**：
-纯 C++ 权威仿真 + UE4 表现层（渲染、UMG、程序化音频）。早期 Web 版
-（TypeScript + Three.js）只保留在 `master` 分支，本分支不存在 `src/`、`tests/`、
-`public/` 与 Web 构建链，不要再按 Web 版的方式查找或运行代码。
+SILENT DEPTH 的唯一开发产品是 **Unreal Engine 4.27 独立游戏，目标在 Steam 发售**。
+采用纯 C++ 权威仿真与 UE4 表现层；本地离线单人玩法是当前设计方向。
+不再开发、维护或迁移 Web 产品，不要求新玩法与 Web 规则、数值、任务或行为一致。
+历史分支和文档仅用于追溯，不是新产品需求；未经明确要求不删除历史文件。
+Node 脚本仍用于离线数据与资产工具，不是 Web 游戏构建链。
 
-编辑前先读相关源码与测试。架构与玩法问题以下列文档为准（按权威优先级排列）：
+编辑前先读相关源码与测试。文档入口为 `docs/README.md`，按领域区分权威：
 
-- `docs/UE4_27_MIGRATION_MASTER_PLAN.md`（§2 权威顺序、迁移门禁）
-- `docs/UE4_27_TARGET_ARCHITECTURE.md`
-- `docs/UE4_REBUILD_PLAN.md`
-- `docs/GAME_DESIGN.md`、`docs/GAME_ARCHITECTURE.md`（需求与公式来源，描述的是 Web 版实现蓝本）
-- `docs/UE4_TECH_TREE_DECISION_RECORD.md`、`docs/UE4_TECH_TREE_SCHEMA.md`、`docs/UE4_TECH_TREE_NEXT_PLAN.md`
-- `docs/SUBMARINE_MODULAR_ASSET_PIPELINE_PLAN.md`（潜艇资产管线）
-- `docs/VISUAL_STYLE.md`、`docs/ASSET_PIPELINE.md`
+- 用户明确决定与本文件：产品方向、授权和不可协商边界。
+- `docs/plan/11_DECISIONS.md`：新产品决定、提案及待确认事项；草案不等于实施授权。
+- `docs/plan/00_PRODUCT_SCOPE.md`、`02_GAME_DESIGN.md`：产品范围与玩法设计。
+- `docs/plan/03_COMBAT_SYSTEMS.md` 至 `08_PRESENTATION_AND_ASSETS.md`：各系统目标规格。
+- `docs/plan/09_ROADMAP.md`、`10_QA_AND_STEAM_RELEASE.md`：任务依赖与验收。
+- `docs/plan/12_SCENARIO_MATRIX.md`：首发场景、异常恢复与组合验收；用例存在不等于已执行。
+- `docs/plan/13_TUNING_BASELINE.md`、`15_CONTENT_CATALOGUE.md`：待批准的试玩参数与内容提案，
+  不得当作已经生效的配置、现实性能或已验收资产。
+- `docs/plan/14_SAVE_RECOVERY_PROTOCOL.md`：新存档协议提案，落地需批准、迁移与故障注入验证。
+- 当前代码、配置、测试和新执行的检查：只定义当前已实现行为与实际证据。
+- 既有 `UE4_TECH_TREE_*`：继续定义当前数据、经济、兼容与存档契约；改规则需记录新决定。
+- `docs/SUBMARINE_MODULAR_ASSET_PIPELINE_PLAN.md`：继续约束资产生产和母版治理。
 
-旧报告中的测试数量、性能与视觉结论可能是过期的快照；当前代码、测试与刚执行过的
-检查才是权威。
+`UE4_27_MIGRATION_*`、旧 `UE4_27_TARGET_ARCHITECTURE.md`、`UE4_REBUILD_PLAN.md`、
+`GAME_DESIGN.md`、`GAME_ARCHITECTURE.md`、`V2*` 和旧 Web 视听文档不再约束新产品。
+新技术架构入口是 `docs/plan/07_TECHNICAL_ARCHITECTURE.md`；不得并行维护两套架构。
+发现设计与代码不符时记录差距，不把草案当作已实现，也不以旧代码阻止经批准的新设计。
 
 ## 不可协商架构
 
@@ -52,7 +60,7 @@ Simulation -> Snapshot -> RenderState -> Renderer / HUD / Camera / Audio
 - 渲染、相机、HUD、音频、特效与 Pawn 的表现逻辑**不得回写仿真状态**，也不得把
   推断出的事实当作玩法输入。
 - 表现层只能消费快照、RenderState 与既有引擎事件暴露的事实。
-- 隐藏实体必须保持隐藏：`RenderShip.visible === false` 的舰船不得影响渲染、镜头、
+- 隐藏实体必须保持隐藏：表现契约未公开的舰船不得影响渲染、镜头、
   尾迹、瞄准提示或其他表现线索。
 - 表现事实缺失时失败关闭，不得猜测位置、分类、命中、可见性或任务状态。
 
@@ -71,8 +79,9 @@ Simulation -> Snapshot -> RenderState -> Renderer / HUD / Camera / Audio
 ## 确定性
 
 - 同 seed + 同输入序列必须产生相同的快照与事件。
-- `Rng.h/.cpp` 的 mulberry32 与 `fork(label)` 派生在迁移完成前必须与 Web 版基线逐位一致；
-  不得引入第二套随机源。
+- 复用 `Rng.h/.cpp` 的确定性随机源与命名派生机制，不引入第二套随机源。
+  不再要求与 Web 版对照；算法、随机流或消费顺序变更必须另行授权，更新 UE 回归基线，
+  并明确存档和回放版本兼容策略。
 - 权威路径禁止 `FMath::Rand`、`Math.random` 等价物、墙钟（`FDateTime`/`FPlatformTime`）
   与帧率相关的分支。
 - UE Tick、Chaos、碰撞、导航与墙钟不得决定玩法结果；表现动画可以用真实时间。
@@ -102,7 +111,9 @@ Simulation -> Snapshot -> RenderState -> Renderer / HUD / Camera / Audio
 
 ## 资产
 
-- 运行时完全离线：不得引入 CDN 资源、远程贴图、运行时下载或追踪器。
+- 核心玩法与必要资产必须可离线运行：不得引入 CDN 资源、远程贴图、运行时下载或追踪器。
+  Steam 成就、云存档等是另行决策的平台功能；不得成为仿真输入或离线游玩的前置条件，
+  本轮文档设计不授权接入 SDK、上传存档或启用遥测。
 - `SilentDepth_Assets/` 是资产库唯一权威；`ue4/SilentDepthUE/Config/SilentDepth/`
   下的副本由 `tools/ue4/sync-tech-tree-data.mjs` 生成并逐文件记录 SHA-256，
   不要手改生成物。

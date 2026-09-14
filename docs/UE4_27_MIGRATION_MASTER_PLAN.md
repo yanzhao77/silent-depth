@@ -1,5 +1,9 @@
 # SILENT DEPTH UE4.27 迁移主方案
 
+> 历史资料，已于 2026-09-14 退役。正文保留用于追溯，不再规定当前产品的需求优先级、
+> Web 对照、玩法数值或实施顺序。当前唯一产品是 UE4 独立游戏，目标在 Steam 发售。
+> 请从 [新文档入口](README.md) 开始，技术契约见 [新架构](plan/07_TECHNICAL_ARCHITECTURE.md)。
+
 | 字段 | 内容 |
 |---|---|
 | 状态 | CONSOLIDATED PROPOSAL |

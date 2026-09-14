@@ -1,5 +1,8 @@
 # SILENT DEPTH 《深海猎手》 — Game Architecture (GAME_ARCHITECTURE.md)
 
+> 历史 Web 架构，已于 2026-09-14 退出当前架构权威。不得据本文恢复浏览器工具链或
+> 要求双端行为一致。当前唯一技术入口为 [UE4 架构](plan/07_TECHNICAL_ARCHITECTURE.md)。
+
 | 字段 | 值 |
 |---|---|
 | 项目 | p-004 SILENT DEPTH 《深海猎手》 |

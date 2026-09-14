@@ -1,5 +1,9 @@
 # SILENT DEPTH 迁移到 UE4.27 实施方案
 
+> 历史资料，已于 2026-09-14 退役。正文中的双端迁移、旧任务、基线和阶段不再约束新产品。
+> 当前 UE4 独立游戏的实施顺序见 [开发路线](plan/09_ROADMAP.md)，
+> 发布门禁见 [测试与 Steam 发行](plan/10_QA_AND_STEAM_RELEASE.md)。
+
 | 字段 | 内容 |
 |---|---|
 | 状态 | PROPOSED |

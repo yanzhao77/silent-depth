@@ -1,5 +1,9 @@
 # SILENT DEPTH —— UE4.27 重构需求与落地计划
 
+> 历史移植计划，已于 2026-09-14 退役。UE4 独立游戏不再受正文的 Web 需求、数值同步、
+> 旧输入与里程碑约束。当前需求见 [产品范围](plan/00_PRODUCT_SCOPE.md)和
+> [游戏设计](plan/02_GAME_DESIGN.md)，现状以 [代码基线](plan/01_CURRENT_BASELINE.md)为准。
+
 | 字段 | 值 |
 |---|---|
 | 上游项目 | SILENT DEPTH（TypeScript/Three.js Web 版，本仓库） |

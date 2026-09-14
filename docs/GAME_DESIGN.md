@@ -1,5 +1,8 @@
 # SILENT DEPTH 《深海猎手》 — 游戏设计文档 (Game Design Document)
 
+> 历史 Web 产品设计，已于 2026-09-14 退出当前需求权威。正文数值、任务、玩法和旧版
+> 完成声明不约束新的 UE4 独立游戏。新设计见 [完整游戏设计](plan/02_GAME_DESIGN.md)。
+
 | 字段 | 值 |
 |---|---|
 | 项目 | p-004 SILENT DEPTH 《深海猎手》 |
